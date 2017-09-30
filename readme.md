@@ -1,7 +1,7 @@
 echo.css
 ====================================
 
-![echo](http://cms-skill.com/echo/images/logo.svg =x45)
+<img alt="echo" src="http://cms-skill.com/echo/images/logo.svg" height="45" />
 
 - - - - - - - - - - - - - - - - - - -
 
