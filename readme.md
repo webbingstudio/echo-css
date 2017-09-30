@@ -1,9 +1,7 @@
 echo.css
 ====================================
 
-<img alt="echo" src="http://cms-skill.com/echo/images/logo.svg" height="45" />
-
-- - - - - - - - - - - - - - - - - - -
+<img alt="echo" src="http://cms-skill.com/echo/images/logo.svg" height="60" />
 
 version 0.0.1 (under construction)
 
@@ -18,6 +16,7 @@ http://opensource.org/licenses/MIT
 ### Japanese
 
 "echo"は、SMACSSを設計のベースとしたCSSフレームワークです。
+
 https://smacss.com/ja
 
 - CMSを組み込んだウェブサイトの制作に最適化
@@ -28,6 +27,8 @@ https://smacss.com/ja
 ### English
 
 "echo" is a CSS framework based on the design of SMACSS.
+
+https://smacss.com
 
 - Optimized for the creation of website incorporating CMS
 - Language-friendly typography in East Asian countries
