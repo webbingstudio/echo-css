@@ -1,0 +1,279 @@
+// Name
+// -----------------------------------------
+
+$prefix: "" !default;
+
+// post-name
+// ex. post, entry, article...
+$post: "post" !default;
+
+// widget-name
+// ex. widgetarea, layout, page, region...
+$widgetarea: "widgetarea" !default;
+// ex. widget, module, box, view...
+$widget: "widget" !default;
+
+// nav-name
+// ex. menu, navigation...
+$nav: "nav" !default;
+
+// nav-current-name
+// ex. is-active, active, current, stay...
+$nav-current: "is-current" !default;
+
+// action-active-name
+// ex. is-active, active...
+$action-active: "is-active" !default;
+
+// action-open-name
+// ex. is-open, open, active...
+$action-open: "is-open" !default;
+
+// action-close-name
+// ex. is-close, is-hidden, close...
+$action-close: "is-close" !default;
+
+// error-name
+// ex. is-error, error...
+$error: "is-error" !default;
+
+// utillity-wrap-class
+// ユーティリティクラスの優先順位を上昇させるために、これらを必ず包括する要素のクラス名を指定する
+// In order to raise the priority of the utility class, specify the class name of the element that always includes them
+$u-wrap: ".l-document .l-document-inner" !default;
+
+
+// Spacing
+// -----------------------------------------
+
+$spacer:                     10px !default;
+
+
+// Colors
+// -----------------------------------------
+
+$first:                     #49d !default;
+$first-strong:              #28b !default;
+$first-text:                $first-strong !default;
+$first-mild:                lighten(desaturate($first, 5%), 10%) !default;
+$first-fade:                rgba($first, .2) !default;
+
+$second:                    #333 !default;
+$second-strong:             #000 !default;
+$second-text:               $second !default;
+$second-mild:               #777 !default;
+$second-fade:               #eee !default;
+
+$third:                     #55B677 !default;
+$third-strong:              #229644 !default;
+$third-text:                $third-strong !default;
+$third-mild:                lighten(desaturate($third, 5%), 10%) !default;
+$third-fade:                rgba($third, .2) !default;
+
+$info:                      $third !default;
+$info-text:                 $third-text !default;
+$info-strong:               $third-strong !default;
+$info-mild:                 $third-mild !default;
+$info-fade:                 $third-fade !default;
+
+$important:                 #d45 !default;
+$important-strong:          #d02 !default;
+$important-text:            $important-strong !default;
+$important-mild:            lighten(desaturate($important, 15%), 20%) !default;
+$important-fade:            #ffe9ee !default;
+
+$body-bg:                   #fff !default;
+$body-color:                #333 !default;
+$body-inverse-bg:           #000 !default;
+$body-inverse-color:        #fff !default;
+$body-mild-color:           #777 !default;
+
+
+// Border
+// -----------------------------------------
+
+$border-width:               1px !default;
+$border-color:               #cccccc !default;
+$border-inverse-color:       #666666 !default;
+
+
+// Font Mapping
+// -----------------------------------------
+
+@mixin font-face-mapping() {
+  /* thanks: https://speakerdeck.com/tacamy/modanri-ben-yu-huontozhi-ding */
+
+  @font-face {
+    font-family: 'PGYuGothic';
+    font-weight: normal;
+    src: local('YuGothic-Medium'),
+         local('Yu Gothic Medium'),
+         local('YuGothic-Regular');
+  }
+  @font-face {
+    font-family: 'PGYuGothic';
+    font-weight: bold;
+    src: local('YuGothic-Bold'),
+         local('Yu Gothic');
+  }
+
+  @import url('https://fonts.googleapis.com/css?family=Oxygen:300,400,700');
+}
+
+// Font family
+// -----------------------------------------
+
+$font-family-root:          'PGYuGothic', 'YuGothic', '-apple-system', 'BlinkMacSystemFont', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif !default;
+$font-weight-root:          300 !default;
+$font-family-bold-root:     $font-family-root;
+$font-weight-bold-root:     700 !default;
+
+$font-family-mono:          'Consolas', 'Liberation Mono', 'Menlo', 'Courier', monospace !default;
+
+// first: heading
+$font-family-first:            '游明朝', 'Yu Mincho', '游明朝体', 'YuMincho', 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', 'HiraMinProN-W3', "HGS明朝E", 'ＭＳ Ｐ明朝', 'MS PMincho', serif !default;
+$font-weight-first:            300 !default;
+$font-family-bold-first:       '游明朝', 'Yu Mincho', '游明朝体', 'YuMincho', 'ヒラギノ明朝 Pro W6', 'Hiragino Mincho Pro', 'HiraMinProN-W6', "HGS明朝E", 'ＭＳ Ｐ明朝', 'MS PMincho', serif !default;
+$font-weight-bold-first:       700 !default;
+
+// second: english, date, number, badge
+$font-family-second:           'Helvetica', 'Roboto', '-apple-system', 'Open Sans', 'Arial', sans-serif !default;
+$font-weight-second:           300 !default;
+$font-family-bold-second:      $font-family-second;
+$font-weight-bold-second:      700 !default;
+
+// third: hero, etc
+$font-family-third:            'Oxygen', 'PGYuGothic', 'YuGothic', '-apple-system', 'Roboto', 'Open Sans', 'Arial', 'Helvetica', sans-serif !default;
+$font-weight-third:            300 !default;
+$font-family-bold-third:       $font-family-third;
+$font-weight-bold-third:       700 !default;
+
+
+// Font size
+// -----------------------------------------
+
+$font-size-xxs:             .625rem !default;
+$font-size-xs:              .75rem !default;
+$font-size-sm:              .875rem !default;
+$font-size-md:              1rem !default;
+$font-size-lg:              1.125rem !default;
+$font-size-xl:              1.25rem !default;
+$font-size-xxl:             1.5rem !default;
+
+
+// Line height
+// -----------------------------------------
+
+$line-height-none:          1 !default;
+$line-height-xs:            1.25 !default;
+$line-height-sm:            1.5 !default;
+$line-height-mg:            1.75 !default;
+$line-height-lg:            2 !default;
+
+
+// Links
+// -----------------------------------------
+
+$link-color:                 $first-text !default;
+$link-hover-color:           $first-mild !default;
+
+
+// Navigation
+// -----------------------------------------
+
+$nav-color:                  $body-color !default;
+$nav-bg:                     transparent !default;
+$nav-border:                 $border-color !default;
+
+$nav-hover-color:            $body-color !default;
+$nav-hover-bg:               $first-fade !default;
+$nav-hover-border:           $border-color !default;
+
+$nav-current-color:          $body-inverse-color !default;
+$nav-current-bg:             $first !default;
+$nav-current-border:         $first !default;
+
+
+// Radius
+// -----------------------------------------
+
+$border-radius-sm:   3px;
+$border-radius-md:   5px;
+$border-radius-lg:   7px;
+$border-radius-xl:   9px;
+
+
+// Buttons
+// -----------------------------------------
+
+$btn-first-color:         $body-inverse-color !default;
+$btn-first-bg:            $first !default;
+$btn-first-border:        $first !default;
+
+$btn-second-color:        $body-inverse-color !default;
+$btn-second-bg:           $second !default;
+$btn-second-border:       $second !default;
+
+$btn-third-color:         $body-inverse-color !default;
+$btn-third-bg:            $third !default;
+$btn-third-border:        $third !default;
+
+$btn-important-color:     $body-inverse-color !default;
+$btn-important-bg:        $important !default;
+$btn-important-border:    $important !default;
+
+
+$btn-font-size-sm:          $font-size-sm;
+$btn-padding-x-sm:          1rem !default;
+$btn-padding-y-sm:          .25rem !default;
+
+$btn-font-size-md:          $font-size-sm;
+$btn-padding-x-md:          1rem !default;
+$btn-padding-y-md:          .5rem !default;
+
+$btn-font-size-lg:          $font-size-sm;
+$btn-padding-x-lg:          1.5rem !default;
+$btn-padding-y-lg:          .75rem !default;
+
+$btn-font-size-xl:          $font-size-sm;
+$btn-padding-x-xl:          2rem !default;
+$btn-padding-y-xl:          1rem !default;
+
+
+// Grid
+// -----------------------------------------
+
+$grid-breakpoints: (
+  default: 0,
+  xxs: 320px,
+  xs:  375px,
+  sm:  425px,
+  md:  768px,
+  lg:  1000px,
+  xl:  1280px
+  xxl: 1600px
+) !default;
+
+
+$container-max-widths-sm: (
+  md: 700px,
+  lg: 960px
+) !default;
+
+$container-max-widths-md: (
+  md: 700px,
+  lg: 960px,
+  xl: 1200px
+) !default;
+
+
+$grid-columns:    12 !default;
+
+$grid-gutter-widths: (
+  none: 0,
+  sm:   $spacer,
+  md:   ($spacer * 2),
+  lg:   ($spacer * 4)
+) !default;
+
+
