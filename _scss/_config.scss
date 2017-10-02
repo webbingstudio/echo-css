@@ -61,7 +61,7 @@ $default:                   #000 !default;
 $default-strong:            $default !default;
 $default-mild:              #777 !default;
 $default-milder:            #aaa !default;
-$default-fade:              #eee !default;
+$default-fade:              #f3f3f3 !default;
 
 $first:                     #49d !default;
 $first-strong:              #28b !default;
@@ -69,11 +69,11 @@ $first-text:                $first-strong !default;
 $first-mild:                lighten(desaturate($first, 5%), 10%) !default;
 $first-fade:                rgba($first, .2) !default;
 
-$second:                    #333 !default;
+$second:                    #444 !default;
 $second-strong:             #000 !default;
-$second-text:               $second !default;
+$second-text:               #333 !default;
 $second-mild:               #777 !default;
-$second-fade:               #eee !default;
+$second-fade:               #eaeaea !default;
 
 $third:                     #55B677 !default;
 $third-strong:              #229644 !default;
@@ -87,10 +87,10 @@ $info-strong:               $third-strong !default;
 $info-mild:                 $third-mild !default;
 $info-fade:                 $third-fade !default;
 
-$important:                 #d45 !default;
+$important:                 #e34050 !default;
 $important-strong:          #d02 !default;
 $important-text:            $important-strong !default;
-$important-mild:            lighten(desaturate($important, 15%), 20%) !default;
+$important-mild:            lighten(desaturate($important, 5%), 10%) !default;
 $important-fade:            #ffe9ee !default;
 
 $body-bg:                   #fff !default;
