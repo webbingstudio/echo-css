@@ -3,7 +3,7 @@ echo.css
 
 <img alt="echo" src="http://cms-skill.com/echo/images/logo.svg" height="60" />
 
-version 0.0.2 (under construction)
+version 0.0.3 (under construction)
 
 Copyright 2017 WebbingStudio  
 Released under the MIT license  
