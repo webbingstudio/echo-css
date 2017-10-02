@@ -5,17 +5,6 @@ btn-outline
 
 .#{$p}btn-outline {
 
-    &.#{$p}btn {
-        @include button-variant(
-            $body-color,
-            transparent,
-            $body-color,
-            $body-inverse-color,
-            $body-inverse-bg,
-            $body-inverse-bg
-        );
-    }
-
     &.#{$p}btn-first {
         @include button-variant(
             $body-color,
