@@ -1,12 +1,12 @@
 /*
 base
-------------
+--------------------
 */
 
 @include font-face-mapping();
 
 html {
-  font-size: $font-size-root;
+  font-size: $font-size-md;
   font-family: $font-family-root;
   font-weight: $font-weight-root;
 
@@ -23,13 +23,15 @@ html {
 body {
   background-color: $body-bg;
   color: $body-color;
-  line-height: $line-height-root;
+  line-height: $line-height-md;
 }
 
-// note: Underline of Link
-// wysiwyg(リッチテキスト)の適用範囲内のみ、リンクにcolorやtext-decorationを指定することは、適切ではありません。スタイルの優先度が、その装飾を必要としないモジュールよりも、高くなってしまうことを回避するためです。
-// It is not appropriate to specify color or text-decoration for the link only within the scope of wysiwyg (rich text). This is to avoid that the priority of the style will be higher than the module that does not require that decoration.
-// --------------------
+/*
+note: Underline of Link
+wysiwyg(リッチテキスト)の適用範囲内のみ、リンクにcolorやtext-decorationを指定することは、適切ではありません。スタイルの優先度が、その装飾を必要としないモジュールよりも、高くなってしまうことを回避するためです。
+It is not appropriate to specify color or text-decoration for the link only within the scope of wysiwyg (rich text). This is to avoid that the priority of the style will be higher than the module that does not require that decoration.
+--------------------
+*/
 
 a {
   color: $link-color;
@@ -87,10 +89,12 @@ dd {
 }
 
 
-// note: Font Families in Form
-// 日本では、フォームの入力フィールドにサンセリフフォントを指定する傾向があります。 これは、入力フォームに適用される標準フォントが、OSによって大きく異なるためです。
-// In Japan, there is a tendency to specify sans-serif fonts in the form input fields. This is because standard fonts applied to input fields vary greatly depending on the OS.
-// --------------------
+/*
+note: Font Families in Form
+日本では、フォームの入力フィールドにサンセリフフォントを指定する傾向があります。 これは、入力フォームに適用される標準フォントが、OSによって大きく異なるためです。
+In Japan, there is a tendency to specify sans-serif fonts in the form input fields. This is because standard fonts applied to input fields vary greatly depending on the OS.
+--------------------
+*/
 
 textarea,
 input[type="text"],
