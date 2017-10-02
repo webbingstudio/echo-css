@@ -69,7 +69,13 @@ ol {
 }
 
 li {
-    margin: 0 0 1em;
+    margin: 0 0 .5em;
+
+    > ul,
+    > ol {
+        margin: .5em 0;
+    }
+
 }
 
 dl {
