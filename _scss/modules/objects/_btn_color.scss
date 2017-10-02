@@ -36,6 +36,17 @@ btn-(color)
   );
 }
 
+.#{$p}btn-info {
+  @include button-variant(
+    $btn-info-color,
+    $btn-info-bg,
+    $btn-info-border,
+    $btn-info-color,
+    saturate(darken($btn-info-bg, 10%), 10%),
+    saturate(darken($btn-info-bg, 10%), 10%)
+  );
+}
+
 .#{$p}btn-important {
   @include button-variant(
     $btn-important-color,
