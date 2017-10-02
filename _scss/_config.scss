@@ -188,6 +188,16 @@ $link-color:                 $first-text !default;
 $link-hover-color:           $first-mild !default;
 
 
+// List
+// -----------------------------------------
+
+// ex. .list-item or li
+$list-item: "." + $p + "list-item" !default;
+
+// ex. .list-item or li > ul
+$list-children: "." + $p + "list-children" !default;
+
+
 // Navigation
 // -----------------------------------------
 
