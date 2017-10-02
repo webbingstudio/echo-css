@@ -162,13 +162,13 @@ $font-weight-bold-third:       $font-weight-bold-first;
 // Font size
 // -----------------------------------------
 
-$font-size-xxs:             .625rem !default;
-$font-size-xs:              .75rem !default;
-$font-size-sm:              .875rem !default;
-$font-size-md:              1rem !default;
-$font-size-lg:              1.125rem !default;
-$font-size-xl:              1.25rem !default;
-$font-size-xxl:             1.5rem !default;
+$font-size-xxs:             .625em !default;
+$font-size-xs:              .75em !default;
+$font-size-sm:              .875em !default;
+$font-size-md:              1em !default;
+$font-size-lg:              1.125em !default;
+$font-size-xl:              1.25em !default;
+$font-size-xxl:             1.5em !default;
 
 
 // Line height
@@ -237,21 +237,31 @@ $btn-important-bg:        $important !default;
 $btn-important-border:    $important !default;
 
 
-$btn-font-size-sm:          $font-size-sm;
-$btn-padding-x-sm:          .5rem !default;
-$btn-padding-y-sm:          .25rem !default;
+$btn-font-size-sm:          $font-size-xs;
+$btn-padding-x-sm:          .5em !default;
+$btn-padding-y-sm:          .25em !default;
 
 $btn-font-size-md:          $font-size-sm;
-$btn-padding-x-md:          1rem !default;
-$btn-padding-y-md:          .5rem !default;
+$btn-padding-x-md:          1em !default;
+$btn-padding-y-md:          .5em !default;
 
-$btn-font-size-lg:          $font-size-sm;
-$btn-padding-x-lg:          1.5rem !default;
-$btn-padding-y-lg:          .75rem !default;
+$btn-font-size-lg:          $font-size-md;
+$btn-padding-x-lg:          1.5em !default;
+$btn-padding-y-lg:          .75em !default;
 
-$btn-font-size-xl:          $font-size-sm;
-$btn-padding-x-xl:          3rem !default;
-$btn-padding-y-xl:          1rem !default;
+$btn-font-size-xl:          $font-size-lg;
+$btn-padding-x-xl:          3em !default;
+$btn-padding-y-xl:          .75em !default;
+
+$btn-round-width-sm:        2em;
+$btn-round-width-md:        2.5em;
+$btn-round-width-lg:        3.75em;
+$btn-round-width-xl:        5em;
+
+$btn-square-width-sm:       1.5em;
+$btn-square-width-md:       2.5em;
+$btn-square-width-lg:       3.75em;
+$btn-square-width-xl:       5em;
 
 
 // Grid
