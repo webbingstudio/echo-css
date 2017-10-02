@@ -1,0 +1,121 @@
+/*
+btn-block
+--------------------
+*/
+
+/*
+note: Padding in button
+.btn-block, .btn-round, .btn-squareでは、.btnのpaddingの初期値を上書きする必要があります。このため、意図的にクラスを追加して優先度を上げています。
+In .btn-block, .btn-round, .btn-square, need to override the default padding of .btn. For this reason, intentionally add classes to increase priority.
+--------------------
+*/
+
+.#{$p}btn-block {
+    display: block;
+    width: 100%;
+    max-width: 240px; 
+    margin: 0 auto;
+
+    &.#{$p}btn {
+        padding-left: .5rem;
+        padding-right: .5rem;
+    }
+
+    &.#{$p}btn-sm {
+      max-width: 180px; 
+    }
+
+    &.#{$p}btn-lg {
+      max-width: 320px; 
+    }
+
+    &.#{$p}btn-xl {
+      max-width: 480px; 
+    }
+
+}
+
+/*
+btn-round
+--------------------
+*/
+
+.#{$p}btn-round {
+    overflow: hidden;
+    width: $btn-round-width-md;
+    height: $btn-round-width-md;
+    line-height: $btn-round-width-md;
+    border-radius: 50%;
+
+    &.#{$p}btn {
+        padding: 0;
+    }
+
+    &.#{$p}btn-sm {
+        width: $btn-round-width-sm;
+        height: $btn-round-width-sm;
+        line-height: $btn-round-width-sm;
+    }
+
+    &.#{$p}btn-lg {
+        width: $btn-round-width-lg;
+        height: $btn-round-width-lg;
+        line-height: $btn-round-width-lg;
+    }
+
+    &.#{$p}btn-xl {
+        width: $btn-round-width-xl;
+        height: $btn-round-width-xl;
+        line-height: $btn-round-width-xl;
+    }
+
+}
+
+
+/*
+btn-square
+--------------------
+*/
+
+.#{$p}btn-square {
+    overflow: hidden;
+    width: $btn-square-width-md;
+    height: $btn-square-width-md;
+    line-height: $btn-square-width-md;
+
+    &.#{$p}btn {
+        padding: 0;
+        border-radius: $border-radius-sm;
+    }
+
+    &.#{$p}btn-sm {
+        width: $btn-square-width-sm;
+        height: $btn-square-width-sm;
+        line-height: $btn-square-width-sm;
+    }
+
+    &.#{$p}btn-lg {
+        width: $btn-square-width-lg;
+        height: $btn-square-width-lg;
+        line-height: $btn-square-width-lg;
+    }
+
+    &.#{$p}btn-xl {
+        width: $btn-square-width-xl;
+        height: $btn-square-width-xl;
+        line-height: $btn-square-width-xl;
+    }
+
+}
+
+
+/*
+btn-oval
+--------------------
+*/
+
+.#{$p}btn-oval {
+    border-radius: 3em;
+}
+
+
