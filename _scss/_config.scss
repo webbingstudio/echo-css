@@ -117,23 +117,22 @@ $border-inverse-color:       #666666 !default;
          local('Yu Gothic');
   }
 
-  @import url('https://fonts.googleapis.com/css?family=Oxygen:300,400,700');
 }
 
 // Font family
 // -----------------------------------------
 
-$font-family-root:          'PGYuGothic', 'YuGothic', '-apple-system', 'BlinkMacSystemFont', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif !default;
-$font-weight-root:          300 !default;
-$font-family-bold-root:     $font-family-root;
-$font-weight-bold-root:     700 !default;
+$font-family-root:             'PGYuGothic', 'YuGothic', '-apple-system', 'BlinkMacSystemFont', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif !default;
+$font-weight-root:             300 !default;
+$font-family-bold-root:        $font-family-root;
+$font-weight-bold-root:        700 !default;
 
-$font-family-mono:          'Consolas', 'Liberation Mono', 'Menlo', 'Courier', monospace !default;
+$font-family-mono:             'Consolas', 'Liberation Mono', 'Menlo', 'Courier', monospace !default;
 
 // first: heading
-$font-family-first:            '游明朝', 'Yu Mincho', '游明朝体', 'YuMincho', 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', 'HiraMinProN-W3', "HGS明朝E", 'ＭＳ Ｐ明朝', 'MS PMincho', serif !default;
+$font-family-first:            '游明朝', 'Yu Mincho', '游明朝体', 'YuMincho', 'Hiragino Mincho Pro', 'ＭＳ Ｐ明朝', 'MS PMincho', 'Bookman Old Style', 'Times New Roman', '-apple-system', 'BlinkMacSystemFont', serif !default;
 $font-weight-first:            300 !default;
-$font-family-bold-first:       '游明朝', 'Yu Mincho', '游明朝体', 'YuMincho', 'ヒラギノ明朝 Pro W6', 'Hiragino Mincho Pro', 'HiraMinProN-W6', "HGS明朝E", 'ＭＳ Ｐ明朝', 'MS PMincho', serif !default;
+$font-family-bold-first:       $font-family-first;
 $font-weight-bold-first:       700 !default;
 
 // second: english, date, number, badge
@@ -143,10 +142,10 @@ $font-family-bold-second:      $font-family-second;
 $font-weight-bold-second:      700 !default;
 
 // third: hero, etc
-$font-family-third:            'Oxygen', 'PGYuGothic', 'YuGothic', '-apple-system', 'Roboto', 'Open Sans', 'Arial', 'Helvetica', sans-serif !default;
-$font-weight-third:            300 !default;
-$font-family-bold-third:       $font-family-third;
-$font-weight-bold-third:       700 !default;
+$font-family-third:            $font-family-first;
+$font-weight-third:            $font-weight-first;
+$font-family-bold-third:       $font-family-bold-first;
+$font-weight-bold-third:       $font-weight-bold-first;
 
 
 // Font size
