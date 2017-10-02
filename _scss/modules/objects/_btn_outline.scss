@@ -1,0 +1,82 @@
+/*
+btn-outline-(modifier)
+--------------------
+*/
+
+/*
+note: modifier in class
+別パターンが追加される可能性があるコンポーネントには、01から開始するmodifierを付与しています。
+components that may have other patterns add will be given a modifier starting at 01.
+--------------------
+*/
+
+.#{$p}btn-outline-01 {
+
+    &.#{$p}btn {
+        @include button-variant(
+            $body-color,
+            transparent,
+            $body-color,
+            $body-inverse-color,
+            $body-inverse-bg,
+            $body-inverse-bg
+        );
+    }
+
+    &.#{$p}btn-first {
+        @include button-variant(
+            $body-color,
+            transparent,
+            $btn-first-border,
+            $btn-first-color,
+            $btn-first-bg,
+            $btn-first-border
+        );
+    }
+
+    &.#{$p}btn-second {
+        @include button-variant(
+            $body-color,
+            transparent,
+            $btn-second-border,
+            $btn-second-color,
+            $btn-second-bg,
+            $btn-second-border
+        );
+    }
+
+    &.#{$p}btn-third {
+        @include button-variant(
+            $body-color,
+            transparent,
+            $btn-third-border,
+            $btn-third-color,
+            $btn-third-bg,
+            $btn-third-border
+        );
+    }
+
+    &.#{$p}btn-info {
+        @include button-variant(
+            $body-color,
+            transparent,
+            $btn-info-border,
+            $btn-info-color,
+            $btn-info-bg,
+            $btn-info-border
+        );
+    }
+
+    &.#{$p}btn-important {
+        @include button-variant(
+            $body-color,
+            transparent,
+            $btn-important-border,
+            $btn-important-color,
+            $btn-important-bg,
+            $btn-important-border
+        );
+    }
+
+}
+
