@@ -1,0 +1,87 @@
+/*
+btn
+--------------------
+*/
+
+.#{$p}btn {
+    position: relative;
+    display: inline-block;
+    color: $body-color;
+    font-size: $btn-font-size-md;
+    font-family: $font-family-root;
+    font-weight: $font-weight-root;
+    border: $border-width solid $border-color;
+    padding: $btn-padding-y-md $btn-padding-x-md;
+    text-align: center;
+    line-height: $line-height-xs;
+    border-radius: $border-radius-md;
+    vertical-align: middle;
+    transition: .3s all;
+
+    @at-root {
+        a#{&} {
+            text-decoration: none;
+
+            &:hover,
+            &:focus {
+                text-decoration: none;
+            }
+
+        }
+
+        span#{&} {
+
+            &:hover,
+            &:focus {
+                cursor: default;
+            }
+
+        }
+    }
+
+    &,
+    &:active,
+    &.active {
+
+        &:focus,
+        &.focus {
+            outline: 0 none;
+            outline-offset: 0;
+        }
+
+    }
+
+    &:hover,
+    &.hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+        color: $body-color;
+        background-color: $default-fade;
+        text-decoration: none;
+    }
+
+    &.disabled,
+    &:disabled,
+    fieldset[disabled] & {
+        cursor: default;
+        opacity: .65;
+
+        &:hover,
+        &.hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active {
+            background-color: transparent;
+        }
+
+    }
+
+}
+
+a.#{$p}btn.disaabled,
+fieldset[disabled] a.#{$p}btn {
+    pointer-events: none;
+}

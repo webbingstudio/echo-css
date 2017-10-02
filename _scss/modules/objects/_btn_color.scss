@@ -1,0 +1,48 @@
+/*
+btn-color
+--------------------
+*/
+
+.#{$p}btn-first {
+  @include button-variant(
+    $btn-first-color,
+    $btn-first-bg,
+    $btn-first-border,
+    $btn-first-color,
+    saturate(darken($btn-first-bg, 10%), 10%),
+    saturate(darken($btn-first-bg, 10%), 10%)
+  );
+}
+
+.#{$p}btn-second {
+  @include button-variant(
+    $btn-second-color,
+    $btn-second-bg,
+    $btn-second-border,
+    $btn-second-color,
+    saturate(darken($btn-second-bg, 10%), 10%),
+    saturate(darken($btn-second-bg, 10%), 10%)
+  );
+}
+
+.#{$p}btn-third {
+  @include button-variant(
+    $btn-third-color,
+    $btn-third-bg,
+    $btn-third-border,
+    $btn-third-color,
+    saturate(darken($btn-third-bg, 10%), 10%),
+    saturate(darken($btn-third-bg, 10%), 10%)
+  );
+}
+
+.#{$p}btn-important {
+  @include button-variant(
+    $btn-important-color,
+    $btn-important-bg,
+    $btn-important-border,
+    $btn-important-color,
+    saturate(darken($btn-important-bg, 10%), 10%),
+    saturate(darken($btn-important-bg, 10%), 10%)
+  );
+}
