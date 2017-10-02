@@ -1,0 +1,56 @@
+/*
+reset
+------------
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td,
+th {
+    padding: 0;
+}
+
+th {
+    text-align: left;
+}
+
+
+b, th, dt, optgroup, strong {
+    font-family: $font-family-bold-root;
+    font-weight: $font-weight-bold-root;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dt {
+    font-family: $font-family-bold-root;
+    font-weight: $font-weight-bold-root;
+}
+
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+    cursor: pointer;
+}
+
