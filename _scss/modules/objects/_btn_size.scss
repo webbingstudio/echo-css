@@ -8,12 +8,8 @@ btn-(size)
     padding-bottom: $btn-padding-y-sm;
     font-size: $btn-font-size-sm;
     border-radius: $border-radius-sm;
-
-    &:not([class*="btn-block"]) {
-        padding-left: $btn-padding-x-sm;
-        padding-right: $btn-padding-x-sm;
-    }
-
+    padding-left: $btn-padding-x-sm;
+    padding-right: $btn-padding-x-sm;
 }
 
 .#{$p}btn-lg {
@@ -21,12 +17,8 @@ btn-(size)
     padding-bottom: $btn-padding-y-lg;
     font-size: $btn-font-size-lg;
     border-radius: $border-radius-lg;
-
-    &:not([class*="btn-block"]) {
-        padding-left: $btn-padding-x-lg;
-        padding-right: $btn-padding-x-lg;
-    }
-
+    padding-left: $btn-padding-x-lg;
+    padding-right: $btn-padding-x-lg;
 }
 
 .#{$p}btn-xl {
@@ -35,11 +27,7 @@ btn-(size)
     font-size: $btn-font-size-xl;
     border-width: ($border-width * 2);
     border-radius: $border-radius-xl;
-
-    &:not([class*="btn-block"]) {
-        padding-left: $btn-padding-x-xl;
-        padding-right: $btn-padding-x-xl;
-    }
-
+    padding-left: $btn-padding-x-xl;
+    padding-right: $btn-padding-x-xl;
 }
 
