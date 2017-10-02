@@ -1,0 +1,52 @@
+/*
+badge
+--------------------
+*/
+
+.#{$p}badge {
+    overflow: hidden;
+    display: inline-block;
+    padding: 2em .5em .5em;
+    border-radius: 0 0 $border-radius-md $border-radius-md;
+    background: $body-bg;
+    color: $body-color;
+    border: 1px solid $border-color;
+    font-family: $font-family-second;
+    font-weight: $font-weight-second;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    text-align: center;
+    line-height: $line-height-none;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.#{$p}badge-first {
+    color: $body-inverse-color;
+    border-color: $first;
+    background-color: $first;
+}
+
+.#{$p}badge-second {
+    color: $body-inverse-color;
+    border-color: $second;
+    background-color: $second;
+}
+
+.#{$p}badge-third {
+    color: $body-inverse-color;
+    border-color: $third;
+    background-color: $third;
+}
+
+.#{$p}badge-info {
+    color: $body-inverse-color;
+    border-color: $third;
+    background-color: $third;
+}
+
+.#{$p}badge-important {
+    color: $body-inverse-color;
+    border-color: $important;
+    background-color: $important;
+}
