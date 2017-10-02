@@ -1,0 +1,26 @@
+/*
+btn-inverse
+--------------------
+*/
+
+.#{$p}btn-inverse {
+    @include button-variant(
+        $body-inverse-color,
+        rgba($body-bg, .25),
+        transparent,
+        $body-inverse-color,
+        rgba($body-bg, .4),
+        transparent
+    );
+
+    &.#{$p}btn-outline {
+        @include button-variant(
+            $body-inverse-color,
+            $body-inverse-bg,
+            rgba($body-inverse-color, .8),
+            $body-inverse-color,
+            rgba($body-bg, .2),
+            $body-inverse-color
+        );
+    }
+}
