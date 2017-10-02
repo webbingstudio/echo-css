@@ -30,6 +30,12 @@ gulp.task('sass', () =>
     .on('error', sass.logError)
     .pipe(gulp.dest(project_dist + 'css/'))
 );
+gulp.task('sassmin', () =>
+  sass('_scss/*.scss', { style: 'compressed' })
+    .on('error', sass.logError)
+    .pipe(rename({extname: '.min.css'}))
+    .pipe(gulp.dest(project_dist + 'css/'))
+);
 
 // js
 // gulp.task('js', function() {
@@ -50,6 +56,7 @@ gulp.task('watch', function(){
       '_scss/**/*.scss'
     ], function(event) {
     gulp.run('sass');
+    gulp.run('sassmin');
   });
 
 //   gulp.watch([
