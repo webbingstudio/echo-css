@@ -1,0 +1,181 @@
+@charset "UTF-8";
+/*!
+ * echo.css - version 0.0.1 (under construction)
+ * 
+ * "echo" is CSS framework, built with consider CMS theming in East asian countries.
+ * 
+ * Copyright 2017 WebbingStudio
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ * 
+ */
+/*
+reset
+--------------------
+*/
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+th {
+  text-align: left;
+}
+
+b, th, dt, optgroup, strong {
+  font-family: "PGYuGothic", "YuGothic", "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dt {
+  font-family: "PGYuGothic", "YuGothic", "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  font-weight: 700;
+}
+
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  cursor: pointer;
+}
+
+/*
+base
+--------------------
+*/
+/* thanks: https://speakerdeck.com/tacamy/modanri-ben-yu-huontozhi-ding */
+@font-face {
+  font-family: 'PGYuGothic';
+  font-weight: normal;
+  src: local("YuGothic-Medium"), local("Yu Gothic Medium"), local("YuGothic-Regular");
+}
+@font-face {
+  font-family: 'PGYuGothic';
+  font-weight: bold;
+  src: local("YuGothic-Bold"), local("Yu Gothic");
+}
+html {
+  font-size: 1rem;
+  font-family: "PGYuGothic", "YuGothic", "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  font-weight: 300;
+}
+@media (max-width: 767.9px) {
+  html {
+    font-size: 0.875rem;
+  }
+}
+@media (min-width: 1280px) {
+  html {
+    font-size: 1.125rem;
+  }
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  line-height: 1.75;
+}
+
+/*
+note: Underline of Link
+wysiwyg(リッチテキスト)の適用範囲内のみ、リンクにcolorやtext-decorationを指定することは、適切ではありません。スタイルの優先度が、その装飾を必要としないモジュールよりも、高くなってしまうことを回避するためです。
+It is not appropriate to specify color or text-decoration for the link only within the scope of wysiwyg (rich text). This is to avoid that the priority of the style will be higher than the module that does not require that decoration.
+--------------------
+*/
+a {
+  color: #28b;
+  text-decoration: underline;
+}
+a:hover, a:focus {
+  color: #73b0e1;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code {
+  margin: 0;
+}
+
+p,
+pre,
+blockquote {
+  margin: 0 0 1.5em;
+}
+
+ul,
+ol {
+  margin: 0 0 1.5em;
+  padding-left: 1.25em;
+}
+
+li {
+  margin: 0 0 1em;
+}
+
+dl {
+  margin: 0 0 1.5em;
+}
+
+dt {
+  margin: 0 0 .5em;
+}
+
+dd {
+  margin: 0 0 1em 2em;
+}
+dd:last-child {
+  margin-bottom: 0;
+}
+
+/*
+note: Font Families in Form
+日本では、フォームの入力フィールドにサンセリフフォントを指定する傾向があります。 これは、入力フォームに適用される標準フォントが、OSによって大きく異なるためです。
+In Japan, there is a tendency to specify sans-serif fonts in the form input fields. This is because standard fonts applied to input fields vary greatly depending on the OS.
+--------------------
+*/
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="time"],
+input[type="number"] {
+  font-size: 1em;
+  font-family: '-apple-system', 'BlinkMacSystemFont', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+  font-weight: 300;
+}
+
+select {
+  font-family: '-apple-system', 'BlinkMacSystemFont', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+  font-weight: 300;
+}
