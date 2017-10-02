@@ -1,16 +1,9 @@
 /*
-btn-outline-(modifier)
+btn-outline
 --------------------
 */
 
-/*
-note: modifier in class
-別パターンが追加される可能性があるコンポーネントには、01から開始するmodifierを付与しています。
-components that may have other patterns add will be given a modifier starting at 01.
---------------------
-*/
-
-.#{$p}btn-outline-01 {
+.#{$p}btn-outline {
 
     &.#{$p}btn {
         @include button-variant(
