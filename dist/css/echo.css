@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * echo.css - version 0.0.3 (under construction)
+ * echo.css - version 0.0.4 (under construction)
  * 
  * "echo" is CSS framework, built with consider CMS theming in East asian countries.
  * 
@@ -140,7 +140,11 @@ ol {
 }
 
 li {
-  margin: 0 0 1em;
+  margin: 0 0 .5em;
+}
+li > ul,
+li > ol {
+  margin: .5em 0;
 }
 
 dl {
@@ -210,8 +214,8 @@ badge
 
 .badge-second {
   color: #fff;
-  border-color: #333;
-  background-color: #333;
+  border-color: #444;
+  background-color: #444;
 }
 
 .badge-third {
@@ -228,8 +232,8 @@ badge
 
 .badge-important {
   color: #fff;
-  border-color: #d45;
-  background-color: #d45;
+  border-color: #e34050;
+  background-color: #e34050;
 }
 
 /*
@@ -267,7 +271,7 @@ span.btn:hover, span.btn:focus {
 }
 .btn:hover, .btn.hover, .btn:focus, .btn.focus, .btn:active, .btn.active {
   color: #333;
-  background-color: #eee;
+  background-color: #f3f3f3;
   text-decoration: none;
 }
 .btn.disabled, .btn:disabled, fieldset[disabled] .btn {
@@ -308,21 +312,21 @@ btn-(color)
 
 .btn-second {
   color: #fff;
-  background-color: #333;
-  border-color: #333;
+  background-color: #444;
+  border-color: #444;
 }
 .btn-second:hover, .btn-second:focus, .btn-second:active, .btn-second.active {
   color: #fff;
-  background-color: #1c1717;
-  border-color: #1c1717;
+  background-color: #2f2626;
+  border-color: #2f2626;
 }
 .btn-second.disabled, .btn-second:disabled, fieldset[disabled] .btn-second {
   opacity: .8;
 }
 .btn-second.disabled:hover, .btn-second.disabled.hover, .btn-second.disabled:focus, .btn-second.disabled.focus, .btn-second:disabled:hover, .btn-second:disabled.hover, .btn-second:disabled:focus, .btn-second:disabled.focus, fieldset[disabled] .btn-second:hover, fieldset[disabled] .btn-second.hover, fieldset[disabled] .btn-second:focus, fieldset[disabled] .btn-second.focus {
   color: #fff;
-  background-color: #333;
-  border-color: #333;
+  background-color: #444;
+  border-color: #444;
 }
 
 .btn-third {
@@ -365,21 +369,21 @@ btn-(color)
 
 .btn-important {
   color: #fff;
-  background-color: #d45;
-  border-color: #d45;
+  background-color: #e34050;
+  border-color: #e34050;
 }
 .btn-important:hover, .btn-important:focus, .btn-important:active, .btn-important.active {
   color: #fff;
-  background-color: #d5192e;
-  border-color: #d5192e;
+  background-color: #dd1327;
+  border-color: #dd1327;
 }
 .btn-important.disabled, .btn-important:disabled, fieldset[disabled] .btn-important {
   opacity: .8;
 }
 .btn-important.disabled:hover, .btn-important.disabled.hover, .btn-important.disabled:focus, .btn-important.disabled.focus, .btn-important:disabled:hover, .btn-important:disabled.hover, .btn-important:disabled:focus, .btn-important:disabled.focus, fieldset[disabled] .btn-important:hover, fieldset[disabled] .btn-important.hover, fieldset[disabled] .btn-important:focus, fieldset[disabled] .btn-important.focus {
   color: #fff;
-  background-color: #d45;
-  border-color: #d45;
+  background-color: #e34050;
+  border-color: #e34050;
 }
 
 /*
@@ -439,12 +443,12 @@ btn-outline
 .btn-outline.btn-second {
   color: #333;
   background-color: transparent;
-  border-color: #333;
+  border-color: #444;
 }
 .btn-outline.btn-second:hover, .btn-outline.btn-second:focus, .btn-outline.btn-second:active, .btn-outline.btn-second.active {
   color: #fff;
-  background-color: #333;
-  border-color: #333;
+  background-color: #444;
+  border-color: #444;
 }
 .btn-outline.btn-second.disabled, .btn-outline.btn-second:disabled, fieldset[disabled] .btn-outline.btn-second {
   opacity: .8;
@@ -452,7 +456,7 @@ btn-outline
 .btn-outline.btn-second.disabled:hover, .btn-outline.btn-second.disabled.hover, .btn-outline.btn-second.disabled:focus, .btn-outline.btn-second.disabled.focus, .btn-outline.btn-second:disabled:hover, .btn-outline.btn-second:disabled.hover, .btn-outline.btn-second:disabled:focus, .btn-outline.btn-second:disabled.focus, fieldset[disabled] .btn-outline.btn-second:hover, fieldset[disabled] .btn-outline.btn-second.hover, fieldset[disabled] .btn-outline.btn-second:focus, fieldset[disabled] .btn-outline.btn-second.focus {
   color: #333;
   background-color: transparent;
-  border-color: #333;
+  border-color: #444;
 }
 .btn-outline.btn-third {
   color: #333;
@@ -493,12 +497,12 @@ btn-outline
 .btn-outline.btn-important {
   color: #333;
   background-color: transparent;
-  border-color: #d45;
+  border-color: #e34050;
 }
 .btn-outline.btn-important:hover, .btn-outline.btn-important:focus, .btn-outline.btn-important:active, .btn-outline.btn-important.active {
   color: #fff;
-  background-color: #d45;
-  border-color: #d45;
+  background-color: #e34050;
+  border-color: #e34050;
 }
 .btn-outline.btn-important.disabled, .btn-outline.btn-important:disabled, fieldset[disabled] .btn-outline.btn-important {
   opacity: .8;
@@ -506,7 +510,7 @@ btn-outline
 .btn-outline.btn-important.disabled:hover, .btn-outline.btn-important.disabled.hover, .btn-outline.btn-important.disabled:focus, .btn-outline.btn-important.disabled.focus, .btn-outline.btn-important:disabled:hover, .btn-outline.btn-important:disabled.hover, .btn-outline.btn-important:disabled:focus, .btn-outline.btn-important:disabled.focus, fieldset[disabled] .btn-outline.btn-important:hover, fieldset[disabled] .btn-outline.btn-important.hover, fieldset[disabled] .btn-outline.btn-important:focus, fieldset[disabled] .btn-outline.btn-important.focus {
   color: #333;
   background-color: transparent;
-  border-color: #d45;
+  border-color: #e34050;
 }
 
 /*
@@ -646,4 +650,230 @@ btn-oval
 */
 .btn-oval {
   border-radius: 3em;
+}
+
+/*
+box
+--------------------
+*/
+.box {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid transparent;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+}
+.box:before, .box:after {
+  content: "";
+  display: table;
+}
+.box:after {
+  clear: both;
+}
+@media (min-width: 768px) {
+  .box {
+    padding: 30px;
+  }
+}
+@media (min-width: 1280px) {
+  .box {
+    margin-bottom: 30px;
+  }
+}
+.box p:last-child,
+.box ul:last-child,
+.box ol:last-child,
+.box dl:last-child {
+  margin-bottom: 0;
+}
+
+.box-first {
+  background-color: rgba(68, 153, 221, 0.2);
+}
+
+.box-second {
+  background-color: #eaeaea;
+}
+
+.box-third {
+  background-color: rgba(85, 182, 119, 0.2);
+}
+
+.box-info {
+  background-color: rgba(85, 182, 119, 0.2);
+}
+
+.box-important {
+  background-color: #ffe9ee;
+}
+
+.box-outline {
+  background-color: #fff;
+  border-color: #aaa;
+}
+.box-outline.box-first {
+  border-color: #73b0e1;
+}
+.box-outline.box-second {
+  border-color: #777;
+}
+.box-outline.box-third {
+  border-color: #7dc195;
+}
+.box-outline.box-info {
+  border-color: #7dc195;
+}
+.box-outline.box-important {
+  border-color: #e5717c;
+}
+
+/*
+dfn
+--------------------
+*/
+.dfn {
+  display: inline-table;
+}
+.dfn .dfn-header {
+  display: table-cell;
+  padding-right: .25em;
+  font-size: 3em;
+  font-weight: 300;
+  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
+  text-align: center;
+  line-height: 1;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+@media (min-width: 375px) {
+  .dfn .dfn-header {
+    padding-right: .4em;
+  }
+}
+.dfn .dfn-contents {
+  display: table-cell;
+  text-align: left;
+  font-size: 0.875em;
+  line-height: 1.5;
+  padding-top: 0.5em;
+  vertical-align: middle;
+}
+
+/*
+label
+--------------------
+*/
+.label {
+  display: inline-block;
+  min-width: 3em;
+  margin-right: .5em;
+  padding: .25rem .75em .3rem;
+  -webkit-transform: translate(0, -0.125rem);
+  -ms-transform: translate(0, -0.125rem);
+  transform: translate(0, -0.125rem);
+  background-color: #aaa;
+  font-size: 0.75em;
+  color: #fff;
+  text-align: center;
+  line-height: 1;
+  vertical-align: middle;
+  border-radius: 1em;
+}
+a.label {
+  color: #fff;
+  text-decoration: none;
+}
+a.label:hover, a.label:focus, a.label:active {
+  color: #fff;
+  text-decoration: none;
+}
+
+.label-first {
+  background-color: #49d;
+}
+
+.label-second {
+  background-color: #444;
+}
+
+.label-third {
+  background-color: #55B677;
+}
+
+.label-info {
+  background-color: #55B677;
+}
+
+.label-important {
+  background-color: #e34050;
+}
+
+/*
+list
+--------------------
+*/
+.list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.list-item {
+  position: relative;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.list-children {
+  margin: 0;
+  list-style-type: none;
+}
+
+.list-vertical .list-item {
+  margin-top: .75em;
+  margin-bottom: .75em;
+}
+.list-vertical .list-children {
+  padding-left: 0;
+}
+.list-vertical .list-children .list-item {
+  font-size: .9em;
+  padding-left: 1.5em;
+}
+.list-vertical .list-children .list-item:before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: .5em;
+  left: .75em;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: .25em .375em;
+  border-color: transparent transparent transparent #aaa;
+}
+
+.list-horizontal {
+  letter-spacing: -.4em;
+}
+.list-horizontal .list-item {
+  display: inline-block;
+  padding-right: 1em;
+  letter-spacing: normal;
+}
+.list-horizontal .list-item:before {
+  display: inline-block;
+  content: "";
+  width: 1px;
+  height: 1.125em;
+  margin-right: 1em;
+  background-color: #cccccc;
+  vertical-align: middle;
+}
+.list-horizontal .list-item:first-child:before {
+  display: none;
+}
+.list-horizontal .list-item:last-child {
+  padding-right: 0;
 }
