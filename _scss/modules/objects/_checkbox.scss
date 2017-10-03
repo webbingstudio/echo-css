@@ -1,0 +1,19 @@
+/*
+checkbox
+--------------------
+*/
+
+.#{$p}checkbox {
+    display: inline-block;
+
+    &.#{$error},
+    .#{$error} & {
+        color: $important-text;
+    }
+
+    input[type="checkbox"] {
+        margin: 0;
+        vertical-align: middle;
+    }
+
+}
