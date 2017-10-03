@@ -1,0 +1,30 @@
+/*
+input
+--------------------
+*/
+
+.#{$p}input {
+    padding: .375rem .5rem;
+    background: $body-bg none;
+    border: $border-width solid $border-color;
+    color: $body-color;
+    border-radius: $border-radius-sm;
+    vertical-align: middle;
+
+    &.#{$error},
+    .#{$error} & {
+        background-color: $important-fade;
+        border-color: $important;
+    }
+
+    &.#{$p}input-sm {
+        padding: .25rem;
+        font-size: $font-size-sm;
+    }
+
+    &.#{$p}input-lg {
+        padding: .5rem .5rem;
+        font-size: $font-size-lg;
+    }
+
+}
