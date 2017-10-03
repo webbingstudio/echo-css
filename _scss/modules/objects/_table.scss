@@ -1,0 +1,175 @@
+/*
+table
+--------------------
+*/
+
+.#{$p}table {
+    display: block;
+    max-width: 100%;
+    background-color: $body-bg;
+    border: 0 none;
+
+    @include media-breakpoint-up(md) {
+        display: table;
+    }
+
+    thead,
+    tbody,
+    tfoot {
+        display: block;
+
+        @include media-breakpoint-up(md) {
+            display: table-row-group;
+        }
+
+    }
+
+    th,
+    td {
+        display: block;
+        width: 100%;
+        line-height: $line-height-sm;
+        border: 0 none;
+        padding: 0 0 .5rem;
+        vertical-align: top;
+
+        @include media-breakpoint-up(md) {
+            display: table-cell;
+            width: auto;
+            padding-left: .5em;
+            padding-right: .5em;
+        }
+
+    }
+
+    tr {
+        display: block;
+        border: 0 none;
+
+        @include media-breakpoint-up(md) {
+            display: table-row;
+        }
+
+        th,
+        td {
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+            &:last-child {
+                padding-right: 0;
+            }
+
+        }
+
+    }
+
+    thead {
+        border-bottom: $border-width solid $border-color;
+
+        th {
+            text-align: center;
+            vertical-align: bottom;
+        }
+
+    }
+
+}
+
+.#{$p}table-01 {
+    border-top: $border-width solid $border-color;
+    border-left: $border-width solid $border-color;
+
+    th,
+    td {
+        border-bottom: $border-width solid $border-color;
+        border-right: $border-width solid $border-color;
+        padding-top: .5em;
+        padding-bottom: .5em;
+    }
+
+}
+
+.#{$p}table-02 {
+
+    th,
+    td {
+        border-bottom: $border-width solid $border-color;
+        padding-top: 1em;
+        padding-bottom: .5em;
+    }
+
+    tr {
+
+        th,
+        td {
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+            &:last-child {
+                padding-left: 0;
+            }
+
+        }
+
+    }
+
+}
+
+.#{$p}table-3to9 {
+
+    tr {
+
+        th,
+        td {
+            @include media-breakpoint-up(md) {
+                width: percentage(9 / 12);
+            }
+
+            &:first-child {
+
+                @include media-breakpoint-up(md) {
+                    width: percentage(3 / 12);
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+.#{$p}table-4to8 {
+
+    tr {
+
+        th,
+        td {
+            @include media-breakpoint-up(md) {
+                width: percentage(8 / 12);
+            }
+
+            &:first-child {
+
+                @include media-breakpoint-up(md) {
+                    width: percentage(4 / 12);
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+.#{$p}table-justify {
+    @include media-breakpoint-up(md) {
+        width: 100%;
+        table-layout: fixed;
+    }
+}
