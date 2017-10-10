@@ -25,13 +25,27 @@ list
     #{$list-item} {
         margin-top: .75em;
         margin-bottom: .75em;
+        padding-left: 1.25em;
+
+        @include chevron( 'right', $default-mild ) {
+            &:before {
+                top: .65em;
+                left: .25em;
+            }
+
+            &:after {
+                top: .65em;
+                left: .25em;
+            }
+
+        }
+
     }
 
     #{$list-children} {
         padding-left: 0;
 
         #{$list-item} {
-            padding-left: 1.5em;
             font-size: .9em;
         }
 
