@@ -1,9 +1,10 @@
 /*
-checkbox
+radio
 --------------------
 */
 
-.#{$p}checkbox {
+.#{$p}radio {
+    position: relative;
     display: inline-block;
 
     &.#{$error},
@@ -11,13 +12,13 @@ checkbox
         color: $important-text;
     }
 
-    input[type="checkbox"] {
+    input[type="radio"] {
         display: inline-block;
         margin: 0;
         vertical-align: middle;
-        -webkit-transform:translate(0, -10%);
-        -ms-transform:translate(0, -10%);
-        transform:translate(0, -10%);
+        -webkit-transform:translate(0, -15%);
+        -ms-transform:translate(0, -15%);
+        transform:translate(0, -15%);
     }
 
 }
