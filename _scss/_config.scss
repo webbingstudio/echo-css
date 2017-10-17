@@ -42,10 +42,10 @@ $error: "is-error" !default;
 // ex. wysiwyg, freetext, richtext...
 $wysiwyg: "wysiwyg" !default;
 
-// utillity-wrap-class
-// ユーティリティクラスの優先順位を上昇させるために、これらを必ず包括する要素のクラス名を指定する
-// In order to raise the priority of the utility class, specify the class name of the element that always includes them
-$u-wrap: ".l-document .l-document-inner" !default;
+// utillity-wrap-selector
+// ユーティリティクラスの優先順位を上昇させるために、点数が30（0.0.3.0）以上になるようなセレクタを指定する
+// In order to raise the priority of the utility class, specify a selector whose score is 30 (0.0.3.0) or more
+$u-wrap: "#document" !default;
 
 
 // Spacing
