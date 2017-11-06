@@ -1,0 +1,93 @@
+/*
+title
+--------------------
+*/
+
+.#{$p}title {
+    margin: 0;
+    padding: 0;
+    background: transparent none;
+    border: 0 none;
+    color: inherit;
+    text-align: inherit;
+    line-height: $line-height-sm;
+    border-radius: 0;
+
+    &:before,
+    &:after {
+        display: none;
+    }
+
+}
+
+.#{$p}title-01 {
+    font-size: 2em;
+    font-weight: $font-weight-first;
+    font-family: $font-family-first;
+    letter-spacing: .1em;
+    text-align: center;
+
+    @include media-breakpoint-up(sm) {
+        font-size: 2.25em;
+    }
+
+    @include media-breakpoint-up(lg) {
+        font-size: 2.5em;
+    }
+
+}
+
+.#{$p}title-02 {
+    font-size: 1.5em;
+    font-weight: $font-weight-first;
+    font-family: $font-family-first;
+    letter-spacing: .1em;
+
+    @include media-breakpoint-up(sm) {
+        font-size: 1.75em;
+    }
+
+    @include media-breakpoint-up(lg) {
+        font-size: 1.75em;
+    }
+}
+
+.#{$p}title-03 {
+    font-size: 1.25em;
+    font-weight: $font-weight-bold-root;
+    font-family: $font-family-root;
+
+    @include media-breakpoint-up(lg) {
+        font-size: 1.5em;
+    }
+}
+
+.#{$p}title-04 {
+    font-size: 1.125em;
+    font-weight: $font-weight-bold-root;
+    font-family: $font-family-root;
+
+    @include media-breakpoint-up(lg) {
+        font-size: 1.25em;
+    }
+}
+
+.#{$p}title-05 {
+    font-size: 1.0625em;
+    font-weight: $font-weight-bold-root;
+    font-family: $font-family-root;
+
+    @include media-breakpoint-up(lg) {
+        font-size: 1.125em;
+    }
+}
+
+.#{$p}title-06 {
+    font-size: 1em;
+    font-weight: $font-weight-bold-root;
+    font-family: $font-family-root;
+
+    @include media-breakpoint-up(lg) {
+        font-size: 1.0625em;
+    }
+}
