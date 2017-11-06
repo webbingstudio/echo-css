@@ -6,7 +6,7 @@ select
 .#{$p}select {
     display: inline-block;
 
-    @include chevron( 'down', $default-mild ) {
+    @include chevron( 'down', $gray-mild ) {
         &:before {
             right: 1em;
             z-index: 2;

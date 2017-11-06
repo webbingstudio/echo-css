@@ -54,14 +54,14 @@ $u-wrap: "#document" !default;
 $spacer:                     10px !default;
 
 
-// Colors
+// Colors(basic)
 // -----------------------------------------
 
-$default:                   #000 !default;
-$default-strong:            $default !default;
-$default-mild:              #888 !default;
-$default-milder:            #bbb !default;
-$default-fade:              #f3f3f3 !default;
+$gray:                   #333 !default;
+$gray-strong:            $gray !default;
+$gray-mild:              #888 !default;
+$gray-milder:            #bbb !default;
+$gray-fade:              #f3f3f3 !default;
 
 $first:                     #49d !default;
 $first-strong:              #28b !default;
@@ -81,30 +81,47 @@ $third-text:                $third-strong !default;
 $third-mild:                lighten(desaturate($third, 5%), 10%) !default;
 $third-fade:                rgba($third, .2) !default;
 
-$info:                      $third !default;
-$info-text:                 $third-text !default;
-$info-strong:               $third-strong !default;
-$info-mild:                 $third-mild !default;
-$info-fade:                 $third-fade !default;
+$fourth:                    #f38c10 !default;
+$fourth-strong:             #ec7910 !default;
+$fourth-text:               $fourth-strong !default;
+$fourth-mild:               lighten(desaturate($fourth, 5%), 10%) !default;
+$fourth-fade:               rgba($fourth, .2) !default;
 
-$important:                 #e34050 !default;
-$important-strong:          #d02 !default;
-$important-text:            $important-strong !default;
-$important-mild:            lighten(desaturate($important, 5%), 10%) !default;
-$important-fade:            #ffe9ee !default;
+$fifth:                     #e34050 !default;
+$fifth-strong:              #d02 !default;
+$fifth-text:                $fifth-strong !default;
+$fifth-mild:                lighten(desaturate($fifth, 2%), 10%) !default;
+$fifth-fade:                #ffe9ee !default;
+
+
+// Colors(system)
+// -----------------------------------------
+
+$info:                      $fourth !default;
+$info-text:                 $fourth-text !default;
+$info-strong:               $fourth-strong !default;
+$info-mild:                 $fourth-mild !default;
+$info-fade:                 $fourth-fade !default;
+
+$important:                 $fifth !default;
+$important-strong:          $fifth-strong !default;
+$important-text:            $fifth-text !default;
+$important-mild:            $fifth-mild !default;
+$important-fade:            $fifth-fade !default;
+
 
 $body-bg:                   #fff !default;
-$body-color:                #333 !default;
-$body-inverse-bg:           #000 !default;
+$body-color:                $gray !default;
+$body-inverse-bg:           $gray-strong !default;
 $body-inverse-color:        #fff !default;
-$body-mild-color:           #777 !default;
+$body-mild-color:           $gray-mild !default;
 
 
 // Border
 // -----------------------------------------
 
 $border-width:               1px !default;
-$border-color:               $default-milder !default;
+$border-color:               $gray-milder !default;
 $border-inverse-color:       #666666 !default;
 
 
@@ -225,27 +242,6 @@ $border-radius-xl:   7px;
 
 // Buttons
 // -----------------------------------------
-
-$btn-first-color:         $body-inverse-color !default;
-$btn-first-bg:            $first !default;
-$btn-first-border:        $first !default;
-
-$btn-second-color:        $body-inverse-color !default;
-$btn-second-bg:           $second !default;
-$btn-second-border:       $second !default;
-
-$btn-third-color:         $body-inverse-color !default;
-$btn-third-bg:            $third !default;
-$btn-third-border:        $third !default;
-
-$btn-info-color:          $body-inverse-color !default;
-$btn-info-bg:             $info !default;
-$btn-info-border:         $info !default;
-
-$btn-important-color:     $body-inverse-color !default;
-$btn-important-bg:        $important !default;
-$btn-important-border:    $important !default;
-
 
 $btn-font-size-sm:          $font-size-xs;
 $btn-padding-x-sm:          .5em !default;

@@ -9,8 +9,8 @@ box
     margin-bottom: ($spacer * 2);
     padding: ($spacer * 2);
     border: $border-width solid transparent;
-    background-color: $default-fade;
-    border-radius: $border-radius-lg;
+    background-color: $gray-fade;
+    border-radius: $border-radius-md;
 
     @include media-breakpoint-up(md) {
         padding: ($spacer * 3);
@@ -53,7 +53,7 @@ box
 
 .#{$p}box-outline {
     background-color: $body-bg;
-    border-color: $default-milder;
+    border-color: $gray-milder;
 
     &.#{$p}box-first {
         border-color: $first-mild;
