@@ -41,7 +41,9 @@ gulp.task('sassmin', () =>
 // gulp.task('js', function() {
 //     gulp.src('_js/**/*.js')
 //     .pipe(plumber())
-//     .pipe(gulp.dest(project_dist + 'js/'))
+//     .pipe(gulp.dest(project_dist + 'js/'));
+// });
+// gulp.task('jsmin', ['js'], function() {
 //     gulp.src('_js/**/*.js')
 //     .pipe(plumber())
 //     .pipe(uglify())
@@ -59,11 +61,17 @@ gulp.task('watch', function(){
     gulp.run('sassmin');
   });
 
-//   gulp.watch([
-//       '_js/**/*.js'
-//     ], function(event) {
-//     gulp.run('js');
-//   });
+//  gulp.watch([
+//      '_js/**/*.js'
+//    ], function(event) {
+//    gulp.run('js');
+//  });
+
+//  gulp.watch([
+//      '_js/**/*.js'
+//    ], function(event) {
+//    gulp.run('jsmin');
+//  });
 
 });
 
