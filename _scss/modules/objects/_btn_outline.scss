@@ -9,10 +9,10 @@ btn-outline
         @include button-variant(
             $body-color,
             transparent,
-            $btn-first-border,
-            $btn-first-color,
-            $btn-first-bg,
-            $btn-first-border
+            $first,
+            $body-inverse-color,
+            $first,
+            transparent
         );
     }
 
@@ -20,10 +20,10 @@ btn-outline
         @include button-variant(
             $body-color,
             transparent,
-            $btn-second-border,
-            $btn-second-color,
-            $btn-second-bg,
-            $btn-second-border
+            $second,
+            $body-inverse-color,
+            $second,
+            transparent
         );
     }
 
@@ -31,10 +31,32 @@ btn-outline
         @include button-variant(
             $body-color,
             transparent,
-            $btn-third-border,
-            $btn-third-color,
-            $btn-third-bg,
-            $btn-third-border
+            $third,
+            $body-inverse-color,
+            $third,
+            transparent
+        );
+    }
+
+    &.#{$p}btn-fourth {
+        @include button-variant(
+            $body-color,
+            transparent,
+            $fourth,
+            $body-inverse-color,
+            $fourth,
+            transparent
+        );
+    }
+
+    &.#{$p}btn-fifth {
+        @include button-variant(
+            $body-color,
+            transparent,
+            $fifth,
+            $body-inverse-color,
+            $fifth,
+            transparent
         );
     }
 
@@ -42,10 +64,10 @@ btn-outline
         @include button-variant(
             $body-color,
             transparent,
-            $btn-info-border,
-            $btn-info-color,
-            $btn-info-bg,
-            $btn-info-border
+            $info,
+            $body-inverse-color,
+            $info,
+            transparent
         );
     }
 
@@ -53,10 +75,10 @@ btn-outline
         @include button-variant(
             $body-color,
             transparent,
-            $btn-important-border,
-            $btn-important-color,
-            $btn-important-bg,
-            $btn-important-border
+            $important,
+            $body-inverse-color,
+            $important,
+            transparent
         );
     }
 

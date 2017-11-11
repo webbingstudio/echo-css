@@ -6,20 +6,20 @@ btn-inverse
 .#{$p}btn-inverse {
     @include button-variant(
         $body-inverse-color,
-        rgba($body-bg, .25),
+        rgba($body-inverse-color, .25),
         transparent,
         $body-inverse-color,
-        rgba($body-bg, .4),
+        rgba($body-inverse-color, .4),
         transparent
     );
 
     &.#{$p}btn-outline {
         @include button-variant(
             $body-inverse-color,
-            $body-inverse-bg,
+            transparent,
             rgba($body-inverse-color, .8),
             $body-inverse-color,
-            rgba($body-bg, .2),
+            rgba($body-inverse-color, .2),
             $body-inverse-color
         );
     }

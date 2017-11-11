@@ -5,55 +5,77 @@ btn-(color)
 
 .#{$p}btn-first {
   @include button-variant(
-    $btn-first-color,
-    $btn-first-bg,
-    $btn-first-border,
-    $btn-first-color,
-    saturate(darken($btn-first-bg, 10%), 10%),
-    saturate(darken($btn-first-bg, 10%), 10%)
+    $body-inverse-color,
+    $first,
+    transparent,
+    $body-inverse-color,
+    $first-strong,
+    transparent
   );
 }
 
 .#{$p}btn-second {
   @include button-variant(
-    $btn-second-color,
-    $btn-second-bg,
-    $btn-second-border,
-    $btn-second-color,
-    saturate(darken($btn-second-bg, 10%), 10%),
-    saturate(darken($btn-second-bg, 10%), 10%)
+    $body-inverse-color,
+    $second,
+    transparent,
+    $body-inverse-color,
+    $second-strong,
+    transparent
   );
 }
 
 .#{$p}btn-third {
   @include button-variant(
-    $btn-third-color,
-    $btn-third-bg,
-    $btn-third-border,
-    $btn-third-color,
-    saturate(darken($btn-third-bg, 10%), 10%),
-    saturate(darken($btn-third-bg, 10%), 10%)
+    $body-inverse-color,
+    $third,
+    transparent,
+    $body-inverse-color,
+    $third-strong,
+    transparent
+  );
+}
+
+.#{$p}btn-fourth {
+  @include button-variant(
+    $body-inverse-color,
+    $fourth,
+    transparent,
+    $body-inverse-color,
+    $fourth-strong,
+    transparent
+  );
+}
+
+.#{$p}btn-fifth {
+  @include button-variant(
+    $body-inverse-color,
+    $fifth,
+    transparent,
+    $body-inverse-color,
+    $fifth-strong,
+    transparent
   );
 }
 
 .#{$p}btn-info {
   @include button-variant(
-    $btn-info-color,
-    $btn-info-bg,
-    $btn-info-border,
-    $btn-info-color,
-    saturate(darken($btn-info-bg, 10%), 10%),
-    saturate(darken($btn-info-bg, 10%), 10%)
+    $body-inverse-color,
+    $info,
+    transparent,
+    $body-inverse-color,
+    $info-strong,
+    transparent
   );
 }
 
 .#{$p}btn-important {
   @include button-variant(
-    $btn-important-color,
-    $btn-important-bg,
-    $btn-important-border,
-    $btn-important-color,
-    saturate(darken($btn-important-bg, 10%), 10%),
-    saturate(darken($btn-important-bg, 10%), 10%)
+    $body-inverse-color,
+    $important,
+    transparent,
+    $body-inverse-color,
+    $important-strong,
+    transparent
   );
 }
