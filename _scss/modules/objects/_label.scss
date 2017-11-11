@@ -11,13 +11,12 @@ label
     -webkit-transform:translate(0, -.125rem);
     -ms-transform:translate(0, -.125rem);
     transform:translate(0, -.125rem);
-    background-color: $gray-milder;
+    background-color: $gray-mild;
     font-size: $font-size-xs;
     color: $body-inverse-color;
     text-align: center;
     line-height: $line-height-none;
     vertical-align: middle;
-    border-radius: 1em;
 
     @at-root {
         a#{&} {
@@ -47,6 +46,14 @@ label
 
 .#{$p}label-third {
     background-color: $third;
+}
+
+.#{$p}label-fourth {
+    background-color: $fourth;
+}
+
+.#{$p}label-fifth {
+    background-color: $fifth;
 }
 
 .#{$p}label-info {
