@@ -1,0 +1,78 @@
+/*
+position
+--------------------
+*/
+
+.#{$p}position-tl,
+.#{$p}position-tc,
+.#{$p}position-tr,
+.#{$p}position-cl,
+.#{$p}position-cc,
+.#{$p}position-cr,
+.#{$p}position-bl,
+.#{$p}position-bc,
+.#{$p}position-br {
+    position: absolute;
+    z-index: 99;
+}
+
+.#{$p}position-tl {
+    top: 0;
+    left: 0;
+}
+
+.#{$p}position-tc {
+    top: 0;
+    left: 50%;
+    -webkit-transform:translate(-50%, 0);
+    -ms-transform:translate(-50%, 0);
+    transform:translate(-50%, 0);
+}
+
+.#{$p}position-tr {
+    top: 0;
+    right: 0;
+}
+
+.#{$p}position-cl {
+    top: 50%;
+    left: 0;
+    -webkit-transform:translate(0, -50%);
+    -ms-transform:translate(0, -50%);
+    transform:translate(0, -50%);
+}
+
+.#{$p}position-cc {
+    top: 50%;
+    left: 50%;
+    -webkit-transform:translate(-50%, 0);
+    -ms-transform:translate(-50%, 0);
+    transform:translate(-50%, 0);
+}
+
+.#{$p}position-cr {
+    top: 50%;
+    right: 0;
+    -webkit-transform:translate(0, -50%);
+    -ms-transform:translate(0, -50%);
+    transform:translate(0, -50%);
+}
+
+.#{$p}position-bl {
+    bottom: 0;
+    left: 0;
+}
+
+.#{$p}position-bc {
+    bottom: 0;
+    left: 50%;
+    -webkit-transform:translate(-50%, 0);
+    -ms-transform:translate(-50%, 0);
+    transform:translate(-50%, 0);
+}
+
+.#{$p}position-br {
+    bottom: 0;
+    right: 0;
+}
+
