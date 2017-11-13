@@ -7,7 +7,7 @@ btn-outline
 
     &.#{$p}btn-first {
         @include button-variant(
-            $body-color,
+            inherit,
             transparent,
             $first,
             $body-inverse-color,
@@ -18,7 +18,7 @@ btn-outline
 
     &.#{$p}btn-second {
         @include button-variant(
-            $body-color,
+            inherit,
             transparent,
             $second,
             $body-inverse-color,
@@ -29,7 +29,7 @@ btn-outline
 
     &.#{$p}btn-third {
         @include button-variant(
-            $body-color,
+            inherit,
             transparent,
             $third,
             $body-inverse-color,
@@ -40,7 +40,7 @@ btn-outline
 
     &.#{$p}btn-fourth {
         @include button-variant(
-            $body-color,
+            inherit,
             transparent,
             $fourth,
             $body-inverse-color,
@@ -51,7 +51,7 @@ btn-outline
 
     &.#{$p}btn-fifth {
         @include button-variant(
-            $body-color,
+            inherit,
             transparent,
             $fifth,
             $body-inverse-color,
@@ -62,7 +62,7 @@ btn-outline
 
     &.#{$p}btn-info {
         @include button-variant(
-            $body-color,
+            inherit,
             transparent,
             $info,
             $body-inverse-color,
@@ -73,7 +73,7 @@ btn-outline
 
     &.#{$p}btn-important {
         @include button-variant(
-            $body-color,
+            inherit,
             transparent,
             $important,
             $body-inverse-color,
