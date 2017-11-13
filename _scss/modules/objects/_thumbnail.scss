@@ -26,6 +26,7 @@ thumbnail
 
 .#{$p}thumbnail-square,
 .#{$p}thumbnail-3to2,
+.#{$p}thumbnail-4to3,
 .#{$p}thumbnail-16to9,
 .#{$p}thumbnail-ogimage {
     width: 100%;
@@ -54,15 +55,19 @@ thumbnail
 }
 
 .#{$p}thumbnail-3to2 {
-    padding-bottom: 75%;
+    padding-bottom: percentage(2 / 3);
+}
+
+.#{$p}thumbnail-4to3 {
+    padding-bottom: percentage(3 / 4);
 }
 
 .#{$p}thumbnail-16to9 {
-    padding-bottom: 56.25%;
+    padding-bottom: percentage(9 / 16);
 }
 
 .#{$p}thumbnail-ogimage {
-    padding-bottom: 52.3560209%;
+    padding-bottom: percentage(100 / 191);
 }
 
 .#{$p}thumbnail-vertical {
