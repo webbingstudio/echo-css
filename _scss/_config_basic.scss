@@ -1,42 +1,8 @@
+// Config: basic
+// ========================================
+
 // Name
 // -----------------------------------------
-
-// prefix
-$p: "" !default;
-
-// post-name
-// ex. post, entry, article...
-$post: "post" !default;
-
-// widget-name
-// ex. widgetarea, layout, page, region...
-$widgetarea: "widgetarea" !default;
-// ex. widget, module, box, view...
-$widget: "widget" !default;
-
-// nav-name
-// ex. menu, navigation...
-$nav: "nav" !default;
-
-// nav-current-name
-// ex. is-active, active, current, stay...
-$nav-current: "is-current" !default;
-
-// action-active-name
-// ex. is-active, active...
-$action-active: "is-active" !default;
-
-// action-open-name
-// ex. is-open, open, active...
-$action-open: "is-open" !default;
-
-// action-close-name
-// ex. is-close, is-hidden, close...
-$action-close: "is-close" !default;
-
-// error-name
-// ex. is-error, error...
-$error: "is-error" !default;
 
 // wysiwyg-class
 // ex. wysiwyg, freetext, richtext...
@@ -205,16 +171,6 @@ $link-color:                 $first-text !default;
 $link-hover-color:           $first-mild !default;
 
 
-// List
-// -----------------------------------------
-
-// ex. .list-item or li
-$list-item: "." + $p + "list-item" !default;
-
-// ex. .list-item or li > ul
-$list-children: "." + $p + "list-children" !default;
-
-
 // Navigation
 // -----------------------------------------
 
@@ -268,42 +224,3 @@ $btn-square-width-sm:       1.5em;
 $btn-square-width-md:       2.5em;
 $btn-square-width-lg:       3.75em;
 $btn-square-width-xl:       5em;
-
-
-// Grid
-// -----------------------------------------
-
-$grid-breakpoints: (
-  default: 0,
-  xxs: 320px,
-  xs:  375px,
-  sm:  425px,
-  md:  768px,
-  lg:  1000px,
-  xl:  1280px,
-  xxl: 1600px
-) !default;
-
-
-$container-max-widths-sm: (
-  md: 700px,
-  lg: 960px
-) !default;
-
-$container-max-widths-md: (
-  md: 700px,
-  lg: 960px,
-  xl: 1200px
-) !default;
-
-
-$grid-columns:    12 !default;
-
-$grid-gutter-widths: (
-  none: 0,
-  sm:   $spacer,
-  md:   ($spacer * 2),
-  lg:   ($spacer * 4)
-) !default;
-
-
