@@ -1,0 +1,169 @@
+/*
+bg
+--------------------
+*/
+
+.#{$p}bg-first {
+    background-color: $first;
+
+    &:not(.#{$p}bg-fade) {
+        color: $body-inverse-color;
+
+        & a:not([class]) {
+            color: $body-inverse-color;
+        }
+
+    }
+
+    &.#{$p}bg-mild {
+        background-color: $first-mild;
+    }
+
+    &.#{$p}bg-fade {
+        background-color: $first-fade;
+    }
+
+}
+
+.#{$p}bg-second {
+    background-color: $second;
+
+    &:not(.#{$p}bg-fade) {
+        color: $body-inverse-color;
+
+        & a:not([class]) {
+            color: $body-inverse-color;
+        }
+
+    }
+
+    &.#{$p}bg-mild {
+        background-color: $second-mild;
+    }
+
+    &.#{$p}bg-fade {
+        background-color: $second-fade;
+    }
+
+}
+
+.#{$p}bg-third {
+    background-color: $third;
+
+    &:not(.#{$p}bg-fade) {
+        color: $body-inverse-color;
+
+        & a:not([class]) {
+            color: $body-inverse-color;
+        }
+
+    }
+
+    &.#{$p}bg-mild {
+        background-color: $third-mild;
+    }
+
+    &.#{$p}bg-fade {
+        background-color: $third-fade;
+    }
+
+}
+
+.#{$p}bg-fourth {
+    background-color: $fourth;
+
+    &:not(.#{$p}bg-fade) {
+        color: $body-inverse-color;
+
+        & a:not([class]) {
+            color: $body-inverse-color;
+        }
+
+    }
+
+    &.#{$p}bg-mild {
+        background-color: $fourth-mild;
+    }
+
+    &.#{$p}bg-fade {
+        background-color: $fourth-fade;
+    }
+
+}
+
+.#{$p}bg-fifth {
+    background-color: $fifth;
+
+    &:not(.#{$p}bg-fade) {
+        color: $body-inverse-color;
+
+        & a:not([class]) {
+            color: $body-inverse-color;
+        }
+
+    }
+
+    &.#{$p}bg-mild {
+        background-color: $fifth-mild;
+    }
+
+    &.#{$p}bg-fade {
+        background-color: $fifth-fade;
+    }
+
+}
+
+.#{$p}bg-info {
+    background-color: $info;
+
+    &:not(.#{$p}bg-fade) {
+        color: $body-inverse-color;
+
+        & a:not([class]) {
+            color: $body-inverse-color;
+        }
+
+    }
+
+    &.#{$p}bg-mild {
+        background-color: $info-mild;
+    }
+
+    &.#{$p}bg-fade {
+        background-color: $info-fade;
+    }
+
+}
+
+.#{$p}bg-important {
+    background-color: $important;
+
+    &:not(.#{$p}bg-fade) {
+        color: $body-inverse-color;
+
+        & a:not([class]) {
+            color: $body-inverse-color;
+        }
+
+    }
+
+    &.#{$p}bg-mild {
+        background-color: $important-mild;
+    }
+
+    &.#{$p}bg-fade {
+        background-color: $important-fade;
+    }
+
+}
+
+.#{$p}bg-inverse {
+    color: $body-inverse-color;
+    background-color: $body-inverse-bg;
+
+    & a:not([class]) {
+        color: $body-inverse-color;
+    }
+
+}
+
