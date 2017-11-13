@@ -78,9 +78,10 @@ $important-fade:            $fifth-fade !default;
 
 $body-bg:                   #fff !default;
 $body-color:                $gray !default;
+$body-mild-color:           $gray-mild !default;
 $body-inverse-bg:           $gray-strong !default;
 $body-inverse-color:        #fff !default;
-$body-mild-color:           $gray-mild !default;
+$body-inverse-mild-color:   rgba($body-inverse-color, .75) !default;
 
 
 // Border
@@ -145,13 +146,13 @@ $font-weight-bold-third:       $font-weight-bold-first;
 // Font size
 // -----------------------------------------
 
-$font-size-xxs:             .625em !default;
-$font-size-xs:              .75em !default;
-$font-size-sm:              .875em !default;
-$font-size-md:              1em !default;
-$font-size-lg:              1.125em !default;
-$font-size-xl:              1.25em !default;
-$font-size-xxl:             1.5em !default;
+$font-size-xxs:             .625rem !default;
+$font-size-xs:              .75rem !default;
+$font-size-sm:              .875rem !default;
+$font-size-md:              1rem !default;
+$font-size-lg:              1.125rem !default;
+$font-size-xl:              1.25rem !default;
+$font-size-xxl:             1.5rem !default;
 
 
 // Line height

@@ -1,0 +1,81 @@
+/*
+text_color
+--------------------
+*/
+
+.#{$p}text-first {
+    color: $first-text;
+
+    &.#{$p}text-mild {
+        color: $first-mild;
+    }
+
+}
+
+.#{$p}text-second {
+    color: $second-text;
+
+    &.#{$p}text-mild {
+        color: $second-mild;
+    }
+
+}
+
+.#{$p}text-third {
+    color: $third-text;
+
+    &.#{$p}text-mild {
+        color: $third-mild;
+    }
+
+}
+
+.#{$p}text-fourth {
+    color: $fourth-text;
+
+    &.#{$p}text-mild {
+        color: $fourth-mild;
+    }
+
+}
+
+.#{$p}text-fifth {
+    color: $fifth-text;
+
+    &.#{$p}text-mild {
+        color: $fifth-mild;
+    }
+
+}
+
+.#{$p}text-info {
+    color: $info-text;
+
+    &.#{$p}text-mild {
+        color: $info-mild;
+    }
+
+}
+
+.#{$p}text-important {
+    color: $important-text;
+
+    &.#{$p}text-mild {
+        color: $important-mild;
+    }
+
+}
+
+.#{$p}text-mild {
+    color: $body-mild-color;
+}
+
+.#{$p}text-inverse {
+    color: $body-inverse-color;
+
+    &.#{$p}text-mild {
+        color: $body-inverse-mild-color;
+    }
+
+}
+
