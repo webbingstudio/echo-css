@@ -1,0 +1,52 @@
+/*
+font (with Japanese webfonts)
+--------------------
+*/
+
+.#{$p}font-root {
+    font-family: $font-family-root;
+    font-family: $font-weight-root;
+
+    & .#{$p}font-bold {
+        font-family: $font-family-bold-root;
+        font-weight: $font-weight-bold-root;
+    }
+
+}
+
+.#{$p}font-mono {
+    font-family: $font-family-mono;
+}
+
+.#{$p}font-first {
+    font-family: $font-family-first;
+    font-weight: $font-weight-first;
+
+    & .#{$p}font-bold {
+        font-family: $font-family-bold-first;
+        font-weight: $font-weight-bold-first;
+    }
+
+}
+
+.#{$p}font-second {
+    font-family: $font-family-second;
+    font-weight: $font-weight-second;
+
+    & .#{$p}font-bold {
+        font-family: $font-family-bold-second;
+        font-weight: $font-weight-bold-second;
+    }
+
+}
+
+.#{$p}font-third {
+    font-family: $font-family-third;
+    font-weight: $font-weight-third;
+
+    & .#{$p}font-bold {
+        font-family: $font-family-bold-third;
+        font-weight: $font-weight-bold-third;
+    }
+
+}
