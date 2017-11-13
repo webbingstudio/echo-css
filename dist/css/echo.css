@@ -193,7 +193,7 @@ input[type="password"],
 input[type="date"],
 input[type="time"],
 input[type="number"] {
-  line-height: 1.25;
+  line-height: 1;
 }
 
 textarea {
@@ -203,7 +203,7 @@ textarea {
 select {
   font-family: '-apple-system', 'BlinkMacSystemFont', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
   font-weight: 300;
-  line-height: 1.25;
+  line-height: 1;
 }
 
 /*
@@ -375,7 +375,7 @@ btn
   border: 1px solid #bbb;
   padding: 0.5em 1em;
   text-align: center;
-  line-height: 1.25;
+  line-height: 1.5;
   border-radius: 3px;
   vertical-align: middle;
   transition: .3s all;
@@ -899,7 +899,7 @@ input
 --------------------
 */
 .input {
-  padding: .375rem .5rem;
+  padding: .375rem .5rem .25rem;
   background: #fff none;
   border: 1px solid #bbb;
   color: #333;
@@ -1141,7 +1141,6 @@ select
   border-radius: 3px;
   outline: none;
   z-index: 4;
-  line-height: 1.25;
 }
 .select.is-error, .is-error > .select {
   background-color: #ffe9ee;
@@ -1464,6 +1463,18 @@ thumbnail
   font (with Japanese webfonts)
   --------------------
   */
+  /*
+  hidden
+  --------------------
+  */
+  /*
+  img
+  --------------------
+  */
+  /*
+  line
+  --------------------
+  */
 }
 #document .bg-first {
   background-color: #49d;
@@ -1627,4 +1638,107 @@ thumbnail
 #document .font-third .font-bold {
   font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
   font-weight: 700;
+}
+#document .hidden {
+  display: none;
+}
+#document .hidden-default-up {
+  display: none;
+}
+@media (min-width: 375px) {
+  #document .hidden-xs-up {
+    display: none;
+  }
+}
+@media (min-width: 425px) {
+  #document .hidden-sm-up {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  #document .hidden-md-up {
+    display: none;
+  }
+}
+@media (min-width: 1000px) {
+  #document .hidden-lg-up {
+    display: none;
+  }
+}
+@media (min-width: 1280px) {
+  #document .hidden-xl-up {
+    display: none;
+  }
+}
+@media (min-width: 1600px) {
+  #document .hidden-xxl-up {
+    display: none;
+  }
+}
+@media (max-width: 319.9px) {
+  #document .hidden-default-down {
+    display: none;
+  }
+}
+@media (max-width: 374.9px) {
+  #document .hidden-xxs-down {
+    display: none;
+  }
+}
+@media (max-width: 424.9px) {
+  #document .hidden-xs-down {
+    display: none;
+  }
+}
+@media (max-width: 767.9px) {
+  #document .hidden-sm-down {
+    display: none;
+  }
+}
+@media (max-width: 999.9px) {
+  #document .hidden-md-down {
+    display: none;
+  }
+}
+@media (max-width: 1279.9px) {
+  #document .hidden-lg-down {
+    display: none;
+  }
+}
+@media (max-width: 1599.9px) {
+  #document .hidden-xl-down {
+    display: none;
+  }
+}
+#document .img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+#document .img-fill {
+  width: 100%;
+  height: auto;
+}
+#document .img-round {
+  border-radius: 50%;
+}
+#document .line-l {
+  text-align: left;
+}
+#document .line-c {
+  text-align: center;
+}
+#document .line-r {
+  text-align: right;
+}
+#document .line-none {
+  line-height: 1;
+}
+#document .line-sm {
+  line-height: 1.5;
+}
+#document .line-md {
+  line-height: 1.75;
+}
+#document .line-lg {
+  line-height: 2;
 }

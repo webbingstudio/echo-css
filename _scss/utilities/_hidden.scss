@@ -1,0 +1,28 @@
+/*
+hidden
+--------------------
+*/
+
+.#{$p}hidden {
+    display: none;
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        @if ($breakpoint != 'xxs') {
+            .#{$p}hidden-#{$breakpoint}-up {
+                display: none;
+            }
+        }
+    }
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-down($breakpoint) {
+        @if ($breakpoint != 'xxl') {
+            .#{$p}hidden-#{$breakpoint}-down {
+                display: none;
+            }
+        }
+    }
+}
