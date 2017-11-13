@@ -9,12 +9,12 @@ select
     @include chevron( 'down', $gray-mild ) {
         &:before {
             right: 1em;
-            z-index: 2;
+            z-index: 3;
         }
 
         &:after {
             right: .5em;
-            z-index: 3;
+            z-index: 4;
         }
 
     }
@@ -33,7 +33,12 @@ select
         vertical-align: middle;
         border-radius: $border-radius-md;
         outline: none;
-        z-index: 4;
+        z-index: 2;
+
+        &:focus {
+            background-color: $gray-fade;
+        }
+
     }
 
     &.#{$error},
