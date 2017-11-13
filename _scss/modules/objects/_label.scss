@@ -7,10 +7,15 @@ label
     display: inline-block;
     min-width: 3em;
     margin-right: .5em;
-    padding: .25rem .75em .3rem;
+
+    // Visual adjustment
+    // 文字がわずかに下がって見えるので視覚調整をする
+    // Adjust the visuals because the letters appear slightly lowered
+    padding: .3rem .75em .25rem;
     -webkit-transform:translate(0, -.125rem);
     -ms-transform:translate(0, -.125rem);
     transform:translate(0, -.125rem);
+
     background-color: $gray-mild;
     font-size: $font-size-xs;
     color: $body-inverse-color;
@@ -64,3 +69,6 @@ label
     background-color: $important;
 }
 
+.#{$p}label-round {
+    border-radius: 1em;
+}
