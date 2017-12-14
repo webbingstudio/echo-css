@@ -66,60 +66,6 @@
     }
 }
 
-@mixin headings-reset() {
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    background: transparent none;
-    border: 0 none;
-    color: $body-color;
-    font-size: $font-size-root;
-    font-weight: $font-weight-bold-root;
-    text-align: left;
-    line-height: $line-height-root;
-    border-radius: 0;
-
-    &:before,
-    &:after {
-        display: none;
-    }
-
-}
-
-@mixin imgfit($type:null) {
-  display: block;
-  height: auto;
-  margin: 0 auto;
-  @if ($type == cover) {
-    width: 100%;
-  } @else {
-    max-width: 100%;
-  }
-}
-
-@mixin absolute($position:tl, $offsetX:0, $offsetY:0, $z:null) {
-  position: absolute;
-  @if ($position == tl) {
-    left: $offsetX;
-    top: $offsetY;
-  }
-  @if ($position == tr) {
-    right: $offsetX;
-    top: $offsetY;
-  }
-  @if ($position == bl) {
-    left: $offsetX;
-    bottom: $offsetY;
-  }
-  @if ($position == br) {
-    right: $offsetX;
-    bottom: $offsetY;
-  }
-  @if ($z) {
-    z-index: $z;
-  }
-}
-
 
 @mixin sprites($type, $file, $width, $height, $imgwidth:100%, $imgheight:100%, $position:center center) {
 
@@ -135,28 +81,6 @@
 
 }
 
-@mixin translate($x, $y) {
-  -moz-transform: translate($x, $y);
-  -o-transform: translate($x, $y);
-  -ms-transform: translate($x, $y);
-  transform: translate($x, $y);
-}
-
-@mixin rotate($deg, $origin:center center) {
-  -moz-transform: rotate($deg);
-  -o-transform: rotate($deg);
-  -ms-transform: rotate($deg);
-  transform: rotate($deg);
-  transform-origin: $origin;
-}
-
-@mixin scale($x, $y, $origin:center center) {
-  -moz-transform: scale($x, $y);
-  -o-transform: scale($x, $y);
-  -ms-transform: scale($x, $y);
-  transform: scale($x, $y);
-  transform-origin: $origin;
-}
 
 @mixin animation($delay, $duration, $function, $animation-name) {
   -moz-animation-delay: $delay;
@@ -242,27 +166,27 @@
   }
 }
 
-@mixin make-container($gutter: $grid-gutter-width) {
+@mixin make-container($gutter: $grid-gutter-widths) {
   margin-right: auto;
   margin-left: auto;
-  padding-left:  ($gutter / 2);
-  padding-right: ($gutter / 2);
+  padding-left:  (map-get($grid-gutter-widths, md) / 2);
+  padding-right: (map-get($grid-gutter-widths, md) / 2);
   @include clearfix();
 }
 
-@mixin make-row($gutter: $grid-gutter-width) {
+@mixin make-row($gutter: map-get($grid-gutter-widths, md)) {
   @include clearfix();
   margin-left:  ($gutter / -2);
   margin-right: ($gutter / -2);
 }
 
-@mixin make-col($gutter: $grid-gutter-width) {
-  position: relative;
-  float: left;
-  min-height: 1px;
-  padding-left:  ($gutter / 2);
-  padding-right: ($gutter / 2);
-}
+// @mixin make-col($gutter: $grid-gutter-widths) {
+//   position: relative;
+//   float: left;
+//   min-height: 1px;
+//   padding-left:  ($gutter / 2);
+//   padding-right: ($gutter / 2);
+// }
 
 @mixin make-col-span($size, $columns: $grid-columns) {
   width: percentage($size / $columns);
@@ -290,25 +214,13 @@
   }
 }
 
-@mixin make-grid-columns($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
-  %grid-column {
+@mixin make-grid-columns($columns: $grid-columns, $breakpoints: $grid-breakpoints) {
+  .#{$p}l-col {
     position: relative;
     min-height: 1px;
-    padding-left: ($gutter / 2);
-    padding-right: ($gutter / 2);
   }
+
   @each $breakpoint in map-keys($breakpoints) {
-    @for $i from 1 through $columns {
-      @if ($breakpoint == default) {
-        .l-col-#{$i} {
-          @extend %grid-column;
-        }
-      } @else {
-        .l-col-#{$i}-#{$breakpoint} {
-          @extend %grid-column;
-        }
-      }
-    }
     @include media-breakpoint-up($breakpoint) {
       @if ($breakpoint == default) {
         %grid-column-float {
@@ -322,12 +234,12 @@
 
       @for $i from 1 through $columns {
         @if ($breakpoint == default) {
-          .l-col-#{$i} {
+          .#{$p}l-col-#{$i} {
             @extend %grid-column-float;
             @include make-col-span($i, $columns);
           }
         } @else {
-          .l-col-#{$i}-#{$breakpoint} {
+          .#{$p}l-col-#{$i}-#{$breakpoint} {
             @extend %grid-column-float-#{$breakpoint};
             @include make-col-span($i, $columns);
           }
@@ -336,11 +248,11 @@
       @each $modifier in (pull, push, offset) {
         @for $i from 0 through $columns {
           @if ($breakpoint == default) {
-            .l-col-#{$i}-#{$modifier} {
+            .#{$p}l-col-#{$i}-#{$modifier} {
               @include make-col-modifier($modifier, $i, $columns)
             }
           } @else {
-            .l-col-#{$i}-#{$breakpoint}-#{$modifier} {
+            .#{$p}l-col-#{$i}-#{$breakpoint}-#{$modifier} {
               @include make-col-modifier($modifier, $i, $columns)
             }
           }
@@ -350,7 +262,14 @@
   }
 }
 
-@mixin button-variant($color, $background, $border, $hover-color, $hover-background, $hover-border) {
+@mixin button-variant(
+  $color,
+  $background,
+  $border,
+  $hover-color,
+  $hover-background,
+  $hover-border
+) {
   color: $color;
   background-color: $background;
   border-color: $border;
@@ -376,6 +295,18 @@
       color: $color;
       background-color: $background;
       border-color: $border;
+    }
+
+  }
+
+  @at-root {
+
+    a:hover &,
+    a:focus &,
+    a:active & {
+      color: $hover-color;
+      background-color: $hover-background;
+      border-color: $hover-border;
     }
 
   }
