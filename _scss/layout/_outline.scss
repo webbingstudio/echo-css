@@ -1,0 +1,149 @@
+/*doc
+---
+title: .#{$p}l-header
+name: l-6-header
+category: layout
+---
+
+ヘッダを表示する。
+
+*/
+
+.#{$p}l-header {
+    padding: ($spacer * 2) 0;
+}
+
+
+/*doc
+---
+title: .#{$p}l-header-brand
+name: l-6-header-1-brand
+category: layout
+parent: l-6-header
+---
+
+ブランドロゴを表示する。
+
+*/
+
+.#{$p}l-header-brand {
+    margin: 0;
+    text-align: center;
+    line-height: $line-height-none;
+
+    @include media-breakpoint-up(lg) {
+        text-align: left;
+    }
+}
+
+
+/*doc
+---
+title: .#{$p}l-header-title
+name: l-6-header-2-title
+category: layout
+parent: l-6-header
+---
+
+サイトタイトルを表示する。
+
+*/
+
+.#{$p}l-header-title {
+    font-size: 1.5rem;
+}
+
+
+/*doc
+---
+title: .#{$p}l-globalnav
+name: l-7-globalnav
+category: layout
+---
+
+グローバルナビゲーションを表示する。.#{$p}nav-horizontalを含む。
+
+*/
+
+.#{$p}l-globalnav {
+    width: 100%;
+    background-color: $body-bg;
+    line-height: $line-height-none;
+
+    .#{$p}#{$nav}-horizontal {
+        display: block;
+        width: 100%;
+
+        > ul {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    }
+
+    &.#{$action-active}{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+        z-index: 99;
+    }
+
+}
+
+
+/*doc
+---
+title: .#{$p}l-footer
+name: l-8-footer
+category: layout
+---
+
+フッタを表示する。
+
+*/
+
+.#{$p}l-footer {
+    padding: ($spacer * 2) 0 ($spacer * 6);
+    font-size: $font-size-xs;
+    text-align: center;
+}
+
+
+/*doc
+---
+title: .#{$p}l-footer-nav
+name: l-8-footer-1-nav
+category: layout
+parent: l-8-footer
+---
+
+フッタナビを表示する。.#{$p}nav-horizontalを含む。
+
+*/
+
+.#{$p}l-footer-nav {
+
+    .#{$p}nav-horizontal {
+    }
+
+}
+
+
+/*doc
+---
+title: .#{$p}l-footer-copyright
+name: l-8-footer-2-copyright
+category: layout
+parent: l-8-footer
+---
+
+コピーライト文を表示する。
+
+*/
+
+.#{$p}l-footer-copyright {
+    margin: 0;
+    font-size: $font-size-xs;
+}
