@@ -206,6 +206,2286 @@ select {
   line-height: 1;
 }
 
+/*doc
+---
+title: .l-document
+name: l-3-document
+category: layout
+---
+
+ドキュメント全体を包括する。オフキャンバス等の画面全体に影響する演出のために使用する。
+
+``` example
+<div class="l-document">
+(all document)
+</div>
+```
+*/
+/*doc
+---
+title: .l-document-inner
+name: l-3-document-1-inner
+category: layout
+parent: l-document
+---
+
+要素の幅をコンテナブロックを無視して広げる演出のために使用する。
+
+``` example
+<div class="l-document">
+<div class="l-document-inner">
+(all document)
+</div>
+</div>
+```
+*/
+.l-document-inner {
+  overflow: hidden;
+  max-width: 100%;
+}
+
+/*doc
+---
+title: .l-container
+name: l-1-container
+category: layout
+---
+
+デバイスに応じて適切に本文幅を調整するコンテナブロック。
+
+``` example
+<div class="l-container l-container-full-md bg-first bg-fade m-b">
+    <div class="p-y bg-first bg-fade line-c">.l-container</div>
+</div>
+```
+
+*/
+.l-container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.l-container:before, .l-container:after {
+  content: "";
+  display: table;
+}
+.l-container:after {
+  clear: both;
+}
+@media (min-width: 768px) {
+  .l-container {
+    max-width: 700px;
+  }
+}
+@media (min-width: 1000px) {
+  .l-container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1280px) {
+  .l-container {
+    max-width: 1200px;
+  }
+}
+
+/*doc
+---
+title: .l-container-sm
+name: l-1-container-1-sm
+category: layout
+parent: l-1-container
+---
+
+本文幅が狭いコンテナブロック。1カラムレイアウトで1行の文字数を抑えるために使用する。
+
+``` example
+<div class="l-container l-container-sm l-container-full-md bg-third bg-fade">
+    <div class="p-y bg-third bg-fade line-c">.l-container-sm</div>
+</div>
+```
+
+*/
+@media (min-width: 768px) {
+  .l-container-sm {
+    max-width: 700px;
+  }
+}
+@media (min-width: 1000px) {
+  .l-container-sm {
+    max-width: 960px;
+  }
+}
+
+/*
+a-blog cmsのレイアウトモジュール、HTML直書きの影響で
+.l-containerが二重になった場合の対策
+*/
+@media (min-width: 425px) {
+  .l-container .l-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+/*doc
+---
+title: .l-container-full-md
+name: l-1-container-2-full-md
+category: layout
+parent: l-1-container
+---
+
+タブレットportrait以下でコンテナ余白を打ち消す。画像の幅100%表示等に使用する。
+
+``` example
+<div class="l-container l-container-full-md bg-first bg-fade m-b">
+    <div class="p-y bg-first bg-fade line-c">.l-container</div>
+</div>
+<div class="l-container l-container-sm l-container-full-md bg-third bg-fade">
+    <div class="p-y bg-third bg-fade line-c">.l-container-sm</div>
+</div>
+```
+*/
+@media (max-width: 999.9px) {
+  .l-container-full-md {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/*doc
+---
+title: .l-row
+name: l-4-row
+category: layout
+---
+
+floatによるグリッドのグループを作成する。
+
+*/
+/*doc
+---
+title: .l-col-(column)-(breakpoint)
+name: l-4-row-1-col
+category: layout
+parent: l-4-row
+---
+
+フレックスボックスによるグリッドのセルを作成する。
+
+### 一般的なグリッド
+
+``` example
+<div class="l-row">
+    <div class="l-col l-col-4">
+        <div class="m-b p-sm bg-first bg-mild">l-col l-col-4</div>
+    </div>
+    <div class="l-col l-col-4">
+        <div class="m-b p-sm bg-first bg-mild">l-col l-col-4</div>
+    </div>
+    <div class="l-col l-col-4">
+        <div class="m-b p-sm bg-first bg-mild">l-col l-col-4</div>
+    </div>
+</div>
+```
+
+### デバイスによって変化するグリッド
+
+スマートフォン(default), タブレット以上(sm), XGA以上(lg)でレイアウトを変更する代表的な例。
+
+``` example
+<div class="l-row">
+    <div class="l-col l-col-12 l-col-6-sm l-col-4-lg">
+        <div class="m-b p-sm bg-first bg-mild">l-col l-col-12 l-col-6-sm l-col-4-lg</div>
+    </div>
+    <div class="l-col l-col-12 l-col-6-sm l-col-4-lg">
+        <div class="m-b p-sm bg-first bg-mild">l-col l-col-12 l-col-6-sm l-col-4-lg</div>
+    </div>
+    <div class="l-col l-col-12 l-col-6-sm l-col-4-lg">
+        <div class="m-b p-sm bg-first bg-mild">l-col l-col-12 l-col-6-sm l-col-4-lg</div>
+    </div>
+</div>
+```
+
+iPhone SE(default), iPhone 7(xs), iPhone 7 Plus(sm)間でもレイアウトを変更できる。
+
+``` example
+<div class="l-row">
+    <div class="l-col l-col-12 l-col-6-xs l-col-4-sm">
+        <div class="m-b p-sm bg-third bg-mild">l-col l-col-12 l-col-6-xs l-col-4-sm</div>
+    </div>
+    <div class="l-col l-col-12 l-col-6-xs l-col-4-sm">
+        <div class="m-b p-sm bg-third bg-mild">l-col l-col-12 l-col-6-xs l-col-4-sm</div>
+    </div>
+    <div class="l-col l-col-12 l-col-6-xs l-col-4-sm">
+        <div class="m-b p-sm bg-third bg-mild">l-col l-col-12 l-col-6-xs l-col-4-sm</div>
+    </div>
+</div>
+```
+
+*/
+.l-col {
+  position: relative;
+  min-height: 1px;
+}
+
+.l-col-1, .l-col-2, .l-col-3, .l-col-4, .l-col-5, .l-col-6, .l-col-7, .l-col-8, .l-col-9, .l-col-10, .l-col-11, .l-col-12 {
+  float: left;
+}
+
+.l-col-1 {
+  width: 8.33333%;
+}
+
+.l-col-2 {
+  width: 16.66667%;
+}
+
+.l-col-3 {
+  width: 25%;
+}
+
+.l-col-4 {
+  width: 33.33333%;
+}
+
+.l-col-5 {
+  width: 41.66667%;
+}
+
+.l-col-6 {
+  width: 50%;
+}
+
+.l-col-7 {
+  width: 58.33333%;
+}
+
+.l-col-8 {
+  width: 66.66667%;
+}
+
+.l-col-9 {
+  width: 75%;
+}
+
+.l-col-10 {
+  width: 83.33333%;
+}
+
+.l-col-11 {
+  width: 91.66667%;
+}
+
+.l-col-12 {
+  width: 100%;
+}
+
+.l-col-0-pull {
+  right: auto;
+}
+
+.l-col-1-pull {
+  right: 8.33333%;
+}
+
+.l-col-2-pull {
+  right: 16.66667%;
+}
+
+.l-col-3-pull {
+  right: 25%;
+}
+
+.l-col-4-pull {
+  right: 33.33333%;
+}
+
+.l-col-5-pull {
+  right: 41.66667%;
+}
+
+.l-col-6-pull {
+  right: 50%;
+}
+
+.l-col-7-pull {
+  right: 58.33333%;
+}
+
+.l-col-8-pull {
+  right: 66.66667%;
+}
+
+.l-col-9-pull {
+  right: 75%;
+}
+
+.l-col-10-pull {
+  right: 83.33333%;
+}
+
+.l-col-11-pull {
+  right: 91.66667%;
+}
+
+.l-col-12-pull {
+  right: 100%;
+}
+
+.l-col-0-push {
+  left: auto;
+}
+
+.l-col-1-push {
+  left: 8.33333%;
+}
+
+.l-col-2-push {
+  left: 16.66667%;
+}
+
+.l-col-3-push {
+  left: 25%;
+}
+
+.l-col-4-push {
+  left: 33.33333%;
+}
+
+.l-col-5-push {
+  left: 41.66667%;
+}
+
+.l-col-6-push {
+  left: 50%;
+}
+
+.l-col-7-push {
+  left: 58.33333%;
+}
+
+.l-col-8-push {
+  left: 66.66667%;
+}
+
+.l-col-9-push {
+  left: 75%;
+}
+
+.l-col-10-push {
+  left: 83.33333%;
+}
+
+.l-col-11-push {
+  left: 91.66667%;
+}
+
+.l-col-12-push {
+  left: 100%;
+}
+
+.l-col-0-offset {
+  margin-left: 0%;
+}
+
+.l-col-1-offset {
+  margin-left: 8.33333%;
+}
+
+.l-col-2-offset {
+  margin-left: 16.66667%;
+}
+
+.l-col-3-offset {
+  margin-left: 25%;
+}
+
+.l-col-4-offset {
+  margin-left: 33.33333%;
+}
+
+.l-col-5-offset {
+  margin-left: 41.66667%;
+}
+
+.l-col-6-offset {
+  margin-left: 50%;
+}
+
+.l-col-7-offset {
+  margin-left: 58.33333%;
+}
+
+.l-col-8-offset {
+  margin-left: 66.66667%;
+}
+
+.l-col-9-offset {
+  margin-left: 75%;
+}
+
+.l-col-10-offset {
+  margin-left: 83.33333%;
+}
+
+.l-col-11-offset {
+  margin-left: 91.66667%;
+}
+
+.l-col-12-offset {
+  margin-left: 100%;
+}
+
+@media (min-width: 320px) {
+  .l-col-1-xxs, .l-col-2-xxs, .l-col-3-xxs, .l-col-4-xxs, .l-col-5-xxs, .l-col-6-xxs, .l-col-7-xxs, .l-col-8-xxs, .l-col-9-xxs, .l-col-10-xxs, .l-col-11-xxs, .l-col-12-xxs {
+    float: left;
+  }
+
+  .l-col-1-xxs {
+    width: 8.33333%;
+  }
+
+  .l-col-2-xxs {
+    width: 16.66667%;
+  }
+
+  .l-col-3-xxs {
+    width: 25%;
+  }
+
+  .l-col-4-xxs {
+    width: 33.33333%;
+  }
+
+  .l-col-5-xxs {
+    width: 41.66667%;
+  }
+
+  .l-col-6-xxs {
+    width: 50%;
+  }
+
+  .l-col-7-xxs {
+    width: 58.33333%;
+  }
+
+  .l-col-8-xxs {
+    width: 66.66667%;
+  }
+
+  .l-col-9-xxs {
+    width: 75%;
+  }
+
+  .l-col-10-xxs {
+    width: 83.33333%;
+  }
+
+  .l-col-11-xxs {
+    width: 91.66667%;
+  }
+
+  .l-col-12-xxs {
+    width: 100%;
+  }
+
+  .l-col-0-xxs-pull {
+    right: auto;
+  }
+
+  .l-col-1-xxs-pull {
+    right: 8.33333%;
+  }
+
+  .l-col-2-xxs-pull {
+    right: 16.66667%;
+  }
+
+  .l-col-3-xxs-pull {
+    right: 25%;
+  }
+
+  .l-col-4-xxs-pull {
+    right: 33.33333%;
+  }
+
+  .l-col-5-xxs-pull {
+    right: 41.66667%;
+  }
+
+  .l-col-6-xxs-pull {
+    right: 50%;
+  }
+
+  .l-col-7-xxs-pull {
+    right: 58.33333%;
+  }
+
+  .l-col-8-xxs-pull {
+    right: 66.66667%;
+  }
+
+  .l-col-9-xxs-pull {
+    right: 75%;
+  }
+
+  .l-col-10-xxs-pull {
+    right: 83.33333%;
+  }
+
+  .l-col-11-xxs-pull {
+    right: 91.66667%;
+  }
+
+  .l-col-12-xxs-pull {
+    right: 100%;
+  }
+
+  .l-col-0-xxs-push {
+    left: auto;
+  }
+
+  .l-col-1-xxs-push {
+    left: 8.33333%;
+  }
+
+  .l-col-2-xxs-push {
+    left: 16.66667%;
+  }
+
+  .l-col-3-xxs-push {
+    left: 25%;
+  }
+
+  .l-col-4-xxs-push {
+    left: 33.33333%;
+  }
+
+  .l-col-5-xxs-push {
+    left: 41.66667%;
+  }
+
+  .l-col-6-xxs-push {
+    left: 50%;
+  }
+
+  .l-col-7-xxs-push {
+    left: 58.33333%;
+  }
+
+  .l-col-8-xxs-push {
+    left: 66.66667%;
+  }
+
+  .l-col-9-xxs-push {
+    left: 75%;
+  }
+
+  .l-col-10-xxs-push {
+    left: 83.33333%;
+  }
+
+  .l-col-11-xxs-push {
+    left: 91.66667%;
+  }
+
+  .l-col-12-xxs-push {
+    left: 100%;
+  }
+
+  .l-col-0-xxs-offset {
+    margin-left: 0%;
+  }
+
+  .l-col-1-xxs-offset {
+    margin-left: 8.33333%;
+  }
+
+  .l-col-2-xxs-offset {
+    margin-left: 16.66667%;
+  }
+
+  .l-col-3-xxs-offset {
+    margin-left: 25%;
+  }
+
+  .l-col-4-xxs-offset {
+    margin-left: 33.33333%;
+  }
+
+  .l-col-5-xxs-offset {
+    margin-left: 41.66667%;
+  }
+
+  .l-col-6-xxs-offset {
+    margin-left: 50%;
+  }
+
+  .l-col-7-xxs-offset {
+    margin-left: 58.33333%;
+  }
+
+  .l-col-8-xxs-offset {
+    margin-left: 66.66667%;
+  }
+
+  .l-col-9-xxs-offset {
+    margin-left: 75%;
+  }
+
+  .l-col-10-xxs-offset {
+    margin-left: 83.33333%;
+  }
+
+  .l-col-11-xxs-offset {
+    margin-left: 91.66667%;
+  }
+
+  .l-col-12-xxs-offset {
+    margin-left: 100%;
+  }
+}
+@media (min-width: 375px) {
+  .l-col-1-xs, .l-col-2-xs, .l-col-3-xs, .l-col-4-xs, .l-col-5-xs, .l-col-6-xs, .l-col-7-xs, .l-col-8-xs, .l-col-9-xs, .l-col-10-xs, .l-col-11-xs, .l-col-12-xs {
+    float: left;
+  }
+
+  .l-col-1-xs {
+    width: 8.33333%;
+  }
+
+  .l-col-2-xs {
+    width: 16.66667%;
+  }
+
+  .l-col-3-xs {
+    width: 25%;
+  }
+
+  .l-col-4-xs {
+    width: 33.33333%;
+  }
+
+  .l-col-5-xs {
+    width: 41.66667%;
+  }
+
+  .l-col-6-xs {
+    width: 50%;
+  }
+
+  .l-col-7-xs {
+    width: 58.33333%;
+  }
+
+  .l-col-8-xs {
+    width: 66.66667%;
+  }
+
+  .l-col-9-xs {
+    width: 75%;
+  }
+
+  .l-col-10-xs {
+    width: 83.33333%;
+  }
+
+  .l-col-11-xs {
+    width: 91.66667%;
+  }
+
+  .l-col-12-xs {
+    width: 100%;
+  }
+
+  .l-col-0-xs-pull {
+    right: auto;
+  }
+
+  .l-col-1-xs-pull {
+    right: 8.33333%;
+  }
+
+  .l-col-2-xs-pull {
+    right: 16.66667%;
+  }
+
+  .l-col-3-xs-pull {
+    right: 25%;
+  }
+
+  .l-col-4-xs-pull {
+    right: 33.33333%;
+  }
+
+  .l-col-5-xs-pull {
+    right: 41.66667%;
+  }
+
+  .l-col-6-xs-pull {
+    right: 50%;
+  }
+
+  .l-col-7-xs-pull {
+    right: 58.33333%;
+  }
+
+  .l-col-8-xs-pull {
+    right: 66.66667%;
+  }
+
+  .l-col-9-xs-pull {
+    right: 75%;
+  }
+
+  .l-col-10-xs-pull {
+    right: 83.33333%;
+  }
+
+  .l-col-11-xs-pull {
+    right: 91.66667%;
+  }
+
+  .l-col-12-xs-pull {
+    right: 100%;
+  }
+
+  .l-col-0-xs-push {
+    left: auto;
+  }
+
+  .l-col-1-xs-push {
+    left: 8.33333%;
+  }
+
+  .l-col-2-xs-push {
+    left: 16.66667%;
+  }
+
+  .l-col-3-xs-push {
+    left: 25%;
+  }
+
+  .l-col-4-xs-push {
+    left: 33.33333%;
+  }
+
+  .l-col-5-xs-push {
+    left: 41.66667%;
+  }
+
+  .l-col-6-xs-push {
+    left: 50%;
+  }
+
+  .l-col-7-xs-push {
+    left: 58.33333%;
+  }
+
+  .l-col-8-xs-push {
+    left: 66.66667%;
+  }
+
+  .l-col-9-xs-push {
+    left: 75%;
+  }
+
+  .l-col-10-xs-push {
+    left: 83.33333%;
+  }
+
+  .l-col-11-xs-push {
+    left: 91.66667%;
+  }
+
+  .l-col-12-xs-push {
+    left: 100%;
+  }
+
+  .l-col-0-xs-offset {
+    margin-left: 0%;
+  }
+
+  .l-col-1-xs-offset {
+    margin-left: 8.33333%;
+  }
+
+  .l-col-2-xs-offset {
+    margin-left: 16.66667%;
+  }
+
+  .l-col-3-xs-offset {
+    margin-left: 25%;
+  }
+
+  .l-col-4-xs-offset {
+    margin-left: 33.33333%;
+  }
+
+  .l-col-5-xs-offset {
+    margin-left: 41.66667%;
+  }
+
+  .l-col-6-xs-offset {
+    margin-left: 50%;
+  }
+
+  .l-col-7-xs-offset {
+    margin-left: 58.33333%;
+  }
+
+  .l-col-8-xs-offset {
+    margin-left: 66.66667%;
+  }
+
+  .l-col-9-xs-offset {
+    margin-left: 75%;
+  }
+
+  .l-col-10-xs-offset {
+    margin-left: 83.33333%;
+  }
+
+  .l-col-11-xs-offset {
+    margin-left: 91.66667%;
+  }
+
+  .l-col-12-xs-offset {
+    margin-left: 100%;
+  }
+}
+@media (min-width: 425px) {
+  .l-col-1-sm, .l-col-2-sm, .l-col-3-sm, .l-col-4-sm, .l-col-5-sm, .l-col-6-sm, .l-col-7-sm, .l-col-8-sm, .l-col-9-sm, .l-col-10-sm, .l-col-11-sm, .l-col-12-sm {
+    float: left;
+  }
+
+  .l-col-1-sm {
+    width: 8.33333%;
+  }
+
+  .l-col-2-sm {
+    width: 16.66667%;
+  }
+
+  .l-col-3-sm {
+    width: 25%;
+  }
+
+  .l-col-4-sm {
+    width: 33.33333%;
+  }
+
+  .l-col-5-sm {
+    width: 41.66667%;
+  }
+
+  .l-col-6-sm {
+    width: 50%;
+  }
+
+  .l-col-7-sm {
+    width: 58.33333%;
+  }
+
+  .l-col-8-sm {
+    width: 66.66667%;
+  }
+
+  .l-col-9-sm {
+    width: 75%;
+  }
+
+  .l-col-10-sm {
+    width: 83.33333%;
+  }
+
+  .l-col-11-sm {
+    width: 91.66667%;
+  }
+
+  .l-col-12-sm {
+    width: 100%;
+  }
+
+  .l-col-0-sm-pull {
+    right: auto;
+  }
+
+  .l-col-1-sm-pull {
+    right: 8.33333%;
+  }
+
+  .l-col-2-sm-pull {
+    right: 16.66667%;
+  }
+
+  .l-col-3-sm-pull {
+    right: 25%;
+  }
+
+  .l-col-4-sm-pull {
+    right: 33.33333%;
+  }
+
+  .l-col-5-sm-pull {
+    right: 41.66667%;
+  }
+
+  .l-col-6-sm-pull {
+    right: 50%;
+  }
+
+  .l-col-7-sm-pull {
+    right: 58.33333%;
+  }
+
+  .l-col-8-sm-pull {
+    right: 66.66667%;
+  }
+
+  .l-col-9-sm-pull {
+    right: 75%;
+  }
+
+  .l-col-10-sm-pull {
+    right: 83.33333%;
+  }
+
+  .l-col-11-sm-pull {
+    right: 91.66667%;
+  }
+
+  .l-col-12-sm-pull {
+    right: 100%;
+  }
+
+  .l-col-0-sm-push {
+    left: auto;
+  }
+
+  .l-col-1-sm-push {
+    left: 8.33333%;
+  }
+
+  .l-col-2-sm-push {
+    left: 16.66667%;
+  }
+
+  .l-col-3-sm-push {
+    left: 25%;
+  }
+
+  .l-col-4-sm-push {
+    left: 33.33333%;
+  }
+
+  .l-col-5-sm-push {
+    left: 41.66667%;
+  }
+
+  .l-col-6-sm-push {
+    left: 50%;
+  }
+
+  .l-col-7-sm-push {
+    left: 58.33333%;
+  }
+
+  .l-col-8-sm-push {
+    left: 66.66667%;
+  }
+
+  .l-col-9-sm-push {
+    left: 75%;
+  }
+
+  .l-col-10-sm-push {
+    left: 83.33333%;
+  }
+
+  .l-col-11-sm-push {
+    left: 91.66667%;
+  }
+
+  .l-col-12-sm-push {
+    left: 100%;
+  }
+
+  .l-col-0-sm-offset {
+    margin-left: 0%;
+  }
+
+  .l-col-1-sm-offset {
+    margin-left: 8.33333%;
+  }
+
+  .l-col-2-sm-offset {
+    margin-left: 16.66667%;
+  }
+
+  .l-col-3-sm-offset {
+    margin-left: 25%;
+  }
+
+  .l-col-4-sm-offset {
+    margin-left: 33.33333%;
+  }
+
+  .l-col-5-sm-offset {
+    margin-left: 41.66667%;
+  }
+
+  .l-col-6-sm-offset {
+    margin-left: 50%;
+  }
+
+  .l-col-7-sm-offset {
+    margin-left: 58.33333%;
+  }
+
+  .l-col-8-sm-offset {
+    margin-left: 66.66667%;
+  }
+
+  .l-col-9-sm-offset {
+    margin-left: 75%;
+  }
+
+  .l-col-10-sm-offset {
+    margin-left: 83.33333%;
+  }
+
+  .l-col-11-sm-offset {
+    margin-left: 91.66667%;
+  }
+
+  .l-col-12-sm-offset {
+    margin-left: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .l-col-1-md, .l-col-2-md, .l-col-3-md, .l-col-4-md, .l-col-5-md, .l-col-6-md, .l-col-7-md, .l-col-8-md, .l-col-9-md, .l-col-10-md, .l-col-11-md, .l-col-12-md {
+    float: left;
+  }
+
+  .l-col-1-md {
+    width: 8.33333%;
+  }
+
+  .l-col-2-md {
+    width: 16.66667%;
+  }
+
+  .l-col-3-md {
+    width: 25%;
+  }
+
+  .l-col-4-md {
+    width: 33.33333%;
+  }
+
+  .l-col-5-md {
+    width: 41.66667%;
+  }
+
+  .l-col-6-md {
+    width: 50%;
+  }
+
+  .l-col-7-md {
+    width: 58.33333%;
+  }
+
+  .l-col-8-md {
+    width: 66.66667%;
+  }
+
+  .l-col-9-md {
+    width: 75%;
+  }
+
+  .l-col-10-md {
+    width: 83.33333%;
+  }
+
+  .l-col-11-md {
+    width: 91.66667%;
+  }
+
+  .l-col-12-md {
+    width: 100%;
+  }
+
+  .l-col-0-md-pull {
+    right: auto;
+  }
+
+  .l-col-1-md-pull {
+    right: 8.33333%;
+  }
+
+  .l-col-2-md-pull {
+    right: 16.66667%;
+  }
+
+  .l-col-3-md-pull {
+    right: 25%;
+  }
+
+  .l-col-4-md-pull {
+    right: 33.33333%;
+  }
+
+  .l-col-5-md-pull {
+    right: 41.66667%;
+  }
+
+  .l-col-6-md-pull {
+    right: 50%;
+  }
+
+  .l-col-7-md-pull {
+    right: 58.33333%;
+  }
+
+  .l-col-8-md-pull {
+    right: 66.66667%;
+  }
+
+  .l-col-9-md-pull {
+    right: 75%;
+  }
+
+  .l-col-10-md-pull {
+    right: 83.33333%;
+  }
+
+  .l-col-11-md-pull {
+    right: 91.66667%;
+  }
+
+  .l-col-12-md-pull {
+    right: 100%;
+  }
+
+  .l-col-0-md-push {
+    left: auto;
+  }
+
+  .l-col-1-md-push {
+    left: 8.33333%;
+  }
+
+  .l-col-2-md-push {
+    left: 16.66667%;
+  }
+
+  .l-col-3-md-push {
+    left: 25%;
+  }
+
+  .l-col-4-md-push {
+    left: 33.33333%;
+  }
+
+  .l-col-5-md-push {
+    left: 41.66667%;
+  }
+
+  .l-col-6-md-push {
+    left: 50%;
+  }
+
+  .l-col-7-md-push {
+    left: 58.33333%;
+  }
+
+  .l-col-8-md-push {
+    left: 66.66667%;
+  }
+
+  .l-col-9-md-push {
+    left: 75%;
+  }
+
+  .l-col-10-md-push {
+    left: 83.33333%;
+  }
+
+  .l-col-11-md-push {
+    left: 91.66667%;
+  }
+
+  .l-col-12-md-push {
+    left: 100%;
+  }
+
+  .l-col-0-md-offset {
+    margin-left: 0%;
+  }
+
+  .l-col-1-md-offset {
+    margin-left: 8.33333%;
+  }
+
+  .l-col-2-md-offset {
+    margin-left: 16.66667%;
+  }
+
+  .l-col-3-md-offset {
+    margin-left: 25%;
+  }
+
+  .l-col-4-md-offset {
+    margin-left: 33.33333%;
+  }
+
+  .l-col-5-md-offset {
+    margin-left: 41.66667%;
+  }
+
+  .l-col-6-md-offset {
+    margin-left: 50%;
+  }
+
+  .l-col-7-md-offset {
+    margin-left: 58.33333%;
+  }
+
+  .l-col-8-md-offset {
+    margin-left: 66.66667%;
+  }
+
+  .l-col-9-md-offset {
+    margin-left: 75%;
+  }
+
+  .l-col-10-md-offset {
+    margin-left: 83.33333%;
+  }
+
+  .l-col-11-md-offset {
+    margin-left: 91.66667%;
+  }
+
+  .l-col-12-md-offset {
+    margin-left: 100%;
+  }
+}
+@media (min-width: 1000px) {
+  .l-col-1-lg, .l-col-2-lg, .l-col-3-lg, .l-col-4-lg, .l-col-5-lg, .l-col-6-lg, .l-col-7-lg, .l-col-8-lg, .l-col-9-lg, .l-col-10-lg, .l-col-11-lg, .l-col-12-lg {
+    float: left;
+  }
+
+  .l-col-1-lg {
+    width: 8.33333%;
+  }
+
+  .l-col-2-lg {
+    width: 16.66667%;
+  }
+
+  .l-col-3-lg {
+    width: 25%;
+  }
+
+  .l-col-4-lg {
+    width: 33.33333%;
+  }
+
+  .l-col-5-lg {
+    width: 41.66667%;
+  }
+
+  .l-col-6-lg {
+    width: 50%;
+  }
+
+  .l-col-7-lg {
+    width: 58.33333%;
+  }
+
+  .l-col-8-lg {
+    width: 66.66667%;
+  }
+
+  .l-col-9-lg {
+    width: 75%;
+  }
+
+  .l-col-10-lg {
+    width: 83.33333%;
+  }
+
+  .l-col-11-lg {
+    width: 91.66667%;
+  }
+
+  .l-col-12-lg {
+    width: 100%;
+  }
+
+  .l-col-0-lg-pull {
+    right: auto;
+  }
+
+  .l-col-1-lg-pull {
+    right: 8.33333%;
+  }
+
+  .l-col-2-lg-pull {
+    right: 16.66667%;
+  }
+
+  .l-col-3-lg-pull {
+    right: 25%;
+  }
+
+  .l-col-4-lg-pull {
+    right: 33.33333%;
+  }
+
+  .l-col-5-lg-pull {
+    right: 41.66667%;
+  }
+
+  .l-col-6-lg-pull {
+    right: 50%;
+  }
+
+  .l-col-7-lg-pull {
+    right: 58.33333%;
+  }
+
+  .l-col-8-lg-pull {
+    right: 66.66667%;
+  }
+
+  .l-col-9-lg-pull {
+    right: 75%;
+  }
+
+  .l-col-10-lg-pull {
+    right: 83.33333%;
+  }
+
+  .l-col-11-lg-pull {
+    right: 91.66667%;
+  }
+
+  .l-col-12-lg-pull {
+    right: 100%;
+  }
+
+  .l-col-0-lg-push {
+    left: auto;
+  }
+
+  .l-col-1-lg-push {
+    left: 8.33333%;
+  }
+
+  .l-col-2-lg-push {
+    left: 16.66667%;
+  }
+
+  .l-col-3-lg-push {
+    left: 25%;
+  }
+
+  .l-col-4-lg-push {
+    left: 33.33333%;
+  }
+
+  .l-col-5-lg-push {
+    left: 41.66667%;
+  }
+
+  .l-col-6-lg-push {
+    left: 50%;
+  }
+
+  .l-col-7-lg-push {
+    left: 58.33333%;
+  }
+
+  .l-col-8-lg-push {
+    left: 66.66667%;
+  }
+
+  .l-col-9-lg-push {
+    left: 75%;
+  }
+
+  .l-col-10-lg-push {
+    left: 83.33333%;
+  }
+
+  .l-col-11-lg-push {
+    left: 91.66667%;
+  }
+
+  .l-col-12-lg-push {
+    left: 100%;
+  }
+
+  .l-col-0-lg-offset {
+    margin-left: 0%;
+  }
+
+  .l-col-1-lg-offset {
+    margin-left: 8.33333%;
+  }
+
+  .l-col-2-lg-offset {
+    margin-left: 16.66667%;
+  }
+
+  .l-col-3-lg-offset {
+    margin-left: 25%;
+  }
+
+  .l-col-4-lg-offset {
+    margin-left: 33.33333%;
+  }
+
+  .l-col-5-lg-offset {
+    margin-left: 41.66667%;
+  }
+
+  .l-col-6-lg-offset {
+    margin-left: 50%;
+  }
+
+  .l-col-7-lg-offset {
+    margin-left: 58.33333%;
+  }
+
+  .l-col-8-lg-offset {
+    margin-left: 66.66667%;
+  }
+
+  .l-col-9-lg-offset {
+    margin-left: 75%;
+  }
+
+  .l-col-10-lg-offset {
+    margin-left: 83.33333%;
+  }
+
+  .l-col-11-lg-offset {
+    margin-left: 91.66667%;
+  }
+
+  .l-col-12-lg-offset {
+    margin-left: 100%;
+  }
+}
+@media (min-width: 1280px) {
+  .l-col-1-xl, .l-col-2-xl, .l-col-3-xl, .l-col-4-xl, .l-col-5-xl, .l-col-6-xl, .l-col-7-xl, .l-col-8-xl, .l-col-9-xl, .l-col-10-xl, .l-col-11-xl, .l-col-12-xl {
+    float: left;
+  }
+
+  .l-col-1-xl {
+    width: 8.33333%;
+  }
+
+  .l-col-2-xl {
+    width: 16.66667%;
+  }
+
+  .l-col-3-xl {
+    width: 25%;
+  }
+
+  .l-col-4-xl {
+    width: 33.33333%;
+  }
+
+  .l-col-5-xl {
+    width: 41.66667%;
+  }
+
+  .l-col-6-xl {
+    width: 50%;
+  }
+
+  .l-col-7-xl {
+    width: 58.33333%;
+  }
+
+  .l-col-8-xl {
+    width: 66.66667%;
+  }
+
+  .l-col-9-xl {
+    width: 75%;
+  }
+
+  .l-col-10-xl {
+    width: 83.33333%;
+  }
+
+  .l-col-11-xl {
+    width: 91.66667%;
+  }
+
+  .l-col-12-xl {
+    width: 100%;
+  }
+
+  .l-col-0-xl-pull {
+    right: auto;
+  }
+
+  .l-col-1-xl-pull {
+    right: 8.33333%;
+  }
+
+  .l-col-2-xl-pull {
+    right: 16.66667%;
+  }
+
+  .l-col-3-xl-pull {
+    right: 25%;
+  }
+
+  .l-col-4-xl-pull {
+    right: 33.33333%;
+  }
+
+  .l-col-5-xl-pull {
+    right: 41.66667%;
+  }
+
+  .l-col-6-xl-pull {
+    right: 50%;
+  }
+
+  .l-col-7-xl-pull {
+    right: 58.33333%;
+  }
+
+  .l-col-8-xl-pull {
+    right: 66.66667%;
+  }
+
+  .l-col-9-xl-pull {
+    right: 75%;
+  }
+
+  .l-col-10-xl-pull {
+    right: 83.33333%;
+  }
+
+  .l-col-11-xl-pull {
+    right: 91.66667%;
+  }
+
+  .l-col-12-xl-pull {
+    right: 100%;
+  }
+
+  .l-col-0-xl-push {
+    left: auto;
+  }
+
+  .l-col-1-xl-push {
+    left: 8.33333%;
+  }
+
+  .l-col-2-xl-push {
+    left: 16.66667%;
+  }
+
+  .l-col-3-xl-push {
+    left: 25%;
+  }
+
+  .l-col-4-xl-push {
+    left: 33.33333%;
+  }
+
+  .l-col-5-xl-push {
+    left: 41.66667%;
+  }
+
+  .l-col-6-xl-push {
+    left: 50%;
+  }
+
+  .l-col-7-xl-push {
+    left: 58.33333%;
+  }
+
+  .l-col-8-xl-push {
+    left: 66.66667%;
+  }
+
+  .l-col-9-xl-push {
+    left: 75%;
+  }
+
+  .l-col-10-xl-push {
+    left: 83.33333%;
+  }
+
+  .l-col-11-xl-push {
+    left: 91.66667%;
+  }
+
+  .l-col-12-xl-push {
+    left: 100%;
+  }
+
+  .l-col-0-xl-offset {
+    margin-left: 0%;
+  }
+
+  .l-col-1-xl-offset {
+    margin-left: 8.33333%;
+  }
+
+  .l-col-2-xl-offset {
+    margin-left: 16.66667%;
+  }
+
+  .l-col-3-xl-offset {
+    margin-left: 25%;
+  }
+
+  .l-col-4-xl-offset {
+    margin-left: 33.33333%;
+  }
+
+  .l-col-5-xl-offset {
+    margin-left: 41.66667%;
+  }
+
+  .l-col-6-xl-offset {
+    margin-left: 50%;
+  }
+
+  .l-col-7-xl-offset {
+    margin-left: 58.33333%;
+  }
+
+  .l-col-8-xl-offset {
+    margin-left: 66.66667%;
+  }
+
+  .l-col-9-xl-offset {
+    margin-left: 75%;
+  }
+
+  .l-col-10-xl-offset {
+    margin-left: 83.33333%;
+  }
+
+  .l-col-11-xl-offset {
+    margin-left: 91.66667%;
+  }
+
+  .l-col-12-xl-offset {
+    margin-left: 100%;
+  }
+}
+@media (min-width: 1600px) {
+  .l-col-1-xxl, .l-col-2-xxl, .l-col-3-xxl, .l-col-4-xxl, .l-col-5-xxl, .l-col-6-xxl, .l-col-7-xxl, .l-col-8-xxl, .l-col-9-xxl, .l-col-10-xxl, .l-col-11-xxl, .l-col-12-xxl {
+    float: left;
+  }
+
+  .l-col-1-xxl {
+    width: 8.33333%;
+  }
+
+  .l-col-2-xxl {
+    width: 16.66667%;
+  }
+
+  .l-col-3-xxl {
+    width: 25%;
+  }
+
+  .l-col-4-xxl {
+    width: 33.33333%;
+  }
+
+  .l-col-5-xxl {
+    width: 41.66667%;
+  }
+
+  .l-col-6-xxl {
+    width: 50%;
+  }
+
+  .l-col-7-xxl {
+    width: 58.33333%;
+  }
+
+  .l-col-8-xxl {
+    width: 66.66667%;
+  }
+
+  .l-col-9-xxl {
+    width: 75%;
+  }
+
+  .l-col-10-xxl {
+    width: 83.33333%;
+  }
+
+  .l-col-11-xxl {
+    width: 91.66667%;
+  }
+
+  .l-col-12-xxl {
+    width: 100%;
+  }
+
+  .l-col-0-xxl-pull {
+    right: auto;
+  }
+
+  .l-col-1-xxl-pull {
+    right: 8.33333%;
+  }
+
+  .l-col-2-xxl-pull {
+    right: 16.66667%;
+  }
+
+  .l-col-3-xxl-pull {
+    right: 25%;
+  }
+
+  .l-col-4-xxl-pull {
+    right: 33.33333%;
+  }
+
+  .l-col-5-xxl-pull {
+    right: 41.66667%;
+  }
+
+  .l-col-6-xxl-pull {
+    right: 50%;
+  }
+
+  .l-col-7-xxl-pull {
+    right: 58.33333%;
+  }
+
+  .l-col-8-xxl-pull {
+    right: 66.66667%;
+  }
+
+  .l-col-9-xxl-pull {
+    right: 75%;
+  }
+
+  .l-col-10-xxl-pull {
+    right: 83.33333%;
+  }
+
+  .l-col-11-xxl-pull {
+    right: 91.66667%;
+  }
+
+  .l-col-12-xxl-pull {
+    right: 100%;
+  }
+
+  .l-col-0-xxl-push {
+    left: auto;
+  }
+
+  .l-col-1-xxl-push {
+    left: 8.33333%;
+  }
+
+  .l-col-2-xxl-push {
+    left: 16.66667%;
+  }
+
+  .l-col-3-xxl-push {
+    left: 25%;
+  }
+
+  .l-col-4-xxl-push {
+    left: 33.33333%;
+  }
+
+  .l-col-5-xxl-push {
+    left: 41.66667%;
+  }
+
+  .l-col-6-xxl-push {
+    left: 50%;
+  }
+
+  .l-col-7-xxl-push {
+    left: 58.33333%;
+  }
+
+  .l-col-8-xxl-push {
+    left: 66.66667%;
+  }
+
+  .l-col-9-xxl-push {
+    left: 75%;
+  }
+
+  .l-col-10-xxl-push {
+    left: 83.33333%;
+  }
+
+  .l-col-11-xxl-push {
+    left: 91.66667%;
+  }
+
+  .l-col-12-xxl-push {
+    left: 100%;
+  }
+
+  .l-col-0-xxl-offset {
+    margin-left: 0%;
+  }
+
+  .l-col-1-xxl-offset {
+    margin-left: 8.33333%;
+  }
+
+  .l-col-2-xxl-offset {
+    margin-left: 16.66667%;
+  }
+
+  .l-col-3-xxl-offset {
+    margin-left: 25%;
+  }
+
+  .l-col-4-xxl-offset {
+    margin-left: 33.33333%;
+  }
+
+  .l-col-5-xxl-offset {
+    margin-left: 41.66667%;
+  }
+
+  .l-col-6-xxl-offset {
+    margin-left: 50%;
+  }
+
+  .l-col-7-xxl-offset {
+    margin-left: 58.33333%;
+  }
+
+  .l-col-8-xxl-offset {
+    margin-left: 66.66667%;
+  }
+
+  .l-col-9-xxl-offset {
+    margin-left: 75%;
+  }
+
+  .l-col-10-xxl-offset {
+    margin-left: 83.33333%;
+  }
+
+  .l-col-11-xxl-offset {
+    margin-left: 91.66667%;
+  }
+
+  .l-col-12-xxl-offset {
+    margin-left: 100%;
+  }
+}
+.l-row {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.l-row:before, .l-row:after {
+  content: "";
+  display: table;
+}
+.l-row:after {
+  clear: both;
+}
+.l-row .l-col {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/*doc
+---
+title: .l-row-(0 or size)
+name: l-4-row-2-size
+category: layout
+parent: l-4-row
+---
+
+floatによるグリッドで余白が異なるグループを作成する。
+
+``` example
+<div class="l-row l-row-0">
+    <div class="l-col l-col-4">
+        <div class="m-b p-sm bg-second bg-mild">l-row l-row-0</div>
+    </div>
+    <div class="l-col l-col-4">
+        <div class="m-b p-sm bg-second bg-mild" style="opacity: 0.8;">l-row l-row-0</div>
+    </div>
+    <div class="l-col l-col-4">
+        <div class="m-b p-sm bg-second bg-mild">l-row l-row-0</div>
+    </div>
+</div>
+
+<div class="l-row l-row-sm">
+    <div class="l-col l-col-4">
+        <div class="m-b p-sm bg-third bg-mild">l-row l-row-sm</div>
+    </div>
+    <div class="l-col l-col-4">
+        <div class="m-b p-sm bg-third bg-mild">l-row l-row-sm</div>
+    </div>
+    <div class="l-col l-col-4">
+        <div class="m-b p-sm bg-third bg-mild">l-row l-row-sm</div>
+    </div>
+</div>
+
+<div class="l-row l-row-lg">
+    <div class="l-col l-col-4">
+        <div class="m-b p-sm bg-important bg-mild">l-row l-row-lg</div>
+    </div>
+    <div class="l-col l-col-4">
+        <div class="m-b p-sm bg-important bg-mild">l-row l-row-lg</div>
+    </div>
+    <div class="l-col l-col-4">
+        <div class="m-b p-sm bg-important bg-mild">l-row l-row-lg</div>
+    </div>
+</div>
+```
+*/
+.l-row-0 {
+  margin-left: 0;
+  margin-right: 0;
+}
+.l-row-0:before, .l-row-0:after {
+  content: "";
+  display: table;
+}
+.l-row-0:after {
+  clear: both;
+}
+.l-row-0 .l-col {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.l-row-sm {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+.l-row-sm:before, .l-row-sm:after {
+  content: "";
+  display: table;
+}
+.l-row-sm:after {
+  clear: both;
+}
+.l-row-sm .l-col {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.l-row-lg {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.l-row-lg:before, .l-row-lg:after {
+  content: "";
+  display: table;
+}
+.l-row-lg:after {
+  clear: both;
+}
+.l-row-lg .l-col {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/*doc
+---
+title: .l-f-row
+name: l-5-f-row
+category: layout
+---
+
+フレックスボックスによるグリッドのグループを作成する。セル内の高さを揃える必要がある場合に使用する。
+
+*/
+@media (min-width: 1000px) {
+  .l-f-row {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+}
+
+/*doc
+---
+title: .l-f-col-(column)-(breakpoint)
+name: l-5-f-row-1-col
+category: layout
+parent: l-5-f-row
+---
+
+フレックスボックスによるグリッドのセルを作成する。(column)は3,4,6のみ、(breakpoint)はlgのみ。
+
+``` example
+<div class="l-f-row">
+    <div class="l-f-col l-f-col-4-lg p-b">
+        <div class="bg-first bg-mild p" style="height: 100%;">l-f-col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
+    </div>
+    <div class="l-f-col l-f-col-4-lg p-b">
+        <div class="bg-first bg-mild p" style="height: 100%;">l-f-col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto. Quia, nobis explicabo asperiores facere!</div>
+    </div>
+    <div class="l-f-col l-f-col-4-lg p-b">
+        <div class="bg-first bg-mild p" style="height: 100%;">l-f-col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+    </div>
+    <div class="l-f-col l-f-col-4-lg p-b">
+        <div class="bg-first bg-mild p" style="height: 100%;">l-f-col-4-lg<br>Lorem ipsum dolor sit amet</div>
+    </div>
+    <div class="l-f-col l-f-col-4-lg p-b">
+        <div class="bg-first bg-mild p" style="height: 100%;">l-f-col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
+    </div>
+</div>
+```
+*/
+.l-f-col {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media (min-width: 1000px) {
+  .l-f-col-3-lg {
+    width: 25%;
+  }
+
+  .l-f-col-4-lg {
+    width: 33.33333333%;
+  }
+
+  .l-f-col-6-lg {
+    width: 50%;
+  }
+}
+/*doc
+---
+title: .l-f-row-(0 or size)
+name: l-5-f-row-2-size
+category: layout
+parent: l-5-f-row
+---
+
+フレックスボックスによるグリッドで余白が異なるグループを作成する。
+
+``` example
+<div class="l-f-row l-f-row-0">
+    <div class="l-f-col l-f-col-4-lg p-b">
+        <div class="bg-second bg-mild p" style="height: 100%;">l-f-col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
+    </div>
+    <div class="l-f-col l-f-col-4-lg p-b">
+        <div class="bg-second bg-mild p" style="height: 100%; opacity: 0.8;">l-f-col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto. Quia, nobis explicabo asperiores facere!</div>
+    </div>
+    <div class="l-f-col l-f-col-4-lg p-b">
+        <div class="bg-second bg-mild p" style="height: 100%;">l-f-col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+    </div>
+</div>
+
+<div class="l-f-row l-f-row-sm">
+    <div class="l-f-col l-f-col-3-lg p-b">
+        <div class="bg-third bg-mild p" style="height: 100%;">l-f-col-3-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
+    </div>
+    <div class="l-f-col l-f-col-3-lg p-b">
+        <div class="bg-third bg-mild p" style="height: 100%;">l-f-col-3-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto. Quia, nobis explicabo asperiores facere!</div>
+    </div>
+    <div class="l-f-col l-f-col-3-lg p-b">
+        <div class="bg-third bg-mild p" style="height: 100%;">l-f-col-3-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+    </div>
+    <div class="l-f-col l-f-col-3-lg p-b">
+        <div class="bg-third bg-mild p" style="height: 100%;">l-f-col-3-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto.</div>
+    </div>
+</div>
+
+<div class="l-f-row l-f-row-lg">
+    <div class="l-f-col l-f-col-6-lg p-b">
+        <div class="bg-important bg-mild p" style="height: 100%;">l-f-col-6-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
+    </div>
+    <div class="l-f-col l-f-col-6-lg p-b">
+        <div class="bg-important bg-mild p" style="height: 100%;">l-f-col-6-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto. Quia, nobis explicabo asperiores facere!</div>
+    </div>
+</div>
+```
+*/
+.l-f-row-0 {
+  margin-left: 0;
+  margin-right: 0;
+}
+.l-f-row-0 .l-f-col {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.l-f-row-sm {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+.l-f-row-sm .l-f-col {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.l-f-row-lg {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.l-f-row-lg .l-f-col {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/*doc
+---
+title: .l-header
+name: l-6-header
+category: layout
+---
+
+ヘッダを表示する。
+
+*/
+.l-header {
+  padding: 20px 0;
+}
+
+/*doc
+---
+title: .l-header-brand
+name: l-6-header-1-brand
+category: layout
+parent: l-6-header
+---
+
+ブランドロゴを表示する。
+
+*/
+.l-header-brand {
+  margin: 0;
+  text-align: center;
+  line-height: 1;
+}
+@media (min-width: 1000px) {
+  .l-header-brand {
+    text-align: left;
+  }
+}
+
+/*doc
+---
+title: .l-header-title
+name: l-6-header-2-title
+category: layout
+parent: l-6-header
+---
+
+サイトタイトルを表示する。
+
+*/
+.l-header-title {
+  font-size: 1.5rem;
+}
+
+/*doc
+---
+title: .l-globalnav
+name: l-7-globalnav
+category: layout
+---
+
+グローバルナビゲーションを表示する。.nav-horizontalを含む。
+
+*/
+.l-globalnav {
+  width: 100%;
+  background-color: #fff;
+  line-height: 1;
+}
+.l-globalnav .nav-horizontal {
+  display: block;
+  width: 100%;
+}
+.l-globalnav .nav-horizontal > ul {
+  margin-left: auto;
+  margin-right: auto;
+}
+.l-globalnav.is-active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 99;
+}
+
+/*doc
+---
+title: .l-footer
+name: l-8-footer
+category: layout
+---
+
+フッタを表示する。
+
+*/
+.l-footer {
+  padding: 20px 0 60px;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+/*doc
+---
+title: .l-footer-nav
+name: l-8-footer-1-nav
+category: layout
+parent: l-8-footer
+---
+
+フッタナビを表示する。.nav-horizontalを含む。
+
+*/
+/*doc
+---
+title: .l-footer-copyright
+name: l-8-footer-2-copyright
+category: layout
+parent: l-8-footer
+---
+
+コピーライト文を表示する。
+
+*/
+.l-footer-copyright {
+  margin: 0;
+  font-size: 0.75rem;
+}
+
 /*
 badge
 --------------------
@@ -430,6 +2710,11 @@ btn-(color)
   background-color: #49d;
   border-color: transparent;
 }
+a:hover .btn-first, a:focus .btn-first, a:active .btn-first {
+  color: #fff;
+  background-color: #2283cc;
+  border-color: transparent;
+}
 
 .btn-second {
   color: #fff;
@@ -447,6 +2732,11 @@ btn-(color)
 .btn-second.disabled:hover, .btn-second.disabled.hover, .btn-second.disabled:focus, .btn-second.disabled.focus, .btn-second:disabled:hover, .btn-second:disabled.hover, .btn-second:disabled:focus, .btn-second:disabled.focus, fieldset[disabled] .btn-second:hover, fieldset[disabled] .btn-second.hover, fieldset[disabled] .btn-second:focus, fieldset[disabled] .btn-second.focus {
   color: #fff;
   background-color: #444;
+  border-color: transparent;
+}
+a:hover .btn-second, a:focus .btn-second, a:active .btn-second {
+  color: #fff;
+  background-color: #000;
   border-color: transparent;
 }
 
@@ -468,6 +2758,11 @@ btn-(color)
   background-color: #49B070;
   border-color: transparent;
 }
+a:hover .btn-third, a:focus .btn-third, a:active .btn-third {
+  color: #fff;
+  background-color: #229644;
+  border-color: transparent;
+}
 
 .btn-fourth {
   color: #fff;
@@ -485,6 +2780,11 @@ btn-(color)
 .btn-fourth.disabled:hover, .btn-fourth.disabled.hover, .btn-fourth.disabled:focus, .btn-fourth.disabled.focus, .btn-fourth:disabled:hover, .btn-fourth:disabled.hover, .btn-fourth:disabled:focus, .btn-fourth:disabled.focus, fieldset[disabled] .btn-fourth:hover, fieldset[disabled] .btn-fourth.hover, fieldset[disabled] .btn-fourth:focus, fieldset[disabled] .btn-fourth.focus {
   color: #fff;
   background-color: #f38c10;
+  border-color: transparent;
+}
+a:hover .btn-fourth, a:focus .btn-fourth, a:active .btn-fourth {
+  color: #fff;
+  background-color: #f37910;
   border-color: transparent;
 }
 
@@ -506,6 +2806,11 @@ btn-(color)
   background-color: #e33050;
   border-color: transparent;
 }
+a:hover .btn-fifth, a:focus .btn-fifth, a:active .btn-fifth {
+  color: #fff;
+  background-color: #d70022;
+  border-color: transparent;
+}
 
 .btn-info {
   color: #fff;
@@ -525,6 +2830,11 @@ btn-(color)
   background-color: #f38c10;
   border-color: transparent;
 }
+a:hover .btn-info, a:focus .btn-info, a:active .btn-info {
+  color: #fff;
+  background-color: #f37910;
+  border-color: transparent;
+}
 
 .btn-important {
   color: #fff;
@@ -542,6 +2852,11 @@ btn-(color)
 .btn-important.disabled:hover, .btn-important.disabled.hover, .btn-important.disabled:focus, .btn-important.disabled.focus, .btn-important:disabled:hover, .btn-important:disabled.hover, .btn-important:disabled:focus, .btn-important:disabled.focus, fieldset[disabled] .btn-important:hover, fieldset[disabled] .btn-important.hover, fieldset[disabled] .btn-important:focus, fieldset[disabled] .btn-important.focus {
   color: #fff;
   background-color: #e33050;
+  border-color: transparent;
+}
+a:hover .btn-important, a:focus .btn-important, a:active .btn-important {
+  color: #fff;
+  background-color: #d70022;
   border-color: transparent;
 }
 
@@ -567,6 +2882,11 @@ btn-inverse
   background-color: rgba(255, 255, 255, 0.25);
   border-color: transparent;
 }
+a:hover .btn-inverse, a:focus .btn-inverse, a:active .btn-inverse {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-color: transparent;
+}
 .btn-inverse.btn-outline {
   color: #fff;
   background-color: transparent;
@@ -584,6 +2904,11 @@ btn-inverse
   color: #fff;
   background-color: transparent;
   border-color: rgba(255, 255, 255, 0.8);
+}
+a:hover .btn-inverse.btn-outline, a:focus .btn-inverse.btn-outline, a:active .btn-inverse.btn-outline {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: #fff;
 }
 
 /*
@@ -608,6 +2933,11 @@ btn-outline
   background-color: transparent;
   border-color: #49d;
 }
+a:hover .btn-outline.btn-first, a:focus .btn-outline.btn-first, a:active .btn-outline.btn-first {
+  color: #fff;
+  background-color: #49d;
+  border-color: transparent;
+}
 .btn-outline.btn-second {
   color: inherit;
   background-color: transparent;
@@ -625,6 +2955,11 @@ btn-outline
   color: inherit;
   background-color: transparent;
   border-color: #444;
+}
+a:hover .btn-outline.btn-second, a:focus .btn-outline.btn-second, a:active .btn-outline.btn-second {
+  color: #fff;
+  background-color: #444;
+  border-color: transparent;
 }
 .btn-outline.btn-third {
   color: inherit;
@@ -644,6 +2979,11 @@ btn-outline
   background-color: transparent;
   border-color: #49B070;
 }
+a:hover .btn-outline.btn-third, a:focus .btn-outline.btn-third, a:active .btn-outline.btn-third {
+  color: #fff;
+  background-color: #49B070;
+  border-color: transparent;
+}
 .btn-outline.btn-fourth {
   color: inherit;
   background-color: transparent;
@@ -661,6 +3001,11 @@ btn-outline
   color: inherit;
   background-color: transparent;
   border-color: #f38c10;
+}
+a:hover .btn-outline.btn-fourth, a:focus .btn-outline.btn-fourth, a:active .btn-outline.btn-fourth {
+  color: #fff;
+  background-color: #f38c10;
+  border-color: transparent;
 }
 .btn-outline.btn-fifth {
   color: inherit;
@@ -680,6 +3025,11 @@ btn-outline
   background-color: transparent;
   border-color: #e33050;
 }
+a:hover .btn-outline.btn-fifth, a:focus .btn-outline.btn-fifth, a:active .btn-outline.btn-fifth {
+  color: #fff;
+  background-color: #e33050;
+  border-color: transparent;
+}
 .btn-outline.btn-info {
   color: inherit;
   background-color: transparent;
@@ -698,6 +3048,11 @@ btn-outline
   background-color: transparent;
   border-color: #f38c10;
 }
+a:hover .btn-outline.btn-info, a:focus .btn-outline.btn-info, a:active .btn-outline.btn-info {
+  color: #fff;
+  background-color: #f38c10;
+  border-color: transparent;
+}
 .btn-outline.btn-important {
   color: inherit;
   background-color: transparent;
@@ -715,6 +3070,11 @@ btn-outline
   color: inherit;
   background-color: transparent;
   border-color: #e33050;
+}
+a:hover .btn-outline.btn-important, a:focus .btn-outline.btn-important, a:active .btn-outline.btn-important {
+  color: #fff;
+  background-color: #e33050;
+  border-color: transparent;
 }
 
 /*
@@ -1486,65 +3846,568 @@ thumbnail
 }
 
 #document {
-  /*
-  bg
-  --------------------
+  /*doc
+  ---
+  title: .bg-(color)
+  name: bg-1-color
+  category: utilities
+  ---
+  
+  背景に色をつける。オブジェクト・コンポーネントを可能な限り上書きする。.bgを付与する必要はない。
+  
+  ``` example
+  <div class="m-b p-sm bg-first">bg-first</div>
+  <div class="m-b p-sm bg-second">bg-second</div>
+  <div class="m-b p-sm bg-third">bg-third</div>
+  <div class="m-b p-sm bg-info">bg-info</div>
+  <div class="m-b p-sm bg-important">bg-important</div>
+  ```
+  
   */
-  /*
-  clear
-  ------------------------------
+  /*doc
+  ---
+  title: .bg-mild
+  name: bg-2-mild
+  category: utilities
+  ---
+  
+  .bg-(color)と併用すると背景色を弱める。オブジェクト・コンポーネントを可能な限り上書きする。.bgを付与する必要はない。
+  
+  ``` example
+  <div class="m-b p-sm bg-first bg-mild">bg-first</div>
+  <div class="m-b p-sm bg-second bg-mild">bg-second</div>
+  <div class="m-b p-sm bg-third bg-mild">bg-third</div>
+  <div class="m-b p-sm bg-info bg-mild">bg-info</div>
+  <div class="m-b p-sm bg-important bg-mild">bg-important</div>
+  ```
+  
   */
-  /*
-  clearfix
-  ------------------------------
+  /*doc
+  ---
+  title: .bg-fade
+  name: bg-3-fade
+  category: utilities
+  ---
+  
+  .bg-(color)と併用すると背景色を薄くする。オブジェクト・コンポーネントを可能な限り上書きする。.bgを付与する必要はない。
+  
+  ``` example
+  <div class="m-b p-sm bg-first bg-fade">bg-first</div>
+  <div class="m-b p-sm bg-second bg-fade">bg-second</div>
+  <div class="m-b p-sm bg-third bg-fade">bg-third</div>
+  <div class="m-b p-sm bg-info bg-fade">bg-info</div>
+  <div class="m-b p-sm bg-important bg-fade">bg-important</div>
+  ```
+  
   */
-  /*
-  float
-  --------------------
+  /*doc
+  ---
+  title: .bg-inverse
+  name: bg-4-inverse
+  category: utilities
+  ---
+  
+  文字色と背景色を反転する。オブジェクト・コンポーネントを可能な限り上書きする。.bgを付与する必要はない。
+  
+  ``` example
+  <div class="p-sm bg-inverse">bg-inverse</div>
+  ```
+  
   */
-  /*
-  font (with Japanese webfonts)
-  --------------------
+  /*doc
+  ---
+  title: .clear
+  name: clear
+  category: utilities
+  ---
+  
+  floatを解除する。
+  
+  ``` example
+  <div class="float-l">
+      <div class="thumbnail">
+          <img src="https://placehold.jp/150x150.jpg?text=float-l" alt="">
+      </div>
+  </div>
+  
+  <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+  吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+  
+  <p class="clear">ここで解除_掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。<br>
+  第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</p>
+  ```
+  
   */
-  /*
-  hidden
-  --------------------
+  /*doc
+  ---
+  title: .clearfix
+  name: clearfix
+  category: utilities
+  ---
+  
+  指定された包括要素が閉じられた時点でfloatを解除する。
+  
+  ``` example
+  <div class="bg-first bg-fade clearfix">
+  
+  <div class="float-l">
+      <div class="thumbnail">
+          <img src="https://placehold.jp/100x100.jpg?text=float-l" alt="">
+      </div>
+  </div>
+  <div class="float-l">
+      <div class="thumbnail">
+          <img src="https://placehold.jp/100x100.jpg?text=float-l" alt="">
+      </div>
+  </div>
+  <div class="float-l">
+      <div class="thumbnail">
+          <img src="https://placehold.jp/100x100.jpg?text=float-l" alt="">
+      </div>
+  </div>
+  
+  <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+  吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+  
+  </div>
+  
+  <p>この直前でclearfix_この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+  ```
+  
   */
-  /*
-  img
-  --------------------
+  /*doc
+  ---
+  title: .float-(direction)
+  name: float-direction
+  category: utilities
+  ---
+  
+  指定した要素を(direction)で指示した方向に寄せる。
+  
+  ``` example
+  <div class="float-l">
+      <div class="thumbnail">
+          <img src="https://placehold.jp/150x150.jpg?text=float-l" alt="">
+      </div>
+  </div>
+  
+  <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+  吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+  
+  <p>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。<br>
+  第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。<br>
+  のみならず顔の真中があまりに突起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。<br>
+  これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+  
+  <div class="float-r">
+      <div class="thumbnail">
+          <img src="https://placehold.jp/150x150.jpg?text=float-r" alt="">
+      </div>
+  </div>
+  
+  <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+  吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+  
+  <p>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。<br>
+  第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。<br>
+  のみならず顔の真中があまりに突起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。<br>
+  これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+  ```
+  
   */
-  /*
-  line
-  --------------------
+  /*doc
+  ---
+  title: .font-(face)
+  name: font-1-face
+  category: utilities
+  ---
+  
+  フォントを変更する。オブジェクト・コンポーネントを可能な限り上書きする。.fontを付与する必要はない。
+  
+  ``` example
+  <p class="text-xl font-first">font-first_デザインフォント01に変更しました</p>
+  <p class="text-xl font-second">font-second_デザインフォント02に変更しました</p>
+  <p class="text-xl font-third">font-third_デザインフォント03に変更しました</p>
+  <p class="text-xl font-first">ここはデザインフォント01ですが、<span class="font-root">font-root_ここからbody要素のフォントに変更しました</span></p>
+  <p class="text-xl font-mono">font-mono_等幅フォントに変更しました &lt;p class="font-mono"&gt;hello world!&lt;/p&gt;</p>
+  ```
+  
   */
-  /*
-  m
-  --------------------
+  /*doc
+  ---
+  title: .font-bold
+  name: font-2-bold
+  category: utilities
+  ---
+  
+  ボールドフォントに変更する。日本語ウェブフォントサービスを利用した場合、font-weightだけでは変更ができないため、別途クラスが必要となる。
+  
+  ``` example
+  <p class="text-xl font-first font-bold">font-first_font-bold_デザインフォント01に変更しました</p>
+  <p class="text-xl font-secondfont-bold">font-second_font-bold_デザインフォント02に変更しました</p>
+  <p class="text-xl font-thirdfont-bold">font-third_font-bold_デザインフォント03に変更しました</p>
+  <p class="text-xl font-firstfont-bold">ここはデザインフォント01ですが、<span class="font-root font-bold">font-root_font-bold_ここからbody要素のフォントに変更しました</span></p>
+  <p class="text-xl font-mono font-bold">font-mono_font-bold_等幅フォントに変更しました &lt;p class="font-mono font-bold"&gt;hello world!&lt;/p&gt;</p>
+  ```
+  
   */
-  /*
-  p
-  --------------------
+  /*doc
+  ---
+  title: .hidden
+  name: hidden
+  category: utilities
+  ---
+  
+  常に要素を非表示にする。音声読み上げに対応する場合は.srを使用すること。
+  
   */
-  /*
-  position
-  --------------------
+  /*doc
+  ---
+  title: .hidden-(breakpoint)-up
+  name: hidden-1-breakpoint-up
+  category: utilities
+  parent: hidden
+  ---
+  
+  (breakpoint)で指定した画面幅以上で要素を非表示にする。特性上、hidden-xs-upはない。
+  
+  ``` example
+  <div class="hidden-sm-up m-b-sm"><span class="btn btn-first">hidden-sm-up</span></div>
+  <div class="hidden-md-up m-b-sm"><span class="btn btn-second">hidden-md-up</span></div>
+  <div class="hidden-lg-up m-b-sm"><span class="btn btn-third">hidden-lg-up</span></div>
+  <div class="hidden-xl-up m-b-sm"><span class="btn btn-important">hidden-xl-up</span></div>
+  <div class="hidden-xxl-up m-b-sm"><span class="btn">hidden-xxl-up</span></div>
+  ```
+  
   */
-  /*
-  shadow
-  --------------------
+  /*doc
+  ---
+  title: .hidden-(breakpoint)-down
+  name: hidden-2-breakpoint-down
+  category: utilities
+  parent: hidden
+  ---
+  
+  (breakpoint)で指定した画面幅未満で要素を非表示にする。特性上、hidden-xxl-downはない。
+  
+  ``` example
+  <div class="hidden-xs-down m-b-sm"><span class="btn btn-first">hidden-xs-down</span></div>
+  <div class="hidden-sm-down m-b-sm"><span class="btn btn-second">hidden-sm-down</span></div>
+  <div class="hidden-md-down m-b-sm"><span class="btn btn-third">hidden-md-down</span></div>
+  <div class="hidden-lg-down m-b-sm"><span class="btn btn-important">hidden-lg-down</span></div>
+  <div class="hidden-xl-down m-b-sm"><span class="btn">hidden-xl-down</span></div>
+  ```
+  
   */
-  /*
-  sr
-  --------------------
+  /*doc
+  ---
+  title: .img-responsive
+  name: img-responsive
+  category: utilities
+  ---
+  
+  画像が包括要素よりも大きくなった場合のみ、縦横比を保って伸縮させる。
+  
+  ``` example
+  <img src="https://placehold.jp/960x100.jpg?text=img-responsive" alt="" class="img-responsive">
+  ```
+  
   */
-  /*
-  text_color
-  --------------------
+  /*doc
+  ---
+  title: .img-fill
+  name: img-fill
+  category: utilities
+  ---
+  
+  画像の大きさに関係なく、常に包括要素の幅いっぱいに伸縮させる。
+  
+  ``` example
+  <img src="https://placehold.jp/960x100.jpg?text=img-fill" alt="" class="img-fill">
+  ```
+  
   */
-  /*
-  text_size
-  --------------------
+  /*doc
+  ---
+  title: .img-round
+  name: img-round
+  category: utilities
+  ---
+  
+  正方形の画像を正円にする。
+  
+  ``` example
+  <img src="https://placehold.jp/200x200.jpg?text=img-round" alt="" class="img-round">
+  ```
+  
+  */
+  /*doc
+  ---
+  title: .line-(direction)
+  name: line-1-direction
+  category: utilities
+  ---
+  
+  ブロック要素内の文章を指定した方向へ寄せる。
+  
+  ``` example
+  <p class="line-c">line-c_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+  <p class="line-r">line-r_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+  
+  <div class="bg-second bg-fade line-c">
+      <p>line-c_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+      <p class="line-l">line-l_何でも薄暗いじめじめした所で</p>
+      <p>ニャーニャー泣いていた事だけは記憶している。</p>
+  </div>
+  ```
+  */
+  /*doc
+  ---
+  title: .line-(size)
+  name: line-2-size
+  category: utilities
+  ---
+  
+  文章を指定した行高さに変更する。
+  
+  ``` example
+  <p class="line-none">line-none_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+  <p class="line-sm">line-sm_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+  <p class="line-md">line-md_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+  <p class="line-lg">line-lg_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+  ```
+  */
+  /*doc
+  ---
+  title: .m-(direction)-(size)
+  name: m
+  category: utilities
+  ---
+  
+  ブロック要素の外部余白を変更する。
+  
+  ``` example
+  <div class="m-xs bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-xs</div>
+  <div class="m-t-xs bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-t-xs</div>
+  <div class="m-r-xs bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-r-xs</div>
+  <div class="m-b-xs bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-b-xs</div>
+  <div class="m-l-xs bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-l-xs</div>
+  
+  <div class="m-sm bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-sm</div>
+  <div class="m-t-sm bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-t-sm</div>
+  <div class="m-r-sm bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-r-sm</div>
+  <div class="m-b-sm bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-b-sm</div>
+  <div class="m-l-sm bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-l-sm</div>
+  
+  <div class="m bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m</div>
+  <div class="m-t bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-t</div>
+  <div class="m-r bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-r</div>
+  <div class="m-b bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-b</div>
+  <div class="m-l bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-l</div>
+  
+  <div class="m-lg bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-lg</div>
+  <div class="m-t-lg bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-t-lg</div>
+  <div class="m-r-lg bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-r-lg</div>
+  <div class="m-b-lg bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-b-lg</div>
+  <div class="m-l-lg bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-l-lg</div>
+  
+  <div class="m-xl bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-xl</div>
+  <div class="m-t-xl bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-t-xl</div>
+  <div class="m-r-xl bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-r-xl</div>
+  <div class="m-b-xl bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-b-xl</div>
+  <div class="m-l-xl bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-l-xl</div>
+  
+  <div class="m-xxl bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-xxl</div>
+  <div class="m-t-xxl bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-t-xxl</div>
+  <div class="m-r-xxl bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-r-xxl</div>
+  <div class="m-b-xxl bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-b-xxl</div>
+  <div class="m-l-xxl bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-l-xxl</div>
+  ```
+  */
+  /*doc
+  ---
+  title: .p-(direction)-(size)
+  name: p
+  category: utilities
+  ---
+  
+  ブロック要素の内部余白を変更する。
+  
+  ``` example
+  <div class="p-xs bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-xs</div></div>
+  <div class="p-t-xs bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-t-xs</div></div>
+  <div class="p-r-xs bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-r-xs</div></div>
+  <div class="p-b-xs bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-b-xs</div></div>
+  <div class="p-l-xs bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-l-xs</div></div>
+  
+  <div class="p-sm bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-sm</div></div>
+  <div class="p-t-sm bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-t-sm</div></div>
+  <div class="p-r-sm bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-r-sm</div></div>
+  <div class="p-b-sm bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-b-sm</div></div>
+  <div class="p-l-sm bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-l-sm</div></div>
+  
+  <div class="m bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">m</div></div>
+  <div class="p-t bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-t</div></div>
+  <div class="p-r bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-r</div></div>
+  <div class="p-b bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-b</div></div>
+  <div class="p-l bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-l</div></div>
+  
+  <div class="p-lg bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-lg</div></div>
+  <div class="p-t-lg bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-t-lg</div></div>
+  <div class="p-r-lg bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-r-lg</div></div>
+  <div class="p-b-lg bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-b-lg</div></div>
+  <div class="p-l-lg bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-l-lg</div></div>
+  
+  <div class="p-xl bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-xl</div></div>
+  <div class="p-t-xl bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-t-xl</div></div>
+  <div class="p-r-xl bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-r-xl</div></div>
+  <div class="p-b-xl bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-b-xl</div></div>
+  <div class="p-l-xl bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-l-xl</div></div>
+  
+  <div class="p-xxl bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-xxl</div></div>
+  <div class="p-t-xxl bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-t-xxl</div></div>
+  <div class="p-r-xxl bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-r-xxl</div></div>
+  <div class="p-b-xxl bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-b-xxl</div></div>
+  <div class="p-l-xxl bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-l-xxl</div></div>
+  ```
+  */
+  /*doc
+  ---
+  title: .position-(directionY)-(directionX)
+  name: position
+  category: utilities
+  ---
+  
+  ブロック要素を親要素の指定した位置に絶対配置する。親要素にposition:relativeを指定している必要がある。
+  
+  ``` example
+  <div>position-tl</div>
+  <div class="bg-first bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="position-tl" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+  
+  <div>position-tc</div>
+  <div class="bg-first bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="position-tc" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+  
+  <div>position-tr</div>
+  <div class="bg-first bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="position-tr" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+  
+  <div>position-cl</div>
+  <div class="bg-second bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="position-cl" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+  
+  <div>position-cc</div>
+  <div class="bg-second bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="position-cc" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+  
+  <div>position-cr</div>
+  <div class="bg-second bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="position-cr" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+  
+  <div>position-bl</div>
+  <div class="bg-third bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="position-bl" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+  
+  <div>position-bc</div>
+  <div class="bg-third bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="position-bc" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+  
+  <div>position-br</div>
+  <div class="bg-third bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="position-br" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+  ```
+  */
+  /*doc
+  ---
+  title: .shadow-(size)
+  name: shadow
+  category: utilities
+  ---
+  
+  要素に影をつける。サイズによって、背景との擬似的な距離が変わる。
+  
+  ``` example
+  <p><a href="#" class="btn btn-first btn-block shadow shadow-sm">shadow-sm</a></p>
+  <p><a href="#" class="btn btn-first btn-block shadow">shadow</a></p>
+  <p><a href="#" class="btn btn-first btn-block shadow shadow-lg">shadow-lg</a></p>
+  ```
+  */
+  /*doc
+  ---
+  title: .sr
+  name: sr
+  category: utilities
+  ---
+  
+  要素内の文章をスクリーンリーダーに反応するよう、外見のみ非表示にする。  
+  .sr-focusは要素そのもの、.sr-focus-innerは包括する要素にフォーカスしたときに表示される。
+  
+  ``` example
+  <p><a href="#" class="btn btn-third btn-round">&raquo; sr <span class="sr">この文字は表示されません</span></a></p>
+  <p>sr-focus <input type="button" class="sr sr-focus" value="フォーカスしましたね" /></p>
+  <p><a href="#" class="btn btn-fifth sr-focus-inner">&raquo; sr-focus-inner <span class="sr">フォーカスしましたね</span></a></p>
+  ```
+  */
+  /*doc
+  ---
+  title: .text-(color)
+  name: text-1-color
+  category: utilities
+  ---
+  
+  文字色を変更する。
+  
+  ``` example
+  <p class="text-first">text-first_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+  <p class="text-second">text-second_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+  <p class="text-third">text-third_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+  <p class="text-important">text-important_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+  <p class="text-info">text-info_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+  ```
+  */
+  /*doc
+  ---
+  title: .text-mild
+  name: text-2-mild
+  category: utilities
+  ---
+  
+  文字色を弱める。.text-(color)と併用すると、指定した色を弱める。
+  
+  ``` example
+  <p class="text-mild">text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+  <p class="text-first text-mild">text-first_text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+  <p class="text-second text-mild">text-second_text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+  <p class="text-third text-mild">text-third_text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+  <p class="text-info text-mild">text-info_text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+  <p class="text-important text-mild">text-important_text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+  ```
+  */
+  /*doc
+  ---
+  title: .text-inverse
+  name: text-3-inverse
+  category: utilities
+  ---
+  
+  文字色を反転する（背景色を文字色とする）。
+  
+  ``` example
+  <div class="bg-inverse">
+      <p class="text-inverse">text-inverse_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+  </div>
+  ```
+  */
+  /*doc
+  ---
+  title: .text-(size)
+  name: text
+  category: utilities
+  ---
+  
+  文字サイズを変更する。単位が**rem**ではなく、**em**である点に注意。
+  
+  ``` example
+  <p class="text-xxs">text-xxs_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+  <p class="text-xs">text-xs_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+  <p class="text-sm">text-sm_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+  
+  <p class="text-lg">text-lg_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+  <p class="text-xl">text-xl_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+  <p class="text-xxl">text-xxl_吾輩は猫である。<span class="text-md">名前はまだ無い。text-md_どこで生れたか</span>とんと見当がつかぬ。</p>
+  ```
   */
 }
 #document .bg-first {
@@ -2285,23 +5148,23 @@ thumbnail
   color: rgba(255, 255, 255, 0.75);
 }
 #document .text-xxs {
-  font-size: 0.625rem;
+  font-size: .625em;
 }
 #document .text-xs {
-  font-size: 0.75rem;
+  font-size: .75em;
 }
 #document .text-sm {
-  font-size: 0.875rem;
+  font-size: .875em;
 }
 #document .text-md {
-  font-size: 1rem;
+  font-size: 1em;
 }
 #document .text-lg {
-  font-size: 1.125rem;
+  font-size: 1.125em;
 }
 #document .text-xl {
-  font-size: 1.25rem;
+  font-size: 1.25em;
 }
 #document .text-xxl {
-  font-size: 1.5rem;
+  font-size: 1.5em;
 }
