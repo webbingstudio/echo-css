@@ -1,6 +1,49 @@
-/*
-p
---------------------
+/*doc
+---
+title: .#{$p}p-(direction)-(size)
+name: p
+category: utilities
+---
+
+ブロック要素の内部余白を変更する。
+
+``` example
+<div class="p-xs bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-xs</div></div>
+<div class="p-t-xs bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-t-xs</div></div>
+<div class="p-r-xs bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-r-xs</div></div>
+<div class="p-b-xs bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-b-xs</div></div>
+<div class="p-l-xs bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-l-xs</div></div>
+
+<div class="p-sm bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-sm</div></div>
+<div class="p-t-sm bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-t-sm</div></div>
+<div class="p-r-sm bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-r-sm</div></div>
+<div class="p-b-sm bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-b-sm</div></div>
+<div class="p-l-sm bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-l-sm</div></div>
+
+<div class="m bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">m</div></div>
+<div class="p-t bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-t</div></div>
+<div class="p-r bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-r</div></div>
+<div class="p-b bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-b</div></div>
+<div class="p-l bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-l</div></div>
+
+<div class="p-lg bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-lg</div></div>
+<div class="p-t-lg bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-t-lg</div></div>
+<div class="p-r-lg bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-r-lg</div></div>
+<div class="p-b-lg bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-b-lg</div></div>
+<div class="p-l-lg bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-l-lg</div></div>
+
+<div class="p-xl bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-xl</div></div>
+<div class="p-t-xl bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-t-xl</div></div>
+<div class="p-r-xl bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-r-xl</div></div>
+<div class="p-b-xl bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-b-xl</div></div>
+<div class="p-l-xl bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-l-xl</div></div>
+
+<div class="p-xxl bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-xxl</div></div>
+<div class="p-t-xxl bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-t-xxl</div></div>
+<div class="p-r-xxl bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-r-xxl</div></div>
+<div class="p-b-xxl bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-b-xxl</div></div>
+<div class="p-l-xxl bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-l-xxl</div></div>
+```
 */
 
 .#{$p}p-0   { padding:        0 }

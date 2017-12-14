@@ -1,11 +1,37 @@
-/*
-hidden
---------------------
+/*doc
+---
+title: .#{$p}hidden
+name: hidden
+category: utilities
+---
+
+常に要素を非表示にする。音声読み上げに対応する場合は.#{$p}srを使用すること。
+
 */
 
 .#{$p}hidden {
     display: none;
 }
+
+/*doc
+---
+title: .#{$p}hidden-(breakpoint)-up
+name: hidden-1-breakpoint-up
+category: utilities
+parent: hidden
+---
+
+(breakpoint)で指定した画面幅以上で要素を非表示にする。特性上、#{$p}hidden-xs-upはない。
+
+``` example
+<div class="#{$p}hidden-sm-up #{$p}m-b-sm"><span class="#{$p}btn #{$p}btn-first">#{$p}hidden-sm-up</span></div>
+<div class="#{$p}hidden-md-up #{$p}m-b-sm"><span class="#{$p}btn #{$p}btn-second">#{$p}hidden-md-up</span></div>
+<div class="#{$p}hidden-lg-up #{$p}m-b-sm"><span class="#{$p}btn #{$p}btn-third">#{$p}hidden-lg-up</span></div>
+<div class="#{$p}hidden-xl-up #{$p}m-b-sm"><span class="#{$p}btn #{$p}btn-important">#{$p}hidden-xl-up</span></div>
+<div class="#{$p}hidden-xxl-up #{$p}m-b-sm"><span class="#{$p}btn">#{$p}hidden-xxl-up</span></div>
+```
+
+*/
 
 @each $breakpoint in map-keys($grid-breakpoints) {
     @include media-breakpoint-up($breakpoint) {
@@ -16,6 +42,27 @@ hidden
         }
     }
 }
+
+
+/*doc
+---
+title: .#{$p}hidden-(breakpoint)-down
+name: hidden-2-breakpoint-down
+category: utilities
+parent: hidden
+---
+
+(breakpoint)で指定した画面幅未満で要素を非表示にする。特性上、#{$p}hidden-xxl-downはない。
+
+``` example
+<div class="#{$p}hidden-xs-down #{$p}m-b-sm"><span class="#{$p}btn #{$p}btn-first">#{$p}hidden-xs-down</span></div>
+<div class="#{$p}hidden-sm-down #{$p}m-b-sm"><span class="#{$p}btn #{$p}btn-second">#{$p}hidden-sm-down</span></div>
+<div class="#{$p}hidden-md-down #{$p}m-b-sm"><span class="#{$p}btn #{$p}btn-third">#{$p}hidden-md-down</span></div>
+<div class="#{$p}hidden-lg-down #{$p}m-b-sm"><span class="#{$p}btn #{$p}btn-important">#{$p}hidden-lg-down</span></div>
+<div class="#{$p}hidden-xl-down #{$p}m-b-sm"><span class="#{$p}btn">#{$p}hidden-xl-down</span></div>
+```
+
+*/
 
 @each $breakpoint in map-keys($grid-breakpoints) {
     @include media-breakpoint-down($breakpoint) {

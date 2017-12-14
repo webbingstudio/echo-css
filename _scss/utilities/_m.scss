@@ -1,6 +1,49 @@
-/*
-m
---------------------
+/*doc
+---
+title: .#{$p}m-(direction)-(size)
+name: m
+category: utilities
+---
+
+ブロック要素の外部余白を変更する。
+
+``` example
+<div class="m-xs bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-xs</div>
+<div class="m-t-xs bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-t-xs</div>
+<div class="m-r-xs bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-r-xs</div>
+<div class="m-b-xs bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-b-xs</div>
+<div class="m-l-xs bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-l-xs</div>
+
+<div class="m-sm bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-sm</div>
+<div class="m-t-sm bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-t-sm</div>
+<div class="m-r-sm bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-r-sm</div>
+<div class="m-b-sm bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-b-sm</div>
+<div class="m-l-sm bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-l-sm</div>
+
+<div class="m bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m</div>
+<div class="m-t bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-t</div>
+<div class="m-r bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-r</div>
+<div class="m-b bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-b</div>
+<div class="m-l bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-l</div>
+
+<div class="m-lg bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-lg</div>
+<div class="m-t-lg bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-t-lg</div>
+<div class="m-r-lg bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-r-lg</div>
+<div class="m-b-lg bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-b-lg</div>
+<div class="m-l-lg bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-l-lg</div>
+
+<div class="m-xl bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-xl</div>
+<div class="m-t-xl bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-t-xl</div>
+<div class="m-r-xl bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-r-xl</div>
+<div class="m-b-xl bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-b-xl</div>
+<div class="m-l-xl bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-l-xl</div>
+
+<div class="m-xxl bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-xxl</div>
+<div class="m-t-xxl bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-t-xxl</div>
+<div class="m-r-xxl bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-r-xxl</div>
+<div class="m-b-xxl bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-b-xxl</div>
+<div class="m-l-xxl bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-l-xxl</div>
+```
 */
 
 .#{$p}m-0   { margin:        0 }

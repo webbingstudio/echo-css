@@ -1,32 +1,47 @@
-/*
-text_size
---------------------
+/*doc
+---
+title: .#{$p}text-(size)
+name: text
+category: utilities
+---
+
+文字サイズを変更する。単位が**rem**ではなく、**em**である点に注意。
+
+``` example
+<p class="text-xxs">text-xxs_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="text-xs">text-xs_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="text-sm">text-sm_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+
+<p class="text-lg">text-lg_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="text-xl">text-xl_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="text-xxl">text-xxl_吾輩は猫である。<span class="text-md">名前はまだ無い。text-md_どこで生れたか</span>とんと見当がつかぬ。</p>
+```
 */
 
 .#{$p}text-xxs {
-    font-size: $font-size-xxs;
+    font-size: .625em;
 }
 
 .#{$p}text-xs {
-    font-size: $font-size-xs;
+    font-size: .75em;
 }
 
 .#{$p}text-sm {
-    font-size: $font-size-sm;
+    font-size: .875em;
 }
 
 .#{$p}text-md {
-    font-size: $font-size-md;
+    font-size: 1em;
 }
 
 .#{$p}text-lg {
-    font-size: $font-size-lg;
+    font-size: 1.125em;
 }
 
 .#{$p}text-xl {
-    font-size: $font-size-xl;
+    font-size: 1.25em;
 }
 
 .#{$p}text-xxl {
-    font-size: $font-size-xxl;
+    font-size: 1.5em;
 }

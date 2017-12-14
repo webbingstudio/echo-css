@@ -1,6 +1,18 @@
-/*
-sr
---------------------
+/*doc
+---
+title: .#{$p}sr
+name: sr
+category: utilities
+---
+
+要素内の文章をスクリーンリーダーに反応するよう、外見のみ非表示にする。  
+.sr-focusは要素そのもの、.sr-focus-innerは包括する要素にフォーカスしたときに表示される。
+
+``` example
+<p><a href="#" class="btn btn-third btn-round">&raquo; sr <span class="sr">この文字は表示されません</span></a></p>
+<p>sr-focus <input type="button" class="sr sr-focus" value="フォーカスしましたね" /></p>
+<p><a href="#" class="btn btn-fifth sr-focus-inner">&raquo; sr-focus-inner <span class="sr">フォーカスしましたね</span></a></p>
+```
 */
 
 .#{$p}sr {

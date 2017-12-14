@@ -1,6 +1,22 @@
-/*
-line
---------------------
+/*doc
+---
+title: .#{$p}line-(direction)
+name: line-1-direction
+category: utilities
+---
+
+ブロック要素内の文章を指定した方向へ寄せる。
+
+``` example
+<p class="line-c">line-c_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+<p class="line-r">line-r_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+
+<div class="bg-second bg-fade line-c">
+    <p>line-c_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+    <p class="line-l">line-l_何でも薄暗いじめじめした所で</p>
+    <p>ニャーニャー泣いていた事だけは記憶している。</p>
+</div>
+```
 */
 
 .#{$p}line-l {
@@ -14,6 +30,25 @@ line
 .#{$p}line-r {
     text-align: right;
 }
+
+
+
+/*doc
+---
+title: .#{$p}line-(size)
+name: line-2-size
+category: utilities
+---
+
+文章を指定した行高さに変更する。
+
+``` example
+<p class="line-none">line-none_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+<p class="line-sm">line-sm_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+<p class="line-md">line-md_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+<p class="line-lg">line-lg_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+```
+*/
 
 .#{$p}line-none {
     line-height: $line-height-none;

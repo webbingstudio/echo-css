@@ -1,7 +1,75 @@
-/*
-bg
---------------------
+/*doc
+---
+title: .#{$p}bg-(color)
+name: bg-1-color
+category: utilities
+---
+
+背景に色をつける。オブジェクト・コンポーネントを可能な限り上書きする。.#{$p}bgを付与する必要はない。
+
+``` example
+<div class="#{$p}m-b #{$p}p-sm #{$p}bg-first">bg-first</div>
+<div class="#{$p}m-b #{$p}p-sm #{$p}bg-second">bg-second</div>
+<div class="#{$p}m-b #{$p}p-sm #{$p}bg-third">bg-third</div>
+<div class="#{$p}m-b #{$p}p-sm #{$p}bg-info">bg-info</div>
+<div class="#{$p}m-b #{$p}p-sm #{$p}bg-important">bg-important</div>
+```
+
 */
+
+/*doc
+---
+title: .#{$p}bg-mild
+name: bg-2-mild
+category: utilities
+---
+
+.#{$p}bg-(color)と併用すると背景色を弱める。オブジェクト・コンポーネントを可能な限り上書きする。.#{$p}bgを付与する必要はない。
+
+``` example
+<div class="#{$p}m-b #{$p}p-sm #{$p}bg-first #{$p}bg-mild">bg-first</div>
+<div class="#{$p}m-b #{$p}p-sm #{$p}bg-second #{$p}bg-mild">bg-second</div>
+<div class="#{$p}m-b #{$p}p-sm #{$p}bg-third #{$p}bg-mild">bg-third</div>
+<div class="#{$p}m-b #{$p}p-sm #{$p}bg-info #{$p}bg-mild">bg-info</div>
+<div class="#{$p}m-b #{$p}p-sm #{$p}bg-important #{$p}bg-mild">bg-important</div>
+```
+
+*/
+
+/*doc
+---
+title: .#{$p}bg-fade
+name: bg-3-fade
+category: utilities
+---
+
+.#{$p}bg-(color)と併用すると背景色を薄くする。オブジェクト・コンポーネントを可能な限り上書きする。.#{$p}bgを付与する必要はない。
+
+``` example
+<div class="#{$p}m-b #{$p}p-sm #{$p}bg-first #{$p}bg-fade">bg-first</div>
+<div class="#{$p}m-b #{$p}p-sm #{$p}bg-second #{$p}bg-fade">bg-second</div>
+<div class="#{$p}m-b #{$p}p-sm #{$p}bg-third #{$p}bg-fade">bg-third</div>
+<div class="#{$p}m-b #{$p}p-sm #{$p}bg-info #{$p}bg-fade">bg-info</div>
+<div class="#{$p}m-b #{$p}p-sm #{$p}bg-important #{$p}bg-fade">bg-important</div>
+```
+
+*/
+
+/*doc
+---
+title: .#{$p}bg-inverse
+name: bg-4-inverse
+category: utilities
+---
+
+文字色と背景色を反転する。オブジェクト・コンポーネントを可能な限り上書きする。.#{$p}bgを付与する必要はない。
+
+``` example
+<div class="#{$p}p-sm #{$p}bg-inverse">bg-inverse</div>
+```
+
+*/
+
 
 .#{$p}bg-first {
     background-color: $first;

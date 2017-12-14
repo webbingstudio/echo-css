@@ -1,7 +1,41 @@
-/*
-text_color
---------------------
+/*doc
+---
+title: .#{$p}text-(color)
+name: text-1-color
+category: utilities
+---
+
+文字色を変更する。
+
+``` example
+<p class="text-first">text-first_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="text-second">text-second_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="text-third">text-third_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="text-important">text-important_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="text-info">text-info_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+```
 */
+
+
+/*doc
+---
+title: .#{$p}text-mild
+name: text-2-mild
+category: utilities
+---
+
+文字色を弱める。.#{$p}text-(color)と併用すると、指定した色を弱める。
+
+``` example
+<p class="text-mild">text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="text-first text-mild">text-first_text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="text-second text-mild">text-second_text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="text-third text-mild">text-third_text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="text-info text-mild">text-info_text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="text-important text-mild">text-important_text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+```
+*/
+
 
 .#{$p}text-first {
     color: $first-text;
@@ -69,6 +103,23 @@ text_color
 .#{$p}text-mild {
     color: $body-mild-color;
 }
+
+
+/*doc
+---
+title: .#{$p}text-inverse
+name: text-3-inverse
+category: utilities
+---
+
+文字色を反転する（背景色を文字色とする）。
+
+``` example
+<div class="bg-inverse">
+    <p class="text-inverse">text-inverse_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+</div>
+```
+*/
 
 .#{$p}text-inverse {
     color: $body-inverse-color;

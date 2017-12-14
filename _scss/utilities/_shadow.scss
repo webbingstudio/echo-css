@@ -1,6 +1,17 @@
-/*
-shadow
---------------------
+/*doc
+---
+title: .#{$p}shadow-(size)
+name: shadow
+category: utilities
+---
+
+要素に影をつける。サイズによって、背景との擬似的な距離が変わる。
+
+``` example
+<p><a href="#" class="btn btn-first btn-block shadow shadow-sm">shadow-sm</a></p>
+<p><a href="#" class="btn btn-first btn-block shadow">shadow</a></p>
+<p><a href="#" class="btn btn-first btn-block shadow shadow-lg">shadow-lg</a></p>
+```
 */
 
 .#{$p}shadow {

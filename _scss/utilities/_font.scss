@@ -1,6 +1,39 @@
-/*
-font (with Japanese webfonts)
---------------------
+/*doc
+---
+title: .#{$p}font-(face)
+name: font-1-face
+category: utilities
+---
+
+フォントを変更する。オブジェクト・コンポーネントを可能な限り上書きする。.#{$p}fontを付与する必要はない。
+
+``` example
+<p class="#{$p}text-xl #{$p}font-first">#{$p}font-first_デザインフォント01に変更しました</p>
+<p class="#{$p}text-xl #{$p}font-second">#{$p}font-second_デザインフォント02に変更しました</p>
+<p class="#{$p}text-xl #{$p}font-third">#{$p}font-third_デザインフォント03に変更しました</p>
+<p class="#{$p}text-xl #{$p}font-first">ここはデザインフォント01ですが、<span class="#{$p}font-root">#{$p}font-root_ここからbody要素のフォントに変更しました</span></p>
+<p class="#{$p}text-xl #{$p}font-mono">#{$p}font-mono_等幅フォントに変更しました &lt;p class="#{$p}font-mono"&gt;hello world!&lt;/p&gt;</p>
+```
+
+*/
+
+/*doc
+---
+title: .#{$p}font-bold
+name: font-2-bold
+category: utilities
+---
+
+ボールドフォントに変更する。日本語ウェブフォントサービスを利用した場合、font-weightだけでは変更ができないため、別途クラスが必要となる。
+
+``` example
+<p class="#{$p}text-xl #{$p}font-first #{$p}font-bold">#{$p}font-first_#{$p}font-bold_デザインフォント01に変更しました</p>
+<p class="#{$p}text-xl #{$p}font-second#{$p}font-bold">#{$p}font-second_#{$p}font-bold_デザインフォント02に変更しました</p>
+<p class="#{$p}text-xl #{$p}font-third#{$p}font-bold">#{$p}font-third_#{$p}font-bold_デザインフォント03に変更しました</p>
+<p class="#{$p}text-xl #{$p}font-first#{$p}font-bold">ここはデザインフォント01ですが、<span class="#{$p}font-root #{$p}font-bold">#{$p}font-root_#{$p}font-bold_ここからbody要素のフォントに変更しました</span></p>
+<p class="#{$p}text-xl #{$p}font-mono #{$p}font-bold">#{$p}font-mono_#{$p}font-bold_等幅フォントに変更しました &lt;p class="#{$p}font-mono #{$p}font-bold"&gt;hello world!&lt;/p&gt;</p>
+```
+
 */
 
 .#{$p}font-root {

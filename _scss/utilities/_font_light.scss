@@ -1,6 +1,20 @@
-/*
-font (Global)
---------------------
+/*doc
+---
+title: .#{$p}font-(face)
+name: font-1-face
+category: utilities
+---
+
+フォントを変更する。オブジェクト・コンポーネントを可能な限り上書きする。.#{$p}fontを付与する必要はない。
+
+``` example
+<p class="#{$p}text-xl #{$p}font-first">#{$p}font-first_デザインフォント01に変更しました</p>
+<p class="#{$p}text-xl #{$p}font-second">#{$p}font-second_デザインフォント02に変更しました</p>
+<p class="#{$p}text-xl #{$p}font-third">#{$p}font-third_デザインフォント03に変更しました</p>
+<p class="#{$p}text-xl #{$p}font-first">ここはデザインフォント01ですが、<span class="#{$p}font-root">#{$p}font-root_ここからbody要素のフォントに変更しました</span></p>
+<p class="#{$p}text-xl #{$p}font-mono">#{$p}font-mono_等幅フォントに変更しました &lt;p class="#{$p}font-mono"&gt;hello world!&lt;/p&gt;</p>
+```
+
 */
 
 .#{$p}font-root {

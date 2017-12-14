@@ -1,6 +1,40 @@
-/*
-position
---------------------
+/*doc
+---
+title: .#{$p}position-(directionY)-(directionX)
+name: position
+category: utilities
+---
+
+ブロック要素を親要素の指定した位置に絶対配置する。親要素にposition:relativeを指定している必要がある。
+
+``` example
+<div>position-tl</div>
+<div class="bg-first bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="position-tl" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+
+<div>position-tc</div>
+<div class="bg-first bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="position-tc" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+
+<div>position-tr</div>
+<div class="bg-first bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="position-tr" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+
+<div>position-cl</div>
+<div class="bg-second bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="position-cl" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+
+<div>position-cc</div>
+<div class="bg-second bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="position-cc" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+
+<div>position-cr</div>
+<div class="bg-second bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="position-cr" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+
+<div>position-bl</div>
+<div class="bg-third bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="position-bl" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+
+<div>position-bc</div>
+<div class="bg-third bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="position-bc" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+
+<div>position-br</div>
+<div class="bg-third bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="position-br" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+```
 */
 
 .#{$p}position-tl,

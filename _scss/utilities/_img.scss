@@ -1,6 +1,16 @@
-/*
-img
---------------------
+/*doc
+---
+title: .#{$p}img-responsive
+name: img-responsive
+category: utilities
+---
+
+画像が包括要素よりも大きくなった場合のみ、縦横比を保って伸縮させる。
+
+``` example
+<img src="https://placehold.jp/960x100.jpg?text=img-responsive" alt="" class="#{$p}img-responsive">
+```
+
 */
 
 .#{$p}img-responsive {
@@ -8,10 +18,42 @@ img
     height: auto;
 }
 
+
+/*doc
+---
+title: .#{$p}img-fill
+name: img-fill
+category: utilities
+---
+
+画像の大きさに関係なく、常に包括要素の幅いっぱいに伸縮させる。
+
+``` example
+<img src="https://placehold.jp/960x100.jpg?text=img-fill" alt="" class="#{$p}img-fill">
+```
+
+*/
+
 .#{$p}img-fill {
     width: 100%;
     height: auto;
 }
+
+
+/*doc
+---
+title: .#{$p}img-round
+name: img-round
+category: utilities
+---
+
+正方形の画像を正円にする。
+
+``` example
+<img src="https://placehold.jp/200x200.jpg?text=img-round" alt="" class="#{$p}img-round">
+```
+
+*/
 
 .#{$p}img-round {
     border-radius: 50%;
