@@ -1,0 +1,101 @@
+/*doc
+---
+title: .#{$p}l-container
+name: l-1-container
+category: layout
+---
+
+デバイスに応じて適切に本文幅を調整するコンテナブロック。
+
+``` example
+<div class="#{$p}l-container #{$p}l-container-full-md #{$p}bg-first #{$p}bg-fade #{$p}m-b">
+    <div class="#{$p}p-y #{$p}bg-first #{$p}bg-fade #{$p}line-c">.#{$p}l-container</div>
+</div>
+```
+
+*/
+
+.#{$p}l-container {
+  @include make-container();
+
+  @each $breakpoint, $container-max-width in $container-max-widths-md {
+    @include media-breakpoint-up($breakpoint) {
+      max-width: $container-max-width;
+    }
+  }
+}
+
+
+/*doc
+---
+title: .#{$p}l-container-sm
+name: l-1-container-1-sm
+category: layout
+parent: l-1-container
+---
+
+本文幅が狭いコンテナブロック。1カラムレイアウトで1行の文字数を抑えるために使用する。
+
+``` example
+<div class="#{$p}l-container #{$p}l-container-sm #{$p}l-container-full-md #{$p}bg-third #{$p}bg-fade">
+    <div class="#{$p}p-y #{$p}bg-third #{$p}bg-fade #{$p}line-c">.#{$p}l-container-sm</div>
+</div>
+```
+
+*/
+
+.#{$p}l-container-sm {
+  @each $breakpoint, $container-max-width-sm in $container-max-widths-sm {
+    @include media-breakpoint-up($breakpoint) {
+      max-width: $container-max-width-sm;
+    }
+  }
+}
+
+
+/*
+a-blog cmsのレイアウトモジュール、HTML直書きの影響で
+.#{$p}l-containerが二重になった場合の対策
+*/
+@include media-breakpoint-up(sm) {
+
+.#{$p}l-container {
+
+  .#{$p}l-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+}
+
+}
+
+
+/*doc
+---
+title: .#{$p}l-container-full-md
+name: l-1-container-2-full-md
+category: layout
+parent: l-1-container
+---
+
+タブレットportrait以下でコンテナ余白を打ち消す。画像の幅100%表示等に使用する。
+
+``` example
+<div class="#{$p}l-container #{$p}l-container-full-md #{$p}bg-first #{$p}bg-fade #{$p}m-b">
+    <div class="#{$p}p-y #{$p}bg-first #{$p}bg-fade #{$p}line-c">.#{$p}l-container</div>
+</div>
+<div class="#{$p}l-container #{$p}l-container-sm #{$p}l-container-full-md #{$p}bg-third #{$p}bg-fade">
+    <div class="#{$p}p-y #{$p}bg-third #{$p}bg-fade #{$p}line-c">.#{$p}l-container-sm</div>
+</div>
+```
+*/
+
+.#{$p}l-container-full-md {
+
+  @include media-breakpoint-down(md) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+}
