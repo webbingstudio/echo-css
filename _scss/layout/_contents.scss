@@ -1,0 +1,93 @@
+/*doc
+---
+title: .#{$p}l-contents
+name: l-2-contents
+category: layout
+---
+
+カラム分割に対応したメインコンテンツを作成する。.#{$p}l-mainは必須。
+
+``` example
+<div class="#{$p}l-contents">
+
+    <main class="#{$p}l-main" id="main" role="main">
+        <div class="#{$p}bg-first #{$p}p-xl">main</div>
+    </main>
+    <div class="#{$p}l-sub">
+        <div class="#{$p}bg-second #{$p}p-xl">sub</div>
+    </div>
+
+</div>
+```
+
+*/
+
+.#{$p}l-contents {
+
+    .#{$p}l-main {
+        @include clearfix();
+        padding-bottom: ($spacer * 3);
+    }
+
+    .#{$p}l-sub {
+        @include clearfix();
+        padding-top: ($spacer * 3);
+        padding-bottom: ($spacer * 3);
+    }
+
+}
+
+
+/*doc
+---
+title: .#{$p}l-contents-2col
+name: l-2-contents-1-2col
+category: layout
+parent: l-2-contents
+---
+
+lg以上でflexboxによる2カラムとなる。#{$p}l-main, #{$p}l-subは必須。
+
+``` example
+<div class="#{$p}l-contents #{$p}l-contents-2col">
+
+    <main class="#{$p}l-main" id="main" role="main">
+        <div class="#{$p}bg-first #{$p}p-xl">main</div>
+    </main>
+    <div class="#{$p}l-sub">
+        <div class="#{$p}bg-second #{$p}p-xl">sub</div>
+    </div>
+
+</div>
+```
+*/
+
+.#{$p}l-contents-2col {
+
+    @include media-breakpoint-up(lg) {
+        width: 100%;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+    }
+
+    .#{$p}l-main {
+        @include media-breakpoint-up(lg) {
+            flex: 1;
+            width: auto;
+            padding-right: ($spacer * 3);
+        }
+        @include media-breakpoint-up(xl) {
+            padding-right: ($spacer * 6);
+        }
+    }
+
+    .#{$p}l-sub {
+        @include media-breakpoint-up(lg) {
+            width: 300px;
+        }
+    }
+
+}

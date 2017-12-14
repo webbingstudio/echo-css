@@ -1,0 +1,42 @@
+/*doc
+---
+title: .#{$p}l-document
+name: l-3-document
+category: layout
+---
+
+ドキュメント全体を包括する。オフキャンバス等の画面全体に影響する演出のために使用する。
+
+``` example
+<div class="#{$p}l-document">
+(all document)
+</div>
+```
+*/
+
+.#{$p}l-document {
+}
+
+/*doc
+---
+title: .#{$p}l-document-inner
+name: l-3-document-1-inner
+category: layout
+parent: l-document
+---
+
+要素の幅をコンテナブロックを無視して広げる演出のために使用する。
+
+``` example
+<div class="#{$p}l-document">
+<div class="#{$p}l-document-inner">
+(all document)
+</div>
+</div>
+```
+*/
+
+.#{$p}l-document-inner {
+  overflow: hidden;
+  max-width: 100%;
+}
