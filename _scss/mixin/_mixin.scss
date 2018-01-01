@@ -234,27 +234,55 @@
 
       @for $i from 1 through $columns {
         @if ($breakpoint == default) {
-          .#{$p}l-col-#{$i} {
-            @extend %grid-column-float;
-            @include make-col-span($i, $columns);
+
+          @if ($optimize != true) or ( ($optimize == true) and ( $i > 2 ) ) {
+
+            .#{$p}l-col-#{$i} {
+              @extend %grid-column-float;
+              @include make-col-span($i, $columns);
+            }
+
           }
+
         } @else {
-          .#{$p}l-col-#{$i}-#{$breakpoint} {
-            @extend %grid-column-float-#{$breakpoint};
-            @include make-col-span($i, $columns);
+
+          @if ($optimize != true) or ( ($optimize == true) and ( $i > 2 ) ) {
+
+            .#{$p}l-col-#{$i}-#{$breakpoint} {
+              @extend %grid-column-float-#{$breakpoint};
+              @include make-col-span($i, $columns);
+            }
+
           }
+
         }
+
       }
       @each $modifier in (pull, push, offset) {
         @for $i from 0 through $columns {
-          @if ($breakpoint == default) {
-            .#{$p}l-col-#{$i}-#{$modifier} {
-              @include make-col-modifier($modifier, $i, $columns)
+          @if ($i != 0) {
+            @if ($breakpoint == default) {
+
+              @if ($optimize != true) or ( ($optimize == true) and ( $i < 11 ) ) {
+
+                .#{$p}l-col-#{$i}-#{$modifier} {
+                  @include make-col-modifier($modifier, $i, $columns)
+                }
+
+              }
+
+            } @else {
+
+              @if ($optimize != true) or ( ($optimize == true) and ( $breakpoint != 'xxs' ) and ( $breakpoint != 'xs' ) and ( $breakpoint != 'xl' ) and ( $breakpoint != 'xxl' ) and ( $i < 11 ) ) {
+
+                .#{$p}l-col-#{$i}-#{$breakpoint}-#{$modifier} {
+                  @include make-col-modifier($modifier, $i, $columns)
+                }
+
+              }
+
             }
-          } @else {
-            .#{$p}l-col-#{$i}-#{$breakpoint}-#{$modifier} {
-              @include make-col-modifier($modifier, $i, $columns)
-            }
+
           }
         }
       }
