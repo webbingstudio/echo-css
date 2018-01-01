@@ -311,18 +311,21 @@
     border-color: $hover-border;
   }
 
-  &.disabled,
-  &:disabled,
-  fieldset[disabled] & {
-    opacity: .8;
+  @if ($optimize != true) {
+    &.disabled,
+    &:disabled,
+    fieldset[disabled] & {
+      opacity: .8;
 
-    &:hover,
-    &.hover,
-    &:focus,
-    &.focus {
-      color: $color;
-      background-color: $background;
-      border-color: $border;
+      &:hover,
+      &.hover,
+      &:focus,
+      &.focus {
+        color: $color;
+        background-color: $background;
+        border-color: $border;
+      }
+
     }
 
   }

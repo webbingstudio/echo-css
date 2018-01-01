@@ -51,26 +51,34 @@ btn
         text-decoration: none;
     }
 
-    &.disabled,
-    &:disabled,
-    fieldset[disabled] & {
-        cursor: default;
-        opacity: .65;
+    @if ($optimize != true) {
 
-        &:hover,
-        &.hover,
-        &:focus,
-        &.focus,
-        &:active,
-        &.active {
-            background-color: transparent;
+        &.disabled,
+        &:disabled,
+        fieldset[disabled] & {
+            cursor: default;
+            opacity: .65;
+
+            &:hover,
+            &.hover,
+            &:focus,
+            &.focus,
+            &:active,
+            &.active {
+                background-color: transparent;
+            }
+
         }
 
     }
 
 }
 
-a.#{$p}btn.disaabled,
-fieldset[disabled] a.#{$p}btn {
-    pointer-events: none;
+@if ($optimize != true) {
+
+    a.#{$p}btn.disaabled,
+    fieldset[disabled] a.#{$p}btn {
+        pointer-events: none;
+    }
+
 }
