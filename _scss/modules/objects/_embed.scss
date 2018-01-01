@@ -1,9 +1,9 @@
 /*
-object
+embed
 --------------------
 */
 
-.#{$p}object {
+.#{$p}embed {
     overflow: hidden;
     position: relative;
     display: block;
@@ -29,7 +29,7 @@ object
 
 }
 
-.#{$p}object-4to3 {
+.#{$p}embed-4to3 {
 
     &:before {
         padding-top: percentage(3 / 4);
@@ -37,7 +37,7 @@ object
 
 }
 
-.#{$p}object-16to9 {
+.#{$p}embed-16to9 {
 
     &:before {
         padding-top: percentage(9 / 16);
@@ -45,7 +45,7 @@ object
 
 }
 
-.#{$p}object-21to9 {
+.#{$p}embed-21to9 {
 
     &:before {
         padding-top: percentage(9 / 21);
