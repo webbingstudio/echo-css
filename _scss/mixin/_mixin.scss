@@ -215,7 +215,7 @@
 }
 
 @mixin make-grid-columns($columns: $grid-columns, $breakpoints: $grid-breakpoints) {
-  .#{$p}l-col {
+  .#{$p}col {
     position: relative;
     min-height: 1px;
   }
@@ -237,7 +237,7 @@
 
           @if ($optimize != true) or ( ($optimize == true) and ( $i > 2 ) ) {
 
-            .#{$p}l-col-#{$i} {
+            .#{$p}col-#{$i} {
               @extend %grid-column-float;
               @include make-col-span($i, $columns);
             }
@@ -248,7 +248,7 @@
 
           @if ($optimize != true) or ( ($optimize == true) and ( $i > 2 ) ) {
 
-            .#{$p}l-col-#{$i}-#{$breakpoint} {
+            .#{$p}col-#{$i}-#{$breakpoint} {
               @extend %grid-column-float-#{$breakpoint};
               @include make-col-span($i, $columns);
             }
@@ -265,7 +265,7 @@
 
               @if ($optimize != true) or ( ($optimize == true) and ( $i < 11 ) ) {
 
-                .#{$p}l-col-#{$i}-#{$modifier} {
+                .#{$p}col-#{$i}-#{$modifier} {
                   @include make-col-modifier($modifier, $i, $columns)
                 }
 
@@ -275,7 +275,7 @@
 
               @if ($optimize != true) or ( ($optimize == true) and ( $breakpoint != 'xxs' ) and ( $breakpoint != 'xs' ) and ( $breakpoint != 'xl' ) and ( $breakpoint != 'xxl' ) and ( $i < 11 ) ) {
 
-                .#{$p}l-col-#{$i}-#{$breakpoint}-#{$modifier} {
+                .#{$p}col-#{$i}-#{$breakpoint}-#{$modifier} {
                   @include make-col-modifier($modifier, $i, $columns)
                 }
 

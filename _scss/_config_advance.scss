@@ -8,11 +8,32 @@
 $optimize: true !default;
 
 
-// Name
+// Prefix
 // -----------------------------------------
 
-// prefix
-$p: "" !default;
+// common-prefix
+// 他のCSSフレームワークとの衝突を回避したい場合は、接頭辞を指定する
+// Specify the prefix, if you want to avoid conflicts with other CSS frameworks
+$prefix: "" !default;
+
+// layout-group-prefix
+$l: "l-" !default;
+
+// module-group-prefix
+$m: "m-" !default;
+
+// component-group-prefix
+$c: "c-" !default;
+
+// utility-group-prefix
+// ユーティリティクラスは、意図的に接頭辞を指定していません。システムの編集者も使用する可能性があるため、覚えやすいよう簡略化しています
+// Utility class does not intentionally specify a prefix. there is a possibility that editors of system, use it, it simplified for easier to remember
+$u: "" !default;
+
+
+
+// Name
+// -----------------------------------------
 
 // post-name
 // ex. post, entry, article...
@@ -53,10 +74,10 @@ $error: "is-error" !default;
 // -----------------------------------------
 
 // ex. .list-item or li
-$list-item: "." + $p + "list-item" !default;
+$list-item: "." + $prefix + $m + "list-item" !default;
 
 // ex. .list-item or li > ul
-$list-children: "." + $p + "list-children" !default;
+$list-children: "." + $prefix + $m + "list-children" !default;
 
 
 // Grid

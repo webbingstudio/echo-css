@@ -1,6 +1,6 @@
 /*doc
 ---
-title: .#{$p}header
+title: .#{$prefix}header
 name: p-1-header
 category: project
 ---
@@ -9,14 +9,14 @@ category: project
 
 */
 
-.#{$p}header {
+.#{$prefix}header {
     padding: ($spacer * 2) 0;
 }
 
 
 /*doc
 ---
-title: .#{$p}header-brand
+title: .#{$prefix}header-brand
 name: p-1-header-1-brand
 category: project
 parent: p-1-header
@@ -26,7 +26,7 @@ parent: p-1-header
 
 */
 
-.#{$p}header-brand {
+.#{$prefix}header-brand {
     margin: 0;
     text-align: center;
     line-height: $line-height-none;
@@ -39,7 +39,7 @@ parent: p-1-header
 
 /*doc
 ---
-title: .#{$p}header-title
+title: .#{$prefix}header-title
 name: p-1-header-2-title
 category: project
 parent: p-1-header
@@ -49,7 +49,7 @@ parent: p-1-header
 
 */
 
-.#{$p}header-title {
+.#{$prefix}header-title {
     font-size: 1.5rem;
 }
 

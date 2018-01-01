@@ -1,20 +1,20 @@
 /*doc
 ---
-title: .#{$p}globalnav
+title: .#{$prefix}globalnav
 name: p-2-globalnav
 category: project
 ---
 
-グローバルナビゲーションを表示する。.#{$p}nav-horizontalを含む。
+グローバルナビゲーションを表示する。.#{$prefix}nav-horizontalを含む。
 
 */
 
-.#{$p}globalnav {
+.#{$prefix}globalnav {
     width: 100%;
     background-color: $body-bg;
     line-height: $line-height-none;
 
-    .#{$p}#{$nav}-horizontal {
+    .#{$prefix}#{$nav}-horizontal {
         display: block;
         width: 100%;
 

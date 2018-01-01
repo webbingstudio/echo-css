@@ -1,6 +1,6 @@
 /*doc
 ---
-title: .#{$p}footer
+title: .#{$prefix}footer
 name: p-3-footer
 category: project
 ---
@@ -9,7 +9,7 @@ category: project
 
 */
 
-.#{$p}footer {
+.#{$prefix}footer {
     padding: ($spacer * 2) 0 ($spacer * 6);
     font-size: $font-size-xs;
     text-align: center;
@@ -18,7 +18,7 @@ category: project
 
 /*doc
 ---
-title: .#{$p}footer-copyright
+title: .#{$prefix}footer-copyright
 name: p-3-footer-1-copyright
 category: project
 parent: p-3-footer
@@ -28,7 +28,7 @@ parent: p-3-footer
 
 */
 
-.#{$p}footer-copyright {
+.#{$prefix}footer-copyright {
     margin: 0;
     font-size: $font-size-xs;
 }

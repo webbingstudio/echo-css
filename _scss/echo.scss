@@ -21,10 +21,11 @@
 @import "foundation/_reset";
 @import "foundation/_base";
 
-
 // ====================
 // Layout
 // ====================
+
+$p: $prefix + $l;
 
 @import "layout/_document";
 @import "layout/_container";
@@ -38,6 +39,9 @@
 
 // Module
 // --------------------
+
+$p: $prefix + $m;
+
 @import "object/module/_badge";
 @import "object/module/_box";
 @import "object/module/_btn";
@@ -64,10 +68,13 @@
 // Component
 // ---------------------------------
 
+$p: $prefix + $c;
 
 
 // Utility
 // ---------------------------------
+
+$p: $prefix + $u;
 
 #{$u-wrap} {
 
