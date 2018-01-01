@@ -1,0 +1,37 @@
+/*doc
+---
+title: .#{$p}globalnav
+name: p-2-globalnav
+category: project
+---
+
+グローバルナビゲーションを表示する。.#{$p}nav-horizontalを含む。
+
+*/
+
+.#{$p}globalnav {
+    width: 100%;
+    background-color: $body-bg;
+    line-height: $line-height-none;
+
+    .#{$p}#{$nav}-horizontal {
+        display: block;
+        width: 100%;
+
+        > ul {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    }
+
+    &.#{$action-active} {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+        z-index: 99;
+    }
+
+}

@@ -1,0 +1,34 @@
+/*doc
+---
+title: .#{$p}footer
+name: p-3-footer
+category: project
+---
+
+フッタを表示する。
+
+*/
+
+.#{$p}footer {
+    padding: ($spacer * 2) 0 ($spacer * 6);
+    font-size: $font-size-xs;
+    text-align: center;
+}
+
+
+/*doc
+---
+title: .#{$p}footer-copyright
+name: p-3-footer-1-copyright
+category: project
+parent: p-3-footer
+---
+
+コピーライト文を表示する。
+
+*/
+
+.#{$p}footer-copyright {
+    margin: 0;
+    font-size: $font-size-xs;
+}
