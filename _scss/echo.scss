@@ -33,62 +33,62 @@
 
 
 // ====================
-// Modules
+// Object
 // ====================
 
-// Objects
+// Module
 // --------------------
-@import "modules/objects/_badge";
-@import "modules/objects/_box";
-@import "modules/objects/_btn";
-@import "modules/objects/_btn_color";
-@import "modules/objects/_btn_inverse";
-@import "modules/objects/_btn_outline";
+@import "object/module/_badge";
+@import "object/module/_box";
+@import "object/module/_btn";
+@import "object/module/_btn_color";
+@import "object/module/_btn_inverse";
+@import "object/module/_btn_outline";
 
 // size -> shape
-@import "modules/objects/_btn_size";
-@import "modules/objects/_btn_shape";
+@import "object/module/_btn_size";
+@import "object/module/_btn_shape";
 
-@import "modules/objects/_checkbox";
-@import "modules/objects/_dfn";
-@import "modules/objects/_embed";
-@import "modules/objects/_input";
-@import "modules/objects/_label";
-@import "modules/objects/_list";
-@import "modules/objects/_radio";
-@import "modules/objects/_select";
-@import "modules/objects/_table";
-@import "modules/objects/_title";
-@import "modules/objects/_thumbnail";
+@import "object/module/_checkbox";
+@import "object/module/_dfn";
+@import "object/module/_embed";
+@import "object/module/_input";
+@import "object/module/_label";
+@import "object/module/_list";
+@import "object/module/_radio";
+@import "object/module/_select";
+@import "object/module/_table";
+@import "object/module/_title";
+@import "object/module/_thumbnail";
 
-// Components
+// Component
 // ---------------------------------
 
 
 
-// Utilities
+// Utility
 // ---------------------------------
 
 #{$u-wrap} {
 
-    @import "utilities/_bg";
-    @import "utilities/_clear";
-    @import "utilities/_clearfix";
-    @import "utilities/_float";
+    @import "object/utility/_bg";
+    @import "object/utility/_clear";
+    @import "object/utility/_clearfix";
+    @import "object/utility/_float";
 
-    @import "utilities/_font";
-//    @import "utilities/_font_light";
+    @import "object/utility/_font";
+//    @import "object/utility/_font_light";
 
-    @import "utilities/_hidden";
-    @import "utilities/_img";
-    @import "utilities/_line";
-    @import "utilities/_m";
-    @import "utilities/_p";
-    @import "utilities/_position";
-    @import "utilities/_shadow";
-    @import "utilities/_sr";
-    @import "utilities/_text_color";
-    @import "utilities/_text_size";
+    @import "object/utility/_hidden";
+    @import "object/utility/_img";
+    @import "object/utility/_line";
+    @import "object/utility/_m";
+    @import "object/utility/_p";
+    @import "object/utility/_position";
+    @import "object/utility/_shadow";
+    @import "object/utility/_sr";
+    @import "object/utility/_text_color";
+    @import "object/utility/_text_size";
 }
 
 
