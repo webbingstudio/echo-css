@@ -3,9 +3,9 @@ echo.css
 
 <img alt="echo" src="http://cms-skill.com/echo/images/logo.svg" height="60" />
 
-version 0.2.0 (under construction)
+version 0.5.0 (under construction)
 
-Copyright 2017 WebbingStudio  
+Copyright 2018 WebbingStudio  
 Released under the MIT license  
 http://opensource.org/licenses/MIT
 
@@ -15,7 +15,7 @@ http://opensource.org/licenses/MIT
 
 ### Japanese
 
-"echo"は、SMACSSを設計のベースとしたCSSフレームワークです。
+"echo"は、SMACSS, FLOCSSを設計のベースとしたCSSフレームワークです。
 
 https://smacss.com/ja
 
@@ -26,7 +26,7 @@ https://smacss.com/ja
 
 ### English
 
-"echo" is a CSS framework based on the design of SMACSS.
+"echo" is a CSS framework based on the design of SMACSS and FLOCSS.
 
 https://smacss.com
 
