@@ -1,42 +1,23 @@
 /*doc
 ---
-title: .#{$p}document
-name: l-3-document
-category: layout
+title: #{$p}document
+name: document
+category: document
 ---
 
-ドキュメント全体を包括する。オフキャンバス等の画面全体に影響する演出のために使用する。
+ドキュメント全体を包括する。  
+常に横スクロールバーを禁止しているため、不都合がある場合は、<code>overflow:hidden</code> を解除すること。
 
 ``` example
 <div class="#{$p}document">
-(all document)
+	<div class="#{$prefix}#{$u}bg-first #{$prefix}#{$u}bg-fade #{$prefix}#{$u}p" style="white-space: nowrap">
+	    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore est animi, error, illo nam, rerum nobis doloremque facere illum corporis iure adipisci, temporibus. Nihil ipsum recusandae sed suscipit repellendus reiciendis!
+	</div>
 </div>
 ```
 */
 
 .#{$p}document {
-}
-
-/*doc
----
-title: .#{$p}document-inner
-name: l-3-document-1-inner
-category: layout
-parent: l-document
----
-
-要素の幅をコンテナブロックを無視して広げる演出のために使用する。
-
-``` example
-<div class="#{$p}document">
-<div class="#{$p}document-inner">
-(all document)
-</div>
-</div>
-```
-*/
-
-.#{$p}document-inner {
   overflow: hidden;
   max-width: 100%;
 }

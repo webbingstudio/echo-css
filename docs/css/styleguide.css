@@ -55,6 +55,19 @@
   line-height: 1.5;
 }
 
+.styleguide-contents code {
+  display: inline-block;
+  border: 1px solid #aaa;
+  background-color: #eee;
+  padding: .25em;
+  font-family: Consolas, 'Liberation Mono', Courier, monospace;
+  color: #d01040;
+  font-size: .9em;
+  line-height: 1;
+  vertical-align: middle;
+  transform:translate(0, -.1em);
+}
+
 .styleguide-contents pre:not([class]) code {
   padding: 0;
   white-space: pre;

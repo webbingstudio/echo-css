@@ -11,7 +11,7 @@
 
 </head>
 <body>
-<div id="document">
+<div class="l-document" id="document">
     <header class="p-header bg-first">
         <div class="l-container l-container-fluid">
 
@@ -45,7 +45,14 @@
             <nav class="c-nav c-nav-vertical">
                 <ul class="c-nav-list">
                     <li class="c-nav-item"><a href="./">introduction</a></li>
-                    <li class="c-nav-item"><a href="./layout.html">layout</a></li>
+                    <li class="c-nav-item"><a href="./layout.html">layout</a>
+                        <ul class="c-nav-list c-nav-children">
+                            <li class="c-nav-item"><a href="./container.html">container</a>
+                            <li class="c-nav-item"><a href="./document.html">document</a>
+                            <li class="c-nav-item"><a href="./grid-flex.html">grid-flex</a>
+                            <li class="c-nav-item"><a href="./grid-float.html">grid-float</a>
+                        </ul>
+                    </li>
                     <li class="c-nav-item">object
                         <ul class="c-nav-list c-nav-children">
                             <li class="c-nav-item"><a href="./module.html">module</a>
@@ -78,27 +85,7 @@
             <nav class="c-nav c-nav-horizontal">
                 <ul class="c-nav-list">
                     
-                    <li class="c-nav-item"><a href="#l-1-container">.l-container</a></li>
-                    
-                    <li class="c-nav-item"><a href="#l-1-container-1-sm">.l-container-sm</a></li>
-                    
-                    <li class="c-nav-item"><a href="#l-1-container-2-full-md">.l-container-full-md</a></li>
-                    
-                    <li class="c-nav-item"><a href="#l-3-document">.l-document</a></li>
-                    
-                    <li class="c-nav-item"><a href="#l-3-document-1-inner">.l-document-inner</a></li>
-                    
-                    <li class="c-nav-item"><a href="#l-4-row">.l-row</a></li>
-                    
-                    <li class="c-nav-item"><a href="#l-4-row-1-col">.l-col-(column)-(breakpoint)</a></li>
-                    
                     <li class="c-nav-item"><a href="#l-4-row-2-size">.l-row-(0 or size)</a></li>
-                    
-                    <li class="c-nav-item"><a href="#l-5-f-row">.l-f-row</a></li>
-                    
-                    <li class="c-nav-item"><a href="#l-5-f-row-1-col">.l-f-col-(column)-(breakpoint)</a></li>
-                    
-                    <li class="c-nav-item"><a href="#l-5-f-row-2-size">.l-f-row-(0 or size)</a></li>
                     
                 </ul>
             </nav>
@@ -106,159 +93,7 @@
 
             <article class="c-post">
                 <div class="c-post-contents styleguide-contents">
-<h1 id="l-1-container" class="styleguide">.l-container</h1>
-
-<ul class="section-nav">
-  <li><a href="#l-1-container-1-sm">.l-container-sm</a></li>
-  <li><a href="#l-1-container-2-full-md">.l-container-full-md</a></li>
-</ul>
-
-<p>デバイスに応じて適切に本文幅を調整するコンテナブロック。</p>
-<div class="example"><div class="l-container l-container-full-md l-bg-first l-bg-fade l-m-b">
-    <div class="l-p-y l-bg-first l-bg-fade l-line-c">.l-container</div>
-</div>
-</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-container l-container-full-md l-bg-first l-bg-fade l-m-b"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-p-y l-bg-first l-bg-fade l-line-c"</span><span class="nt">&gt;</span>.l-container<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</pre></div>
-<h2 id="l-1-container-1-sm" class="styleguide">.l-container-sm</h2>
-
-<p>本文幅が狭いコンテナブロック。1カラムレイアウトで1行の文字数を抑えるために使用する。</p>
-<div class="example"><div class="l-container l-container-sm l-container-full-md l-bg-third l-bg-fade">
-    <div class="l-p-y l-bg-third l-bg-fade l-line-c">.l-container-sm</div>
-</div>
-</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-container l-container-sm l-container-full-md l-bg-third l-bg-fade"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-p-y l-bg-third l-bg-fade l-line-c"</span><span class="nt">&gt;</span>.l-container-sm<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</pre></div>
-<h2 id="l-1-container-2-full-md" class="styleguide">.l-container-full-md</h2>
-
-<p>タブレットportrait以下でコンテナ余白を打ち消す。画像の幅100%表示等に使用する。</p>
-<div class="example"><div class="l-container l-container-full-md l-bg-first l-bg-fade l-m-b">
-    <div class="l-p-y l-bg-first l-bg-fade l-line-c">.l-container</div>
-</div>
-<div class="l-container l-container-sm l-container-full-md l-bg-third l-bg-fade">
-    <div class="l-p-y l-bg-third l-bg-fade l-line-c">.l-container-sm</div>
-</div>
-</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-container l-container-full-md l-bg-first l-bg-fade l-m-b"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-p-y l-bg-first l-bg-fade l-line-c"</span><span class="nt">&gt;</span>.l-container<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-container l-container-sm l-container-full-md l-bg-third l-bg-fade"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-p-y l-bg-third l-bg-fade l-line-c"</span><span class="nt">&gt;</span>.l-container-sm<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</pre></div>
-<h1 id="l-3-document" class="styleguide">.l-document</h1>
-
-<p>ドキュメント全体を包括する。オフキャンバス等の画面全体に影響する演出のために使用する。</p>
-<div class="example"><div class="l-document">
-(all document)
-</div>
-</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-document"</span><span class="nt">&gt;</span>
-(all document)
-<span class="nt">&lt;/div&gt;</span>
-</pre></div>
-<h1 id="l-3-document-1-inner" class="styleguide">.l-document-inner</h1>
-
-<p>要素の幅をコンテナブロックを無視して広げる演出のために使用する。</p>
-<div class="example"><div class="l-document">
-<div class="l-document-inner">
-(all document)
-</div>
-</div>
-</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-document"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-document-inner"</span><span class="nt">&gt;</span>
-(all document)
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</pre></div>
-<h1 id="l-4-row" class="styleguide">.l-row</h1>
-
-<ul class="section-nav">
-  <li><a href="#l-4-row-1-col">.l-col-(column)-(breakpoint)</a></li>
-  <li><a href="#l-4-row-2-size">.l-row-(0 or size)</a></li>
-</ul>
-
-<p>floatによるグリッドのグループを作成する。</p>
-
-<h2 id="l-4-row-1-col" class="styleguide">.l-col-(column)-(breakpoint)</h2>
-
-<p>floatによるグリッドのセルを作成する。</p>
-
-<h3>一般的なグリッド</h3>
-<div class="example"><div class="l-row">
-    <div class="l-col l-col-4">
-        <div class="m-b p-sm bg-first bg-mild">l-col l-col-4</div>
-    </div>
-    <div class="l-col l-col-4">
-        <div class="m-b p-sm bg-first bg-mild">l-col l-col-4</div>
-    </div>
-    <div class="l-col l-col-4">
-        <div class="m-b p-sm bg-first bg-mild">l-col l-col-4</div>
-    </div>
-</div>
-</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-row"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-col l-col-4"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-b p-sm bg-first bg-mild"</span><span class="nt">&gt;</span>l-col l-col-4<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-col l-col-4"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-b p-sm bg-first bg-mild"</span><span class="nt">&gt;</span>l-col l-col-4<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-col l-col-4"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-b p-sm bg-first bg-mild"</span><span class="nt">&gt;</span>l-col l-col-4<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</pre></div>
-<h3>デバイスによって変化するグリッド</h3>
-
-<p>スマートフォン(default), タブレット以上(sm), XGA以上(lg)でレイアウトを変更する代表的な例。</p>
-<div class="example"><div class="l-row">
-    <div class="l-col l-col-12 l-col-6-sm l-col-4-lg">
-        <div class="m-b p-sm bg-first bg-mild">l-col l-col-12 l-col-6-sm l-col-4-lg</div>
-    </div>
-    <div class="l-col l-col-12 l-col-6-sm l-col-4-lg">
-        <div class="m-b p-sm bg-first bg-mild">l-col l-col-12 l-col-6-sm l-col-4-lg</div>
-    </div>
-    <div class="l-col l-col-12 l-col-6-sm l-col-4-lg">
-        <div class="m-b p-sm bg-first bg-mild">l-col l-col-12 l-col-6-sm l-col-4-lg</div>
-    </div>
-</div>
-</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-row"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-col l-col-12 l-col-6-sm l-col-4-lg"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-b p-sm bg-first bg-mild"</span><span class="nt">&gt;</span>l-col l-col-12 l-col-6-sm l-col-4-lg<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-col l-col-12 l-col-6-sm l-col-4-lg"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-b p-sm bg-first bg-mild"</span><span class="nt">&gt;</span>l-col l-col-12 l-col-6-sm l-col-4-lg<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-col l-col-12 l-col-6-sm l-col-4-lg"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-b p-sm bg-first bg-mild"</span><span class="nt">&gt;</span>l-col l-col-12 l-col-6-sm l-col-4-lg<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</pre></div>
-<p>iPhone SE(default), iPhone 7(xs), iPhone 7 Plus(sm)間でもレイアウトを変更できる。</p>
-<div class="example"><div class="l-row">
-    <div class="l-col l-col-12 l-col-6-xs l-col-4-sm">
-        <div class="m-b p-sm bg-third bg-mild">l-col l-col-12 l-col-6-xs l-col-4-sm</div>
-    </div>
-    <div class="l-col l-col-12 l-col-6-xs l-col-4-sm">
-        <div class="m-b p-sm bg-third bg-mild">l-col l-col-12 l-col-6-xs l-col-4-sm</div>
-    </div>
-    <div class="l-col l-col-12 l-col-6-xs l-col-4-sm">
-        <div class="m-b p-sm bg-third bg-mild">l-col l-col-12 l-col-6-xs l-col-4-sm</div>
-    </div>
-</div>
-</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-row"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-col l-col-12 l-col-6-xs l-col-4-sm"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-b p-sm bg-third bg-mild"</span><span class="nt">&gt;</span>l-col l-col-12 l-col-6-xs l-col-4-sm<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-col l-col-12 l-col-6-xs l-col-4-sm"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-b p-sm bg-third bg-mild"</span><span class="nt">&gt;</span>l-col l-col-12 l-col-6-xs l-col-4-sm<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-col l-col-12 l-col-6-xs l-col-4-sm"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-b p-sm bg-third bg-mild"</span><span class="nt">&gt;</span>l-col l-col-12 l-col-6-xs l-col-4-sm<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</pre></div>
-<h2 id="l-4-row-2-size" class="styleguide">.l-row-(0 or size)</h2>
+<h1 id="l-4-row-2-size" class="styleguide">.l-row-(0 or size)</h1>
 
 <p>floatによるグリッドで余白が異なるグループを作成する。</p>
 <div class="example"><div class="l-row l-row-0">
@@ -331,134 +166,13 @@
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-b p-sm bg-important bg-mild"</span><span class="nt">&gt;</span>l-row l-row-lg<span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-</pre></div>
-<h1 id="l-5-f-row" class="styleguide">.l-f-row</h1>
-
-<ul class="section-nav">
-  <li><a href="#l-5-f-row-1-col">.l-f-col-(column)-(breakpoint)</a></li>
-  <li><a href="#l-5-f-row-2-size">.l-f-row-(0 or size)</a></li>
-</ul>
-
-<p>フレックスボックスによるグリッドのグループを作成する。セル内の高さを揃える必要がある場合に使用する。</p>
-
-<h2 id="l-5-f-row-1-col" class="styleguide">.l-f-col-(column)-(breakpoint)</h2>
-
-<p>フレックスボックスによるグリッドのセルを作成する。(column)は3,4,6のみ、(breakpoint)はlgのみ。</p>
-<div class="example"><div class="l-f-row">
-    <div class="l-f-col l-f-col-4-lg p-b">
-        <div class="bg-first bg-mild p" style="height: 100%;">l-f-col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
-    </div>
-    <div class="l-f-col l-f-col-4-lg p-b">
-        <div class="bg-first bg-mild p" style="height: 100%;">l-f-col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto. Quia, nobis explicabo asperiores facere!</div>
-    </div>
-    <div class="l-f-col l-f-col-4-lg p-b">
-        <div class="bg-first bg-mild p" style="height: 100%;">l-f-col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-    </div>
-    <div class="l-f-col l-f-col-4-lg p-b">
-        <div class="bg-first bg-mild p" style="height: 100%;">l-f-col-4-lg<br>Lorem ipsum dolor sit amet</div>
-    </div>
-    <div class="l-f-col l-f-col-4-lg p-b">
-        <div class="bg-first bg-mild p" style="height: 100%;">l-f-col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
-    </div>
-</div>
-</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-f-row"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-f-col l-f-col-4-lg p-b"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-first bg-mild p"</span> <span class="na">style=</span><span class="s">"height: 100%;"</span><span class="nt">&gt;</span>l-f-col-4-lg<span class="nt">&lt;br&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-f-col l-f-col-4-lg p-b"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-first bg-mild p"</span> <span class="na">style=</span><span class="s">"height: 100%;"</span><span class="nt">&gt;</span>l-f-col-4-lg<span class="nt">&lt;br&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto. Quia, nobis explicabo asperiores facere!<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-f-col l-f-col-4-lg p-b"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-first bg-mild p"</span> <span class="na">style=</span><span class="s">"height: 100%;"</span><span class="nt">&gt;</span>l-f-col-4-lg<span class="nt">&lt;br&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-f-col l-f-col-4-lg p-b"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-first bg-mild p"</span> <span class="na">style=</span><span class="s">"height: 100%;"</span><span class="nt">&gt;</span>l-f-col-4-lg<span class="nt">&lt;br&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-f-col l-f-col-4-lg p-b"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-first bg-mild p"</span> <span class="na">style=</span><span class="s">"height: 100%;"</span><span class="nt">&gt;</span>l-f-col-4-lg<span class="nt">&lt;br&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</pre></div>
-<h2 id="l-5-f-row-2-size" class="styleguide">.l-f-row-(0 or size)</h2>
-
-<p>フレックスボックスによるグリッドで余白が異なるグループを作成する。</p>
-<div class="example"><div class="l-f-row l-f-row-0">
-    <div class="l-f-col l-f-col-4-lg p-b">
-        <div class="bg-second bg-mild p" style="height: 100%;">l-f-col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
-    </div>
-    <div class="l-f-col l-f-col-4-lg p-b">
-        <div class="bg-second bg-mild p" style="height: 100%; opacity: 0.8;">l-f-col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto. Quia, nobis explicabo asperiores facere!</div>
-    </div>
-    <div class="l-f-col l-f-col-4-lg p-b">
-        <div class="bg-second bg-mild p" style="height: 100%;">l-f-col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-    </div>
-</div>
-
-<div class="l-f-row l-f-row-sm">
-    <div class="l-f-col l-f-col-3-lg p-b">
-        <div class="bg-third bg-mild p" style="height: 100%;">l-f-col-3-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
-    </div>
-    <div class="l-f-col l-f-col-3-lg p-b">
-        <div class="bg-third bg-mild p" style="height: 100%;">l-f-col-3-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto. Quia, nobis explicabo asperiores facere!</div>
-    </div>
-    <div class="l-f-col l-f-col-3-lg p-b">
-        <div class="bg-third bg-mild p" style="height: 100%;">l-f-col-3-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-    </div>
-    <div class="l-f-col l-f-col-3-lg p-b">
-        <div class="bg-third bg-mild p" style="height: 100%;">l-f-col-3-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto.</div>
-    </div>
-</div>
-
-<div class="l-f-row l-f-row-lg">
-    <div class="l-f-col l-f-col-6-lg p-b">
-        <div class="bg-important bg-mild p" style="height: 100%;">l-f-col-6-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
-    </div>
-    <div class="l-f-col l-f-col-6-lg p-b">
-        <div class="bg-important bg-mild p" style="height: 100%;">l-f-col-6-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto. Quia, nobis explicabo asperiores facere!</div>
-    </div>
-</div>
-</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-f-row l-f-row-0"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-f-col l-f-col-4-lg p-b"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-second bg-mild p"</span> <span class="na">style=</span><span class="s">"height: 100%;"</span><span class="nt">&gt;</span>l-f-col-4-lg<span class="nt">&lt;br&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-f-col l-f-col-4-lg p-b"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-second bg-mild p"</span> <span class="na">style=</span><span class="s">"height: 100%; opacity: 0.8;"</span><span class="nt">&gt;</span>l-f-col-4-lg<span class="nt">&lt;br&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto. Quia, nobis explicabo asperiores facere!<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-f-col l-f-col-4-lg p-b"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-second bg-mild p"</span> <span class="na">style=</span><span class="s">"height: 100%;"</span><span class="nt">&gt;</span>l-f-col-4-lg<span class="nt">&lt;br&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-f-row l-f-row-sm"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-f-col l-f-col-3-lg p-b"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-third bg-mild p"</span> <span class="na">style=</span><span class="s">"height: 100%;"</span><span class="nt">&gt;</span>l-f-col-3-lg<span class="nt">&lt;br&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-f-col l-f-col-3-lg p-b"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-third bg-mild p"</span> <span class="na">style=</span><span class="s">"height: 100%;"</span><span class="nt">&gt;</span>l-f-col-3-lg<span class="nt">&lt;br&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto. Quia, nobis explicabo asperiores facere!<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-f-col l-f-col-3-lg p-b"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-third bg-mild p"</span> <span class="na">style=</span><span class="s">"height: 100%;"</span><span class="nt">&gt;</span>l-f-col-3-lg<span class="nt">&lt;br&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-f-col l-f-col-3-lg p-b"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-third bg-mild p"</span> <span class="na">style=</span><span class="s">"height: 100%;"</span><span class="nt">&gt;</span>l-f-col-3-lg<span class="nt">&lt;br&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto.<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-f-row l-f-row-lg"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-f-col l-f-col-6-lg p-b"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-important bg-mild p"</span> <span class="na">style=</span><span class="s">"height: 100%;"</span><span class="nt">&gt;</span>l-f-col-6-lg<span class="nt">&lt;br&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-f-col l-f-col-6-lg p-b"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-important bg-mild p"</span> <span class="na">style=</span><span class="s">"height: 100%;"</span><span class="nt">&gt;</span>l-f-col-6-lg<span class="nt">&lt;br&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto. Quia, nobis explicabo asperiores facere!<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
 </pre></div>                </div><!-- /.c-post-contents -->
             </article><!-- /.c-post -->
 
         </main>
     </div><!-- /.p-contents -->
     <footer class="p-footer" role="contentinfo">
-        <p class="p-footer-copyright"><small>@copy;2018 WebbingStudio</small></p>
+        <p class="p-footer-copyright"><small>&copy; 2018 WebbingStudio</small></p>
     </footer>
 </div><!-- /.l-document -->
 </body>

@@ -1,15 +1,16 @@
 /*doc
 ---
-title: .#{$p}container
-name: l-1-container
-category: layout
+title: #{$p}container
+name: container
+category: container
 ---
 
-デバイスに応じて適切に本文幅を調整するコンテナブロック。
+デバイスに応じて適切に本文幅を調整するコンテナブロック。  
+<code>/\_scss/\_config_advance.scss</code> の「<code>$container-max-widths-md</code>」の定義を参照する。
 
 ``` example
-<div class="#{$p}container #{$p}container-full-md #{$p}bg-first #{$p}bg-fade #{$p}m-b">
-    <div class="#{$p}p-y #{$p}bg-first #{$p}bg-fade #{$p}line-c">.#{$p}container</div>
+<div class="#{$p}container #{$prefix}#{$u}bg-first #{$prefix}#{$u}bg-mild #{$prefix}#{$u}m-b">
+    <div class="#{$prefix}#{$u}p-y #{$prefix}#{$u}line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
 </div>
 ```
 
@@ -22,23 +23,52 @@ category: layout
     @include media-breakpoint-up($breakpoint) {
       max-width: $container-max-width;
     }
+
   }
+
+}
+
+/*doc
+---
+title: #{$p}container-fluid
+name: container-01-fluid
+category: container
+parent: container
+---
+
+コンテナブロックの最大幅の制限を行わない。
+
+``` example
+<div class="#{$p}container #{$p}container-fluid #{$prefix}#{$u}bg-second #{$prefix}#{$u}bg-mild #{$prefix}#{$u}m-b">
+    <div class="#{$prefix}#{$u}p-y #{$prefix}#{$u}line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
+</div>
+```
+
+*/
+
+.#{$p}container-fluid {
+
+  @include media-breakpoint-up(0px) {
+    max-width: none;
+  }
+
 }
 
 
 /*doc
 ---
-title: .#{$p}container-sm
-name: l-1-container-1-sm
-category: layout
-parent: l-1-container
+title: #{$p}container-sm
+name: container-02-sm
+category: container
+parent: container
 ---
 
-本文幅が狭いコンテナブロック。1カラムレイアウトで1行の文字数を抑えるために使用する。
+コンテナブロックの最大幅が通常よりも狭くなる。  
+<code>/\_scss/\_config_advance.scss</code> の「<code>$container-max-widths-sm</code>」の定義を参照する。
 
 ``` example
-<div class="#{$p}container #{$p}container-sm #{$p}container-full-md #{$p}bg-third #{$p}bg-fade">
-    <div class="#{$p}p-y #{$p}bg-third #{$p}bg-fade #{$p}line-c">.#{$p}container-sm</div>
+<div class="#{$p}container #{$p}container-sm #{$prefix}#{$u}bg-third #{$prefix}#{$u}bg-mild #{$prefix}#{$u}m-b">
+    <div class="#{$prefix}#{$u}p-y #{$prefix}#{$u}line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
 </div>
 ```
 
@@ -53,9 +83,70 @@ parent: l-1-container
 }
 
 
+/*doc
+---
+title: #{$p}container-lg
+name: container-03-lg
+category: container
+parent: container
+---
+
+コンテナブロックの最大幅が通常よりも広くなる。  
+<code>/\_scss/\_config_advance.scss</code> の「<code>$container-max-widths-lg</code>」の定義を参照する。
+
+
+``` example
+<div class="#{$p}container #{$p}container-lg #{$prefix}#{$u}bg-fourth #{$prefix}#{$u}bg-mild #{$prefix}#{$u}m-b">
+    <div class="#{$prefix}#{$u}p-y #{$prefix}#{$u}line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
+</div>
+```
+
+*/
+
+.#{$p}container-lg {
+  @each $breakpoint, $container-max-width-lg in $container-max-widths-lg {
+    @include media-breakpoint-up($breakpoint) {
+      max-width: $container-max-width-lg;
+    }
+  }
+}
+
+
+/*doc
+---
+title: #{$p}container-full-md
+name: container-04-full-md
+category: container
+parent: container
+---
+
+<code>breakpoint < md</code>でコンテナ余白を打ち消す。モバイル端末での幅100%表示等に使用する。
+
+``` example
+<div class="#{$p}container #{$p}container-full-md #{$prefix}#{$u}bg-fifth #{$prefix}#{$u}bg-mild #{$prefix}#{$u}m-b">
+    <div class="#{$prefix}#{$u}p-y #{$prefix}#{$u}line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
+</div>
+<div class="#{$p}container #{$p}container-sm #{$p}container-full-md #{$prefix}#{$u}bg-fifth #{$prefix}#{$u}bg-mild #{$prefix}#{$u}m-b">
+    <div class="#{$prefix}#{$u}p-y #{$prefix}#{$u}line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
+</div>
+<div class="#{$p}container #{$p}container-lg #{$p}container-full-md #{$prefix}#{$u}bg-fifth #{$prefix}#{$u}bg-mild #{$prefix}#{$u}m-b">
+    <div class="#{$prefix}#{$u}p-y #{$prefix}#{$u}line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
+</div>
+```
+*/
+
+.#{$p}container-full-md {
+
+  @include media-breakpoint-down(md) {
+      padding-left: 0;
+      padding-right: 0;
+  }
+
+}
+
+
 /*
-a-blog cmsのレイアウトモジュール、HTML直書きの影響で
-.#{$p}containerが二重になった場合の対策
+#{$p}containerが二重になった場合の対策
 */
 @include media-breakpoint-up(sm) {
 
@@ -67,35 +158,5 @@ a-blog cmsのレイアウトモジュール、HTML直書きの影響で
   }
 
 }
-
-}
-
-
-/*doc
----
-title: .#{$p}container-full-md
-name: l-1-container-2-full-md
-category: layout
-parent: l-1-container
----
-
-タブレットportrait以下でコンテナ余白を打ち消す。画像の幅100%表示等に使用する。
-
-``` example
-<div class="#{$p}container #{$p}container-full-md #{$p}bg-first #{$p}bg-fade #{$p}m-b">
-    <div class="#{$p}p-y #{$p}bg-first #{$p}bg-fade #{$p}line-c">.#{$p}container</div>
-</div>
-<div class="#{$p}container #{$p}container-sm #{$p}container-full-md #{$p}bg-third #{$p}bg-fade">
-    <div class="#{$p}p-y #{$p}bg-third #{$p}bg-fade #{$p}line-c">.#{$p}container-sm</div>
-</div>
-```
-*/
-
-.#{$p}container-full-md {
-
-  @include media-breakpoint-down(md) {
-    padding-left: 0;
-    padding-right: 0;
-  }
 
 }

@@ -2,71 +2,31 @@
 
 /*doc
 ---
-title: .#{$p}row
-name: l-4-row
-category: layout
+title: #{$p}row
+name: 01-row
+category: grid-float
 ---
 
 floatによるグリッドのグループを作成する。
 
-*/
+### 補足：floatによるグリッドの特徴
 
-/*doc
----
-title: .#{$p}col-(column)-(breakpoint)
-name: l-4-row-1-col
-category: layout
-parent: l-4-row
----
-
-floatによるグリッドのセルを作成する。
-
-### 一般的なグリッド
+- <code>.#{$p}row</code> と <code>.#{$p}col</code> が直接の親子関係ではない場合でもグリッドが成立する
+- セルの開始位置をずらすことができる
+- Internet Explorer 9以前のバージョンでも利用できる
+- セル内のコンポーネントの高さを揃えることができない
+- セルの上下揃えを指定できない
 
 ``` example
-<div class="#{$p}row">
-    <div class="#{$p}col #{$p}col-4">
-        <div class="#{$prefix}#{$u}m-b #{$prefix}#{$u}p-sm #{$prefix}#{$u}bg-first #{$prefix}#{$u}bg-mild">#{$p}col #{$p}col-4</div>
+<div class="#{$p}row" style="position: relative">
+    <div class="#{$p}col #{$p}col-4-lg #{$prefix}#{$u}m-b">
+        <div class="#{$prefix}#{$u}bg-first #{$prefix}#{$u}p" style="height: 100%;">#{$p}col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
     </div>
-    <div class="#{$p}col #{$p}col-4">
-        <div class="#{$prefix}#{$u}m-b #{$prefix}#{$u}p-sm #{$prefix}#{$u}bg-first #{$prefix}#{$u}bg-mild">#{$p}col #{$p}col-4</div>
+    <div class="#{$p}col #{$p}col-4-lg #{$prefix}#{$u}m-b">
+        <div class="#{$prefix}#{$u}bg-first #{$prefix}#{$u}p" style="height: 100%;">#{$p}col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto. Quia, nobis explicabo asperiores facere!</div>
     </div>
-    <div class="#{$p}col #{$p}col-4">
-        <div class="#{$prefix}#{$u}m-b #{$prefix}#{$u}p-sm #{$prefix}#{$u}bg-first #{$prefix}#{$u}bg-mild">#{$p}col #{$p}col-4</div>
-    </div>
-</div>
-```
-
-### デバイスによって変化するグリッド
-
-スマートフォン(default), タブレット以上(sm), XGA以上(lg)でレイアウトを変更する代表的な例。
-
-``` example
-<div class="#{$p}row">
-    <div class="#{$p}col #{$p}col-12 #{$p}col-6-sm #{$p}col-4-lg">
-        <div class="#{$prefix}#{$u}m-b #{$prefix}#{$u}p-sm #{$prefix}#{$u}bg-first #{$prefix}#{$u}bg-mild">#{$p}col #{$p}col-12 #{$p}col-6-sm #{$p}col-4-lg</div>
-    </div>
-    <div class="#{$p}col #{$p}col-12 #{$p}col-6-sm #{$p}col-4-lg">
-        <div class="#{$prefix}#{$u}m-b #{$prefix}#{$u}p-sm #{$prefix}#{$u}bg-first #{$prefix}#{$u}bg-mild">#{$p}col #{$p}col-12 #{$p}col-6-sm #{$p}col-4-lg</div>
-    </div>
-    <div class="#{$p}col #{$p}col-12 #{$p}col-6-sm #{$p}col-4-lg">
-        <div class="#{$prefix}#{$u}m-b #{$prefix}#{$u}p-sm #{$prefix}#{$u}bg-first #{$prefix}#{$u}bg-mild">#{$p}col #{$p}col-12 #{$p}col-6-sm #{$p}col-4-lg</div>
-    </div>
-</div>
-```
-
-iPhone SE(default), iPhone 7(xs), iPhone 7 Plus(sm)間でもレイアウトを変更できる。
-
-``` example
-<div class="#{$p}row">
-    <div class="#{$p}col #{$p}col-12 #{$p}col-6-xs #{$p}col-4-sm">
-        <div class="#{$prefix}#{$u}m-b #{$prefix}#{$u}p-sm #{$prefix}#{$u}bg-third #{$prefix}#{$u}bg-mild">#{$p}col #{$p}col-12 #{$p}col-6-xs #{$p}col-4-sm</div>
-    </div>
-    <div class="#{$p}col #{$p}col-12 #{$p}col-6-xs #{$p}col-4-sm">
-        <div class="#{$prefix}#{$u}m-b #{$prefix}#{$u}p-sm #{$prefix}#{$u}bg-third #{$prefix}#{$u}bg-mild">#{$p}col #{$p}col-12 #{$p}col-6-xs #{$p}col-4-sm</div>
-    </div>
-    <div class="#{$p}col #{$p}col-12 #{$p}col-6-xs #{$p}col-4-sm">
-        <div class="#{$prefix}#{$u}m-b #{$prefix}#{$u}p-sm #{$prefix}#{$u}bg-third #{$prefix}#{$u}bg-mild">#{$p}col #{$p}col-12 #{$p}col-6-xs #{$p}col-4-sm</div>
+    <div class="#{$p}col #{$p}col-4-lg #{$prefix}#{$u}m-b">
+        <div class="#{$prefix}#{$u}bg-first #{$prefix}#{$u}p" style="height: 100%;">#{$p}col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
     </div>
 </div>
 ```
@@ -77,57 +37,63 @@ iPhone SE(default), iPhone 7(xs), iPhone 7 Plus(sm)間でもレイアウトを�
 
 .#{$p}row {
     @include make-row();
+
     .#{$p}col {
         padding-left: (map-get($grid-gutter-widths, md) / 2);
         padding-right: (map-get($grid-gutter-widths, md) / 2);
     }
+
 }
+
+
+
+
 
 
 /*doc
 ---
-title: .#{$p}row-(0 or size)
-name: l-4-row-2-size
-category: layout
-parent: l-4-row
+title: #{$p}row-(0 or size)
+name: 02-row-size
+category: grid-float
+parent: 01-row
 ---
 
 floatによるグリッドで余白が異なるグループを作成する。
 
 ``` example
 <div class="#{$p}row #{$p}row-0">
-    <div class="#{$p}col #{$p}col-4">
-        <div class="#{$prefix}#{$u}m-b #{$prefix}#{$u}p-sm #{$prefix}#{$u}bg-second #{$prefix}#{$u}bg-mild">#{$p}row #{$p}row-0</div>
+    <div class="#{$p}col #{$p}col-4-lg #{$prefix}#{$u}m-b">
+        <div class="#{$prefix}#{$u}bg-first #{$prefix}#{$u}p" style="height: 100%;">#{$p}row-0<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
     </div>
-    <div class="#{$p}col #{$p}col-4">
-        <div class="#{$prefix}#{$u}m-b #{$prefix}#{$u}p-sm #{$prefix}#{$u}bg-second #{$prefix}#{$u}bg-mild" style="opacity: 0.8;">#{$p}row #{$p}row-0</div>
+    <div class="#{$p}col #{$p}col-4-lg #{$prefix}#{$u}m-b">
+        <div class="#{$prefix}#{$u}bg-first #{$prefix}#{$u}p" style="height: 100%; opacity: 0.8;">#{$p}row-0<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto. Quia, nobis explicabo asperiores facere!</div>
     </div>
-    <div class="#{$p}col #{$p}col-4">
-        <div class="#{$prefix}#{$u}m-b #{$prefix}#{$u}p-sm #{$prefix}#{$u}bg-second #{$prefix}#{$u}bg-mild">#{$p}row #{$p}row-0</div>
+    <div class="#{$p}col #{$p}col-4-lg #{$prefix}#{$u}m-b">
+        <div class="#{$prefix}#{$u}bg-first #{$prefix}#{$u}p" style="height: 100%;">#{$p}row-0<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
     </div>
 </div>
 
 <div class="#{$p}row #{$p}row-sm">
-    <div class="#{$p}col #{$p}col-4">
-        <div class="#{$prefix}#{$u}m-b #{$prefix}#{$u}p-sm #{$prefix}#{$u}bg-third #{$prefix}#{$u}bg-mild">#{$p}row #{$p}row-sm</div>
+    <div class="#{$p}col #{$p}col-4-lg #{$prefix}#{$u}m-b">
+        <div class="#{$prefix}#{$u}bg-second #{$prefix}#{$u}p" style="height: 100%;">#{$p}row-sm<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
     </div>
-    <div class="#{$p}col #{$p}col-4">
-        <div class="#{$prefix}#{$u}m-b #{$prefix}#{$u}p-sm #{$prefix}#{$u}bg-third #{$prefix}#{$u}bg-mild">#{$p}row #{$p}row-sm</div>
+    <div class="#{$p}col #{$p}col-4-lg #{$prefix}#{$u}m-b">
+        <div class="#{$prefix}#{$u}bg-second #{$prefix}#{$u}p" style="height: 100%; opacity: 0.8;">#{$p}row-sm<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto. Quia, nobis explicabo asperiores facere!</div>
     </div>
-    <div class="#{$p}col #{$p}col-4">
-        <div class="#{$prefix}#{$u}m-b #{$prefix}#{$u}p-sm #{$prefix}#{$u}bg-third #{$prefix}#{$u}bg-mild">#{$p}row #{$p}row-sm</div>
+    <div class="#{$p}col #{$p}col-4-lg #{$prefix}#{$u}m-b">
+        <div class="#{$prefix}#{$u}bg-second #{$prefix}#{$u}p" style="height: 100%;">#{$p}row-sm<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
     </div>
 </div>
 
 <div class="#{$p}row #{$p}row-lg">
-    <div class="#{$p}col #{$p}col-4">
-        <div class="#{$prefix}#{$u}m-b #{$prefix}#{$u}p-sm #{$prefix}#{$u}bg-important #{$prefix}#{$u}bg-mild">#{$p}row #{$p}row-lg</div>
+    <div class="#{$p}col #{$p}col-4-lg #{$prefix}#{$u}m-b">
+        <div class="#{$prefix}#{$u}bg-third #{$prefix}#{$u}p" style="height: 100%;">#{$p}row-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
     </div>
-    <div class="#{$p}col #{$p}col-4">
-        <div class="#{$prefix}#{$u}m-b #{$prefix}#{$u}p-sm #{$prefix}#{$u}bg-important #{$prefix}#{$u}bg-mild">#{$p}row #{$p}row-lg</div>
+    <div class="#{$p}col #{$p}col-4-lg #{$prefix}#{$u}m-b">
+        <div class="#{$prefix}#{$u}bg-third #{$prefix}#{$u}p" style="height: 100%; opacity: 0.8;">#{$p}row-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto. Quia, nobis explicabo asperiores facere!</div>
     </div>
-    <div class="#{$p}col #{$p}col-4">
-        <div class="#{$prefix}#{$u}m-b #{$prefix}#{$u}p-sm #{$prefix}#{$u}bg-important #{$prefix}#{$u}bg-mild">#{$p}row #{$p}row-lg</div>
+    <div class="#{$p}col #{$p}col-4-lg #{$prefix}#{$u}m-b">
+        <div class="#{$prefix}#{$u}bg-third #{$prefix}#{$u}p" style="height: 100%;">#{$p}row-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
     </div>
 </div>
 ```
@@ -156,6 +122,83 @@ floatによるグリッドで余白が異なるグループを作成する。
         padding-right: (map-get($grid-gutter-widths, lg) / 2);
     }
 }
+
+
+
+/*doc
+---
+title: #{$p}col-(column)-(breakpoint)
+name: 03-col
+category: grid-float
+parent: 01-row
+---
+
+floatによるグリッドのセルを作成する。
+
+スマートフォン(default), タブレット以上(sm), XGA以上(lg)でレイアウトを変更する代表的な例。
+
+``` example
+<div class="#{$p}row">
+    <div class="#{$p}col #{$p}col-12 #{$p}col-6-sm #{$p}col-4-lg">
+        <div class="#{$prefix}#{$u}bg-first #{$prefix}#{$u}p" style="height: 100%;">#{$p}col-12<br>#{$p}col-6-sm<br>#{$p}col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
+    </div>
+    <div class="#{$p}col #{$p}col-12 #{$p}col-6-sm #{$p}col-4-lg">
+        <div class="#{$prefix}#{$u}bg-first #{$prefix}#{$u}p" style="height: 100%;">#{$p}col-12<br>#{$p}col-6-sm<br>#{$p}col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto. Quia, nobis explicabo asperiores facere!</div>
+    </div>
+    <div class="#{$p}col #{$p}col-12 #{$p}col-6-sm #{$p}col-4-lg">
+        <div class="#{$prefix}#{$u}bg-first #{$prefix}#{$u}p" style="height: 100%;">#{$p}col-12<br>#{$p}col-6-sm<br>#{$p}col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+    </div>
+</div>
+```
+
+iPhone SE(default), iPhone 8(xs), iPhone 8 Plus(sm)間でもレイアウトを変更できる。
+
+``` example
+<div class="#{$p}row">
+    <div class="#{$p}col #{$p}col-12 #{$p}col-6-xs #{$p}col-4-sm">
+        <div class="#{$prefix}#{$u}bg-second #{$prefix}#{$u}p" style="height: 100%;">#{$p}col-12<br>#{$p}col-6-xs<br>#{$p}col-4-sm<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
+    </div>
+    <div class="#{$p}col #{$p}col-12 #{$p}col-6-xs #{$p}col-4-sm">
+        <div class="#{$prefix}#{$u}bg-second #{$prefix}#{$u}p" style="height: 100%;">#{$p}col-12<br>#{$p}col-6-xs<br>#{$p}col-4-sm<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto. Quia, nobis explicabo asperiores facere!</div>
+    </div>
+    <div class="#{$p}col #{$p}col-12 #{$p}col-6-xs #{$p}col-4-sm">
+        <div class="#{$prefix}#{$u}bg-second #{$prefix}#{$u}p" style="height: 100%;">#{$p}col-12<br>#{$p}col-6-xs<br>#{$p}col-4-sm<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+    </div>
+</div>
+```
+
+*/
+
+
+/*doc
+---
+title: #{$p}col-(column)-(breakpoint)-(push or pull)
+name: 04-col-push
+category: grid-float
+parent: 01-row
+---
+
+グリッドのセルの開始位置をずらす。pushは右、pullは左にずれる。組み合わせるとfloatのグリッドでもセルの左右入れ替えができる。
+
+``` example
+<div class="#{$p}row #{$prefix}#{$u}m-b">
+    <div class="#{$p}col #{$p}col-6-lg #{$p}col-2-lg-push">
+        <div class="#{$prefix}#{$u}bg-third #{$prefix}#{$u}p" style="height: 100%;">#{$p}col-6-lg<br>#{$p}col-2-lg-push<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
+    </div>
+</div>
+
+<div class="#{$p}row #{$prefix}#{$u}m-b">
+    <div class="#{$p}col #{$p}col-4-lg #{$p}col-8-lg-push">
+        <div class="#{$prefix}#{$u}bg-fourth #{$prefix}#{$u}p" style="height: 100%;">#{$p}col-4-lg<br>#{$p}col-8-lg-push<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
+    </div>
+    <div class="#{$p}col #{$p}col-8-lg #{$p}col-4-lg-pull">
+        <div class="#{$prefix}#{$u}bg-fourth #{$prefix}#{$u}p" style="height: 100%;">#{$p}col-8-lg<br>#{$p}col-4-lg-pull<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
+    </div>
+</div>
+```
+
+*/
+
 
 }
 

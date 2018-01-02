@@ -2,64 +2,218 @@
 
 /*doc
 ---
-title: .#{$p}f-row
-name: l-5-f-row
-category: layout
+title: #{$p}f-row
+name: f-row
+category: grid-flex
 ---
 
-フレックスボックスによるグリッドのグループを作成する。セル内の高さを揃える必要がある場合に使用する。
+flexboxによるグリッドのグループを作成する。
 
-*/
+### 補足：flexboxによるグリッドの特徴
 
-.#{$p}f-row {
-    @include media-breakpoint-up(lg) {
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: stretch;
-        margin-left: (map-get($grid-gutter-widths, md) / -2);
-        margin-right: (map-get($grid-gutter-widths, md) / -2);
-    }
-}
-
-/*doc
----
-title: .#{$p}f-col-(column)-(breakpoint)
-name: l-5-f-row-1-col
-category: layout
-parent: l-5-f-row
----
-
-フレックスボックスによるグリッドのセルを作成する。(column)は3,4,6のみ、(breakpoint)はlgのみ。
+- セル内のコンポーネントの高さを揃えることができる（<code>.#{$prefix}#{$c}card</code> 以外は、別途 <code>height: 100%</code> を指定すること）
+- セルの上下揃えを指定できる（別途 <code>align-items: center</code> を指定すること）
+- <code>.#{$p}f-row</code> と <code>.#{$p}f-col</code> は直接の親子関係でなければならない
 
 ``` example
 <div class="#{$p}f-row">
-    <div class="#{$p}f-col #{$p}f-col-4-lg p-b">
-        <div class="#{$prefix}#{$u}bg-first #{$prefix}#{$u}bg-mild #{$prefix}#{$u}p" style="height: 100%;">#{$p}f-col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
+    <div class="#{$p}f-col #{$p}f-col-4-lg #{$prefix}#{$u}m-b">
+        <div class="#{$prefix}#{$u}bg-first #{$prefix}#{$u}p" style="height: 100%;">#{$p}f-col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
     </div>
-    <div class="#{$p}f-col #{$p}f-col-4-lg p-b">
-        <div class="#{$prefix}#{$u}bg-first #{$prefix}#{$u}bg-mild #{$prefix}#{$u}p" style="height: 100%;">#{$p}f-col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto. Quia, nobis explicabo asperiores facere!</div>
+    <div class="#{$p}f-col #{$p}f-col-4-lg #{$prefix}#{$u}m-b">
+        <div class="#{$prefix}#{$u}bg-first #{$prefix}#{$u}p" style="height: 100%;">#{$p}f-col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto. Quia, nobis explicabo asperiores facere!</div>
     </div>
-    <div class="#{$p}f-col #{$p}f-col-4-lg p-b">
-        <div class="#{$prefix}#{$u}bg-first #{$prefix}#{$u}bg-mild #{$prefix}#{$u}p" style="height: 100%;">#{$p}f-col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+    <div class="#{$p}f-col #{$p}f-col-4-lg #{$prefix}#{$u}m-b">
+        <div class="#{$prefix}#{$u}bg-first #{$prefix}#{$u}p" style="height: 100%;">#{$p}f-col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
     </div>
-    <div class="#{$p}f-col #{$p}f-col-4-lg p-b">
-        <div class="#{$prefix}#{$u}bg-first #{$prefix}#{$u}bg-mild #{$prefix}#{$u}p" style="height: 100%;">#{$p}f-col-4-lg<br>Lorem ipsum dolor sit amet</div>
+</div>
+```
+*/
+
+.#{$p}f-row {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin-left: (map-get($grid-gutter-widths, md) / -2);
+    margin-right: (map-get($grid-gutter-widths, md) / -2);
+}
+
+
+/*doc
+---
+title: #{$p}f-row-(0 or size)
+name: f-01-row-size
+category: grid-flex
+parent: f-row
+---
+
+flexboxによるグリッドで余白が異なるグループを作成する。
+
+``` example
+<div class="#{$p}f-row #{$p}f-row-0">
+    <div class="#{$p}f-col #{$p}f-col-4-lg #{$prefix}#{$u}m-b">
+        <div class="#{$prefix}#{$u}bg-first #{$prefix}#{$u}p" style="height: 100%;">#{$p}f-row-0<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
     </div>
-    <div class="#{$p}f-col #{$p}f-col-4-lg p-b">
-        <div class="#{$prefix}#{$u}bg-first #{$prefix}#{$u}bg-mild #{$prefix}#{$u}p" style="height: 100%;">#{$p}f-col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
+    <div class="#{$p}f-col #{$p}f-col-4-lg #{$prefix}#{$u}m-b">
+        <div class="#{$prefix}#{$u}bg-first #{$prefix}#{$u}p" style="height: 100%; opacity: 0.8;">#{$p}f-row-0<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto. Quia, nobis explicabo asperiores facere!</div>
+    </div>
+    <div class="#{$p}f-col #{$p}f-col-4-lg #{$prefix}#{$u}m-b">
+        <div class="#{$prefix}#{$u}bg-first #{$prefix}#{$u}p" style="height: 100%;">#{$p}f-row-0<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+    </div>
+</div>
+
+<div class="#{$p}f-row #{$p}f-row-sm">
+    <div class="#{$p}f-col #{$p}f-col-4-lg #{$prefix}#{$u}m-b">
+        <div class="#{$prefix}#{$u}bg-second #{$prefix}#{$u}p" style="height: 100%;">#{$p}f-row-sm<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
+    </div>
+    <div class="#{$p}f-col #{$p}f-col-4-lg #{$prefix}#{$u}m-b">
+        <div class="#{$prefix}#{$u}bg-second #{$prefix}#{$u}p" style="height: 100%; opacity: 0.8;">#{$p}f-row-sm<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto. Quia, nobis explicabo asperiores facere!</div>
+    </div>
+    <div class="#{$p}f-col #{$p}f-col-4-lg #{$prefix}#{$u}m-b">
+        <div class="#{$prefix}#{$u}bg-second #{$prefix}#{$u}p" style="height: 100%;">#{$p}f-row-sm<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+    </div>
+</div>
+
+<div class="#{$p}f-row #{$p}f-row-lg">
+    <div class="#{$p}f-col #{$p}f-col-4-lg #{$prefix}#{$u}m-b">
+        <div class="#{$prefix}#{$u}bg-third #{$prefix}#{$u}p" style="height: 100%;">#{$p}f-row-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
+    </div>
+    <div class="#{$p}f-col #{$p}f-col-4-lg #{$prefix}#{$u}m-b">
+        <div class="#{$prefix}#{$u}bg-third #{$prefix}#{$u}p" style="height: 100%; opacity: 0.8;">#{$p}f-row-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto. Quia, nobis explicabo asperiores facere!</div>
+    </div>
+    <div class="#{$p}f-col #{$p}f-col-4-lg #{$prefix}#{$u}m-b">
+        <div class="#{$prefix}#{$u}bg-third #{$prefix}#{$u}p" style="height: 100%;">#{$p}f-row-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+    </div>
+</div>
+```
+*/
+
+.#{$p}f-row-0 {
+    margin-left: 0;
+    margin-right: 0;
+
+    .#{$p}f-col {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+}
+
+.#{$p}f-row-sm {
+    margin-left: (map-get($grid-gutter-widths, sm) / -2);
+    margin-right: (map-get($grid-gutter-widths, sm) / -2);
+
+    .#{$p}f-col {
+        padding-left: (map-get($grid-gutter-widths, sm) / 2);
+        padding-right: (map-get($grid-gutter-widths, sm) / 2);
+    }
+
+}
+
+.#{$p}f-row-lg {
+    margin-left: (map-get($grid-gutter-widths, lg) / -2);
+    margin-right: (map-get($grid-gutter-widths, lg) / -2);
+
+    .#{$p}f-col {
+        padding-left: (map-get($grid-gutter-widths, lg) / 2);
+        padding-right: (map-get($grid-gutter-widths, lg) / 2);
+    }
+
+}
+
+
+/*doc
+---
+title: #{$p}f-col-(column)-(breakpoint)
+name: f-02-col
+category: grid-flex
+parent: f-row
+---
+
+flexboxによるグリッドのセルを作成する。現在のバージョンでは、(column)は<code>3,4,6</code>のみ、(breakpoint)は<code>sm,lg</code>のみ。
+
+``` example
+<div class="#{$p}f-row #{$prefix}#{$u}m-b-lg">
+    <div class="#{$p}f-col #{$p}f-col-3-sm #{$prefix}#{$u}m-b">
+        <div class="#{$prefix}#{$u}bg-first #{$prefix}#{$u}p" style="height: 100%;">#{$p}f-col-3-sm<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
+    </div>
+    <div class="#{$p}f-col #{$p}f-col-3-sm #{$prefix}#{$u}m-b">
+        <div class="#{$prefix}#{$u}bg-first #{$prefix}#{$u}p" style="height: 100%;">#{$p}f-col-3-sm<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto. Quia, nobis explicabo asperiores facere!</div>
+    </div>
+    <div class="#{$p}f-col #{$p}f-col-3-sm #{$prefix}#{$u}m-b">
+        <div class="#{$prefix}#{$u}bg-first #{$prefix}#{$u}p" style="height: 100%;">#{$p}f-col-3-sm<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+    </div>
+    <div class="#{$p}f-col #{$p}f-col-3-sm #{$prefix}#{$u}m-b">
+        <div class="#{$prefix}#{$u}bg-first #{$prefix}#{$u}p" style="height: 100%;">#{$p}f-col-3-sm<br>Lorem ipsum dolor sit amet</div>
+    </div>
+    <div class="#{$p}f-col #{$p}f-col-3-sm #{$prefix}#{$u}m-b">
+        <div class="#{$prefix}#{$u}bg-first #{$prefix}#{$u}p" style="height: 100%;">#{$p}f-col-3-sm<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
+    </div>
+</div>
+
+<div class="#{$p}f-row #{$prefix}#{$u}m-b-lg">
+    <div class="#{$p}f-col #{$p}f-col-4-lg #{$prefix}#{$u}m-b">
+        <div class="#{$prefix}#{$u}bg-second #{$prefix}#{$u}p" style="height: 100%;">#{$p}f-col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
+    </div>
+    <div class="#{$p}f-col #{$p}f-col-4-lg #{$prefix}#{$u}m-b">
+        <div class="#{$prefix}#{$u}bg-second #{$prefix}#{$u}p" style="height: 100%;">#{$p}f-col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto. Quia, nobis explicabo asperiores facere!</div>
+    </div>
+    <div class="#{$p}f-col #{$p}f-col-4-lg #{$prefix}#{$u}m-b">
+        <div class="#{$prefix}#{$u}bg-second #{$prefix}#{$u}p" style="height: 100%;">#{$p}f-col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+    </div>
+    <div class="#{$p}f-col #{$p}f-col-4-lg #{$prefix}#{$u}m-b">
+        <div class="#{$prefix}#{$u}bg-second #{$prefix}#{$u}p" style="height: 100%;">#{$p}f-col-4-lg<br>Lorem ipsum dolor sit amet</div>
+    </div>
+    <div class="#{$p}f-col #{$p}f-col-4-lg #{$prefix}#{$u}m-b">
+        <div class="#{$prefix}#{$u}bg-second #{$prefix}#{$u}p" style="height: 100%;">#{$p}f-col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
+    </div>
+</div>
+
+<div class="#{$p}f-row">
+    <div class="#{$p}f-col #{$p}f-col-6-lg #{$prefix}#{$u}m-b">
+        <div class="#{$prefix}#{$u}bg-third #{$prefix}#{$u}p" style="height: 100%;">#{$p}f-col-6-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
+    </div>
+    <div class="#{$p}f-col #{$p}f-col-6-lg #{$prefix}#{$u}m-b">
+        <div class="#{$prefix}#{$u}bg-third #{$prefix}#{$u}p" style="height: 100%;">#{$p}f-col-6-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto. Quia, nobis explicabo asperiores facere!</div>
+    </div>
+    <div class="#{$p}f-col #{$p}f-col-6-lg #{$prefix}#{$u}m-b">
+        <div class="#{$prefix}#{$u}bg-third #{$prefix}#{$u}p" style="height: 100%;">#{$p}f-col-6-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+    </div>
+    <div class="#{$p}f-col #{$p}f-col-6-lg #{$prefix}#{$u}m-b">
+        <div class="#{$prefix}#{$u}bg-third #{$prefix}#{$u}p" style="height: 100%;">#{$p}f-col-6-lg<br>Lorem ipsum dolor sit amet</div>
+    </div>
+    <div class="#{$p}f-col #{$p}f-col-6-lg #{$prefix}#{$u}m-b">
+        <div class="#{$prefix}#{$u}bg-third #{$prefix}#{$u}p" style="height: 100%;">#{$p}f-col-6-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
     </div>
 </div>
 ```
 */
 
 .#{$p}f-col {
+    width: 100%;
     padding-left: (map-get($grid-gutter-widths, md) / 2);
     padding-right: (map-get($grid-gutter-widths, md) / 2);
+}
+
+@include media-breakpoint-up(sm) {
+
+    .#{$p}f-col-3-sm {
+        width: 25%;
+    }
+
+    .#{$p}f-col-4-sm {
+        width: 33.33333333%;
+    }
+
+    .#{$p}f-col-6-sm {
+        width: 50%;
+    }
+
 }
 
 @include media-breakpoint-up(lg) {
@@ -76,85 +230,6 @@ parent: l-5-f-row
         width: 50%;
     }
 
-}
-
-/*doc
----
-title: .#{$p}f-row-(0 or size)
-name: l-5-f-row-2-size
-category: layout
-parent: l-5-f-row
----
-
-フレックスボックスによるグリッドで余白が異なるグループを作成する。
-
-``` example
-<div class="#{$p}f-row #{$p}f-row-0">
-    <div class="#{$p}f-col #{$p}f-col-4-lg p-b">
-        <div class="#{$prefix}#{$u}bg-second #{$prefix}#{$u}bg-mild #{$prefix}#{$u}p" style="height: 100%;">#{$p}f-col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
-    </div>
-    <div class="#{$p}f-col #{$p}f-col-4-lg p-b">
-        <div class="#{$prefix}#{$u}bg-second #{$prefix}#{$u}bg-mild #{$prefix}#{$u}p" style="height: 100%; opacity: 0.8;">#{$p}f-col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto. Quia, nobis explicabo asperiores facere!</div>
-    </div>
-    <div class="#{$p}f-col #{$p}f-col-4-lg p-b">
-        <div class="#{$prefix}#{$u}bg-second #{$prefix}#{$u}bg-mild #{$prefix}#{$u}p" style="height: 100%;">#{$p}f-col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-    </div>
-</div>
-
-<div class="#{$p}f-row #{$p}f-row-sm">
-    <div class="#{$p}f-col #{$p}f-col-3-lg p-b">
-        <div class="#{$prefix}#{$u}bg-third #{$prefix}#{$u}bg-mild #{$prefix}#{$u}p" style="height: 100%;">#{$p}f-col-3-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
-    </div>
-    <div class="#{$p}f-col #{$p}f-col-3-lg p-b">
-        <div class="#{$prefix}#{$u}bg-third #{$prefix}#{$u}bg-mild #{$prefix}#{$u}p" style="height: 100%;">#{$p}f-col-3-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto. Quia, nobis explicabo asperiores facere!</div>
-    </div>
-    <div class="#{$p}f-col #{$p}f-col-3-lg p-b">
-        <div class="#{$prefix}#{$u}bg-third #{$prefix}#{$u}bg-mild #{$prefix}#{$u}p" style="height: 100%;">#{$p}f-col-3-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-    </div>
-    <div class="#{$p}f-col #{$p}f-col-3-lg p-b">
-        <div class="#{$prefix}#{$u}bg-third #{$prefix}#{$u}bg-mild #{$prefix}#{$u}p" style="height: 100%;">#{$p}f-col-3-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto.</div>
-    </div>
-</div>
-
-<div class="#{$p}f-row #{$p}f-row-lg">
-    <div class="#{$p}f-col #{$p}f-col-6-lg p-b">
-        <div class="#{$prefix}#{$u}bg-important #{$prefix}#{$u}bg-mild #{$prefix}#{$u}p" style="height: 100%;">#{$p}f-col-6-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
-    </div>
-    <div class="#{$p}f-col #{$p}f-col-6-lg p-b">
-        <div class="#{$prefix}#{$u}bg-important #{$prefix}#{$u}bg-mild #{$prefix}#{$u}p" style="height: 100%;">#{$p}f-col-6-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto. Quia, nobis explicabo asperiores facere!</div>
-    </div>
-</div>
-```
-*/
-
-.#{$p}f-row-0 {
-    margin-left: 0;
-    margin-right: 0;
-
-    .#{$p}f-col {
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
-
-.#{$p}f-row-sm {
-    margin-left: (map-get($grid-gutter-widths, sm) / -2);
-    margin-right: (map-get($grid-gutter-widths, sm) / -2);
-
-    .#{$p}f-col {
-        padding-left: (map-get($grid-gutter-widths, sm) / 2);
-        padding-right: (map-get($grid-gutter-widths, sm) / 2);
-    }
-}
-
-.#{$p}f-row-lg {
-    margin-left: (map-get($grid-gutter-widths, lg) / -2);
-    margin-right: (map-get($grid-gutter-widths, lg) / -2);
-
-    .#{$p}f-col {
-        padding-left: (map-get($grid-gutter-widths, lg) / 2);
-        padding-right: (map-get($grid-gutter-widths, lg) / 2);
-    }
 }
 
 
