@@ -2,25 +2,26 @@ const gulp = require('gulp');
 
 const plumber = require('gulp-plumber');
 const sass = require('gulp-ruby-sass');
+const hologram = require('gulp-hologram');
 const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
 
 // var theme_name = 'example';
 
 // Static Website --------------------
-var project_dist = 'dist/';
+var dist_dir = 'dist/';
 
 // WordPress --------------------
-// var project_dist = 'dist/wordpress/wp-content/themes/'+theme_name+'/';
+// var dist_dir = 'dist/wordpress/wp-content/themes/'+theme_name+'/';
 
 // MovableType --------------------
-// var project_dist = 'dist/mt/themes/'+theme_name+'/blog_static/';
+// var dist_dir = 'dist/mt/themes/'+theme_name+'/blog_static/';
 
 // Drupal --------------------
-// var project_dist = 'dist/themes/custom/'+theme_name+'/';
+// var dist_dir = 'dist/themes/custom/'+theme_name+'/';
 
 // a-blog cms --------------------
-// var project_dist = 'dist/themes/'+theme_name+'/';
+// var dist_dir = 'dist/themes/'+theme_name+'/';
 
 
 
@@ -28,27 +29,34 @@ var project_dist = 'dist/';
 gulp.task('sass', () =>
   sass('_scss/*.scss', { style: 'expanded' })
     .on('error', sass.logError)
-    .pipe(gulp.dest(project_dist + 'css/'))
+    .pipe(gulp.dest(dist_dir + 'css/'))
 );
 gulp.task('sassmin', () =>
   sass('_scss/*.scss', { style: 'compressed' })
     .on('error', sass.logError)
     .pipe(rename({extname: '.min.css'}))
-    .pipe(gulp.dest(project_dist + 'css/'))
+    .pipe(gulp.dest(dist_dir + 'css/'))
 );
+
+// hologram
+// sassの終了後に処理する
+gulp.task('hologram', ['sass'], function() {
+  gulp.src( './hologram_config.yml' )
+    .pipe(hologram());
+});
 
 // js
 // gulp.task('js', function() {
 //     gulp.src('_js/**/*.js')
 //     .pipe(plumber())
-//     .pipe(gulp.dest(project_dist + 'js/'));
+//     .pipe(gulp.dest(dist_dir + 'js/'));
 // });
 // gulp.task('jsmin', ['js'], function() {
 //     gulp.src('_js/**/*.js')
 //     .pipe(plumber())
 //     .pipe(uglify())
 //     .pipe(rename({extname: '.min.js'}))
-//     .pipe(gulp.dest(project_dist + 'js/'));
+//     .pipe(gulp.dest(dist_dir + 'js/'));
 // });
 
 // watch
@@ -59,6 +67,7 @@ gulp.task('watch', function(){
     ], function(event) {
     gulp.run('sass');
     gulp.run('sassmin');
+    gulp.run('hologram');
   });
 
 //  gulp.watch([
