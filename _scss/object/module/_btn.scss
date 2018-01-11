@@ -1,9 +1,38 @@
-/*
-btn
---------------------
+/*doc
+---
+title: #{$p}#{$m}btn
+name: btn
+category: module-btn
+---
+
+リンク、インライン要素、フォームのボタン要素をボタン状に表示する。  
+<code>.disabled</code> または <code>disabled="disabled"</code>が付与されていると、反応しない見た目となる（クリックはできるので注意）。
+
+``` example
+<p>
+  <a href="#" class="#{$p}#{$m}btn">#{$p}#{$m}btn</a>
+  <a href="#" class="#{$p}#{$m}btn disabled">#{$p}#{$m}btn</a>
+</p>
+
+<p>
+  <span class="#{$p}#{$m}btn">#{$p}#{$m}btn</span>
+  <span class="#{$p}#{$m}btn disabled">#{$p}#{$m}btn</span>
+</p>
+
+<p>
+  <input type="button" class="#{$p}#{$m}btn" value="#{$p}#{$m}btn" />
+  <input type="button" class="#{$p}#{$m}btn" value="#{$p}#{$m}btn" disabled="disabled" />
+</p>
+
+<p>
+  <button class="#{$p}#{$m}btn">#{$p}#{$m}btn</button>
+  <button class="#{$p}#{$m}btn" disabled="disabled">#{$p}#{$m}btn</button>
+</p>
+```
+
 */
 
-.#{$p}btn {
+.#{$p}#{$m}btn {
     position: relative;
     display: inline-block;
     color: $body-color;
@@ -11,13 +40,14 @@ btn
     font-family: $font-family-root;
     font-weight: $font-weight-root;
     background-color: $body-bg;
-    border: $border-width solid $border-color;
+    border: $border-width solid transparent;
     padding: $btn-padding-y-md $btn-padding-x-md;
     text-align: center;
-    line-height: $line-height-sm;
+    line-height: $line-height-none;
     border-radius: $border-radius-md;
     vertical-align: middle;
     transition: .3s all;
+    cursor: pointer;
 
     @at-root {
         a#{&} {
@@ -30,14 +60,6 @@ btn
 
         }
 
-        span#{&} {
-
-            &:hover,
-            &:focus {
-                cursor: default;
-            }
-
-        }
     }
 
     &:hover,
@@ -51,34 +73,53 @@ btn
         text-decoration: none;
     }
 
-    @if ($optimize != true) {
+    &.disabled,
+    &:disabled,
+    fieldset[disabled] & {
+        cursor: default;
+        opacity: .65;
+        cursor: default;
 
-        &.disabled,
-        &:disabled,
-        fieldset[disabled] & {
-            cursor: default;
-            opacity: .65;
-
-            &:hover,
-            &.hover,
-            &:focus,
-            &.focus,
-            &:active,
-            &.active {
-                background-color: transparent;
-            }
-
+        &:hover,
+        &.hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active {
+            background-color: transparent;
         }
 
     }
 
-}
+    @at-root {
 
-@if ($optimize != true) {
+        a:hover &,
+        a:focus &,
+        a:active & {
+            color: $body-color;
+            background-color: $gray-fade;
+            text-decoration: none;
+        }
 
-    a.#{$p}btn.disaabled,
-    fieldset[disabled] a.#{$p}btn {
-        pointer-events: none;
     }
 
+    img {
+        width: auto;
+        height: 1.25em;
+        vertical-align: middle;
+    }
+
+    .fa {
+        vertical-align: middle;
+    }
+
+    .fa:before {
+        font-size: 1.25em;
+    }
+
+}
+
+a.#{$p}#{$m}btn.disaabled,
+fieldset[disabled] a.#{$p}#{$m}btn {
+    pointer-events: none;
 }

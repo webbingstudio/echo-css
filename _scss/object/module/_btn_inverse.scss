@@ -1,9 +1,28 @@
-/*
-btn-inverse
---------------------
+/*doc
+---
+title: #{$p}#{$m}btn-inverse
+name: btn-03-inverse
+category: module-btn
+parent: btn
+---
+
+ボタンの文字色と背景色を反転する。  
+<code>.#{$p}#{$m}btn-outline</code> と同時に使用すると、罫線のみの状態で反転する。
+
+``` example
+<p class="#{$p}#{$u}bg-inverse #{$p}#{$u}p-y">
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-inverse">#{$p}#{$m}btn-inverse</a>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-inverse disabled">#{$p}#{$m}btn-inverse</a>
+</p>
+<p class="bg-inverse p-y">
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-inverse">#{$p}#{$m}btn-outline + #{$p}#{$m}btn-inverse</a>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-inverse disabled">#{$p}#{$m}btn-outline + #{$p}#{$m}btn-inverse</a>
+</p>
+```
+
 */
 
-.#{$p}btn-inverse {
+.#{$p}#{$m}btn-inverse {
     @include button-variant(
         $body-inverse-color,
         rgba($body-inverse-color, .25),
@@ -13,7 +32,7 @@ btn-inverse
         transparent
     );
 
-    &.#{$p}btn-outline {
+    &.#{$p}#{$m}btn-outline {
         @include button-variant(
             $body-inverse-color,
             transparent,

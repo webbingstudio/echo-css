@@ -1,9 +1,53 @@
-/*
-btn-(color)
---------------------
+/*doc
+---
+title: #{$p}#{$m}btn-(color)
+name: btn-01-color
+category: module-btn
+parent: btn
+---
+
+ボタンの色を変更する。(color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
+
+``` example
+<p>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-first">#{$p}#{$m}btn-first</a>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-first disabled">#{$p}#{$m}btn-first</a>
+</p>
+
+<p>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-second">#{$p}#{$m}btn-second</a>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-second disabled">#{$p}#{$m}btn-second</a>
+</p>
+
+<p>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-third">#{$p}#{$m}btn-third</a>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-third disabled">#{$p}#{$m}btn-third</a>
+</p>
+
+<p>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-fourth">#{$p}#{$m}btn-fourth</a>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-fourth disabled">#{$p}#{$m}btn-fourth</a>
+</p>
+
+<p>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-fifth">#{$p}#{$m}btn-fifth</a>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-fifth disabled">#{$p}#{$m}btn-fifth</a>
+</p>
+
+<p>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-info">#{$p}#{$m}btn-info</a>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-info disabled">#{$p}#{$m}btn-info</a>
+</p>
+
+<p>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-important">#{$p}#{$m}btn-important</a>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-important disabled">#{$p}#{$m}btn-important</a>
+</p>
+```
+
 */
 
-.#{$p}btn-first {
+.#{$p}#{$m}btn-first {
   @include button-variant(
     $body-inverse-color,
     $first,
@@ -14,7 +58,7 @@ btn-(color)
   );
 }
 
-.#{$p}btn-second {
+.#{$p}#{$m}btn-second {
   @include button-variant(
     $body-inverse-color,
     $second,
@@ -25,7 +69,7 @@ btn-(color)
   );
 }
 
-.#{$p}btn-third {
+.#{$p}#{$m}btn-third {
   @include button-variant(
     $body-inverse-color,
     $third,
@@ -36,7 +80,7 @@ btn-(color)
   );
 }
 
-.#{$p}btn-fourth {
+.#{$p}#{$m}btn-fourth {
   @include button-variant(
     $body-inverse-color,
     $fourth,
@@ -47,7 +91,7 @@ btn-(color)
   );
 }
 
-.#{$p}btn-fifth {
+.#{$p}#{$m}btn-fifth {
   @include button-variant(
     $body-inverse-color,
     $fifth,
@@ -58,7 +102,7 @@ btn-(color)
   );
 }
 
-.#{$p}btn-info {
+.#{$p}#{$m}btn-info {
   @include button-variant(
     $body-inverse-color,
     $info,
@@ -69,7 +113,7 @@ btn-(color)
   );
 }
 
-.#{$p}btn-important {
+.#{$p}#{$m}btn-important {
   @include button-variant(
     $body-inverse-color,
     $important,
@@ -79,3 +123,4 @@ btn-(color)
     transparent
   );
 }
+

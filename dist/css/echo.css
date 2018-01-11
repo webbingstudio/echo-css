@@ -1909,11 +1909,40 @@ parent: badge
   background-color: #e33050;
 }
 
-/*
-btn
---------------------
+/*doc
+---
+title: m-btn
+name: btn
+category: module-btn
+---
+
+リンク、インライン要素、フォームのボタン要素をボタン状に表示する。  
+<code>.disabled</code> または <code>disabled="disabled"</code>が付与されていると、反応しない見た目となる（クリックはできるので注意）。
+
+``` example
+<p>
+  <a href="#" class="m-btn">m-btn</a>
+  <a href="#" class="m-btn disabled">m-btn</a>
+</p>
+
+<p>
+  <span class="m-btn">m-btn</span>
+  <span class="m-btn disabled">m-btn</span>
+</p>
+
+<p>
+  <input type="button" class="m-btn" value="m-btn" />
+  <input type="button" class="m-btn" value="m-btn" disabled="disabled" />
+</p>
+
+<p>
+  <button class="m-btn">m-btn</button>
+  <button class="m-btn" disabled="disabled">m-btn</button>
+</p>
+```
+
 */
-.btn {
+.m-btn {
   position: relative;
   display: inline-block;
   color: #333;
@@ -1921,286 +1950,550 @@ btn
   font-family: "PGYuGothic", "YuGothic", "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
   font-weight: 300;
   background-color: #fff;
-  border: 1px solid #bbb;
+  border: 1px solid transparent;
   padding: 0.5em 1em;
   text-align: center;
-  line-height: 1.5;
+  line-height: 1;
   border-radius: 3px;
   vertical-align: middle;
   transition: .3s all;
+  cursor: pointer;
 }
-a.btn {
+a.m-btn {
   text-decoration: none;
 }
-a.btn:hover, a.btn:focus {
+a.m-btn:hover, a.m-btn:focus {
   text-decoration: none;
 }
-
-span.btn:hover, span.btn:focus {
-  cursor: default;
-}
-.btn:hover, .btn.hover, .btn:focus, .btn.focus, .btn:active, .btn.active {
+.m-btn:hover, .m-btn.hover, .m-btn:focus, .m-btn.focus, .m-btn:active, .m-btn.active {
   color: #333;
   background-color: #eaeaea;
   text-decoration: none;
 }
+.m-btn.disabled, .m-btn:disabled, fieldset[disabled] .m-btn {
+  cursor: default;
+  opacity: .65;
+  cursor: default;
+}
+.m-btn.disabled:hover, .m-btn.disabled.hover, .m-btn.disabled:focus, .m-btn.disabled.focus, .m-btn.disabled:active, .m-btn.disabled.active, .m-btn:disabled:hover, .m-btn:disabled.hover, .m-btn:disabled:focus, .m-btn:disabled.focus, .m-btn:disabled:active, .m-btn:disabled.active, fieldset[disabled] .m-btn:hover, fieldset[disabled] .m-btn.hover, fieldset[disabled] .m-btn:focus, fieldset[disabled] .m-btn.focus, fieldset[disabled] .m-btn:active, fieldset[disabled] .m-btn.active {
+  background-color: transparent;
+}
+a:hover .m-btn, a:focus .m-btn, a:active .m-btn {
+  color: #333;
+  background-color: #eaeaea;
+  text-decoration: none;
+}
+.m-btn img {
+  width: auto;
+  height: 1.25em;
+  vertical-align: middle;
+}
+.m-btn .fa {
+  vertical-align: middle;
+}
+.m-btn .fa:before {
+  font-size: 1.25em;
+}
 
-/*
-btn-(color)
---------------------
+a.m-btn.disaabled,
+fieldset[disabled] a.m-btn {
+  pointer-events: none;
+}
+
+/*doc
+---
+title: m-btn-(color)
+name: btn-01-color
+category: module-btn
+parent: btn
+---
+
+ボタンの色を変更する。(color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
+
+``` example
+<p>
+  <a href="#" class="m-btn m-btn-first">m-btn-first</a>
+  <a href="#" class="m-btn m-btn-first disabled">m-btn-first</a>
+</p>
+
+<p>
+  <a href="#" class="m-btn m-btn-second">m-btn-second</a>
+  <a href="#" class="m-btn m-btn-second disabled">m-btn-second</a>
+</p>
+
+<p>
+  <a href="#" class="m-btn m-btn-third">m-btn-third</a>
+  <a href="#" class="m-btn m-btn-third disabled">m-btn-third</a>
+</p>
+
+<p>
+  <a href="#" class="m-btn m-btn-fourth">m-btn-fourth</a>
+  <a href="#" class="m-btn m-btn-fourth disabled">m-btn-fourth</a>
+</p>
+
+<p>
+  <a href="#" class="m-btn m-btn-fifth">m-btn-fifth</a>
+  <a href="#" class="m-btn m-btn-fifth disabled">m-btn-fifth</a>
+</p>
+
+<p>
+  <a href="#" class="m-btn m-btn-info">m-btn-info</a>
+  <a href="#" class="m-btn m-btn-info disabled">m-btn-info</a>
+</p>
+
+<p>
+  <a href="#" class="m-btn m-btn-important">m-btn-important</a>
+  <a href="#" class="m-btn m-btn-important disabled">m-btn-important</a>
+</p>
+```
+
 */
-.btn-first {
+.m-btn-first {
   color: #fff;
   background-color: #49d;
   border-color: transparent;
 }
-.btn-first:hover, .btn-first:focus, .btn-first:active, .btn-first.active {
+.m-btn-first:hover, .m-btn-first:focus, .m-btn-first:active, .m-btn-first.active {
   color: #fff;
   background-color: #2283cc;
   border-color: transparent;
 }
-a:hover .btn-first, a:focus .btn-first, a:active .btn-first {
+.m-btn-first.disabled, .m-btn-first:disabled, fieldset[disabled] .m-btn-first {
+  opacity: .8;
+}
+.m-btn-first.disabled:hover, .m-btn-first.disabled.hover, .m-btn-first.disabled:focus, .m-btn-first.disabled.focus, .m-btn-first:disabled:hover, .m-btn-first:disabled.hover, .m-btn-first:disabled:focus, .m-btn-first:disabled.focus, fieldset[disabled] .m-btn-first:hover, fieldset[disabled] .m-btn-first.hover, fieldset[disabled] .m-btn-first:focus, fieldset[disabled] .m-btn-first.focus {
+  color: #fff;
+  background-color: #49d;
+  border-color: transparent;
+}
+a:hover .m-btn-first, a:focus .m-btn-first, a:active .m-btn-first {
   color: #fff;
   background-color: #2283cc;
   border-color: transparent;
 }
 
-.btn-second {
+.m-btn-second {
   color: #fff;
   background-color: #444;
   border-color: transparent;
 }
-.btn-second:hover, .btn-second:focus, .btn-second:active, .btn-second.active {
+.m-btn-second:hover, .m-btn-second:focus, .m-btn-second:active, .m-btn-second.active {
   color: #fff;
   background-color: #000;
   border-color: transparent;
 }
-a:hover .btn-second, a:focus .btn-second, a:active .btn-second {
+.m-btn-second.disabled, .m-btn-second:disabled, fieldset[disabled] .m-btn-second {
+  opacity: .8;
+}
+.m-btn-second.disabled:hover, .m-btn-second.disabled.hover, .m-btn-second.disabled:focus, .m-btn-second.disabled.focus, .m-btn-second:disabled:hover, .m-btn-second:disabled.hover, .m-btn-second:disabled:focus, .m-btn-second:disabled.focus, fieldset[disabled] .m-btn-second:hover, fieldset[disabled] .m-btn-second.hover, fieldset[disabled] .m-btn-second:focus, fieldset[disabled] .m-btn-second.focus {
+  color: #fff;
+  background-color: #444;
+  border-color: transparent;
+}
+a:hover .m-btn-second, a:focus .m-btn-second, a:active .m-btn-second {
   color: #fff;
   background-color: #000;
   border-color: transparent;
 }
 
-.btn-third {
+.m-btn-third {
   color: #fff;
   background-color: #49B070;
   border-color: transparent;
 }
-.btn-third:hover, .btn-third:focus, .btn-third:active, .btn-third.active {
+.m-btn-third:hover, .m-btn-third:focus, .m-btn-third:active, .m-btn-third.active {
   color: #fff;
   background-color: #229644;
   border-color: transparent;
 }
-a:hover .btn-third, a:focus .btn-third, a:active .btn-third {
+.m-btn-third.disabled, .m-btn-third:disabled, fieldset[disabled] .m-btn-third {
+  opacity: .8;
+}
+.m-btn-third.disabled:hover, .m-btn-third.disabled.hover, .m-btn-third.disabled:focus, .m-btn-third.disabled.focus, .m-btn-third:disabled:hover, .m-btn-third:disabled.hover, .m-btn-third:disabled:focus, .m-btn-third:disabled.focus, fieldset[disabled] .m-btn-third:hover, fieldset[disabled] .m-btn-third.hover, fieldset[disabled] .m-btn-third:focus, fieldset[disabled] .m-btn-third.focus {
+  color: #fff;
+  background-color: #49B070;
+  border-color: transparent;
+}
+a:hover .m-btn-third, a:focus .m-btn-third, a:active .m-btn-third {
   color: #fff;
   background-color: #229644;
   border-color: transparent;
 }
 
-.btn-fourth {
+.m-btn-fourth {
   color: #fff;
   background-color: #f38c10;
   border-color: transparent;
 }
-.btn-fourth:hover, .btn-fourth:focus, .btn-fourth:active, .btn-fourth.active {
+.m-btn-fourth:hover, .m-btn-fourth:focus, .m-btn-fourth:active, .m-btn-fourth.active {
   color: #fff;
   background-color: #f37910;
   border-color: transparent;
 }
-a:hover .btn-fourth, a:focus .btn-fourth, a:active .btn-fourth {
-  color: #fff;
-  background-color: #f37910;
-  border-color: transparent;
+.m-btn-fourth.disabled, .m-btn-fourth:disabled, fieldset[disabled] .m-btn-fourth {
+  opacity: .8;
 }
-
-.btn-fifth {
-  color: #fff;
-  background-color: #e33050;
-  border-color: transparent;
-}
-.btn-fifth:hover, .btn-fifth:focus, .btn-fifth:active, .btn-fifth.active {
-  color: #fff;
-  background-color: #d70022;
-  border-color: transparent;
-}
-a:hover .btn-fifth, a:focus .btn-fifth, a:active .btn-fifth {
-  color: #fff;
-  background-color: #d70022;
-  border-color: transparent;
-}
-
-.btn-info {
+.m-btn-fourth.disabled:hover, .m-btn-fourth.disabled.hover, .m-btn-fourth.disabled:focus, .m-btn-fourth.disabled.focus, .m-btn-fourth:disabled:hover, .m-btn-fourth:disabled.hover, .m-btn-fourth:disabled:focus, .m-btn-fourth:disabled.focus, fieldset[disabled] .m-btn-fourth:hover, fieldset[disabled] .m-btn-fourth.hover, fieldset[disabled] .m-btn-fourth:focus, fieldset[disabled] .m-btn-fourth.focus {
   color: #fff;
   background-color: #f38c10;
   border-color: transparent;
 }
-.btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active {
-  color: #fff;
-  background-color: #f37910;
-  border-color: transparent;
-}
-a:hover .btn-info, a:focus .btn-info, a:active .btn-info {
+a:hover .m-btn-fourth, a:focus .m-btn-fourth, a:active .m-btn-fourth {
   color: #fff;
   background-color: #f37910;
   border-color: transparent;
 }
 
-.btn-important {
+.m-btn-fifth {
   color: #fff;
   background-color: #e33050;
   border-color: transparent;
 }
-.btn-important:hover, .btn-important:focus, .btn-important:active, .btn-important.active {
+.m-btn-fifth:hover, .m-btn-fifth:focus, .m-btn-fifth:active, .m-btn-fifth.active {
   color: #fff;
   background-color: #d70022;
   border-color: transparent;
 }
-a:hover .btn-important, a:focus .btn-important, a:active .btn-important {
+.m-btn-fifth.disabled, .m-btn-fifth:disabled, fieldset[disabled] .m-btn-fifth {
+  opacity: .8;
+}
+.m-btn-fifth.disabled:hover, .m-btn-fifth.disabled.hover, .m-btn-fifth.disabled:focus, .m-btn-fifth.disabled.focus, .m-btn-fifth:disabled:hover, .m-btn-fifth:disabled.hover, .m-btn-fifth:disabled:focus, .m-btn-fifth:disabled.focus, fieldset[disabled] .m-btn-fifth:hover, fieldset[disabled] .m-btn-fifth.hover, fieldset[disabled] .m-btn-fifth:focus, fieldset[disabled] .m-btn-fifth.focus {
+  color: #fff;
+  background-color: #e33050;
+  border-color: transparent;
+}
+a:hover .m-btn-fifth, a:focus .m-btn-fifth, a:active .m-btn-fifth {
   color: #fff;
   background-color: #d70022;
   border-color: transparent;
 }
 
-/*
-btn-inverse
---------------------
+.m-btn-info {
+  color: #fff;
+  background-color: #f38c10;
+  border-color: transparent;
+}
+.m-btn-info:hover, .m-btn-info:focus, .m-btn-info:active, .m-btn-info.active {
+  color: #fff;
+  background-color: #f37910;
+  border-color: transparent;
+}
+.m-btn-info.disabled, .m-btn-info:disabled, fieldset[disabled] .m-btn-info {
+  opacity: .8;
+}
+.m-btn-info.disabled:hover, .m-btn-info.disabled.hover, .m-btn-info.disabled:focus, .m-btn-info.disabled.focus, .m-btn-info:disabled:hover, .m-btn-info:disabled.hover, .m-btn-info:disabled:focus, .m-btn-info:disabled.focus, fieldset[disabled] .m-btn-info:hover, fieldset[disabled] .m-btn-info.hover, fieldset[disabled] .m-btn-info:focus, fieldset[disabled] .m-btn-info.focus {
+  color: #fff;
+  background-color: #f38c10;
+  border-color: transparent;
+}
+a:hover .m-btn-info, a:focus .m-btn-info, a:active .m-btn-info {
+  color: #fff;
+  background-color: #f37910;
+  border-color: transparent;
+}
+
+.m-btn-important {
+  color: #fff;
+  background-color: #e33050;
+  border-color: transparent;
+}
+.m-btn-important:hover, .m-btn-important:focus, .m-btn-important:active, .m-btn-important.active {
+  color: #fff;
+  background-color: #d70022;
+  border-color: transparent;
+}
+.m-btn-important.disabled, .m-btn-important:disabled, fieldset[disabled] .m-btn-important {
+  opacity: .8;
+}
+.m-btn-important.disabled:hover, .m-btn-important.disabled.hover, .m-btn-important.disabled:focus, .m-btn-important.disabled.focus, .m-btn-important:disabled:hover, .m-btn-important:disabled.hover, .m-btn-important:disabled:focus, .m-btn-important:disabled.focus, fieldset[disabled] .m-btn-important:hover, fieldset[disabled] .m-btn-important.hover, fieldset[disabled] .m-btn-important:focus, fieldset[disabled] .m-btn-important.focus {
+  color: #fff;
+  background-color: #e33050;
+  border-color: transparent;
+}
+a:hover .m-btn-important, a:focus .m-btn-important, a:active .m-btn-important {
+  color: #fff;
+  background-color: #d70022;
+  border-color: transparent;
+}
+
+/*doc
+---
+title: m-btn-inverse
+name: btn-03-inverse
+category: module-btn
+parent: btn
+---
+
+ボタンの文字色と背景色を反転する。  
+<code>.m-btn-outline</code> と同時に使用すると、罫線のみの状態で反転する。
+
+``` example
+<p class="bg-inverse p-y">
+  <a href="#" class="m-btn m-btn-inverse">m-btn-inverse</a>
+  <a href="#" class="m-btn m-btn-inverse disabled">m-btn-inverse</a>
+</p>
+<p class="bg-inverse p-y">
+  <a href="#" class="m-btn m-btn-outline m-btn-inverse">m-btn-outline + m-btn-inverse</a>
+  <a href="#" class="m-btn m-btn-outline m-btn-inverse disabled">m-btn-outline + m-btn-inverse</a>
+</p>
+```
+
 */
-.btn-inverse {
+.m-btn-inverse {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.25);
   border-color: transparent;
 }
-.btn-inverse:hover, .btn-inverse:focus, .btn-inverse:active, .btn-inverse.active {
+.m-btn-inverse:hover, .m-btn-inverse:focus, .m-btn-inverse:active, .m-btn-inverse.active {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.4);
   border-color: transparent;
 }
-a:hover .btn-inverse, a:focus .btn-inverse, a:active .btn-inverse {
+.m-btn-inverse.disabled, .m-btn-inverse:disabled, fieldset[disabled] .m-btn-inverse {
+  opacity: .8;
+}
+.m-btn-inverse.disabled:hover, .m-btn-inverse.disabled.hover, .m-btn-inverse.disabled:focus, .m-btn-inverse.disabled.focus, .m-btn-inverse:disabled:hover, .m-btn-inverse:disabled.hover, .m-btn-inverse:disabled:focus, .m-btn-inverse:disabled.focus, fieldset[disabled] .m-btn-inverse:hover, fieldset[disabled] .m-btn-inverse.hover, fieldset[disabled] .m-btn-inverse:focus, fieldset[disabled] .m-btn-inverse.focus {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-color: transparent;
+}
+a:hover .m-btn-inverse, a:focus .m-btn-inverse, a:active .m-btn-inverse {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.4);
   border-color: transparent;
 }
-.btn-inverse.btn-outline {
+.m-btn-inverse.m-btn-outline {
   color: #fff;
   background-color: transparent;
   border-color: rgba(255, 255, 255, 0.8);
 }
-.btn-inverse.btn-outline:hover, .btn-inverse.btn-outline:focus, .btn-inverse.btn-outline:active, .btn-inverse.btn-outline.active {
+.m-btn-inverse.m-btn-outline:hover, .m-btn-inverse.m-btn-outline:focus, .m-btn-inverse.m-btn-outline:active, .m-btn-inverse.m-btn-outline.active {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.2);
   border-color: #fff;
 }
-a:hover .btn-inverse.btn-outline, a:focus .btn-inverse.btn-outline, a:active .btn-inverse.btn-outline {
+.m-btn-inverse.m-btn-outline.disabled, .m-btn-inverse.m-btn-outline:disabled, fieldset[disabled] .m-btn-inverse.m-btn-outline {
+  opacity: .8;
+}
+.m-btn-inverse.m-btn-outline.disabled:hover, .m-btn-inverse.m-btn-outline.disabled.hover, .m-btn-inverse.m-btn-outline.disabled:focus, .m-btn-inverse.m-btn-outline.disabled.focus, .m-btn-inverse.m-btn-outline:disabled:hover, .m-btn-inverse.m-btn-outline:disabled.hover, .m-btn-inverse.m-btn-outline:disabled:focus, .m-btn-inverse.m-btn-outline:disabled.focus, fieldset[disabled] .m-btn-inverse.m-btn-outline:hover, fieldset[disabled] .m-btn-inverse.m-btn-outline.hover, fieldset[disabled] .m-btn-inverse.m-btn-outline:focus, fieldset[disabled] .m-btn-inverse.m-btn-outline.focus {
+  color: #fff;
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.8);
+}
+a:hover .m-btn-inverse.m-btn-outline, a:focus .m-btn-inverse.m-btn-outline, a:active .m-btn-inverse.m-btn-outline {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.2);
   border-color: #fff;
 }
 
-/*
-btn-outline
---------------------
+/*doc
+---
+title: m-btn-outline
+name: btn-02-outline
+category: module-btn
+parent: btn
+---
+
+ボタンを罫線のみの見た目にする。背景色は <code>$body-bg</code> ではなく <code>transparent</code> なので注意。  
+<code>.m-btn-(color)</code> と同時に使用することが前提となっており、罫線の色が変わる。
+
+``` example
+<p>
+  <a href="#" class="m-btn m-btn-outline m-btn-first">m-btn-first</a>
+  <a href="#" class="m-btn m-btn-outline m-btn-first disabled">m-btn-first</a>
+</p>
+
+<p>
+  <a href="#" class="m-btn m-btn-outline m-btn-second">m-btn-second</a>
+  <a href="#" class="m-btn m-btn-outline m-btn-second disabled">m-btn-second</a>
+</p>
+
+<p>
+  <a href="#" class="m-btn m-btn-outline m-btn-third">m-btn-third</a>
+  <a href="#" class="m-btn m-btn-outline m-btn-third disabled">m-btn-third</a>
+</p>
+
+<p>
+  <a href="#" class="m-btn m-btn-outline m-btn-fourth">m-btn-fourth</a>
+  <a href="#" class="m-btn m-btn-outline m-btn-fourth disabled">m-btn-fourth</a>
+</p>
+
+<p>
+  <a href="#" class="m-btn m-btn-outline m-btn-fifth">m-btn-fifth</a>
+  <a href="#" class="m-btn m-btn-outline m-btn-fifth disabled">m-btn-fifth</a>
+</p>
+
+<p>
+  <a href="#" class="m-btn m-btn-outline m-btn-info">m-btn-info</a>
+  <a href="#" class="m-btn m-btn-outline m-btn-info disabled">m-btn-info</a>
+</p>
+
+<p>
+  <a href="#" class="m-btn m-btn-outline m-btn-important">m-btn-important</a>
+  <a href="#" class="m-btn m-btn-outline m-btn-important disabled">m-btn-important</a>
+</p>
+```
 */
-.btn-outline.btn-first {
+.m-btn-outline {
+  box-shadow: none;
+}
+.m-btn-outline.m-btn-first {
   color: inherit;
   background-color: transparent;
   border-color: #49d;
 }
-.btn-outline.btn-first:hover, .btn-outline.btn-first:focus, .btn-outline.btn-first:active, .btn-outline.btn-first.active {
+.m-btn-outline.m-btn-first:hover, .m-btn-outline.m-btn-first:focus, .m-btn-outline.m-btn-first:active, .m-btn-outline.m-btn-first.active {
   color: #fff;
   background-color: #49d;
   border-color: transparent;
 }
-a:hover .btn-outline.btn-first, a:focus .btn-outline.btn-first, a:active .btn-outline.btn-first {
+.m-btn-outline.m-btn-first.disabled, .m-btn-outline.m-btn-first:disabled, fieldset[disabled] .m-btn-outline.m-btn-first {
+  opacity: .8;
+}
+.m-btn-outline.m-btn-first.disabled:hover, .m-btn-outline.m-btn-first.disabled.hover, .m-btn-outline.m-btn-first.disabled:focus, .m-btn-outline.m-btn-first.disabled.focus, .m-btn-outline.m-btn-first:disabled:hover, .m-btn-outline.m-btn-first:disabled.hover, .m-btn-outline.m-btn-first:disabled:focus, .m-btn-outline.m-btn-first:disabled.focus, fieldset[disabled] .m-btn-outline.m-btn-first:hover, fieldset[disabled] .m-btn-outline.m-btn-first.hover, fieldset[disabled] .m-btn-outline.m-btn-first:focus, fieldset[disabled] .m-btn-outline.m-btn-first.focus {
+  color: inherit;
+  background-color: transparent;
+  border-color: #49d;
+}
+a:hover .m-btn-outline.m-btn-first, a:focus .m-btn-outline.m-btn-first, a:active .m-btn-outline.m-btn-first {
   color: #fff;
   background-color: #49d;
   border-color: transparent;
 }
-.btn-outline.btn-second {
+.m-btn-outline.m-btn-second {
   color: inherit;
   background-color: transparent;
   border-color: #444;
 }
-.btn-outline.btn-second:hover, .btn-outline.btn-second:focus, .btn-outline.btn-second:active, .btn-outline.btn-second.active {
+.m-btn-outline.m-btn-second:hover, .m-btn-outline.m-btn-second:focus, .m-btn-outline.m-btn-second:active, .m-btn-outline.m-btn-second.active {
   color: #fff;
   background-color: #444;
   border-color: transparent;
 }
-a:hover .btn-outline.btn-second, a:focus .btn-outline.btn-second, a:active .btn-outline.btn-second {
+.m-btn-outline.m-btn-second.disabled, .m-btn-outline.m-btn-second:disabled, fieldset[disabled] .m-btn-outline.m-btn-second {
+  opacity: .8;
+}
+.m-btn-outline.m-btn-second.disabled:hover, .m-btn-outline.m-btn-second.disabled.hover, .m-btn-outline.m-btn-second.disabled:focus, .m-btn-outline.m-btn-second.disabled.focus, .m-btn-outline.m-btn-second:disabled:hover, .m-btn-outline.m-btn-second:disabled.hover, .m-btn-outline.m-btn-second:disabled:focus, .m-btn-outline.m-btn-second:disabled.focus, fieldset[disabled] .m-btn-outline.m-btn-second:hover, fieldset[disabled] .m-btn-outline.m-btn-second.hover, fieldset[disabled] .m-btn-outline.m-btn-second:focus, fieldset[disabled] .m-btn-outline.m-btn-second.focus {
+  color: inherit;
+  background-color: transparent;
+  border-color: #444;
+}
+a:hover .m-btn-outline.m-btn-second, a:focus .m-btn-outline.m-btn-second, a:active .m-btn-outline.m-btn-second {
   color: #fff;
   background-color: #444;
   border-color: transparent;
 }
-.btn-outline.btn-third {
+.m-btn-outline.m-btn-third {
   color: inherit;
   background-color: transparent;
   border-color: #49B070;
 }
-.btn-outline.btn-third:hover, .btn-outline.btn-third:focus, .btn-outline.btn-third:active, .btn-outline.btn-third.active {
+.m-btn-outline.m-btn-third:hover, .m-btn-outline.m-btn-third:focus, .m-btn-outline.m-btn-third:active, .m-btn-outline.m-btn-third.active {
   color: #fff;
   background-color: #49B070;
   border-color: transparent;
 }
-a:hover .btn-outline.btn-third, a:focus .btn-outline.btn-third, a:active .btn-outline.btn-third {
+.m-btn-outline.m-btn-third.disabled, .m-btn-outline.m-btn-third:disabled, fieldset[disabled] .m-btn-outline.m-btn-third {
+  opacity: .8;
+}
+.m-btn-outline.m-btn-third.disabled:hover, .m-btn-outline.m-btn-third.disabled.hover, .m-btn-outline.m-btn-third.disabled:focus, .m-btn-outline.m-btn-third.disabled.focus, .m-btn-outline.m-btn-third:disabled:hover, .m-btn-outline.m-btn-third:disabled.hover, .m-btn-outline.m-btn-third:disabled:focus, .m-btn-outline.m-btn-third:disabled.focus, fieldset[disabled] .m-btn-outline.m-btn-third:hover, fieldset[disabled] .m-btn-outline.m-btn-third.hover, fieldset[disabled] .m-btn-outline.m-btn-third:focus, fieldset[disabled] .m-btn-outline.m-btn-third.focus {
+  color: inherit;
+  background-color: transparent;
+  border-color: #49B070;
+}
+a:hover .m-btn-outline.m-btn-third, a:focus .m-btn-outline.m-btn-third, a:active .m-btn-outline.m-btn-third {
   color: #fff;
   background-color: #49B070;
   border-color: transparent;
 }
-.btn-outline.btn-fourth {
+.m-btn-outline.m-btn-fourth {
   color: inherit;
   background-color: transparent;
   border-color: #f38c10;
 }
-.btn-outline.btn-fourth:hover, .btn-outline.btn-fourth:focus, .btn-outline.btn-fourth:active, .btn-outline.btn-fourth.active {
+.m-btn-outline.m-btn-fourth:hover, .m-btn-outline.m-btn-fourth:focus, .m-btn-outline.m-btn-fourth:active, .m-btn-outline.m-btn-fourth.active {
   color: #fff;
   background-color: #f38c10;
   border-color: transparent;
 }
-a:hover .btn-outline.btn-fourth, a:focus .btn-outline.btn-fourth, a:active .btn-outline.btn-fourth {
-  color: #fff;
-  background-color: #f38c10;
-  border-color: transparent;
+.m-btn-outline.m-btn-fourth.disabled, .m-btn-outline.m-btn-fourth:disabled, fieldset[disabled] .m-btn-outline.m-btn-fourth {
+  opacity: .8;
 }
-.btn-outline.btn-fifth {
-  color: inherit;
-  background-color: transparent;
-  border-color: #e33050;
-}
-.btn-outline.btn-fifth:hover, .btn-outline.btn-fifth:focus, .btn-outline.btn-fifth:active, .btn-outline.btn-fifth.active {
-  color: #fff;
-  background-color: #e33050;
-  border-color: transparent;
-}
-a:hover .btn-outline.btn-fifth, a:focus .btn-outline.btn-fifth, a:active .btn-outline.btn-fifth {
-  color: #fff;
-  background-color: #e33050;
-  border-color: transparent;
-}
-.btn-outline.btn-info {
+.m-btn-outline.m-btn-fourth.disabled:hover, .m-btn-outline.m-btn-fourth.disabled.hover, .m-btn-outline.m-btn-fourth.disabled:focus, .m-btn-outline.m-btn-fourth.disabled.focus, .m-btn-outline.m-btn-fourth:disabled:hover, .m-btn-outline.m-btn-fourth:disabled.hover, .m-btn-outline.m-btn-fourth:disabled:focus, .m-btn-outline.m-btn-fourth:disabled.focus, fieldset[disabled] .m-btn-outline.m-btn-fourth:hover, fieldset[disabled] .m-btn-outline.m-btn-fourth.hover, fieldset[disabled] .m-btn-outline.m-btn-fourth:focus, fieldset[disabled] .m-btn-outline.m-btn-fourth.focus {
   color: inherit;
   background-color: transparent;
   border-color: #f38c10;
 }
-.btn-outline.btn-info:hover, .btn-outline.btn-info:focus, .btn-outline.btn-info:active, .btn-outline.btn-info.active {
+a:hover .m-btn-outline.m-btn-fourth, a:focus .m-btn-outline.m-btn-fourth, a:active .m-btn-outline.m-btn-fourth {
   color: #fff;
   background-color: #f38c10;
   border-color: transparent;
 }
-a:hover .btn-outline.btn-info, a:focus .btn-outline.btn-info, a:active .btn-outline.btn-info {
-  color: #fff;
-  background-color: #f38c10;
-  border-color: transparent;
-}
-.btn-outline.btn-important {
+.m-btn-outline.m-btn-fifth {
   color: inherit;
   background-color: transparent;
   border-color: #e33050;
 }
-.btn-outline.btn-important:hover, .btn-outline.btn-important:focus, .btn-outline.btn-important:active, .btn-outline.btn-important.active {
+.m-btn-outline.m-btn-fifth:hover, .m-btn-outline.m-btn-fifth:focus, .m-btn-outline.m-btn-fifth:active, .m-btn-outline.m-btn-fifth.active {
   color: #fff;
   background-color: #e33050;
   border-color: transparent;
 }
-a:hover .btn-outline.btn-important, a:focus .btn-outline.btn-important, a:active .btn-outline.btn-important {
+.m-btn-outline.m-btn-fifth.disabled, .m-btn-outline.m-btn-fifth:disabled, fieldset[disabled] .m-btn-outline.m-btn-fifth {
+  opacity: .8;
+}
+.m-btn-outline.m-btn-fifth.disabled:hover, .m-btn-outline.m-btn-fifth.disabled.hover, .m-btn-outline.m-btn-fifth.disabled:focus, .m-btn-outline.m-btn-fifth.disabled.focus, .m-btn-outline.m-btn-fifth:disabled:hover, .m-btn-outline.m-btn-fifth:disabled.hover, .m-btn-outline.m-btn-fifth:disabled:focus, .m-btn-outline.m-btn-fifth:disabled.focus, fieldset[disabled] .m-btn-outline.m-btn-fifth:hover, fieldset[disabled] .m-btn-outline.m-btn-fifth.hover, fieldset[disabled] .m-btn-outline.m-btn-fifth:focus, fieldset[disabled] .m-btn-outline.m-btn-fifth.focus {
+  color: inherit;
+  background-color: transparent;
+  border-color: #e33050;
+}
+a:hover .m-btn-outline.m-btn-fifth, a:focus .m-btn-outline.m-btn-fifth, a:active .m-btn-outline.m-btn-fifth {
+  color: #fff;
+  background-color: #e33050;
+  border-color: transparent;
+}
+.m-btn-outline.m-btn-info {
+  color: inherit;
+  background-color: transparent;
+  border-color: #f38c10;
+}
+.m-btn-outline.m-btn-info:hover, .m-btn-outline.m-btn-info:focus, .m-btn-outline.m-btn-info:active, .m-btn-outline.m-btn-info.active {
+  color: #fff;
+  background-color: #f38c10;
+  border-color: transparent;
+}
+.m-btn-outline.m-btn-info.disabled, .m-btn-outline.m-btn-info:disabled, fieldset[disabled] .m-btn-outline.m-btn-info {
+  opacity: .8;
+}
+.m-btn-outline.m-btn-info.disabled:hover, .m-btn-outline.m-btn-info.disabled.hover, .m-btn-outline.m-btn-info.disabled:focus, .m-btn-outline.m-btn-info.disabled.focus, .m-btn-outline.m-btn-info:disabled:hover, .m-btn-outline.m-btn-info:disabled.hover, .m-btn-outline.m-btn-info:disabled:focus, .m-btn-outline.m-btn-info:disabled.focus, fieldset[disabled] .m-btn-outline.m-btn-info:hover, fieldset[disabled] .m-btn-outline.m-btn-info.hover, fieldset[disabled] .m-btn-outline.m-btn-info:focus, fieldset[disabled] .m-btn-outline.m-btn-info.focus {
+  color: inherit;
+  background-color: transparent;
+  border-color: #f38c10;
+}
+a:hover .m-btn-outline.m-btn-info, a:focus .m-btn-outline.m-btn-info, a:active .m-btn-outline.m-btn-info {
+  color: #fff;
+  background-color: #f38c10;
+  border-color: transparent;
+}
+.m-btn-outline.m-btn-important {
+  color: inherit;
+  background-color: transparent;
+  border-color: #e33050;
+}
+.m-btn-outline.m-btn-important:hover, .m-btn-outline.m-btn-important:focus, .m-btn-outline.m-btn-important:active, .m-btn-outline.m-btn-important.active {
+  color: #fff;
+  background-color: #e33050;
+  border-color: transparent;
+}
+.m-btn-outline.m-btn-important.disabled, .m-btn-outline.m-btn-important:disabled, fieldset[disabled] .m-btn-outline.m-btn-important {
+  opacity: .8;
+}
+.m-btn-outline.m-btn-important.disabled:hover, .m-btn-outline.m-btn-important.disabled.hover, .m-btn-outline.m-btn-important.disabled:focus, .m-btn-outline.m-btn-important.disabled.focus, .m-btn-outline.m-btn-important:disabled:hover, .m-btn-outline.m-btn-important:disabled.hover, .m-btn-outline.m-btn-important:disabled:focus, .m-btn-outline.m-btn-important:disabled.focus, fieldset[disabled] .m-btn-outline.m-btn-important:hover, fieldset[disabled] .m-btn-outline.m-btn-important.hover, fieldset[disabled] .m-btn-outline.m-btn-important:focus, fieldset[disabled] .m-btn-outline.m-btn-important.focus {
+  color: inherit;
+  background-color: transparent;
+  border-color: #e33050;
+}
+a:hover .m-btn-outline.m-btn-important, a:focus .m-btn-outline.m-btn-important, a:active .m-btn-outline.m-btn-important {
   color: #fff;
   background-color: #e33050;
   border-color: transparent;
@@ -2238,94 +2531,194 @@ btn-(size)
   padding-right: 3em;
 }
 
-/*
-btn-block
---------------------
+/*doc
+---
+title: m-btn-block
+name: btn-05-block
+category: module-btn
+parent: btn
+---
+
+ボタンを中央に寄せたブロック要素として表示する。幅は100%ではなく、一般的に考えられる幅を最大値とする。
+
+### 補足：ボタンの余白
+
+<code>.m-btn-block, .m-btn-round, .m-btn-square</code> では、<code>.m-btn</code> のpaddingの初期値を上書きする必要があるため、意図的にクラスを追加して優先度を上げている。
+
+### note: Padding in button
+
+In <code>.m-btn-block, .m-btn-round, .m-btn-square</code>, need to override the default padding of <code>.m-btn</code>. For this reason, intentionally add classes to increase priority.
+
+``` example
+<p>
+  <a href="#" class="m-btn m-btn-sm m-btn-block">m-btn-block</a>
+</p>
+<p>
+  <a href="#" class="m-btn m-btn-block">m-btn-block</a>
+</p>
+<p>
+  <a href="#" class="m-btn m-btn-lg m-btn-block">m-btn-block</a>
+</p>
+<p>
+  <a href="#" class="m-btn m-btn-xl m-btn-block">m-btn-block</a>
+</p>
+```
 */
-/*
-note: Padding in button
-.btn-block, .btn-round, .btn-squareでは、.btnのpaddingの初期値を上書きする必要があります。このため、意図的にクラスを追加して優先度を上げています。
-In .btn-block, .btn-round, .btn-square, need to override the default padding of .btn. For this reason, intentionally add classes to increase priority.
---------------------
-*/
-.btn-block {
+.m-btn-block {
   display: block;
   width: 100%;
-  max-width: 240px;
+  max-width: 320px;
   margin: 0 auto;
 }
-.btn-block.btn {
+.m-btn-block.m-btn {
   padding-left: .5rem;
   padding-right: .5rem;
 }
-.btn-block.btn-sm {
+.m-btn-block.m-btn-sm {
   max-width: 180px;
 }
-.btn-block.btn-lg {
-  max-width: 320px;
+.m-btn-block.m-btn-lg {
+  max-width: 640px;
 }
-.btn-block.btn-xl {
-  max-width: 480px;
+.m-btn-block.m-btn-xl {
+  max-width: 960px;
 }
 
-/*
-btn-round
---------------------
+/*doc
+---
+title: m-btn-round
+name: btn-06-round
+category: module-btn
+parent: btn
+---
+
+ボタンを正円で表示する。幅を超えるようなテキストを入れることはできない。
+
+``` example
+<p>
+  <a href="#" class="m-btn m-btn-sm m-btn-round">R</a>
+</p>
+<p>
+  <a href="#" class="m-btn m-btn-round">R</a>
+</p>
+<p>
+  <a href="#" class="m-btn m-btn-lg m-btn-round">R</a>
+</p>
+<p>
+  <a href="#" class="m-btn m-btn-xl m-btn-round">R</a>
+</p>
+```
 */
-.btn-round {
+.m-btn-round {
   overflow: hidden;
   width: 2.5em;
   height: 2.5em;
   line-height: 2.5em;
   border-radius: 50%;
 }
-.btn-round.btn {
+.m-btn-round.m-btn {
   padding: 0;
 }
-.btn-round.btn-sm {
+.m-btn-round.m-btn img {
+  transform: translate(0, -0.1em);
+}
+.m-btn-round.m-btn .fa {
+  transform: translate(0, -0.1em);
+}
+.m-btn-round.m-btn-sm {
   width: 2em;
   height: 2em;
   line-height: 2em;
 }
-.btn-round.btn-lg {
+.m-btn-round.m-btn-lg {
   width: 3.75em;
   height: 3.75em;
   line-height: 3.75em;
 }
-.btn-round.btn-xl {
+.m-btn-round.m-btn-lg img {
+  transform: translate(0, -0.125em);
+}
+.m-btn-round.m-btn-lg .fa {
+  transform: translate(0, -0.125em);
+}
+.m-btn-round.m-btn-xl {
   width: 5em;
   height: 5em;
   line-height: 5em;
 }
+.m-btn-round.m-btn-xl img {
+  transform: translate(0, -0.15em);
+}
+.m-btn-round.m-btn-xl .fa {
+  transform: translate(0, -0.15em);
+}
 
-/*
-btn-square
---------------------
+/*doc
+---
+title: m-btn-square
+name: btn-07-square
+category: module-btn
+parent: btn
+---
+
+ボタンを正方形で表示する。幅を超えるようなテキストを入れることはできない。
+
+``` example
+<p>
+  <a href="#" class="m-btn m-btn-sm m-btn-square">S</a>
+</p>
+<p>
+  <a href="#" class="m-btn m-btn-square">S</a>
+</p>
+<p>
+  <a href="#" class="m-btn m-btn-lg m-btn-square">S</a>
+</p>
+<p>
+  <a href="#" class="m-btn m-btn-xl m-btn-square">S</a>
+</p>
+```
 */
-.btn-square {
+.m-btn-square {
   overflow: hidden;
   width: 2.5em;
   height: 2.5em;
   line-height: 2.5em;
 }
-.btn-square.btn {
+.m-btn-square.m-btn {
   padding: 0;
-  border-radius: 3px;
 }
-.btn-square.btn-sm {
+.m-btn-square.m-btn img {
+  transform: translate(0, -0.1em);
+}
+.m-btn-square.m-btn .fa {
+  transform: translate(0, -0.1em);
+}
+.m-btn-square.m-btn-sm {
   width: 1.5em;
   height: 1.5em;
   line-height: 1.5em;
 }
-.btn-square.btn-lg {
+.m-btn-square.m-btn-lg {
   width: 3.75em;
   height: 3.75em;
   line-height: 3.75em;
 }
-.btn-square.btn-xl {
+.m-btn-square.m-btn-lg img {
+  transform: translate(0, -0.125em);
+}
+.m-btn-square.m-btn-lg .fa {
+  transform: translate(0, -0.125em);
+}
+.m-btn-square.m-btn-xl {
   width: 5em;
   height: 5em;
   line-height: 5em;
+}
+.m-btn-square.m-btn-xl img {
+  transform: translate(0, -0.15em);
+}
+.m-btn-square.m-btn-xl .fa {
+  transform: translate(0, -0.15em);
 }
 
 /*

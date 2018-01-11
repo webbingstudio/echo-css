@@ -1,109 +1,227 @@
-/*
-btn-block
---------------------
+/*doc
+---
+title: #{$p}#{$m}btn-block
+name: btn-05-block
+category: module-btn
+parent: btn
+---
+
+ボタンを中央に寄せたブロック要素として表示する。幅は100%ではなく、一般的に考えられる幅を最大値とする。
+
+### 補足：ボタンの余白
+
+<code>.#{$p}#{$m}btn-block, .#{$p}#{$m}btn-round, .#{$p}#{$m}btn-square</code> では、<code>.#{$p}#{$m}btn</code> のpaddingの初期値を上書きする必要があるため、意図的にクラスを追加して優先度を上げている。
+
+### note: Padding in button
+
+In <code>.#{$p}#{$m}btn-block, .#{$p}#{$m}btn-round, .#{$p}#{$m}btn-square</code>, need to override the default padding of <code>.#{$p}#{$m}btn</code>. For this reason, intentionally add classes to increase priority.
+
+``` example
+<p>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-sm #{$p}#{$m}btn-block">#{$p}#{$m}btn-block</a>
+</p>
+<p>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-block">#{$p}#{$m}btn-block</a>
+</p>
+<p>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-lg #{$p}#{$m}btn-block">#{$p}#{$m}btn-block</a>
+</p>
+<p>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-xl #{$p}#{$m}btn-block">#{$p}#{$m}btn-block</a>
+</p>
+```
 */
 
-/*
-note: Padding in button
-.btn-block, .btn-round, .btn-squareでは、.btnのpaddingの初期値を上書きする必要があります。このため、意図的にクラスを追加して優先度を上げています。
-In .btn-block, .btn-round, .btn-square, need to override the default padding of .btn. For this reason, intentionally add classes to increase priority.
---------------------
-*/
-
-.#{$p}btn-block {
+.#{$p}#{$m}btn-block {
     display: block;
     width: 100%;
-    max-width: 240px; 
+    max-width: 320px; 
     margin: 0 auto;
 
-    &.#{$p}btn {
+    &.#{$p}#{$m}btn {
         padding-left: .5rem;
         padding-right: .5rem;
     }
 
-    &.#{$p}btn-sm {
+    &.#{$p}#{$m}btn-sm {
       max-width: 180px; 
     }
 
-    &.#{$p}btn-lg {
-      max-width: 320px; 
+    &.#{$p}#{$m}btn-lg {
+      max-width: 640px; 
     }
 
-    &.#{$p}btn-xl {
-      max-width: 480px; 
+    &.#{$p}#{$m}btn-xl {
+      max-width: map-get($container-max-widths-md, lg); 
     }
 
 }
 
-/*
-btn-round
---------------------
+
+/*doc
+---
+title: #{$p}#{$m}btn-round
+name: btn-06-round
+category: module-btn
+parent: btn
+---
+
+ボタンを正円で表示する。幅を超えるようなテキストを入れることはできない。
+
+``` example
+<p>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-sm #{$p}#{$m}btn-round">R</a>
+</p>
+<p>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-round">R</a>
+</p>
+<p>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-lg #{$p}#{$m}btn-round">R</a>
+</p>
+<p>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-xl #{$p}#{$m}btn-round">R</a>
+</p>
+```
 */
 
-.#{$p}btn-round {
+.#{$p}#{$m}btn-round {
     overflow: hidden;
     width: $btn-round-width-md;
     height: $btn-round-width-md;
     line-height: $btn-round-width-md;
     border-radius: 50%;
 
-    &.#{$p}btn {
+    &.#{$p}#{$m}btn {
         padding: 0;
+
+        img {
+            transform:translate(0, -.1em);
+        }
+
+        .fa {
+            transform:translate(0, -.1em);
+        }
+
     }
 
-    &.#{$p}btn-sm {
+    &.#{$p}#{$m}btn-sm {
         width: $btn-round-width-sm;
         height: $btn-round-width-sm;
         line-height: $btn-round-width-sm;
     }
 
-    &.#{$p}btn-lg {
+    &.#{$p}#{$m}btn-lg {
         width: $btn-round-width-lg;
         height: $btn-round-width-lg;
         line-height: $btn-round-width-lg;
+
+        img {
+            transform:translate(0, -.125em);
+        }
+
+        .fa {
+            transform:translate(0, -.125em);
+        }
+
     }
 
-    &.#{$p}btn-xl {
+    &.#{$p}#{$m}btn-xl {
         width: $btn-round-width-xl;
         height: $btn-round-width-xl;
         line-height: $btn-round-width-xl;
+
+        img {
+            transform:translate(0, -.15em);
+        }
+
+        .fa {
+            transform:translate(0, -.15em);
+        }
+
     }
 
 }
 
 
-/*
-btn-square
---------------------
+/*doc
+---
+title: #{$p}#{$m}btn-square
+name: btn-07-square
+category: module-btn
+parent: btn
+---
+
+ボタンを正方形で表示する。幅を超えるようなテキストを入れることはできない。
+
+``` example
+<p>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-sm #{$p}#{$m}btn-square">S</a>
+</p>
+<p>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-square">S</a>
+</p>
+<p>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-lg #{$p}#{$m}btn-square">S</a>
+</p>
+<p>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-xl #{$p}#{$m}btn-square">S</a>
+</p>
+```
 */
 
-.#{$p}btn-square {
+.#{$p}#{$m}btn-square {
     overflow: hidden;
     width: $btn-square-width-md;
     height: $btn-square-width-md;
     line-height: $btn-square-width-md;
 
-    &.#{$p}btn {
+    &.#{$p}#{$m}btn {
         padding: 0;
-        border-radius: $border-radius-sm;
+
+        img {
+            transform:translate(0, -.1em);
+        }
+
+        .fa {
+            transform:translate(0, -.1em);
+        }
+
     }
 
-    &.#{$p}btn-sm {
+    &.#{$p}#{$m}btn-sm {
         width: $btn-square-width-sm;
         height: $btn-square-width-sm;
         line-height: $btn-square-width-sm;
     }
 
-    &.#{$p}btn-lg {
+    &.#{$p}#{$m}btn-lg {
         width: $btn-square-width-lg;
         height: $btn-square-width-lg;
         line-height: $btn-square-width-lg;
+
+        img {
+            transform:translate(0, -.125em);
+        }
+
+        .fa {
+            transform:translate(0, -.125em);
+        }
+
     }
 
-    &.#{$p}btn-xl {
+    &.#{$p}#{$m}btn-xl {
         width: $btn-square-width-xl;
         height: $btn-square-width-xl;
         line-height: $btn-square-width-xl;
+
+        img {
+            transform:translate(0, -.15em);
+        }
+
+        .fa {
+            transform:translate(0, -.15em);
+        }
+
     }
 
 }

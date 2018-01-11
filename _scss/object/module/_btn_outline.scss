@@ -1,11 +1,56 @@
-/*
-btn-outline
---------------------
+/*doc
+---
+title: #{$p}#{$m}btn-outline
+name: btn-02-outline
+category: module-btn
+parent: btn
+---
+
+ボタンを罫線のみの見た目にする。背景色は <code>$body-bg</code> ではなく <code>transparent</code> なので注意。  
+<code>.#{$p}#{$m}btn-(color)</code> と同時に使用することが前提となっており、罫線の色が変わる。
+
+``` example
+<p>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-first">#{$p}#{$m}btn-first</a>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-first disabled">#{$p}#{$m}btn-first</a>
+</p>
+
+<p>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-second">#{$p}#{$m}btn-second</a>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-second disabled">#{$p}#{$m}btn-second</a>
+</p>
+
+<p>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-third">#{$p}#{$m}btn-third</a>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-third disabled">#{$p}#{$m}btn-third</a>
+</p>
+
+<p>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-fourth">#{$p}#{$m}btn-fourth</a>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-fourth disabled">#{$p}#{$m}btn-fourth</a>
+</p>
+
+<p>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-fifth">#{$p}#{$m}btn-fifth</a>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-fifth disabled">#{$p}#{$m}btn-fifth</a>
+</p>
+
+<p>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-info">#{$p}#{$m}btn-info</a>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-info disabled">#{$p}#{$m}btn-info</a>
+</p>
+
+<p>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-important">#{$p}#{$m}btn-important</a>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-important disabled">#{$p}#{$m}btn-important</a>
+</p>
+```
 */
 
-.#{$p}btn-outline {
+.#{$p}#{$m}btn-outline {
+    box-shadow: none;
 
-    &.#{$p}btn-first {
+    &.#{$p}#{$m}btn-first {
         @include button-variant(
             inherit,
             transparent,
@@ -16,7 +61,7 @@ btn-outline
         );
     }
 
-    &.#{$p}btn-second {
+    &.#{$p}#{$m}btn-second {
         @include button-variant(
             inherit,
             transparent,
@@ -27,7 +72,7 @@ btn-outline
         );
     }
 
-    &.#{$p}btn-third {
+    &.#{$p}#{$m}btn-third {
         @include button-variant(
             inherit,
             transparent,
@@ -38,7 +83,7 @@ btn-outline
         );
     }
 
-    &.#{$p}btn-fourth {
+    &.#{$p}#{$m}btn-fourth {
         @include button-variant(
             inherit,
             transparent,
@@ -49,7 +94,7 @@ btn-outline
         );
     }
 
-    &.#{$p}btn-fifth {
+    &.#{$p}#{$m}btn-fifth {
         @include button-variant(
             inherit,
             transparent,
@@ -60,7 +105,7 @@ btn-outline
         );
     }
 
-    &.#{$p}btn-info {
+    &.#{$p}#{$m}btn-info {
         @include button-variant(
             inherit,
             transparent,
@@ -71,7 +116,7 @@ btn-outline
         );
     }
 
-    &.#{$p}btn-important {
+    &.#{$p}#{$m}btn-important {
         @include button-variant(
             inherit,
             transparent,
