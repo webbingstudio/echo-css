@@ -7,7 +7,7 @@ styleguide_name: 'echo-css'
 source: ./dist/
 
 # The directory that hologram will build to
-destination: ./docs
+destination: ./dist/docs
 
 # The assets needed to build the docs (includes header.html,
 # footer.html, etc)
@@ -41,7 +41,7 @@ index: basic
 # To additionally output navigation for top level sections, set the value to
 # 'section'. To output navigation for sub-sections,
 # set the value to `all`
-nav_level: all
+# nav_level: all
 
 # Hologram displays warnings when there are issues with your docs
 # (e.g. if a component's parent is not found, if the _header.html and/or
