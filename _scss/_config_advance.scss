@@ -14,7 +14,7 @@ $optimize: true !default;
 // common-prefix
 // 他のCSSフレームワークとの衝突を回避したい場合は、接頭辞を指定する
 // Specify the prefix, if you want to avoid conflicts with other CSS frameworks
-$p: "echo-" !default;
+$p: "" !default;
 
 // layout-group-prefix
 $l: "l-" !default;
@@ -74,10 +74,10 @@ $error: "is-error" !default;
 // -----------------------------------------
 
 // ex. .list-item or li
-$list-item: "." + $prefix + $m + "list-item" !default;
+$list-item: "." + $p + $m + "list-item" !default;
 
 // ex. .list-item or li > ul
-$list-children: "." + $prefix + $m + "list-children" !default;
+$list-children: "." + $p + $m + "list-children" !default;
 
 
 // Grid
