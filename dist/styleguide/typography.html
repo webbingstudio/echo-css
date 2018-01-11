@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>typography | Style guide | echo-css</title>
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div class="l-document" id="document">
+
+    <header class="s-header">
+        <div class="s-container s-container-fluid">
+
+            <div class="s-header-brand">
+                <p class="s-header-title title title-03">echo-css <span class="label label-info">v0.0.5</span></p>
+            </div><!-- /.s-header-brand -->
+
+            <?php include('../doc_include/header_nav.inc'); ?>
+
+        </div><!-- /.s-container -->
+    </header>
+
+    <div class="s-container s-container-fluid">
+        <div class="s-contents s-contents-2col">
+            <main class="s-contents-main" role="main">
+
+                
+                <div class="s-page-header page-header">
+                    <h1 class="page-title title s-title-01">typography</h1>
+                </div><!-- /.page-header -->
+                
+
+                
+
+                <article class="s-post post">
+                    <div class="post-contents styleguide-contents"><h1 id="typography" class="styleguide">typography</h1>
+
+<p>何もクラスを付与していないときの、各HTML要素のサンプル。すべての見出し要素には<code>margin-top: 2em</code>が指定されている。</p>
+<div class="example"><h1>あいうえおかきくけ10_h1</h1>
+
+<h2>あいうえおかきくけ10_h2</h2>
+
+<p>あいうえおかきくけ10さしすせ<strong>太字です</strong>そたちつて20なにぬねのはひ<em>斜体です</em>ふへ30まみむめもやゆよっ40らりるれろわをんー50<br>
+あいうえおかきく<strong><em>太字＋斜体です</em></strong>け10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおか<em><strong>斜体＋太字です</strong></em>きくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</p>
+
+<h3>さしすせそたちつて20_h3</h3>
+
+<p>あいうえおかきくけ10さし<a href="#">リンクを貼りました</a>すせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</p>
+
+<h4>なにぬねのはひふへ30_h4</h4>
+
+<p>あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30ま<br>みむめもやゆよっ40らりるれろわをんー50あいうえおかき<br>くけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</p>
+
+<h5>まみむめもやゆよっ40_h5</h5>
+
+<p>あいうえおかきくけ10さしすせそたちつて20<br>なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそた<br>ちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</p>
+
+<h6>らりるれろわをんー50_h6</h6>
+
+<p>あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40ら<br>りるれろわをんー50あいうえおかきくけ10<br>さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</p>
+
+<ul>
+  <li>マーク付きリスト</li>
+  <li>マーク付きリスト</li>
+  <li>マーク付きリスト
+    <ul>
+      <li>マーク付きリスト子</li>
+      <li>マーク付きリスト子</li>
+    </ul>
+  </li>
+  <li>マーク付きリスト</li>
+  <li>マーク付きリスト</li>
+</ul>
+
+<ol>
+  <li>数字リスト</li>
+  <li>数字リスト</li>
+  <li>数字リスト
+    <ol>
+      <li>数字リスト子</li>
+      <li>数字リスト子</li>
+    </ol>
+  </li>
+  <li>数字リスト</li>
+  <li>数字リスト</li>
+</ol>
+
+<ul>
+  <li>マーク付きリスト</li>
+  <li>マーク付きリスト</li>
+  <li>マーク付きリスト
+    <ol>
+      <li>数字リスト子</li>
+      <li>数字リスト子</li>
+    </ol>
+  </li>
+  <li>マーク付きリスト</li>
+  <li>マーク付きリスト</li>
+</ul>
+
+<ol>
+  <li>数字リスト</li>
+  <li>数字リスト</li>
+  <li>数字リスト
+    <ul>
+      <li>マーク付きリスト子</li>
+      <li>マーク付きリスト子</li>
+    </ul>
+  </li>
+  <li>数字リスト</li>
+  <li>数字リスト</li>
+</ol>
+
+<dl>
+  <dt>定義語</dt>
+  <dd>あいうえおかきくけ10さしすせそたちつて20なにぬ</dd>
+  <dt>定義語</dt>
+  <dd>あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40</dd>
+  <dt>定義語</dt>
+  <dd>あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよ</dd>
+  <dt>定義語</dt>
+  <dd>あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30ま</dd>
+</dl>
+</div><div class="codeblock"><pre><span class="nt">&lt;h1&gt;</span>あいうえおかきくけ10_h1<span class="nt">&lt;/h1&gt;</span>
+
+<span class="nt">&lt;h2&gt;</span>あいうえおかきくけ10_h2<span class="nt">&lt;/h2&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>あいうえおかきくけ10さしすせ<span class="nt">&lt;strong&gt;</span>太字です<span class="nt">&lt;/strong&gt;</span>そたちつて20なにぬねのはひ<span class="nt">&lt;em&gt;</span>斜体です<span class="nt">&lt;/em&gt;</span>ふへ30まみむめもやゆよっ40らりるれろわをんー50<span class="nt">&lt;br&gt;</span>
+あいうえおかきく<span class="nt">&lt;strong&gt;&lt;em&gt;</span>太字＋斜体です<span class="nt">&lt;/em&gt;&lt;/strong&gt;</span>け10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおか<span class="nt">&lt;em&gt;&lt;strong&gt;</span>斜体＋太字です<span class="nt">&lt;/strong&gt;&lt;/em&gt;</span>きくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;h3&gt;</span>さしすせそたちつて20_h3<span class="nt">&lt;/h3&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>あいうえおかきくけ10さし<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>リンクを貼りました<span class="nt">&lt;/a&gt;</span>すせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;h4&gt;</span>なにぬねのはひふへ30_h4<span class="nt">&lt;/h4&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30ま<span class="nt">&lt;br&gt;</span>みむめもやゆよっ40らりるれろわをんー50あいうえおかき<span class="nt">&lt;br&gt;</span>くけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;h5&gt;</span>まみむめもやゆよっ40_h5<span class="nt">&lt;/h5&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>あいうえおかきくけ10さしすせそたちつて20<span class="nt">&lt;br&gt;</span>なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそた<span class="nt">&lt;br&gt;</span>ちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;h6&gt;</span>らりるれろわをんー50_h6<span class="nt">&lt;/h6&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40ら<span class="nt">&lt;br&gt;</span>りるれろわをんー50あいうえおかきくけ10<span class="nt">&lt;br&gt;</span>さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li&gt;</span>マーク付きリスト<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>マーク付きリスト<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>マーク付きリスト
+    <span class="nt">&lt;ul&gt;</span>
+      <span class="nt">&lt;li&gt;</span>マーク付きリスト子<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>マーク付きリスト子<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>マーク付きリスト<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>マーク付きリスト<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+
+<span class="nt">&lt;ol&gt;</span>
+  <span class="nt">&lt;li&gt;</span>数字リスト<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>数字リスト<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>数字リスト
+    <span class="nt">&lt;ol&gt;</span>
+      <span class="nt">&lt;li&gt;</span>数字リスト子<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>数字リスト子<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ol&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>数字リスト<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>数字リスト<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ol&gt;</span>
+
+<span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li&gt;</span>マーク付きリスト<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>マーク付きリスト<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>マーク付きリスト
+    <span class="nt">&lt;ol&gt;</span>
+      <span class="nt">&lt;li&gt;</span>数字リスト子<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>数字リスト子<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ol&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>マーク付きリスト<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>マーク付きリスト<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+
+<span class="nt">&lt;ol&gt;</span>
+  <span class="nt">&lt;li&gt;</span>数字リスト<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>数字リスト<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>数字リスト
+    <span class="nt">&lt;ul&gt;</span>
+      <span class="nt">&lt;li&gt;</span>マーク付きリスト子<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>マーク付きリスト子<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>数字リスト<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>数字リスト<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ol&gt;</span>
+
+<span class="nt">&lt;dl&gt;</span>
+  <span class="nt">&lt;dt&gt;</span>定義語<span class="nt">&lt;/dt&gt;</span>
+  <span class="nt">&lt;dd&gt;</span>あいうえおかきくけ10さしすせそたちつて20なにぬ<span class="nt">&lt;/dd&gt;</span>
+  <span class="nt">&lt;dt&gt;</span>定義語<span class="nt">&lt;/dt&gt;</span>
+  <span class="nt">&lt;dd&gt;</span>あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40<span class="nt">&lt;/dd&gt;</span>
+  <span class="nt">&lt;dt&gt;</span>定義語<span class="nt">&lt;/dt&gt;</span>
+  <span class="nt">&lt;dd&gt;</span>あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよ<span class="nt">&lt;/dd&gt;</span>
+  <span class="nt">&lt;dt&gt;</span>定義語<span class="nt">&lt;/dt&gt;</span>
+  <span class="nt">&lt;dd&gt;</span>あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30ま<span class="nt">&lt;/dd&gt;</span>
+<span class="nt">&lt;/dl&gt;</span>
+</pre></div>                    </div><!-- /.post-contents -->
+                </article><!-- /.post -->
+
+            </main>
+            <div class="s-contents-sub" role="complementary">
+                <h2 class="title title-04 m-b">Style guide</h2>
+                <nav class="s-sitemap nav nav-vertical">
+                    <?php include('../doc_include/menu_styleguide.inc'); ?>
+                </nav>
+            </div>
+        </div><!-- /.s-contents -->
+    </div><!-- /.s-container -->
+
+    <?php include('../doc_include/footer.inc'); ?>
+
+</div><!-- /.l-document -->
+</body>
+</html>

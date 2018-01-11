@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>wysiwyg | Style guide | echo-css</title>
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div class="l-document" id="document">
+
+    <header class="s-header">
+        <div class="s-container s-container-fluid">
+
+            <div class="s-header-brand">
+                <p class="s-header-title title title-03">echo-css <span class="label label-info">v0.0.5</span></p>
+            </div><!-- /.s-header-brand -->
+
+            <?php include('../doc_include/header_nav.inc'); ?>
+
+        </div><!-- /.s-container -->
+    </header>
+
+    <div class="s-container s-container-fluid">
+        <div class="s-contents s-contents-2col">
+            <main class="s-contents-main" role="main">
+
+                
+                <div class="s-page-header page-header">
+                    <h1 class="page-title title s-title-01">wysiwyg</h1>
+                </div><!-- /.page-header -->
+                
+
+                
+
+                <article class="s-post post">
+                    <div class="post-contents styleguide-contents"><h1 id="wysiwyg-wordpress" class="styleguide">WYSIWYG Styles (WordPress)</h1>
+
+<p>コンテンツ・マネージメント・システムの仕様上、クラスを指定することができない、自由文エリアの標準スタイル。<br>
+以下の条件に合致する要素に適用される。この条件から漏れるようなコンポーネントは使用できない。</p>
+
+<ol>
+<li><code>.wysiwyg</code> を付与した要素で包括されている</li>
+<li>要素自体に以下のクラスが付与されていない
+
+<ul>
+<li>a:  link, btn, label</li>
+<li>h:  title</li>
+<li>ul: list</li>
+<li>ol: list</li>
+<li>dl: list</li>
+<li>hr: すべてのクラス</li>
+<li>blockquote: すべてのクラス</li>
+<li>table: すべてのクラス</li>
+</ul></li>
+<li>img要素に以下のクラスが付与されている
+
+<ul>
+<li>wp-image-*</li>
+</ul></li>
+</ol>
+
+<p>なお、<code>.wysiwyg</code> 内の最初の要素は、強制的に上マージンが0となる。（!importantを使用している）</p>
+                    </div><!-- /.post-contents -->
+                </article><!-- /.post -->
+
+            </main>
+            <div class="s-contents-sub" role="complementary">
+                <h2 class="title title-04 m-b">Style guide</h2>
+                <nav class="s-sitemap nav nav-vertical">
+                    <?php include('../doc_include/menu_styleguide.inc'); ?>
+                </nav>
+            </div>
+        </div><!-- /.s-contents -->
+    </div><!-- /.s-container -->
+
+    <?php include('../doc_include/footer.inc'); ?>
+
+</div><!-- /.l-document -->
+</body>
+</html>

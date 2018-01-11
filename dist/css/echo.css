@@ -63,9 +63,103 @@ input[type="reset"] {
   cursor: pointer;
 }
 
-/*
-base
---------------------
+/*doc
+---
+title: typography
+name: typography
+category: typography
+---
+
+何もクラスを付与していないときの、各HTML要素のサンプル。すべての見出し要素には<code>margin-top: 2em</code>が指定されている。
+
+``` example
+<h1>あいうえおかきくけ10_h1</h1>
+
+<h2>あいうえおかきくけ10_h2</h2>
+
+<p>あいうえおかきくけ10さしすせ<strong>太字です</strong>そたちつて20なにぬねのはひ<em>斜体です</em>ふへ30まみむめもやゆよっ40らりるれろわをんー50<br>
+あいうえおかきく<strong><em>太字＋斜体です</em></strong>け10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおか<em><strong>斜体＋太字です</strong></em>きくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</p>
+
+<h3>さしすせそたちつて20_h3</h3>
+
+<p>あいうえおかきくけ10さし<a href="#">リンクを貼りました</a>すせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</p>
+
+<h4>なにぬねのはひふへ30_h4</h4>
+
+<p>あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30ま<br>みむめもやゆよっ40らりるれろわをんー50あいうえおかき<br>くけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</p>
+
+<h5>まみむめもやゆよっ40_h5</h5>
+
+<p>あいうえおかきくけ10さしすせそたちつて20<br>なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそた<br>ちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</p>
+
+<h6>らりるれろわをんー50_h6</h6>
+
+<p>あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40ら<br>りるれろわをんー50あいうえおかきくけ10<br>さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</p>
+
+<ul>
+  <li>マーク付きリスト</li>
+  <li>マーク付きリスト</li>
+  <li>マーク付きリスト
+    <ul>
+      <li>マーク付きリスト子</li>
+      <li>マーク付きリスト子</li>
+    </ul>
+  </li>
+  <li>マーク付きリスト</li>
+  <li>マーク付きリスト</li>
+</ul>
+
+<ol>
+  <li>数字リスト</li>
+  <li>数字リスト</li>
+  <li>数字リスト
+    <ol>
+      <li>数字リスト子</li>
+      <li>数字リスト子</li>
+    </ol>
+  </li>
+  <li>数字リスト</li>
+  <li>数字リスト</li>
+</ol>
+
+<ul>
+  <li>マーク付きリスト</li>
+  <li>マーク付きリスト</li>
+  <li>マーク付きリスト
+    <ol>
+      <li>数字リスト子</li>
+      <li>数字リスト子</li>
+    </ol>
+  </li>
+  <li>マーク付きリスト</li>
+  <li>マーク付きリスト</li>
+</ul>
+
+<ol>
+  <li>数字リスト</li>
+  <li>数字リスト</li>
+  <li>数字リスト
+    <ul>
+      <li>マーク付きリスト子</li>
+      <li>マーク付きリスト子</li>
+    </ul>
+  </li>
+  <li>数字リスト</li>
+  <li>数字リスト</li>
+</ol>
+
+<dl>
+  <dt>定義語</dt>
+  <dd>あいうえおかきくけ10さしすせそたちつて20なにぬ</dd>
+  <dt>定義語</dt>
+  <dd>あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40</dd>
+  <dt>定義語</dt>
+  <dd>あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよ</dd>
+  <dt>定義語</dt>
+  <dd>あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30ま</dd>
+</dl>
+```
+
 */
 /* thanks: https://speakerdeck.com/tacamy/modanri-ben-yu-huontozhi-ding */
 @font-face {
@@ -88,7 +182,7 @@ html {
     font-size: 0.875rem;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1240px) {
   html {
     font-size: 1.125rem;
   }
@@ -208,54 +302,42 @@ select {
 
 /*doc
 ---
-title: .l-document
-name: l-3-document
-category: layout
+title: l-document
+name: document
+category: layout-document
 ---
 
-ドキュメント全体を包括する。オフキャンバス等の画面全体に影響する演出のために使用する。
+ドキュメント全体を包括する。  
+ユーティリティクラスの重要度を上げるための<code>id="#document"</code>はこの包括ブロックに指定することを想定している。  
+ユーティリティクラス <code>.container-expand</code> や、オフキャンバス等の画面全体に影響する演出の影響を受けないよう、幅を制限している。  
+<code>.container-expand</code> を使用する予定がない場合や、他のライブラリ等と干渉する場合は、この要素は削除してもかまわない。
 
 ``` example
-<div class="l-document">
-(all document)
+<div id="#document" class="l-document">
+    <div class="bg-first bg-fade p" style="white-space: nowrap">
+        吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。
+    </div>
 </div>
 ```
 */
-/*doc
----
-title: .l-document-inner
-name: l-3-document-1-inner
-category: layout
-parent: l-document
----
-
-要素の幅をコンテナブロックを無視して広げる演出のために使用する。
-
-``` example
-<div class="l-document">
-<div class="l-document-inner">
-(all document)
-</div>
-</div>
-```
-*/
-.l-document-inner {
+.l-document {
   overflow: hidden;
   max-width: 100%;
 }
 
 /*doc
 ---
-title: .l-container
-name: l-1-container
-category: layout
+title: l-container
+name: container
+category: layout-container
 ---
 
-デバイスに応じて適切に本文幅を調整するコンテナブロック。
+デバイスに応じて適切に本文幅を調整するコンテナブロック。  
+<code>/\_scss/\_config_advance.scss</code> の「<code>$container-max-widths-md</code>」の定義を参照する。
 
 ``` example
-<div class="l-container l-container-full-md l-bg-first l-bg-fade l-m-b">
-    <div class="l-p-y l-bg-first l-bg-fade l-line-c">.l-container</div>
+<div class="l-container bg-first bg-mild m-b">
+        <div class="p-y line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
 </div>
 ```
 
@@ -283,25 +365,56 @@ category: layout
     max-width: 960px;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1240px) {
   .l-container {
     max-width: 1200px;
   }
 }
 
+/*
+.l-containerが二重になった場合の対策
+*/
+@media (min-width: 425px) {
+  .l-container .l-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 /*doc
 ---
-title: .l-container-sm
-name: l-1-container-1-sm
-category: layout
-parent: l-1-container
+title: l-container-fluid
+name: container-01-fluid
+category: layout-container
+parent: container
 ---
 
-本文幅が狭いコンテナブロック。1カラムレイアウトで1行の文字数を抑えるために使用する。
+コンテナブロックの最大幅の制限を行わない。
 
 ``` example
-<div class="l-container l-container-sm l-container-full-md l-bg-third l-bg-fade">
-    <div class="l-p-y l-bg-third l-bg-fade l-line-c">.l-container-sm</div>
+<div class="l-container l-container-fluid bg-second bg-mild m-b">
+        <div class="p-y line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
+</div>
+```
+
+*/
+.l-container-fluid {
+  max-width: none;
+}
+
+/*doc
+---
+title: l-container-sm
+name: container-02-sm
+category: layout-container
+parent: container
+---
+
+コンテナブロックの最大幅が通常よりも狭くなる。  
+<code>/\_scss/\_config_advance.scss</code> の「<code>$container-max-widths-sm</code>」の定義を参照する。
+
+``` example
+<div class="l-container l-container-sm bg-third bg-mild m-b">
+        <div class="p-y line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
 </div>
 ```
 
@@ -317,32 +430,64 @@ parent: l-1-container
   }
 }
 
-/*
-a-blog cmsのレイアウトモジュール、HTML直書きの影響で
-.l-containerが二重になった場合の対策
-*/
-@media (min-width: 425px) {
-  .l-container .l-container {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
 /*doc
 ---
-title: .l-container-full-md
-name: l-1-container-2-full-md
-category: layout
-parent: l-1-container
+title: l-container-lg
+name: container-03-lg
+category: layout-container
+parent: container
 ---
 
-タブレットportrait以下でコンテナ余白を打ち消す。画像の幅100%表示等に使用する。
+コンテナブロックの最大幅が通常よりも広くなる。  
+<code>/\_scss/\_config_advance.scss</code> の「<code>$container-max-widths-lg</code>」の定義を参照する。
 
 ``` example
-<div class="l-container l-container-full-md l-bg-first l-bg-fade l-m-b">
-    <div class="l-p-y l-bg-first l-bg-fade l-line-c">.l-container</div>
+<div class="l-container l-container-lg bg-third bg-mild m-b">
+        <div class="p-y line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
 </div>
-<div class="l-container l-container-sm l-container-full-md l-bg-third l-bg-fade">
-    <div class="l-p-y l-bg-third l-bg-fade l-line-c">.l-container-sm</div>
+```
+
+*/
+@media (min-width: 768px) {
+  .l-container-lg {
+    max-width: 700px;
+  }
+}
+@media (min-width: 1000px) {
+  .l-container-lg {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1240px) {
+  .l-container-lg {
+    max-width: 1200px;
+  }
+}
+@media (min-width: 1640px) {
+  .l-container-lg {
+    max-width: 1600px;
+  }
+}
+
+/*doc
+---
+title: l-container-full-md
+name: container-04-full-md
+category: layout-container
+parent: container
+---
+
+(breakpoint)が <code>md</code> 以下のときにコンテナ余白を打ち消す。モバイル端末での幅100%表示等に使用する。
+
+``` example
+<div class="l-container l-container-full-md bg-important bg-mild m-b">
+        <div class="p-y line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
+</div>
+<div class="l-container l-container-sm l-container-full-md bg-important bg-mild m-b">
+        <div class="p-y line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
+</div>
+<div class="l-container l-container-lg l-container-full-md bg-important bg-mild m-b">
+        <div class="p-y line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
 </div>
 ```
 */
@@ -355,121 +500,86 @@ parent: l-1-container
 
 /*doc
 ---
-title: .l-f-row
-name: l-5-f-row
-category: layout
+title: l-f-row
+name: f-01-row
+category: layout-grid-flex
 ---
 
-フレックスボックスによるグリッドのグループを作成する。セル内の高さを揃える必要がある場合に使用する。
-
-*/
-@media (min-width: 1000px) {
-  .l-f-row {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: stretch;
-    margin-left: -10px;
-    margin-right: -10px;
-  }
-}
-
-/*doc
----
-title: .l-f-col-(column)-(breakpoint)
-name: l-5-f-row-1-col
-category: layout
-parent: l-5-f-row
----
-
-フレックスボックスによるグリッドのセルを作成する。(column)は3,4,6のみ、(breakpoint)はlgのみ。
+flexboxによるグリッドのグループを作成する。  
+余白・段組の仕様を変更したい場合は <code>/\_scss/config\_advance.css</code> の各変数を調整すること。
 
 ``` example
 <div class="l-f-row">
-    <div class="l-f-col l-f-col-4-lg p-b">
-        <div class="bg-first bg-mild p" style="height: 100%;">l-f-col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
+    <div class="l-f-col l-f-col-4-lg m-b">
+        <div class="bg-first p" style="height: 100%;">l-f-col-4-lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-f-col l-f-col-4-lg p-b">
-        <div class="bg-first bg-mild p" style="height: 100%;">l-f-col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto. Quia, nobis explicabo asperiores facere!</div>
+    <div class="l-f-col l-f-col-4-lg m-b">
+        <div class="bg-first p" style="height: 100%;">l-f-col-4-lg<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。</div>
     </div>
-    <div class="l-f-col l-f-col-4-lg p-b">
-        <div class="bg-first bg-mild p" style="height: 100%;">l-f-col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-    </div>
-    <div class="l-f-col l-f-col-4-lg p-b">
-        <div class="bg-first bg-mild p" style="height: 100%;">l-f-col-4-lg<br>Lorem ipsum dolor sit amet</div>
-    </div>
-    <div class="l-f-col l-f-col-4-lg p-b">
-        <div class="bg-first bg-mild p" style="height: 100%;">l-f-col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
+    <div class="l-f-col l-f-col-4-lg m-b">
+        <div class="bg-first p" style="height: 100%;">l-f-col-4-lg<br>ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。</div>
     </div>
 </div>
 ```
 */
-.l-f-col {
-  padding-left: 10px;
-  padding-right: 10px;
+.l-f-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  margin-left: -10px;
+  margin-right: -10px;
 }
 
-@media (min-width: 1000px) {
-  .l-f-col-3-lg {
-    width: 25%;
-  }
-
-  .l-f-col-4-lg {
-    width: 33.33333333%;
-  }
-
-  .l-f-col-6-lg {
-    width: 50%;
-  }
-}
 /*doc
 ---
-title: .l-f-row-(0 or size)
-name: l-5-f-row-2-size
-category: layout
-parent: l-5-f-row
+title: l-f-row-(size)
+name: f-01-row-01-size
+category: layout-grid-flex
+parent: f-01-row
 ---
 
-フレックスボックスによるグリッドで余白が異なるグループを作成する。
+flexboxによるグリッドで余白が異なるグループを作成する。  
+(size)は<code>0, sm, md, lg</code> に対応している。
 
 ``` example
 <div class="l-f-row l-f-row-0">
-    <div class="l-f-col l-f-col-4-lg p-b">
-        <div class="bg-second bg-mild p" style="height: 100%;">l-f-col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
+    <div class="l-f-col l-f-col-4-lg m-b">
+        <div class="bg-first p" style="height: 100%;">l-f-row-0<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-f-col l-f-col-4-lg p-b">
-        <div class="bg-second bg-mild p" style="height: 100%; opacity: 0.8;">l-f-col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto. Quia, nobis explicabo asperiores facere!</div>
+    <div class="l-f-col l-f-col-4-lg m-b">
+        <div class="bg-first p" style="height: 100%; opacity: 0.8;">l-f-row-0<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-f-col l-f-col-4-lg p-b">
-        <div class="bg-second bg-mild p" style="height: 100%;">l-f-col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+    <div class="l-f-col l-f-col-4-lg m-b">
+        <div class="bg-first p" style="height: 100%;">l-f-row-0<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 
 <div class="l-f-row l-f-row-sm">
-    <div class="l-f-col l-f-col-3-lg p-b">
-        <div class="bg-third bg-mild p" style="height: 100%;">l-f-col-3-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
+    <div class="l-f-col l-f-col-4-lg m-b">
+        <div class="bg-second p" style="height: 100%;">l-f-row-sm<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-f-col l-f-col-3-lg p-b">
-        <div class="bg-third bg-mild p" style="height: 100%;">l-f-col-3-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto. Quia, nobis explicabo asperiores facere!</div>
+    <div class="l-f-col l-f-col-4-lg m-b">
+        <div class="bg-second p" style="height: 100%; opacity: 0.8;">l-f-row-sm<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-f-col l-f-col-3-lg p-b">
-        <div class="bg-third bg-mild p" style="height: 100%;">l-f-col-3-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-    </div>
-    <div class="l-f-col l-f-col-3-lg p-b">
-        <div class="bg-third bg-mild p" style="height: 100%;">l-f-col-3-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto.</div>
+    <div class="l-f-col l-f-col-4-lg m-b">
+        <div class="bg-second p" style="height: 100%;">l-f-row-sm<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 
 <div class="l-f-row l-f-row-lg">
-    <div class="l-f-col l-f-col-6-lg p-b">
-        <div class="bg-important bg-mild p" style="height: 100%;">l-f-col-6-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
+    <div class="l-f-col l-f-col-4-lg m-b">
+        <div class="bg-third p" style="height: 100%;">l-f-row-lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-f-col l-f-col-6-lg p-b">
-        <div class="bg-important bg-mild p" style="height: 100%;">l-f-col-6-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto. Quia, nobis explicabo asperiores facere!</div>
+    <div class="l-f-col l-f-col-4-lg m-b">
+        <div class="bg-third p" style="height: 100%; opacity: 0.8;">l-f-row-lg<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    </div>
+    <div class="l-f-col l-f-col-4-lg m-b">
+        <div class="bg-third p" style="height: 100%;">l-f-row-lg<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 ```
@@ -503,916 +613,1001 @@ parent: l-5-f-row
 
 /*doc
 ---
-title: .l-row
-name: l-4-row
-category: layout
+title: l-f-col
+name: f-02-col
+category: layout-grid-flex
 ---
 
-floatによるグリッドのグループを作成する。
+flexboxによるグリッドのセルを作成する。このクラス単独では余白のみ確保する。
 
 */
+.l-f-col {
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 /*doc
 ---
-title: .l-col-(column)-(breakpoint)
-name: l-4-row-1-col
-category: layout
-parent: l-4-row
+title: l-f-col-(column)-(breakpoint)
+name: f-02-col-01-column-breakpoint
+category: layout-grid-flex
+parent: f-02-col
 ---
 
-floatによるグリッドのセルを作成する。
-
-### 一般的なグリッド
+flexboxによるグリッドのセルを、ウィンドウ幅が(breakpoint)よりも大きくなったときに、<code>(column) / 12</code>の幅で配置する。  
+(breakpoint)の指定がない場合は、常にその幅となる。  
+このテーマでは、(column)は<code>3, 4, 6</code>のみ、(breakpoint)は<code>sm, md, lg</code>のみ対応している。
 
 ``` example
-<div class="l-row">
-    <div class="l-col l-col-4">
-        <div class="m-b p-sm bg-first bg-mild">l-col l-col-4</div>
+<div class="l-f-row m-b-lg">
+    <div class="l-f-col l-f-col-3-sm m-b">
+        <div class="bg-first p" style="height: 100%;">l-f-col-3-sm<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col l-col-4">
-        <div class="m-b p-sm bg-first bg-mild">l-col l-col-4</div>
+    <div class="l-f-col l-f-col-3-sm m-b">
+        <div class="bg-first p" style="height: 100%;">l-f-col-3-sm<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-col l-col-4">
-        <div class="m-b p-sm bg-first bg-mild">l-col l-col-4</div>
+    <div class="l-f-col l-f-col-3-sm m-b">
+        <div class="bg-first p" style="height: 100%;">l-f-col-3-sm<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    </div>
+    <div class="l-f-col l-f-col-3-sm m-b">
+        <div class="bg-first p" style="height: 100%;">l-f-col-3-sm<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
+    </div>
+</div>
+
+<div class="l-f-row m-b-lg">
+    <div class="l-f-col l-f-col-3-md m-b">
+        <div class="bg-second p" style="height: 100%;">l-f-col-3-md<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    </div>
+    <div class="l-f-col l-f-col-3-md m-b">
+        <div class="bg-second p" style="height: 100%;">l-f-col-3-md<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    </div>
+    <div class="l-f-col l-f-col-3-md m-b">
+        <div class="bg-second p" style="height: 100%;">l-f-col-3-md<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    </div>
+    <div class="l-f-col l-f-col-3-md m-b">
+        <div class="bg-second p" style="height: 100%;">l-f-col-3-md<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
+    </div>
+</div>
+
+<div class="l-f-row m-b-lg">
+    <div class="l-f-col l-f-col-4-lg m-b">
+        <div class="bg-third p" style="height: 100%;">l-f-col-4-lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    </div>
+    <div class="l-f-col l-f-col-4-lg m-b">
+        <div class="bg-third p" style="height: 100%;">l-f-col-4-lg<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    </div>
+    <div class="l-f-col l-f-col-4-lg m-b">
+        <div class="bg-third p" style="height: 100%;">l-f-col-4-lg<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    </div>
+</div>
+
+<div class="l-f-row">
+    <div class="l-f-col l-f-col-6-lg m-b">
+        <div class="bg-fourth p" style="height: 100%;">l-f-col-6-lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    </div>
+    <div class="l-f-col l-f-col-6-lg m-b">
+        <div class="bg-fourth p" style="height: 100%;">l-f-col-6-lg<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    </div>
+    <div class="l-f-col l-f-col-6-lg m-b">
+        <div class="bg-fourth p" style="height: 100%;">l-f-col-6-lg<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    </div>
+    <div class="l-f-col l-f-col-6-lg m-b">
+        <div class="bg-fourth p" style="height: 100%;">l-f-col-6-lg<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
     </div>
 </div>
 ```
+*/
+@media (min-width: 425px) {
+  .l-f-col-3-sm {
+    width: 25%;
+  }
 
-### デバイスによって変化するグリッド
+  .l-f-col-4-sm {
+    width: 33.33333333%;
+  }
 
-スマートフォン(default), タブレット以上(sm), XGA以上(lg)でレイアウトを変更する代表的な例。
+  .l-f-col-6-sm {
+    width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .l-f-col-3-md {
+    width: 25%;
+  }
+
+  .l-f-col-4-md {
+    width: 33.33333333%;
+  }
+
+  .l-f-col-6-md {
+    width: 50%;
+  }
+}
+@media (min-width: 1000px) {
+  .l-f-col-3-lg {
+    width: 25%;
+  }
+
+  .l-f-col-4-lg {
+    width: 33.33333333%;
+  }
+
+  .l-f-col-6-lg {
+    width: 50%;
+  }
+}
+/*doc
+---
+title: l-row
+name: 01-row
+category: layout-grid-float
+---
+
+floatによるグリッドのグループを作成する。余白・段組の仕様を変更したい場合は <code>/\_scss/config\_advance.css</code> の各変数を調整すること。
+
+命名規則を他のCSSフレームワークと同様にしたい場合は以下を調整すること。
+
+- <code>/\_scss/lauout/\_grid\_float.css</code>
+- <code>/\_scss/mixin/mixin.css</code> の <code>make-row(), make-grid-columns()</code>
+
 
 ``` example
 <div class="l-row">
-    <div class="l-col l-col-12 l-col-6-sm l-col-4-lg">
-        <div class="m-b p-sm bg-first bg-mild">l-col l-col-12 l-col-6-sm l-col-4-lg</div>
+    <div class="l-col l-col-4-lg m-b">
+        <div class="bg-first p">l-col-4-lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col l-col-12 l-col-6-sm l-col-4-lg">
-        <div class="m-b p-sm bg-first bg-mild">l-col l-col-12 l-col-6-sm l-col-4-lg</div>
+    <div class="l-col l-col-4-lg m-b">
+        <div class="bg-first p">l-col-4-lg<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-col l-col-12 l-col-6-sm l-col-4-lg">
-        <div class="m-b p-sm bg-first bg-mild">l-col l-col-12 l-col-6-sm l-col-4-lg</div>
-    </div>
-</div>
-```
-
-iPhone SE(default), iPhone 7(xs), iPhone 7 Plus(sm)間でもレイアウトを変更できる。
-
-``` example
-<div class="l-row">
-    <div class="l-col l-col-12 l-col-6-xs l-col-4-sm">
-        <div class="m-b p-sm bg-third bg-mild">l-col l-col-12 l-col-6-xs l-col-4-sm</div>
-    </div>
-    <div class="l-col l-col-12 l-col-6-xs l-col-4-sm">
-        <div class="m-b p-sm bg-third bg-mild">l-col l-col-12 l-col-6-xs l-col-4-sm</div>
-    </div>
-    <div class="l-col l-col-12 l-col-6-xs l-col-4-sm">
-        <div class="m-b p-sm bg-third bg-mild">l-col l-col-12 l-col-6-xs l-col-4-sm</div>
+    <div class="l-col l-col-4-lg m-b">
+        <div class="bg-first p">l-col-4-lg<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 ```
 
 */
-.l-col {
+.col {
   position: relative;
   min-height: 1px;
 }
 
-.l-col-3, .l-col-4, .l-col-5, .l-col-6, .l-col-7, .l-col-8, .l-col-9, .l-col-10, .l-col-11, .l-col-12 {
+.col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
   float: left;
 }
 
-.l-col-3 {
+.col-3 {
   width: 25%;
 }
 
-.l-col-4 {
+.col-4 {
   width: 33.33333%;
 }
 
-.l-col-5 {
+.col-5 {
   width: 41.66667%;
 }
 
-.l-col-6 {
+.col-6 {
   width: 50%;
 }
 
-.l-col-7 {
+.col-7 {
   width: 58.33333%;
 }
 
-.l-col-8 {
+.col-8 {
   width: 66.66667%;
 }
 
-.l-col-9 {
+.col-9 {
   width: 75%;
 }
 
-.l-col-10 {
+.col-10 {
   width: 83.33333%;
 }
 
-.l-col-11 {
+.col-11 {
   width: 91.66667%;
 }
 
-.l-col-12 {
+.col-12 {
   width: 100%;
 }
 
-.l-col-1-pull {
+.col-1-pull {
   right: 8.33333%;
 }
 
-.l-col-2-pull {
+.col-2-pull {
   right: 16.66667%;
 }
 
-.l-col-3-pull {
+.col-3-pull {
   right: 25%;
 }
 
-.l-col-4-pull {
+.col-4-pull {
   right: 33.33333%;
 }
 
-.l-col-5-pull {
+.col-5-pull {
   right: 41.66667%;
 }
 
-.l-col-6-pull {
+.col-6-pull {
   right: 50%;
 }
 
-.l-col-7-pull {
+.col-7-pull {
   right: 58.33333%;
 }
 
-.l-col-8-pull {
+.col-8-pull {
   right: 66.66667%;
 }
 
-.l-col-9-pull {
+.col-9-pull {
   right: 75%;
 }
 
-.l-col-10-pull {
+.col-10-pull {
   right: 83.33333%;
 }
 
-.l-col-1-push {
+.col-1-push {
   left: 8.33333%;
 }
 
-.l-col-2-push {
+.col-2-push {
   left: 16.66667%;
 }
 
-.l-col-3-push {
+.col-3-push {
   left: 25%;
 }
 
-.l-col-4-push {
+.col-4-push {
   left: 33.33333%;
 }
 
-.l-col-5-push {
+.col-5-push {
   left: 41.66667%;
 }
 
-.l-col-6-push {
+.col-6-push {
   left: 50%;
 }
 
-.l-col-7-push {
+.col-7-push {
   left: 58.33333%;
 }
 
-.l-col-8-push {
+.col-8-push {
   left: 66.66667%;
 }
 
-.l-col-9-push {
+.col-9-push {
   left: 75%;
 }
 
-.l-col-10-push {
+.col-10-push {
   left: 83.33333%;
 }
 
-.l-col-1-offset {
+.col-1-offset {
   margin-left: 8.33333%;
 }
 
-.l-col-2-offset {
+.col-2-offset {
   margin-left: 16.66667%;
 }
 
-.l-col-3-offset {
+.col-3-offset {
   margin-left: 25%;
 }
 
-.l-col-4-offset {
+.col-4-offset {
   margin-left: 33.33333%;
 }
 
-.l-col-5-offset {
+.col-5-offset {
   margin-left: 41.66667%;
 }
 
-.l-col-6-offset {
+.col-6-offset {
   margin-left: 50%;
 }
 
-.l-col-7-offset {
+.col-7-offset {
   margin-left: 58.33333%;
 }
 
-.l-col-8-offset {
+.col-8-offset {
   margin-left: 66.66667%;
 }
 
-.l-col-9-offset {
+.col-9-offset {
   margin-left: 75%;
 }
 
-.l-col-10-offset {
+.col-10-offset {
   margin-left: 83.33333%;
 }
 
 @media (min-width: 320px) {
-  .l-col-3-xxs, .l-col-4-xxs, .l-col-5-xxs, .l-col-6-xxs, .l-col-7-xxs, .l-col-8-xxs, .l-col-9-xxs, .l-col-10-xxs, .l-col-11-xxs, .l-col-12-xxs {
+  .col-3-xxs, .col-4-xxs, .col-5-xxs, .col-6-xxs, .col-7-xxs, .col-8-xxs, .col-9-xxs, .col-10-xxs, .col-11-xxs, .col-12-xxs {
     float: left;
   }
 
-  .l-col-3-xxs {
+  .col-3-xxs {
     width: 25%;
   }
 
-  .l-col-4-xxs {
+  .col-4-xxs {
     width: 33.33333%;
   }
 
-  .l-col-5-xxs {
+  .col-5-xxs {
     width: 41.66667%;
   }
 
-  .l-col-6-xxs {
+  .col-6-xxs {
     width: 50%;
   }
 
-  .l-col-7-xxs {
+  .col-7-xxs {
     width: 58.33333%;
   }
 
-  .l-col-8-xxs {
+  .col-8-xxs {
     width: 66.66667%;
   }
 
-  .l-col-9-xxs {
+  .col-9-xxs {
     width: 75%;
   }
 
-  .l-col-10-xxs {
+  .col-10-xxs {
     width: 83.33333%;
   }
 
-  .l-col-11-xxs {
+  .col-11-xxs {
     width: 91.66667%;
   }
 
-  .l-col-12-xxs {
+  .col-12-xxs {
     width: 100%;
   }
 }
 @media (min-width: 375px) {
-  .l-col-3-xs, .l-col-4-xs, .l-col-5-xs, .l-col-6-xs, .l-col-7-xs, .l-col-8-xs, .l-col-9-xs, .l-col-10-xs, .l-col-11-xs, .l-col-12-xs {
+  .col-3-xs, .col-4-xs, .col-5-xs, .col-6-xs, .col-7-xs, .col-8-xs, .col-9-xs, .col-10-xs, .col-11-xs, .col-12-xs {
     float: left;
   }
 
-  .l-col-3-xs {
+  .col-3-xs {
     width: 25%;
   }
 
-  .l-col-4-xs {
+  .col-4-xs {
     width: 33.33333%;
   }
 
-  .l-col-5-xs {
+  .col-5-xs {
     width: 41.66667%;
   }
 
-  .l-col-6-xs {
+  .col-6-xs {
     width: 50%;
   }
 
-  .l-col-7-xs {
+  .col-7-xs {
     width: 58.33333%;
   }
 
-  .l-col-8-xs {
+  .col-8-xs {
     width: 66.66667%;
   }
 
-  .l-col-9-xs {
+  .col-9-xs {
     width: 75%;
   }
 
-  .l-col-10-xs {
+  .col-10-xs {
     width: 83.33333%;
   }
 
-  .l-col-11-xs {
+  .col-11-xs {
     width: 91.66667%;
   }
 
-  .l-col-12-xs {
+  .col-12-xs {
     width: 100%;
   }
 }
 @media (min-width: 425px) {
-  .l-col-3-sm, .l-col-4-sm, .l-col-5-sm, .l-col-6-sm, .l-col-7-sm, .l-col-8-sm, .l-col-9-sm, .l-col-10-sm, .l-col-11-sm, .l-col-12-sm {
+  .col-3-sm, .col-4-sm, .col-5-sm, .col-6-sm, .col-7-sm, .col-8-sm, .col-9-sm, .col-10-sm, .col-11-sm, .col-12-sm {
     float: left;
   }
 
-  .l-col-3-sm {
+  .col-3-sm {
     width: 25%;
   }
 
-  .l-col-4-sm {
+  .col-4-sm {
     width: 33.33333%;
   }
 
-  .l-col-5-sm {
+  .col-5-sm {
     width: 41.66667%;
   }
 
-  .l-col-6-sm {
+  .col-6-sm {
     width: 50%;
   }
 
-  .l-col-7-sm {
+  .col-7-sm {
     width: 58.33333%;
   }
 
-  .l-col-8-sm {
+  .col-8-sm {
     width: 66.66667%;
   }
 
-  .l-col-9-sm {
+  .col-9-sm {
     width: 75%;
   }
 
-  .l-col-10-sm {
+  .col-10-sm {
     width: 83.33333%;
   }
 
-  .l-col-11-sm {
+  .col-11-sm {
     width: 91.66667%;
   }
 
-  .l-col-12-sm {
+  .col-12-sm {
     width: 100%;
   }
 
-  .l-col-1-sm-pull {
+  .col-1-sm-pull {
     right: 8.33333%;
   }
 
-  .l-col-2-sm-pull {
+  .col-2-sm-pull {
     right: 16.66667%;
   }
 
-  .l-col-3-sm-pull {
+  .col-3-sm-pull {
     right: 25%;
   }
 
-  .l-col-4-sm-pull {
+  .col-4-sm-pull {
     right: 33.33333%;
   }
 
-  .l-col-5-sm-pull {
+  .col-5-sm-pull {
     right: 41.66667%;
   }
 
-  .l-col-6-sm-pull {
+  .col-6-sm-pull {
     right: 50%;
   }
 
-  .l-col-7-sm-pull {
+  .col-7-sm-pull {
     right: 58.33333%;
   }
 
-  .l-col-8-sm-pull {
+  .col-8-sm-pull {
     right: 66.66667%;
   }
 
-  .l-col-9-sm-pull {
+  .col-9-sm-pull {
     right: 75%;
   }
 
-  .l-col-10-sm-pull {
+  .col-10-sm-pull {
     right: 83.33333%;
   }
 
-  .l-col-1-sm-push {
+  .col-1-sm-push {
     left: 8.33333%;
   }
 
-  .l-col-2-sm-push {
+  .col-2-sm-push {
     left: 16.66667%;
   }
 
-  .l-col-3-sm-push {
+  .col-3-sm-push {
     left: 25%;
   }
 
-  .l-col-4-sm-push {
+  .col-4-sm-push {
     left: 33.33333%;
   }
 
-  .l-col-5-sm-push {
+  .col-5-sm-push {
     left: 41.66667%;
   }
 
-  .l-col-6-sm-push {
+  .col-6-sm-push {
     left: 50%;
   }
 
-  .l-col-7-sm-push {
+  .col-7-sm-push {
     left: 58.33333%;
   }
 
-  .l-col-8-sm-push {
+  .col-8-sm-push {
     left: 66.66667%;
   }
 
-  .l-col-9-sm-push {
+  .col-9-sm-push {
     left: 75%;
   }
 
-  .l-col-10-sm-push {
+  .col-10-sm-push {
     left: 83.33333%;
   }
 
-  .l-col-1-sm-offset {
+  .col-1-sm-offset {
     margin-left: 8.33333%;
   }
 
-  .l-col-2-sm-offset {
+  .col-2-sm-offset {
     margin-left: 16.66667%;
   }
 
-  .l-col-3-sm-offset {
+  .col-3-sm-offset {
     margin-left: 25%;
   }
 
-  .l-col-4-sm-offset {
+  .col-4-sm-offset {
     margin-left: 33.33333%;
   }
 
-  .l-col-5-sm-offset {
+  .col-5-sm-offset {
     margin-left: 41.66667%;
   }
 
-  .l-col-6-sm-offset {
+  .col-6-sm-offset {
     margin-left: 50%;
   }
 
-  .l-col-7-sm-offset {
+  .col-7-sm-offset {
     margin-left: 58.33333%;
   }
 
-  .l-col-8-sm-offset {
+  .col-8-sm-offset {
     margin-left: 66.66667%;
   }
 
-  .l-col-9-sm-offset {
+  .col-9-sm-offset {
     margin-left: 75%;
   }
 
-  .l-col-10-sm-offset {
+  .col-10-sm-offset {
     margin-left: 83.33333%;
   }
 }
 @media (min-width: 768px) {
-  .l-col-3-md, .l-col-4-md, .l-col-5-md, .l-col-6-md, .l-col-7-md, .l-col-8-md, .l-col-9-md, .l-col-10-md, .l-col-11-md, .l-col-12-md {
+  .col-3-md, .col-4-md, .col-5-md, .col-6-md, .col-7-md, .col-8-md, .col-9-md, .col-10-md, .col-11-md, .col-12-md {
     float: left;
   }
 
-  .l-col-3-md {
+  .col-3-md {
     width: 25%;
   }
 
-  .l-col-4-md {
+  .col-4-md {
     width: 33.33333%;
   }
 
-  .l-col-5-md {
+  .col-5-md {
     width: 41.66667%;
   }
 
-  .l-col-6-md {
+  .col-6-md {
     width: 50%;
   }
 
-  .l-col-7-md {
+  .col-7-md {
     width: 58.33333%;
   }
 
-  .l-col-8-md {
+  .col-8-md {
     width: 66.66667%;
   }
 
-  .l-col-9-md {
+  .col-9-md {
     width: 75%;
   }
 
-  .l-col-10-md {
+  .col-10-md {
     width: 83.33333%;
   }
 
-  .l-col-11-md {
+  .col-11-md {
     width: 91.66667%;
   }
 
-  .l-col-12-md {
+  .col-12-md {
     width: 100%;
   }
 
-  .l-col-1-md-pull {
+  .col-1-md-pull {
     right: 8.33333%;
   }
 
-  .l-col-2-md-pull {
+  .col-2-md-pull {
     right: 16.66667%;
   }
 
-  .l-col-3-md-pull {
+  .col-3-md-pull {
     right: 25%;
   }
 
-  .l-col-4-md-pull {
+  .col-4-md-pull {
     right: 33.33333%;
   }
 
-  .l-col-5-md-pull {
+  .col-5-md-pull {
     right: 41.66667%;
   }
 
-  .l-col-6-md-pull {
+  .col-6-md-pull {
     right: 50%;
   }
 
-  .l-col-7-md-pull {
+  .col-7-md-pull {
     right: 58.33333%;
   }
 
-  .l-col-8-md-pull {
+  .col-8-md-pull {
     right: 66.66667%;
   }
 
-  .l-col-9-md-pull {
+  .col-9-md-pull {
     right: 75%;
   }
 
-  .l-col-10-md-pull {
+  .col-10-md-pull {
     right: 83.33333%;
   }
 
-  .l-col-1-md-push {
+  .col-1-md-push {
     left: 8.33333%;
   }
 
-  .l-col-2-md-push {
+  .col-2-md-push {
     left: 16.66667%;
   }
 
-  .l-col-3-md-push {
+  .col-3-md-push {
     left: 25%;
   }
 
-  .l-col-4-md-push {
+  .col-4-md-push {
     left: 33.33333%;
   }
 
-  .l-col-5-md-push {
+  .col-5-md-push {
     left: 41.66667%;
   }
 
-  .l-col-6-md-push {
+  .col-6-md-push {
     left: 50%;
   }
 
-  .l-col-7-md-push {
+  .col-7-md-push {
     left: 58.33333%;
   }
 
-  .l-col-8-md-push {
+  .col-8-md-push {
     left: 66.66667%;
   }
 
-  .l-col-9-md-push {
+  .col-9-md-push {
     left: 75%;
   }
 
-  .l-col-10-md-push {
+  .col-10-md-push {
     left: 83.33333%;
   }
 
-  .l-col-1-md-offset {
+  .col-1-md-offset {
     margin-left: 8.33333%;
   }
 
-  .l-col-2-md-offset {
+  .col-2-md-offset {
     margin-left: 16.66667%;
   }
 
-  .l-col-3-md-offset {
+  .col-3-md-offset {
     margin-left: 25%;
   }
 
-  .l-col-4-md-offset {
+  .col-4-md-offset {
     margin-left: 33.33333%;
   }
 
-  .l-col-5-md-offset {
+  .col-5-md-offset {
     margin-left: 41.66667%;
   }
 
-  .l-col-6-md-offset {
+  .col-6-md-offset {
     margin-left: 50%;
   }
 
-  .l-col-7-md-offset {
+  .col-7-md-offset {
     margin-left: 58.33333%;
   }
 
-  .l-col-8-md-offset {
+  .col-8-md-offset {
     margin-left: 66.66667%;
   }
 
-  .l-col-9-md-offset {
+  .col-9-md-offset {
     margin-left: 75%;
   }
 
-  .l-col-10-md-offset {
+  .col-10-md-offset {
     margin-left: 83.33333%;
   }
 }
 @media (min-width: 1000px) {
-  .l-col-3-lg, .l-col-4-lg, .l-col-5-lg, .l-col-6-lg, .l-col-7-lg, .l-col-8-lg, .l-col-9-lg, .l-col-10-lg, .l-col-11-lg, .l-col-12-lg {
+  .col-3-lg, .col-4-lg, .col-5-lg, .col-6-lg, .col-7-lg, .col-8-lg, .col-9-lg, .col-10-lg, .col-11-lg, .col-12-lg {
     float: left;
   }
 
-  .l-col-3-lg {
+  .col-3-lg {
     width: 25%;
   }
 
-  .l-col-4-lg {
+  .col-4-lg {
     width: 33.33333%;
   }
 
-  .l-col-5-lg {
+  .col-5-lg {
     width: 41.66667%;
   }
 
-  .l-col-6-lg {
+  .col-6-lg {
     width: 50%;
   }
 
-  .l-col-7-lg {
+  .col-7-lg {
     width: 58.33333%;
   }
 
-  .l-col-8-lg {
+  .col-8-lg {
     width: 66.66667%;
   }
 
-  .l-col-9-lg {
+  .col-9-lg {
     width: 75%;
   }
 
-  .l-col-10-lg {
+  .col-10-lg {
     width: 83.33333%;
   }
 
-  .l-col-11-lg {
+  .col-11-lg {
     width: 91.66667%;
   }
 
-  .l-col-12-lg {
+  .col-12-lg {
     width: 100%;
   }
 
-  .l-col-1-lg-pull {
+  .col-1-lg-pull {
     right: 8.33333%;
   }
 
-  .l-col-2-lg-pull {
+  .col-2-lg-pull {
     right: 16.66667%;
   }
 
-  .l-col-3-lg-pull {
+  .col-3-lg-pull {
     right: 25%;
   }
 
-  .l-col-4-lg-pull {
+  .col-4-lg-pull {
     right: 33.33333%;
   }
 
-  .l-col-5-lg-pull {
+  .col-5-lg-pull {
     right: 41.66667%;
   }
 
-  .l-col-6-lg-pull {
+  .col-6-lg-pull {
     right: 50%;
   }
 
-  .l-col-7-lg-pull {
+  .col-7-lg-pull {
     right: 58.33333%;
   }
 
-  .l-col-8-lg-pull {
+  .col-8-lg-pull {
     right: 66.66667%;
   }
 
-  .l-col-9-lg-pull {
+  .col-9-lg-pull {
     right: 75%;
   }
 
-  .l-col-10-lg-pull {
+  .col-10-lg-pull {
     right: 83.33333%;
   }
 
-  .l-col-1-lg-push {
+  .col-1-lg-push {
     left: 8.33333%;
   }
 
-  .l-col-2-lg-push {
+  .col-2-lg-push {
     left: 16.66667%;
   }
 
-  .l-col-3-lg-push {
+  .col-3-lg-push {
     left: 25%;
   }
 
-  .l-col-4-lg-push {
+  .col-4-lg-push {
     left: 33.33333%;
   }
 
-  .l-col-5-lg-push {
+  .col-5-lg-push {
     left: 41.66667%;
   }
 
-  .l-col-6-lg-push {
+  .col-6-lg-push {
     left: 50%;
   }
 
-  .l-col-7-lg-push {
+  .col-7-lg-push {
     left: 58.33333%;
   }
 
-  .l-col-8-lg-push {
+  .col-8-lg-push {
     left: 66.66667%;
   }
 
-  .l-col-9-lg-push {
+  .col-9-lg-push {
     left: 75%;
   }
 
-  .l-col-10-lg-push {
+  .col-10-lg-push {
     left: 83.33333%;
   }
 
-  .l-col-1-lg-offset {
+  .col-1-lg-offset {
     margin-left: 8.33333%;
   }
 
-  .l-col-2-lg-offset {
+  .col-2-lg-offset {
     margin-left: 16.66667%;
   }
 
-  .l-col-3-lg-offset {
+  .col-3-lg-offset {
     margin-left: 25%;
   }
 
-  .l-col-4-lg-offset {
+  .col-4-lg-offset {
     margin-left: 33.33333%;
   }
 
-  .l-col-5-lg-offset {
+  .col-5-lg-offset {
     margin-left: 41.66667%;
   }
 
-  .l-col-6-lg-offset {
+  .col-6-lg-offset {
     margin-left: 50%;
   }
 
-  .l-col-7-lg-offset {
+  .col-7-lg-offset {
     margin-left: 58.33333%;
   }
 
-  .l-col-8-lg-offset {
+  .col-8-lg-offset {
     margin-left: 66.66667%;
   }
 
-  .l-col-9-lg-offset {
+  .col-9-lg-offset {
     margin-left: 75%;
   }
 
-  .l-col-10-lg-offset {
+  .col-10-lg-offset {
     margin-left: 83.33333%;
   }
 }
-@media (min-width: 1280px) {
-  .l-col-3-xl, .l-col-4-xl, .l-col-5-xl, .l-col-6-xl, .l-col-7-xl, .l-col-8-xl, .l-col-9-xl, .l-col-10-xl, .l-col-11-xl, .l-col-12-xl {
+@media (min-width: 1240px) {
+  .col-3-xl, .col-4-xl, .col-5-xl, .col-6-xl, .col-7-xl, .col-8-xl, .col-9-xl, .col-10-xl, .col-11-xl, .col-12-xl {
     float: left;
   }
 
-  .l-col-3-xl {
+  .col-3-xl {
     width: 25%;
   }
 
-  .l-col-4-xl {
+  .col-4-xl {
     width: 33.33333%;
   }
 
-  .l-col-5-xl {
+  .col-5-xl {
     width: 41.66667%;
   }
 
-  .l-col-6-xl {
+  .col-6-xl {
     width: 50%;
   }
 
-  .l-col-7-xl {
+  .col-7-xl {
     width: 58.33333%;
   }
 
-  .l-col-8-xl {
+  .col-8-xl {
     width: 66.66667%;
   }
 
-  .l-col-9-xl {
+  .col-9-xl {
     width: 75%;
   }
 
-  .l-col-10-xl {
+  .col-10-xl {
     width: 83.33333%;
   }
 
-  .l-col-11-xl {
+  .col-11-xl {
     width: 91.66667%;
   }
 
-  .l-col-12-xl {
+  .col-12-xl {
     width: 100%;
   }
 }
-@media (min-width: 1600px) {
-  .l-col-3-xxl, .l-col-4-xxl, .l-col-5-xxl, .l-col-6-xxl, .l-col-7-xxl, .l-col-8-xxl, .l-col-9-xxl, .l-col-10-xxl, .l-col-11-xxl, .l-col-12-xxl {
+@media (min-width: 1640px) {
+  .col-3-xxl, .col-4-xxl, .col-5-xxl, .col-6-xxl, .col-7-xxl, .col-8-xxl, .col-9-xxl, .col-10-xxl, .col-11-xxl, .col-12-xxl {
     float: left;
   }
 
-  .l-col-3-xxl {
+  .col-3-xxl {
     width: 25%;
   }
 
-  .l-col-4-xxl {
+  .col-4-xxl {
     width: 33.33333%;
   }
 
-  .l-col-5-xxl {
+  .col-5-xxl {
     width: 41.66667%;
   }
 
-  .l-col-6-xxl {
+  .col-6-xxl {
     width: 50%;
   }
 
-  .l-col-7-xxl {
+  .col-7-xxl {
     width: 58.33333%;
   }
 
-  .l-col-8-xxl {
+  .col-8-xxl {
     width: 66.66667%;
   }
 
-  .l-col-9-xxl {
+  .col-9-xxl {
     width: 75%;
   }
 
-  .l-col-10-xxl {
+  .col-10-xxl {
     width: 83.33333%;
   }
 
-  .l-col-11-xxl {
+  .col-11-xxl {
     width: 91.66667%;
   }
 
-  .l-col-12-xxl {
+  .col-12-xxl {
     width: 100%;
   }
 }
@@ -1434,48 +1629,49 @@ iPhone SE(default), iPhone 7(xs), iPhone 7 Plus(sm)間でもレイアウトを�
 
 /*doc
 ---
-title: .l-row-(0 or size)
-name: l-4-row-2-size
-category: layout
-parent: l-4-row
+title: l-row-(size)
+name: 01-row-01-size
+category: layout-grid-float
+parent: 01-row
 ---
 
-floatによるグリッドで余白が異なるグループを作成する。
+floatによるグリッドで余白が異なるグループを作成する。  
+(size)は<code>0, sm, md, lg</code> に対応している。
 
 ``` example
 <div class="l-row l-row-0">
-    <div class="l-col l-col-4">
-        <div class="m-b p-sm bg-second bg-mild">l-row l-row-0</div>
+    <div class="l-col l-col-4-lg m-b">
+        <div class="bg-first p">l-row-0<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col l-col-4">
-        <div class="m-b p-sm bg-second bg-mild" style="opacity: 0.8;">l-row l-row-0</div>
+    <div class="l-col l-col-4-lg m-b">
+        <div class="bg-first p" style="height: 100%; opacity: 0.8;">l-row-0<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-col l-col-4">
-        <div class="m-b p-sm bg-second bg-mild">l-row l-row-0</div>
+    <div class="l-col l-col-4-lg m-b">
+        <div class="bg-first p">l-row-0<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 
 <div class="l-row l-row-sm">
-    <div class="l-col l-col-4">
-        <div class="m-b p-sm bg-third bg-mild">l-row l-row-sm</div>
+    <div class="l-col l-col-4-lg m-b">
+        <div class="bg-second p">l-row-sm<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col l-col-4">
-        <div class="m-b p-sm bg-third bg-mild">l-row l-row-sm</div>
+    <div class="l-col l-col-4-lg m-b">
+        <div class="bg-second p" style="height: 100%; opacity: 0.8;">l-row-sm<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-col l-col-4">
-        <div class="m-b p-sm bg-third bg-mild">l-row l-row-sm</div>
+    <div class="l-col l-col-4-lg m-b">
+        <div class="bg-second p">l-row-sm<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 
 <div class="l-row l-row-lg">
-    <div class="l-col l-col-4">
-        <div class="m-b p-sm bg-important bg-mild">l-row l-row-lg</div>
+    <div class="l-col l-col-4-lg m-b">
+        <div class="bg-third p">l-row-lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col l-col-4">
-        <div class="m-b p-sm bg-important bg-mild">l-row l-row-lg</div>
+    <div class="l-col l-col-4-lg m-b">
+        <div class="bg-third p" style="height: 100%; opacity: 0.8;">l-row-lg<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-col l-col-4">
-        <div class="m-b p-sm bg-important bg-mild">l-row l-row-lg</div>
+    <div class="l-col l-col-4-lg m-b">
+        <div class="bg-third p">l-row-lg<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 ```
@@ -1528,11 +1724,96 @@ floatによるグリッドで余白が異なるグループを作成する。
   padding-right: 20px;
 }
 
+/*doc
+---
+title: l-col
+name: 02-col
+category: layout-grid-float
+---
+
+floatによるグリッドのセルを作成する。このクラス単独では余白のみ確保する。
+
+*/
+/*doc
+---
+title: l-col-(column)-(breakpoint)
+name: 02-col-01-column-breakpoint
+category: layout-grid-float
+parent: 02-col
+---
+
+floatによるグリッドのセルを、ウィンドウ幅が(breakpoint)よりも大きくなったときに、<code>(column) / 12</code>の幅で配置する。  
+(breakpoint)の指定がない場合は、常にその幅となる。  
+このテーマでは、(column)は<code>1 - 12</code>、(breakpoint)は<a href="./basic.html#breakpoints">標準のブレークポイント</a>を参照。
+
+### スマートフォン(default)、低解像度タブレットまたはスマートフォン横回転(sm)、XGA以上(lg)でレイアウトを変更する代表的な例
+
+``` example
+<div class="l-row">
+    <div class="l-col l-col-12 l-col-6-sm l-col-4-lg">
+        <div class="bg-first p">l-col-12<br>l-col-6-sm<br>l-col-4-lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    </div>
+    <div class="l-col l-col-12 l-col-6-sm l-col-4-lg">
+        <div class="bg-first p">l-col-12<br>l-col-6-sm<br>l-col-4-lg<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    </div>
+    <div class="l-col l-col-12 l-col-6-sm l-col-4-lg">
+        <div class="bg-first p">l-col-12<br>l-col-6-sm<br>l-col-4-lg<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    </div>
+</div>
+```
+
+### iPhone SEまたは拡大UI(default)、iPhone 8(xs)、iPhone 8 Plus(sm)間でレイアウトを変更する例
+
+``` example
+<div class="l-row">
+    <div class="l-col l-col-12 l-col-6-xs l-col-4-sm">
+        <div class="bg-second p">l-col-12<br>l-col-6-xs<br>l-col-4-sm<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    </div>
+    <div class="l-col l-col-12 l-col-6-xs l-col-4-sm">
+        <div class="bg-second p">l-col-12<br>l-col-6-xs<br>l-col-4-sm<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    </div>
+    <div class="l-col l-col-12 l-col-6-xs l-col-4-sm">
+        <div class="bg-second p">l-col-12<br>l-col-6-xs<br>l-col-4-sm<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    </div>
+</div>
+```
+
+*/
+/*doc
+---
+title: l-col-(column)-(breakpoint)-(push or pull)
+name: 02-col-02-column-breakpoint-push
+category: layout-grid-float
+parent: 02-col
+---
+
+グリッドのセルの開始位置をずらす。<code>push</code>は右、<code>pull</code>は左にずれる。  
+組み合わせるとfloatのグリッドでもセルの左右入れ替えができる。
+このテーマでは、(column)は<code>1 - 12</code>、(breakpoint)は<code>xs, sm, md, lg, xl, xxl</code>に対応している。
+
+``` example
+<div class="l-row m-b">
+    <div class="l-col l-col-6-lg l-col-2-lg-push">
+        <div class="bg-third p">l-col-6-lg<br>l-col-2-lg-push<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    </div>
+</div>
+
+<div class="l-row m-b">
+    <div class="l-col l-col-4-lg l-col-8-lg-push">
+        <div class="bg-third p">l-col-4-lg<br>l-col-8-lg-push<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    </div>
+    <div class="l-col l-col-8-lg l-col-4-lg-pull">
+        <div class="bg-third p">l-col-8-lg<br>l-col-4-lg-pull<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    </div>
+</div>
+```
+
+*/
 /*
 badge
 --------------------
 */
-.m-badge {
+.badge {
   overflow: hidden;
   display: inline-block;
   padding: 2em .5em .5em;
@@ -1550,43 +1831,43 @@ badge
   vertical-align: middle;
 }
 
-.m-badge-first {
+.badge-first {
   color: #fff;
   border-color: #49d;
   background-color: #49d;
 }
 
-.m-badge-second {
+.badge-second {
   color: #fff;
   border-color: #444;
   background-color: #444;
 }
 
-.m-badge-third {
+.badge-third {
   color: #fff;
   border-color: #49B070;
   background-color: #49B070;
 }
 
-.m-badge-fourth {
+.badge-fourth {
   color: #fff;
   border-color: #f38c10;
   background-color: #f38c10;
 }
 
-.m-badge-fifth {
+.badge-fifth {
   color: #fff;
   border-color: #e33050;
   background-color: #e33050;
 }
 
-.m-badge-info {
+.badge-info {
   color: #fff;
   border-color: #49B070;
   background-color: #49B070;
 }
 
-.m-badge-important {
+.badge-important {
   color: #fff;
   border-color: #e33050;
   background-color: #e33050;
@@ -1596,7 +1877,7 @@ badge
 box
 --------------------
 */
-.m-box {
+.box {
   position: relative;
   margin-bottom: 20px;
   padding: 20px;
@@ -1604,81 +1885,81 @@ box
   background-color: #eaeaea;
   border-radius: 3px;
 }
-.m-box:before, .m-box:after {
+.box:before, .box:after {
   content: "";
   display: table;
 }
-.m-box:after {
+.box:after {
   clear: both;
 }
 @media (min-width: 768px) {
-  .m-box {
+  .box {
     padding: 30px;
   }
 }
-@media (min-width: 1280px) {
-  .m-box {
+@media (min-width: 1240px) {
+  .box {
     margin-bottom: 30px;
   }
 }
-.m-box p:last-child,
-.m-box ul:last-child,
-.m-box ol:last-child,
-.m-box dl:last-child {
+.box p:last-child,
+.box ul:last-child,
+.box ol:last-child,
+.box dl:last-child {
   margin-bottom: 0;
 }
 
-.m-box-first {
+.box-first {
   background-color: rgba(68, 153, 221, 0.2);
 }
 
-.m-box-second {
+.box-second {
   background-color: #eaeaea;
 }
 
-.m-box-third {
+.box-third {
   background-color: rgba(73, 176, 112, 0.2);
 }
 
-.m-box-fourth {
+.box-fourth {
   background-color: rgba(243, 140, 16, 0.2);
 }
 
-.m-box-fifth {
+.box-fifth {
   background-color: #ffe9ee;
 }
 
-.m-box-info {
+.box-info {
   background-color: rgba(243, 140, 16, 0.2);
 }
 
-.m-box-important {
+.box-important {
   background-color: #ffe9ee;
 }
 
-.m-box-outline {
+.box-outline {
   background-color: #fff;
   border-color: #bbb;
 }
-.m-box-outline.m-box-first {
+.box-outline.box-first {
   border-color: #73b0e1;
 }
-.m-box-outline.m-box-second {
+.box-outline.box-second {
   border-color: #777;
 }
-.m-box-outline.m-box-third {
+.box-outline.box-third {
   border-color: #70bc8d;
 }
-.m-box-outline.m-box-fourth {
+.box-outline.box-fourth {
   border-color: #f0a346;
 }
-.m-box-outline.m-box-fifth {
+.box-outline.box-fifth {
   border-color: #e75f77;
 }
-.m-box-outline.m-box-info {
+.box-outline.box-info {
   border-color: #f0a346;
 }
-.m-box-outline.m-box-important {
+.box-outline.box-important {
   border-color: #e75f77;
 }
 
@@ -1686,7 +1967,7 @@ box
 btn
 --------------------
 */
-.m-btn {
+.btn {
   position: relative;
   display: inline-block;
   color: #333;
@@ -1702,17 +1983,17 @@ btn
   vertical-align: middle;
   transition: .3s all;
 }
-a.m-btn {
+a.btn {
   text-decoration: none;
 }
-a.m-btn:hover, a.m-btn:focus {
+a.btn:hover, a.btn:focus {
   text-decoration: none;
 }
 
-span.m-btn:hover, span.m-btn:focus {
+span.btn:hover, span.btn:focus {
   cursor: default;
 }
-.m-btn:hover, .m-btn.hover, .m-btn:focus, .m-btn.focus, .m-btn:active, .m-btn.active {
+.btn:hover, .btn.hover, .btn:focus, .btn.focus, .btn:active, .btn.active {
   color: #333;
   background-color: #eaeaea;
   text-decoration: none;
@@ -1722,113 +2003,113 @@ span.m-btn:hover, span.m-btn:focus {
 btn-(color)
 --------------------
 */
-.m-btn-first {
+.btn-first {
   color: #fff;
   background-color: #49d;
   border-color: transparent;
 }
-.m-btn-first:hover, .m-btn-first:focus, .m-btn-first:active, .m-btn-first.active {
+.btn-first:hover, .btn-first:focus, .btn-first:active, .btn-first.active {
   color: #fff;
   background-color: #2283cc;
   border-color: transparent;
 }
-a:hover .m-btn-first, a:focus .m-btn-first, a:active .m-btn-first {
+a:hover .btn-first, a:focus .btn-first, a:active .btn-first {
   color: #fff;
   background-color: #2283cc;
   border-color: transparent;
 }
 
-.m-btn-second {
+.btn-second {
   color: #fff;
   background-color: #444;
   border-color: transparent;
 }
-.m-btn-second:hover, .m-btn-second:focus, .m-btn-second:active, .m-btn-second.active {
+.btn-second:hover, .btn-second:focus, .btn-second:active, .btn-second.active {
   color: #fff;
   background-color: #000;
   border-color: transparent;
 }
-a:hover .m-btn-second, a:focus .m-btn-second, a:active .m-btn-second {
+a:hover .btn-second, a:focus .btn-second, a:active .btn-second {
   color: #fff;
   background-color: #000;
   border-color: transparent;
 }
 
-.m-btn-third {
+.btn-third {
   color: #fff;
   background-color: #49B070;
   border-color: transparent;
 }
-.m-btn-third:hover, .m-btn-third:focus, .m-btn-third:active, .m-btn-third.active {
+.btn-third:hover, .btn-third:focus, .btn-third:active, .btn-third.active {
   color: #fff;
   background-color: #229644;
   border-color: transparent;
 }
-a:hover .m-btn-third, a:focus .m-btn-third, a:active .m-btn-third {
+a:hover .btn-third, a:focus .btn-third, a:active .btn-third {
   color: #fff;
   background-color: #229644;
   border-color: transparent;
 }
 
-.m-btn-fourth {
+.btn-fourth {
   color: #fff;
   background-color: #f38c10;
   border-color: transparent;
 }
-.m-btn-fourth:hover, .m-btn-fourth:focus, .m-btn-fourth:active, .m-btn-fourth.active {
+.btn-fourth:hover, .btn-fourth:focus, .btn-fourth:active, .btn-fourth.active {
   color: #fff;
   background-color: #f37910;
   border-color: transparent;
 }
-a:hover .m-btn-fourth, a:focus .m-btn-fourth, a:active .m-btn-fourth {
+a:hover .btn-fourth, a:focus .btn-fourth, a:active .btn-fourth {
   color: #fff;
   background-color: #f37910;
   border-color: transparent;
 }
 
-.m-btn-fifth {
+.btn-fifth {
   color: #fff;
   background-color: #e33050;
   border-color: transparent;
 }
-.m-btn-fifth:hover, .m-btn-fifth:focus, .m-btn-fifth:active, .m-btn-fifth.active {
+.btn-fifth:hover, .btn-fifth:focus, .btn-fifth:active, .btn-fifth.active {
   color: #fff;
   background-color: #d70022;
   border-color: transparent;
 }
-a:hover .m-btn-fifth, a:focus .m-btn-fifth, a:active .m-btn-fifth {
+a:hover .btn-fifth, a:focus .btn-fifth, a:active .btn-fifth {
   color: #fff;
   background-color: #d70022;
   border-color: transparent;
 }
 
-.m-btn-info {
+.btn-info {
   color: #fff;
   background-color: #f38c10;
   border-color: transparent;
 }
-.m-btn-info:hover, .m-btn-info:focus, .m-btn-info:active, .m-btn-info.active {
+.btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active {
   color: #fff;
   background-color: #f37910;
   border-color: transparent;
 }
-a:hover .m-btn-info, a:focus .m-btn-info, a:active .m-btn-info {
+a:hover .btn-info, a:focus .btn-info, a:active .btn-info {
   color: #fff;
   background-color: #f37910;
   border-color: transparent;
 }
 
-.m-btn-important {
+.btn-important {
   color: #fff;
   background-color: #e33050;
   border-color: transparent;
 }
-.m-btn-important:hover, .m-btn-important:focus, .m-btn-important:active, .m-btn-important.active {
+.btn-important:hover, .btn-important:focus, .btn-important:active, .btn-important.active {
   color: #fff;
   background-color: #d70022;
   border-color: transparent;
 }
-a:hover .m-btn-important, a:focus .m-btn-important, a:active .m-btn-important {
+a:hover .btn-important, a:focus .btn-important, a:active .btn-important {
   color: #fff;
   background-color: #d70022;
   border-color: transparent;
@@ -1838,32 +2119,32 @@ a:hover .m-btn-important, a:focus .m-btn-important, a:active .m-btn-important {
 btn-inverse
 --------------------
 */
-.m-btn-inverse {
+.btn-inverse {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.25);
   border-color: transparent;
 }
-.m-btn-inverse:hover, .m-btn-inverse:focus, .m-btn-inverse:active, .m-btn-inverse.active {
+.btn-inverse:hover, .btn-inverse:focus, .btn-inverse:active, .btn-inverse.active {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.4);
   border-color: transparent;
 }
-a:hover .m-btn-inverse, a:focus .m-btn-inverse, a:active .m-btn-inverse {
+a:hover .btn-inverse, a:focus .btn-inverse, a:active .btn-inverse {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.4);
   border-color: transparent;
 }
-.m-btn-inverse.m-btn-outline {
+.btn-inverse.btn-outline {
   color: #fff;
   background-color: transparent;
   border-color: rgba(255, 255, 255, 0.8);
 }
-.m-btn-inverse.m-btn-outline:hover, .m-btn-inverse.m-btn-outline:focus, .m-btn-inverse.m-btn-outline:active, .m-btn-inverse.m-btn-outline.active {
+.btn-inverse.btn-outline:hover, .btn-inverse.btn-outline:focus, .btn-inverse.btn-outline:active, .btn-inverse.btn-outline.active {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.2);
   border-color: #fff;
 }
-a:hover .m-btn-inverse.m-btn-outline, a:focus .m-btn-inverse.m-btn-outline, a:active .m-btn-inverse.m-btn-outline {
+a:hover .btn-inverse.btn-outline, a:focus .btn-inverse.btn-outline, a:active .btn-inverse.btn-outline {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.2);
   border-color: #fff;
@@ -1873,107 +2154,107 @@ a:hover .m-btn-inverse.m-btn-outline, a:focus .m-btn-inverse.m-btn-outline, a:ac
 btn-outline
 --------------------
 */
-.m-btn-outline.m-btn-first {
+.btn-outline.btn-first {
   color: inherit;
   background-color: transparent;
   border-color: #49d;
 }
-.m-btn-outline.m-btn-first:hover, .m-btn-outline.m-btn-first:focus, .m-btn-outline.m-btn-first:active, .m-btn-outline.m-btn-first.active {
+.btn-outline.btn-first:hover, .btn-outline.btn-first:focus, .btn-outline.btn-first:active, .btn-outline.btn-first.active {
   color: #fff;
   background-color: #49d;
   border-color: transparent;
 }
-a:hover .m-btn-outline.m-btn-first, a:focus .m-btn-outline.m-btn-first, a:active .m-btn-outline.m-btn-first {
+a:hover .btn-outline.btn-first, a:focus .btn-outline.btn-first, a:active .btn-outline.btn-first {
   color: #fff;
   background-color: #49d;
   border-color: transparent;
 }
-.m-btn-outline.m-btn-second {
+.btn-outline.btn-second {
   color: inherit;
   background-color: transparent;
   border-color: #444;
 }
-.m-btn-outline.m-btn-second:hover, .m-btn-outline.m-btn-second:focus, .m-btn-outline.m-btn-second:active, .m-btn-outline.m-btn-second.active {
+.btn-outline.btn-second:hover, .btn-outline.btn-second:focus, .btn-outline.btn-second:active, .btn-outline.btn-second.active {
   color: #fff;
   background-color: #444;
   border-color: transparent;
 }
-a:hover .m-btn-outline.m-btn-second, a:focus .m-btn-outline.m-btn-second, a:active .m-btn-outline.m-btn-second {
+a:hover .btn-outline.btn-second, a:focus .btn-outline.btn-second, a:active .btn-outline.btn-second {
   color: #fff;
   background-color: #444;
   border-color: transparent;
 }
-.m-btn-outline.m-btn-third {
+.btn-outline.btn-third {
   color: inherit;
   background-color: transparent;
   border-color: #49B070;
 }
-.m-btn-outline.m-btn-third:hover, .m-btn-outline.m-btn-third:focus, .m-btn-outline.m-btn-third:active, .m-btn-outline.m-btn-third.active {
+.btn-outline.btn-third:hover, .btn-outline.btn-third:focus, .btn-outline.btn-third:active, .btn-outline.btn-third.active {
   color: #fff;
   background-color: #49B070;
   border-color: transparent;
 }
-a:hover .m-btn-outline.m-btn-third, a:focus .m-btn-outline.m-btn-third, a:active .m-btn-outline.m-btn-third {
+a:hover .btn-outline.btn-third, a:focus .btn-outline.btn-third, a:active .btn-outline.btn-third {
   color: #fff;
   background-color: #49B070;
   border-color: transparent;
 }
-.m-btn-outline.m-btn-fourth {
+.btn-outline.btn-fourth {
   color: inherit;
   background-color: transparent;
   border-color: #f38c10;
 }
-.m-btn-outline.m-btn-fourth:hover, .m-btn-outline.m-btn-fourth:focus, .m-btn-outline.m-btn-fourth:active, .m-btn-outline.m-btn-fourth.active {
+.btn-outline.btn-fourth:hover, .btn-outline.btn-fourth:focus, .btn-outline.btn-fourth:active, .btn-outline.btn-fourth.active {
   color: #fff;
   background-color: #f38c10;
   border-color: transparent;
 }
-a:hover .m-btn-outline.m-btn-fourth, a:focus .m-btn-outline.m-btn-fourth, a:active .m-btn-outline.m-btn-fourth {
+a:hover .btn-outline.btn-fourth, a:focus .btn-outline.btn-fourth, a:active .btn-outline.btn-fourth {
   color: #fff;
   background-color: #f38c10;
   border-color: transparent;
 }
-.m-btn-outline.m-btn-fifth {
+.btn-outline.btn-fifth {
   color: inherit;
   background-color: transparent;
   border-color: #e33050;
 }
-.m-btn-outline.m-btn-fifth:hover, .m-btn-outline.m-btn-fifth:focus, .m-btn-outline.m-btn-fifth:active, .m-btn-outline.m-btn-fifth.active {
+.btn-outline.btn-fifth:hover, .btn-outline.btn-fifth:focus, .btn-outline.btn-fifth:active, .btn-outline.btn-fifth.active {
   color: #fff;
   background-color: #e33050;
   border-color: transparent;
 }
-a:hover .m-btn-outline.m-btn-fifth, a:focus .m-btn-outline.m-btn-fifth, a:active .m-btn-outline.m-btn-fifth {
+a:hover .btn-outline.btn-fifth, a:focus .btn-outline.btn-fifth, a:active .btn-outline.btn-fifth {
   color: #fff;
   background-color: #e33050;
   border-color: transparent;
 }
-.m-btn-outline.m-btn-info {
+.btn-outline.btn-info {
   color: inherit;
   background-color: transparent;
   border-color: #f38c10;
 }
-.m-btn-outline.m-btn-info:hover, .m-btn-outline.m-btn-info:focus, .m-btn-outline.m-btn-info:active, .m-btn-outline.m-btn-info.active {
+.btn-outline.btn-info:hover, .btn-outline.btn-info:focus, .btn-outline.btn-info:active, .btn-outline.btn-info.active {
   color: #fff;
   background-color: #f38c10;
   border-color: transparent;
 }
-a:hover .m-btn-outline.m-btn-info, a:focus .m-btn-outline.m-btn-info, a:active .m-btn-outline.m-btn-info {
+a:hover .btn-outline.btn-info, a:focus .btn-outline.btn-info, a:active .btn-outline.btn-info {
   color: #fff;
   background-color: #f38c10;
   border-color: transparent;
 }
-.m-btn-outline.m-btn-important {
+.btn-outline.btn-important {
   color: inherit;
   background-color: transparent;
   border-color: #e33050;
 }
-.m-btn-outline.m-btn-important:hover, .m-btn-outline.m-btn-important:focus, .m-btn-outline.m-btn-important:active, .m-btn-outline.m-btn-important.active {
+.btn-outline.btn-important:hover, .btn-outline.btn-important:focus, .btn-outline.btn-important:active, .btn-outline.btn-important.active {
   color: #fff;
   background-color: #e33050;
   border-color: transparent;
 }
-a:hover .m-btn-outline.m-btn-important, a:focus .m-btn-outline.m-btn-important, a:active .m-btn-outline.m-btn-important {
+a:hover .btn-outline.btn-important, a:focus .btn-outline.btn-important, a:active .btn-outline.btn-important {
   color: #fff;
   background-color: #e33050;
   border-color: transparent;
@@ -1983,7 +2264,7 @@ a:hover .m-btn-outline.m-btn-important, a:focus .m-btn-outline.m-btn-important, 
 btn-(size)
 --------------------
 */
-.m-btn-sm {
+.btn-sm {
   padding-top: 0.25em;
   padding-bottom: 0.25em;
   font-size: 0.75rem;
@@ -1992,7 +2273,7 @@ btn-(size)
   padding-right: 0.5em;
 }
 
-.m-btn-lg {
+.btn-lg {
   padding-top: 0.75em;
   padding-bottom: 0.75em;
   font-size: 1rem;
@@ -2001,7 +2282,7 @@ btn-(size)
   padding-right: 1.5em;
 }
 
-.m-btn-xl {
+.btn-xl {
   padding-top: 0.75em;
   padding-bottom: 0.75em;
   font-size: 1.125rem;
@@ -2021,23 +2302,23 @@ note: Padding in button
 In .btn-block, .btn-round, .btn-square, need to override the default padding of .btn. For this reason, intentionally add classes to increase priority.
 --------------------
 */
-.m-btn-block {
+.btn-block {
   display: block;
   width: 100%;
   max-width: 240px;
   margin: 0 auto;
 }
-.m-btn-block.m-btn {
+.btn-block.btn {
   padding-left: .5rem;
   padding-right: .5rem;
 }
-.m-btn-block.m-btn-sm {
+.btn-block.btn-sm {
   max-width: 180px;
 }
-.m-btn-block.m-btn-lg {
+.btn-block.btn-lg {
   max-width: 320px;
 }
-.m-btn-block.m-btn-xl {
+.btn-block.btn-xl {
   max-width: 480px;
 }
 
@@ -2045,27 +2326,27 @@ In .btn-block, .btn-round, .btn-square, need to override the default padding of 
 btn-round
 --------------------
 */
-.m-btn-round {
+.btn-round {
   overflow: hidden;
   width: 2.5em;
   height: 2.5em;
   line-height: 2.5em;
   border-radius: 50%;
 }
-.m-btn-round.m-btn {
+.btn-round.btn {
   padding: 0;
 }
-.m-btn-round.m-btn-sm {
+.btn-round.btn-sm {
   width: 2em;
   height: 2em;
   line-height: 2em;
 }
-.m-btn-round.m-btn-lg {
+.btn-round.btn-lg {
   width: 3.75em;
   height: 3.75em;
   line-height: 3.75em;
 }
-.m-btn-round.m-btn-xl {
+.btn-round.btn-xl {
   width: 5em;
   height: 5em;
   line-height: 5em;
@@ -2075,27 +2356,27 @@ btn-round
 btn-square
 --------------------
 */
-.m-btn-square {
+.btn-square {
   overflow: hidden;
   width: 2.5em;
   height: 2.5em;
   line-height: 2.5em;
 }
-.m-btn-square.m-btn {
+.btn-square.btn {
   padding: 0;
   border-radius: 3px;
 }
-.m-btn-square.m-btn-sm {
+.btn-square.btn-sm {
   width: 1.5em;
   height: 1.5em;
   line-height: 1.5em;
 }
-.m-btn-square.m-btn-lg {
+.btn-square.btn-lg {
   width: 3.75em;
   height: 3.75em;
   line-height: 3.75em;
 }
-.m-btn-square.m-btn-xl {
+.btn-square.btn-xl {
   width: 5em;
   height: 5em;
   line-height: 5em;
@@ -2105,13 +2386,13 @@ btn-square
 checkbox
 --------------------
 */
-.m-checkbox {
+.checkbox {
   display: inline-block;
 }
-.m-checkbox.is-error, .is-error > .m-checkbox {
+.checkbox.is-error, .is-error > .checkbox {
   color: #d70022;
 }
-.m-checkbox input[type="checkbox"] {
+.checkbox input[type="checkbox"] {
   display: inline-block;
   margin: 0;
   vertical-align: middle;
@@ -2124,26 +2405,26 @@ checkbox
 dfn
 --------------------
 */
-.m-dfn {
+.dfn {
   display: inline-table;
 }
-.m-dfn .m-dfn-header {
+.dfn .dfn-header {
   display: table-cell;
   padding-right: .25em;
   font-size: 3em;
   font-weight: 300;
-  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
+  font-family: "PGYuGothic", "YuGothic", "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
   text-align: center;
   line-height: 1;
   vertical-align: middle;
   white-space: nowrap;
 }
 @media (min-width: 375px) {
-  .m-dfn .m-dfn-header {
+  .dfn .dfn-header {
     padding-right: .4em;
   }
 }
-.m-dfn .m-dfn-contents {
+.dfn .dfn-contents {
   display: table-cell;
   text-align: left;
   font-size: 0.875rem;
@@ -2156,21 +2437,21 @@ dfn
 embed
 --------------------
 */
-.m-embed {
+.embed {
   overflow: hidden;
   position: relative;
   display: block;
   background-color: #000;
   width: 100%;
 }
-.m-embed:before {
+.embed:before {
   display: block;
   content: "";
 }
-.m-embed iframe,
-.m-embed embed,
-.m-embed object,
-.m-embed video {
+.embed iframe,
+.embed embed,
+.embed object,
+.embed video {
   position: absolute;
   top: 0;
   left: 0;
@@ -2179,15 +2460,15 @@ embed
   border: 0;
 }
 
-.m-embed-4to3:before {
+.embed-4to3:before {
   padding-top: 75%;
 }
 
-.m-embed-16to9:before {
+.embed-16to9:before {
   padding-top: 56.25%;
 }
 
-.m-embed-21to9:before {
+.embed-21to9:before {
   padding-top: 42.85714%;
 }
 
@@ -2195,7 +2476,7 @@ embed
 input
 --------------------
 */
-.m-input {
+.input {
   padding: .375rem .5rem .25rem;
   background: #fff none;
   border: 1px solid #bbb;
@@ -2203,16 +2484,16 @@ input
   border-radius: 3px;
   vertical-align: middle;
 }
-.m-input.is-error, .is-error .m-input {
+.input.is-error, .is-error .input {
   background-color: #ffe9ee;
   border-color: #e33050;
   color: #d70022;
 }
-.m-input.m-input-sm {
+.input.input-sm {
   padding: .25rem;
   font-size: 0.875rem;
 }
-.m-input.m-input-lg {
+.input.input-lg {
   padding: .5rem .5rem;
   font-size: 1.125rem;
 }
@@ -2221,7 +2502,7 @@ input
 label
 --------------------
 */
-.m-label {
+.label {
   display: inline-block;
   min-width: 3em;
   margin-right: .5em;
@@ -2236,44 +2517,44 @@ label
   line-height: 1;
   vertical-align: middle;
 }
-a.m-label {
+a.label {
   color: #fff;
   text-decoration: none;
 }
-a.m-label:hover, a.m-label:focus, a.m-label:active {
+a.label:hover, a.label:focus, a.label:active {
   color: #fff;
   text-decoration: none;
 }
 
-.m-label-first {
+.label-first {
   background-color: #49d;
 }
 
-.m-label-second {
+.label-second {
   background-color: #444;
 }
 
-.m-label-third {
+.label-third {
   background-color: #49B070;
 }
 
-.m-label-fourth {
+.label-fourth {
   background-color: #f38c10;
 }
 
-.m-label-fifth {
+.label-fifth {
   background-color: #e33050;
 }
 
-.m-label-info {
+.label-info {
   background-color: #f38c10;
 }
 
-.m-label-important {
+.label-important {
   background-color: #e33050;
 }
 
-.m-label-round {
+.label-round {
   border-radius: 1em;
 }
 
@@ -2281,7 +2562,7 @@ a.m-label:hover, a.m-label:focus, a.m-label:active {
 list
 --------------------
 */
-.m-list {
+.list {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -2298,20 +2579,20 @@ list
   list-style-type: none;
 }
 
-.m-list-vertical .m-list-item {
+.list-vertical .m-list-item {
   margin-top: .75em;
   margin-bottom: .75em;
   padding-left: 1.25em;
   position: relative;
 }
-.m-list-vertical .m-list-item:before, .m-list-vertical .m-list-item:after {
+.list-vertical .m-list-item:before, .list-vertical .m-list-item:after {
   content: "";
   position: absolute;
   width: .5em;
   height: 2px;
   background-color: #888;
 }
-.m-list-vertical .m-list-item:before {
+.list-vertical .m-list-item:before {
   top: 55%;
   margin-left: -1px;
   -webkit-transform: rotate(40deg);
@@ -2319,37 +2600,37 @@ list
   -webkit-transform-origin: 100% 100%;
   transform-origin: 100% 100%;
 }
-.m-list-vertical .m-list-item:after {
+.list-vertical .m-list-item:after {
   top: 55%;
   -webkit-transform: rotate(-40deg);
   transform: rotate(-40deg);
   -webkit-transform-origin: 100% 100%;
   transform-origin: 100% 100%;
 }
-.m-list-vertical .m-list-item:before {
+.list-vertical .m-list-item:before {
   top: .65em;
   left: .25em;
 }
-.m-list-vertical .m-list-item:after {
+.list-vertical .m-list-item:after {
   top: .65em;
   left: .25em;
 }
-.m-list-vertical .m-list-children {
+.list-vertical .m-list-children {
   padding-left: 0;
 }
-.m-list-vertical .m-list-children .m-list-item {
+.list-vertical .m-list-children .m-list-item {
   font-size: .9em;
 }
 
-.m-list-horizontal {
+.list-horizontal {
   letter-spacing: -.4em;
 }
-.m-list-horizontal .m-list-item {
+.list-horizontal .m-list-item {
   display: inline-block;
   padding-right: 1em;
   letter-spacing: normal;
 }
-.m-list-horizontal .m-list-item:before {
+.list-horizontal .m-list-item:before {
   display: inline-block;
   content: "";
   width: 1px;
@@ -2358,10 +2639,10 @@ list
   background-color: #bbb;
   vertical-align: middle;
 }
-.m-list-horizontal .m-list-item:first-child:before {
+.list-horizontal .m-list-item:first-child:before {
   display: none;
 }
-.m-list-horizontal .m-list-item:last-child {
+.list-horizontal .m-list-item:last-child {
   padding-right: 0;
 }
 
@@ -2369,14 +2650,14 @@ list
 radio
 --------------------
 */
-.m-radio {
+.radio {
   position: relative;
   display: inline-block;
 }
-.m-radio.is-error, .is-error > .m-radio {
+.radio.is-error, .is-error > .radio {
   color: #d70022;
 }
-.m-radio input[type="radio"] {
+.radio input[type="radio"] {
   display: inline-block;
   margin: 0;
   vertical-align: middle;
@@ -2389,25 +2670,25 @@ radio
 select
 --------------------
 */
-.m-select {
+.select {
   display: inline-block;
   position: relative;
 }
-.m-select:before, .m-select:after {
+.select:before, .select:after {
   content: "";
   position: absolute;
   width: .5em;
   height: 2px;
   background-color: #888;
 }
-.m-select:before {
+.select:before {
   top: 55%;
   -webkit-transform: rotate(50deg);
   transform: rotate(50deg);
   -webkit-transform-origin: 100% 100%;
   transform-origin: 100% 100%;
 }
-.m-select:after {
+.select:after {
   top: 55%;
   margin-right: -1px;
   -webkit-transform: rotate(-50deg);
@@ -2415,15 +2696,15 @@ select
   -webkit-transform-origin: 0% 100%;
   transform-origin: 0% 100%;
 }
-.m-select:before {
+.select:before {
   right: 1em;
   z-index: 3;
 }
-.m-select:after {
+.select:after {
   right: .5em;
   z-index: 4;
 }
-.m-select select {
+.select select {
   position: relative;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2439,13 +2720,13 @@ select
   outline: none;
   z-index: 2;
 }
-.m-select select:focus {
+.select select:focus {
   background-color: #eaeaea;
 }
-.m-select.is-error, .is-error > .m-select {
+.select.is-error, .is-error > .select {
   background-color: #ffe9ee;
 }
-.m-select option {
+.select option {
   outline: none;
 }
 
@@ -2453,31 +2734,31 @@ select
 table
 --------------------
 */
-.m-table {
+.table {
   display: block;
   max-width: 100%;
   background-color: #fff;
   border: 0 none;
 }
 @media (min-width: 768px) {
-  .m-table {
+  .table {
     display: table;
   }
 }
-.m-table thead,
-.m-table tbody,
-.m-table tfoot {
+.table thead,
+.table tbody,
+.table tfoot {
   display: block;
 }
 @media (min-width: 768px) {
-  .m-table thead,
-  .m-table tbody,
-  .m-table tfoot {
+  .table thead,
+  .table tbody,
+  .table tfoot {
     display: table-row-group;
   }
 }
-.m-table th,
-.m-table td {
+.table th,
+.table td {
   display: block;
   width: 100%;
   line-height: 1.5;
@@ -2486,94 +2767,94 @@ table
   vertical-align: top;
 }
 @media (min-width: 768px) {
-  .m-table th,
-  .m-table td {
+  .table th,
+  .table td {
     display: table-cell;
     width: auto;
     padding-left: .5em;
     padding-right: .5em;
   }
 }
-.m-table tr {
+.table tr {
   display: block;
   border: 0 none;
 }
 @media (min-width: 768px) {
-  .m-table tr {
+  .table tr {
     display: table-row;
   }
 }
-.m-table tr th:first-child,
-.m-table tr td:first-child {
+.table tr th:first-child,
+.table tr td:first-child {
   padding-left: 0;
 }
-.m-table tr th:last-child,
-.m-table tr td:last-child {
+.table tr th:last-child,
+.table tr td:last-child {
   padding-right: 0;
 }
-.m-table thead {
+.table thead {
   border-bottom: 1px solid #bbb;
 }
-.m-table thead th {
+.table thead th {
   text-align: center;
   vertical-align: bottom;
 }
 
-.m-table-01 {
+.table-01 {
   border-top: 1px solid #bbb;
   border-left: 1px solid #bbb;
 }
-.m-table-01 th,
-.m-table-01 td {
+.table-01 th,
+.table-01 td {
   border-bottom: 1px solid #bbb;
   border-right: 1px solid #bbb;
   padding-top: .5em;
   padding-bottom: .5em;
 }
 
-.m-table-02 th,
-.m-table-02 td {
+.table-02 th,
+.table-02 td {
   border-bottom: 1px solid #bbb;
   padding-top: 1em;
   padding-bottom: .5em;
 }
-.m-table-02 tr th:first-child,
-.m-table-02 tr td:first-child {
+.table-02 tr th:first-child,
+.table-02 tr td:first-child {
   padding-left: 0;
 }
-.m-table-02 tr th:last-child,
-.m-table-02 tr td:last-child {
+.table-02 tr th:last-child,
+.table-02 tr td:last-child {
   padding-left: 0;
 }
 
 @media (min-width: 768px) {
-  .m-table-3to9 tr th,
-  .m-table-3to9 tr td {
+  .table-3to9 tr th,
+  .table-3to9 tr td {
     width: 75%;
   }
 }
 @media (min-width: 768px) {
-  .m-table-3to9 tr th:first-child,
-  .m-table-3to9 tr td:first-child {
+  .table-3to9 tr th:first-child,
+  .table-3to9 tr td:first-child {
     width: 25%;
   }
 }
 
 @media (min-width: 768px) {
-  .m-table-4to8 tr th,
-  .m-table-4to8 tr td {
+  .table-4to8 tr th,
+  .table-4to8 tr td {
     width: 66.66667%;
   }
 }
 @media (min-width: 768px) {
-  .m-table-4to8 tr th:first-child,
-  .m-table-4to8 tr td:first-child {
+  .table-4to8 tr th:first-child,
+  .table-4to8 tr td:first-child {
     width: 33.33333%;
   }
 }
 
 @media (min-width: 768px) {
-  .m-table-justify {
+  .table-justify {
     width: 100%;
     table-layout: fixed;
   }
@@ -2583,7 +2864,7 @@ table
 title
 --------------------
 */
-.m-title {
+.title {
   margin: 0;
   padding: 0;
   background: transparent none;
@@ -2593,84 +2874,84 @@ title
   line-height: 1.5;
   border-radius: 0;
 }
-.m-title:before, .m-title:after {
+.title:before, .title:after {
   display: none;
 }
 
-.m-title-01 {
+.title-01 {
   font-size: 2em;
   font-weight: 300;
-  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
+  font-family: "PGYuGothic", "YuGothic", "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
   letter-spacing: .1em;
 }
 @media (min-width: 425px) {
-  .m-title-01 {
+  .title-01 {
     font-size: 2.25em;
   }
 }
 @media (min-width: 1000px) {
-  .m-title-01 {
+  .title-01 {
     font-size: 2.5em;
   }
 }
 
-.m-title-02 {
+.title-02 {
   font-size: 1.5em;
   font-weight: 300;
-  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
+  font-family: "PGYuGothic", "YuGothic", "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
   letter-spacing: .1em;
 }
 @media (min-width: 425px) {
-  .m-title-02 {
+  .title-02 {
     font-size: 1.75em;
   }
 }
 @media (min-width: 1000px) {
-  .m-title-02 {
+  .title-02 {
     font-size: 1.75em;
   }
 }
 
-.m-title-03 {
+.title-03 {
   font-size: 1.25em;
   font-weight: 700;
   font-family: "PGYuGothic", "YuGothic", "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
 }
 @media (min-width: 1000px) {
-  .m-title-03 {
+  .title-03 {
     font-size: 1.5em;
   }
 }
 
-.m-title-04 {
+.title-04 {
   font-size: 1.125em;
   font-weight: 700;
   font-family: "PGYuGothic", "YuGothic", "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
 }
 @media (min-width: 1000px) {
-  .m-title-04 {
+  .title-04 {
     font-size: 1.25em;
   }
 }
 
-.m-title-05 {
+.title-05 {
   font-size: 1.0625em;
   font-weight: 700;
   font-family: "PGYuGothic", "YuGothic", "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
 }
 @media (min-width: 1000px) {
-  .m-title-05 {
+  .title-05 {
     font-size: 1.125em;
   }
 }
 
-.m-title-06 {
+.title-06 {
   font-size: 1em;
   font-weight: 700;
   font-family: "PGYuGothic", "YuGothic", "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
 }
 @media (min-width: 1000px) {
-  .m-title-06 {
+  .title-06 {
     font-size: 1.0625em;
   }
 }
@@ -2679,37 +2960,37 @@ title
 thumbnail
 --------------------
 */
-.m-thumbnail {
+.thumbnail {
   overflow: hidden;
   position: relative;
   display: inline-block;
   background: #fff;
   border: 1px solid #bbb;
 }
-.m-thumbnail img {
+.thumbnail img {
   display: block;
   margin: 0 auto;
   max-width: 100%;
   height: auto;
 }
 
-.m-thumbnail-round {
+.thumbnail-round {
   border-radius: 50%;
 }
 
-.m-thumbnail-square,
-.m-thumbnail-3to2,
-.m-thumbnail-4to3,
-.m-thumbnail-16to9,
-.m-thumbnail-ogimage {
+.thumbnail-square,
+.thumbnail-3to2,
+.thumbnail-4to3,
+.thumbnail-16to9,
+.thumbnail-ogimage {
   width: 100%;
   height: 0;
 }
-.m-thumbnail-square img,
-.m-thumbnail-3to2 img,
-.m-thumbnail-4to3 img,
-.m-thumbnail-16to9 img,
-.m-thumbnail-ogimage img {
+.thumbnail-square img,
+.thumbnail-3to2 img,
+.thumbnail-4to3 img,
+.thumbnail-16to9 img,
+.thumbnail-ogimage img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -2721,27 +3002,27 @@ thumbnail
   transform: translate(-50%, -50%);
 }
 
-.m-thumbnail-square {
+.thumbnail-square {
   padding-bottom: 100%;
 }
 
-.m-thumbnail-3to2 {
+.thumbnail-3to2 {
   padding-bottom: 66.66667%;
 }
 
-.m-thumbnail-4to3 {
+.thumbnail-4to3 {
   padding-bottom: 75%;
 }
 
-.m-thumbnail-16to9 {
+.thumbnail-16to9 {
   padding-bottom: 56.25%;
 }
 
-.m-thumbnail-ogimage {
+.thumbnail-ogimage {
   padding-bottom: 52.35602%;
 }
 
-.m-thumbnail-vertical img {
+.thumbnail-vertical img {
   width: auto;
   max-width: none;
   height: 102%;
@@ -2750,17 +3031,19 @@ thumbnail
 #document {
   /*doc
   ---
-  title: .bg-(color)
-  name: bg-1-color
-  category: utilities
+  title: bg-(color)
+  name: bg-01-color
+  category: utility-bg
   ---
   
-  背景に色をつける。オブジェクト・コンポーネントを可能な限り上書きする。.bgを付与する必要はない。
+  背景に色をつける。オブジェクト・コンポーネントを可能な限り上書きする。
   
   ``` example
   <div class="m-b p-sm bg-first">bg-first</div>
   <div class="m-b p-sm bg-second">bg-second</div>
   <div class="m-b p-sm bg-third">bg-third</div>
+  <div class="m-b p-sm bg-fourth">bg-fourth</div>
+  <div class="m-b p-sm bg-fifth">bg-fifth</div>
   <div class="m-b p-sm bg-info">bg-info</div>
   <div class="m-b p-sm bg-important">bg-important</div>
   ```
@@ -2768,9 +3051,9 @@ thumbnail
   */
   /*doc
   ---
-  title: .bg-mild
-  name: bg-2-mild
-  category: utilities
+  title: bg-mild
+  name: bg-02-mild
+  category: utility-bg
   ---
   
   .bg-(color)と併用すると背景色を弱める。オブジェクト・コンポーネントを可能な限り上書きする。.bgを付与する必要はない。
@@ -2779,6 +3062,8 @@ thumbnail
   <div class="m-b p-sm bg-first bg-mild">bg-first</div>
   <div class="m-b p-sm bg-second bg-mild">bg-second</div>
   <div class="m-b p-sm bg-third bg-mild">bg-third</div>
+  <div class="m-b p-sm bg-fourth bg-mild">bg-fourth</div>
+  <div class="m-b p-sm bg-fifth bg-mild">bg-fifth</div>
   <div class="m-b p-sm bg-info bg-mild">bg-info</div>
   <div class="m-b p-sm bg-important bg-mild">bg-important</div>
   ```
@@ -2786,9 +3071,9 @@ thumbnail
   */
   /*doc
   ---
-  title: .bg-fade
-  name: bg-3-fade
-  category: utilities
+  title: bg-fade
+  name: bg-03-fade
+  category: utility-bg
   ---
   
   .bg-(color)と併用すると背景色を薄くする。オブジェクト・コンポーネントを可能な限り上書きする。.bgを付与する必要はない。
@@ -2797,6 +3082,8 @@ thumbnail
   <div class="m-b p-sm bg-first bg-fade">bg-first</div>
   <div class="m-b p-sm bg-second bg-fade">bg-second</div>
   <div class="m-b p-sm bg-third bg-fade">bg-third</div>
+  <div class="m-b p-sm bg-fourth bg-fade">bg-fourth</div>
+  <div class="m-b p-sm bg-fifth bg-fade">bg-fifth</div>
   <div class="m-b p-sm bg-info bg-fade">bg-info</div>
   <div class="m-b p-sm bg-important bg-fade">bg-important</div>
   ```
@@ -2804,9 +3091,9 @@ thumbnail
   */
   /*doc
   ---
-  title: .bg-inverse
-  name: bg-4-inverse
-  category: utilities
+  title: bg-inverse
+  name: bg-04-inverse
+  category: utility-bg
   ---
   
   文字色と背景色を反転する。オブジェクト・コンポーネントを可能な限り上書きする。.bgを付与する必要はない。
@@ -2818,16 +3105,16 @@ thumbnail
   */
   /*doc
   ---
-  title: .clear
+  title: clear
   name: clear
-  category: utilities
+  category: utility-clear
   ---
   
   floatを解除する。
   
   ``` example
   <div class="float-l">
-      <div class="thumbnail">
+      <div class="m-thumbnail">
           <img src="https://placehold.jp/150x150.jpg?text=float-l" alt="">
       </div>
   </div>
@@ -2835,16 +3122,16 @@ thumbnail
   <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
   吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
   
-  <p class="clear">ここで解除_掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。<br>
+  <p class="clear">clear_掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。<br>
   第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</p>
   ```
   
   */
   /*doc
   ---
-  title: .clearfix
+  title: clearfix
   name: clearfix
-  category: utilities
+  category: utility-clearfix
   ---
   
   指定された包括要素が閉じられた時点でfloatを解除する。
@@ -2853,17 +3140,17 @@ thumbnail
   <div class="bg-first bg-fade clearfix">
   
   <div class="float-l">
-      <div class="thumbnail">
+      <div class="m-thumbnail">
           <img src="https://placehold.jp/100x100.jpg?text=float-l" alt="">
       </div>
   </div>
   <div class="float-l">
-      <div class="thumbnail">
+      <div class="m-thumbnail">
           <img src="https://placehold.jp/100x100.jpg?text=float-l" alt="">
       </div>
   </div>
   <div class="float-l">
-      <div class="thumbnail">
+      <div class="m-thumbnail">
           <img src="https://placehold.jp/100x100.jpg?text=float-l" alt="">
       </div>
   </div>
@@ -2873,22 +3160,22 @@ thumbnail
   
   </div>
   
-  <p>この直前でclearfix_この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+  <p>この前でclearfix_この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
   ```
   
   */
   /*doc
   ---
-  title: .float-(direction)
+  title: float-(direction)
   name: float-direction
-  category: utilities
+  category: utility-float
   ---
   
   指定した要素を(direction)で指示した方向に寄せる。
   
   ``` example
   <div class="float-l">
-      <div class="thumbnail">
+      <div class="m-thumbnail">
           <img src="https://placehold.jp/150x150.jpg?text=float-l" alt="">
       </div>
   </div>
@@ -2902,7 +3189,7 @@ thumbnail
   これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
   
   <div class="float-r">
-      <div class="thumbnail">
+      <div class="m-thumbnail">
           <img src="https://placehold.jp/150x150.jpg?text=float-r" alt="">
       </div>
   </div>
@@ -2919,12 +3206,12 @@ thumbnail
   */
   /*doc
   ---
-  title: .font-(face)
-  name: font-1-face
-  category: utilities
+  title: font-(face)
+  name: font-01-face
+  category: utility-font
   ---
   
-  フォントを変更する。オブジェクト・コンポーネントを可能な限り上書きする。.fontを付与する必要はない。
+  フォントを変更する。オブジェクト・コンポーネントを可能な限り上書きする。
   
   ``` example
   <p class="text-xl font-first">font-first_デザインフォント01に変更しました</p>
@@ -2938,74 +3225,72 @@ thumbnail
   /*doc
   ---
   title: .font-bold
-  name: font-2-bold
-  category: utilities
+  name: font-02-bold
+  category: utility-font
   ---
   
-  ボールドフォントに変更する。日本語ウェブフォントサービスを利用した場合、font-weightだけでは変更ができないため、別途クラスが必要となる。
+  ボールドフォントに変更する。日本語ウェブフォントサービスを利用した場合、font-weightだけではウェイトの変更ができないため、別途クラスが必要となる。
   
   ``` example
   <p class="text-xl font-first font-bold">font-first_font-bold_デザインフォント01に変更しました</p>
-  <p class="text-xl font-secondfont-bold">font-second_font-bold_デザインフォント02に変更しました</p>
-  <p class="text-xl font-thirdfont-bold">font-third_font-bold_デザインフォント03に変更しました</p>
-  <p class="text-xl font-firstfont-bold">ここはデザインフォント01ですが、<span class="font-root font-bold">font-root_font-bold_ここからbody要素のフォントに変更しました</span></p>
+  <p class="text-xl font-second font-bold">font-second_font-bold_デザインフォント02に変更しました</p>
+  <p class="text-xl font-third font-bold">font-third_font-bold_デザインフォント03に変更しました</p>
+  <p class="text-xl font-first font-bold">ここはデザインフォント01ですが、<span class="font-root font-bold">font-root_font-bold_ここからbody要素のフォントに変更しました</span></p>
   <p class="text-xl font-mono font-bold">font-mono_font-bold_等幅フォントに変更しました &lt;p class="font-mono font-bold"&gt;hello world!&lt;/p&gt;</p>
   ```
   
   */
   /*doc
   ---
-  title: .hidden
+  title: hidden
   name: hidden
-  category: utilities
+  category: utility-hidden
   ---
   
-  常に要素を非表示にする。音声読み上げに対応する場合は.srを使用すること。
+  常に要素を非表示にする。スクリーンリーダーに対応する場合は <code>.sr</code> を使用すること。
   
   */
   /*doc
   ---
-  title: .hidden-(breakpoint)-up
-  name: hidden-1-breakpoint-up
-  category: utilities
-  parent: hidden
+  title: hidden-(breakpoint)-up
+  name: hidden-01-breakpoint-up
+  category: utility-hidden
   ---
   
   (breakpoint)で指定した画面幅以上で要素を非表示にする。特性上、hidden-xs-upはない。
   
   ``` example
-  <div class="hidden-sm-up m-b-sm"><span class="btn btn-first">hidden-sm-up</span></div>
-  <div class="hidden-md-up m-b-sm"><span class="btn btn-second">hidden-md-up</span></div>
-  <div class="hidden-lg-up m-b-sm"><span class="btn btn-third">hidden-lg-up</span></div>
-  <div class="hidden-xl-up m-b-sm"><span class="btn btn-important">hidden-xl-up</span></div>
-  <div class="hidden-xxl-up m-b-sm"><span class="btn">hidden-xxl-up</span></div>
+  <div class="hidden-sm-up m-b-sm"><span class="m-btn m-btn-first">hidden-sm-up</span></div>
+  <div class="hidden-md-up m-b-sm"><span class="m-btn m-btn-second">hidden-md-up</span></div>
+  <div class="hidden-lg-up m-b-sm"><span class="m-btn m-btn-third">hidden-lg-up</span></div>
+  <div class="hidden-xl-up m-b-sm"><span class="m-btn m-btn-important">hidden-xl-up</span></div>
+  <div class="hidden-xxl-up m-b-sm"><span class="m-btn">hidden-xxl-up</span></div>
   ```
   
   */
   /*doc
   ---
   title: .hidden-(breakpoint)-down
-  name: hidden-2-breakpoint-down
-  category: utilities
-  parent: hidden
+  name: hidden-02-breakpoint-down
+  category: utility-hidden
   ---
   
   (breakpoint)で指定した画面幅未満で要素を非表示にする。特性上、hidden-xxl-downはない。
   
   ``` example
-  <div class="hidden-xs-down m-b-sm"><span class="btn btn-first">hidden-xs-down</span></div>
-  <div class="hidden-sm-down m-b-sm"><span class="btn btn-second">hidden-sm-down</span></div>
-  <div class="hidden-md-down m-b-sm"><span class="btn btn-third">hidden-md-down</span></div>
-  <div class="hidden-lg-down m-b-sm"><span class="btn btn-important">hidden-lg-down</span></div>
-  <div class="hidden-xl-down m-b-sm"><span class="btn">hidden-xl-down</span></div>
+  <div class="hidden-xs-down m-b-sm"><span class="m-btn m-btn-first">hidden-xs-down</span></div>
+  <div class="hidden-sm-down m-b-sm"><span class="m-btn m-btn-second">hidden-sm-down</span></div>
+  <div class="hidden-md-down m-b-sm"><span class="m-btn m-btn-third">hidden-md-down</span></div>
+  <div class="hidden-lg-down m-b-sm"><span class="m-btn m-btn-important">hidden-lg-down</span></div>
+  <div class="hidden-xl-down m-b-sm"><span class="m-btn">hidden-xl-down</span></div>
   ```
   
   */
   /*doc
   ---
-  title: .img-responsive
+  title: img-responsive
   name: img-responsive
-  category: utilities
+  category: utility-img
   ---
   
   画像が包括要素よりも大きくなった場合のみ、縦横比を保って伸縮させる。
@@ -3017,9 +3302,9 @@ thumbnail
   */
   /*doc
   ---
-  title: .img-fill
+  title: img-fill
   name: img-fill
-  category: utilities
+  category: utility-img
   ---
   
   画像の大きさに関係なく、常に包括要素の幅いっぱいに伸縮させる。
@@ -3031,23 +3316,9 @@ thumbnail
   */
   /*doc
   ---
-  title: .img-round
-  name: img-round
-  category: utilities
-  ---
-  
-  正方形の画像を正円にする。
-  
-  ``` example
-  <img src="https://placehold.jp/200x200.jpg?text=img-round" alt="" class="img-round">
-  ```
-  
-  */
-  /*doc
-  ---
-  title: .line-(direction)
-  name: line-1-direction
-  category: utilities
+  title: line-(direction)
+  name: line-01-direction
+  category: utility-line
   ---
   
   ブロック要素内の文章を指定した方向へ寄せる。
@@ -3065,12 +3336,13 @@ thumbnail
   */
   /*doc
   ---
-  title: .line-(size)
-  name: line-2-size
-  category: utilities
+  title: line-(size)
+  name: line-02-size
+  category: utility-line
   ---
   
-  文章を指定した行高さに変更する。
+  文章を指定した行高さに変更する。 <code>none, sm, md, lg</code> に対応している。  
+  行間を最低にするクラスは、0ではなく <code>none</code> である点に注意。
   
   ``` example
   <p class="line-none">line-none_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
@@ -3081,14 +3353,16 @@ thumbnail
   */
   /*doc
   ---
-  title: .m-(direction)-(size)
+  title: m-(direction)-(size)
   name: m
-  category: utilities
+  category: utility-m
   ---
   
   ブロック要素の外部余白を変更する。
   
   ``` example
+  <div class="m-a bg-first bg-fade p-xs" style="border: 1px solid #ccc; width: 50%;">m-a</div>
+  
   <div class="m-xs bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-xs</div>
   <div class="m-t-xs bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-t-xs</div>
   <div class="m-r-xs bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-r-xs</div>
@@ -3128,9 +3402,9 @@ thumbnail
   */
   /*doc
   ---
-  title: .p-(direction)-(size)
+  title: p-(direction)-(size)
   name: p
-  category: utilities
+  category: utility-p
   ---
   
   ブロック要素の内部余白を変更する。
@@ -3148,7 +3422,7 @@ thumbnail
   <div class="p-b-sm bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-b-sm</div></div>
   <div class="p-l-sm bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-l-sm</div></div>
   
-  <div class="m bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">m</div></div>
+  <div class="p bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p</div></div>
   <div class="p-t bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-t</div></div>
   <div class="p-r bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-r</div></div>
   <div class="p-b bg-third bg-fade m-b-xs"><div style="border: 1px solid #ccc;">p-b</div></div>
@@ -3175,12 +3449,13 @@ thumbnail
   */
   /*doc
   ---
-  title: .position-(directionY)-(directionX)
+  title: position-(y)-(x)
   name: position
-  category: utilities
+  category: utility-position
   ---
   
-  ブロック要素を親要素の指定した位置に絶対配置する。親要素にposition:relativeを指定している必要がある。
+  ブロック要素を親要素の指定した位置に絶対配置する。  
+  親要素に <code>position:relative</code> を指定している必要がある。
   
   ``` example
   <div>position-tl</div>
@@ -3213,40 +3488,75 @@ thumbnail
   */
   /*doc
   ---
-  title: .shadow-(size)
+  title: shadow-(size)
   name: shadow
-  category: utilities
+  category: utility-shadow
   ---
   
-  要素に影をつける。サイズによって、背景との擬似的な距離が変わる。
+  要素に影をつける。
   
   ``` example
-  <p><a href="#" class="btn btn-first btn-block shadow shadow-sm">shadow-sm</a></p>
-  <p><a href="#" class="btn btn-first btn-block shadow">shadow</a></p>
-  <p><a href="#" class="btn btn-first btn-block shadow shadow-lg">shadow-lg</a></p>
+  <p><a href="#" class="m-btn m-btn-first m-btn-block shadow">shadow</a></p>
   ```
   */
   /*doc
   ---
-  title: .sr
+  title: shadow-(size)
+  name: shadow-01-size
+  category: utility-shadow
+  ---
+  
+  影をつけた要素と背景の、擬似的な距離を変更する。
+  
+  ``` example
+  <p><a href="#" class="m-btn m-btn-first m-btn-block shadow shadow-sm">shadow-sm</a></p>
+  <p><a href="#" class="m-btn m-btn-first m-btn-block shadow shadow-lg">shadow-lg</a></p>
+  ```
+  */
+  /*doc
+  ---
+  title: sr
   name: sr
-  category: utilities
+  category: utility-sr
   ---
   
-  要素内の文章をスクリーンリーダーに反応するよう、外見のみ非表示にする。  
-  .sr-focusは要素そのもの、.sr-focus-innerは包括する要素にフォーカスしたときに表示される。
+  要素内の文章をスクリーンリーダーに反応するよう、外見のみ非表示にする。
   
   ``` example
-  <p><a href="#" class="btn btn-third btn-round">&raquo; sr <span class="sr">この文字は表示されません</span></a></p>
-  <p>sr-focus <input type="button" class="sr sr-focus" value="フォーカスしましたね" /></p>
-  <p><a href="#" class="btn btn-fifth sr-focus-inner">&raquo; sr-focus-inner <span class="sr">フォーカスしましたね</span></a></p>
+  <p><a href="#" class="m-btn m-btn-first m-btn-round">&raquo; sr <span class="sr">この文字は表示されません</span></a></p>
   ```
   */
   /*doc
   ---
-  title: .text-(color)
-  name: text-1-color
-  category: utilities
+  title: sr-focus
+  name: sr-01-focus
+  category: utility-sr
+  ---
+  
+  要素そのものにフォーカスしたときにテキストが表示される。
+  
+  ``` example
+  <p>sr-focus -> <input type="button" class="sr-focus" value="フォーカスしましたね" /></p>
+  ```
+  */
+  /*doc
+  ---
+  title: sr-focus-inner
+  name: sr-02-focus-inner
+  category: utility-sr
+  ---
+  
+  包括要素にフォーカスしたときにテキストが表示される。
+  
+  ``` example
+  <p><a href="#" class="m-btn m-btn-second sr-focus-inner">&raquo; sr-focus-inner <span class="sr">フォーカスしましたね</span></a></p>
+  ```
+  */
+  /*doc
+  ---
+  title: text-(color)
+  name: text-01-color
+  category: utility-text
   ---
   
   文字色を変更する。
@@ -3255,33 +3565,37 @@ thumbnail
   <p class="text-first">text-first_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
   <p class="text-second">text-second_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
   <p class="text-third">text-third_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+  <p class="text-fourth">text-fourth_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+  <p class="text-fifth">text-fifth_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
   <p class="text-important">text-important_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
   <p class="text-info">text-info_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
   ```
   */
   /*doc
   ---
-  title: .text-mild
-  name: text-2-mild
-  category: utilities
+  title: text-mild
+  name: text-02-mild
+  category: utility-text
   ---
   
-  文字色を弱める。.text-(color)と併用すると、指定した色を弱める。
+  文字色を弱める。 <code>.text-(color)</code> と併用すると、指定した色を弱める。
   
   ``` example
   <p class="text-mild">text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
   <p class="text-first text-mild">text-first_text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
   <p class="text-second text-mild">text-second_text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
   <p class="text-third text-mild">text-third_text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+  <p class="text-fourth text-mild">text-fourth_text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+  <p class="text-fifth text-mild">text-fifth_text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
   <p class="text-info text-mild">text-info_text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
   <p class="text-important text-mild">text-important_text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
   ```
   */
   /*doc
   ---
-  title: .text-inverse
-  name: text-3-inverse
-  category: utilities
+  title: text-inverse
+  name: text-03-inverse
+  category: utility-text
   ---
   
   文字色を反転する（背景色を文字色とする）。
@@ -3294,12 +3608,13 @@ thumbnail
   */
   /*doc
   ---
-  title: .text-(size)
-  name: text
-  category: utilities
+  title: text-(size)
+  name: text-04-size
+  category: utility-text
   ---
   
-  文字サイズを変更する。単位が**rem**ではなく、**em**である点に注意。
+  文字サイズを変更する。  
+  <code>.text-md</code> 以外は、単位が <code>rem</code> ではなく <code>em</code> （要素の文字サイズからの相対値）である点に注意。
   
   ``` example
   <p class="text-xxs">text-xxs_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
@@ -3452,11 +3767,11 @@ thumbnail
   font-family: "Consolas", "Liberation Mono", "Menlo", "Courier", monospace;
 }
 #document .font-first {
-  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
+  font-family: "PGYuGothic", "YuGothic", "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
   font-weight: 300;
 }
 #document .font-first .font-bold {
-  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
+  font-family: "PGYuGothic", "YuGothic", "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
   font-weight: 700;
 }
 #document .font-second {
@@ -3468,11 +3783,11 @@ thumbnail
   font-weight: 700;
 }
 #document .font-third {
-  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
+  font-family: "PGYuGothic", "YuGothic", "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
   font-weight: 300;
 }
 #document .font-third .font-bold {
-  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
+  font-family: "PGYuGothic", "YuGothic", "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
   font-weight: 700;
 }
 #document .hidden {
@@ -3501,12 +3816,12 @@ thumbnail
     display: none;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1240px) {
   #document .hidden-xl-up {
     display: none;
   }
 }
-@media (min-width: 1600px) {
+@media (min-width: 1640px) {
   #document .hidden-xxl-up {
     display: none;
   }
@@ -3536,12 +3851,12 @@ thumbnail
     display: none;
   }
 }
-@media (max-width: 1279.9px) {
+@media (max-width: 1239.9px) {
   #document .hidden-lg-down {
     display: none;
   }
 }
-@media (max-width: 1599.9px) {
+@media (max-width: 1639.9px) {
   #document .hidden-xl-down {
     display: none;
   }
@@ -3553,9 +3868,6 @@ thumbnail
 #document .img-fill {
   width: 100%;
   height: auto;
-}
-#document .img-round {
-  border-radius: 50%;
 }
 #document .line-l {
   text-align: left;
@@ -3577,6 +3889,10 @@ thumbnail
 }
 #document .line-lg {
   line-height: 2;
+}
+#document .m-a {
+  margin-right: auto;
+  margin-left: auto;
 }
 #document .m-0 {
   margin: 0;
@@ -3982,6 +4298,16 @@ thumbnail
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
+#document .sr-focus {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
 #document .sr-focus:focus, #document .sr-focus:active {
   position: static;
   width: auto;
@@ -3989,6 +4315,16 @@ thumbnail
   margin: 0;
   overflow: visible;
   clip: auto;
+}
+#document .sr-focus-inner .sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 #document .sr-focus-inner:focus .sr, #document .sr-focus-inner:active .sr {
   position: static;
@@ -4059,7 +4395,7 @@ thumbnail
   font-size: .875em;
 }
 #document .text-md {
-  font-size: 1em;
+  font-size: 1rem;
 }
 #document .text-lg {
   font-size: 1.125em;
@@ -4069,119 +4405,4 @@ thumbnail
 }
 #document .text-xxl {
   font-size: 1.5em;
-}
-
-/*doc
----
-title: .header
-name: p-1-header
-category: project
----
-
-ヘッダを表示する。
-
-*/
-.header {
-  padding: 20px 0;
-}
-
-/*doc
----
-title: .header-brand
-name: p-1-header-1-brand
-category: project
-parent: p-1-header
----
-
-ブランドロゴを表示する。
-
-*/
-.header-brand {
-  margin: 0;
-  text-align: center;
-  line-height: 1;
-}
-@media (min-width: 1000px) {
-  .header-brand {
-    text-align: left;
-  }
-}
-
-/*doc
----
-title: .header-title
-name: p-1-header-2-title
-category: project
-parent: p-1-header
----
-
-サイトタイトルを表示する。
-
-*/
-.header-title {
-  font-size: 1.5rem;
-}
-
-/*doc
----
-title: .globalnav
-name: p-2-globalnav
-category: project
----
-
-グローバルナビゲーションを表示する。.nav-horizontalを含む。
-
-*/
-.globalnav {
-  width: 100%;
-  background-color: #fff;
-  line-height: 1;
-}
-.globalnav .nav-horizontal {
-  display: block;
-  width: 100%;
-}
-.globalnav .nav-horizontal > ul {
-  margin-left: auto;
-  margin-right: auto;
-}
-.globalnav.is-active {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  z-index: 99;
-}
-
-/*doc
----
-title: .footer
-name: p-3-footer
-category: project
----
-
-フッタを表示する。
-
-*/
-.footer {
-  padding: 20px 0 60px;
-  font-size: 0.75rem;
-  text-align: center;
-}
-
-/*doc
----
-title: .footer-copyright
-name: p-3-footer-1-copyright
-category: project
-parent: p-3-footer
----
-
-コピーライト文を表示する。
-
-*/
-.footer-copyright {
-  margin: 0;
-  font-size: 0.75rem;
 }

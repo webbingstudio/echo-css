@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>utility-clearfix | Style guide | echo-css</title>
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div class="l-document" id="document">
+
+    <header class="s-header">
+        <div class="s-container s-container-fluid">
+
+            <div class="s-header-brand">
+                <p class="s-header-title title title-03">echo-css <span class="label label-info">v0.0.5</span></p>
+            </div><!-- /.s-header-brand -->
+
+            <?php include('../doc_include/header_nav.inc'); ?>
+
+        </div><!-- /.s-container -->
+    </header>
+
+    <div class="s-container s-container-fluid">
+        <div class="s-contents s-contents-2col">
+            <main class="s-contents-main" role="main">
+
+                
+                <div class="s-page-header page-header">
+                    <h1 class="page-title title s-title-01">utility-clearfix</h1>
+                </div><!-- /.page-header -->
+                
+
+                
+
+                <article class="s-post post">
+                    <div class="post-contents styleguide-contents"><h1 id="clearfix" class="styleguide">clearfix</h1>
+  
+
+<p>指定された包括要素が閉じられた時点でfloatを解除する。</p>
+<div class="example">  <div class="bg-first bg-fade clearfix">
+
+  <div class="float-l">
+      <div class="m-thumbnail">
+          <img src="https://placehold.jp/100x100.jpg?text=float-l" alt="">
+      </div>
+  </div>
+  <div class="float-l">
+      <div class="m-thumbnail">
+          <img src="https://placehold.jp/100x100.jpg?text=float-l" alt="">
+      </div>
+  </div>
+  <div class="float-l">
+      <div class="m-thumbnail">
+          <img src="https://placehold.jp/100x100.jpg?text=float-l" alt="">
+      </div>
+  </div>
+
+  <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+  吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+
+  </div>
+
+  <p>この前でclearfix_この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+</div><div class="codeblock"><pre>  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-first bg-fade clearfix"</span><span class="nt">&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"float-l"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placehold.jp/100x100.jpg?text=float-l"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"float-l"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placehold.jp/100x100.jpg?text=float-l"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"float-l"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placehold.jp/100x100.jpg?text=float-l"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;p&gt;</span>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;br&gt;</span>
+  吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<span class="nt">&lt;/p&gt;</span>
+
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;p&gt;</span>この前でclearfix_この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。<span class="nt">&lt;/p&gt;</span>
+</pre></div>                    </div><!-- /.post-contents -->
+                </article><!-- /.post -->
+
+            </main>
+            <div class="s-contents-sub" role="complementary">
+                <h2 class="title title-04 m-b">Style guide</h2>
+                <nav class="s-sitemap nav nav-vertical">
+                    <?php include('../doc_include/menu_styleguide.inc'); ?>
+                </nav>
+            </div>
+        </div><!-- /.s-contents -->
+    </div><!-- /.s-container -->
+
+    <?php include('../doc_include/footer.inc'); ?>
+
+</div><!-- /.l-document -->
+</body>
+</html>

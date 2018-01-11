@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>utility-bg | Style guide | echo-css</title>
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div class="l-document" id="document">
+
+    <header class="s-header">
+        <div class="s-container s-container-fluid">
+
+            <div class="s-header-brand">
+                <p class="s-header-title title title-03">echo-css <span class="label label-info">v0.0.5</span></p>
+            </div><!-- /.s-header-brand -->
+
+            <?php include('../doc_include/header_nav.inc'); ?>
+
+        </div><!-- /.s-container -->
+    </header>
+
+    <div class="s-container s-container-fluid">
+        <div class="s-contents s-contents-2col">
+            <main class="s-contents-main" role="main">
+
+                
+                <div class="s-page-header page-header">
+                    <h1 class="page-title title s-title-01">utility-bg</h1>
+                </div><!-- /.page-header -->
+                
+
+                
+                <nav class="s-anchor">
+                    <ul class="list list-horizontal">
+                        
+                        <li class="list-item"><a href="#bg-01-color" class="js-scrollto">bg-(color)</a></li>
+                        
+                        <li class="list-item"><a href="#bg-02-mild" class="js-scrollto">bg-mild</a></li>
+                        
+                        <li class="list-item"><a href="#bg-03-fade" class="js-scrollto">bg-fade</a></li>
+                        
+                        <li class="list-item"><a href="#bg-04-inverse" class="js-scrollto">bg-inverse</a></li>
+                        
+                    </ul>
+                </nav>
+                
+
+                <article class="s-post post">
+                    <div class="post-contents styleguide-contents"><h1 id="bg-01-color" class="styleguide">bg-(color)</h1>
+  
+
+<p>背景に色をつける。オブジェクト・コンポーネントを可能な限り上書きする。</p>
+<div class="example">  <div class="m-b p-sm bg-first">bg-first</div>
+  <div class="m-b p-sm bg-second">bg-second</div>
+  <div class="m-b p-sm bg-third">bg-third</div>
+  <div class="m-b p-sm bg-fourth">bg-fourth</div>
+  <div class="m-b p-sm bg-fifth">bg-fifth</div>
+  <div class="m-b p-sm bg-info">bg-info</div>
+  <div class="m-b p-sm bg-important">bg-important</div>
+</div><div class="codeblock"><pre>  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-b p-sm bg-first"</span><span class="nt">&gt;</span>bg-first<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-b p-sm bg-second"</span><span class="nt">&gt;</span>bg-second<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-b p-sm bg-third"</span><span class="nt">&gt;</span>bg-third<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-b p-sm bg-fourth"</span><span class="nt">&gt;</span>bg-fourth<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-b p-sm bg-fifth"</span><span class="nt">&gt;</span>bg-fifth<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-b p-sm bg-info"</span><span class="nt">&gt;</span>bg-info<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-b p-sm bg-important"</span><span class="nt">&gt;</span>bg-important<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+<h1 id="bg-02-mild" class="styleguide">bg-mild</h1>
+  
+
+<p>.bg-(color)と併用すると背景色を弱める。オブジェクト・コンポーネントを可能な限り上書きする。.bgを付与する必要はない。</p>
+<div class="example">  <div class="m-b p-sm bg-first bg-mild">bg-first</div>
+  <div class="m-b p-sm bg-second bg-mild">bg-second</div>
+  <div class="m-b p-sm bg-third bg-mild">bg-third</div>
+  <div class="m-b p-sm bg-fourth bg-mild">bg-fourth</div>
+  <div class="m-b p-sm bg-fifth bg-mild">bg-fifth</div>
+  <div class="m-b p-sm bg-info bg-mild">bg-info</div>
+  <div class="m-b p-sm bg-important bg-mild">bg-important</div>
+</div><div class="codeblock"><pre>  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-b p-sm bg-first bg-mild"</span><span class="nt">&gt;</span>bg-first<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-b p-sm bg-second bg-mild"</span><span class="nt">&gt;</span>bg-second<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-b p-sm bg-third bg-mild"</span><span class="nt">&gt;</span>bg-third<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-b p-sm bg-fourth bg-mild"</span><span class="nt">&gt;</span>bg-fourth<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-b p-sm bg-fifth bg-mild"</span><span class="nt">&gt;</span>bg-fifth<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-b p-sm bg-info bg-mild"</span><span class="nt">&gt;</span>bg-info<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-b p-sm bg-important bg-mild"</span><span class="nt">&gt;</span>bg-important<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+<h1 id="bg-03-fade" class="styleguide">bg-fade</h1>
+  
+
+<p>.bg-(color)と併用すると背景色を薄くする。オブジェクト・コンポーネントを可能な限り上書きする。.bgを付与する必要はない。</p>
+<div class="example">  <div class="m-b p-sm bg-first bg-fade">bg-first</div>
+  <div class="m-b p-sm bg-second bg-fade">bg-second</div>
+  <div class="m-b p-sm bg-third bg-fade">bg-third</div>
+  <div class="m-b p-sm bg-fourth bg-fade">bg-fourth</div>
+  <div class="m-b p-sm bg-fifth bg-fade">bg-fifth</div>
+  <div class="m-b p-sm bg-info bg-fade">bg-info</div>
+  <div class="m-b p-sm bg-important bg-fade">bg-important</div>
+</div><div class="codeblock"><pre>  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-b p-sm bg-first bg-fade"</span><span class="nt">&gt;</span>bg-first<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-b p-sm bg-second bg-fade"</span><span class="nt">&gt;</span>bg-second<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-b p-sm bg-third bg-fade"</span><span class="nt">&gt;</span>bg-third<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-b p-sm bg-fourth bg-fade"</span><span class="nt">&gt;</span>bg-fourth<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-b p-sm bg-fifth bg-fade"</span><span class="nt">&gt;</span>bg-fifth<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-b p-sm bg-info bg-fade"</span><span class="nt">&gt;</span>bg-info<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-b p-sm bg-important bg-fade"</span><span class="nt">&gt;</span>bg-important<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+<h1 id="bg-04-inverse" class="styleguide">bg-inverse</h1>
+  
+
+<p>文字色と背景色を反転する。オブジェクト・コンポーネントを可能な限り上書きする。.bgを付与する必要はない。</p>
+<div class="example">  <div class="p-sm bg-inverse">bg-inverse</div>
+</div><div class="codeblock"><pre>  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-sm bg-inverse"</span><span class="nt">&gt;</span>bg-inverse<span class="nt">&lt;/div&gt;</span>
+</pre></div>                    </div><!-- /.post-contents -->
+                </article><!-- /.post -->
+
+            </main>
+            <div class="s-contents-sub" role="complementary">
+                <h2 class="title title-04 m-b">Style guide</h2>
+                <nav class="s-sitemap nav nav-vertical">
+                    <?php include('../doc_include/menu_styleguide.inc'); ?>
+                </nav>
+            </div>
+        </div><!-- /.s-contents -->
+    </div><!-- /.s-container -->
+
+    <?php include('../doc_include/footer.inc'); ?>
+
+</div><!-- /.l-document -->
+</body>
+</html>
