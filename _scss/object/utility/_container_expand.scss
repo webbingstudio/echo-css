@@ -1,0 +1,29 @@
+/*doc
+---
+title: #{$p}#{$u}container-expand
+name: container-expand
+category: utility-container-expand
+---
+
+コンテナブロックの最大幅を無視して、要素の背景とボーダーのみをウィンドウ全体に広げる。  
+仕様上、2カラム以上のレイアウトでは使用できない。  
+<code>.#{$p}#{$l}document</code> の幅制限を解除していると、横スクロールバーが表示されてしまう。
+
+``` example
+<div class="#{$p}#{$l}container #{$p}#{$u}bg-first #{$p}#{$u}bg-mild #{$p}#{$u}m-b #{$p}#{$u}p">
+    <div class="#{$p}#{$u}p-y #{$p}#{$u}line-c #{$p}#{$u}m-b" style="background-color: rgba(255,255,255,.5); color: #000">(#{$p}#{$l}container + contents)</div>
+
+    <div class="#{$p}#{$u}container-expand #{$p}#{$u}bg-third #{$p}#{$u}bg-mild">
+        <div class="#{$p}#{$u}p-y #{$p}#{$u}line-c" style="background-color: rgba(255,255,255,.5); color: #000">(#{$p}#{$l}container + #{$p}#{$u}container-expand + contents)</div>
+    </div>
+</div>
+```
+
+*/
+
+.#{$p}#{$u}container-expand {
+    margin-left: -9999px;
+    margin-right: -9999px;
+    padding-left: 9999px;
+    padding-right: 9999px;
+}

@@ -3166,6 +3166,28 @@ thumbnail
   */
   /*doc
   ---
+  title: container-expand
+  name: container-expand
+  category: utility-container-expand
+  ---
+  
+  コンテナブロックの最大幅を無視して、要素の背景とボーダーのみをウィンドウ全体に広げる。  
+  仕様上、2カラム以上のレイアウトでは使用できない。  
+  <code>.l-document</code> の幅制限を解除していると、横スクロールバーが表示されてしまう。
+  
+  ``` example
+  <div class="l-container bg-first bg-mild m-b p">
+      <div class="p-y line-c m-b" style="background-color: rgba(255,255,255,.5); color: #000">(l-container + contents)</div>
+  
+      <div class="container-expand bg-third bg-mild">
+          <div class="p-y line-c" style="background-color: rgba(255,255,255,.5); color: #000">(l-container + container-expand + contents)</div>
+      </div>
+  </div>
+  ```
+  
+  */
+  /*doc
+  ---
   title: float-(direction)
   name: float-direction
   category: utility-float
@@ -3748,6 +3770,12 @@ thumbnail
 }
 #document .clearfix:after {
   clear: both;
+}
+#document .container-expand {
+  margin-left: -9999px;
+  margin-right: -9999px;
+  padding-left: 9999px;
+  padding-right: 9999px;
 }
 #document .float-l {
   float: left;
