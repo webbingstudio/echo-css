@@ -1,19 +1,32 @@
-/*
-badge
---------------------
+/*doc
+---
+title: #{$p}#{$m}badge
+name: badge
+category: module-badge
+---
+
+新着アイコンなどに使用する、バッジを表示する。英数字のみが入ることが前提となっている。
+
+``` example
+<p>
+  <span class="#{$p}#{$m}badge">Badge</span>
+</p>
+```
+
 */
 
-.#{$p}badge {
+.#{$p}#{$m}badge {
     overflow: hidden;
     display: inline-block;
-    padding: 2em .5em .5em;
+    min-width: 5em;
+    padding: 1em .5em .25em;
     border-radius: 0 0 $border-radius-md $border-radius-md;
     background: $body-bg;
     color: $body-color;
     border: $border-width solid $border-color;
+    font-size: .8em;
     font-family: $font-family-second;
     font-weight: $font-weight-second;
-    text-transform: uppercase;
     letter-spacing: .1em;
     text-align: center;
     line-height: $line-height-none;
@@ -21,43 +34,67 @@ badge
     vertical-align: middle;
 }
 
-.#{$p}badge-first {
+/*doc
+---
+title: #{$p}#{$m}badge-(color)
+name: badge-01-color
+category: module-badge
+parent: badge
+---
+
+バッジの色を変更する。(color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
+
+``` example
+<p>
+  <span class="#{$p}#{$m}badge #{$p}#{$m}badge-first">First</span>
+  <span class="#{$p}#{$m}badge #{$p}#{$m}badge-second">Second</span>
+  <span class="#{$p}#{$m}badge #{$p}#{$m}badge-third">Third</span>
+  <span class="#{$p}#{$m}badge #{$p}#{$m}badge-fourth">Fourth</span>
+  <span class="#{$p}#{$m}badge #{$p}#{$m}badge-fifth">Fifth</span>
+  <span class="#{$p}#{$m}badge #{$p}#{$m}badge-info">Info</span>
+  <span class="#{$p}#{$m}badge #{$p}#{$m}badge-important">Important</span>
+</p>
+```
+
+*/
+
+.#{$p}#{$m}badge-first {
     color: $body-inverse-color;
     border-color: $first;
     background-color: $first;
 }
 
-.#{$p}badge-second {
+.#{$p}#{$m}badge-second {
     color: $body-inverse-color;
     border-color: $second;
     background-color: $second;
 }
 
-.#{$p}badge-third {
+.#{$p}#{$m}badge-third {
     color: $body-inverse-color;
     border-color: $third;
     background-color: $third;
 }
 
-.#{$p}badge-fourth {
+.#{$p}#{$m}badge-fourth {
     color: $body-inverse-color;
     border-color: $fourth;
     background-color: $fourth;
 }
 
-.#{$p}badge-fifth {
+.#{$p}#{$m}badge-fifth {
     color: $body-inverse-color;
     border-color: $fifth;
     background-color: $fifth;
 }
 
-.#{$p}badge-info {
+.#{$p}#{$m}badge-info {
     color: $body-inverse-color;
     border-color: $third;
     background-color: $third;
 }
 
-.#{$p}badge-important {
+.#{$p}#{$m}badge-important {
     color: $body-inverse-color;
     border-color: $important;
     background-color: $important;
