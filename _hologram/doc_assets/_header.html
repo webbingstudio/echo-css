@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title><% if title %><%= title %> | <% end %>スタイルガイド | <%= @config['styleguide_name'] %></title>
+    <title><% if title %><%= title %> | <% end %>Style guide | <%= @config['styleguide_name'] %></title>
 
     <link rel="stylesheet" href="../css/echo.min.css<?php echo '?var=' . date('%Y%m%d%H%m%s'); ?>">
     <link rel="stylesheet" href="../css/styles.css<?php echo '?var=' . date('%Y%m%d%H%m%s'); ?>">
@@ -22,7 +22,24 @@
 <body>
 <div class="l-document" id="document">
 
-    <?php include('./include/header.inc'); ?>
+    <header class="s-header">
+        <div class="s-container s-container-fluid">
+
+            <div class="s-header-brand">
+                <p class="s-header-title title title-03"><%= @config['styleguide_name'] %> <span class="label label-info">v0.0.5</span></p>
+            </div><!-- /.s-header-brand -->
+
+            <nav class="s-header-nav nav nav-horizontal">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="../">Home</a></li>
+                    <li class="nav-item"><a href="../documentation/">Documentation</a></li>
+                    <li class="nav-item"><a href="../examples/">Examples</a></li>
+                    <li class="nav-item is-current"><a href="./styleguide/">Style guide</a></li>
+                </ul>
+            </nav><!-- /.s-header-nav -->
+
+        </div><!-- /.s-container -->
+    </header>
 
     <div class="s-container s-container-fluid">
         <div class="s-contents s-contents-2col">
