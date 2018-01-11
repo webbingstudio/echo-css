@@ -6,17 +6,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title><% if title %><%= title %> | <% end %>Style guide | <%= @config['styleguide_name'] %></title>
 
-    <link rel="stylesheet" href="../css/echo.min.css<?php echo '?var=' . date('%Y%m%d%H%m%s'); ?>">
-    <link rel="stylesheet" href="../css/styles.css<?php echo '?var=' . date('%Y%m%d%H%m%s'); ?>">
-
-    <script
-        src="https://code.jquery.com/jquery-2.2.4.min.js"
-        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-        crossorigin="anonymous"></script>
-    <script src="./js/scrollto.min.js<?php echo '?var=' . date('%Y%m%d%H%m%s'); ?>"></script>
-    <script src="./js/fixnav.min.js<?php echo '?var=' . date('%Y%m%d%H%m%s'); ?>"></script>
-
-    <link rel="stylesheet" href="./css/styleguide.css<?php echo '?var=' . date('%Y%m%d%H%m%s'); ?>">
+    <?php include('../doc_include/html_head.inc'); ?>
 
 </head>
 <body>
@@ -26,17 +16,10 @@
         <div class="s-container s-container-fluid">
 
             <div class="s-header-brand">
-                <p class="s-header-title title title-03"><%= @config['styleguide_name'] %> <span class="label label-info">v0.0.5</span></p>
+                <p class="s-header-title title title-03"><%= @config['styleguide_name'] %> <span class="label label-info">v<%= @config['styleguide_version'] %></span></p>
             </div><!-- /.s-header-brand -->
 
-            <nav class="s-header-nav nav nav-horizontal">
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="../">Home</a></li>
-                    <li class="nav-item"><a href="../documentation/">Documentation</a></li>
-                    <li class="nav-item"><a href="../examples/">Examples</a></li>
-                    <li class="nav-item is-current"><a href="./styleguide/">Style guide</a></li>
-                </ul>
-            </nav><!-- /.s-header-nav -->
+            <?php include('../doc_include/header_nav.inc'); ?>
 
         </div><!-- /.s-container -->
     </header>
@@ -49,7 +32,9 @@
                 <div class="s-page-header page-header">
                     <h1 class="page-title title s-title-01"><%= title %></h1>
                 </div><!-- /.page-header -->
+                <% end %>
 
+                <% if @blocks.length > 1 then %>
                 <nav class="s-anchor">
                     <ul class="list list-horizontal">
                         <% @blocks.each do |block| %>
