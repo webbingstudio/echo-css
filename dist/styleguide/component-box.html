@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>component-box | Style guide | echo-css</title>
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div class="l-document" id="document">
+
+    <header class="s-header">
+        <div class="s-container s-container-fluid">
+
+            <div class="s-header-brand">
+                <p class="s-header-title title title-03">echo-css <span class="label label-info">v0.0.5</span></p>
+            </div><!-- /.s-header-brand -->
+
+            <?php include('../doc_include/header_nav.inc'); ?>
+
+        </div><!-- /.s-container -->
+    </header>
+
+    <div class="s-container s-container-fluid">
+        <div class="s-contents s-contents-2col">
+            <main class="s-contents-main" role="main">
+
+                
+                <div class="s-page-header page-header">
+                    <h1 class="page-title title s-title-01">component-box</h1>
+                </div><!-- /.page-header -->
+                
+
+                
+                <nav class="s-anchor">
+                    <ul class="list list-horizontal">
+                        
+                        <li class="list-item"><a href="#box" class="js-scrollto">c-box</a></li>
+                        
+                        <li class="list-item"><a href="#box-01-color" class="js-scrollto">c-box-(color)</a></li>
+                        
+                        <li class="list-item"><a href="#box-02-outline" class="js-scrollto">c-box-outline</a></li>
+                        
+                    </ul>
+                </nav>
+                
+
+                <article class="s-post post">
+                    <div class="post-contents styleguide-contents"><h1 id="box" class="styleguide">c-box</h1>
+
+<p>ブロック要素を網掛けで囲んで、箱状に強調する。</p>
+<div class="example"><div class="c-box">
+    <p>c-box_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+    <p>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+</div>
+</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-box"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>c-box_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;br&gt;</span>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+<h2 id="box-01-color" class="styleguide">c-box-(color)</h2>
+
+<p>箱の色を変更する。(color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。</p>
+<div class="example"><div class="c-box c-box-first">
+    <p>c-box-first_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+    <p>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+</div>
+
+<div class="c-box c-box-second">
+    <p>c-box-second_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+    <p>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+</div>
+
+<div class="c-box c-box-third">
+    <p>c-box-third_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+    <p>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+</div>
+
+<div class="c-box c-box-info">
+    <p>c-box-info_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+    <p>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+</div>
+
+<div class="c-box c-box-important">
+    <p>c-box-important_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+    <p>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+</div>
+</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-box c-box-first"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>c-box-first_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;br&gt;</span>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-box c-box-second"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>c-box-second_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;br&gt;</span>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-box c-box-third"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>c-box-third_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;br&gt;</span>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-box c-box-info"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>c-box-info_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;br&gt;</span>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-box c-box-important"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>c-box-important_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;br&gt;</span>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+<h2 id="box-02-outline" class="styleguide">c-box-outline</h2>
+
+<p>箱を網掛けではなく、罫線にする。同時に(color)を指定すると罫線の色が変わる。</p>
+<div class="example"><div class="c-box c-box-outline">
+    <p>c-box-outline_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+    <p>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+</div>
+
+<div class="c-box c-box-outline c-box-first">
+    <p>c-box-first_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+    <p>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+</div>
+
+<div class="c-box c-box-outline c-box-second">
+    <p>c-box-second_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+    <p>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+</div>
+
+<div class="c-box c-box-outline c-box-third">
+    <p>c-box-third_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+    <p>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+</div>
+
+<div class="c-box c-box-outline c-box-info">
+    <p>c-box-info_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+    <p>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+</div>
+
+<div class="c-box c-box-outline c-box-important">
+    <p>c-box-important_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+    <p>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+</div>
+</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-box c-box-outline"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>c-box-outline_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;br&gt;</span>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-box c-box-outline c-box-first"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>c-box-first_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;br&gt;</span>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-box c-box-outline c-box-second"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>c-box-second_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;br&gt;</span>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-box c-box-outline c-box-third"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>c-box-third_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;br&gt;</span>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-box c-box-outline c-box-info"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>c-box-info_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;br&gt;</span>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-box c-box-outline c-box-important"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>c-box-important_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;br&gt;</span>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>                    </div><!-- /.post-contents -->
+                </article><!-- /.post -->
+
+            </main>
+            <div class="s-contents-sub" role="complementary">
+                <h2 class="title title-04 m-b">Style guide</h2>
+                <nav class="s-sitemap nav nav-vertical">
+                    <?php include('../doc_include/menu_styleguide.inc'); ?>
+                </nav>
+            </div>
+        </div><!-- /.s-contents -->
+    </div><!-- /.s-container -->
+
+    <?php include('../doc_include/footer.inc'); ?>
+
+</div><!-- /.l-document -->
+</body>
+</html>

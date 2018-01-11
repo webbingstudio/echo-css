@@ -25,7 +25,6 @@
                     <li class="nav-item"><a href="./module-select.html">select</a></li>
                     <li class="nav-item"><a href="./module-label.html">label</a></li>
                     <li class="nav-item"><a href="./module-badge.html">badge</a></li>
-                    <li class="nav-item"><a href="./module-box.html">box</a></li>
                     <li class="nav-item"><a href="./module-list.html">list</a></li>
                     <li class="nav-item"><a href="./module-table.html">table</a></li>
                     <li class="nav-item"><a href="./module-dfn.html">dfn</a></li>
@@ -35,6 +34,7 @@
             </li>
             <li class="nav-item"><span class="nav-label">component</span>
                 <ul class="nav-list nav-chidren">
+                    <li class="nav-item"><a href="./component-box.html">box</a></li>
                     <li class="nav-item"><a href="./component-alert.html">alert</a></li>
                     <li class="nav-item"><a href="./component-backtotop.html">backtotop</a></li>
                     <li class="nav-item"><a href="./component-block.html">block</a></li>

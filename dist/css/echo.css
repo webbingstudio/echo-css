@@ -1809,21 +1809,34 @@ parent: 02-col
 ```
 
 */
-/*
-badge
---------------------
+/*doc
+---
+title: m-badge
+name: badge
+category: module-badge
+---
+
+新着アイコンなどに使用する、バッジを表示する。英数字のみが入ることが前提となっている。
+
+``` example
+<p>
+  <span class="m-badge">Badge</span>
+</p>
+```
+
 */
-.badge {
+.m-badge {
   overflow: hidden;
   display: inline-block;
-  padding: 2em .5em .5em;
+  min-width: 5em;
+  padding: 1em .5em .25em;
   border-radius: 0 0 3px 3px;
   background: #fff;
   color: #333;
   border: 1px solid #bbb;
+  font-size: .8em;
   font-family: "Helvetica", "Roboto", "-apple-system", "Open Sans", "Arial", sans-serif;
   font-weight: 300;
-  text-transform: uppercase;
   letter-spacing: .1em;
   text-align: center;
   line-height: 1;
@@ -1831,136 +1844,69 @@ badge
   vertical-align: middle;
 }
 
-.badge-first {
+/*doc
+---
+title: m-badge-(color)
+name: badge-01-color
+category: module-badge
+parent: badge
+---
+
+バッジの色を変更する。(color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
+
+``` example
+<p>
+  <span class="m-badge m-badge-first">First</span>
+  <span class="m-badge m-badge-second">Second</span>
+  <span class="m-badge m-badge-third">Third</span>
+  <span class="m-badge m-badge-fourth">Fourth</span>
+  <span class="m-badge m-badge-fifth">Fifth</span>
+  <span class="m-badge m-badge-info">Info</span>
+  <span class="m-badge m-badge-important">Important</span>
+</p>
+```
+
+*/
+.m-badge-first {
   color: #fff;
   border-color: #49d;
   background-color: #49d;
 }
 
-.badge-second {
+.m-badge-second {
   color: #fff;
   border-color: #444;
   background-color: #444;
 }
 
-.badge-third {
+.m-badge-third {
   color: #fff;
   border-color: #49B070;
   background-color: #49B070;
 }
 
-.badge-fourth {
+.m-badge-fourth {
   color: #fff;
   border-color: #f38c10;
   background-color: #f38c10;
 }
 
-.badge-fifth {
+.m-badge-fifth {
   color: #fff;
   border-color: #e33050;
   background-color: #e33050;
 }
 
-.badge-info {
+.m-badge-info {
   color: #fff;
   border-color: #49B070;
   background-color: #49B070;
 }
 
-.badge-important {
+.m-badge-important {
   color: #fff;
   border-color: #e33050;
   background-color: #e33050;
-}
-
-/*
-box
---------------------
-*/
-.box {
-  position: relative;
-  margin-bottom: 20px;
-  padding: 20px;
-  border: 2px solid transparent;
-  background-color: #eaeaea;
-  border-radius: 3px;
-}
-.box:before, .box:after {
-  content: "";
-  display: table;
-}
-.box:after {
-  clear: both;
-}
-@media (min-width: 768px) {
-  .box {
-    padding: 30px;
-  }
-}
-@media (min-width: 1240px) {
-  .box {
-    margin-bottom: 30px;
-  }
-}
-.box p:last-child,
-.box ul:last-child,
-.box ol:last-child,
-.box dl:last-child {
-  margin-bottom: 0;
-}
-
-.box-first {
-  background-color: rgba(68, 153, 221, 0.2);
-}
-
-.box-second {
-  background-color: #eaeaea;
-}
-
-.box-third {
-  background-color: rgba(73, 176, 112, 0.2);
-}
-
-.box-fourth {
-  background-color: rgba(243, 140, 16, 0.2);
-}
-
-.box-fifth {
-  background-color: #ffe9ee;
-}
-
-.box-info {
-  background-color: rgba(243, 140, 16, 0.2);
-}
-
-.box-important {
-  background-color: #ffe9ee;
-}
-
-.box-outline {
-  background-color: #fff;
-  border-color: #bbb;
-}
-.box-outline.box-first {
-  border-color: #73b0e1;
-}
-.box-outline.box-second {
-  border-color: #777;
-}
-.box-outline.box-third {
-  border-color: #70bc8d;
-}
-.box-outline.box-fourth {
-  border-color: #f0a346;
-}
-.box-outline.box-fifth {
-  border-color: #e75f77;
-}
-.box-outline.box-info {
-  border-color: #f0a346;
-}
-.box-outline.box-important {
-  border-color: #e75f77;
 }
 
 /*
@@ -3028,6 +2974,214 @@ thumbnail
   height: 102%;
 }
 
+/*doc
+---
+title: c-box
+name: box
+category: component-box
+---
+
+ブロック要素を網掛けで囲んで、箱状に強調する。
+
+``` example
+<div class="c-box">
+    <p>c-box_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+    <p>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+</div>
+```
+
+*/
+.c-box {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 2px solid transparent;
+  background-color: #eaeaea;
+  border-radius: 3px;
+}
+.c-box:before, .c-box:after {
+  content: "";
+  display: table;
+}
+.c-box:after {
+  clear: both;
+}
+@media (min-width: 768px) {
+  .c-box {
+    padding: 30px;
+  }
+}
+@media (min-width: 1240px) {
+  .c-box {
+    margin-bottom: 30px;
+  }
+}
+.c-box p:last-child,
+.c-box ul:last-child,
+.c-box ol:last-child,
+.c-box dl:last-child {
+  margin-bottom: 0;
+}
+
+/*doc
+---
+title: c-box-(color)
+name: box-01-color
+category: component-box
+parent: box
+---
+
+箱の色を変更する。(color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
+
+``` example
+<div class="c-box c-box-first">
+    <p>c-box-first_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+    <p>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+</div>
+
+<div class="c-box c-box-second">
+    <p>c-box-second_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+    <p>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+</div>
+
+<div class="c-box c-box-third">
+    <p>c-box-third_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+    <p>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+</div>
+
+<div class="c-box c-box-info">
+    <p>c-box-info_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+    <p>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+</div>
+
+<div class="c-box c-box-important">
+    <p>c-box-important_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+    <p>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+</div>
+```
+
+*/
+.c-box-first {
+  background-color: rgba(68, 153, 221, 0.2);
+}
+
+.c-box-second {
+  background-color: #eaeaea;
+}
+
+.c-box-third {
+  background-color: rgba(73, 176, 112, 0.2);
+}
+
+.c-box-fourth {
+  background-color: rgba(243, 140, 16, 0.2);
+}
+
+.c-box-fifth {
+  background-color: #ffe9ee;
+}
+
+.c-box-info {
+  background-color: rgba(243, 140, 16, 0.2);
+}
+
+.c-box-important {
+  background-color: #ffe9ee;
+}
+
+/*doc
+---
+title: c-box-outline
+name: box-02-outline
+category: component-box
+parent: box
+---
+
+箱を網掛けではなく、罫線にする。同時に(color)を指定すると罫線の色が変わる。
+
+``` example
+<div class="c-box c-box-outline">
+    <p>c-box-outline_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+    <p>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+</div>
+
+<div class="c-box c-box-outline c-box-first">
+    <p>c-box-first_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+    <p>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+</div>
+
+<div class="c-box c-box-outline c-box-second">
+    <p>c-box-second_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+    <p>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+</div>
+
+<div class="c-box c-box-outline c-box-third">
+    <p>c-box-third_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+    <p>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+</div>
+
+<div class="c-box c-box-outline c-box-info">
+    <p>c-box-info_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+    <p>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+</div>
+
+<div class="c-box c-box-outline c-box-important">
+    <p>c-box-important_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+    <p>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+</div>
+```
+
+*/
+.c-box-outline {
+  background-color: #fff;
+  border-color: #bbb;
+}
+.c-box-outline.c-box-first {
+  border-color: #73b0e1;
+}
+.c-box-outline.c-box-second {
+  border-color: #777;
+}
+.c-box-outline.c-box-third {
+  border-color: #70bc8d;
+}
+.c-box-outline.c-box-fourth {
+  border-color: #f0a346;
+}
+.c-box-outline.c-box-fifth {
+  border-color: #e75f77;
+}
+.c-box-outline.c-box-info {
+  border-color: #f0a346;
+}
+.c-box-outline.c-box-important {
+  border-color: #e75f77;
+}
+
 #document {
   /*doc
   ---
@@ -3036,7 +3190,8 @@ thumbnail
   category: utility-bg
   ---
   
-  背景に色をつける。オブジェクト・コンポーネントを可能な限り上書きする。
+  背景に色をつける。オブジェクト・コンポーネントを可能な限り上書きする。  
+  (color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
   
   ``` example
   <div class="m-b p-sm bg-first">bg-first</div>
@@ -3581,7 +3736,7 @@ thumbnail
   category: utility-text
   ---
   
-  文字色を変更する。
+  文字色を変更する。(color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
   
   ``` example
   <p class="text-first">text-first_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
