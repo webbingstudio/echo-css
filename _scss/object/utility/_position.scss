@@ -1,61 +1,62 @@
 /*doc
 ---
-title: .#{$p}position-(directionY)-(directionX)
+title: #{$p}#{$u}position-(y)-(x)
 name: position
-category: utilities
+category: utility-position
 ---
 
-ブロック要素を親要素の指定した位置に絶対配置する。親要素にposition:relativeを指定している必要がある。
+ブロック要素を親要素の指定した位置に絶対配置する。  
+親要素に <code>position:relative</code> を指定している必要がある。
 
 ``` example
-<div>position-tl</div>
-<div class="bg-first bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="position-tl" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+<div>#{$p}#{$u}position-tl</div>
+<div class="#{$p}#{$u}bg-first #{$p}#{$u}bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="#{$p}#{$u}position-tl" style="background-color: #333; width: 10px; height: 10px;"></span></div>
 
-<div>position-tc</div>
-<div class="bg-first bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="position-tc" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+<div>#{$p}#{$u}position-tc</div>
+<div class="#{$p}#{$u}bg-first #{$p}#{$u}bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="#{$p}#{$u}position-tc" style="background-color: #333; width: 10px; height: 10px;"></span></div>
 
-<div>position-tr</div>
-<div class="bg-first bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="position-tr" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+<div>#{$p}#{$u}position-tr</div>
+<div class="#{$p}#{$u}bg-first #{$p}#{$u}bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="#{$p}#{$u}position-tr" style="background-color: #333; width: 10px; height: 10px;"></span></div>
 
-<div>position-cl</div>
-<div class="bg-second bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="position-cl" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+<div>#{$p}#{$u}position-cl</div>
+<div class="#{$p}#{$u}bg-second #{$p}#{$u}bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="#{$p}#{$u}position-cl" style="background-color: #333; width: 10px; height: 10px;"></span></div>
 
-<div>position-cc</div>
-<div class="bg-second bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="position-cc" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+<div>#{$p}#{$u}position-cc</div>
+<div class="#{$p}#{$u}bg-second #{$p}#{$u}bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="#{$p}#{$u}position-cc" style="background-color: #333; width: 10px; height: 10px;"></span></div>
 
-<div>position-cr</div>
-<div class="bg-second bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="position-cr" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+<div>#{$p}#{$u}position-cr</div>
+<div class="#{$p}#{$u}bg-second #{$p}#{$u}bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="#{$p}#{$u}position-cr" style="background-color: #333; width: 10px; height: 10px;"></span></div>
 
-<div>position-bl</div>
-<div class="bg-third bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="position-bl" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+<div>#{$p}#{$u}position-bl</div>
+<div class="#{$p}#{$u}bg-third #{$p}#{$u}bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="#{$p}#{$u}position-bl" style="background-color: #333; width: 10px; height: 10px;"></span></div>
 
-<div>position-bc</div>
-<div class="bg-third bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="position-bc" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+<div>#{$p}#{$u}position-bc</div>
+<div class="#{$p}#{$u}bg-third #{$p}#{$u}bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="#{$p}#{$u}position-bc" style="background-color: #333; width: 10px; height: 10px;"></span></div>
 
-<div>position-br</div>
-<div class="bg-third bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="position-br" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+<div>#{$p}#{$u}position-br</div>
+<div class="#{$p}#{$u}bg-third #{$p}#{$u}bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="#{$p}#{$u}position-br" style="background-color: #333; width: 10px; height: 10px;"></span></div>
 ```
 */
 
-.#{$p}position-tl,
-.#{$p}position-tc,
-.#{$p}position-tr,
-.#{$p}position-cl,
-.#{$p}position-cc,
-.#{$p}position-cr,
-.#{$p}position-bl,
-.#{$p}position-bc,
-.#{$p}position-br {
+.#{$p}#{$u}position-tl,
+.#{$p}#{$u}position-tc,
+.#{$p}#{$u}position-tr,
+.#{$p}#{$u}position-cl,
+.#{$p}#{$u}position-cc,
+.#{$p}#{$u}position-cr,
+.#{$p}#{$u}position-bl,
+.#{$p}#{$u}position-bc,
+.#{$p}#{$u}position-br {
     position: absolute;
     z-index: 99;
 }
 
-.#{$p}position-tl {
+.#{$p}#{$u}position-tl {
     top: 0;
     left: 0;
 }
 
-.#{$p}position-tc {
+.#{$p}#{$u}position-tc {
     top: 0;
     left: 50%;
     -webkit-transform:translate(-50%, 0);
@@ -63,12 +64,12 @@ category: utilities
     transform:translate(-50%, 0);
 }
 
-.#{$p}position-tr {
+.#{$p}#{$u}position-tr {
     top: 0;
     right: 0;
 }
 
-.#{$p}position-cl {
+.#{$p}#{$u}position-cl {
     top: 50%;
     left: 0;
     -webkit-transform:translate(0, -50%);
@@ -76,7 +77,7 @@ category: utilities
     transform:translate(0, -50%);
 }
 
-.#{$p}position-cc {
+.#{$p}#{$u}position-cc {
     top: 50%;
     left: 50%;
     -webkit-transform:translate(-50%, 0);
@@ -84,7 +85,7 @@ category: utilities
     transform:translate(-50%, 0);
 }
 
-.#{$p}position-cr {
+.#{$p}#{$u}position-cr {
     top: 50%;
     right: 0;
     -webkit-transform:translate(0, -50%);
@@ -92,12 +93,12 @@ category: utilities
     transform:translate(0, -50%);
 }
 
-.#{$p}position-bl {
+.#{$p}#{$u}position-bl {
     bottom: 0;
     left: 0;
 }
 
-.#{$p}position-bc {
+.#{$p}#{$u}position-bc {
     bottom: 0;
     left: 50%;
     -webkit-transform:translate(-50%, 0);
@@ -105,7 +106,7 @@ category: utilities
     transform:translate(-50%, 0);
 }
 
-.#{$p}position-br {
+.#{$p}#{$u}position-br {
     bottom: 0;
     right: 0;
 }

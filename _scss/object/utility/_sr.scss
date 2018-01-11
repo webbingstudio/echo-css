@@ -1,21 +1,18 @@
 /*doc
 ---
-title: .#{$p}sr
+title: #{$p}#{$u}sr
 name: sr
-category: utilities
+category: utility-sr
 ---
 
-要素内の文章をスクリーンリーダーに反応するよう、外見のみ非表示にする。  
-.sr-focusは要素そのもの、.sr-focus-innerは包括する要素にフォーカスしたときに表示される。
+要素内の文章をスクリーンリーダーに反応するよう、外見のみ非表示にする。
 
 ``` example
-<p><a href="#" class="btn btn-third btn-round">&raquo; sr <span class="sr">この文字は表示されません</span></a></p>
-<p>sr-focus <input type="button" class="sr sr-focus" value="フォーカスしましたね" /></p>
-<p><a href="#" class="btn btn-fifth sr-focus-inner">&raquo; sr-focus-inner <span class="sr">フォーカスしましたね</span></a></p>
+<p><a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-first #{$p}#{$m}btn-round">&raquo; #{$p}#{$u}sr <span class="#{$p}#{$u}sr">この文字は表示されません</span></a></p>
 ```
 */
 
-.#{$p}sr {
+.#{$p}#{$u}sr {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -26,9 +23,32 @@ category: utilities
     border: 0;
 }
 
-.#{$p}sr-focus {
 
-  &:focus,
+/*doc
+---
+title: #{$p}#{$u}sr-focus
+name: sr-01-focus
+category: utility-sr
+---
+
+要素そのものにフォーカスしたときにテキストが表示される。
+
+``` example
+<p>#{$p}#{$u}sr-focus -> <input type="button" class="#{$p}#{$u}sr-focus" value="フォーカスしましたね" /></p>
+```
+*/
+
+.#{$p}#{$u}sr-focus {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+
+    &:focus,
     &:active {
         position: static;
         width: auto;
@@ -40,12 +60,38 @@ category: utilities
 
 }
 
-.#{$p}sr-focus-inner {
+
+/*doc
+---
+title: #{$p}#{$u}sr-focus-inner
+name: sr-02-focus-inner
+category: utility-sr
+---
+
+包括要素にフォーカスしたときにテキストが表示される。
+
+``` example
+<p><a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-second #{$p}#{$u}sr-focus-inner">&raquo; #{$p}#{$u}sr-focus-inner <span class="#{$p}#{$u}sr">フォーカスしましたね</span></a></p>
+```
+*/
+
+.#{$p}#{$u}sr-focus-inner {
+
+    .#{$p}#{$u}sr {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+    }
 
     &:focus,
     &:active {
 
-        .#{$p}sr {
+        .#{$p}#{$u}sr {
             position: static;
             width: auto;
             height: auto;

@@ -1,47 +1,48 @@
 /*doc
 ---
-title: .#{$p}text-(size)
-name: text
-category: utilities
+title: #{$p}#{$u}text-(size)
+name: text-04-size
+category: utility-text
 ---
 
-文字サイズを変更する。単位が**rem**ではなく、**em**である点に注意。
+文字サイズを変更する。  
+<code>.#{$p}#{$u}text-md</code> 以外は、単位が <code>rem</code> ではなく <code>em</code> （要素の文字サイズからの相対値）である点に注意。
 
 ``` example
-<p class="text-xxs">text-xxs_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="text-xs">text-xs_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="text-sm">text-sm_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$p}#{$u}text-xxs">#{$p}#{$u}text-xxs_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$p}#{$u}text-xs">#{$p}#{$u}text-xs_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$p}#{$u}text-sm">#{$p}#{$u}text-sm_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
 
-<p class="text-lg">text-lg_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="text-xl">text-xl_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="text-xxl">text-xxl_吾輩は猫である。<span class="text-md">名前はまだ無い。text-md_どこで生れたか</span>とんと見当がつかぬ。</p>
+<p class="#{$p}#{$u}text-lg">#{$p}#{$u}text-lg_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$p}#{$u}text-xl">#{$p}#{$u}text-xl_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$p}#{$u}text-xxl">#{$p}#{$u}text-xxl_吾輩は猫である。<span class="#{$p}#{$u}text-md">名前はまだ無い。#{$p}#{$u}text-md_どこで生れたか</span>とんと見当がつかぬ。</p>
 ```
 */
 
-.#{$p}text-xxs {
+.#{$p}#{$u}text-xxs {
     font-size: .625em;
 }
 
-.#{$p}text-xs {
+.#{$p}#{$u}text-xs {
     font-size: .75em;
 }
 
-.#{$p}text-sm {
+.#{$p}#{$u}text-sm {
     font-size: .875em;
 }
 
-.#{$p}text-md {
-    font-size: 1em;
+.#{$p}#{$u}text-md {
+    font-size: 1rem;
 }
 
-.#{$p}text-lg {
+.#{$p}#{$u}text-lg {
     font-size: 1.125em;
 }
 
-.#{$p}text-xl {
+.#{$p}#{$u}text-xl {
     font-size: 1.25em;
 }
 
-.#{$p}text-xxl {
+.#{$p}#{$u}text-xxl {
     font-size: 1.5em;
 }

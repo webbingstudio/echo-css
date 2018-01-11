@@ -1,38 +1,38 @@
 /*doc
 ---
-title: .#{$p}font-(face)
-name: font-1-face
-category: utilities
+title: #{$p}#{$u}font-(face)
+name: font-01-face
+category: utility-font
 ---
 
-フォントを変更する。オブジェクト・コンポーネントを可能な限り上書きする。.#{$p}fontを付与する必要はない。
+フォントを変更する。オブジェクト・コンポーネントを可能な限り上書きする。
 
 ``` example
-<p class="#{$p}text-xl #{$p}font-first">#{$p}font-first_デザインフォント01に変更しました</p>
-<p class="#{$p}text-xl #{$p}font-second">#{$p}font-second_デザインフォント02に変更しました</p>
-<p class="#{$p}text-xl #{$p}font-third">#{$p}font-third_デザインフォント03に変更しました</p>
-<p class="#{$p}text-xl #{$p}font-first">ここはデザインフォント01ですが、<span class="#{$p}font-root">#{$p}font-root_ここからbody要素のフォントに変更しました</span></p>
-<p class="#{$p}text-xl #{$p}font-mono">#{$p}font-mono_等幅フォントに変更しました &lt;p class="#{$p}font-mono"&gt;hello world!&lt;/p&gt;</p>
+<p class="#{$p}#{$u}text-xl #{$p}#{$u}font-first">#{$p}#{$u}font-first_デザインフォント01に変更しました</p>
+<p class="#{$p}#{$u}text-xl #{$p}#{$u}font-second">#{$p}#{$u}font-second_デザインフォント02に変更しました</p>
+<p class="#{$p}#{$u}text-xl #{$p}#{$u}font-third">#{$p}#{$u}font-third_デザインフォント03に変更しました</p>
+<p class="#{$p}#{$u}text-xl #{$p}#{$u}font-first">ここはデザインフォント01ですが、<span class="#{$p}#{$u}font-root">#{$p}#{$u}font-root_ここからbody要素のフォントに変更しました</span></p>
+<p class="#{$p}#{$u}text-xl #{$p}#{$u}font-mono">#{$p}#{$u}font-mono_等幅フォントに変更しました &lt;p class="#{$p}#{$u}font-mono"&gt;hello world!&lt;/p&gt;</p>
 ```
 
 */
 
-.#{$p}font-root {
+.#{$p}#{$u}font-root {
     font-family: $font-family-root;
 }
 
-.#{$p}font-mono {
+.#{$p}#{$u}font-mono {
     font-family: $font-family-mono;
 }
 
-.#{$p}font-first {
+.#{$p}#{$u}font-first {
     font-family: $font-family-first;
 }
 
-.#{$p}font-second {
+.#{$p}#{$u}font-second {
     font-family: $font-family-second;
 }
 
-.#{$p}font-third {
+.#{$p}#{$u}font-third {
     font-family: $font-family-third;
 }

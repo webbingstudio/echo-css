@@ -1,27 +1,27 @@
 /*doc
 ---
-title: .#{$p}clearfix
+title: #{$p}#{$u}clearfix
 name: clearfix
-category: utilities
+category: utility-clearfix
 ---
 
 指定された包括要素が閉じられた時点でfloatを解除する。
 
 ``` example
-<div class="#{$p}bg-first #{$p}bg-fade #{$p}clearfix">
+<div class="#{$p}#{$u}bg-first #{$p}#{$u}bg-fade #{$p}#{$u}clearfix">
 
-<div class="#{$p}float-l">
-    <div class="#{$p}thumbnail">
+<div class="#{$p}#{$u}float-l">
+    <div class="#{$p}#{$m}thumbnail">
         <img src="https://placehold.jp/100x100.jpg?text=float-l" alt="">
     </div>
 </div>
-<div class="#{$p}float-l">
-    <div class="#{$p}thumbnail">
+<div class="#{$p}#{$u}float-l">
+    <div class="#{$p}#{$m}thumbnail">
         <img src="https://placehold.jp/100x100.jpg?text=float-l" alt="">
     </div>
 </div>
-<div class="#{$p}float-l">
-    <div class="#{$p}thumbnail">
+<div class="#{$p}#{$u}float-l">
+    <div class="#{$p}#{$m}thumbnail">
         <img src="https://placehold.jp/100x100.jpg?text=float-l" alt="">
     </div>
 </div>
@@ -31,11 +31,11 @@ category: utilities
 
 </div>
 
-<p>この直前でclearfix_この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+<p>この前でclearfix_この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
 ```
 
 */
 
-.#{$p}clearfix {
+.#{$p}#{$u}clearfix {
   @include clearfix();
 }

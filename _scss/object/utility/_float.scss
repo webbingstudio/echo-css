@@ -1,15 +1,15 @@
 /*doc
 ---
-title: .#{$p}float-(direction)
+title: #{$p}#{$u}float-(direction)
 name: float-direction
-category: utilities
+category: utility-float
 ---
 
 指定した要素を(direction)で指示した方向に寄せる。
 
 ``` example
-<div class="float-l">
-    <div class="thumbnail">
+<div class="#{$p}#{$u}float-l">
+    <div class="#{$p}#{$m}thumbnail">
         <img src="https://placehold.jp/150x150.jpg?text=float-l" alt="">
     </div>
 </div>
@@ -22,8 +22,8 @@ category: utilities
 のみならず顔の真中があまりに突起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。<br>
 これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
 
-<div class="float-r">
-    <div class="thumbnail">
+<div class="#{$p}#{$u}float-r">
+    <div class="#{$p}#{$m}thumbnail">
         <img src="https://placehold.jp/150x150.jpg?text=float-r" alt="">
     </div>
 </div>
@@ -39,10 +39,10 @@ category: utilities
 
 */
 
-.#{$p}float-l {
+.#{$p}#{$u}float-l {
 	float: left;
 }
 
-.#{$p}float-r {
+.#{$p}#{$u}float-r {
 	float: right;
 }

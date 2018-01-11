@@ -1,103 +1,107 @@
 /*doc
 ---
-title: .#{$p}m-(direction)-(size)
+title: #{$p}#{$u}m-(direction)-(size)
 name: m
-category: utilities
+category: utility-m
 ---
 
 ブロック要素の外部余白を変更する。
 
 ``` example
-<div class="m-xs bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-xs</div>
-<div class="m-t-xs bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-t-xs</div>
-<div class="m-r-xs bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-r-xs</div>
-<div class="m-b-xs bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-b-xs</div>
-<div class="m-l-xs bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-l-xs</div>
+<div class="#{$p}#{$u}m-a #{$p}#{$u}bg-first #{$p}#{$u}bg-fade #{$p}#{$u}p-xs" style="border: 1px solid #ccc; width: 50%;">#{$p}#{$u}m-a</div>
 
-<div class="m-sm bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-sm</div>
-<div class="m-t-sm bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-t-sm</div>
-<div class="m-r-sm bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-r-sm</div>
-<div class="m-b-sm bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-b-sm</div>
-<div class="m-l-sm bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-l-sm</div>
+<div class="#{$p}#{$u}m-xs #{$p}#{$u}bg-first #{$p}#{$u}bg-fade #{$p}#{$u}p-xs" style="border: 1px solid #ccc;">#{$p}#{$u}m-xs</div>
+<div class="#{$p}#{$u}m-t-xs #{$p}#{$u}bg-first #{$p}#{$u}bg-fade #{$p}#{$u}p-xs" style="border: 1px solid #ccc;">#{$p}#{$u}m-t-xs</div>
+<div class="#{$p}#{$u}m-r-xs #{$p}#{$u}bg-first #{$p}#{$u}bg-fade #{$p}#{$u}p-xs" style="border: 1px solid #ccc;">#{$p}#{$u}m-r-xs</div>
+<div class="#{$p}#{$u}m-b-xs #{$p}#{$u}bg-first #{$p}#{$u}bg-fade #{$p}#{$u}p-xs" style="border: 1px solid #ccc;">#{$p}#{$u}m-b-xs</div>
+<div class="#{$p}#{$u}m-l-xs #{$p}#{$u}bg-first #{$p}#{$u}bg-fade #{$p}#{$u}p-xs" style="border: 1px solid #ccc;">#{$p}#{$u}m-l-xs</div>
 
-<div class="m bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m</div>
-<div class="m-t bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-t</div>
-<div class="m-r bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-r</div>
-<div class="m-b bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-b</div>
-<div class="m-l bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-l</div>
+<div class="#{$p}#{$u}m-sm #{$p}#{$u}bg-first #{$p}#{$u}bg-fade #{$p}#{$u}p-xs" style="border: 1px solid #ccc;">#{$p}#{$u}m-sm</div>
+<div class="#{$p}#{$u}m-t-sm #{$p}#{$u}bg-first #{$p}#{$u}bg-fade #{$p}#{$u}p-xs" style="border: 1px solid #ccc;">#{$p}#{$u}m-t-sm</div>
+<div class="#{$p}#{$u}m-r-sm #{$p}#{$u}bg-first #{$p}#{$u}bg-fade #{$p}#{$u}p-xs" style="border: 1px solid #ccc;">#{$p}#{$u}m-r-sm</div>
+<div class="#{$p}#{$u}m-b-sm #{$p}#{$u}bg-first #{$p}#{$u}bg-fade #{$p}#{$u}p-xs" style="border: 1px solid #ccc;">#{$p}#{$u}m-b-sm</div>
+<div class="#{$p}#{$u}m-l-sm #{$p}#{$u}bg-first #{$p}#{$u}bg-fade #{$p}#{$u}p-xs" style="border: 1px solid #ccc;">#{$p}#{$u}m-l-sm</div>
 
-<div class="m-lg bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-lg</div>
-<div class="m-t-lg bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-t-lg</div>
-<div class="m-r-lg bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-r-lg</div>
-<div class="m-b-lg bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-b-lg</div>
-<div class="m-l-lg bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-l-lg</div>
+<div class="m #{$p}#{$u}bg-first #{$p}#{$u}bg-fade #{$p}#{$u}p-xs" style="border: 1px solid #ccc;">m</div>
+<div class="#{$p}#{$u}m-t #{$p}#{$u}bg-first #{$p}#{$u}bg-fade #{$p}#{$u}p-xs" style="border: 1px solid #ccc;">#{$p}#{$u}m-t</div>
+<div class="#{$p}#{$u}m-r #{$p}#{$u}bg-first #{$p}#{$u}bg-fade #{$p}#{$u}p-xs" style="border: 1px solid #ccc;">#{$p}#{$u}m-r</div>
+<div class="#{$p}#{$u}m-b #{$p}#{$u}bg-first #{$p}#{$u}bg-fade #{$p}#{$u}p-xs" style="border: 1px solid #ccc;">#{$p}#{$u}m-b</div>
+<div class="#{$p}#{$u}m-l #{$p}#{$u}bg-first #{$p}#{$u}bg-fade #{$p}#{$u}p-xs" style="border: 1px solid #ccc;">#{$p}#{$u}m-l</div>
 
-<div class="m-xl bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-xl</div>
-<div class="m-t-xl bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-t-xl</div>
-<div class="m-r-xl bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-r-xl</div>
-<div class="m-b-xl bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-b-xl</div>
-<div class="m-l-xl bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-l-xl</div>
+<div class="#{$p}#{$u}m-lg #{$p}#{$u}bg-first #{$p}#{$u}bg-fade #{$p}#{$u}p-xs" style="border: 1px solid #ccc;">#{$p}#{$u}m-lg</div>
+<div class="#{$p}#{$u}m-t-lg #{$p}#{$u}bg-first #{$p}#{$u}bg-fade #{$p}#{$u}p-xs" style="border: 1px solid #ccc;">#{$p}#{$u}m-t-lg</div>
+<div class="#{$p}#{$u}m-r-lg #{$p}#{$u}bg-first #{$p}#{$u}bg-fade #{$p}#{$u}p-xs" style="border: 1px solid #ccc;">#{$p}#{$u}m-r-lg</div>
+<div class="#{$p}#{$u}m-b-lg #{$p}#{$u}bg-first #{$p}#{$u}bg-fade #{$p}#{$u}p-xs" style="border: 1px solid #ccc;">#{$p}#{$u}m-b-lg</div>
+<div class="#{$p}#{$u}m-l-lg #{$p}#{$u}bg-first #{$p}#{$u}bg-fade #{$p}#{$u}p-xs" style="border: 1px solid #ccc;">#{$p}#{$u}m-l-lg</div>
 
-<div class="m-xxl bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-xxl</div>
-<div class="m-t-xxl bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-t-xxl</div>
-<div class="m-r-xxl bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-r-xxl</div>
-<div class="m-b-xxl bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-b-xxl</div>
-<div class="m-l-xxl bg-first bg-fade p-xs" style="border: 1px solid #ccc;">m-l-xxl</div>
+<div class="#{$p}#{$u}m-xl #{$p}#{$u}bg-first #{$p}#{$u}bg-fade #{$p}#{$u}p-xs" style="border: 1px solid #ccc;">#{$p}#{$u}m-xl</div>
+<div class="#{$p}#{$u}m-t-xl #{$p}#{$u}bg-first #{$p}#{$u}bg-fade #{$p}#{$u}p-xs" style="border: 1px solid #ccc;">#{$p}#{$u}m-t-xl</div>
+<div class="#{$p}#{$u}m-r-xl #{$p}#{$u}bg-first #{$p}#{$u}bg-fade #{$p}#{$u}p-xs" style="border: 1px solid #ccc;">#{$p}#{$u}m-r-xl</div>
+<div class="#{$p}#{$u}m-b-xl #{$p}#{$u}bg-first #{$p}#{$u}bg-fade #{$p}#{$u}p-xs" style="border: 1px solid #ccc;">#{$p}#{$u}m-b-xl</div>
+<div class="#{$p}#{$u}m-l-xl #{$p}#{$u}bg-first #{$p}#{$u}bg-fade #{$p}#{$u}p-xs" style="border: 1px solid #ccc;">#{$p}#{$u}m-l-xl</div>
+
+<div class="#{$p}#{$u}m-xxl #{$p}#{$u}bg-first #{$p}#{$u}bg-fade #{$p}#{$u}p-xs" style="border: 1px solid #ccc;">#{$p}#{$u}m-xxl</div>
+<div class="#{$p}#{$u}m-t-xxl #{$p}#{$u}bg-first #{$p}#{$u}bg-fade #{$p}#{$u}p-xs" style="border: 1px solid #ccc;">#{$p}#{$u}m-t-xxl</div>
+<div class="#{$p}#{$u}m-r-xxl #{$p}#{$u}bg-first #{$p}#{$u}bg-fade #{$p}#{$u}p-xs" style="border: 1px solid #ccc;">#{$p}#{$u}m-r-xxl</div>
+<div class="#{$p}#{$u}m-b-xxl #{$p}#{$u}bg-first #{$p}#{$u}bg-fade #{$p}#{$u}p-xs" style="border: 1px solid #ccc;">#{$p}#{$u}m-b-xxl</div>
+<div class="#{$p}#{$u}m-l-xxl #{$p}#{$u}bg-first #{$p}#{$u}bg-fade #{$p}#{$u}p-xs" style="border: 1px solid #ccc;">#{$p}#{$u}m-l-xxl</div>
 ```
 */
 
-.#{$p}m-0   { margin:        0 }
-.#{$p}m-t-0 { margin-top:    0 }
-.#{$p}m-r-0 { margin-right:  0 }
-.#{$p}m-b-0 { margin-bottom: 0 }
-.#{$p}m-l-0 { margin-left:   0 }
-.#{$p}m-x-0 { margin-right:  0; margin-left:   0 }
-.#{$p}m-y-0 { margin-top:    0; margin-bottom: 0 }
+.#{$p}#{$u}m-a   { margin-right:  auto; margin-left:   auto }
 
-.#{$p}m-xs   { margin:        ($spacer * .5) }
-.#{$p}m-t-xs { margin-top:    ($spacer * .5) }
-.#{$p}m-r-xs { margin-right:  ($spacer * .5) }
-.#{$p}m-b-xs { margin-bottom: ($spacer * .5) }
-.#{$p}m-l-xs { margin-left:   ($spacer * .5) }
-.#{$p}m-x-xs { margin-right:  ($spacer * .5); margin-left:   ($spacer * .5) }
-.#{$p}m-y-xs { margin-top:    ($spacer * .5); margin-bottom: ($spacer * .5) }
+.#{$p}#{$u}m-0   { margin:        0 }
+.#{$p}#{$u}m-t-0 { margin-top:    0 }
+.#{$p}#{$u}m-r-0 { margin-right:  0 }
+.#{$p}#{$u}m-b-0 { margin-bottom: 0 }
+.#{$p}#{$u}m-l-0 { margin-left:   0 }
+.#{$p}#{$u}m-x-0 { margin-right:  0; margin-left:   0 }
+.#{$p}#{$u}m-y-0 { margin-top:    0; margin-bottom: 0 }
 
-.#{$p}m-sm   { margin:        $spacer }
-.#{$p}m-t-sm { margin-top:    $spacer }
-.#{$p}m-r-sm { margin-right:  $spacer }
-.#{$p}m-b-sm { margin-bottom: $spacer }
-.#{$p}m-l-sm { margin-left:   $spacer }
-.#{$p}m-x-sm { margin-right:  $spacer; margin-left:   $spacer }
-.#{$p}m-y-sm { margin-top:    $spacer; margin-bottom: $spacer }
+.#{$p}#{$u}m-xs   { margin:        ($spacer * .5) }
+.#{$p}#{$u}m-t-xs { margin-top:    ($spacer * .5) }
+.#{$p}#{$u}m-r-xs { margin-right:  ($spacer * .5) }
+.#{$p}#{$u}m-b-xs { margin-bottom: ($spacer * .5) }
+.#{$p}#{$u}m-l-xs { margin-left:   ($spacer * .5) }
+.#{$p}#{$u}m-x-xs { margin-right:  ($spacer * .5); margin-left:   ($spacer * .5) }
+.#{$p}#{$u}m-y-xs { margin-top:    ($spacer * .5); margin-bottom: ($spacer * .5) }
 
-.#{$p}m   { margin:        ($spacer * 1.5) }
-.#{$p}m-t { margin-top:    ($spacer * 1.5) }
-.#{$p}m-r { margin-right:  ($spacer * 1.5) }
-.#{$p}m-b { margin-bottom: ($spacer * 1.5) }
-.#{$p}m-l { margin-left:   ($spacer * 1.5) }
-.#{$p}m-x { margin-right:  ($spacer * 1.5); margin-left:   ($spacer * 1.5) }
-.#{$p}m-y { margin-top:    ($spacer * 1.5); margin-bottom: ($spacer * 1.5) }
+.#{$p}#{$u}m-sm   { margin:        $spacer }
+.#{$p}#{$u}m-t-sm { margin-top:    $spacer }
+.#{$p}#{$u}m-r-sm { margin-right:  $spacer }
+.#{$p}#{$u}m-b-sm { margin-bottom: $spacer }
+.#{$p}#{$u}m-l-sm { margin-left:   $spacer }
+.#{$p}#{$u}m-x-sm { margin-right:  $spacer; margin-left:   $spacer }
+.#{$p}#{$u}m-y-sm { margin-top:    $spacer; margin-bottom: $spacer }
 
-.#{$p}m-lg   { margin:        ($spacer * 3) }
-.#{$p}m-t-lg { margin-top:    ($spacer * 3) }
-.#{$p}m-r-lg { margin-right:  ($spacer * 3) }
-.#{$p}m-b-lg { margin-bottom: ($spacer * 3) }
-.#{$p}m-l-lg { margin-left:   ($spacer * 3) }
-.#{$p}m-x-lg { margin-right:  ($spacer * 3); margin-left:   ($spacer * 3) }
-.#{$p}m-y-lg { margin-top:    ($spacer * 3); margin-bottom: ($spacer * 3) }
+.#{$p}#{$u}m   { margin:        ($spacer * 1.5) }
+.#{$p}#{$u}m-t { margin-top:    ($spacer * 1.5) }
+.#{$p}#{$u}m-r { margin-right:  ($spacer * 1.5) }
+.#{$p}#{$u}m-b { margin-bottom: ($spacer * 1.5) }
+.#{$p}#{$u}m-l { margin-left:   ($spacer * 1.5) }
+.#{$p}#{$u}m-x { margin-right:  ($spacer * 1.5); margin-left:   ($spacer * 1.5) }
+.#{$p}#{$u}m-y { margin-top:    ($spacer * 1.5); margin-bottom: ($spacer * 1.5) }
 
-.#{$p}m-xl   { margin:        ($spacer * 4.5) }
-.#{$p}m-t-xl { margin-top:    ($spacer * 4.5) }
-.#{$p}m-r-xl { margin-right:  ($spacer * 4.5) }
-.#{$p}m-b-xl { margin-bottom: ($spacer * 4.5) }
-.#{$p}m-l-xl { margin-left:   ($spacer * 4.5) }
-.#{$p}m-x-xl { margin-right:  ($spacer * 4.5); margin-left:   ($spacer * 4.5) }
-.#{$p}m-y-xl { margin-top:    ($spacer * 4.5); margin-bottom: ($spacer * 4.5) }
+.#{$p}#{$u}m-lg   { margin:        ($spacer * 3) }
+.#{$p}#{$u}m-t-lg { margin-top:    ($spacer * 3) }
+.#{$p}#{$u}m-r-lg { margin-right:  ($spacer * 3) }
+.#{$p}#{$u}m-b-lg { margin-bottom: ($spacer * 3) }
+.#{$p}#{$u}m-l-lg { margin-left:   ($spacer * 3) }
+.#{$p}#{$u}m-x-lg { margin-right:  ($spacer * 3); margin-left:   ($spacer * 3) }
+.#{$p}#{$u}m-y-lg { margin-top:    ($spacer * 3); margin-bottom: ($spacer * 3) }
 
-.#{$p}m-xxl   { margin:        ($spacer * 6) }
-.#{$p}m-t-xxl { margin-top:    ($spacer * 6) }
-.#{$p}m-r-xxl { margin-right:  ($spacer * 6) }
-.#{$p}m-b-xxl { margin-bottom: ($spacer * 6) }
-.#{$p}m-l-xxl { margin-left:   ($spacer * 6) }
-.#{$p}m-x-xxl { margin-right:  ($spacer * 6); margin-left:   ($spacer * 6) }
-.#{$p}m-y-xxl { margin-top:    ($spacer * 6); margin-bottom: ($spacer * 6) }
+.#{$p}#{$u}m-xl   { margin:        ($spacer * 4.5) }
+.#{$p}#{$u}m-t-xl { margin-top:    ($spacer * 4.5) }
+.#{$p}#{$u}m-r-xl { margin-right:  ($spacer * 4.5) }
+.#{$p}#{$u}m-b-xl { margin-bottom: ($spacer * 4.5) }
+.#{$p}#{$u}m-l-xl { margin-left:   ($spacer * 4.5) }
+.#{$p}#{$u}m-x-xl { margin-right:  ($spacer * 4.5); margin-left:   ($spacer * 4.5) }
+.#{$p}#{$u}m-y-xl { margin-top:    ($spacer * 4.5); margin-bottom: ($spacer * 4.5) }
+
+.#{$p}#{$u}m-xxl   { margin:        ($spacer * 6) }
+.#{$p}#{$u}m-t-xxl { margin-top:    ($spacer * 6) }
+.#{$p}#{$u}m-r-xxl { margin-right:  ($spacer * 6) }
+.#{$p}#{$u}m-b-xxl { margin-bottom: ($spacer * 6) }
+.#{$p}#{$u}m-l-xxl { margin-left:   ($spacer * 6) }
+.#{$p}#{$u}m-x-xxl { margin-right:  ($spacer * 6); margin-left:   ($spacer * 6) }
+.#{$p}#{$u}m-y-xxl { margin-top:    ($spacer * 6); margin-bottom: ($spacer * 6) }

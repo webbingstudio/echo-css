@@ -1,15 +1,15 @@
 /*doc
 ---
-title: .#{$p}clear
+title: #{$p}#{$u}clear
 name: clear
-category: utilities
+category: utility-clear
 ---
 
 floatを解除する。
 
 ``` example
-<div class="#{$p}float-l">
-    <div class="#{$p}thumbnail">
+<div class="#{$p}#{$u}float-l">
+    <div class="#{$p}#{$m}thumbnail">
         <img src="https://placehold.jp/150x150.jpg?text=float-l" alt="">
     </div>
 </div>
@@ -17,12 +17,12 @@ floatを解除する。
 <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
 吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
 
-<p class="#{$p}clear">ここで解除_掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。<br>
+<p class="#{$p}#{$u}clear">#{$p}#{$u}clear_掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。<br>
 第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</p>
 ```
 
 */
 
-.#{$p}clear {
+.#{$p}#{$u}clear {
     clear: both;
 }

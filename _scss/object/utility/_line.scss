@@ -1,33 +1,33 @@
 /*doc
 ---
-title: .#{$p}line-(direction)
-name: line-1-direction
-category: utilities
+title: #{$p}#{$u}line-(direction)
+name: line-01-direction
+category: utility-line
 ---
 
 ブロック要素内の文章を指定した方向へ寄せる。
 
 ``` example
-<p class="line-c">line-c_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
-<p class="line-r">line-r_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+<p class="#{$p}#{$u}line-c">#{$p}#{$u}line-c_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+<p class="#{$p}#{$u}line-r">#{$p}#{$u}line-r_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
 
-<div class="bg-second bg-fade line-c">
-    <p>line-c_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-    <p class="line-l">line-l_何でも薄暗いじめじめした所で</p>
+<div class="#{$p}#{$u}bg-second #{$p}#{$u}bg-fade #{$p}#{$u}line-c">
+    <p>#{$p}#{$u}line-c_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+    <p class="#{$p}#{$u}line-l">#{$p}#{$u}line-l_何でも薄暗いじめじめした所で</p>
     <p>ニャーニャー泣いていた事だけは記憶している。</p>
 </div>
 ```
 */
 
-.#{$p}line-l {
+.#{$p}#{$u}line-l {
     text-align: left;
 }
 
-.#{$p}line-c {
+.#{$p}#{$u}line-c {
     text-align: center;
 }
 
-.#{$p}line-r {
+.#{$p}#{$u}line-r {
     text-align: right;
 }
 
@@ -35,34 +35,35 @@ category: utilities
 
 /*doc
 ---
-title: .#{$p}line-(size)
-name: line-2-size
-category: utilities
+title: #{$p}#{$u}line-(size)
+name: line-02-size
+category: utility-line
 ---
 
-文章を指定した行高さに変更する。
+文章を指定した行高さに変更する。 <code>none, sm, md, lg</code> に対応している。  
+行間を最低にするクラスは、0ではなく <code>none</code> である点に注意。
 
 ``` example
-<p class="line-none">line-none_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
-<p class="line-sm">line-sm_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
-<p class="line-md">line-md_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
-<p class="line-lg">line-lg_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+<p class="#{$p}#{$u}line-none">#{$p}#{$u}line-none_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+<p class="#{$p}#{$u}line-sm">#{$p}#{$u}line-sm_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+<p class="#{$p}#{$u}line-md">#{$p}#{$u}line-md_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+<p class="#{$p}#{$u}line-lg">#{$p}#{$u}line-lg_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
 ```
 */
 
-.#{$p}line-none {
+.#{$p}#{$u}line-none {
     line-height: $line-height-none;
 }
 
-.#{$p}line-sm {
+.#{$p}#{$u}line-sm {
     line-height: $line-height-sm;
 }
 
-.#{$p}line-md {
+.#{$p}#{$u}line-md {
     line-height: $line-height-md;
 }
 
-.#{$p}line-lg {
+.#{$p}#{$u}line-lg {
     line-height: $line-height-lg;
 }
 

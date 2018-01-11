@@ -1,34 +1,33 @@
 /*doc
 ---
-title: .#{$p}hidden
+title: #{$p}#{$u}hidden
 name: hidden
-category: utilities
+category: utility-hidden
 ---
 
-常に要素を非表示にする。音声読み上げに対応する場合は.#{$p}srを使用すること。
+常に要素を非表示にする。スクリーンリーダーに対応する場合は <code>.#{$p}sr</code> を使用すること。
 
 */
 
-.#{$p}hidden {
+.#{$p}#{$u}hidden {
     display: none;
 }
 
 /*doc
 ---
-title: .#{$p}hidden-(breakpoint)-up
-name: hidden-1-breakpoint-up
-category: utilities
-parent: hidden
+title: #{$p}#{$u}hidden-(breakpoint)-up
+name: hidden-01-breakpoint-up
+category: utility-hidden
 ---
 
-(breakpoint)で指定した画面幅以上で要素を非表示にする。特性上、#{$p}hidden-xs-upはない。
+(breakpoint)で指定した画面幅以上で要素を非表示にする。特性上、#{$p}#{$u}hidden-xs-upはない。
 
 ``` example
-<div class="#{$p}hidden-sm-up #{$p}m-b-sm"><span class="#{$p}btn #{$p}btn-first">#{$p}hidden-sm-up</span></div>
-<div class="#{$p}hidden-md-up #{$p}m-b-sm"><span class="#{$p}btn #{$p}btn-second">#{$p}hidden-md-up</span></div>
-<div class="#{$p}hidden-lg-up #{$p}m-b-sm"><span class="#{$p}btn #{$p}btn-third">#{$p}hidden-lg-up</span></div>
-<div class="#{$p}hidden-xl-up #{$p}m-b-sm"><span class="#{$p}btn #{$p}btn-important">#{$p}hidden-xl-up</span></div>
-<div class="#{$p}hidden-xxl-up #{$p}m-b-sm"><span class="#{$p}btn">#{$p}hidden-xxl-up</span></div>
+<div class="#{$p}#{$u}hidden-sm-up #{$p}#{$u}m-b-sm"><span class="#{$p}btn#{$m}btn #{$p}btn#{$m}btn-first">#{$p}#{$u}hidden-sm-up</span></div>
+<div class="#{$p}#{$u}hidden-md-up #{$p}#{$u}m-b-sm"><span class="#{$p}btn#{$m}btn #{$p}btn#{$m}btn-second">#{$p}#{$u}hidden-md-up</span></div>
+<div class="#{$p}#{$u}hidden-lg-up #{$p}#{$u}m-b-sm"><span class="#{$p}btn#{$m}btn #{$p}btn#{$m}btn-third">#{$p}#{$u}hidden-lg-up</span></div>
+<div class="#{$p}#{$u}hidden-xl-up #{$p}#{$u}m-b-sm"><span class="#{$p}btn#{$m}btn #{$p}btn#{$m}btn-important">#{$p}#{$u}hidden-xl-up</span></div>
+<div class="#{$p}#{$u}hidden-xxl-up #{$p}#{$u}m-b-sm"><span class="#{$p}btn#{$m}btn">#{$p}#{$u}hidden-xxl-up</span></div>
 ```
 
 */
@@ -36,7 +35,7 @@ parent: hidden
 @each $breakpoint in map-keys($grid-breakpoints) {
     @include media-breakpoint-up($breakpoint) {
         @if ($breakpoint != 'xxs') {
-            .#{$p}hidden-#{$breakpoint}-up {
+            .#{$p}#{$u}hidden-#{$breakpoint}-up {
                 display: none;
             }
         }
@@ -46,20 +45,20 @@ parent: hidden
 
 /*doc
 ---
-title: .#{$p}hidden-(breakpoint)-down
+title: .#{$p}#{$u}hidden-(breakpoint)-down
 name: hidden-2-breakpoint-down
 category: utilities
 parent: hidden
 ---
 
-(breakpoint)で指定した画面幅未満で要素を非表示にする。特性上、#{$p}hidden-xxl-downはない。
+(breakpoint)で指定した画面幅未満で要素を非表示にする。特性上、#{$p}#{$u}hidden-xxl-downはない。
 
 ``` example
-<div class="#{$p}hidden-xs-down #{$p}m-b-sm"><span class="#{$p}btn #{$p}btn-first">#{$p}hidden-xs-down</span></div>
-<div class="#{$p}hidden-sm-down #{$p}m-b-sm"><span class="#{$p}btn #{$p}btn-second">#{$p}hidden-sm-down</span></div>
-<div class="#{$p}hidden-md-down #{$p}m-b-sm"><span class="#{$p}btn #{$p}btn-third">#{$p}hidden-md-down</span></div>
-<div class="#{$p}hidden-lg-down #{$p}m-b-sm"><span class="#{$p}btn #{$p}btn-important">#{$p}hidden-lg-down</span></div>
-<div class="#{$p}hidden-xl-down #{$p}m-b-sm"><span class="#{$p}btn">#{$p}hidden-xl-down</span></div>
+<div class="#{$p}#{$u}hidden-xs-down #{$p}#{$u}m-b-sm"><span class="#{$p}btn#{$m}btn #{$p}btn#{$m}btn-first">#{$p}#{$u}hidden-xs-down</span></div>
+<div class="#{$p}#{$u}hidden-sm-down #{$p}#{$u}m-b-sm"><span class="#{$p}btn#{$m}btn #{$p}btn#{$m}btn-second">#{$p}#{$u}hidden-sm-down</span></div>
+<div class="#{$p}#{$u}hidden-md-down #{$p}#{$u}m-b-sm"><span class="#{$p}btn#{$m}btn #{$p}btn#{$m}btn-third">#{$p}#{$u}hidden-md-down</span></div>
+<div class="#{$p}#{$u}hidden-lg-down #{$p}#{$u}m-b-sm"><span class="#{$p}btn#{$m}btn #{$p}btn#{$m}btn-important">#{$p}#{$u}hidden-lg-down</span></div>
+<div class="#{$p}#{$u}hidden-xl-down #{$p}#{$u}m-b-sm"><span class="#{$p}btn#{$m}btn">#{$p}#{$u}hidden-xl-down</span></div>
 ```
 
 */
@@ -67,7 +66,7 @@ parent: hidden
 @each $breakpoint in map-keys($grid-breakpoints) {
     @include media-breakpoint-down($breakpoint) {
         @if ($breakpoint != 'xxl') {
-            .#{$p}hidden-#{$breakpoint}-down {
+            .#{$p}#{$u}hidden-#{$breakpoint}-down {
                 display: none;
             }
         }

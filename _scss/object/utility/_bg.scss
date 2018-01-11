@@ -1,80 +1,85 @@
 /*doc
 ---
-title: .#{$p}bg-(color)
-name: bg-1-color
-category: utilities
+title: #{$p}#{$u}bg-(color)
+name: bg-01-color
+category: utility-bg
 ---
 
-背景に色をつける。オブジェクト・コンポーネントを可能な限り上書きする。.#{$p}bgを付与する必要はない。
+背景に色をつける。オブジェクト・コンポーネントを可能な限り上書きする。
 
 ``` example
-<div class="#{$p}m-b #{$p}p-sm #{$p}bg-first">bg-first</div>
-<div class="#{$p}m-b #{$p}p-sm #{$p}bg-second">bg-second</div>
-<div class="#{$p}m-b #{$p}p-sm #{$p}bg-third">bg-third</div>
-<div class="#{$p}m-b #{$p}p-sm #{$p}bg-info">bg-info</div>
-<div class="#{$p}m-b #{$p}p-sm #{$p}bg-important">bg-important</div>
+<div class="#{$p}#{$u}m-b #{$p}#{$u}p-sm #{$p}#{$u}bg-first">bg-first</div>
+<div class="#{$p}#{$u}m-b #{$p}#{$u}p-sm #{$p}#{$u}bg-second">bg-second</div>
+<div class="#{$p}#{$u}m-b #{$p}#{$u}p-sm #{$p}#{$u}bg-third">bg-third</div>
+<div class="#{$p}#{$u}m-b #{$p}#{$u}p-sm #{$p}#{$u}bg-fourth">bg-fourth</div>
+<div class="#{$p}#{$u}m-b #{$p}#{$u}p-sm #{$p}#{$u}bg-fifth">bg-fifth</div>
+<div class="#{$p}#{$u}m-b #{$p}#{$u}p-sm #{$p}#{$u}bg-info">bg-info</div>
+<div class="#{$p}#{$u}m-b #{$p}#{$u}p-sm #{$p}#{$u}bg-important">bg-important</div>
 ```
 
 */
 
 /*doc
 ---
-title: .#{$p}bg-mild
-name: bg-2-mild
-category: utilities
+title: #{$p}#{$u}bg-mild
+name: bg-02-mild
+category: utility-bg
 ---
 
-.#{$p}bg-(color)と併用すると背景色を弱める。オブジェクト・コンポーネントを可能な限り上書きする。.#{$p}bgを付与する必要はない。
+.#{$p}#{$u}bg-(color)と併用すると背景色を弱める。オブジェクト・コンポーネントを可能な限り上書きする。.#{$p}#{$u}bgを付与する必要はない。
 
 ``` example
-<div class="#{$p}m-b #{$p}p-sm #{$p}bg-first #{$p}bg-mild">bg-first</div>
-<div class="#{$p}m-b #{$p}p-sm #{$p}bg-second #{$p}bg-mild">bg-second</div>
-<div class="#{$p}m-b #{$p}p-sm #{$p}bg-third #{$p}bg-mild">bg-third</div>
-<div class="#{$p}m-b #{$p}p-sm #{$p}bg-info #{$p}bg-mild">bg-info</div>
-<div class="#{$p}m-b #{$p}p-sm #{$p}bg-important #{$p}bg-mild">bg-important</div>
+<div class="#{$p}#{$u}m-b #{$p}#{$u}p-sm #{$p}#{$u}bg-first #{$p}#{$u}bg-mild">bg-first</div>
+<div class="#{$p}#{$u}m-b #{$p}#{$u}p-sm #{$p}#{$u}bg-second #{$p}#{$u}bg-mild">bg-second</div>
+<div class="#{$p}#{$u}m-b #{$p}#{$u}p-sm #{$p}#{$u}bg-third #{$p}#{$u}bg-mild">bg-third</div>
+<div class="#{$p}#{$u}m-b #{$p}#{$u}p-sm #{$p}#{$u}bg-fourth #{$p}#{$u}bg-mild">bg-fourth</div>
+<div class="#{$p}#{$u}m-b #{$p}#{$u}p-sm #{$p}#{$u}bg-fifth #{$p}#{$u}bg-mild">bg-fifth</div>
+<div class="#{$p}#{$u}m-b #{$p}#{$u}p-sm #{$p}#{$u}bg-info #{$p}#{$u}bg-mild">bg-info</div>
+<div class="#{$p}#{$u}m-b #{$p}#{$u}p-sm #{$p}#{$u}bg-important #{$p}#{$u}bg-mild">bg-important</div>
 ```
 
 */
 
 /*doc
 ---
-title: .#{$p}bg-fade
-name: bg-3-fade
-category: utilities
+title: #{$p}#{$u}bg-fade
+name: bg-03-fade
+category: utility-bg
 ---
 
-.#{$p}bg-(color)と併用すると背景色を薄くする。オブジェクト・コンポーネントを可能な限り上書きする。.#{$p}bgを付与する必要はない。
+.#{$p}#{$u}bg-(color)と併用すると背景色を薄くする。オブジェクト・コンポーネントを可能な限り上書きする。.#{$p}#{$u}bgを付与する必要はない。
 
 ``` example
-<div class="#{$p}m-b #{$p}p-sm #{$p}bg-first #{$p}bg-fade">bg-first</div>
-<div class="#{$p}m-b #{$p}p-sm #{$p}bg-second #{$p}bg-fade">bg-second</div>
-<div class="#{$p}m-b #{$p}p-sm #{$p}bg-third #{$p}bg-fade">bg-third</div>
-<div class="#{$p}m-b #{$p}p-sm #{$p}bg-info #{$p}bg-fade">bg-info</div>
-<div class="#{$p}m-b #{$p}p-sm #{$p}bg-important #{$p}bg-fade">bg-important</div>
+<div class="#{$p}#{$u}m-b #{$p}#{$u}p-sm #{$p}#{$u}bg-first #{$p}#{$u}bg-fade">bg-first</div>
+<div class="#{$p}#{$u}m-b #{$p}#{$u}p-sm #{$p}#{$u}bg-second #{$p}#{$u}bg-fade">bg-second</div>
+<div class="#{$p}#{$u}m-b #{$p}#{$u}p-sm #{$p}#{$u}bg-third #{$p}#{$u}bg-fade">bg-third</div>
+<div class="#{$p}#{$u}m-b #{$p}#{$u}p-sm #{$p}#{$u}bg-fourth #{$p}#{$u}bg-fade">bg-fourth</div>
+<div class="#{$p}#{$u}m-b #{$p}#{$u}p-sm #{$p}#{$u}bg-fifth #{$p}#{$u}bg-fade">bg-fifth</div>
+<div class="#{$p}#{$u}m-b #{$p}#{$u}p-sm #{$p}#{$u}bg-info #{$p}#{$u}bg-fade">bg-info</div>
+<div class="#{$p}#{$u}m-b #{$p}#{$u}p-sm #{$p}#{$u}bg-important #{$p}#{$u}bg-fade">bg-important</div>
 ```
 
 */
 
 /*doc
 ---
-title: .#{$p}bg-inverse
-name: bg-4-inverse
-category: utilities
+title: #{$p}#{$u}bg-inverse
+name: bg-04-inverse
+category: utility-bg
 ---
 
-文字色と背景色を反転する。オブジェクト・コンポーネントを可能な限り上書きする。.#{$p}bgを付与する必要はない。
+文字色と背景色を反転する。オブジェクト・コンポーネントを可能な限り上書きする。.#{$p}#{$u}bgを付与する必要はない。
 
 ``` example
-<div class="#{$p}p-sm #{$p}bg-inverse">bg-inverse</div>
+<div class="#{$p}#{$u}p-sm #{$p}#{$u}bg-inverse">bg-inverse</div>
 ```
 
 */
 
-
-.#{$p}bg-first {
+.#{$p}#{$u}bg-first {
     background-color: $first;
 
-    &:not(.#{$p}bg-fade) {
+    &:not(.#{$p}#{$u}bg-fade) {
         color: $body-inverse-color;
 
         & a:not([class]) {
@@ -83,20 +88,20 @@ category: utilities
 
     }
 
-    &.#{$p}bg-mild {
+    &.#{$p}#{$u}bg-mild {
         background-color: $first-mild;
     }
 
-    &.#{$p}bg-fade {
+    &.#{$p}#{$u}bg-fade {
         background-color: $first-fade;
     }
 
 }
 
-.#{$p}bg-second {
+.#{$p}#{$u}bg-second {
     background-color: $second;
 
-    &:not(.#{$p}bg-fade) {
+    &:not(.#{$p}#{$u}bg-fade) {
         color: $body-inverse-color;
 
         & a:not([class]) {
@@ -105,20 +110,20 @@ category: utilities
 
     }
 
-    &.#{$p}bg-mild {
+    &.#{$p}#{$u}bg-mild {
         background-color: $second-mild;
     }
 
-    &.#{$p}bg-fade {
+    &.#{$p}#{$u}bg-fade {
         background-color: $second-fade;
     }
 
 }
 
-.#{$p}bg-third {
+.#{$p}#{$u}bg-third {
     background-color: $third;
 
-    &:not(.#{$p}bg-fade) {
+    &:not(.#{$p}#{$u}bg-fade) {
         color: $body-inverse-color;
 
         & a:not([class]) {
@@ -127,20 +132,20 @@ category: utilities
 
     }
 
-    &.#{$p}bg-mild {
+    &.#{$p}#{$u}bg-mild {
         background-color: $third-mild;
     }
 
-    &.#{$p}bg-fade {
+    &.#{$p}#{$u}bg-fade {
         background-color: $third-fade;
     }
 
 }
 
-.#{$p}bg-fourth {
+.#{$p}#{$u}bg-fourth {
     background-color: $fourth;
 
-    &:not(.#{$p}bg-fade) {
+    &:not(.#{$p}#{$u}bg-fade) {
         color: $body-inverse-color;
 
         & a:not([class]) {
@@ -149,20 +154,20 @@ category: utilities
 
     }
 
-    &.#{$p}bg-mild {
+    &.#{$p}#{$u}bg-mild {
         background-color: $fourth-mild;
     }
 
-    &.#{$p}bg-fade {
+    &.#{$p}#{$u}bg-fade {
         background-color: $fourth-fade;
     }
 
 }
 
-.#{$p}bg-fifth {
+.#{$p}#{$u}bg-fifth {
     background-color: $fifth;
 
-    &:not(.#{$p}bg-fade) {
+    &:not(.#{$p}#{$u}bg-fade) {
         color: $body-inverse-color;
 
         & a:not([class]) {
@@ -171,20 +176,20 @@ category: utilities
 
     }
 
-    &.#{$p}bg-mild {
+    &.#{$p}#{$u}bg-mild {
         background-color: $fifth-mild;
     }
 
-    &.#{$p}bg-fade {
+    &.#{$p}#{$u}bg-fade {
         background-color: $fifth-fade;
     }
 
 }
 
-.#{$p}bg-info {
+.#{$p}#{$u}bg-info {
     background-color: $info;
 
-    &:not(.#{$p}bg-fade) {
+    &:not(.#{$p}#{$u}bg-fade) {
         color: $body-inverse-color;
 
         & a:not([class]) {
@@ -193,20 +198,20 @@ category: utilities
 
     }
 
-    &.#{$p}bg-mild {
+    &.#{$p}#{$u}bg-mild {
         background-color: $info-mild;
     }
 
-    &.#{$p}bg-fade {
+    &.#{$p}#{$u}bg-fade {
         background-color: $info-fade;
     }
 
 }
 
-.#{$p}bg-important {
+.#{$p}#{$u}bg-important {
     background-color: $important;
 
-    &:not(.#{$p}bg-fade) {
+    &:not(.#{$p}#{$u}bg-fade) {
         color: $body-inverse-color;
 
         & a:not([class]) {
@@ -215,17 +220,17 @@ category: utilities
 
     }
 
-    &.#{$p}bg-mild {
+    &.#{$p}#{$u}bg-mild {
         background-color: $important-mild;
     }
 
-    &.#{$p}bg-fade {
+    &.#{$p}#{$u}bg-fade {
         background-color: $important-fade;
     }
 
 }
 
-.#{$p}bg-inverse {
+.#{$p}#{$u}bg-inverse {
     color: $body-inverse-color;
     background-color: $body-inverse-bg;
 
