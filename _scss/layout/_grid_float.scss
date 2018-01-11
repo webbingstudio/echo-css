@@ -1,32 +1,28 @@
-@if ($grid-type != 'flexbox') {
-
 /*doc
 ---
-title: #{$p}row
+title: #{$p}#{$l}row
 name: 01-row
-category: grid-float
+category: layout-grid-float
 ---
 
-floatによるグリッドのグループを作成する。
+floatによるグリッドのグループを作成する。余白・段組の仕様を変更したい場合は <code>/\_scss/config\_advance.css</code> の各変数を調整すること。
 
-### 補足：floatによるグリッドの特徴
+命名規則を他のCSSフレームワークと同様にしたい場合は以下を調整すること。
 
-- <code>.#{$p}row</code> と <code>.#{$p}col</code> が直接の親子関係ではない場合でもグリッドが成立する
-- セルの開始位置をずらすことができる
-- Internet Explorer 9以前のバージョンでも利用できる
-- セル内のコンポーネントの高さを揃えることができない
-- セルの上下揃えを指定できない
+- <code>/\_scss/lauout/\_grid\_float.css</code>
+- <code>/\_scss/mixin/mixin.css</code> の <code>make-row(), make-grid-columns()</code>
+
 
 ``` example
-<div class="#{$p}row" style="position: relative">
-    <div class="#{$p}col #{$p}col-4-lg #{$prefix}#{$u}m-b">
-        <div class="#{$prefix}#{$u}bg-first #{$prefix}#{$u}p" style="height: 100%;">#{$p}col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
+<div class="#{$p}#{$l}row">
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-4-lg #{$p}#{$u}m-b">
+        <div class="#{$p}#{$u}bg-first #{$p}#{$u}p">#{$p}#{$l}col-4-lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="#{$p}col #{$p}col-4-lg #{$prefix}#{$u}m-b">
-        <div class="#{$prefix}#{$u}bg-first #{$prefix}#{$u}p" style="height: 100%;">#{$p}col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto. Quia, nobis explicabo asperiores facere!</div>
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-4-lg #{$p}#{$u}m-b">
+        <div class="#{$p}#{$u}bg-first #{$p}#{$u}p">#{$p}#{$l}col-4-lg<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="#{$p}col #{$p}col-4-lg #{$prefix}#{$u}m-b">
-        <div class="#{$prefix}#{$u}bg-first #{$prefix}#{$u}p" style="height: 100%;">#{$p}col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-4-lg #{$p}#{$u}m-b">
+        <div class="#{$p}#{$u}bg-first #{$p}#{$u}p">#{$p}#{$l}col-4-lg<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 ```
@@ -35,10 +31,10 @@ floatによるグリッドのグループを作成する。
 
 @include make-grid-columns();
 
-.#{$p}row {
+.#{$p}#{$l}row {
     @include make-row();
 
-    .#{$p}col {
+    .#{$p}#{$l}col {
         padding-left: (map-get($grid-gutter-widths, md) / 2);
         padding-right: (map-get($grid-gutter-widths, md) / 2);
     }
@@ -46,123 +42,142 @@ floatによるグリッドのグループを作成する。
 }
 
 
-
-
-
-
 /*doc
 ---
-title: #{$p}row-(0 or size)
-name: 02-row-size
-category: grid-float
+title: #{$p}#{$l}row-(size)
+name: 01-row-01-size
+category: layout-grid-float
 parent: 01-row
 ---
 
-floatによるグリッドで余白が異なるグループを作成する。
+floatによるグリッドで余白が異なるグループを作成する。  
+(size)は<code>0, sm, md, lg</code> に対応している。
 
 ``` example
-<div class="#{$p}row #{$p}row-0">
-    <div class="#{$p}col #{$p}col-4-lg #{$prefix}#{$u}m-b">
-        <div class="#{$prefix}#{$u}bg-first #{$prefix}#{$u}p" style="height: 100%;">#{$p}row-0<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
+<div class="#{$p}#{$l}row #{$p}#{$l}row-0">
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-4-lg #{$p}#{$u}m-b">
+        <div class="#{$p}#{$u}bg-first #{$p}#{$u}p">#{$p}#{$l}row-0<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="#{$p}col #{$p}col-4-lg #{$prefix}#{$u}m-b">
-        <div class="#{$prefix}#{$u}bg-first #{$prefix}#{$u}p" style="height: 100%; opacity: 0.8;">#{$p}row-0<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto. Quia, nobis explicabo asperiores facere!</div>
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-4-lg #{$p}#{$u}m-b">
+        <div class="#{$p}#{$u}bg-first #{$p}#{$u}p" style="height: 100%; opacity: 0.8;">#{$p}#{$l}row-0<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="#{$p}col #{$p}col-4-lg #{$prefix}#{$u}m-b">
-        <div class="#{$prefix}#{$u}bg-first #{$prefix}#{$u}p" style="height: 100%;">#{$p}row-0<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-    </div>
-</div>
-
-<div class="#{$p}row #{$p}row-sm">
-    <div class="#{$p}col #{$p}col-4-lg #{$prefix}#{$u}m-b">
-        <div class="#{$prefix}#{$u}bg-second #{$prefix}#{$u}p" style="height: 100%;">#{$p}row-sm<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
-    </div>
-    <div class="#{$p}col #{$p}col-4-lg #{$prefix}#{$u}m-b">
-        <div class="#{$prefix}#{$u}bg-second #{$prefix}#{$u}p" style="height: 100%; opacity: 0.8;">#{$p}row-sm<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto. Quia, nobis explicabo asperiores facere!</div>
-    </div>
-    <div class="#{$p}col #{$p}col-4-lg #{$prefix}#{$u}m-b">
-        <div class="#{$prefix}#{$u}bg-second #{$prefix}#{$u}p" style="height: 100%;">#{$p}row-sm<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-4-lg #{$p}#{$u}m-b">
+        <div class="#{$p}#{$u}bg-first #{$p}#{$u}p">#{$p}#{$l}row-0<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 
-<div class="#{$p}row #{$p}row-lg">
-    <div class="#{$p}col #{$p}col-4-lg #{$prefix}#{$u}m-b">
-        <div class="#{$prefix}#{$u}bg-third #{$prefix}#{$u}p" style="height: 100%;">#{$p}row-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
+<div class="#{$p}#{$l}row #{$p}#{$l}row-sm">
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-4-lg #{$p}#{$u}m-b">
+        <div class="#{$p}#{$u}bg-second #{$p}#{$u}p">#{$p}#{$l}row-sm<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="#{$p}col #{$p}col-4-lg #{$prefix}#{$u}m-b">
-        <div class="#{$prefix}#{$u}bg-third #{$prefix}#{$u}p" style="height: 100%; opacity: 0.8;">#{$p}row-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto. Quia, nobis explicabo asperiores facere!</div>
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-4-lg #{$p}#{$u}m-b">
+        <div class="#{$p}#{$u}bg-second #{$p}#{$u}p" style="height: 100%; opacity: 0.8;">#{$p}#{$l}row-sm<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="#{$p}col #{$p}col-4-lg #{$prefix}#{$u}m-b">
-        <div class="#{$prefix}#{$u}bg-third #{$prefix}#{$u}p" style="height: 100%;">#{$p}row-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-4-lg #{$p}#{$u}m-b">
+        <div class="#{$p}#{$u}bg-second #{$p}#{$u}p">#{$p}#{$l}row-sm<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    </div>
+</div>
+
+<div class="#{$p}#{$l}row #{$p}#{$l}row-lg">
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-4-lg #{$p}#{$u}m-b">
+        <div class="#{$p}#{$u}bg-third #{$p}#{$u}p">#{$p}#{$l}row-lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    </div>
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-4-lg #{$p}#{$u}m-b">
+        <div class="#{$p}#{$u}bg-third #{$p}#{$u}p" style="height: 100%; opacity: 0.8;">#{$p}#{$l}row-lg<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    </div>
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-4-lg #{$p}#{$u}m-b">
+        <div class="#{$p}#{$u}bg-third #{$p}#{$u}p">#{$p}#{$l}row-lg<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 ```
 */
 
-.#{$p}row-0 {
+.#{$p}#{$l}row-0 {
+
     @include make-row( $gutter: 0 );
-    .#{$p}col {
+
+    .#{$p}#{$l}col {
         padding-left: 0;
         padding-right: 0;
     }
+
 }
 
-.#{$p}row-sm {
+.#{$p}#{$l}row-sm {
+
     @include make-row( $gutter: map-get($grid-gutter-widths, sm) );
-    .#{$p}col {
+
+    .#{$p}#{$l}col {
         padding-left: (map-get($grid-gutter-widths, sm) / 2);
         padding-right: (map-get($grid-gutter-widths, sm) / 2);
     }
+
 }
 
-.#{$p}row-lg {
+.#{$p}#{$l}row-lg {
+
     @include make-row( $gutter: map-get($grid-gutter-widths, lg) );
-    .#{$p}col {
+
+    .#{$p}#{$l}col {
         padding-left: (map-get($grid-gutter-widths, lg) / 2);
         padding-right: (map-get($grid-gutter-widths, lg) / 2);
     }
-}
 
+}
 
 
 /*doc
 ---
-title: #{$p}col-(column)-(breakpoint)
-name: 03-col
-category: grid-float
-parent: 01-row
+title: #{$p}#{$l}col
+name: 02-col
+category: layout-grid-float
 ---
 
-floatによるグリッドのセルを作成する。
+floatによるグリッドのセルを作成する。このクラス単独では余白のみ確保する。
 
-スマートフォン(default), タブレット以上(sm), XGA以上(lg)でレイアウトを変更する代表的な例。
+*/
+
+
+/*doc
+---
+title: #{$p}#{$l}col-(column)-(breakpoint)
+name: 02-col-01-column-breakpoint
+category: layout-grid-float
+parent: 02-col
+---
+
+floatによるグリッドのセルを、ウィンドウ幅が(breakpoint)よりも大きくなったときに、<code>(column) / #{$grid-columns}</code>の幅で配置する。  
+(breakpoint)の指定がない場合は、常にその幅となる。  
+このテーマでは、(column)は<code>1 - 12</code>、(breakpoint)は<a href="./basic.html#breakpoints">標準のブレークポイント</a>を参照。
+
+### スマートフォン(default)、低解像度タブレットまたはスマートフォン横回転(sm)、XGA以上(lg)でレイアウトを変更する代表的な例
 
 ``` example
-<div class="#{$p}row">
-    <div class="#{$p}col #{$p}col-12 #{$p}col-6-sm #{$p}col-4-lg">
-        <div class="#{$prefix}#{$u}bg-first #{$prefix}#{$u}p" style="height: 100%;">#{$p}col-12<br>#{$p}col-6-sm<br>#{$p}col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
+<div class="#{$p}#{$l}row">
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-12 #{$p}#{$l}col-6-sm #{$p}#{$l}col-4-lg">
+        <div class="#{$p}#{$u}bg-first #{$p}#{$u}p">#{$p}#{$l}col-12<br>#{$p}#{$l}col-6-sm<br>#{$p}#{$l}col-4-lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="#{$p}col #{$p}col-12 #{$p}col-6-sm #{$p}col-4-lg">
-        <div class="#{$prefix}#{$u}bg-first #{$prefix}#{$u}p" style="height: 100%;">#{$p}col-12<br>#{$p}col-6-sm<br>#{$p}col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto. Quia, nobis explicabo asperiores facere!</div>
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-12 #{$p}#{$l}col-6-sm #{$p}#{$l}col-4-lg">
+        <div class="#{$p}#{$u}bg-first #{$p}#{$u}p">#{$p}#{$l}col-12<br>#{$p}#{$l}col-6-sm<br>#{$p}#{$l}col-4-lg<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="#{$p}col #{$p}col-12 #{$p}col-6-sm #{$p}col-4-lg">
-        <div class="#{$prefix}#{$u}bg-first #{$prefix}#{$u}p" style="height: 100%;">#{$p}col-12<br>#{$p}col-6-sm<br>#{$p}col-4-lg<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-12 #{$p}#{$l}col-6-sm #{$p}#{$l}col-4-lg">
+        <div class="#{$p}#{$u}bg-first #{$p}#{$u}p">#{$p}#{$l}col-12<br>#{$p}#{$l}col-6-sm<br>#{$p}#{$l}col-4-lg<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 ```
 
-iPhone SE(default), iPhone 8(xs), iPhone 8 Plus(sm)間でもレイアウトを変更できる。
+### iPhone SEまたは拡大UI(default)、iPhone 8(xs)、iPhone 8 Plus(sm)間でレイアウトを変更する例
 
 ``` example
-<div class="#{$p}row">
-    <div class="#{$p}col #{$p}col-12 #{$p}col-6-xs #{$p}col-4-sm">
-        <div class="#{$prefix}#{$u}bg-second #{$prefix}#{$u}p" style="height: 100%;">#{$p}col-12<br>#{$p}col-6-xs<br>#{$p}col-4-sm<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
+<div class="#{$p}#{$l}row">
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-12 #{$p}#{$l}col-6-xs #{$p}#{$l}col-4-sm">
+        <div class="#{$p}#{$u}bg-second #{$p}#{$u}p">#{$p}#{$l}col-12<br>#{$p}#{$l}col-6-xs<br>#{$p}#{$l}col-4-sm<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="#{$p}col #{$p}col-12 #{$p}col-6-xs #{$p}col-4-sm">
-        <div class="#{$prefix}#{$u}bg-second #{$prefix}#{$u}p" style="height: 100%;">#{$p}col-12<br>#{$p}col-6-xs<br>#{$p}col-4-sm<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro, fugit omnis, expedita ratione eos sunt quaerat, numquam eaque a iusto. Quia, nobis explicabo asperiores facere!</div>
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-12 #{$p}#{$l}col-6-xs #{$p}#{$l}col-4-sm">
+        <div class="#{$p}#{$u}bg-second #{$p}#{$u}p">#{$p}#{$l}col-12<br>#{$p}#{$l}col-6-xs<br>#{$p}#{$l}col-4-sm<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="#{$p}col #{$p}col-12 #{$p}col-6-xs #{$p}col-4-sm">
-        <div class="#{$prefix}#{$u}bg-second #{$prefix}#{$u}p" style="height: 100%;">#{$p}col-12<br>#{$p}col-6-xs<br>#{$p}col-4-sm<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-12 #{$p}#{$l}col-6-xs #{$p}#{$l}col-4-sm">
+        <div class="#{$p}#{$u}bg-second #{$p}#{$u}p">#{$p}#{$l}col-12<br>#{$p}#{$l}col-6-xs<br>#{$p}#{$l}col-4-sm<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 ```
@@ -172,33 +187,31 @@ iPhone SE(default), iPhone 8(xs), iPhone 8 Plus(sm)間でもレイアウトを�
 
 /*doc
 ---
-title: #{$p}col-(column)-(breakpoint)-(push or pull)
-name: 04-col-push
-category: grid-float
-parent: 01-row
+title: #{$p}#{$l}col-(column)-(breakpoint)-(push or pull)
+name: 02-col-02-column-breakpoint-push
+category: layout-grid-float
+parent: 02-col
 ---
 
-グリッドのセルの開始位置をずらす。pushは右、pullは左にずれる。組み合わせるとfloatのグリッドでもセルの左右入れ替えができる。
+グリッドのセルの開始位置をずらす。<code>push</code>は右、<code>pull</code>は左にずれる。  
+組み合わせるとfloatのグリッドでもセルの左右入れ替えができる。
+このテーマでは、(column)は<code>1 - 12</code>、(breakpoint)は<code>xs, sm, md, lg, xl, xxl</code>に対応している。
 
 ``` example
-<div class="#{$p}row #{$prefix}#{$u}m-b">
-    <div class="#{$p}col #{$p}col-6-lg #{$p}col-2-lg-push">
-        <div class="#{$prefix}#{$u}bg-third #{$prefix}#{$u}p" style="height: 100%;">#{$p}col-6-lg<br>#{$p}col-2-lg-push<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
+<div class="#{$p}#{$l}row #{$p}#{$u}m-b">
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-6-lg #{$p}#{$l}col-2-lg-push">
+        <div class="#{$p}#{$u}bg-third #{$p}#{$u}p">#{$p}#{$l}col-6-lg<br>#{$p}#{$l}col-2-lg-push<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
 </div>
 
-<div class="#{$p}row #{$prefix}#{$u}m-b">
-    <div class="#{$p}col #{$p}col-4-lg #{$p}col-8-lg-push">
-        <div class="#{$prefix}#{$u}bg-fourth #{$prefix}#{$u}p" style="height: 100%;">#{$p}col-4-lg<br>#{$p}col-8-lg-push<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
+<div class="#{$p}#{$l}row #{$p}#{$u}m-b">
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-4-lg #{$p}#{$l}col-8-lg-push">
+        <div class="#{$p}#{$u}bg-third #{$p}#{$u}p">#{$p}#{$l}col-4-lg<br>#{$p}#{$l}col-8-lg-push<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="#{$p}col #{$p}col-8-lg #{$p}col-4-lg-pull">
-        <div class="#{$prefix}#{$u}bg-fourth #{$prefix}#{$u}p" style="height: 100%;">#{$p}col-8-lg<br>#{$p}col-4-lg-pull<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit corporis nam aliquid at porro</div>
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-8-lg #{$p}#{$l}col-4-lg-pull">
+        <div class="#{$p}#{$u}bg-third #{$p}#{$u}p">#{$p}#{$l}col-8-lg<br>#{$p}#{$l}col-4-lg-pull<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 ```
 
 */
-
-
-}
-

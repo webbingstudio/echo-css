@@ -14,7 +14,7 @@ $optimize: true !default;
 // common-prefix
 // 他のCSSフレームワークとの衝突を回避したい場合は、接頭辞を指定する
 // Specify the prefix, if you want to avoid conflicts with other CSS frameworks
-$prefix: "" !default;
+$p: "echo-" !default;
 
 // layout-group-prefix
 $l: "l-" !default;
@@ -26,7 +26,7 @@ $m: "m-" !default;
 $c: "c-" !default;
 
 // utility-group-prefix
-// ユーティリティクラスは、意図的に接頭辞を指定していません。システムの編集者も使用する可能性があるため、覚えやすいよう簡略化しています
+// ユーティリティクラスは、意図的に接頭辞を指定していない。システムの編集者も使用する可能性があるため、覚えやすいよう簡略化している
 // Utility class does not intentionally specify a prefix. there is a possibility that editors of system, use it, it simplified for easier to remember
 $u: "" !default;
 
