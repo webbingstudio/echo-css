@@ -22,7 +22,7 @@ $l: "l-" !default;
 // layout-group-grid-prefix
 // グリッドシステムのみBootstrapに対応したい場合は、接頭辞を "" （空）にする
 // If you only want to support Bootstrap on the grid system, set the prefix to "" (empty)
-$g: "" !default;
+$g: $l !default;
 
 // module-group-prefix
 $m: "m-" !default;
@@ -94,7 +94,7 @@ $grid-type: "flexbox" !default;
 $grid-breakpoints: (
   default: 0,
   xxs: 320px,
-  xs:  375px,
+  xs:  360px,
   sm:  425px,
   md:  768px,
   lg:  1000px,
