@@ -4163,8 +4163,21 @@ parent: box
   */
   /*doc
   ---
+  title: text-root
+  name: text-03-root
+  category: utility-text
+  ---
+  
+  文字色をbody要素の文字色に戻す。
+  
+  ``` example
+  <p class="text-important">ここの文字色はimportantですが、<span class="text-root">text-root_ここからbody要素の文字色に変更しました</span></p>
+  ```
+  */
+  /*doc
+  ---
   title: text-inverse
-  name: text-03-inverse
+  name: text-04-inverse
   category: utility-text
   ---
   
@@ -4954,6 +4967,9 @@ parent: box
 }
 #document .text-mild {
   color: #888;
+}
+#document .text-root {
+  color: #333;
 }
 #document .text-inverse {
   color: #fff;

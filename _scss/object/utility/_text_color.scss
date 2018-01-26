@@ -111,8 +111,28 @@ category: utility-text
 
 /*doc
 ---
+title: #{$p}#{$u}text-root
+name: text-03-root
+category: utility-text
+---
+
+文字色をbody要素の文字色に戻す。
+
+``` example
+<p class="#{$p}#{$u}text-important">ここの文字色はimportantですが、<span class="#{$p}#{$u}text-root">#{$p}#{$u}text-root_ここからbody要素の文字色に変更しました</span></p>
+```
+*/
+
+.#{$p}#{$u}text-root {
+    color: $body-color;
+}
+
+
+
+/*doc
+---
 title: #{$p}#{$u}text-inverse
-name: text-03-inverse
+name: text-04-inverse
 category: utility-text
 ---
 
