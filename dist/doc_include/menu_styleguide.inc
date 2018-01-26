@@ -8,8 +8,7 @@
         <ul class="nav-list nav-chidren">
             <li class="nav-item"><a href="./layout-container.html">container</a></li>
             <li class="nav-item"><a href="./layout-document.html">document</a></li>
-            <li class="nav-item"><a href="./layout-grid-flex.html">grid (flex)</a></li>
-            <li class="nav-item"><a href="./layout-grid-float.html">grid (float)</a></li>
+            <li class="nav-item"><a href="./layout-grid.html">grid</a></li>
         </ul>
     </li>
 

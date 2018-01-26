@@ -19,6 +19,11 @@ $p: "" !default;
 // layout-group-prefix
 $l: "l-" !default;
 
+// layout-group-grid-prefix
+// グリッドシステムのみBootstrapに対応したい場合は、接頭辞を "" （空）にする
+// If you only want to support Bootstrap on the grid system, set the prefix to "" (empty)
+$g: "" !default;
+
 // module-group-prefix
 $m: "m-" !default;
 
@@ -83,8 +88,8 @@ $list-children: "." + $p + $m + "list-children" !default;
 // Grid
 // -----------------------------------------
 
-// grid type: float, flexbox, both(or others) 
-$grid-type: "both" !default;
+// grid type: float, flexbox(or others)
+$grid-type: "flexbox" !default;
 
 $grid-breakpoints: (
   default: 0,

@@ -500,29 +500,29 @@ parent: container
 
 /*doc
 ---
-title: l-f-row
-name: f-01-row
-category: layout-grid-flex
+title: l-row
+name: grid-01-row
+category: layout-grid
 ---
 
 flexboxによるグリッドのグループを作成する。  
 余白・段組の仕様を変更したい場合は <code>/\_scss/config\_advance.css</code> の各変数を調整すること。
 
 ``` example
-<div class="l-f-row">
-    <div class="l-f-col l-f-col-4-lg m-b">
-        <div class="bg-first p" style="height: 100%;">l-f-col-4-lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="l-row">
+    <div class="l-col l-col-4-lg m-b">
+        <div class="bg-first p" style="height: 100%;">l-col-4-lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-f-col l-f-col-4-lg m-b">
-        <div class="bg-first p" style="height: 100%;">l-f-col-4-lg<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。</div>
+    <div class="l-col l-col-4-lg m-b">
+        <div class="bg-first p" style="height: 100%;">l-col-4-lg<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。</div>
     </div>
-    <div class="l-f-col l-f-col-4-lg m-b">
-        <div class="bg-first p" style="height: 100%;">l-f-col-4-lg<br>ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。</div>
+    <div class="l-col l-col-4-lg m-b">
+        <div class="bg-first p" style="height: 100%;">l-col-4-lg<br>ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。</div>
     </div>
 </div>
 ```
 */
-.l-f-row {
+.l-row {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -537,1141 +537,49 @@ flexboxによるグリッドのグループを作成する。
 
 /*doc
 ---
-title: l-f-row-(size)
-name: f-01-row-01-size
-category: layout-grid-flex
-parent: f-01-row
+title: l-row-(size)
+name: grid-01-row-01-size
+category: layout-grid
+parent: grid-01-row
 ---
 
 flexboxによるグリッドで余白が異なるグループを作成する。  
 (size)は<code>0, sm, md, lg</code> に対応している。
 
 ``` example
-<div class="l-f-row l-f-row-0">
-    <div class="l-f-col l-f-col-4-lg m-b">
-        <div class="bg-first p" style="height: 100%;">l-f-row-0<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="l-f-col l-f-col-4-lg m-b">
-        <div class="bg-first p" style="height: 100%; opacity: 0.8;">l-f-row-0<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="l-f-col l-f-col-4-lg m-b">
-        <div class="bg-first p" style="height: 100%;">l-f-row-0<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-</div>
-
-<div class="l-f-row l-f-row-sm">
-    <div class="l-f-col l-f-col-4-lg m-b">
-        <div class="bg-second p" style="height: 100%;">l-f-row-sm<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="l-f-col l-f-col-4-lg m-b">
-        <div class="bg-second p" style="height: 100%; opacity: 0.8;">l-f-row-sm<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="l-f-col l-f-col-4-lg m-b">
-        <div class="bg-second p" style="height: 100%;">l-f-row-sm<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-</div>
-
-<div class="l-f-row l-f-row-lg">
-    <div class="l-f-col l-f-col-4-lg m-b">
-        <div class="bg-third p" style="height: 100%;">l-f-row-lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="l-f-col l-f-col-4-lg m-b">
-        <div class="bg-third p" style="height: 100%; opacity: 0.8;">l-f-row-lg<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="l-f-col l-f-col-4-lg m-b">
-        <div class="bg-third p" style="height: 100%;">l-f-row-lg<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-</div>
-```
-*/
-.l-f-row-0 {
-  margin-left: 0;
-  margin-right: 0;
-}
-.l-f-row-0 .l-f-col {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.l-f-row-sm {
-  margin-left: -5px;
-  margin-right: -5px;
-}
-.l-f-row-sm .l-f-col {
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-.l-f-row-lg {
-  margin-left: -20px;
-  margin-right: -20px;
-}
-.l-f-row-lg .l-f-col {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-/*doc
----
-title: l-f-col
-name: f-02-col
-category: layout-grid-flex
----
-
-flexboxによるグリッドのセルを作成する。このクラス単独では余白のみ確保する。
-
-*/
-.l-f-col {
-  width: 100%;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-/*doc
----
-title: l-f-col-(column)-(breakpoint)
-name: f-02-col-01-column-breakpoint
-category: layout-grid-flex
-parent: f-02-col
----
-
-flexboxによるグリッドのセルを、ウィンドウ幅が(breakpoint)よりも大きくなったときに、<code>(column) / 12</code>の幅で配置する。  
-(breakpoint)の指定がない場合は、常にその幅となる。  
-このテーマでは、(column)は<code>3, 4, 6</code>のみ、(breakpoint)は<code>sm, md, lg</code>のみ対応している。
-
-``` example
-<div class="l-f-row m-b-lg">
-    <div class="l-f-col l-f-col-3-sm m-b">
-        <div class="bg-first p" style="height: 100%;">l-f-col-3-sm<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="l-f-col l-f-col-3-sm m-b">
-        <div class="bg-first p" style="height: 100%;">l-f-col-3-sm<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="l-f-col l-f-col-3-sm m-b">
-        <div class="bg-first p" style="height: 100%;">l-f-col-3-sm<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-    <div class="l-f-col l-f-col-3-sm m-b">
-        <div class="bg-first p" style="height: 100%;">l-f-col-3-sm<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
-    </div>
-</div>
-
-<div class="l-f-row m-b-lg">
-    <div class="l-f-col l-f-col-3-md m-b">
-        <div class="bg-second p" style="height: 100%;">l-f-col-3-md<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="l-f-col l-f-col-3-md m-b">
-        <div class="bg-second p" style="height: 100%;">l-f-col-3-md<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="l-f-col l-f-col-3-md m-b">
-        <div class="bg-second p" style="height: 100%;">l-f-col-3-md<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-    <div class="l-f-col l-f-col-3-md m-b">
-        <div class="bg-second p" style="height: 100%;">l-f-col-3-md<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
-    </div>
-</div>
-
-<div class="l-f-row m-b-lg">
-    <div class="l-f-col l-f-col-4-lg m-b">
-        <div class="bg-third p" style="height: 100%;">l-f-col-4-lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="l-f-col l-f-col-4-lg m-b">
-        <div class="bg-third p" style="height: 100%;">l-f-col-4-lg<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="l-f-col l-f-col-4-lg m-b">
-        <div class="bg-third p" style="height: 100%;">l-f-col-4-lg<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-</div>
-
-<div class="l-f-row">
-    <div class="l-f-col l-f-col-6-lg m-b">
-        <div class="bg-fourth p" style="height: 100%;">l-f-col-6-lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="l-f-col l-f-col-6-lg m-b">
-        <div class="bg-fourth p" style="height: 100%;">l-f-col-6-lg<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="l-f-col l-f-col-6-lg m-b">
-        <div class="bg-fourth p" style="height: 100%;">l-f-col-6-lg<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-    <div class="l-f-col l-f-col-6-lg m-b">
-        <div class="bg-fourth p" style="height: 100%;">l-f-col-6-lg<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
-    </div>
-</div>
-```
-*/
-@media (min-width: 425px) {
-  .l-f-col-3-sm {
-    width: 25%;
-  }
-
-  .l-f-col-4-sm {
-    width: 33.33333333%;
-  }
-
-  .l-f-col-6-sm {
-    width: 50%;
-  }
-}
-@media (min-width: 768px) {
-  .l-f-col-3-md {
-    width: 25%;
-  }
-
-  .l-f-col-4-md {
-    width: 33.33333333%;
-  }
-
-  .l-f-col-6-md {
-    width: 50%;
-  }
-}
-@media (min-width: 1000px) {
-  .l-f-col-3-lg {
-    width: 25%;
-  }
-
-  .l-f-col-4-lg {
-    width: 33.33333333%;
-  }
-
-  .l-f-col-6-lg {
-    width: 50%;
-  }
-}
-/*doc
----
-title: l-row
-name: 01-row
-category: layout-grid-float
----
-
-floatによるグリッドのグループを作成する。余白・段組の仕様を変更したい場合は <code>/\_scss/config\_advance.css</code> の各変数を調整すること。
-
-命名規則を他のCSSフレームワークと同様にしたい場合は以下を調整すること。
-
-- <code>/\_scss/lauout/\_grid\_float.css</code>
-- <code>/\_scss/mixin/mixin.css</code> の <code>make-row(), make-grid-columns()</code>
-
-
-``` example
-<div class="l-row">
-    <div class="l-col l-col-lg-4 m-b">
-        <div class="bg-first p">l-col-lg-4<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="l-col l-col-lg-4 m-b">
-        <div class="bg-first p">l-col-lg-4<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="l-col l-col-lg-4 m-b">
-        <div class="bg-first p">l-col-lg-4<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-</div>
-```
-
-*/
-.l-col {
-  position: relative;
-  min-height: 1px;
-}
-
-.l-col-3, .l-col-4, .l-col-5, .l-col-6, .l-col-7, .l-col-8, .l-col-9, .l-col-10, .l-col-11, .l-col-12 {
-  float: left;
-}
-
-.l-col-3 {
-  width: 25%;
-}
-
-.l-col-4 {
-  width: 33.33333%;
-}
-
-.l-col-5 {
-  width: 41.66667%;
-}
-
-.l-col-6 {
-  width: 50%;
-}
-
-.l-col-7 {
-  width: 58.33333%;
-}
-
-.l-col-8 {
-  width: 66.66667%;
-}
-
-.l-col-9 {
-  width: 75%;
-}
-
-.l-col-10 {
-  width: 83.33333%;
-}
-
-.l-col-11 {
-  width: 91.66667%;
-}
-
-.l-col-12 {
-  width: 100%;
-}
-
-.l-col-pull-1 {
-  right: 8.33333%;
-}
-
-.l-col-pull-2 {
-  right: 16.66667%;
-}
-
-.l-col-pull-3 {
-  right: 25%;
-}
-
-.l-col-pull-4 {
-  right: 33.33333%;
-}
-
-.l-col-pull-5 {
-  right: 41.66667%;
-}
-
-.l-col-pull-6 {
-  right: 50%;
-}
-
-.l-col-pull-7 {
-  right: 58.33333%;
-}
-
-.l-col-pull-8 {
-  right: 66.66667%;
-}
-
-.l-col-pull-9 {
-  right: 75%;
-}
-
-.l-col-pull-10 {
-  right: 83.33333%;
-}
-
-.l-col-push-1 {
-  left: 8.33333%;
-}
-
-.l-col-push-2 {
-  left: 16.66667%;
-}
-
-.l-col-push-3 {
-  left: 25%;
-}
-
-.l-col-push-4 {
-  left: 33.33333%;
-}
-
-.l-col-push-5 {
-  left: 41.66667%;
-}
-
-.l-col-push-6 {
-  left: 50%;
-}
-
-.l-col-push-7 {
-  left: 58.33333%;
-}
-
-.l-col-push-8 {
-  left: 66.66667%;
-}
-
-.l-col-push-9 {
-  left: 75%;
-}
-
-.l-col-push-10 {
-  left: 83.33333%;
-}
-
-.l-col-offset-1 {
-  margin-left: 8.33333%;
-}
-
-.l-col-offset-2 {
-  margin-left: 16.66667%;
-}
-
-.l-col-offset-3 {
-  margin-left: 25%;
-}
-
-.l-col-offset-4 {
-  margin-left: 33.33333%;
-}
-
-.l-col-offset-5 {
-  margin-left: 41.66667%;
-}
-
-.l-col-offset-6 {
-  margin-left: 50%;
-}
-
-.l-col-offset-7 {
-  margin-left: 58.33333%;
-}
-
-.l-col-offset-8 {
-  margin-left: 66.66667%;
-}
-
-.l-col-offset-9 {
-  margin-left: 75%;
-}
-
-.l-col-offset-10 {
-  margin-left: 83.33333%;
-}
-
-@media (min-width: 320px) {
-  .l-col-xxs-3, .l-col-xxs-4, .l-col-xxs-5, .l-col-xxs-6, .l-col-xxs-7, .l-col-xxs-8, .l-col-xxs-9, .l-col-xxs-10, .l-col-xxs-11, .l-col-xxs-12 {
-    float: left;
-  }
-
-  .l-col-xxs-3 {
-    width: 25%;
-  }
-
-  .l-col-xxs-4 {
-    width: 33.33333%;
-  }
-
-  .l-col-xxs-5 {
-    width: 41.66667%;
-  }
-
-  .l-col-xxs-6 {
-    width: 50%;
-  }
-
-  .l-col-xxs-7 {
-    width: 58.33333%;
-  }
-
-  .l-col-xxs-8 {
-    width: 66.66667%;
-  }
-
-  .l-col-xxs-9 {
-    width: 75%;
-  }
-
-  .l-col-xxs-10 {
-    width: 83.33333%;
-  }
-
-  .l-col-xxs-11 {
-    width: 91.66667%;
-  }
-
-  .l-col-xxs-12 {
-    width: 100%;
-  }
-}
-@media (min-width: 375px) {
-  .l-col-xs-3, .l-col-xs-4, .l-col-xs-5, .l-col-xs-6, .l-col-xs-7, .l-col-xs-8, .l-col-xs-9, .l-col-xs-10, .l-col-xs-11, .l-col-xs-12 {
-    float: left;
-  }
-
-  .l-col-xs-3 {
-    width: 25%;
-  }
-
-  .l-col-xs-4 {
-    width: 33.33333%;
-  }
-
-  .l-col-xs-5 {
-    width: 41.66667%;
-  }
-
-  .l-col-xs-6 {
-    width: 50%;
-  }
-
-  .l-col-xs-7 {
-    width: 58.33333%;
-  }
-
-  .l-col-xs-8 {
-    width: 66.66667%;
-  }
-
-  .l-col-xs-9 {
-    width: 75%;
-  }
-
-  .l-col-xs-10 {
-    width: 83.33333%;
-  }
-
-  .l-col-xs-11 {
-    width: 91.66667%;
-  }
-
-  .l-col-xs-12 {
-    width: 100%;
-  }
-}
-@media (min-width: 425px) {
-  .l-col-sm-3, .l-col-sm-4, .l-col-sm-5, .l-col-sm-6, .l-col-sm-7, .l-col-sm-8, .l-col-sm-9, .l-col-sm-10, .l-col-sm-11, .l-col-sm-12 {
-    float: left;
-  }
-
-  .l-col-sm-3 {
-    width: 25%;
-  }
-
-  .l-col-sm-4 {
-    width: 33.33333%;
-  }
-
-  .l-col-sm-5 {
-    width: 41.66667%;
-  }
-
-  .l-col-sm-6 {
-    width: 50%;
-  }
-
-  .l-col-sm-7 {
-    width: 58.33333%;
-  }
-
-  .l-col-sm-8 {
-    width: 66.66667%;
-  }
-
-  .l-col-sm-9 {
-    width: 75%;
-  }
-
-  .l-col-sm-10 {
-    width: 83.33333%;
-  }
-
-  .l-col-sm-11 {
-    width: 91.66667%;
-  }
-
-  .l-col-sm-12 {
-    width: 100%;
-  }
-
-  .l-col-sm-pull-1 {
-    right: 8.33333%;
-  }
-
-  .l-col-sm-pull-2 {
-    right: 16.66667%;
-  }
-
-  .l-col-sm-pull-3 {
-    right: 25%;
-  }
-
-  .l-col-sm-pull-4 {
-    right: 33.33333%;
-  }
-
-  .l-col-sm-pull-5 {
-    right: 41.66667%;
-  }
-
-  .l-col-sm-pull-6 {
-    right: 50%;
-  }
-
-  .l-col-sm-pull-7 {
-    right: 58.33333%;
-  }
-
-  .l-col-sm-pull-8 {
-    right: 66.66667%;
-  }
-
-  .l-col-sm-pull-9 {
-    right: 75%;
-  }
-
-  .l-col-sm-pull-10 {
-    right: 83.33333%;
-  }
-
-  .l-col-sm-push-1 {
-    left: 8.33333%;
-  }
-
-  .l-col-sm-push-2 {
-    left: 16.66667%;
-  }
-
-  .l-col-sm-push-3 {
-    left: 25%;
-  }
-
-  .l-col-sm-push-4 {
-    left: 33.33333%;
-  }
-
-  .l-col-sm-push-5 {
-    left: 41.66667%;
-  }
-
-  .l-col-sm-push-6 {
-    left: 50%;
-  }
-
-  .l-col-sm-push-7 {
-    left: 58.33333%;
-  }
-
-  .l-col-sm-push-8 {
-    left: 66.66667%;
-  }
-
-  .l-col-sm-push-9 {
-    left: 75%;
-  }
-
-  .l-col-sm-push-10 {
-    left: 83.33333%;
-  }
-
-  .l-col-sm-offset-1 {
-    margin-left: 8.33333%;
-  }
-
-  .l-col-sm-offset-2 {
-    margin-left: 16.66667%;
-  }
-
-  .l-col-sm-offset-3 {
-    margin-left: 25%;
-  }
-
-  .l-col-sm-offset-4 {
-    margin-left: 33.33333%;
-  }
-
-  .l-col-sm-offset-5 {
-    margin-left: 41.66667%;
-  }
-
-  .l-col-sm-offset-6 {
-    margin-left: 50%;
-  }
-
-  .l-col-sm-offset-7 {
-    margin-left: 58.33333%;
-  }
-
-  .l-col-sm-offset-8 {
-    margin-left: 66.66667%;
-  }
-
-  .l-col-sm-offset-9 {
-    margin-left: 75%;
-  }
-
-  .l-col-sm-offset-10 {
-    margin-left: 83.33333%;
-  }
-}
-@media (min-width: 768px) {
-  .l-col-md-3, .l-col-md-4, .l-col-md-5, .l-col-md-6, .l-col-md-7, .l-col-md-8, .l-col-md-9, .l-col-md-10, .l-col-md-11, .l-col-md-12 {
-    float: left;
-  }
-
-  .l-col-md-3 {
-    width: 25%;
-  }
-
-  .l-col-md-4 {
-    width: 33.33333%;
-  }
-
-  .l-col-md-5 {
-    width: 41.66667%;
-  }
-
-  .l-col-md-6 {
-    width: 50%;
-  }
-
-  .l-col-md-7 {
-    width: 58.33333%;
-  }
-
-  .l-col-md-8 {
-    width: 66.66667%;
-  }
-
-  .l-col-md-9 {
-    width: 75%;
-  }
-
-  .l-col-md-10 {
-    width: 83.33333%;
-  }
-
-  .l-col-md-11 {
-    width: 91.66667%;
-  }
-
-  .l-col-md-12 {
-    width: 100%;
-  }
-
-  .l-col-md-pull-1 {
-    right: 8.33333%;
-  }
-
-  .l-col-md-pull-2 {
-    right: 16.66667%;
-  }
-
-  .l-col-md-pull-3 {
-    right: 25%;
-  }
-
-  .l-col-md-pull-4 {
-    right: 33.33333%;
-  }
-
-  .l-col-md-pull-5 {
-    right: 41.66667%;
-  }
-
-  .l-col-md-pull-6 {
-    right: 50%;
-  }
-
-  .l-col-md-pull-7 {
-    right: 58.33333%;
-  }
-
-  .l-col-md-pull-8 {
-    right: 66.66667%;
-  }
-
-  .l-col-md-pull-9 {
-    right: 75%;
-  }
-
-  .l-col-md-pull-10 {
-    right: 83.33333%;
-  }
-
-  .l-col-md-push-1 {
-    left: 8.33333%;
-  }
-
-  .l-col-md-push-2 {
-    left: 16.66667%;
-  }
-
-  .l-col-md-push-3 {
-    left: 25%;
-  }
-
-  .l-col-md-push-4 {
-    left: 33.33333%;
-  }
-
-  .l-col-md-push-5 {
-    left: 41.66667%;
-  }
-
-  .l-col-md-push-6 {
-    left: 50%;
-  }
-
-  .l-col-md-push-7 {
-    left: 58.33333%;
-  }
-
-  .l-col-md-push-8 {
-    left: 66.66667%;
-  }
-
-  .l-col-md-push-9 {
-    left: 75%;
-  }
-
-  .l-col-md-push-10 {
-    left: 83.33333%;
-  }
-
-  .l-col-md-offset-1 {
-    margin-left: 8.33333%;
-  }
-
-  .l-col-md-offset-2 {
-    margin-left: 16.66667%;
-  }
-
-  .l-col-md-offset-3 {
-    margin-left: 25%;
-  }
-
-  .l-col-md-offset-4 {
-    margin-left: 33.33333%;
-  }
-
-  .l-col-md-offset-5 {
-    margin-left: 41.66667%;
-  }
-
-  .l-col-md-offset-6 {
-    margin-left: 50%;
-  }
-
-  .l-col-md-offset-7 {
-    margin-left: 58.33333%;
-  }
-
-  .l-col-md-offset-8 {
-    margin-left: 66.66667%;
-  }
-
-  .l-col-md-offset-9 {
-    margin-left: 75%;
-  }
-
-  .l-col-md-offset-10 {
-    margin-left: 83.33333%;
-  }
-}
-@media (min-width: 1000px) {
-  .l-col-lg-3, .l-col-lg-4, .l-col-lg-5, .l-col-lg-6, .l-col-lg-7, .l-col-lg-8, .l-col-lg-9, .l-col-lg-10, .l-col-lg-11, .l-col-lg-12 {
-    float: left;
-  }
-
-  .l-col-lg-3 {
-    width: 25%;
-  }
-
-  .l-col-lg-4 {
-    width: 33.33333%;
-  }
-
-  .l-col-lg-5 {
-    width: 41.66667%;
-  }
-
-  .l-col-lg-6 {
-    width: 50%;
-  }
-
-  .l-col-lg-7 {
-    width: 58.33333%;
-  }
-
-  .l-col-lg-8 {
-    width: 66.66667%;
-  }
-
-  .l-col-lg-9 {
-    width: 75%;
-  }
-
-  .l-col-lg-10 {
-    width: 83.33333%;
-  }
-
-  .l-col-lg-11 {
-    width: 91.66667%;
-  }
-
-  .l-col-lg-12 {
-    width: 100%;
-  }
-
-  .l-col-lg-pull-1 {
-    right: 8.33333%;
-  }
-
-  .l-col-lg-pull-2 {
-    right: 16.66667%;
-  }
-
-  .l-col-lg-pull-3 {
-    right: 25%;
-  }
-
-  .l-col-lg-pull-4 {
-    right: 33.33333%;
-  }
-
-  .l-col-lg-pull-5 {
-    right: 41.66667%;
-  }
-
-  .l-col-lg-pull-6 {
-    right: 50%;
-  }
-
-  .l-col-lg-pull-7 {
-    right: 58.33333%;
-  }
-
-  .l-col-lg-pull-8 {
-    right: 66.66667%;
-  }
-
-  .l-col-lg-pull-9 {
-    right: 75%;
-  }
-
-  .l-col-lg-pull-10 {
-    right: 83.33333%;
-  }
-
-  .l-col-lg-push-1 {
-    left: 8.33333%;
-  }
-
-  .l-col-lg-push-2 {
-    left: 16.66667%;
-  }
-
-  .l-col-lg-push-3 {
-    left: 25%;
-  }
-
-  .l-col-lg-push-4 {
-    left: 33.33333%;
-  }
-
-  .l-col-lg-push-5 {
-    left: 41.66667%;
-  }
-
-  .l-col-lg-push-6 {
-    left: 50%;
-  }
-
-  .l-col-lg-push-7 {
-    left: 58.33333%;
-  }
-
-  .l-col-lg-push-8 {
-    left: 66.66667%;
-  }
-
-  .l-col-lg-push-9 {
-    left: 75%;
-  }
-
-  .l-col-lg-push-10 {
-    left: 83.33333%;
-  }
-
-  .l-col-lg-offset-1 {
-    margin-left: 8.33333%;
-  }
-
-  .l-col-lg-offset-2 {
-    margin-left: 16.66667%;
-  }
-
-  .l-col-lg-offset-3 {
-    margin-left: 25%;
-  }
-
-  .l-col-lg-offset-4 {
-    margin-left: 33.33333%;
-  }
-
-  .l-col-lg-offset-5 {
-    margin-left: 41.66667%;
-  }
-
-  .l-col-lg-offset-6 {
-    margin-left: 50%;
-  }
-
-  .l-col-lg-offset-7 {
-    margin-left: 58.33333%;
-  }
-
-  .l-col-lg-offset-8 {
-    margin-left: 66.66667%;
-  }
-
-  .l-col-lg-offset-9 {
-    margin-left: 75%;
-  }
-
-  .l-col-lg-offset-10 {
-    margin-left: 83.33333%;
-  }
-}
-@media (min-width: 1240px) {
-  .l-col-xl-3, .l-col-xl-4, .l-col-xl-5, .l-col-xl-6, .l-col-xl-7, .l-col-xl-8, .l-col-xl-9, .l-col-xl-10, .l-col-xl-11, .l-col-xl-12 {
-    float: left;
-  }
-
-  .l-col-xl-3 {
-    width: 25%;
-  }
-
-  .l-col-xl-4 {
-    width: 33.33333%;
-  }
-
-  .l-col-xl-5 {
-    width: 41.66667%;
-  }
-
-  .l-col-xl-6 {
-    width: 50%;
-  }
-
-  .l-col-xl-7 {
-    width: 58.33333%;
-  }
-
-  .l-col-xl-8 {
-    width: 66.66667%;
-  }
-
-  .l-col-xl-9 {
-    width: 75%;
-  }
-
-  .l-col-xl-10 {
-    width: 83.33333%;
-  }
-
-  .l-col-xl-11 {
-    width: 91.66667%;
-  }
-
-  .l-col-xl-12 {
-    width: 100%;
-  }
-}
-@media (min-width: 1640px) {
-  .l-col-xxl-3, .l-col-xxl-4, .l-col-xxl-5, .l-col-xxl-6, .l-col-xxl-7, .l-col-xxl-8, .l-col-xxl-9, .l-col-xxl-10, .l-col-xxl-11, .l-col-xxl-12 {
-    float: left;
-  }
-
-  .l-col-xxl-3 {
-    width: 25%;
-  }
-
-  .l-col-xxl-4 {
-    width: 33.33333%;
-  }
-
-  .l-col-xxl-5 {
-    width: 41.66667%;
-  }
-
-  .l-col-xxl-6 {
-    width: 50%;
-  }
-
-  .l-col-xxl-7 {
-    width: 58.33333%;
-  }
-
-  .l-col-xxl-8 {
-    width: 66.66667%;
-  }
-
-  .l-col-xxl-9 {
-    width: 75%;
-  }
-
-  .l-col-xxl-10 {
-    width: 83.33333%;
-  }
-
-  .l-col-xxl-11 {
-    width: 91.66667%;
-  }
-
-  .l-col-xxl-12 {
-    width: 100%;
-  }
-}
-.l-row {
-  margin-left: -10px;
-  margin-right: -10px;
-}
-.l-row:before, .l-row:after {
-  content: "";
-  display: table;
-}
-.l-row:after {
-  clear: both;
-}
-.l-row .l-col {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-/*doc
----
-title: l-row-(size)
-name: 01-row-01-size
-category: layout-grid-float
-parent: 01-row
----
-
-floatによるグリッドで余白が異なるグループを作成する。  
-(size)は<code>0, sm, md, lg</code> に対応している。
-
-``` example
 <div class="l-row l-row-0">
-    <div class="l-col l-col-lg-4 m-b">
-        <div class="bg-first p">l-row-0<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    <div class="l-col l-col-4-lg m-b">
+        <div class="bg-first p" style="height: 100%;">l-row-0<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col l-col-lg-4 m-b">
+    <div class="l-col l-col-4-lg m-b">
         <div class="bg-first p" style="height: 100%; opacity: 0.8;">l-row-0<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-col l-col-lg-4 m-b">
-        <div class="bg-first p">l-row-0<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="l-col l-col-4-lg m-b">
+        <div class="bg-first p" style="height: 100%;">l-row-0<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 
 <div class="l-row l-row-sm">
-    <div class="l-col l-col-lg-4 m-b">
-        <div class="bg-second p">l-row-sm<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    <div class="l-col l-col-4-lg m-b">
+        <div class="bg-second p" style="height: 100%;">l-row-sm<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col l-col-lg-4 m-b">
+    <div class="l-col l-col-4-lg m-b">
         <div class="bg-second p" style="height: 100%; opacity: 0.8;">l-row-sm<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-col l-col-lg-4 m-b">
-        <div class="bg-second p">l-row-sm<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="l-col l-col-4-lg m-b">
+        <div class="bg-second p" style="height: 100%;">l-row-sm<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 
 <div class="l-row l-row-lg">
-    <div class="l-col l-col-lg-4 m-b">
-        <div class="bg-third p">l-row-lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    <div class="l-col l-col-4-lg m-b">
+        <div class="bg-third p" style="height: 100%;">l-row-lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col l-col-lg-4 m-b">
+    <div class="l-col l-col-4-lg m-b">
         <div class="bg-third p" style="height: 100%; opacity: 0.8;">l-row-lg<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-col l-col-lg-4 m-b">
-        <div class="bg-third p">l-row-lg<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="l-col l-col-4-lg m-b">
+        <div class="bg-third p" style="height: 100%;">l-row-lg<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 ```
@@ -1679,13 +587,6 @@ floatによるグリッドで余白が異なるグループを作成する。
 .l-row-0 {
   margin-left: 0;
   margin-right: 0;
-}
-.l-row-0:before, .l-row-0:after {
-  content: "";
-  display: table;
-}
-.l-row-0:after {
-  clear: both;
 }
 .l-row-0 .l-col {
   padding-left: 0;
@@ -1696,13 +597,6 @@ floatによるグリッドで余白が異なるグループを作成する。
   margin-left: -5px;
   margin-right: -5px;
 }
-.l-row-sm:before, .l-row-sm:after {
-  content: "";
-  display: table;
-}
-.l-row-sm:after {
-  clear: both;
-}
 .l-row-sm .l-col {
   padding-left: 5px;
   padding-right: 5px;
@@ -1712,13 +606,6 @@ floatによるグリッドで余白が異なるグループを作成する。
   margin-left: -20px;
   margin-right: -20px;
 }
-.l-row-lg:before, .l-row-lg:after {
-  content: "";
-  display: table;
-}
-.l-row-lg:after {
-  clear: both;
-}
 .l-row-lg .l-col {
   padding-left: 20px;
   padding-right: 20px;
@@ -1727,88 +614,129 @@ floatによるグリッドで余白が異なるグループを作成する。
 /*doc
 ---
 title: l-col
-name: 02-col
-category: layout-grid-float
+name: grid-02-col
+category: layout-grid
 ---
 
-floatによるグリッドのセルを作成する。このクラス単独では余白のみ確保する。
+flexboxによるグリッドのセルを作成する。このクラス単独では余白のみ確保する。
 
 */
+.l-col {
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 /*doc
 ---
-title: l-col-(breakpoint)-(column)
-name: 02-col-01-breakpoint-column
-category: layout-grid-float
-parent: 02-col
+title: l-col-(column)-(breakpoint)
+name: grid-02-col-01-column-breakpoint
+category: layout-grid
+parent: grid-02-col
 ---
 
-floatによるグリッドのセルを、ウィンドウ幅が(breakpoint)よりも大きくなったときに、<code>(column) / 12</code>の幅で配置する。  
+flexboxによるグリッドのセルを、ウィンドウ幅が(breakpoint)よりも大きくなったときに、<code>(column) / 12</code>の幅で配置する。  
 (breakpoint)の指定がない場合は、常にその幅となる。  
-このテーマでは、(column)は<code>1 - 12</code>、(breakpoint)は<a href="./basic.html#breakpoints">標準のブレークポイント</a>を参照。
-
-### スマートフォン(default)、低解像度タブレットまたはスマートフォン横回転(sm)、XGA以上(lg)でレイアウトを変更する代表的な例
+このテーマでは、(column)は<code>3, 4, 6</code>のみ、(breakpoint)は<code>sm, md, lg</code>のみ対応している。
 
 ``` example
+<div class="l-row m-b-lg">
+    <div class="l-col l-col-3-sm m-b">
+        <div class="bg-first p" style="height: 100%;">l-col-3-sm<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    </div>
+    <div class="l-col l-col-3-sm m-b">
+        <div class="bg-first p" style="height: 100%;">l-col-3-sm<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    </div>
+    <div class="l-col l-col-3-sm m-b">
+        <div class="bg-first p" style="height: 100%;">l-col-3-sm<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    </div>
+    <div class="l-col l-col-3-sm m-b">
+        <div class="bg-first p" style="height: 100%;">l-col-3-sm<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
+    </div>
+</div>
+
+<div class="l-row m-b-lg">
+    <div class="l-col l-col-3-md m-b">
+        <div class="bg-second p" style="height: 100%;">l-col-3-md<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    </div>
+    <div class="l-col l-col-3-md m-b">
+        <div class="bg-second p" style="height: 100%;">l-col-3-md<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    </div>
+    <div class="l-col l-col-3-md m-b">
+        <div class="bg-second p" style="height: 100%;">l-col-3-md<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    </div>
+    <div class="l-col l-col-3-md m-b">
+        <div class="bg-second p" style="height: 100%;">l-col-3-md<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
+    </div>
+</div>
+
+<div class="l-row m-b-lg">
+    <div class="l-col l-col-4-lg m-b">
+        <div class="bg-third p" style="height: 100%;">l-col-4-lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    </div>
+    <div class="l-col l-col-4-lg m-b">
+        <div class="bg-third p" style="height: 100%;">l-col-4-lg<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    </div>
+    <div class="l-col l-col-4-lg m-b">
+        <div class="bg-third p" style="height: 100%;">l-col-4-lg<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    </div>
+</div>
+
 <div class="l-row">
-    <div class="l-col l-col-12 l-col-sm-6 l-col-lg-4">
-        <div class="bg-first p">l-col-12<br>l-col-sm-6<br>l-col-lg-4<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    <div class="l-col l-col-6-lg m-b">
+        <div class="bg-fourth p" style="height: 100%;">l-col-6-lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col l-col-12 l-col-sm-6 l-col-lg-4">
-        <div class="bg-first p">l-col-12<br>l-col-sm-6<br>l-col-lg-4<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-col l-col-6-lg m-b">
+        <div class="bg-fourth p" style="height: 100%;">l-col-6-lg<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-col l-col-12 l-col-sm-6 l-col-lg-4">
-        <div class="bg-first p">l-col-12<br>l-col-sm-6<br>l-col-lg-4<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="l-col l-col-6-lg m-b">
+        <div class="bg-fourth p" style="height: 100%;">l-col-6-lg<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
-</div>
-```
-
-### iPhone SEまたは拡大UI(default)、iPhone 8(xs)、iPhone 8 Plus(sm)間でレイアウトを変更する例
-
-``` example
-<div class="l-row">
-    <div class="l-col l-col-12 l-col-xs-6 l-col-sm-4">
-        <div class="bg-second p">l-col-12<br>l-col-xs-6<br>l-col-sm-4<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="l-col l-col-12 l-col-xs-6 l-col-sm-4">
-        <div class="bg-second p">l-col-12<br>l-col-xs-6<br>l-col-sm-4<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="l-col l-col-12 l-col-xs-6 l-col-sm-4">
-        <div class="bg-second p">l-col-12<br>l-col-xs-6<br>l-col-sm-4<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="l-col l-col-6-lg m-b">
+        <div class="bg-fourth p" style="height: 100%;">l-col-6-lg<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
     </div>
 </div>
 ```
-
 */
-/*doc
----
-title: l-col-(breakpoint)-(push or pull)-(column)
-name: 02-col-02-breakpoint-push-column
-category: layout-grid-float
-parent: 02-col
----
+@media (min-width: 425px) {
+  .l-col-3-sm {
+    width: 25%;
+  }
 
-グリッドのセルの開始位置をずらす。<code>push</code>は右、<code>pull</code>は左にずれる。  
-組み合わせるとfloatのグリッドでもセルの左右入れ替えができる。
-このテーマでは、(column)は<code>1 - 12</code>、(breakpoint)は<code>xs, sm, md, lg, xl, xxl</code>に対応している。
+  .l-col-4-sm {
+    width: 33.33333333%;
+  }
 
-``` example
-<div class="l-row m-b">
-    <div class="l-col l-col-lg-6 l-col-lg-push-2">
-        <div class="bg-third p">l-col-lg-6<br>l-col-lg-push-2<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-</div>
+  .l-col-6-sm {
+    width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .l-col-3-md {
+    width: 25%;
+  }
 
-<div class="l-row m-b">
-    <div class="l-col l-col-lg-4 l-col-lg-push-8">
-        <div class="bg-third p">l-col-lg-4<br>l-col-lg-push-8<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="l-col l-col-lg-8 l-col-lg-pull-4">
-        <div class="bg-third p">l-col-lg-8<br>l-col-lg-pull-4<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-</div>
-```
+  .l-col-4-md {
+    width: 33.33333333%;
+  }
 
-*/
+  .l-col-6-md {
+    width: 50%;
+  }
+}
+@media (min-width: 1000px) {
+  .l-col-3-lg {
+    width: 25%;
+  }
+
+  .l-col-4-lg {
+    width: 33.33333333%;
+  }
+
+  .l-col-6-lg {
+    width: 50%;
+  }
+}
 /*doc
 ---
 title: m-badge
