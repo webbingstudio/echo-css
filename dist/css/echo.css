@@ -754,860 +754,860 @@ floatによるグリッドのグループを作成する。余白・段組の仕
 
 ``` example
 <div class="l-row">
-    <div class="l-col l-col-4-lg m-b">
-        <div class="bg-first p">l-col-4-lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    <div class="l-col l-col-lg-4 m-b">
+        <div class="bg-first p">l-col-lg-4<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col l-col-4-lg m-b">
-        <div class="bg-first p">l-col-4-lg<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-col l-col-lg-4 m-b">
+        <div class="bg-first p">l-col-lg-4<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-col l-col-4-lg m-b">
-        <div class="bg-first p">l-col-4-lg<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="l-col l-col-lg-4 m-b">
+        <div class="bg-first p">l-col-lg-4<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 ```
 
 */
-.col {
+.l-col {
   position: relative;
   min-height: 1px;
 }
 
-.col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+.l-col-3, .l-col-4, .l-col-5, .l-col-6, .l-col-7, .l-col-8, .l-col-9, .l-col-10, .l-col-11, .l-col-12 {
   float: left;
 }
 
-.col-3 {
+.l-col-3 {
   width: 25%;
 }
 
-.col-4 {
+.l-col-4 {
   width: 33.33333%;
 }
 
-.col-5 {
+.l-col-5 {
   width: 41.66667%;
 }
 
-.col-6 {
+.l-col-6 {
   width: 50%;
 }
 
-.col-7 {
+.l-col-7 {
   width: 58.33333%;
 }
 
-.col-8 {
+.l-col-8 {
   width: 66.66667%;
 }
 
-.col-9 {
+.l-col-9 {
   width: 75%;
 }
 
-.col-10 {
+.l-col-10 {
   width: 83.33333%;
 }
 
-.col-11 {
+.l-col-11 {
   width: 91.66667%;
 }
 
-.col-12 {
+.l-col-12 {
   width: 100%;
 }
 
-.col-1-pull {
+.l-col-pull-1 {
   right: 8.33333%;
 }
 
-.col-2-pull {
+.l-col-pull-2 {
   right: 16.66667%;
 }
 
-.col-3-pull {
+.l-col-pull-3 {
   right: 25%;
 }
 
-.col-4-pull {
+.l-col-pull-4 {
   right: 33.33333%;
 }
 
-.col-5-pull {
+.l-col-pull-5 {
   right: 41.66667%;
 }
 
-.col-6-pull {
+.l-col-pull-6 {
   right: 50%;
 }
 
-.col-7-pull {
+.l-col-pull-7 {
   right: 58.33333%;
 }
 
-.col-8-pull {
+.l-col-pull-8 {
   right: 66.66667%;
 }
 
-.col-9-pull {
+.l-col-pull-9 {
   right: 75%;
 }
 
-.col-10-pull {
+.l-col-pull-10 {
   right: 83.33333%;
 }
 
-.col-1-push {
+.l-col-push-1 {
   left: 8.33333%;
 }
 
-.col-2-push {
+.l-col-push-2 {
   left: 16.66667%;
 }
 
-.col-3-push {
+.l-col-push-3 {
   left: 25%;
 }
 
-.col-4-push {
+.l-col-push-4 {
   left: 33.33333%;
 }
 
-.col-5-push {
+.l-col-push-5 {
   left: 41.66667%;
 }
 
-.col-6-push {
+.l-col-push-6 {
   left: 50%;
 }
 
-.col-7-push {
+.l-col-push-7 {
   left: 58.33333%;
 }
 
-.col-8-push {
+.l-col-push-8 {
   left: 66.66667%;
 }
 
-.col-9-push {
+.l-col-push-9 {
   left: 75%;
 }
 
-.col-10-push {
+.l-col-push-10 {
   left: 83.33333%;
 }
 
-.col-1-offset {
+.l-col-offset-1 {
   margin-left: 8.33333%;
 }
 
-.col-2-offset {
+.l-col-offset-2 {
   margin-left: 16.66667%;
 }
 
-.col-3-offset {
+.l-col-offset-3 {
   margin-left: 25%;
 }
 
-.col-4-offset {
+.l-col-offset-4 {
   margin-left: 33.33333%;
 }
 
-.col-5-offset {
+.l-col-offset-5 {
   margin-left: 41.66667%;
 }
 
-.col-6-offset {
+.l-col-offset-6 {
   margin-left: 50%;
 }
 
-.col-7-offset {
+.l-col-offset-7 {
   margin-left: 58.33333%;
 }
 
-.col-8-offset {
+.l-col-offset-8 {
   margin-left: 66.66667%;
 }
 
-.col-9-offset {
+.l-col-offset-9 {
   margin-left: 75%;
 }
 
-.col-10-offset {
+.l-col-offset-10 {
   margin-left: 83.33333%;
 }
 
 @media (min-width: 320px) {
-  .col-3-xxs, .col-4-xxs, .col-5-xxs, .col-6-xxs, .col-7-xxs, .col-8-xxs, .col-9-xxs, .col-10-xxs, .col-11-xxs, .col-12-xxs {
+  .l-col-xxs-3, .l-col-xxs-4, .l-col-xxs-5, .l-col-xxs-6, .l-col-xxs-7, .l-col-xxs-8, .l-col-xxs-9, .l-col-xxs-10, .l-col-xxs-11, .l-col-xxs-12 {
     float: left;
   }
 
-  .col-3-xxs {
+  .l-col-xxs-3 {
     width: 25%;
   }
 
-  .col-4-xxs {
+  .l-col-xxs-4 {
     width: 33.33333%;
   }
 
-  .col-5-xxs {
+  .l-col-xxs-5 {
     width: 41.66667%;
   }
 
-  .col-6-xxs {
+  .l-col-xxs-6 {
     width: 50%;
   }
 
-  .col-7-xxs {
+  .l-col-xxs-7 {
     width: 58.33333%;
   }
 
-  .col-8-xxs {
+  .l-col-xxs-8 {
     width: 66.66667%;
   }
 
-  .col-9-xxs {
+  .l-col-xxs-9 {
     width: 75%;
   }
 
-  .col-10-xxs {
+  .l-col-xxs-10 {
     width: 83.33333%;
   }
 
-  .col-11-xxs {
+  .l-col-xxs-11 {
     width: 91.66667%;
   }
 
-  .col-12-xxs {
+  .l-col-xxs-12 {
     width: 100%;
   }
 }
 @media (min-width: 375px) {
-  .col-3-xs, .col-4-xs, .col-5-xs, .col-6-xs, .col-7-xs, .col-8-xs, .col-9-xs, .col-10-xs, .col-11-xs, .col-12-xs {
+  .l-col-xs-3, .l-col-xs-4, .l-col-xs-5, .l-col-xs-6, .l-col-xs-7, .l-col-xs-8, .l-col-xs-9, .l-col-xs-10, .l-col-xs-11, .l-col-xs-12 {
     float: left;
   }
 
-  .col-3-xs {
+  .l-col-xs-3 {
     width: 25%;
   }
 
-  .col-4-xs {
+  .l-col-xs-4 {
     width: 33.33333%;
   }
 
-  .col-5-xs {
+  .l-col-xs-5 {
     width: 41.66667%;
   }
 
-  .col-6-xs {
+  .l-col-xs-6 {
     width: 50%;
   }
 
-  .col-7-xs {
+  .l-col-xs-7 {
     width: 58.33333%;
   }
 
-  .col-8-xs {
+  .l-col-xs-8 {
     width: 66.66667%;
   }
 
-  .col-9-xs {
+  .l-col-xs-9 {
     width: 75%;
   }
 
-  .col-10-xs {
+  .l-col-xs-10 {
     width: 83.33333%;
   }
 
-  .col-11-xs {
+  .l-col-xs-11 {
     width: 91.66667%;
   }
 
-  .col-12-xs {
+  .l-col-xs-12 {
     width: 100%;
   }
 }
 @media (min-width: 425px) {
-  .col-3-sm, .col-4-sm, .col-5-sm, .col-6-sm, .col-7-sm, .col-8-sm, .col-9-sm, .col-10-sm, .col-11-sm, .col-12-sm {
+  .l-col-sm-3, .l-col-sm-4, .l-col-sm-5, .l-col-sm-6, .l-col-sm-7, .l-col-sm-8, .l-col-sm-9, .l-col-sm-10, .l-col-sm-11, .l-col-sm-12 {
     float: left;
   }
 
-  .col-3-sm {
+  .l-col-sm-3 {
     width: 25%;
   }
 
-  .col-4-sm {
+  .l-col-sm-4 {
     width: 33.33333%;
   }
 
-  .col-5-sm {
+  .l-col-sm-5 {
     width: 41.66667%;
   }
 
-  .col-6-sm {
+  .l-col-sm-6 {
     width: 50%;
   }
 
-  .col-7-sm {
+  .l-col-sm-7 {
     width: 58.33333%;
   }
 
-  .col-8-sm {
+  .l-col-sm-8 {
     width: 66.66667%;
   }
 
-  .col-9-sm {
+  .l-col-sm-9 {
     width: 75%;
   }
 
-  .col-10-sm {
+  .l-col-sm-10 {
     width: 83.33333%;
   }
 
-  .col-11-sm {
+  .l-col-sm-11 {
     width: 91.66667%;
   }
 
-  .col-12-sm {
+  .l-col-sm-12 {
     width: 100%;
   }
 
-  .col-1-sm-pull {
+  .l-col-sm-pull-1 {
     right: 8.33333%;
   }
 
-  .col-2-sm-pull {
+  .l-col-sm-pull-2 {
     right: 16.66667%;
   }
 
-  .col-3-sm-pull {
+  .l-col-sm-pull-3 {
     right: 25%;
   }
 
-  .col-4-sm-pull {
+  .l-col-sm-pull-4 {
     right: 33.33333%;
   }
 
-  .col-5-sm-pull {
+  .l-col-sm-pull-5 {
     right: 41.66667%;
   }
 
-  .col-6-sm-pull {
+  .l-col-sm-pull-6 {
     right: 50%;
   }
 
-  .col-7-sm-pull {
+  .l-col-sm-pull-7 {
     right: 58.33333%;
   }
 
-  .col-8-sm-pull {
+  .l-col-sm-pull-8 {
     right: 66.66667%;
   }
 
-  .col-9-sm-pull {
+  .l-col-sm-pull-9 {
     right: 75%;
   }
 
-  .col-10-sm-pull {
+  .l-col-sm-pull-10 {
     right: 83.33333%;
   }
 
-  .col-1-sm-push {
+  .l-col-sm-push-1 {
     left: 8.33333%;
   }
 
-  .col-2-sm-push {
+  .l-col-sm-push-2 {
     left: 16.66667%;
   }
 
-  .col-3-sm-push {
+  .l-col-sm-push-3 {
     left: 25%;
   }
 
-  .col-4-sm-push {
+  .l-col-sm-push-4 {
     left: 33.33333%;
   }
 
-  .col-5-sm-push {
+  .l-col-sm-push-5 {
     left: 41.66667%;
   }
 
-  .col-6-sm-push {
+  .l-col-sm-push-6 {
     left: 50%;
   }
 
-  .col-7-sm-push {
+  .l-col-sm-push-7 {
     left: 58.33333%;
   }
 
-  .col-8-sm-push {
+  .l-col-sm-push-8 {
     left: 66.66667%;
   }
 
-  .col-9-sm-push {
+  .l-col-sm-push-9 {
     left: 75%;
   }
 
-  .col-10-sm-push {
+  .l-col-sm-push-10 {
     left: 83.33333%;
   }
 
-  .col-1-sm-offset {
+  .l-col-sm-offset-1 {
     margin-left: 8.33333%;
   }
 
-  .col-2-sm-offset {
+  .l-col-sm-offset-2 {
     margin-left: 16.66667%;
   }
 
-  .col-3-sm-offset {
+  .l-col-sm-offset-3 {
     margin-left: 25%;
   }
 
-  .col-4-sm-offset {
+  .l-col-sm-offset-4 {
     margin-left: 33.33333%;
   }
 
-  .col-5-sm-offset {
+  .l-col-sm-offset-5 {
     margin-left: 41.66667%;
   }
 
-  .col-6-sm-offset {
+  .l-col-sm-offset-6 {
     margin-left: 50%;
   }
 
-  .col-7-sm-offset {
+  .l-col-sm-offset-7 {
     margin-left: 58.33333%;
   }
 
-  .col-8-sm-offset {
+  .l-col-sm-offset-8 {
     margin-left: 66.66667%;
   }
 
-  .col-9-sm-offset {
+  .l-col-sm-offset-9 {
     margin-left: 75%;
   }
 
-  .col-10-sm-offset {
+  .l-col-sm-offset-10 {
     margin-left: 83.33333%;
   }
 }
 @media (min-width: 768px) {
-  .col-3-md, .col-4-md, .col-5-md, .col-6-md, .col-7-md, .col-8-md, .col-9-md, .col-10-md, .col-11-md, .col-12-md {
+  .l-col-md-3, .l-col-md-4, .l-col-md-5, .l-col-md-6, .l-col-md-7, .l-col-md-8, .l-col-md-9, .l-col-md-10, .l-col-md-11, .l-col-md-12 {
     float: left;
   }
 
-  .col-3-md {
+  .l-col-md-3 {
     width: 25%;
   }
 
-  .col-4-md {
+  .l-col-md-4 {
     width: 33.33333%;
   }
 
-  .col-5-md {
+  .l-col-md-5 {
     width: 41.66667%;
   }
 
-  .col-6-md {
+  .l-col-md-6 {
     width: 50%;
   }
 
-  .col-7-md {
+  .l-col-md-7 {
     width: 58.33333%;
   }
 
-  .col-8-md {
+  .l-col-md-8 {
     width: 66.66667%;
   }
 
-  .col-9-md {
+  .l-col-md-9 {
     width: 75%;
   }
 
-  .col-10-md {
+  .l-col-md-10 {
     width: 83.33333%;
   }
 
-  .col-11-md {
+  .l-col-md-11 {
     width: 91.66667%;
   }
 
-  .col-12-md {
+  .l-col-md-12 {
     width: 100%;
   }
 
-  .col-1-md-pull {
+  .l-col-md-pull-1 {
     right: 8.33333%;
   }
 
-  .col-2-md-pull {
+  .l-col-md-pull-2 {
     right: 16.66667%;
   }
 
-  .col-3-md-pull {
+  .l-col-md-pull-3 {
     right: 25%;
   }
 
-  .col-4-md-pull {
+  .l-col-md-pull-4 {
     right: 33.33333%;
   }
 
-  .col-5-md-pull {
+  .l-col-md-pull-5 {
     right: 41.66667%;
   }
 
-  .col-6-md-pull {
+  .l-col-md-pull-6 {
     right: 50%;
   }
 
-  .col-7-md-pull {
+  .l-col-md-pull-7 {
     right: 58.33333%;
   }
 
-  .col-8-md-pull {
+  .l-col-md-pull-8 {
     right: 66.66667%;
   }
 
-  .col-9-md-pull {
+  .l-col-md-pull-9 {
     right: 75%;
   }
 
-  .col-10-md-pull {
+  .l-col-md-pull-10 {
     right: 83.33333%;
   }
 
-  .col-1-md-push {
+  .l-col-md-push-1 {
     left: 8.33333%;
   }
 
-  .col-2-md-push {
+  .l-col-md-push-2 {
     left: 16.66667%;
   }
 
-  .col-3-md-push {
+  .l-col-md-push-3 {
     left: 25%;
   }
 
-  .col-4-md-push {
+  .l-col-md-push-4 {
     left: 33.33333%;
   }
 
-  .col-5-md-push {
+  .l-col-md-push-5 {
     left: 41.66667%;
   }
 
-  .col-6-md-push {
+  .l-col-md-push-6 {
     left: 50%;
   }
 
-  .col-7-md-push {
+  .l-col-md-push-7 {
     left: 58.33333%;
   }
 
-  .col-8-md-push {
+  .l-col-md-push-8 {
     left: 66.66667%;
   }
 
-  .col-9-md-push {
+  .l-col-md-push-9 {
     left: 75%;
   }
 
-  .col-10-md-push {
+  .l-col-md-push-10 {
     left: 83.33333%;
   }
 
-  .col-1-md-offset {
+  .l-col-md-offset-1 {
     margin-left: 8.33333%;
   }
 
-  .col-2-md-offset {
+  .l-col-md-offset-2 {
     margin-left: 16.66667%;
   }
 
-  .col-3-md-offset {
+  .l-col-md-offset-3 {
     margin-left: 25%;
   }
 
-  .col-4-md-offset {
+  .l-col-md-offset-4 {
     margin-left: 33.33333%;
   }
 
-  .col-5-md-offset {
+  .l-col-md-offset-5 {
     margin-left: 41.66667%;
   }
 
-  .col-6-md-offset {
+  .l-col-md-offset-6 {
     margin-left: 50%;
   }
 
-  .col-7-md-offset {
+  .l-col-md-offset-7 {
     margin-left: 58.33333%;
   }
 
-  .col-8-md-offset {
+  .l-col-md-offset-8 {
     margin-left: 66.66667%;
   }
 
-  .col-9-md-offset {
+  .l-col-md-offset-9 {
     margin-left: 75%;
   }
 
-  .col-10-md-offset {
+  .l-col-md-offset-10 {
     margin-left: 83.33333%;
   }
 }
 @media (min-width: 1000px) {
-  .col-3-lg, .col-4-lg, .col-5-lg, .col-6-lg, .col-7-lg, .col-8-lg, .col-9-lg, .col-10-lg, .col-11-lg, .col-12-lg {
+  .l-col-lg-3, .l-col-lg-4, .l-col-lg-5, .l-col-lg-6, .l-col-lg-7, .l-col-lg-8, .l-col-lg-9, .l-col-lg-10, .l-col-lg-11, .l-col-lg-12 {
     float: left;
   }
 
-  .col-3-lg {
+  .l-col-lg-3 {
     width: 25%;
   }
 
-  .col-4-lg {
+  .l-col-lg-4 {
     width: 33.33333%;
   }
 
-  .col-5-lg {
+  .l-col-lg-5 {
     width: 41.66667%;
   }
 
-  .col-6-lg {
+  .l-col-lg-6 {
     width: 50%;
   }
 
-  .col-7-lg {
+  .l-col-lg-7 {
     width: 58.33333%;
   }
 
-  .col-8-lg {
+  .l-col-lg-8 {
     width: 66.66667%;
   }
 
-  .col-9-lg {
+  .l-col-lg-9 {
     width: 75%;
   }
 
-  .col-10-lg {
+  .l-col-lg-10 {
     width: 83.33333%;
   }
 
-  .col-11-lg {
+  .l-col-lg-11 {
     width: 91.66667%;
   }
 
-  .col-12-lg {
+  .l-col-lg-12 {
     width: 100%;
   }
 
-  .col-1-lg-pull {
+  .l-col-lg-pull-1 {
     right: 8.33333%;
   }
 
-  .col-2-lg-pull {
+  .l-col-lg-pull-2 {
     right: 16.66667%;
   }
 
-  .col-3-lg-pull {
+  .l-col-lg-pull-3 {
     right: 25%;
   }
 
-  .col-4-lg-pull {
+  .l-col-lg-pull-4 {
     right: 33.33333%;
   }
 
-  .col-5-lg-pull {
+  .l-col-lg-pull-5 {
     right: 41.66667%;
   }
 
-  .col-6-lg-pull {
+  .l-col-lg-pull-6 {
     right: 50%;
   }
 
-  .col-7-lg-pull {
+  .l-col-lg-pull-7 {
     right: 58.33333%;
   }
 
-  .col-8-lg-pull {
+  .l-col-lg-pull-8 {
     right: 66.66667%;
   }
 
-  .col-9-lg-pull {
+  .l-col-lg-pull-9 {
     right: 75%;
   }
 
-  .col-10-lg-pull {
+  .l-col-lg-pull-10 {
     right: 83.33333%;
   }
 
-  .col-1-lg-push {
+  .l-col-lg-push-1 {
     left: 8.33333%;
   }
 
-  .col-2-lg-push {
+  .l-col-lg-push-2 {
     left: 16.66667%;
   }
 
-  .col-3-lg-push {
+  .l-col-lg-push-3 {
     left: 25%;
   }
 
-  .col-4-lg-push {
+  .l-col-lg-push-4 {
     left: 33.33333%;
   }
 
-  .col-5-lg-push {
+  .l-col-lg-push-5 {
     left: 41.66667%;
   }
 
-  .col-6-lg-push {
+  .l-col-lg-push-6 {
     left: 50%;
   }
 
-  .col-7-lg-push {
+  .l-col-lg-push-7 {
     left: 58.33333%;
   }
 
-  .col-8-lg-push {
+  .l-col-lg-push-8 {
     left: 66.66667%;
   }
 
-  .col-9-lg-push {
+  .l-col-lg-push-9 {
     left: 75%;
   }
 
-  .col-10-lg-push {
+  .l-col-lg-push-10 {
     left: 83.33333%;
   }
 
-  .col-1-lg-offset {
+  .l-col-lg-offset-1 {
     margin-left: 8.33333%;
   }
 
-  .col-2-lg-offset {
+  .l-col-lg-offset-2 {
     margin-left: 16.66667%;
   }
 
-  .col-3-lg-offset {
+  .l-col-lg-offset-3 {
     margin-left: 25%;
   }
 
-  .col-4-lg-offset {
+  .l-col-lg-offset-4 {
     margin-left: 33.33333%;
   }
 
-  .col-5-lg-offset {
+  .l-col-lg-offset-5 {
     margin-left: 41.66667%;
   }
 
-  .col-6-lg-offset {
+  .l-col-lg-offset-6 {
     margin-left: 50%;
   }
 
-  .col-7-lg-offset {
+  .l-col-lg-offset-7 {
     margin-left: 58.33333%;
   }
 
-  .col-8-lg-offset {
+  .l-col-lg-offset-8 {
     margin-left: 66.66667%;
   }
 
-  .col-9-lg-offset {
+  .l-col-lg-offset-9 {
     margin-left: 75%;
   }
 
-  .col-10-lg-offset {
+  .l-col-lg-offset-10 {
     margin-left: 83.33333%;
   }
 }
 @media (min-width: 1240px) {
-  .col-3-xl, .col-4-xl, .col-5-xl, .col-6-xl, .col-7-xl, .col-8-xl, .col-9-xl, .col-10-xl, .col-11-xl, .col-12-xl {
+  .l-col-xl-3, .l-col-xl-4, .l-col-xl-5, .l-col-xl-6, .l-col-xl-7, .l-col-xl-8, .l-col-xl-9, .l-col-xl-10, .l-col-xl-11, .l-col-xl-12 {
     float: left;
   }
 
-  .col-3-xl {
+  .l-col-xl-3 {
     width: 25%;
   }
 
-  .col-4-xl {
+  .l-col-xl-4 {
     width: 33.33333%;
   }
 
-  .col-5-xl {
+  .l-col-xl-5 {
     width: 41.66667%;
   }
 
-  .col-6-xl {
+  .l-col-xl-6 {
     width: 50%;
   }
 
-  .col-7-xl {
+  .l-col-xl-7 {
     width: 58.33333%;
   }
 
-  .col-8-xl {
+  .l-col-xl-8 {
     width: 66.66667%;
   }
 
-  .col-9-xl {
+  .l-col-xl-9 {
     width: 75%;
   }
 
-  .col-10-xl {
+  .l-col-xl-10 {
     width: 83.33333%;
   }
 
-  .col-11-xl {
+  .l-col-xl-11 {
     width: 91.66667%;
   }
 
-  .col-12-xl {
+  .l-col-xl-12 {
     width: 100%;
   }
 }
 @media (min-width: 1640px) {
-  .col-3-xxl, .col-4-xxl, .col-5-xxl, .col-6-xxl, .col-7-xxl, .col-8-xxl, .col-9-xxl, .col-10-xxl, .col-11-xxl, .col-12-xxl {
+  .l-col-xxl-3, .l-col-xxl-4, .l-col-xxl-5, .l-col-xxl-6, .l-col-xxl-7, .l-col-xxl-8, .l-col-xxl-9, .l-col-xxl-10, .l-col-xxl-11, .l-col-xxl-12 {
     float: left;
   }
 
-  .col-3-xxl {
+  .l-col-xxl-3 {
     width: 25%;
   }
 
-  .col-4-xxl {
+  .l-col-xxl-4 {
     width: 33.33333%;
   }
 
-  .col-5-xxl {
+  .l-col-xxl-5 {
     width: 41.66667%;
   }
 
-  .col-6-xxl {
+  .l-col-xxl-6 {
     width: 50%;
   }
 
-  .col-7-xxl {
+  .l-col-xxl-7 {
     width: 58.33333%;
   }
 
-  .col-8-xxl {
+  .l-col-xxl-8 {
     width: 66.66667%;
   }
 
-  .col-9-xxl {
+  .l-col-xxl-9 {
     width: 75%;
   }
 
-  .col-10-xxl {
+  .l-col-xxl-10 {
     width: 83.33333%;
   }
 
-  .col-11-xxl {
+  .l-col-xxl-11 {
     width: 91.66667%;
   }
 
-  .col-12-xxl {
+  .l-col-xxl-12 {
     width: 100%;
   }
 }
@@ -1640,37 +1640,37 @@ floatによるグリッドで余白が異なるグループを作成する。
 
 ``` example
 <div class="l-row l-row-0">
-    <div class="l-col l-col-4-lg m-b">
+    <div class="l-col l-col-lg-4 m-b">
         <div class="bg-first p">l-row-0<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col l-col-4-lg m-b">
+    <div class="l-col l-col-lg-4 m-b">
         <div class="bg-first p" style="height: 100%; opacity: 0.8;">l-row-0<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-col l-col-4-lg m-b">
+    <div class="l-col l-col-lg-4 m-b">
         <div class="bg-first p">l-row-0<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 
 <div class="l-row l-row-sm">
-    <div class="l-col l-col-4-lg m-b">
+    <div class="l-col l-col-lg-4 m-b">
         <div class="bg-second p">l-row-sm<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col l-col-4-lg m-b">
+    <div class="l-col l-col-lg-4 m-b">
         <div class="bg-second p" style="height: 100%; opacity: 0.8;">l-row-sm<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-col l-col-4-lg m-b">
+    <div class="l-col l-col-lg-4 m-b">
         <div class="bg-second p">l-row-sm<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 
 <div class="l-row l-row-lg">
-    <div class="l-col l-col-4-lg m-b">
+    <div class="l-col l-col-lg-4 m-b">
         <div class="bg-third p">l-row-lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col l-col-4-lg m-b">
+    <div class="l-col l-col-lg-4 m-b">
         <div class="bg-third p" style="height: 100%; opacity: 0.8;">l-row-lg<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-col l-col-4-lg m-b">
+    <div class="l-col l-col-lg-4 m-b">
         <div class="bg-third p">l-row-lg<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
@@ -1736,8 +1736,8 @@ floatによるグリッドのセルを作成する。このクラス単独では
 */
 /*doc
 ---
-title: l-col-(column)-(breakpoint)
-name: 02-col-01-column-breakpoint
+title: l-col-(breakpoint)-(column)
+name: 02-col-01-breakpoint-column
 category: layout-grid-float
 parent: 02-col
 ---
@@ -1750,14 +1750,14 @@ floatによるグリッドのセルを、ウィンドウ幅が(breakpoint)より
 
 ``` example
 <div class="l-row">
-    <div class="l-col l-col-12 l-col-6-sm l-col-4-lg">
-        <div class="bg-first p">l-col-12<br>l-col-6-sm<br>l-col-4-lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    <div class="l-col l-col-12 l-col-sm-6 l-col-lg-4">
+        <div class="bg-first p">l-col-12<br>l-col-sm-6<br>l-col-lg-4<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col l-col-12 l-col-6-sm l-col-4-lg">
-        <div class="bg-first p">l-col-12<br>l-col-6-sm<br>l-col-4-lg<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-col l-col-12 l-col-sm-6 l-col-lg-4">
+        <div class="bg-first p">l-col-12<br>l-col-sm-6<br>l-col-lg-4<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-col l-col-12 l-col-6-sm l-col-4-lg">
-        <div class="bg-first p">l-col-12<br>l-col-6-sm<br>l-col-4-lg<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="l-col l-col-12 l-col-sm-6 l-col-lg-4">
+        <div class="bg-first p">l-col-12<br>l-col-sm-6<br>l-col-lg-4<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 ```
@@ -1766,14 +1766,14 @@ floatによるグリッドのセルを、ウィンドウ幅が(breakpoint)より
 
 ``` example
 <div class="l-row">
-    <div class="l-col l-col-12 l-col-6-xs l-col-4-sm">
-        <div class="bg-second p">l-col-12<br>l-col-6-xs<br>l-col-4-sm<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    <div class="l-col l-col-12 l-col-xs-6 l-col-sm-4">
+        <div class="bg-second p">l-col-12<br>l-col-xs-6<br>l-col-sm-4<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col l-col-12 l-col-6-xs l-col-4-sm">
-        <div class="bg-second p">l-col-12<br>l-col-6-xs<br>l-col-4-sm<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-col l-col-12 l-col-xs-6 l-col-sm-4">
+        <div class="bg-second p">l-col-12<br>l-col-xs-6<br>l-col-sm-4<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-col l-col-12 l-col-6-xs l-col-4-sm">
-        <div class="bg-second p">l-col-12<br>l-col-6-xs<br>l-col-4-sm<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="l-col l-col-12 l-col-xs-6 l-col-sm-4">
+        <div class="bg-second p">l-col-12<br>l-col-xs-6<br>l-col-sm-4<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 ```
@@ -1781,8 +1781,8 @@ floatによるグリッドのセルを、ウィンドウ幅が(breakpoint)より
 */
 /*doc
 ---
-title: l-col-(column)-(breakpoint)-(push or pull)
-name: 02-col-02-column-breakpoint-push
+title: l-col-(breakpoint)-(push or pull)-(column)
+name: 02-col-02-breakpoint-push-column
 category: layout-grid-float
 parent: 02-col
 ---
@@ -1793,17 +1793,17 @@ parent: 02-col
 
 ``` example
 <div class="l-row m-b">
-    <div class="l-col l-col-6-lg l-col-2-lg-push">
-        <div class="bg-third p">l-col-6-lg<br>l-col-2-lg-push<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    <div class="l-col l-col-lg-6 l-col-lg-push-2">
+        <div class="bg-third p">l-col-lg-6<br>l-col-lg-push-2<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
 </div>
 
 <div class="l-row m-b">
-    <div class="l-col l-col-4-lg l-col-8-lg-push">
-        <div class="bg-third p">l-col-4-lg<br>l-col-8-lg-push<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-col l-col-lg-4 l-col-lg-push-8">
+        <div class="bg-third p">l-col-lg-4<br>l-col-lg-push-8<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-col l-col-8-lg l-col-4-lg-pull">
-        <div class="bg-third p">l-col-8-lg<br>l-col-4-lg-pull<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="l-col l-col-lg-8 l-col-lg-pull-4">
+        <div class="bg-third p">l-col-lg-8<br>l-col-lg-pull-4<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 ```

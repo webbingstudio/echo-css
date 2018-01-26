@@ -15,14 +15,14 @@ floatによるグリッドのグループを作成する。余白・段組の仕
 
 ``` example
 <div class="#{$p}#{$l}row">
-    <div class="#{$p}#{$l}col #{$p}#{$l}col-4-lg #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-first #{$p}#{$u}p">#{$p}#{$l}col-4-lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-lg-4 #{$p}#{$u}m-b">
+        <div class="#{$p}#{$u}bg-first #{$p}#{$u}p">#{$p}#{$l}col-lg-4<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="#{$p}#{$l}col #{$p}#{$l}col-4-lg #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-first #{$p}#{$u}p">#{$p}#{$l}col-4-lg<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-lg-4 #{$p}#{$u}m-b">
+        <div class="#{$p}#{$u}bg-first #{$p}#{$u}p">#{$p}#{$l}col-lg-4<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="#{$p}#{$l}col #{$p}#{$l}col-4-lg #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-first #{$p}#{$u}p">#{$p}#{$l}col-4-lg<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-lg-4 #{$p}#{$u}m-b">
+        <div class="#{$p}#{$u}bg-first #{$p}#{$u}p">#{$p}#{$l}col-lg-4<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 ```
@@ -55,37 +55,37 @@ floatによるグリッドで余白が異なるグループを作成する。
 
 ``` example
 <div class="#{$p}#{$l}row #{$p}#{$l}row-0">
-    <div class="#{$p}#{$l}col #{$p}#{$l}col-4-lg #{$p}#{$u}m-b">
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-lg-4 #{$p}#{$u}m-b">
         <div class="#{$p}#{$u}bg-first #{$p}#{$u}p">#{$p}#{$l}row-0<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="#{$p}#{$l}col #{$p}#{$l}col-4-lg #{$p}#{$u}m-b">
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-lg-4 #{$p}#{$u}m-b">
         <div class="#{$p}#{$u}bg-first #{$p}#{$u}p" style="height: 100%; opacity: 0.8;">#{$p}#{$l}row-0<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="#{$p}#{$l}col #{$p}#{$l}col-4-lg #{$p}#{$u}m-b">
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-lg-4 #{$p}#{$u}m-b">
         <div class="#{$p}#{$u}bg-first #{$p}#{$u}p">#{$p}#{$l}row-0<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 
 <div class="#{$p}#{$l}row #{$p}#{$l}row-sm">
-    <div class="#{$p}#{$l}col #{$p}#{$l}col-4-lg #{$p}#{$u}m-b">
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-lg-4 #{$p}#{$u}m-b">
         <div class="#{$p}#{$u}bg-second #{$p}#{$u}p">#{$p}#{$l}row-sm<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="#{$p}#{$l}col #{$p}#{$l}col-4-lg #{$p}#{$u}m-b">
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-lg-4 #{$p}#{$u}m-b">
         <div class="#{$p}#{$u}bg-second #{$p}#{$u}p" style="height: 100%; opacity: 0.8;">#{$p}#{$l}row-sm<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="#{$p}#{$l}col #{$p}#{$l}col-4-lg #{$p}#{$u}m-b">
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-lg-4 #{$p}#{$u}m-b">
         <div class="#{$p}#{$u}bg-second #{$p}#{$u}p">#{$p}#{$l}row-sm<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 
 <div class="#{$p}#{$l}row #{$p}#{$l}row-lg">
-    <div class="#{$p}#{$l}col #{$p}#{$l}col-4-lg #{$p}#{$u}m-b">
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-lg-4 #{$p}#{$u}m-b">
         <div class="#{$p}#{$u}bg-third #{$p}#{$u}p">#{$p}#{$l}row-lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="#{$p}#{$l}col #{$p}#{$l}col-4-lg #{$p}#{$u}m-b">
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-lg-4 #{$p}#{$u}m-b">
         <div class="#{$p}#{$u}bg-third #{$p}#{$u}p" style="height: 100%; opacity: 0.8;">#{$p}#{$l}row-lg<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="#{$p}#{$l}col #{$p}#{$l}col-4-lg #{$p}#{$u}m-b">
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-lg-4 #{$p}#{$u}m-b">
         <div class="#{$p}#{$u}bg-third #{$p}#{$u}p">#{$p}#{$l}row-lg<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
@@ -140,8 +140,8 @@ floatによるグリッドのセルを作成する。このクラス単独では
 
 /*doc
 ---
-title: #{$p}#{$l}col-(column)-(breakpoint)
-name: 02-col-01-column-breakpoint
+title: #{$p}#{$l}col-(breakpoint)-(column)
+name: 02-col-01-breakpoint-column
 category: layout-grid-float
 parent: 02-col
 ---
@@ -154,14 +154,14 @@ floatによるグリッドのセルを、ウィンドウ幅が(breakpoint)より
 
 ``` example
 <div class="#{$p}#{$l}row">
-    <div class="#{$p}#{$l}col #{$p}#{$l}col-12 #{$p}#{$l}col-6-sm #{$p}#{$l}col-4-lg">
-        <div class="#{$p}#{$u}bg-first #{$p}#{$u}p">#{$p}#{$l}col-12<br>#{$p}#{$l}col-6-sm<br>#{$p}#{$l}col-4-lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-12 #{$p}#{$l}col-sm-6 #{$p}#{$l}col-lg-4">
+        <div class="#{$p}#{$u}bg-first #{$p}#{$u}p">#{$p}#{$l}col-12<br>#{$p}#{$l}col-sm-6<br>#{$p}#{$l}col-lg-4<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="#{$p}#{$l}col #{$p}#{$l}col-12 #{$p}#{$l}col-6-sm #{$p}#{$l}col-4-lg">
-        <div class="#{$p}#{$u}bg-first #{$p}#{$u}p">#{$p}#{$l}col-12<br>#{$p}#{$l}col-6-sm<br>#{$p}#{$l}col-4-lg<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-12 #{$p}#{$l}col-sm-6 #{$p}#{$l}col-lg-4">
+        <div class="#{$p}#{$u}bg-first #{$p}#{$u}p">#{$p}#{$l}col-12<br>#{$p}#{$l}col-sm-6<br>#{$p}#{$l}col-lg-4<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="#{$p}#{$l}col #{$p}#{$l}col-12 #{$p}#{$l}col-6-sm #{$p}#{$l}col-4-lg">
-        <div class="#{$p}#{$u}bg-first #{$p}#{$u}p">#{$p}#{$l}col-12<br>#{$p}#{$l}col-6-sm<br>#{$p}#{$l}col-4-lg<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-12 #{$p}#{$l}col-sm-6 #{$p}#{$l}col-lg-4">
+        <div class="#{$p}#{$u}bg-first #{$p}#{$u}p">#{$p}#{$l}col-12<br>#{$p}#{$l}col-sm-6<br>#{$p}#{$l}col-lg-4<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 ```
@@ -170,14 +170,14 @@ floatによるグリッドのセルを、ウィンドウ幅が(breakpoint)より
 
 ``` example
 <div class="#{$p}#{$l}row">
-    <div class="#{$p}#{$l}col #{$p}#{$l}col-12 #{$p}#{$l}col-6-xs #{$p}#{$l}col-4-sm">
-        <div class="#{$p}#{$u}bg-second #{$p}#{$u}p">#{$p}#{$l}col-12<br>#{$p}#{$l}col-6-xs<br>#{$p}#{$l}col-4-sm<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-12 #{$p}#{$l}col-xs-6 #{$p}#{$l}col-sm-4">
+        <div class="#{$p}#{$u}bg-second #{$p}#{$u}p">#{$p}#{$l}col-12<br>#{$p}#{$l}col-xs-6<br>#{$p}#{$l}col-sm-4<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="#{$p}#{$l}col #{$p}#{$l}col-12 #{$p}#{$l}col-6-xs #{$p}#{$l}col-4-sm">
-        <div class="#{$p}#{$u}bg-second #{$p}#{$u}p">#{$p}#{$l}col-12<br>#{$p}#{$l}col-6-xs<br>#{$p}#{$l}col-4-sm<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-12 #{$p}#{$l}col-xs-6 #{$p}#{$l}col-sm-4">
+        <div class="#{$p}#{$u}bg-second #{$p}#{$u}p">#{$p}#{$l}col-12<br>#{$p}#{$l}col-xs-6<br>#{$p}#{$l}col-sm-4<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="#{$p}#{$l}col #{$p}#{$l}col-12 #{$p}#{$l}col-6-xs #{$p}#{$l}col-4-sm">
-        <div class="#{$p}#{$u}bg-second #{$p}#{$u}p">#{$p}#{$l}col-12<br>#{$p}#{$l}col-6-xs<br>#{$p}#{$l}col-4-sm<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-12 #{$p}#{$l}col-xs-6 #{$p}#{$l}col-sm-4">
+        <div class="#{$p}#{$u}bg-second #{$p}#{$u}p">#{$p}#{$l}col-12<br>#{$p}#{$l}col-xs-6<br>#{$p}#{$l}col-sm-4<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 ```
@@ -187,8 +187,8 @@ floatによるグリッドのセルを、ウィンドウ幅が(breakpoint)より
 
 /*doc
 ---
-title: #{$p}#{$l}col-(column)-(breakpoint)-(push or pull)
-name: 02-col-02-column-breakpoint-push
+title: #{$p}#{$l}col-(breakpoint)-(push or pull)-(column)
+name: 02-col-02-breakpoint-push-column
 category: layout-grid-float
 parent: 02-col
 ---
@@ -199,17 +199,17 @@ parent: 02-col
 
 ``` example
 <div class="#{$p}#{$l}row #{$p}#{$u}m-b">
-    <div class="#{$p}#{$l}col #{$p}#{$l}col-6-lg #{$p}#{$l}col-2-lg-push">
-        <div class="#{$p}#{$u}bg-third #{$p}#{$u}p">#{$p}#{$l}col-6-lg<br>#{$p}#{$l}col-2-lg-push<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-lg-6 #{$p}#{$l}col-lg-push-2">
+        <div class="#{$p}#{$u}bg-third #{$p}#{$u}p">#{$p}#{$l}col-lg-6<br>#{$p}#{$l}col-lg-push-2<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
 </div>
 
 <div class="#{$p}#{$l}row #{$p}#{$u}m-b">
-    <div class="#{$p}#{$l}col #{$p}#{$l}col-4-lg #{$p}#{$l}col-8-lg-push">
-        <div class="#{$p}#{$u}bg-third #{$p}#{$u}p">#{$p}#{$l}col-4-lg<br>#{$p}#{$l}col-8-lg-push<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-lg-4 #{$p}#{$l}col-lg-push-8">
+        <div class="#{$p}#{$u}bg-third #{$p}#{$u}p">#{$p}#{$l}col-lg-4<br>#{$p}#{$l}col-lg-push-8<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="#{$p}#{$l}col #{$p}#{$l}col-8-lg #{$p}#{$l}col-4-lg-pull">
-        <div class="#{$p}#{$u}bg-third #{$p}#{$u}p">#{$p}#{$l}col-8-lg<br>#{$p}#{$l}col-4-lg-pull<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="#{$p}#{$l}col #{$p}#{$l}col-lg-8 #{$p}#{$l}col-lg-pull-4">
+        <div class="#{$p}#{$u}bg-third #{$p}#{$u}p">#{$p}#{$l}col-lg-8<br>#{$p}#{$l}col-lg-pull-4<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 ```
