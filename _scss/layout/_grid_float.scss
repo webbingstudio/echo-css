@@ -49,7 +49,8 @@ parent: grid-01-row
 ---
 
 floatによるグリッドで余白が異なるグループを作成する。  
-(size)は<code>0, sm, md, lg</code> に対応している。
+(size)は<code>0, sm, lg</code> に対応している。  
+Bootstrap4の <code>.no-gutters</code> は <code>.#{$p}#{$g}row-0</code> のエイリアスとなる。
 
 ``` example
 <div class="#{$p}#{$g}row #{$p}#{$g}row-0">
@@ -90,7 +91,8 @@ floatによるグリッドで余白が異なるグループを作成する。
 ```
 */
 
-.#{$p}#{$g}row-0 {
+.#{$p}#{$g}row-0,
+.#{$p}no-gutters {
 
     @include make-row-float( $gutter: 0 );
 

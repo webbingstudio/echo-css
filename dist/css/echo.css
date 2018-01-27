@@ -505,32 +505,28 @@ name: grid-01-row
 category: layout-grid
 ---
 
-flexboxによるグリッドのグループを作成する。  
-余白・段組の仕様を変更したい場合は <code>/\_scss/config\_advance.css</code> の各変数を調整すること。
+flexboxによるグリッドのグループを作成する。
+
+余白・段組のブレークポイントを変更したい場合は <code>/\_scss/config\_advance.css</code> の各変数を調整すること。  
+命名規則をbootstrapと同様にしたい場合は、 <code>/\_scss/_\config\_advance.scss</code> の変数 <code>$g</code> を空にすること。
 
 ``` example
 <div class="l-row">
-    <div class="l-col l-col-4-lg m-b">
-        <div class="bg-first p" style="height: 100%;">l-col-4-lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    <div class="l-col m-b">
+        <div class="bg-first p" style="height: 100%;">l-col-lg-4<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col l-col-4-lg m-b">
-        <div class="bg-first p" style="height: 100%;">l-col-4-lg<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。</div>
+    <div class="l-col m-b">
+        <div class="bg-first p" style="height: 100%;">l-col-lg-4<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。</div>
     </div>
-    <div class="l-col l-col-4-lg m-b">
-        <div class="bg-first p" style="height: 100%;">l-col-4-lg<br>ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。</div>
+    <div class="l-col m-b">
+        <div class="bg-first p" style="height: 100%;">l-col-lg-4<br>ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。</div>
     </div>
 </div>
 ```
 */
 .l-row {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: stretch;
   margin-left: -10px;
   margin-right: -10px;
 }
@@ -544,51 +540,54 @@ parent: grid-01-row
 ---
 
 flexboxによるグリッドで余白が異なるグループを作成する。  
-(size)は<code>0, sm, md, lg</code> に対応している。
+(size)は<code>0, sm, lg</code> に対応している。  
+Bootstrap4の <code>.no-gutters</code> は <code>.l-row-0</code> のエイリアスとなる。
 
 ``` example
 <div class="l-row l-row-0">
-    <div class="l-col l-col-4-lg m-b">
+    <div class="l-col m-b">
         <div class="bg-first p" style="height: 100%;">l-row-0<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col l-col-4-lg m-b">
+    <div class="l-col m-b">
         <div class="bg-first p" style="height: 100%; opacity: 0.8;">l-row-0<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-col l-col-4-lg m-b">
+    <div class="l-col m-b">
         <div class="bg-first p" style="height: 100%;">l-row-0<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 
 <div class="l-row l-row-sm">
-    <div class="l-col l-col-4-lg m-b">
+    <div class="l-col m-b">
         <div class="bg-second p" style="height: 100%;">l-row-sm<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col l-col-4-lg m-b">
+    <div class="l-col m-b">
         <div class="bg-second p" style="height: 100%; opacity: 0.8;">l-row-sm<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-col l-col-4-lg m-b">
+    <div class="l-col m-b">
         <div class="bg-second p" style="height: 100%;">l-row-sm<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 
 <div class="l-row l-row-lg">
-    <div class="l-col l-col-4-lg m-b">
+    <div class="l-col m-b">
         <div class="bg-third p" style="height: 100%;">l-row-lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col l-col-4-lg m-b">
+    <div class="l-col m-b">
         <div class="bg-third p" style="height: 100%; opacity: 0.8;">l-row-lg<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-col l-col-4-lg m-b">
+    <div class="l-col m-b">
         <div class="bg-third p" style="height: 100%;">l-row-lg<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 ```
 */
-.l-row-0 {
+.l-row-0,
+.no-gutters {
   margin-left: 0;
   margin-right: 0;
 }
-.l-row-0 .l-col {
+.l-row-0 .l-col,
+.no-gutters .l-col {
   padding-left: 0;
   padding-right: 0;
 }
@@ -618,125 +617,1500 @@ name: grid-02-col
 category: layout-grid
 ---
 
-flexboxによるグリッドのセルを作成する。このクラス単独では余白のみ確保する。
+flexboxによるグリッドのセルを作成する。このクラス単独では常に均等幅となる。
 
-*/
-.l-col {
-  width: 100%;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-/*doc
----
-title: l-col-(column)-(breakpoint)
-name: grid-02-col-01-column-breakpoint
-category: layout-grid
-parent: grid-02-col
----
-
-flexboxによるグリッドのセルを、ウィンドウ幅が(breakpoint)よりも大きくなったときに、<code>(column) / 12</code>の幅で配置する。  
-(breakpoint)の指定がない場合は、常にその幅となる。  
-このテーマでは、(column)は<code>3, 4, 6</code>のみ、(breakpoint)は<code>sm, md, lg</code>のみ対応している。
+Bootstrap 4との互換の関係で、**このカテゴリーのみシングルクラスとなっている（l-colを常に付与する必要はない）**ことに注意。
 
 ``` example
-<div class="l-row m-b-lg">
-    <div class="l-col l-col-3-sm m-b">
-        <div class="bg-first p" style="height: 100%;">l-col-3-sm<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="l-col l-col-3-sm m-b">
-        <div class="bg-first p" style="height: 100%;">l-col-3-sm<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="l-col l-col-3-sm m-b">
-        <div class="bg-first p" style="height: 100%;">l-col-3-sm<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-    <div class="l-col l-col-3-sm m-b">
-        <div class="bg-first p" style="height: 100%;">l-col-3-sm<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
-    </div>
-</div>
-
-<div class="l-row m-b-lg">
-    <div class="l-col l-col-3-md m-b">
-        <div class="bg-second p" style="height: 100%;">l-col-3-md<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="l-col l-col-3-md m-b">
-        <div class="bg-second p" style="height: 100%;">l-col-3-md<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="l-col l-col-3-md m-b">
-        <div class="bg-second p" style="height: 100%;">l-col-3-md<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-    <div class="l-col l-col-3-md m-b">
-        <div class="bg-second p" style="height: 100%;">l-col-3-md<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
-    </div>
-</div>
-
-<div class="l-row m-b-lg">
-    <div class="l-col l-col-4-lg m-b">
-        <div class="bg-third p" style="height: 100%;">l-col-4-lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="l-col l-col-4-lg m-b">
-        <div class="bg-third p" style="height: 100%;">l-col-4-lg<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="l-col l-col-4-lg m-b">
-        <div class="bg-third p" style="height: 100%;">l-col-4-lg<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+<div class="l-row">
+    <div class="l-col m-b">
+        <div class="bg-first p" style="height: 100%;">l-col<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
 </div>
 
 <div class="l-row">
-    <div class="l-col l-col-6-lg m-b">
-        <div class="bg-fourth p" style="height: 100%;">l-col-6-lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    <div class="l-col m-b">
+        <div class="bg-second p" style="height: 100%;">l-col<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col l-col-6-lg m-b">
-        <div class="bg-fourth p" style="height: 100%;">l-col-6-lg<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-col m-b">
+        <div class="bg-second p" style="height: 100%;">l-col<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-col l-col-6-lg m-b">
-        <div class="bg-fourth p" style="height: 100%;">l-col-6-lg<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+</div>
+
+<div class="l-row">
+    <div class="l-col m-b">
+        <div class="bg-third p" style="height: 100%;">l-col<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col l-col-6-lg m-b">
-        <div class="bg-fourth p" style="height: 100%;">l-col-6-lg<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
+    <div class="l-col m-b">
+        <div class="bg-third p" style="height: 100%;">l-col<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    </div>
+    <div class="l-col m-b">
+        <div class="bg-third p" style="height: 100%;">l-col<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    </div>
+</div>
+```
+
+*/
+[class*="l-col"] {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.l-col-2, .l-col-3, .l-col-4, .l-col-5, .l-col-6, .l-col-7, .l-col-8, .l-col-9, .l-col-10, .l-col,
+.l-col-auto, .l-col-xxs-2, .l-col-xxs-3, .l-col-xxs-4, .l-col-xxs-5, .l-col-xxs-6, .l-col-xxs-7, .l-col-xxs-8, .l-col-xxs-9, .l-col-xxs-10, .l-col-xxs,
+.l-col-xxs-auto, .l-col-xs-2, .l-col-xs-3, .l-col-xs-4, .l-col-xs-5, .l-col-xs-6, .l-col-xs-7, .l-col-xs-8, .l-col-xs-9, .l-col-xs-10, .l-col-xs,
+.l-col-xs-auto, .l-col-sm-2, .l-col-sm-3, .l-col-sm-4, .l-col-sm-5, .l-col-sm-6, .l-col-sm-7, .l-col-sm-8, .l-col-sm-9, .l-col-sm-10, .l-col-sm,
+.l-col-sm-auto, .l-col-md-2, .l-col-md-3, .l-col-md-4, .l-col-md-5, .l-col-md-6, .l-col-md-7, .l-col-md-8, .l-col-md-9, .l-col-md-10, .l-col-md,
+.l-col-md-auto, .l-col-lg-2, .l-col-lg-3, .l-col-lg-4, .l-col-lg-5, .l-col-lg-6, .l-col-lg-7, .l-col-lg-8, .l-col-lg-9, .l-col-lg-10, .l-col-lg,
+.l-col-lg-auto, .l-col-xl-2, .l-col-xl-3, .l-col-xl-4, .l-col-xl-5, .l-col-xl-6, .l-col-xl-7, .l-col-xl-8, .l-col-xl-9, .l-col-xl-10, .l-col-xl,
+.l-col-xl-auto, .l-col-xxl-2, .l-col-xxl-3, .l-col-xxl-4, .l-col-xxl-5, .l-col-xxl-6, .l-col-xxl-7, .l-col-xxl-8, .l-col-xxl-9, .l-col-xxl-10, .l-col-xxl,
+.l-col-xxl-auto {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+}
+
+.l-col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+.l-col-2 {
+  flex: 0 0 16.66667%;
+  max-width: 16.66667%;
+}
+
+.l-col-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.l-col-4 {
+  flex: 0 0 33.33333%;
+  max-width: 33.33333%;
+}
+
+.l-col-5 {
+  flex: 0 0 41.66667%;
+  max-width: 41.66667%;
+}
+
+.l-col-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.l-col-7 {
+  flex: 0 0 58.33333%;
+  max-width: 58.33333%;
+}
+
+.l-col-8 {
+  flex: 0 0 66.66667%;
+  max-width: 66.66667%;
+}
+
+.l-col-9 {
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+
+.l-col-10 {
+  flex: 0 0 83.33333%;
+  max-width: 83.33333%;
+}
+
+.l-order-first {
+  order: -1;
+}
+
+.l-order-last {
+  order: 13;
+}
+
+.l-order-0 {
+  order: 0;
+}
+
+.l-order-1 {
+  order: 1;
+}
+
+.l-order-2 {
+  order: 2;
+}
+
+.l-order-3 {
+  order: 3;
+}
+
+.l-order-4 {
+  order: 4;
+}
+
+.l-order-5 {
+  order: 5;
+}
+
+.l-order-6 {
+  order: 6;
+}
+
+.l-order-7 {
+  order: 7;
+}
+
+.l-order-8 {
+  order: 8;
+}
+
+.l-order-9 {
+  order: 9;
+}
+
+.l-order-10 {
+  order: 10;
+}
+
+.l-order-11 {
+  order: 11;
+}
+
+.l-order-12 {
+  order: 12;
+}
+
+.l-offset-1 {
+  margin-left: 8.33333%;
+}
+
+.l-offset-2 {
+  margin-left: 16.66667%;
+}
+
+.l-offset-3 {
+  margin-left: 25%;
+}
+
+.l-offset-4 {
+  margin-left: 33.33333%;
+}
+
+.l-offset-5 {
+  margin-left: 41.66667%;
+}
+
+.l-offset-6 {
+  margin-left: 50%;
+}
+
+.l-offset-7 {
+  margin-left: 58.33333%;
+}
+
+.l-offset-8 {
+  margin-left: 66.66667%;
+}
+
+.l-offset-9 {
+  margin-left: 75%;
+}
+
+.l-offset-10 {
+  margin-left: 83.33333%;
+}
+
+.l-offset-11 {
+  margin-left: 91.66667%;
+}
+
+@media (min-width: 320px) {
+  .l-col-xxs {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+
+  .l-col-xxs-2 {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+  }
+
+  .l-col-xxs-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+
+  .l-col-xxs-4 {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+
+  .l-col-xxs-5 {
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+  }
+
+  .l-col-xxs-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .l-col-xxs-7 {
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%;
+  }
+
+  .l-col-xxs-8 {
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+  }
+
+  .l-col-xxs-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+
+  .l-col-xxs-10 {
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%;
+  }
+
+  .l-order-xxs-first {
+    order: -1;
+  }
+
+  .l-order-xxs-last {
+    order: 13;
+  }
+
+  .l-order-xxs-0 {
+    order: 0;
+  }
+
+  .l-order-xxs-1 {
+    order: 1;
+  }
+
+  .l-order-xxs-2 {
+    order: 2;
+  }
+
+  .l-order-xxs-3 {
+    order: 3;
+  }
+
+  .l-order-xxs-4 {
+    order: 4;
+  }
+
+  .l-order-xxs-5 {
+    order: 5;
+  }
+
+  .l-order-xxs-6 {
+    order: 6;
+  }
+
+  .l-order-xxs-7 {
+    order: 7;
+  }
+
+  .l-order-xxs-8 {
+    order: 8;
+  }
+
+  .l-order-xxs-9 {
+    order: 9;
+  }
+
+  .l-order-xxs-10 {
+    order: 10;
+  }
+
+  .l-order-xxs-11 {
+    order: 11;
+  }
+
+  .l-order-xxs-12 {
+    order: 12;
+  }
+
+  .l-offset-xxs-0 {
+    margin-left: 0;
+  }
+
+  .l-offset-xxs-1 {
+    margin-left: 8.33333%;
+  }
+
+  .l-offset-xxs-2 {
+    margin-left: 16.66667%;
+  }
+
+  .l-offset-xxs-3 {
+    margin-left: 25%;
+  }
+
+  .l-offset-xxs-4 {
+    margin-left: 33.33333%;
+  }
+
+  .l-offset-xxs-5 {
+    margin-left: 41.66667%;
+  }
+
+  .l-offset-xxs-6 {
+    margin-left: 50%;
+  }
+
+  .l-offset-xxs-7 {
+    margin-left: 58.33333%;
+  }
+
+  .l-offset-xxs-8 {
+    margin-left: 66.66667%;
+  }
+
+  .l-offset-xxs-9 {
+    margin-left: 75%;
+  }
+
+  .l-offset-xxs-10 {
+    margin-left: 83.33333%;
+  }
+
+  .l-offset-xxs-11 {
+    margin-left: 91.66667%;
+  }
+}
+@media (min-width: 360px) {
+  .l-col-xs {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+
+  .l-col-xs-2 {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+  }
+
+  .l-col-xs-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+
+  .l-col-xs-4 {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+
+  .l-col-xs-5 {
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+  }
+
+  .l-col-xs-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .l-col-xs-7 {
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%;
+  }
+
+  .l-col-xs-8 {
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+  }
+
+  .l-col-xs-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+
+  .l-col-xs-10 {
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%;
+  }
+
+  .l-order-xs-first {
+    order: -1;
+  }
+
+  .l-order-xs-last {
+    order: 13;
+  }
+
+  .l-order-xs-0 {
+    order: 0;
+  }
+
+  .l-order-xs-1 {
+    order: 1;
+  }
+
+  .l-order-xs-2 {
+    order: 2;
+  }
+
+  .l-order-xs-3 {
+    order: 3;
+  }
+
+  .l-order-xs-4 {
+    order: 4;
+  }
+
+  .l-order-xs-5 {
+    order: 5;
+  }
+
+  .l-order-xs-6 {
+    order: 6;
+  }
+
+  .l-order-xs-7 {
+    order: 7;
+  }
+
+  .l-order-xs-8 {
+    order: 8;
+  }
+
+  .l-order-xs-9 {
+    order: 9;
+  }
+
+  .l-order-xs-10 {
+    order: 10;
+  }
+
+  .l-order-xs-11 {
+    order: 11;
+  }
+
+  .l-order-xs-12 {
+    order: 12;
+  }
+
+  .l-offset-xs-0 {
+    margin-left: 0;
+  }
+
+  .l-offset-xs-1 {
+    margin-left: 8.33333%;
+  }
+
+  .l-offset-xs-2 {
+    margin-left: 16.66667%;
+  }
+
+  .l-offset-xs-3 {
+    margin-left: 25%;
+  }
+
+  .l-offset-xs-4 {
+    margin-left: 33.33333%;
+  }
+
+  .l-offset-xs-5 {
+    margin-left: 41.66667%;
+  }
+
+  .l-offset-xs-6 {
+    margin-left: 50%;
+  }
+
+  .l-offset-xs-7 {
+    margin-left: 58.33333%;
+  }
+
+  .l-offset-xs-8 {
+    margin-left: 66.66667%;
+  }
+
+  .l-offset-xs-9 {
+    margin-left: 75%;
+  }
+
+  .l-offset-xs-10 {
+    margin-left: 83.33333%;
+  }
+
+  .l-offset-xs-11 {
+    margin-left: 91.66667%;
+  }
+}
+@media (min-width: 425px) {
+  .l-col-sm {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+
+  .l-col-sm-2 {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+  }
+
+  .l-col-sm-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+
+  .l-col-sm-4 {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+
+  .l-col-sm-5 {
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+  }
+
+  .l-col-sm-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .l-col-sm-7 {
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%;
+  }
+
+  .l-col-sm-8 {
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+  }
+
+  .l-col-sm-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+
+  .l-col-sm-10 {
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%;
+  }
+
+  .l-order-sm-first {
+    order: -1;
+  }
+
+  .l-order-sm-last {
+    order: 13;
+  }
+
+  .l-order-sm-0 {
+    order: 0;
+  }
+
+  .l-order-sm-1 {
+    order: 1;
+  }
+
+  .l-order-sm-2 {
+    order: 2;
+  }
+
+  .l-order-sm-3 {
+    order: 3;
+  }
+
+  .l-order-sm-4 {
+    order: 4;
+  }
+
+  .l-order-sm-5 {
+    order: 5;
+  }
+
+  .l-order-sm-6 {
+    order: 6;
+  }
+
+  .l-order-sm-7 {
+    order: 7;
+  }
+
+  .l-order-sm-8 {
+    order: 8;
+  }
+
+  .l-order-sm-9 {
+    order: 9;
+  }
+
+  .l-order-sm-10 {
+    order: 10;
+  }
+
+  .l-order-sm-11 {
+    order: 11;
+  }
+
+  .l-order-sm-12 {
+    order: 12;
+  }
+
+  .l-offset-sm-0 {
+    margin-left: 0;
+  }
+
+  .l-offset-sm-1 {
+    margin-left: 8.33333%;
+  }
+
+  .l-offset-sm-2 {
+    margin-left: 16.66667%;
+  }
+
+  .l-offset-sm-3 {
+    margin-left: 25%;
+  }
+
+  .l-offset-sm-4 {
+    margin-left: 33.33333%;
+  }
+
+  .l-offset-sm-5 {
+    margin-left: 41.66667%;
+  }
+
+  .l-offset-sm-6 {
+    margin-left: 50%;
+  }
+
+  .l-offset-sm-7 {
+    margin-left: 58.33333%;
+  }
+
+  .l-offset-sm-8 {
+    margin-left: 66.66667%;
+  }
+
+  .l-offset-sm-9 {
+    margin-left: 75%;
+  }
+
+  .l-offset-sm-10 {
+    margin-left: 83.33333%;
+  }
+
+  .l-offset-sm-11 {
+    margin-left: 91.66667%;
+  }
+}
+@media (min-width: 768px) {
+  .l-col-md {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+
+  .l-col-md-2 {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+  }
+
+  .l-col-md-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+
+  .l-col-md-4 {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+
+  .l-col-md-5 {
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+  }
+
+  .l-col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .l-col-md-7 {
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%;
+  }
+
+  .l-col-md-8 {
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+  }
+
+  .l-col-md-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+
+  .l-col-md-10 {
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%;
+  }
+
+  .l-order-md-first {
+    order: -1;
+  }
+
+  .l-order-md-last {
+    order: 13;
+  }
+
+  .l-order-md-0 {
+    order: 0;
+  }
+
+  .l-order-md-1 {
+    order: 1;
+  }
+
+  .l-order-md-2 {
+    order: 2;
+  }
+
+  .l-order-md-3 {
+    order: 3;
+  }
+
+  .l-order-md-4 {
+    order: 4;
+  }
+
+  .l-order-md-5 {
+    order: 5;
+  }
+
+  .l-order-md-6 {
+    order: 6;
+  }
+
+  .l-order-md-7 {
+    order: 7;
+  }
+
+  .l-order-md-8 {
+    order: 8;
+  }
+
+  .l-order-md-9 {
+    order: 9;
+  }
+
+  .l-order-md-10 {
+    order: 10;
+  }
+
+  .l-order-md-11 {
+    order: 11;
+  }
+
+  .l-order-md-12 {
+    order: 12;
+  }
+
+  .l-offset-md-0 {
+    margin-left: 0;
+  }
+
+  .l-offset-md-1 {
+    margin-left: 8.33333%;
+  }
+
+  .l-offset-md-2 {
+    margin-left: 16.66667%;
+  }
+
+  .l-offset-md-3 {
+    margin-left: 25%;
+  }
+
+  .l-offset-md-4 {
+    margin-left: 33.33333%;
+  }
+
+  .l-offset-md-5 {
+    margin-left: 41.66667%;
+  }
+
+  .l-offset-md-6 {
+    margin-left: 50%;
+  }
+
+  .l-offset-md-7 {
+    margin-left: 58.33333%;
+  }
+
+  .l-offset-md-8 {
+    margin-left: 66.66667%;
+  }
+
+  .l-offset-md-9 {
+    margin-left: 75%;
+  }
+
+  .l-offset-md-10 {
+    margin-left: 83.33333%;
+  }
+
+  .l-offset-md-11 {
+    margin-left: 91.66667%;
+  }
+}
+@media (min-width: 1000px) {
+  .l-col-lg {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+
+  .l-col-lg-2 {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+  }
+
+  .l-col-lg-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+
+  .l-col-lg-4 {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+
+  .l-col-lg-5 {
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+  }
+
+  .l-col-lg-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .l-col-lg-7 {
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%;
+  }
+
+  .l-col-lg-8 {
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+  }
+
+  .l-col-lg-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+
+  .l-col-lg-10 {
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%;
+  }
+
+  .l-order-lg-first {
+    order: -1;
+  }
+
+  .l-order-lg-last {
+    order: 13;
+  }
+
+  .l-order-lg-0 {
+    order: 0;
+  }
+
+  .l-order-lg-1 {
+    order: 1;
+  }
+
+  .l-order-lg-2 {
+    order: 2;
+  }
+
+  .l-order-lg-3 {
+    order: 3;
+  }
+
+  .l-order-lg-4 {
+    order: 4;
+  }
+
+  .l-order-lg-5 {
+    order: 5;
+  }
+
+  .l-order-lg-6 {
+    order: 6;
+  }
+
+  .l-order-lg-7 {
+    order: 7;
+  }
+
+  .l-order-lg-8 {
+    order: 8;
+  }
+
+  .l-order-lg-9 {
+    order: 9;
+  }
+
+  .l-order-lg-10 {
+    order: 10;
+  }
+
+  .l-order-lg-11 {
+    order: 11;
+  }
+
+  .l-order-lg-12 {
+    order: 12;
+  }
+
+  .l-offset-lg-0 {
+    margin-left: 0;
+  }
+
+  .l-offset-lg-1 {
+    margin-left: 8.33333%;
+  }
+
+  .l-offset-lg-2 {
+    margin-left: 16.66667%;
+  }
+
+  .l-offset-lg-3 {
+    margin-left: 25%;
+  }
+
+  .l-offset-lg-4 {
+    margin-left: 33.33333%;
+  }
+
+  .l-offset-lg-5 {
+    margin-left: 41.66667%;
+  }
+
+  .l-offset-lg-6 {
+    margin-left: 50%;
+  }
+
+  .l-offset-lg-7 {
+    margin-left: 58.33333%;
+  }
+
+  .l-offset-lg-8 {
+    margin-left: 66.66667%;
+  }
+
+  .l-offset-lg-9 {
+    margin-left: 75%;
+  }
+
+  .l-offset-lg-10 {
+    margin-left: 83.33333%;
+  }
+
+  .l-offset-lg-11 {
+    margin-left: 91.66667%;
+  }
+}
+@media (min-width: 1240px) {
+  .l-col-xl {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+
+  .l-col-xl-2 {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+  }
+
+  .l-col-xl-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+
+  .l-col-xl-4 {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+
+  .l-col-xl-5 {
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+  }
+
+  .l-col-xl-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .l-col-xl-7 {
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%;
+  }
+
+  .l-col-xl-8 {
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+  }
+
+  .l-col-xl-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+
+  .l-col-xl-10 {
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%;
+  }
+
+  .l-order-xl-first {
+    order: -1;
+  }
+
+  .l-order-xl-last {
+    order: 13;
+  }
+
+  .l-order-xl-0 {
+    order: 0;
+  }
+
+  .l-order-xl-1 {
+    order: 1;
+  }
+
+  .l-order-xl-2 {
+    order: 2;
+  }
+
+  .l-order-xl-3 {
+    order: 3;
+  }
+
+  .l-order-xl-4 {
+    order: 4;
+  }
+
+  .l-order-xl-5 {
+    order: 5;
+  }
+
+  .l-order-xl-6 {
+    order: 6;
+  }
+
+  .l-order-xl-7 {
+    order: 7;
+  }
+
+  .l-order-xl-8 {
+    order: 8;
+  }
+
+  .l-order-xl-9 {
+    order: 9;
+  }
+
+  .l-order-xl-10 {
+    order: 10;
+  }
+
+  .l-order-xl-11 {
+    order: 11;
+  }
+
+  .l-order-xl-12 {
+    order: 12;
+  }
+
+  .l-offset-xl-0 {
+    margin-left: 0;
+  }
+
+  .l-offset-xl-1 {
+    margin-left: 8.33333%;
+  }
+
+  .l-offset-xl-2 {
+    margin-left: 16.66667%;
+  }
+
+  .l-offset-xl-3 {
+    margin-left: 25%;
+  }
+
+  .l-offset-xl-4 {
+    margin-left: 33.33333%;
+  }
+
+  .l-offset-xl-5 {
+    margin-left: 41.66667%;
+  }
+
+  .l-offset-xl-6 {
+    margin-left: 50%;
+  }
+
+  .l-offset-xl-7 {
+    margin-left: 58.33333%;
+  }
+
+  .l-offset-xl-8 {
+    margin-left: 66.66667%;
+  }
+
+  .l-offset-xl-9 {
+    margin-left: 75%;
+  }
+
+  .l-offset-xl-10 {
+    margin-left: 83.33333%;
+  }
+
+  .l-offset-xl-11 {
+    margin-left: 91.66667%;
+  }
+}
+@media (min-width: 1640px) {
+  .l-col-xxl {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+
+  .l-col-xxl-2 {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+  }
+
+  .l-col-xxl-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+
+  .l-col-xxl-4 {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+
+  .l-col-xxl-5 {
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+  }
+
+  .l-col-xxl-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .l-col-xxl-7 {
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%;
+  }
+
+  .l-col-xxl-8 {
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+  }
+
+  .l-col-xxl-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+
+  .l-col-xxl-10 {
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%;
+  }
+
+  .l-order-xxl-first {
+    order: -1;
+  }
+
+  .l-order-xxl-last {
+    order: 13;
+  }
+
+  .l-order-xxl-0 {
+    order: 0;
+  }
+
+  .l-order-xxl-1 {
+    order: 1;
+  }
+
+  .l-order-xxl-2 {
+    order: 2;
+  }
+
+  .l-order-xxl-3 {
+    order: 3;
+  }
+
+  .l-order-xxl-4 {
+    order: 4;
+  }
+
+  .l-order-xxl-5 {
+    order: 5;
+  }
+
+  .l-order-xxl-6 {
+    order: 6;
+  }
+
+  .l-order-xxl-7 {
+    order: 7;
+  }
+
+  .l-order-xxl-8 {
+    order: 8;
+  }
+
+  .l-order-xxl-9 {
+    order: 9;
+  }
+
+  .l-order-xxl-10 {
+    order: 10;
+  }
+
+  .l-order-xxl-11 {
+    order: 11;
+  }
+
+  .l-order-xxl-12 {
+    order: 12;
+  }
+
+  .l-offset-xxl-0 {
+    margin-left: 0;
+  }
+
+  .l-offset-xxl-1 {
+    margin-left: 8.33333%;
+  }
+
+  .l-offset-xxl-2 {
+    margin-left: 16.66667%;
+  }
+
+  .l-offset-xxl-3 {
+    margin-left: 25%;
+  }
+
+  .l-offset-xxl-4 {
+    margin-left: 33.33333%;
+  }
+
+  .l-offset-xxl-5 {
+    margin-left: 41.66667%;
+  }
+
+  .l-offset-xxl-6 {
+    margin-left: 50%;
+  }
+
+  .l-offset-xxl-7 {
+    margin-left: 58.33333%;
+  }
+
+  .l-offset-xxl-8 {
+    margin-left: 66.66667%;
+  }
+
+  .l-offset-xxl-9 {
+    margin-left: 75%;
+  }
+
+  .l-offset-xxl-10 {
+    margin-left: 83.33333%;
+  }
+
+  .l-offset-xxl-11 {
+    margin-left: 91.66667%;
+  }
+}
+/*doc
+---
+title: l-col-(column)-(breakpoint)
+name: grid-03-col-column-breakpoint
+category: layout-grid
+---
+
+flexboxによるグリッドのセルの幅を、<code>(column) / 12</code>の割合にする。  
+(breakpoint)の指定がない場合は、常にその幅となる。  
+(breakpoint)の指定がある場合は、(breakpoint)**以上**のときに、指定した幅となる。
+
+``` example
+<div class="l-row m-b-lg">
+    <div class="l-col-3 m-b">
+        <div class="bg-first p" style="height: 100%;">l-col-3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    </div>
+    <div class="l-col-sm-3 m-b">
+        <div class="bg-first p" style="height: 100%;">l-col-sm-3<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    </div>
+    <div class="l-col-sm-3 m-b">
+        <div class="bg-first p" style="height: 100%;">l-col-sm-3<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    </div>
+</div>
+
+<div class="l-row m-b-lg">
+    <div class="l-col-md-3 m-b">
+        <div class="bg-second p" style="height: 100%;">l-col-md-3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    </div>
+    <div class="l-col-md-3 m-b">
+        <div class="bg-second p" style="height: 100%;">l-col-md-3<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    </div>
+    <div class="l-col-md-3 m-b">
+        <div class="bg-second p" style="height: 100%;">l-col-md-3<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    </div>
+    <div class="l-col-md-3 m-b">
+        <div class="bg-second p" style="height: 100%;">l-col-md-3<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
+    </div>
+</div>
+
+<div class="l-row m-b-lg">
+    <div class="l-col-lg-4 m-b">
+        <div class="bg-third p" style="height: 100%;">l-col-lg-4<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    </div>
+    <div class="l-col-lg-4 m-b">
+        <div class="bg-third p" style="height: 100%;">l-col-lg-4<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    </div>
+    <div class="l-col-lg-4 m-b">
+        <div class="bg-third p" style="height: 100%;">l-col-lg-4<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    </div>
+</div>
+
+<div class="l-row">
+    <div class="l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2 m-b">
+        <div class="bg-fourth p" style="height: 100%;">l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    </div>
+    <div class="l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2 m-b">
+        <div class="bg-fourth p" style="height: 100%;">l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    </div>
+    <div class="l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2 m-b">
+        <div class="bg-fourth p" style="height: 100%;">l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    </div>
+    <div class="l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2 m-b">
+        <div class="bg-fourth p" style="height: 100%;">l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
+    </div>
+    <div class="l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2 m-b">
+        <div class="bg-fourth p" style="height: 100%;">l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    </div>
+    <div class="l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2 m-b">
+        <div class="bg-fourth p" style="height: 100%;">l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
     </div>
 </div>
 ```
 */
-@media (min-width: 425px) {
-  .l-col-3-sm {
-    width: 25%;
-  }
+/*doc
+---
+title: l-order-(breakpoint)-(first or last or number)
+name: grid-04-order-breakpoint
+category: layout-grid
+parent: grid-02-col
+---
 
-  .l-col-4-sm {
-    width: 33.33333333%;
-  }
+flexboxによるグリッドのセルを、指定した順番にする。  
+(breakpoint)の指定がない場合は、常にその順番となる。  
+(breakpoint)の指定がある場合は、(breakpoint)**以上**のときに、指定した順番となる。
 
-  .l-col-6-sm {
-    width: 50%;
-  }
-}
-@media (min-width: 768px) {
-  .l-col-3-md {
-    width: 25%;
-  }
+``` example
+<div class="l-row m-b-lg">
+    <div class="l-order-last l-col m-b">
+        <div class="bg-first p" style="height: 100%;">1:<br>l-order-last<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    </div>
+    <div class="l-col m-b">
+        <div class="bg-first bg-mild p" style="height: 100%;">2:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    </div>
+    <div class="l-order-first l-col m-b">
+        <div class="bg-first p" style="height: 100%;">3:<br>l-order-first<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    </div>
+    <div class="l-col m-b">
+        <div class="bg-first bg-mild p" style="height: 100%;">4:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    </div>
+</div>
 
-  .l-col-4-md {
-    width: 33.33333333%;
-  }
+<div class="l-row m-b-lg">
+    <div class="l-order-3 l-col m-b">
+        <div class="bg-second p" style="height: 100%;">1:<br>l-order-3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    </div>
+    <div class="l-order-1 l-col m-b">
+        <div class="bg-second p" style="height: 100%;">2:<br>l-order-1<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    </div>
+    <div class="l-order-4 l-col m-b">
+        <div class="bg-second p" style="height: 100%;">3:<br>l-order-4<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    </div>
+    <div class="l-order-2 l-col m-b">
+        <div class="bg-second p" style="height: 100%;">4:<br>l-order-2<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    </div>
+</div>
 
-  .l-col-6-md {
-    width: 50%;
-  }
-}
-@media (min-width: 1000px) {
-  .l-col-3-lg {
-    width: 25%;
-  }
+<div class="l-row m-b-lg">
+    <div class="l-order-sm-last l-col-sm-6 l-col-lg-3 m-b">
+        <div class="bg-third p" style="height: 100%;">1:<br>l-order-sm-last<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    </div>
+    <div class="l-col-sm-6 l-col-lg-3 m-b">
+        <div class="bg-third bg-mild p" style="height: 100%;">2:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    </div>
+    <div class="l-order-xl-first l-col-sm-6 l-col-lg-3 m-b">
+        <div class="bg-third p" style="height: 100%;">3:<br>l-order-xl-first<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    </div>
+    <div class="l-col-sm-6 l-col-lg-3 m-b">
+        <div class="bg-third bg-mild p" style="height: 100%;">4:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    </div>
+</div>
+```
+*/
+/*doc
+---
+title: l-offset-(breakpoint)-(column)
+name: grid-05-order-breakpoint
+category: layout-grid
+parent: grid-02-col
+---
 
-  .l-col-4-lg {
-    width: 33.33333333%;
-  }
+flexboxによるグリッドのセルの開始位置を、<code>(column) / 12</code>の割合だけ右にずらす。  
+<code>l-col-(column)</code> と、<code>l-offset-(column)</code> の合計値が<code>12</code>を超えてしまうと、セルが右にはみ出す。  
+(breakpoint)の指定がない場合は、常にその位置となる。  
+(breakpoint)の指定がある場合は、(breakpoint)**以上**のときに、指定した位置となる。
 
-  .l-col-6-lg {
-    width: 50%;
-  }
-}
+``` example
+<div class="l-row m-b-lg">
+    <div class="l-offset-1 l-col-10 m-b">
+        <div class="bg-first p" style="height: 100%;">l-offset-3<br>l-col-10<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    </div>
+</div>
+
+<div class="l-row m-b-lg">
+    <div class="l-offset-lg-8 l-col-6 m-b">
+        <div class="bg-second p" style="height: 100%;">l-offset-lg-8<br>l-col-6<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    </div>
+    <div class="l-offset-lg-4 l-offset-md-8 l-col-3 m-b">
+        <div class="bg-second p" style="height: 100%;">l-offset-lg-4<br>l-offset-md-8<br>l-col-3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    </div>
+</div>
+
+```
+*/
 /*doc
 ---
 title: m-badge

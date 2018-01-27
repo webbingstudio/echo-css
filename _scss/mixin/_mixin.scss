@@ -1,4 +1,5 @@
 @import "./_grid_float.scss";
+@import "./_grid_flex.scss";
 
 @mixin chevron( $rotate: 'right', $color: $body-color ) {
     position: relative;
@@ -136,6 +137,10 @@
 @function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
   $next: breakpoint-next($name, $breakpoints);
   @return if($next, breakpoint-min($next, $breakpoints) - 0.1, null);
+}
+
+@function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
+  @return if(breakpoint-min($name, $breakpoints) == null, "", "-#{$name}");
 }
 
 @mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
