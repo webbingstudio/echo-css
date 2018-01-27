@@ -151,9 +151,9 @@ category: layout-grid
 parent: grid-02-col
 ---
 
-floatによるグリッドのセルを、ウィンドウ幅が(breakpoint)よりも大きくなったときに、<code>(column) / #{$grid-columns}</code>の幅で配置する。  
+floatによるグリッドのセルの幅を、<code>(column) / #{$grid-columns}</code>の割合にする。  
 (breakpoint)の指定がない場合は、常にその幅となる。  
-このテーマでは、(column)は<code>1 - 12</code>、(breakpoint)は<a href="./basic.html#breakpoints">標準のブレークポイント</a>を参照。
+(breakpoint)の指定がある場合は、(breakpoint)**以上**のときに、指定した幅となる。
 
 ### スマートフォン(default)、低解像度タブレットまたはスマートフォン横回転(sm)、XGA以上(lg)でレイアウトを変更する代表的な例
 
