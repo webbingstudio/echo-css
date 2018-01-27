@@ -4188,12 +4188,14 @@ parent: box
   */
   /*doc
   ---
-  title: line-(direction)
+  title: line-(breakpont)-(direction)
   name: line-01-direction
   category: utility-line
   ---
   
-  ブロック要素内の文章を指定した方向へ寄せる。
+  ブロック要素内の文章を指定した方向へ寄せる。  
+  (breakpoint)の指定がない場合は、常にその方向となる。  
+  (breakpoint)の指定がある場合は、(breakpoint)**以上**のときに、指定した方向へ寄せる。
   
   ``` example
   <p class="line-c">line-c_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
@@ -4204,6 +4206,17 @@ parent: box
       <p class="line-l">line-l_何でも薄暗いじめじめした所で</p>
       <p>ニャーニャー泣いていた事だけは記憶している。</p>
   </div>
+  
+  <p class="line-lg-c">line-lg-c_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+  <p class="line-lg-r">line-lg-r_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+  
+  <div class="bg-second bg-fade line-lg-c">
+      <p>line-lg-c_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+      <p class="line-lg-l">line-lg-l_何でも薄暗いじめじめした所で</p>
+      <p>ニャーニャー泣いていた事だけは記憶している。</p>
+  </div>
+  
+  <p class="line-r line-lg-c">line-r_line-lg-c_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
   ```
   */
   /*doc
@@ -4768,6 +4781,120 @@ parent: box
 }
 #document .line-r {
   text-align: right;
+}
+#document .line-default-l {
+  text-align: left;
+}
+@media (min-width: 320px) {
+  #document .line-xxs-l {
+    text-align: left;
+  }
+}
+@media (min-width: 360px) {
+  #document .line-xs-l {
+    text-align: left;
+  }
+}
+@media (min-width: 425px) {
+  #document .line-sm-l {
+    text-align: left;
+  }
+}
+@media (min-width: 768px) {
+  #document .line-md-l {
+    text-align: left;
+  }
+}
+@media (min-width: 1000px) {
+  #document .line-lg-l {
+    text-align: left;
+  }
+}
+@media (min-width: 1240px) {
+  #document .line-xl-l {
+    text-align: left;
+  }
+}
+@media (min-width: 1640px) {
+  #document .line-xxl-l {
+    text-align: left;
+  }
+}
+#document .line-default-c {
+  text-align: center;
+}
+@media (min-width: 320px) {
+  #document .line-xxs-c {
+    text-align: center;
+  }
+}
+@media (min-width: 360px) {
+  #document .line-xs-c {
+    text-align: center;
+  }
+}
+@media (min-width: 425px) {
+  #document .line-sm-c {
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+  #document .line-md-c {
+    text-align: center;
+  }
+}
+@media (min-width: 1000px) {
+  #document .line-lg-c {
+    text-align: center;
+  }
+}
+@media (min-width: 1240px) {
+  #document .line-xl-c {
+    text-align: center;
+  }
+}
+@media (min-width: 1640px) {
+  #document .line-xxl-c {
+    text-align: center;
+  }
+}
+#document .line-default-r {
+  text-align: right;
+}
+@media (min-width: 320px) {
+  #document .line-xxs-r {
+    text-align: right;
+  }
+}
+@media (min-width: 360px) {
+  #document .line-xs-r {
+    text-align: right;
+  }
+}
+@media (min-width: 425px) {
+  #document .line-sm-r {
+    text-align: right;
+  }
+}
+@media (min-width: 768px) {
+  #document .line-md-r {
+    text-align: right;
+  }
+}
+@media (min-width: 1000px) {
+  #document .line-lg-r {
+    text-align: right;
+  }
+}
+@media (min-width: 1240px) {
+  #document .line-xl-r {
+    text-align: right;
+  }
+}
+@media (min-width: 1640px) {
+  #document .line-xxl-r {
+    text-align: right;
+  }
 }
 #document .line-none {
   line-height: 1;

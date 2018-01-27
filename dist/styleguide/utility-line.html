@@ -38,7 +38,7 @@
                 <nav class="s-anchor">
                     <ul class="list list-horizontal">
                         
-                        <li class="list-item"><a href="#line-01-direction" class="js-scrollto">line-(direction)</a></li>
+                        <li class="list-item"><a href="#line-01-direction" class="js-scrollto">line-(breakpont)-(direction)</a></li>
                         
                         <li class="list-item"><a href="#line-02-size" class="js-scrollto">line-(size)</a></li>
                         
@@ -47,10 +47,12 @@
                 
 
                 <article class="s-post post">
-                    <div class="post-contents styleguide-contents"><h1 id="line-01-direction" class="styleguide">line-(direction)</h1>
+                    <div class="post-contents styleguide-contents"><h1 id="line-01-direction" class="styleguide">line-(breakpont)-(direction)</h1>
   
 
-<p>ブロック要素内の文章を指定した方向へ寄せる。</p>
+<p>ブロック要素内の文章を指定した方向へ寄せる。<br>
+  (breakpoint)の指定がない場合は、常にその方向となる。<br>
+  (breakpoint)の指定がある場合は、(breakpoint)<strong>以上</strong>のときに、指定した方向へ寄せる。</p>
 <div class="example">  <p class="line-c">line-c_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
   <p class="line-r">line-r_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
 
@@ -59,6 +61,17 @@
       <p class="line-l">line-l_何でも薄暗いじめじめした所で</p>
       <p>ニャーニャー泣いていた事だけは記憶している。</p>
   </div>
+
+  <p class="line-lg-c">line-lg-c_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+  <p class="line-lg-r">line-lg-r_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+
+  <div class="bg-second bg-fade line-lg-c">
+      <p>line-lg-c_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+      <p class="line-lg-l">line-lg-l_何でも薄暗いじめじめした所で</p>
+      <p>ニャーニャー泣いていた事だけは記憶している。</p>
+  </div>
+
+  <p class="line-r line-lg-c">line-r_line-lg-c_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
 </div><div class="codeblock"><pre>  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"line-c"</span><span class="nt">&gt;</span>line-c_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<span class="nt">&lt;br&gt;</span>何でも薄暗いじめじめした所で<span class="nt">&lt;br&gt;</span>ニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/p&gt;</span>
   <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"line-r"</span><span class="nt">&gt;</span>line-r_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<span class="nt">&lt;br&gt;</span>何でも薄暗いじめじめした所で<span class="nt">&lt;br&gt;</span>ニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/p&gt;</span>
 
@@ -67,6 +80,17 @@
       <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"line-l"</span><span class="nt">&gt;</span>line-l_何でも薄暗いじめじめした所で<span class="nt">&lt;/p&gt;</span>
       <span class="nt">&lt;p&gt;</span>ニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/p&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"line-lg-c"</span><span class="nt">&gt;</span>line-lg-c_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<span class="nt">&lt;br&gt;</span>何でも薄暗いじめじめした所で<span class="nt">&lt;br&gt;</span>ニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"line-lg-r"</span><span class="nt">&gt;</span>line-lg-r_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<span class="nt">&lt;br&gt;</span>何でも薄暗いじめじめした所で<span class="nt">&lt;br&gt;</span>ニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/p&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-second bg-fade line-lg-c"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p&gt;</span>line-lg-c_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"line-lg-l"</span><span class="nt">&gt;</span>line-lg-l_何でも薄暗いじめじめした所で<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;p&gt;</span>ニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"line-r line-lg-c"</span><span class="nt">&gt;</span>line-r_line-lg-c_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<span class="nt">&lt;br&gt;</span>何でも薄暗いじめじめした所で<span class="nt">&lt;br&gt;</span>ニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/p&gt;</span>
 </pre></div>
 <h1 id="line-02-size" class="styleguide">line-(size)</h1>
   
