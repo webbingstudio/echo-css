@@ -1,9 +1,19 @@
-/*
-label
---------------------
+/*doc
+---
+title: #{$p}#{$m}label
+name: label
+category: module-label
+---
+
+カテゴリー名などに使用する、小さなラベルを表示する。a要素にも指定できる。
+
+``` example
+<p>吾輩は猫である。名前はまだ無い。<span class="#{$p}#{$m}label">#{$p}#{$m}label</span><a href="#" class="#{$p}#{$m}label">#{$p}#{$m}label(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+```
+
 */
 
-.#{$p}label {
+.#{$p}#{$m}label {
     display: inline-block;
     min-width: 3em;
     margin-right: .5em;
@@ -24,15 +34,194 @@ label
     vertical-align: middle;
 
     @at-root {
+
         a#{&} {
             color: $body-inverse-color;
             text-decoration: none;
+        }
 
-            &:hover,
-            &:focus,
-            &:active {
-                color: $body-inverse-color;
-                text-decoration: none;
+    }
+
+}
+
+
+/*doc
+---
+title: #{$p}#{$m}label-(color)
+name: label-01-color
+category: module-label
+parent: label
+---
+
+ラベルの色を変更する。(color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
+
+``` example
+<p>吾輩は猫である。名前はまだ無い。<span class="#{$p}#{$m}label #{$p}#{$m}label-first">#{$p}#{$m}label-first</span><a href="#" class="#{$p}#{$m}label #{$p}#{$m}label-first">#{$p}#{$m}label-first(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="#{$p}#{$m}label #{$p}#{$m}label-second">#{$p}#{$m}label-second</span><a href="#" class="#{$p}#{$m}label #{$p}#{$m}label-second">#{$p}#{$m}label-second(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="#{$p}#{$m}label #{$p}#{$m}label-third">#{$p}#{$m}label-third</span><a href="#" class="#{$p}#{$m}label #{$p}#{$m}label-third">#{$p}#{$m}label-third(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="#{$p}#{$m}label #{$p}#{$m}label-fourth">#{$p}#{$m}label-fourth</span><a href="#" class="#{$p}#{$m}label #{$p}#{$m}label-fourth">#{$p}#{$m}label-fourth(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="#{$p}#{$m}label #{$p}#{$m}label-fifth">#{$p}#{$m}label-fifth</span><a href="#" class="#{$p}#{$m}label #{$p}#{$m}label-fifth">#{$p}#{$m}label-fifth(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="#{$p}#{$m}label #{$p}#{$m}label-info">#{$p}#{$m}label-info</span><a href="#" class="#{$p}#{$m}label #{$p}#{$m}label-info">#{$p}#{$m}label-info(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="#{$p}#{$m}label #{$p}#{$m}label-important">#{$p}#{$m}label-important</span><a href="#" class="#{$p}#{$m}label #{$p}#{$m}label-important">#{$p}#{$m}label-important(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+```
+
+*/
+
+.#{$p}#{$m}label-first {
+    background-color: $first;
+}
+
+.#{$p}#{$m}label-second {
+    background-color: $second;
+}
+
+.#{$p}#{$m}label-third {
+    background-color: $third;
+}
+
+.#{$p}#{$m}label-fourth {
+    background-color: $fourth;
+}
+
+.#{$p}#{$m}label-fifth {
+    background-color: $fifth;
+}
+
+.#{$p}#{$m}label-info {
+    background-color: $info;
+}
+
+.#{$p}#{$m}label-important {
+    background-color: $important;
+}
+
+
+/*doc
+---
+title: #{$p}#{$m}label-inverse
+name: label-03-inverse
+category: module-label
+parent: label
+---
+
+ラベルの文字色をbody要素の文字色、背景色をbody要素の背景色にする。  
+<code>.#{$p}#{$m}label-(color)</code> と同時に使用すると、文字色が指定した色になる。
+
+
+``` example
+<div class="bg-first bg-mild p-y">
+    <p>吾輩は猫である。名前はまだ無い。<span class="#{$p}#{$m}label #{$p}#{$m}label-inverse">#{$p}#{$m}label-inverse</span><a href="#" class="#{$p}#{$m}label #{$p}#{$m}label-inverse">#{$p}#{$m}label-inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+    <p>吾輩は猫である。名前はまだ無い。<span class="#{$p}#{$m}label #{$p}#{$m}label-inverse #{$p}#{$m}label-first">#{$p}#{$m}label-inverse</span><a href="#" class="#{$p}#{$m}label #{$p}#{$m}label-inverse #{$p}#{$m}label-first">#{$p}#{$m}label-inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+    <p>吾輩は猫である。名前はまだ無い。<span class="#{$p}#{$m}label #{$p}#{$m}label-inverse #{$p}#{$m}label-second">#{$p}#{$m}label-inverse</span><a href="#" class="#{$p}#{$m}label #{$p}#{$m}label-inverse #{$p}#{$m}label-second">#{$p}#{$m}label-inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+    <p>吾輩は猫である。名前はまだ無い。<span class="#{$p}#{$m}label #{$p}#{$m}label-inverse #{$p}#{$m}label-third">#{$p}#{$m}label-inverse</span><a href="#" class="#{$p}#{$m}label #{$p}#{$m}label-inverse #{$p}#{$m}label-third">#{$p}#{$m}label-inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+    <p>吾輩は猫である。名前はまだ無い。<span class="#{$p}#{$m}label #{$p}#{$m}label-inverse #{$p}#{$m}label-fourth">#{$p}#{$m}label-inverse</span><a href="#" class="#{$p}#{$m}label #{$p}#{$m}label-inverse #{$p}#{$m}label-fourth">#{$p}#{$m}label-inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+    <p>吾輩は猫である。名前はまだ無い。<span class="#{$p}#{$m}label #{$p}#{$m}label-inverse #{$p}#{$m}label-fifth">#{$p}#{$m}label-inverse</span><a href="#" class="#{$p}#{$m}label #{$p}#{$m}label-inverse #{$p}#{$m}label-fifth">#{$p}#{$m}label-inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+    <p>吾輩は猫である。名前はまだ無い。<span class="#{$p}#{$m}label #{$p}#{$m}label-inverse #{$p}#{$m}label-info">#{$p}#{$m}label-inverse</span><a href="#" class="#{$p}#{$m}label #{$p}#{$m}label-inverse #{$p}#{$m}label-info">#{$p}#{$m}label-inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+    <p>吾輩は猫である。名前はまだ無い。<span class="#{$p}#{$m}label #{$p}#{$m}label-inverse #{$p}#{$m}label-important">#{$p}#{$m}label-inverse</span><a href="#" class="#{$p}#{$m}label #{$p}#{$m}label-inverse #{$p}#{$m}label-important">#{$p}#{$m}label-inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+</div>
+```
+
+*/
+
+.#{$p}#{$m}label-inverse {
+    color: $body-color;
+    background-color: $body-bg;
+
+    @at-root {
+
+        a#{&} {
+            color: $body-color;
+        }
+
+    }
+
+    &.#{$p}#{$m}label-first {
+
+        color: $first-text;
+
+        @at-root {
+
+            a#{&} {
+                color: $first-text;
+            }
+
+        }
+
+    }
+
+    &.#{$p}#{$m}label-second {
+
+        color: $second-text;
+
+        @at-root {
+
+            a#{&} {
+                color: $second-text;
+            }
+
+        }
+
+    }
+
+    &.#{$p}#{$m}label-third {
+
+        color: $third-text;
+
+        @at-root {
+
+            a#{&} {
+                color: $third-text;
+            }
+
+        }
+
+    }
+
+    &.#{$p}#{$m}label-fourth {
+        color: $fourth-text;
+        @at-root {
+            a#{&} {
+                color: $fourth-text;
+            }
+        }
+    }
+
+    &.#{$p}#{$m}label-fifth {
+
+        color: $fifth-text;
+
+        @at-root {
+
+            a#{&} {
+                color: $fifth-text;
+            }
+
+        }
+
+    }
+
+    &.#{$p}#{$m}label-info {
+
+        color: $info-text;
+
+        @at-root {
+
+            a#{&} {
+                color: $info-text;
+            }
+
+        }
+
+    }
+
+    &.#{$p}#{$m}label-important {
+
+        color: $important-text;
+
+        @at-root {
+
+            a#{&} {
+                color: $important-text;
             }
 
         }
@@ -41,34 +230,31 @@ label
 
 }
 
-.#{$p}label-first {
-    background-color: $first;
-}
 
-.#{$p}label-second {
-    background-color: $second;
-}
+/*doc
+---
+title: #{$p}#{$m}label-round
+name: label-04-round
+category: module-label
+parent: label
+---
 
-.#{$p}label-third {
-    background-color: $third;
-}
+ラベルが小判型になる。
 
-.#{$p}label-fourth {
-    background-color: $fourth;
-}
+``` example
+<p>吾輩は猫である。名前はまだ無い。<span class="#{$p}#{$m}label #{$p}#{$m}label-round #{$p}#{$m}label-first">#{$p}#{$m}label-first</span><a href="#" class="#{$p}#{$m}label #{$p}#{$m}label-round #{$p}#{$m}label-first">#{$p}#{$m}label-first(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="#{$p}#{$m}label #{$p}#{$m}label-round #{$p}#{$m}label-second">#{$p}#{$m}label-second</span><a href="#" class="#{$p}#{$m}label #{$p}#{$m}label-round #{$p}#{$m}label-second">#{$p}#{$m}label-second(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="#{$p}#{$m}label #{$p}#{$m}label-round #{$p}#{$m}label-third">#{$p}#{$m}label-third</span><a href="#" class="#{$p}#{$m}label #{$p}#{$m}label-round #{$p}#{$m}label-third">#{$p}#{$m}label-third(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="#{$p}#{$m}label #{$p}#{$m}label-round #{$p}#{$m}label-fourth">#{$p}#{$m}label-fourth</span><a href="#" class="#{$p}#{$m}label #{$p}#{$m}label-round #{$p}#{$m}label-fourth">#{$p}#{$m}label-fourth(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="#{$p}#{$m}label #{$p}#{$m}label-round #{$p}#{$m}label-fifth">#{$p}#{$m}label-fifth</span><a href="#" class="#{$p}#{$m}label #{$p}#{$m}label-round #{$p}#{$m}label-fifth">#{$p}#{$m}label-fifth(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="#{$p}#{$m}label #{$p}#{$m}label-round #{$p}#{$m}label-info">#{$p}#{$m}label-info</span><a href="#" class="#{$p}#{$m}label #{$p}#{$m}label-round #{$p}#{$m}label-info">#{$p}#{$m}label-info(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="#{$p}#{$m}label #{$p}#{$m}label-round #{$p}#{$m}label-important">#{$p}#{$m}label-important</span><a href="#" class="#{$p}#{$m}label #{$p}#{$m}label-round #{$p}#{$m}label-important">#{$p}#{$m}label-important(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+```
 
-.#{$p}label-fifth {
-    background-color: $fifth;
-}
+*/
 
-.#{$p}label-info {
-    background-color: $info;
-}
-
-.#{$p}label-important {
-    background-color: $important;
-}
-
-.#{$p}label-round {
+.#{$p}#{$m}label-round {
     border-radius: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
 }

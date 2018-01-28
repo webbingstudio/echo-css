@@ -215,10 +215,37 @@ h2 {
 }
 
 h3,
-h4,
+h4 {
+  margin: 2em 0 .5em;
+}
+
 h5,
 h6 {
-  margin: 2em 0 .5em;
+  margin: 2em 0 0;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.75em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.25em;
+}
+
+h5 {
+  font-size: 1.125em;
+}
+
+h6 {
+  font-size: 1em;
 }
 
 pre,
@@ -2801,11 +2828,26 @@ a:hover .m-btn-outline.m-btn-important, a:focus .m-btn-outline.m-btn-important, 
   border-color: transparent;
 }
 
-/*
-btn-(size)
---------------------
+/*doc
+---
+title: m-btn-(size)
+name: btn-04-size
+category: module-btn
+parent: btn
+---
+
+ボタンのサイズを変える。(size)は、 <code>sm, lg, xl</code> に対応している。
+
+``` example
+<p>
+  <a href="#" class="m-btn m-btn-first">default</a>
+  <a href="#" class="m-btn m-btn-first m-btn-sm">m-btn-sm</a>
+  <a href="#" class="m-btn m-btn-first m-btn-lg">m-btn-lg</a>
+  <a href="#" class="m-btn m-btn-first m-btn-xl">m-btn-xl</a>
+</p>
+```
 */
-.btn-sm {
+.m-btn-sm {
   padding-top: 0.25em;
   padding-bottom: 0.25em;
   font-size: 0.75rem;
@@ -2814,7 +2856,7 @@ btn-(size)
   padding-right: 0.5em;
 }
 
-.btn-lg {
+.m-btn-lg {
   padding-top: 0.75em;
   padding-bottom: 0.75em;
   font-size: 1rem;
@@ -2823,7 +2865,7 @@ btn-(size)
   padding-right: 1.5em;
 }
 
-.btn-xl {
+.m-btn-xl {
   padding-top: 0.75em;
   padding-bottom: 0.75em;
   font-size: 1.125rem;
@@ -2853,16 +2895,19 @@ In <code>.m-btn-block, .m-btn-round, .m-btn-square</code>, need to override the 
 
 ``` example
 <p>
-  <a href="#" class="m-btn m-btn-sm m-btn-block">m-btn-block</a>
+  <a href="#" class="m-btn m-btn-first m-btn-sm m-btn-block">m-btn-block</a>
 </p>
 <p>
-  <a href="#" class="m-btn m-btn-block">m-btn-block</a>
+  <a href="#" class="m-btn m-btn-first m-btn-block">m-btn-block</a>
 </p>
 <p>
-  <a href="#" class="m-btn m-btn-lg m-btn-block">m-btn-block</a>
+  <a href="#" class="m-btn m-btn-first m-btn-lg m-btn-block">m-btn-block</a>
 </p>
 <p>
-  <a href="#" class="m-btn m-btn-xl m-btn-block">m-btn-block</a>
+  <a href="#" class="m-btn m-btn-first m-btn-xl m-btn-block">m-btn-block</a>
+</p>
+<p>
+  <a href="#" class="m-btn m-btn-first m-btn-xxl m-btn-block">m-btn-block</a>
 </p>
 ```
 */
@@ -2898,16 +2943,16 @@ parent: btn
 
 ``` example
 <p>
-  <a href="#" class="m-btn m-btn-sm m-btn-round">R</a>
+  <a href="#" class="m-btn m-btn-first m-btn-sm m-btn-round">R</a>
 </p>
 <p>
-  <a href="#" class="m-btn m-btn-round">R</a>
+  <a href="#" class="m-btn m-btn-first m-btn-round">R</a>
 </p>
 <p>
-  <a href="#" class="m-btn m-btn-lg m-btn-round">R</a>
+  <a href="#" class="m-btn m-btn-first m-btn-lg m-btn-round">R</a>
 </p>
 <p>
-  <a href="#" class="m-btn m-btn-xl m-btn-round">R</a>
+  <a href="#" class="m-btn m-btn-first m-btn-xl m-btn-round">R</a>
 </p>
 ```
 */
@@ -2967,16 +3012,16 @@ parent: btn
 
 ``` example
 <p>
-  <a href="#" class="m-btn m-btn-sm m-btn-square">S</a>
+  <a href="#" class="m-btn m-btn-first m-btn-sm m-btn-square">R</a>
 </p>
 <p>
-  <a href="#" class="m-btn m-btn-square">S</a>
+  <a href="#" class="m-btn m-btn-first m-btn-square">R</a>
 </p>
 <p>
-  <a href="#" class="m-btn m-btn-lg m-btn-square">S</a>
+  <a href="#" class="m-btn m-btn-first m-btn-lg m-btn-square">R</a>
 </p>
 <p>
-  <a href="#" class="m-btn m-btn-xl m-btn-square">S</a>
+  <a href="#" class="m-btn m-btn-first m-btn-xl m-btn-square">R</a>
 </p>
 ```
 */
@@ -3023,17 +3068,32 @@ parent: btn
   transform: translate(0, -0.15em);
 }
 
-/*
-checkbox
---------------------
+/*doc
+---
+title: m-checkbox
+name: checkbox
+category: module-checkbox
+---
+
+チェックボックスとラベルをインライン表示する。input要素ではなく、包括している要素にクラスを付与する（ほとんどの場合、label要素となる）。  
+余白・レイアウト等は <code>utility > .p</code> や <code>component > .c-form</code> で指定する。  
+<code>.is-error</code> を同時に使用するとエラーがあったときの表示となる。 
+
+``` example
+<p>
+<label class="m-checkbox m-r" for="checkbox1"><input type="checkbox" name="checkbox1" id="checkbox1" class="m-r-sm" value="1">m-checkbox</label>
+<label class="m-checkbox m-r" for="checkbox2"><input type="checkbox" name="checkbox2" id="checkbox2" class="m-r-sm" value="2" checked="checked">m-checkbox</label>
+<label class="m-checkbox is-error" for="checkbox3"><input type="checkbox" name="checkbox3" id="checkbox3" class="m-r-sm" value="3">m-checkbox</label>
+</p>
+```
 */
-.checkbox {
+.m-checkbox {
   display: inline-block;
 }
-.checkbox.is-error, .is-error > .checkbox {
+.m-checkbox.is-error, .is-error > .m-checkbox {
   color: #d70022;
 }
-.checkbox input[type="checkbox"] {
+.m-checkbox input[type="checkbox"] {
   display: inline-block;
   margin: 0;
   vertical-align: middle;
@@ -3042,57 +3102,125 @@ checkbox
   transform: translate(0, -10%);
 }
 
-/*
-dfn
---------------------
-*/
-.dfn {
-  display: inline-table;
-}
-.dfn .dfn-header {
-  display: table-cell;
-  padding-right: .25em;
-  font-size: 3em;
-  font-weight: 300;
-  font-family: "PGYuGothic", "YuGothic", "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-  text-align: center;
-  line-height: 1;
-  vertical-align: middle;
-  white-space: nowrap;
-}
-@media (min-width: 360px) {
-  .dfn .dfn-header {
-    padding-right: .4em;
-  }
-}
-.dfn .dfn-contents {
-  display: table-cell;
-  text-align: left;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  padding-top: 0.5em;
-  vertical-align: middle;
-}
+/*doc
+---
+title: m-embed
+name: embed
+category: module-embed
+---
 
-/*
-embed
---------------------
+インラインフレームなどの埋め込みオブジェクトを表示する。要素自体ではなく、包括している要素にクラスを付与する。  
+このクラス単独ではそのままのサイズで表示する。
+
+``` example
+<div class="m-embed">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4CZpUy_YWA?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+```
+
 */
-.embed {
+.m-embed {
   overflow: hidden;
   position: relative;
   display: block;
   background-color: #000;
   width: 100%;
 }
-.embed:before {
+.m-embed:before {
   display: block;
   content: "";
 }
-.embed iframe,
-.embed embed,
-.embed object,
-.embed video {
+.m-embed iframe,
+.m-embed embed,
+.m-embed object,
+.m-embed video {
+  display: block;
+  margin: 0 auto;
+}
+
+/*doc
+---
+title: m-embed-square
+name: object-01-square
+category: module-object
+parent: object
+---
+
+埋め込みオブジェクトを正方形にトリミングして表示する。別途、幅を指定する必要がある。
+
+``` example
+<div style="max-width: 320px;">
+
+<div class="m-embed m-embed-square">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4CZpUy_YWA?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+
+</div>
+```
+
+*/
+/*doc
+---
+title: m-embed-(ratio-x)to(ratio-y)
+name: embed-02-ratio
+category: module-embed
+parent: embed
+---
+
+埋め込みオブジェクトを指定した縦横比で表示する。別途、幅を指定する必要がある。  
+(ratio-x)to(ratio-y)は <code>3to2, 4to3, 16to9, ogimage(1.91:1), 21to9</code> に対応している。   
+
+``` example
+<div style="max-width: 320px;">
+
+<div class="m-embed m-embed-3to2 m-b">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4CZpUy_YWA?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div class="m-embed m-embed-4to3 m-b">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4CZpUy_YWA?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div class="m-embed m-embed-16to9 m-b">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4CZpUy_YWA?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div class="m-embed m-embed-ogimage m-b">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4CZpUy_YWA?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div class="m-embed m-embed-21to9 m-b">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4CZpUy_YWA?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+
+</div>
+```
+
+*/
+.m-embed-square iframe,
+.m-embed-square embed,
+.m-embed-square object,
+.m-embed-square video,
+.m-embed-3to2 iframe,
+.m-embed-3to2 embed,
+.m-embed-3to2 object,
+.m-embed-3to2 video,
+.m-embed-4to3 iframe,
+.m-embed-4to3 embed,
+.m-embed-4to3 object,
+.m-embed-4to3 video,
+.m-embed-16to9 iframe,
+.m-embed-16to9 embed,
+.m-embed-16to9 object,
+.m-embed-16to9 video,
+.m-embed-ogimage iframe,
+.m-embed-ogimage embed,
+.m-embed-ogimage object,
+.m-embed-ogimage video,
+.m-embed-21to9 iframe,
+.m-embed-21to9 embed,
+.m-embed-21to9 object,
+.m-embed-21to9 video {
   position: absolute;
   top: 0;
   left: 0;
@@ -3101,49 +3229,112 @@ embed
   border: 0;
 }
 
-.embed-4to3:before {
+.m-embed-square:before {
+  padding-top: 100%;
+}
+
+.m-embed-3to2:before {
+  padding-top: 66.66667%;
+}
+
+.m-embed-4to3:before {
   padding-top: 75%;
 }
 
-.embed-16to9:before {
+.m-embed-16to9:before {
   padding-top: 56.25%;
 }
 
-.embed-21to9:before {
+.m-embed-ogimage:before {
+  padding-top: 52.35602%;
+}
+
+.m-embed-21to9:before {
   padding-top: 42.85714%;
 }
 
-/*
-input
---------------------
+/*doc
+---
+title: m-input
+name: input
+category: module-input
+---
+
+テキスト入力を即す欄を表示する。要素に直接クラスを付与する（ほとんどの場合、input要素、textarea要素となる）。  
+余白・レイアウト等は <code>utility > .m</code> や <code>component > .c-form</code> で指定する。  
+<code>.is-error</code> を同時に使用するとエラーがあったときの表示となる。 
+
+``` example
+<div class="m-b">
+    <input type="text" class="m-input" size="20" value="" placeholder="鈴木一朗" />
+    <input type="text" class="m-input is-error" size="20" value="" placeholder="鈴木一郎" />
+</div>
+<div class="m-b">
+    <textarea class="m-input" rows="5" cols="60">メッセージをどうぞ</textarea>
+    <textarea class="m-input is-error" rows="5" cols="60">* おおっと *</textarea>
+</div>
+```
 */
-.input {
-  padding: .375rem .5rem .25rem;
+.m-input {
+  padding: .375rem .5rem;
   background: #fff none;
   border: 1px solid #bbb;
   color: #333;
   border-radius: 3px;
   vertical-align: middle;
 }
-.input.is-error, .is-error .input {
+.m-input.is-error, .is-error .m-input {
   background-color: #ffe9ee;
   border-color: #e33050;
   color: #d70022;
 }
-.input.input-sm {
+
+/*doc
+---
+title: m-input-(size)
+name: input-01-size
+category: module-input
+parent: input
+---
+
+テキスト入力を即す欄の全体のサイズを変更する。(size)は <code>sm, lg</code> に対応している。
+
+``` example
+<div class="m-b">
+    <input type="text" class="m-input m-input-sm" size="20" value="" placeholder="鈴木一朗" />
+    <input type="text" class="m-input m-input-lg" size="20" value="" placeholder="鈴木一朗" />
+</div>
+<div class="m-b">
+    <textarea class="m-input m-input-sm" rows="5" cols="60">メッセージをどうぞ</textarea>
+    <textarea class="m-input m-input-lg" rows="5" cols="60">メッセージをどうぞ</textarea>
+</div>
+```
+*/
+.m-input-sm {
   padding: .25rem;
   font-size: 0.875rem;
 }
-.input.input-lg {
+
+.m-input-lg {
   padding: .5rem .5rem;
   font-size: 1.125rem;
 }
 
-/*
-label
---------------------
+/*doc
+---
+title: m-label
+name: label
+category: module-label
+---
+
+カテゴリー名などに使用する、小さなラベルを表示する。a要素にも指定できる。
+
+``` example
+<p>吾輩は猫である。名前はまだ無い。<span class="m-label">m-label</span><a href="#" class="m-label">m-label(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+```
+
 */
-.label {
+.m-label {
   display: inline-block;
   min-width: 3em;
   margin-right: .5em;
@@ -3158,52 +3349,198 @@ label
   line-height: 1;
   vertical-align: middle;
 }
-a.label {
-  color: #fff;
-  text-decoration: none;
-}
-a.label:hover, a.label:focus, a.label:active {
+a.m-label {
   color: #fff;
   text-decoration: none;
 }
 
-.label-first {
+/*doc
+---
+title: m-label-(color)
+name: label-01-color
+category: module-label
+parent: label
+---
+
+ラベルの色を変更する。(color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
+
+``` example
+<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-first">m-label-first</span><a href="#" class="m-label m-label-first">m-label-first(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-second">m-label-second</span><a href="#" class="m-label m-label-second">m-label-second(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-third">m-label-third</span><a href="#" class="m-label m-label-third">m-label-third(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-fourth">m-label-fourth</span><a href="#" class="m-label m-label-fourth">m-label-fourth(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-fifth">m-label-fifth</span><a href="#" class="m-label m-label-fifth">m-label-fifth(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-info">m-label-info</span><a href="#" class="m-label m-label-info">m-label-info(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-important">m-label-important</span><a href="#" class="m-label m-label-important">m-label-important(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+```
+
+*/
+.m-label-first {
   background-color: #49d;
 }
 
-.label-second {
+.m-label-second {
   background-color: #444;
 }
 
-.label-third {
+.m-label-third {
   background-color: #49B070;
 }
 
-.label-fourth {
+.m-label-fourth {
   background-color: #f38c10;
 }
 
-.label-fifth {
+.m-label-fifth {
   background-color: #e33050;
 }
 
-.label-info {
+.m-label-info {
   background-color: #f38c10;
 }
 
-.label-important {
+.m-label-important {
   background-color: #e33050;
 }
 
-.label-round {
-  border-radius: 1em;
-}
+/*doc
+---
+title: m-label-inverse
+name: label-03-inverse
+category: module-label
+parent: label
+---
 
-/*
-list
---------------------
+ラベルの文字色をbody要素の文字色、背景色をbody要素の背景色にする。  
+<code>.m-label-(color)</code> と同時に使用すると、文字色が指定した色になる。
+
+
+``` example
+<div class="bg-first bg-mild p-y">
+    <p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-inverse">m-label-inverse</span><a href="#" class="m-label m-label-inverse">m-label-inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+    <p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-inverse m-label-first">m-label-inverse</span><a href="#" class="m-label m-label-inverse m-label-first">m-label-inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+    <p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-inverse m-label-second">m-label-inverse</span><a href="#" class="m-label m-label-inverse m-label-second">m-label-inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+    <p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-inverse m-label-third">m-label-inverse</span><a href="#" class="m-label m-label-inverse m-label-third">m-label-inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+    <p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-inverse m-label-fourth">m-label-inverse</span><a href="#" class="m-label m-label-inverse m-label-fourth">m-label-inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+    <p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-inverse m-label-fifth">m-label-inverse</span><a href="#" class="m-label m-label-inverse m-label-fifth">m-label-inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+    <p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-inverse m-label-info">m-label-inverse</span><a href="#" class="m-label m-label-inverse m-label-info">m-label-inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+    <p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-inverse m-label-important">m-label-inverse</span><a href="#" class="m-label m-label-inverse m-label-important">m-label-inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+</div>
+```
+
 */
-.list {
+.m-label-inverse {
+  color: #333;
+  background-color: #fff;
+}
+a.m-label-inverse {
+  color: #333;
+}
+.m-label-inverse.m-label-first {
+  color: #2283cc;
+}
+a.m-label-inverse.m-label-first {
+  color: #2283cc;
+}
+.m-label-inverse.m-label-second {
+  color: #333;
+}
+a.m-label-inverse.m-label-second {
+  color: #333;
+}
+.m-label-inverse.m-label-third {
+  color: #229644;
+}
+a.m-label-inverse.m-label-third {
+  color: #229644;
+}
+.m-label-inverse.m-label-fourth {
+  color: #f37910;
+}
+a.m-label-inverse.m-label-fourth {
+  color: #f37910;
+}
+.m-label-inverse.m-label-fifth {
+  color: #d70022;
+}
+a.m-label-inverse.m-label-fifth {
+  color: #d70022;
+}
+.m-label-inverse.m-label-info {
+  color: #f37910;
+}
+a.m-label-inverse.m-label-info {
+  color: #f37910;
+}
+.m-label-inverse.m-label-important {
+  color: #d70022;
+}
+a.m-label-inverse.m-label-important {
+  color: #d70022;
+}
+
+/*doc
+---
+title: m-label-round
+name: label-04-round
+category: module-label
+parent: label
+---
+
+ラベルが小判型になる。
+
+``` example
+<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-round m-label-first">m-label-first</span><a href="#" class="m-label m-label-round m-label-first">m-label-first(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-round m-label-second">m-label-second</span><a href="#" class="m-label m-label-round m-label-second">m-label-second(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-round m-label-third">m-label-third</span><a href="#" class="m-label m-label-round m-label-third">m-label-third(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-round m-label-fourth">m-label-fourth</span><a href="#" class="m-label m-label-round m-label-fourth">m-label-fourth(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-round m-label-fifth">m-label-fifth</span><a href="#" class="m-label m-label-round m-label-fifth">m-label-fifth(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-round m-label-info">m-label-info</span><a href="#" class="m-label m-label-round m-label-info">m-label-info(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-round m-label-important">m-label-important</span><a href="#" class="m-label m-label-round m-label-important">m-label-important(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+```
+
+*/
+.m-label-round {
+  border-radius: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+/*doc
+---
+title: m-list
+name: list
+category: module-list
+---
+
+シンプルなリストを表示する。このクラス単独では整列のみ行う。  
+リストの子要素にクラスを付与することができない場合は、 <code>/\_scss/config\_advance.css</code> の変数 <code>$list-item, $list-children</code> のセレクタを変更すること。
+
+``` example
+<ul class="m-list">
+    <li class="m-list-item">あいうえおかきくけ10さしすせ</li>
+    <li class="m-list-item">あいうえおかきく
+        <ul class="m-list-children">
+            <li class="m-list-item">あいうえお</li>
+            <li class="m-list-item">あいうえおかきくけ10さしすせそたちつて20
+                <ul class="m-list-children">
+                    <li class="m-list-item">あいうえお</li>
+                    <li class="m-list-item">あいうえおかきくけ10さしすせそたちつて20</li>
+                    <li class="m-list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
+                    <li class="m-list-item">あいうえおかきくけ10</li>
+                </ul>
+            </li>
+            <li class="m-list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
+            <li class="m-list-item">あいうえおかきくけ10</li>
+        </ul>
+    </li>
+    <li class="m-list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
+    <li class="m-list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
+</ul>
+```
+
+*/
+.m-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -3217,88 +3554,119 @@ list
 
 .m-list-children {
   margin: 0;
+  padding-left: 0;
   list-style-type: none;
 }
 
-.list-vertical .m-list-item {
+/*doc
+---
+title: m-list-vertical
+name: list-01-vertical
+category: module-list
+parent: list
+---
+
+階層構造を持ったリストを表示する。階層が深くなるごとに文字が小さくなる。
+
+``` example
+<ul class="m-list m-list-vertical">
+    <li class="m-list-item">あいうえおかきくけ10さしすせ</li>
+    <li class="m-list-item">あいうえおかきく
+        <ul class="m-list-children">
+            <li class="m-list-item">あいうえお</li>
+            <li class="m-list-item">あいうえおかきくけ10さしすせそたちつて20
+                <ul class="m-list-children">
+                    <li class="m-list-item">あいうえお</li>
+                    <li class="m-list-item">あいうえおかきくけ10さしすせそたちつて20</li>
+                    <li class="m-list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20</li>
+                    <li class="m-list-item">あいうえおかきくけ10</li>
+                </ul>
+            </li>
+            <li class="m-list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのは</li>
+            <li class="m-list-item">あいうえおかきくけ10</li>
+        </ul>
+    </li>
+    <li class="m-list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえ</li>
+    <li class="m-list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
+</ul>
+```
+
+*/
+.m-list-vertical .m-list-item {
   margin-top: .75em;
   margin-bottom: .75em;
-  padding-left: 1.25em;
-  position: relative;
+  padding-left: 1.5em;
 }
-.list-vertical .m-list-item:before, .list-vertical .m-list-item:after {
-  content: "";
-  position: absolute;
-  width: .5em;
-  height: 2px;
-  background-color: #888;
-}
-.list-vertical .m-list-item:before {
-  top: 55%;
-  margin-left: -1px;
-  -webkit-transform: rotate(40deg);
-  transform: rotate(40deg);
-  -webkit-transform-origin: 100% 100%;
-  transform-origin: 100% 100%;
-}
-.list-vertical .m-list-item:after {
-  top: 55%;
-  -webkit-transform: rotate(-40deg);
-  transform: rotate(-40deg);
-  -webkit-transform-origin: 100% 100%;
-  transform-origin: 100% 100%;
-}
-.list-vertical .m-list-item:before {
-  top: .65em;
-  left: .25em;
-}
-.list-vertical .m-list-item:after {
-  top: .65em;
-  left: .25em;
-}
-.list-vertical .m-list-children {
+.m-list-vertical .m-list-children {
   padding-left: 0;
 }
-.list-vertical .m-list-children .m-list-item {
+.m-list-vertical .m-list-children .m-list-item {
   font-size: .9em;
 }
 
-.list-horizontal {
+/*doc
+---
+title: m-list-horizontal
+name: list-02-horizontal
+category: module-list
+parent: list
+---
+
+水平に並列するリストを表示する。階層構造を持たせたり、長いテキストを表示することはできない。  
+
+``` example
+<ul class="m-list m-list-horizontal">
+    <li class="m-list-item">あいうえおかきくけ10さしすせ</li>
+    <li class="m-list-item">あいうえおかきく</li>
+    <li class="m-list-item">あいうえお</li>
+    <li class="m-list-item">あいうえおかきくけ</li>
+</ul>
+```
+
+*/
+.m-list-horizontal {
   letter-spacing: -.4em;
 }
-.list-horizontal .m-list-item {
+.m-list-horizontal .m-list-item {
   display: inline-block;
+  padding-left: 1em;
   padding-right: 1em;
   letter-spacing: normal;
 }
-.list-horizontal .m-list-item:before {
-  display: inline-block;
-  content: "";
-  width: 1px;
-  height: 1.125em;
-  margin-right: 1em;
-  background-color: #bbb;
-  vertical-align: middle;
+.m-list-horizontal .m-list-item:first-child {
+  padding-left: 0;
 }
-.list-horizontal .m-list-item:first-child:before {
-  display: none;
-}
-.list-horizontal .m-list-item:last-child {
+.m-list-horizontal .m-list-item:last-child {
   padding-right: 0;
 }
 
-/*
-radio
---------------------
+/*doc
+---
+title: m-radio
+name: radio
+category: module-radio
+---
+
+ラジオボタンとラベルをインライン表示する。input要素ではなく、包括している要素にクラスを付与する（ほとんどの場合、label要素となる）。  
+余白・レイアウト等は <code>utility > .p</code> や <code>component > .c-form</code> で指定する。  
+<code>.is-error</code> を同時に使用するとエラーがあったときの表示となる。 
+
+``` example
+<p>
+<label class="m-radio m-r" for="radio1"><input type="radio" name="radio" id="radio1" class="m-r-sm" value="1">m-radio 1</label>
+<label class="m-radio m-r" for="radio2"><input type="radio" name="radio" id="radio2" class="m-r-sm" value="2" checked="checked">m-radio 2</label>
+<label class="m-radio m-r is-error" for="radio3"><input type="radio" name="radio" id="radio3" class="m-r-sm" value="3">m-radio 3</label>
+</p>
+```
 */
-.radio {
+.m-radio {
   position: relative;
   display: inline-block;
 }
-.radio.is-error, .is-error > .radio {
+.m-radio.is-error, .is-error > .m-radio {
   color: #d70022;
 }
-.radio input[type="radio"] {
+.m-radio input[type="radio"] {
   display: inline-block;
   margin: 0;
   vertical-align: middle;
@@ -3307,29 +3675,57 @@ radio
   transform: translate(0, -15%);
 }
 
-/*
-select
---------------------
+/*doc
+---
+title: m-select
+name: select
+category: module-select
+---
+
+セレクトボックスをインライン表示する。select要素ではなく、包括している要素にクラスを付与する。  
+余白・レイアウト等は <code>utility > .p</code> や <code>component > .c-form</code> で指定する。  
+<code>.is-error</code> を同時に使用するとエラーがあったときの表示となる。  
+セレクトボックスのシェブロンは <code>/\_scss/mixin/mixin.css</code> の <code>chevron()</code>を参照。
+
+``` example
+<div class="m-select m-b">
+<select>
+<option>月を選択...</option>
+<option value="">2017年</option>
+<option value="">2016年</option>
+<option value="">2015年</option>
+</select>
+</div>
+
+<div class="m-select is-error">
+<select>
+<option>月を選択...</option>
+<option value="">2017年</option>
+<option value="">2016年</option>
+<option value="">2015年</option>
+</select>
+</div>
+```
 */
-.select {
+.m-select {
   display: inline-block;
   position: relative;
 }
-.select:before, .select:after {
+.m-select:before, .m-select:after {
   content: "";
   position: absolute;
   width: .5em;
   height: 2px;
-  background-color: #888;
+  background-color: #333;
 }
-.select:before {
+.m-select:before {
   top: 55%;
   -webkit-transform: rotate(50deg);
   transform: rotate(50deg);
   -webkit-transform-origin: 100% 100%;
   transform-origin: 100% 100%;
 }
-.select:after {
+.m-select:after {
   top: 55%;
   margin-right: -1px;
   -webkit-transform: rotate(-50deg);
@@ -3337,20 +3733,23 @@ select
   -webkit-transform-origin: 0% 100%;
   transform-origin: 0% 100%;
 }
-.select:before {
-  right: 1em;
+.m-select:before, .m-select:after {
+  font-size: 1.25em;
+}
+.m-select:before {
+  right: .85em;
   z-index: 3;
 }
-.select:after {
+.m-select:after {
   right: .5em;
   z-index: 4;
 }
-.select select {
+.m-select select {
   position: relative;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: #333;
   width: 100%;
   padding: .5em 3em .5em 1em;
@@ -3361,277 +3760,683 @@ select
   outline: none;
   z-index: 2;
 }
-.select select:focus {
+.m-select select:focus {
   background-color: #eaeaea;
 }
-.select.is-error, .is-error > .select {
+.m-select.is-error, .is-error > .m-select {
   background-color: #ffe9ee;
 }
-.select option {
+.m-select option {
   outline: none;
 }
 
-/*
-table
---------------------
+/*doc
+---
+title: m-select-(size)
+name: select-01-size
+category: module-select
+parent: select
+---
+
+テキスト入力を即す欄の全体のサイズを変更する。(size)は <code>sm, lg</code> に対応している。
+
+``` example
+<div class="m-b">
+    <div class="m-select m-select-sm m-b">
+    <select>
+    <option>月を選択...</option>
+    <option value="">2017年</option>
+    <option value="">2016年</option>
+    <option value="">2015年</option>
+    </select>
+    </div>
+</div>
+<div class="m-b">
+    <div class="m-select m-select-lg m-b">
+    <select>
+    <option>月を選択...</option>
+    <option value="">2017年</option>
+    <option value="">2016年</option>
+    <option value="">2015年</option>
+    </select>
+    </div>
+</div>
+```
 */
-.table {
-  display: block;
+.m-select-sm select {
+  font-size: 0.875rem;
+  padding: .5em 3em .5em 1em;
+}
+
+.m-select-lg select {
+  font-size: 1.125rem;
+  padding: .75em 3em .75em 1em;
+}
+
+/*doc
+---
+title: m-table
+name: table
+category: module-table
+---
+
+表組を整形する。このクラス単独では整列のみ行う。  
+幅は常に100%、セル内の文字は常に左寄せとなる。寄せ方向を変更したい場合は <code>utility > .line-(direction)</code> を使用する。
+
+``` example
+<table class="m-table">
+    <caption>キャプション</caption>
+    <tbody>
+        <tr>
+            <th>吾輩は猫である</th>
+            <td>名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+        <tr>
+            <th>吾輩は猫である名前はまだ無い。</th>
+            <td>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+        <tr>
+            <th>吾輩は猫</th>
+            <td>である名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+    </tbody>
+</table>
+```
+
+*/
+.m-table {
   max-width: 100%;
   background-color: #fff;
   border: 0 none;
 }
-@media (min-width: 768px) {
-  .table {
-    display: table;
-  }
-}
-.table thead,
-.table tbody,
-.table tfoot {
-  display: block;
-}
-@media (min-width: 768px) {
-  .table thead,
-  .table tbody,
-  .table tfoot {
-    display: table-row-group;
-  }
-}
-.table th,
-.table td {
-  display: block;
-  width: 100%;
+.m-table th,
+.m-table td {
   line-height: 1.5;
   border: 0 none;
-  padding: 0 0 .5rem;
+  padding: 0 .5rem .5rem;
   vertical-align: top;
 }
-@media (min-width: 768px) {
-  .table th,
-  .table td {
-    display: table-cell;
-    width: auto;
-    padding-left: .5em;
-    padding-right: .5em;
-  }
-}
-.table tr {
-  display: block;
+.m-table tr {
   border: 0 none;
 }
-@media (min-width: 768px) {
-  .table tr {
-    display: table-row;
-  }
-}
-.table tr th:first-child,
-.table tr td:first-child {
-  padding-left: 0;
-}
-.table tr th:last-child,
-.table tr td:last-child {
-  padding-right: 0;
-}
-.table thead {
-  border-bottom: 1px solid #bbb;
-}
-.table thead th {
-  text-align: center;
+.m-table thead th {
   vertical-align: bottom;
 }
+.m-table caption {
+  font-size: 1.125rem;
+  text-align: center;
+  margin: 0 0 .5rem;
+  line-height: 1.5;
+}
 
-.table-01 {
+/*doc
+---
+title: m-table-bordered
+name: table-01-bordered
+category: module-table
+parent: table
+---
+
+表組のセル全てにグリッド罫線を引く。
+
+``` example
+<table class="m-table m-table-bordered">
+    <thead>
+        <tr>
+            <th>吾輩は</th>
+            <th>猫である</th>
+            <th>名前はまだ無い</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>吾輩は猫である</th>
+            <td>名前はまだ無い</td>
+            <td>どこで生れたかとんと見当がつかぬ</td>
+        </tr>
+        <tr>
+            <th>何でも薄暗い</th>
+            <td>じめじめした所でニャーニャー</td>
+            <td>泣いていた事だけは記憶している</td>
+        </tr>
+        <tr>
+            <th>吾輩はここで始めて</th>
+            <td>人間というものを見た</td>
+            <td>しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>どこで生れたか</th>
+            <td>とんと</td>
+            <td>見当がつかぬ</td>
+        </tr>
+    </tfoot>
+</table>
+```
+
+*/
+.m-table-bordered {
+  width: 100%;
   border-top: 1px solid #bbb;
   border-left: 1px solid #bbb;
 }
-.table-01 th,
-.table-01 td {
+.m-table-bordered thead {
+  border-bottom: 2px solid #bbb;
+}
+.m-table-bordered tfoot {
+  border-top: 2px solid #bbb;
+}
+.m-table-bordered th,
+.m-table-bordered td {
   border-bottom: 1px solid #bbb;
   border-right: 1px solid #bbb;
-  padding-top: .5em;
-  padding-bottom: .5em;
+  padding: .5rem;
+}
+.m-table-bordered th:first-child,
+.m-table-bordered td:first-child {
+  padding-left: .5rem;
+}
+.m-table-bordered th:last-child,
+.m-table-bordered td:last-child {
+  padding-right: .5rem;
 }
 
-.table-02 th,
-.table-02 td {
+/*doc
+---
+title: m-table-ruled
+name: table-02-ruled
+category: module-table
+parent: table
+---
+
+表組の各セルの下のみ罫線を引く。Bootstrapの <code>.table</code> と同じ。
+
+``` example
+<table class="m-table m-table-ruled">
+    <thead>
+        <tr>
+            <th>吾輩は</th>
+            <th>猫である</th>
+            <th>名前はまだ無い</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>吾輩は猫である</th>
+            <td>名前はまだ無い</td>
+            <td>どこで生れたかとんと見当がつかぬ</td>
+        </tr>
+        <tr>
+            <th>何でも薄暗い</th>
+            <td>じめじめした所でニャーニャー</td>
+            <td>泣いていた事だけは記憶している</td>
+        </tr>
+        <tr>
+            <th>吾輩はここで始めて</th>
+            <td>人間というものを見た</td>
+            <td>しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>どこで生れたか</th>
+            <td>とんと</td>
+            <td>見当がつかぬ</td>
+        </tr>
+    </tfoot>
+</table>
+```
+
+*/
+.m-table-ruled {
+  width: 100%;
+}
+.m-table-ruled thead {
+  border-bottom: 2px solid #bbb;
+}
+.m-table-ruled th,
+.m-table-ruled td {
   border-bottom: 1px solid #bbb;
-  padding-top: 1em;
-  padding-bottom: .5em;
-}
-.table-02 tr th:first-child,
-.table-02 tr td:first-child {
-  padding-left: 0;
-}
-.table-02 tr th:last-child,
-.table-02 tr td:last-child {
-  padding-left: 0;
+  padding-top: 1rem;
+  padding-bottom: .5rem;
 }
 
-@media (min-width: 768px) {
-  .table-3to9 tr th,
-  .table-3to9 tr td {
-    width: 75%;
-  }
-}
-@media (min-width: 768px) {
-  .table-3to9 tr th:first-child,
-  .table-3to9 tr td:first-child {
-    width: 25%;
-  }
+/*doc
+---
+title: m-table-justify
+name: table-03-justify
+category: module-table
+parent: table
+---
+
+列数、内容にかかわらず、セルを均等な幅にする。
+
+``` example
+<table class="m-table m-table-bordered m-table-justify m-b">
+    <tbody>
+        <tr>
+            <td>吾輩は猫である名前はまだ無い。どこで生れたかとんと見当がつかぬ。</td>
+            <td>何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="m-table m-table-bordered m-table-justify m-b">
+    <tbody>
+        <tr>
+            <td>吾輩は猫である名前は</td>
+            <td>まだ無い。どこで生れたか</td>
+            <td>とんと見当がつかぬ。</td>
+            <td>何でも薄暗いじめじめした所で</td>
+            <td rowspan="2">ニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+        <tr>
+            <td>吾輩は猫である</td>
+            <td>名前はまだ無い。</td>
+            <td colspan="2">どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所で</td>
+        </tr>
+    </tbody>
+</table>
+```
+
+*/
+.m-table-justify {
+  width: 100%;
+  table-layout: fixed;
 }
 
-@media (min-width: 768px) {
-  .table-4to8 tr th,
-  .table-4to8 tr td {
-    width: 66.66667%;
-  }
+/*doc
+---
+title: m-table-(ratio-first)to(ratio-second)to(ratio-third)
+name: table-04-ratio
+category: module-table
+parent: table
+---
+
+2列または3列のセル幅を、 <code>(ratio) / 12</code> の比率にする。  
+(ratio-first)to(ratio-second)to(ratio-third)は <code>3to9, 4to8, 3to3to6, 0to12</code> に対応している。   
+
+``` example
+<table class="m-table m-table-bordered m-table-3to9 m-b">
+    <caption>.m-table-3to9</caption>
+    <tbody>
+        <tr>
+            <th>吾輩は猫である</th>
+            <td>名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+        <tr>
+            <th>吾輩は猫である名前はまだ無い。</th>
+            <td>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="m-table m-table-bordered m-table-4to8 m-b">
+    <caption>.m-table-4to8</caption>
+    <tbody>
+        <tr>
+            <th>吾輩は猫である</th>
+            <td>名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+        <tr>
+            <th>吾輩は猫である名前はまだ無い。</th>
+            <td>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="m-table m-table-bordered m-table-3to3to6 m-b">
+    <caption>.m-table-3to3to6</caption>
+    <tbody>
+        <tr>
+            <th>吾輩は猫である</th>
+            <td>名前はまだ無い。</td>
+            <td>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+        <tr>
+            <th>吾輩は猫である名前はまだ無い。</th>
+            <td>どこで生れたかとんと見当がつかぬ。</td>
+            <td>何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="m-table m-table-bordered m-table-0to12 m-b">
+    <caption>.m-table-0to12</caption>
+    <tbody>
+        <tr>
+            <th>吾輩は猫</th>
+            <td>である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+        <tr>
+            <th>吾輩はここで</th>
+            <td>始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</td>
+        </tr>
+        <tr>
+            <th>しかし</th>
+            <td>その当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</td>
+        </tr>
+    </tbody>
+</table>
+```
+
+*/
+.m-table-3to9 tr th,
+.m-table-3to9 tr td {
+  width: 75%;
 }
-@media (min-width: 768px) {
-  .table-4to8 tr th:first-child,
-  .table-4to8 tr td:first-child {
-    width: 33.33333%;
-  }
+.m-table-3to9 tr th:first-child,
+.m-table-3to9 tr td:first-child {
+  width: 25%;
 }
 
-@media (min-width: 768px) {
-  .table-justify {
+.m-table-4to8 tr th,
+.m-table-4to8 tr td {
+  width: 66.66667%;
+}
+.m-table-4to8 tr th:first-child,
+.m-table-4to8 tr td:first-child {
+  width: 33.33333%;
+}
+
+.m-table-3to3to6 tr th,
+.m-table-3to3to6 tr td {
+  width: 25%;
+}
+.m-table-3to3to6 tr th:last-child,
+.m-table-3to3to6 tr td:last-child {
+  width: 50%;
+}
+
+.m-table-0to12 tr th,
+.m-table-0to12 tr td {
+  width: 99.9%;
+}
+.m-table-0to12 tr th:first-child,
+.m-table-0to12 tr td:first-child {
+  width: auto;
+  white-space: nowrap;
+}
+
+/*doc
+---
+title: m-table-break-sm-down
+name: table-05-break-sm-down
+category: module-table
+parent: table
+---
+
+(breakpoint)が <code>sm</code> 以下のときに表組を解除する。  
+2カラム以上の表の場合は <code>.m-table-responsive</code> を推薦。
+
+``` example
+<table class="m-table m-table-break-sm-down m-table-bordered m-b">
+    <thead>
+        <tr>
+            <th>吾輩は猫である</th>
+            <th>名前はまだ無い</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>吾輩は猫である名前はまだ無い</th>
+            <td>どこで生れたかとんと見当がつかぬ</td>
+        </tr>
+        <tr>
+            <th>何でも薄暗いじめじめした所で</th>
+            <td>ニャーニャー泣いていた事だけは記憶している</td>
+        </tr>
+        <tr>
+            <th>吾輩はここで始めて人間というものを見た</th>
+            <td>しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>どこで生れたか</th>
+            <td>とんと見当がつかぬ</td>
+        </tr>
+    </tfoot>
+</table>
+
+<table class="m-table m-table-break-sm-down m-table-ruled">
+    <thead>
+        <tr>
+            <th>吾輩は猫である</th>
+            <th>名前はまだ無い</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>吾輩は猫である名前はまだ無い</th>
+            <td>どこで生れたかとんと見当がつかぬ</td>
+        </tr>
+        <tr>
+            <th>何でも薄暗いじめじめした所で</th>
+            <td>ニャーニャー泣いていた事だけは記憶している</td>
+        </tr>
+        <tr>
+            <th>吾輩はここで始めて人間というものを見た</th>
+            <td>しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>どこで生れたか</th>
+            <td>とんと見当がつかぬ</td>
+        </tr>
+    </tfoot>
+</table>
+```
+
+*/
+@media (max-width: 767.9px) {
+  .m-table-break-sm-down {
+    display: block;
+  }
+}
+@media (max-width: 767.9px) {
+  .m-table-break-sm-down thead,
+  .m-table-break-sm-down tbody,
+  .m-table-break-sm-down tfoot {
+    display: block;
+  }
+}
+@media (max-width: 767.9px) {
+  .m-table-break-sm-down tr {
+    display: block;
+  }
+}
+@media (max-width: 767.9px) {
+  .m-table-break-sm-down th,
+  .m-table-break-sm-down td {
+    display: block;
     width: 100%;
-    table-layout: fixed;
   }
 }
+.m-table-break-sm-down.m-table-bordered thead {
+  border-bottom-width: 1px;
+}
+.m-table-break-sm-down.m-table-bordered tfoot {
+  border-top-width: 1px;
+}
+.m-table-break-sm-down.m-table-ruled thead {
+  border-bottom-width: 1px;
+}
 
-/*
-title
---------------------
+/*doc
+---
+title: m-table-responsive
+name: table-06-responsive
+category: module-table
+parent: table
+---
+
+(breakpoint)が <code>md</code> 以下のときにスクロールバーを表示する。
+
+``` example
+<div class="m-table-responsive">
+    <table class="m-table m-table-bordered">
+        <tbody>
+            <tr>
+                <th>吾輩は猫である</th>
+                <td>名前はまだ無い</td>
+                <td>どこで生れたかとんと見当がつかぬ</td>
+            </tr>
+            <tr>
+                <th>何でも薄暗い</th>
+                <td>じめじめした所でニャーニャー</td>
+                <td>泣いていた事だけは記憶している</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+```
+
 */
-.title {
-  margin: 0;
-  padding: 0;
-  background: transparent none;
-  border: 0 none;
-  color: inherit;
-  text-align: inherit;
-  line-height: 1.5;
-  border-radius: 0;
+.m-table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
 }
-.title:before, .title:after {
-  display: none;
+.m-table-responsive > .m-table {
+  min-width: 768px;
 }
 
-.title-01 {
-  font-size: 2em;
-  font-weight: 300;
-  font-family: "PGYuGothic", "YuGothic", "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-  letter-spacing: .1em;
-}
-@media (min-width: 425px) {
-  .title-01 {
-    font-size: 2.25em;
-  }
-}
-@media (min-width: 1000px) {
-  .title-01 {
-    font-size: 2.5em;
-  }
-}
+/*doc
+---
+title: m-thumbnail
+name: thumbnail
+category: module-thumbnail
+---
 
-.title-02 {
-  font-size: 1.5em;
-  font-weight: 300;
-  font-family: "PGYuGothic", "YuGothic", "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-  letter-spacing: .1em;
-}
-@media (min-width: 425px) {
-  .title-02 {
-    font-size: 1.75em;
-  }
-}
-@media (min-width: 1000px) {
-  .title-02 {
-    font-size: 1.75em;
-  }
-}
+一覧ページ、記事中で縮小された画像を表示する。要素自体ではなく、包括している要素にクラスを付与する。  
+このクラス単独ではそのままのサイズと縦横比で表示する。幅が制限されていると、そのサイズを超えないよう画像が縮小される。
 
-.title-03 {
-  font-size: 1.25em;
-  font-weight: 700;
-  font-family: "PGYuGothic", "YuGothic", "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-}
-@media (min-width: 1000px) {
-  .title-03 {
-    font-size: 1.5em;
-  }
-}
+``` example
+<div class="clearfix m-b">
 
-.title-04 {
-  font-size: 1.125em;
-  font-weight: 700;
-  font-family: "PGYuGothic", "YuGothic", "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-}
-@media (min-width: 1000px) {
-  .title-04 {
-    font-size: 1.25em;
-  }
-}
+<div class="float-l m-r">
+    <div class="m-thumbnail">
+        <img src="https://placehold.jp/150x150.jpg" alt="">
+    </div>
+</div>
 
-.title-05 {
-  font-size: 1.0625em;
-  font-weight: 700;
-  font-family: "PGYuGothic", "YuGothic", "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-}
-@media (min-width: 1000px) {
-  .title-05 {
-    font-size: 1.125em;
-  }
-}
+<div class="float-l m-r">
+    <div class="m-thumbnail">
+        <img src="https://placehold.jp/240x320.jpg" alt="">
+    </div>
+</div>
 
-.title-06 {
-  font-size: 1em;
-  font-weight: 700;
-  font-family: "PGYuGothic", "YuGothic", "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-}
-@media (min-width: 1000px) {
-  .title-06 {
-    font-size: 1.0625em;
-  }
-}
+<div class="float-l m-r" style="width: 200px;">
+    <div class="m-thumbnail">
+        <img src="https://placehold.jp/480x360.jpg" alt="">
+    </div>
+    <p class="m-y-0">↑width: 200px</p>
+</div>
 
-/*
-thumbnail
---------------------
+</div>
+```
+
 */
-.thumbnail {
+.m-thumbnail {
   overflow: hidden;
   position: relative;
   display: inline-block;
   background: #fff;
   border: 1px solid #bbb;
+  vertical-align: bottom;
 }
-.thumbnail img {
+.m-thumbnail img {
   display: block;
   margin: 0 auto;
   max-width: 100%;
   height: auto;
 }
 
-.thumbnail-round {
-  border-radius: 50%;
-}
+/*doc
+---
+title: m-thumbnail-round
+name: thumbnail-01-round
+category: module-thumbnail
+parent: thumbnail
+---
 
-.thumbnail-square,
-.thumbnail-3to2,
-.thumbnail-4to3,
-.thumbnail-16to9,
-.thumbnail-ogimage {
+画像を正円にトリミングして表示する。別途、幅を指定する必要がある。  
+横長の画像では、上下に余白ができるため、 <code>m-thumbnail-vertical</code> を併用する必要がある。
+
+``` example
+<div class="clearfix m-b">
+
+<div class="float-l m-r" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail-round">
+        <img src="https://placehold.jp/200x200.jpg" alt="">
+    </div>
+</div>
+
+<div class="float-l m-r" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail-round">
+        <img src="https://placehold.jp/200x100.jpg" alt="">
+    </div>
+</div>
+
+<div class="float-l m-r" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail-round">
+        <img src="https://placehold.jp/200x300.jpg" alt="">
+    </div>
+</div>
+
+</div>
+```
+
+*/
+/*doc
+---
+title: m-thumbnail-square
+name: thumbnail-02-square
+category: module-thumbnail
+parent: thumbnail
+---
+
+画像を正方形にトリミングして表示する。別途、幅を指定する必要がある。  
+横長の画像では、上下に余白ができるため、 <code>m-thumbnail-vertical</code> を併用すること。
+
+``` example
+<div class="clearfix m-b">
+
+<div class="float-l m-r" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail-square">
+        <img src="https://placehold.jp/200x200.jpg" alt="">
+    </div>
+</div>
+
+<div class="float-l m-r" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail-square">
+        <img src="https://placehold.jp/200x100.jpg" alt="">
+    </div>
+</div>
+
+<div class="float-l m-r" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail-square">
+        <img src="https://placehold.jp/200x300.jpg" alt="">
+    </div>
+</div>
+
+</div>
+```
+
+*/
+.m-thumbnail-round,
+.m-thumbnail-square {
   width: 100%;
   height: 0;
+  padding-bottom: 100%;
 }
-.thumbnail-square img,
-.thumbnail-3to2 img,
-.thumbnail-4to3 img,
-.thumbnail-16to9 img,
-.thumbnail-ogimage img {
+.m-thumbnail-round img,
+.m-thumbnail-square img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -3643,27 +4448,239 @@ thumbnail
   transform: translate(-50%, -50%);
 }
 
-.thumbnail-square {
+.m-thumbnail-round {
+  width: 100%;
+  height: 0;
   padding-bottom: 100%;
+  border-radius: 50%;
 }
 
-.thumbnail-3to2 {
+/*doc
+---
+title: m-thumbnail-(ratio-x)to(ratio-y)
+name: thumbnail-03-ratio
+category: module-thumbnail
+parent: thumbnail
+---
+
+画像を指定した縦横比で、かつトリミングして表示する。別途、幅を指定する必要がある。  
+(ratio-x)to(ratio-y)は <code>3to2, 4to3, 16to9, ogimage(1.91:1), 21to9</code> に対応している。  
+指定した比率を超える超横長の画像だった場合は、上下に余白ができる。
+
+``` example
+<div class="clearfix m-b">
+
+<div class="float-l m-r" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail-3to2">
+        <img src="https://placehold.jp/480x360.jpg" alt="">
+    </div>
+</div>
+
+<div class="float-l m-r" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail-4to3">
+        <img src="https://placehold.jp/480x360.jpg" alt="">
+    </div>
+</div>
+
+<div class="float-l m-r" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail-16to9">
+        <img src="https://placehold.jp/480x360.jpg" alt="">
+    </div>
+</div>
+
+<div class="float-l m-r" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail-ogimage">
+        <img src="https://placehold.jp/480x360.jpg" alt="">
+    </div>
+</div>
+
+<div class="float-l m-r" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail-21to9">
+        <img src="https://placehold.jp/480x360.jpg" alt="">
+    </div>
+</div>
+
+</div>
+
+
+<div class="clearfix m-b">
+
+<div class="float-l m-r" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail-3to2">
+        <img src="https://placehold.jp/320x480.jpg" alt="">
+    </div>
+</div>
+
+<div class="float-l m-r" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail-4to3">
+        <img src="https://placehold.jp/320x480.jpg" alt="">
+    </div>
+</div>
+
+<div class="float-l m-r" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail-16to9">
+        <img src="https://placehold.jp/320x480.jpg" alt="">
+    </div>
+</div>
+
+<div class="float-l m-r" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail-ogimage">
+        <img src="https://placehold.jp/320x480.jpg" alt="">
+    </div>
+</div>
+
+<div class="float-l m-r" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail-21to9">
+        <img src="https://placehold.jp/320x480.jpg" alt="">
+    </div>
+</div>
+
+</div>
+
+
+<div class="clearfix m-b">
+
+<div class="float-l m-r" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail-3to2">
+        <img src="https://placehold.jp/600x200.jpg" alt="">
+    </div>
+</div>
+
+<div class="float-l m-r" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail-4to3">
+        <img src="https://placehold.jp/600x200.jpg" alt="">
+    </div>
+</div>
+
+<div class="float-l m-r" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail-16to9">
+        <img src="https://placehold.jp/600x200.jpg" alt="">
+    </div>
+</div>
+
+<div class="float-l m-r" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail-ogimage">
+        <img src="https://placehold.jp/600x200.jpg" alt="">
+    </div>
+</div>
+
+<div class="float-l m-r" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail-21to9">
+        <img src="https://placehold.jp/600x200.jpg" alt="">
+    </div>
+</div>
+
+</div>
+```
+
+*/
+.m-thumbnail-3to2,
+.m-thumbnail-4to3,
+.m-thumbnail-16to9,
+.m-thumbnail-ogimage,
+.m-thumbnail-21to9 {
+  width: 100%;
+  height: 0;
+}
+.m-thumbnail-3to2 img,
+.m-thumbnail-4to3 img,
+.m-thumbnail-16to9 img,
+.m-thumbnail-ogimage img,
+.m-thumbnail-21to9 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 102%;
+  max-width: none;
+  height: auto;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.m-thumbnail-3to2 {
   padding-bottom: 66.66667%;
 }
 
-.thumbnail-4to3 {
+.m-thumbnail-4to3 {
   padding-bottom: 75%;
 }
 
-.thumbnail-16to9 {
+.m-thumbnail-16to9 {
   padding-bottom: 56.25%;
 }
 
-.thumbnail-ogimage {
+.m-thumbnail-ogimage {
   padding-bottom: 52.35602%;
 }
 
-.thumbnail-vertical img {
+.m-thumbnail-21to9 {
+  padding-bottom: 42.85714%;
+}
+
+/*doc
+---
+title: m-thumbnail-vertical
+name: thumbnail-04-vertical
+category: module-thumbnail
+parent: thumbnail
+---
+
+<code>m-thumbnail-round, m-thumbnail-square, m-thumbnail-(ratio-x)to(ratio-y)</code> を使用したときに、幅ではなく高さを基準にトリミングする。
+
+``` example
+<div class="clearfix m-b">
+
+<div class="float-l m-r" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail-vertical m-thumbnail-square">
+        <img src="https://placehold.jp/480x320.jpg" alt="">
+    </div>
+</div>
+
+<div class="float-l m-r" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail-vertical m-thumbnail-round">
+        <img src="https://placehold.jp/480x320.jpg" alt="">
+    </div>
+</div>
+
+</div>
+
+<div class="clearfix m-b">
+
+<div class="float-l m-r" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail-vertical m-thumbnail-3to2">
+        <img src="https://placehold.jp/600x200.jpg" alt="">
+    </div>
+</div>
+
+<div class="float-l m-r" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail-vertical m-thumbnail-4to3">
+        <img src="https://placehold.jp/600x200.jpg" alt="">
+    </div>
+</div>
+
+<div class="float-l m-r" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail-vertical m-thumbnail-16to9">
+        <img src="https://placehold.jp/600x200.jpg" alt="">
+    </div>
+</div>
+
+<div class="float-l m-r" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail-vertical m-thumbnail-ogimage">
+        <img src="https://placehold.jp/600x200.jpg" alt="">
+    </div>
+</div>
+
+<div class="float-l m-r" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail-vertical m-thumbnail-21to9">
+        <img src="https://placehold.jp/600x200.jpg" alt="">
+    </div>
+</div>
+
+</div>
+```
+*/
+.m-thumbnail-vertical img {
   width: auto;
   max-width: none;
   height: 102%;
@@ -3875,6 +4892,63 @@ parent: box
 }
 .c-box-outline.c-box-important {
   border-color: #e75f77;
+}
+
+/*doc
+---
+title: c-dfn
+name: dfn
+category: component-dfn
+---
+
+単語と、それを補足するテキストを表示する。補足テキストは改行に対応する。  
+(breakpoint)が <code>sm</code> 以上でインライン表示となる。
+
+``` example
+<div class="m-b">
+<div class="c-dfn">
+    <h1 class="c-dfn-header">猫</h1>
+    <p class="c-dfn-contents">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+</div>
+</div>
+
+<dl class="c-dfn">
+    <dt class="c-dfn-header m-title m-title-01">I'm a Cat</dt>
+    <dd class="c-dfn-contents">There is no name yet.<br>
+    I have no idea where I was born.</dd>
+</dl>
+```
+*/
+@media (min-width: 425px) {
+  .c-dfn {
+    display: inline-block;
+  }
+}
+.c-dfn .c-dfn-header {
+  display: block;
+  padding-right: .25em;
+  text-align: center;
+  line-height: 1;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+@media (min-width: 425px) {
+  .c-dfn .c-dfn-header {
+    display: table-cell;
+    padding-right: .4em;
+  }
+}
+.c-dfn .c-dfn-contents {
+  display: block;
+  margin: 0;
+  line-height: 1.5;
+  padding-top: 0.5em;
+  vertical-align: middle;
+}
+@media (min-width: 425px) {
+  .c-dfn .c-dfn-contents {
+    display: table-cell;
+  }
 }
 
 #document {

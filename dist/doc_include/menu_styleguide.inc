@@ -16,7 +16,6 @@
         <ul class="nav-list nav-chidren">
             <li class="nav-item"><span class="nav-label">module</span>
                 <ul class="nav-list nav-chidren">
-                    <li class="nav-item"><a href="./module-title.html">title</a></li>
                     <li class="nav-item"><a href="./module-btn.html">btn</a></li>
                     <li class="nav-item"><a href="./module-input.html">input</a></li>
                     <li class="nav-item"><a href="./module-radio.html">radio</a></li>
@@ -26,14 +25,14 @@
                     <li class="nav-item"><a href="./module-badge.html">badge</a></li>
                     <li class="nav-item"><a href="./module-list.html">list</a></li>
                     <li class="nav-item"><a href="./module-table.html">table</a></li>
-                    <li class="nav-item"><a href="./module-dfn.html">dfn</a></li>
                     <li class="nav-item"><a href="./module-thumbnail.html">thumbnail</a></li>
-                    <li class="nav-item"><a href="./module-object.html">object</a></li>
+                    <li class="nav-item"><a href="./module-embed.html">embed</a></li>
                 </ul>
             </li>
             <li class="nav-item"><span class="nav-label">component</span>
                 <ul class="nav-list nav-chidren">
                     <li class="nav-item"><a href="./component-box.html">box</a></li>
+                    <li class="nav-item"><a href="./component-dfn.html">dfn</a></li>
                     <li class="nav-item"><a href="./component-alert.html">alert</a></li>
                     <li class="nav-item"><a href="./component-backtotop.html">backtotop</a></li>
                     <li class="nav-item"><a href="./component-block.html">block</a></li>

@@ -1,116 +1,384 @@
-/*
-table
---------------------
+/*doc
+---
+title: #{$p}#{$m}table
+name: table
+category: module-table
+---
+
+表組を整形する。このクラス単独では整列のみ行う。  
+幅は常に100%、セル内の文字は常に左寄せとなる。寄せ方向を変更したい場合は <code>utility > .#{$p}#{$u}line-(direction)</code> を使用する。
+
+``` example
+<table class="#{$p}#{$m}table">
+    <caption>キャプション</caption>
+    <tbody>
+        <tr>
+            <th>吾輩は猫である</th>
+            <td>名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+        <tr>
+            <th>吾輩は猫である名前はまだ無い。</th>
+            <td>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+        <tr>
+            <th>吾輩は猫</th>
+            <td>である名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+    </tbody>
+</table>
+```
+
 */
 
-.#{$p}table {
-    display: block;
+.#{$p}#{$m}table {
     max-width: 100%;
     background-color: $body-bg;
     border: 0 none;
 
-    @include media-breakpoint-up(md) {
-        display: table;
-    }
-
-    thead,
-    tbody,
-    tfoot {
-        display: block;
-
-        @include media-breakpoint-up(md) {
-            display: table-row-group;
-        }
-
-    }
-
     th,
     td {
-        display: block;
-        width: 100%;
         line-height: $line-height-sm;
         border: 0 none;
-        padding: 0 0 .5rem;
+        padding: 0 .5rem .5rem;
         vertical-align: top;
-
-        @include media-breakpoint-up(md) {
-            display: table-cell;
-            width: auto;
-            padding-left: .5em;
-            padding-right: .5em;
-        }
-
     }
 
     tr {
-        display: block;
         border: 0 none;
-
-        @include media-breakpoint-up(md) {
-            display: table-row;
-        }
-
-        th,
-        td {
-
-            &:first-child {
-                padding-left: 0;
-            }
-
-            &:last-child {
-                padding-right: 0;
-            }
-
-        }
-
     }
 
     thead {
-        border-bottom: $border-width solid $border-color;
 
         th {
-            text-align: center;
             vertical-align: bottom;
         }
 
     }
 
+    caption {
+        font-size: $font-size-lg;
+        text-align: center;
+        margin: 0 0 .5rem;
+        line-height: $line-height-sm;
+    }
+
 }
 
-.#{$p}table-01 {
+
+/*doc
+---
+title: #{$p}#{$m}table-bordered
+name: table-01-bordered
+category: module-table
+parent: table
+---
+
+表組のセル全てにグリッド罫線を引く。
+
+``` example
+<table class="#{$p}#{$m}table #{$p}#{$m}table-bordered">
+    <thead>
+        <tr>
+            <th>吾輩は</th>
+            <th>猫である</th>
+            <th>名前はまだ無い</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>吾輩は猫である</th>
+            <td>名前はまだ無い</td>
+            <td>どこで生れたかとんと見当がつかぬ</td>
+        </tr>
+        <tr>
+            <th>何でも薄暗い</th>
+            <td>じめじめした所でニャーニャー</td>
+            <td>泣いていた事だけは記憶している</td>
+        </tr>
+        <tr>
+            <th>吾輩はここで始めて</th>
+            <td>人間というものを見た</td>
+            <td>しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>どこで生れたか</th>
+            <td>とんと</td>
+            <td>見当がつかぬ</td>
+        </tr>
+    </tfoot>
+</table>
+```
+
+*/
+
+.#{$p}#{$m}table-bordered {
+    width: 100%;
     border-top: $border-width solid $border-color;
     border-left: $border-width solid $border-color;
+
+    thead {
+        border-bottom: ($border-width * 2) solid $border-color;
+    }
+
+    tfoot {
+        border-top: ($border-width * 2) solid $border-color;
+    }
 
     th,
     td {
         border-bottom: $border-width solid $border-color;
         border-right: $border-width solid $border-color;
-        padding-top: .5em;
-        padding-bottom: .5em;
+        padding: .5rem;
+
+        &:first-child {
+            padding-left: .5rem;
+        }
+
+        &:last-child {
+            padding-right: .5rem;
+        }
+
     }
 
 }
 
-.#{$p}table-02 {
+
+/*doc
+---
+title: #{$p}#{$m}table-ruled
+name: table-02-ruled
+category: module-table
+parent: table
+---
+
+表組の各セルの下のみ罫線を引く。Bootstrapの <code>.table</code> と同じ。
+
+``` example
+<table class="#{$p}#{$m}table #{$p}#{$m}table-ruled">
+    <thead>
+        <tr>
+            <th>吾輩は</th>
+            <th>猫である</th>
+            <th>名前はまだ無い</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>吾輩は猫である</th>
+            <td>名前はまだ無い</td>
+            <td>どこで生れたかとんと見当がつかぬ</td>
+        </tr>
+        <tr>
+            <th>何でも薄暗い</th>
+            <td>じめじめした所でニャーニャー</td>
+            <td>泣いていた事だけは記憶している</td>
+        </tr>
+        <tr>
+            <th>吾輩はここで始めて</th>
+            <td>人間というものを見た</td>
+            <td>しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>どこで生れたか</th>
+            <td>とんと</td>
+            <td>見当がつかぬ</td>
+        </tr>
+    </tfoot>
+</table>
+```
+
+*/
+
+.#{$p}#{$m}table-ruled {
+    width: 100%;
+
+    thead {
+        border-bottom: ($border-width * 2) solid $border-color;
+    }
 
     th,
     td {
         border-bottom: $border-width solid $border-color;
-        padding-top: 1em;
-        padding-bottom: .5em;
+        padding-top: 1rem;
+        padding-bottom: .5rem;
     }
+
+}
+
+
+/*doc
+---
+title: #{$p}#{$m}table-justify
+name: table-03-justify
+category: module-table
+parent: table
+---
+
+列数、内容にかかわらず、セルを均等な幅にする。
+
+``` example
+<table class="#{$p}#{$m}table #{$p}#{$m}table-bordered #{$p}#{$m}table-justify #{$p}m-b">
+    <tbody>
+        <tr>
+            <td>吾輩は猫である名前はまだ無い。どこで生れたかとんと見当がつかぬ。</td>
+            <td>何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="#{$p}#{$m}table #{$p}#{$m}table-bordered #{$p}#{$m}table-justify #{$p}m-b">
+    <tbody>
+        <tr>
+            <td>吾輩は猫である名前は</td>
+            <td>まだ無い。どこで生れたか</td>
+            <td>とんと見当がつかぬ。</td>
+            <td>何でも薄暗いじめじめした所で</td>
+            <td rowspan="2">ニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+        <tr>
+            <td>吾輩は猫である</td>
+            <td>名前はまだ無い。</td>
+            <td colspan="2">どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所で</td>
+        </tr>
+    </tbody>
+</table>
+```
+
+*/
+
+.#{$p}#{$m}table-justify {
+    width: 100%;
+    table-layout: fixed;
+}
+
+
+/*doc
+---
+title: #{$p}#{$m}table-(ratio-first)to(ratio-second)to(ratio-third)
+name: table-04-ratio
+category: module-table
+parent: table
+---
+
+2列または3列のセル幅を、 <code>(ratio) / 12</code> の比率にする。  
+(ratio-first)to(ratio-second)to(ratio-third)は <code>3to9, 4to8, 3to3to6, 0to12</code> に対応している。   
+
+``` example
+<table class="#{$p}#{$m}table #{$p}#{$m}table-bordered #{$p}#{$m}table-3to9 #{$p}m-b">
+    <caption>.#{$p}#{$m}table-3to9</caption>
+    <tbody>
+        <tr>
+            <th>吾輩は猫である</th>
+            <td>名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+        <tr>
+            <th>吾輩は猫である名前はまだ無い。</th>
+            <td>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="#{$p}#{$m}table #{$p}#{$m}table-bordered #{$p}#{$m}table-4to8 #{$p}m-b">
+    <caption>.#{$p}#{$m}table-4to8</caption>
+    <tbody>
+        <tr>
+            <th>吾輩は猫である</th>
+            <td>名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+        <tr>
+            <th>吾輩は猫である名前はまだ無い。</th>
+            <td>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="#{$p}#{$m}table #{$p}#{$m}table-bordered #{$p}#{$m}table-3to3to6 #{$p}m-b">
+    <caption>.#{$p}#{$m}table-3to3to6</caption>
+    <tbody>
+        <tr>
+            <th>吾輩は猫である</th>
+            <td>名前はまだ無い。</td>
+            <td>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+        <tr>
+            <th>吾輩は猫である名前はまだ無い。</th>
+            <td>どこで生れたかとんと見当がつかぬ。</td>
+            <td>何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="#{$p}#{$m}table #{$p}#{$m}table-bordered #{$p}#{$m}table-0to12 #{$p}#{$u}m-b">
+    <caption>.#{$p}#{$m}table-0to12</caption>
+    <tbody>
+        <tr>
+            <th>吾輩は猫</th>
+            <td>である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+        <tr>
+            <th>吾輩はここで</th>
+            <td>始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</td>
+        </tr>
+        <tr>
+            <th>しかし</th>
+            <td>その当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</td>
+        </tr>
+    </tbody>
+</table>
+```
+
+*/
+
+.#{$p}#{$m}table-3to9 {
 
     tr {
 
         th,
         td {
+            width: percentage(9 / 12);
 
             &:first-child {
-                padding-left: 0;
+                width: percentage(3 / 12);
             }
+
+        }
+
+    }
+
+}
+
+.#{$p}#{$m}table-4to8 {
+
+    tr {
+
+        th,
+        td {
+            width: percentage(8 / 12);
+
+            &:first-child {
+                width: percentage(4 / 12);
+            }
+
+        }
+
+    }
+
+}
+
+.#{$p}#{$m}table-3to3to6 {
+
+    tr {
+
+        th,
+        td {
+            width: percentage(3 / 12);
 
             &:last-child {
-                padding-left: 0;
+                width: percentage(6 / 12);
             }
 
         }
@@ -119,22 +387,17 @@ table
 
 }
 
-.#{$p}table-3to9 {
+.#{$p}#{$m}table-0to12 {
 
     tr {
 
         th,
         td {
-            @include media-breakpoint-up(md) {
-                width: percentage(9 / 12);
-            }
+            width: 99.9%;
 
             &:first-child {
-
-                @include media-breakpoint-up(md) {
-                    width: percentage(3 / 12);
-                }
-
+                width: auto;
+                white-space: nowrap;
             }
 
         }
@@ -143,33 +406,179 @@ table
 
 }
 
-.#{$p}table-4to8 {
+
+/*doc
+---
+title: #{$p}#{$m}table-break-sm-down
+name: table-05-break-sm-down
+category: module-table
+parent: table
+---
+
+(breakpoint)が <code>sm</code> 以下のときに表組を解除する。  
+2カラム以上の表の場合は <code>.#{$p}#{$m}table-responsive</code> を推薦。
+
+``` example
+<table class="#{$p}#{$m}table #{$p}#{$m}table-break-sm-down #{$p}#{$m}table-bordered #{$p}#{$u}m-b">
+    <thead>
+        <tr>
+            <th>吾輩は猫である</th>
+            <th>名前はまだ無い</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>吾輩は猫である名前はまだ無い</th>
+            <td>どこで生れたかとんと見当がつかぬ</td>
+        </tr>
+        <tr>
+            <th>何でも薄暗いじめじめした所で</th>
+            <td>ニャーニャー泣いていた事だけは記憶している</td>
+        </tr>
+        <tr>
+            <th>吾輩はここで始めて人間というものを見た</th>
+            <td>しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>どこで生れたか</th>
+            <td>とんと見当がつかぬ</td>
+        </tr>
+    </tfoot>
+</table>
+
+<table class="#{$p}#{$m}table #{$p}#{$m}table-break-sm-down #{$p}#{$m}table-ruled">
+    <thead>
+        <tr>
+            <th>吾輩は猫である</th>
+            <th>名前はまだ無い</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>吾輩は猫である名前はまだ無い</th>
+            <td>どこで生れたかとんと見当がつかぬ</td>
+        </tr>
+        <tr>
+            <th>何でも薄暗いじめじめした所で</th>
+            <td>ニャーニャー泣いていた事だけは記憶している</td>
+        </tr>
+        <tr>
+            <th>吾輩はここで始めて人間というものを見た</th>
+            <td>しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>どこで生れたか</th>
+            <td>とんと見当がつかぬ</td>
+        </tr>
+    </tfoot>
+</table>
+```
+
+*/
+
+.#{$p}#{$m}table-break-sm-down {
+
+    @include media-breakpoint-down(sm) {
+        display: block;
+    }
+
+    thead,
+    tbody,
+    tfoot {
+
+        @include media-breakpoint-down(sm) {
+            display: block;
+        }
+
+    }
 
     tr {
 
-        th,
-        td {
-            @include media-breakpoint-up(md) {
-                width: percentage(8 / 12);
-            }
-
-            &:first-child {
-
-                @include media-breakpoint-up(md) {
-                    width: percentage(4 / 12);
-                }
-
-            }
-
+        @include media-breakpoint-down(sm) {
+            display: block;
         }
 
     }
 
+    th,
+    td {
+
+        @include media-breakpoint-down(sm) {
+            display: block;
+            width: 100%;
+        }
+
+    }
+
+    &.#{$p}#{$m}table-bordered {
+
+        thead {
+            border-bottom-width: $border-width;
+        }
+
+        tfoot {
+            border-top-width: $border-width;
+        }
+
+    }
+
+    &.#{$p}#{$m}table-ruled {
+
+        thead {
+            border-bottom-width: $border-width;
+        }
+
+    }
+
+
+
 }
 
-.#{$p}table-justify {
-    @include media-breakpoint-up(md) {
-        width: 100%;
-        table-layout: fixed;
+
+/*doc
+---
+title: #{$p}#{$m}table-responsive
+name: table-06-responsive
+category: module-table
+parent: table
+---
+
+(breakpoint)が <code>md</code> 以下のときにスクロールバーを表示する。
+
+``` example
+<div class="#{$p}#{$m}table-responsive">
+    <table class="#{$p}#{$m}table #{$p}#{$m}table-bordered">
+        <tbody>
+            <tr>
+                <th>吾輩は猫である</th>
+                <td>名前はまだ無い</td>
+                <td>どこで生れたかとんと見当がつかぬ</td>
+            </tr>
+            <tr>
+                <th>何でも薄暗い</th>
+                <td>じめじめした所でニャーニャー</td>
+                <td>泣いていた事だけは記憶している</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+```
+
+*/
+
+.#{$p}#{$m}table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+
+    > .#{$p}#{$m}table {
+        min-width: map-get($grid-breakpoints, md);
     }
+
 }

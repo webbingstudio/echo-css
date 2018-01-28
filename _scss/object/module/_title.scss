@@ -1,9 +1,17 @@
-/*
-title
---------------------
+/*doc
+---
+title: #{$p}#{$m}title
+name: title
+category: module-title
+---
+
+コンポーネント内で使用できる見出しを作成する。div要素・p要素にも使用できる。  
+このクラス単独では初期化のみ行うため、 <code>.#{$p}#{$m}title-(type)</code> を付与する必要がある。  
+上下余白は <code>.#{$p}#{$u}m-(direction)-(size)</code> で別途指定する。
+
 */
 
-.#{$p}title {
+.#{$p}#{$m}title {
     margin: 0;
     padding: 0;
     background: transparent none;
@@ -20,73 +28,141 @@ title
 
 }
 
-.#{$p}title-01 {
-    font-size: 2em;
+
+/*doc
+---
+title: #{$p}#{$m}title-01
+name: title-01
+category: module-title
+parent: title
+---
+
+``` example
+<h1 class="#{$p}#{$m}title #{$p}#{$m}title-01">これはh1要素です</h1>
+<p class="#{$p}#{$m}title #{$p}#{$m}title-01">これはp要素です</p>
+```
+
+*/
+
+.#{$p}#{$m}title-01 {
+    font-size: 2.5rem;
     font-weight: $font-weight-first;
     font-family: $font-family-first;
-    letter-spacing: .1em;
-
-    @include media-breakpoint-up(sm) {
-        font-size: 2.25em;
-    }
-
-    @include media-breakpoint-up(lg) {
-        font-size: 2.5em;
-    }
-
+    text-align: center;
 }
 
-.#{$p}title-02 {
-    font-size: 1.5em;
+
+/*doc
+---
+title: #{$p}#{$m}title-02
+name: title-02
+category: module-title
+parent: title
+---
+
+``` example
+<h2 class="#{$p}#{$m}title #{$p}#{$m}title-02">これはh2要素です</h2>
+<p class="#{$p}itle #{$p}#{$m}title-02">これはp要素です</p>
+```
+
+*/
+
+.#{$p}#{$m}title-02 {
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid $body-color;
+    font-size: 2rem;
     font-weight: $font-weight-first;
     font-family: $font-family-first;
-    letter-spacing: .1em;
-
-    @include media-breakpoint-up(sm) {
-        font-size: 1.75em;
-    }
-
-    @include media-breakpoint-up(lg) {
-        font-size: 1.75em;
-    }
+    text-align: center;
 }
 
-.#{$p}title-03 {
-    font-size: 1.25em;
+
+/*doc
+---
+title: #{$p}#{$m}title-03
+name: title-03
+category: module-title
+parent: title
+---
+
+``` example
+<h3 class="#{$p}#{$m}title #{$p}#{$m}title-03">これはh3要素です</h3>
+<p class="#{$p}#{$m}title #{$p}#{$m}title-03">これはp要素です</p>
+```
+
+*/
+
+.#{$p}#{$m}title-03 {
+    font-size: $font-size-xxl;
     font-weight: $font-weight-bold-root;
     font-family: $font-family-root;
-
-    @include media-breakpoint-up(lg) {
-        font-size: 1.5em;
-    }
 }
 
-.#{$p}title-04 {
-    font-size: 1.125em;
+
+/*doc
+---
+title: #{$p}#{$m}title-04
+name: title-04
+category: module-title
+parent: title
+---
+
+``` example
+<h4 class="#{$p}#{$m}title #{$p}#{$m}title-04">これはh4要素です</h4>
+<p class="#{$p}#{$m}title #{$p}#{$m}title-04">これはp要素です</p>
+```
+
+*/
+
+.#{$p}#{$m}title-04 {
+    font-size: $font-size-xl;
     font-weight: $font-weight-bold-root;
     font-family: $font-family-root;
-
-    @include media-breakpoint-up(lg) {
-        font-size: 1.25em;
-    }
 }
 
-.#{$p}title-05 {
-    font-size: 1.0625em;
+
+/*doc
+---
+title: #{$p}#{$m}title-05
+name: title-05
+category: module-title
+parent: title
+---
+
+``` example
+<h5 class="#{$p}#{$m}title #{$p}#{$m}title-05">これはh5要素です</h5>
+<p class="#{$p}#{$m}title #{$p}#{$m}title-05">これはp要素です</p>
+```
+
+*/
+
+.#{$p}#{$m}title-05 {
+    font-size: $font-size-lg;
     font-weight: $font-weight-bold-root;
     font-family: $font-family-root;
-
-    @include media-breakpoint-up(lg) {
-        font-size: 1.125em;
-    }
 }
 
-.#{$p}title-06 {
-    font-size: 1em;
+
+/*doc
+---
+title: #{$p}#{$m}title-06
+name: title-06
+category: module-title
+parent: title
+---
+
+``` example
+<h6 class="#{$p}#{$m}title #{$p}#{$m}title-06">これはh6要素です</h6>
+<p class="#{$p}#{$m}title #{$p}#{$m}title-06">これはp要素です</p>
+```
+
+*/
+
+.#{$p}#{$m}title-06 {
+    font-size: $font-size-md;
     font-weight: $font-weight-bold-root;
     font-family: $font-family-root;
-
-    @include media-breakpoint-up(lg) {
-        font-size: 1.0625em;
-    }
 }

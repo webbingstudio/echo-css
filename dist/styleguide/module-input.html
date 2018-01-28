@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>module-input | Style guide | echo-css</title>
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div class="l-document" id="document">
+
+    <header class="s-header">
+        <div class="s-container s-container-fluid">
+
+            <div class="s-header-brand">
+                <p class="s-header-title title title-03">echo-css <span class="label label-info">v0.0.5</span></p>
+            </div><!-- /.s-header-brand -->
+
+            <?php include('../doc_include/header_nav.inc'); ?>
+
+        </div><!-- /.s-container -->
+    </header>
+
+    <div class="s-container s-container-fluid">
+        <div class="s-contents s-contents-2col">
+            <main class="s-contents-main" role="main">
+
+                
+                <div class="s-page-header page-header">
+                    <h1 class="page-title title s-title-01">module-input</h1>
+                </div><!-- /.page-header -->
+                
+
+                
+                <nav class="s-anchor">
+                    <ul class="list list-horizontal">
+                        
+                        <li class="list-item"><a href="#input" class="js-scrollto">m-input</a></li>
+                        
+                        <li class="list-item"><a href="#input-01-size" class="js-scrollto">m-input-(size)</a></li>
+                        
+                    </ul>
+                </nav>
+                
+
+                <article class="s-post post">
+                    <div class="post-contents styleguide-contents"><h1 id="input" class="styleguide">m-input</h1>
+
+<p>テキスト入力を即す欄を表示する。要素に直接クラスを付与する（ほとんどの場合、input要素、textarea要素となる）。<br>
+余白・レイアウト等は <code>utility &gt; .m</code> や <code>component &gt; .c-form</code> で指定する。<br>
+<code>.is-error</code> を同時に使用するとエラーがあったときの表示となる。 </p>
+<div class="example"><div class="m-b">
+    <input type="text" class="m-input" size="20" value="" placeholder="鈴木一朗" />
+    <input type="text" class="m-input is-error" size="20" value="" placeholder="鈴木一郎" />
+</div>
+<div class="m-b">
+    <textarea class="m-input" rows="5" cols="60">メッセージをどうぞ</textarea>
+    <textarea class="m-input is-error" rows="5" cols="60">* おおっと *</textarea>
+</div>
+</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-b"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"m-input"</span> <span class="na">size=</span><span class="s">"20"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">placeholder=</span><span class="s">"鈴木一朗"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"m-input is-error"</span> <span class="na">size=</span><span class="s">"20"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">placeholder=</span><span class="s">"鈴木一郎"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-b"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"m-input"</span> <span class="na">rows=</span><span class="s">"5"</span> <span class="na">cols=</span><span class="s">"60"</span><span class="nt">&gt;</span>メッセージをどうぞ<span class="nt">&lt;/textarea&gt;</span>
+    <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"m-input is-error"</span> <span class="na">rows=</span><span class="s">"5"</span> <span class="na">cols=</span><span class="s">"60"</span><span class="nt">&gt;</span>* おおっと *<span class="nt">&lt;/textarea&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+<h2 id="input-01-size" class="styleguide">m-input-(size)</h2>
+
+<p>テキスト入力を即す欄の全体のサイズを変更する。(size)は <code>sm, lg</code> に対応している。</p>
+<div class="example"><div class="m-b">
+    <input type="text" class="m-input m-input-sm" size="20" value="" placeholder="鈴木一朗" />
+    <input type="text" class="m-input m-input-lg" size="20" value="" placeholder="鈴木一朗" />
+</div>
+<div class="m-b">
+    <textarea class="m-input m-input-sm" rows="5" cols="60">メッセージをどうぞ</textarea>
+    <textarea class="m-input m-input-lg" rows="5" cols="60">メッセージをどうぞ</textarea>
+</div>
+</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-b"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"m-input m-input-sm"</span> <span class="na">size=</span><span class="s">"20"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">placeholder=</span><span class="s">"鈴木一朗"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"m-input m-input-lg"</span> <span class="na">size=</span><span class="s">"20"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">placeholder=</span><span class="s">"鈴木一朗"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-b"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"m-input m-input-sm"</span> <span class="na">rows=</span><span class="s">"5"</span> <span class="na">cols=</span><span class="s">"60"</span><span class="nt">&gt;</span>メッセージをどうぞ<span class="nt">&lt;/textarea&gt;</span>
+    <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"m-input m-input-lg"</span> <span class="na">rows=</span><span class="s">"5"</span> <span class="na">cols=</span><span class="s">"60"</span><span class="nt">&gt;</span>メッセージをどうぞ<span class="nt">&lt;/textarea&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>                    </div><!-- /.post-contents -->
+                </article><!-- /.post -->
+
+            </main>
+            <div class="s-contents-sub" role="complementary">
+                <h2 class="title title-04 m-b">Style guide</h2>
+                <nav class="s-sitemap nav nav-vertical">
+                    <?php include('../doc_include/menu_styleguide.inc'); ?>
+                </nav>
+            </div>
+        </div><!-- /.s-contents -->
+    </div><!-- /.s-container -->
+
+    <?php include('../doc_include/footer.inc'); ?>
+
+</div><!-- /.l-document -->
+</body>
+</html>

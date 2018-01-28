@@ -1,10 +1,28 @@
-/*
-input
---------------------
+/*doc
+---
+title: #{$p}#{$m}input
+name: input
+category: module-input
+---
+
+テキスト入力を即す欄を表示する。要素に直接クラスを付与する（ほとんどの場合、input要素、textarea要素となる）。  
+余白・レイアウト等は <code>utility > .#{$p}#{$u}m</code> や <code>component > .#{$p}#{$c}form</code> で指定する。  
+<code>.#{$p}#{$error}</code> を同時に使用するとエラーがあったときの表示となる。 
+
+``` example
+<div class="m-b">
+    <input type="text" class="#{$p}#{$m}input" size="20" value="" placeholder="鈴木一朗" />
+    <input type="text" class="#{$p}#{$m}input #{$p}#{$error}" size="20" value="" placeholder="鈴木一郎" />
+</div>
+<div class="m-b">
+    <textarea class="#{$p}#{$m}input" rows="5" cols="60">メッセージをどうぞ</textarea>
+    <textarea class="#{$p}#{$m}input #{$p}#{$error}" rows="5" cols="60">* おおっと *</textarea>
+</div>
+```
 */
 
-.#{$p}input {
-    padding: .375rem .5rem .25rem;
+.#{$p}#{$m}input {
+    padding: .375rem .5rem;
     background: $body-bg none;
     border: $border-width solid $border-color;
     color: $body-color;
@@ -18,14 +36,37 @@ input
         color: $important-text;
     }
 
-    &.#{$p}input-sm {
-        padding: .25rem;
-        font-size: $font-size-sm;
-    }
+}
 
-    &.#{$p}input-lg {
-        padding: .5rem .5rem;
-        font-size: $font-size-lg;
-    }
 
+/*doc
+---
+title: #{$p}#{$m}input-(size)
+name: input-01-size
+category: module-input
+parent: input
+---
+
+テキスト入力を即す欄の全体のサイズを変更する。(size)は <code>sm, lg</code> に対応している。
+
+``` example
+<div class="m-b">
+    <input type="text" class="#{$p}#{$m}input #{$p}#{$m}input-sm" size="20" value="" placeholder="鈴木一朗" />
+    <input type="text" class="#{$p}#{$m}input #{$p}#{$m}input-lg" size="20" value="" placeholder="鈴木一朗" />
+</div>
+<div class="m-b">
+    <textarea class="#{$p}#{$m}input #{$p}#{$m}input-sm" rows="5" cols="60">メッセージをどうぞ</textarea>
+    <textarea class="#{$p}#{$m}input #{$p}#{$m}input-lg" rows="5" cols="60">メッセージをどうぞ</textarea>
+</div>
+```
+*/
+
+.#{$p}#{$m}input-sm {
+    padding: .25rem;
+    font-size: $font-size-sm;
+}
+
+.#{$p}#{$m}input-lg {
+    padding: .5rem .5rem;
+    font-size: $font-size-lg;
 }

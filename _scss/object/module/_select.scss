@@ -1,14 +1,47 @@
-/*
-select
---------------------
+/*doc
+---
+title: #{$p}#{$m}select
+name: select
+category: module-select
+---
+
+セレクトボックスをインライン表示する。select要素ではなく、包括している要素にクラスを付与する。  
+余白・レイアウト等は <code>utility > .#{$p}#{$u}p</code> や <code>component > .#{$p}#{$c}form</code> で指定する。  
+<code>.#{$p}#{$error}</code> を同時に使用するとエラーがあったときの表示となる。  
+セレクトボックスのシェブロンは <code>/\_scss/mixin/mixin.css</code> の <code>chevron()</code>を参照。
+
+``` example
+<div class="#{$p}#{$m}select #{$p}#{$u}m-b">
+<select>
+<option>月を選択...</option>
+<option value="">2017年</option>
+<option value="">2016年</option>
+<option value="">2015年</option>
+</select>
+</div>
+
+<div class="#{$p}#{$m}select #{$p}#{$error}">
+<select>
+<option>月を選択...</option>
+<option value="">2017年</option>
+<option value="">2016年</option>
+<option value="">2015年</option>
+</select>
+</div>
+```
 */
 
-.#{$p}select {
+.#{$p}#{$m}select {
     display: inline-block;
 
-    @include chevron( 'down', $gray-mild ) {
+    @include chevron( 'down', $body-color ) {
+        &:before,
+        &:after {
+            font-size: 1.25em;
+        }
+
         &:before {
-            right: 1em;
+            right: .85em;
             z-index: 3;
         }
 
@@ -24,7 +57,7 @@ select
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
-        font-size: $font-size-sm;
+        font-size: $font-size-md;
         color: $body-color;
         width: 100%;
         padding: .5em 3em .5em 1em;
@@ -48,6 +81,59 @@ select
 
     option {
         outline: none;
+    }
+
+}
+
+
+/*doc
+---
+title: #{$p}#{$m}select-(size)
+name: select-01-size
+category: module-select
+parent: select
+---
+
+テキスト入力を即す欄の全体のサイズを変更する。(size)は <code>sm, lg</code> に対応している。
+
+``` example
+<div class="#{$p}#{$u}m-b">
+    <div class="#{$p}#{$m}select #{$p}#{$m}select-sm #{$p}#{$u}m-b">
+    <select>
+    <option>月を選択...</option>
+    <option value="">2017年</option>
+    <option value="">2016年</option>
+    <option value="">2015年</option>
+    </select>
+    </div>
+</div>
+<div class="#{$p}#{$u}m-b">
+    <div class="#{$p}#{$m}select #{$p}#{$m}select-lg #{$p}#{$u}m-b">
+    <select>
+    <option>月を選択...</option>
+    <option value="">2017年</option>
+    <option value="">2016年</option>
+    <option value="">2015年</option>
+    </select>
+    </div>
+</div>
+```
+*/
+
+.#{$p}#{$m}select-sm {
+
+    select {
+        font-size: $font-size-sm;
+        padding: .5em 3em .5em 1em;
+    }
+
+}
+
+.#{$p}#{$m}select-lg {
+
+    select {
+        font-size: $font-size-lg;
+        padding: .75em 3em .75em 1em;
     }
 
 }
