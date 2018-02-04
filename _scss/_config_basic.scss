@@ -20,61 +20,57 @@ $u-wrap: "#document" !default;
 $spacer:                     10px !default;
 
 
-// Colors(basic)
+// Colors
 // -----------------------------------------
 
+// gray: greyscale color
 $gray:                      #333 !default;
 $gray-strong:               #000 !default;
 $gray-mild:                 #888 !default;
 $gray-milder:               #bbb !default;
-$gray-fade:                 #eaeaea !default;
+$gray-fade:                 #eee !default;
 
+// first: primary color
 $first:                     #49d !default;
 $first-strong:              #2283cc !default;
 $first-text:                $first-strong !default;
 $first-mild:                lighten(desaturate($first, 5%), 10%) !default;
 $first-fade:                rgba($first, .2) !default;
 
+// second: secondary color
 $second:                    #444 !default;
 $second-strong:             #000 !default;
 $second-text:               #333 !default;
 $second-mild:               #777 !default;
 $second-fade:               #eaeaea !default;
 
-$third:                     #49B070 !default;
+// third: tertiary color, or success color in system
+$third:                     #49b070 !default;
 $third-strong:              #229644 !default;
 $third-text:                $third-strong !default;
 $third-mild:                lighten(desaturate($third, 5%), 10%) !default;
 $third-fade:                rgba($third, .2) !default;
 
-$fourth:                    #f38c10 !default;
-$fourth-strong:             #f37910 !default;
-$fourth-text:               $fourth-strong !default;
-$fourth-mild:               lighten(desaturate($fourth, 5%), 10%) !default;
-$fourth-fade:               rgba($fourth, .2) !default;
+// fourth: fourth color, or warning color in system
+$fourth:                     #f38c10 !default;
+$fourth-strong:              #f37910 !default;
+$fourth-text:                $fourth-strong !default;
+$fourth-mild:                lighten(desaturate($fourth, 5%), 10%) !default;
+$fourth-fade:                rgba($fourth, .2) !default;
 
-$fifth:                     #e33050 !default;
-$fifth-strong:              #d70022 !default;
-$fifth-text:                $fifth-strong !default;
-$fifth-mild:                lighten(desaturate($fifth, 2%), 10%) !default;
-$fifth-fade:                #ffe9ee !default;
+// fifth: fifth color, or information color in system
+$fifth:                    #49d !default;
+$fifth-strong:             #2283cc !default;
+$fifth-text:               $fifth-strong !default;
+$fifth-mild:               lighten(desaturate($fifth, 5%), 10%) !default;
+$fifth-fade:               rgba($fifth, .2) !default;
 
-
-// Colors(system)
-// -----------------------------------------
-
-$info:                      $fourth !default;
-$info-text:                 $fourth-text !default;
-$info-strong:               $fourth-strong !default;
-$info-mild:                 $fourth-mild !default;
-$info-fade:                 $fourth-fade !default;
-
-$important:                 $fifth !default;
-$important-strong:          $fifth-strong !default;
-$important-text:            $fifth-text !default;
-$important-mild:            $fifth-mild !default;
-$important-fade:            $fifth-fade !default;
-
+// sixth: sixth color, or important(danger) color in system
+$sixth:                     #e33050 !default;
+$sixth-strong:              #d70022 !default;
+$sixth-text:                $sixth-strong !default;
+$sixth-mild:                lighten(desaturate($sixth, 2%), 10%) !default;
+$sixth-fade:                #ffe9ee !default;
 
 $body-bg:                   #fff !default;
 $body-color:                $gray !default;
@@ -82,6 +78,25 @@ $body-mild-color:           $gray-mild !default;
 $body-inverse-bg:           $gray-strong !default;
 $body-inverse-color:        #fff !default;
 $body-inverse-mild-color:   rgba($body-inverse-color, .75) !default;
+
+
+// Color Table
+// -----------------------------------------
+
+$__first:     "first" !default;
+$__second:    "second" !default;
+$__third:     "third" !default;
+$__fourth:    "fourth" !default;
+$__fifth:     "info" !default;
+$__sixth:     "important" !default;
+
+// ex. Bootstrap compatible
+// $color-first:     "primary" !default;
+// $color-second:    "secondary" !default;
+// $color-third:     "success" !default;
+// $color-fourth:    "warning" !default;
+// $color-fifth:     "info" !default;
+// $color-sixth:     "danger" !default;
 
 
 // Border
@@ -96,28 +111,16 @@ $border-inverse-color:       #666666 !default;
 // -----------------------------------------
 
 @mixin font-face-mapping() {
-  /* thanks: https://speakerdeck.com/tacamy/modanri-ben-yu-huontozhi-ding */
 
-  @font-face {
-    font-family: 'PGYuGothic';
-    font-weight: normal;
-    src: local('YuGothic-Medium'),
-         local('Yu Gothic Medium'),
-         local('YuGothic-Regular');
-  }
-  @font-face {
-    font-family: 'PGYuGothic';
-    font-weight: bold;
-    src: local('YuGothic-Bold'),
-         local('Yu Gothic');
-  }
+  @import url(https://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+  @import url(https://fonts.googleapis.com/earlyaccess/sawarabimincho.css);
 
 }
 
 // Font family
 // -----------------------------------------
 
-$font-family-root:             'PGYuGothic', 'YuGothic', '-apple-system', 'BlinkMacSystemFont', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif !default;
+$font-family-root:             'Noto Sans Japanese', '-apple-system', 'BlinkMacSystemFont', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif !default;
 $font-weight-root:             300 !default;
 $font-family-bold-root:        $font-family-root;
 $font-weight-bold-root:        700 !default;
@@ -125,8 +128,7 @@ $font-weight-bold-root:        700 !default;
 $font-family-mono:             'Consolas', 'Liberation Mono', 'Menlo', 'Courier', monospace !default;
 
 // first: heading
-// $font-family-first:            '游明朝', 'Yu Mincho', '游明朝体', 'YuMincho', 'Hiragino Mincho Pro', 'ＭＳ Ｐ明朝', 'MS PMincho', 'Bookman Old Style', 'Times New Roman', '-apple-system', 'BlinkMacSystemFont', serif !default;
-$font-family-first:            $font-family-root;
+$font-family-first:            'Sawarabi Mincho', 'Hiragino Mincho Pro', 'ＭＳ Ｐ明朝', 'MS PMincho', 'Bookman Old Style', 'Times New Roman', '-apple-system', 'BlinkMacSystemFont', serif !default;
 $font-weight-first:            300 !default;
 $font-family-bold-first:       $font-family-first;
 $font-weight-bold-first:       700 !default;
@@ -138,10 +140,10 @@ $font-family-bold-second:      $font-family-second;
 $font-weight-bold-second:      700 !default;
 
 // third: hero, etc
-$font-family-third:            $font-family-first;
-$font-weight-third:            $font-weight-first;
-$font-family-bold-third:       $font-family-bold-first;
-$font-weight-bold-third:       $font-weight-bold-first;
+$font-family-third:            $font-family-root;
+$font-weight-third:            $font-weight-root;
+$font-family-bold-third:       $font-family-bold-root;
+$font-weight-bold-third:       $font-weight-bold-root;
 
 
 // Font size

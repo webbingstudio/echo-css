@@ -2,8 +2,8 @@
 // ========================================
 
 // Code Optimize
-// 使用頻度が少ないスタイル（小さすぎるグリッド、disabled等）を除外し、コードを最適化する
-// Optimize the code by excluding styles that are not used frequently (grids that are too small, disabled, etc.)
+// 使用頻度が少ないスタイル（小さすぎるグリッド、小さすぎる正方形ボタン等）を除外し、コードを最適化する
+// Optimize the code by excluding styles that are not used frequently (too small grids, too small square buttons, etc.)
 // -----------------------------------------
 $optimize: true !default;
 
@@ -19,11 +19,6 @@ $p: "" !default;
 // layout-group-prefix
 $l: "l-" !default;
 
-// layout-group-grid-prefix
-// グリッドシステムのみBootstrapに対応したい場合は、接頭辞を "" （空）にする
-// If you only want to support Bootstrap on the grid system, set the prefix to "" (empty)
-$g: $l !default;
-
 // module-group-prefix
 $m: "m-" !default;
 
@@ -34,7 +29,6 @@ $c: "c-" !default;
 // ユーティリティクラスは、意図的に接頭辞を指定していない。システムの編集者も使用する可能性があるため、覚えやすいよう簡略化している
 // Utility class does not intentionally specify a prefix. there is a possibility that editors of system, use it, it simplified for easier to remember
 $u: "" !default;
-
 
 
 // Name
@@ -85,23 +79,8 @@ $list-item: "." + $p + $m + "list-item" !default;
 $list-children: "." + $p + $m + "list-children" !default;
 
 
-// Grid
+// Container
 // -----------------------------------------
-
-// grid type: float, flexbox(or others)
-$grid-type: "flexbox" !default;
-
-$grid-breakpoints: (
-  default: 0,
-  xxs: 320px,
-  xs:  360px,
-  sm:  425px,
-  md:  768px,
-  lg:  1000px,
-  xl:  1240px,
-  xxl: 1640px
-) !default;
-
 
 $container-max-widths-sm: (
   md: 700px,
@@ -121,6 +100,28 @@ $container-max-widths-lg: (
   xxl: 1600px,
 ) !default;
 
+
+// Grid
+// -----------------------------------------
+
+// grid type: float, flexbox(or others)
+$grid-type: "flexbox" !default;
+
+// layout-group-grid-prefix
+// グリッドシステムのみBootstrapに対応したい場合は、接頭辞を "" （空）にする
+// If you only want to support Bootstrap on the grid system, set the prefix to "" (empty)
+$g: $l !default;
+
+$grid-breakpoints: (
+  default: 0,
+  xxs: 320px,
+  xs:  360px,
+  sm:  425px,
+  md:  768px,
+  lg:  1000px,
+  xl:  1240px,
+  xxl: 1640px
+) !default;
 
 $grid-columns:    12 !default;
 
