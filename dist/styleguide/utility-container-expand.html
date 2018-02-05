@@ -16,7 +16,7 @@
         <div class="s-container s-container-fluid">
 
             <div class="s-header-brand">
-                <p class="s-header-title title title-03">echo-css <span class="label label-info">v0.0.5</span></p>
+                <p class="s-header-title title title-03">echo-css <span class="label label-info">v0.6.0</span></p>
             </div><!-- /.s-header-brand -->
 
             <?php include('../doc_include/header_nav.inc'); ?>
@@ -43,17 +43,17 @@
 <p>コンテナブロックの最大幅を無視して、要素の背景とボーダーのみをウィンドウ全体に広げる。<br>
   仕様上、2カラム以上のレイアウトでは使用できない。<br>
   <code>.l-document</code> の幅制限を解除していると、横スクロールバーが表示されてしまう。</p>
-<div class="example">  <div class="l-container bg-primary bg-mild m-b p">
+<div class="example">  <div class="l-container bg-first bg-mild m-b p">
       <div class="p-y line-c m-b" style="background-color: rgba(255,255,255,.5); color: #000">(l-container + contents)</div>
 
-      <div class="container-expand bg-secondary bg-mild">
+      <div class="container-expand bg-second bg-mild">
           <div class="p-y line-c" style="background-color: rgba(255,255,255,.5); color: #000">(l-container + container-expand + contents)</div>
       </div>
   </div>
-</div><div class="codeblock"><pre>  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-container bg-primary bg-mild m-b p"</span><span class="nt">&gt;</span>
+</div><div class="codeblock"><pre>  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-container bg-first bg-mild m-b p"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-y line-c m-b"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.5); color: #000"</span><span class="nt">&gt;</span>(l-container + contents)<span class="nt">&lt;/div&gt;</span>
 
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-expand bg-secondary bg-mild"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-expand bg-second bg-mild"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-y line-c"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.5); color: #000"</span><span class="nt">&gt;</span>(l-container + container-expand + contents)<span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
