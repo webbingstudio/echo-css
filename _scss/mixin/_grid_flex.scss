@@ -59,21 +59,26 @@
         }
       }
 
-      .#{$p}#{$g}order#{$infix}-first { order: -1; }
+      @if ($disabled-grid-order-offset != true) {
 
-      .#{$p}#{$g}order#{$infix}-last { order: $columns + 1; }
+        .#{$p}#{$g}order#{$infix}-first { order: -1; }
 
-      @for $i from 0 through $columns {
-        .#{$p}#{$g}order#{$infix}-#{$i} { order: $i; }
-      }
+        .#{$p}#{$g}order#{$infix}-last { order: $columns + 1; }
 
-      @for $i from 0 through ($columns - 1) {
-        @if not ($infix == "" and $i == 0) {
-          .#{$p}#{$g}offset#{$infix}-#{$i} {
-            @include make-col-offset-flex($i, $columns);
+        @for $i from 0 through $columns {
+          .#{$p}#{$g}order#{$infix}-#{$i} { order: $i; }
+        }
+
+        @for $i from 0 through ($columns - 1) {
+          @if not ($infix == "" and $i == 0) {
+            .#{$p}#{$g}offset#{$infix}-#{$i} {
+              @include make-col-offset-flex($i, $columns);
+            }
           }
         }
+
       }
+
     }
   }
 }
