@@ -10,10 +10,10 @@ parent: btn
 
 ``` example
 <p>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-first">default</a>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-first #{$p}#{$m}btn-sm">#{$p}#{$m}btn-sm</a>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-first #{$p}#{$m}btn-lg">#{$p}#{$m}btn-lg</a>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-first #{$p}#{$m}btn-xl">#{$p}#{$m}btn-xl</a>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-#{$__first} #{$p}#{$m}btn-sm">#{$p}#{$m}btn-sm</a>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-#{$__first}">default</a>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-#{$__first} #{$p}#{$m}btn-lg">#{$p}#{$m}btn-lg</a>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-#{$__first} #{$p}#{$m}btn-xl">#{$p}#{$m}btn-xl</a>
 </p>
 ```
 */

@@ -1,3 +1,5 @@
+@if ($use-font-in-reliable == true) {
+
 /*doc
 ---
 title: #{$p}#{$u}font-(face)
@@ -24,7 +26,15 @@ name: font-02-bold
 category: utility-font
 ---
 
-ボールドフォントに変更する。日本語ウェブフォントサービスを利用した場合、font-weightだけではウェイトの変更ができないため、別途クラスが必要となる。
+ボールドフォントに変更する。
+
+### 補足：日本語ウェブフォントの仕様
+
+日本語ウェブフォントサービスを利用した場合、 <code>font-weight</code> だけではウェイトの変更ができないことがある。このため、別途クラスが必要となる。
+
+### Note: Web font in Japanese specification
+
+When using the Japanese web font service, font weight is may not be change with only <code> font-weight </code>. Therefore, a separate class is required.
 
 ``` example
 <p class="#{$p}#{$u}text-xl #{$p}#{$u}font-first #{$p}#{$u}font-bold">#{$p}#{$u}font-first_#{$p}#{$u}font-bold_デザインフォント01に変更しました</p>
@@ -40,7 +50,7 @@ category: utility-font
     font-family: $font-family-root;
     font-family: $font-weight-root;
 
-    & .#{$p}#{$u}font-bold {
+    &.#{$p}#{$u}font-bold {
         font-family: $font-family-bold-root;
         font-weight: $font-weight-bold-root;
     }
@@ -55,7 +65,7 @@ category: utility-font
     font-family: $font-family-first;
     font-weight: $font-weight-first;
 
-    & .#{$p}#{$u}font-bold {
+    &.#{$p}#{$u}font-bold {
         font-family: $font-family-bold-first;
         font-weight: $font-weight-bold-first;
     }
@@ -66,7 +76,7 @@ category: utility-font
     font-family: $font-family-second;
     font-weight: $font-weight-second;
 
-    & .#{$p}#{$u}font-bold {
+    &.#{$p}#{$u}font-bold {
         font-family: $font-family-bold-second;
         font-weight: $font-weight-bold-second;
     }
@@ -77,9 +87,12 @@ category: utility-font
     font-family: $font-family-third;
     font-weight: $font-weight-third;
 
-    & .#{$p}#{$u}font-bold {
+    &.#{$p}#{$u}font-bold {
         font-family: $font-family-bold-third;
         font-weight: $font-weight-bold-third;
     }
+
+}
+
 
 }

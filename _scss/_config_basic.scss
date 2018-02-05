@@ -34,43 +34,43 @@ $gray-fade:                 #eee !default;
 $first:                     #49d !default;
 $first-strong:              #2283cc !default;
 $first-text:                $first-strong !default;
-$first-mild:                lighten(desaturate($first, 5%), 10%) !default;
-$first-fade:                rgba($first, .2) !default;
+$first-mild:                lighten(desaturate($first, 2%), 8%) !default;
+$first-fade:                #d0e5fa !default;
 
 // second: secondary color
-$second:                    #444 !default;
-$second-strong:             #000 !default;
-$second-text:               #333 !default;
-$second-mild:               #777 !default;
-$second-fade:               #eaeaea !default;
+$second:                    #b17c38 !default;
+$second-strong:             #9c6723 !default;
+$second-text:               $second-strong !default;
+$second-mild:               #bf9867 !default;
+$second-fade:               #e8d9c6 !default;
 
 // third: tertiary color, or success color in system
 $third:                     #49b070 !default;
 $third-strong:              #229644 !default;
 $third-text:                $third-strong !default;
-$third-mild:                lighten(desaturate($third, 5%), 10%) !default;
-$third-fade:                rgba($third, .2) !default;
+$third-mild:                lighten(desaturate($third, 2%), 10%) !default;
+$third-fade:                #d5f0e1 !default;
 
 // fourth: fourth color, or warning color in system
-$fourth:                     #f38c10 !default;
-$fourth-strong:              #f37910 !default;
-$fourth-text:                $fourth-strong !default;
-$fourth-mild:                lighten(desaturate($fourth, 5%), 10%) !default;
-$fourth-fade:                rgba($fourth, .2) !default;
+$fourth:                    #f38c10 !default;
+$fourth-strong:             #f37910 !default;
+$fourth-text:               $fourth-strong !default;
+$fourth-mild:               lighten(desaturate($fourth, 5%), 10%) !default;
+$fourth-fade:               #ffe8cc !default;
 
-// fifth: fifth color, or information color in system
-$fifth:                    #49d !default;
-$fifth-strong:             #2283cc !default;
-$fifth-text:               $fifth-strong !default;
-$fifth-mild:               lighten(desaturate($fifth, 5%), 10%) !default;
-$fifth-fade:               rgba($fifth, .2) !default;
+// info: fifth color, or information color in system
+$info:                      #4ad !default;
+$info-strong:               #26a9d0 !default;
+$info-text:                 $info-strong !default;
+$info-mild:                 lighten(desaturate($info, 2%), 10%) !default;
+$info-fade:                 #d8f2f9 !default;
 
-// sixth: sixth color, or important(danger) color in system
-$sixth:                     #e33050 !default;
-$sixth-strong:              #d70022 !default;
-$sixth-text:                $sixth-strong !default;
-$sixth-mild:                lighten(desaturate($sixth, 2%), 10%) !default;
-$sixth-fade:                #ffe9ee !default;
+// important: sixth color, or important(danger) color in system
+$important:                 #e33050 !default;
+$important-strong:          #d70022 !default;
+$important-text:            $important-strong !default;
+$important-mild:            lighten(desaturate($important, 2%), 10%) !default;
+$important-fade:            #ffe3e9 !default;
 
 $body-bg:                   #fff !default;
 $body-color:                $gray !default;
@@ -80,23 +80,38 @@ $body-inverse-color:        #fff !default;
 $body-inverse-mild-color:   rgba($body-inverse-color, .75) !default;
 
 
+// Links
+// -----------------------------------------
+
+$link-color:                $first-text !default;
+$link-hover-color:          $first-mild !default;
+
+
 // Color Table
 // -----------------------------------------
 
-$__first:     "first" !default;
-$__second:    "second" !default;
-$__third:     "third" !default;
-$__fourth:    "fourth" !default;
-$__fifth:     "info" !default;
-$__sixth:     "important" !default;
+// $__gray:         "gray" !default;
+// $__gray_light:   "gray" !default;
+// $__inverse:      "inverse" !default;
+// $__inverse_bg:   "inverse" !default;
+// $__first:        "first" !default;
+// $__second:       "second" !default;
+// $__third:        "third" !default;
+// $__fourth:       "fourth" !default;
+// $__info:         "info" !default;
+// $__important:    "important" !default;
 
 // ex. Bootstrap compatible
-// $color-first:     "primary" !default;
-// $color-second:    "secondary" !default;
-// $color-third:     "success" !default;
-// $color-fourth:    "warning" !default;
-// $color-fifth:     "info" !default;
-// $color-sixth:     "danger" !default;
+$__gray:         "dark" !default;
+$__gray_light:   "light" !default;
+$__inverse:      "light" !default;
+$__inverse_bg:   "dark" !default;
+$__first:        "primary" !default;
+$__second:       "secondary" !default;
+$__third:        "success" !default;
+$__fourth:       "warning" !default;
+$__info:         "info" !default;
+$__important:    "danger" !default;
 
 
 // Border
@@ -119,6 +134,10 @@ $border-inverse-color:       #666666 !default;
 
 // Font family
 // -----------------------------------------
+
+// 確実なフォント設定を利用する場合は、値を「true」にする（CSSが冗長になる）
+// Set the value to "true" if you do want to use reliable font settings (CSS becomes redundant)
+$use-font-in-reliable: true !default;
 
 $font-family-root:             'Noto Sans Japanese', '-apple-system', 'BlinkMacSystemFont', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif !default;
 $font-weight-root:             300 !default;
@@ -166,13 +185,6 @@ $line-height-xs:            1.25 !default;
 $line-height-sm:            1.5 !default;
 $line-height-md:            1.75 !default;
 $line-height-lg:            2 !default;
-
-
-// Links
-// -----------------------------------------
-
-$link-color:                 $first-text !default;
-$link-hover-color:           $first-mild !default;
 
 
 // Navigation

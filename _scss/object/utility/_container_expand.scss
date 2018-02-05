@@ -10,10 +10,10 @@ category: utility-container-expand
 <code>.#{$p}#{$l}document</code> の幅制限を解除していると、横スクロールバーが表示されてしまう。
 
 ``` example
-<div class="#{$p}#{$l}container #{$p}#{$u}bg-first #{$p}#{$u}bg-mild #{$p}#{$u}m-b #{$p}#{$u}p">
+<div class="#{$p}#{$l}container #{$p}#{$u}bg-#{$__first} #{$p}#{$u}bg-mild #{$p}#{$u}m-b #{$p}#{$u}p">
     <div class="#{$p}#{$u}p-y #{$p}#{$u}line-c #{$p}#{$u}m-b" style="background-color: rgba(255,255,255,.5); color: #000">(#{$p}#{$l}container + contents)</div>
 
-    <div class="#{$p}#{$u}container-expand #{$p}#{$u}bg-third #{$p}#{$u}bg-mild">
+    <div class="#{$p}#{$u}container-expand #{$p}#{$u}bg-#{$__second} #{$p}#{$u}bg-mild">
         <div class="#{$p}#{$u}p-y #{$p}#{$u}line-c" style="background-color: rgba(255,255,255,.5); color: #000">(#{$p}#{$l}container + #{$p}#{$u}container-expand + contents)</div>
     </div>
 </div>

@@ -1,6 +1,6 @@
 /*doc
 ---
-title: #{$p}#{$m}btn-inverse
+title: #{$p}#{$m}btn-#{$__inverse}
 name: btn-03-inverse
 category: module-btn
 parent: btn
@@ -11,18 +11,18 @@ parent: btn
 
 ``` example
 <p class="#{$p}#{$u}bg-inverse #{$p}#{$u}p-y">
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-inverse">#{$p}#{$m}btn-inverse</a>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-inverse disabled">#{$p}#{$m}btn-inverse</a>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-#{$__inverse}">#{$p}#{$m}btn-#{$__inverse}</a>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-#{$__inverse} disabled">#{$p}#{$m}btn-#{$__inverse}</a>
 </p>
-<p class="#{$p}#{$u}bg-inverse #{$p}#{$u}p-y">
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-inverse">#{$p}#{$m}btn-outline + #{$p}#{$m}btn-inverse</a>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-inverse disabled">#{$p}#{$m}btn-outline + #{$p}#{$m}btn-inverse</a>
+<p class="#{$p}#{$u}bg-#{$__inverse} #{$p}#{$u}p-y">
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-#{$__inverse}">#{$p}#{$m}btn-outline + #{$p}#{$m}btn-#{$__inverse}</a>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-#{$__inverse} disabled">#{$p}#{$m}btn-outline + #{$p}#{$m}btn-#{$__inverse}</a>
 </p>
 ```
 
 */
 
-.#{$p}#{$m}btn-inverse {
+.#{$p}#{$m}btn-#{$__inverse} {
     @include button-variant(
         $body-inverse-color,
         rgba($body-inverse-color, .25),

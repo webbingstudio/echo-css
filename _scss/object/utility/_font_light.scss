@@ -1,3 +1,5 @@
+@if ($use-font-in-reliable != true) {
+
 /*doc
 ---
 title: #{$p}#{$u}font-(face)
@@ -35,4 +37,6 @@ category: utility-font
 
 .#{$p}#{$u}font-third {
     font-family: $font-family-third;
+}
+
 }

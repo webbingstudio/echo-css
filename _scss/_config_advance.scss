@@ -2,10 +2,15 @@
 // ========================================
 
 // Code Optimize
-// 使用頻度が少ないスタイル（小さすぎるグリッド、小さすぎる正方形ボタン等）を除外し、コードを最適化する
-// Optimize the code by excluding styles that are not used frequently (too small grids, too small square buttons, etc.)
 // -----------------------------------------
+
+// 使用頻度が少ないスタイル（小さすぎるグリッド等）を除外し、コードを最適化する
+// Optimize the code by excluding styles that are not used frequently (too small grids, etc.)
 $optimize: true !default;
+
+// グリッドの並び順・開始位置を指定するクラスを使用しない場合は、値を「true」にする
+// Set the value to "true" if you do not want to use a class that specifies the order and offset of the grid
+$disabled-grid-order-offset: false !default;
 
 
 // Prefix

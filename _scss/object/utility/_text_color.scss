@@ -8,13 +8,12 @@ category: utility-text
 文字色を変更する。(color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
 
 ``` example
-<p class="#{$p}#{$u}text-first">#{$p}#{$u}text-first_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="#{$p}#{$u}text-second">#{$p}#{$u}text-second_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="#{$p}#{$u}text-third">#{$p}#{$u}text-third_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="#{$p}#{$u}text-fourth">#{$p}#{$u}text-fourth_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="#{$p}#{$u}text-fifth">#{$p}#{$u}text-fifth_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="#{$p}#{$u}text-important">#{$p}#{$u}text-important_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="#{$p}#{$u}text-info">#{$p}#{$u}text-info_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$p}#{$u}text-#{$__first}">#{$p}#{$u}text-#{$__first}_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$p}#{$u}text-#{$__second}">#{$p}#{$u}text-#{$__second}_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$p}#{$u}text-#{$__third}">#{$p}#{$u}text-#{$__third}_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$p}#{$u}text-#{$__fourth}">#{$p}#{$u}text-#{$__fourth}_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$p}#{$u}text-#{$__info}">#{$p}#{$u}text-#{$__info}_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$p}#{$u}text-#{$__important}">#{$p}#{$u}text-#{$__important}_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
 ```
 */
 
@@ -30,18 +29,20 @@ category: utility-text
 
 ``` example
 <p class="text-mild">text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="text-first text-mild">text-first_text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="text-second text-mild">text-second_text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="text-third text-mild">text-third_text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="text-fourth text-mild">text-fourth_text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="text-fifth text-mild">text-fifth_text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="text-info text-mild">text-info_text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="text-important text-mild">text-important_text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="text-#{$__first} text-mild">text-#{$__first}_text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="text-#{$__second} text-mild">text-#{$__second}_text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="text-#{$__third} text-mild">text-#{$__third}_text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="text-#{$__fourth} text-mild">text-#{$__fourth}_text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="text-#{$__info} text-mild">text-#{$__info}_text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="text-#{$__important} text-mild">text-#{$__important}_text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
 ```
 */
 
+.#{$p}#{$u}text-mild {
+    color: $body-mild-color;
+}
 
-.#{$p}#{$u}text-first {
+.#{$p}#{$u}text-#{$__first} {
     color: $first-text;
 
     &.#{$p}#{$u}text-mild {
@@ -50,7 +51,7 @@ category: utility-text
 
 }
 
-.#{$p}#{$u}text-second {
+.#{$p}#{$u}text-#{$__second} {
     color: $second-text;
 
     &.#{$p}#{$u}text-mild {
@@ -59,7 +60,7 @@ category: utility-text
 
 }
 
-.#{$p}#{$u}text-third {
+.#{$p}#{$u}text-#{$__third} {
     color: $third-text;
 
     &.#{$p}#{$u}text-mild {
@@ -68,7 +69,7 @@ category: utility-text
 
 }
 
-.#{$p}#{$u}text-fourth {
+.#{$p}#{$u}text-#{$__fourth} {
     color: $fourth-text;
 
     &.#{$p}#{$u}text-mild {
@@ -77,16 +78,7 @@ category: utility-text
 
 }
 
-.#{$p}#{$u}text-fifth {
-    color: $fifth-text;
-
-    &.#{$p}#{$u}text-mild {
-        color: $fifth-mild;
-    }
-
-}
-
-.#{$p}#{$u}text-info {
+.#{$p}#{$u}text-#{$__info} {
     color: $info-text;
 
     &.#{$p}#{$u}text-mild {
@@ -95,17 +87,13 @@ category: utility-text
 
 }
 
-.#{$p}#{$u}text-important {
+.#{$p}#{$u}text-#{$__important} {
     color: $important-text;
 
     &.#{$p}#{$u}text-mild {
         color: $important-mild;
     }
 
-}
-
-.#{$p}#{$u}text-mild {
-    color: $body-mild-color;
 }
 
 
@@ -119,8 +107,9 @@ category: utility-text
 文字色をbody要素の文字色に戻す。
 
 ``` example
-<p class="#{$p}#{$u}text-important">ここの文字色はimportantですが、<span class="#{$p}#{$u}text-root">#{$p}#{$u}text-root_ここからbody要素の文字色に変更しました</span></p>
+<p class="#{$p}#{$u}text-first">ここは文字色が first ですが、<span class="#{$p}#{$u}text-root">#{$p}#{$u}text-root_ここからbody要素の文字色に変更しました</span></p>
 ```
+
 */
 
 .#{$p}#{$u}text-root {
@@ -131,21 +120,22 @@ category: utility-text
 
 /*doc
 ---
-title: #{$p}#{$u}text-inverse
+title: #{$p}#{$u}text-#{$__inverse}
 name: text-04-inverse
 category: utility-text
 ---
 
 文字色を反転する（背景色を文字色とする）。
 
+
 ``` example
-<div class="#{$p}#{$u}bg-inverse">
-    <p class="#{$p}#{$u}text-inverse">#{$p}#{$u}text-inverse_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<div class="#{$p}#{$u}bg-#{$__inverse}">
+    <p class="#{$p}#{$u}text-#{$__inverse}">#{$p}#{$u}text-#{$__inverse}_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
 </div>
 ```
 */
 
-.#{$p}#{$u}text-inverse {
+.#{$p}#{$u}text-#{$__inverse} {
     color: $body-inverse-color;
 
     &.#{$p}#{$u}text-mild {

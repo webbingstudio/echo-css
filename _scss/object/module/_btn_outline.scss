@@ -11,38 +11,38 @@ parent: btn
 
 ``` example
 <p>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-first">#{$p}#{$m}btn-first</a>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-first disabled">#{$p}#{$m}btn-first</a>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-#{$__gray}">#{$p}#{$m}btn-#{$__gray}</a>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-#{$__gray} disabled">#{$p}#{$m}btn-#{$__gray}</a>
 </p>
 
 <p>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-second">#{$p}#{$m}btn-second</a>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-second disabled">#{$p}#{$m}btn-second</a>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-#{$__first}">#{$p}#{$m}btn-#{$__first}</a>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-#{$__first} disabled">#{$p}#{$m}btn-#{$__first}</a>
 </p>
 
 <p>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-third">#{$p}#{$m}btn-third</a>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-third disabled">#{$p}#{$m}btn-third</a>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-#{$__second}">#{$p}#{$m}btn-#{$__second}</a>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-#{$__second} disabled">#{$p}#{$m}btn-#{$__second}</a>
 </p>
 
 <p>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-fourth">#{$p}#{$m}btn-fourth</a>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-fourth disabled">#{$p}#{$m}btn-fourth</a>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-#{$__third}">#{$p}#{$m}btn-#{$__third}</a>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-#{$__third} disabled">#{$p}#{$m}btn-#{$__third}</a>
 </p>
 
 <p>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-fifth">#{$p}#{$m}btn-fifth</a>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-fifth disabled">#{$p}#{$m}btn-fifth</a>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-#{$__fourth}">#{$p}#{$m}btn-#{$__fourth}</a>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-#{$__fourth} disabled">#{$p}#{$m}btn-#{$__fourth}</a>
 </p>
 
 <p>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-info">#{$p}#{$m}btn-info</a>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-info disabled">#{$p}#{$m}btn-info</a>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-#{$__info}">#{$p}#{$m}btn-#{$__info}</a>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-#{$__info} disabled">#{$p}#{$m}btn-#{$__info}</a>
 </p>
 
 <p>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-important">#{$p}#{$m}btn-important</a>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-important disabled">#{$p}#{$m}btn-important</a>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-#{$__important}">#{$p}#{$m}btn-#{$__important}</a>
+  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-#{$__important} disabled">#{$p}#{$m}btn-#{$__important}</a>
 </p>
 ```
 */
@@ -50,7 +50,18 @@ parent: btn
 .#{$p}#{$m}btn-outline {
     box-shadow: none;
 
-    &.#{$p}#{$m}btn-first {
+    &.#{$p}#{$m}btn-#{$__gray} {
+        @include button-variant(
+            inherit,
+            transparent,
+            $gray,
+            $body-inverse-color,
+            $gray,
+            transparent
+        );
+    }
+
+    &.#{$p}#{$m}btn-#{$__first} {
         @include button-variant(
             inherit,
             transparent,
@@ -61,7 +72,7 @@ parent: btn
         );
     }
 
-    &.#{$p}#{$m}btn-second {
+    &.#{$p}#{$m}btn-#{$__second} {
         @include button-variant(
             inherit,
             transparent,
@@ -72,7 +83,7 @@ parent: btn
         );
     }
 
-    &.#{$p}#{$m}btn-third {
+    &.#{$p}#{$m}btn-#{$__third} {
         @include button-variant(
             inherit,
             transparent,
@@ -83,7 +94,7 @@ parent: btn
         );
     }
 
-    &.#{$p}#{$m}btn-fourth {
+    &.#{$p}#{$m}btn-#{$__fourth} {
         @include button-variant(
             inherit,
             transparent,
@@ -94,18 +105,7 @@ parent: btn
         );
     }
 
-    &.#{$p}#{$m}btn-fifth {
-        @include button-variant(
-            inherit,
-            transparent,
-            $fifth,
-            $body-inverse-color,
-            $fifth,
-            transparent
-        );
-    }
-
-    &.#{$p}#{$m}btn-info {
+    &.#{$p}#{$m}btn-#{$__info} {
         @include button-variant(
             inherit,
             transparent,
@@ -116,7 +116,7 @@ parent: btn
         );
     }
 
-    &.#{$p}#{$m}btn-important {
+    &.#{$p}#{$m}btn-#{$__important} {
         @include button-variant(
             inherit,
             transparent,

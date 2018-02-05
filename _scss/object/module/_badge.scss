@@ -47,55 +47,55 @@ parent: badge
 
 ``` example
 <p>
-  <span class="#{$p}#{$m}badge #{$p}#{$m}badge-first">First</span>
-  <span class="#{$p}#{$m}badge #{$p}#{$m}badge-second">Second</span>
-  <span class="#{$p}#{$m}badge #{$p}#{$m}badge-third">Third</span>
-  <span class="#{$p}#{$m}badge #{$p}#{$m}badge-fourth">Fourth</span>
-  <span class="#{$p}#{$m}badge #{$p}#{$m}badge-fifth">Fifth</span>
-  <span class="#{$p}#{$m}badge #{$p}#{$m}badge-info">Info</span>
-  <span class="#{$p}#{$m}badge #{$p}#{$m}badge-important">Important</span>
+  <span class="#{$p}#{$m}badge #{$p}#{$m}badge-#{$__gray}">#{$__gray}</span>
+  <span class="#{$p}#{$m}badge #{$p}#{$m}badge-#{$__first}">#{$__first}</span>
+  <span class="#{$p}#{$m}badge #{$p}#{$m}badge-#{$__second}">#{$__second}</span>
+  <span class="#{$p}#{$m}badge #{$p}#{$m}badge-#{$__third}">#{$__third}</span>
+  <span class="#{$p}#{$m}badge #{$p}#{$m}badge-#{$__fourth}">#{$__fourth}</span>
+  <span class="#{$p}#{$m}badge #{$p}#{$m}badge-#{$__info}">#{$__info}</span>
+  <span class="#{$p}#{$m}badge #{$p}#{$m}badge-#{$__important}">#{$__important}</span>
 </p>
 ```
 
 */
 
-.#{$p}#{$m}badge-first {
+.#{$p}#{$m}badge-#{$__gray} {
+    color: $body-inverse-color;
+    border-color: $gray;
+    background-color: $gray;
+}
+
+.#{$p}#{$m}badge-#{$__first} {
     color: $body-inverse-color;
     border-color: $first;
     background-color: $first;
 }
 
-.#{$p}#{$m}badge-second {
+.#{$p}#{$m}badge-#{$__second} {
     color: $body-inverse-color;
     border-color: $second;
     background-color: $second;
 }
 
-.#{$p}#{$m}badge-third {
+.#{$p}#{$m}badge-#{$__third} {
     color: $body-inverse-color;
     border-color: $third;
     background-color: $third;
 }
 
-.#{$p}#{$m}badge-fourth {
+.#{$p}#{$m}badge-#{$__fourth} {
     color: $body-inverse-color;
     border-color: $fourth;
     background-color: $fourth;
 }
 
-.#{$p}#{$m}badge-fifth {
+.#{$p}#{$m}badge-#{$__info} {
     color: $body-inverse-color;
-    border-color: $fifth;
-    background-color: $fifth;
+    border-color: $info;
+    background-color: $info;
 }
 
-.#{$p}#{$m}badge-info {
-    color: $body-inverse-color;
-    border-color: $third;
-    background-color: $third;
-}
-
-.#{$p}#{$m}badge-important {
+.#{$p}#{$m}badge-#{$__important} {
     color: $body-inverse-color;
     border-color: $important;
     background-color: $important;
