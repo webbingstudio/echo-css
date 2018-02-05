@@ -1,3 +1,5 @@
+@if ($disabled-utility-class != true) {
+
 /*doc
 ---
 title: #{$p}#{$u}shadow-(size)
@@ -40,4 +42,7 @@ category: utility-shadow
     box-shadow:
         0 2px 4px rgba(0, 0, 0, 0.1),
         2px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
 }

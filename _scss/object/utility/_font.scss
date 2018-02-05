@@ -1,3 +1,4 @@
+@if ($disabled-utility-class != true) {
 @if ($use-font-in-reliable == true) {
 
 /*doc
@@ -95,4 +96,5 @@ When using the Japanese web font service, font weight is may not be change with 
 }
 
 
+}
 }

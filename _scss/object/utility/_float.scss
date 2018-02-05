@@ -1,3 +1,5 @@
+@if ($disabled-utility-class != true) {
+
 /*doc
 ---
 title: #{$p}#{$u}float-(direction)
@@ -45,4 +47,7 @@ category: utility-float
 
 .#{$p}#{$u}float-r {
 	float: right;
+}
+
+
 }

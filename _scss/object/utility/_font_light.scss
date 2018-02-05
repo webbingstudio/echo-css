@@ -1,3 +1,4 @@
+@if ($disabled-utility-class != true) {
 @if ($use-font-in-reliable != true) {
 
 /*doc
@@ -39,4 +40,6 @@ category: utility-font
     font-family: $font-family-third;
 }
 
+
+}
 }

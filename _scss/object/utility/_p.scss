@@ -1,3 +1,5 @@
+@if ($disabled-utility-class != true) {
+
 /*doc
 ---
 title: #{$p}#{$u}p-(direction)-(size)
@@ -8,41 +10,41 @@ category: utility-p
 ブロック要素の内部余白を変更する。
 
 ``` example
-<div class="#{$p}p-xs #{$p}#{$u}bg-third #{$p}#{$u}bg-fade #{$p}#{$u}m-b-xs"><div style="border: 1px solid #ccc;">#{$p}#{$u}p-xs</div></div>
-<div class="#{$p}p-t-xs #{$p}#{$u}bg-third #{$p}#{$u}bg-fade #{$p}#{$u}m-b-xs"><div style="border: 1px solid #ccc;">#{$p}#{$u}p-t-xs</div></div>
-<div class="#{$p}p-r-xs #{$p}#{$u}bg-third #{$p}#{$u}bg-fade #{$p}#{$u}m-b-xs"><div style="border: 1px solid #ccc;">#{$p}#{$u}p-r-xs</div></div>
-<div class="#{$p}p-b-xs #{$p}#{$u}bg-third #{$p}#{$u}bg-fade #{$p}#{$u}m-b-xs"><div style="border: 1px solid #ccc;">#{$p}#{$u}p-b-xs</div></div>
-<div class="#{$p}p-l-xs #{$p}#{$u}bg-third #{$p}#{$u}bg-fade #{$p}#{$u}m-b-xs"><div style="border: 1px solid #ccc;">#{$p}#{$u}p-l-xs</div></div>
+<div class="#{$p}p-xs #{$p}#{$u}bg-#{$__second} #{$p}#{$u}bg-fade #{$p}#{$u}m-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$p}#{$u}p-xs</div></div>
+<div class="#{$p}p-t-xs #{$p}#{$u}bg-#{$__second} #{$p}#{$u}bg-fade #{$p}#{$u}m-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$p}#{$u}p-t-xs</div></div>
+<div class="#{$p}p-r-xs #{$p}#{$u}bg-#{$__second} #{$p}#{$u}bg-fade #{$p}#{$u}m-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$p}#{$u}p-r-xs</div></div>
+<div class="#{$p}p-b-xs #{$p}#{$u}bg-#{$__second} #{$p}#{$u}bg-fade #{$p}#{$u}m-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$p}#{$u}p-b-xs</div></div>
+<div class="#{$p}p-l-xs #{$p}#{$u}bg-#{$__second} #{$p}#{$u}bg-fade #{$p}#{$u}m-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$p}#{$u}p-l-xs</div></div>
 
-<div class="#{$p}p-sm #{$p}#{$u}bg-third #{$p}#{$u}bg-fade #{$p}#{$u}m-b-xs"><div style="border: 1px solid #ccc;">#{$p}#{$u}p-sm</div></div>
-<div class="#{$p}p-t-sm #{$p}#{$u}bg-third #{$p}#{$u}bg-fade #{$p}#{$u}m-b-xs"><div style="border: 1px solid #ccc;">#{$p}#{$u}p-t-sm</div></div>
-<div class="#{$p}p-r-sm #{$p}#{$u}bg-third #{$p}#{$u}bg-fade #{$p}#{$u}m-b-xs"><div style="border: 1px solid #ccc;">#{$p}#{$u}p-r-sm</div></div>
-<div class="#{$p}p-b-sm #{$p}#{$u}bg-third #{$p}#{$u}bg-fade #{$p}#{$u}m-b-xs"><div style="border: 1px solid #ccc;">#{$p}#{$u}p-b-sm</div></div>
-<div class="#{$p}p-l-sm #{$p}#{$u}bg-third #{$p}#{$u}bg-fade #{$p}#{$u}m-b-xs"><div style="border: 1px solid #ccc;">#{$p}#{$u}p-l-sm</div></div>
+<div class="#{$p}p-sm #{$p}#{$u}bg-#{$__second} #{$p}#{$u}bg-fade #{$p}#{$u}m-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$p}#{$u}p-sm</div></div>
+<div class="#{$p}p-t-sm #{$p}#{$u}bg-#{$__second} #{$p}#{$u}bg-fade #{$p}#{$u}m-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$p}#{$u}p-t-sm</div></div>
+<div class="#{$p}p-r-sm #{$p}#{$u}bg-#{$__second} #{$p}#{$u}bg-fade #{$p}#{$u}m-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$p}#{$u}p-r-sm</div></div>
+<div class="#{$p}p-b-sm #{$p}#{$u}bg-#{$__second} #{$p}#{$u}bg-fade #{$p}#{$u}m-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$p}#{$u}p-b-sm</div></div>
+<div class="#{$p}p-l-sm #{$p}#{$u}bg-#{$__second} #{$p}#{$u}bg-fade #{$p}#{$u}m-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$p}#{$u}p-l-sm</div></div>
 
-<div class="#{$p}p #{$p}#{$u}bg-third #{$p}#{$u}bg-fade #{$p}#{$u}m-b-xs"><div style="border: 1px solid #ccc;">#{$p}#{$u}p</div></div>
-<div class="#{$p}p-t #{$p}#{$u}bg-third #{$p}#{$u}bg-fade #{$p}#{$u}m-b-xs"><div style="border: 1px solid #ccc;">#{$p}#{$u}p-t</div></div>
-<div class="#{$p}p-r #{$p}#{$u}bg-third #{$p}#{$u}bg-fade #{$p}#{$u}m-b-xs"><div style="border: 1px solid #ccc;">#{$p}#{$u}p-r</div></div>
-<div class="#{$p}p-b #{$p}#{$u}bg-third #{$p}#{$u}bg-fade #{$p}#{$u}m-b-xs"><div style="border: 1px solid #ccc;">#{$p}#{$u}p-b</div></div>
-<div class="#{$p}p-l #{$p}#{$u}bg-third #{$p}#{$u}bg-fade #{$p}#{$u}m-b-xs"><div style="border: 1px solid #ccc;">#{$p}#{$u}p-l</div></div>
+<div class="#{$p}p #{$p}#{$u}bg-#{$__second} #{$p}#{$u}bg-fade #{$p}#{$u}m-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$p}#{$u}p</div></div>
+<div class="#{$p}p-t #{$p}#{$u}bg-#{$__second} #{$p}#{$u}bg-fade #{$p}#{$u}m-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$p}#{$u}p-t</div></div>
+<div class="#{$p}p-r #{$p}#{$u}bg-#{$__second} #{$p}#{$u}bg-fade #{$p}#{$u}m-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$p}#{$u}p-r</div></div>
+<div class="#{$p}p-b #{$p}#{$u}bg-#{$__second} #{$p}#{$u}bg-fade #{$p}#{$u}m-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$p}#{$u}p-b</div></div>
+<div class="#{$p}p-l #{$p}#{$u}bg-#{$__second} #{$p}#{$u}bg-fade #{$p}#{$u}m-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$p}#{$u}p-l</div></div>
 
-<div class="#{$p}p-lg #{$p}#{$u}bg-third #{$p}#{$u}bg-fade #{$p}#{$u}m-b-xs"><div style="border: 1px solid #ccc;">#{$p}#{$u}p-lg</div></div>
-<div class="#{$p}p-t-lg #{$p}#{$u}bg-third #{$p}#{$u}bg-fade #{$p}#{$u}m-b-xs"><div style="border: 1px solid #ccc;">#{$p}#{$u}p-t-lg</div></div>
-<div class="#{$p}p-r-lg #{$p}#{$u}bg-third #{$p}#{$u}bg-fade #{$p}#{$u}m-b-xs"><div style="border: 1px solid #ccc;">#{$p}#{$u}p-r-lg</div></div>
-<div class="#{$p}p-b-lg #{$p}#{$u}bg-third #{$p}#{$u}bg-fade #{$p}#{$u}m-b-xs"><div style="border: 1px solid #ccc;">#{$p}#{$u}p-b-lg</div></div>
-<div class="#{$p}p-l-lg #{$p}#{$u}bg-third #{$p}#{$u}bg-fade #{$p}#{$u}m-b-xs"><div style="border: 1px solid #ccc;">#{$p}#{$u}p-l-lg</div></div>
+<div class="#{$p}p-lg #{$p}#{$u}bg-#{$__second} #{$p}#{$u}bg-fade #{$p}#{$u}m-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$p}#{$u}p-lg</div></div>
+<div class="#{$p}p-t-lg #{$p}#{$u}bg-#{$__second} #{$p}#{$u}bg-fade #{$p}#{$u}m-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$p}#{$u}p-t-lg</div></div>
+<div class="#{$p}p-r-lg #{$p}#{$u}bg-#{$__second} #{$p}#{$u}bg-fade #{$p}#{$u}m-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$p}#{$u}p-r-lg</div></div>
+<div class="#{$p}p-b-lg #{$p}#{$u}bg-#{$__second} #{$p}#{$u}bg-fade #{$p}#{$u}m-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$p}#{$u}p-b-lg</div></div>
+<div class="#{$p}p-l-lg #{$p}#{$u}bg-#{$__second} #{$p}#{$u}bg-fade #{$p}#{$u}m-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$p}#{$u}p-l-lg</div></div>
 
-<div class="#{$p}p-xl #{$p}#{$u}bg-third #{$p}#{$u}bg-fade #{$p}#{$u}m-b-xs"><div style="border: 1px solid #ccc;">#{$p}#{$u}p-xl</div></div>
-<div class="#{$p}p-t-xl #{$p}#{$u}bg-third #{$p}#{$u}bg-fade #{$p}#{$u}m-b-xs"><div style="border: 1px solid #ccc;">#{$p}#{$u}p-t-xl</div></div>
-<div class="#{$p}p-r-xl #{$p}#{$u}bg-third #{$p}#{$u}bg-fade #{$p}#{$u}m-b-xs"><div style="border: 1px solid #ccc;">#{$p}#{$u}p-r-xl</div></div>
-<div class="#{$p}p-b-xl #{$p}#{$u}bg-third #{$p}#{$u}bg-fade #{$p}#{$u}m-b-xs"><div style="border: 1px solid #ccc;">#{$p}#{$u}p-b-xl</div></div>
-<div class="#{$p}p-l-xl #{$p}#{$u}bg-third #{$p}#{$u}bg-fade #{$p}#{$u}m-b-xs"><div style="border: 1px solid #ccc;">#{$p}#{$u}p-l-xl</div></div>
+<div class="#{$p}p-xl #{$p}#{$u}bg-#{$__second} #{$p}#{$u}bg-fade #{$p}#{$u}m-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$p}#{$u}p-xl</div></div>
+<div class="#{$p}p-t-xl #{$p}#{$u}bg-#{$__second} #{$p}#{$u}bg-fade #{$p}#{$u}m-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$p}#{$u}p-t-xl</div></div>
+<div class="#{$p}p-r-xl #{$p}#{$u}bg-#{$__second} #{$p}#{$u}bg-fade #{$p}#{$u}m-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$p}#{$u}p-r-xl</div></div>
+<div class="#{$p}p-b-xl #{$p}#{$u}bg-#{$__second} #{$p}#{$u}bg-fade #{$p}#{$u}m-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$p}#{$u}p-b-xl</div></div>
+<div class="#{$p}p-l-xl #{$p}#{$u}bg-#{$__second} #{$p}#{$u}bg-fade #{$p}#{$u}m-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$p}#{$u}p-l-xl</div></div>
 
-<div class="#{$p}p-xxl #{$p}#{$u}bg-third #{$p}#{$u}bg-fade #{$p}#{$u}m-b-xs"><div style="border: 1px solid #ccc;">#{$p}#{$u}p-xxl</div></div>
-<div class="#{$p}p-t-xxl #{$p}#{$u}bg-third #{$p}#{$u}bg-fade #{$p}#{$u}m-b-xs"><div style="border: 1px solid #ccc;">#{$p}#{$u}p-t-xxl</div></div>
-<div class="#{$p}p-r-xxl #{$p}#{$u}bg-third #{$p}#{$u}bg-fade #{$p}#{$u}m-b-xs"><div style="border: 1px solid #ccc;">#{$p}#{$u}p-r-xxl</div></div>
-<div class="#{$p}p-b-xxl #{$p}#{$u}bg-third #{$p}#{$u}bg-fade #{$p}#{$u}m-b-xs"><div style="border: 1px solid #ccc;">#{$p}#{$u}p-b-xxl</div></div>
-<div class="#{$p}p-l-xxl #{$p}#{$u}bg-third #{$p}#{$u}bg-fade #{$p}#{$u}m-b-xs"><div style="border: 1px solid #ccc;">#{$p}#{$u}p-l-xxl</div></div>
+<div class="#{$p}p-xxl #{$p}#{$u}bg-#{$__second} #{$p}#{$u}bg-fade #{$p}#{$u}m-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$p}#{$u}p-xxl</div></div>
+<div class="#{$p}p-t-xxl #{$p}#{$u}bg-#{$__second} #{$p}#{$u}bg-fade #{$p}#{$u}m-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$p}#{$u}p-t-xxl</div></div>
+<div class="#{$p}p-r-xxl #{$p}#{$u}bg-#{$__second} #{$p}#{$u}bg-fade #{$p}#{$u}m-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$p}#{$u}p-r-xxl</div></div>
+<div class="#{$p}p-b-xxl #{$p}#{$u}bg-#{$__second} #{$p}#{$u}bg-fade #{$p}#{$u}m-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$p}#{$u}p-b-xxl</div></div>
+<div class="#{$p}p-l-xxl #{$p}#{$u}bg-#{$__second} #{$p}#{$u}bg-fade #{$p}#{$u}m-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$p}#{$u}p-l-xxl</div></div>
 ```
 */
 
@@ -101,3 +103,6 @@ category: utility-p
 .#{$p}#{$u}p-l-xxl { padding-left:   ($spacer * 6) }
 .#{$p}#{$u}p-x-xxl { padding-right:  ($spacer * 6); padding-left:   ($spacer * 6) }
 .#{$p}#{$u}p-y-xxl { padding-top:    ($spacer * 6); padding-bottom: ($spacer * 6) }
+
+
+}

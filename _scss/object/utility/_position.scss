@@ -1,3 +1,5 @@
+@if ($disabled-utility-class != true) {
+
 /*doc
 ---
 title: #{$p}#{$u}position-(y)-(x)
@@ -111,3 +113,5 @@ category: utility-position
     right: 0;
 }
 
+
+}
