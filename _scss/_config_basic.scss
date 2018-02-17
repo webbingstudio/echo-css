@@ -26,29 +26,29 @@ $spacer:                     10px !default;
 // gray: greyscale color
 $gray:                      #333 !default;
 $gray-strong:               #000 !default;
-$gray-mild:                 #777 !default;
+$gray-mild:                 #888 !default;
 $gray-milder:               #bbb !default;
 $gray-fade:                 #eee !default;
 
 // first: primary color
-$first:                     #49d !default;
-$first-strong:              #2283cc !default;
+$first:                     #1976d2 !default;
+$first-strong:              #096ed2 !default;
 $first-text:                $first-strong !default;
-$first-mild:                lighten(desaturate($first, 2%), 8%) !default;
-$first-fade:                #d0e5fa !default;
+$first-mild:                #4690da !default;
+$first-fade:                #d7e7f7 !default;
 
 // second: secondary color
-$second:                    #b17c38 !default;
-$second-strong:             #9c6723 !default;
+$second:                    #3cade6 !default;
+$second-strong:             #26a9d0 !default;
 $second-text:               $second-strong !default;
-$second-mild:               #bf9867 !default;
-$second-fade:               #e8d9c6 !default;
+$second-mild:               #6bb9ea !default;
+$second-fade:               #d8f0f7 !default;
 
 // third: tertiary color, or success color in system
 $third:                     #49b070 !default;
 $third-strong:              #229644 !default;
 $third-text:                $third-strong !default;
-$third-mild:                lighten(desaturate($third, 2%), 10%) !default;
+$third-mild:                #70b98c !default;
 $third-fade:                #d5f0e1 !default;
 
 // fourth: fourth color, or warning color in system
@@ -56,14 +56,14 @@ $fourth:                    #f38c10 !default;
 $fourth-strong:             #f37910 !default;
 $fourth-text:               $fourth-strong !default;
 $fourth-mild:               lighten(desaturate($fourth, 5%), 10%) !default;
-$fourth-fade:               #ffe8cc !default;
+$fourth-fade:               #ffeccc !default;
 
 // info: fifth color, or information color in system
-$info:                      #4ad !default;
+$info:                      #3cade6 !default;
 $info-strong:               #26a9d0 !default;
 $info-text:                 $info-strong !default;
-$info-mild:                 lighten(desaturate($info, 2%), 10%) !default;
-$info-fade:                 #d8f2f9 !default;
+$info-mild:                 #6bb9ea !default;
+$info-fade:                 #d8f0f7 !default;
 
 // important: sixth color, or important(danger) color in system
 $important:                 #e33050 !default;

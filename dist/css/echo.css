@@ -181,11 +181,11 @@ It is not appropriate to specify color or text-decoration for the link only with
 --------------------
 */
 a {
-  color: #2283cc;
+  color: #096ed2;
   text-decoration: underline;
 }
 a:hover, a:focus {
-  color: #68ace1;
+  color: #4690da;
   text-decoration: none;
 }
 
@@ -2184,14 +2184,14 @@ parent: badge
 
 .m-badge-first {
   color: #fff;
-  border-color: #49d;
-  background-color: #49d;
+  border-color: #1976d2;
+  background-color: #1976d2;
 }
 
 .m-badge-second {
   color: #fff;
-  border-color: #b17c38;
-  background-color: #b17c38;
+  border-color: #3cade6;
+  background-color: #3cade6;
 }
 
 .m-badge-third {
@@ -2208,8 +2208,8 @@ parent: badge
 
 .m-badge-info {
   color: #fff;
-  border-color: #4ad;
-  background-color: #4ad;
+  border-color: #3cade6;
+  background-color: #3cade6;
 }
 
 .m-badge-important {
@@ -2317,7 +2317,7 @@ category: module-btn
 parent: btn
 ---
 
-ボタンの色を変更する。(color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル}</a>を参照。
+ボタンの色を変更する。(color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
 
 ``` example
 <p>
@@ -2383,12 +2383,12 @@ a:hover .m-btn-gray, a:focus .m-btn-gray, a:active .m-btn-gray {
 
 .m-btn-first {
   color: #fff;
-  background-color: #49d;
+  background-color: #1976d2;
   border-color: transparent;
 }
 .m-btn-first:hover, .m-btn-first:focus, .m-btn-first:active, .m-btn-first.active {
   color: #fff;
-  background-color: #2283cc;
+  background-color: #096ed2;
   border-color: transparent;
 }
 .m-btn-first.disabled, .m-btn-first:disabled, fieldset[disabled] .m-btn-first {
@@ -2396,23 +2396,23 @@ a:hover .m-btn-gray, a:focus .m-btn-gray, a:active .m-btn-gray {
 }
 .m-btn-first.disabled:hover, .m-btn-first.disabled.hover, .m-btn-first.disabled:focus, .m-btn-first.disabled.focus, .m-btn-first:disabled:hover, .m-btn-first:disabled.hover, .m-btn-first:disabled:focus, .m-btn-first:disabled.focus, fieldset[disabled] .m-btn-first:hover, fieldset[disabled] .m-btn-first.hover, fieldset[disabled] .m-btn-first:focus, fieldset[disabled] .m-btn-first.focus {
   color: #fff;
-  background-color: #49d;
+  background-color: #1976d2;
   border-color: transparent;
 }
 a:hover .m-btn-first, a:focus .m-btn-first, a:active .m-btn-first {
   color: #fff;
-  background-color: #2283cc;
+  background-color: #096ed2;
   border-color: transparent;
 }
 
 .m-btn-second {
   color: #fff;
-  background-color: #b17c38;
+  background-color: #3cade6;
   border-color: transparent;
 }
 .m-btn-second:hover, .m-btn-second:focus, .m-btn-second:active, .m-btn-second.active {
   color: #fff;
-  background-color: #9c6723;
+  background-color: #26a9d0;
   border-color: transparent;
 }
 .m-btn-second.disabled, .m-btn-second:disabled, fieldset[disabled] .m-btn-second {
@@ -2420,12 +2420,12 @@ a:hover .m-btn-first, a:focus .m-btn-first, a:active .m-btn-first {
 }
 .m-btn-second.disabled:hover, .m-btn-second.disabled.hover, .m-btn-second.disabled:focus, .m-btn-second.disabled.focus, .m-btn-second:disabled:hover, .m-btn-second:disabled.hover, .m-btn-second:disabled:focus, .m-btn-second:disabled.focus, fieldset[disabled] .m-btn-second:hover, fieldset[disabled] .m-btn-second.hover, fieldset[disabled] .m-btn-second:focus, fieldset[disabled] .m-btn-second.focus {
   color: #fff;
-  background-color: #b17c38;
+  background-color: #3cade6;
   border-color: transparent;
 }
 a:hover .m-btn-second, a:focus .m-btn-second, a:active .m-btn-second {
   color: #fff;
-  background-color: #9c6723;
+  background-color: #26a9d0;
   border-color: transparent;
 }
 
@@ -2479,7 +2479,7 @@ a:hover .m-btn-fourth, a:focus .m-btn-fourth, a:active .m-btn-fourth {
 
 .m-btn-info {
   color: #fff;
-  background-color: #4ad;
+  background-color: #3cade6;
   border-color: transparent;
 }
 .m-btn-info:hover, .m-btn-info:focus, .m-btn-info:active, .m-btn-info.active {
@@ -2492,7 +2492,7 @@ a:hover .m-btn-fourth, a:focus .m-btn-fourth, a:active .m-btn-fourth {
 }
 .m-btn-info.disabled:hover, .m-btn-info.disabled.hover, .m-btn-info.disabled:focus, .m-btn-info.disabled.focus, .m-btn-info:disabled:hover, .m-btn-info:disabled.hover, .m-btn-info:disabled:focus, .m-btn-info:disabled.focus, fieldset[disabled] .m-btn-info:hover, fieldset[disabled] .m-btn-info.hover, fieldset[disabled] .m-btn-info:focus, fieldset[disabled] .m-btn-info.focus {
   color: #fff;
-  background-color: #4ad;
+  background-color: #3cade6;
   border-color: transparent;
 }
 a:hover .m-btn-info, a:focus .m-btn-info, a:active .m-btn-info {
@@ -2672,11 +2672,11 @@ a:hover .m-btn-outline.m-btn-gray, a:focus .m-btn-outline.m-btn-gray, a:active .
 .m-btn-outline.m-btn-first {
   color: inherit;
   background-color: transparent;
-  border-color: #49d;
+  border-color: #1976d2;
 }
 .m-btn-outline.m-btn-first:hover, .m-btn-outline.m-btn-first:focus, .m-btn-outline.m-btn-first:active, .m-btn-outline.m-btn-first.active {
   color: #fff;
-  background-color: #49d;
+  background-color: #1976d2;
   border-color: transparent;
 }
 .m-btn-outline.m-btn-first.disabled, .m-btn-outline.m-btn-first:disabled, fieldset[disabled] .m-btn-outline.m-btn-first {
@@ -2685,21 +2685,21 @@ a:hover .m-btn-outline.m-btn-gray, a:focus .m-btn-outline.m-btn-gray, a:active .
 .m-btn-outline.m-btn-first.disabled:hover, .m-btn-outline.m-btn-first.disabled.hover, .m-btn-outline.m-btn-first.disabled:focus, .m-btn-outline.m-btn-first.disabled.focus, .m-btn-outline.m-btn-first:disabled:hover, .m-btn-outline.m-btn-first:disabled.hover, .m-btn-outline.m-btn-first:disabled:focus, .m-btn-outline.m-btn-first:disabled.focus, fieldset[disabled] .m-btn-outline.m-btn-first:hover, fieldset[disabled] .m-btn-outline.m-btn-first.hover, fieldset[disabled] .m-btn-outline.m-btn-first:focus, fieldset[disabled] .m-btn-outline.m-btn-first.focus {
   color: inherit;
   background-color: transparent;
-  border-color: #49d;
+  border-color: #1976d2;
 }
 a:hover .m-btn-outline.m-btn-first, a:focus .m-btn-outline.m-btn-first, a:active .m-btn-outline.m-btn-first {
   color: #fff;
-  background-color: #49d;
+  background-color: #1976d2;
   border-color: transparent;
 }
 .m-btn-outline.m-btn-second {
   color: inherit;
   background-color: transparent;
-  border-color: #b17c38;
+  border-color: #3cade6;
 }
 .m-btn-outline.m-btn-second:hover, .m-btn-outline.m-btn-second:focus, .m-btn-outline.m-btn-second:active, .m-btn-outline.m-btn-second.active {
   color: #fff;
-  background-color: #b17c38;
+  background-color: #3cade6;
   border-color: transparent;
 }
 .m-btn-outline.m-btn-second.disabled, .m-btn-outline.m-btn-second:disabled, fieldset[disabled] .m-btn-outline.m-btn-second {
@@ -2708,11 +2708,11 @@ a:hover .m-btn-outline.m-btn-first, a:focus .m-btn-outline.m-btn-first, a:active
 .m-btn-outline.m-btn-second.disabled:hover, .m-btn-outline.m-btn-second.disabled.hover, .m-btn-outline.m-btn-second.disabled:focus, .m-btn-outline.m-btn-second.disabled.focus, .m-btn-outline.m-btn-second:disabled:hover, .m-btn-outline.m-btn-second:disabled.hover, .m-btn-outline.m-btn-second:disabled:focus, .m-btn-outline.m-btn-second:disabled.focus, fieldset[disabled] .m-btn-outline.m-btn-second:hover, fieldset[disabled] .m-btn-outline.m-btn-second.hover, fieldset[disabled] .m-btn-outline.m-btn-second:focus, fieldset[disabled] .m-btn-outline.m-btn-second.focus {
   color: inherit;
   background-color: transparent;
-  border-color: #b17c38;
+  border-color: #3cade6;
 }
 a:hover .m-btn-outline.m-btn-second, a:focus .m-btn-outline.m-btn-second, a:active .m-btn-outline.m-btn-second {
   color: #fff;
-  background-color: #b17c38;
+  background-color: #3cade6;
   border-color: transparent;
 }
 .m-btn-outline.m-btn-third {
@@ -2764,11 +2764,11 @@ a:hover .m-btn-outline.m-btn-fourth, a:focus .m-btn-outline.m-btn-fourth, a:acti
 .m-btn-outline.m-btn-info {
   color: inherit;
   background-color: transparent;
-  border-color: #4ad;
+  border-color: #3cade6;
 }
 .m-btn-outline.m-btn-info:hover, .m-btn-outline.m-btn-info:focus, .m-btn-outline.m-btn-info:active, .m-btn-outline.m-btn-info.active {
   color: #fff;
-  background-color: #4ad;
+  background-color: #3cade6;
   border-color: transparent;
 }
 .m-btn-outline.m-btn-info.disabled, .m-btn-outline.m-btn-info:disabled, fieldset[disabled] .m-btn-outline.m-btn-info {
@@ -2777,11 +2777,11 @@ a:hover .m-btn-outline.m-btn-fourth, a:focus .m-btn-outline.m-btn-fourth, a:acti
 .m-btn-outline.m-btn-info.disabled:hover, .m-btn-outline.m-btn-info.disabled.hover, .m-btn-outline.m-btn-info.disabled:focus, .m-btn-outline.m-btn-info.disabled.focus, .m-btn-outline.m-btn-info:disabled:hover, .m-btn-outline.m-btn-info:disabled.hover, .m-btn-outline.m-btn-info:disabled:focus, .m-btn-outline.m-btn-info:disabled.focus, fieldset[disabled] .m-btn-outline.m-btn-info:hover, fieldset[disabled] .m-btn-outline.m-btn-info.hover, fieldset[disabled] .m-btn-outline.m-btn-info:focus, fieldset[disabled] .m-btn-outline.m-btn-info.focus {
   color: inherit;
   background-color: transparent;
-  border-color: #4ad;
+  border-color: #3cade6;
 }
 a:hover .m-btn-outline.m-btn-info, a:focus .m-btn-outline.m-btn-info, a:active .m-btn-outline.m-btn-info {
   color: #fff;
-  background-color: #4ad;
+  background-color: #3cade6;
   border-color: transparent;
 }
 .m-btn-outline.m-btn-important {
@@ -3319,7 +3319,7 @@ category: module-label
   -webkit-transform: translate(0, -0.125rem);
   -ms-transform: translate(0, -0.125rem);
   transform: translate(0, -0.125rem);
-  background-color: #777;
+  background-color: #888;
   font-size: 0.75rem;
   color: #fff;
   text-align: center;
@@ -3361,7 +3361,7 @@ parent: label
 }
 
 .m-label-second {
-  background-color: #b17c38;
+  background-color: #3cade6;
 }
 
 .m-label-third {
@@ -3373,7 +3373,7 @@ parent: label
 }
 
 .m-label-info {
-  background-color: #4ad;
+  background-color: #3cade6;
 }
 
 .m-label-important {
@@ -3419,10 +3419,10 @@ a.m-label-inverse.m-label-first {
   color: first-text;
 }
 .m-label-inverse.m-label-second {
-  color: #9c6723;
+  color: #26a9d0;
 }
 a.m-label-inverse.m-label-second {
-  color: #9c6723;
+  color: #26a9d0;
 }
 .m-label-inverse.m-label-third {
   color: #229644;
@@ -4700,33 +4700,33 @@ parent: alert
 
 */
 .c-alert-first {
-  color: #2283cc;
-  border-color: #68ace1;
-  background-color: #d0e5fa;
+  color: #096ed2;
+  border-color: #4690da;
+  background-color: #d7e7f7;
 }
 
 .c-alert-second {
-  color: #9c6723;
-  border-color: #bf9867;
-  background-color: #e8d9c6;
+  color: #26a9d0;
+  border-color: #6bb9ea;
+  background-color: #d8f0f7;
 }
 
 .c-alert-third {
   color: #229644;
-  border-color: #6dbf8c;
+  border-color: #70b98c;
   background-color: #d5f0e1;
 }
 
 .c-alert-fourth {
   color: #f37910;
   border-color: #f0a346;
-  background-color: #ffe8cc;
+  background-color: #ffeccc;
 }
 
 .c-alert-info {
   color: #26a9d0;
-  border-color: #71bde3;
-  background-color: #d8f2f9;
+  border-color: #6bb9ea;
+  background-color: #d8f0f7;
 }
 
 .c-alert-important {
@@ -4842,11 +4842,11 @@ parent: box
 
 */
 .c-box-first {
-  background-color: #d0e5fa;
+  background-color: #d7e7f7;
 }
 
 .c-box-second {
-  background-color: #e8d9c6;
+  background-color: #d8f0f7;
 }
 
 .c-box-third {
@@ -4854,11 +4854,11 @@ parent: box
 }
 
 .c-box-fourth {
-  background-color: #ffe8cc;
+  background-color: #ffeccc;
 }
 
 .c-box-info {
-  background-color: #d8f2f9;
+  background-color: #d8f0f7;
 }
 
 .c-box-important {
@@ -4932,19 +4932,19 @@ parent: box
   border-color: #bbb;
 }
 .c-box-outline.c-box-first {
-  border-color: #68ace1;
+  border-color: #4690da;
 }
 .c-box-outline.c-box-second {
-  border-color: #bf9867;
+  border-color: #6bb9ea;
 }
 .c-box-outline.c-box-third {
-  border-color: #6dbf8c;
+  border-color: #70b98c;
 }
 .c-box-outline.c-box-fourth {
   border-color: #f0a346;
 }
 .c-box-outline.c-box-info {
-  border-color: #71bde3;
+  border-color: #6bb9ea;
 }
 .c-box-outline.c-box-important {
   border-color: #eb758a;
@@ -5673,13 +5673,13 @@ category: component-dfn
   color: #fff;
 }
 #document .bg-gray.bg-mild {
-  background-color: #777;
+  background-color: #888;
 }
 #document .bg-gray.bg-fade {
   background-color: #eee;
 }
 #document .bg-first {
-  background-color: #49d;
+  background-color: #1976d2;
 }
 #document .bg-first:not(.bg-fade) {
   color: #fff;
@@ -5688,13 +5688,13 @@ category: component-dfn
   color: #fff;
 }
 #document .bg-first.bg-mild {
-  background-color: #68ace1;
+  background-color: #4690da;
 }
 #document .bg-first.bg-fade {
-  background-color: #d0e5fa;
+  background-color: #d7e7f7;
 }
 #document .bg-second {
-  background-color: #b17c38;
+  background-color: #3cade6;
 }
 #document .bg-second:not(.bg-fade) {
   color: #fff;
@@ -5703,10 +5703,10 @@ category: component-dfn
   color: #fff;
 }
 #document .bg-second.bg-mild {
-  background-color: #bf9867;
+  background-color: #6bb9ea;
 }
 #document .bg-second.bg-fade {
-  background-color: #e8d9c6;
+  background-color: #d8f0f7;
 }
 #document .bg-third {
   background-color: #49b070;
@@ -5718,7 +5718,7 @@ category: component-dfn
   color: #fff;
 }
 #document .bg-third.bg-mild {
-  background-color: #6dbf8c;
+  background-color: #70b98c;
 }
 #document .bg-third.bg-fade {
   background-color: #d5f0e1;
@@ -5736,10 +5736,10 @@ category: component-dfn
   background-color: #f0a346;
 }
 #document .bg-fourth.bg-fade {
-  background-color: #ffe8cc;
+  background-color: #ffeccc;
 }
 #document .bg-info {
-  background-color: #4ad;
+  background-color: #3cade6;
 }
 #document .bg-info:not(.bg-fade) {
   color: #fff;
@@ -5748,10 +5748,10 @@ category: component-dfn
   color: #fff;
 }
 #document .bg-info.bg-mild {
-  background-color: #71bde3;
+  background-color: #6bb9ea;
 }
 #document .bg-info.bg-fade {
-  background-color: #d8f2f9;
+  background-color: #d8f0f7;
 }
 #document .bg-important {
   background-color: #e33050;
@@ -6493,25 +6493,25 @@ category: component-dfn
   clip: auto;
 }
 #document .text-mild {
-  color: #777;
+  color: #888;
 }
 #document .text-first {
-  color: #2283cc;
+  color: #096ed2;
 }
 #document .text-first.text-mild {
-  color: #68ace1;
+  color: #4690da;
 }
 #document .text-second {
-  color: #9c6723;
+  color: #26a9d0;
 }
 #document .text-second.text-mild {
-  color: #bf9867;
+  color: #6bb9ea;
 }
 #document .text-third {
   color: #229644;
 }
 #document .text-third.text-mild {
-  color: #6dbf8c;
+  color: #70b98c;
 }
 #document .text-fourth {
   color: #f37910;
@@ -6523,7 +6523,7 @@ category: component-dfn
   color: #26a9d0;
 }
 #document .text-info.text-mild {
-  color: #71bde3;
+  color: #6bb9ea;
 }
 #document .text-important {
   color: #d70022;
