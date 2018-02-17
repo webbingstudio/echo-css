@@ -101,15 +101,6 @@ html {
   font-size: $font-size-md;
   font-family: $font-family-root;
   font-weight: $font-weight-root;
-
-  @include media-breakpoint-down(sm) {
-    font-size: $font-size-sm;
-  }
-
-  @include media-breakpoint-up(xl) {
-    font-size: $font-size-lg;
-  }
-
 }
 
 body {
