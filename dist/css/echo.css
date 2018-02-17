@@ -9,7 +9,6 @@
  * http://opensource.org/licenses/MIT
  * 
  */
-@import url(https://fonts.googleapis.com/earlyaccess/sawarabimincho.css);
 /*
 reset
 --------------------
@@ -4984,7 +4983,7 @@ category: component-dfn
   display: block;
   margin: 0;
   padding-bottom: .25em;
-  font-family: "Sawarabi Mincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
+  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
   font-weight: 300;
   font-size: 3rem;
   line-height: 1;
@@ -5175,6 +5174,25 @@ category: component-dfn
   */
   /*doc
   ---
+  title: display-(type)
+  name: display-01-type
+  category: utility-display
+  ---
+  
+  テキストを大見出しに変更する。  
+  余白等は <code>utility > .m</code> や <code>utility > .p</code> で指定する。  
+  (type)は、 <code>1, 2, 3, 4</code> に対応しており、**必ずしも文字の大きさを表すものではない。**
+  
+  ``` example
+  <h1 class="display-1">これはdisplay-1です</h1>
+  <h1 class="display-2">これはdisplay-2です</h1>
+  <h1 class="display-3">これはdisplay-3です</h1>
+  <h1 class="display-4">これはdisplay-4です</h1>
+  ```
+  
+  */
+  /*doc
+  ---
   title: float-(direction)
   name: float-direction
   category: utility-float
@@ -5333,41 +5351,8 @@ category: component-dfn
   */
   /*doc
   ---
-  title: line-(breakpont)-(direction)
-  name: line-01-direction
-  category: utility-line
-  ---
-  
-  ブロック要素内の文章を指定した方向へ寄せる。  
-  (breakpoint)の指定がない場合は、常にその方向となる。  
-  (breakpoint)の指定がある場合は、(breakpoint)**以上**のときに、指定した方向へ寄せる。
-  
-  ``` example
-  <p class="line-c">line-c_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
-  <p class="line-r">line-r_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
-  
-  <div class="bg-second bg-fade line-c">
-      <p>line-c_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-      <p class="line-l">line-l_何でも薄暗いじめじめした所で</p>
-      <p>ニャーニャー泣いていた事だけは記憶している。</p>
-  </div>
-  
-  <p class="line-lg-c">line-lg-c_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
-  <p class="line-lg-r">line-lg-r_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
-  
-  <div class="bg-second bg-fade line-lg-c">
-      <p>line-lg-c_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-      <p class="line-lg-l">line-lg-l_何でも薄暗いじめじめした所で</p>
-      <p>ニャーニャー泣いていた事だけは記憶している。</p>
-  </div>
-  
-  <p class="line-r line-lg-c">line-r_line-lg-c_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
-  ```
-  */
-  /*doc
-  ---
   title: line-(size)
-  name: line-02-size
+  name: line-01-size
   category: utility-line
   ---
   
@@ -5651,8 +5636,41 @@ category: component-dfn
   */
   /*doc
   ---
+  title: text-(direction)(-(breakpont)-(up or down))
+  name: text-05-direction
+  category: utility-text
+  ---
+  
+  ブロック要素内の文章を指定した方向へ寄せる。  
+  (breakpoint)の指定がない場合は、常にその方向となる。  
+  (breakpoint)の指定がある場合は、(breakpoint)以上、もしくは以下のときに、指定した方向へ寄せる。
+  
+  ``` example
+  <p class="text-center">text-center_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+  <p class="text-right">text-right_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+  
+  <div class="bg-second bg-fade text-center">
+      <p>text-center_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+      <p class="text-left">text-left_何でも薄暗いじめじめした所で</p>
+      <p>ニャーニャー泣いていた事だけは記憶している。</p>
+  </div>
+  
+  <p class="text-center-lg-up">text-center-lg-up_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+  <p class="text-right-sm-up">text-right-sm-up_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+  
+  <div class="bg-second bg-fade text-center-lg-up">
+      <p>text-center-lg-up_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+      <p class="text-left-sm-down">text-left-sm-down_何でも薄暗いじめじめした所で</p>
+      <p>ニャーニャー泣いていた事だけは記憶している。</p>
+  </div>
+  
+  <p class="text-right text-center-lg-up">text-right_text-center-lg-up_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+  ```
+  */
+  /*doc
+  ---
   title: text-(size)
-  name: text-04-size
+  name: text-06-size
   category: utility-text
   ---
   
@@ -5800,6 +5818,38 @@ category: component-dfn
   padding-left: 9999px;
   padding-right: 9999px;
 }
+#document .display-1 {
+  margin: 0;
+  padding: 0;
+  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
+  font-weight: 300;
+  font-size: 5rem;
+  line-height: 1.25;
+}
+#document .display-2 {
+  margin: 0;
+  padding: 0;
+  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
+  font-weight: 300;
+  font-size: 4rem;
+  line-height: 1.25;
+}
+#document .display-3 {
+  margin: 0;
+  padding: 0;
+  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
+  font-weight: 300;
+  font-size: 3rem;
+  line-height: 1.25;
+}
+#document .display-4 {
+  margin: 0;
+  padding: 0;
+  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 1.25;
+}
 #document .float-l {
   float: left;
 }
@@ -5818,11 +5868,11 @@ category: component-dfn
   font-family: "Consolas", "Liberation Mono", "Menlo", "Courier", monospace;
 }
 #document .font-first {
-  font-family: "Sawarabi Mincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
+  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
   font-weight: 300;
 }
 #document .font-first.font-bold {
-  font-family: "Sawarabi Mincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
+  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
   font-weight: 700;
 }
 #document .font-second {
@@ -5919,129 +5969,6 @@ category: component-dfn
 #document .img-fill {
   width: 100%;
   height: auto;
-}
-#document .line-l {
-  text-align: left;
-}
-#document .line-c {
-  text-align: center;
-}
-#document .line-r {
-  text-align: right;
-}
-#document .line-default-l {
-  text-align: left;
-}
-@media (min-width: 320px) {
-  #document .line-xxs-l {
-    text-align: left;
-  }
-}
-@media (min-width: 360px) {
-  #document .line-xs-l {
-    text-align: left;
-  }
-}
-@media (min-width: 425px) {
-  #document .line-sm-l {
-    text-align: left;
-  }
-}
-@media (min-width: 768px) {
-  #document .line-md-l {
-    text-align: left;
-  }
-}
-@media (min-width: 1000px) {
-  #document .line-lg-l {
-    text-align: left;
-  }
-}
-@media (min-width: 1240px) {
-  #document .line-xl-l {
-    text-align: left;
-  }
-}
-@media (min-width: 1640px) {
-  #document .line-xxl-l {
-    text-align: left;
-  }
-}
-#document .line-default-c {
-  text-align: center;
-}
-@media (min-width: 320px) {
-  #document .line-xxs-c {
-    text-align: center;
-  }
-}
-@media (min-width: 360px) {
-  #document .line-xs-c {
-    text-align: center;
-  }
-}
-@media (min-width: 425px) {
-  #document .line-sm-c {
-    text-align: center;
-  }
-}
-@media (min-width: 768px) {
-  #document .line-md-c {
-    text-align: center;
-  }
-}
-@media (min-width: 1000px) {
-  #document .line-lg-c {
-    text-align: center;
-  }
-}
-@media (min-width: 1240px) {
-  #document .line-xl-c {
-    text-align: center;
-  }
-}
-@media (min-width: 1640px) {
-  #document .line-xxl-c {
-    text-align: center;
-  }
-}
-#document .line-default-r {
-  text-align: right;
-}
-@media (min-width: 320px) {
-  #document .line-xxs-r {
-    text-align: right;
-  }
-}
-@media (min-width: 360px) {
-  #document .line-xs-r {
-    text-align: right;
-  }
-}
-@media (min-width: 425px) {
-  #document .line-sm-r {
-    text-align: right;
-  }
-}
-@media (min-width: 768px) {
-  #document .line-md-r {
-    text-align: right;
-  }
-}
-@media (min-width: 1000px) {
-  #document .line-lg-r {
-    text-align: right;
-  }
-}
-@media (min-width: 1240px) {
-  #document .line-xl-r {
-    text-align: right;
-  }
-}
-@media (min-width: 1640px) {
-  #document .line-xxl-r {
-    text-align: right;
-  }
 }
 #document .line-none {
   line-height: 1;
@@ -6546,6 +6473,187 @@ category: component-dfn
 }
 #document .text-inverse.text-mild {
   color: rgba(255, 255, 255, 0.75);
+}
+#document .text-left {
+  text-align: left;
+}
+#document .text-center {
+  text-align: center;
+}
+#document .text-right {
+  text-align: right;
+}
+#document .text-left-default-up {
+  text-align: left;
+}
+#document .text-center-default-up {
+  text-align: center;
+}
+#document .text-right-default-up {
+  text-align: right;
+}
+@media (max-width: 319.9px) {
+  #document .text-left-default-down {
+    text-align: left;
+  }
+  #document .text-center-default-down {
+    text-align: center;
+  }
+  #document .text-right-default-down {
+    text-align: right;
+  }
+}
+@media (min-width: 320px) {
+  #document .text-left-xxs-up {
+    text-align: left;
+  }
+  #document .text-center-xxs-up {
+    text-align: center;
+  }
+  #document .text-right-xxs-up {
+    text-align: right;
+  }
+}
+@media (max-width: 359.9px) {
+  #document .text-left-xxs-down {
+    text-align: left;
+  }
+  #document .text-center-xxs-down {
+    text-align: center;
+  }
+  #document .text-right-xxs-down {
+    text-align: right;
+  }
+}
+@media (min-width: 360px) {
+  #document .text-left-xs-up {
+    text-align: left;
+  }
+  #document .text-center-xs-up {
+    text-align: center;
+  }
+  #document .text-right-xs-up {
+    text-align: right;
+  }
+}
+@media (max-width: 424.9px) {
+  #document .text-left-xs-down {
+    text-align: left;
+  }
+  #document .text-center-xs-down {
+    text-align: center;
+  }
+  #document .text-right-xs-down {
+    text-align: right;
+  }
+}
+@media (min-width: 425px) {
+  #document .text-left-sm-up {
+    text-align: left;
+  }
+  #document .text-center-sm-up {
+    text-align: center;
+  }
+  #document .text-right-sm-up {
+    text-align: right;
+  }
+}
+@media (max-width: 767.9px) {
+  #document .text-left-sm-down {
+    text-align: left;
+  }
+  #document .text-center-sm-down {
+    text-align: center;
+  }
+  #document .text-right-sm-down {
+    text-align: right;
+  }
+}
+@media (min-width: 768px) {
+  #document .text-left-md-up {
+    text-align: left;
+  }
+  #document .text-center-md-up {
+    text-align: center;
+  }
+  #document .text-right-md-up {
+    text-align: right;
+  }
+}
+@media (max-width: 999.9px) {
+  #document .text-left-md-down {
+    text-align: left;
+  }
+  #document .text-center-md-down {
+    text-align: center;
+  }
+  #document .text-right-md-down {
+    text-align: right;
+  }
+}
+@media (min-width: 1000px) {
+  #document .text-left-lg-up {
+    text-align: left;
+  }
+  #document .text-center-lg-up {
+    text-align: center;
+  }
+  #document .text-right-lg-up {
+    text-align: right;
+  }
+}
+@media (max-width: 1239.9px) {
+  #document .text-left-lg-down {
+    text-align: left;
+  }
+  #document .text-center-lg-down {
+    text-align: center;
+  }
+  #document .text-right-lg-down {
+    text-align: right;
+  }
+}
+@media (min-width: 1240px) {
+  #document .text-left-xl-up {
+    text-align: left;
+  }
+  #document .text-center-xl-up {
+    text-align: center;
+  }
+  #document .text-right-xl-up {
+    text-align: right;
+  }
+}
+@media (max-width: 1639.9px) {
+  #document .text-left-xl-down {
+    text-align: left;
+  }
+  #document .text-center-xl-down {
+    text-align: center;
+  }
+  #document .text-right-xl-down {
+    text-align: right;
+  }
+}
+@media (min-width: 1640px) {
+  #document .text-left-xxl-up {
+    text-align: left;
+  }
+  #document .text-center-xxl-up {
+    text-align: center;
+  }
+  #document .text-right-xxl-up {
+    text-align: right;
+  }
+}
+#document .text-left-xxl-down {
+  text-align: left;
+}
+#document .text-center-xxl-down {
+  text-align: center;
+}
+#document .text-right-xxl-down {
+  text-align: right;
 }
 #document .text-xxs {
   font-size: .625em;

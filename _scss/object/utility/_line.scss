@@ -2,57 +2,8 @@
 
 /*doc
 ---
-title: #{$p}#{$u}line-(breakpont)-(direction)
-name: line-01-direction
-category: utility-line
----
-
-ブロック要素内の文章を指定した方向へ寄せる。  
-(breakpoint)の指定がない場合は、常にその方向となる。  
-(breakpoint)の指定がある場合は、(breakpoint)**以上**のときに、指定した方向へ寄せる。
-
-``` example
-<p class="#{$p}#{$u}line-c">#{$p}#{$u}line-c_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
-<p class="#{$p}#{$u}line-r">#{$p}#{$u}line-r_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
-
-<div class="#{$p}#{$u}bg-second #{$p}#{$u}bg-fade #{$p}#{$u}line-c">
-    <p>#{$p}#{$u}line-c_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-    <p class="#{$p}#{$u}line-l">#{$p}#{$u}line-l_何でも薄暗いじめじめした所で</p>
-    <p>ニャーニャー泣いていた事だけは記憶している。</p>
-</div>
-
-<p class="#{$p}#{$u}line-lg-c">#{$p}#{$u}line-lg-c_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
-<p class="#{$p}#{$u}line-lg-r">#{$p}#{$u}line-lg-r_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
-
-<div class="#{$p}#{$u}bg-second #{$p}#{$u}bg-fade #{$p}#{$u}line-lg-c">
-    <p>#{$p}#{$u}line-lg-c_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-    <p class="#{$p}#{$u}line-lg-l">#{$p}#{$u}line-lg-l_何でも薄暗いじめじめした所で</p>
-    <p>ニャーニャー泣いていた事だけは記憶している。</p>
-</div>
-
-<p class="#{$p}#{$u}line-r #{$p}#{$u}line-lg-c">#{$p}#{$u}line-r_#{$p}#{$u}line-lg-c_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
-```
-*/
-
-.#{$p}#{$u}line-l {
-    text-align: left;
-}
-.#{$p}#{$u}line-c {
-    text-align: center;
-}
-.#{$p}#{$u}line-r {
-    text-align: right;
-}
-
-@include make-line-direction(l, left);
-@include make-line-direction(c, center);
-@include make-line-direction(r, right);
-
-
-/*doc
----
 title: #{$p}#{$u}line-(size)
-name: line-02-size
+name: line-01-size
 category: utility-line
 ---
 

@@ -1,0 +1,46 @@
+@mixin make-text-direction($b: $grid-breakpoints) {
+  .#{$p}#{$u}text-left {
+    text-align: left;
+  }
+
+  .#{$p}#{$u}text-center {
+    text-align: center;
+  }
+
+  .#{$p}#{$u}text-right {
+    text-align: right;
+  }
+
+  @each $breakpoint in map-keys($b) {
+    @include media-breakpoint-up($breakpoint, $b) {
+      .#{$p}#{$u}text-left-#{$breakpoint}-up {
+        text-align: left;
+      }
+
+      .#{$p}#{$u}text-center-#{$breakpoint}-up {
+        text-align: center;
+      }
+
+      .#{$p}#{$u}text-right-#{$breakpoint}-up {
+        text-align: right;
+      }
+
+    }
+    @include media-breakpoint-down($breakpoint, $b) {
+      .#{$p}#{$u}text-left-#{$breakpoint}-down {
+        text-align: left;
+      }
+
+      .#{$p}#{$u}text-center-#{$breakpoint}-down {
+        text-align: center;
+      }
+
+      .#{$p}#{$u}text-right-#{$breakpoint}-down {
+        text-align: right;
+      }
+
+    }
+
+  }
+
+}

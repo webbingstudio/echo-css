@@ -34,7 +34,6 @@
                     <li class="nav-item"><a href="./component-box.html">box</a></li>
                     <li class="nav-item"><a href="./component-dfn.html">dfn</a></li>
                     <li class="nav-item"><a href="./component-alert.html">alert</a></li>
-                    <li class="nav-item"><a href="./component-backtotop.html">backtotop</a></li>
                     <li class="nav-item"><a href="./component-block.html">block</a></li>
                     <li class="nav-item"><a href="./component-blockarea.html">blockarea</a></li>
                     <li class="nav-item"><a href="./component-card.html">card</a></li>
@@ -53,13 +52,14 @@
             </li>
             <li class="nav-item"><span class="nav-label">utility</span>
                 <ul class="nav-list nav-chidren">
-                    <li class="nav-item"><a href="./utility-m.html">margin</a></li>
-                    <li class="nav-item"><a href="./utility-p.html">padding</a></li>
+                    <li class="nav-item"><a href="./utility-display.html">display</a></li>
+                    <li class="nav-item"><a href="./utility-m.html">m</a></li>
+                    <li class="nav-item"><a href="./utility-p.html">p</a></li>
                     <li class="nav-item"><a href="./utility-text.html">text</a></li>
                     <li class="nav-item"><a href="./utility-font.html">font</a></li>
                     <li class="nav-item"><a href="./utility-line.html">line</a></li>
-                    <li class="nav-item"><a href="./utility-img.html">image</a></li>
-                    <li class="nav-item"><a href="./utility-bg.html">background</a></li>
+                    <li class="nav-item"><a href="./utility-img.html">img</a></li>
+                    <li class="nav-item"><a href="./utility-bg.html">bg</a></li>
                     <li class="nav-item"><a href="./utility-shadow.html">shadow</a></li>
                     <li class="nav-item"><a href="./utility-hidden.html">hidden</a></li>
                     <li class="nav-item"><a href="./utility-float.html">float</a></li>
