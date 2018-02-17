@@ -4658,6 +4658,85 @@ parent: thumbnail
 
 /*doc
 ---
+title: c-alert
+name: alert
+category: component-alert
+---
+
+システム側の注意文を表示する。  
+上下余白は <code>utility > .m</code> 等で指定する。
+
+``` example
+<p class="c-alert">c-alert_これはシステムからの注意文です。</p>
+```
+
+*/
+.c-alert {
+  padding: 10px 20px;
+  background-color: #eee;
+  border: 1px solid #bbb;
+  line-height: 1.5;
+}
+
+/*doc
+---
+title: c-alert-(color)
+name: alert-01-color
+category: component-alert
+parent: alert
+---
+
+注意文の色を変更する。  
+(color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
+
+``` example
+<p class="c-alert c-alert-first">c-alert-first_これはシステムからの注意文です。</p>
+<p class="c-alert c-alert-second">c-alert-second_これはシステムからの注意文です。</p>
+<p class="c-alert c-alert-third">c-alert-third_これはシステムからの注意文です。</p>
+<p class="c-alert c-alert-fourth">c-alert-fourth_これはシステムからの注意文です。</p>
+<p class="c-alert c-alert-info">c-alert-info_これはシステムからの注意文です。</p>
+<p class="c-alert c-alert-important">c-alert-important_これはシステムからの注意文です。</p>
+```
+
+*/
+.c-alert-first {
+  color: #2283cc;
+  border-color: #68ace1;
+  background-color: #d0e5fa;
+}
+
+.c-alert-second {
+  color: #9c6723;
+  border-color: #bf9867;
+  background-color: #e8d9c6;
+}
+
+.c-alert-third {
+  color: #229644;
+  border-color: #6dbf8c;
+  background-color: #d5f0e1;
+}
+
+.c-alert-fourth {
+  color: #f37910;
+  border-color: #f0a346;
+  background-color: #ffe8cc;
+}
+
+.c-alert-info {
+  color: #26a9d0;
+  border-color: #71bde3;
+  background-color: #d8f2f9;
+}
+
+.c-alert-important {
+  color: #d70022;
+  border-color: #eb758a;
+  background-color: #ffe3e9;
+}
+
+/*doc
+---
 title: c-box
 name: box
 category: component-box
