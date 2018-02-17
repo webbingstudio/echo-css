@@ -12,6 +12,10 @@ $optimize: true !default;
 // Set the value to "true" if you do not want to use a class that specifies the order and offset of the grid
 $disabled-grid-order-offset: false !default;
 
+// コンポーネントグループに属するクラスを使用しない場合は、値を「true」にする（box・media・card等）
+// Set the value to "true" if you do not want to use a class "component" group (box,media,card, etc.)
+$disabled-component-class: false !default;
+
 // ユーティリティグループに属するクラスを使用しない場合は、値を「true」にする（m・p・text-***等）
 // Set the value to "true" if you do not want to use a class "utility" group (m,p,text-***, etc.)
 $disabled-utility-class: false !default;
