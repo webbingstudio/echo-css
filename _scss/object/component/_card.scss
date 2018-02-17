@@ -1,0 +1,261 @@
+@if ($disabled-component-class != true) {
+
+/*doc
+---
+title: .#{$p}#{$c}card
+name: card
+category: component-card
+---
+
+新着情報のエントリー繰り返し部分などに使用する、カード状のコンポーネントを表示する。  
+余白等は <code>component > .#{$p}#{$c}#{$widget}</code> や <code>layout > .#{$p}#{$c}#{$widgetarea}</code> で指定する。  
+
+``` example
+<div style="max-width: 320px;">
+
+<div class="#{$p}#{$c}card #{$p}#{$u}m-b">
+    <div class="#{$p}#{$m}thumbnail #{$p}#{$m}thumbnail-ogimage">
+        <picture>
+        <source
+            media="(max-width:640px)"
+            srcset="http://placehold.jp/12/9ed8db/ffffff/200x150.png?text=small_image 640w"
+            sizes="100vw">
+        <source
+            srcset="http://placehold.jp/36/ffcc66/ffffff/640x480.png?text=large_image 1280w"
+            sizes="(max-width:1280px) 100vw, 1280px">
+        <img alt="" src="http://placehold.jp/24/9ed8db/ffffff/640x360.png?text=renponsive_image">
+        </picture>
+    </div>
+    <div class="#{$p}#{$c}card-contents">
+        <h3 class="#{$p}#{$c}card-title"><span class="#{$p}#{$m}label">カテゴリー</span>カードのタイトルですカードのタイトルですカードのタイトルです</h3>
+        <p class="#{$p}#{$c}card-body">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+    </div>
+</div>
+
+<div class="#{$p}#{$c}card">
+    <a href="#" class="#{$p}#{$c}card-inner">
+        <div class="#{$p}#{$c}card-header">
+            <h3 class="#{$p}#{$c}card-title">カードのタイトルですカードのタイトルですカードのタイトルです</h3>
+        </div>
+        <div class="#{$p}#{$m}thumbnail #{$p}#{$m}thumbnail-ogimage">
+            <picture>
+            <source
+                media="(max-width:640px)"
+                srcset="http://placehold.jp/12/9ed8db/ffffff/200x150.png?text=small_image 640w"
+                sizes="100vw">
+            <source
+                srcset="http://placehold.jp/36/ffcc66/ffffff/640x480.png?text=large_image 1280w"
+                sizes="(max-width:1280px) 100vw, 1280px">
+            <img alt="" src="http://placehold.jp/24/9ed8db/ffffff/640x360.png?text=renponsive_image">
+            </picture>
+        </div>
+        <div class="#{$p}#{$c}card-footer">
+            <p class="#{$p}#{$c}card-body">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+        </div>
+    </a>
+</div>
+
+</div>
+```
+
+*/
+
+.#{$p}#{$c}card {
+    position: relative;
+    background-color: $body-bg;
+    border: $border-card-width solid $border-color;
+    color: $body-color;
+
+    [class*="#{$p}#{$g}col"] > & {
+        height: 100%;
+    }
+
+    .#{$p}#{$c}card-object {
+        position: relative;
+        z-index: 2;
+    }
+
+    .#{$p}#{$c}card-inner {
+        display: block;
+        position: relative;
+        height: 100%;
+    }
+
+    > a {
+        color: $body-color;
+        text-decoration: none;
+        transition: .3s all;
+
+        &:hover,
+        &:focus {
+            color: $body-color;
+            text-decoration: none;
+            opacity: .8;
+        }
+
+    }
+
+    .#{$p}#{$c}card-header,
+    .#{$p}#{$c}card-contents,
+    .#{$p}#{$c}card-footer {
+        @include clearfix();
+        padding: (map-get($grid-gutter-widths, md) / 2);
+        line-height: $line-height-sm;
+        word-break: break-word;
+
+        > *:last-child {
+            margin-bottom: 0;
+        }
+
+    }
+
+    .#{$p}#{$c}card-header {
+    }
+
+    .#{$p}#{$c}card-contents {
+    }
+
+    .#{$p}#{$c}card-footer {
+    }
+
+    .#{$p}#{$c}card-title {
+        margin: 0 0 .5em;
+        font-size: $font-size-md;
+        font-weight: $font-weight-bold-root;
+    }
+
+    .#{$p}#{$c}card-body {
+        font-size: $font-size-sm;
+        margin: 0 0 .5em;
+    }
+
+}
+
+
+/*doc
+---
+title: .#{$p}#{$c}card-linked
+name: card-01-linked
+category: component-card
+parent: card
+---
+
+ボタンをカードの高さに関わらず絶対配置する。
+
+``` example
+<div class="#{$p}#{$l}container">
+    <div class="#{$p}#{$g}row">
+
+        <div class="#{$p}#{$g}col-md">
+            <div class="#{$p}#{$c}card #{$p}#{$c}card-linked">
+                <a href="#" class="#{$p}#{$c}card-inner">
+                    <div class="#{$p}#{$m}thumbnail #{$p}#{$m}thumbnail-ogimage">
+                        <picture>
+                        <source
+                            media="(max-width:640px)"
+                            srcset="http://placehold.jp/12/9ed8db/ffffff/200x150.png?text=small_image 640w"
+                            sizes="100vw">
+                        <source
+                            srcset="http://placehold.jp/36/ffcc66/ffffff/640x480.png?text=large_image 1280w"
+                            sizes="(max-width:1280px) 100vw, 1280px">
+                        <img alt="" src="http://placehold.jp/24/9ed8db/ffffff/640x360.png?text=renponsive_image">
+                        </picture>
+                    </div>
+                    <div class="#{$p}#{$c}card-contents">
+                        <h3 class="#{$p}#{$c}card-title">カードのタイトルです</h3>
+                        <p class="#{$p}#{$c}card-body">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+                        <p class="#{$p}#{$c}card-link">
+                            <span href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-gray #{$p}#{$m}btn-outline #{$p}#{$m}btn-block">ボタン</span>
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="#{$p}#{$g}col-md">
+            <div class="#{$p}#{$c}card #{$p}#{$c}card-linked">
+                <a href="#" class="#{$p}#{$c}card-inner">
+                    <div class="#{$p}#{$m}thumbnail #{$p}#{$m}thumbnail-ogimage">
+                        <picture>
+                        <source
+                            media="(max-width:640px)"
+                            srcset="http://placehold.jp/12/9ed8db/ffffff/200x150.png?text=small_image 640w"
+                            sizes="100vw">
+                        <source
+                            srcset="http://placehold.jp/36/ffcc66/ffffff/640x480.png?text=large_image 1280w"
+                            sizes="(max-width:1280px) 100vw, 1280px">
+                        <img alt="" src="http://placehold.jp/24/9ed8db/ffffff/640x360.png?text=renponsive_image">
+                        </picture>
+                    </div>
+                    <div class="#{$p}#{$c}card-contents">
+                        <h3 class="#{$p}#{$c}card-title">カードのタイトルですカードのタイトルですカードのタイトルです</h3>
+                        <p class="#{$p}#{$c}card-body">何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。</p>
+                        <p class="#{$p}#{$c}card-link">
+                            <span href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-gray #{$p}#{$m}btn-outline #{$p}#{$m}btn-block">ボタン</span>
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="#{$p}#{$g}col-md">
+            <div class="#{$p}#{$c}card #{$p}#{$c}card-linked">
+                <a href="#" class="#{$p}#{$c}card-inner">
+                    <div class="#{$p}#{$m}thumbnail #{$p}#{$m}thumbnail-ogimage">
+                        <picture>
+                        <source
+                            media="(max-width:640px)"
+                            srcset="http://placehold.jp/12/9ed8db/ffffff/200x150.png?text=small_image 640w"
+                            sizes="100vw">
+                        <source
+                            srcset="http://placehold.jp/36/ffcc66/ffffff/640x480.png?text=large_image 1280w"
+                            sizes="(max-width:1280px) 100vw, 1280px">
+                        <img alt="" src="http://placehold.jp/24/9ed8db/ffffff/640x360.png?text=renponsive_image">
+                        </picture>
+                    </div>
+                    <div class="#{$p}#{$c}card-contents">
+                        <h3 class="#{$p}#{$c}card-title">カードのタイトルですカードのタイトルです</h3>
+                        <p class="#{$p}#{$c}card-body">しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+                        <p class="#{$p}#{$c}card-link">
+                            <span href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-gray #{$p}#{$m}btn-outline #{$p}#{$m}btn-block">ボタン</span>
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>
+```
+
+*/
+
+.#{$p}#{$c}card-linked {
+
+    .#{$p}#{$c}card-inner {
+        // button height = 2rem
+        padding-bottom: 3rem;
+    }
+
+    .#{$p}#{$c}card-link {
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        width: 100%;
+        max-width: 15rem;
+        margin: 0;
+        transform: translate(-50%, 0);
+
+        .#{$p}#{$m}btn {
+            padding-top: 0;
+            padding-bottom: 0;
+            height: 2rem;
+            line-height: 1.9rem;
+        }
+
+    }
+
+}
+
+
+
+}

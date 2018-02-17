@@ -2141,7 +2141,7 @@ category: module-badge
   border-radius: 0 0 5px 5px;
   background: #fff;
   color: #333;
-  border: 1px solid #bbb;
+  border: 1px solid #ccc;
   font-size: .8em;
   font-family: "Helvetica", "Roboto", "-apple-system", "Open Sans", "Arial", sans-serif;
   font-weight: 300;
@@ -3254,7 +3254,7 @@ category: module-input
 .m-input {
   padding: .375rem .5rem;
   background: #fff none;
-  border: 1px solid #bbb;
+  border: 1px solid #ccc;
   color: #333;
   border-radius: 3px;
   vertical-align: middle;
@@ -3319,7 +3319,8 @@ category: module-label
   -ms-transform: translate(0, -0.125rem);
   transform: translate(0, -0.125rem);
   background-color: #888;
-  font-size: 0.75rem;
+  font-size: .75em;
+  font-weight: 300;
   color: #fff;
   text-align: center;
   line-height: 1;
@@ -3723,7 +3724,7 @@ category: module-select
   width: 100%;
   padding: .5em 3em .5em 1em;
   background-color: transparent;
-  border: 1px solid #bbb;
+  border: 1px solid #ccc;
   vertical-align: middle;
   border-radius: 5px;
   outline: none;
@@ -3887,19 +3888,19 @@ parent: table
 */
 .m-table-bordered {
   width: 100%;
-  border-top: 1px solid #bbb;
-  border-left: 1px solid #bbb;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
 }
 .m-table-bordered thead {
-  border-bottom: 2px solid #bbb;
+  border-bottom: 2px solid #ccc;
 }
 .m-table-bordered tfoot {
-  border-top: 2px solid #bbb;
+  border-top: 2px solid #ccc;
 }
 .m-table-bordered th,
 .m-table-bordered td {
-  border-bottom: 1px solid #bbb;
-  border-right: 1px solid #bbb;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
   padding: .5rem;
 }
 .m-table-bordered th:first-child,
@@ -3962,11 +3963,11 @@ parent: table
   width: 100%;
 }
 .m-table-ruled thead {
-  border-bottom: 2px solid #bbb;
+  border-bottom: 2px solid #ccc;
 }
 .m-table-ruled th,
 .m-table-ruled td {
-  border-bottom: 1px solid #bbb;
+  border-bottom: 1px solid #ccc;
   padding-top: 1rem;
   padding-bottom: .5rem;
 }
@@ -4316,7 +4317,7 @@ category: module-thumbnail
   position: relative;
   display: inline-block;
   background: #fff;
-  border: 1px solid #bbb;
+  border: 0 solid #ccc;
   vertical-align: bottom;
 }
 .m-thumbnail img {
@@ -4673,7 +4674,7 @@ category: component-alert
 .c-alert {
   padding: 10px 20px;
   background-color: #eee;
-  border: 1px solid #bbb;
+  border: 1px solid #ccc;
   line-height: 1.5;
 }
 
@@ -4928,7 +4929,7 @@ parent: box
 */
 .c-box-outline {
   background-color: #fff;
-  border-color: #bbb;
+  border-color: #ccc;
 }
 .c-box-outline.c-box-first {
   border-color: #4690da;
@@ -5011,6 +5012,243 @@ category: component-dfn
   .c-dfn .c-dfn-contents {
     display: table-cell;
   }
+}
+
+/*doc
+---
+title: .c-card
+name: card
+category: component-card
+---
+
+新着情報のエントリー繰り返し部分などに使用する、カード状のコンポーネントを表示する。  
+余白等は <code>component > .c-widget</code> や <code>layout > .c-widgetarea</code> で指定する。  
+
+``` example
+<div style="max-width: 320px;">
+
+<div class="c-card m-b">
+    <div class="m-thumbnail m-thumbnail-ogimage">
+        <picture>
+        <source
+            media="(max-width:640px)"
+            srcset="http://placehold.jp/12/9ed8db/ffffff/200x150.png?text=small_image 640w"
+            sizes="100vw">
+        <source
+            srcset="http://placehold.jp/36/ffcc66/ffffff/640x480.png?text=large_image 1280w"
+            sizes="(max-width:1280px) 100vw, 1280px">
+        <img alt="" src="http://placehold.jp/24/9ed8db/ffffff/640x360.png?text=renponsive_image">
+        </picture>
+    </div>
+    <div class="c-card-contents">
+        <h3 class="c-card-title"><span class="m-label">カテゴリー</span>カードのタイトルですカードのタイトルですカードのタイトルです</h3>
+        <p class="c-card-body">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+    </div>
+</div>
+
+<div class="c-card">
+    <a href="#" class="c-card-inner">
+        <div class="c-card-header">
+            <h3 class="c-card-title">カードのタイトルですカードのタイトルですカードのタイトルです</h3>
+        </div>
+        <div class="m-thumbnail m-thumbnail-ogimage">
+            <picture>
+            <source
+                media="(max-width:640px)"
+                srcset="http://placehold.jp/12/9ed8db/ffffff/200x150.png?text=small_image 640w"
+                sizes="100vw">
+            <source
+                srcset="http://placehold.jp/36/ffcc66/ffffff/640x480.png?text=large_image 1280w"
+                sizes="(max-width:1280px) 100vw, 1280px">
+            <img alt="" src="http://placehold.jp/24/9ed8db/ffffff/640x360.png?text=renponsive_image">
+            </picture>
+        </div>
+        <div class="c-card-footer">
+            <p class="c-card-body">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+        </div>
+    </a>
+</div>
+
+</div>
+```
+
+*/
+.c-card {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #333;
+}
+[class*="l-col"] > .c-card {
+  height: 100%;
+}
+.c-card .c-card-object {
+  position: relative;
+  z-index: 2;
+}
+.c-card .c-card-inner {
+  display: block;
+  position: relative;
+  height: 100%;
+}
+.c-card > a {
+  color: #333;
+  text-decoration: none;
+  transition: .3s all;
+}
+.c-card > a:hover, .c-card > a:focus {
+  color: #333;
+  text-decoration: none;
+  opacity: .8;
+}
+.c-card .c-card-header,
+.c-card .c-card-contents,
+.c-card .c-card-footer {
+  padding: 10px;
+  line-height: 1.5;
+  word-break: break-word;
+}
+.c-card .c-card-header:before, .c-card .c-card-header:after,
+.c-card .c-card-contents:before,
+.c-card .c-card-contents:after,
+.c-card .c-card-footer:before,
+.c-card .c-card-footer:after {
+  content: "";
+  display: table;
+}
+.c-card .c-card-header:after,
+.c-card .c-card-contents:after,
+.c-card .c-card-footer:after {
+  clear: both;
+}
+.c-card .c-card-header > *:last-child,
+.c-card .c-card-contents > *:last-child,
+.c-card .c-card-footer > *:last-child {
+  margin-bottom: 0;
+}
+.c-card .c-card-title {
+  margin: 0 0 .5em;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.c-card .c-card-body {
+  font-size: 0.875rem;
+  margin: 0 0 .5em;
+}
+
+/*doc
+---
+title: .c-card-linked
+name: card-01-linked
+category: component-card
+parent: card
+---
+
+ボタンをカードの高さに関わらず絶対配置する。
+
+``` example
+<div class="l-container">
+    <div class="l-row">
+
+        <div class="l-col-md">
+            <div class="c-card c-card-linked">
+                <a href="#" class="c-card-inner">
+                    <div class="m-thumbnail m-thumbnail-ogimage">
+                        <picture>
+                        <source
+                            media="(max-width:640px)"
+                            srcset="http://placehold.jp/12/9ed8db/ffffff/200x150.png?text=small_image 640w"
+                            sizes="100vw">
+                        <source
+                            srcset="http://placehold.jp/36/ffcc66/ffffff/640x480.png?text=large_image 1280w"
+                            sizes="(max-width:1280px) 100vw, 1280px">
+                        <img alt="" src="http://placehold.jp/24/9ed8db/ffffff/640x360.png?text=renponsive_image">
+                        </picture>
+                    </div>
+                    <div class="c-card-contents">
+                        <h3 class="c-card-title">カードのタイトルです</h3>
+                        <p class="c-card-body">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+                        <p class="c-card-link">
+                            <span href="#" class="m-btn m-btn-gray m-btn-outline m-btn-block">ボタン</span>
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="l-col-md">
+            <div class="c-card c-card-linked">
+                <a href="#" class="c-card-inner">
+                    <div class="m-thumbnail m-thumbnail-ogimage">
+                        <picture>
+                        <source
+                            media="(max-width:640px)"
+                            srcset="http://placehold.jp/12/9ed8db/ffffff/200x150.png?text=small_image 640w"
+                            sizes="100vw">
+                        <source
+                            srcset="http://placehold.jp/36/ffcc66/ffffff/640x480.png?text=large_image 1280w"
+                            sizes="(max-width:1280px) 100vw, 1280px">
+                        <img alt="" src="http://placehold.jp/24/9ed8db/ffffff/640x360.png?text=renponsive_image">
+                        </picture>
+                    </div>
+                    <div class="c-card-contents">
+                        <h3 class="c-card-title">カードのタイトルですカードのタイトルですカードのタイトルです</h3>
+                        <p class="c-card-body">何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。</p>
+                        <p class="c-card-link">
+                            <span href="#" class="m-btn m-btn-gray m-btn-outline m-btn-block">ボタン</span>
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="l-col-md">
+            <div class="c-card c-card-linked">
+                <a href="#" class="c-card-inner">
+                    <div class="m-thumbnail m-thumbnail-ogimage">
+                        <picture>
+                        <source
+                            media="(max-width:640px)"
+                            srcset="http://placehold.jp/12/9ed8db/ffffff/200x150.png?text=small_image 640w"
+                            sizes="100vw">
+                        <source
+                            srcset="http://placehold.jp/36/ffcc66/ffffff/640x480.png?text=large_image 1280w"
+                            sizes="(max-width:1280px) 100vw, 1280px">
+                        <img alt="" src="http://placehold.jp/24/9ed8db/ffffff/640x360.png?text=renponsive_image">
+                        </picture>
+                    </div>
+                    <div class="c-card-contents">
+                        <h3 class="c-card-title">カードのタイトルですカードのタイトルです</h3>
+                        <p class="c-card-body">しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+                        <p class="c-card-link">
+                            <span href="#" class="m-btn m-btn-gray m-btn-outline m-btn-block">ボタン</span>
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>
+```
+
+*/
+.c-card-linked .c-card-inner {
+  padding-bottom: 3rem;
+}
+.c-card-linked .c-card-link {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  width: 100%;
+  max-width: 15rem;
+  margin: 0;
+  transform: translate(-50%, 0);
+}
+.c-card-linked .c-card-link .m-btn {
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 2rem;
+  line-height: 1.9rem;
 }
 
 #document {
