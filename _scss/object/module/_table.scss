@@ -115,21 +115,21 @@ parent: table
 
 .#{$p}#{$m}table-bordered {
     width: 100%;
-    border-top: $border-width solid $border-color;
-    border-left: $border-width solid $border-color;
+    border-top: $border-table-width solid $border-color;
+    border-left: $border-table-width solid $border-color;
 
     thead {
-        border-bottom: ($border-width * 2) solid $border-color;
+        border-bottom: $border-table-section-width solid $border-table-section-color;
     }
 
     tfoot {
-        border-top: ($border-width * 2) solid $border-color;
+        border-top: $border-table-section-width solid $border-table-section-color;
     }
 
     th,
     td {
-        border-bottom: $border-width solid $border-color;
-        border-right: $border-width solid $border-color;
+        border-bottom: $border-table-width solid $border-color;
+        border-right: $border-table-width solid $border-color;
         padding: .5rem;
 
         &:first-child {
@@ -197,12 +197,12 @@ parent: table
     width: 100%;
 
     thead {
-        border-bottom: ($border-width * 2) solid $border-color;
+        border-bottom: $border-table-section-width solid $border-table-section-color;
     }
 
     th,
     td {
-        border-bottom: $border-width solid $border-color;
+        border-bottom: $border-table-width solid $border-color;
         padding-top: 1rem;
         padding-bottom: .5rem;
     }
@@ -517,11 +517,11 @@ parent: table
     &.#{$p}#{$m}table-bordered {
 
         thead {
-            border-bottom-width: $border-width;
+            border-bottom-width: $border-table-width;
         }
 
         tfoot {
-            border-top-width: $border-width;
+            border-top-width: $border-table-width;
         }
 
     }
@@ -529,7 +529,7 @@ parent: table
     &.#{$p}#{$m}table-ruled {
 
         thead {
-            border-bottom-width: $border-width;
+            border-bottom-width: $border-table-width;
         }
 
     }

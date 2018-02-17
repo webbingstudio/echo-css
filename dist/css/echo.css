@@ -9,7 +9,6 @@
  * http://opensource.org/licenses/MIT
  * 
  */
-@import url(https://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
 @import url(https://fonts.googleapis.com/earlyaccess/sawarabimincho.css);
 /*
 reset
@@ -54,7 +53,7 @@ h4,
 h5,
 h6,
 dt {
-  font-family: "Noto Sans Japanese", "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
   font-weight: 700;
 }
 
@@ -165,18 +164,8 @@ category: typography
 */
 html {
   font-size: 1rem;
-  font-family: "Noto Sans Japanese", "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
   font-weight: 300;
-}
-@media (max-width: 767.9px) {
-  html {
-    font-size: 0.875rem;
-  }
-}
-@media (min-width: 1240px) {
-  html {
-    font-size: 1.125rem;
-  }
 }
 
 body {
@@ -2150,7 +2139,7 @@ category: module-badge
   display: inline-block;
   min-width: 5em;
   padding: 1em .5em .25em;
-  border-radius: 0 0 3px 3px;
+  border-radius: 0 0 5px 5px;
   background: #fff;
   color: #333;
   border: 1px solid #bbb;
@@ -2267,14 +2256,14 @@ category: module-btn
   display: inline-block;
   color: #333;
   font-size: 0.875rem;
-  font-family: "Noto Sans Japanese", "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
   font-weight: 300;
   background-color: #fff;
   border: 1px solid transparent;
   padding: 0.5em 1em;
   text-align: center;
   line-height: 1;
-  border-radius: 3px;
+  border-radius: 5px;
   vertical-align: middle;
   transition: .3s all;
   cursor: pointer;
@@ -2851,7 +2840,7 @@ parent: btn
   padding-top: 0.75em;
   padding-bottom: 0.75em;
   font-size: 1rem;
-  border-radius: 5px;
+  border-radius: 7px;
   padding-left: 1.5em;
   padding-right: 1.5em;
 }
@@ -2861,7 +2850,7 @@ parent: btn
   padding-bottom: 0.75em;
   font-size: 1.125rem;
   border-width: 2px;
-  border-radius: 7px;
+  border-radius: 9px;
   padding-left: 3em;
   padding-right: 3em;
 }
@@ -3330,7 +3319,7 @@ category: module-label
   -webkit-transform: translate(0, -0.125rem);
   -ms-transform: translate(0, -0.125rem);
   transform: translate(0, -0.125rem);
-  background-color: #888;
+  background-color: #777;
   font-size: 0.75rem;
   color: #fff;
   text-align: center;
@@ -3737,7 +3726,7 @@ category: module-select
   background-color: transparent;
   border: 1px solid #bbb;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 5px;
   outline: none;
   z-index: 2;
 }
@@ -4692,7 +4681,7 @@ category: component-box
   padding: 20px;
   border: 2px solid transparent;
   background-color: #eee;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 .c-box:before, .c-box:after {
   content: "";
@@ -5605,7 +5594,7 @@ category: component-dfn
   color: #fff;
 }
 #document .bg-gray.bg-mild {
-  background-color: #888;
+  background-color: #777;
 }
 #document .bg-gray.bg-fade {
   background-color: #eee;
@@ -5732,11 +5721,11 @@ category: component-dfn
   float: right;
 }
 #document .font-root {
-  font-family: "Noto Sans Japanese", "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
   font-family: 300;
 }
 #document .font-root.font-bold {
-  font-family: "Noto Sans Japanese", "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
   font-weight: 700;
 }
 #document .font-mono {
@@ -5759,11 +5748,11 @@ category: component-dfn
   font-weight: 700;
 }
 #document .font-third {
-  font-family: "Noto Sans Japanese", "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
   font-weight: 300;
 }
 #document .font-third.font-bold {
-  font-family: "Noto Sans Japanese", "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
   font-weight: 700;
 }
 #document .hidden {
@@ -6425,7 +6414,7 @@ category: component-dfn
   clip: auto;
 }
 #document .text-mild {
-  color: #888;
+  color: #777;
 }
 #document .text-first {
   color: #2283cc;
