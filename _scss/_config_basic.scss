@@ -137,7 +137,7 @@ $border-box-width:               ($border-width * 2) !default;
 
 @mixin font-face-mapping() {
 
-  @import url(https://fonts.googleapis.com/earlyaccess/sawarabimincho.css);
+// font-face or webfont import
 
 }
 
@@ -156,7 +156,7 @@ $font-weight-bold-root:        700 !default;
 $font-family-mono:             'Consolas', 'Liberation Mono', 'Menlo', 'Courier', monospace !default;
 
 // first: heading
-$font-family-first:            'Sawarabi Mincho', 'Hiragino Mincho Pro', 'ＭＳ Ｐ明朝', 'MS PMincho', 'Bookman Old Style', 'Times New Roman', '-apple-system', 'BlinkMacSystemFont', serif !default;
+$font-family-first:            '游明朝', 'Yu Mincho', '游明朝体', 'YuMincho', 'Hiragino Mincho Pro', 'ＭＳ Ｐ明朝', 'MS PMincho', 'Bookman Old Style', 'Times New Roman', '-apple-system', 'BlinkMacSystemFont', serif !default;
 $font-weight-first:            300 !default;
 $font-family-bold-first:       $font-family-first;
 $font-weight-bold-first:       700 !default;

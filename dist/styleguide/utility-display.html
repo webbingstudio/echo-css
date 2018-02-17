@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>utility-display | Style guide | echo-css</title>
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div class="l-document" id="document">
+
+    <header class="s-header">
+        <div class="s-container s-container-fluid">
+
+            <div class="s-header-brand">
+                <p class="s-header-title title title-03">echo-css <span class="label label-info">v0.6.0</span></p>
+            </div><!-- /.s-header-brand -->
+
+            <?php include('../doc_include/header_nav.inc'); ?>
+
+        </div><!-- /.s-container -->
+    </header>
+
+    <div class="s-container s-container-fluid">
+        <div class="s-contents s-contents-2col">
+            <main class="s-contents-main" role="main">
+
+                
+                <div class="s-page-header page-header">
+                    <h1 class="page-title title s-title-01">utility-display</h1>
+                </div><!-- /.page-header -->
+                
+
+                
+
+                <article class="s-post post">
+                    <div class="post-contents styleguide-contents"><h1 id="display-01-type" class="styleguide">display-(type)</h1>
+  
+
+<p>テキストを大見出しに変更する。<br>
+  余白等は <code>utility &gt; .m</code> や <code>utility &gt; .p</code> で指定する。<br>
+  (type)は、 <code>1, 2, 3, 4</code> に対応しており、<strong>必ずしも文字の大きさを表すものではない。</strong></p>
+<div class="example">  <h1 class="display-1">これはdisplay-1です</h1>
+  <h1 class="display-2">これはdisplay-2です</h1>
+  <h1 class="display-3">これはdisplay-3です</h1>
+  <h1 class="display-4">これはdisplay-4です</h1>
+</div><div class="codeblock"><pre>  <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"display-1"</span><span class="nt">&gt;</span>これはdisplay-1です<span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"display-2"</span><span class="nt">&gt;</span>これはdisplay-2です<span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"display-3"</span><span class="nt">&gt;</span>これはdisplay-3です<span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"display-4"</span><span class="nt">&gt;</span>これはdisplay-4です<span class="nt">&lt;/h1&gt;</span>
+</pre></div>                    </div><!-- /.post-contents -->
+                </article><!-- /.post -->
+
+            </main>
+            <div class="s-contents-sub" role="complementary">
+                <h2 class="title title-04 m-b">Style guide</h2>
+                <nav class="s-sitemap nav nav-vertical">
+                    <?php include('../doc_include/menu_styleguide.inc'); ?>
+                </nav>
+            </div>
+        </div><!-- /.s-contents -->
+    </div><!-- /.s-container -->
+
+    <?php include('../doc_include/footer.inc'); ?>
+
+</div><!-- /.l-document -->
+</body>
+</html>
