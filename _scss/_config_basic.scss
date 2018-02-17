@@ -26,7 +26,7 @@ $spacer:                     10px !default;
 // gray: greyscale color
 $gray:                      #333 !default;
 $gray-strong:               #000 !default;
-$gray-mild:                 #888 !default;
+$gray-mild:                 #777 !default;
 $gray-milder:               #bbb !default;
 $gray-fade:                 #eee !default;
 
@@ -119,7 +119,7 @@ $__important:    "important" !default;
 
 $border-width:               1px !default;
 $border-color:               $gray-milder !default;
-$border-inverse-color:       #666666 !default;
+$border-inverse-color:       $gray-mild !default;
 
 
 // Font Mapping
@@ -127,7 +127,6 @@ $border-inverse-color:       #666666 !default;
 
 @mixin font-face-mapping() {
 
-  @import url(https://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
   @import url(https://fonts.googleapis.com/earlyaccess/sawarabimincho.css);
 
 }
@@ -139,7 +138,7 @@ $border-inverse-color:       #666666 !default;
 // Set the value to "true" if you do want to use reliable font settings (CSS becomes redundant)
 $use-font-in-reliable: true !default;
 
-$font-family-root:             'Noto Sans Japanese', '-apple-system', 'BlinkMacSystemFont', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif !default;
+$font-family-root:             '-apple-system', 'BlinkMacSystemFont', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif !default;
 $font-weight-root:             300 !default;
 $font-family-bold-root:        $font-family-root;
 $font-weight-bold-root:        700 !default;
