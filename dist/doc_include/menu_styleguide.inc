@@ -52,7 +52,6 @@
             </li>
             <li class="nav-item"><span class="nav-label">utility</span>
                 <ul class="nav-list nav-chidren">
-                    <li class="nav-item"><a href="./utility-display.html">display</a></li>
                     <li class="nav-item"><a href="./utility-m.html">m</a></li>
                     <li class="nav-item"><a href="./utility-p.html">p</a></li>
                     <li class="nav-item"><a href="./utility-text.html">text</a></li>

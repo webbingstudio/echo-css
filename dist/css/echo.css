@@ -5545,58 +5545,6 @@ category: utility-container-expand
 
 /*doc
 ---
-title: display-(type)
-name: display-01-type
-category: utility-display
----
-
-テキストを大見出しに変更する。  
-余白等は <code>utility > .m</code> や <code>utility > .p</code> で指定する。  
-(type)は、 <code>1, 2, 3, 4</code> に対応しており、**必ずしも文字の大きさを表すものではない。**
-
-``` example
-<h1 class="display-1">これはdisplay-1です</h1>
-<h1 class="display-2">これはdisplay-2です</h1>
-<h1 class="display-3">これはdisplay-3です</h1>
-<h1 class="display-4">これはdisplay-4です</h1>
-```
-
-*/
-#document .display-1 {
-  margin: 0;
-  padding: 0;
-  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
-  font-weight: 300;
-  font-size: 5rem;
-  line-height: 1.25;
-}
-#document .display-2 {
-  margin: 0;
-  padding: 0;
-  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
-  font-weight: 300;
-  font-size: 4rem;
-  line-height: 1.25;
-}
-#document .display-3 {
-  margin: 0;
-  padding: 0;
-  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
-  font-weight: 300;
-  font-size: 3rem;
-  line-height: 1.25;
-}
-#document .display-4 {
-  margin: 0;
-  padding: 0;
-  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
-  font-weight: 300;
-  font-size: 2rem;
-  line-height: 1.25;
-}
-
-/*doc
----
 title: float-(direction)
 name: float-direction
 category: utility-float
