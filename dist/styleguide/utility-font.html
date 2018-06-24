@@ -48,42 +48,40 @@
 
                 <article class="s-post post">
                     <div class="post-contents styleguide-contents"><h1 id="font-01-face" class="styleguide">font-(face)</h1>
-  
 
 <p>フォントを変更する。オブジェクト・コンポーネントを可能な限り上書きする。</p>
-<div class="example">  <p class="text-xl font-first">font-first_デザインフォント01に変更しました</p>
-  <p class="text-xl font-second">font-second_デザインフォント02に変更しました</p>
-  <p class="text-xl font-third">font-third_デザインフォント03に変更しました</p>
-  <p class="text-xl font-first">ここはデザインフォント01ですが、<span class="font-root">font-root_ここからbody要素のフォントに変更しました</span></p>
-  <p class="text-xl font-mono">font-mono_等幅フォントに変更しました &lt;p class="font-mono"&gt;hello world!&lt;/p&gt;</p>
-</div><div class="codeblock"><pre>  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-xl font-first"</span><span class="nt">&gt;</span>font-first_デザインフォント01に変更しました<span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-xl font-second"</span><span class="nt">&gt;</span>font-second_デザインフォント02に変更しました<span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-xl font-third"</span><span class="nt">&gt;</span>font-third_デザインフォント03に変更しました<span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-xl font-first"</span><span class="nt">&gt;</span>ここはデザインフォント01ですが、<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"font-root"</span><span class="nt">&gt;</span>font-root_ここからbody要素のフォントに変更しました<span class="nt">&lt;/span&gt;&lt;/p&gt;</span>
-  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-xl font-mono"</span><span class="nt">&gt;</span>font-mono_等幅フォントに変更しました <span class="ni">&amp;lt;</span>p class="font-mono"<span class="ni">&amp;gt;</span>hello world!<span class="ni">&amp;lt;</span>/p<span class="ni">&amp;gt;</span><span class="nt">&lt;/p&gt;</span>
+<div class="example"><p class="text-xl font-first">font-first_フォント01に変更しました</p>
+<p class="text-xl font-second">font-second_フォント02に変更しました</p>
+<p class="text-xl font-third">font-third_フォント03に変更しました</p>
+<p class="text-xl font-first">ここはフォント01ですが、<span class="font-root">font-root_ここからbody要素のフォントに変更しました</span></p>
+<p class="text-xl font-mono">font-mono_等幅フォントに変更しました &lt;p class="font-mono"&gt;hello world!&lt;/p&gt;</p>
+</div><div class="codeblock"><pre><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-xl font-first"</span><span class="nt">&gt;</span>font-first_フォント01に変更しました<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-xl font-second"</span><span class="nt">&gt;</span>font-second_フォント02に変更しました<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-xl font-third"</span><span class="nt">&gt;</span>font-third_フォント03に変更しました<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-xl font-first"</span><span class="nt">&gt;</span>ここはフォント01ですが、<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"font-root"</span><span class="nt">&gt;</span>font-root_ここからbody要素のフォントに変更しました<span class="nt">&lt;/span&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-xl font-mono"</span><span class="nt">&gt;</span>font-mono_等幅フォントに変更しました <span class="ni">&amp;lt;</span>p class="font-mono"<span class="ni">&amp;gt;</span>hello world!<span class="ni">&amp;lt;</span>/p<span class="ni">&amp;gt;</span><span class="nt">&lt;/p&gt;</span>
 </pre></div>
 <h1 id="font-02-bold" class="styleguide">.font-bold</h1>
-  
 
 <p>ボールドフォントに変更する。</p>
 
-<p>### 補足：日本語ウェブフォントの仕様</p>
+<h3>補足：日本語ウェブフォントの仕様</h3>
 
 <p>日本語ウェブフォントサービスを利用した場合、 <code>font-weight</code> だけではウェイトの変更ができないことがある。このため、別途クラスが必要となる。</p>
 
-<p>### Note: Web font in Japanese specification</p>
+<h3>Note: Web font in Japanese specification</h3>
 
 <p>When using the Japanese web font service, font weight is may not be change with only <code> font-weight </code>. Therefore, a separate class is required.</p>
-<div class="example">  <p class="text-xl font-first font-bold">font-first_font-bold_デザインフォント01に変更しました</p>
-  <p class="text-xl font-second font-bold">font-second_font-bold_デザインフォント02に変更しました</p>
-  <p class="text-xl font-third font-bold">font-third_font-bold_デザインフォント03に変更しました</p>
-  <p class="text-xl font-first font-bold">ここはデザインフォント01ですが、<span class="font-root font-bold">font-root_font-bold_ここからbody要素のフォントに変更しました</span></p>
-  <p class="text-xl font-mono font-bold">font-mono_font-bold_等幅フォントに変更しました &lt;p class="font-mono font-bold"&gt;hello world!&lt;/p&gt;</p>
-</div><div class="codeblock"><pre>  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-xl font-first font-bold"</span><span class="nt">&gt;</span>font-first_font-bold_デザインフォント01に変更しました<span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-xl font-second font-bold"</span><span class="nt">&gt;</span>font-second_font-bold_デザインフォント02に変更しました<span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-xl font-third font-bold"</span><span class="nt">&gt;</span>font-third_font-bold_デザインフォント03に変更しました<span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-xl font-first font-bold"</span><span class="nt">&gt;</span>ここはデザインフォント01ですが、<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"font-root font-bold"</span><span class="nt">&gt;</span>font-root_font-bold_ここからbody要素のフォントに変更しました<span class="nt">&lt;/span&gt;&lt;/p&gt;</span>
-  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-xl font-mono font-bold"</span><span class="nt">&gt;</span>font-mono_font-bold_等幅フォントに変更しました <span class="ni">&amp;lt;</span>p class="font-mono font-bold"<span class="ni">&amp;gt;</span>hello world!<span class="ni">&amp;lt;</span>/p<span class="ni">&amp;gt;</span><span class="nt">&lt;/p&gt;</span>
+<div class="example"><p class="text-xl font-first font-bold">font-first_font-bold_フォント01に変更しました</p>
+<p class="text-xl font-second font-bold">font-second_font-bold_フォント02に変更しました</p>
+<p class="text-xl font-third font-bold">font-third_font-bold_フォント03に変更しました</p>
+<p class="text-xl font-first font-bold">ここはフォント01ですが、<span class="font-root font-bold">font-root_font-bold_ここからbody要素のフォントに変更しました</span></p>
+<p class="text-xl font-mono font-bold">font-mono_font-bold_等幅フォントに変更しました &lt;p class="font-mono font-bold"&gt;hello world!&lt;/p&gt;</p>
+</div><div class="codeblock"><pre><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-xl font-first font-bold"</span><span class="nt">&gt;</span>font-first_font-bold_フォント01に変更しました<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-xl font-second font-bold"</span><span class="nt">&gt;</span>font-second_font-bold_フォント02に変更しました<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-xl font-third font-bold"</span><span class="nt">&gt;</span>font-third_font-bold_フォント03に変更しました<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-xl font-first font-bold"</span><span class="nt">&gt;</span>ここはフォント01ですが、<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"font-root font-bold"</span><span class="nt">&gt;</span>font-root_font-bold_ここからbody要素のフォントに変更しました<span class="nt">&lt;/span&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-xl font-mono font-bold"</span><span class="nt">&gt;</span>font-mono_font-bold_等幅フォントに変更しました <span class="ni">&amp;lt;</span>p class="font-mono font-bold"<span class="ni">&amp;gt;</span>hello world!<span class="ni">&amp;lt;</span>/p<span class="ni">&amp;gt;</span><span class="nt">&lt;/p&gt;</span>
 </pre></div>                    </div><!-- /.post-contents -->
                 </article><!-- /.post -->
 
