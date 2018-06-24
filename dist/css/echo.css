@@ -6907,3 +6907,499 @@ category: utility-text
 #document .text-xxl {
   font-size: 2em;
 }
+
+/*doc
+---
+title: WYSIWYG Styles (WordPress)
+name: wysiwyg-wordpress
+category: wysiwyg
+---
+
+コンテンツ・マネージメント・システムの仕様上、クラスを指定することができない、自由文エリアの標準スタイル。  
+以下の条件に合致する要素に適用される。この条件から漏れるようなコンポーネントは使用できない。
+
+1. <code>.wysiwyg</code> を付与した要素で包括されている
+1. 要素自体に以下のクラスが付与されていない
+    - a:  link, btn, label
+    - h:  title
+    - ul: list
+    - ol: list
+    - dl: list
+    - hr: すべてのクラス
+    - blockquote: すべてのクラス
+    - table: すべてのクラス
+1. img要素に以下のクラスが付与されている
+    - align-*
+1. figure要素に以下のクラスが付与されている
+    - align-*
+
+なお、<code>.wysiwyg</code> 内の最初の要素は、強制的に上マージンが0となる。（!importantを使用している）
+
+
+``` example
+<div class="c-box">
+    <p>以下は、<a href="https://ja.wordpress.org/themes/" target="_blank">WordPressテーマディレクトリ</a>のサンプルコードを日本語訳し、より想定外のケースに対応したものです。</p>
+</div>
+<div class="wysiwyg">
+    <p>このHTMLの目的は、CSSを使ってどのようなデフォルト設定を決定し、可能なHTML要素がこのHTMLに含まれているかを確認し、サイトを設計する際に考えられる要素を見落とさないようにすることです。</p>
+    <hr>
+    <h1>見出し1</h1>
+    <h2>見出し2</h2>
+    <h3>見出し3</h3>
+    <h4>見出し4</h4>
+    <h5>見出し5</h5>
+    <h6>見出し6</h6>
+    <p><small><a href="#top">[ページ先頭へもどる]</a></small></p>
+    <hr>
+    <h2 id="paragraph">段落</h2>
+    <p>吾輩は猫である。名前はまだ無い。<a href="#" title="テストリンクです">テストリンクです</a>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+    <p>吾輩は猫である。名前は<em>弱い強調です</em>まだ無い。どこで生れたかとんと見当がつかぬ。何でも<strong>強い強調です</strong>薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+    <p><small><a href="#top">[ページ先頭へもどる]</a></small></p>
+    <hr>
+    <h2 id="list_types">リストタイプ</h2>
+    <h3>定義リスト</h3>
+    <dl>
+        <dt>定義リストのタイトル</dt>
+        <dd>これは定義リストの説明です。</dd>
+        <dt>定義リストのタイトル</dt>
+        <dd>これは定義リストの説明ですが、とても長く複数行になるくらい文字数があります。これは定義リストの説明ですが、とても長く複数行になるくらい文字数があります。これは定義リストの説明ですが、とても長く複数行になるくらい文字数があります。これは定義リストの説明ですが、とても長く複数行になるくらい文字数があります。これは定義リストの説明ですが、とても長く複数行になるくらい文字数があります。</dd>
+        <dt>定義リストのタイトル</dt>
+        <dd>これは定義リストの説明です。</dd>
+    </dl>
+    <h3>番号リスト</h3>
+    <ol>
+        <li>これは1番目の番号リストです。</li>
+        <li>これは2番目の番号リストですが、とても長く複数行になるくらい文字数があります。これは2番目の番号リストですが、とても長く複数行になるくらい文字数があります。これは2番目の番号リストですが、とても長く複数行になるくらい文字数があります。これは2番目の番号リストですが、とても長く複数行になるくらい文字数があります。</li>
+        <li>これは3番目の番号リストです。
+            <ol>
+                <li>これは1番目の番号リストです。</li>
+                <li>これは2番目の番号リストです。</li>
+                <li>これは3番目の番号リストです。</li>
+            </ol>
+        </li>
+        <li>これは4番目の番号リストです。</li>
+        <li>これは5番目の番号リストです。
+            <ul>
+                <li>これは1番目の順序なしリストです。</li>
+                <li>これは2番目の順序なしリストです。</li>
+                <li>これは3番目の順序なしリストです。</li>
+            </ul>
+        </li>
+        <li>これは6番目の番号リストです。</li>
+    </ol>
+    <h3>順序なしリスト</h3>
+    <ul>
+        <li>これは1番目の順序なしリストです。</li>
+        <li>これは2番目の順序なしリストですが、とても長く複数行になるくらい文字数があります。これは2番目の順序なしリストですが、とても長く複数行になるくらい文字数があります。これは2番目の順序なしリストですが、とても長く複数行になるくらい文字数があります。これは2番目の順序なしリストですが、とても長く複数行になるくらい文字数があります。</li>
+        <li>これは3番目の順序なしリストです。
+            <ul>
+                <li>これは1番目の順序なしリストです。</li>
+                <li>これは2番目の順序なしリストです。</li>
+                <li>これは3番目の順序なしリストです。</li>
+            </ul>
+        </li>
+        <li>これは4番目の順序なしリストです。</li>
+        <li>これは5番目の順序なしリストです。
+            <ol>
+                <li>これは1番目の番号リストです。</li>
+                <li>これは2番目の番号リストです。</li>
+                <li>これは3番目の番号リストです。</li>
+            </ol>
+        </li>
+        <li>これは6番目の順序なしリストです。</li>
+    </ul>
+    <p><small><a href="#top">[ページ先頭へもどる]</a></small></p>
+    <hr>
+    <h2 id="images">画像</h2>
+    <figure style="width: 640px" class="wp-caption alignnone"><img class="wp-image-999" alt="" src="/images/_dummy/image_01_s.jpg" width="640"><figcaption class="wp-caption-text">画像のキャプションです</figcaption></figure>
+    <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+    <figure style="width: 320px" class="wp-caption alignleft"><img class="wp-image-999" alt="" src="/images/_dummy/image_02_s.jpg" width="320"><figcaption class="wp-caption-text">画像のキャプションです</figcaption></figure>
+    <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+    <figure style="width: 320px" class="wp-caption alignright"><img class="wp-image-999" alt="" src="/images/_dummy/image_03_s.jpg" width="320"><figcaption class="wp-caption-text">画像のキャプションです</figcaption></figure>
+    <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+    <p>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+    <figure style="width: 640px" class="wp-caption aligncenter"><img class="wp-image-999" alt="" src="/images/_dummy/image_04_s.jpg" width="640"><figcaption class="wp-caption-text">画像のキャプションです</figcaption></figure>
+    <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+    <p><small><a href="#top">[ページ先頭へもどる]</a></small></p>
+    <hr>
+    <h2 id="form_elements">フォーム</h2>
+    <fieldset>
+        <legend>legend要素（フィールドセットの表題）</legend>
+        <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</p>
+        <form>
+            <h2>フォーム内要素</h2>
+            <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</p>
+            <p><label for="text_field">テキスト入力:</label><br>
+                    <input type="text" id="text_field"></p>
+            <p><label for="text_area">複数行テキスト入力:</label><br>
+                    <textarea id="text_area"></textarea></p>
+            <p><label for="select_element">プルダウンリスト:</label><br>
+                        <select name="select_element">
+                        <optgroup label="オプショングループ1"><option value="1">オプション1</option><option value="2">オプション2</option><option value="3">オプション3</option></optgroup>
+                        <optgroup label="オプショングループ2"><option value="1">オプション1</option><option value="2">オプション2</option><option value="3">オプション3</option></optgroup>
+                    </select></p>
+            <p><label for="radio_buttons">ラジオボタン:</label></p>
+            <p>         <input type="radio" class="radio" name="radio_button" value="radio_1"> ラジオボタン1<br>
+                            <input type="radio" class="radio" name="radio_button" value="radio_2"> ラジオボタン2<br>
+                            <input type="radio" class="radio" name="radio_button" value="radio_3"> ラジオボタン3
+                    </p>
+    <p><label for="checkboxes">チェックボックス:</label></p>
+    <p>         <input type="checkbox" class="checkbox" name="checkboxes" value="check_1"> チェックボックス1<br>
+                    <input type="checkbox" class="checkbox" name="checkboxes" value="check_2"> チェックボックス2<br>
+                    <input type="checkbox" class="checkbox" name="checkboxes" value="check_3"> チェックボックス3
+            </p>
+    <p><label for="password">パスワード:</label></p>
+    <p>         <input type="password" class="password" name="password">
+            </p>
+    <p><label for="file">ファイルアップロード:</label><br>
+                <input type="file" class="file" name="file">
+            </p>
+    <p><input class="button" type="reset" value="消去"> <input class="button" type="submit" value="送信">
+            </p>
+    <p></p></form>
+    </fieldset>
+    <p><small><a href="#top">[ページ先頭へもどる]</a></small></p>
+    <hr>
+    <h2 id="tables">表組</h2>
+    <table cellspacing="0" cellpadding="0">
+    <tbody><tr>
+    <th>表見出し1</th>
+    <th>表見出し2</th>
+    <th>表見出し3</th>
+    </tr>
+    <tr>
+    <td>表のデータ1</td>
+    <td>表のデータ2</td>
+    <td>表のデータ3</td>
+    </tr>
+    <tr class="even">
+    <td>表のデータ1</td>
+    <td>表のデータ2</td>
+    <td>表のデータ3</td>
+    </tr>
+    <tr>
+    <td>表のデータ1</td>
+    <td>表のデータ2</td>
+    <td>表のデータ3</td>
+    </tr>
+    </tbody></table>
+    <p><small><a href="#top">[ページ先頭へもどる]</a></small></p>
+    <hr>
+    <h2 id="misc">その他 - abbr、acronym、pre、code、sub、supなど</h2>
+    <p>Lorem <sup>superscript</sup> dolor <sub>subscript</sub> amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. <cite>cite</cite>. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. <acronym title="National Basketball Association">NBA</acronym> Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.  <abbr title="Avenue">AVE</abbr></p>
+    <pre><p>
+    Lorem ipsum dolor sit amet,
+     consectetuer adipiscing elit.
+     Nullam dignissim convallis est.
+     Quisque aliquam. Donec faucibus. 
+    Nunc iaculis suscipit dui. 
+    Nam sit amet sem. 
+    Aliquam libero nisi, imperdiet at,
+     tincidunt nec, gravida vehicula,
+     nisl. 
+    Praesent mattis, massa quis 
+    luctus fermentum, turpis mi 
+    volutpat justo, eu volutpat 
+    enim diam eget metus. 
+    Maecenas ornare tortor. 
+    Donec sed tellus eget sapien
+     fringilla nonummy. 
+    <acronym title="National Basketball Association">NBA</acronym> 
+    Mauris a ante. Suspendisse
+     quam sem, consequat at, 
+    commodo vitae, feugiat in, 
+    nunc. Morbi imperdiet augue
+     quis tellus.  
+    <abbr title="Avenue">AVE</abbr></p></pre>
+    <blockquote><p>
+        "このスタイルシートは<br>とても驚くほど助けになるだろう" - 引用
+    </p></blockquote>
+    <p><small><a href="#top">[ページ先頭へもどる]</a></small></p>
+</div>
+```
+
+*/
+.wysiwyg {
+  word-break: break-word;
+  padding-bottom: 40px;
+}
+.wysiwyg *:first-child {
+  margin-top: 0 !important;
+}
+.wysiwyg a:not([class*="link"]):not([class*="btn"]):not([class*="label"]) {
+  text-decoration: underline;
+}
+.wysiwyg a:not([class*="link"]):not([class*="btn"]):not([class*="label"]):hover {
+  color: #4690da;
+  text-decoration: none;
+}
+.wysiwyg h1:not([class*="title"]),
+.wysiwyg h2:not([class*="title"]),
+.wysiwyg h3:not([class*="title"]),
+.wysiwyg h4:not([class*="title"]),
+.wysiwyg h5:not([class*="title"]),
+.wysiwyg h6:not([class*="title"]) {
+  margin: 0;
+  padding: 0;
+  background: transparent none;
+  border: 0 none;
+  color: #333;
+  font-weight: bold;
+  text-align: left;
+  line-height: 1.5;
+  border-radius: 0;
+}
+.wysiwyg h1:not([class*="title"]):before, .wysiwyg h1:not([class*="title"]):after,
+.wysiwyg h2:not([class*="title"]):before,
+.wysiwyg h2:not([class*="title"]):after,
+.wysiwyg h3:not([class*="title"]):before,
+.wysiwyg h3:not([class*="title"]):after,
+.wysiwyg h4:not([class*="title"]):before,
+.wysiwyg h4:not([class*="title"]):after,
+.wysiwyg h5:not([class*="title"]):before,
+.wysiwyg h5:not([class*="title"]):after,
+.wysiwyg h6:not([class*="title"]):before,
+.wysiwyg h6:not([class*="title"]):after {
+  display: none;
+}
+.wysiwyg h1:not([class*="title"]),
+.wysiwyg h2:not([class*="title"]) {
+  font-size: 1.25rem;
+  margin-top: 2em;
+  margin-bottom: .75em;
+  font-weight: 300;
+  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@media (min-width: 1000px) {
+  .wysiwyg h1:not([class*="title"]),
+  .wysiwyg h2:not([class*="title"]) {
+    font-size: 1.75rem;
+  }
+}
+.wysiwyg h3:not([class*="title"]) {
+  font-size: 1.25rem;
+  margin-top: 1.5em;
+  margin-bottom: .75em;
+}
+@media (min-width: 1000px) {
+  .wysiwyg h3:not([class*="title"]) {
+    font-size: 1.5rem;
+  }
+}
+.wysiwyg h4:not([class*="title"]) {
+  font-size: 1.125rem;
+  margin-top: 1em;
+  margin-bottom: .5em;
+}
+@media (min-width: 1000px) {
+  .wysiwyg h4:not([class*="title"]) {
+    font-size: 1.25rem;
+  }
+}
+.wysiwyg h5:not([class*="title"]) {
+  font-size: 1rem;
+  margin-top: 1em;
+  margin-bottom: .5em;
+}
+.wysiwyg h6:not([class*="title"]) {
+  font-size: 1rem;
+  margin-bottom: .5em;
+}
+.wysiwyg ul:not([class*="list"]),
+.wysiwyg ol:not([class*="list"]) {
+  overflow: hidden;
+}
+.wysiwyg ul:not([class*="list"]) {
+  margin: 0 0 .5rem;
+  padding: 0;
+}
+.wysiwyg ul:not([class*="list"]) > li {
+  position: relative;
+  margin: .5rem 0;
+  padding: 0 0 0 1.5rem;
+  list-style-type: none;
+}
+.wysiwyg ul:not([class*="list"]) > li:before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: .75em;
+  left: .25em;
+  width: .25em;
+  height: .25em;
+  background-color: #333;
+}
+.wysiwyg ul:not([class*="list"]) > li ul:not([class*="list"]),
+.wysiwyg ul:not([class*="list"]) > li ol:not([class*="list"]) {
+  margin-top: .5rem !important;
+  margin-bottom: 0 !important;
+}
+.wysiwyg ol:not([class*="list"]) {
+  counter-reset: ol_number;
+  margin: 0 0 .5rem;
+  padding: 0;
+}
+.wysiwyg ol:not([class*="list"]) > li {
+  position: relative;
+  margin: .5rem 0;
+  padding: 0 0 0 1.5rem;
+  list-style-type: none;
+}
+.wysiwyg ol:not([class*="list"]) > li:before {
+  display: block;
+  counter-increment: ol_number;
+  content: counter(ol_number) ".";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1rem;
+  text-align: center;
+}
+.wysiwyg ol:not([class*="list"]) > li ul:not([class*="list"]),
+.wysiwyg ol:not([class*="list"]) > li ol:not([class*="list"]) {
+  margin-top: .5em !important;
+  margin-bottom: 0 !important;
+}
+.wysiwyg dl:not([class*="list"]) {
+  margin: 0;
+  padding: 0;
+}
+.wysiwyg dl:not([class*="list"]) > dt {
+  margin: 0 0 .5em;
+  padding: 0;
+}
+.wysiwyg dl:not([class*="list"]) > dd {
+  margin: 0 0 .5em;
+  padding: 0 0 0 1.5rem;
+}
+.wysiwyg hr:not([class]) {
+  overflow: hidden;
+  margin: 30px 0;
+  height: #ccc;
+  border-width: 1px 0 0;
+  border-style: solid none none;
+  border-color: #ccc transparent transparent;
+}
+.wysiwyg blockquote:not([class]) {
+  overflow: hidden;
+  margin: 30px 0;
+  padding: 10px;
+  border-width: 0 0 0 5px;
+  border-style: none none none solid;
+  border-color: transparent transparent transparent #d8f0f7;
+  font-style: normal;
+}
+.wysiwyg table:not([class]) {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 30px;
+  border-width: 0 0 1px 1px;
+  border-style: solid;
+  border-color: #ccc;
+}
+@media (min-width: 425px) {
+  .wysiwyg table:not([class]) {
+    display: table;
+  }
+}
+.wysiwyg table:not([class]) thead,
+.wysiwyg table:not([class]) tbody,
+.wysiwyg table:not([class]) tfoot {
+  display: block;
+}
+@media (min-width: 425px) {
+  .wysiwyg table:not([class]) thead,
+  .wysiwyg table:not([class]) tbody,
+  .wysiwyg table:not([class]) tfoot {
+    display: table-row-group;
+  }
+}
+.wysiwyg table:not([class]) tr {
+  display: block;
+  border-bottom: 2px solid #ccc;
+}
+@media (min-width: 425px) {
+  .wysiwyg table:not([class]) tr {
+    display: table-row;
+    border-bottom: 0 none;
+  }
+}
+.wysiwyg table:not([class]) th,
+.wysiwyg table:not([class]) td {
+  display: block;
+  width: 100%;
+  padding: 5px 10px;
+  border-width: 1px 1px 0 0;
+  border-style: solid;
+  border-color: #ccc;
+  line-height: 1.5;
+  vertical-align: top;
+}
+@media (min-width: 425px) {
+  .wysiwyg table:not([class]) th,
+  .wysiwyg table:not([class]) td {
+    display: table-cell;
+    width: auto;
+  }
+}
+.wysiwyg table:not([class]) th {
+  text-align: left;
+}
+.wysiwyg table:not([class]) th.line-c {
+  text-align: center;
+}
+.wysiwyg table:not([class]) th.line-r {
+  text-align: right;
+}
+.wysiwyg table:not([class]) thead th {
+  vertical-align: bottom;
+}
+.wysiwyg img {
+  max-width: 100%;
+  height: auto;
+}
+.wysiwyg img[class*="alignnone"],
+.wysiwyg figure[class*="alignnone"] {
+  display: block !important;
+  margin: 0 0 20px !important;
+}
+.wysiwyg img[class*="alignleft"],
+.wysiwyg figure[class*="alignleft"] {
+  float: none !important;
+  display: block !important;
+  margin: 0 auto 20px !important;
+}
+@media (min-width: 425px) {
+  .wysiwyg img[class*="alignleft"],
+  .wysiwyg figure[class*="alignleft"] {
+    float: left !important;
+    margin: 0 20px 20px 0 !important;
+  }
+}
+.wysiwyg img[class*="alignright"],
+.wysiwyg figure[class*="alignright"] {
+  float: none !important;
+  display: block !important;
+  margin: 0 auto 20px !important;
+}
+@media (min-width: 425px) {
+  .wysiwyg img[class*="alignright"],
+  .wysiwyg figure[class*="alignright"] {
+    float: right !important;
+    margin: 0 0 20px 20px !important;
+  }
+}
+.wysiwyg img[class*="aligncenter"],
+.wysiwyg figure[class*="aligncenter"] {
+  display: block !important;
+  margin: 0 auto 20px !important;
+}
+.wysiwyg .wp-caption-text {
+  line-height: 1.5;
+  color: #888;
+  font-size: 0.875rem;
+  text-align: center;
+}
