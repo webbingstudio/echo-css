@@ -8,7 +8,7 @@ category: utility-text
 ---
 
 文字サイズを変更する。  
-<code>.#{$p}#{$u}text-md</code> 以外は、単位が <code>rem</code> ではなく <code>em</code> （要素の文字サイズからの相対値）である点に注意。
+<code>.#{$p}#{$u}text-md</code> のみ、単位が <code>em</code> ではなく <code>rem</code> （HTML要素の文字サイズ）である点に注意。
 
 ``` example
 <p class="#{$p}#{$u}text-xxs">#{$p}#{$u}text-xxs_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
@@ -40,15 +40,15 @@ category: utility-text
 	}
 
 	.#{$p}#{$u}text-lg {
-	    font-size: 1.125em;
-	}
-
-	.#{$p}#{$u}text-xl {
 	    font-size: 1.25em;
 	}
 
-	.#{$p}#{$u}text-xxl {
+	.#{$p}#{$u}text-xl {
 	    font-size: 1.5em;
+	}
+
+	.#{$p}#{$u}text-xxl {
+	    font-size: 2em;
 	}
 
 }

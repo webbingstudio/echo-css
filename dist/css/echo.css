@@ -6926,7 +6926,7 @@ category: utility-text
 ---
 
 文字サイズを変更する。  
-<code>.text-md</code> 以外は、単位が <code>rem</code> ではなく <code>em</code> （要素の文字サイズからの相対値）である点に注意。
+<code>.text-md</code> のみ、単位が <code>em</code> ではなく <code>rem</code> （HTML要素の文字サイズ）である点に注意。
 
 ``` example
 <p class="text-xxs">text-xxs_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
@@ -6951,11 +6951,11 @@ category: utility-text
   font-size: 1rem;
 }
 #document .text-lg {
-  font-size: 1.125em;
-}
-#document .text-xl {
   font-size: 1.25em;
 }
-#document .text-xxl {
+#document .text-xl {
   font-size: 1.5em;
+}
+#document .text-xxl {
+  font-size: 2em;
 }
