@@ -15,11 +15,14 @@ category: utility-img
 
 */
 
-.#{$p}#{$u}img-responsive {
-    max-width: 100%;
-    height: auto;
-}
+#{$u-wrap} {
 
+	.#{$p}#{$u}img-responsive {
+	    max-width: 100%;
+	    height: auto;
+	}
+
+}
 
 /*doc
 ---
@@ -36,10 +39,13 @@ category: utility-img
 
 */
 
-.#{$p}#{$u}img-fill {
-    width: 100%;
-    height: auto;
-}
+#{$u-wrap} {
 
+	.#{$p}#{$u}img-fill {
+	    width: 100%;
+	    height: auto;
+	}
+
+}
 
 }

@@ -34,6 +34,10 @@ category: utility-text
 ```
 */
 
-@include make-text-direction();
+#{$u-wrap} {
+
+	@include make-text-direction();
+
+}
 
 }

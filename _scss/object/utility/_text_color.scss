@@ -40,60 +40,64 @@ category: utility-text
 ```
 */
 
-.#{$p}#{$u}text-mild {
-    color: $body-mild-color;
-}
+#{$u-wrap} {
 
-.#{$p}#{$u}text-#{$__first} {
-    color: $first-text;
-
-    &.#{$p}#{$u}text-mild {
-        color: $first-mild;
+    .#{$p}#{$u}text-mild {
+        color: $body-mild-color;
     }
 
-}
+    .#{$p}#{$u}text-#{$__first} {
+        color: $first-text;
 
-.#{$p}#{$u}text-#{$__second} {
-    color: $second-text;
+        &.#{$p}#{$u}text-mild {
+            color: $first-mild;
+        }
 
-    &.#{$p}#{$u}text-mild {
-        color: $second-mild;
     }
 
-}
+    .#{$p}#{$u}text-#{$__second} {
+        color: $second-text;
 
-.#{$p}#{$u}text-#{$__third} {
-    color: $third-text;
+        &.#{$p}#{$u}text-mild {
+            color: $second-mild;
+        }
 
-    &.#{$p}#{$u}text-mild {
-        color: $third-mild;
     }
 
-}
+    .#{$p}#{$u}text-#{$__third} {
+        color: $third-text;
 
-.#{$p}#{$u}text-#{$__fourth} {
-    color: $fourth-text;
+        &.#{$p}#{$u}text-mild {
+            color: $third-mild;
+        }
 
-    &.#{$p}#{$u}text-mild {
-        color: $fourth-mild;
     }
 
-}
+    .#{$p}#{$u}text-#{$__fourth} {
+        color: $fourth-text;
 
-.#{$p}#{$u}text-#{$__info} {
-    color: $info-text;
+        &.#{$p}#{$u}text-mild {
+            color: $fourth-mild;
+        }
 
-    &.#{$p}#{$u}text-mild {
-        color: $info-mild;
     }
 
-}
+    .#{$p}#{$u}text-#{$__info} {
+        color: $info-text;
 
-.#{$p}#{$u}text-#{$__important} {
-    color: $important-text;
+        &.#{$p}#{$u}text-mild {
+            color: $info-mild;
+        }
 
-    &.#{$p}#{$u}text-mild {
-        color: $important-mild;
+    }
+
+    .#{$p}#{$u}text-#{$__important} {
+        color: $important-text;
+
+        &.#{$p}#{$u}text-mild {
+            color: $important-mild;
+        }
+
     }
 
 }
@@ -114,10 +118,13 @@ category: utility-text
 
 */
 
-.#{$p}#{$u}text-root {
-    color: $body-color;
-}
+#{$u-wrap} {
 
+    .#{$p}#{$u}text-root {
+        color: $body-color;
+    }
+
+}
 
 
 /*doc
@@ -137,14 +144,17 @@ category: utility-text
 ```
 */
 
-.#{$p}#{$u}text-#{$__inverse} {
-    color: $body-inverse-color;
+#{$u-wrap} {
 
-    &.#{$p}#{$u}text-mild {
-        color: $body-inverse-mild-color;
+    .#{$p}#{$u}text-#{$__inverse} {
+        color: $body-inverse-color;
+
+        &.#{$p}#{$u}text-mild {
+            color: $body-inverse-mild-color;
+        }
+
     }
 
 }
-
 
 }

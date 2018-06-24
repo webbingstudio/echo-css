@@ -79,177 +79,180 @@ category: utility-bg
 
 */
 
-.#{$p}#{$u}bg-#{$__gray} {
-    background-color: $gray;
+#{$u-wrap} {
 
-    &:not(.#{$p}#{$u}bg-fade) {
-        color: $body-inverse-color;
+    .#{$p}#{$u}bg-#{$__gray} {
+        background-color: $gray;
 
-        & a:not([class]) {
+        &:not(.#{$p}#{$u}bg-fade) {
             color: $body-inverse-color;
+
+            & a:not([class]) {
+                color: $body-inverse-color;
+            }
+
+        }
+
+        &.#{$p}#{$u}bg-mild {
+            background-color: $gray-mild;
         }
 
     }
 
-    &.#{$p}#{$u}bg-mild {
-        background-color: $gray-mild;
-    }
+    .#{$p}#{$u}bg-#{$__gray_light} {
 
-}
-
-.#{$p}#{$u}bg-#{$__gray_light} {
-
-    &.#{$p}#{$u}bg-fade {
-        background-color: $gray-fade;
-    }
-
-}
-
-.#{$p}#{$u}bg-#{$__first} {
-    background-color: $first;
-
-    &:not(.#{$p}#{$u}bg-fade) {
-        color: $body-inverse-color;
-
-        & a:not([class]) {
-            color: $body-inverse-color;
+        &.#{$p}#{$u}bg-fade {
+            background-color: $gray-fade;
         }
 
     }
 
-    &.#{$p}#{$u}bg-mild {
-        background-color: $first-mild;
-    }
+    .#{$p}#{$u}bg-#{$__first} {
+        background-color: $first;
 
-    &.#{$p}#{$u}bg-fade {
-        background-color: $first-fade;
-    }
-
-}
-
-.#{$p}#{$u}bg-#{$__second} {
-    background-color: $second;
-
-    &:not(.#{$p}#{$u}bg-fade) {
-        color: $body-inverse-color;
-
-        & a:not([class]) {
+        &:not(.#{$p}#{$u}bg-fade) {
             color: $body-inverse-color;
+
+            & a:not([class]) {
+                color: $body-inverse-color;
+            }
+
+        }
+
+        &.#{$p}#{$u}bg-mild {
+            background-color: $first-mild;
+        }
+
+        &.#{$p}#{$u}bg-fade {
+            background-color: $first-fade;
         }
 
     }
 
-    &.#{$p}#{$u}bg-mild {
-        background-color: $second-mild;
-    }
+    .#{$p}#{$u}bg-#{$__second} {
+        background-color: $second;
 
-    &.#{$p}#{$u}bg-fade {
-        background-color: $second-fade;
-    }
-
-}
-
-.#{$p}#{$u}bg-#{$__third} {
-    background-color: $third;
-
-    &:not(.#{$p}#{$u}bg-fade) {
-        color: $body-inverse-color;
-
-        & a:not([class]) {
+        &:not(.#{$p}#{$u}bg-fade) {
             color: $body-inverse-color;
+
+            & a:not([class]) {
+                color: $body-inverse-color;
+            }
+
+        }
+
+        &.#{$p}#{$u}bg-mild {
+            background-color: $second-mild;
+        }
+
+        &.#{$p}#{$u}bg-fade {
+            background-color: $second-fade;
         }
 
     }
 
-    &.#{$p}#{$u}bg-mild {
-        background-color: $third-mild;
-    }
+    .#{$p}#{$u}bg-#{$__third} {
+        background-color: $third;
 
-    &.#{$p}#{$u}bg-fade {
-        background-color: $third-fade;
-    }
-
-}
-
-.#{$p}#{$u}bg-#{$__fourth} {
-    background-color: $fourth;
-
-    &:not(.#{$p}#{$u}bg-fade) {
-        color: $body-inverse-color;
-
-        & a:not([class]) {
+        &:not(.#{$p}#{$u}bg-fade) {
             color: $body-inverse-color;
+
+            & a:not([class]) {
+                color: $body-inverse-color;
+            }
+
+        }
+
+        &.#{$p}#{$u}bg-mild {
+            background-color: $third-mild;
+        }
+
+        &.#{$p}#{$u}bg-fade {
+            background-color: $third-fade;
         }
 
     }
 
-    &.#{$p}#{$u}bg-mild {
-        background-color: $fourth-mild;
-    }
+    .#{$p}#{$u}bg-#{$__fourth} {
+        background-color: $fourth;
 
-    &.#{$p}#{$u}bg-fade {
-        background-color: $fourth-fade;
-    }
-
-}
-
-.#{$p}#{$u}bg-#{$__info} {
-    background-color: $info;
-
-    &:not(.#{$p}#{$u}bg-fade) {
-        color: $body-inverse-color;
-
-        & a:not([class]) {
+        &:not(.#{$p}#{$u}bg-fade) {
             color: $body-inverse-color;
+
+            & a:not([class]) {
+                color: $body-inverse-color;
+            }
+
+        }
+
+        &.#{$p}#{$u}bg-mild {
+            background-color: $fourth-mild;
+        }
+
+        &.#{$p}#{$u}bg-fade {
+            background-color: $fourth-fade;
         }
 
     }
 
-    &.#{$p}#{$u}bg-mild {
-        background-color: $info-mild;
-    }
+    .#{$p}#{$u}bg-#{$__info} {
+        background-color: $info;
 
-    &.#{$p}#{$u}bg-fade {
-        background-color: $info-fade;
-    }
-
-}
-
-.#{$p}#{$u}bg-#{$__important} {
-    background-color: $important;
-
-    &:not(.#{$p}#{$u}bg-fade) {
-        color: $body-inverse-color;
-
-        & a:not([class]) {
+        &:not(.#{$p}#{$u}bg-fade) {
             color: $body-inverse-color;
+
+            & a:not([class]) {
+                color: $body-inverse-color;
+            }
+
+        }
+
+        &.#{$p}#{$u}bg-mild {
+            background-color: $info-mild;
+        }
+
+        &.#{$p}#{$u}bg-fade {
+            background-color: $info-fade;
         }
 
     }
 
-    &.#{$p}#{$u}bg-mild {
-        background-color: $important-mild;
-    }
+    .#{$p}#{$u}bg-#{$__important} {
+        background-color: $important;
 
-    &.#{$p}#{$u}bg-fade {
-        background-color: $important-fade;
-    }
-
-}
-
-.#{$p}#{$u}bg-#{$__inverse_bg} {
-    background-color: $body-inverse-bg;
-
-    &:not(.#{$p}#{$u}bg-fade) {
-        color: $body-inverse-color;
-
-        & a:not([class]) {
+        &:not(.#{$p}#{$u}bg-fade) {
             color: $body-inverse-color;
+
+            & a:not([class]) {
+                color: $body-inverse-color;
+            }
+
+        }
+
+        &.#{$p}#{$u}bg-mild {
+            background-color: $important-mild;
+        }
+
+        &.#{$p}#{$u}bg-fade {
+            background-color: $important-fade;
+        }
+
+    }
+
+    .#{$p}#{$u}bg-#{$__inverse_bg} {
+        background-color: $body-inverse-bg;
+
+        &:not(.#{$p}#{$u}bg-fade) {
+            color: $body-inverse-color;
+
+            & a:not([class]) {
+                color: $body-inverse-color;
+            }
+
         }
 
     }
 
 }
-
 
 }

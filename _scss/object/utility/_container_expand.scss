@@ -23,12 +23,15 @@ category: utility-container-expand
 
 */
 
-.#{$p}#{$u}container-expand {
-    margin-left: -9999px;
-    margin-right: -9999px;
-    padding-left: 9999px;
-    padding-right: 9999px;
-}
+#{$u-wrap} {
 
+	.#{$p}#{$u}container-expand {
+	    margin-left: -9999px;
+	    margin-right: -9999px;
+	    padding-left: 9999px;
+	    padding-right: 9999px;
+	}
+
+}
 
 }

@@ -41,13 +41,16 @@ category: utility-float
 
 */
 
-.#{$p}#{$u}float-l {
-	float: left;
-}
+#{$u-wrap} {
 
-.#{$p}#{$u}float-r {
-	float: right;
-}
+	.#{$p}#{$u}float-l {
+		float: left;
+	}
 
+	.#{$p}#{$u}float-r {
+		float: right;
+	}
+
+}
 
 }

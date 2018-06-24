@@ -11,8 +11,12 @@ category: utility-hidden
 
 */
 
-.#{$p}#{$u}hidden {
-    display: none;
+#{$u-wrap} {
+
+    .#{$p}#{$u}hidden {
+        display: none;
+    }
+
 }
 
 /*doc
@@ -34,16 +38,17 @@ category: utility-hidden
 
 */
 
-@each $breakpoint in map-keys($grid-breakpoints) {
-    @include media-breakpoint-up($breakpoint) {
-        @if ($breakpoint != 'xxs') {
-            .#{$p}#{$u}hidden-#{$breakpoint}-up {
-                display: none;
+#{$u-wrap} {
+    @each $breakpoint in map-keys($grid-breakpoints) {
+        @include media-breakpoint-up($breakpoint) {
+            @if ($breakpoint != 'xxs') {
+                .#{$p}#{$u}hidden-#{$breakpoint}-up {
+                    display: none;
+                }
             }
         }
     }
 }
-
 
 /*doc
 ---
@@ -64,11 +69,13 @@ category: utility-hidden
 
 */
 
-@each $breakpoint in map-keys($grid-breakpoints) {
-    @include media-breakpoint-down($breakpoint) {
-        @if ($breakpoint != 'xxl') {
-            .#{$p}#{$u}hidden-#{$breakpoint}-down {
-                display: none;
+#{$u-wrap} {
+    @each $breakpoint in map-keys($grid-breakpoints) {
+        @include media-breakpoint-down($breakpoint) {
+            @if ($breakpoint != 'xxl') {
+                .#{$p}#{$u}hidden-#{$breakpoint}-down {
+                    display: none;
+                }
             }
         }
     }

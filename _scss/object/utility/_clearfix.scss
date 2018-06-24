@@ -38,9 +38,12 @@ category: utility-clearfix
 
 */
 
-.#{$p}#{$u}clearfix {
-  @include clearfix();
-}
+#{$u-wrap} {
 
+    .#{$p}#{$u}clearfix {
+      @include clearfix();
+    }
+
+}
 
 }

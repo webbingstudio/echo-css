@@ -18,21 +18,24 @@ category: utility-line
 ```
 */
 
-.#{$p}#{$u}line-none {
-    line-height: $line-height-none;
-}
+#{$u-wrap} {
 
-.#{$p}#{$u}line-sm {
-    line-height: $line-height-sm;
-}
+	.#{$p}#{$u}line-none {
+	    line-height: $line-height-none;
+	}
 
-.#{$p}#{$u}line-md {
-    line-height: $line-height-md;
-}
+	.#{$p}#{$u}line-sm {
+	    line-height: $line-height-sm;
+	}
 
-.#{$p}#{$u}line-lg {
-    line-height: $line-height-lg;
-}
+	.#{$p}#{$u}line-md {
+	    line-height: $line-height-md;
+	}
 
+	.#{$p}#{$u}line-lg {
+	    line-height: $line-height-lg;
+	}
+
+}
 
 }

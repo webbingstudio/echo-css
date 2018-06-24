@@ -20,26 +20,29 @@ category: utility-font
 
 */
 
-.#{$p}#{$u}font-root {
-    font-family: $font-family-root;
-}
+#{$u-wrap} {
 
-.#{$p}#{$u}font-mono {
-    font-family: $font-family-mono;
-}
+	.#{$p}#{$u}font-root {
+	    font-family: $font-family-root;
+	}
 
-.#{$p}#{$u}font-first {
-    font-family: $font-family-first;
-}
+	.#{$p}#{$u}font-mono {
+	    font-family: $font-family-mono;
+	}
 
-.#{$p}#{$u}font-second {
-    font-family: $font-family-second;
-}
+	.#{$p}#{$u}font-first {
+	    font-family: $font-family-first;
+	}
 
-.#{$p}#{$u}font-third {
-    font-family: $font-family-third;
-}
+	.#{$p}#{$u}font-second {
+	    font-family: $font-family-second;
+	}
 
+	.#{$p}#{$u}font-third {
+	    font-family: $font-family-third;
+	}
+
+}
 
 }
 }

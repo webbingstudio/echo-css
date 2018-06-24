@@ -14,17 +14,20 @@ category: utility-sr
 ```
 */
 
-.#{$p}#{$u}sr {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-}
+#{$u-wrap} {
 
+    .#{$p}#{$u}sr {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+    }
+
+}
 
 /*doc
 ---
@@ -40,28 +43,31 @@ category: utility-sr
 ```
 */
 
-.#{$p}#{$u}sr-focus {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
+#{$u-wrap} {
 
-    &:focus,
-    &:active {
-        position: static;
-        width: auto;
-        height: auto;
-        margin: 0;
-        overflow: visible;
-        clip: auto;
+    .#{$p}#{$u}sr-focus {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+
+        &:focus,
+        &:active {
+            position: static;
+            width: auto;
+            height: auto;
+            margin: 0;
+            overflow: visible;
+            clip: auto;
+        }
+
     }
 
 }
-
 
 /*doc
 ---
@@ -77,34 +83,37 @@ category: utility-sr
 ```
 */
 
-.#{$p}#{$u}sr-focus-inner {
+#{$u-wrap} {
 
-    .#{$p}#{$u}sr {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        border: 0;
-    }
-
-    &:focus,
-    &:active {
+    .#{$p}#{$u}sr-focus-inner {
 
         .#{$p}#{$u}sr {
-            position: static;
-            width: auto;
-            height: auto;
-            margin: 0;
-            overflow: visible;
-            clip: auto;
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        &:focus,
+        &:active {
+
+            .#{$p}#{$u}sr {
+                position: static;
+                width: auto;
+                height: auto;
+                margin: 0;
+                overflow: visible;
+                clip: auto;
+            }
+
         }
 
     }
 
 }
-
 
 }

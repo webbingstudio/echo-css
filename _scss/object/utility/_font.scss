@@ -47,54 +47,57 @@ When using the Japanese web font service, font weight is may not be change with 
 
 */
 
-.#{$p}#{$u}font-root {
-    font-family: $font-family-root;
-    font-family: $font-weight-root;
+#{$u-wrap} {
 
-    &.#{$p}#{$u}font-bold {
-        font-family: $font-family-bold-root;
-        font-weight: $font-weight-bold-root;
+    .#{$p}#{$u}font-root {
+        font-family: $font-family-root;
+        font-family: $font-weight-root;
+
+        &.#{$p}#{$u}font-bold {
+            font-family: $font-family-bold-root;
+            font-weight: $font-weight-bold-root;
+        }
+
+    }
+
+    .#{$p}#{$u}font-mono {
+        font-family: $font-family-mono;
+    }
+
+    .#{$p}#{$u}font-first {
+        font-family: $font-family-first;
+        font-weight: $font-weight-first;
+
+        &.#{$p}#{$u}font-bold {
+            font-family: $font-family-bold-first;
+            font-weight: $font-weight-bold-first;
+        }
+
+    }
+
+    .#{$p}#{$u}font-second {
+        font-family: $font-family-second;
+        font-weight: $font-weight-second;
+
+        &.#{$p}#{$u}font-bold {
+            font-family: $font-family-bold-second;
+            font-weight: $font-weight-bold-second;
+        }
+
+    }
+
+    .#{$p}#{$u}font-third {
+        font-family: $font-family-third;
+        font-weight: $font-weight-third;
+
+        &.#{$p}#{$u}font-bold {
+            font-family: $font-family-bold-third;
+            font-weight: $font-weight-bold-third;
+        }
+
     }
 
 }
-
-.#{$p}#{$u}font-mono {
-    font-family: $font-family-mono;
-}
-
-.#{$p}#{$u}font-first {
-    font-family: $font-family-first;
-    font-weight: $font-weight-first;
-
-    &.#{$p}#{$u}font-bold {
-        font-family: $font-family-bold-first;
-        font-weight: $font-weight-bold-first;
-    }
-
-}
-
-.#{$p}#{$u}font-second {
-    font-family: $font-family-second;
-    font-weight: $font-weight-second;
-
-    &.#{$p}#{$u}font-bold {
-        font-family: $font-family-bold-second;
-        font-weight: $font-weight-bold-second;
-    }
-
-}
-
-.#{$p}#{$u}font-third {
-    font-family: $font-family-third;
-    font-weight: $font-weight-third;
-
-    &.#{$p}#{$u}font-bold {
-        font-family: $font-family-bold-third;
-        font-weight: $font-weight-bold-third;
-    }
-
-}
-
 
 }
 }
