@@ -5652,10 +5652,10 @@ category: utility-font
 フォントを変更する。オブジェクト・コンポーネントを可能な限り上書きする。
 
 ``` example
-<p class="text-xl font-first">font-first_デザインフォント01に変更しました</p>
-<p class="text-xl font-second">font-second_デザインフォント02に変更しました</p>
-<p class="text-xl font-third">font-third_デザインフォント03に変更しました</p>
-<p class="text-xl font-first">ここはデザインフォント01ですが、<span class="font-root">font-root_ここからbody要素のフォントに変更しました</span></p>
+<p class="text-xl font-first">font-first_フォント01に変更しました</p>
+<p class="text-xl font-second">font-second_フォント02に変更しました</p>
+<p class="text-xl font-third">font-third_フォント03に変更しました</p>
+<p class="text-xl font-first">ここはフォント01ですが、<span class="font-root">font-root_ここからbody要素のフォントに変更しました</span></p>
 <p class="text-xl font-mono">font-mono_等幅フォントに変更しました &lt;p class="font-mono"&gt;hello world!&lt;/p&gt;</p>
 ```
 
@@ -5678,10 +5678,10 @@ category: utility-font
 When using the Japanese web font service, font weight is may not be change with only <code> font-weight </code>. Therefore, a separate class is required.
 
 ``` example
-<p class="text-xl font-first font-bold">font-first_font-bold_デザインフォント01に変更しました</p>
-<p class="text-xl font-second font-bold">font-second_font-bold_デザインフォント02に変更しました</p>
-<p class="text-xl font-third font-bold">font-third_font-bold_デザインフォント03に変更しました</p>
-<p class="text-xl font-first font-bold">ここはデザインフォント01ですが、<span class="font-root font-bold">font-root_font-bold_ここからbody要素のフォントに変更しました</span></p>
+<p class="text-xl font-first font-bold">font-first_font-bold_フォント01に変更しました</p>
+<p class="text-xl font-second font-bold">font-second_font-bold_フォント02に変更しました</p>
+<p class="text-xl font-third font-bold">font-third_font-bold_フォント03に変更しました</p>
+<p class="text-xl font-first font-bold">ここはフォント01ですが、<span class="font-root font-bold">font-root_font-bold_ここからbody要素のフォントに変更しました</span></p>
 <p class="text-xl font-mono font-bold">font-mono_font-bold_等幅フォントに変更しました &lt;p class="font-mono font-bold"&gt;hello world!&lt;/p&gt;</p>
 ```
 

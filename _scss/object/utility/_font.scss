@@ -11,10 +11,10 @@ category: utility-font
 フォントを変更する。オブジェクト・コンポーネントを可能な限り上書きする。
 
 ``` example
-<p class="#{$p}#{$u}text-xl #{$p}#{$u}font-first">#{$p}#{$u}font-first_デザインフォント01に変更しました</p>
-<p class="#{$p}#{$u}text-xl #{$p}#{$u}font-second">#{$p}#{$u}font-second_デザインフォント02に変更しました</p>
-<p class="#{$p}#{$u}text-xl #{$p}#{$u}font-third">#{$p}#{$u}font-third_デザインフォント03に変更しました</p>
-<p class="#{$p}#{$u}text-xl #{$p}#{$u}font-first">ここはデザインフォント01ですが、<span class="#{$p}#{$u}font-root">#{$p}#{$u}font-root_ここからbody要素のフォントに変更しました</span></p>
+<p class="#{$p}#{$u}text-xl #{$p}#{$u}font-first">#{$p}#{$u}font-first_フォント01に変更しました</p>
+<p class="#{$p}#{$u}text-xl #{$p}#{$u}font-second">#{$p}#{$u}font-second_フォント02に変更しました</p>
+<p class="#{$p}#{$u}text-xl #{$p}#{$u}font-third">#{$p}#{$u}font-third_フォント03に変更しました</p>
+<p class="#{$p}#{$u}text-xl #{$p}#{$u}font-first">ここはフォント01ですが、<span class="#{$p}#{$u}font-root">#{$p}#{$u}font-root_ここからbody要素のフォントに変更しました</span></p>
 <p class="#{$p}#{$u}text-xl #{$p}#{$u}font-mono">#{$p}#{$u}font-mono_等幅フォントに変更しました &lt;p class="#{$p}#{$u}font-mono"&gt;hello world!&lt;/p&gt;</p>
 ```
 
@@ -38,10 +38,10 @@ category: utility-font
 When using the Japanese web font service, font weight is may not be change with only <code> font-weight </code>. Therefore, a separate class is required.
 
 ``` example
-<p class="#{$p}#{$u}text-xl #{$p}#{$u}font-first #{$p}#{$u}font-bold">#{$p}#{$u}font-first_#{$p}#{$u}font-bold_デザインフォント01に変更しました</p>
-<p class="#{$p}#{$u}text-xl #{$p}#{$u}font-second #{$p}#{$u}font-bold">#{$p}#{$u}font-second_#{$p}#{$u}font-bold_デザインフォント02に変更しました</p>
-<p class="#{$p}#{$u}text-xl #{$p}#{$u}font-third #{$p}#{$u}font-bold">#{$p}#{$u}font-third_#{$p}#{$u}font-bold_デザインフォント03に変更しました</p>
-<p class="#{$p}#{$u}text-xl #{$p}#{$u}font-first #{$p}#{$u}font-bold">ここはデザインフォント01ですが、<span class="#{$p}#{$u}font-root #{$p}#{$u}font-bold">#{$p}#{$u}font-root_#{$p}#{$u}font-bold_ここからbody要素のフォントに変更しました</span></p>
+<p class="#{$p}#{$u}text-xl #{$p}#{$u}font-first #{$p}#{$u}font-bold">#{$p}#{$u}font-first_#{$p}#{$u}font-bold_フォント01に変更しました</p>
+<p class="#{$p}#{$u}text-xl #{$p}#{$u}font-second #{$p}#{$u}font-bold">#{$p}#{$u}font-second_#{$p}#{$u}font-bold_フォント02に変更しました</p>
+<p class="#{$p}#{$u}text-xl #{$p}#{$u}font-third #{$p}#{$u}font-bold">#{$p}#{$u}font-third_#{$p}#{$u}font-bold_フォント03に変更しました</p>
+<p class="#{$p}#{$u}text-xl #{$p}#{$u}font-first #{$p}#{$u}font-bold">ここはフォント01ですが、<span class="#{$p}#{$u}font-root #{$p}#{$u}font-bold">#{$p}#{$u}font-root_#{$p}#{$u}font-bold_ここからbody要素のフォントに変更しました</span></p>
 <p class="#{$p}#{$u}text-xl #{$p}#{$u}font-mono #{$p}#{$u}font-bold">#{$p}#{$u}font-mono_#{$p}#{$u}font-bold_等幅フォントに変更しました &lt;p class="#{$p}#{$u}font-mono #{$p}#{$u}font-bold"&gt;hello world!&lt;/p&gt;</p>
 ```
 
