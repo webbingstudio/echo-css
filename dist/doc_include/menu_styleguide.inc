@@ -34,8 +34,6 @@
                     <li class="nav-item"><a href="./component-box.html">box</a></li>
                     <li class="nav-item"><a href="./component-dfn.html">dfn</a></li>
                     <li class="nav-item"><a href="./component-alert.html">alert</a></li>
-                    <li class="nav-item"><a href="./component-block.html">block</a></li>
-                    <li class="nav-item"><a href="./component-blockarea.html">blockarea</a></li>
                     <li class="nav-item"><a href="./component-card.html">card</a></li>
                     <li class="nav-item"><a href="./component-flip.html">flip</a></li>
                     <li class="nav-item"><a href="./component-form.html">form</a></li>
@@ -48,6 +46,7 @@
                     <li class="nav-item"><a href="./component-post.html">post</a></li>
                     <li class="nav-item"><a href="./component-share.html">share</a></li>
                     <li class="nav-item"><a href="./component-slider.html">slider</a></li>
+                    <li class="nav-item"><a href="./component-widget.html">widget</a></li>
                 </ul>
             </li>
             <li class="nav-item"><span class="nav-label">utility</span>

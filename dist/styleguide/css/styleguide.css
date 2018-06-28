@@ -458,6 +458,16 @@ h2.styleguide:before {
     padding: 1em 0;
 }
 
+.styleguide-contents .example:before,
+.styleguide-contents .example:after {
+    content: "";
+    display: table;
+}
+
+.styleguide-contents .example:after {
+    clear: both;
+}
+
 
 /*
 gitHub code highlight
