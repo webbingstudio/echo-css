@@ -1,100 +1,131 @@
 /*doc
 ---
-title: .flip
+title: #{$pr}#{$c}flip
 name: flip
-category: module_component
+category: component-flip
 ---
 
-全面背景とボックスを持つコンポーネントを表示する。  
-必ず.flip-(type)クラスを付与する必要がある。  
-vhが非対応のブラウザがまだ多いため、高さは固定値としている。 背景色固定が前提となっているので、適当調整すること。
+全面背景とボックスを持つ、フリップボードのようなコンポーネントを表示する。  
+<code>.#{$pr}#{$c}flip-cover</code> の背景画像はインラインスタイル、もしくは追加CSSで定義する。  
+(breakpoint)が <code>md</code> 以下ではウィンドウの半分、 <code>lg</code> 以上ではウィンドウ全体の表示を前提としている。大きすぎる場合は都度調整すること。
+
+``` example
+<div class="#{$pr}#{$c}flip">
+    <div class="#{$pr}#{$c}flip-cover" style="background-image: url(/images/_dummy/image_03.jpg)"></div>
+    <div class="#{$pr}#{$c}flip-container">
+        <div class="#{$pr}#{$c}flip-contents">
+            <div class="#{$pr}#{$c}flip-contents-inner">
+                <div class="#{$pr}#{$u}bg-third #{$pr}#{$u}bg-fade #{$pr}#{$u}p-sm #{$pr}#{$u}line-c">(other component)</div>
+            </div><!-- /.#{$pr}#{$c}flip-contents-inner -->
+        </div><!-- /.#{$pr}#{$c}flip-contents -->
+    </div><!-- /.#{$pr}#{$c}flip-container -->
+</div><!-- /.#{$pr}#{$c}flip -->
+```
 */
 
-.flip {
+.#{$pr}#{$c}flip {
+    position: relative;
+    width: 100%;
 
-    .flip-cover {
-        position: absolute;
-        top: 0;
-        left: 0;
+    @include media-breakpoint-up(lg) {
+        height: 100vh;
+    }
+
+    .#{$pr}#{$c}flip-cover {
         width: 100%;
-        height: 100%;
-        background: transparent none no-repeat center center;
+        height: 50vh;
+        background: #000 none no-repeat center center;
         background-size: cover;
-        z-index: 21;
+        z-index: 11;
 
         @include media-breakpoint-up(lg) {
+            position: absolute;
+            top: 0;
+            left: 0;
             height: 100%;
+        }
+
+    }
+
+    .#{$pr}#{$c}flip-container {
+        position: relative;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include media-breakpoint-up(lg) {
+            max-width: map-get($container-max-widths-md, lg);
+            height: 100%;
+        }
+
+        @include media-breakpoint-up(xl) {
+            max-width: map-get($container-max-widths-md, xl);
+        }
+    }
+
+    .#{$pr}#{$c}flip-contents {
+        display: table;
+        width: 100%;
+        position: relative;
+        background-color: rgba(255,255,255,.85);
+        z-index: 12;
+
+        @include media-breakpoint-up(lg) {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 50%;
+            height: 90%;
+            transform:translate(0, -50%);
+        }
+
+        .#{$pr}#{$c}flip-contents-inner {
+            display: table-cell;
+            padding: $spacer;
+            vertical-align: middle;
+
+            @include media-breakpoint-up(lg) {
+                height: 100%;
+            }
+
         }
 
     }
 
 }
 
+
 /*doc
 ---
-title: .flip-01
-name: flip-01
-category: module_component
+title: #{$pr}#{$c}flip-reverse
+name: flip-01-reverse
+category: component-flip
 parent: flip
 ---
 
-コンテンツ高さが内容に応じて可変となる。
+(breakpoint)が <code>lg</code> 以上でのコンテンツの位置が逆となる。
 
 ``` example
-<div class="flip flip-01">
-    <div class="flip-cover" style="background-image: url(http://placehold.jp/96/559922/ffffff/1600x1000.png?text=dummy_image)"></div>
-    <div class="flip-container">
-        <div class="flip-contents">
-            <div class="flip-contents-inner">
-                <div class="bg-third bg-fade p-sm line-c">(other component)</div>
-            </div><!-- /.flip-contents-inner -->
-        </div><!-- /.flip-contents -->
-    </div><!-- /.flip-container -->
-</div><!-- /.flip -->
+<div class="#{$pr}#{$c}flip #{$pr}#{$c}flip-reverse">
+    <div class="#{$pr}#{$c}flip-cover" style="background-image: url(/images/_dummy/image_03.jpg)"></div>
+    <div class="#{$pr}#{$c}flip-container">
+        <div class="#{$pr}#{$c}flip-contents">
+            <div class="#{$pr}#{$c}flip-contents-inner">
+                <div class="#{$pr}#{$u}bg-third #{$pr}#{$u}bg-fade #{$pr}#{$u}p-sm #{$pr}#{$u}line-c">(other component)</div>
+            </div><!-- /.#{$pr}#{$c}flip-contents-inner -->
+        </div><!-- /.#{$pr}#{$c}flip-contents -->
+    </div><!-- /.#{$pr}#{$c}flip-container -->
+</div><!-- /.#{$pr}#{$c}flip -->
 ```
 */
 
-.flip.flip-01 {
-    position: relative;
-    width: 100%;
-    height: 320px;
+.#{$pr}#{$c}flip-reverse {
 
-    @include media-breakpoint-up(lg) {
-        height: 480px;
-    }
+    .#{$pr}#{$c}flip-contents {
 
-    @include media-breakpoint-up(xl) {
-        height: 640px;
-    }
-
-    .flip-container {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        max-width: map-get($container-max-widths, lg);
-        margin-left: auto;
-        margin-right: auto;
-
-        @include media-breakpoint-up(xl) {
-            max-width: map-get($container-max-widths, xl);
-        }
-    }
-
-    .flip-contents {
-        display: table;
-        position: absolute;
-        left: 0;
-        top: 50%;
-        -webkit-transform:translate(0, -50%);
-        -ms-transform:translate(0, -50%);
-        transform:translate(0, -50%);
-        width: 100%;
-        z-index: 22;
-
-        .flip-contents-inner {
-            display: table-cell;
-            padding: ($spacer * 2) $spacer;
-            vertical-align: middle;
+        @include media-breakpoint-up(lg) {
+            left: auto;
+            right: 0;
         }
 
     }

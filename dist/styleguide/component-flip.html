@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>component-flip | Style guide | echo-css</title>
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div class="l-document" id="document">
+
+    <header class="s-header">
+        <div class="s-container s-container-fluid">
+
+            <div class="s-header-brand">
+                <p class="s-header-title title title-03">echo-css <span class="label label-info">v0.6.0</span></p>
+            </div><!-- /.s-header-brand -->
+
+            <?php include('../doc_include/header_nav.inc'); ?>
+
+        </div><!-- /.s-container -->
+    </header>
+
+    <div class="s-container s-container-fluid">
+        <div class="s-contents s-contents-2col">
+            <main class="s-contents-main" role="main">
+
+                
+                <div class="s-page-header page-header">
+                    <h1 class="page-title title s-title-01">component-flip</h1>
+                </div><!-- /.page-header -->
+                
+
+                
+                <nav class="s-anchor">
+                    <ul class="list list-horizontal">
+                        
+                        <li class="list-item"><a href="#flip" class="js-scrollto">c-flip</a></li>
+                        
+                        <li class="list-item"><a href="#flip-01-reverse" class="js-scrollto">c-flip-reverse</a></li>
+                        
+                    </ul>
+                </nav>
+                
+
+                <article class="s-post post">
+                    <div class="post-contents styleguide-contents"><h1 id="flip" class="styleguide">c-flip</h1>
+
+<p>全面背景とボックスを持つ、フリップボードのようなコンポーネントを表示する。<br>
+<code>.c-flip-cover</code> の背景画像はインラインスタイル、もしくは追加CSSで定義する。<br>
+(breakpoint)が <code>md</code> 以下ではウィンドウの半分、 <code>lg</code> 以上ではウィンドウ全体の表示を前提としている。大きすぎる場合は都度調整すること。</p>
+<div class="example"><div class="c-flip">
+    <div class="c-flip-cover" style="background-image: url(/images/_dummy/image_03.jpg)"></div>
+    <div class="c-flip-container">
+        <div class="c-flip-contents">
+            <div class="c-flip-contents-inner">
+                <div class="bg-third bg-fade p-sm line-c">(other component)</div>
+            </div><!-- /.c-flip-contents-inner -->
+        </div><!-- /.c-flip-contents -->
+    </div><!-- /.c-flip-container -->
+</div><!-- /.c-flip -->
+</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-flip"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-flip-cover"</span> <span class="na">style=</span><span class="s">"background-image: url(/images/_dummy/image_03.jpg)"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-flip-container"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-flip-contents"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-flip-contents-inner"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-third bg-fade p-sm line-c"</span><span class="nt">&gt;</span>(other component)<span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.c-flip-contents-inner --&gt;</span>
+        <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.c-flip-contents --&gt;</span>
+    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.c-flip-container --&gt;</span>
+<span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.c-flip --&gt;</span>
+</pre></div>
+<h2 id="flip-01-reverse" class="styleguide">c-flip-reverse</h2>
+
+<p>(breakpoint)が <code>lg</code> 以上でのコンテンツの位置が逆となる。</p>
+<div class="example"><div class="c-flip c-flip-reverse">
+    <div class="c-flip-cover" style="background-image: url(/images/_dummy/image_03.jpg)"></div>
+    <div class="c-flip-container">
+        <div class="c-flip-contents">
+            <div class="c-flip-contents-inner">
+                <div class="bg-third bg-fade p-sm line-c">(other component)</div>
+            </div><!-- /.c-flip-contents-inner -->
+        </div><!-- /.c-flip-contents -->
+    </div><!-- /.c-flip-container -->
+</div><!-- /.c-flip -->
+</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-flip c-flip-reverse"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-flip-cover"</span> <span class="na">style=</span><span class="s">"background-image: url(/images/_dummy/image_03.jpg)"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-flip-container"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-flip-contents"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-flip-contents-inner"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-third bg-fade p-sm line-c"</span><span class="nt">&gt;</span>(other component)<span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.c-flip-contents-inner --&gt;</span>
+        <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.c-flip-contents --&gt;</span>
+    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.c-flip-container --&gt;</span>
+<span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.c-flip --&gt;</span>
+</pre></div>                    </div><!-- /.post-contents -->
+                </article><!-- /.post -->
+
+            </main>
+            <div class="s-contents-sub" role="complementary">
+                <h2 class="title title-04 m-b">Style guide</h2>
+                <nav class="s-sitemap nav nav-vertical">
+                    <?php include('../doc_include/menu_styleguide.inc'); ?>
+                </nav>
+            </div>
+        </div><!-- /.s-contents -->
+    </div><!-- /.s-container -->
+
+    <?php include('../doc_include/footer.inc'); ?>
+
+</div><!-- /.l-document -->
+</body>
+</html>
