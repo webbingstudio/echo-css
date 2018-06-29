@@ -4952,70 +4952,6 @@ parent: box
 
 /*doc
 ---
-title: c-dfn
-name: dfn
-category: component-dfn
----
-
-単語と、それを補足するテキストを表示する。補足テキストは改行に対応する。  
-(breakpoint)が <code>sm</code> 以上でインライン表示となる。
-
-``` example
-<div class="m-b">
-<div class="c-dfn">
-    <h1 class="c-dfn-header">猫</h1>
-    <p class="c-dfn-contents">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-</div>
-</div>
-
-<dl class="c-dfn">
-    <dt class="c-dfn-header">I'm a Cat</dt>
-    <dd class="c-dfn-contents">There is no name yet.<br>
-    I have no idea where I was born.</dd>
-</dl>
-```
-*/
-@media (min-width: 425px) {
-  .c-dfn {
-    display: inline-block;
-  }
-}
-.c-dfn .c-dfn-header {
-  display: block;
-  margin: 0;
-  padding-bottom: .25em;
-  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
-  font-weight: 300;
-  font-size: 3rem;
-  line-height: 1;
-  vertical-align: bottom;
-  white-space: nowrap;
-}
-@media (min-width: 425px) {
-  .c-dfn .c-dfn-header {
-    display: table-cell;
-    padding-bottom: 0;
-    padding-right: .4em;
-  }
-}
-.c-dfn .c-dfn-contents {
-  display: block;
-  margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  vertical-align: bottom;
-  -webkit-transform: translate(0, -0.1em);
-  -ms-transform: translate(0, -0.1em);
-  transform: translate(0, -0.1em);
-}
-@media (min-width: 425px) {
-  .c-dfn .c-dfn-contents {
-    display: table-cell;
-  }
-}
-
-/*doc
----
 title: .c-card
 name: card
 category: component-card
@@ -5142,6 +5078,70 @@ category: component-card
 }
 .c-card .c-card-contents {
   font-size: 0.875rem;
+}
+
+/*doc
+---
+title: c-dfn
+name: dfn
+category: component-dfn
+---
+
+単語と、それを補足するテキストを表示する。補足テキストは改行に対応する。  
+(breakpoint)が <code>sm</code> 以上でインライン表示となる。
+
+``` example
+<div class="m-b">
+<div class="c-dfn">
+    <h1 class="c-dfn-header">猫</h1>
+    <p class="c-dfn-contents">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+</div>
+</div>
+
+<dl class="c-dfn">
+    <dt class="c-dfn-header">I'm a Cat</dt>
+    <dd class="c-dfn-contents">There is no name yet.<br>
+    I have no idea where I was born.</dd>
+</dl>
+```
+*/
+@media (min-width: 425px) {
+  .c-dfn {
+    display: inline-block;
+  }
+}
+.c-dfn .c-dfn-header {
+  display: block;
+  margin: 0;
+  padding-bottom: .25em;
+  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
+  font-weight: 300;
+  font-size: 3rem;
+  line-height: 1;
+  vertical-align: bottom;
+  white-space: nowrap;
+}
+@media (min-width: 425px) {
+  .c-dfn .c-dfn-header {
+    display: table-cell;
+    padding-bottom: 0;
+    padding-right: .4em;
+  }
+}
+.c-dfn .c-dfn-contents {
+  display: block;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  vertical-align: bottom;
+  -webkit-transform: translate(0, -0.1em);
+  -ms-transform: translate(0, -0.1em);
+  transform: translate(0, -0.1em);
+}
+@media (min-width: 425px) {
+  .c-dfn .c-dfn-contents {
+    display: table-cell;
+  }
 }
 
 /*doc

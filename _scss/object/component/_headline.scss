@@ -1,0 +1,88 @@
+/*doc
+---
+title: .headline
+name: headline
+category: module_component
+---
+
+新着情報のエントリー繰り返し部分などに使用する、日付とタイトルを並列したコンポーネントを表示する。  
+特定幅を下回るとタイトルがブロック要素となる。
+
+*/
+
+.headline {
+    position: relative;
+    margin-bottom: ($spacer * 1.5);
+
+    @include media-breakpoint-up(md) {
+        display: table;
+    }
+
+    .headline-date,
+    .headline-category,
+    .headline-title {
+        line-height: $line-height-sm;
+
+        @include media-breakpoint-up(md) {
+            vertical-align: middle;
+        }
+    }
+
+    .headline-date {
+        display: inline;
+        font-size: .8125rem;
+        padding-right: ($spacer * 1);
+
+        @include media-breakpoint-up(md) {
+            display: table-cell;
+            width: 1%;
+            padding-right: ($spacer * 2);
+            white-space: nowrap;
+        }
+
+    }
+
+    .headline-category {
+        display: inline;
+
+        @include media-breakpoint-up(md) {
+            display: table-cell;
+            width: 1%;
+            padding-right: ($spacer * 2);
+            white-space: nowrap;
+        }
+
+        .label {
+            min-width: 5.5rem;
+            margin-right: 0;
+        }
+
+    }
+
+    .headline-title {
+        display: block;
+        margin: 0;
+        font-size: .8125rem;
+        font-family: $font-family-root;
+        font-weight: $font-weight-root;
+
+        @include media-breakpoint-up(md) {
+            display: table-cell;
+            width: 99%;
+        }
+
+        a {
+            color: $body-color;
+            text-decoration: none;
+
+            &:hover,
+            &:focus {
+                color: $link-hover-color;
+                text-decoration: underline;
+            }
+
+        }
+
+    }
+
+}

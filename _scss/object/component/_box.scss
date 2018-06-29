@@ -1,5 +1,3 @@
-@if ($disabled-component-class != true) {
-
 /*doc
 ---
 title: #{$p}#{$c}box
@@ -220,7 +218,5 @@ parent: box
     &.#{$p}#{$c}box-#{$__important} {
         border-color: $important-mild;
     }
-
-}
 
 }

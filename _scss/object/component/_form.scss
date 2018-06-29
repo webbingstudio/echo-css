@@ -1,0 +1,318 @@
+/*doc
+---
+title: .form
+name: form
+category: module_component
+---
+
+フォームに関するスタイル。必ず.form-(option)クラスを付与する。ボタン関連は.btnを参照。
+
+*/
+
+/*doc
+---
+title: .form-group
+name: form-group
+category: module_component
+parent: form
+---
+
+システムで可能な限りフォームの各入力セットを包括する。
+
+``` example
+<div class="form form-group">
+    <label for="demo01-01" class="form form-label">氏名</label>
+    <input type="text" class="form form-input form-50" id="demo01-01" name="demo00" value="" placeholder="山田一郎" />
+</div>
+<div class="form form-group">
+    <label for="demo01-02" class="form form-label form-100">メッセージ</label>
+    <textarea id="demo01-02" name="demo02" rows="5" class="form form-input form-100" placeholder="メッセージをどうぞ"></textarea>
+</div>
+```
+*/
+
+.form.form-group {
+    @include clearfix();
+    margin-bottom: ($spacer * 3);
+}
+
+/*doc
+---
+title: .form-label
+name: form-label
+category: module_component
+parent: form
+---
+
+フォームの各項目見出しに付与する。
+
+*/
+
+.form.form-label {
+    display: block;
+    padding-bottom: $spacer;
+    line-height: $line-height-xs;
+    font-size: $font-size-lg;
+    vertical-align: middle;
+
+    .form-inline & {
+        display: inline-block;
+        font-size: $font-size-root;
+        padding: .375rem 1em .375rem 0;
+    }
+
+}
+
+/*doc
+---
+title: .form-text
+name: form-text
+category: module_component
+parent: form
+---
+
+フォームの各項目内のテキストに付与する。
+
+*/
+
+.form.form-text {
+    display: inline-block;
+    line-height: $line-height-xs;
+    padding-right: .5em;
+    vertical-align: middle;
+}
+
+/*doc
+---
+title: .form-input
+name: form-input
+category: module_component
+parent: form
+---
+
+テキスト入力を即すフィールドに付与する。.form-(size)の指定がない限り属性の幅に従う。
+
+``` example
+<div class="form form-group">
+    <input type="text" class="form form-input" name="demo02" size="10" value="" placeholder="山田一郎" />
+</div>
+<div class="form form-group">
+    <textarea name="demo03" rows="5" cols="60" class="form form-input" placeholder="メッセージをどうぞ"></textarea>
+</div>
+```
+
+*/
+
+
+
+/*doc
+---
+title: .form-(size)
+name: form-size
+category: module_component
+parent: form
+---
+
+可能な要素であれば入力項目を大きくする。
+
+``` example
+<div class="form form-group">
+    <input type="text" class="form form-input form-lg" name="demo04_01" size="10" value="15" />
+</div>
+<div class="form form-group">
+    <input type="text" class="form form-input form-sm" name="demo04_02" size="10" value="25" />
+</div>
+```
+
+*/
+.form.form-sm {
+
+    &.form-input {
+    }
+
+    &.form-select {
+        select {
+        }
+    }
+
+}
+
+.form.form-lg {
+
+    &.form-input {
+    }
+
+    &.form-select {
+        select {
+        }
+    }
+
+}
+
+
+/*doc
+---
+title: .form-(percentage)
+name: form-percentage
+category: module_component
+parent: form
+---
+
+可能な要素であれば入力項目の幅を広げる。
+
+``` example
+<div class="form form-group">
+    <input type="text" class="form form-input form-15" name="demo04_01" size="10" value="15" />
+</div>
+<div class="form form-group">
+    <input type="text" class="form form-input form-25" name="demo04_02" size="10" value="25" />
+</div>
+<div class="form form-group">
+    <input type="text" class="form form-input form-33" name="demo04_03" size="10" value="33" />
+</div>
+<div class="form form-group">
+    <input type="text" class="form form-input form-50" name="demo04_04" size="10" value="50" />
+</div>
+<div class="form form-group">
+    <input type="text" class="form form-input form-75" name="demo04_05" size="10" value="75" />
+</div>
+<div class="form form-group">
+    <input type="text" class="form form-input form-100" name="demo04_06" size="10" value="100" />
+</div>
+```
+
+*/
+
+.form.form-15 {
+    width: 15%;
+    min-width: 100px;
+}
+
+.form.form-25 {
+    width: 25%;
+    min-width: 100px;
+}
+
+.form.form-33 {
+    width: 33.33333333%;
+    min-width: 150px;
+}
+
+.form.form-50 {
+    width: 50%;
+    min-width: 200px;
+}
+
+.form.form-75 {
+    width: 75%;
+    min-width: 200px;
+}
+
+.form.form-100 {
+    width: 100%;
+    min-width: 200px;
+}
+
+
+
+/*doc
+---
+title: .form-error
+name: form-error
+category: module_component
+parent: form
+---
+
+フォームの入力を間違えたときに表示される補助テキスト。
+
+*/
+
+.form.form-error {
+    margin-top: ($spacer / 2);
+    color: $important;
+    font-size: $font-size-sm;
+    line-height: $line-height-sm;
+}
+
+
+/*doc
+---
+title: .form-message
+name: form-message
+category: module_component
+parent: form
+---
+
+フォームの前書き部分。
+
+*/
+
+.form.form-message {
+    margin-bottom: ($spacer * 3);
+}
+
+
+/*doc
+---
+title: .form-preview
+name: form-preview
+category: module_component
+parent: form
+---
+
+フォームの確認部分。
+
+*/
+
+.form.form-preview {
+}
+
+
+/*doc
+---
+title: .form-submit
+name: form-submit
+category: module_component
+parent: form
+---
+
+フォームの送信ボタン部分。
+
+*/
+
+.form.form-submit {
+    @include clearfix();
+    padding-top: ($spacer * 3);
+    line-height: $line-height-sm;
+    text-align: center;
+
+    form {
+        display: inline-block;
+    }
+
+    .btn {
+        min-width: 12em;
+    }
+
+}
+
+
+/*doc
+---
+title: .form-return
+name: form-return
+category: module_component
+parent: form
+---
+
+フォームの送信後に指定したページへ誘導する部分。
+
+*/
+
+.form.form-return {
+    @include clearfix();
+    padding: ($spacer * 3) 0 ($spacer * 6);
+    line-height: $line-height-sm;
+    text-align: center;
+}
+

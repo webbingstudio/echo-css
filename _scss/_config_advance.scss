@@ -12,10 +12,6 @@ $optimize: true !default;
 // Set the value to "true" if you do not want to use a class that specifies the order and offset of the grid
 $disabled-grid-order-offset: false !default;
 
-// コンポーネントグループに属するクラスを使用しない場合は、値を「true」にする（box・media・card等）
-// Set the value to "true" if you do not want to use a class "component" group (box,media,card, etc.)
-$disabled-component-class: false !default;
-
 // ユーティリティグループに属するクラスを使用しない場合は、値を「true」にする（m・p・text-***等）
 // Set the value to "true" if you do not want to use a class "utility" group (m,p,text-***, etc.)
 $disabled-utility-class: false !default;
@@ -42,6 +38,9 @@ $c: "c-" !default;
 // ユーティリティクラスは、意図的に接頭辞を指定していない。システムの編集者も使用する可能性があるため、覚えやすいよう簡略化している
 // Utility class does not intentionally specify a prefix. there is a possibility that editors of system, use it, it simplified for easier to remember
 $u: "" !default;
+
+// project-group-prefix
+$pj: "p-" !default;
 
 
 // Name

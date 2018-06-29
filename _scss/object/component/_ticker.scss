@@ -1,0 +1,146 @@
+/*doc
+---
+title: .ticker
+name: ticker
+category: module_component
+---
+
+ティッカーを表示する。画面幅が広い場合は改行を禁止する。  
+必ず.ticker-(type)クラスを付与する必要がある。
+*/
+.ticker {
+    position: relative;
+    width: 100%;
+
+    .ticker-inner {
+        overflow: hidden;
+        width: 100%;
+    }
+
+    a.ticker-inner {
+        display: block;
+        text-decoration: none;
+
+        &:hover,
+        &:focus,
+        &:active {
+            text-decoration: none;
+        }
+    }
+
+    .ticker-body {
+
+        @include media-breakpoint-up(md) {
+            display: table-cell;
+            width: 100%;
+        }
+
+        .ticker-header {
+            display: inline-block;
+            margin: 0 0 .5rem;
+            line-height: $line-height-none;
+
+            @include media-breakpoint-up(md) {
+                display: table-cell;
+                margin: 0;
+                width: 1%;
+                vertical-align: middle;
+                white-space: nowrap;
+            }
+
+        }
+
+        .ticker-contents {
+
+            @include media-breakpoint-up(md) {
+                display: table-cell;
+                margin: 0;
+                width: 99%;
+                padding-left: ($spacer * 2);
+                line-height: $line-height-none;
+                vertical-align: middle;
+                white-space: nowrap;
+            }
+
+        }
+
+    }
+
+    .ticker-date {
+        display: inline;
+        margin-right: .5em;
+    }
+
+}
+
+/*doc
+---
+title: .ticker-01
+name: ticker-01
+category: module_component
+parent: ticker
+---
+
+``` example
+<div class="ticker ticker-01">
+    <div class="l-container">
+        <div class="ticker-inner">
+            <div class="ticker-body">
+                <h2 class="ticker-header">NEWS</h2>
+                <p class="ticker-contents">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+            </div><!-- /.ticker-body -->
+        </div><!-- /.ticker-inner -->
+    </div><!-- /.l-container -->
+</div><!-- /.ticker -->
+```
+*/
+
+.ticker.ticker-01 {
+    background-color: $body-inverse-bg;
+    padding: .5em 0 .25em;
+
+    @include media-breakpoint-up(md) {
+        background-color: rgba($body-color, .5);
+        padding: .5em 0;
+    }
+
+    .ticker-inner {
+
+        .ticker-header {
+            padding-right: ($spacer * 2);
+            border-right: 1px dotted $body-inverse-color;
+            color: $body-inverse-color;
+            font-size: $font-size-sm;
+            font-weight: $font-weight-02;
+            font-family: $font-family-02;
+
+            @include media-breakpoint-up(md) {
+                font-size: .8125rem;
+            }
+
+        }
+
+        .ticker-contents {
+            font-size: $font-size-sm;
+            color: $body-inverse-color;
+            line-height: $line-height-sm;
+
+            @include media-breakpoint-up(md) {
+                font-size: .8125rem;
+            }
+
+        }
+
+    }
+
+    a.ticker-inner {
+        color: $body-inverse-color;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $body-inverse-color;
+        }
+    }
+
+}

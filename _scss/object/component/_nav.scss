@@ -1,0 +1,645 @@
+/*doc
+---
+title: .#{$nav}
+name: #{$nav}
+category: module_component
+---
+
+クリック範囲が広いナビゲーションを表示する。a要素の包括要素に指定しなければならない。
+
+``` example
+<div class="line-c">
+    <nav class="#{$nav}">
+        <a href="#">ナビ</a><a href="#">ナビナビ</a><span class="#{$nav}-label">ラベルです</span><a href="#">ナビ</a><a href="#">ナビナビナビ</a>
+    </nav>
+</div>
+```
+
+*/
+
+.#{$nav} {
+    display: inline-block;
+    font-size: $font-size-sm;
+    line-height: $line-height-sm;
+    vertical-align: bottom;
+
+    a {
+        position: relative;
+        display: inline-block;
+        margin-right: ($spacer * .5);
+        padding: 1.2rem 1rem;
+        border: 1px solid $border-color;
+        color: $body-color;
+        text-decoration: none;
+        transition: .3s all;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:hover,
+        &:focus {
+            color: $nav-hover-color;
+            background-color: $nav-hover-bg;
+            text-decoration: none;
+        }
+
+    }
+
+    .#{$nav-current},
+    .#{$nav-current} > a,
+    .#{$nav-current} > span {
+        color: $nav-current-color;
+        background-color: $nav-current-bg;        
+
+        &:hover,
+        &:focus {
+            color: $nav-current-color;
+            background-color: $nav-current-bg;        
+        }
+
+    }
+
+    .#{$nav}-label {
+        display: inline-block;
+        margin: 0 $spacer 0 ($spacer * .5);
+        padding: .5rem 0;
+    }
+
+}
+
+
+/*doc
+---
+title: .#{$nav}-vertical
+name: #{$nav}-vertical
+category: module_component
+parent: #{$nav}
+---
+
+三段までの階層構造と複数行のテキストを持たせることができる。ul要素、li要素を包括していなければならない。
+
+``` example
+<nav class="#{$nav} #{$nav}-vertical">
+    <ul>
+        <li><a href="#">ナビゲーション</a></li>
+        <li><a href="#">ナビゲーションナビゲーション</a>
+            <ul>
+                <li><a href="#">ナビゲーション</a>
+                    <ul>
+                        <li><a href="#">ナビゲーションナビゲーションナビゲーションナビゲーションナビゲーションナビゲーション</a></li>
+                        <li><a href="#">ナビゲーションナビゲーション</a></li>
+                        <li><a href="#">ナビゲーション</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">ナビゲーション</a></li>
+                <li><a href="#">ナビゲーションナビゲーションナビゲーションナビゲーションナビゲーションナビゲーションナビゲーション</a></li>
+            </ul>
+        </li>
+        <li><a href="#">ナビゲーションナビゲーションナビゲーションナビゲーションナビゲーション</a></li>
+        <li><a href="#">ナビゲーションナビゲーション</a></li>
+        <li><a href="#">ナビゲーション</a></li>
+    </ul>
+</nav>
+```
+*/
+
+.#{$nav}.#{$nav}-vertical {
+    display: block;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        li {
+            position: relative;
+            display: block;
+            margin: 0;
+            padding: 0;
+            letter-spacing: normal;
+            list-style-type: none;
+            vertical-align: middle;
+
+            a {
+                display: block;
+                margin: 0;
+                padding-top: .5em;
+                padding-bottom: .5em;
+                border: 0 none;
+                padding-left: 20px;
+
+                &:before {
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    top: 1em;
+                    left: 10px;
+                    width: .25em;
+                    height: .25em;
+                    background-color: $body-color;
+                }
+
+                &:hover,
+                &:focus {
+                    text-decoration: underline;
+
+                    &:before {
+                        background-color: $link-hover-color;
+                    }
+
+                }
+
+            }
+
+            ul {
+
+                li {
+
+                    a {
+                        padding-left: 50px;
+
+                        &:before {
+                            left: 35px;
+                            width: .375em;
+                            height: 2px;
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+
+/*doc
+---
+title: .#{$nav}-horizontal
+name: #{$nav}-horizontal
+category: module_component
+parent: #{$nav}
+---
+
+二段までの階層構造を持たせることができる。ul要素、li要素を包括していなければならない。モバイル端末で複数行となったときの表示には対応していない。
+
+``` example
+<div class="line-c">
+    <nav class="#{$nav} #{$nav}-horizontal">
+        <ul>
+            <li><a href="#">ナビゲーション</a></li>
+            <li><a href="#">ナビゲ</a>
+                <ul>
+                    <li><a href="#">ナビゲーション</a></li>
+                    <li><a href="#">ナビゲーション</a></li>
+                    <li><a href="#">ナビゲーションナビゲーションナビゲーションナビゲーションナビゲーションナビゲーションナビゲーション</a></li>
+                </ul>
+            </li>
+            <li><a href="#">ナビ</a></li>
+            <li><a href="#">ナビゲーションナ</a></li>
+            <li><a href="#">ナビゲー</a></li>
+        </ul>
+    </nav>
+</div>
+```
+*/
+
+.#{$nav}.#{$nav}-horizontal {
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        li {
+            margin: 0;
+            padding: 0;
+        }
+
+    }
+
+    > ul {
+        display: table;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        letter-spacing: -.4rem;
+
+        > li {
+            position: relative;
+            display: table-cell;
+            letter-spacing: normal;
+
+            > a {
+                display: block;
+                margin: 0;
+                border: 0 none;
+
+                @include media-breakpoint-up(xl) {
+                    padding-left: 2rem;
+                    padding-right: 2rem;
+                }
+            }
+
+            > ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 200%;
+                min-width: 200px;
+                background-color: rgba($body-bg, .5);
+                z-index: 101;
+
+                > li {
+                    display: table-row;
+                    font-size: $font-size-sm;
+
+                    > a {
+                        display: table-cell;
+                        width: 100%;
+                        padding: .5rem 1rem;
+                        border: 0 none;
+                        text-align: left;
+
+                        &:hover,
+                        &:focus {
+                            background-color: $nav-hover-bg;
+                            text-decoration: none;
+                        }
+
+                    }
+
+                }
+
+                &.#{$action-open} {
+                    display: table;
+                    @include animation(0, .3s, ease, nav-open);
+                }
+
+            }
+
+            &:hover {
+
+                > ul {
+                    display: table;
+                    @include animation(0, .3s, ease, nav-open);
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+@include keyframes(nav-open) {
+
+    0% {
+        height: 0;
+        opacity: 0;
+    }
+
+    100% {
+        height: auto;
+        opacity: 1;
+    }
+
+}
+
+
+/*doc
+---
+title: .#{$nav}-justify
+name: #{$nav}-justify
+category: module_component
+parent: #{$nav}
+---
+
+.#{$nav}-horizontalの外観に加え、ナビゲーションの全体幅が100%、各ボタンが均等幅となる。
+
+``` example
+<div class="line-c">
+    <nav class="#{$nav} #{$nav}-horizontal #{$nav}-justify">
+        <ul>
+            <li><a href="#">ナビゲーション</a></li>
+            <li><a href="#">ナビゲ</a>
+                <ul>
+                    <li><a href="#">ナビゲーション</a></li>
+                    <li><a href="#">ナビゲーション</a></li>
+                    <li><a href="#">ナビゲーションナビゲーションナビゲーションナビゲーションナビゲーションナビゲーションナビゲーション</a></li>
+                </ul>
+            </li>
+            <li><a href="#">ナビ</a></li>
+            <li><a href="#">ナビゲーションナ</a></li>
+            <li><a href="#">ナビゲー</a></li>
+        </ul>
+    </nav>
+</div>
+```
+*/
+
+.#{$nav}.#{$nav}-horizontal.#{$nav}-justify {
+    width: 100%;
+
+    > ul {
+        width: 100%;
+        table-layout: fixed;
+
+        > li {
+
+            > a {
+                display: block;
+                width: 100%;
+                padding-left: 0;
+                padding-right: 0;
+                text-align: center;
+            }
+
+            > ul {
+                width: 100%;
+            }
+
+        }
+
+    }
+
+}
+
+/*doc
+---
+title: .#{$nav}-pager
+name: #{$nav}-pager
+category: module_component
+parent: #{$nav}
+---
+
+ページネーションを表示する。.#{$nav}-prev, .#{$nav}-next以外のa要素は正方形となる。複数行に対応していない。  
+アイコンは:before,:after疑似要素で作成しているので適当調整すること。
+
+``` example
+<div class="line-c">
+    <nav class="#{$nav} #{$nav}-pager">
+        <a href="#" class="#{$nav}-prev"><i class="icon icon-chevron-l"></i>Prev</a>
+        <a href="#">1</a>
+        <span class="#{$nav}-label">...</span>
+        <a href="#">8</a>
+        <a href="#">9</a>
+        <a href="#">10</a>
+        <a href="#">11</a>
+        <a href="#">12</a>
+        <span class="#{$nav}-label">...</span>
+        <a href="#">999</a>
+        <a href="#" class="#{$nav}-next">Next<i class="icon icon-chevron-r"></i></a>
+    </nav>
+</div>
+```
+
+*/
+
+.#{$nav}.#{$nav}-pager {
+    line-height: 1;
+
+    a,
+    span {
+        padding-top: 0;
+        padding-bottom: 0;
+        height: 2.857142857em;
+        line-height: 2.857142857;
+        vertical-align: middle;
+        text-align: center;
+    }
+
+
+    .#{$nav}-label {
+
+        @include media-breakpoint-down(sm) {
+            margin-left: 0;
+            margin-right: .25em;
+        }
+
+    }
+
+    a {
+        background-color: rgba($first, .2);
+        border-color: $first;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            background-color: $first;
+        }
+
+        &.#{$nav}-prev,
+        &.#{$nav}-next {
+            color: $body-inverse-color;
+            background-color: $body-inverse-bg;
+            border-color: $body-inverse-bg;
+
+            @include media-breakpoint-down(sm) {
+                padding-left: .5em;
+                padding-right: .5em;
+            }
+
+        }
+
+        &.#{$nav}-prev {
+            text-transform: uppercase;
+
+            .icon {
+                font-size: $font-size-xs;
+                margin-right: $spacer;
+            }
+        }
+
+        &.#{$nav}-next {
+            text-transform: uppercase;
+
+            .icon {
+                font-size: $font-size-xs;
+                margin-left: $spacer;
+            }
+        }
+
+        &:not([class="#{$nav}-prev"]):not([class="#{$nav}-next"]) {
+            padding-left: 0;
+            padding-right: 0;
+            width: 2.285714286em;
+
+            @include media-breakpoint-up(md) {
+                width: 3.571428571em;
+            }
+
+            &.#{$nav-current} {
+                color: #fff;
+                background-color: $first;
+            }
+
+        }
+
+    }
+
+}
+
+/*doc
+---
+title: .#{$nav}-serial
+name: #{$nav}-serial
+category: module_component
+parent: #{$nav}
+---
+
+複数行に対応した、前後移動リンクを表示する。  
+アイコンは:before,:after疑似要素で作成しているので適当調整すること。
+
+``` example
+<nav class="#{$nav} #{$nav}-serial">
+    <a href="#" class="#{$nav}-prev">エントリータイトルエントリータイトルエントリータイトルエントリータイトルエントリータイトルエントリータイトル</a>
+    <a href="#" class="#{$nav}-next">エントリータイトルエントリータイトルエントリータイトルエントリータイトルエントリータイトルエントリータイトル</a>
+</nav>
+```
+
+*/
+
+.#{$nav}.#{$nav}-serial {
+    @include clearfix();
+    display: block;
+    width: 100%;
+    font-size: $font-size-sm;
+    padding-bottom: ($spacer * 6);
+
+    a {
+        position: relative;
+        width: 100%;
+        max-width: 640px;
+        margin: 0;
+        border: 0 none;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $first-dark;
+        }
+
+
+        &.#{$nav}-prev {
+            float: left;
+            padding: 0 0 0 2rem;
+
+            +.#{$nav}-next {
+                margin-top: 1rem;
+            }
+
+        }
+
+        &.#{$nav}-next {
+            float: right;
+            text-align: right;
+            padding: 0 2rem 0 0;
+        }
+
+    }
+
+}
+
+
+/*doc
+---
+title: .#{$nav}-inverse
+name: #{$nav}-inverse
+category: module_component
+parent: #{$nav}
+---
+
+リンク色が反転する。
+
+``` example
+<div class="line-c bg-inverse">
+    <nav class="#{$nav} #{$nav}-inverse #{$nav}-horizontal #{$nav}-justify">
+        <ul>
+            <li><a href="#">ナビゲーション</a></li>
+            <li><a href="#">ナビゲ</a>
+                <ul>
+                    <li><a href="#">ナビゲーション</a></li>
+                    <li><a href="#">ナビゲーション</a></li>
+                    <li><a href="#">ナビゲーションナビゲーションナビゲーションナビゲーションナビゲーションナビゲーションナビゲーション</a></li>
+                </ul>
+            </li>
+            <li><a href="#">ナビ</a></li>
+            <li><a href="#">ナビゲーションナ</a></li>
+            <li><a href="#">ナビゲー</a></li>
+        </ul>
+    </nav>
+</div>
+```
+
+*/
+
+.#{$nav}.#{$nav}-inverse {
+    background-color: $body-inverse-bg;
+    color: $body-inverse-color;
+
+    a {
+        border-color: $border-inverse-color;
+        color: $body-inverse-color;
+
+        &:hover,
+        &:focus {
+            background-color: $nav-hover-inverse-bg;
+            color: $nav-hover-inverse-color;
+        }
+
+    }
+
+    .#{$nav-current},
+    .#{$nav-current} > a,
+    .#{$nav-current} > span {
+        background-color: $nav-current-inverse-bg;        
+        color: $nav-current-inverse-color;
+
+        &:hover,
+        &:focus {
+            background-color: $nav-current-inverse-bg;        
+        }
+
+    }
+
+}
+
+.#{$nav}.#{$nav}-inverse.#{$nav}-horizontal {
+
+    > ul {
+
+        > li {
+
+            > ul {
+                background-color: rgba($body-inverse-bg, .75);
+
+                > li {
+
+                    > a {
+                        color: $body-inverse-color;
+
+                        &:hover,
+                        &:focus {
+                            color: $nav-hover-inverse-color;
+                            background-color: $nav-hover-inverse-bg;
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}

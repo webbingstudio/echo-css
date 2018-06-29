@@ -1,0 +1,252 @@
+/*doc
+---
+title: .#{$post}
+name: #{$post}
+category: module_component
+---
+
+CMSの投稿の詳細としての役割を持つコンポーネントを表示する。  
+必ず.#{$post}-(type)クラスを付与する必要がある。
+
+*/
+
+.#{$post} {
+}
+
+.#{$post}-header {
+    @include clearfix();
+}
+
+.#{$post}-contents {
+    @include clearfix();
+    word-break: break-word;
+}
+
+.#{$post}-footer {
+    @include clearfix();
+}
+
+.#{$post}-title {
+
+    a {
+        color: $body-color;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            color: $link-hover-color;
+            text-decoration: underline;
+        }
+
+    }
+
+}
+
+
+/*doc
+---
+title: .#{$post}-01
+name: #{$post}-01
+category: module_component
+parent: post
+---
+
+固定ページ用。特に装飾はない。
+*/
+
+.#{$post}.#{$post}-01 {
+    padding-bottom: ($spacer * 6);
+}
+
+/*doc
+---
+title: .#{$post}-02
+name: #{$post}-02
+category: module_component
+parent: post
+---
+
+事例用。アイキャッチ画像と事例に関する情報枠がある。
+*/
+
+.#{$post}.#{$post}-02 {
+    padding-bottom: ($spacer * 3);
+
+    .#{$post}-header {
+        padding-top: ($spacer * 4);
+        padding-bottom: ($spacer * 4);
+
+        @include media-breakpoint-up(xl) {
+            padding-top: ($spacer * 6);
+        }
+    }
+
+    .#{$post}-footer {
+        padding-top: ($spacer * 3);
+    }
+
+    .#{$post}-title {
+        font-size: 1.5rem;
+        font-weight: $font-weight-01;
+        font-family: $font-family-01;
+        line-height: $line-height-sm;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+
+        @include media-breakpoint-up(sm) {
+            font-size: 1.75rem;
+        }
+
+        @include media-breakpoint-up(lg) {
+            font-size: 2rem;
+        }
+
+    }
+
+    .#{$post}-subtitle {
+        margin: 0;
+        color: $third;
+        font-size: $font-size-sm;
+
+        @include media-breakpoint-up(sm) {
+            font-size: $font-size-root;
+        }
+
+        @include media-breakpoint-up(lg) {
+            font-size: $font-size-lg;
+        }
+
+    }
+
+    .#{$post}-eyecatch {
+        width: 100%;
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+        }
+
+    }
+
+    .#{$post}-info {
+        font-size: $font-size-sm;
+        margin-top: ($spacer * -2);
+        padding-bottom: ($spacer * 4);
+
+        ul.#{$post}-info-list {
+            padding-left: 0;
+
+            @include media-breakpoint-up(md) {
+                letter-spacing: -.4rem;
+            }
+
+            li.#{$post}-info-item {
+                margin: 0;
+
+                @include media-breakpoint-up(md) {
+                    display: inline-block;
+                    letter-spacing: normal;
+                }
+
+                &:before {
+
+                    @include media-breakpoint-up(md) {
+                        display: inline-block;
+                        content: "/";
+                        padding: 0 0.5em;
+                    }
+
+                }
+
+                &:first-child {
+                    padding-left: 0;
+
+                    &:before {
+                        display: none;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+
+/*doc
+---
+title: .#{$post}-03
+name: #{$post}-03
+category: module_component
+parent: post
+---
+
+ブログ用。
+*/
+
+.#{$post}.#{$post}-03 {
+    padding-bottom: ($spacer * 3);
+
+    @include media-breakpoint-up(md) {
+        padding-bottom: ($spacer * 6);
+    }
+
+    .#{$post}-header {
+        padding-top: ($spacer * 4);
+        padding-bottom: $spacer;
+
+        @include media-breakpoint-up(xl) {
+            padding-top: ($spacer * 6);
+        }
+
+        .#{$block} & {
+            @include media-breakpoint-up(xl) {
+                padding-top: 0;
+            }
+        }
+
+    }
+
+    .#{$post}-footer {
+        padding-top: ($spacer * 3);
+    }
+
+    .#{$post}-title {
+        font-size: 1.5rem;
+        font-weight: $font-weight-01;
+        font-family: $font-family-01;
+        line-height: $line-height-sm;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    .#{$post}-category {
+        float: left;
+        padding-top: ($spacer * 2);
+        font-size: $font-size-sm;
+    }
+
+    .#{$post}-date {
+        float: right;
+        padding-top: ($spacer * 2);
+        color: $gray-light;
+        font-size: $font-size-sm;
+        text-align: right;
+    }
+
+    .#{$post}-more {
+    }
+
+    .#{$post}-continue {
+        margin-top: ($spacer * 3);  
+    }
+
+}
+
+
+

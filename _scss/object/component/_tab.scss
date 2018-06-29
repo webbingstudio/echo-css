@@ -1,0 +1,253 @@
+/*doc
+---
+title: .tabs
+name: tabs
+category: module_component
+---
+
+均等な幅を持った、タブ形式のナビゲーションを表示する。必ず.tabs-(type)クラスを付与する必要がある。  
+.l-containerで.tabs-listを包括することで、アンダーラインを画面いっぱいに伸ばしたまま、幅を制限できる。
+
+*/
+
+.tabs {
+    line-height: $line-height-none;
+
+    .tabs-list {
+        display: table;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    .tabs-item {
+        display: table-cell;
+    }
+
+    .tabs-label {
+        display: block;
+    }
+
+    a.tabs-label {
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+        }
+
+    }
+
+}
+
+
+/*doc
+---
+title: .tabs-01
+name: tabs-01
+category: module_component
+parent: tabs
+---
+
+一般的なナビゲーション。  
+
+``` example
+<nav class="tabs tabs-01">
+    <div class="l-container">
+        <ul class="tabs-list">
+            <li class="tabs-item"><a href="#" class="tabs-label">タブタブ</a></li>
+            <li class="tabs-item is-current"><span class="tabs-label">タブ</span></li>
+            <li class="tabs-item"><a href="#" class="tabs-label">タブタブタブ</a></li>
+            <li class="tabs-item"><a href="#" class="tabs-label">タブタブ</a></li>
+        </ul>
+    </div><!-- /.l-container -->
+</nav><!-- /.tabs -->
+```
+*/
+
+
+.tabs.tabs-01 {
+    border-bottom: $border-width solid $border-color;
+    text-align: center;
+
+    .tabs-list {
+        margin-bottom: $border-width * -1;  
+    }
+
+    .tabs-item {
+    }
+
+    .tabs-label {
+        padding: 1rem 0;
+        border: $border-width solid transparent;
+        border-radius: 5px 5px 0 0;
+
+        &.#{$nav-current},
+        .#{$nav-current} & {
+            background-color: $body-bg;
+            border-top-color: $border-color;
+            border-left-color: $border-color;
+            border-right-color: $border-color;
+        }
+
+    }
+
+    .#{$nav-current},
+    .#{$nav-current} .tabs-label {
+        background-color: $body-bg;
+        border-top-color: $border-color;
+        border-left-color: $border-color;
+        border-right-color: $border-color;
+    }
+
+    a.tabs-label {
+        color: $body-color;
+
+        &:hover,
+        &:focus {
+            color: $nav-hover-color;
+        }
+
+    }
+
+}
+
+
+/*doc
+---
+title: .tabs-02
+name: tabs-02
+category: module_component
+parent: tabs
+---
+
+ひじょうに大きなナビゲーション。.dfnを含めることができる。
+
+``` example
+<nav class="tabs tabs-02">
+    <div class="l-container">
+        <ul class="tabs-list">
+
+            <li class="tabs-item">
+                <a href="#" class="tabs-label">
+                    <span class="dfn">
+                        <span class="dfn-header">01<span class="sr">. </span></span>
+                        <span class="dfn-contents">タブタブ<br>タブタブタブ</span>
+                        <i class="icon icon-chevron-d"></i>
+                    </span>
+                </a>
+            </li>
+
+            <li class="tabs-item is-current">
+                <a href="#" class="tabs-label">
+                    <span class="dfn">
+                        <span class="dfn-header">02<span class="sr">. </span></span>
+                        <span class="dfn-contents">タブタブ<br>タブタブタブ</span>
+                        <i class="icon icon-chevron-d"></i>
+                    </span>
+                </a>
+            </li>
+
+            <li class="tabs-item">
+                <a href="#" class="tabs-label">
+                    <span class="dfn">
+                        <span class="dfn-header">03<span class="sr">. </span></span>
+                        <span class="dfn-contents">タブタブ<br>タブタブタブ</span>
+                        <i class="icon icon-chevron-d"></i>
+                    </span>
+                </a>
+            </li>
+
+            <li class="tabs-item">
+                <a href="#" class="tabs-label">
+                    <span class="dfn">
+                        <span class="dfn-header">04<span class="sr">. </span></span>
+                        <span class="dfn-contents">タブタブ<br>タブタブタブ</span>
+                        <i class="icon icon-chevron-d"></i>
+                    </span>
+                </a>
+            </li>
+
+        </ul>
+    </div><!-- /.l-container -->
+</nav><!-- /.tabs -->
+```
+*/
+
+
+.tabs.tabs-02 {
+    border-bottom: $border-width solid $border-color;
+    text-align: center;
+
+    .tabs-list {
+        margin-bottom: $border-width * -1;  
+    }
+
+    .tabs-item {
+    }
+
+    .tabs-label {
+        padding: 1.25rem 0 1.125rem;
+        border: $border-width solid transparent;
+        border-radius: 10px 10px 0 0;
+        text-align: center;
+
+        @include media-breakpoint-up(md) {
+            padding: 1.625rem 0 1.375rem;
+        }
+
+        &.#{$nav-current},
+        .#{$nav-current} & {
+            background-color: $body-bg;
+            border-top-color: $border-color;
+            border-left-color: $border-color;
+            border-right-color: $border-color;
+        }
+
+    }
+
+    .#{$nav-current},
+    .#{$nav-current} .tabs-label {
+        background-color: $body-bg;
+        border-top-color: $border-color;
+        border-left-color: $border-color;
+        border-right-color: $border-color;
+    }
+
+    a.tabs-label {
+        color: $body-color;
+
+        &:hover,
+        &:focus {
+            color: $nav-hover-color;
+        }
+
+    }
+
+    .dfn {
+        position: relative;
+
+        .dfn-contents {
+            min-width: 8em;
+
+            @include media-breakpoint-up(xs) {
+                min-width: 10em;
+            }
+
+        }
+
+    }
+
+    .icon {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        -webkit-transform:translate(0, -50%);
+        -ms-transform:translate(0, -50%);
+        transform:translate(0, -50%);
+        font-size: $font-size-xxs;
+        z-index: 99;
+    }
+
+}
