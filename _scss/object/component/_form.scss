@@ -1,150 +1,124 @@
 /*doc
 ---
-title: .form
+title: #{$pr}#{$c}form
 name: form
-category: module_component
+category: component-form
 ---
 
-フォームに関するスタイル。必ず.form-(option)クラスを付与する。ボタン関連は.btnを参照。
-
-*/
-
-/*doc
----
-title: .form-group
-name: form-group
-category: module_component
-parent: form
----
-
-システムで可能な限りフォームの各入力セットを包括する。
+システムで可能な限りフォームの各入力セットを包括する。  
+幅の調整が必要な場合は <code>.#{$pr}#{$u}width-(percentage)</code> を併用すること。  
+フォーム内のパーツは <code>.#{$pr}#{$m}input, .#{$pr}#{$m}radio, .#{$pr}#{$m}select, .#{$pr}#{$m}checkbox, .#{$pr}#{$m}btn</code> を参照。
 
 ``` example
-<div class="form form-group">
-    <label for="demo01-01" class="form form-label">氏名</label>
-    <input type="text" class="form form-input form-50" id="demo01-01" name="demo00" value="" placeholder="山田一郎" />
-</div>
-<div class="form form-group">
-    <label for="demo01-02" class="form form-label form-100">メッセージ</label>
-    <textarea id="demo01-02" name="demo02" rows="5" class="form form-input form-100" placeholder="メッセージをどうぞ"></textarea>
-</div>
+<div class="#{$pr}#{$c}form">
+    <label for="demo01-01" class="#{$pr}#{$c}form-label">氏名</label>
+    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$u}width-50" id="demo01-01" name="demo00" value="" placeholder="山田一郎" />
+</div><!-- /.#{$pr}#{$c}form -->
+
+<div class="#{$pr}#{$c}form">
+    <span class="#{$pr}#{$c}form-label">好きな食べ物</span>
+    <label class="#{$pr}#{$m}checkbox #{$pr}#{$u}m-r" for="checkbox1"><input type="checkbox" name="checkbox1" id="checkbox1" class="#{$pr}#{$u}m-r-sm" value="りんご">りんご</label>
+    <label class="#{$pr}#{$m}checkbox #{$pr}#{$u}m-r" for="checkbox2"><input type="checkbox" name="checkbox2" id="checkbox2" class="#{$pr}#{$u}m-r-sm" value="バナナ">バナナ</label>
+    <label class="#{$pr}#{$m}checkbox" for="checkbox3"><input type="checkbox" name="checkbox3" id="checkbox3" class="#{$pr}#{$u}m-r-sm" value="メロン">メロン</label>
+</div><!-- /.#{$pr}#{$c}form -->
+
+<div class="#{$pr}#{$c}form">
+    <label for="demo01-02" class="#{$pr}#{$c}form-label">メッセージ</label>
+    <textarea id="demo01-02" name="demo02" rows="5" class="#{$pr}#{$m}input #{$pr}#{$u}width-50" placeholder="メッセージをどうぞ"></textarea>
+</div><!-- /.#{$pr}#{$c}form -->
 ```
 */
 
-.form.form-group {
-    @include clearfix();
+.#{$pr}#{$c}form {
+    width: 100%;
     margin-bottom: ($spacer * 3);
 }
 
-/*doc
----
-title: .form-label
-name: form-label
-category: module_component
-parent: form
----
-
-フォームの各項目見出しに付与する。
-
-*/
-
-.form.form-label {
+.#{$pr}#{$c}form-label {
     display: block;
     padding-bottom: $spacer;
-    line-height: $line-height-xs;
-    font-size: $font-size-lg;
-    vertical-align: middle;
-
-    .form-inline & {
-        display: inline-block;
-        font-size: $font-size-root;
-        padding: .375rem 1em .375rem 0;
-    }
-
+    font-weight: $font-weight-bold-root;
+    line-height: $line-height-none;
 }
 
 /*doc
 ---
-title: .form-text
-name: form-text
-category: module_component
+title: #{$pr}#{$c}form-inline
+name: form-01-inline
+category: component-form
 parent: form
 ---
 
-フォームの各項目内のテキストに付与する。
-
-*/
-
-.form.form-text {
-    display: inline-block;
-    line-height: $line-height-xs;
-    padding-right: .5em;
-    vertical-align: middle;
-}
-
-/*doc
----
-title: .form-input
-name: form-input
-category: module_component
-parent: form
----
-
-テキスト入力を即すフィールドに付与する。.form-(size)の指定がない限り属性の幅に従う。
+フォームの入力欄とボタン、またはラベルをインラインで表示する。  
+複数並べられた場合の、モバイル環境でのオーバーフローを想定していないことに注意。
 
 ``` example
-<div class="form form-group">
-    <input type="text" class="form form-input" name="demo02" size="10" value="" placeholder="山田一郎" />
+<div class="#{$pr}#{$c}form #{$pr}#{$c}form-inline">
+    <label for="demo02-01" class="#{$pr}#{$c}form-label">姓</label>
+    <input type="text" class="#{$pr}#{$m}input" id="demo02-01" name="demo02_01" value="" placeholder="山田" />
+    <label for="demo02-02" class="#{$pr}#{$c}form-label">名</label>
+    <input type="text" class="#{$pr}#{$m}input" id="demo02-02" name="demo02_02" value="" placeholder="一郎" />
 </div>
-<div class="form form-group">
-    <textarea name="demo03" rows="5" cols="60" class="form form-input" placeholder="メッセージをどうぞ"></textarea>
-</div>
-```
-
-*/
-
-
-
-/*doc
----
-title: .form-(size)
-name: form-size
-category: module_component
-parent: form
----
-
-可能な要素であれば入力項目を大きくする。
-
-``` example
-<div class="form form-group">
-    <input type="text" class="form form-input form-lg" name="demo04_01" size="10" value="15" />
-</div>
-<div class="form form-group">
-    <input type="text" class="form form-input form-sm" name="demo04_02" size="10" value="25" />
+<div class="#{$pr}#{$c}form #{$pr}#{$c}form-inline">
+    <label for="demo02-03" class="#{$pr}#{$c}form-label">アカウント名</label>
+    <input type="text" class="#{$pr}#{$m}input" id="demo02-03" name="demo02_03" value="" placeholder="山田" />
+    <label for="demo02-04" class="#{$pr}#{$c}form-label">パスワード</label>
+    <input type="text" class="#{$pr}#{$m}input" id="demo02-04" name="demo02_04" value="" placeholder="一郎" />
+    <button class="#{$pr}#{$m}btn #{$pr}#{$m}btn-gray">ログイン</button>
 </div>
 ```
-
 */
-.form.form-sm {
 
-    &.form-input {
+.#{$pr}#{$c}form-inline {
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    > * {
+        flex: 0 0 auto;
     }
 
-    &.form-select {
-        select {
+    .#{$pr}#{$c}form-label {
+        margin: 0 .25rem 0 1.5rem;
+        padding-bottom: 0;
+        align-self: center;
+
+        &:first-child {
+            margin-left: 0;
         }
-    }
 
-}
-
-.form.form-lg {
-
-    &.form-input {
-    }
-
-    &.form-select {
-        select {
+        &:last-child {
+            margin-right: 0;
         }
+
+    }
+
+    .#{$pr}#{$m}btn {
+        margin: 0 .25rem;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+    }
+
+    .#{$pr}#{$m}input,
+    .#{$pr}#{$m}select {
+        margin: 0 .25rem;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
     }
 
 }
@@ -152,83 +126,97 @@ parent: form
 
 /*doc
 ---
-title: .form-(percentage)
-name: form-percentage
-category: module_component
+title: #{$pr}#{$c}form-grow
+name: form-02-grow
+category: component-form
 parent: form
 ---
 
-可能な要素であれば入力項目の幅を広げる。
+<code>.#{$pr}#{$c}form-inline</code>と併用する。  
+フォームの入力欄が <code>.#{$pr}#{$c}form</code> 全体を埋めるように伸びる。
 
 ``` example
-<div class="form form-group">
-    <input type="text" class="form form-input form-15" name="demo04_01" size="10" value="15" />
+<div class="#{$pr}#{$c}form #{$pr}#{$c}form-inline #{$pr}#{$c}form-grow">
+    <label for="demo03-01" class="#{$pr}#{$c}form-label">氏名</label>
+    <input type="text" class="#{$pr}#{$m}input" id="demo03-01" name="demo00" value="" placeholder="山田一郎" />
 </div>
-<div class="form form-group">
-    <input type="text" class="form form-input form-25" name="demo04_02" size="10" value="25" />
-</div>
-<div class="form form-group">
-    <input type="text" class="form form-input form-33" name="demo04_03" size="10" value="33" />
-</div>
-<div class="form form-group">
-    <input type="text" class="form form-input form-50" name="demo04_04" size="10" value="50" />
-</div>
-<div class="form form-group">
-    <input type="text" class="form form-input form-75" name="demo04_05" size="10" value="75" />
-</div>
-<div class="form form-group">
-    <input type="text" class="form form-input form-100" name="demo04_06" size="10" value="100" />
+<div class="#{$pr}#{$c}form #{$pr}#{$c}form-inline #{$pr}#{$c}form-grow">
+    <label for="demo03-02" class="#{$pr}#{$c}form-label">アカウント名</label>
+    <input type="text" class="#{$pr}#{$m}input" id="demo03-02" name="demo03_02" value="" placeholder="山田" />
+    <label for="demo03-03" class="#{$pr}#{$c}form-label">パスワード</label>
+    <input type="text" class="#{$pr}#{$m}input" id="demo03-03" name="demo03_03" value="" placeholder="一郎" />
+    <button class="#{$pr}#{$m}btn #{$pr}#{$m}btn-gray">ログイン</button>
 </div>
 ```
-
 */
 
-.form.form-15 {
-    width: 15%;
-    min-width: 100px;
+.#{$pr}#{$c}form-grow {
+
+    .#{$pr}#{$m}input,
+    .#{$pr}#{$m}select {
+        flex-grow: 1;
+    }
+
 }
 
-.form.form-25 {
-    width: 25%;
-    min-width: 100px;
+/*doc
+---
+title: #{$pr}#{$c}form-append
+name: form-03-append
+category: component-form
+parent: form
+---
+
+<code>.#{$pr}#{$c}form-inline</code>と併用する。  
+<code>.#{$pr}#{$m}input</code> に <code>.#{$pr}#{$m}btn</code> が接していた場合は角丸を解除する。
+
+``` example
+<div class="#{$pr}#{$c}form #{$pr}#{$c}form-inline #{$pr}#{$c}form-append">
+    <input type="text" name="search" class="#{$pr}#{$m}input #{$pr}#{$m}input-first" placeholder="Keyword" />
+    <button class="#{$pr}#{$m}btn #{$pr}#{$m}btn-first">検索</button>
+</div>
+```
+*/
+
+.#{$pr}#{$c}form-append {
+
+    .#{$pr}#{$m}input {
+        margin-right: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+
+        + .#{$pr}#{$m}btn {
+            margin-left: 0;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+    }
+
 }
 
-.form.form-33 {
-    width: 33.33333333%;
-    min-width: 150px;
-}
 
-.form.form-50 {
-    width: 50%;
-    min-width: 200px;
-}
+/*doc
+---
+title: #{$pr}#{$c}form-error
+name: form-04-error
+category: component-form
+---
 
-.form.form-75 {
-    width: 75%;
-    min-width: 200px;
-}
+フォームの入力を間違えたときの補助テキストを表示する。
 
-.form.form-100 {
+``` example
+<div class="#{$pr}#{$c}form #{$pr}#{$c}form-inline">
+    <label for="demo01-01" class="#{$pr}#{$c}form-label">フリガナ</label>
+    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$u}width-50 #{$error}" id="demo01-01" name="demo00" value="山田一郎" />
+    <p class="#{$pr}#{$c}form-error">フリガナはカタカナで入力してください。</p>
+</div><!-- /.#{$pr}#{$c}form -->
+```
+*/
+
+.#{$pr}#{$c}form-error {
     width: 100%;
-    min-width: 200px;
-}
-
-
-
-/*doc
----
-title: .form-error
-name: form-error
-category: module_component
-parent: form
----
-
-フォームの入力を間違えたときに表示される補助テキスト。
-
-*/
-
-.form.form-error {
-    margin-top: ($spacer / 2);
+    margin: .5rem 0 0;
     color: $important;
     font-size: $font-size-sm;
     line-height: $line-height-sm;
@@ -237,61 +225,43 @@ parent: form
 
 /*doc
 ---
-title: .form-message
-name: form-message
-category: module_component
-parent: form
+title: #{$pr}#{$c}form-submit
+name: form-05-submit
+category: component-form
 ---
 
-フォームの前書き部分。
+フォームの送信ボタンを表示する。 <code>.#{$pr}#{$m}btn-xl</code> を使用する前提となっている。
 
+``` example
+<div class="#{$pr}#{$c}form-submit">
+    <button class="#{$pr}#{$m}btn #{$pr}#{$m}btn-xl #{$pr}#{$m}btn-first">入力内容の確認</button>
+</div>
+```
 */
 
-.form.form-message {
-    margin-bottom: ($spacer * 3);
-}
-
-
-/*doc
----
-title: .form-preview
-name: form-preview
-category: module_component
-parent: form
----
-
-フォームの確認部分。
-
-*/
-
-.form.form-preview {
-}
-
-
-/*doc
----
-title: .form-submit
-name: form-submit
-category: module_component
-parent: form
----
-
-フォームの送信ボタン部分。
-
-*/
-
-.form.form-submit {
+.#{$pr}#{$c}form-submit {
     @include clearfix();
     padding-top: ($spacer * 3);
-    line-height: $line-height-sm;
+    line-height: $line-height-none;
     text-align: center;
+
+    @include media-breakpoint-up(lg) {
+        padding-top: ($spacer * 4.5);
+    }
 
     form {
         display: inline-block;
     }
 
-    .btn {
-        min-width: 12em;
+    .#{$pr}#{$m}btn {
+        padding-left: 0;
+        padding-right: 0;
+        width: 280px;
+
+        @include media-breakpoint-up(lg) {
+            width: 360px;
+        }
+
     }
 
 }
@@ -299,20 +269,36 @@ parent: form
 
 /*doc
 ---
-title: .form-return
-name: form-return
-category: module_component
-parent: form
+title: #{$pr}#{$c}form-submit-2col
+name: form-06-submit-2col
+category: component-form
 ---
 
-フォームの送信後に指定したページへ誘導する部分。
+<code>.#{$pr}#{$c}form-submit</code>と併用する。  
+ボタンを複数個表示する場合に、**最後のボタン以外**の幅を詰め、最後のボタンを強調して表示する。
 
+``` example
+<div class="#{$pr}#{$c}form-submit #{$pr}#{$c}form-submit-2col">
+    <button class="#{$pr}#{$m}btn #{$pr}#{$m}btn-xl #{$pr}#{$m}btn-first #{$pr}#{$m}btn-outline">入力画面にもどる</button>
+    <button class="#{$pr}#{$m}btn #{$pr}#{$m}btn-xl #{$pr}#{$m}btn-first">この内容で送信</button>
+</div>
+```
 */
 
-.form.form-return {
-    @include clearfix();
-    padding: ($spacer * 3) 0 ($spacer * 6);
-    line-height: $line-height-sm;
-    text-align: center;
-}
 
+.#{$pr}#{$c}form-submit-2col {
+
+    .#{$pr}#{$m}btn {
+        margin: 0 $spacer $spacer;
+
+        &:not(:last-child) {
+
+            @include media-breakpoint-up(lg) {
+                width: 240px;
+            }
+
+        }
+
+    }
+
+}

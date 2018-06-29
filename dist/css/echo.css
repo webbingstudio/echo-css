@@ -2141,7 +2141,7 @@ category: module-badge
   border-radius: 0 0 5px 5px;
   background: #fff;
   color: #333;
-  border: 1px solid #ccc;
+  border: 1px solid #888;
   font-size: .8em;
   font-family: "Helvetica", "Roboto", "-apple-system", "Open Sans", "Arial", sans-serif;
   font-weight: 300;
@@ -3254,7 +3254,7 @@ category: module-input
 .m-input {
   padding: .375rem .5rem;
   background: #fff none;
-  border: 1px solid #ccc;
+  border: 1px solid #888;
   color: #333;
   border-radius: 3px;
   vertical-align: middle;
@@ -3294,6 +3294,68 @@ parent: input
 .m-input-lg {
   padding: .5rem .5rem;
   font-size: 1.125rem;
+}
+
+/*doc
+---
+title: m-input-(color)
+name: input-02-color
+category: module-input
+parent: input
+---
+
+ボーダーの色を変更する。(color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
+
+``` example
+<div class="m-b-sm">
+    <input type="text" class="m-input m-input-gray" size="20" value="" placeholder="gray" />
+</div>
+<div class="m-b-sm">
+    <input type="text" class="m-input m-input-first" size="20" value="" placeholder="first" />
+</div>
+<div class="m-b-sm">
+    <input type="text" class="m-input m-input-second" size="20" value="" placeholder="second" />
+</div>
+<div class="m-b-sm">
+    <input type="text" class="m-input m-input-third" size="20" value="" placeholder="third" />
+</div>
+<div class="m-b-sm">
+    <input type="text" class="m-input m-input-fourth" size="20" value="" placeholder="fourth" />
+</div>
+<div class="m-b-sm">
+    <input type="text" class="m-input m-input-info" size="20" value="" placeholder="info" />
+</div>
+<div class="m-b-sm">
+    <input type="text" class="m-input m-input-important" size="20" value="" placeholder="important" />
+</div>
+```
+*/
+.m-input-gray {
+  border-color: #333;
+}
+
+.m-input-first {
+  border-color: #1976d2;
+}
+
+.m-input-second {
+  border-color: #3cade6;
+}
+
+.m-input-third {
+  border-color: #49b070;
+}
+
+.m-input-fourth {
+  border-color: #f38c10;
+}
+
+.m-input-info {
+  border-color: #3cade6;
+}
+
+.m-input-important {
+  border-color: #e33050;
 }
 
 /*doc
@@ -3724,7 +3786,7 @@ category: module-select
   width: 100%;
   padding: .5em 3em .5em 1em;
   background-color: transparent;
-  border: 1px solid #ccc;
+  border: 1px solid #888;
   vertical-align: middle;
   border-radius: 5px;
   outline: none;
@@ -3888,19 +3950,19 @@ parent: table
 */
 .m-table-bordered {
   width: 100%;
-  border-top: 1px solid #ccc;
-  border-left: 1px solid #ccc;
+  border-top: 1px solid #888;
+  border-left: 1px solid #888;
 }
 .m-table-bordered thead {
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid #888;
 }
 .m-table-bordered tfoot {
-  border-top: 2px solid #ccc;
+  border-top: 2px solid #888;
 }
 .m-table-bordered th,
 .m-table-bordered td {
-  border-bottom: 1px solid #ccc;
-  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #888;
+  border-right: 1px solid #888;
   padding: .5rem;
 }
 .m-table-bordered th:first-child,
@@ -3963,11 +4025,11 @@ parent: table
   width: 100%;
 }
 .m-table-ruled thead {
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid #888;
 }
 .m-table-ruled th,
 .m-table-ruled td {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #888;
   padding-top: 1rem;
   padding-bottom: .5rem;
 }
@@ -4317,7 +4379,7 @@ category: module-thumbnail
   position: relative;
   display: inline-block;
   background: #fff;
-  border: 0 solid #ccc;
+  border: 0 solid #888;
   vertical-align: bottom;
 }
 .m-thumbnail img {
@@ -4674,7 +4736,7 @@ category: component-alert
 .c-alert {
   padding: 10px 20px;
   background-color: #eee;
-  border: 1px solid #ccc;
+  border: 1px solid #888;
   line-height: 1.5;
 }
 
@@ -5045,7 +5107,7 @@ category: component-card
 .c-card {
   position: relative;
   background-color: #fff;
-  border: 1px solid #ccc;
+  border: 1px solid #888;
   color: #333;
 }
 [class*="l-col"] > .c-card {
@@ -5291,6 +5353,273 @@ parent: flip
   .c-flip-reverse .c-flip-contents {
     left: auto;
     right: 0;
+  }
+}
+
+/*doc
+---
+title: c-form
+name: form
+category: component-form
+---
+
+システムで可能な限りフォームの各入力セットを包括する。  
+幅の調整が必要な場合は <code>.width-(percentage)</code> を併用すること。  
+フォーム内のパーツは <code>.m-input, .m-radio, .m-select, .m-checkbox, .m-btn</code> を参照。
+
+``` example
+<div class="c-form">
+    <label for="demo01-01" class="c-form-label">氏名</label>
+    <input type="text" class="m-input width-50" id="demo01-01" name="demo00" value="" placeholder="山田一郎" />
+</div><!-- /.c-form -->
+
+<div class="c-form">
+    <span class="c-form-label">好きな食べ物</span>
+    <label class="m-checkbox m-r" for="checkbox1"><input type="checkbox" name="checkbox1" id="checkbox1" class="m-r-sm" value="りんご">りんご</label>
+    <label class="m-checkbox m-r" for="checkbox2"><input type="checkbox" name="checkbox2" id="checkbox2" class="m-r-sm" value="バナナ">バナナ</label>
+    <label class="m-checkbox" for="checkbox3"><input type="checkbox" name="checkbox3" id="checkbox3" class="m-r-sm" value="メロン">メロン</label>
+</div><!-- /.c-form -->
+
+<div class="c-form">
+    <label for="demo01-02" class="c-form-label">メッセージ</label>
+    <textarea id="demo01-02" name="demo02" rows="5" class="m-input width-50" placeholder="メッセージをどうぞ"></textarea>
+</div><!-- /.c-form -->
+```
+*/
+.c-form {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.c-form-label {
+  display: block;
+  padding-bottom: 10px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/*doc
+---
+title: c-form-inline
+name: form-01-inline
+category: component-form
+parent: form
+---
+
+フォームの入力欄とボタン、またはラベルをインラインで表示する。  
+複数並べられた場合の、モバイル環境でのオーバーフローを想定していないことに注意。
+
+``` example
+<div class="c-form c-form-inline">
+    <label for="demo02-01" class="c-form-label">姓</label>
+    <input type="text" class="m-input" id="demo02-01" name="demo02_01" value="" placeholder="山田" />
+    <label for="demo02-02" class="c-form-label">名</label>
+    <input type="text" class="m-input" id="demo02-02" name="demo02_02" value="" placeholder="一郎" />
+</div>
+<div class="c-form c-form-inline">
+    <label for="demo02-03" class="c-form-label">アカウント名</label>
+    <input type="text" class="m-input" id="demo02-03" name="demo02_03" value="" placeholder="山田" />
+    <label for="demo02-04" class="c-form-label">パスワード</label>
+    <input type="text" class="m-input" id="demo02-04" name="demo02_04" value="" placeholder="一郎" />
+    <button class="m-btn m-btn-gray">ログイン</button>
+</div>
+```
+*/
+.c-form-inline {
+  display: flex;
+  align-items: stretch;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.c-form-inline > * {
+  flex: 0 0 auto;
+}
+.c-form-inline .c-form-label {
+  margin: 0 .25rem 0 1.5rem;
+  padding-bottom: 0;
+  align-self: center;
+}
+.c-form-inline .c-form-label:first-child {
+  margin-left: 0;
+}
+.c-form-inline .c-form-label:last-child {
+  margin-right: 0;
+}
+.c-form-inline .m-btn {
+  margin: 0 .25rem;
+}
+.c-form-inline .m-btn:first-child {
+  margin-left: 0;
+}
+.c-form-inline .m-btn:last-child {
+  margin-right: 0;
+}
+.c-form-inline .m-input,
+.c-form-inline .m-select {
+  margin: 0 .25rem;
+}
+.c-form-inline .m-input:first-child,
+.c-form-inline .m-select:first-child {
+  margin-left: 0;
+}
+.c-form-inline .m-input:last-child,
+.c-form-inline .m-select:last-child {
+  margin-right: 0;
+}
+
+/*doc
+---
+title: c-form-grow
+name: form-02-grow
+category: component-form
+parent: form
+---
+
+<code>.c-form-inline</code>と併用する。  
+フォームの入力欄が <code>.c-form</code> 全体を埋めるように伸びる。
+
+``` example
+<div class="c-form c-form-inline c-form-grow">
+    <label for="demo03-01" class="c-form-label">氏名</label>
+    <input type="text" class="m-input" id="demo03-01" name="demo00" value="" placeholder="山田一郎" />
+</div>
+<div class="c-form c-form-inline c-form-grow">
+    <label for="demo03-02" class="c-form-label">アカウント名</label>
+    <input type="text" class="m-input" id="demo03-02" name="demo03_02" value="" placeholder="山田" />
+    <label for="demo03-03" class="c-form-label">パスワード</label>
+    <input type="text" class="m-input" id="demo03-03" name="demo03_03" value="" placeholder="一郎" />
+    <button class="m-btn m-btn-gray">ログイン</button>
+</div>
+```
+*/
+.c-form-grow .m-input,
+.c-form-grow .m-select {
+  flex-grow: 1;
+}
+
+/*doc
+---
+title: c-form-append
+name: form-03-append
+category: component-form
+parent: form
+---
+
+<code>.c-form-inline</code>と併用する。  
+<code>.m-input</code> に <code>.m-btn</code> が接していた場合は角丸を解除する。
+
+``` example
+<div class="c-form c-form-inline c-form-append">
+    <input type="text" name="search" class="m-input m-input-first" placeholder="Keyword" />
+    <button class="m-btn m-btn-first">検索</button>
+</div>
+```
+*/
+.c-form-append .m-input {
+  margin-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.c-form-append .m-input + .m-btn {
+  margin-left: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/*doc
+---
+title: c-form-error
+name: form-04-error
+category: component-form
+---
+
+フォームの入力を間違えたときの補助テキストを表示する。
+
+``` example
+<div class="c-form c-form-inline">
+    <label for="demo01-01" class="c-form-label">フリガナ</label>
+    <input type="text" class="m-input width-50 is-error" id="demo01-01" name="demo00" value="山田一郎" />
+    <p class="c-form-error">フリガナはカタカナで入力してください。</p>
+</div><!-- /.c-form -->
+```
+*/
+.c-form-error {
+  width: 100%;
+  margin: .5rem 0 0;
+  color: #e33050;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/*doc
+---
+title: c-form-submit
+name: form-05-submit
+category: component-form
+---
+
+フォームの送信ボタンを表示する。 <code>.m-btn-xl</code> を使用する前提となっている。
+
+``` example
+<div class="c-form-submit">
+    <button class="m-btn m-btn-xl m-btn-first">入力内容の確認</button>
+</div>
+```
+*/
+.c-form-submit {
+  padding-top: 30px;
+  line-height: 1;
+  text-align: center;
+}
+.c-form-submit:before, .c-form-submit:after {
+  content: "";
+  display: table;
+}
+.c-form-submit:after {
+  clear: both;
+}
+@media (min-width: 1000px) {
+  .c-form-submit {
+    padding-top: 45px;
+  }
+}
+.c-form-submit form {
+  display: inline-block;
+}
+.c-form-submit .m-btn {
+  padding-left: 0;
+  padding-right: 0;
+  width: 280px;
+}
+@media (min-width: 1000px) {
+  .c-form-submit .m-btn {
+    width: 360px;
+  }
+}
+
+/*doc
+---
+title: c-form-submit-2col
+name: form-06-submit-2col
+category: component-form
+---
+
+<code>.c-form-submit</code>と併用する。  
+ボタンを複数個表示する場合に、**最後のボタン以外**の幅を詰め、最後のボタンを強調して表示する。
+
+``` example
+<div class="c-form-submit c-form-submit-2col">
+    <button class="m-btn m-btn-xl m-btn-first m-btn-outline">入力画面にもどる</button>
+    <button class="m-btn m-btn-xl m-btn-first">この内容で送信</button>
+</div>
+```
+*/
+.c-form-submit-2col .m-btn {
+  margin: 0 10px 10px;
+}
+@media (min-width: 1000px) {
+  .c-form-submit-2col .m-btn:not(:last-child) {
+    width: 240px;
   }
 }
 
@@ -7320,10 +7649,10 @@ category: wysiwyg
 .wysiwyg hr:not([class]) {
   overflow: hidden;
   margin: 30px 0;
-  height: #ccc;
+  height: #888;
   border-width: 1px 0 0;
   border-style: solid none none;
-  border-color: #ccc transparent transparent;
+  border-color: #888 transparent transparent;
 }
 .wysiwyg blockquote:not([class]) {
   overflow: hidden;
@@ -7341,7 +7670,7 @@ category: wysiwyg
   margin-bottom: 30px;
   border-width: 0 0 1px 1px;
   border-style: solid;
-  border-color: #ccc;
+  border-color: #888;
 }
 @media (min-width: 425px) {
   .wysiwyg table:not([class]) {
@@ -7362,7 +7691,7 @@ category: wysiwyg
 }
 .wysiwyg table:not([class]) tr {
   display: block;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid #888;
 }
 @media (min-width: 425px) {
   .wysiwyg table:not([class]) tr {
@@ -7377,7 +7706,7 @@ category: wysiwyg
   padding: 5px 10px;
   border-width: 1px 1px 0 0;
   border-style: solid;
-  border-color: #ccc;
+  border-color: #888;
   line-height: 1.5;
   vertical-align: top;
 }

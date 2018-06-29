@@ -70,3 +70,66 @@ parent: input
     padding: .5rem .5rem;
     font-size: $font-size-lg;
 }
+
+
+/*doc
+---
+title: #{$pr}#{$m}input-(color)
+name: input-02-color
+category: module-input
+parent: input
+---
+
+ボーダーの色を変更する。(color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
+
+``` example
+<div class="#{$pr}#{$u}m-b-sm">
+    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input-#{$__gray}" size="20" value="" placeholder="#{$__gray}" />
+</div>
+<div class="#{$pr}#{$u}m-b-sm">
+    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input-#{$__first}" size="20" value="" placeholder="#{$__first}" />
+</div>
+<div class="#{$pr}#{$u}m-b-sm">
+    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input-#{$__second}" size="20" value="" placeholder="#{$__second}" />
+</div>
+<div class="#{$pr}#{$u}m-b-sm">
+    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input-#{$__third}" size="20" value="" placeholder="#{$__third}" />
+</div>
+<div class="#{$pr}#{$u}m-b-sm">
+    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input-#{$__fourth}" size="20" value="" placeholder="#{$__fourth}" />
+</div>
+<div class="#{$pr}#{$u}m-b-sm">
+    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input-#{$__info}" size="20" value="" placeholder="#{$__info}" />
+</div>
+<div class="#{$pr}#{$u}m-b-sm">
+    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input-#{$__important}" size="20" value="" placeholder="#{$__important}" />
+</div>
+```
+*/
+
+.#{$pr}#{$m}input-#{$__gray} {
+    border-color: $gray;
+}
+
+.#{$pr}#{$m}input-#{$__first} {
+    border-color: $first;
+}
+
+.#{$pr}#{$m}input-#{$__second} {
+    border-color: $second;
+}
+
+.#{$pr}#{$m}input-#{$__third} {
+    border-color: $third;
+}
+
+.#{$pr}#{$m}input-#{$__fourth} {
+    border-color: $fourth;
+}
+
+.#{$pr}#{$m}input-#{$__info} {
+    border-color: $info;
+}
+.#{$pr}#{$m}input-#{$__important} {
+    border-color: $important;
+}
