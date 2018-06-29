@@ -2,7 +2,7 @@
 
 /*doc
 ---
-title: #{$p}#{$g}row
+title: #{$pr}#{$g}row
 name: grid-01-row
 category: layout-grid
 ---
@@ -13,20 +13,20 @@ flexboxによるグリッドのグループを作成する。
 命名規則をbootstrapと同様にしたい場合は、 <code>/\_scss/_\config\_advance.scss</code> の変数 <code>$g</code> を空にすること。
 
 ``` example
-<div class="#{$p}#{$g}row">
-    <div class="#{$p}#{$g}col #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__first} #{$p}#{$u}p" style="height: 100%;">#{$p}#{$g}col-lg-4<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="#{$pr}#{$g}row">
+    <div class="#{$pr}#{$g}col #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}p" style="height: 100%;">#{$pr}#{$g}col-lg-4<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="#{$p}#{$g}col #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__first} #{$p}#{$u}p" style="height: 100%;">#{$p}#{$g}col-lg-4<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。</div>
+    <div class="#{$pr}#{$g}col #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}p" style="height: 100%;">#{$pr}#{$g}col-lg-4<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。</div>
     </div>
-    <div class="#{$p}#{$g}col #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__first} #{$p}#{$u}p" style="height: 100%;">#{$p}#{$g}col-lg-4<br>ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。</div>
+    <div class="#{$pr}#{$g}col #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}p" style="height: 100%;">#{$pr}#{$g}col-lg-4<br>ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。</div>
     </div>
 </div>
 ```
 */
-.#{$p}#{$g}row {
+.#{$pr}#{$g}row {
     @include make-row-flex();
     margin-left: (map-get($grid-gutter-widths, md) / -2);
     margin-right: (map-get($grid-gutter-widths, md) / -2);
@@ -35,7 +35,7 @@ flexboxによるグリッドのグループを作成する。
 
 /*doc
 ---
-title: #{$p}#{$g}row-(size)
+title: #{$pr}#{$g}row-(size)
 name: grid-01-row-01-size
 category: layout-grid
 parent: grid-01-row
@@ -43,75 +43,75 @@ parent: grid-01-row
 
 flexboxによるグリッドで余白が異なるグループを作成する。  
 (size)は<code>0, sm, lg</code> に対応している。  
-Bootstrap4の <code>.no-gutters</code> は <code>.#{$p}#{$g}row-0</code> のエイリアスとなる。
+Bootstrap4の <code>.no-gutters</code> は <code>.#{$pr}#{$g}row-0</code> のエイリアスとなる。
 
 ``` example
-<div class="#{$p}#{$g}row #{$p}#{$g}row-0">
-    <div class="#{$p}#{$g}col #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__first} #{$p}#{$u}p" style="height: 100%;">#{$p}#{$g}row-0<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="#{$pr}#{$g}row #{$pr}#{$g}row-0">
+    <div class="#{$pr}#{$g}col #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}p" style="height: 100%;">#{$pr}#{$g}row-0<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="#{$p}#{$g}col #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__first} #{$p}#{$u}p" style="height: 100%; opacity: 0.8;">#{$p}#{$g}row-0<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="#{$pr}#{$g}col #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}p" style="height: 100%; opacity: 0.8;">#{$pr}#{$g}row-0<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="#{$p}#{$g}col #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__first} #{$p}#{$u}p" style="height: 100%;">#{$p}#{$g}row-0<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-</div>
-
-<div class="#{$p}#{$g}row #{$p}#{$g}row-sm">
-    <div class="#{$p}#{$g}col #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__second} #{$p}#{$u}p" style="height: 100%;">#{$p}#{$g}row-sm<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="#{$p}#{$g}col #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__second} #{$p}#{$u}p" style="height: 100%; opacity: 0.8;">#{$p}#{$g}row-sm<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="#{$p}#{$g}col #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__second} #{$p}#{$u}p" style="height: 100%;">#{$p}#{$g}row-sm<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="#{$pr}#{$g}col #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}p" style="height: 100%;">#{$pr}#{$g}row-0<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 
-<div class="#{$p}#{$g}row #{$p}#{$g}row-lg">
-    <div class="#{$p}#{$g}col #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__third} #{$p}#{$u}p" style="height: 100%;">#{$p}#{$g}row-lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="#{$pr}#{$g}row #{$pr}#{$g}row-sm">
+    <div class="#{$pr}#{$g}col #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}p" style="height: 100%;">#{$pr}#{$g}row-sm<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="#{$p}#{$g}col #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__third} #{$p}#{$u}p" style="height: 100%; opacity: 0.8;">#{$p}#{$g}row-lg<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="#{$pr}#{$g}col #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}p" style="height: 100%; opacity: 0.8;">#{$pr}#{$g}row-sm<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="#{$p}#{$g}col #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__third} #{$p}#{$u}p" style="height: 100%;">#{$p}#{$g}row-lg<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="#{$pr}#{$g}col #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}p" style="height: 100%;">#{$pr}#{$g}row-sm<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    </div>
+</div>
+
+<div class="#{$pr}#{$g}row #{$pr}#{$g}row-lg">
+    <div class="#{$pr}#{$g}col #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__third} #{$pr}#{$u}p" style="height: 100%;">#{$pr}#{$g}row-lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    </div>
+    <div class="#{$pr}#{$g}col #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__third} #{$pr}#{$u}p" style="height: 100%; opacity: 0.8;">#{$pr}#{$g}row-lg<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    </div>
+    <div class="#{$pr}#{$g}col #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__third} #{$pr}#{$u}p" style="height: 100%;">#{$pr}#{$g}row-lg<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 ```
 */
 
-.#{$p}#{$g}row-0,
-.#{$p}no-gutters {
+.#{$pr}#{$g}row-0,
+.#{$pr}no-gutters {
     margin-left: 0;
     margin-right: 0;
 
-    .#{$p}#{$g}col {
+    .#{$pr}#{$g}col {
         padding-left: 0;
         padding-right: 0;
     }
 
 }
 
-.#{$p}#{$g}row-sm {
+.#{$pr}#{$g}row-sm {
     margin-left: (map-get($grid-gutter-widths, sm) / -2);
     margin-right: (map-get($grid-gutter-widths, sm) / -2);
 
-    .#{$p}#{$g}col {
+    .#{$pr}#{$g}col {
         padding-left: (map-get($grid-gutter-widths, sm) / 2);
         padding-right: (map-get($grid-gutter-widths, sm) / 2);
     }
 
 }
 
-.#{$p}#{$g}row-lg {
+.#{$pr}#{$g}row-lg {
     margin-left: (map-get($grid-gutter-widths, lg) / -2);
     margin-right: (map-get($grid-gutter-widths, lg) / -2);
 
-    .#{$p}#{$g}col {
+    .#{$pr}#{$g}col {
         padding-left: (map-get($grid-gutter-widths, lg) / 2);
         padding-right: (map-get($grid-gutter-widths, lg) / 2);
     }
@@ -121,47 +121,47 @@ Bootstrap4の <code>.no-gutters</code> は <code>.#{$p}#{$g}row-0</code> のエ�
 
 /*doc
 ---
-title: #{$p}#{$g}col
+title: #{$pr}#{$g}col
 name: grid-02-col
 category: layout-grid
 ---
 
 flexboxによるグリッドのセルを作成する。このクラス単独では常に均等幅となる。
 
-Bootstrap 4との互換の関係で、**このカテゴリーのみシングルクラスとなっている（#{$p}#{$g}colを常に付与する必要はない）**ことに注意。
+Bootstrap 4との互換の関係で、**このカテゴリーのみシングルクラスとなっている（#{$pr}#{$g}colを常に付与する必要はない）**ことに注意。
 
 ``` example
-<div class="#{$p}#{$g}row">
-    <div class="#{$p}#{$g}col #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__first} #{$p}#{$u}p" style="height: 100%;">#{$p}#{$g}col<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="#{$pr}#{$g}row">
+    <div class="#{$pr}#{$g}col #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}p" style="height: 100%;">#{$pr}#{$g}col<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
 </div>
 
-<div class="#{$p}#{$g}row">
-    <div class="#{$p}#{$g}col #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__second} #{$p}#{$u}p" style="height: 100%;">#{$p}#{$g}col<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="#{$pr}#{$g}row">
+    <div class="#{$pr}#{$g}col #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}p" style="height: 100%;">#{$pr}#{$g}col<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="#{$p}#{$g}col #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__second} #{$p}#{$u}p" style="height: 100%;">#{$p}#{$g}col<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="#{$pr}#{$g}col #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}p" style="height: 100%;">#{$pr}#{$g}col<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
 </div>
 
-<div class="#{$p}#{$g}row">
-    <div class="#{$p}#{$g}col #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__third} #{$p}#{$u}p" style="height: 100%;">#{$p}#{$g}col<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="#{$pr}#{$g}row">
+    <div class="#{$pr}#{$g}col #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__third} #{$pr}#{$u}p" style="height: 100%;">#{$pr}#{$g}col<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="#{$p}#{$g}col #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__third} #{$p}#{$u}p" style="height: 100%;">#{$p}#{$g}col<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="#{$pr}#{$g}col #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__third} #{$pr}#{$u}p" style="height: 100%;">#{$pr}#{$g}col<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="#{$p}#{$g}col #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__third} #{$p}#{$u}p" style="height: 100%;">#{$p}#{$g}col<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="#{$pr}#{$g}col #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__third} #{$pr}#{$u}p" style="height: 100%;">#{$pr}#{$g}col<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 ```
 
 */
 
-[class*="#{$p}#{$g}col"] {
+[class*="#{$pr}#{$g}col"] {
     position: relative;
     width: 100%;
     min-height: 1px;
@@ -174,7 +174,7 @@ Bootstrap 4との互換の関係で、**このカテゴリーのみシングル�
 
 /*doc
 ---
-title: #{$p}#{$g}col-(column)-(breakpoint)
+title: #{$pr}#{$g}col-(column)-(breakpoint)
 name: grid-03-col-column-breakpoint
 category: layout-grid
 ---
@@ -184,63 +184,63 @@ flexboxによるグリッドのセルの幅を、<code>(column) / #{$grid-column
 (breakpoint)の指定がある場合は、(breakpoint)**以上**のときに、指定した幅となる。
 
 ``` example
-<div class="#{$p}#{$g}row #{$p}#{$u}m-b-lg">
-    <div class="#{$p}#{$g}col-3 #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__first} #{$p}#{$u}p" style="height: 100%;">#{$p}#{$g}col-3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="#{$pr}#{$g}row #{$pr}#{$u}m-b-lg">
+    <div class="#{$pr}#{$g}col-3 #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}p" style="height: 100%;">#{$pr}#{$g}col-3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="#{$p}#{$g}col-sm-3 #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__first} #{$p}#{$u}p" style="height: 100%;">#{$p}#{$g}col-sm-3<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="#{$pr}#{$g}col-sm-3 #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}p" style="height: 100%;">#{$pr}#{$g}col-sm-3<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="#{$p}#{$g}col-sm-3 #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__first} #{$p}#{$u}p" style="height: 100%;">#{$p}#{$g}col-sm-3<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-</div>
-
-<div class="#{$p}#{$g}row #{$p}#{$u}m-b-lg">
-    <div class="#{$p}#{$g}col-md-3 #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__second} #{$p}#{$u}p" style="height: 100%;">#{$p}#{$g}col-md-3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="#{$p}#{$g}col-md-3 #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__second} #{$p}#{$u}p" style="height: 100%;">#{$p}#{$g}col-md-3<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="#{$p}#{$g}col-md-3 #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__second} #{$p}#{$u}p" style="height: 100%;">#{$p}#{$g}col-md-3<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-    <div class="#{$p}#{$g}col-md-3 #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__second} #{$p}#{$u}p" style="height: 100%;">#{$p}#{$g}col-md-3<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
+    <div class="#{$pr}#{$g}col-sm-3 #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}p" style="height: 100%;">#{$pr}#{$g}col-sm-3<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 
-<div class="#{$p}#{$g}row #{$p}#{$u}m-b-lg">
-    <div class="#{$p}#{$g}col-lg-4 #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__third} #{$p}#{$u}p" style="height: 100%;">#{$p}#{$g}col-lg-4<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="#{$pr}#{$g}row #{$pr}#{$u}m-b-lg">
+    <div class="#{$pr}#{$g}col-md-3 #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}p" style="height: 100%;">#{$pr}#{$g}col-md-3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="#{$p}#{$g}col-lg-4 #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__third} #{$p}#{$u}p" style="height: 100%;">#{$p}#{$g}col-lg-4<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="#{$pr}#{$g}col-md-3 #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}p" style="height: 100%;">#{$pr}#{$g}col-md-3<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="#{$p}#{$g}col-lg-4 #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__third} #{$p}#{$u}p" style="height: 100%;">#{$p}#{$g}col-lg-4<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="#{$pr}#{$g}col-md-3 #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}p" style="height: 100%;">#{$pr}#{$g}col-md-3<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    </div>
+    <div class="#{$pr}#{$g}col-md-3 #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}p" style="height: 100%;">#{$pr}#{$g}col-md-3<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
     </div>
 </div>
 
-<div class="#{$p}#{$g}row">
-    <div class="#{$p}#{$g}col-6 #{$p}#{$g}col-sm-4 #{$p}#{$g}col-lg-3 #{$p}#{$g}col-xxl-2 #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-fourth #{$p}#{$u}p" style="height: 100%;">#{$p}#{$g}col-6 #{$p}#{$g}col-sm-4 #{$p}#{$g}col-lg-3 #{$p}#{$g}col-xxl-2<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="#{$pr}#{$g}row #{$pr}#{$u}m-b-lg">
+    <div class="#{$pr}#{$g}col-lg-4 #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__third} #{$pr}#{$u}p" style="height: 100%;">#{$pr}#{$g}col-lg-4<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="#{$p}#{$g}col-6 #{$p}#{$g}col-sm-4 #{$p}#{$g}col-lg-3 #{$p}#{$g}col-xxl-2 #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-fourth #{$p}#{$u}p" style="height: 100%;">#{$p}#{$g}col-6 #{$p}#{$g}col-sm-4 #{$p}#{$g}col-lg-3 #{$p}#{$g}col-xxl-2<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="#{$pr}#{$g}col-lg-4 #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__third} #{$pr}#{$u}p" style="height: 100%;">#{$pr}#{$g}col-lg-4<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="#{$p}#{$g}col-6 #{$p}#{$g}col-sm-4 #{$p}#{$g}col-lg-3 #{$p}#{$g}col-xxl-2 #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-fourth #{$p}#{$u}p" style="height: 100%;">#{$p}#{$g}col-6 #{$p}#{$g}col-sm-4 #{$p}#{$g}col-lg-3 #{$p}#{$g}col-xxl-2<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="#{$pr}#{$g}col-lg-4 #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__third} #{$pr}#{$u}p" style="height: 100%;">#{$pr}#{$g}col-lg-4<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
-    <div class="#{$p}#{$g}col-6 #{$p}#{$g}col-sm-4 #{$p}#{$g}col-lg-3 #{$p}#{$g}col-xxl-2 #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-fourth #{$p}#{$u}p" style="height: 100%;">#{$p}#{$g}col-6 #{$p}#{$g}col-sm-4 #{$p}#{$g}col-lg-3 #{$p}#{$g}col-xxl-2<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
+</div>
+
+<div class="#{$pr}#{$g}row">
+    <div class="#{$pr}#{$g}col-6 #{$pr}#{$g}col-sm-4 #{$pr}#{$g}col-lg-3 #{$pr}#{$g}col-xxl-2 #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-fourth #{$pr}#{$u}p" style="height: 100%;">#{$pr}#{$g}col-6 #{$pr}#{$g}col-sm-4 #{$pr}#{$g}col-lg-3 #{$pr}#{$g}col-xxl-2<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="#{$p}#{$g}col-6 #{$p}#{$g}col-sm-4 #{$p}#{$g}col-lg-3 #{$p}#{$g}col-xxl-2 #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-fourth #{$p}#{$u}p" style="height: 100%;">#{$p}#{$g}col-6 #{$p}#{$g}col-sm-4 #{$p}#{$g}col-lg-3 #{$p}#{$g}col-xxl-2<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="#{$pr}#{$g}col-6 #{$pr}#{$g}col-sm-4 #{$pr}#{$g}col-lg-3 #{$pr}#{$g}col-xxl-2 #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-fourth #{$pr}#{$u}p" style="height: 100%;">#{$pr}#{$g}col-6 #{$pr}#{$g}col-sm-4 #{$pr}#{$g}col-lg-3 #{$pr}#{$g}col-xxl-2<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="#{$p}#{$g}col-6 #{$p}#{$g}col-sm-4 #{$p}#{$g}col-lg-3 #{$p}#{$g}col-xxl-2 #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-fourth #{$p}#{$u}p" style="height: 100%;">#{$p}#{$g}col-6 #{$p}#{$g}col-sm-4 #{$p}#{$g}col-lg-3 #{$p}#{$g}col-xxl-2<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
+    <div class="#{$pr}#{$g}col-6 #{$pr}#{$g}col-sm-4 #{$pr}#{$g}col-lg-3 #{$pr}#{$g}col-xxl-2 #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-fourth #{$pr}#{$u}p" style="height: 100%;">#{$pr}#{$g}col-6 #{$pr}#{$g}col-sm-4 #{$pr}#{$g}col-lg-3 #{$pr}#{$g}col-xxl-2<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    </div>
+    <div class="#{$pr}#{$g}col-6 #{$pr}#{$g}col-sm-4 #{$pr}#{$g}col-lg-3 #{$pr}#{$g}col-xxl-2 #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-fourth #{$pr}#{$u}p" style="height: 100%;">#{$pr}#{$g}col-6 #{$pr}#{$g}col-sm-4 #{$pr}#{$g}col-lg-3 #{$pr}#{$g}col-xxl-2<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
+    </div>
+    <div class="#{$pr}#{$g}col-6 #{$pr}#{$g}col-sm-4 #{$pr}#{$g}col-lg-3 #{$pr}#{$g}col-xxl-2 #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-fourth #{$pr}#{$u}p" style="height: 100%;">#{$pr}#{$g}col-6 #{$pr}#{$g}col-sm-4 #{$pr}#{$g}col-lg-3 #{$pr}#{$g}col-xxl-2<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    </div>
+    <div class="#{$pr}#{$g}col-6 #{$pr}#{$g}col-sm-4 #{$pr}#{$g}col-lg-3 #{$pr}#{$g}col-xxl-2 #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-fourth #{$pr}#{$u}p" style="height: 100%;">#{$pr}#{$g}col-6 #{$pr}#{$g}col-sm-4 #{$pr}#{$g}col-lg-3 #{$pr}#{$g}col-xxl-2<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
     </div>
 </div>
 ```
@@ -250,7 +250,7 @@ flexboxによるグリッドのセルの幅を、<code>(column) / #{$grid-column
 
 /*doc
 ---
-title: #{$p}#{$g}order-(breakpoint)-(first or last or number)
+title: #{$pr}#{$g}order-(breakpoint)-(first or last or number)
 name: grid-04-order-breakpoint
 category: layout-grid
 parent: grid-02-col
@@ -261,48 +261,48 @@ flexboxによるグリッドのセルを、指定した順番にする。
 (breakpoint)の指定がある場合は、(breakpoint)**以上**のときに、指定した順番となる。
 
 ``` example
-<div class="#{$p}#{$g}row #{$p}#{$u}m-b-lg">
-    <div class="#{$p}#{$g}order-last #{$p}#{$g}col #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__first} #{$p}#{$u}p" style="height: 100%;">1:<br>#{$p}#{$g}order-last<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="#{$pr}#{$g}row #{$pr}#{$u}m-b-lg">
+    <div class="#{$pr}#{$g}order-last #{$pr}#{$g}col #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}p" style="height: 100%;">1:<br>#{$pr}#{$g}order-last<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="#{$p}#{$g}col #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__first} #{$p}#{$u}bg-mild #{$p}#{$u}p" style="height: 100%;">2:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="#{$pr}#{$g}col #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-mild #{$pr}#{$u}p" style="height: 100%;">2:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="#{$p}#{$g}order-first #{$p}#{$g}col #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__first} #{$p}#{$u}p" style="height: 100%;">3:<br>#{$p}#{$g}order-first<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="#{$pr}#{$g}order-first #{$pr}#{$g}col #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}p" style="height: 100%;">3:<br>#{$pr}#{$g}order-first<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="#{$p}#{$g}col #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__first} #{$p}#{$u}bg-mild #{$p}#{$u}p" style="height: 100%;">4:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-</div>
-
-<div class="#{$p}#{$g}row #{$p}#{$u}m-b-lg">
-    <div class="#{$p}#{$g}order-3 #{$p}#{$g}col #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__second} #{$p}#{$u}p" style="height: 100%;">1:<br>#{$p}#{$g}order-3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="#{$p}#{$g}order-1 #{$p}#{$g}col #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__second} #{$p}#{$u}p" style="height: 100%;">2:<br>#{$p}#{$g}order-1<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="#{$p}#{$g}order-4 #{$p}#{$g}col #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__second} #{$p}#{$u}p" style="height: 100%;">3:<br>#{$p}#{$g}order-4<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="#{$p}#{$g}order-2 #{$p}#{$g}col #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__second} #{$p}#{$u}p" style="height: 100%;">4:<br>#{$p}#{$g}order-2<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="#{$pr}#{$g}col #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-mild #{$pr}#{$u}p" style="height: 100%;">4:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
 </div>
 
-<div class="#{$p}#{$g}row #{$p}#{$u}m-b-lg">
-    <div class="#{$p}#{$g}order-sm-last #{$p}#{$g}col-sm-6 #{$p}#{$g}col-lg-3 #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__third} #{$p}#{$u}p" style="height: 100%;">1:<br>#{$p}#{$g}order-sm-last<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="#{$pr}#{$g}row #{$pr}#{$u}m-b-lg">
+    <div class="#{$pr}#{$g}order-3 #{$pr}#{$g}col #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}p" style="height: 100%;">1:<br>#{$pr}#{$g}order-3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="#{$p}#{$g}col-sm-6 #{$p}#{$g}col-lg-3 #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__third} #{$p}#{$u}bg-mild #{$p}#{$u}p" style="height: 100%;">2:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="#{$pr}#{$g}order-1 #{$pr}#{$g}col #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}p" style="height: 100%;">2:<br>#{$pr}#{$g}order-1<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="#{$p}#{$g}order-xl-first #{$p}#{$g}col-sm-6 #{$p}#{$g}col-lg-3 #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__third} #{$p}#{$u}p" style="height: 100%;">3:<br>#{$p}#{$g}order-xl-first<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="#{$pr}#{$g}order-4 #{$pr}#{$g}col #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}p" style="height: 100%;">3:<br>#{$pr}#{$g}order-4<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="#{$p}#{$g}col-sm-6 #{$p}#{$g}col-lg-3 #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__third} #{$p}#{$u}bg-mild #{$p}#{$u}p" style="height: 100%;">4:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="#{$pr}#{$g}order-2 #{$pr}#{$g}col #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}p" style="height: 100%;">4:<br>#{$pr}#{$g}order-2<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    </div>
+</div>
+
+<div class="#{$pr}#{$g}row #{$pr}#{$u}m-b-lg">
+    <div class="#{$pr}#{$g}order-sm-last #{$pr}#{$g}col-sm-6 #{$pr}#{$g}col-lg-3 #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__third} #{$pr}#{$u}p" style="height: 100%;">1:<br>#{$pr}#{$g}order-sm-last<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    </div>
+    <div class="#{$pr}#{$g}col-sm-6 #{$pr}#{$g}col-lg-3 #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__third} #{$pr}#{$u}bg-mild #{$pr}#{$u}p" style="height: 100%;">2:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    </div>
+    <div class="#{$pr}#{$g}order-xl-first #{$pr}#{$g}col-sm-6 #{$pr}#{$g}col-lg-3 #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__third} #{$pr}#{$u}p" style="height: 100%;">3:<br>#{$pr}#{$g}order-xl-first<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    </div>
+    <div class="#{$pr}#{$g}col-sm-6 #{$pr}#{$g}col-lg-3 #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__third} #{$pr}#{$u}bg-mild #{$pr}#{$u}p" style="height: 100%;">4:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
 </div>
 ```
@@ -312,30 +312,30 @@ flexboxによるグリッドのセルを、指定した順番にする。
 
 /*doc
 ---
-title: #{$p}#{$g}offset-(breakpoint)-(column)
+title: #{$pr}#{$g}offset-(breakpoint)-(column)
 name: grid-05-offset-breakpoint
 category: layout-grid
 parent: grid-02-col
 ---
 
 flexboxによるグリッドのセルの開始位置を、<code>(column) / #{$grid-columns}</code>の割合だけ右にずらす。  
-<code>#{$p}#{$g}col-(column)</code> と、<code>#{$p}#{$g}offset-(column)</code> の合計値が<code>#{$grid-columns}</code>を超えてしまうと、セルが右にはみ出す。  
+<code>#{$pr}#{$g}col-(column)</code> と、<code>#{$pr}#{$g}offset-(column)</code> の合計値が<code>#{$grid-columns}</code>を超えてしまうと、セルが右にはみ出す。  
 (breakpoint)の指定がない場合は、常にその位置となる。  
 (breakpoint)の指定がある場合は、(breakpoint)**以上**のときに、指定した位置となる。
 
 ``` example
-<div class="#{$p}#{$g}row #{$p}#{$u}m-b-lg">
-    <div class="#{$p}#{$g}offset-1 #{$p}#{$g}col-10 #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__first} #{$p}#{$u}p" style="height: 100%;">#{$p}#{$g}offset-3<br>#{$p}#{$g}col-10<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="#{$pr}#{$g}row #{$pr}#{$u}m-b-lg">
+    <div class="#{$pr}#{$g}offset-1 #{$pr}#{$g}col-10 #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}p" style="height: 100%;">#{$pr}#{$g}offset-3<br>#{$pr}#{$g}col-10<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
 </div>
 
-<div class="#{$p}#{$g}row #{$p}#{$u}m-b-lg">
-    <div class="#{$p}#{$g}offset-lg-8 #{$p}#{$g}col-6 #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__second} #{$p}#{$u}p" style="height: 100%;">#{$p}#{$g}offset-lg-8<br>#{$p}#{$g}col-6<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="#{$pr}#{$g}row #{$pr}#{$u}m-b-lg">
+    <div class="#{$pr}#{$g}offset-lg-8 #{$pr}#{$g}col-6 #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}p" style="height: 100%;">#{$pr}#{$g}offset-lg-8<br>#{$pr}#{$g}col-6<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="#{$p}#{$g}offset-lg-4 #{$p}#{$g}offset-md-8 #{$p}#{$g}col-3 #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}bg-#{$__second} #{$p}#{$u}p" style="height: 100%;">#{$p}#{$g}offset-lg-4<br>#{$p}#{$g}offset-md-8<br>#{$p}#{$g}col-3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    <div class="#{$pr}#{$g}offset-lg-4 #{$pr}#{$g}offset-md-8 #{$pr}#{$g}col-3 #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}p" style="height: 100%;">#{$pr}#{$g}offset-lg-4<br>#{$pr}#{$g}offset-md-8<br>#{$pr}#{$g}col-3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
 </div>
 

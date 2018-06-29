@@ -1,6 +1,6 @@
 /*doc
 ---
-title: #{$p}#{$m}list
+title: #{$pr}#{$m}list
 name: list
 category: module-list
 ---
@@ -9,31 +9,31 @@ category: module-list
 リストの子要素にクラスを付与することができない場合は、 <code>/\_scss/config\_advance.css</code> の変数 <code>$list-item, $list-children</code> のセレクタを変更すること。
 
 ``` example
-<ul class="#{$p}#{$m}list">
-    <li class="#{$p}#{$m}list-item">あいうえおかきくけ10さしすせ</li>
-    <li class="#{$p}#{$m}list-item">あいうえおかきく
-        <ul class="#{$p}#{$m}list-children">
-            <li class="#{$p}#{$m}list-item">あいうえお</li>
-            <li class="#{$p}#{$m}list-item">あいうえおかきくけ10さしすせそたちつて20
-                <ul class="#{$p}#{$m}list-children">
-                    <li class="#{$p}#{$m}list-item">あいうえお</li>
-                    <li class="#{$p}#{$m}list-item">あいうえおかきくけ10さしすせそたちつて20</li>
-                    <li class="#{$p}#{$m}list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
-                    <li class="#{$p}#{$m}list-item">あいうえおかきくけ10</li>
+<ul class="#{$pr}#{$m}list">
+    <li class="#{$pr}#{$m}list-item">あいうえおかきくけ10さしすせ</li>
+    <li class="#{$pr}#{$m}list-item">あいうえおかきく
+        <ul class="#{$pr}#{$m}list-children">
+            <li class="#{$pr}#{$m}list-item">あいうえお</li>
+            <li class="#{$pr}#{$m}list-item">あいうえおかきくけ10さしすせそたちつて20
+                <ul class="#{$pr}#{$m}list-children">
+                    <li class="#{$pr}#{$m}list-item">あいうえお</li>
+                    <li class="#{$pr}#{$m}list-item">あいうえおかきくけ10さしすせそたちつて20</li>
+                    <li class="#{$pr}#{$m}list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
+                    <li class="#{$pr}#{$m}list-item">あいうえおかきくけ10</li>
                 </ul>
             </li>
-            <li class="#{$p}#{$m}list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
-            <li class="#{$p}#{$m}list-item">あいうえおかきくけ10</li>
+            <li class="#{$pr}#{$m}list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
+            <li class="#{$pr}#{$m}list-item">あいうえおかきくけ10</li>
         </ul>
     </li>
-    <li class="#{$p}#{$m}list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
-    <li class="#{$p}#{$m}list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
+    <li class="#{$pr}#{$m}list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
+    <li class="#{$pr}#{$m}list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
 </ul>
 ```
 
 */
 
-.#{$p}#{$m}list {
+.#{$pr}#{$m}list {
     margin: 0;
     padding: 0;
     list-style-type: none;
@@ -54,7 +54,7 @@ category: module-list
 
 /*doc
 ---
-title: #{$p}#{$m}list-vertical
+title: #{$pr}#{$m}list-vertical
 name: list-01-vertical
 category: module-list
 parent: list
@@ -63,31 +63,31 @@ parent: list
 階層構造を持ったリストを表示する。階層が深くなるごとに文字が小さくなる。
 
 ``` example
-<ul class="#{$p}#{$m}list #{$p}#{$m}list-vertical">
-    <li class="#{$p}#{$m}list-item">あいうえおかきくけ10さしすせ</li>
-    <li class="#{$p}#{$m}list-item">あいうえおかきく
-        <ul class="#{$p}#{$m}list-children">
-            <li class="#{$p}#{$m}list-item">あいうえお</li>
-            <li class="#{$p}#{$m}list-item">あいうえおかきくけ10さしすせそたちつて20
-                <ul class="#{$p}#{$m}list-children">
-                    <li class="#{$p}#{$m}list-item">あいうえお</li>
-                    <li class="#{$p}#{$m}list-item">あいうえおかきくけ10さしすせそたちつて20</li>
-                    <li class="#{$p}#{$m}list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20</li>
-                    <li class="#{$p}#{$m}list-item">あいうえおかきくけ10</li>
+<ul class="#{$pr}#{$m}list #{$pr}#{$m}list-vertical">
+    <li class="#{$pr}#{$m}list-item">あいうえおかきくけ10さしすせ</li>
+    <li class="#{$pr}#{$m}list-item">あいうえおかきく
+        <ul class="#{$pr}#{$m}list-children">
+            <li class="#{$pr}#{$m}list-item">あいうえお</li>
+            <li class="#{$pr}#{$m}list-item">あいうえおかきくけ10さしすせそたちつて20
+                <ul class="#{$pr}#{$m}list-children">
+                    <li class="#{$pr}#{$m}list-item">あいうえお</li>
+                    <li class="#{$pr}#{$m}list-item">あいうえおかきくけ10さしすせそたちつて20</li>
+                    <li class="#{$pr}#{$m}list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20</li>
+                    <li class="#{$pr}#{$m}list-item">あいうえおかきくけ10</li>
                 </ul>
             </li>
-            <li class="#{$p}#{$m}list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのは</li>
-            <li class="#{$p}#{$m}list-item">あいうえおかきくけ10</li>
+            <li class="#{$pr}#{$m}list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのは</li>
+            <li class="#{$pr}#{$m}list-item">あいうえおかきくけ10</li>
         </ul>
     </li>
-    <li class="#{$p}#{$m}list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえ</li>
-    <li class="#{$p}#{$m}list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
+    <li class="#{$pr}#{$m}list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえ</li>
+    <li class="#{$pr}#{$m}list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
 </ul>
 ```
 
 */
 
-.#{$p}#{$m}list-vertical {
+.#{$pr}#{$m}list-vertical {
 
     #{$list-item} {
         margin-top: .75em;
@@ -109,7 +109,7 @@ parent: list
 
 /*doc
 ---
-title: #{$p}#{$m}list-horizontal
+title: #{$pr}#{$m}list-horizontal
 name: list-02-horizontal
 category: module-list
 parent: list
@@ -118,17 +118,17 @@ parent: list
 水平に並列するリストを表示する。階層構造を持たせたり、長いテキストを表示することはできない。  
 
 ``` example
-<ul class="#{$p}#{$m}list #{$p}#{$m}list-horizontal">
-    <li class="#{$p}#{$m}list-item">あいうえおかきくけ10さしすせ</li>
-    <li class="#{$p}#{$m}list-item">あいうえおかきく</li>
-    <li class="#{$p}#{$m}list-item">あいうえお</li>
-    <li class="#{$p}#{$m}list-item">あいうえおかきくけ</li>
+<ul class="#{$pr}#{$m}list #{$pr}#{$m}list-horizontal">
+    <li class="#{$pr}#{$m}list-item">あいうえおかきくけ10さしすせ</li>
+    <li class="#{$pr}#{$m}list-item">あいうえおかきく</li>
+    <li class="#{$pr}#{$m}list-item">あいうえお</li>
+    <li class="#{$pr}#{$m}list-item">あいうえおかきくけ</li>
 </ul>
 ```
 
 */
 
-.#{$p}#{$m}list-horizontal {
+.#{$pr}#{$m}list-horizontal {
     letter-spacing: -.4em;
 
     #{$list-item} {

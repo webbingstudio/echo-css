@@ -2,7 +2,7 @@
 
 /*doc
 ---
-title: #{$p}#{$u}text-(direction)(-(breakpont)-(up or down))
+title: #{$pr}#{$u}text-(direction)(-(breakpont)-(up or down))
 name: text-05-direction
 category: utility-text
 ---
@@ -12,25 +12,25 @@ category: utility-text
 (breakpoint)の指定がある場合は、(breakpoint)以上、もしくは以下のときに、指定した方向へ寄せる。
 
 ``` example
-<p class="#{$p}#{$u}text-center">#{$p}#{$u}text-center_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
-<p class="#{$p}#{$u}text-right">#{$p}#{$u}text-right_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+<p class="#{$pr}#{$u}text-center">#{$pr}#{$u}text-center_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+<p class="#{$pr}#{$u}text-right">#{$pr}#{$u}text-right_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
 
-<div class="#{$p}#{$u}bg-second #{$p}#{$u}bg-fade #{$p}#{$u}text-center">
-    <p>#{$p}#{$u}text-center_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-    <p class="#{$p}#{$u}text-left">#{$p}#{$u}text-left_何でも薄暗いじめじめした所で</p>
+<div class="#{$pr}#{$u}bg-second #{$pr}#{$u}bg-fade #{$pr}#{$u}text-center">
+    <p>#{$pr}#{$u}text-center_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+    <p class="#{$pr}#{$u}text-left">#{$pr}#{$u}text-left_何でも薄暗いじめじめした所で</p>
     <p>ニャーニャー泣いていた事だけは記憶している。</p>
 </div>
 
-<p class="#{$p}#{$u}text-center-lg-up">#{$p}#{$u}text-center-lg-up_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
-<p class="#{$p}#{$u}text-right-sm-up">#{$p}#{$u}text-right-sm-up_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+<p class="#{$pr}#{$u}text-center-lg-up">#{$pr}#{$u}text-center-lg-up_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+<p class="#{$pr}#{$u}text-right-sm-up">#{$pr}#{$u}text-right-sm-up_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
 
-<div class="#{$p}#{$u}bg-second #{$p}#{$u}bg-fade #{$p}#{$u}text-center-lg-up">
-    <p>#{$p}#{$u}text-center-lg-up_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-    <p class="#{$p}#{$u}text-left-sm-down">#{$p}#{$u}text-left-sm-down_何でも薄暗いじめじめした所で</p>
+<div class="#{$pr}#{$u}bg-second #{$pr}#{$u}bg-fade #{$pr}#{$u}text-center-lg-up">
+    <p>#{$pr}#{$u}text-center-lg-up_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+    <p class="#{$pr}#{$u}text-left-sm-down">#{$pr}#{$u}text-left-sm-down_何でも薄暗いじめじめした所で</p>
     <p>ニャーニャー泣いていた事だけは記憶している。</p>
 </div>
 
-<p class="#{$p}#{$u}text-right #{$p}#{$u}text-center-lg-up">#{$p}#{$u}text-right_#{$p}#{$u}text-center-lg-up_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+<p class="#{$pr}#{$u}text-right #{$pr}#{$u}text-center-lg-up">#{$pr}#{$u}text-right_#{$pr}#{$u}text-center-lg-up_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
 ```
 */
 

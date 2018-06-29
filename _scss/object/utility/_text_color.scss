@@ -2,7 +2,7 @@
 
 /*doc
 ---
-title: #{$p}#{$u}text-(color)
+title: #{$pr}#{$u}text-(color)
 name: text-01-color
 category: utility-text
 ---
@@ -10,24 +10,24 @@ category: utility-text
 文字色を変更する。(color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
 
 ``` example
-<p class="#{$p}#{$u}text-#{$__first}">#{$p}#{$u}text-#{$__first}_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="#{$p}#{$u}text-#{$__second}">#{$p}#{$u}text-#{$__second}_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="#{$p}#{$u}text-#{$__third}">#{$p}#{$u}text-#{$__third}_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="#{$p}#{$u}text-#{$__fourth}">#{$p}#{$u}text-#{$__fourth}_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="#{$p}#{$u}text-#{$__info}">#{$p}#{$u}text-#{$__info}_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="#{$p}#{$u}text-#{$__important}">#{$p}#{$u}text-#{$__important}_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$pr}#{$u}text-#{$__first}">#{$pr}#{$u}text-#{$__first}_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$pr}#{$u}text-#{$__second}">#{$pr}#{$u}text-#{$__second}_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$pr}#{$u}text-#{$__third}">#{$pr}#{$u}text-#{$__third}_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$pr}#{$u}text-#{$__fourth}">#{$pr}#{$u}text-#{$__fourth}_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$pr}#{$u}text-#{$__info}">#{$pr}#{$u}text-#{$__info}_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$pr}#{$u}text-#{$__important}">#{$pr}#{$u}text-#{$__important}_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
 ```
 */
 
 
 /*doc
 ---
-title: #{$p}#{$u}text-mild
+title: #{$pr}#{$u}text-mild
 name: text-02-mild
 category: utility-text
 ---
 
-文字色を弱める。 <code>.#{$p}#{$u}text-(color)</code> と併用すると、指定した色を弱める。
+文字色を弱める。 <code>.#{$pr}#{$u}text-(color)</code> と併用すると、指定した色を弱める。
 
 ``` example
 <p class="text-mild">text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
@@ -42,59 +42,59 @@ category: utility-text
 
 #{$u-wrap} {
 
-    .#{$p}#{$u}text-mild {
+    .#{$pr}#{$u}text-mild {
         color: $body-mild-color;
     }
 
-    .#{$p}#{$u}text-#{$__first} {
+    .#{$pr}#{$u}text-#{$__first} {
         color: $first-text;
 
-        &.#{$p}#{$u}text-mild {
+        &.#{$pr}#{$u}text-mild {
             color: $first-mild;
         }
 
     }
 
-    .#{$p}#{$u}text-#{$__second} {
+    .#{$pr}#{$u}text-#{$__second} {
         color: $second-text;
 
-        &.#{$p}#{$u}text-mild {
+        &.#{$pr}#{$u}text-mild {
             color: $second-mild;
         }
 
     }
 
-    .#{$p}#{$u}text-#{$__third} {
+    .#{$pr}#{$u}text-#{$__third} {
         color: $third-text;
 
-        &.#{$p}#{$u}text-mild {
+        &.#{$pr}#{$u}text-mild {
             color: $third-mild;
         }
 
     }
 
-    .#{$p}#{$u}text-#{$__fourth} {
+    .#{$pr}#{$u}text-#{$__fourth} {
         color: $fourth-text;
 
-        &.#{$p}#{$u}text-mild {
+        &.#{$pr}#{$u}text-mild {
             color: $fourth-mild;
         }
 
     }
 
-    .#{$p}#{$u}text-#{$__info} {
+    .#{$pr}#{$u}text-#{$__info} {
         color: $info-text;
 
-        &.#{$p}#{$u}text-mild {
+        &.#{$pr}#{$u}text-mild {
             color: $info-mild;
         }
 
     }
 
-    .#{$p}#{$u}text-#{$__important} {
+    .#{$pr}#{$u}text-#{$__important} {
         color: $important-text;
 
-        &.#{$p}#{$u}text-mild {
+        &.#{$pr}#{$u}text-mild {
             color: $important-mild;
         }
 
@@ -105,7 +105,7 @@ category: utility-text
 
 /*doc
 ---
-title: #{$p}#{$u}text-root
+title: #{$pr}#{$u}text-root
 name: text-03-root
 category: utility-text
 ---
@@ -113,14 +113,14 @@ category: utility-text
 文字色をbody要素の文字色に戻す。
 
 ``` example
-<p class="#{$p}#{$u}text-first">ここは文字色が first ですが、<span class="#{$p}#{$u}text-root">#{$p}#{$u}text-root_ここからbody要素の文字色に変更しました</span></p>
+<p class="#{$pr}#{$u}text-first">ここは文字色が first ですが、<span class="#{$pr}#{$u}text-root">#{$pr}#{$u}text-root_ここからbody要素の文字色に変更しました</span></p>
 ```
 
 */
 
 #{$u-wrap} {
 
-    .#{$p}#{$u}text-root {
+    .#{$pr}#{$u}text-root {
         color: $body-color;
     }
 
@@ -129,7 +129,7 @@ category: utility-text
 
 /*doc
 ---
-title: #{$p}#{$u}text-#{$__inverse}
+title: #{$pr}#{$u}text-#{$__inverse}
 name: text-04-inverse
 category: utility-text
 ---
@@ -138,18 +138,18 @@ category: utility-text
 
 
 ``` example
-<div class="#{$p}#{$u}bg-#{$__inverse}">
-    <p class="#{$p}#{$u}text-#{$__inverse}">#{$p}#{$u}text-#{$__inverse}_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<div class="#{$pr}#{$u}bg-#{$__inverse}">
+    <p class="#{$pr}#{$u}text-#{$__inverse}">#{$pr}#{$u}text-#{$__inverse}_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
 </div>
 ```
 */
 
 #{$u-wrap} {
 
-    .#{$p}#{$u}text-#{$__inverse} {
+    .#{$pr}#{$u}text-#{$__inverse} {
         color: $body-inverse-color;
 
-        &.#{$p}#{$u}text-mild {
+        &.#{$pr}#{$u}text-mild {
             color: $body-inverse-mild-color;
         }
 

@@ -1,20 +1,20 @@
 /*doc
 ---
-title: #{$p}#{$c}alert
+title: #{$pr}#{$c}alert
 name: alert
 category: component-alert
 ---
 
 システム側の注意文を表示する。  
-上下余白は <code>utility > .#{$p}#{$u}m</code> 等で指定する。
+上下余白は <code>utility > .#{$pr}#{$u}m</code> 等で指定する。
 
 ``` example
-<p class="#{$p}#{$c}alert">#{$p}#{$c}alert_これはシステムからの注意文です。</p>
+<p class="#{$pr}#{$c}alert">#{$pr}#{$c}alert_これはシステムからの注意文です。</p>
 ```
 
 */
 
-.#{$p}#{$c}alert {
+.#{$pr}#{$c}alert {
     padding: $spacer ($spacer * 2);
     background-color: $gray-fade;
     border: $border-alert-width solid $border-color;
@@ -25,7 +25,7 @@ category: component-alert
 
 /*doc
 ---
-title: #{$p}#{$c}alert-(color)
+title: #{$pr}#{$c}alert-(color)
 name: alert-01-color
 category: component-alert
 parent: alert
@@ -35,47 +35,47 @@ parent: alert
 (color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
 
 ``` example
-<p class="#{$p}#{$c}alert #{$p}#{$c}alert-#{$__first}">#{$p}#{$c}alert-#{$__first}_これはシステムからの注意文です。</p>
-<p class="#{$p}#{$c}alert #{$p}#{$c}alert-#{$__second}">#{$p}#{$c}alert-#{$__second}_これはシステムからの注意文です。</p>
-<p class="#{$p}#{$c}alert #{$p}#{$c}alert-#{$__third}">#{$p}#{$c}alert-#{$__third}_これはシステムからの注意文です。</p>
-<p class="#{$p}#{$c}alert #{$p}#{$c}alert-#{$__fourth}">#{$p}#{$c}alert-#{$__fourth}_これはシステムからの注意文です。</p>
-<p class="#{$p}#{$c}alert #{$p}#{$c}alert-#{$__info}">#{$p}#{$c}alert-#{$__info}_これはシステムからの注意文です。</p>
-<p class="#{$p}#{$c}alert #{$p}#{$c}alert-#{$__important}">#{$p}#{$c}alert-#{$__important}_これはシステムからの注意文です。</p>
+<p class="#{$pr}#{$c}alert #{$pr}#{$c}alert-#{$__first}">#{$pr}#{$c}alert-#{$__first}_これはシステムからの注意文です。</p>
+<p class="#{$pr}#{$c}alert #{$pr}#{$c}alert-#{$__second}">#{$pr}#{$c}alert-#{$__second}_これはシステムからの注意文です。</p>
+<p class="#{$pr}#{$c}alert #{$pr}#{$c}alert-#{$__third}">#{$pr}#{$c}alert-#{$__third}_これはシステムからの注意文です。</p>
+<p class="#{$pr}#{$c}alert #{$pr}#{$c}alert-#{$__fourth}">#{$pr}#{$c}alert-#{$__fourth}_これはシステムからの注意文です。</p>
+<p class="#{$pr}#{$c}alert #{$pr}#{$c}alert-#{$__info}">#{$pr}#{$c}alert-#{$__info}_これはシステムからの注意文です。</p>
+<p class="#{$pr}#{$c}alert #{$pr}#{$c}alert-#{$__important}">#{$pr}#{$c}alert-#{$__important}_これはシステムからの注意文です。</p>
 ```
 
 */
 
-.#{$p}#{$c}alert-#{$__first} {
+.#{$pr}#{$c}alert-#{$__first} {
     color: $first-text;
     border-color: $first-mild;
     background-color: $first-fade;
 }
 
-.#{$p}#{$c}alert-#{$__second} {
+.#{$pr}#{$c}alert-#{$__second} {
     color: $second-text;
     border-color: $second-mild;
     background-color: $second-fade;
 }
 
-.#{$p}#{$c}alert-#{$__third} {
+.#{$pr}#{$c}alert-#{$__third} {
     color: $third-text;
     border-color: $third-mild;
     background-color: $third-fade;
 }
 
-.#{$p}#{$c}alert-#{$__fourth} {
+.#{$pr}#{$c}alert-#{$__fourth} {
     color: $fourth-text;
     border-color: $fourth-mild;
     background-color: $fourth-fade;
 }
 
-.#{$p}#{$c}alert-#{$__info} {
+.#{$pr}#{$c}alert-#{$__info} {
     color: $info-text;
     border-color: $info-mild;
     background-color: $info-fade;
 }
 
-.#{$p}#{$c}alert-#{$__important} {
+.#{$pr}#{$c}alert-#{$__important} {
     color: $important-text;
     border-color: $important-mild;
     background-color: $important-fade;

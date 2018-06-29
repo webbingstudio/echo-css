@@ -1,6 +1,6 @@
 /*doc
 ---
-title: #{$p}#{$m}btn-block
+title: #{$pr}#{$m}btn-block
 name: btn-05-block
 category: module-btn
 parent: btn
@@ -10,48 +10,48 @@ parent: btn
 
 ### 補足：ボタンの余白
 
-<code>.#{$p}#{$m}btn-block, .#{$p}#{$m}btn-round, .#{$p}#{$m}btn-square</code> では、<code>.#{$p}#{$m}btn</code> のpaddingの初期値を上書きする必要があるため、意図的にクラスを追加して優先度を上げている。
+<code>.#{$pr}#{$m}btn-block, .#{$pr}#{$m}btn-round, .#{$pr}#{$m}btn-square</code> では、<code>.#{$pr}#{$m}btn</code> のpaddingの初期値を上書きする必要があるため、意図的にクラスを追加して優先度を上げている。
 
 ### note: Padding in button
 
-In <code>.#{$p}#{$m}btn-block, .#{$p}#{$m}btn-round, .#{$p}#{$m}btn-square</code>, need to override the default padding of <code>.#{$p}#{$m}btn</code>. For this reason, intentionally add classes to increase priority.
+In <code>.#{$pr}#{$m}btn-block, .#{$pr}#{$m}btn-round, .#{$pr}#{$m}btn-square</code>, need to override the default padding of <code>.#{$pr}#{$m}btn</code>. For this reason, intentionally add classes to increase priority.
 
 ``` example
 <p>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-#{$__first} #{$p}#{$m}btn-sm #{$p}#{$m}btn-block">#{$p}#{$m}btn-block</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-#{$__first} #{$pr}#{$m}btn-sm #{$pr}#{$m}btn-block">#{$pr}#{$m}btn-block</a>
 </p>
 <p>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-#{$__first} #{$p}#{$m}btn-block">#{$p}#{$m}btn-block</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-#{$__first} #{$pr}#{$m}btn-block">#{$pr}#{$m}btn-block</a>
 </p>
 <p>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-#{$__first} #{$p}#{$m}btn-lg #{$p}#{$m}btn-block">#{$p}#{$m}btn-block</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-#{$__first} #{$pr}#{$m}btn-lg #{$pr}#{$m}btn-block">#{$pr}#{$m}btn-block</a>
 </p>
 <p>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-#{$__first} #{$p}#{$m}btn-xl #{$p}#{$m}btn-block">#{$p}#{$m}btn-block</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-#{$__first} #{$pr}#{$m}btn-xl #{$pr}#{$m}btn-block">#{$pr}#{$m}btn-block</a>
 </p>
 ```
 */
 
-.#{$p}#{$m}btn-block {
+.#{$pr}#{$m}btn-block {
     display: block;
     width: 100%;
     max-width: 320px; 
     margin: 0 auto;
 
-    &.#{$p}#{$m}btn {
+    &.#{$pr}#{$m}btn {
         padding-left: .5rem;
         padding-right: .5rem;
     }
 
-    &.#{$p}#{$m}btn-sm {
+    &.#{$pr}#{$m}btn-sm {
       max-width: 180px; 
     }
 
-    &.#{$p}#{$m}btn-lg {
+    &.#{$pr}#{$m}btn-lg {
       max-width: 640px; 
     }
 
-    &.#{$p}#{$m}btn-xl {
+    &.#{$pr}#{$m}btn-xl {
       max-width: map-get($container-max-widths-md, lg); 
     }
 
@@ -60,7 +60,7 @@ In <code>.#{$p}#{$m}btn-block, .#{$p}#{$m}btn-round, .#{$p}#{$m}btn-square</code
 
 /*doc
 ---
-title: #{$p}#{$m}btn-round
+title: #{$pr}#{$m}btn-round
 name: btn-06-round
 category: module-btn
 parent: btn
@@ -70,28 +70,28 @@ parent: btn
 
 ``` example
 <p>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-#{$__first} #{$p}#{$m}btn-sm #{$p}#{$m}btn-round">R</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-#{$__first} #{$pr}#{$m}btn-sm #{$pr}#{$m}btn-round">R</a>
 </p>
 <p>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-#{$__first} #{$p}#{$m}btn-round">R</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-#{$__first} #{$pr}#{$m}btn-round">R</a>
 </p>
 <p>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-#{$__first} #{$p}#{$m}btn-lg #{$p}#{$m}btn-round">R</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-#{$__first} #{$pr}#{$m}btn-lg #{$pr}#{$m}btn-round">R</a>
 </p>
 <p>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-#{$__first} #{$p}#{$m}btn-xl #{$p}#{$m}btn-round">R</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-#{$__first} #{$pr}#{$m}btn-xl #{$pr}#{$m}btn-round">R</a>
 </p>
 ```
 */
 
-.#{$p}#{$m}btn-round {
+.#{$pr}#{$m}btn-round {
     overflow: hidden;
     width: $btn-round-width-md;
     height: $btn-round-width-md;
     line-height: $btn-round-width-md;
     border-radius: 50%;
 
-    &.#{$p}#{$m}btn {
+    &.#{$pr}#{$m}btn {
         padding: 0;
 
         img {
@@ -104,13 +104,13 @@ parent: btn
 
     }
 
-    &.#{$p}#{$m}btn-sm {
+    &.#{$pr}#{$m}btn-sm {
         width: $btn-round-width-sm;
         height: $btn-round-width-sm;
         line-height: $btn-round-width-sm;
     }
 
-    &.#{$p}#{$m}btn-lg {
+    &.#{$pr}#{$m}btn-lg {
         width: $btn-round-width-lg;
         height: $btn-round-width-lg;
         line-height: $btn-round-width-lg;
@@ -125,7 +125,7 @@ parent: btn
 
     }
 
-    &.#{$p}#{$m}btn-xl {
+    &.#{$pr}#{$m}btn-xl {
         width: $btn-round-width-xl;
         height: $btn-round-width-xl;
         line-height: $btn-round-width-xl;
@@ -145,7 +145,7 @@ parent: btn
 
 /*doc
 ---
-title: #{$p}#{$m}btn-square
+title: #{$pr}#{$m}btn-square
 name: btn-07-square
 category: module-btn
 parent: btn
@@ -155,27 +155,27 @@ parent: btn
 
 ``` example
 <p>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-#{$__first} #{$p}#{$m}btn-sm #{$p}#{$m}btn-square">R</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-#{$__first} #{$pr}#{$m}btn-sm #{$pr}#{$m}btn-square">R</a>
 </p>
 <p>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-#{$__first} #{$p}#{$m}btn-square">R</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-#{$__first} #{$pr}#{$m}btn-square">R</a>
 </p>
 <p>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-#{$__first} #{$p}#{$m}btn-lg #{$p}#{$m}btn-square">R</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-#{$__first} #{$pr}#{$m}btn-lg #{$pr}#{$m}btn-square">R</a>
 </p>
 <p>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-#{$__first} #{$p}#{$m}btn-xl #{$p}#{$m}btn-square">R</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-#{$__first} #{$pr}#{$m}btn-xl #{$pr}#{$m}btn-square">R</a>
 </p>
 ```
 */
 
-.#{$p}#{$m}btn-square {
+.#{$pr}#{$m}btn-square {
     overflow: hidden;
     width: $btn-square-width-md;
     height: $btn-square-width-md;
     line-height: $btn-square-width-md;
 
-    &.#{$p}#{$m}btn {
+    &.#{$pr}#{$m}btn {
         padding: 0;
 
         img {
@@ -188,13 +188,13 @@ parent: btn
 
     }
 
-    &.#{$p}#{$m}btn-sm {
+    &.#{$pr}#{$m}btn-sm {
         width: $btn-square-width-sm;
         height: $btn-square-width-sm;
         line-height: $btn-square-width-sm;
     }
 
-    &.#{$p}#{$m}btn-lg {
+    &.#{$pr}#{$m}btn-lg {
         width: $btn-square-width-lg;
         height: $btn-square-width-lg;
         line-height: $btn-square-width-lg;
@@ -209,7 +209,7 @@ parent: btn
 
     }
 
-    &.#{$p}#{$m}btn-xl {
+    &.#{$pr}#{$m}btn-xl {
         width: $btn-square-width-xl;
         height: $btn-square-width-xl;
         line-height: $btn-square-width-xl;

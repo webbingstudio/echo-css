@@ -1,56 +1,56 @@
 /*doc
 ---
-title: #{$p}#{$m}btn-outline
+title: #{$pr}#{$m}btn-outline
 name: btn-02-outline
 category: module-btn
 parent: btn
 ---
 
 ボタンを罫線のみの見た目にする。背景色は <code>$body-bg</code> ではなく <code>transparent</code> なので注意。  
-<code>.#{$p}#{$m}btn-(color)</code> と同時に使用することが前提となっており、罫線の色が変わる。
+<code>.#{$pr}#{$m}btn-(color)</code> と同時に使用することが前提となっており、罫線の色が変わる。
 
 ``` example
 <p>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-#{$__gray}">#{$p}#{$m}btn-#{$__gray}</a>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-#{$__gray} disabled">#{$p}#{$m}btn-#{$__gray}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-outline #{$pr}#{$m}btn-#{$__gray}">#{$pr}#{$m}btn-#{$__gray}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-outline #{$pr}#{$m}btn-#{$__gray} disabled">#{$pr}#{$m}btn-#{$__gray}</a>
 </p>
 
 <p>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-#{$__first}">#{$p}#{$m}btn-#{$__first}</a>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-#{$__first} disabled">#{$p}#{$m}btn-#{$__first}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-outline #{$pr}#{$m}btn-#{$__first}">#{$pr}#{$m}btn-#{$__first}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-outline #{$pr}#{$m}btn-#{$__first} disabled">#{$pr}#{$m}btn-#{$__first}</a>
 </p>
 
 <p>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-#{$__second}">#{$p}#{$m}btn-#{$__second}</a>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-#{$__second} disabled">#{$p}#{$m}btn-#{$__second}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-outline #{$pr}#{$m}btn-#{$__second}">#{$pr}#{$m}btn-#{$__second}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-outline #{$pr}#{$m}btn-#{$__second} disabled">#{$pr}#{$m}btn-#{$__second}</a>
 </p>
 
 <p>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-#{$__third}">#{$p}#{$m}btn-#{$__third}</a>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-#{$__third} disabled">#{$p}#{$m}btn-#{$__third}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-outline #{$pr}#{$m}btn-#{$__third}">#{$pr}#{$m}btn-#{$__third}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-outline #{$pr}#{$m}btn-#{$__third} disabled">#{$pr}#{$m}btn-#{$__third}</a>
 </p>
 
 <p>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-#{$__fourth}">#{$p}#{$m}btn-#{$__fourth}</a>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-#{$__fourth} disabled">#{$p}#{$m}btn-#{$__fourth}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-outline #{$pr}#{$m}btn-#{$__fourth}">#{$pr}#{$m}btn-#{$__fourth}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-outline #{$pr}#{$m}btn-#{$__fourth} disabled">#{$pr}#{$m}btn-#{$__fourth}</a>
 </p>
 
 <p>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-#{$__info}">#{$p}#{$m}btn-#{$__info}</a>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-#{$__info} disabled">#{$p}#{$m}btn-#{$__info}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-outline #{$pr}#{$m}btn-#{$__info}">#{$pr}#{$m}btn-#{$__info}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-outline #{$pr}#{$m}btn-#{$__info} disabled">#{$pr}#{$m}btn-#{$__info}</a>
 </p>
 
 <p>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-#{$__important}">#{$p}#{$m}btn-#{$__important}</a>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-#{$__important} disabled">#{$p}#{$m}btn-#{$__important}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-outline #{$pr}#{$m}btn-#{$__important}">#{$pr}#{$m}btn-#{$__important}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-outline #{$pr}#{$m}btn-#{$__important} disabled">#{$pr}#{$m}btn-#{$__important}</a>
 </p>
 ```
 */
 
-.#{$p}#{$m}btn-outline {
+.#{$pr}#{$m}btn-outline {
     box-shadow: none;
 
-    &.#{$p}#{$m}btn-#{$__gray} {
+    &.#{$pr}#{$m}btn-#{$__gray} {
         @include button-variant(
             inherit,
             transparent,
@@ -61,7 +61,7 @@ parent: btn
         );
     }
 
-    &.#{$p}#{$m}btn-#{$__first} {
+    &.#{$pr}#{$m}btn-#{$__first} {
         @include button-variant(
             inherit,
             transparent,
@@ -72,7 +72,7 @@ parent: btn
         );
     }
 
-    &.#{$p}#{$m}btn-#{$__second} {
+    &.#{$pr}#{$m}btn-#{$__second} {
         @include button-variant(
             inherit,
             transparent,
@@ -83,7 +83,7 @@ parent: btn
         );
     }
 
-    &.#{$p}#{$m}btn-#{$__third} {
+    &.#{$pr}#{$m}btn-#{$__third} {
         @include button-variant(
             inherit,
             transparent,
@@ -94,7 +94,7 @@ parent: btn
         );
     }
 
-    &.#{$p}#{$m}btn-#{$__fourth} {
+    &.#{$pr}#{$m}btn-#{$__fourth} {
         @include button-variant(
             inherit,
             transparent,
@@ -105,7 +105,7 @@ parent: btn
         );
     }
 
-    &.#{$p}#{$m}btn-#{$__info} {
+    &.#{$pr}#{$m}btn-#{$__info} {
         @include button-variant(
             inherit,
             transparent,
@@ -116,7 +116,7 @@ parent: btn
         );
     }
 
-    &.#{$p}#{$m}btn-#{$__important} {
+    &.#{$pr}#{$m}btn-#{$__important} {
         @include button-variant(
             inherit,
             transparent,

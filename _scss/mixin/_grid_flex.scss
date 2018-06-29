@@ -25,18 +25,18 @@
 
     @for $i from 1 through $columns {
       @if ($optimize != true) or ( ($optimize == true) and ( $i > 1 ) and ( $i < 11 ) ) {
-        .#{$p}#{$g}col#{$infix}-#{$i} {
+        .#{$pr}#{$g}col#{$infix}-#{$i} {
           @extend %grid-column;
         }
       }
     }
-    .#{$p}#{$g}col#{$infix},
-    .#{$p}#{$g}col#{$infix}-auto {
+    .#{$pr}#{$g}col#{$infix},
+    .#{$pr}#{$g}col#{$infix}-auto {
       @extend %grid-column;
     }
 
     @include media-breakpoint-up($breakpoint, $breakpoints) {
-      .#{$p}#{$g}col#{$infix} {
+      .#{$pr}#{$g}col#{$infix} {
         flex-basis: 0;
         flex-grow: 1;
         max-width: 100%;
@@ -45,7 +45,7 @@
 // 内容文字列が長いとグリッドが崩れるため、このフレームワークでは使用していない
 // It is not used in this framework. Because the grid collapses if the content string is long.
 //
-//      .#{$p}#{$g}col#{$infix}-auto {
+//      .#{$pr}#{$g}col#{$infix}-auto {
 //        flex: 0 0 auto;
 //        width: auto;
 //        max-width: none;
@@ -53,7 +53,7 @@
 
       @for $i from 1 through $columns {
         @if ($optimize != true) or ( ($optimize == true) and ( $i > 1 ) and ( $i < 11 ) ) {
-          .#{$p}#{$g}col#{$infix}-#{$i} {
+          .#{$pr}#{$g}col#{$infix}-#{$i} {
             @include make-col-flex($i, $columns);
           }
         }
@@ -61,17 +61,17 @@
 
       @if ($disabled-grid-order-offset != true) {
 
-        .#{$p}#{$g}order#{$infix}-first { order: -1; }
+        .#{$pr}#{$g}order#{$infix}-first { order: -1; }
 
-        .#{$p}#{$g}order#{$infix}-last { order: $columns + 1; }
+        .#{$pr}#{$g}order#{$infix}-last { order: $columns + 1; }
 
         @for $i from 0 through $columns {
-          .#{$p}#{$g}order#{$infix}-#{$i} { order: $i; }
+          .#{$pr}#{$g}order#{$infix}-#{$i} { order: $i; }
         }
 
         @for $i from 0 through ($columns - 1) {
           @if not ($infix == "" and $i == 0) {
-            .#{$p}#{$g}offset#{$infix}-#{$i} {
+            .#{$pr}#{$g}offset#{$infix}-#{$i} {
               @include make-col-offset-flex($i, $columns);
             }
           }

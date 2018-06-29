@@ -1,21 +1,21 @@
 /*doc
 ---
-title: .#{$p}#{$c}card
+title: .#{$pr}#{$c}card
 name: card
 category: component-card
 ---
 
 新着情報のエントリー繰り返し部分などに使用する、カード状のコンポーネントを表示する。  
-<code>.#{$p}#{$m}tite</code>, <code>.#{$p}#{$m}thumbnail</code>, <code>.#{$p}#{$m}btn</code>を含む可能性がある。  
-<code>.#{$p}#{$c}card-inner</code> はリンクを追加しない場合でも必須となる。
+<code>.#{$pr}#{$m}tite</code>, <code>.#{$pr}#{$m}thumbnail</code>, <code>.#{$pr}#{$m}btn</code>を含む可能性がある。  
+<code>.#{$pr}#{$c}card-inner</code> はリンクを追加しない場合でも必須となる。
 
 
 ``` example
 <div style="max-width: 320px; margin-bottom: 30px;">
 
-<div class="#{$p}#{$c}card">
-    <div class="#{$p}#{$c}card-inner">
-        <div class="#{$p}#{$m}thumbnail #{$p}#{$m}thumbnail-ogimage">
+<div class="#{$pr}#{$c}card">
+    <div class="#{$pr}#{$c}card-inner">
+        <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-ogimage">
             <picture>
             <source
                 media="(max-width:640px)"
@@ -27,8 +27,8 @@ category: component-card
             <img alt="" src="http://placehold.jp/24/9ed8db/ffffff/640x360.png?text=renponsive_image">
             </picture>
         </div>
-        <div class="#{$p}#{$c}card-contents">
-            <p class="#{$p}#{$c}card-body">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+        <div class="#{$pr}#{$c}card-contents">
+            <p class="#{$pr}#{$c}card-body">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
         </div>
     </div>
 </div>
@@ -36,12 +36,12 @@ category: component-card
 </div>
 <div style="max-width: 320px;">
 
-<div class="#{$p}#{$c}card">
-    <a href="#" class="#{$p}#{$c}card-inner">
-        <div class="#{$p}#{$c}card-header">
-            <h3 class="#{$p}#{$m}title #{$p}#{$m}title-05">カードのタイトルですカードのタイトルですカードのタイトルです</h3>
+<div class="#{$pr}#{$c}card">
+    <a href="#" class="#{$pr}#{$c}card-inner">
+        <div class="#{$pr}#{$c}card-header">
+            <h3 class="#{$pr}#{$m}title #{$pr}#{$m}title-05">カードのタイトルですカードのタイトルですカードのタイトルです</h3>
         </div>
-        <div class="#{$p}#{$m}thumbnail #{$p}#{$m}thumbnail-ogimage">
+        <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-ogimage">
             <picture>
             <source
                 media="(max-width:640px)"
@@ -53,9 +53,9 @@ category: component-card
             <img alt="" src="http://placehold.jp/24/9ed8db/ffffff/640x360.png?text=renponsive_image">
             </picture>
         </div>
-        <div class="#{$p}#{$c}card-contents">
+        <div class="#{$pr}#{$c}card-contents">
             <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-            <span href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-gray #{$p}#{$m}btn-outline #{$p}#{$m}btn-block">ボタン</span>
+            <span href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-gray #{$pr}#{$m}btn-outline #{$pr}#{$m}btn-block">ボタン</span>
             <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
         </div>
     </a>
@@ -66,13 +66,13 @@ category: component-card
 
 */
 
-.#{$p}#{$c}card {
+.#{$pr}#{$c}card {
     position: relative;
     background-color: $body-bg;
     border: $border-card-width solid $border-color;
     color: $body-color;
 
-    [class*="#{$p}#{$g}col"] > & {
+    [class*="#{$pr}#{$g}col"] > & {
         height: 100%;
     }
 
@@ -90,30 +90,30 @@ category: component-card
 
     }
 
-    .#{$p}#{$c}card-inner {
+    .#{$pr}#{$c}card-inner {
         display: block;
         position: relative;
         height: 100%;
     }
 
-    .#{$p}#{$c}card-object {
+    .#{$pr}#{$c}card-object {
         position: relative;
         z-index: 2;
     }
 
-    .#{$p}#{$c}card-header,
-    .#{$p}#{$c}card-contents {
+    .#{$pr}#{$c}card-header,
+    .#{$pr}#{$c}card-contents {
         @include clearfix();
         padding: (map-get($grid-gutter-widths, md) / 2);
         line-height: $line-height-sm;
         word-break: break-word;
 
-        .#{$p}#{$m}title,
+        .#{$pr}#{$m}title,
         p {
             margin: 0 0 .5em;
         }
 
-        .#{$p}#{$m}btn {
+        .#{$pr}#{$m}btn {
             margin: 1em auto .5em;
             max-width: 12em;
         }
@@ -124,10 +124,10 @@ category: component-card
 
     }
 
-    .#{$p}#{$c}card-header {
+    .#{$pr}#{$c}card-header {
     }
 
-    .#{$p}#{$c}card-contents {
+    .#{$pr}#{$c}card-contents {
         font-size: $font-size-sm;
     }
 

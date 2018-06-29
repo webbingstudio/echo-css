@@ -1,25 +1,25 @@
 /*doc
 ---
-title: #{$p}#{$l}document
+title: #{$pr}#{$l}document
 name: document
 category: layout-document
 ---
 
 ドキュメント全体を包括する。  
 ユーティリティクラスの重要度を上げるための<code>id="#{$u-wrap}"</code>はこの包括ブロックに指定することを想定している。  
-ユーティリティクラス <code>.#{$p}#{$u}container-expand</code> や、オフキャンバス等の画面全体に影響する演出の影響を受けないよう、幅を制限している。  
-<code>.#{$p}#{$u}container-expand</code> を使用する予定がない場合や、他のライブラリ等と干渉する場合は、この要素は削除してもかまわない。
+ユーティリティクラス <code>.#{$pr}#{$u}container-expand</code> や、オフキャンバス等の画面全体に影響する演出の影響を受けないよう、幅を制限している。  
+<code>.#{$pr}#{$u}container-expand</code> を使用する予定がない場合や、他のライブラリ等と干渉する場合は、この要素は削除してもかまわない。
 
 ``` example
-<div id="#{$u-wrap}" class="#{$p}#{$l}document">
-    <div class="#{$p}#{$u}bg-first #{$p}#{$u}bg-fade #{$p}#{$u}p" style="white-space: nowrap">
+<div id="#{$u-wrap}" class="#{$pr}#{$l}document">
+    <div class="#{$pr}#{$u}bg-first #{$pr}#{$u}bg-fade #{$pr}#{$u}p" style="white-space: nowrap">
         吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。
     </div>
 </div>
 ```
 */
 
-.#{$p}#{$l}document {
+.#{$pr}#{$l}document {
   overflow: hidden;
   max-width: 100%;
 }

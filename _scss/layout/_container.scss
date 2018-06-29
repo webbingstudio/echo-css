@@ -1,6 +1,6 @@
 /*doc
 ---
-title: #{$p}#{$l}container
+title: #{$pr}#{$l}container
 name: container
 category: layout-container
 ---
@@ -9,14 +9,14 @@ category: layout-container
 <code>/\_scss/\_config_advance.scss</code> の「<code>$container-max-widths-md</code>」の定義を参照する。
 
 ``` example
-<div class="#{$p}#{$l}container #{$p}#{$u}bg-#{$__first} #{$p}#{$u}bg-mild #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}p-y #{$p}#{$u}line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
+<div class="#{$pr}#{$l}container #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-mild #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}p-y #{$pr}#{$u}line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
 </div>
 ```
 
 */
 
-.#{$p}#{$l}container {
+.#{$pr}#{$l}container {
     @include make-container();
 
     @each $breakpoint, $container-max-width in $container-max-widths-md {
@@ -31,13 +31,13 @@ category: layout-container
 
 
 /*
-.#{$p}#{$l}containerが二重になった場合の対策
+.#{$pr}#{$l}containerが二重になった場合の対策
 */
 @include media-breakpoint-up(sm) {
 
-    .#{$p}#{$l}container {
+    .#{$pr}#{$l}container {
 
-        .#{$p}#{$l}container {
+        .#{$pr}#{$l}container {
             padding-left: 0;
             padding-right: 0;
         }
@@ -48,7 +48,7 @@ category: layout-container
 
 /*doc
 ---
-title: #{$p}#{$l}container-fluid
+title: #{$pr}#{$l}container-fluid
 name: container-01-fluid
 category: layout-container
 parent: container
@@ -57,14 +57,14 @@ parent: container
 コンテナブロックの最大幅の制限を行わない。
 
 ``` example
-<div class="#{$p}#{$l}container #{$p}#{$l}container-fluid #{$p}#{$u}bg-#{$__second} #{$p}#{$u}bg-mild #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}p-y #{$p}#{$u}line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
+<div class="#{$pr}#{$l}container #{$pr}#{$l}container-fluid #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-mild #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}p-y #{$pr}#{$u}line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
 </div>
 ```
 
 */
 
-.#{$p}#{$l}container-fluid {
+.#{$pr}#{$l}container-fluid {
 
     @include media-breakpoint-up(0px) {
         max-width: none;
@@ -75,7 +75,7 @@ parent: container
 
 /*doc
 ---
-title: #{$p}#{$l}container-sm
+title: #{$pr}#{$l}container-sm
 name: container-02-sm
 category: layout-container
 parent: container
@@ -85,14 +85,14 @@ parent: container
 <code>/\_scss/\_config_advance.scss</code> の「<code>$container-max-widths-sm</code>」の定義を参照する。
 
 ``` example
-<div class="#{$p}#{$l}container #{$p}#{$l}container-sm #{$p}#{$u}bg-#{$__third} #{$p}#{$u}bg-mild #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}p-y #{$p}#{$u}line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
+<div class="#{$pr}#{$l}container #{$pr}#{$l}container-sm #{$pr}#{$u}bg-#{$__third} #{$pr}#{$u}bg-mild #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}p-y #{$pr}#{$u}line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
 </div>
 ```
 
 */
 
-.#{$p}#{$l}container-sm {
+.#{$pr}#{$l}container-sm {
 
     @each $breakpoint, $container-max-width-sm in $container-max-widths-sm {
 
@@ -107,7 +107,7 @@ parent: container
 
 /*doc
 ---
-title: #{$p}#{$l}container-lg
+title: #{$pr}#{$l}container-lg
 name: container-03-lg
 category: layout-container
 parent: container
@@ -117,14 +117,14 @@ parent: container
 <code>/\_scss/\_config_advance.scss</code> の「<code>$container-max-widths-lg</code>」の定義を参照する。
 
 ``` example
-<div class="#{$p}#{$l}container #{$p}#{$l}container-lg #{$p}#{$u}bg-#{$__third} #{$p}#{$u}bg-mild #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}p-y #{$p}#{$u}line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
+<div class="#{$pr}#{$l}container #{$pr}#{$l}container-lg #{$pr}#{$u}bg-#{$__third} #{$pr}#{$u}bg-mild #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}p-y #{$pr}#{$u}line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
 </div>
 ```
 
 */
 
-.#{$p}#{$l}container-lg {
+.#{$pr}#{$l}container-lg {
 
     @each $breakpoint, $container-max-width-lg in $container-max-widths-lg {
 
@@ -139,7 +139,7 @@ parent: container
 
 /*doc
 ---
-title: #{$p}#{$l}container-full-md
+title: #{$pr}#{$l}container-full-md
 name: container-04-full-md
 category: layout-container
 parent: container
@@ -148,19 +148,19 @@ parent: container
 (breakpoint)が <code>md</code> 以下のときにコンテナ余白を打ち消す。モバイル端末での幅100%表示等に使用する。
 
 ``` example
-<div class="#{$p}#{$l}container #{$p}#{$l}container-full-md #{$p}#{$u}bg-#{$__fourth} #{$p}#{$u}bg-mild #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}p-y #{$p}#{$u}line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
+<div class="#{$pr}#{$l}container #{$pr}#{$l}container-full-md #{$pr}#{$u}bg-#{$__fourth} #{$pr}#{$u}bg-mild #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}p-y #{$pr}#{$u}line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
 </div>
-<div class="#{$p}#{$l}container #{$p}#{$l}container-sm #{$p}#{$l}container-full-md #{$p}#{$u}bg-#{$__fourth} #{$p}#{$u}bg-mild #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}p-y #{$p}#{$u}line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
+<div class="#{$pr}#{$l}container #{$pr}#{$l}container-sm #{$pr}#{$l}container-full-md #{$pr}#{$u}bg-#{$__fourth} #{$pr}#{$u}bg-mild #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}p-y #{$pr}#{$u}line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
 </div>
-<div class="#{$p}#{$l}container #{$p}#{$l}container-lg #{$p}#{$l}container-full-md #{$p}#{$u}bg-#{$__fourth} #{$p}#{$u}bg-mild #{$p}#{$u}m-b">
-        <div class="#{$p}#{$u}p-y #{$p}#{$u}line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
+<div class="#{$pr}#{$l}container #{$pr}#{$l}container-lg #{$pr}#{$l}container-full-md #{$pr}#{$u}bg-#{$__fourth} #{$pr}#{$u}bg-mild #{$pr}#{$u}m-b">
+        <div class="#{$pr}#{$u}p-y #{$pr}#{$u}line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
 </div>
 ```
 */
 
-.#{$p}#{$l}container-full-md {
+.#{$pr}#{$l}container-full-md {
 
     @include media-breakpoint-down(md) {
             padding-left: 0;

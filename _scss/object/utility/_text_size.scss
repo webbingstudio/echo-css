@@ -2,52 +2,52 @@
 
 /*doc
 ---
-title: #{$p}#{$u}text-(size)
+title: #{$pr}#{$u}text-(size)
 name: text-06-size
 category: utility-text
 ---
 
 文字サイズを変更する。  
-<code>.#{$p}#{$u}text-md</code> のみ、単位が <code>em</code> ではなく <code>rem</code> （HTML要素の文字サイズ）である点に注意。
+<code>.#{$pr}#{$u}text-md</code> のみ、単位が <code>em</code> ではなく <code>rem</code> （HTML要素の文字サイズ）である点に注意。
 
 ``` example
-<p class="#{$p}#{$u}text-xxs">#{$p}#{$u}text-xxs_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="#{$p}#{$u}text-xs">#{$p}#{$u}text-xs_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="#{$p}#{$u}text-sm">#{$p}#{$u}text-sm_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$pr}#{$u}text-xxs">#{$pr}#{$u}text-xxs_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$pr}#{$u}text-xs">#{$pr}#{$u}text-xs_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$pr}#{$u}text-sm">#{$pr}#{$u}text-sm_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
 
-<p class="#{$p}#{$u}text-lg">#{$p}#{$u}text-lg_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="#{$p}#{$u}text-xl">#{$p}#{$u}text-xl_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="#{$p}#{$u}text-xxl">#{$p}#{$u}text-xxl_吾輩は猫である。<span class="#{$p}#{$u}text-md">名前はまだ無い。#{$p}#{$u}text-md_どこで生れたか</span>とんと見当がつかぬ。</p>
+<p class="#{$pr}#{$u}text-lg">#{$pr}#{$u}text-lg_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$pr}#{$u}text-xl">#{$pr}#{$u}text-xl_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$pr}#{$u}text-xxl">#{$pr}#{$u}text-xxl_吾輩は猫である。<span class="#{$pr}#{$u}text-md">名前はまだ無い。#{$pr}#{$u}text-md_どこで生れたか</span>とんと見当がつかぬ。</p>
 ```
 */
 
 #{$u-wrap} {
 
-	.#{$p}#{$u}text-xxs {
+	.#{$pr}#{$u}text-xxs {
 	    font-size: .625em;
 	}
 
-	.#{$p}#{$u}text-xs {
+	.#{$pr}#{$u}text-xs {
 	    font-size: .75em;
 	}
 
-	.#{$p}#{$u}text-sm {
+	.#{$pr}#{$u}text-sm {
 	    font-size: .875em;
 	}
 
-	.#{$p}#{$u}text-md {
+	.#{$pr}#{$u}text-md {
 	    font-size: 1rem;
 	}
 
-	.#{$p}#{$u}text-lg {
+	.#{$pr}#{$u}text-lg {
 	    font-size: 1.25em;
 	}
 
-	.#{$p}#{$u}text-xl {
+	.#{$pr}#{$u}text-xl {
 	    font-size: 1.5em;
 	}
 
-	.#{$p}#{$u}text-xxl {
+	.#{$pr}#{$u}text-xxl {
 	    font-size: 2em;
 	}
 

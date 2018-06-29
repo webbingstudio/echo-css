@@ -1,28 +1,28 @@
 /*doc
 ---
-title: #{$p}#{$m}btn-#{$__inverse}
+title: #{$pr}#{$m}btn-#{$__inverse}
 name: btn-03-inverse
 category: module-btn
 parent: btn
 ---
 
 ボタンの文字色と背景色を反転する。  
-<code>.#{$p}#{$m}btn-outline</code> と同時に使用すると、罫線のみの状態で反転する。
+<code>.#{$pr}#{$m}btn-outline</code> と同時に使用すると、罫線のみの状態で反転する。
 
 ``` example
-<p class="#{$p}#{$u}bg-inverse #{$p}#{$u}p-y">
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-#{$__inverse}">#{$p}#{$m}btn-#{$__inverse}</a>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-#{$__inverse} disabled">#{$p}#{$m}btn-#{$__inverse}</a>
+<p class="#{$pr}#{$u}bg-inverse #{$pr}#{$u}p-y">
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-#{$__inverse}">#{$pr}#{$m}btn-#{$__inverse}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-#{$__inverse} disabled">#{$pr}#{$m}btn-#{$__inverse}</a>
 </p>
-<p class="#{$p}#{$u}bg-#{$__inverse} #{$p}#{$u}p-y">
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-#{$__inverse}">#{$p}#{$m}btn-outline + #{$p}#{$m}btn-#{$__inverse}</a>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-outline #{$p}#{$m}btn-#{$__inverse} disabled">#{$p}#{$m}btn-outline + #{$p}#{$m}btn-#{$__inverse}</a>
+<p class="#{$pr}#{$u}bg-#{$__inverse} #{$pr}#{$u}p-y">
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-outline #{$pr}#{$m}btn-#{$__inverse}">#{$pr}#{$m}btn-outline + #{$pr}#{$m}btn-#{$__inverse}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-outline #{$pr}#{$m}btn-#{$__inverse} disabled">#{$pr}#{$m}btn-outline + #{$pr}#{$m}btn-#{$__inverse}</a>
 </p>
 ```
 
 */
 
-.#{$p}#{$m}btn-#{$__inverse} {
+.#{$pr}#{$m}btn-#{$__inverse} {
     @include button-variant(
         $body-inverse-color,
         rgba($body-inverse-color, .25),
@@ -32,7 +32,7 @@ parent: btn
         transparent
     );
 
-    &.#{$p}#{$m}btn-outline {
+    &.#{$pr}#{$m}btn-outline {
         @include button-variant(
             $body-inverse-color,
             transparent,

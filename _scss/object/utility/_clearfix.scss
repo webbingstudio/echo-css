@@ -2,7 +2,7 @@
 
 /*doc
 ---
-title: #{$p}#{$u}clearfix
+title: #{$pr}#{$u}clearfix
 name: clearfix
 category: utility-clearfix
 ---
@@ -10,20 +10,20 @@ category: utility-clearfix
 指定された包括要素が閉じられた時点でfloatを解除する。
 
 ``` example
-<div class="#{$p}#{$u}bg-first #{$p}#{$u}bg-fade #{$p}#{$u}clearfix">
+<div class="#{$pr}#{$u}bg-first #{$pr}#{$u}bg-fade #{$pr}#{$u}clearfix">
 
-<div class="#{$p}#{$u}float-l">
-    <div class="#{$p}#{$m}thumbnail">
+<div class="#{$pr}#{$u}float-l">
+    <div class="#{$pr}#{$m}thumbnail">
         <img src="https://placehold.jp/100x100.jpg?text=float-l" alt="">
     </div>
 </div>
-<div class="#{$p}#{$u}float-l">
-    <div class="#{$p}#{$m}thumbnail">
+<div class="#{$pr}#{$u}float-l">
+    <div class="#{$pr}#{$m}thumbnail">
         <img src="https://placehold.jp/100x100.jpg?text=float-l" alt="">
     </div>
 </div>
-<div class="#{$p}#{$u}float-l">
-    <div class="#{$p}#{$m}thumbnail">
+<div class="#{$pr}#{$u}float-l">
+    <div class="#{$pr}#{$m}thumbnail">
         <img src="https://placehold.jp/100x100.jpg?text=float-l" alt="">
     </div>
 </div>
@@ -40,7 +40,7 @@ category: utility-clearfix
 
 #{$u-wrap} {
 
-    .#{$p}#{$u}clearfix {
+    .#{$pr}#{$u}clearfix {
       @include clearfix();
     }
 

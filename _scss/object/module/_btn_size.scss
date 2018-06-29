@@ -1,6 +1,6 @@
 /*doc
 ---
-title: #{$p}#{$m}btn-(size)
+title: #{$pr}#{$m}btn-(size)
 name: btn-04-size
 category: module-btn
 parent: btn
@@ -10,15 +10,15 @@ parent: btn
 
 ``` example
 <p>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-#{$__first} #{$p}#{$m}btn-sm">#{$p}#{$m}btn-sm</a>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-#{$__first}">default</a>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-#{$__first} #{$p}#{$m}btn-lg">#{$p}#{$m}btn-lg</a>
-  <a href="#" class="#{$p}#{$m}btn #{$p}#{$m}btn-#{$__first} #{$p}#{$m}btn-xl">#{$p}#{$m}btn-xl</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-#{$__first} #{$pr}#{$m}btn-sm">#{$pr}#{$m}btn-sm</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-#{$__first}">default</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-#{$__first} #{$pr}#{$m}btn-lg">#{$pr}#{$m}btn-lg</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-#{$__first} #{$pr}#{$m}btn-xl">#{$pr}#{$m}btn-xl</a>
 </p>
 ```
 */
 
-.#{$p}#{$m}btn-sm {
+.#{$pr}#{$m}btn-sm {
     padding-top: $btn-padding-y-sm;
     padding-bottom: $btn-padding-y-sm;
     font-size: $btn-font-size-sm;
@@ -27,7 +27,7 @@ parent: btn
     padding-right: $btn-padding-x-sm;
 }
 
-.#{$p}#{$m}btn-lg {
+.#{$pr}#{$m}btn-lg {
     padding-top: $btn-padding-y-lg;
     padding-bottom: $btn-padding-y-lg;
     font-size: $btn-font-size-lg;
@@ -36,7 +36,7 @@ parent: btn
     padding-right: $btn-padding-x-lg;
 }
 
-.#{$p}#{$m}btn-xl {
+.#{$pr}#{$m}btn-xl {
     padding-top: $btn-padding-y-xl;
     padding-bottom: $btn-padding-y-xl;
     font-size: $btn-font-size-xl;

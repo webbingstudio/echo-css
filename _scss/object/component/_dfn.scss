@@ -1,6 +1,6 @@
 /*doc
 ---
-title: #{$p}#{$c}dfn
+title: #{$pr}#{$c}dfn
 name: dfn
 category: component-dfn
 ---
@@ -9,27 +9,27 @@ category: component-dfn
 (breakpoint)が <code>sm</code> 以上でインライン表示となる。
 
 ``` example
-<div class="#{$p}#{$u}m-b">
-<div class="#{$p}#{$c}dfn">
-    <h1 class="#{$p}#{$c}dfn-header">猫</h1>
-    <p class="#{$p}#{$c}dfn-contents">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<div class="#{$pr}#{$u}m-b">
+<div class="#{$pr}#{$c}dfn">
+    <h1 class="#{$pr}#{$c}dfn-header">猫</h1>
+    <p class="#{$pr}#{$c}dfn-contents">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
 </div>
 </div>
 
-<dl class="#{$p}#{$c}dfn">
-    <dt class="#{$p}#{$c}dfn-header">I'm a Cat</dt>
-    <dd class="#{$p}#{$c}dfn-contents">There is no name yet.<br>
+<dl class="#{$pr}#{$c}dfn">
+    <dt class="#{$pr}#{$c}dfn-header">I'm a Cat</dt>
+    <dd class="#{$pr}#{$c}dfn-contents">There is no name yet.<br>
     I have no idea where I was born.</dd>
 </dl>
 ```
 */
 
-.#{$p}#{$c}dfn {
+.#{$pr}#{$c}dfn {
     @include media-breakpoint-up(sm) {
         display: inline-block;
     }
 
-    .#{$p}#{$c}dfn-header {
+    .#{$pr}#{$c}dfn-header {
         display: block;
         margin: 0;
         padding-bottom: .25em;
@@ -48,7 +48,7 @@ category: component-dfn
 
     }
 
-    .#{$p}#{$c}dfn-contents {
+    .#{$pr}#{$c}dfn-contents {
         display: block;
         margin: 0;
         font-size: $font-size-sm;

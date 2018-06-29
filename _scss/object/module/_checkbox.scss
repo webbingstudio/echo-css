@@ -1,28 +1,28 @@
 /*doc
 ---
-title: #{$p}#{$m}checkbox
+title: #{$pr}#{$m}checkbox
 name: checkbox
 category: module-checkbox
 ---
 
 チェックボックスとラベルをインライン表示する。input要素ではなく、包括している要素にクラスを付与する（ほとんどの場合、label要素となる）。  
-余白・レイアウト等は <code>utility > .#{$p}#{$u}p</code> や <code>component > .#{$p}#{$c}form</code> で指定する。  
-<code>.#{$p}#{$error}</code> を同時に使用するとエラーがあったときの表示となる。 
+余白・レイアウト等は <code>utility > .#{$pr}#{$u}p</code> や <code>component > .#{$pr}#{$c}form</code> で指定する。  
+<code>.#{$pr}#{$error}</code> を同時に使用するとエラーがあったときの表示となる。 
 
 ``` example
 <p>
-<label class="#{$p}#{$m}checkbox #{$p}#{$u}m-r" for="checkbox1"><input type="checkbox" name="checkbox1" id="checkbox1" class="#{$p}#{$u}m-r-sm" value="1">#{$p}#{$m}checkbox</label>
-<label class="#{$p}#{$m}checkbox #{$p}#{$u}m-r" for="checkbox2"><input type="checkbox" name="checkbox2" id="checkbox2" class="#{$p}#{$u}m-r-sm" value="2" checked="checked">#{$p}#{$m}checkbox</label>
-<label class="#{$p}#{$m}checkbox #{$p}#{$error}" for="checkbox3"><input type="checkbox" name="checkbox3" id="checkbox3" class="#{$p}#{$u}m-r-sm" value="3">#{$p}#{$m}checkbox</label>
+<label class="#{$pr}#{$m}checkbox #{$pr}#{$u}m-r" for="checkbox1"><input type="checkbox" name="checkbox1" id="checkbox1" class="#{$pr}#{$u}m-r-sm" value="1">#{$pr}#{$m}checkbox</label>
+<label class="#{$pr}#{$m}checkbox #{$pr}#{$u}m-r" for="checkbox2"><input type="checkbox" name="checkbox2" id="checkbox2" class="#{$pr}#{$u}m-r-sm" value="2" checked="checked">#{$pr}#{$m}checkbox</label>
+<label class="#{$pr}#{$m}checkbox #{$pr}#{$error}" for="checkbox3"><input type="checkbox" name="checkbox3" id="checkbox3" class="#{$pr}#{$u}m-r-sm" value="3">#{$pr}#{$m}checkbox</label>
 </p>
 ```
 */
 
-.#{$p}#{$m}checkbox {
+.#{$pr}#{$m}checkbox {
     display: inline-block;
 
-    &.#{$p}#{$error},
-    .#{$p}#{$error} > & {
+    &.#{$pr}#{$error},
+    .#{$pr}#{$error} > & {
         color: $important-text;
     }
 

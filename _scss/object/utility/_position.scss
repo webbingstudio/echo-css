@@ -2,7 +2,7 @@
 
 /*doc
 ---
-title: #{$p}#{$u}position-(y)-(x)
+title: #{$pr}#{$u}position-(y)-(x)
 name: position
 category: utility-position
 ---
@@ -11,56 +11,56 @@ category: utility-position
 親要素に <code>position:relative</code> を指定している必要がある。
 
 ``` example
-<div>#{$p}#{$u}position-tl</div>
-<div class="#{$p}#{$u}bg-first #{$p}#{$u}bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="#{$p}#{$u}position-tl" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+<div>#{$pr}#{$u}position-tl</div>
+<div class="#{$pr}#{$u}bg-first #{$pr}#{$u}bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="#{$pr}#{$u}position-tl" style="background-color: #333; width: 10px; height: 10px;"></span></div>
 
-<div>#{$p}#{$u}position-tc</div>
-<div class="#{$p}#{$u}bg-first #{$p}#{$u}bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="#{$p}#{$u}position-tc" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+<div>#{$pr}#{$u}position-tc</div>
+<div class="#{$pr}#{$u}bg-first #{$pr}#{$u}bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="#{$pr}#{$u}position-tc" style="background-color: #333; width: 10px; height: 10px;"></span></div>
 
-<div>#{$p}#{$u}position-tr</div>
-<div class="#{$p}#{$u}bg-first #{$p}#{$u}bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="#{$p}#{$u}position-tr" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+<div>#{$pr}#{$u}position-tr</div>
+<div class="#{$pr}#{$u}bg-first #{$pr}#{$u}bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="#{$pr}#{$u}position-tr" style="background-color: #333; width: 10px; height: 10px;"></span></div>
 
-<div>#{$p}#{$u}position-cl</div>
-<div class="#{$p}#{$u}bg-second #{$p}#{$u}bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="#{$p}#{$u}position-cl" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+<div>#{$pr}#{$u}position-cl</div>
+<div class="#{$pr}#{$u}bg-second #{$pr}#{$u}bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="#{$pr}#{$u}position-cl" style="background-color: #333; width: 10px; height: 10px;"></span></div>
 
-<div>#{$p}#{$u}position-cc</div>
-<div class="#{$p}#{$u}bg-second #{$p}#{$u}bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="#{$p}#{$u}position-cc" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+<div>#{$pr}#{$u}position-cc</div>
+<div class="#{$pr}#{$u}bg-second #{$pr}#{$u}bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="#{$pr}#{$u}position-cc" style="background-color: #333; width: 10px; height: 10px;"></span></div>
 
-<div>#{$p}#{$u}position-cr</div>
-<div class="#{$p}#{$u}bg-second #{$p}#{$u}bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="#{$p}#{$u}position-cr" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+<div>#{$pr}#{$u}position-cr</div>
+<div class="#{$pr}#{$u}bg-second #{$pr}#{$u}bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="#{$pr}#{$u}position-cr" style="background-color: #333; width: 10px; height: 10px;"></span></div>
 
-<div>#{$p}#{$u}position-bl</div>
-<div class="#{$p}#{$u}bg-third #{$p}#{$u}bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="#{$p}#{$u}position-bl" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+<div>#{$pr}#{$u}position-bl</div>
+<div class="#{$pr}#{$u}bg-third #{$pr}#{$u}bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="#{$pr}#{$u}position-bl" style="background-color: #333; width: 10px; height: 10px;"></span></div>
 
-<div>#{$p}#{$u}position-bc</div>
-<div class="#{$p}#{$u}bg-third #{$p}#{$u}bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="#{$p}#{$u}position-bc" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+<div>#{$pr}#{$u}position-bc</div>
+<div class="#{$pr}#{$u}bg-third #{$pr}#{$u}bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="#{$pr}#{$u}position-bc" style="background-color: #333; width: 10px; height: 10px;"></span></div>
 
-<div>#{$p}#{$u}position-br</div>
-<div class="#{$p}#{$u}bg-third #{$p}#{$u}bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="#{$p}#{$u}position-br" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+<div>#{$pr}#{$u}position-br</div>
+<div class="#{$pr}#{$u}bg-third #{$pr}#{$u}bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="#{$pr}#{$u}position-br" style="background-color: #333; width: 10px; height: 10px;"></span></div>
 ```
 */
 
 #{$u-wrap} {
 
-    .#{$p}#{$u}position-tl,
-    .#{$p}#{$u}position-tc,
-    .#{$p}#{$u}position-tr,
-    .#{$p}#{$u}position-cl,
-    .#{$p}#{$u}position-cc,
-    .#{$p}#{$u}position-cr,
-    .#{$p}#{$u}position-bl,
-    .#{$p}#{$u}position-bc,
-    .#{$p}#{$u}position-br {
+    .#{$pr}#{$u}position-tl,
+    .#{$pr}#{$u}position-tc,
+    .#{$pr}#{$u}position-tr,
+    .#{$pr}#{$u}position-cl,
+    .#{$pr}#{$u}position-cc,
+    .#{$pr}#{$u}position-cr,
+    .#{$pr}#{$u}position-bl,
+    .#{$pr}#{$u}position-bc,
+    .#{$pr}#{$u}position-br {
         position: absolute;
         z-index: 99;
     }
 
-    .#{$p}#{$u}position-tl {
+    .#{$pr}#{$u}position-tl {
         top: 0;
         left: 0;
     }
 
-    .#{$p}#{$u}position-tc {
+    .#{$pr}#{$u}position-tc {
         top: 0;
         left: 50%;
         -webkit-transform:translate(-50%, 0);
@@ -68,12 +68,12 @@ category: utility-position
         transform:translate(-50%, 0);
     }
 
-    .#{$p}#{$u}position-tr {
+    .#{$pr}#{$u}position-tr {
         top: 0;
         right: 0;
     }
 
-    .#{$p}#{$u}position-cl {
+    .#{$pr}#{$u}position-cl {
         top: 50%;
         left: 0;
         -webkit-transform:translate(0, -50%);
@@ -81,7 +81,7 @@ category: utility-position
         transform:translate(0, -50%);
     }
 
-    .#{$p}#{$u}position-cc {
+    .#{$pr}#{$u}position-cc {
         top: 50%;
         left: 50%;
         -webkit-transform:translate(-50%, 0);
@@ -89,7 +89,7 @@ category: utility-position
         transform:translate(-50%, 0);
     }
 
-    .#{$p}#{$u}position-cr {
+    .#{$pr}#{$u}position-cr {
         top: 50%;
         right: 0;
         -webkit-transform:translate(0, -50%);
@@ -97,12 +97,12 @@ category: utility-position
         transform:translate(0, -50%);
     }
 
-    .#{$p}#{$u}position-bl {
+    .#{$pr}#{$u}position-bl {
         bottom: 0;
         left: 0;
     }
 
-    .#{$p}#{$u}position-bc {
+    .#{$pr}#{$u}position-bc {
         bottom: 0;
         left: 50%;
         -webkit-transform:translate(-50%, 0);
@@ -110,7 +110,7 @@ category: utility-position
         transform:translate(-50%, 0);
     }
 
-    .#{$p}#{$u}position-br {
+    .#{$pr}#{$u}position-br {
         bottom: 0;
         right: 0;
     }

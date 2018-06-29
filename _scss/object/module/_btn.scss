@@ -1,6 +1,6 @@
 /*doc
 ---
-title: #{$p}#{$m}btn
+title: #{$pr}#{$m}btn
 name: btn
 category: module-btn
 ---
@@ -10,29 +10,29 @@ category: module-btn
 
 ``` example
 <p>
-  <a href="#" class="#{$p}#{$m}btn">#{$p}#{$m}btn</a>
-  <a href="#" class="#{$p}#{$m}btn disabled">#{$p}#{$m}btn</a>
+  <a href="#" class="#{$pr}#{$m}btn">#{$pr}#{$m}btn</a>
+  <a href="#" class="#{$pr}#{$m}btn disabled">#{$pr}#{$m}btn</a>
 </p>
 
 <p>
-  <span class="#{$p}#{$m}btn">#{$p}#{$m}btn</span>
-  <span class="#{$p}#{$m}btn disabled">#{$p}#{$m}btn</span>
+  <span class="#{$pr}#{$m}btn">#{$pr}#{$m}btn</span>
+  <span class="#{$pr}#{$m}btn disabled">#{$pr}#{$m}btn</span>
 </p>
 
 <p>
-  <input type="button" class="#{$p}#{$m}btn" value="#{$p}#{$m}btn" />
-  <input type="button" class="#{$p}#{$m}btn" value="#{$p}#{$m}btn" disabled="disabled" />
+  <input type="button" class="#{$pr}#{$m}btn" value="#{$pr}#{$m}btn" />
+  <input type="button" class="#{$pr}#{$m}btn" value="#{$pr}#{$m}btn" disabled="disabled" />
 </p>
 
 <p>
-  <button class="#{$p}#{$m}btn">#{$p}#{$m}btn</button>
-  <button class="#{$p}#{$m}btn" disabled="disabled">#{$p}#{$m}btn</button>
+  <button class="#{$pr}#{$m}btn">#{$pr}#{$m}btn</button>
+  <button class="#{$pr}#{$m}btn" disabled="disabled">#{$pr}#{$m}btn</button>
 </p>
 ```
 
 */
 
-.#{$p}#{$m}btn {
+.#{$pr}#{$m}btn {
     position: relative;
     display: inline-block;
     color: $body-color;
@@ -119,7 +119,7 @@ category: module-btn
 
 }
 
-a.#{$p}#{$m}btn.disaabled,
-fieldset[disabled] a.#{$p}#{$m}btn {
+a.#{$pr}#{$m}btn.disaabled,
+fieldset[disabled] a.#{$pr}#{$m}btn {
     pointer-events: none;
 }

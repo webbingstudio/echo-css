@@ -3516,13 +3516,13 @@ category: module-list
   list-style-type: none;
 }
 
-.m-list-item {
+.p-m-list-item {
   position: relative;
   margin: 0;
   line-height: 1.5;
 }
 
-.m-list-children {
+.p-m-list-children {
   margin: 0;
   padding-left: 0;
   list-style-type: none;
@@ -3562,15 +3562,15 @@ parent: list
 ```
 
 */
-.m-list-vertical .m-list-item {
+.m-list-vertical .p-m-list-item {
   margin-top: .75em;
   margin-bottom: .75em;
   padding-left: 1.5em;
 }
-.m-list-vertical .m-list-children {
+.m-list-vertical .p-m-list-children {
   padding-left: 0;
 }
-.m-list-vertical .m-list-children .m-list-item {
+.m-list-vertical .p-m-list-children .p-m-list-item {
   font-size: .9em;
 }
 
@@ -3597,16 +3597,16 @@ parent: list
 .m-list-horizontal {
   letter-spacing: -.4em;
 }
-.m-list-horizontal .m-list-item {
+.m-list-horizontal .p-m-list-item {
   display: inline-block;
   padding-left: 1em;
   padding-right: 1em;
   letter-spacing: normal;
 }
-.m-list-horizontal .m-list-item:first-child {
+.m-list-horizontal .p-m-list-item:first-child {
   padding-left: 0;
 }
-.m-list-horizontal .m-list-item:last-child {
+.m-list-horizontal .p-m-list-item:last-child {
   padding-right: 0;
 }
 

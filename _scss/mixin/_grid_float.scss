@@ -55,7 +55,7 @@
 
           @if ($optimize != true) or ( ($optimize == true) and ( $i > 2 ) ) {
 
-            .#{$p}#{$g}col-#{$i} {
+            .#{$pr}#{$g}col-#{$i} {
               @extend %grid-column-float;
               @include make-col-span-float($i, $columns);
             }
@@ -66,7 +66,7 @@
 
           @if ($optimize != true) or ( ($optimize == true) and ( $i > 2 ) ) {
 
-            .#{$p}#{$g}col-#{$breakpoint}-#{$i} {
+            .#{$pr}#{$g}col-#{$breakpoint}-#{$i} {
               @extend %grid-column-float-#{$breakpoint};
               @include make-col-span-float($i, $columns);
             }
@@ -85,7 +85,7 @@
 
                 @if ($optimize != true) or ( ($optimize == true) and ( $i < 11 ) ) {
 
-                  .#{$p}#{$g}col-#{$modifier}-#{$i} {
+                  .#{$pr}#{$g}col-#{$modifier}-#{$i} {
                     @include make-col-modifier-float($modifier, $i, $columns)
                   }
 
@@ -94,7 +94,7 @@
               } @else {
 
                 @if ($optimize != true) or ( ($optimize == true) and ( $breakpoint != 'xxs' ) and ( $breakpoint != 'xs' ) and ( $breakpoint != 'xl' ) and ( $breakpoint != 'xxl' ) and ( $i < 11 ) ) {
-                  .#{$p}#{$g}col-#{$breakpoint}-#{$modifier}-#{$i} {
+                  .#{$pr}#{$g}col-#{$breakpoint}-#{$modifier}-#{$i} {
                     @include make-col-modifier-float($modifier, $i, $columns)
                   }
                 }
