@@ -1,0 +1,276 @@
+/*doc
+---
+title: #{$pr}#{$m}nav
+name: nav
+category: module-nav
+---
+
+クリック範囲が広いナビゲーションを表示する。  
+<code>ul > li a</code> の包括要素に使用した場合は、子要素にクラスを指定していなくても有効になる。
+
+``` example
+<h3 class="#{$pr}#{$u}text-lg">すべての要素にクラスを付与した場合</h3>
+<div class="#{$pr}#{$m}nav">
+    <p class="#{$pr}#{$m}nav-list">
+        <a href="#" class="#{$pr}#{$m}nav-item">メニューです</a>
+    </p>
+    <p class="#{$pr}#{$m}nav-list">
+        <a href="#" class="#{$pr}#{$m}nav-item #{$nav-current}">現在のメニューです</a>
+    </p>
+    <p class="#{$pr}#{$m}nav-list">
+        <a href="#" class="#{$pr}#{$m}nav-item">メニューです</a>
+    </p>
+    <p class="#{$pr}#{$m}nav-list">
+        <a href="#" class="#{$pr}#{$m}nav-item">メニューです</a>
+    </p>
+    <p class="#{$pr}#{$m}nav-list">
+        <a href="#" class="#{$pr}#{$m}nav-item">メニューです</a>
+    </p>
+</div>
+
+<h3 class="#{$pr}#{$u}text-lg">包括要素のみクラスを付与した場合</h3>
+<div class="#{$pr}#{$m}nav">
+    <ul>
+        <li>
+            <a href="#">メニューです</a>
+        </li>
+        <li>
+            <a href="#" class="#{$nav-current}">現在のメニューです</a>
+        </li>
+        <li>
+            <a href="#">メニューです</a>
+        </li>
+        <li>
+            <a href="#">メニューです</a>
+        </li>
+        <li>
+            <a href="#">メニューです</a>
+        </li>
+    </ul>
+</div>
+
+<h3 class="#{$pr}#{$u}text-lg">#{$pr}#{$m}nav-itemのみ使用し、ナビゲーションの分割はグリッドにした場合</h3>
+<ul class="#{$pr}#{$g}row #{$pr}#{$g}row-0">
+    <li class="#{$pr}#{$g}col-6 #{$pr}#{$g}col-md">
+        <a href="#" class="#{$pr}#{$m}nav-item">メニューです</a>
+    </li>
+    <li class="#{$pr}#{$g}col-6 #{$pr}#{$g}col-md">
+        <a href="#" class="#{$pr}#{$m}nav-item #{$nav-current}">現在のメニューです</a>
+    </li>
+    <li class="#{$pr}#{$g}col-4 #{$pr}#{$g}col-md">
+        <a href="#" class="#{$pr}#{$m}nav-item">メニューです</a>
+    </li>
+    <li class="#{$pr}#{$g}col-4 #{$pr}#{$g}col-md">
+        <a href="#" class="#{$pr}#{$m}nav-item">メニューです</a>
+    </li>
+    <li class="#{$pr}#{$g}col-4 #{$pr}#{$g}col-md">
+        <a href="#" class="#{$pr}#{$m}nav-item">メニューです</a>
+    </li>
+</ul>
+```
+
+*/
+
+.#{$pr}#{$m}nav:not(ul),
+.#{$pr}#{$m}nav > ul {
+    display: block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.#{$pr}#{$m}nav-list,
+.#{$pr}#{$m}nav > ul li {
+    margin: 0;
+}
+
+.#{$pr}#{$m}nav-item,
+.#{$pr}#{$m}nav > ul li a {
+    display: block;
+    color: $body-color;
+    padding: .75em 0;
+    font-size: 1rem;
+    text-align: center;
+    line-height: $line-height-none;
+    vertical-align: middle;
+    transition: .3s all;
+    cursor: pointer;
+
+    @at-root {
+        a#{&} {
+            text-decoration: none;
+
+            &:hover,
+            &:focus {
+                text-decoration: none;
+            }
+
+        }
+
+    }
+
+    &.#{$nav-current} {
+        background-color: $gray-fade;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $gray-fade;
+        }
+
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $body-color;
+        background-color: $gray-fade;
+        text-decoration: none;
+    }
+
+}
+
+
+/*doc
+---
+title: #{$pr}#{$m}nav-horizontal
+name: nav-01-horizontal
+category: module-nav
+parent: nav
+---
+
+水平ナビゲーションとして表示する。
+
+``` example
+<h3 class="#{$pr}#{$u}text-lg">すべての要素にクラスを付与した場合</h3>
+<div class="#{$pr}#{$m}nav #{$pr}#{$m}nav-horizontal">
+    <p class="#{$pr}#{$m}nav-list">
+        <a href="#" class="#{$pr}#{$m}nav-item">メニューです</a>
+    </p>
+    <p class="#{$pr}#{$m}nav-list">
+        <a href="#" class="#{$pr}#{$m}nav-item #{$nav-current}">現在のメニューです</a>
+    </p>
+    <p class="#{$pr}#{$m}nav-list">
+        <a href="#" class="#{$pr}#{$m}nav-item">メニューです</a>
+    </p>
+    <p class="#{$pr}#{$m}nav-list">
+        <a href="#" class="#{$pr}#{$m}nav-item">メニューです</a>
+    </p>
+    <p class="#{$pr}#{$m}nav-list">
+        <a href="#" class="#{$pr}#{$m}nav-item">メニューです</a>
+    </p>
+</div>
+
+<h3 class="#{$pr}#{$u}text-lg">包括要素のみクラスを付与した場合</h3>
+<div class="#{$pr}#{$m}nav #{$pr}#{$m}nav-horizontal">
+    <ul>
+        <li>
+            <a href="#">メニューです</a>
+        </li>
+        <li>
+            <a href="#" class="#{$nav-current}">現在のメニューです</a>
+        </li>
+        <li>
+            <a href="#">メニューです</a>
+        </li>
+        <li>
+            <a href="#">メニューです</a>
+        </li>
+        <li>
+            <a href="#">メニューです</a>
+        </li>
+    </ul>
+</div>
+```
+
+*/
+
+.#{$pr}#{$m}nav-horizontal:not(ul),
+.#{$pr}#{$m}nav-horizontal > ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.#{$pr}#{$m}nav-horizontal:not(ul) .#{$pr}#{$m}nav-list,
+.#{$pr}#{$m}nav-horizontal > ul li {
+    flex: 0 0 auto;
+}
+
+
+.#{$pr}#{$m}nav-horizontal:not(ul) .#{$pr}#{$m}nav-item,
+.#{$pr}#{$m}nav-horizontal > ul li a {
+    padding-left: ($spacer * 2);
+    padding-right: ($spacer * 2);
+}
+
+
+/*doc
+---
+title: #{$pr}#{$m}nav-justify
+name: nav-02-justify
+category: module-nav
+parent: nav
+---
+
+<code>.#{$pr}#{$m}nav-horizontal</code> と併用する。水平ナビゲーションを包括要素全体に均等幅で表示する。
+
+``` example
+<h3 class="#{$pr}#{$u}text-lg">すべての要素にクラスを付与した場合</h3>
+<div class="#{$pr}#{$m}nav #{$pr}#{$m}nav-horizontal #{$pr}#{$m}nav-justify">
+    <p class="#{$pr}#{$m}nav-list">
+        <a href="#" class="#{$pr}#{$m}nav-item">メニューです</a>
+    </p>
+    <p class="#{$pr}#{$m}nav-list">
+        <a href="#" class="#{$pr}#{$m}nav-item #{$nav-current}">現在のメニューです</a>
+    </p>
+    <p class="#{$pr}#{$m}nav-list">
+        <a href="#" class="#{$pr}#{$m}nav-item">メニューです</a>
+    </p>
+    <p class="#{$pr}#{$m}nav-list">
+        <a href="#" class="#{$pr}#{$m}nav-item">メニューです</a>
+    </p>
+    <p class="#{$pr}#{$m}nav-list">
+        <a href="#" class="#{$pr}#{$m}nav-item">メニューです</a>
+    </p>
+</div>
+
+<h3 class="#{$pr}#{$u}text-lg">包括要素のみクラスを付与した場合</h3>
+<div class="#{$pr}#{$m}nav #{$pr}#{$m}nav-horizontal #{$pr}#{$m}nav-justify">
+    <ul>
+        <li>
+            <a href="#">メニューです</a>
+        </li>
+        <li>
+            <a href="#" class="#{$nav-current}">現在のメニューです</a>
+        </li>
+        <li>
+            <a href="#">メニューです</a>
+        </li>
+        <li>
+            <a href="#">メニューです</a>
+        </li>
+        <li>
+            <a href="#">メニューです</a>
+        </li>
+    </ul>
+</div>
+```
+
+*/
+
+.#{$pr}#{$m}nav-justify:not(ul),
+.#{$pr}#{$m}nav-justify ul {
+    width: 100%;
+}
+
+.#{$pr}#{$m}nav-justify:not(ul) .#{$pr}#{$m}nav-list,
+.#{$pr}#{$m}nav-justify ul li {
+    flex-grow: 1;
+}
+
+.#{$pr}#{$m}nav-justify:not(ul) .#{$pr}#{$m}nav-item,
+.#{$pr}#{$m}nav-justify > ul li a {
+    padding-left: 0;
+    padding-right: 0;
+}
+

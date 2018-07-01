@@ -7,7 +7,7 @@ name: grid-01-row
 category: layout-grid
 ---
 
-flexboxによるグリッドのグループを作成する。
+flexboxによるグリッドのグループを作成する。 <code>ul</code> 要素にも使用できる。
 
 余白・段組のブレークポイントを変更したい場合は <code>/\_scss/config\_advance.css</code> の各変数を調整すること。  
 命名規則をbootstrapと同様にしたい場合は、 <code>/\_scss/_\config\_advance.scss</code> の変数 <code>$g</code> を空にすること。
@@ -89,7 +89,7 @@ Bootstrap4の <code>.no-gutters</code> は <code>.#{$pr}#{$g}row-0</code> のエ
     margin-left: 0;
     margin-right: 0;
 
-    .#{$pr}#{$g}col {
+    [class*="#{$pr}#{$g}col"] {
         padding-left: 0;
         padding-right: 0;
     }
@@ -100,7 +100,7 @@ Bootstrap4の <code>.no-gutters</code> は <code>.#{$pr}#{$g}row-0</code> のエ
     margin-left: (map-get($grid-gutter-widths, sm) / -2);
     margin-right: (map-get($grid-gutter-widths, sm) / -2);
 
-    .#{$pr}#{$g}col {
+    [class*="#{$pr}#{$g}col"] {
         padding-left: (map-get($grid-gutter-widths, sm) / 2);
         padding-right: (map-get($grid-gutter-widths, sm) / 2);
     }
@@ -111,7 +111,7 @@ Bootstrap4の <code>.no-gutters</code> は <code>.#{$pr}#{$g}row-0</code> のエ
     margin-left: (map-get($grid-gutter-widths, lg) / -2);
     margin-right: (map-get($grid-gutter-widths, lg) / -2);
 
-    .#{$pr}#{$g}col {
+    [class*="#{$pr}#{$g}col"] {
         padding-left: (map-get($grid-gutter-widths, lg) / 2);
         padding-right: (map-get($grid-gutter-widths, lg) / 2);
     }

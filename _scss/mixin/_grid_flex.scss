@@ -1,6 +1,8 @@
 @mixin make-row-flex() {
   display: flex;
   flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
 }
 
 @mixin make-col-flex($size, $columns: $grid-columns) {
@@ -18,6 +20,7 @@
     position: relative;
     width: 100%;
     min-height: 1px;
+    margin: 0;
   }
 
   @each $breakpoint in map-keys($breakpoints) {
