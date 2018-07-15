@@ -4989,19 +4989,65 @@ name: alert
 category: component-alert
 ---
 
-システム側の注意文を表示する。  
-上下余白は <code>utility > .m</code> 等で指定する。
+システム側の注意文を表示する。 <code>p</code> のみ、もしくは <code>div</code> と <code>p, ul</code> でマークアップすることもできる。  
+連続して表示すると <code>.c-alert</code> 間の余白が**通常よりも狭くなる。**  
+下以外の余白は <code>utility > .m</code> 等で指定する。
 
 ``` example
+<div>
 <p class="c-alert">c-alert_これはシステムからの注意文です。</p>
+</div>
+
+<div>
+<p class="c-alert"><span class="c-alert-header"><i class="fas fa-info-circle"></i><span class="sr">お知らせ</span></span>c-alert_これはシステムからの注意文です。</p>
+</div>
+
+<div>
+<div class="c-alert"><p>c-alert_これはシステムからの注意文です。</p><span class="c-alert-control"><i class="fas fa-times-circle"></i><span class="sr">閉じる</span></span></div>
+</div>
 ```
 
 */
 .c-alert {
-  padding: 10px 20px;
+  display: flex;
+  align-items: stretch;
+  margin: 0 0 30px;
+  padding: 10px;
   background-color: #eee;
   border: 1px solid #888;
   line-height: 1.5;
+}
+@media (min-width: 768px) {
+  .c-alert {
+    padding: 10px 20px;
+  }
+}
+.c-alert + .c-alert {
+  margin-top: -15px;
+}
+.c-alert p,
+.c-alert ul {
+  margin-bottom: 0;
+}
+
+.c-alert-header {
+  flex: 0 0 auto;
+  align-self: center;
+  margin-right: 10px;
+  text-align: left;
+}
+.c-alert-header [class*=fa-], .c-alert-header .icon {
+  font-size: 1.25em;
+}
+
+.c-alert-control {
+  flex: 1 0 auto;
+  align-self: center;
+  margin-left: 10px;
+  text-align: right;
+}
+.c-alert-control [class*=fa-], .c-alert-control .icon {
+  font-size: 1.25em;
 }
 
 /*doc
@@ -5016,12 +5062,26 @@ parent: alert
 (color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
 
 ``` example
-<p class="c-alert c-alert-first">c-alert-first_これはシステムからの注意文です。</p>
-<p class="c-alert c-alert-second">c-alert-second_これはシステムからの注意文です。</p>
-<p class="c-alert c-alert-third">c-alert-third_これはシステムからの注意文です。</p>
-<p class="c-alert c-alert-fourth">c-alert-fourth_これはシステムからの注意文です。</p>
-<p class="c-alert c-alert-info">c-alert-info_これはシステムからの注意文です。</p>
-<p class="c-alert c-alert-important">c-alert-important_これはシステムからの注意文です。</p>
+<p class="c-alert c-alert-first">c-alert_これはシステムからの注意文です。</p>
+<p class="c-alert c-alert-second">c-alert_これはシステムからの注意文です。</p>
+<p class="c-alert c-alert-third">c-alert_これはシステムからの注意文です。</p>
+<p class="c-alert c-alert-fourth">c-alert_これはシステムからの注意文です。</p>
+<p class="c-alert c-alert-info">c-alert_これはシステムからの注意文です。</p>
+<p class="c-alert c-alert-important">c-alert_これはシステムからの注意文です。</p>
+
+<p class="c-alert c-alert-first"><span class="c-alert-header"><i class="fas fa-info-circle"></i><span class="sr">お知らせ</span></span>c-alert_これはシステムからの注意文です。</p>
+<p class="c-alert c-alert-second"><span class="c-alert-header"><i class="fas fa-info-circle"></i><span class="sr">お知らせ</span></span>c-alert_これはシステムからの注意文です。</p>
+<p class="c-alert c-alert-third"><span class="c-alert-header"><i class="fas fa-info-circle"></i><span class="sr">お知らせ</span></span>c-alert_これはシステムからの注意文です。</p>
+<p class="c-alert c-alert-fourth"><span class="c-alert-header"><i class="fas fa-info-circle"></i><span class="sr">お知らせ</span></span>c-alert_これはシステムからの注意文です。</p>
+<p class="c-alert c-alert-info"><span class="c-alert-header"><i class="fas fa-info-circle"></i><span class="sr">お知らせ</span></span>c-alert_これはシステムからの注意文です。</p>
+<p class="c-alert c-alert-important"><span class="c-alert-header"><i class="fas fa-info-circle"></i><span class="sr">お知らせ</span></span>c-alert_これはシステムからの注意文です。</p>
+
+<div class="c-alert c-alert-first"><p>c-alert_これはシステムからの注意文です。</p><span class="c-alert-control"><i class="fas fa-times-circle"></i><span class="sr">閉じる</span></span></div>
+<div class="c-alert c-alert-second"><p>c-alert_これはシステムからの注意文です。</p><span class="c-alert-control"><i class="fas fa-times-circle"></i><span class="sr">閉じる</span></span></div>
+<div class="c-alert c-alert-third"><p>c-alert_これはシステムからの注意文です。</p><span class="c-alert-control"><i class="fas fa-times-circle"></i><span class="sr">閉じる</span></span></div>
+<div class="c-alert c-alert-fourth"><p>c-alert_これはシステムからの注意文です。</p><span class="c-alert-control"><i class="fas fa-times-circle"></i><span class="sr">閉じる</span></span></div>
+<div class="c-alert c-alert-info"><p>c-alert_これはシステムからの注意文です。</p><span class="c-alert-control"><i class="fas fa-times-circle"></i><span class="sr">閉じる</span></span></div>
+<div class="c-alert c-alert-important"><p>c-alert_これはシステムからの注意文です。</p><span class="c-alert-control"><i class="fas fa-times-circle"></i><span class="sr">閉じる</span></span></div>
 ```
 
 */

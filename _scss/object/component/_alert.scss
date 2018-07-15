@@ -5,20 +5,72 @@ name: alert
 category: component-alert
 ---
 
-システム側の注意文を表示する。  
-上下余白は <code>utility > .#{$pr}#{$u}m</code> 等で指定する。
+システム側の注意文を表示する。 <code>p</code> のみ、もしくは <code>div</code> と <code>p, ul</code> でマークアップすることもできる。  
+連続して表示すると <code>.#{$pr}#{$c}alert</code> 間の余白が**通常よりも狭くなる。**  
+下以外の余白は <code>utility > .#{$pr}#{$u}m</code> 等で指定する。
 
 ``` example
+<div>
 <p class="#{$pr}#{$c}alert">#{$pr}#{$c}alert_これはシステムからの注意文です。</p>
+</div>
+
+<div>
+<p class="#{$pr}#{$c}alert"><span class="#{$pr}#{$c}alert-header"><i class="fas fa-info-circle"></i><span class="#{$pr}#{$u}sr">お知らせ</span></span>#{$pr}#{$c}alert_これはシステムからの注意文です。</p>
+</div>
+
+<div>
+<div class="#{$pr}#{$c}alert"><p>#{$pr}#{$c}alert_これはシステムからの注意文です。</p><span class="#{$pr}#{$c}alert-control"><i class="fas fa-times-circle"></i><span class="#{$pr}#{$u}sr">閉じる</span></span></div>
+</div>
 ```
 
 */
 
 .#{$pr}#{$c}alert {
-    padding: $spacer ($spacer * 2);
+    display: flex;
+    align-items: stretch;
+    margin: 0 0 ($spacer * 3);
+    padding: $spacer;
     background-color: $gray-fade;
     border: $border-alert-width solid $border-color;
     line-height: $line-height-sm;
+
+    @include media-breakpoint-up(md) {
+        padding: $spacer ($spacer * 2);
+    }
+
+    + #{&} {
+        margin-top: $spacer * -1.5;
+    }
+
+    p,
+    ul {
+        margin-bottom: 0;
+    }
+
+}
+
+.#{$pr}#{$c}alert-header {
+    flex: 0 0 auto;
+    align-self: center;
+    margin-right: $spacer;
+    text-align: left;
+
+    #{$icon} {
+        font-size: 1.25em;
+    }
+
+}
+
+.#{$pr}#{$c}alert-control {
+    flex: 1 0 auto;
+    align-self: center;
+    margin-left: $spacer;
+    text-align: right;
+
+    #{$icon} {
+        font-size: 1.25em;
+    }
+
 }
 
 
@@ -35,12 +87,26 @@ parent: alert
 (color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
 
 ``` example
-<p class="#{$pr}#{$c}alert #{$pr}#{$c}alert-#{$__first}">#{$pr}#{$c}alert-#{$__first}_これはシステムからの注意文です。</p>
-<p class="#{$pr}#{$c}alert #{$pr}#{$c}alert-#{$__second}">#{$pr}#{$c}alert-#{$__second}_これはシステムからの注意文です。</p>
-<p class="#{$pr}#{$c}alert #{$pr}#{$c}alert-#{$__third}">#{$pr}#{$c}alert-#{$__third}_これはシステムからの注意文です。</p>
-<p class="#{$pr}#{$c}alert #{$pr}#{$c}alert-#{$__fourth}">#{$pr}#{$c}alert-#{$__fourth}_これはシステムからの注意文です。</p>
-<p class="#{$pr}#{$c}alert #{$pr}#{$c}alert-#{$__info}">#{$pr}#{$c}alert-#{$__info}_これはシステムからの注意文です。</p>
-<p class="#{$pr}#{$c}alert #{$pr}#{$c}alert-#{$__important}">#{$pr}#{$c}alert-#{$__important}_これはシステムからの注意文です。</p>
+<p class="#{$pr}#{$c}alert #{$pr}#{$c}alert-#{$__first}">#{$pr}#{$c}alert_これはシステムからの注意文です。</p>
+<p class="#{$pr}#{$c}alert #{$pr}#{$c}alert-#{$__second}">#{$pr}#{$c}alert_これはシステムからの注意文です。</p>
+<p class="#{$pr}#{$c}alert #{$pr}#{$c}alert-#{$__third}">#{$pr}#{$c}alert_これはシステムからの注意文です。</p>
+<p class="#{$pr}#{$c}alert #{$pr}#{$c}alert-#{$__fourth}">#{$pr}#{$c}alert_これはシステムからの注意文です。</p>
+<p class="#{$pr}#{$c}alert #{$pr}#{$c}alert-#{$__info}">#{$pr}#{$c}alert_これはシステムからの注意文です。</p>
+<p class="#{$pr}#{$c}alert #{$pr}#{$c}alert-#{$__important}">#{$pr}#{$c}alert_これはシステムからの注意文です。</p>
+
+<p class="#{$pr}#{$c}alert #{$pr}#{$c}alert-#{$__first}"><span class="#{$pr}#{$c}alert-header"><i class="fas fa-info-circle"></i><span class="#{$pr}#{$u}sr">お知らせ</span></span>#{$pr}#{$c}alert_これはシステムからの注意文です。</p>
+<p class="#{$pr}#{$c}alert #{$pr}#{$c}alert-#{$__second}"><span class="#{$pr}#{$c}alert-header"><i class="fas fa-info-circle"></i><span class="#{$pr}#{$u}sr">お知らせ</span></span>#{$pr}#{$c}alert_これはシステムからの注意文です。</p>
+<p class="#{$pr}#{$c}alert #{$pr}#{$c}alert-#{$__third}"><span class="#{$pr}#{$c}alert-header"><i class="fas fa-info-circle"></i><span class="#{$pr}#{$u}sr">お知らせ</span></span>#{$pr}#{$c}alert_これはシステムからの注意文です。</p>
+<p class="#{$pr}#{$c}alert #{$pr}#{$c}alert-#{$__fourth}"><span class="#{$pr}#{$c}alert-header"><i class="fas fa-info-circle"></i><span class="#{$pr}#{$u}sr">お知らせ</span></span>#{$pr}#{$c}alert_これはシステムからの注意文です。</p>
+<p class="#{$pr}#{$c}alert #{$pr}#{$c}alert-#{$__info}"><span class="#{$pr}#{$c}alert-header"><i class="fas fa-info-circle"></i><span class="#{$pr}#{$u}sr">お知らせ</span></span>#{$pr}#{$c}alert_これはシステムからの注意文です。</p>
+<p class="#{$pr}#{$c}alert #{$pr}#{$c}alert-#{$__important}"><span class="#{$pr}#{$c}alert-header"><i class="fas fa-info-circle"></i><span class="#{$pr}#{$u}sr">お知らせ</span></span>#{$pr}#{$c}alert_これはシステムからの注意文です。</p>
+
+<div class="#{$pr}#{$c}alert #{$pr}#{$c}alert-#{$__first}"><p>#{$pr}#{$c}alert_これはシステムからの注意文です。</p><span class="#{$pr}#{$c}alert-control"><i class="fas fa-times-circle"></i><span class="#{$pr}#{$u}sr">閉じる</span></span></div>
+<div class="#{$pr}#{$c}alert #{$pr}#{$c}alert-#{$__second}"><p>#{$pr}#{$c}alert_これはシステムからの注意文です。</p><span class="#{$pr}#{$c}alert-control"><i class="fas fa-times-circle"></i><span class="#{$pr}#{$u}sr">閉じる</span></span></div>
+<div class="#{$pr}#{$c}alert #{$pr}#{$c}alert-#{$__third}"><p>#{$pr}#{$c}alert_これはシステムからの注意文です。</p><span class="#{$pr}#{$c}alert-control"><i class="fas fa-times-circle"></i><span class="#{$pr}#{$u}sr">閉じる</span></span></div>
+<div class="#{$pr}#{$c}alert #{$pr}#{$c}alert-#{$__fourth}"><p>#{$pr}#{$c}alert_これはシステムからの注意文です。</p><span class="#{$pr}#{$c}alert-control"><i class="fas fa-times-circle"></i><span class="#{$pr}#{$u}sr">閉じる</span></span></div>
+<div class="#{$pr}#{$c}alert #{$pr}#{$c}alert-#{$__info}"><p>#{$pr}#{$c}alert_これはシステムからの注意文です。</p><span class="#{$pr}#{$c}alert-control"><i class="fas fa-times-circle"></i><span class="#{$pr}#{$u}sr">閉じる</span></span></div>
+<div class="#{$pr}#{$c}alert #{$pr}#{$c}alert-#{$__important}"><p>#{$pr}#{$c}alert_これはシステムからの注意文です。</p><span class="#{$pr}#{$c}alert-control"><i class="fas fa-times-circle"></i><span class="#{$pr}#{$u}sr">閉じる</span></span></div>
 ```
 
 */
