@@ -5036,7 +5036,7 @@ category: component-alert
   margin-right: 10px;
   text-align: left;
 }
-.c-alert-header [class*=fa-], .c-alert-header .icon {
+.c-alert-header [class*=fa-] {
   font-size: 1.25em;
 }
 
@@ -5046,7 +5046,7 @@ category: component-alert
   margin-left: 10px;
   text-align: right;
 }
-.c-alert-control [class*=fa-], .c-alert-control .icon {
+.c-alert-control [class*=fa-] {
   font-size: 1.25em;
 }
 
@@ -5573,7 +5573,7 @@ category: component-flip
     <div class="c-flip-container">
         <div class="c-flip-contents">
             <div class="c-flip-contents-inner">
-                <div class="bg-third bg-fade p-sm line-c">(other component)</div>
+                <div style="border: 1px solid #F68; padding: 10px;">(other component)</div>
             </div><!-- /.c-flip-contents-inner -->
         </div><!-- /.c-flip-contents -->
     </div><!-- /.c-flip-container -->
@@ -5634,7 +5634,7 @@ category: component-flip
     left: 0;
     top: 50%;
     width: 50%;
-    height: 90%;
+    height: 100%;
     transform: translate(0, -50%);
   }
 }
@@ -5665,7 +5665,7 @@ parent: flip
     <div class="c-flip-container">
         <div class="c-flip-contents">
             <div class="c-flip-contents-inner">
-                <div class="bg-third bg-fade p-sm line-c">(other component)</div>
+                <div style="border: 1px solid #F68; padding: 10px;">(other component)</div>
             </div><!-- /.c-flip-contents-inner -->
         </div><!-- /.c-flip-contents -->
     </div><!-- /.c-flip-container -->
@@ -5677,6 +5677,38 @@ parent: flip
     left: auto;
     right: 0;
   }
+}
+
+/*doc
+---
+title: c-flip-inverse
+name: flip-02-inverse
+category: component-flip
+parent: flip
+---
+
+コンテンツの色が反転する。  
+テキストリンク、ボタン等の色は反転前とは変わらないことに注意。
+
+``` example
+<div class="c-flip c-flip-reverse c-flip-inverse">
+    <div class="c-flip-cover" style="background-image: url(/images/_dummy/image_07.jpg)"></div>
+    <div class="c-flip-container">
+        <div class="c-flip-contents">
+            <div class="c-flip-contents-inner">
+                <div style="border: 1px solid #FF9; padding: 10px;">(other component)</div>
+            </div><!-- /.c-flip-contents-inner -->
+        </div><!-- /.c-flip-contents -->
+    </div><!-- /.c-flip-container -->
+</div><!-- /.c-flip -->
+```
+*/
+.c-flip-inverse .c-flip-cover {
+  background-color: #fff;
+}
+.c-flip-inverse .c-flip-contents {
+  color: #f2f2f2;
+  background-color: rgba(0, 0, 0, 0.85);
 }
 
 /*doc

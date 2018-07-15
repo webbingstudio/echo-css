@@ -15,7 +15,7 @@ category: component-flip
     <div class="#{$pr}#{$c}flip-container">
         <div class="#{$pr}#{$c}flip-contents">
             <div class="#{$pr}#{$c}flip-contents-inner">
-                <div class="#{$pr}#{$u}bg-third #{$pr}#{$u}bg-fade #{$pr}#{$u}p-sm #{$pr}#{$u}line-c">(other component)</div>
+                <div style="border: 1px solid #F68; padding: 10px;">(other component)</div>
             </div><!-- /.#{$pr}#{$c}flip-contents-inner -->
         </div><!-- /.#{$pr}#{$c}flip-contents -->
     </div><!-- /.#{$pr}#{$c}flip-container -->
@@ -34,7 +34,7 @@ category: component-flip
     .#{$pr}#{$c}flip-cover {
         width: 100%;
         height: 50vh;
-        background: #000 none no-repeat center center;
+        background: $body-inverse-bg none no-repeat center center;
         background-size: cover;
         z-index: 11;
 
@@ -67,7 +67,7 @@ category: component-flip
         display: table;
         width: 100%;
         position: relative;
-        background-color: rgba(255,255,255,.85);
+        background-color: rgba($body-bg, .85);
         z-index: 12;
 
         @include media-breakpoint-up(lg) {
@@ -75,7 +75,7 @@ category: component-flip
             left: 0;
             top: 50%;
             width: 50%;
-            height: 90%;
+            height: 100%;
             transform:translate(0, -50%);
         }
 
@@ -111,7 +111,7 @@ parent: flip
     <div class="#{$pr}#{$c}flip-container">
         <div class="#{$pr}#{$c}flip-contents">
             <div class="#{$pr}#{$c}flip-contents-inner">
-                <div class="#{$pr}#{$u}bg-third #{$pr}#{$u}bg-fade #{$pr}#{$u}p-sm #{$pr}#{$u}line-c">(other component)</div>
+                <div style="border: 1px solid #F68; padding: 10px;">(other component)</div>
             </div><!-- /.#{$pr}#{$c}flip-contents-inner -->
         </div><!-- /.#{$pr}#{$c}flip-contents -->
     </div><!-- /.#{$pr}#{$c}flip-container -->
@@ -128,6 +128,46 @@ parent: flip
             right: 0;
         }
 
+    }
+
+}
+
+
+
+/*doc
+---
+title: #{$pr}#{$c}flip-inverse
+name: flip-02-inverse
+category: component-flip
+parent: flip
+---
+
+コンテンツの色が反転する。  
+テキストリンク、ボタン等の色は反転前とは変わらないことに注意。
+
+``` example
+<div class="#{$pr}#{$c}flip #{$pr}#{$c}flip-reverse #{$pr}#{$c}flip-inverse">
+    <div class="#{$pr}#{$c}flip-cover" style="background-image: url(/images/_dummy/image_07.jpg)"></div>
+    <div class="#{$pr}#{$c}flip-container">
+        <div class="#{$pr}#{$c}flip-contents">
+            <div class="#{$pr}#{$c}flip-contents-inner">
+                <div style="border: 1px solid #FF9; padding: 10px;">(other component)</div>
+            </div><!-- /.#{$pr}#{$c}flip-contents-inner -->
+        </div><!-- /.#{$pr}#{$c}flip-contents -->
+    </div><!-- /.#{$pr}#{$c}flip-container -->
+</div><!-- /.#{$pr}#{$c}flip -->
+```
+*/
+
+.#{$pr}#{$c}flip-inverse {
+
+    .#{$pr}#{$c}flip-cover {
+        background-color: $body-bg;
+    }
+
+    .#{$pr}#{$c}flip-contents {
+        color: darken($body-inverse-color, 5%);
+        background-color: rgba($body-inverse-bg, .85);
     }
 
 }
