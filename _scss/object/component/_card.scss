@@ -7,13 +7,14 @@ category: component-card
 
 新着情報のエントリー繰り返し部分などに使用する、カード状のコンポーネントを表示する。  
 <code>.#{$pr}#{$m}tite</code>, <code>.#{$pr}#{$m}thumbnail</code>, <code>.#{$pr}#{$m}btn</code>を含む可能性がある。  
-<code>.#{$pr}#{$c}card-inner</code> はリンクを追加しない場合でも必須となる。
+<code>.#{$pr}#{$c}card-inner</code> はリンクを追加しない場合でも必須となる。  
+<code>utility > .#{$pr}#{$u}shadow</code>, <code>utility > .#{$pr}#{$u}border</code>, <code>utility > .#{$pr}#{$u}bg</code> でカードの境界を明らかにする必要がある。
 
 
 ``` example
 <div style="max-width: 320px; margin-bottom: 30px;">
 
-<div class="#{$pr}#{$c}card">
+<div class="#{$pr}#{$c}card #{$pr}#{$u}border">
     <div class="#{$pr}#{$c}card-inner">
         <div class="c-card-header">
             <h3 class="#{$pr}#{$m}title #{$pr}#{$m}title-05">カードの見出しです</h3>
@@ -40,7 +41,7 @@ category: component-card
 
 <div style="max-width: 320px; margin-bottom: 30px;">
 
-<div class="#{$pr}#{$c}card">
+<div class="#{$pr}#{$c}card #{$pr}#{$u}shadow">
     <a href="#" class="#{$pr}#{$c}card-inner">
         <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-ogimage">
             <picture>
@@ -56,7 +57,7 @@ category: component-card
         </div>
         <div class="#{$pr}#{$c}card-contents">
             <p>カード全体がリンク範囲となっています</p>
-            <span class="#{$pr}#{$m}btn #{$pr}#{$m}btn-gray #{$pr}#{$m}btn-outline #{$pr}#{$m}btn-block">ボタン</span>
+            <span class="#{$pr}#{$m}btn #{$pr}#{$m}btn-first #{$pr}#{$m}btn-outline #{$pr}#{$m}btn-block">ボタン</span>
         </div>
     </a>
 </div>
@@ -65,7 +66,7 @@ category: component-card
 
 <div style="max-width: 320px;">
 
-<div class="#{$pr}#{$c}card">
+<div class="#{$pr}#{$c}card #{$pr}#{$u}bg-#{$__first}">
     <div class="#{$pr}#{$c}card-inner">
         <a href="#" class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-ogimage">
             <picture>
@@ -81,7 +82,7 @@ category: component-card
         </a>
         <div class="#{$pr}#{$c}card-contents">
             <p>カードの画像とボタンがリンク範囲となっています</p>
-            <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-gray #{$pr}#{$m}btn-outline #{$pr}#{$m}btn-block">ボタン</a>
+            <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-inverse #{$pr}#{$m}btn-outline #{$pr}#{$m}btn-block">ボタン</a>
         </div>
     </div>
 </div>
@@ -94,7 +95,6 @@ category: component-card
 .#{$pr}#{$c}card {
     position: relative;
     background-color: $body-bg;
-    border: $border-card-width solid $border-color;
     color: $body-color;
 
     [class*="#{$pr}#{$g}col"] > & {
@@ -109,10 +109,10 @@ category: component-card
         &:hover,
         &:focus {
             color: $body-color;
-            text-decoration: underline;
+            text-decoration: none;
 
             img {
-                opacity: .7;
+                opacity: .8;
             }
 
         }

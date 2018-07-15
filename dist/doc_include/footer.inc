@@ -67,6 +67,7 @@
 					                    <li class="s-sitemap-item"><a href="./utility-line.html">line</a></li>
 					                    <li class="s-sitemap-item"><a href="./utility-img.html">img</a></li>
 					                    <li class="s-sitemap-item"><a href="./utility-bg.html">bg</a></li>
+					                    <li class="s-sitemap-item"><a href="./utility-border.html">border</a></li>
 					                    <li class="s-sitemap-item"><a href="./utility-shadow.html">shadow</a></li>
 					                    <li class="s-sitemap-item"><a href="./utility-hidden.html">hidden</a></li>
 					                    <li class="s-sitemap-item"><a href="./utility-float.html">float</a></li>

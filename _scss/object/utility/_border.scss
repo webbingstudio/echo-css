@@ -1,0 +1,166 @@
+@if ($disabled-utility-class != true) {
+
+/*doc
+---
+title: #{$pr}#{$u}border
+name: border
+category: utility-border
+---
+
+要素の周囲にボーダーを引く。ボーダー色は <code>\_config_basic.scss > $border-color</code> で指定した色となる。
+
+``` example
+<p class="#{$pr}#{$u}border">#{$pr}#{$u}border_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+```
+*/
+
+#{$u-wrap} {
+
+    .#{$pr}#{$u}border {
+        border: $border-width solid $border-color;
+    }
+
+}
+
+/*doc
+---
+title: #{$pr}#{$u}border-(color)
+name: border-01-color
+category: utility-border
+---
+
+ボーダー色を変更する。(color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
+
+``` example
+<p class="#{$pr}#{$u}border-#{$__gray}">#{$pr}#{$u}border-#{$__gray}_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$pr}#{$u}border-#{$__first}">#{$pr}#{$u}border-#{$__first}_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$pr}#{$u}border-#{$__second}">#{$pr}#{$u}border-#{$__second}_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$pr}#{$u}border-#{$__third}">#{$pr}#{$u}border-#{$__third}_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$pr}#{$u}border-#{$__fourth}">#{$pr}#{$u}border-#{$__fourth}_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$pr}#{$u}border-#{$__info}">#{$pr}#{$u}border-#{$__info}_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$pr}#{$u}border-#{$__important}">#{$pr}#{$u}border-#{$__important}_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+```
+*/
+
+
+/*doc
+---
+title: #{$pr}#{$u}border-mild
+name: border-02-mild
+category: utility-border
+parent: border-01-color
+---
+
+ボーダー色を弱める。 <code>.#{$pr}#{$u}border-(color)</code> と併用すると、指定した色を弱める。
+
+``` example
+<p class="#{$pr}#{$u}border-#{$__gray} border-mild">border-#{$__gray}_border-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$pr}#{$u}border-#{$__first} border-mild">border-#{$__first}_border-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$pr}#{$u}border-#{$__second} border-mild">border-#{$__second}_border-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$pr}#{$u}border-#{$__third} border-mild">border-#{$__third}_border-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$pr}#{$u}border-#{$__fourth} border-mild">border-#{$__fourth}_border-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$pr}#{$u}border-#{$__info} border-mild">border-#{$__info}_border-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$pr}#{$u}border-#{$__important} border-mild">border-#{$__important}_border-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+```
+*/
+
+#{$u-wrap} {
+
+    .#{$pr}#{$u}border-#{$__gray} {
+        border: $border-width solid $gray;
+
+        &.#{$pr}#{$u}border-mild {
+            border-color: $gray-mild;
+        }
+
+    }
+
+    .#{$pr}#{$u}border-#{$__first} {
+        border: $border-width solid $first;
+
+        &.#{$pr}#{$u}border-mild {
+            border-color: $first-mild;
+        }
+
+    }
+
+    .#{$pr}#{$u}border-#{$__second} {
+        border: $border-width solid $second;
+
+        &.#{$pr}#{$u}border-mild {
+            border-color: $second-mild;
+        }
+
+    }
+
+    .#{$pr}#{$u}border-#{$__third} {
+        border: $border-width solid $third;
+
+        &.#{$pr}#{$u}border-mild {
+            border-color: $third-mild;
+        }
+
+    }
+
+    .#{$pr}#{$u}border-#{$__fourth} {
+        border: $border-width solid $fourth;
+
+        &.#{$pr}#{$u}border-mild {
+            border-color: $fourth-mild;
+        }
+
+    }
+
+    .#{$pr}#{$u}border-#{$__info} {
+        border: $border-width solid $info;
+
+        &.#{$pr}#{$u}border-mild {
+            border-color: $info-mild;
+        }
+
+    }
+
+    .#{$pr}#{$u}border-#{$__important} {
+        border: $border-width solid $important;
+
+        &.#{$pr}#{$u}border-mild {
+            border-color: $important-mild;
+        }
+
+    }
+
+}
+
+
+/*doc
+---
+title: #{$pr}#{$u}border-#{$__inverse}
+name: border-03-inverse
+category: utility-border
+---
+
+ボーダー色を反転する。
+
+
+``` example
+<div class="#{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}p">
+    <p class="#{$pr}#{$u}border-#{$__inverse}">#{$pr}#{$u}border-#{$__inverse}_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+    <p class="#{$pr}#{$u}border-#{$__inverse} #{$pr}#{$u}border-mild">#{$pr}#{$u}border-#{$__inverse}_#{$pr}#{$u}border-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+</div>
+```
+*/
+
+#{$u-wrap} {
+
+    .#{$pr}#{$u}border-#{$__inverse} {
+        border: $border-width solid $body-inverse-color;
+
+        &.#{$pr}#{$u}border-mild {
+            border-color: $body-inverse-mild-color;
+        }
+
+    }
+
+}
+
+}

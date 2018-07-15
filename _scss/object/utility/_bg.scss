@@ -11,13 +11,13 @@ category: utility-bg
 (color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
 
 ``` example
-<div class="#{$pr}#{$u}m-b #{$pr}#{$u}p-sm #{$pr}#{$u}bg-#{$__gray}">bg-#{$__gray}</div>
-<div class="#{$pr}#{$u}m-b #{$pr}#{$u}p-sm #{$pr}#{$u}bg-#{$__first}">bg-#{$__first}</div>
-<div class="#{$pr}#{$u}m-b #{$pr}#{$u}p-sm #{$pr}#{$u}bg-#{$__second}">bg-#{$__second}</div>
-<div class="#{$pr}#{$u}m-b #{$pr}#{$u}p-sm #{$pr}#{$u}bg-#{$__third}">bg-#{$__third}</div>
-<div class="#{$pr}#{$u}m-b #{$pr}#{$u}p-sm #{$pr}#{$u}bg-#{$__fourth}">bg-#{$__fourth}</div>
-<div class="#{$pr}#{$u}m-b #{$pr}#{$u}p-sm #{$pr}#{$u}bg-#{$__info}">bg-#{$__info}</div>
-<div class="#{$pr}#{$u}m-b #{$pr}#{$u}p-sm #{$pr}#{$u}bg-#{$__important}">bg-#{$__important}</div>
+<div class="#{$pr}#{$u}bg-#{$__gray}">bg-#{$__gray}</div>
+<div class="#{$pr}#{$u}bg-#{$__first}">bg-#{$__first}</div>
+<div class="#{$pr}#{$u}bg-#{$__second}">bg-#{$__second}</div>
+<div class="#{$pr}#{$u}bg-#{$__third}">bg-#{$__third}</div>
+<div class="#{$pr}#{$u}bg-#{$__fourth}">bg-#{$__fourth}</div>
+<div class="#{$pr}#{$u}bg-#{$__info}">bg-#{$__info}</div>
+<div class="#{$pr}#{$u}bg-#{$__important}">bg-#{$__important}</div>
 ```
 
 */
@@ -27,18 +27,19 @@ category: utility-bg
 title: #{$pr}#{$u}bg-mild
 name: bg-02-mild
 category: utility-bg
+parent: bg-01-color
 ---
 
-.#{$pr}#{$u}bg-(color)と併用すると背景色を弱める。オブジェクト・コンポーネントを可能な限り上書きする。.#{$pr}#{$u}bgを付与する必要はない。
+.#{$pr}#{$u}bg-(color)と併用すると背景色を弱める。
 
 ``` example
-<div class="#{$pr}#{$u}m-b #{$pr}#{$u}p-sm #{$pr}#{$u}bg-#{$__gray} #{$pr}#{$u}bg-mild">bg-#{$__gray}</div>
-<div class="#{$pr}#{$u}m-b #{$pr}#{$u}p-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-mild">bg-#{$__first}</div>
-<div class="#{$pr}#{$u}m-b #{$pr}#{$u}p-sm #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-mild">bg-#{$__second}</div>
-<div class="#{$pr}#{$u}m-b #{$pr}#{$u}p-sm #{$pr}#{$u}bg-#{$__third} #{$pr}#{$u}bg-mild">bg-#{$__third}</div>
-<div class="#{$pr}#{$u}m-b #{$pr}#{$u}p-sm #{$pr}#{$u}bg-#{$__fourth} #{$pr}#{$u}bg-mild">bg-#{$__fourth}</div>
-<div class="#{$pr}#{$u}m-b #{$pr}#{$u}p-sm #{$pr}#{$u}bg-#{$__info} #{$pr}#{$u}bg-mild">bg-#{$__info}</div>
-<div class="#{$pr}#{$u}m-b #{$pr}#{$u}p-sm #{$pr}#{$u}bg-#{$__important} #{$pr}#{$u}bg-mild">bg-#{$__important}</div>
+<div class="#{$pr}#{$u}bg-#{$__gray} #{$pr}#{$u}bg-mild">bg-#{$__gray}</div>
+<div class="#{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-mild">bg-#{$__first}</div>
+<div class="#{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-mild">bg-#{$__second}</div>
+<div class="#{$pr}#{$u}bg-#{$__third} #{$pr}#{$u}bg-mild">bg-#{$__third}</div>
+<div class="#{$pr}#{$u}bg-#{$__fourth} #{$pr}#{$u}bg-mild">bg-#{$__fourth}</div>
+<div class="#{$pr}#{$u}bg-#{$__info} #{$pr}#{$u}bg-mild">bg-#{$__info}</div>
+<div class="#{$pr}#{$u}bg-#{$__important} #{$pr}#{$u}bg-mild">bg-#{$__important}</div>
 ```
 
 */
@@ -48,33 +49,19 @@ category: utility-bg
 title: #{$pr}#{$u}bg-fade
 name: bg-03-fade
 category: utility-bg
+parent: bg-01-color
 ---
 
-.#{$pr}#{$u}bg-(color)と併用すると背景色を薄くする。オブジェクト・コンポーネントを可能な限り上書きする。.#{$pr}#{$u}bgを付与する必要はない。
+.#{$pr}#{$u}bg-(color)と併用すると背景色を薄くする。
 
 ``` example
-<div class="#{$pr}#{$u}m-b #{$pr}#{$u}p-sm #{$pr}#{$u}bg-#{$__gray_light} #{$pr}#{$u}bg-fade">bg-#{$__gray_light}</div>
-<div class="#{$pr}#{$u}m-b #{$pr}#{$u}p-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade">bg-#{$__first}</div>
-<div class="#{$pr}#{$u}m-b #{$pr}#{$u}p-sm #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade">bg-#{$__second}</div>
-<div class="#{$pr}#{$u}m-b #{$pr}#{$u}p-sm #{$pr}#{$u}bg-#{$__third} #{$pr}#{$u}bg-fade">bg-#{$__third}</div>
-<div class="#{$pr}#{$u}m-b #{$pr}#{$u}p-sm #{$pr}#{$u}bg-#{$__fourth} #{$pr}#{$u}bg-fade">bg-#{$__fourth}</div>
-<div class="#{$pr}#{$u}m-b #{$pr}#{$u}p-sm #{$pr}#{$u}bg-#{$__info} #{$pr}#{$u}bg-fade">bg-#{$__info}</div>
-<div class="#{$pr}#{$u}m-b #{$pr}#{$u}p-sm #{$pr}#{$u}bg-#{$__important} #{$pr}#{$u}bg-fade">bg-#{$__important}</div>
-```
-
-*/
-
-/*doc
----
-title: #{$pr}#{$u}bg-#{$__inverse_bg}
-name: bg-04-inverse
-category: utility-bg
----
-
-文字色と背景色を反転する。オブジェクト・コンポーネントを可能な限り上書きする。.#{$pr}#{$u}bgを付与する必要はない。
-
-``` example
-<div class="#{$pr}#{$u}p-sm #{$pr}#{$u}bg-#{$__inverse_bg}">#{$pr}#{$u}bg-#{$__inverse_bg}</div>
+<div class="#{$pr}#{$u}bg-#{$__gray_light} #{$pr}#{$u}bg-fade">bg-#{$__gray_light}</div>
+<div class="#{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade">bg-#{$__first}</div>
+<div class="#{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade">bg-#{$__second}</div>
+<div class="#{$pr}#{$u}bg-#{$__third} #{$pr}#{$u}bg-fade">bg-#{$__third}</div>
+<div class="#{$pr}#{$u}bg-#{$__fourth} #{$pr}#{$u}bg-fade">bg-#{$__fourth}</div>
+<div class="#{$pr}#{$u}bg-#{$__info} #{$pr}#{$u}bg-fade">bg-#{$__info}</div>
+<div class="#{$pr}#{$u}bg-#{$__important} #{$pr}#{$u}bg-fade">bg-#{$__important}</div>
 ```
 
 */
@@ -235,20 +222,6 @@ category: utility-bg
 
         &.#{$pr}#{$u}bg-fade {
             background-color: $important-fade;
-        }
-
-    }
-
-    .#{$pr}#{$u}bg-#{$__inverse_bg} {
-        background-color: $body-inverse-bg;
-
-        &:not(.#{$pr}#{$u}bg-fade) {
-            color: $body-inverse-color;
-
-            & a:not([class]) {
-                color: $body-inverse-color;
-            }
-
         }
 
     }

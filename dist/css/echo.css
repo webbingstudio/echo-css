@@ -2142,7 +2142,7 @@ category: module-badge
   border-radius: 0 0 5px 5px;
   background: #fff;
   color: #333;
-  border: 1px solid #888;
+  border: 1px solid #ccc;
   font-size: .8em;
   font-family: "Helvetica", "Roboto", "-apple-system", "Open Sans", "Arial", sans-serif;
   font-weight: 300;
@@ -3255,7 +3255,7 @@ category: module-input
 .m-input {
   padding: .375rem .5rem;
   background: #fff none;
-  border: 1px solid #888;
+  border: 1px solid #ccc;
   color: #333;
   border-radius: 3px;
   vertical-align: middle;
@@ -4048,7 +4048,7 @@ category: module-select
   width: 100%;
   padding: .5em 3em .5em 1em;
   background-color: transparent;
-  border: 1px solid #888;
+  border: 1px solid #ccc;
   vertical-align: middle;
   border-radius: 5px;
   outline: none;
@@ -4212,19 +4212,19 @@ parent: table
 */
 .m-table-bordered {
   width: 100%;
-  border-top: 1px solid #888;
-  border-left: 1px solid #888;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
 }
 .m-table-bordered thead {
-  border-bottom: 2px solid #888;
+  border-bottom: 2px solid #ccc;
 }
 .m-table-bordered tfoot {
-  border-top: 2px solid #888;
+  border-top: 2px solid #ccc;
 }
 .m-table-bordered th,
 .m-table-bordered td {
-  border-bottom: 1px solid #888;
-  border-right: 1px solid #888;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
   padding: .5rem;
 }
 .m-table-bordered th:first-child,
@@ -4287,11 +4287,11 @@ parent: table
   width: 100%;
 }
 .m-table-ruled thead {
-  border-bottom: 2px solid #888;
+  border-bottom: 2px solid #ccc;
 }
 .m-table-ruled th,
 .m-table-ruled td {
-  border-bottom: 1px solid #888;
+  border-bottom: 1px solid #ccc;
   padding-top: 1rem;
   padding-bottom: .5rem;
 }
@@ -4640,8 +4640,8 @@ category: module-thumbnail
   overflow: hidden;
   position: relative;
   display: inline-block;
-  background: #fff;
-  border: 0 solid #888;
+  background: #000;
+  border: 0 solid #ccc;
   vertical-align: bottom;
 }
 .m-thumbnail img {
@@ -5012,7 +5012,7 @@ category: component-alert
   margin: 0 0 30px;
   padding: 10px;
   background-color: #eee;
-  border: 1px solid #888;
+  border: 1px solid #ccc;
   line-height: 1.5;
 }
 @media (min-width: 768px) {
@@ -5343,13 +5343,14 @@ category: component-card
 
 新着情報のエントリー繰り返し部分などに使用する、カード状のコンポーネントを表示する。  
 <code>.m-tite</code>, <code>.m-thumbnail</code>, <code>.m-btn</code>を含む可能性がある。  
-<code>.c-card-inner</code> はリンクを追加しない場合でも必須となる。
+<code>.c-card-inner</code> はリンクを追加しない場合でも必須となる。  
+<code>utility > .shadow</code>, <code>utility > .border</code>, <code>utility > .bg</code> でカードの境界を明らかにする必要がある。
 
 
 ``` example
 <div style="max-width: 320px; margin-bottom: 30px;">
 
-<div class="c-card">
+<div class="c-card border">
     <div class="c-card-inner">
         <div class="c-card-header">
             <h3 class="m-title m-title-05">カードの見出しです</h3>
@@ -5376,7 +5377,7 @@ category: component-card
 
 <div style="max-width: 320px; margin-bottom: 30px;">
 
-<div class="c-card">
+<div class="c-card shadow">
     <a href="#" class="c-card-inner">
         <div class="m-thumbnail m-thumbnail-ogimage">
             <picture>
@@ -5392,7 +5393,7 @@ category: component-card
         </div>
         <div class="c-card-contents">
             <p>カード全体がリンク範囲となっています</p>
-            <span class="m-btn m-btn-gray m-btn-outline m-btn-block">ボタン</span>
+            <span class="m-btn m-btn-first m-btn-outline m-btn-block">ボタン</span>
         </div>
     </a>
 </div>
@@ -5401,7 +5402,7 @@ category: component-card
 
 <div style="max-width: 320px;">
 
-<div class="c-card">
+<div class="c-card bg-first">
     <div class="c-card-inner">
         <a href="#" class="m-thumbnail m-thumbnail-ogimage">
             <picture>
@@ -5417,7 +5418,7 @@ category: component-card
         </a>
         <div class="c-card-contents">
             <p>カードの画像とボタンがリンク範囲となっています</p>
-            <a href="#" class="m-btn m-btn-gray m-btn-outline m-btn-block">ボタン</a>
+            <a href="#" class="m-btn m-btn-inverse m-btn-outline m-btn-block">ボタン</a>
         </div>
     </div>
 </div>
@@ -5429,7 +5430,6 @@ category: component-card
 .c-card {
   position: relative;
   background-color: #fff;
-  border: 1px solid #888;
   color: #333;
 }
 [class*="l-col"] > .c-card {
@@ -5442,10 +5442,10 @@ category: component-card
 }
 .c-card a:hover, .c-card a:focus {
   color: #333;
-  text-decoration: underline;
+  text-decoration: none;
 }
 .c-card a:hover img, .c-card a:focus img {
-  opacity: .7;
+  opacity: .8;
 }
 .c-card .c-card-inner {
   display: block;
@@ -6110,13 +6110,13 @@ category: utility-bg
 (color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
 
 ``` example
-<div class="m-b p-sm bg-gray">bg-gray</div>
-<div class="m-b p-sm bg-first">bg-first</div>
-<div class="m-b p-sm bg-second">bg-second</div>
-<div class="m-b p-sm bg-third">bg-third</div>
-<div class="m-b p-sm bg-fourth">bg-fourth</div>
-<div class="m-b p-sm bg-info">bg-info</div>
-<div class="m-b p-sm bg-important">bg-important</div>
+<div class="bg-gray">bg-gray</div>
+<div class="bg-first">bg-first</div>
+<div class="bg-second">bg-second</div>
+<div class="bg-third">bg-third</div>
+<div class="bg-fourth">bg-fourth</div>
+<div class="bg-info">bg-info</div>
+<div class="bg-important">bg-important</div>
 ```
 
 */
@@ -6125,18 +6125,19 @@ category: utility-bg
 title: bg-mild
 name: bg-02-mild
 category: utility-bg
+parent: bg-01-color
 ---
 
-.bg-(color)と併用すると背景色を弱める。オブジェクト・コンポーネントを可能な限り上書きする。.bgを付与する必要はない。
+.bg-(color)と併用すると背景色を弱める。
 
 ``` example
-<div class="m-b p-sm bg-gray bg-mild">bg-gray</div>
-<div class="m-b p-sm bg-first bg-mild">bg-first</div>
-<div class="m-b p-sm bg-second bg-mild">bg-second</div>
-<div class="m-b p-sm bg-third bg-mild">bg-third</div>
-<div class="m-b p-sm bg-fourth bg-mild">bg-fourth</div>
-<div class="m-b p-sm bg-info bg-mild">bg-info</div>
-<div class="m-b p-sm bg-important bg-mild">bg-important</div>
+<div class="bg-gray bg-mild">bg-gray</div>
+<div class="bg-first bg-mild">bg-first</div>
+<div class="bg-second bg-mild">bg-second</div>
+<div class="bg-third bg-mild">bg-third</div>
+<div class="bg-fourth bg-mild">bg-fourth</div>
+<div class="bg-info bg-mild">bg-info</div>
+<div class="bg-important bg-mild">bg-important</div>
 ```
 
 */
@@ -6145,32 +6146,19 @@ category: utility-bg
 title: bg-fade
 name: bg-03-fade
 category: utility-bg
+parent: bg-01-color
 ---
 
-.bg-(color)と併用すると背景色を薄くする。オブジェクト・コンポーネントを可能な限り上書きする。.bgを付与する必要はない。
+.bg-(color)と併用すると背景色を薄くする。
 
 ``` example
-<div class="m-b p-sm bg-gray bg-fade">bg-gray</div>
-<div class="m-b p-sm bg-first bg-fade">bg-first</div>
-<div class="m-b p-sm bg-second bg-fade">bg-second</div>
-<div class="m-b p-sm bg-third bg-fade">bg-third</div>
-<div class="m-b p-sm bg-fourth bg-fade">bg-fourth</div>
-<div class="m-b p-sm bg-info bg-fade">bg-info</div>
-<div class="m-b p-sm bg-important bg-fade">bg-important</div>
-```
-
-*/
-/*doc
----
-title: bg-inverse
-name: bg-04-inverse
-category: utility-bg
----
-
-文字色と背景色を反転する。オブジェクト・コンポーネントを可能な限り上書きする。.bgを付与する必要はない。
-
-``` example
-<div class="p-sm bg-inverse">bg-inverse</div>
+<div class="bg-gray bg-fade">bg-gray</div>
+<div class="bg-first bg-fade">bg-first</div>
+<div class="bg-second bg-fade">bg-second</div>
+<div class="bg-third bg-fade">bg-third</div>
+<div class="bg-fourth bg-fade">bg-fourth</div>
+<div class="bg-info bg-fade">bg-info</div>
+<div class="bg-important bg-fade">bg-important</div>
 ```
 
 */
@@ -6279,14 +6267,128 @@ category: utility-bg
 #document .bg-important.bg-fade {
   background-color: #ffe3e9;
 }
-#document .bg-inverse {
-  background-color: #000;
+
+/*doc
+---
+title: border
+name: border
+category: utility-border
+---
+
+要素の周囲にボーダーを引く。ボーダー色は <code>\_config_basic.scss > $border-color</code> で指定した色となる。
+
+``` example
+<p class="border">border_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+```
+*/
+#document .border {
+  border: 1px solid #ccc;
 }
-#document .bg-inverse:not(.bg-fade) {
-  color: #fff;
+
+/*doc
+---
+title: border-(color)
+name: border-01-color
+category: utility-border
+---
+
+ボーダー色を変更する。(color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
+
+``` example
+<p class="border-gray">border-gray_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="border-first">border-first_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="border-second">border-second_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="border-third">border-third_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="border-fourth">border-fourth_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="border-info">border-info_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="border-important">border-important_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+```
+*/
+/*doc
+---
+title: border-mild
+name: border-02-mild
+category: utility-border
+parent: border-01-color
+---
+
+ボーダー色を弱める。 <code>.border-(color)</code> と併用すると、指定した色を弱める。
+
+``` example
+<p class="border-gray border-mild">border-gray_border-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="border-first border-mild">border-first_border-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="border-second border-mild">border-second_border-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="border-third border-mild">border-third_border-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="border-fourth border-mild">border-fourth_border-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="border-info border-mild">border-info_border-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="border-important border-mild">border-important_border-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+```
+*/
+#document .border-gray {
+  border: 1px solid #333;
 }
-#document .bg-inverse:not(.bg-fade) a:not([class]) {
-  color: #fff;
+#document .border-gray.border-mild {
+  border-color: #888;
+}
+#document .border-first {
+  border: 1px solid #1976d2;
+}
+#document .border-first.border-mild {
+  border-color: #4690da;
+}
+#document .border-second {
+  border: 1px solid #3cade6;
+}
+#document .border-second.border-mild {
+  border-color: #6bb9ea;
+}
+#document .border-third {
+  border: 1px solid #49b070;
+}
+#document .border-third.border-mild {
+  border-color: #70b98c;
+}
+#document .border-fourth {
+  border: 1px solid #f38c10;
+}
+#document .border-fourth.border-mild {
+  border-color: #f0a346;
+}
+#document .border-info {
+  border: 1px solid #3cade6;
+}
+#document .border-info.border-mild {
+  border-color: #6bb9ea;
+}
+#document .border-important {
+  border: 1px solid #e33050;
+}
+#document .border-important.border-mild {
+  border-color: #eb758a;
+}
+
+/*doc
+---
+title: border-inverse
+name: border-03-inverse
+category: utility-border
+---
+
+ボーダー色を反転する。
+
+
+``` example
+<div class="bg-first p">
+    <p class="border-inverse">border-inverse_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+    <p class="border-inverse border-mild">border-inverse_border-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+</div>
+```
+*/
+#document .border-inverse {
+  border: 1px solid #fff;
+}
+#document .border-inverse.border-mild {
+  border-color: rgba(255, 255, 255, 0.5);
 }
 
 /*doc
@@ -7496,7 +7598,7 @@ category: utility-text
   color: #fff;
 }
 #document .text-inverse.text-mild {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 /*doc
@@ -8125,10 +8227,10 @@ category: wysiwyg
 .wysiwyg hr:not([class]) {
   overflow: hidden;
   margin: 30px 0;
-  height: #888;
+  height: #ccc;
   border-width: 1px 0 0;
   border-style: solid none none;
-  border-color: #888 transparent transparent;
+  border-color: #ccc transparent transparent;
 }
 .wysiwyg blockquote:not([class]) {
   overflow: hidden;
@@ -8146,7 +8248,7 @@ category: wysiwyg
   margin-bottom: 30px;
   border-width: 0 0 1px 1px;
   border-style: solid;
-  border-color: #888;
+  border-color: #ccc;
 }
 @media (min-width: 425px) {
   .wysiwyg table:not([class]) {
@@ -8167,7 +8269,7 @@ category: wysiwyg
 }
 .wysiwyg table:not([class]) tr {
   display: block;
-  border-bottom: 2px solid #888;
+  border-bottom: 2px solid #ccc;
 }
 @media (min-width: 425px) {
   .wysiwyg table:not([class]) tr {
@@ -8182,7 +8284,7 @@ category: wysiwyg
   padding: 5px 10px;
   border-width: 1px 1px 0 0;
   border-style: solid;
-  border-color: #888;
+  border-color: #ccc;
   line-height: 1.5;
   vertical-align: top;
 }
