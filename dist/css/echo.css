@@ -320,9 +320,7 @@ category: layout-document
 
 ``` example
 <div id="#document" class="l-document">
-    <div class="bg-first bg-fade p" style="white-space: nowrap">
-        吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。
-    </div>
+	<div style="background-color: rgba(255,160,160,.5); padding: 10px">(contents)</div>
 </div>
 ```
 */
@@ -3422,7 +3420,7 @@ parent: label
 }
 
 .m-label-first {
-  background-color: first;
+  background-color: #1976d2;
 }
 
 .m-label-second {
@@ -4989,7 +4987,7 @@ name: alert
 category: component-alert
 ---
 
-システム側の注意文を表示する。 <code>p</code> のみ、もしくは <code>div</code> と <code>p, ul</code> でマークアップすることもできる。  
+システム側の注意文を表示する。 <code>p</code> のみ、もしくは <code>div</code> と <code>p, ul</code> でマークアップすることができる。  
 連続して表示すると <code>.c-alert</code> 間の余白が**通常よりも狭くなる。**  
 下以外の余白は <code>utility > .m</code> 等で指定する。
 
@@ -5976,6 +5974,129 @@ category: component-form
   .c-form-submit-2col .m-btn:not(:last-child) {
     width: 240px;
   }
+}
+
+/*doc
+---
+title: c-headline
+name: headline
+category: component-headline
+---
+
+新着情報のエントリー繰り返し部分などに使用する、ヘッダとタイトルを併記したコンポーネントを表示する。  
+<code>article</code> と <code>div</code> 、もしくは <code>dl</code> と <code>dt, dd</code> でマークアップすることができる。  
+(breakpoint)が <code>sm</code> 以上でインライン表示となる。
+
+``` example
+
+<h3>article要素の場合</h3>
+
+<article class="c-headline">
+    <time class="c-headline-date" datetime="2017-08-01T09:00:00+09:00">2017年08月01日</time>
+    <p class="c-headline-category">
+        <a href="#" class="m-label m-label-first">カテゴリー</a>
+    </p>
+    <p class="c-headline-title m-title m-title-06"><a href="#">吾輩は猫である。名前はまだ無い。</a></p>
+</article>
+
+<article class="c-headline">
+    <time class="c-headline-date" datetime="2017-08-01T09:00:00+09:00">2017年08月01日</time>
+    <p class="c-headline-category">
+        <a href="#" class="m-label m-label-second">カテゴリー</a>
+    </p>
+    <p class="c-headline-title m-title m-title-06"><a href="#">どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</a></p>
+</article>
+
+<article class="c-headline">
+    <time class="c-headline-date" datetime="2017-08-01T09:00:00+09:00">2017年08月01日</time>
+    <p class="c-headline-category">
+        <a href="#" class="m-label m-label-third">カテゴリー</a>
+    </p>
+    <p class="c-headline-title m-title m-title-06"><a href="#">掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。</a></p>
+</article>
+
+<h3>dl要素の場合</h3>
+
+<dl class="c-headline">
+    <dt class="c-headline-date">2017年08月01日</dt>
+    <p class="c-headline-title m-title m-title-06"><a href="#">吾輩は猫である。名前はまだ無い。</a></p>
+</dl>
+
+<dl class="c-headline">
+    <dt class="c-headline-date">2017年08月01日</dt>
+    <p class="c-headline-title m-title m-title-06"><a href="#">どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</a></p>
+</dl>
+
+<dl class="c-headline">
+    <dt class="c-headline-date">2017年08月01日</dt>
+    <p class="c-headline-title m-title m-title-06"><a href="#">掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。</a></p>
+</dl>
+
+
+```
+*/
+.c-headline {
+  position: relative;
+  margin-bottom: 30px;
+}
+.c-headline:before, .c-headline:after {
+  content: "";
+  display: table;
+}
+.c-headline:after {
+  clear: both;
+}
+@media (min-width: 768px) {
+  .c-headline {
+    margin-bottom: 15px;
+  }
+}
+.c-headline > [class*="c-headline-"] {
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.c-headline-date {
+  float: left;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  font-weight: 300;
+}
+@media (min-width: 768px) {
+  .c-headline-date {
+    padding-bottom: 0;
+  }
+}
+
+.c-headline-category {
+  padding-bottom: 5px;
+}
+@media (min-width: 768px) {
+  .c-headline-category {
+    float: left;
+    padding-bottom: 0;
+    padding-right: 20px;
+  }
+}
+.c-headline-category .m-label {
+  min-width: 5rem;
+  padding-left: 0;
+  padding-right: 0;
+  margin-right: 0;
+}
+
+.c-headline-title {
+  font-weight: 300;
+}
+.c-headline-title a {
+  color: #333;
+  text-decoration: none;
+}
+.c-headline-title a:hover, .c-headline-title a:focus {
+  color: #4690da;
+  text-decoration: underline;
 }
 
 /*doc

@@ -1,86 +1,122 @@
 /*doc
 ---
-title: .headline
+title: #{$pr}#{$c}headline
 name: headline
-category: module_component
+category: component-headline
 ---
 
-新着情報のエントリー繰り返し部分などに使用する、日付とタイトルを並列したコンポーネントを表示する。  
-特定幅を下回るとタイトルがブロック要素となる。
+新着情報のエントリー繰り返し部分などに使用する、ヘッダとタイトルを併記したコンポーネントを表示する。  
+<code>article</code> と <code>div</code> 、もしくは <code>dl</code> と <code>dt, dd</code> でマークアップすることができる。  
+(breakpoint)が <code>sm</code> 以上でインライン表示となる。
 
+``` example
+
+<h3>article要素の場合</h3>
+
+<article class="#{$pr}#{$c}headline">
+    <time class="#{$pr}#{$c}headline-date" datetime="2017-08-01T09:00:00+09:00">2017年08月01日</time>
+    <p class="#{$pr}#{$c}headline-category">
+        <a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label-#{$__first}">カテゴリー</a>
+    </p>
+    <p class="#{$pr}#{$c}headline-title #{$pr}#{$m}title #{$pr}#{$m}title-06"><a href="#">吾輩は猫である。名前はまだ無い。</a></p>
+</article>
+
+<article class="#{$pr}#{$c}headline">
+    <time class="#{$pr}#{$c}headline-date" datetime="2017-08-01T09:00:00+09:00">2017年08月01日</time>
+    <p class="#{$pr}#{$c}headline-category">
+        <a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label-#{$__second}">カテゴリー</a>
+    </p>
+    <p class="#{$pr}#{$c}headline-title #{$pr}#{$m}title #{$pr}#{$m}title-06"><a href="#">どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</a></p>
+</article>
+
+<article class="#{$pr}#{$c}headline">
+    <time class="#{$pr}#{$c}headline-date" datetime="2017-08-01T09:00:00+09:00">2017年08月01日</time>
+    <p class="#{$pr}#{$c}headline-category">
+        <a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label-#{$__third}">カテゴリー</a>
+    </p>
+    <p class="#{$pr}#{$c}headline-title #{$pr}#{$m}title #{$pr}#{$m}title-06"><a href="#">掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。</a></p>
+</article>
+
+<h3>dl要素の場合</h3>
+
+<dl class="#{$pr}#{$c}headline">
+    <dt class="#{$pr}#{$c}headline-date">2017年08月01日</dt>
+    <p class="#{$pr}#{$c}headline-title #{$pr}#{$m}title #{$pr}#{$m}title-06"><a href="#">吾輩は猫である。名前はまだ無い。</a></p>
+</dl>
+
+<dl class="#{$pr}#{$c}headline">
+    <dt class="#{$pr}#{$c}headline-date">2017年08月01日</dt>
+    <p class="#{$pr}#{$c}headline-title #{$pr}#{$m}title #{$pr}#{$m}title-06"><a href="#">どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</a></p>
+</dl>
+
+<dl class="#{$pr}#{$c}headline">
+    <dt class="#{$pr}#{$c}headline-date">2017年08月01日</dt>
+    <p class="#{$pr}#{$c}headline-title #{$pr}#{$m}title #{$pr}#{$m}title-06"><a href="#">掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。</a></p>
+</dl>
+
+
+```
 */
 
-.headline {
+.#{$pr}#{$c}headline {
+    @include clearfix();
     position: relative;
-    margin-bottom: ($spacer * 1.5);
+    margin-bottom: ($spacer * 3);
 
     @include media-breakpoint-up(md) {
-        display: table;
+        margin-bottom: ($spacer * 1.5);
     }
 
-    .headline-date,
-    .headline-category,
-    .headline-title {
-        line-height: $line-height-sm;
-
-        @include media-breakpoint-up(md) {
-            vertical-align: middle;
-        }
-    }
-
-    .headline-date {
-        display: inline;
-        font-size: .8125rem;
-        padding-right: ($spacer * 1);
-
-        @include media-breakpoint-up(md) {
-            display: table-cell;
-            width: 1%;
-            padding-right: ($spacer * 2);
-            white-space: nowrap;
-        }
-
-    }
-
-    .headline-category {
-        display: inline;
-
-        @include media-breakpoint-up(md) {
-            display: table-cell;
-            width: 1%;
-            padding-right: ($spacer * 2);
-            white-space: nowrap;
-        }
-
-        .label {
-            min-width: 5.5rem;
-            margin-right: 0;
-        }
-
-    }
-
-    .headline-title {
+    & > [class*="#{$pr}#{$c}headline-"] {
         display: block;
+        overflow: hidden;
         margin: 0;
-        font-size: .8125rem;
-        font-family: $font-family-root;
-        font-weight: $font-weight-root;
+        line-height: $line-height-sm;
+    }
 
-        @include media-breakpoint-up(md) {
-            display: table-cell;
-            width: 99%;
-        }
+}
 
-        a {
-            color: $body-color;
-            text-decoration: none;
+.#{$pr}#{$c}headline-date {
+    float: left;
+    padding-bottom: ($spacer / 2);
+    padding-right: $spacer;
+    font-weight: $font-weight-root;
 
-            &:hover,
-            &:focus {
-                color: $link-hover-color;
-                text-decoration: underline;
-            }
+    @include media-breakpoint-up(md) {
+        padding-bottom: 0;
+    }
 
+}
+
+.#{$pr}#{$c}headline-category {
+    padding-bottom: ($spacer / 2);
+
+    @include media-breakpoint-up(md) {
+        float: left;
+        padding-bottom: 0;
+        padding-right: ($spacer * 2);
+    }
+
+    .#{$pr}#{$m}label {
+        min-width: 5rem;
+        padding-left: 0;
+        padding-right: 0;
+        margin-right: 0;
+    }
+
+}
+
+.#{$pr}#{$c}headline-title {
+    font-weight: $font-weight-root;
+
+    a {
+        color: $body-color;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            color: $link-hover-color;
+            text-decoration: underline;
         }
 
     }
