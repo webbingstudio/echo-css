@@ -17,7 +17,7 @@ category: component-dfn
 </div>
 
 <dl class="#{$pr}#{$c}dfn">
-    <dt class="#{$pr}#{$c}dfn-header">I'm a Cat</dt>
+    <dt class="#{$pr}#{$c}dfn-header #{$pr}#{$u}font-first">I'm a Cat</dt>
     <dd class="#{$pr}#{$c}dfn-contents">There is no name yet.<br>
     I have no idea where I was born.</dd>
 </dl>
@@ -32,10 +32,9 @@ category: component-dfn
     .#{$pr}#{$c}dfn-header {
         display: block;
         margin: 0;
-        padding-bottom: .25em;
-        font-family: $font-family-first;
-        font-weight: $font-weight-first;
-        font-size: $font-size-display-3;
+        padding-bottom: .5rem;
+        font-size: $font-size-display-2;
+        font-weight: $font-weight-root;
         line-height: $line-height-none;
         vertical-align: bottom;
         white-space: nowrap;
@@ -43,7 +42,7 @@ category: component-dfn
         @include media-breakpoint-up(sm) {
             display: table-cell;
             padding-bottom: 0;
-            padding-right: .4em;
+            padding-right: 1.5rem;
         }
 
     }
@@ -51,7 +50,7 @@ category: component-dfn
     .#{$pr}#{$c}dfn-contents {
         display: block;
         margin: 0;
-        font-size: $font-size-sm;
+        font-size: $font-size-md;
         line-height: $line-height-sm;
         vertical-align: bottom;
 
