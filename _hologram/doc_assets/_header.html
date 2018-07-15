@@ -13,15 +13,11 @@
 <div class="l-document" id="document">
 
     <header class="s-header">
-        <div class="s-container s-container-fluid">
+        <div class="s-header-brand">
+            <p class="s-title s-header-title"><img src="../images/common/logo_white.svg" height="24" alt="<%= @config['styleguide_name'] %>"> <span class="s-label">v<%= @config['styleguide_version'] %></span></p>
+        </div><!-- /.s-header-brand -->
 
-            <div class="s-header-brand">
-                <p class="s-header-title title title-03"><%= @config['styleguide_name'] %> <span class="label label-info">v<%= @config['styleguide_version'] %></span></p>
-            </div><!-- /.s-header-brand -->
-
-            <?php include('../doc_include/header_nav.inc'); ?>
-
-        </div><!-- /.s-container -->
+        <?php include('../doc_include/header_nav.inc'); ?>
     </header>
 
     <div class="s-container s-container-fluid">
@@ -29,20 +25,20 @@
             <main class="s-contents-main" role="main">
 
                 <% if title %>
-                <div class="s-page-header page-header">
-                    <h1 class="page-title title s-title-01"><%= title %></h1>
-                </div><!-- /.page-header -->
+                <div class="s-pageheader">
+                    <h1 class="s-title s-pageheader-title"><%= title %></h1>
+                </div><!-- /.s-pageheader -->
                 <% end %>
 
                 <% if @blocks.length > 1 then %>
                 <nav class="s-anchor">
-                    <ul class="list list-horizontal">
+                    <ul class="s-anchor-list">
                         <% @blocks.each do |block| %>
-                        <li class="list-item"><a href="#<%= block[:name] %>" class="js-scrollto"><%= block[:title] %></a></li>
+                        <li class="s-anchor-item"><a href="#<%= block[:name] %>" class="js-scrollto"><%= block[:title] %></a></li>
                         <% end %>
                     </ul>
                 </nav>
                 <% end %>
 
-                <article class="s-post post">
-                    <div class="post-contents styleguide-contents">
+                <article class="s-post">
+                    <div class="s-post-contents styleguide-contents">

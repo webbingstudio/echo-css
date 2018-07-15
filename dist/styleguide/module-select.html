@@ -13,15 +13,11 @@
 <div class="l-document" id="document">
 
     <header class="s-header">
-        <div class="s-container s-container-fluid">
+        <div class="s-header-brand">
+            <p class="s-title s-header-title"><img src="../images/common/logo_white.svg" height="24" alt="echo-css"> <span class="s-label">v0.6.0</span></p>
+        </div><!-- /.s-header-brand -->
 
-            <div class="s-header-brand">
-                <p class="s-header-title title title-03">echo-css <span class="label label-info">v0.6.0</span></p>
-            </div><!-- /.s-header-brand -->
-
-            <?php include('../doc_include/header_nav.inc'); ?>
-
-        </div><!-- /.s-container -->
+        <?php include('../doc_include/header_nav.inc'); ?>
     </header>
 
     <div class="s-container s-container-fluid">
@@ -29,25 +25,25 @@
             <main class="s-contents-main" role="main">
 
                 
-                <div class="s-page-header page-header">
-                    <h1 class="page-title title s-title-01">module-select</h1>
-                </div><!-- /.page-header -->
+                <div class="s-pageheader">
+                    <h1 class="s-title s-pageheader-title">module-select</h1>
+                </div><!-- /.s-pageheader -->
                 
 
                 
                 <nav class="s-anchor">
-                    <ul class="list list-horizontal">
+                    <ul class="s-anchor-list">
                         
-                        <li class="list-item"><a href="#select" class="js-scrollto">m-select</a></li>
+                        <li class="s-anchor-item"><a href="#select" class="js-scrollto">m-select</a></li>
                         
-                        <li class="list-item"><a href="#select-01-size" class="js-scrollto">m-select-(size)</a></li>
+                        <li class="s-anchor-item"><a href="#select-01-size" class="js-scrollto">m-select-(size)</a></li>
                         
                     </ul>
                 </nav>
                 
 
-                <article class="s-post post">
-                    <div class="post-contents styleguide-contents"><h1 id="select" class="styleguide">m-select</h1>
+                <article class="s-post">
+                    <div class="s-post-contents styleguide-contents"><h1 id="select" class="styleguide">m-select</h1>
 
 <p>セレクトボックスをインライン表示する。select要素ではなく、包括している要素にクラスを付与する。<br>
 余白・レイアウト等は <code>utility &gt; .p</code> や <code>component &gt; .c-form</code> で指定する。<br>
@@ -131,21 +127,4 @@
     <span class="nt">&lt;/select&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-</pre></div>                    </div><!-- /.post-contents -->
-                </article><!-- /.post -->
-
-            </main>
-            <div class="s-contents-sub" role="complementary">
-                <h2 class="title title-04 m-b">Style guide</h2>
-                <nav class="s-sitemap nav nav-vertical">
-                    <?php include('../doc_include/menu_styleguide.inc'); ?>
-                </nav>
-            </div>
-        </div><!-- /.s-contents -->
-    </div><!-- /.s-container -->
-
-    <?php include('../doc_include/footer.inc'); ?>
-
-</div><!-- /.l-document -->
-</body>
-</html>
+</pre></div><?php include('../doc_include/footer.inc'); ?>

@@ -13,15 +13,11 @@
 <div class="l-document" id="document">
 
     <header class="s-header">
-        <div class="s-container s-container-fluid">
+        <div class="s-header-brand">
+            <p class="s-title s-header-title"><img src="../images/common/logo_white.svg" height="24" alt="echo-css"> <span class="s-label">v0.6.0</span></p>
+        </div><!-- /.s-header-brand -->
 
-            <div class="s-header-brand">
-                <p class="s-header-title title title-03">echo-css <span class="label label-info">v0.6.0</span></p>
-            </div><!-- /.s-header-brand -->
-
-            <?php include('../doc_include/header_nav.inc'); ?>
-
-        </div><!-- /.s-container -->
+        <?php include('../doc_include/header_nav.inc'); ?>
     </header>
 
     <div class="s-container s-container-fluid">
@@ -29,31 +25,31 @@
             <main class="s-contents-main" role="main">
 
                 
-                <div class="s-page-header page-header">
-                    <h1 class="page-title title s-title-01">module-thumbnail</h1>
-                </div><!-- /.page-header -->
+                <div class="s-pageheader">
+                    <h1 class="s-title s-pageheader-title">module-thumbnail</h1>
+                </div><!-- /.s-pageheader -->
                 
 
                 
                 <nav class="s-anchor">
-                    <ul class="list list-horizontal">
+                    <ul class="s-anchor-list">
                         
-                        <li class="list-item"><a href="#thumbnail" class="js-scrollto">m-thumbnail</a></li>
+                        <li class="s-anchor-item"><a href="#thumbnail" class="js-scrollto">m-thumbnail</a></li>
                         
-                        <li class="list-item"><a href="#thumbnail-01-round" class="js-scrollto">m-thumbnail-round</a></li>
+                        <li class="s-anchor-item"><a href="#thumbnail-01-round" class="js-scrollto">m-thumbnail-round</a></li>
                         
-                        <li class="list-item"><a href="#thumbnail-02-square" class="js-scrollto">m-thumbnail-square</a></li>
+                        <li class="s-anchor-item"><a href="#thumbnail-02-square" class="js-scrollto">m-thumbnail-square</a></li>
                         
-                        <li class="list-item"><a href="#thumbnail-03-ratio" class="js-scrollto">m-thumbnail-(ratio-x)to(ratio-y)</a></li>
+                        <li class="s-anchor-item"><a href="#thumbnail-03-ratio" class="js-scrollto">m-thumbnail-(ratio-x)to(ratio-y)</a></li>
                         
-                        <li class="list-item"><a href="#thumbnail-04-vertical" class="js-scrollto">m-thumbnail-vertical</a></li>
+                        <li class="s-anchor-item"><a href="#thumbnail-04-vertical" class="js-scrollto">m-thumbnail-vertical</a></li>
                         
                     </ul>
                 </nav>
                 
 
-                <article class="s-post post">
-                    <div class="post-contents styleguide-contents"><h1 id="thumbnail" class="styleguide">m-thumbnail</h1>
+                <article class="s-post">
+                    <div class="s-post-contents styleguide-contents"><h1 id="thumbnail" class="styleguide">m-thumbnail</h1>
 
 <p>一覧ページ、記事中で縮小された画像を表示する。要素自体ではなく、包括している要素にクラスを付与する。<br>
 このクラス単独ではそのままのサイズと縦横比で表示する。幅が制限されていると、そのサイズを超えないよう画像が縮小される。</p>
@@ -509,21 +505,4 @@
 <span class="nt">&lt;/div&gt;</span>
 
 <span class="nt">&lt;/div&gt;</span>
-</pre></div>                    </div><!-- /.post-contents -->
-                </article><!-- /.post -->
-
-            </main>
-            <div class="s-contents-sub" role="complementary">
-                <h2 class="title title-04 m-b">Style guide</h2>
-                <nav class="s-sitemap nav nav-vertical">
-                    <?php include('../doc_include/menu_styleguide.inc'); ?>
-                </nav>
-            </div>
-        </div><!-- /.s-contents -->
-    </div><!-- /.s-container -->
-
-    <?php include('../doc_include/footer.inc'); ?>
-
-</div><!-- /.l-document -->
-</body>
-</html>
+</pre></div><?php include('../doc_include/footer.inc'); ?>

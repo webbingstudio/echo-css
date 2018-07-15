@@ -13,15 +13,11 @@
 <div class="l-document" id="document">
 
     <header class="s-header">
-        <div class="s-container s-container-fluid">
+        <div class="s-header-brand">
+            <p class="s-title s-header-title"><img src="../images/common/logo_white.svg" height="24" alt="echo-css"> <span class="s-label">v0.6.0</span></p>
+        </div><!-- /.s-header-brand -->
 
-            <div class="s-header-brand">
-                <p class="s-header-title title title-03">echo-css <span class="label label-info">v0.6.0</span></p>
-            </div><!-- /.s-header-brand -->
-
-            <?php include('../doc_include/header_nav.inc'); ?>
-
-        </div><!-- /.s-container -->
+        <?php include('../doc_include/header_nav.inc'); ?>
     </header>
 
     <div class="s-container s-container-fluid">
@@ -29,29 +25,29 @@
             <main class="s-contents-main" role="main">
 
                 
-                <div class="s-page-header page-header">
-                    <h1 class="page-title title s-title-01">utility-bg</h1>
-                </div><!-- /.page-header -->
+                <div class="s-pageheader">
+                    <h1 class="s-title s-pageheader-title">utility-bg</h1>
+                </div><!-- /.s-pageheader -->
                 
 
                 
                 <nav class="s-anchor">
-                    <ul class="list list-horizontal">
+                    <ul class="s-anchor-list">
                         
-                        <li class="list-item"><a href="#bg-01-color" class="js-scrollto">bg-(color)</a></li>
+                        <li class="s-anchor-item"><a href="#bg-01-color" class="js-scrollto">bg-(color)</a></li>
                         
-                        <li class="list-item"><a href="#bg-02-mild" class="js-scrollto">bg-mild</a></li>
+                        <li class="s-anchor-item"><a href="#bg-02-mild" class="js-scrollto">bg-mild</a></li>
                         
-                        <li class="list-item"><a href="#bg-03-fade" class="js-scrollto">bg-fade</a></li>
+                        <li class="s-anchor-item"><a href="#bg-03-fade" class="js-scrollto">bg-fade</a></li>
                         
-                        <li class="list-item"><a href="#bg-04-inverse" class="js-scrollto">bg-inverse</a></li>
+                        <li class="s-anchor-item"><a href="#bg-04-inverse" class="js-scrollto">bg-inverse</a></li>
                         
                     </ul>
                 </nav>
                 
 
-                <article class="s-post post">
-                    <div class="post-contents styleguide-contents"><h1 id="bg-01-color" class="styleguide">bg-(color)</h1>
+                <article class="s-post">
+                    <div class="s-post-contents styleguide-contents"><h1 id="bg-01-color" class="styleguide">bg-(color)</h1>
 
 <p>背景に色をつける。オブジェクト・コンポーネントを可能な限り上書きする。<br>
 (color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。</p>
@@ -111,21 +107,4 @@
 <p>文字色と背景色を反転する。オブジェクト・コンポーネントを可能な限り上書きする。.bgを付与する必要はない。</p>
 <div class="example"><div class="p-sm bg-inverse">bg-inverse</div>
 </div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-sm bg-inverse"</span><span class="nt">&gt;</span>bg-inverse<span class="nt">&lt;/div&gt;</span>
-</pre></div>                    </div><!-- /.post-contents -->
-                </article><!-- /.post -->
-
-            </main>
-            <div class="s-contents-sub" role="complementary">
-                <h2 class="title title-04 m-b">Style guide</h2>
-                <nav class="s-sitemap nav nav-vertical">
-                    <?php include('../doc_include/menu_styleguide.inc'); ?>
-                </nav>
-            </div>
-        </div><!-- /.s-contents -->
-    </div><!-- /.s-container -->
-
-    <?php include('../doc_include/footer.inc'); ?>
-
-</div><!-- /.l-document -->
-</body>
-</html>
+</pre></div><?php include('../doc_include/footer.inc'); ?>
