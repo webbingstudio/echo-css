@@ -8,13 +8,12 @@ category: component-card
 新着情報のエントリー繰り返し部分などに使用する、カード状のコンポーネントを表示する。  
 <code>.#{$pr}#{$m}tite</code>, <code>.#{$pr}#{$m}thumbnail</code>, <code>.#{$pr}#{$m}btn</code>を含む可能性がある。  
 <code>.#{$pr}#{$c}card-inner</code> はリンクを追加しない場合でも必須となる。  
-<code>utility > .#{$pr}#{$u}shadow</code>, <code>utility > .#{$pr}#{$u}border</code>, <code>utility > .#{$pr}#{$u}bg</code> でカードの境界を明らかにする必要がある。
+カードの境界は指定されていないため、<code>utility > .#{$pr}#{$u}shadow</code>, <code>utility > .#{$pr}#{$u}border</code> 等で調整すること。
 
 
 ``` example
-<div style="max-width: 320px; margin-bottom: 30px;">
 
-<div class="#{$pr}#{$c}card #{$pr}#{$u}border">
+<div class="#{$pr}#{$c}card">
     <div class="#{$pr}#{$c}card-inner">
         <div class="c-card-header">
             <h3 class="#{$pr}#{$m}title #{$pr}#{$m}title-05">カードの見出しです</h3>
@@ -23,7 +22,7 @@ category: component-card
             <picture>
             <source
                 media="(max-width:640px)"
-                srcset="/images/_dummy/image_01_s.jpg?text=small_image 640w"
+                srcset="/images/_dummy/image_01_s.jpg 640w"
                 sizes="100vw">
             <source
                 srcset="/images/_dummy/image_01.jpg 1280w"
@@ -32,39 +31,76 @@ category: component-card
             </picture>
         </div>
         <div class="#{$pr}#{$c}card-contents">
-            <p class="#{$pr}#{$c}card-body">カードの本文ですカードの本文ですカードの本文ですカードの本文ですカードの本文です</p>
+            <p class="#{$pr}#{$c}card-body">カードの本文ですカードの本文ですカードの本文ですカードの本文ですカードの本文ですカードの本文ですカードの本文です</p>
         </div>
     </div>
 </div>
 
-</div>
-
-<div style="max-width: 320px; margin-bottom: 30px;">
-
-<div class="#{$pr}#{$c}card #{$pr}#{$u}shadow">
-    <a href="#" class="#{$pr}#{$c}card-inner">
-        <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-ogimage">
-            <picture>
-            <source
-                media="(max-width:640px)"
-                srcset="/images/_dummy/image_02_s.jpg 640w"
-                sizes="100vw">
-            <source
-                srcset="/images/_dummy/image_02.jpg 1280w"
-                sizes="(max-width:1280px) 100vw, 1280px">
-            <img alt="" src="/images/_dummy/image_02.jpg">
-            </picture>
+<div class="#{$pr}#{$g}row #{$pr}#{$u}m-y-lg">
+    <div class="#{$pr}#{$g}col-8 #{$pr}#{$g}col-md-4 #{$pr}#{$g}col-xl-3 #{$pr}#{$u}p-b">
+        <div class="#{$pr}#{$c}card #{$pr}#{$u}shadow">
+            <a href="#" class="#{$pr}#{$c}card-inner">
+                <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-ogimage">
+                    <picture>
+                    <source
+                        media="(max-width:640px)"
+                        srcset="/images/_dummy/image_02_s.jpg 640w"
+                        sizes="100vw">
+                    <source
+                        srcset="/images/_dummy/image_02.jpg 1280w"
+                        sizes="(max-width:1280px) 100vw, 1280px">
+                    <img alt="" src="/images/_dummy/image_02.jpg">
+                    </picture>
+                </div>
+                <div class="#{$pr}#{$c}card-contents">
+                    <p>カード全体がリンク範囲となっています</p>
+                </div>
+            </a>
         </div>
-        <div class="#{$pr}#{$c}card-contents">
-            <p>カード全体がリンク範囲となっています</p>
-            <span class="#{$pr}#{$m}btn #{$pr}#{$m}btn-first #{$pr}#{$m}btn-outline #{$pr}#{$m}btn-block">ボタン</span>
+    </div>
+    <div class="#{$pr}#{$g}col-8 #{$pr}#{$g}col-md-4 #{$pr}#{$g}col-xl-3 #{$pr}#{$u}p-b">
+        <div class="#{$pr}#{$c}card #{$pr}#{$u}shadow">
+            <a href="#" class="#{$pr}#{$c}card-inner">
+                <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-ogimage">
+                    <picture>
+                    <source
+                        media="(max-width:640px)"
+                        srcset="/images/_dummy/image_02_s.jpg 640w"
+                        sizes="100vw">
+                    <source
+                        srcset="/images/_dummy/image_02.jpg 1280w"
+                        sizes="(max-width:1280px) 100vw, 1280px">
+                    <img alt="" src="/images/_dummy/image_02.jpg">
+                    </picture>
+                </div>
+                <div class="#{$pr}#{$c}card-contents">
+                    <p>#{$pr}#{$g}row, #{$pr}#{$g}col を併用しました</p>
+                </div>
+            </a>
         </div>
-    </a>
+    </div>
+    <div class="#{$pr}#{$g}col-8 #{$pr}#{$g}col-md-4 #{$pr}#{$g}col-xl-3 #{$pr}#{$u}p-b">
+        <div class="#{$pr}#{$c}card #{$pr}#{$u}shadow">
+            <a href="#" class="#{$pr}#{$c}card-inner">
+                <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-ogimage">
+                    <picture>
+                    <source
+                        media="(max-width:640px)"
+                        srcset="/images/_dummy/image_02_s.jpg 640w"
+                        sizes="100vw">
+                    <source
+                        srcset="/images/_dummy/image_02.jpg 1280w"
+                        sizes="(max-width:1280px) 100vw, 1280px">
+                    <img alt="" src="/images/_dummy/image_02.jpg">
+                    </picture>
+                </div>
+                <div class="#{$pr}#{$c}card-contents">
+                    <p>グリッド内に配置した場合はmax-widthが解除されます</p>
+                </div>
+            </a>
+        </div>
+    </div>
 </div>
-
-</div>
-
-<div style="max-width: 320px;">
 
 <div class="#{$pr}#{$c}card #{$pr}#{$u}bg-#{$__first}">
     <div class="#{$pr}#{$c}card-inner">
@@ -86,18 +122,18 @@ category: component-card
         </div>
     </div>
 </div>
-
-</div>
 ```
 
 */
 
 .#{$pr}#{$c}card {
     position: relative;
+    max-width: 320px;
     background-color: $body-bg;
     color: $body-color;
 
     [class*="#{$pr}#{$g}col"] > & {
+        max-width: none;
         height: 100%;
     }
 

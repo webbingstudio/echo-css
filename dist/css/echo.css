@@ -5344,13 +5344,12 @@ category: component-card
 新着情報のエントリー繰り返し部分などに使用する、カード状のコンポーネントを表示する。  
 <code>.m-tite</code>, <code>.m-thumbnail</code>, <code>.m-btn</code>を含む可能性がある。  
 <code>.c-card-inner</code> はリンクを追加しない場合でも必須となる。  
-<code>utility > .shadow</code>, <code>utility > .border</code>, <code>utility > .bg</code> でカードの境界を明らかにする必要がある。
+カードの境界は指定されていないため、<code>utility > .shadow</code>, <code>utility > .border</code> 等で調整すること。
 
 
 ``` example
-<div style="max-width: 320px; margin-bottom: 30px;">
 
-<div class="c-card border">
+<div class="c-card">
     <div class="c-card-inner">
         <div class="c-card-header">
             <h3 class="m-title m-title-05">カードの見出しです</h3>
@@ -5359,7 +5358,7 @@ category: component-card
             <picture>
             <source
                 media="(max-width:640px)"
-                srcset="/images/_dummy/image_01_s.jpg?text=small_image 640w"
+                srcset="/images/_dummy/image_01_s.jpg 640w"
                 sizes="100vw">
             <source
                 srcset="/images/_dummy/image_01.jpg 1280w"
@@ -5368,39 +5367,76 @@ category: component-card
             </picture>
         </div>
         <div class="c-card-contents">
-            <p class="c-card-body">カードの本文ですカードの本文ですカードの本文ですカードの本文ですカードの本文です</p>
+            <p class="c-card-body">カードの本文ですカードの本文ですカードの本文ですカードの本文ですカードの本文ですカードの本文ですカードの本文です</p>
         </div>
     </div>
 </div>
 
-</div>
-
-<div style="max-width: 320px; margin-bottom: 30px;">
-
-<div class="c-card shadow">
-    <a href="#" class="c-card-inner">
-        <div class="m-thumbnail m-thumbnail-ogimage">
-            <picture>
-            <source
-                media="(max-width:640px)"
-                srcset="/images/_dummy/image_02_s.jpg 640w"
-                sizes="100vw">
-            <source
-                srcset="/images/_dummy/image_02.jpg 1280w"
-                sizes="(max-width:1280px) 100vw, 1280px">
-            <img alt="" src="/images/_dummy/image_02.jpg">
-            </picture>
+<div class="l-row m-y-lg">
+    <div class="l-col-8 l-col-md-4 l-col-xl-3 p-b">
+        <div class="c-card shadow">
+            <a href="#" class="c-card-inner">
+                <div class="m-thumbnail m-thumbnail-ogimage">
+                    <picture>
+                    <source
+                        media="(max-width:640px)"
+                        srcset="/images/_dummy/image_02_s.jpg 640w"
+                        sizes="100vw">
+                    <source
+                        srcset="/images/_dummy/image_02.jpg 1280w"
+                        sizes="(max-width:1280px) 100vw, 1280px">
+                    <img alt="" src="/images/_dummy/image_02.jpg">
+                    </picture>
+                </div>
+                <div class="c-card-contents">
+                    <p>カード全体がリンク範囲となっています</p>
+                </div>
+            </a>
         </div>
-        <div class="c-card-contents">
-            <p>カード全体がリンク範囲となっています</p>
-            <span class="m-btn m-btn-first m-btn-outline m-btn-block">ボタン</span>
+    </div>
+    <div class="l-col-8 l-col-md-4 l-col-xl-3 p-b">
+        <div class="c-card shadow">
+            <a href="#" class="c-card-inner">
+                <div class="m-thumbnail m-thumbnail-ogimage">
+                    <picture>
+                    <source
+                        media="(max-width:640px)"
+                        srcset="/images/_dummy/image_02_s.jpg 640w"
+                        sizes="100vw">
+                    <source
+                        srcset="/images/_dummy/image_02.jpg 1280w"
+                        sizes="(max-width:1280px) 100vw, 1280px">
+                    <img alt="" src="/images/_dummy/image_02.jpg">
+                    </picture>
+                </div>
+                <div class="c-card-contents">
+                    <p>l-row, l-col を併用しました</p>
+                </div>
+            </a>
         </div>
-    </a>
+    </div>
+    <div class="l-col-8 l-col-md-4 l-col-xl-3 p-b">
+        <div class="c-card shadow">
+            <a href="#" class="c-card-inner">
+                <div class="m-thumbnail m-thumbnail-ogimage">
+                    <picture>
+                    <source
+                        media="(max-width:640px)"
+                        srcset="/images/_dummy/image_02_s.jpg 640w"
+                        sizes="100vw">
+                    <source
+                        srcset="/images/_dummy/image_02.jpg 1280w"
+                        sizes="(max-width:1280px) 100vw, 1280px">
+                    <img alt="" src="/images/_dummy/image_02.jpg">
+                    </picture>
+                </div>
+                <div class="c-card-contents">
+                    <p>グリッド内に配置した場合はmax-widthが解除されます</p>
+                </div>
+            </a>
+        </div>
+    </div>
 </div>
-
-</div>
-
-<div style="max-width: 320px;">
 
 <div class="c-card bg-first">
     <div class="c-card-inner">
@@ -5422,17 +5458,17 @@ category: component-card
         </div>
     </div>
 </div>
-
-</div>
 ```
 
 */
 .c-card {
   position: relative;
+  max-width: 320px;
   background-color: #fff;
   color: #333;
 }
 [class*="l-col"] > .c-card {
+  max-width: none;
   height: 100%;
 }
 .c-card a {

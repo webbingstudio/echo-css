@@ -38,10 +38,9 @@
 <p>新着情報のエントリー繰り返し部分などに使用する、カード状のコンポーネントを表示する。<br>
 <code>.m-tite</code>, <code>.m-thumbnail</code>, <code>.m-btn</code>を含む可能性がある。<br>
 <code>.c-card-inner</code> はリンクを追加しない場合でも必須となる。<br>
-<code>utility &gt; .shadow</code>, <code>utility &gt; .border</code>, <code>utility &gt; .bg</code> でカードの境界を明らかにする必要がある。</p>
-<div class="example"><div style="max-width: 320px; margin-bottom: 30px;">
-
-<div class="c-card border">
+カードの境界は指定されていないため、<code>utility &gt; .shadow</code>, <code>utility &gt; .border</code> 等で調整すること。</p>
+<div class="example">
+<div class="c-card">
     <div class="c-card-inner">
         <div class="c-card-header">
             <h3 class="m-title m-title-05">カードの見出しです</h3>
@@ -50,7 +49,7 @@
             <picture>
             <source
                 media="(max-width:640px)"
-                srcset="/images/_dummy/image_01_s.jpg?text=small_image 640w"
+                srcset="/images/_dummy/image_01_s.jpg 640w"
                 sizes="100vw">
             <source
                 srcset="/images/_dummy/image_01.jpg 1280w"
@@ -59,39 +58,76 @@
             </picture>
         </div>
         <div class="c-card-contents">
-            <p class="c-card-body">カードの本文ですカードの本文ですカードの本文ですカードの本文ですカードの本文です</p>
+            <p class="c-card-body">カードの本文ですカードの本文ですカードの本文ですカードの本文ですカードの本文ですカードの本文ですカードの本文です</p>
         </div>
     </div>
 </div>
 
-</div>
-
-<div style="max-width: 320px; margin-bottom: 30px;">
-
-<div class="c-card shadow">
-    <a href="#" class="c-card-inner">
-        <div class="m-thumbnail m-thumbnail-ogimage">
-            <picture>
-            <source
-                media="(max-width:640px)"
-                srcset="/images/_dummy/image_02_s.jpg 640w"
-                sizes="100vw">
-            <source
-                srcset="/images/_dummy/image_02.jpg 1280w"
-                sizes="(max-width:1280px) 100vw, 1280px">
-            <img alt="" src="/images/_dummy/image_02.jpg">
-            </picture>
+<div class="l-row m-y-lg">
+    <div class="l-col-8 l-col-md-4 l-col-xl-3 p-b">
+        <div class="c-card shadow">
+            <a href="#" class="c-card-inner">
+                <div class="m-thumbnail m-thumbnail-ogimage">
+                    <picture>
+                    <source
+                        media="(max-width:640px)"
+                        srcset="/images/_dummy/image_02_s.jpg 640w"
+                        sizes="100vw">
+                    <source
+                        srcset="/images/_dummy/image_02.jpg 1280w"
+                        sizes="(max-width:1280px) 100vw, 1280px">
+                    <img alt="" src="/images/_dummy/image_02.jpg">
+                    </picture>
+                </div>
+                <div class="c-card-contents">
+                    <p>カード全体がリンク範囲となっています</p>
+                </div>
+            </a>
         </div>
-        <div class="c-card-contents">
-            <p>カード全体がリンク範囲となっています</p>
-            <span class="m-btn m-btn-first m-btn-outline m-btn-block">ボタン</span>
+    </div>
+    <div class="l-col-8 l-col-md-4 l-col-xl-3 p-b">
+        <div class="c-card shadow">
+            <a href="#" class="c-card-inner">
+                <div class="m-thumbnail m-thumbnail-ogimage">
+                    <picture>
+                    <source
+                        media="(max-width:640px)"
+                        srcset="/images/_dummy/image_02_s.jpg 640w"
+                        sizes="100vw">
+                    <source
+                        srcset="/images/_dummy/image_02.jpg 1280w"
+                        sizes="(max-width:1280px) 100vw, 1280px">
+                    <img alt="" src="/images/_dummy/image_02.jpg">
+                    </picture>
+                </div>
+                <div class="c-card-contents">
+                    <p>l-row, l-col を併用しました</p>
+                </div>
+            </a>
         </div>
-    </a>
+    </div>
+    <div class="l-col-8 l-col-md-4 l-col-xl-3 p-b">
+        <div class="c-card shadow">
+            <a href="#" class="c-card-inner">
+                <div class="m-thumbnail m-thumbnail-ogimage">
+                    <picture>
+                    <source
+                        media="(max-width:640px)"
+                        srcset="/images/_dummy/image_02_s.jpg 640w"
+                        sizes="100vw">
+                    <source
+                        srcset="/images/_dummy/image_02.jpg 1280w"
+                        sizes="(max-width:1280px) 100vw, 1280px">
+                    <img alt="" src="/images/_dummy/image_02.jpg">
+                    </picture>
+                </div>
+                <div class="c-card-contents">
+                    <p>グリッド内に配置した場合はmax-widthが解除されます</p>
+                </div>
+            </a>
+        </div>
+    </div>
 </div>
-
-</div>
-
-<div style="max-width: 320px;">
 
 <div class="c-card bg-first">
     <div class="c-card-inner">
@@ -113,11 +149,8 @@
         </div>
     </div>
 </div>
-
-</div>
-</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"max-width: 320px; margin-bottom: 30px;"</span><span class="nt">&gt;</span>
-
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-card border"</span><span class="nt">&gt;</span>
+</div><div class="codeblock"><pre>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-card"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-card-inner"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-card-header"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"m-title m-title-05"</span><span class="nt">&gt;</span>カードの見出しです<span class="nt">&lt;/h3&gt;</span>
@@ -126,7 +159,7 @@
             <span class="nt">&lt;picture&gt;</span>
             <span class="nt">&lt;source</span>
                 <span class="na">media=</span><span class="s">"(max-width:640px)"</span>
-                <span class="na">srcset=</span><span class="s">"/images/_dummy/image_01_s.jpg?text=small_image 640w"</span>
+                <span class="na">srcset=</span><span class="s">"/images/_dummy/image_01_s.jpg 640w"</span>
                 <span class="na">sizes=</span><span class="s">"100vw"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;source</span>
                 <span class="na">srcset=</span><span class="s">"/images/_dummy/image_01.jpg 1280w"</span>
@@ -135,39 +168,76 @@
             <span class="nt">&lt;/picture&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-card-contents"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"c-card-body"</span><span class="nt">&gt;</span>カードの本文ですカードの本文ですカードの本文ですカードの本文ですカードの本文です<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"c-card-body"</span><span class="nt">&gt;</span>カードの本文ですカードの本文ですカードの本文ですカードの本文ですカードの本文ですカードの本文ですカードの本文です<span class="nt">&lt;/p&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
-<span class="nt">&lt;/div&gt;</span>
-
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"max-width: 320px; margin-bottom: 30px;"</span><span class="nt">&gt;</span>
-
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-card shadow"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"c-card-inner"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail-ogimage"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;picture&gt;</span>
-            <span class="nt">&lt;source</span>
-                <span class="na">media=</span><span class="s">"(max-width:640px)"</span>
-                <span class="na">srcset=</span><span class="s">"/images/_dummy/image_02_s.jpg 640w"</span>
-                <span class="na">sizes=</span><span class="s">"100vw"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;source</span>
-                <span class="na">srcset=</span><span class="s">"/images/_dummy/image_02.jpg 1280w"</span>
-                <span class="na">sizes=</span><span class="s">"(max-width:1280px) 100vw, 1280px"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">""</span> <span class="na">src=</span><span class="s">"/images/_dummy/image_02.jpg"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;/picture&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-row m-y-lg"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-col-8 l-col-md-4 l-col-xl-3 p-b"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-card shadow"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"c-card-inner"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail-ogimage"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;picture&gt;</span>
+                    <span class="nt">&lt;source</span>
+                        <span class="na">media=</span><span class="s">"(max-width:640px)"</span>
+                        <span class="na">srcset=</span><span class="s">"/images/_dummy/image_02_s.jpg 640w"</span>
+                        <span class="na">sizes=</span><span class="s">"100vw"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;source</span>
+                        <span class="na">srcset=</span><span class="s">"/images/_dummy/image_02.jpg 1280w"</span>
+                        <span class="na">sizes=</span><span class="s">"(max-width:1280px) 100vw, 1280px"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">""</span> <span class="na">src=</span><span class="s">"/images/_dummy/image_02.jpg"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;/picture&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-card-contents"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;p&gt;</span>カード全体がリンク範囲となっています<span class="nt">&lt;/p&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/a&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-card-contents"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;p&gt;</span>カード全体がリンク範囲となっています<span class="nt">&lt;/p&gt;</span>
-            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m-btn m-btn-first m-btn-outline m-btn-block"</span><span class="nt">&gt;</span>ボタン<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-col-8 l-col-md-4 l-col-xl-3 p-b"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-card shadow"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"c-card-inner"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail-ogimage"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;picture&gt;</span>
+                    <span class="nt">&lt;source</span>
+                        <span class="na">media=</span><span class="s">"(max-width:640px)"</span>
+                        <span class="na">srcset=</span><span class="s">"/images/_dummy/image_02_s.jpg 640w"</span>
+                        <span class="na">sizes=</span><span class="s">"100vw"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;source</span>
+                        <span class="na">srcset=</span><span class="s">"/images/_dummy/image_02.jpg 1280w"</span>
+                        <span class="na">sizes=</span><span class="s">"(max-width:1280px) 100vw, 1280px"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">""</span> <span class="na">src=</span><span class="s">"/images/_dummy/image_02.jpg"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;/picture&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-card-contents"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;p&gt;</span>l-row, l-col を併用しました<span class="nt">&lt;/p&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/a&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-col-8 l-col-md-4 l-col-xl-3 p-b"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-card shadow"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"c-card-inner"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail-ogimage"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;picture&gt;</span>
+                    <span class="nt">&lt;source</span>
+                        <span class="na">media=</span><span class="s">"(max-width:640px)"</span>
+                        <span class="na">srcset=</span><span class="s">"/images/_dummy/image_02_s.jpg 640w"</span>
+                        <span class="na">sizes=</span><span class="s">"100vw"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;source</span>
+                        <span class="na">srcset=</span><span class="s">"/images/_dummy/image_02.jpg 1280w"</span>
+                        <span class="na">sizes=</span><span class="s">"(max-width:1280px) 100vw, 1280px"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">""</span> <span class="na">src=</span><span class="s">"/images/_dummy/image_02.jpg"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;/picture&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-card-contents"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;p&gt;</span>グリッド内に配置した場合はmax-widthが解除されます<span class="nt">&lt;/p&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-
-<span class="nt">&lt;/div&gt;</span>
-
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"max-width: 320px;"</span><span class="nt">&gt;</span>
 
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-card bg-first"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-card-inner"</span><span class="nt">&gt;</span>
@@ -188,7 +258,5 @@
             <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"m-btn m-btn-inverse m-btn-outline m-btn-block"</span><span class="nt">&gt;</span>ボタン<span class="nt">&lt;/a&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-
 <span class="nt">&lt;/div&gt;</span>
 </pre></div><?php include('../doc_include/footer.inc'); ?>
