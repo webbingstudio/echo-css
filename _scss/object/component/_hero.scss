@@ -1,186 +1,119 @@
 /*doc
 ---
-title: .hero
+title: #{$pr}#{$c}hero
 name: hero
-category: module_component
+category: component-hero
 ---
 
 メインビジュアルなどに使用される全面背景を持つコンポーネントを表示する。  
-vhが非対応のブラウザがまだ多いことから、高さは固定値としている。  
-背景が暗色であることが前提となっているので、適当調整すること。
+高さは(breakpoint) が <code>sm</code> 以下で <code>50vh</code>、 <code>md</code> 以上で <code>75vh</code> としているため、適当調整すること。
 
 ``` example
-<div class="hero">
-    <div class="hero-cover" style="background-image: url(http://placehold.jp/96/99de74/ffffff/1600x1000.png?text=dummy_image);"></div>
-    <div class="hero-contents">
-        <h2 class="hero-title">画像全面</h2>
-        <p class="hero-subtitle">吾輩は猫である。名前はまだ無い。</p>
-        <p class="hero-text">どこで生れたかとんと見当がつかぬ。</p>
-    </div><!-- /.hero-contents -->
-</div><!-- /.hero -->
-
-<div class="hero">
-    <div class="hero-object"><div id="youtube01"></div></div>
-    <div class="hero-contents">
-        <h2 class="hero-title">動画全面</h2>
-        <p class="hero-subtitle">吾輩は猫である。名前はまだ無い。</p>
-        <p class="hero-text">どこで生れたかとんと見当がつかぬ。</p>
-    </div><!-- /.hero-contents -->
-</div><!-- /.hero -->
+<div class="#{$pr}#{$c}hero">
+    <div class="#{$pr}#{$c}hero-cover" style="background-image: url(/images/_dummy/image_05.jpg);"></div>
+    <div class="#{$pr}#{$c}hero-contents">
+        <h2 class="#{$pr}#{$c}hero-title">画像全面</h2>
+        <p class="#{$pr}#{$c}hero-subtitle">吾輩は猫である。名前はまだ無い。</p>
+        <p class="#{$pr}#{$c}hero-text">どこで生れたかとんと見当がつかぬ。</p>
+    </div><!-- /.#{$pr}#{$c}hero-contents -->
+</div><!-- /.#{$pr}#{$c}hero -->
 
 ```
 
 */
 
-.hero {
+.#{$pr}#{$c}hero {
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 50vh;
+    background-color: $body-inverse-bg;
 
-    .hero-cover {
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background: $body-bg none no-repeat center center;
-        background-size: cover;
-        z-index: 11;
-    }
-
-    .hero-object {
-        overflow: hidden;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -webkit-transform:translate(-50%, -50%);
-        -ms-transform:translate(-50%, -50%);
-        transform:translate(-50%, -50%);
-        width: 100%;
-        height: 100%;
-        z-index: 12;
-
-        iframe {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-    }
-
-    .hero-contents {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -webkit-transform:translate(-50%, -50%);
-        -ms-transform:translate(-50%, -50%);
-        transform:translate(-50%, -50%);
-        width: 100%;
-        max-width: map-get($container-max-widths, lg);
-        padding: ($spacer * 6) $spacer;
-        color: $body-color;
-        line-height: $line-height-sm;
-        text-align: center;
-        z-index: 14;
-
-        @include media-breakpoint-up(xl) {
-            max-width: map-get($container-max-widths, xl);
-        }
-
-    }
-
-    .hero-title {
-        margin: 0;
-        font-size: 2.5rem;
-        font-family: $font-family-03;
-        font-weight: $font-weight-03;
-        letter-spacing: .1em;
-        text-shadow:
-            1px 1px 5px rgba($body-bg, .5),
-            -1px 1px 5px rgba($body-bg, .5),
-            1px -1px 5px rgba($body-bg, .5),
-            -1px -1px 5px rgba($body-bg, .5);
-
-        @include media-breakpoint-up(sm) {
-            font-size: 3rem;
-            letter-spacing: .25em;
-        }
-
-    }
-
-    .hero-subtitle {
-        margin: ($spacer * .5) 0 0;
-        font-size: 1.75rem;
-        font-family: $font-family-01;
-        font-weight: $font-weight-01;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        letter-spacing: .1em;
-        text-shadow:
-            1px 1px 5px rgba($body-bg, .5),
-            -1px 1px 5px rgba($body-bg, .5),
-            1px -1px 5px rgba($body-bg, .5),
-            -1px -1px 5px rgba($body-bg, .5);
-
-        @include media-breakpoint-up(sm) {
-            font-size: 2.25rem;
-        }
-
-    }
-
-    .hero-text {
-        margin: ($spacer * 1.5) 0 0;
-        font-size: $font-size-root;
-        text-shadow:
-            1px 1px 3px rgba($body-bg, .5),
-            -1px 1px 3px rgba($body-bg, .5),
-            1px -1px 3px rgba($body-bg, .5),
-            -1px -1px 3px rgba($body-bg, .5);
-
-        @include media-breakpoint-up(sm) {
-            font-size: $font-size-lg;
-        }
-
-    }
-
-    &.hero-inverse {
-
-        .hero-cover {
-            background-color: $body-inverse-bg;
-        }
-
-        .hero-contents {
-            color: $body-inverse-color;
-        }
-
-        .hero-title {
-            text-shadow:
-                1px 1px 5px rgba($body-inverse-bg, .25),
-                -1px 1px 5px rgba($body-inverse-bg, .25),
-                1px -1px 5px rgba($body-inverse-bg, .25),
-                -1px -1px 5px rgba($body-inverse-bg, .25);
-        }
-
-        .hero-subtitle {
-            text-shadow:
-                1px 1px 3px rgba($body-inverse-bg, .5),
-                -1px 1px 3px rgba($body-inverse-bg, .5),
-                1px -1px 3px rgba($body-inverse-bg, .5),
-                -1px -1px 3px rgba($body-inverse-bg, .5);
-        }
-
-        .hero-text {
-            text-shadow:
-                1px 1px 3px rgba($body-inverse-bg, .5),
-                -1px 1px 3px rgba($body-inverse-bg, .5),
-                1px -1px 3px rgba($body-inverse-bg, .5),
-                -1px -1px 3px rgba($body-inverse-bg, .5);
-        }
-
+    @include media-breakpoint-up(xl) {
+        height: 75vh;
     }
 
 }
+
+.#{$pr}#{$c}hero-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: transparent none no-repeat center center;
+    background-size: cover;
+    opacity: .7;
+    z-index: 11;
+}
+
+.#{$pr}#{$c}hero-contents {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: map-get($container-max-widths-md, lg);
+    padding: ($spacer * 6) $spacer;
+    color: $body-inverse-color;
+    line-height: $line-height-sm;
+    text-align: center;
+    z-index: 14;
+
+    @include media-breakpoint-up(xl) {
+        max-width: map-get($container-max-widths-md, xl);
+    }
+
+}
+
+.#{$pr}#{$c}hero-title {
+    margin: 0;
+    font-size: 2.5rem;
+    font-family: $font-family-third;
+    font-weight: $font-weight-third;
+    letter-spacing: .1em;
+    text-shadow:
+        1px 1px 5px rgba($body-inverse-bg, .5),
+        -1px 1px 5px rgba($body-inverse-bg, .5),
+        1px -1px 5px rgba($body-inverse-bg, .5),
+        -1px -1px 5px rgba($body-inverse-bg, .5);
+
+    @include media-breakpoint-up(sm) {
+        font-size: 3rem;
+        letter-spacing: .25em;
+    }
+
+}
+
+.#{$pr}#{$c}hero-subtitle {
+    margin: ($spacer * .5) 0 0;
+    font-size: 1.75rem;
+    font-family: $font-family-first;
+    font-weight: $font-weight-first;
+    letter-spacing: .1em;
+    text-shadow:
+        1px 1px 5px rgba($body-inverse-bg, .5),
+        -1px 1px 5px rgba($body-inverse-bg, .5),
+        1px -1px 5px rgba($body-inverse-bg, .5),
+        -1px -1px 5px rgba($body-inverse-bg, .5);
+
+    @include media-breakpoint-up(sm) {
+        font-size: 2.25rem;
+    }
+
+}
+
+.#{$pr}#{$c}hero-text {
+    margin: ($spacer * 1.5) 0 0;
+    font-size: $font-size-md;
+    text-shadow:
+        1px 1px 3px rgba($body-inverse-bg, .5),
+        -1px 1px 3px rgba($body-inverse-bg, .5),
+        1px -1px 3px rgba($body-inverse-bg, .5),
+        -1px -1px 3px rgba($body-inverse-bg, .5);
+
+    @include media-breakpoint-up(sm) {
+        font-size: $font-size-lg;
+    }
+
+}
+

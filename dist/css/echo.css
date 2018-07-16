@@ -5336,7 +5336,7 @@ parent: box
 
 /*doc
 ---
-title: .c-card
+title: c-card
 name: card
 category: component-card
 ---
@@ -6133,6 +6133,112 @@ category: component-headline
 .c-headline-title a:hover, .c-headline-title a:focus {
   color: #4690da;
   text-decoration: underline;
+}
+
+/*doc
+---
+title: c-hero
+name: hero
+category: component-hero
+---
+
+メインビジュアルなどに使用される全面背景を持つコンポーネントを表示する。  
+高さは(breakpoint) が <code>sm</code> 以下で <code>50vh</code>、 <code>md</code> 以上で <code>75vh</code> としているため、適当調整すること。
+
+``` example
+<div class="c-hero">
+    <div class="c-hero-cover" style="background-image: url(/images/_dummy/image_05.jpg);"></div>
+    <div class="c-hero-contents">
+        <h2 class="c-hero-title">画像全面</h2>
+        <p class="c-hero-subtitle">吾輩は猫である。名前はまだ無い。</p>
+        <p class="c-hero-text">どこで生れたかとんと見当がつかぬ。</p>
+    </div><!-- /.c-hero-contents -->
+</div><!-- /.c-hero -->
+
+```
+
+*/
+.c-hero {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  background-color: #000;
+}
+@media (min-width: 1240px) {
+  .c-hero {
+    height: 75vh;
+  }
+}
+
+.c-hero-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: transparent none no-repeat center center;
+  background-size: cover;
+  opacity: .7;
+  z-index: 11;
+}
+
+.c-hero-contents {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 960px;
+  padding: 60px 10px;
+  color: #fff;
+  line-height: 1.5;
+  text-align: center;
+  z-index: 14;
+}
+@media (min-width: 1240px) {
+  .c-hero-contents {
+    max-width: 1200px;
+  }
+}
+
+.c-hero-title {
+  margin: 0;
+  font-size: 2.5rem;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  font-weight: 300;
+  letter-spacing: .1em;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5), -1px 1px 5px rgba(0, 0, 0, 0.5), 1px -1px 5px rgba(0, 0, 0, 0.5), -1px -1px 5px rgba(0, 0, 0, 0.5);
+}
+@media (min-width: 425px) {
+  .c-hero-title {
+    font-size: 3rem;
+    letter-spacing: .25em;
+  }
+}
+
+.c-hero-subtitle {
+  margin: 5px 0 0;
+  font-size: 1.75rem;
+  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
+  font-weight: 300;
+  letter-spacing: .1em;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5), -1px 1px 5px rgba(0, 0, 0, 0.5), 1px -1px 5px rgba(0, 0, 0, 0.5), -1px -1px 5px rgba(0, 0, 0, 0.5);
+}
+@media (min-width: 425px) {
+  .c-hero-subtitle {
+    font-size: 2.25rem;
+  }
+}
+
+.c-hero-text {
+  margin: 15px 0 0;
+  font-size: 1rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5), -1px 1px 3px rgba(0, 0, 0, 0.5), 1px -1px 3px rgba(0, 0, 0, 0.5), -1px -1px 3px rgba(0, 0, 0, 0.5);
+}
+@media (min-width: 425px) {
+  .c-hero-text {
+    font-size: 1.125rem;
+  }
 }
 
 /*doc
