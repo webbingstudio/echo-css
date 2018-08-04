@@ -221,31 +221,35 @@ parent: table
 列数、内容にかかわらず、セルを均等な幅にする。
 
 ``` example
-<table class="#{$pr}#{$m}table #{$pr}#{$m}table-bordered #{$pr}#{$m}table-justify #{$pr}m-b">
-    <tbody>
-        <tr>
-            <td>吾輩は猫である名前はまだ無い。どこで生れたかとんと見当がつかぬ。</td>
-            <td>何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
-        </tr>
-    </tbody>
-</table>
+<div style="margin-bottom: 2rem;">
+    <table class="#{$pr}#{$m}table #{$pr}#{$m}table-bordered #{$pr}#{$m}table-justify">
+        <tbody>
+            <tr>
+                <td>吾輩は猫である名前はまだ無い。どこで生れたかとんと見当がつかぬ。</td>
+                <td>何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
-<table class="#{$pr}#{$m}table #{$pr}#{$m}table-bordered #{$pr}#{$m}table-justify #{$pr}m-b">
-    <tbody>
-        <tr>
-            <td>吾輩は猫である名前は</td>
-            <td>まだ無い。どこで生れたか</td>
-            <td>とんと見当がつかぬ。</td>
-            <td>何でも薄暗いじめじめした所で</td>
-            <td rowspan="2">ニャーニャー泣いていた事だけは記憶している。</td>
-        </tr>
-        <tr>
-            <td>吾輩は猫である</td>
-            <td>名前はまだ無い。</td>
-            <td colspan="2">どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所で</td>
-        </tr>
-    </tbody>
-</table>
+<div style="margin-bottom: 2rem;">
+    <table class="#{$pr}#{$m}table #{$pr}#{$m}table-bordered #{$pr}#{$m}table-justify">
+        <tbody>
+            <tr>
+                <td>吾輩は猫である名前は</td>
+                <td>まだ無い。どこで生れたか</td>
+                <td>とんと見当がつかぬ。</td>
+                <td>何でも薄暗いじめじめした所で</td>
+                <td rowspan="2">ニャーニャー泣いていた事だけは記憶している。</td>
+            </tr>
+            <tr>
+                <td>吾輩は猫である</td>
+                <td>名前はまだ無い。</td>
+                <td colspan="2">どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所で</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 ```
 
 */
@@ -268,67 +272,75 @@ parent: table
 (ratio-first)to(ratio-second)to(ratio-third)は <code>3to9, 4to8, 3to3to6, 0to12</code> に対応している。   
 
 ``` example
-<table class="#{$pr}#{$m}table #{$pr}#{$m}table-bordered #{$pr}#{$m}table-3to9 #{$pr}m-b">
-    <caption>.#{$pr}#{$m}table-3to9</caption>
-    <tbody>
-        <tr>
-            <th>吾輩は猫である</th>
-            <td>名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
-        </tr>
-        <tr>
-            <th>吾輩は猫である名前はまだ無い。</th>
-            <td>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
-        </tr>
-    </tbody>
-</table>
+<div style="margin-bottom: 2rem;">
+    <table class="#{$pr}#{$m}table #{$pr}#{$m}table-bordered #{$pr}#{$m}table-3to9">
+        <caption>.#{$pr}#{$m}table-3to9</caption>
+        <tbody>
+            <tr>
+                <th>吾輩は猫である</th>
+                <td>名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+            </tr>
+            <tr>
+                <th>吾輩は猫である名前はまだ無い。</th>
+                <td>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
-<table class="#{$pr}#{$m}table #{$pr}#{$m}table-bordered #{$pr}#{$m}table-4to8 #{$pr}m-b">
-    <caption>.#{$pr}#{$m}table-4to8</caption>
-    <tbody>
-        <tr>
-            <th>吾輩は猫である</th>
-            <td>名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
-        </tr>
-        <tr>
-            <th>吾輩は猫である名前はまだ無い。</th>
-            <td>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
-        </tr>
-    </tbody>
-</table>
+<div style="margin-bottom: 2rem;">
+    <table class="#{$pr}#{$m}table #{$pr}#{$m}table-bordered #{$pr}#{$m}table-4to8">
+        <caption>.#{$pr}#{$m}table-4to8</caption>
+        <tbody>
+            <tr>
+                <th>吾輩は猫である</th>
+                <td>名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+            </tr>
+            <tr>
+                <th>吾輩は猫である名前はまだ無い。</th>
+                <td>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
-<table class="#{$pr}#{$m}table #{$pr}#{$m}table-bordered #{$pr}#{$m}table-3to3to6 #{$pr}m-b">
-    <caption>.#{$pr}#{$m}table-3to3to6</caption>
-    <tbody>
-        <tr>
-            <th>吾輩は猫である</th>
-            <td>名前はまだ無い。</td>
-            <td>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
-        </tr>
-        <tr>
-            <th>吾輩は猫である名前はまだ無い。</th>
-            <td>どこで生れたかとんと見当がつかぬ。</td>
-            <td>何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
-        </tr>
-    </tbody>
-</table>
+<div style="margin-bottom: 2rem;">
+    <table class="#{$pr}#{$m}table #{$pr}#{$m}table-bordered #{$pr}#{$m}table-3to3to6">
+        <caption>.#{$pr}#{$m}table-3to3to6</caption>
+        <tbody>
+            <tr>
+                <th>吾輩は猫である</th>
+                <td>名前はまだ無い。</td>
+                <td>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+            </tr>
+            <tr>
+                <th>吾輩は猫である名前はまだ無い。</th>
+                <td>どこで生れたかとんと見当がつかぬ。</td>
+                <td>何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
-<table class="#{$pr}#{$m}table #{$pr}#{$m}table-bordered #{$pr}#{$m}table-0to12 #{$pr}#{$u}m-b">
-    <caption>.#{$pr}#{$m}table-0to12</caption>
-    <tbody>
-        <tr>
-            <th>吾輩は猫</th>
-            <td>である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
-        </tr>
-        <tr>
-            <th>吾輩はここで</th>
-            <td>始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</td>
-        </tr>
-        <tr>
-            <th>しかし</th>
-            <td>その当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</td>
-        </tr>
-    </tbody>
-</table>
+<div>
+    <table class="#{$pr}#{$m}table #{$pr}#{$m}table-bordered #{$pr}#{$m}table-0to12">
+        <caption>.#{$pr}#{$m}table-0to12</caption>
+        <tbody>
+            <tr>
+                <th>吾輩は猫</th>
+                <td>である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+            </tr>
+            <tr>
+                <th>吾輩はここで</th>
+                <td>始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</td>
+            </tr>
+            <tr>
+                <th>しかし</th>
+                <td>その当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 ```
 
 */
@@ -419,7 +431,7 @@ parent: table
 2カラム以上の表の場合は <code>.#{$pr}#{$m}table-responsive</code> を推薦。
 
 ``` example
-<table class="#{$pr}#{$m}table #{$pr}#{$m}table-break-sm-down #{$pr}#{$m}table-bordered #{$pr}#{$u}m-b">
+<table class="#{$pr}#{$m}table #{$pr}#{$m}table-break-sm-down #{$pr}#{$m}table-bordered" style="margin-bottom: 2rem;">
     <thead>
         <tr>
             <th>吾輩は猫である</th>

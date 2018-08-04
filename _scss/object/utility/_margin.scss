@@ -1,0 +1,127 @@
+@if ($disabled-utility-class != true) {
+
+/*doc
+---
+title: #{$pr}#{$u}margin-(direction)-(size)
+name: margin
+category: utility-margin
+---
+
+ブロック要素の外部余白を変更する。
+
+``` example
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-x-a" style="background-color: rgba(255,255,255,.35); width: 50%;">#{$pr}#{$u}margin-x-a</div></div>
+
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-xs" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin-xs</div></div>
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-t-xs" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin-t-xs</div></div>
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-r-xs" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin-r-xs</div></div>
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-b-xs" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin-b-xs</div></div>
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-l-xs" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin-l-xs</div></div>
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-x-xs" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin-x-xs</div></div>
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-y-xs" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin-y-xs</div></div>
+
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-sm" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin-sm</div></div>
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-t-sm" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin-t-sm</div></div>
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-r-sm" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin-r-sm</div></div>
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-b-sm" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin-b-sm</div></div>
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-l-sm" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin-l-sm</div></div>
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-x-sm" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin-x-sm</div></div>
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-y-sm" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin-y-sm</div></div>
+
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}m" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}m</div></div>
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-t" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin-t</div></div>
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-r" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin-r</div></div>
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-b" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin-b</div></div>
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-l" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin-l</div></div>
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-x" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin-x</div></div>
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-y" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin-y</div></div>
+
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-lg" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin-lg</div></div>
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-t-lg" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin-t-lg</div></div>
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-r-lg" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin-r-lg</div></div>
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-b-lg" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin-b-lg</div></div>
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-l-lg" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin-l-lg</div></div>
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-x-lg" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin-x-lg</div></div>
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-y-lg" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin-y-lg</div></div>
+
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-xl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin-xl</div></div>
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-t-xl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin-t-xl</div></div>
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-r-xl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin-r-xl</div></div>
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-b-xl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin-b-xl</div></div>
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-l-xl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin-l-xl</div></div>
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-x-xl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin-x-xl</div></div>
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-y-xl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin-y-xl</div></div>
+
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-xxl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin-xxl</div></div>
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-t-xxl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin-t-xxl</div></div>
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-r-xxl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin-r-xxl</div></div>
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-b-xxl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin-b-xxl</div></div>
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-l-xxl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin-l-xxl</div></div>
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-x-xxl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin-x-xxl</div></div>
+<div class="#{$pr}#{$u}margin-b-sm #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade" style="padding: 1px;"><div class="#{$pr}#{$u}margin-y-xxl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin-y-xxl</div></div>
+```
+*/
+
+#{$u-wrap} {
+
+	.#{$pr}#{$u}margin-x-a   { margin-right:  auto; margin-left:   auto }
+
+	.#{$pr}#{$u}margin-0   { margin:        0 }
+	.#{$pr}#{$u}margin-t-0 { margin-top:    0 }
+	.#{$pr}#{$u}margin-r-0 { margin-right:  0 }
+	.#{$pr}#{$u}margin-b-0 { margin-bottom: 0 }
+	.#{$pr}#{$u}margin-l-0 { margin-left:   0 }
+	.#{$pr}#{$u}margin-x-0 { margin-right:  0; margin-left:   0 }
+	.#{$pr}#{$u}margin-y-0 { margin-top:    0; margin-bottom: 0 }
+
+	.#{$pr}#{$u}margin-xs   { margin:        ($spacer * .5) }
+	.#{$pr}#{$u}margin-t-xs { margin-top:    ($spacer * .5) }
+	.#{$pr}#{$u}margin-r-xs { margin-right:  ($spacer * .5) }
+	.#{$pr}#{$u}margin-b-xs { margin-bottom: ($spacer * .5) }
+	.#{$pr}#{$u}margin-l-xs { margin-left:   ($spacer * .5) }
+	.#{$pr}#{$u}margin-x-xs { margin-right:  ($spacer * .5); margin-left:   ($spacer * .5) }
+	.#{$pr}#{$u}margin-y-xs { margin-top:    ($spacer * .5); margin-bottom: ($spacer * .5) }
+
+	.#{$pr}#{$u}margin-sm   { margin:        $spacer }
+	.#{$pr}#{$u}margin-t-sm { margin-top:    $spacer }
+	.#{$pr}#{$u}margin-r-sm { margin-right:  $spacer }
+	.#{$pr}#{$u}margin-b-sm { margin-bottom: $spacer }
+	.#{$pr}#{$u}margin-l-sm { margin-left:   $spacer }
+	.#{$pr}#{$u}margin-x-sm { margin-right:  $spacer; margin-left:   $spacer }
+	.#{$pr}#{$u}margin-y-sm { margin-top:    $spacer; margin-bottom: $spacer }
+
+	.#{$pr}#{$u}margin   { margin:        ($spacer * 1.5) }
+	.#{$pr}#{$u}margin-t { margin-top:    ($spacer * 1.5) }
+	.#{$pr}#{$u}margin-r { margin-right:  ($spacer * 1.5) }
+	.#{$pr}#{$u}margin-b { margin-bottom: ($spacer * 1.5) }
+	.#{$pr}#{$u}margin-l { margin-left:   ($spacer * 1.5) }
+	.#{$pr}#{$u}margin-x { margin-right:  ($spacer * 1.5); margin-left:   ($spacer * 1.5) }
+	.#{$pr}#{$u}margin-y { margin-top:    ($spacer * 1.5); margin-bottom: ($spacer * 1.5) }
+
+	.#{$pr}#{$u}margin-lg   { margin:        ($spacer * 3) }
+	.#{$pr}#{$u}margin-t-lg { margin-top:    ($spacer * 3) }
+	.#{$pr}#{$u}margin-r-lg { margin-right:  ($spacer * 3) }
+	.#{$pr}#{$u}margin-b-lg { margin-bottom: ($spacer * 3) }
+	.#{$pr}#{$u}margin-l-lg { margin-left:   ($spacer * 3) }
+	.#{$pr}#{$u}margin-x-lg { margin-right:  ($spacer * 3); margin-left:   ($spacer * 3) }
+	.#{$pr}#{$u}margin-y-lg { margin-top:    ($spacer * 3); margin-bottom: ($spacer * 3) }
+
+	.#{$pr}#{$u}margin-xl   { margin:        ($spacer * 4.5) }
+	.#{$pr}#{$u}margin-t-xl { margin-top:    ($spacer * 4.5) }
+	.#{$pr}#{$u}margin-r-xl { margin-right:  ($spacer * 4.5) }
+	.#{$pr}#{$u}margin-b-xl { margin-bottom: ($spacer * 4.5) }
+	.#{$pr}#{$u}margin-l-xl { margin-left:   ($spacer * 4.5) }
+	.#{$pr}#{$u}margin-x-xl { margin-right:  ($spacer * 4.5); margin-left:   ($spacer * 4.5) }
+	.#{$pr}#{$u}margin-y-xl { margin-top:    ($spacer * 4.5); margin-bottom: ($spacer * 4.5) }
+
+	.#{$pr}#{$u}margin-xxl   { margin:        ($spacer * 6) }
+	.#{$pr}#{$u}margin-t-xxl { margin-top:    ($spacer * 6) }
+	.#{$pr}#{$u}margin-r-xxl { margin-right:  ($spacer * 6) }
+	.#{$pr}#{$u}margin-b-xxl { margin-bottom: ($spacer * 6) }
+	.#{$pr}#{$u}margin-l-xxl { margin-left:   ($spacer * 6) }
+	.#{$pr}#{$u}margin-x-xxl { margin-right:  ($spacer * 6); margin-left:   ($spacer * 6) }
+	.#{$pr}#{$u}margin-y-xxl { margin-top:    ($spacer * 6); margin-bottom: ($spacer * 6) }
+
+}
+
+}

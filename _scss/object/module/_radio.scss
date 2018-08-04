@@ -6,14 +6,14 @@ category: module-radio
 ---
 
 ラジオボタンとラベルをインライン表示する。input要素ではなく、包括している要素にクラスを付与する（ほとんどの場合、label要素となる）。  
-余白・レイアウト等は <code>utility > .#{$pr}#{$u}p</code> や <code>component > .#{$pr}#{$c}form</code> で指定する。  
+余白・レイアウト等は <code>utility > .#{$pr}#{$u}padding</code> や <code>component > .#{$pr}#{$c}form</code> で指定する。  
 <code>.#{$pr}#{$error}</code> を同時に使用するとエラーがあったときの表示となる。 
 
 ``` example
 <p>
-<label class="#{$pr}#{$m}radio #{$pr}#{$u}m-r" for="radio1"><input type="radio" name="radio" id="radio1" class="#{$pr}#{$u}m-r-sm" value="1">#{$pr}#{$m}radio 1</label>
-<label class="#{$pr}#{$m}radio #{$pr}#{$u}m-r" for="radio2"><input type="radio" name="radio" id="radio2" class="#{$pr}#{$u}m-r-sm" value="2" checked="checked">#{$pr}#{$m}radio 2</label>
-<label class="#{$pr}#{$m}radio #{$pr}#{$u}m-r #{$pr}#{$error}" for="radio3"><input type="radio" name="radio" id="radio3" class="#{$pr}#{$u}m-r-sm" value="3">#{$pr}#{$m}radio 3</label>
+<label class="#{$pr}#{$m}radio #{$pr}#{$u}margin-r" for="radio1"><input type="radio" name="radio" id="radio1" class="#{$pr}#{$u}margin-r-sm" value="1">#{$pr}#{$m}radio 1</label>
+<label class="#{$pr}#{$m}radio #{$pr}#{$u}margin-r" for="radio2"><input type="radio" name="radio" id="radio2" class="#{$pr}#{$u}margin-r-sm" value="2" checked="checked">#{$pr}#{$m}radio 2</label>
+<label class="#{$pr}#{$m}radio #{$pr}#{$u}margin-r #{$pr}#{$error}" for="radio3"><input type="radio" name="radio" id="radio3" class="#{$pr}#{$u}margin-r-sm" value="3">#{$pr}#{$m}radio 3</label>
 </p>
 ```
 */

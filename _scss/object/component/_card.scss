@@ -13,7 +13,7 @@ category: component-card
 
 ``` example
 
-<div class="#{$pr}#{$c}card">
+<div class="#{$pr}#{$c}card" style="margin-bottom: 2rem;">
     <div class="#{$pr}#{$c}card-inner">
         <div class="c-card-header">
             <h3 class="#{$pr}#{$m}title #{$pr}#{$m}title-05">カードの見出しです</h3>
@@ -36,8 +36,8 @@ category: component-card
     </div>
 </div>
 
-<div class="#{$pr}#{$g}row #{$pr}#{$u}m-y-lg">
-    <div class="#{$pr}#{$g}col-8 #{$pr}#{$g}col-md-4 #{$pr}#{$g}col-xl-3 #{$pr}#{$u}p-b">
+<div class="#{$pr}#{$g}row" style="margin-bottom: 2rem;">
+    <div class="#{$pr}#{$g}col-8 #{$pr}#{$g}col-md-4 #{$pr}#{$g}col-xl-3" style="padding-bottom: 2rem;">
         <div class="#{$pr}#{$c}card #{$pr}#{$u}shadow">
             <a href="#" class="#{$pr}#{$c}card-inner">
                 <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-ogimage">
@@ -58,7 +58,7 @@ category: component-card
             </a>
         </div>
     </div>
-    <div class="#{$pr}#{$g}col-8 #{$pr}#{$g}col-md-4 #{$pr}#{$g}col-xl-3 #{$pr}#{$u}p-b">
+    <div class="#{$pr}#{$g}col-8 #{$pr}#{$g}col-md-4 #{$pr}#{$g}col-xl-3" style="padding-bottom: 2rem;">
         <div class="#{$pr}#{$c}card #{$pr}#{$u}shadow">
             <a href="#" class="#{$pr}#{$c}card-inner">
                 <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-ogimage">
@@ -79,7 +79,7 @@ category: component-card
             </a>
         </div>
     </div>
-    <div class="#{$pr}#{$g}col-8 #{$pr}#{$g}col-md-4 #{$pr}#{$g}col-xl-3 #{$pr}#{$u}p-b">
+    <div class="#{$pr}#{$g}col-8 #{$pr}#{$g}col-md-4 #{$pr}#{$g}col-xl-3" style="padding-bottom: 2rem;">
         <div class="#{$pr}#{$c}card #{$pr}#{$u}shadow">
             <a href="#" class="#{$pr}#{$c}card-inner">
                 <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-ogimage">

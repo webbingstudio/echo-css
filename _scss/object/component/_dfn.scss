@@ -9,11 +9,9 @@ category: component-dfn
 (breakpoint)が <code>sm</code> 以上でインライン表示となる。
 
 ``` example
-<div class="#{$pr}#{$u}m-b">
-<div class="#{$pr}#{$c}dfn">
+<div class="#{$pr}#{$c}dfn" style="margin-bottom: 2rem;">
     <h1 class="#{$pr}#{$c}dfn-header">猫</h1>
     <p class="#{$pr}#{$c}dfn-contents">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-</div>
 </div>
 
 <dl class="#{$pr}#{$c}dfn">

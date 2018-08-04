@@ -29,11 +29,11 @@ category: utility-hidden
 (breakpoint)で指定した画面幅以上で要素を非表示にする。特性上、#{$pr}#{$u}hidden-xs-upはない。
 
 ``` example
-<div class="#{$pr}#{$u}hidden-sm-up #{$pr}#{$u}m-b-sm"><span class="#{$pr}#{$m}btn #{$pr}#{$m}btn-first">#{$pr}#{$u}hidden-sm-up</span></div>
-<div class="#{$pr}#{$u}hidden-md-up #{$pr}#{$u}m-b-sm"><span class="#{$pr}#{$m}btn #{$pr}#{$m}btn-second">#{$pr}#{$u}hidden-md-up</span></div>
-<div class="#{$pr}#{$u}hidden-lg-up #{$pr}#{$u}m-b-sm"><span class="#{$pr}#{$m}btn #{$pr}#{$m}btn-third">#{$pr}#{$u}hidden-lg-up</span></div>
-<div class="#{$pr}#{$u}hidden-xl-up #{$pr}#{$u}m-b-sm"><span class="#{$pr}#{$m}btn #{$pr}#{$m}btn-important">#{$pr}#{$u}hidden-xl-up</span></div>
-<div class="#{$pr}#{$u}hidden-xxl-up #{$pr}#{$u}m-b-sm"><span class="#{$pr}#{$m}btn">#{$pr}#{$u}hidden-xxl-up</span></div>
+<div class="#{$pr}#{$u}hidden-sm-up" style="margin-bottom: 1rem;"><span class="#{$pr}#{$m}btn #{$pr}#{$m}btn-first">#{$pr}#{$u}hidden-sm-up</span></div>
+<div class="#{$pr}#{$u}hidden-md-up" style="margin-bottom: 1rem;"><span class="#{$pr}#{$m}btn #{$pr}#{$m}btn-second">#{$pr}#{$u}hidden-md-up</span></div>
+<div class="#{$pr}#{$u}hidden-lg-up" style="margin-bottom: 1rem;"><span class="#{$pr}#{$m}btn #{$pr}#{$m}btn-third">#{$pr}#{$u}hidden-lg-up</span></div>
+<div class="#{$pr}#{$u}hidden-xl-up" style="margin-bottom: 1rem;"><span class="#{$pr}#{$m}btn #{$pr}#{$m}btn-fourth">#{$pr}#{$u}hidden-xl-up</span></div>
+<div class="#{$pr}#{$u}hidden-xxl-up" style="margin-bottom: 1rem;"><span class="#{$pr}#{$m}btn #{$pr}#{$m}btn-important">#{$pr}#{$u}hidden-xxl-up</span></div>
 ```
 
 */
@@ -60,11 +60,11 @@ category: utility-hidden
 (breakpoint)で指定した画面幅未満で要素を非表示にする。特性上、#{$pr}#{$u}hidden-xxl-downはない。
 
 ``` example
-<div class="#{$pr}#{$u}hidden-xs-down #{$pr}#{$u}m-b-sm"><span class="#{$pr}#{$m}btn #{$pr}#{$m}btn-first">#{$pr}#{$u}hidden-xs-down</span></div>
-<div class="#{$pr}#{$u}hidden-sm-down #{$pr}#{$u}m-b-sm"><span class="#{$pr}#{$m}btn #{$pr}#{$m}btn-second">#{$pr}#{$u}hidden-sm-down</span></div>
-<div class="#{$pr}#{$u}hidden-md-down #{$pr}#{$u}m-b-sm"><span class="#{$pr}#{$m}btn #{$pr}#{$m}btn-third">#{$pr}#{$u}hidden-md-down</span></div>
-<div class="#{$pr}#{$u}hidden-lg-down #{$pr}#{$u}m-b-sm"><span class="#{$pr}#{$m}btn #{$pr}#{$m}btn-important">#{$pr}#{$u}hidden-lg-down</span></div>
-<div class="#{$pr}#{$u}hidden-xl-down #{$pr}#{$u}m-b-sm"><span class="#{$pr}#{$m}btn">#{$pr}#{$u}hidden-xl-down</span></div>
+<div class="#{$pr}#{$u}hidden-xs-down" style="margin-bottom: 1rem;"><span class="#{$pr}#{$m}btn #{$pr}#{$m}btn-first">#{$pr}#{$u}hidden-xs-down</span></div>
+<div class="#{$pr}#{$u}hidden-sm-down" style="margin-bottom: 1rem;"><span class="#{$pr}#{$m}btn #{$pr}#{$m}btn-second">#{$pr}#{$u}hidden-sm-down</span></div>
+<div class="#{$pr}#{$u}hidden-md-down" style="margin-bottom: 1rem;"><span class="#{$pr}#{$m}btn #{$pr}#{$m}btn-third">#{$pr}#{$u}hidden-md-down</span></div>
+<div class="#{$pr}#{$u}hidden-lg-down" style="margin-bottom: 1rem;"><span class="#{$pr}#{$m}btn #{$pr}#{$m}btn-fourth">#{$pr}#{$u}hidden-lg-down</span></div>
+<div class="#{$pr}#{$u}hidden-xl-down" style="margin-bottom: 1rem;"><span class="#{$pr}#{$m}btn #{$pr}#{$m}btn-important">#{$pr}#{$u}hidden-xl-down</span></div>
 ```
 
 */

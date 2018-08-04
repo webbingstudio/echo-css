@@ -9,8 +9,8 @@ category: layout-container
 <code>/\_scss/\_config_advance.scss</code> の「<code>$container-max-widths-md</code>」の定義を参照する。
 
 ``` example
-<div class="#{$pr}#{$l}container #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-mild #{$pr}#{$u}m-b">
-        <div class="#{$pr}#{$u}p-y #{$pr}#{$u}line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
+<div class="#{$pr}#{$l}container #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-mild">
+    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
 </div>
 ```
 
@@ -57,8 +57,8 @@ parent: container
 コンテナブロックの最大幅の制限を行わない。
 
 ``` example
-<div class="#{$pr}#{$l}container #{$pr}#{$l}container-fluid #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-mild #{$pr}#{$u}m-b">
-        <div class="#{$pr}#{$u}p-y #{$pr}#{$u}line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
+<div class="#{$pr}#{$l}container #{$pr}#{$l}container-fluid #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-mild">
+    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
 </div>
 ```
 
@@ -85,8 +85,8 @@ parent: container
 <code>/\_scss/\_config_advance.scss</code> の「<code>$container-max-widths-sm</code>」の定義を参照する。
 
 ``` example
-<div class="#{$pr}#{$l}container #{$pr}#{$l}container-sm #{$pr}#{$u}bg-#{$__third} #{$pr}#{$u}bg-mild #{$pr}#{$u}m-b">
-        <div class="#{$pr}#{$u}p-y #{$pr}#{$u}line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
+<div class="#{$pr}#{$l}container #{$pr}#{$l}container-sm #{$pr}#{$u}bg-#{$__third} #{$pr}#{$u}bg-mild">
+    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
 </div>
 ```
 
@@ -117,8 +117,8 @@ parent: container
 <code>/\_scss/\_config_advance.scss</code> の「<code>$container-max-widths-lg</code>」の定義を参照する。
 
 ``` example
-<div class="#{$pr}#{$l}container #{$pr}#{$l}container-lg #{$pr}#{$u}bg-#{$__third} #{$pr}#{$u}bg-mild #{$pr}#{$u}m-b">
-        <div class="#{$pr}#{$u}p-y #{$pr}#{$u}line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
+<div class="#{$pr}#{$l}container #{$pr}#{$l}container-lg #{$pr}#{$u}bg-#{$__third} #{$pr}#{$u}bg-mild">
+    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
 </div>
 ```
 
@@ -148,14 +148,16 @@ parent: container
 (breakpoint)が <code>md</code> 以下のときにコンテナ余白を打ち消す。モバイル端末での幅100%表示等に使用する。
 
 ``` example
-<div class="#{$pr}#{$l}container #{$pr}#{$l}container-full-md #{$pr}#{$u}bg-#{$__fourth} #{$pr}#{$u}bg-mild #{$pr}#{$u}m-b">
-        <div class="#{$pr}#{$u}p-y #{$pr}#{$u}line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
+<div class="#{$pr}#{$l}container #{$pr}#{$l}container-full-md #{$pr}#{$u}bg-#{$__fourth} #{$pr}#{$u}bg-mild #{$pr}#{$u}margin-b">
+    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
 </div>
-<div class="#{$pr}#{$l}container #{$pr}#{$l}container-sm #{$pr}#{$l}container-full-md #{$pr}#{$u}bg-#{$__fourth} #{$pr}#{$u}bg-mild #{$pr}#{$u}m-b">
-        <div class="#{$pr}#{$u}p-y #{$pr}#{$u}line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
+
+<div class="#{$pr}#{$l}container #{$pr}#{$l}container-sm #{$pr}#{$l}container-full-md #{$pr}#{$u}bg-#{$__fourth} #{$pr}#{$u}bg-mild #{$pr}#{$u}margin-b">
+    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
 </div>
-<div class="#{$pr}#{$l}container #{$pr}#{$l}container-lg #{$pr}#{$l}container-full-md #{$pr}#{$u}bg-#{$__fourth} #{$pr}#{$u}bg-mild #{$pr}#{$u}m-b">
-        <div class="#{$pr}#{$u}p-y #{$pr}#{$u}line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
+
+<div class="#{$pr}#{$l}container #{$pr}#{$l}container-lg #{$pr}#{$l}container-full-md #{$pr}#{$u}bg-#{$__fourth} #{$pr}#{$u}bg-mild #{$pr}#{$u}margin-b">
+    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
 </div>
 ```
 */

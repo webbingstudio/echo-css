@@ -49,82 +49,86 @@
 余白・レイアウト等は <code>utility &gt; .p</code> や <code>component &gt; .c-form</code> で指定する。<br>
 <code>.is-error</code> を同時に使用するとエラーがあったときの表示となる。<br>
 セレクトボックスのシェブロンは <code>/_scss/mixin/mixin.css</code> の <code>chevron()</code>を参照。</p>
-<div class="example"><div class="m-select m-b">
-<select>
-<option>月を選択...</option>
-<option value="">2017年</option>
-<option value="">2016年</option>
-<option value="">2015年</option>
-</select>
+<div class="example"><div style="margin-bottom: 1rem;">
+    <div class="m-select">
+        <select>
+            <option>月を選択...</option>
+            <option value="">2017年</option>
+            <option value="">2016年</option>
+            <option value="">2015年</option>
+        </select>
+    </div>
 </div>
 
 <div class="m-select is-error">
-<select>
-<option>月を選択...</option>
-<option value="">2017年</option>
-<option value="">2016年</option>
-<option value="">2015年</option>
-</select>
+    <select>
+        <option>月を選択...</option>
+        <option value="">2017年</option>
+        <option value="">2016年</option>
+        <option value="">2015年</option>
+    </select>
 </div>
-</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-select m-b"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;select&gt;</span>
-<span class="nt">&lt;option&gt;</span>月を選択...<span class="nt">&lt;/option&gt;</span>
-<span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>2017年<span class="nt">&lt;/option&gt;</span>
-<span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>2016年<span class="nt">&lt;/option&gt;</span>
-<span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>2015年<span class="nt">&lt;/option&gt;</span>
-<span class="nt">&lt;/select&gt;</span>
+</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-select"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;select&gt;</span>
+            <span class="nt">&lt;option&gt;</span>月を選択...<span class="nt">&lt;/option&gt;</span>
+            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>2017年<span class="nt">&lt;/option&gt;</span>
+            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>2016年<span class="nt">&lt;/option&gt;</span>
+            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>2015年<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-select is-error"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;select&gt;</span>
-<span class="nt">&lt;option&gt;</span>月を選択...<span class="nt">&lt;/option&gt;</span>
-<span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>2017年<span class="nt">&lt;/option&gt;</span>
-<span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>2016年<span class="nt">&lt;/option&gt;</span>
-<span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>2015年<span class="nt">&lt;/option&gt;</span>
-<span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;select&gt;</span>
+        <span class="nt">&lt;option&gt;</span>月を選択...<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>2017年<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>2016年<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>2015年<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;/select&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </pre></div>
 <h2 id="select-01-size" class="styleguide">m-select-(size)</h2>
 
 <p>テキスト入力を即す欄の全体のサイズを変更する。(size)は <code>sm, lg</code> に対応している。</p>
-<div class="example"><div class="m-b">
-    <div class="m-select m-select-sm m-b">
-    <select>
-    <option>月を選択...</option>
-    <option value="">2017年</option>
-    <option value="">2016年</option>
-    <option value="">2015年</option>
-    </select>
+<div class="example"><div style="margin-bottom: 1rem;">
+    <div class="m-select m-select-sm">
+        <select>
+            <option>月を選択...</option>
+            <option value="">2017年</option>
+            <option value="">2016年</option>
+            <option value="">2015年</option>
+        </select>
     </div>
 </div>
-<div class="m-b">
-    <div class="m-select m-select-lg m-b">
-    <select>
-    <option>月を選択...</option>
-    <option value="">2017年</option>
-    <option value="">2016年</option>
-    <option value="">2015年</option>
-    </select>
+<div>
+    <div class="m-select m-select-lg">
+        <select>
+            <option>月を選択...</option>
+            <option value="">2017年</option>
+            <option value="">2016年</option>
+            <option value="">2015年</option>
+        </select>
     </div>
 </div>
-</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-b"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-select m-select-sm m-b"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;select&gt;</span>
-    <span class="nt">&lt;option&gt;</span>月を選択...<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>2017年<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>2016年<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>2015年<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;/select&gt;</span>
+</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-select m-select-sm"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;select&gt;</span>
+            <span class="nt">&lt;option&gt;</span>月を選択...<span class="nt">&lt;/option&gt;</span>
+            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>2017年<span class="nt">&lt;/option&gt;</span>
+            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>2016年<span class="nt">&lt;/option&gt;</span>
+            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>2015年<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;/select&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-b"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-select m-select-lg m-b"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;select&gt;</span>
-    <span class="nt">&lt;option&gt;</span>月を選択...<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>2017年<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>2016年<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>2015年<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;/select&gt;</span>
+<span class="nt">&lt;div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-select m-select-lg"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;select&gt;</span>
+            <span class="nt">&lt;option&gt;</span>月を選択...<span class="nt">&lt;/option&gt;</span>
+            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>2017年<span class="nt">&lt;/option&gt;</span>
+            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>2016年<span class="nt">&lt;/option&gt;</span>
+            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>2015年<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;/select&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </pre></div><?php include('../doc_include/footer.inc'); ?>

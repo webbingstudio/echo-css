@@ -278,11 +278,7 @@ In Japan, there is a tendency to specify sans-serif fonts in the form input fiel
 --------------------
 */
 textarea,
-input[type="text"],
-input[type="password"],
-input[type="date"],
-input[type="time"],
-input[type="number"] {
+input {
   font-size: 1em;
   font-family: '-apple-system', 'BlinkMacSystemFont', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
   font-weight: 300;
@@ -340,8 +336,8 @@ category: layout-container
 <code>/\_scss/\_config_advance.scss</code> の「<code>$container-max-widths-md</code>」の定義を参照する。
 
 ``` example
-<div class="l-container bg-first bg-mild m-b">
-        <div class="p-y line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
+<div class="l-container bg-first bg-mild">
+    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
 </div>
 ```
 
@@ -395,8 +391,8 @@ parent: container
 コンテナブロックの最大幅の制限を行わない。
 
 ``` example
-<div class="l-container l-container-fluid bg-second bg-mild m-b">
-        <div class="p-y line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
+<div class="l-container l-container-fluid bg-second bg-mild">
+    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
 </div>
 ```
 
@@ -417,8 +413,8 @@ parent: container
 <code>/\_scss/\_config_advance.scss</code> の「<code>$container-max-widths-sm</code>」の定義を参照する。
 
 ``` example
-<div class="l-container l-container-sm bg-third bg-mild m-b">
-        <div class="p-y line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
+<div class="l-container l-container-sm bg-third bg-mild">
+    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
 </div>
 ```
 
@@ -446,8 +442,8 @@ parent: container
 <code>/\_scss/\_config_advance.scss</code> の「<code>$container-max-widths-lg</code>」の定義を参照する。
 
 ``` example
-<div class="l-container l-container-lg bg-third bg-mild m-b">
-        <div class="p-y line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
+<div class="l-container l-container-lg bg-third bg-mild">
+    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
 </div>
 ```
 
@@ -484,14 +480,16 @@ parent: container
 (breakpoint)が <code>md</code> 以下のときにコンテナ余白を打ち消す。モバイル端末での幅100%表示等に使用する。
 
 ``` example
-<div class="l-container l-container-full-md bg-fourth bg-mild m-b">
-        <div class="p-y line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
+<div class="l-container l-container-full-md bg-fourth bg-mild margin-b">
+    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
 </div>
-<div class="l-container l-container-sm l-container-full-md bg-fourth bg-mild m-b">
-        <div class="p-y line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
+
+<div class="l-container l-container-sm l-container-full-md bg-fourth bg-mild margin-b">
+    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
 </div>
-<div class="l-container l-container-lg l-container-full-md bg-fourth bg-mild m-b">
-        <div class="p-y line-c" style="background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
+
+<div class="l-container l-container-lg l-container-full-md bg-fourth bg-mild margin-b">
+    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
 </div>
 ```
 */
@@ -515,15 +513,15 @@ flexboxによるグリッドのグループを作成する。 <code>ul</code> �
 命名規則をbootstrapと同様にしたい場合は、 <code>/\_scss/_\config\_advance.scss</code> の変数 <code>$g</code> を空にすること。
 
 ``` example
-<div class="l-row">
-    <div class="l-col m-b">
-        <div class="bg-first p" style="height: 100%;">l-col-lg-4<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="l-row" style="margin-bottom: 2rem;">
+    <div class="l-col">
+        <div class="bg-first" style="padding: 1rem; height: 100%;">l-col-lg-4<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col m-b">
-        <div class="bg-first p" style="height: 100%;">l-col-lg-4<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。</div>
+    <div class="l-col">
+        <div class="bg-first" style="padding: 1rem; height: 100%;">l-col-lg-4<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。</div>
     </div>
-    <div class="l-col m-b">
-        <div class="bg-first p" style="height: 100%;">l-col-lg-4<br>ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。</div>
+    <div class="l-col">
+        <div class="bg-first" style="padding: 1rem; height: 100%;">l-col-lg-4<br>ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。</div>
     </div>
 </div>
 ```
@@ -550,39 +548,39 @@ flexboxによるグリッドで余白が異なるグループを作成する。
 Bootstrap4の <code>.no-gutters</code> は <code>.l-row-0</code> のエイリアスとなる。
 
 ``` example
-<div class="l-row l-row-0">
-    <div class="l-col m-b">
-        <div class="bg-first p" style="height: 100%;">l-row-0<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="l-row l-row-0" style="margin-bottom: 2rem;">
+    <div class="l-col">
+        <div class="bg-first" style="padding: 1rem; height: 100%;">l-row-0<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col m-b">
-        <div class="bg-first p" style="height: 100%; opacity: 0.8;">l-row-0<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-col">
+        <div class="bg-first" style="padding: 1rem; height: 100%; opacity: 0.8;">l-row-0<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-col m-b">
-        <div class="bg-first p" style="height: 100%;">l-row-0<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="l-col">
+        <div class="bg-first" style="padding: 1rem; height: 100%;">l-row-0<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 
-<div class="l-row l-row-sm">
-    <div class="l-col m-b">
-        <div class="bg-second p" style="height: 100%;">l-row-sm<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="l-row l-row-sm" style="margin-bottom: 2rem;">
+    <div class="l-col">
+        <div class="bg-second" style="padding: 1rem; height: 100%;">l-row-sm<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col m-b">
-        <div class="bg-second p" style="height: 100%; opacity: 0.8;">l-row-sm<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-col">
+        <div class="bg-second" style="padding: 1rem; height: 100%; opacity: 0.8;">l-row-sm<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-col m-b">
-        <div class="bg-second p" style="height: 100%;">l-row-sm<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="l-col">
+        <div class="bg-second" style="padding: 1rem; height: 100%;">l-row-sm<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 
 <div class="l-row l-row-lg">
-    <div class="l-col m-b">
-        <div class="bg-third p" style="height: 100%;">l-row-lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    <div class="l-col">
+        <div class="bg-third" style="padding: 1rem; height: 100%;">l-row-lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col m-b">
-        <div class="bg-third p" style="height: 100%; opacity: 0.8;">l-row-lg<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-col">
+        <div class="bg-third" style="padding: 1rem; height: 100%; opacity: 0.8;">l-row-lg<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-col m-b">
-        <div class="bg-third p" style="height: 100%;">l-row-lg<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="l-col">
+        <div class="bg-third" style="padding: 1rem; height: 100%;">l-row-lg<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 ```
@@ -628,30 +626,30 @@ flexboxによるグリッドのセルを作成する。このクラス単独で�
 Bootstrap 4との互換の関係で、**このカテゴリーのみシングルクラスとなっている（l-colを常に付与する必要はない）**ことに注意。
 
 ``` example
-<div class="l-row">
-    <div class="l-col m-b">
-        <div class="bg-first p" style="height: 100%;">l-col<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="l-row" style="margin-bottom: 2rem;">
+    <div class="l-col">
+        <div class="bg-first" style="padding: 1rem; height: 100%;">l-col<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    </div>
+</div>
+
+<div class="l-row" style="margin-bottom: 2rem;">
+    <div class="l-col">
+        <div class="bg-second" style="padding: 1rem; height: 100%;">l-col<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    </div>
+    <div class="l-col">
+        <div class="bg-second" style="padding: 1rem; height: 100%;">l-col<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
 </div>
 
 <div class="l-row">
-    <div class="l-col m-b">
-        <div class="bg-second p" style="height: 100%;">l-col<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    <div class="l-col">
+        <div class="bg-third" style="padding: 1rem; height: 100%;">l-col<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col m-b">
-        <div class="bg-second p" style="height: 100%;">l-col<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-col">
+        <div class="bg-third" style="padding: 1rem; height: 100%;">l-col<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-</div>
-
-<div class="l-row">
-    <div class="l-col m-b">
-        <div class="bg-third p" style="height: 100%;">l-col<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="l-col m-b">
-        <div class="bg-third p" style="height: 100%;">l-col<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="l-col m-b">
-        <div class="bg-third p" style="height: 100%;">l-col<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="l-col">
+        <div class="bg-third" style="padding: 1rem; height: 100%;">l-col<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 ```
@@ -1967,63 +1965,63 @@ flexboxによるグリッドのセルの幅を、<code>(column) / 12</code>の�
 (breakpoint)の指定がある場合は、(breakpoint)**以上**のときに、指定した幅となる。
 
 ``` example
-<div class="l-row m-b-lg">
-    <div class="l-col-3 m-b">
-        <div class="bg-first p" style="height: 100%;">l-col-3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="l-row" style="margin-bottom: 2rem;">
+    <div class="l-col-3">
+        <div class="bg-first" style="padding: 1rem; height: 100%;">l-col-3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col-sm-3 m-b">
-        <div class="bg-first p" style="height: 100%;">l-col-sm-3<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-col-sm-3">
+        <div class="bg-first" style="padding: 1rem; height: 100%;">l-col-sm-3<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-col-sm-3 m-b">
-        <div class="bg-first p" style="height: 100%;">l-col-sm-3<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-</div>
-
-<div class="l-row m-b-lg">
-    <div class="l-col-md-3 m-b">
-        <div class="bg-second p" style="height: 100%;">l-col-md-3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="l-col-md-3 m-b">
-        <div class="bg-second p" style="height: 100%;">l-col-md-3<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="l-col-md-3 m-b">
-        <div class="bg-second p" style="height: 100%;">l-col-md-3<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-    <div class="l-col-md-3 m-b">
-        <div class="bg-second p" style="height: 100%;">l-col-md-3<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
+    <div class="l-col-sm-3">
+        <div class="bg-first" style="padding: 1rem; height: 100%;">l-col-sm-3<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 
-<div class="l-row m-b-lg">
-    <div class="l-col-lg-4 m-b">
-        <div class="bg-third p" style="height: 100%;">l-col-lg-4<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="l-row" style="margin-bottom: 2rem;">
+    <div class="l-col-md-3">
+        <div class="bg-second" style="padding: 1rem; height: 100%;">l-col-md-3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col-lg-4 m-b">
-        <div class="bg-third p" style="height: 100%;">l-col-lg-4<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-col-md-3">
+        <div class="bg-second" style="padding: 1rem; height: 100%;">l-col-md-3<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-col-lg-4 m-b">
-        <div class="bg-third p" style="height: 100%;">l-col-lg-4<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="l-col-md-3">
+        <div class="bg-second" style="padding: 1rem; height: 100%;">l-col-md-3<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    </div>
+    <div class="l-col-md-3">
+        <div class="bg-second" style="padding: 1rem; height: 100%;">l-col-md-3<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
+    </div>
+</div>
+
+<div class="l-row" style="margin-bottom: 2rem;">
+    <div class="l-col-lg-4">
+        <div class="bg-third" style="padding: 1rem; height: 100%;">l-col-lg-4<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    </div>
+    <div class="l-col-lg-4">
+        <div class="bg-third" style="padding: 1rem; height: 100%;">l-col-lg-4<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    </div>
+    <div class="l-col-lg-4">
+        <div class="bg-third" style="padding: 1rem; height: 100%;">l-col-lg-4<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 
 <div class="l-row">
-    <div class="l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2 m-b">
-        <div class="bg-fourth p" style="height: 100%;">l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    <div class="l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2">
+        <div class="bg-fourth" style="padding: 1rem; height: 100%;">l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2 m-b">
-        <div class="bg-fourth p" style="height: 100%;">l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2">
+        <div class="bg-fourth" style="padding: 1rem; height: 100%;">l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2 m-b">
-        <div class="bg-fourth p" style="height: 100%;">l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2">
+        <div class="bg-fourth" style="padding: 1rem; height: 100%;">l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
-    <div class="l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2 m-b">
-        <div class="bg-fourth p" style="height: 100%;">l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
+    <div class="l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2">
+        <div class="bg-fourth" style="padding: 1rem; height: 100%;">l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
     </div>
-    <div class="l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2 m-b">
-        <div class="bg-fourth p" style="height: 100%;">l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2">
+        <div class="bg-fourth" style="padding: 1rem; height: 100%;">l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
-    <div class="l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2 m-b">
-        <div class="bg-fourth p" style="height: 100%;">l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
+    <div class="l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2">
+        <div class="bg-fourth" style="padding: 1rem; height: 100%;">l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
     </div>
 </div>
 ```
@@ -2041,48 +2039,48 @@ flexboxによるグリッドのセルを、指定した順番にする。
 (breakpoint)の指定がある場合は、(breakpoint)**以上**のときに、指定した順番となる。
 
 ``` example
-<div class="l-row m-b-lg">
-    <div class="l-order-last l-col m-b">
-        <div class="bg-first p" style="height: 100%;">1:<br>l-order-last<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="l-row" style="margin-bottom: 2rem;">
+    <div class="l-order-last l-col">
+        <div class="bg-first" style="padding: 1rem; height: 100%;">1:<br>l-order-last<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col m-b">
-        <div class="bg-first bg-mild p" style="height: 100%;">2:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-col">
+        <div class="bg-first bg-mild" style="padding: 1rem; height: 100%;">2:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-order-first l-col m-b">
-        <div class="bg-first p" style="height: 100%;">3:<br>l-order-first<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-order-first l-col">
+        <div class="bg-first" style="padding: 1rem; height: 100%;">3:<br>l-order-first<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-col m-b">
-        <div class="bg-first bg-mild p" style="height: 100%;">4:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-</div>
-
-<div class="l-row m-b-lg">
-    <div class="l-order-3 l-col m-b">
-        <div class="bg-second p" style="height: 100%;">1:<br>l-order-3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="l-order-1 l-col m-b">
-        <div class="bg-second p" style="height: 100%;">2:<br>l-order-1<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="l-order-4 l-col m-b">
-        <div class="bg-second p" style="height: 100%;">3:<br>l-order-4<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="l-order-2 l-col m-b">
-        <div class="bg-second p" style="height: 100%;">4:<br>l-order-2<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-col">
+        <div class="bg-first bg-mild" style="padding: 1rem; height: 100%;">4:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
 </div>
 
-<div class="l-row m-b-lg">
-    <div class="l-order-sm-last l-col-sm-6 l-col-lg-3 m-b">
-        <div class="bg-third p" style="height: 100%;">1:<br>l-order-sm-last<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="l-row" style="margin-bottom: 2rem;">
+    <div class="l-order-3 l-col">
+        <div class="bg-second" style="padding: 1rem; height: 100%;">1:<br>l-order-3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col-sm-6 l-col-lg-3 m-b">
-        <div class="bg-third bg-mild p" style="height: 100%;">2:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-order-1 l-col">
+        <div class="bg-second" style="padding: 1rem; height: 100%;">2:<br>l-order-1<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-order-xl-first l-col-sm-6 l-col-lg-3 m-b">
-        <div class="bg-third p" style="height: 100%;">3:<br>l-order-xl-first<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-order-4 l-col">
+        <div class="bg-second" style="padding: 1rem; height: 100%;">3:<br>l-order-4<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-col-sm-6 l-col-lg-3 m-b">
-        <div class="bg-third bg-mild p" style="height: 100%;">4:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-order-2 l-col">
+        <div class="bg-second" style="padding: 1rem; height: 100%;">4:<br>l-order-2<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    </div>
+</div>
+
+<div class="l-row">
+    <div class="l-order-sm-last l-col-sm-6 l-col-lg-3">
+        <div class="bg-third" style="padding: 1rem; height: 100%;">1:<br>l-order-sm-last<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    </div>
+    <div class="l-col-sm-6 l-col-lg-3">
+        <div class="bg-third bg-mild" style="padding: 1rem; height: 100%;">2:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    </div>
+    <div class="l-order-xl-first l-col-sm-6 l-col-lg-3">
+        <div class="bg-third" style="padding: 1rem; height: 100%;">3:<br>l-order-xl-first<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    </div>
+    <div class="l-col-sm-6 l-col-lg-3">
+        <div class="bg-third bg-mild" style="padding: 1rem; height: 100%;">4:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
 </div>
 ```
@@ -2101,18 +2099,18 @@ flexboxによるグリッドのセルの開始位置を、<code>(column) / 12</c
 (breakpoint)の指定がある場合は、(breakpoint)**以上**のときに、指定した位置となる。
 
 ``` example
-<div class="l-row m-b-lg">
-    <div class="l-offset-1 l-col-10 m-b">
-        <div class="bg-first p" style="height: 100%;">l-offset-3<br>l-col-10<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="l-row" style="margin-bottom: 2rem;">
+    <div class="l-offset-1 l-col-10">
+        <div class="bg-first" style="padding: 1rem; height: 100%;">l-offset-3<br>l-col-10<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
 </div>
 
-<div class="l-row m-b-lg">
-    <div class="l-offset-lg-8 l-col-6 m-b">
-        <div class="bg-second p" style="height: 100%;">l-offset-lg-8<br>l-col-6<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="l-row" style="margin-bottom: 2rem;">
+    <div class="l-offset-lg-8 l-col-6">
+        <div class="bg-second" style="padding: 1rem; height: 100%;">l-offset-lg-8<br>l-col-6<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-offset-lg-4 l-offset-md-8 l-col-3 m-b">
-        <div class="bg-second p" style="height: 100%;">l-offset-lg-4<br>l-offset-md-8<br>l-col-3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    <div class="l-offset-lg-4 l-offset-md-8 l-col-3">
+        <div class="bg-second" style="padding: 1rem; height: 100%;">l-offset-lg-4<br>l-offset-md-8<br>l-col-3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
 </div>
 
@@ -2537,11 +2535,11 @@ parent: btn
 <code>.m-btn-outline</code> と同時に使用すると、罫線のみの状態で反転する。
 
 ``` example
-<p class="bg-inverse p-y">
+<p style="background-color: #000; padding: 1rem 0;">
   <a href="#" class="m-btn m-btn-inverse">m-btn-inverse</a>
   <a href="#" class="m-btn m-btn-inverse disabled">m-btn-inverse</a>
 </p>
-<p class="bg-inverse p-y">
+<p style="background-color: #000; padding: 1rem 0;">
   <a href="#" class="m-btn m-btn-outline m-btn-inverse">m-btn-outline + m-btn-inverse</a>
   <a href="#" class="m-btn m-btn-outline m-btn-inverse disabled">m-btn-outline + m-btn-inverse</a>
 </p>
@@ -3053,14 +3051,14 @@ category: module-checkbox
 ---
 
 チェックボックスとラベルをインライン表示する。input要素ではなく、包括している要素にクラスを付与する（ほとんどの場合、label要素となる）。  
-余白・レイアウト等は <code>utility > .p</code> や <code>component > .c-form</code> で指定する。  
+余白・レイアウト等は <code>utility > .padding</code> や <code>component > .c-form</code> で指定する。  
 <code>.is-error</code> を同時に使用するとエラーがあったときの表示となる。 
 
 ``` example
 <p>
-<label class="m-checkbox m-r" for="checkbox1"><input type="checkbox" name="checkbox1" id="checkbox1" class="m-r-sm" value="1">m-checkbox</label>
-<label class="m-checkbox m-r" for="checkbox2"><input type="checkbox" name="checkbox2" id="checkbox2" class="m-r-sm" value="2" checked="checked">m-checkbox</label>
-<label class="m-checkbox is-error" for="checkbox3"><input type="checkbox" name="checkbox3" id="checkbox3" class="m-r-sm" value="3">m-checkbox</label>
+<label class="m-checkbox margin-r" for="checkbox1"><input type="checkbox" name="checkbox1" id="checkbox1" class="margin-r-sm" value="1">m-checkbox</label>
+<label class="m-checkbox margin-r" for="checkbox2"><input type="checkbox" name="checkbox2" id="checkbox2" class="margin-r-sm" value="2" checked="checked">m-checkbox</label>
+<label class="m-checkbox is-error" for="checkbox3"><input type="checkbox" name="checkbox3" id="checkbox3" class="margin-r-sm" value="3">m-checkbox</label>
 </p>
 ```
 */
@@ -3238,16 +3236,16 @@ category: module-input
 ---
 
 テキスト入力を即す欄を表示する。要素に直接クラスを付与する（ほとんどの場合、input要素、textarea要素となる）。  
-余白・レイアウト等は <code>utility > .m</code> や <code>component > .c-form</code> で指定する。  
+余白・レイアウト等は <code>utility > .margin</code> や <code>component > .c-form</code> で指定する。  
 <code>.is-error</code> を同時に使用するとエラーがあったときの表示となる。 
 
 ``` example
-<div class="m-b">
-    <input type="text" class="m-input" size="20" value="" placeholder="鈴木一朗" />
-    <input type="text" class="m-input is-error" size="20" value="" placeholder="鈴木一郎" />
+<div style="margin-bottom: 2rem;">
+    <input type="text" class="m-input" size="20" value="吾輩は猫である。" />
+    <input type="text" class="m-input is-error" size="20" value="* なに？ *" />
 </div>
-<div class="m-b">
-    <textarea class="m-input" rows="5" cols="60">メッセージをどうぞ</textarea>
+<div>
+    <textarea class="m-input" rows="5" cols="60">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</textarea>
     <textarea class="m-input is-error" rows="5" cols="60">* おおっと *</textarea>
 </div>
 ```
@@ -3278,12 +3276,12 @@ parent: input
 
 ``` example
 <div class="m-b">
-    <input type="text" class="m-input m-input-sm" size="20" value="" placeholder="鈴木一朗" />
-    <input type="text" class="m-input m-input-lg" size="20" value="" placeholder="鈴木一朗" />
+    <input type="text" class="m-input m-input-sm" size="20" value="吾輩は猫である。" />
+    <input type="text" class="m-input m-input-lg" size="20" value="吾輩は猫である。" />
 </div>
 <div class="m-b">
-    <textarea class="m-input m-input-sm" rows="5" cols="60">メッセージをどうぞ</textarea>
-    <textarea class="m-input m-input-lg" rows="5" cols="60">メッセージをどうぞ</textarea>
+    <textarea class="m-input m-input-sm" rows="5" cols="60">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</textarea>
+    <textarea class="m-input m-input-lg" rows="5" cols="60">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</textarea>
 </div>
 ```
 */
@@ -3308,25 +3306,25 @@ parent: input
 ボーダーの色を変更する。(color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
 
 ``` example
-<div class="m-b-sm">
+<div style="margin-bottom: 1rem;">
     <input type="text" class="m-input m-input-gray" size="20" value="" placeholder="gray" />
 </div>
-<div class="m-b-sm">
+<div style="margin-bottom: 1rem;">
     <input type="text" class="m-input m-input-first" size="20" value="" placeholder="first" />
 </div>
-<div class="m-b-sm">
+<div style="margin-bottom: 1rem;">
     <input type="text" class="m-input m-input-second" size="20" value="" placeholder="second" />
 </div>
-<div class="m-b-sm">
+<div style="margin-bottom: 1rem;">
     <input type="text" class="m-input m-input-third" size="20" value="" placeholder="third" />
 </div>
-<div class="m-b-sm">
+<div style="margin-bottom: 1rem;">
     <input type="text" class="m-input m-input-fourth" size="20" value="" placeholder="fourth" />
 </div>
-<div class="m-b-sm">
+<div style="margin-bottom: 1rem;">
     <input type="text" class="m-input m-input-info" size="20" value="" placeholder="info" />
 </div>
-<div class="m-b-sm">
+<div>
     <input type="text" class="m-input m-input-important" size="20" value="" placeholder="important" />
 </div>
 ```
@@ -3942,14 +3940,14 @@ category: module-radio
 ---
 
 ラジオボタンとラベルをインライン表示する。input要素ではなく、包括している要素にクラスを付与する（ほとんどの場合、label要素となる）。  
-余白・レイアウト等は <code>utility > .p</code> や <code>component > .c-form</code> で指定する。  
+余白・レイアウト等は <code>utility > .padding</code> や <code>component > .c-form</code> で指定する。  
 <code>.is-error</code> を同時に使用するとエラーがあったときの表示となる。 
 
 ``` example
 <p>
-<label class="m-radio m-r" for="radio1"><input type="radio" name="radio" id="radio1" class="m-r-sm" value="1">m-radio 1</label>
-<label class="m-radio m-r" for="radio2"><input type="radio" name="radio" id="radio2" class="m-r-sm" value="2" checked="checked">m-radio 2</label>
-<label class="m-radio m-r is-error" for="radio3"><input type="radio" name="radio" id="radio3" class="m-r-sm" value="3">m-radio 3</label>
+<label class="m-radio margin-r" for="radio1"><input type="radio" name="radio" id="radio1" class="margin-r-sm" value="1">m-radio 1</label>
+<label class="m-radio margin-r" for="radio2"><input type="radio" name="radio" id="radio2" class="margin-r-sm" value="2" checked="checked">m-radio 2</label>
+<label class="m-radio margin-r is-error" for="radio3"><input type="radio" name="radio" id="radio3" class="margin-r-sm" value="3">m-radio 3</label>
 </p>
 ```
 */
@@ -3982,22 +3980,24 @@ category: module-select
 セレクトボックスのシェブロンは <code>/\_scss/mixin/mixin.css</code> の <code>chevron()</code>を参照。
 
 ``` example
-<div class="m-select m-b">
-<select>
-<option>月を選択...</option>
-<option value="">2017年</option>
-<option value="">2016年</option>
-<option value="">2015年</option>
-</select>
+<div style="margin-bottom: 1rem;">
+    <div class="m-select">
+        <select>
+            <option>月を選択...</option>
+            <option value="">2017年</option>
+            <option value="">2016年</option>
+            <option value="">2015年</option>
+        </select>
+    </div>
 </div>
 
 <div class="m-select is-error">
-<select>
-<option>月を選択...</option>
-<option value="">2017年</option>
-<option value="">2016年</option>
-<option value="">2015年</option>
-</select>
+    <select>
+        <option>月を選択...</option>
+        <option value="">2017年</option>
+        <option value="">2016年</option>
+        <option value="">2015年</option>
+    </select>
 </div>
 ```
 */
@@ -4075,24 +4075,24 @@ parent: select
 テキスト入力を即す欄の全体のサイズを変更する。(size)は <code>sm, lg</code> に対応している。
 
 ``` example
-<div class="m-b">
-    <div class="m-select m-select-sm m-b">
-    <select>
-    <option>月を選択...</option>
-    <option value="">2017年</option>
-    <option value="">2016年</option>
-    <option value="">2015年</option>
-    </select>
+<div style="margin-bottom: 1rem;">
+    <div class="m-select m-select-sm">
+        <select>
+            <option>月を選択...</option>
+            <option value="">2017年</option>
+            <option value="">2016年</option>
+            <option value="">2015年</option>
+        </select>
     </div>
 </div>
-<div class="m-b">
-    <div class="m-select m-select-lg m-b">
-    <select>
-    <option>月を選択...</option>
-    <option value="">2017年</option>
-    <option value="">2016年</option>
-    <option value="">2015年</option>
-    </select>
+<div>
+    <div class="m-select m-select-lg">
+        <select>
+            <option>月を選択...</option>
+            <option value="">2017年</option>
+            <option value="">2016年</option>
+            <option value="">2015年</option>
+        </select>
     </div>
 </div>
 ```
@@ -4307,31 +4307,35 @@ parent: table
 列数、内容にかかわらず、セルを均等な幅にする。
 
 ``` example
-<table class="m-table m-table-bordered m-table-justify m-b">
-    <tbody>
-        <tr>
-            <td>吾輩は猫である名前はまだ無い。どこで生れたかとんと見当がつかぬ。</td>
-            <td>何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
-        </tr>
-    </tbody>
-</table>
+<div style="margin-bottom: 2rem;">
+    <table class="m-table m-table-bordered m-table-justify">
+        <tbody>
+            <tr>
+                <td>吾輩は猫である名前はまだ無い。どこで生れたかとんと見当がつかぬ。</td>
+                <td>何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
-<table class="m-table m-table-bordered m-table-justify m-b">
-    <tbody>
-        <tr>
-            <td>吾輩は猫である名前は</td>
-            <td>まだ無い。どこで生れたか</td>
-            <td>とんと見当がつかぬ。</td>
-            <td>何でも薄暗いじめじめした所で</td>
-            <td rowspan="2">ニャーニャー泣いていた事だけは記憶している。</td>
-        </tr>
-        <tr>
-            <td>吾輩は猫である</td>
-            <td>名前はまだ無い。</td>
-            <td colspan="2">どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所で</td>
-        </tr>
-    </tbody>
-</table>
+<div style="margin-bottom: 2rem;">
+    <table class="m-table m-table-bordered m-table-justify">
+        <tbody>
+            <tr>
+                <td>吾輩は猫である名前は</td>
+                <td>まだ無い。どこで生れたか</td>
+                <td>とんと見当がつかぬ。</td>
+                <td>何でも薄暗いじめじめした所で</td>
+                <td rowspan="2">ニャーニャー泣いていた事だけは記憶している。</td>
+            </tr>
+            <tr>
+                <td>吾輩は猫である</td>
+                <td>名前はまだ無い。</td>
+                <td colspan="2">どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所で</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 ```
 
 */
@@ -4352,67 +4356,75 @@ parent: table
 (ratio-first)to(ratio-second)to(ratio-third)は <code>3to9, 4to8, 3to3to6, 0to12</code> に対応している。   
 
 ``` example
-<table class="m-table m-table-bordered m-table-3to9 m-b">
-    <caption>.m-table-3to9</caption>
-    <tbody>
-        <tr>
-            <th>吾輩は猫である</th>
-            <td>名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
-        </tr>
-        <tr>
-            <th>吾輩は猫である名前はまだ無い。</th>
-            <td>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
-        </tr>
-    </tbody>
-</table>
+<div style="margin-bottom: 2rem;">
+    <table class="m-table m-table-bordered m-table-3to9">
+        <caption>.m-table-3to9</caption>
+        <tbody>
+            <tr>
+                <th>吾輩は猫である</th>
+                <td>名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+            </tr>
+            <tr>
+                <th>吾輩は猫である名前はまだ無い。</th>
+                <td>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
-<table class="m-table m-table-bordered m-table-4to8 m-b">
-    <caption>.m-table-4to8</caption>
-    <tbody>
-        <tr>
-            <th>吾輩は猫である</th>
-            <td>名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
-        </tr>
-        <tr>
-            <th>吾輩は猫である名前はまだ無い。</th>
-            <td>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
-        </tr>
-    </tbody>
-</table>
+<div style="margin-bottom: 2rem;">
+    <table class="m-table m-table-bordered m-table-4to8">
+        <caption>.m-table-4to8</caption>
+        <tbody>
+            <tr>
+                <th>吾輩は猫である</th>
+                <td>名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+            </tr>
+            <tr>
+                <th>吾輩は猫である名前はまだ無い。</th>
+                <td>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
-<table class="m-table m-table-bordered m-table-3to3to6 m-b">
-    <caption>.m-table-3to3to6</caption>
-    <tbody>
-        <tr>
-            <th>吾輩は猫である</th>
-            <td>名前はまだ無い。</td>
-            <td>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
-        </tr>
-        <tr>
-            <th>吾輩は猫である名前はまだ無い。</th>
-            <td>どこで生れたかとんと見当がつかぬ。</td>
-            <td>何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
-        </tr>
-    </tbody>
-</table>
+<div style="margin-bottom: 2rem;">
+    <table class="m-table m-table-bordered m-table-3to3to6">
+        <caption>.m-table-3to3to6</caption>
+        <tbody>
+            <tr>
+                <th>吾輩は猫である</th>
+                <td>名前はまだ無い。</td>
+                <td>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+            </tr>
+            <tr>
+                <th>吾輩は猫である名前はまだ無い。</th>
+                <td>どこで生れたかとんと見当がつかぬ。</td>
+                <td>何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
-<table class="m-table m-table-bordered m-table-0to12 m-b">
-    <caption>.m-table-0to12</caption>
-    <tbody>
-        <tr>
-            <th>吾輩は猫</th>
-            <td>である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
-        </tr>
-        <tr>
-            <th>吾輩はここで</th>
-            <td>始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</td>
-        </tr>
-        <tr>
-            <th>しかし</th>
-            <td>その当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</td>
-        </tr>
-    </tbody>
-</table>
+<div>
+    <table class="m-table m-table-bordered m-table-0to12">
+        <caption>.m-table-0to12</caption>
+        <tbody>
+            <tr>
+                <th>吾輩は猫</th>
+                <td>である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+            </tr>
+            <tr>
+                <th>吾輩はここで</th>
+                <td>始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</td>
+            </tr>
+            <tr>
+                <th>しかし</th>
+                <td>その当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 ```
 
 */
@@ -4465,7 +4477,7 @@ parent: table
 2カラム以上の表の場合は <code>.m-table-responsive</code> を推薦。
 
 ``` example
-<table class="m-table m-table-break-sm-down m-table-bordered m-b">
+<table class="m-table m-table-break-sm-down m-table-bordered" style="margin-bottom: 2rem;">
     <thead>
         <tr>
             <th>吾輩は猫である</th>
@@ -4989,7 +5001,7 @@ category: component-alert
 
 システム側の注意文を表示する。 <code>p</code> のみ、もしくは <code>div</code> と <code>p, ul</code> でマークアップすることができる。  
 連続して表示すると <code>.c-alert</code> 間の余白が**通常よりも狭くなる。**  
-下以外の余白は <code>utility > .m</code> 等で指定する。
+下以外の余白は <code>utility > .margin</code> 等で指定する。
 
 ``` example
 <div>
@@ -5349,7 +5361,7 @@ category: component-card
 
 ``` example
 
-<div class="c-card">
+<div class="c-card" style="margin-bottom: 2rem;">
     <div class="c-card-inner">
         <div class="c-card-header">
             <h3 class="m-title m-title-05">カードの見出しです</h3>
@@ -5372,8 +5384,8 @@ category: component-card
     </div>
 </div>
 
-<div class="l-row m-y-lg">
-    <div class="l-col-8 l-col-md-4 l-col-xl-3 p-b">
+<div class="l-row" style="margin-bottom: 2rem;">
+    <div class="l-col-8 l-col-md-4 l-col-xl-3" style="padding-bottom: 2rem;">
         <div class="c-card shadow">
             <a href="#" class="c-card-inner">
                 <div class="m-thumbnail m-thumbnail-ogimage">
@@ -5394,7 +5406,7 @@ category: component-card
             </a>
         </div>
     </div>
-    <div class="l-col-8 l-col-md-4 l-col-xl-3 p-b">
+    <div class="l-col-8 l-col-md-4 l-col-xl-3" style="padding-bottom: 2rem;">
         <div class="c-card shadow">
             <a href="#" class="c-card-inner">
                 <div class="m-thumbnail m-thumbnail-ogimage">
@@ -5415,7 +5427,7 @@ category: component-card
             </a>
         </div>
     </div>
-    <div class="l-col-8 l-col-md-4 l-col-xl-3 p-b">
+    <div class="l-col-8 l-col-md-4 l-col-xl-3" style="padding-bottom: 2rem;">
         <div class="c-card shadow">
             <a href="#" class="c-card-inner">
                 <div class="m-thumbnail m-thumbnail-ogimage">
@@ -5538,11 +5550,9 @@ category: component-dfn
 (breakpoint)が <code>sm</code> 以上でインライン表示となる。
 
 ``` example
-<div class="m-b">
-<div class="c-dfn">
+<div class="c-dfn" style="margin-bottom: 2rem;">
     <h1 class="c-dfn-header">猫</h1>
     <p class="c-dfn-contents">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-</div>
 </div>
 
 <dl class="c-dfn">
@@ -5764,9 +5774,9 @@ category: component-form
 
 <div class="c-form">
     <span class="c-form-label">好きな食べ物</span>
-    <label class="m-checkbox m-r" for="checkbox1"><input type="checkbox" name="checkbox1" id="checkbox1" class="m-r-sm" value="りんご">りんご</label>
-    <label class="m-checkbox m-r" for="checkbox2"><input type="checkbox" name="checkbox2" id="checkbox2" class="m-r-sm" value="バナナ">バナナ</label>
-    <label class="m-checkbox" for="checkbox3"><input type="checkbox" name="checkbox3" id="checkbox3" class="m-r-sm" value="メロン">メロン</label>
+    <label class="m-checkbox margin-r" for="checkbox1"><input type="checkbox" name="checkbox1" id="checkbox1" class="margin-r-sm" value="りんご">りんご</label>
+    <label class="m-checkbox margin-r" for="checkbox2"><input type="checkbox" name="checkbox2" id="checkbox2" class="margin-r-sm" value="バナナ">バナナ</label>
+    <label class="m-checkbox" for="checkbox3"><input type="checkbox" name="checkbox3" id="checkbox3" class="margin-r-sm" value="メロン">メロン</label>
 </div><!-- /.c-form -->
 
 <div class="c-form">
@@ -6495,11 +6505,11 @@ category: utility-container-expand
 <code>.l-document</code> の幅制限を解除していると、横スクロールバーが表示されてしまう。
 
 ``` example
-<div class="l-container bg-first bg-mild m-b p">
-    <div class="p-y line-c m-b" style="background-color: rgba(255,255,255,.5); color: #000">(l-container + contents)</div>
+<div class="l-container bg-first bg-mild">
+    <div style="margin-bottom: 1rem; padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(l-container + contents)</div>
 
     <div class="container-expand bg-second bg-mild">
-        <div class="p-y line-c" style="background-color: rgba(255,255,255,.5); color: #000">(l-container + container-expand + contents)</div>
+        <div style="margin-bottom: 1rem; padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(l-container + container-expand + contents)</div>
     </div>
 </div>
 ```
@@ -6663,11 +6673,11 @@ category: utility-hidden
 (breakpoint)で指定した画面幅以上で要素を非表示にする。特性上、hidden-xs-upはない。
 
 ``` example
-<div class="hidden-sm-up m-b-sm"><span class="m-btn m-btn-first">hidden-sm-up</span></div>
-<div class="hidden-md-up m-b-sm"><span class="m-btn m-btn-second">hidden-md-up</span></div>
-<div class="hidden-lg-up m-b-sm"><span class="m-btn m-btn-third">hidden-lg-up</span></div>
-<div class="hidden-xl-up m-b-sm"><span class="m-btn m-btn-important">hidden-xl-up</span></div>
-<div class="hidden-xxl-up m-b-sm"><span class="m-btn">hidden-xxl-up</span></div>
+<div class="hidden-sm-up" style="margin-bottom: 1rem;"><span class="m-btn m-btn-first">hidden-sm-up</span></div>
+<div class="hidden-md-up" style="margin-bottom: 1rem;"><span class="m-btn m-btn-second">hidden-md-up</span></div>
+<div class="hidden-lg-up" style="margin-bottom: 1rem;"><span class="m-btn m-btn-third">hidden-lg-up</span></div>
+<div class="hidden-xl-up" style="margin-bottom: 1rem;"><span class="m-btn m-btn-fourth">hidden-xl-up</span></div>
+<div class="hidden-xxl-up" style="margin-bottom: 1rem;"><span class="m-btn m-btn-important">hidden-xxl-up</span></div>
 ```
 
 */
@@ -6715,11 +6725,11 @@ category: utility-hidden
 (breakpoint)で指定した画面幅未満で要素を非表示にする。特性上、hidden-xxl-downはない。
 
 ``` example
-<div class="hidden-xs-down m-b-sm"><span class="m-btn m-btn-first">hidden-xs-down</span></div>
-<div class="hidden-sm-down m-b-sm"><span class="m-btn m-btn-second">hidden-sm-down</span></div>
-<div class="hidden-md-down m-b-sm"><span class="m-btn m-btn-third">hidden-md-down</span></div>
-<div class="hidden-lg-down m-b-sm"><span class="m-btn m-btn-important">hidden-lg-down</span></div>
-<div class="hidden-xl-down m-b-sm"><span class="m-btn">hidden-xl-down</span></div>
+<div class="hidden-xs-down" style="margin-bottom: 1rem;"><span class="m-btn m-btn-first">hidden-xs-down</span></div>
+<div class="hidden-sm-down" style="margin-bottom: 1rem;"><span class="m-btn m-btn-second">hidden-sm-down</span></div>
+<div class="hidden-md-down" style="margin-bottom: 1rem;"><span class="m-btn m-btn-third">hidden-md-down</span></div>
+<div class="hidden-lg-down" style="margin-bottom: 1rem;"><span class="m-btn m-btn-fourth">hidden-lg-down</span></div>
+<div class="hidden-xl-down" style="margin-bottom: 1rem;"><span class="m-btn m-btn-important">hidden-xl-down</span></div>
 ```
 
 */
@@ -6829,446 +6839,446 @@ category: utility-line
 
 /*doc
 ---
-title: m-(direction)-(size)
-name: m
-category: utility-m
+title: margin-(direction)-(size)
+name: margin
+category: utility-margin
 ---
 
 ブロック要素の外部余白を変更する。
 
 ``` example
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-a" style="background-color: rgba(255,255,255,.35); width: 50%;">m-a</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-x-a" style="background-color: rgba(255,255,255,.35); width: 50%;">margin-x-a</div></div>
 
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-xs" style="background-color: rgba(255,255,255,.35);">m-xs</div></div>
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-t-xs" style="background-color: rgba(255,255,255,.35);">m-t-xs</div></div>
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-r-xs" style="background-color: rgba(255,255,255,.35);">m-r-xs</div></div>
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-b-xs" style="background-color: rgba(255,255,255,.35);">m-b-xs</div></div>
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-l-xs" style="background-color: rgba(255,255,255,.35);">m-l-xs</div></div>
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-x-xs" style="background-color: rgba(255,255,255,.35);">m-x-xs</div></div>
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-y-xs" style="background-color: rgba(255,255,255,.35);">m-y-xs</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-xs" style="background-color: rgba(255,255,255,.35);">margin-xs</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-t-xs" style="background-color: rgba(255,255,255,.35);">margin-t-xs</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-r-xs" style="background-color: rgba(255,255,255,.35);">margin-r-xs</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-b-xs" style="background-color: rgba(255,255,255,.35);">margin-b-xs</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-l-xs" style="background-color: rgba(255,255,255,.35);">margin-l-xs</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-x-xs" style="background-color: rgba(255,255,255,.35);">margin-x-xs</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-y-xs" style="background-color: rgba(255,255,255,.35);">margin-y-xs</div></div>
 
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-sm" style="background-color: rgba(255,255,255,.35);">m-sm</div></div>
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-t-sm" style="background-color: rgba(255,255,255,.35);">m-t-sm</div></div>
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-r-sm" style="background-color: rgba(255,255,255,.35);">m-r-sm</div></div>
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-b-sm" style="background-color: rgba(255,255,255,.35);">m-b-sm</div></div>
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-l-sm" style="background-color: rgba(255,255,255,.35);">m-l-sm</div></div>
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-x-sm" style="background-color: rgba(255,255,255,.35);">m-x-sm</div></div>
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-y-sm" style="background-color: rgba(255,255,255,.35);">m-y-sm</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-sm" style="background-color: rgba(255,255,255,.35);">margin-sm</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-t-sm" style="background-color: rgba(255,255,255,.35);">margin-t-sm</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-r-sm" style="background-color: rgba(255,255,255,.35);">margin-r-sm</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-b-sm" style="background-color: rgba(255,255,255,.35);">margin-b-sm</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-l-sm" style="background-color: rgba(255,255,255,.35);">margin-l-sm</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-x-sm" style="background-color: rgba(255,255,255,.35);">margin-x-sm</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-y-sm" style="background-color: rgba(255,255,255,.35);">margin-y-sm</div></div>
 
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m" style="background-color: rgba(255,255,255,.35);">m</div></div>
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-t" style="background-color: rgba(255,255,255,.35);">m-t</div></div>
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-r" style="background-color: rgba(255,255,255,.35);">m-r</div></div>
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-b" style="background-color: rgba(255,255,255,.35);">m-b</div></div>
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-l" style="background-color: rgba(255,255,255,.35);">m-l</div></div>
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-x" style="background-color: rgba(255,255,255,.35);">m-x</div></div>
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-y" style="background-color: rgba(255,255,255,.35);">m-y</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m" style="background-color: rgba(255,255,255,.35);">m</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-t" style="background-color: rgba(255,255,255,.35);">margin-t</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-r" style="background-color: rgba(255,255,255,.35);">margin-r</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-b" style="background-color: rgba(255,255,255,.35);">margin-b</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-l" style="background-color: rgba(255,255,255,.35);">margin-l</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-x" style="background-color: rgba(255,255,255,.35);">margin-x</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-y" style="background-color: rgba(255,255,255,.35);">margin-y</div></div>
 
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-lg" style="background-color: rgba(255,255,255,.35);">m-lg</div></div>
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-t-lg" style="background-color: rgba(255,255,255,.35);">m-t-lg</div></div>
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-r-lg" style="background-color: rgba(255,255,255,.35);">m-r-lg</div></div>
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-b-lg" style="background-color: rgba(255,255,255,.35);">m-b-lg</div></div>
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-l-lg" style="background-color: rgba(255,255,255,.35);">m-l-lg</div></div>
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-x-lg" style="background-color: rgba(255,255,255,.35);">m-x-lg</div></div>
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-y-lg" style="background-color: rgba(255,255,255,.35);">m-y-lg</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-lg" style="background-color: rgba(255,255,255,.35);">margin-lg</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-t-lg" style="background-color: rgba(255,255,255,.35);">margin-t-lg</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-r-lg" style="background-color: rgba(255,255,255,.35);">margin-r-lg</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-b-lg" style="background-color: rgba(255,255,255,.35);">margin-b-lg</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-l-lg" style="background-color: rgba(255,255,255,.35);">margin-l-lg</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-x-lg" style="background-color: rgba(255,255,255,.35);">margin-x-lg</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-y-lg" style="background-color: rgba(255,255,255,.35);">margin-y-lg</div></div>
 
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-xl" style="background-color: rgba(255,255,255,.35);">m-xl</div></div>
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-t-xl" style="background-color: rgba(255,255,255,.35);">m-t-xl</div></div>
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-r-xl" style="background-color: rgba(255,255,255,.35);">m-r-xl</div></div>
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-b-xl" style="background-color: rgba(255,255,255,.35);">m-b-xl</div></div>
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-l-xl" style="background-color: rgba(255,255,255,.35);">m-l-xl</div></div>
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-x-xl" style="background-color: rgba(255,255,255,.35);">m-x-xl</div></div>
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-y-xl" style="background-color: rgba(255,255,255,.35);">m-y-xl</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-xl" style="background-color: rgba(255,255,255,.35);">margin-xl</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-t-xl" style="background-color: rgba(255,255,255,.35);">margin-t-xl</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-r-xl" style="background-color: rgba(255,255,255,.35);">margin-r-xl</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-b-xl" style="background-color: rgba(255,255,255,.35);">margin-b-xl</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-l-xl" style="background-color: rgba(255,255,255,.35);">margin-l-xl</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-x-xl" style="background-color: rgba(255,255,255,.35);">margin-x-xl</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-y-xl" style="background-color: rgba(255,255,255,.35);">margin-y-xl</div></div>
 
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-xxl" style="background-color: rgba(255,255,255,.35);">m-xxl</div></div>
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-t-xxl" style="background-color: rgba(255,255,255,.35);">m-t-xxl</div></div>
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-r-xxl" style="background-color: rgba(255,255,255,.35);">m-r-xxl</div></div>
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-b-xxl" style="background-color: rgba(255,255,255,.35);">m-b-xxl</div></div>
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-l-xxl" style="background-color: rgba(255,255,255,.35);">m-l-xxl</div></div>
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-x-xxl" style="background-color: rgba(255,255,255,.35);">m-x-xxl</div></div>
-<div class="m-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m-y-xxl" style="background-color: rgba(255,255,255,.35);">m-y-xxl</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-xxl" style="background-color: rgba(255,255,255,.35);">margin-xxl</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-t-xxl" style="background-color: rgba(255,255,255,.35);">margin-t-xxl</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-r-xxl" style="background-color: rgba(255,255,255,.35);">margin-r-xxl</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-b-xxl" style="background-color: rgba(255,255,255,.35);">margin-b-xxl</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-l-xxl" style="background-color: rgba(255,255,255,.35);">margin-l-xxl</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-x-xxl" style="background-color: rgba(255,255,255,.35);">margin-x-xxl</div></div>
+<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-y-xxl" style="background-color: rgba(255,255,255,.35);">margin-y-xxl</div></div>
 ```
 */
-#document .m-a {
+#document .margin-x-a {
   margin-right: auto;
   margin-left: auto;
 }
-#document .m-0 {
+#document .margin-0 {
   margin: 0;
 }
-#document .m-t-0 {
+#document .margin-t-0 {
   margin-top: 0;
 }
-#document .m-r-0 {
+#document .margin-r-0 {
   margin-right: 0;
 }
-#document .m-b-0 {
+#document .margin-b-0 {
   margin-bottom: 0;
 }
-#document .m-l-0 {
+#document .margin-l-0 {
   margin-left: 0;
 }
-#document .m-x-0 {
+#document .margin-x-0 {
   margin-right: 0;
   margin-left: 0;
 }
-#document .m-y-0 {
+#document .margin-y-0 {
   margin-top: 0;
   margin-bottom: 0;
 }
-#document .m-xs {
+#document .margin-xs {
   margin: 5px;
 }
-#document .m-t-xs {
+#document .margin-t-xs {
   margin-top: 5px;
 }
-#document .m-r-xs {
+#document .margin-r-xs {
   margin-right: 5px;
 }
-#document .m-b-xs {
+#document .margin-b-xs {
   margin-bottom: 5px;
 }
-#document .m-l-xs {
+#document .margin-l-xs {
   margin-left: 5px;
 }
-#document .m-x-xs {
+#document .margin-x-xs {
   margin-right: 5px;
   margin-left: 5px;
 }
-#document .m-y-xs {
+#document .margin-y-xs {
   margin-top: 5px;
   margin-bottom: 5px;
 }
-#document .m-sm {
+#document .margin-sm {
   margin: 10px;
 }
-#document .m-t-sm {
+#document .margin-t-sm {
   margin-top: 10px;
 }
-#document .m-r-sm {
+#document .margin-r-sm {
   margin-right: 10px;
 }
-#document .m-b-sm {
+#document .margin-b-sm {
   margin-bottom: 10px;
 }
-#document .m-l-sm {
+#document .margin-l-sm {
   margin-left: 10px;
 }
-#document .m-x-sm {
+#document .margin-x-sm {
   margin-right: 10px;
   margin-left: 10px;
 }
-#document .m-y-sm {
+#document .margin-y-sm {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-#document .m {
+#document .margin {
   margin: 15px;
 }
-#document .m-t {
+#document .margin-t {
   margin-top: 15px;
 }
-#document .m-r {
+#document .margin-r {
   margin-right: 15px;
 }
-#document .m-b {
+#document .margin-b {
   margin-bottom: 15px;
 }
-#document .m-l {
+#document .margin-l {
   margin-left: 15px;
 }
-#document .m-x {
+#document .margin-x {
   margin-right: 15px;
   margin-left: 15px;
 }
-#document .m-y {
+#document .margin-y {
   margin-top: 15px;
   margin-bottom: 15px;
 }
-#document .m-lg {
+#document .margin-lg {
   margin: 30px;
 }
-#document .m-t-lg {
+#document .margin-t-lg {
   margin-top: 30px;
 }
-#document .m-r-lg {
+#document .margin-r-lg {
   margin-right: 30px;
 }
-#document .m-b-lg {
+#document .margin-b-lg {
   margin-bottom: 30px;
 }
-#document .m-l-lg {
+#document .margin-l-lg {
   margin-left: 30px;
 }
-#document .m-x-lg {
+#document .margin-x-lg {
   margin-right: 30px;
   margin-left: 30px;
 }
-#document .m-y-lg {
+#document .margin-y-lg {
   margin-top: 30px;
   margin-bottom: 30px;
 }
-#document .m-xl {
+#document .margin-xl {
   margin: 45px;
 }
-#document .m-t-xl {
+#document .margin-t-xl {
   margin-top: 45px;
 }
-#document .m-r-xl {
+#document .margin-r-xl {
   margin-right: 45px;
 }
-#document .m-b-xl {
+#document .margin-b-xl {
   margin-bottom: 45px;
 }
-#document .m-l-xl {
+#document .margin-l-xl {
   margin-left: 45px;
 }
-#document .m-x-xl {
+#document .margin-x-xl {
   margin-right: 45px;
   margin-left: 45px;
 }
-#document .m-y-xl {
+#document .margin-y-xl {
   margin-top: 45px;
   margin-bottom: 45px;
 }
-#document .m-xxl {
+#document .margin-xxl {
   margin: 60px;
 }
-#document .m-t-xxl {
+#document .margin-t-xxl {
   margin-top: 60px;
 }
-#document .m-r-xxl {
+#document .margin-r-xxl {
   margin-right: 60px;
 }
-#document .m-b-xxl {
+#document .margin-b-xxl {
   margin-bottom: 60px;
 }
-#document .m-l-xxl {
+#document .margin-l-xxl {
   margin-left: 60px;
 }
-#document .m-x-xxl {
+#document .margin-x-xxl {
   margin-right: 60px;
   margin-left: 60px;
 }
-#document .m-y-xxl {
+#document .margin-y-xxl {
   margin-top: 60px;
   margin-bottom: 60px;
 }
 
 /*doc
 ---
-title: p-(direction)-(size)
-name: p
-category: utility-p
+title: padding-(direction)-(size)
+name: padding
+category: utility-padding
 ---
 
 ブロック要素の内部余白を変更する。
 
 ``` example
-<div class="p-xs bg-second bg-fade m-b-sm"><div style="background-color: rgba(255,255,255,.35);">p-xs</div></div>
-<div class="p-t-xs bg-second bg-fade m-b-sm"><div style="background-color: rgba(255,255,255,.35);">p-t-xs</div></div>
-<div class="p-r-xs bg-second bg-fade m-b-sm"><div style="background-color: rgba(255,255,255,.35);">p-r-xs</div></div>
-<div class="p-b-xs bg-second bg-fade m-b-sm"><div style="background-color: rgba(255,255,255,.35);">p-b-xs</div></div>
-<div class="p-l-xs bg-second bg-fade m-b-sm"><div style="background-color: rgba(255,255,255,.35);">p-l-xs</div></div>
+<div class="padding-xs bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-xs</div></div>
+<div class="padding-t-xs bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-t-xs</div></div>
+<div class="padding-r-xs bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-r-xs</div></div>
+<div class="padding-b-xs bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-b-xs</div></div>
+<div class="padding-l-xs bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-l-xs</div></div>
 
-<div class="p-sm bg-second bg-fade m-b-sm"><div style="background-color: rgba(255,255,255,.35);">p-sm</div></div>
-<div class="p-t-sm bg-second bg-fade m-b-sm"><div style="background-color: rgba(255,255,255,.35);">p-t-sm</div></div>
-<div class="p-r-sm bg-second bg-fade m-b-sm"><div style="background-color: rgba(255,255,255,.35);">p-r-sm</div></div>
-<div class="p-b-sm bg-second bg-fade m-b-sm"><div style="background-color: rgba(255,255,255,.35);">p-b-sm</div></div>
-<div class="p-l-sm bg-second bg-fade m-b-sm"><div style="background-color: rgba(255,255,255,.35);">p-l-sm</div></div>
-<div class="p-x-sm bg-second bg-fade m-b-sm"><div style="background-color: rgba(255,255,255,.35);">p-x-sm</div></div>
-<div class="p-y-sm bg-second bg-fade m-b-sm"><div style="background-color: rgba(255,255,255,.35);">p-y-sm</div></div>
+<div class="padding-sm bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-sm</div></div>
+<div class="padding-t-sm bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-t-sm</div></div>
+<div class="padding-r-sm bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-r-sm</div></div>
+<div class="padding-b-sm bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-b-sm</div></div>
+<div class="padding-l-sm bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-l-sm</div></div>
+<div class="padding-x-sm bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-x-sm</div></div>
+<div class="padding-y-sm bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-y-sm</div></div>
 
-<div class="p bg-second bg-fade m-b-sm"><div style="background-color: rgba(255,255,255,.35);">p</div></div>
-<div class="p-t bg-second bg-fade m-b-sm"><div style="background-color: rgba(255,255,255,.35);">p-t</div></div>
-<div class="p-r bg-second bg-fade m-b-sm"><div style="background-color: rgba(255,255,255,.35);">p-r</div></div>
-<div class="p-b bg-second bg-fade m-b-sm"><div style="background-color: rgba(255,255,255,.35);">p-b</div></div>
-<div class="p-l bg-second bg-fade m-b-sm"><div style="background-color: rgba(255,255,255,.35);">p-l</div></div>
-<div class="p-x bg-second bg-fade m-b-sm"><div style="background-color: rgba(255,255,255,.35);">p-x</div></div>
-<div class="p-y bg-second bg-fade m-b-sm"><div style="background-color: rgba(255,255,255,.35);">p-y</div></div>
+<div class="padding bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding</div></div>
+<div class="padding-t bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-t</div></div>
+<div class="padding-r bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-r</div></div>
+<div class="padding-b bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-b</div></div>
+<div class="padding-l bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-l</div></div>
+<div class="padding-x bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-x</div></div>
+<div class="padding-y bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-y</div></div>
 
-<div class="p-lg bg-second bg-fade m-b-sm"><div style="background-color: rgba(255,255,255,.35);">p-lg</div></div>
-<div class="p-t-lg bg-second bg-fade m-b-sm"><div style="background-color: rgba(255,255,255,.35);">p-t-lg</div></div>
-<div class="p-r-lg bg-second bg-fade m-b-sm"><div style="background-color: rgba(255,255,255,.35);">p-r-lg</div></div>
-<div class="p-b-lg bg-second bg-fade m-b-sm"><div style="background-color: rgba(255,255,255,.35);">p-b-lg</div></div>
-<div class="p-l-lg bg-second bg-fade m-b-sm"><div style="background-color: rgba(255,255,255,.35);">p-l-lg</div></div>
-<div class="p-x-lg bg-second bg-fade m-b-sm"><div style="background-color: rgba(255,255,255,.35);">p-x-lg</div></div>
-<div class="p-y-lg bg-second bg-fade m-b-sm"><div style="background-color: rgba(255,255,255,.35);">p-y-lg</div></div>
+<div class="padding-lg bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-lg</div></div>
+<div class="padding-t-lg bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-t-lg</div></div>
+<div class="padding-r-lg bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-r-lg</div></div>
+<div class="padding-b-lg bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-b-lg</div></div>
+<div class="padding-l-lg bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-l-lg</div></div>
+<div class="padding-x-lg bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-x-lg</div></div>
+<div class="padding-y-lg bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-y-lg</div></div>
 
-<div class="p-xl bg-second bg-fade m-b-sm"><div style="background-color: rgba(255,255,255,.35);">p-xl</div></div>
-<div class="p-t-xl bg-second bg-fade m-b-sm"><div style="background-color: rgba(255,255,255,.35);">p-t-xl</div></div>
-<div class="p-r-xl bg-second bg-fade m-b-sm"><div style="background-color: rgba(255,255,255,.35);">p-r-xl</div></div>
-<div class="p-b-xl bg-second bg-fade m-b-sm"><div style="background-color: rgba(255,255,255,.35);">p-b-xl</div></div>
-<div class="p-l-xl bg-second bg-fade m-b-sm"><div style="background-color: rgba(255,255,255,.35);">p-l-xl</div></div>
-<div class="p-x-xl bg-second bg-fade m-b-sm"><div style="background-color: rgba(255,255,255,.35);">p-x-xl</div></div>
-<div class="p-y-xl bg-second bg-fade m-b-sm"><div style="background-color: rgba(255,255,255,.35);">p-y-xl</div></div>
+<div class="padding-xl bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-xl</div></div>
+<div class="padding-t-xl bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-t-xl</div></div>
+<div class="padding-r-xl bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-r-xl</div></div>
+<div class="padding-b-xl bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-b-xl</div></div>
+<div class="padding-l-xl bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-l-xl</div></div>
+<div class="padding-x-xl bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-x-xl</div></div>
+<div class="padding-y-xl bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-y-xl</div></div>
 
-<div class="p-xxl bg-second bg-fade m-b-sm"><div style="background-color: rgba(255,255,255,.35);">p-xxl</div></div>
-<div class="p-t-xxl bg-second bg-fade m-b-sm"><div style="background-color: rgba(255,255,255,.35);">p-t-xxl</div></div>
-<div class="p-r-xxl bg-second bg-fade m-b-sm"><div style="background-color: rgba(255,255,255,.35);">p-r-xxl</div></div>
-<div class="p-b-xxl bg-second bg-fade m-b-sm"><div style="background-color: rgba(255,255,255,.35);">p-b-xxl</div></div>
-<div class="p-l-xxl bg-second bg-fade m-b-sm"><div style="background-color: rgba(255,255,255,.35);">p-l-xxl</div></div>
-<div class="p-x-xxl bg-second bg-fade m-b-sm"><div style="background-color: rgba(255,255,255,.35);">p-x-xxl</div></div>
-<div class="p-y-xxl bg-second bg-fade m-b-sm"><div style="background-color: rgba(255,255,255,.35);">p-y-xxl</div></div>
+<div class="padding-xxl bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-xxl</div></div>
+<div class="padding-t-xxl bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-t-xxl</div></div>
+<div class="padding-r-xxl bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-r-xxl</div></div>
+<div class="padding-b-xxl bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-b-xxl</div></div>
+<div class="padding-l-xxl bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-l-xxl</div></div>
+<div class="padding-x-xxl bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-x-xxl</div></div>
+<div class="padding-y-xxl bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-y-xxl</div></div>
 ```
 */
-#document .p-0 {
+#document .padding-0 {
   padding: 0;
 }
-#document .p-t-0 {
+#document .padding-t-0 {
   padding-top: 0;
 }
-#document .p-r-0 {
+#document .padding-r-0 {
   padding-right: 0;
 }
-#document .p-b-0 {
+#document .padding-b-0 {
   padding-bottom: 0;
 }
-#document .p-l-0 {
+#document .padding-l-0 {
   padding-left: 0;
 }
-#document .p-x-0 {
+#document .padding-x-0 {
   padding-right: 0;
   padding-left: 0;
 }
-#document .p-y-0 {
+#document .padding-y-0 {
   padding-top: 0;
   padding-bottom: 0;
 }
-#document .p-xs {
+#document .padding-xs {
   padding: 5px;
 }
-#document .p-t-xs {
+#document .padding-t-xs {
   padding-top: 5px;
 }
-#document .p-r-xs {
+#document .padding-r-xs {
   padding-right: 5px;
 }
-#document .p-b-xs {
+#document .padding-b-xs {
   padding-bottom: 5px;
 }
-#document .p-l-xs {
+#document .padding-l-xs {
   padding-left: 5px;
 }
-#document .p-x-xs {
+#document .padding-x-xs {
   padding-right: 5px;
   padding-left: 5px;
 }
-#document .p-y-xs {
+#document .padding-y-xs {
   padding-top: 5px;
   padding-bottom: 5px;
 }
-#document .p-sm {
+#document .padding-sm {
   padding: 10px;
 }
-#document .p-t-sm {
+#document .padding-t-sm {
   padding-top: 10px;
 }
-#document .p-r-sm {
+#document .padding-r-sm {
   padding-right: 10px;
 }
-#document .p-b-sm {
+#document .padding-b-sm {
   padding-bottom: 10px;
 }
-#document .p-l-sm {
+#document .padding-l-sm {
   padding-left: 10px;
 }
-#document .p-x-sm {
+#document .padding-x-sm {
   padding-right: 10px;
   padding-left: 10px;
 }
-#document .p-y-sm {
+#document .padding-y-sm {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-#document .p {
+#document .padding {
   padding: 15px;
 }
-#document .p-t {
+#document .padding-t {
   padding-top: 15px;
 }
-#document .p-r {
+#document .padding-r {
   padding-right: 15px;
 }
-#document .p-b {
+#document .padding-b {
   padding-bottom: 15px;
 }
-#document .p-l {
+#document .padding-l {
   padding-left: 15px;
 }
-#document .p-x {
+#document .padding-x {
   padding-right: 15px;
   padding-left: 15px;
 }
-#document .p-y {
+#document .padding-y {
   padding-top: 15px;
   padding-bottom: 15px;
 }
-#document .p-lg {
+#document .padding-lg {
   padding: 30px;
 }
-#document .p-t-lg {
+#document .padding-t-lg {
   padding-top: 30px;
 }
-#document .p-r-lg {
+#document .padding-r-lg {
   padding-right: 30px;
 }
-#document .p-b-lg {
+#document .padding-b-lg {
   padding-bottom: 30px;
 }
-#document .p-l-lg {
+#document .padding-l-lg {
   padding-left: 30px;
 }
-#document .p-x-lg {
+#document .padding-x-lg {
   padding-right: 30px;
   padding-left: 30px;
 }
-#document .p-y-lg {
+#document .padding-y-lg {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-#document .p-xl {
+#document .padding-xl {
   padding: 45px;
 }
-#document .p-t-xl {
+#document .padding-t-xl {
   padding-top: 45px;
 }
-#document .p-r-xl {
+#document .padding-r-xl {
   padding-right: 45px;
 }
-#document .p-b-xl {
+#document .padding-b-xl {
   padding-bottom: 45px;
 }
-#document .p-l-xl {
+#document .padding-l-xl {
   padding-left: 45px;
 }
-#document .p-x-xl {
+#document .padding-x-xl {
   padding-right: 45px;
   padding-left: 45px;
 }
-#document .p-y-xl {
+#document .padding-y-xl {
   padding-top: 45px;
   padding-bottom: 45px;
 }
-#document .p-xxl {
+#document .padding-xxl {
   padding: 60px;
 }
-#document .p-t-xxl {
+#document .padding-t-xxl {
   padding-top: 60px;
 }
-#document .p-r-xxl {
+#document .padding-r-xxl {
   padding-right: 60px;
 }
-#document .p-b-xxl {
+#document .padding-b-xxl {
   padding-bottom: 60px;
 }
-#document .p-l-xxl {
+#document .padding-l-xxl {
   padding-left: 60px;
 }
-#document .p-x-xxl {
+#document .padding-x-xxl {
   padding-right: 60px;
   padding-left: 60px;
 }
-#document .p-y-xxl {
+#document .padding-y-xxl {
   padding-top: 60px;
   padding-bottom: 60px;
 }

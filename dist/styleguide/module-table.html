@@ -235,189 +235,213 @@
 <h2 id="table-03-justify" class="styleguide">m-table-justify</h2>
 
 <p>列数、内容にかかわらず、セルを均等な幅にする。</p>
-<div class="example"><table class="m-table m-table-bordered m-table-justify m-b">
-    <tbody>
-        <tr>
-            <td>吾輩は猫である名前はまだ無い。どこで生れたかとんと見当がつかぬ。</td>
-            <td>何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
-        </tr>
-    </tbody>
-</table>
+<div class="example"><div style="margin-bottom: 2rem;">
+    <table class="m-table m-table-bordered m-table-justify">
+        <tbody>
+            <tr>
+                <td>吾輩は猫である名前はまだ無い。どこで生れたかとんと見当がつかぬ。</td>
+                <td>何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
-<table class="m-table m-table-bordered m-table-justify m-b">
-    <tbody>
-        <tr>
-            <td>吾輩は猫である名前は</td>
-            <td>まだ無い。どこで生れたか</td>
-            <td>とんと見当がつかぬ。</td>
-            <td>何でも薄暗いじめじめした所で</td>
-            <td rowspan="2">ニャーニャー泣いていた事だけは記憶している。</td>
-        </tr>
-        <tr>
-            <td>吾輩は猫である</td>
-            <td>名前はまだ無い。</td>
-            <td colspan="2">どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所で</td>
-        </tr>
-    </tbody>
-</table>
-</div><div class="codeblock"><pre><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"m-table m-table-bordered m-table-justify m-b"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;tbody&gt;</span>
-        <span class="nt">&lt;tr&gt;</span>
-            <span class="nt">&lt;td&gt;</span>吾輩は猫である名前はまだ無い。どこで生れたかとんと見当がつかぬ。<span class="nt">&lt;/td&gt;</span>
-            <span class="nt">&lt;td&gt;</span>何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-    <span class="nt">&lt;/tbody&gt;</span>
-<span class="nt">&lt;/table&gt;</span>
+<div style="margin-bottom: 2rem;">
+    <table class="m-table m-table-bordered m-table-justify">
+        <tbody>
+            <tr>
+                <td>吾輩は猫である名前は</td>
+                <td>まだ無い。どこで生れたか</td>
+                <td>とんと見当がつかぬ。</td>
+                <td>何でも薄暗いじめじめした所で</td>
+                <td rowspan="2">ニャーニャー泣いていた事だけは記憶している。</td>
+            </tr>
+            <tr>
+                <td>吾輩は猫である</td>
+                <td>名前はまだ無い。</td>
+                <td colspan="2">どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所で</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 2rem;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"m-table m-table-bordered m-table-justify"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;tbody&gt;</span>
+            <span class="nt">&lt;tr&gt;</span>
+                <span class="nt">&lt;td&gt;</span>吾輩は猫である名前はまだ無い。どこで生れたかとんと見当がつかぬ。<span class="nt">&lt;/td&gt;</span>
+                <span class="nt">&lt;td&gt;</span>何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;/tbody&gt;</span>
+    <span class="nt">&lt;/table&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 
-<span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"m-table m-table-bordered m-table-justify m-b"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;tbody&gt;</span>
-        <span class="nt">&lt;tr&gt;</span>
-            <span class="nt">&lt;td&gt;</span>吾輩は猫である名前は<span class="nt">&lt;/td&gt;</span>
-            <span class="nt">&lt;td&gt;</span>まだ無い。どこで生れたか<span class="nt">&lt;/td&gt;</span>
-            <span class="nt">&lt;td&gt;</span>とんと見当がつかぬ。<span class="nt">&lt;/td&gt;</span>
-            <span class="nt">&lt;td&gt;</span>何でも薄暗いじめじめした所で<span class="nt">&lt;/td&gt;</span>
-            <span class="nt">&lt;td</span> <span class="na">rowspan=</span><span class="s">"2"</span><span class="nt">&gt;</span>ニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-        <span class="nt">&lt;tr&gt;</span>
-            <span class="nt">&lt;td&gt;</span>吾輩は猫である<span class="nt">&lt;/td&gt;</span>
-            <span class="nt">&lt;td&gt;</span>名前はまだ無い。<span class="nt">&lt;/td&gt;</span>
-            <span class="nt">&lt;td</span> <span class="na">colspan=</span><span class="s">"2"</span><span class="nt">&gt;</span>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所で<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-    <span class="nt">&lt;/tbody&gt;</span>
-<span class="nt">&lt;/table&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 2rem;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"m-table m-table-bordered m-table-justify"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;tbody&gt;</span>
+            <span class="nt">&lt;tr&gt;</span>
+                <span class="nt">&lt;td&gt;</span>吾輩は猫である名前は<span class="nt">&lt;/td&gt;</span>
+                <span class="nt">&lt;td&gt;</span>まだ無い。どこで生れたか<span class="nt">&lt;/td&gt;</span>
+                <span class="nt">&lt;td&gt;</span>とんと見当がつかぬ。<span class="nt">&lt;/td&gt;</span>
+                <span class="nt">&lt;td&gt;</span>何でも薄暗いじめじめした所で<span class="nt">&lt;/td&gt;</span>
+                <span class="nt">&lt;td</span> <span class="na">rowspan=</span><span class="s">"2"</span><span class="nt">&gt;</span>ニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;/tr&gt;</span>
+            <span class="nt">&lt;tr&gt;</span>
+                <span class="nt">&lt;td&gt;</span>吾輩は猫である<span class="nt">&lt;/td&gt;</span>
+                <span class="nt">&lt;td&gt;</span>名前はまだ無い。<span class="nt">&lt;/td&gt;</span>
+                <span class="nt">&lt;td</span> <span class="na">colspan=</span><span class="s">"2"</span><span class="nt">&gt;</span>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所で<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;/tbody&gt;</span>
+    <span class="nt">&lt;/table&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 </pre></div>
 <h2 id="table-04-ratio" class="styleguide">m-table-(ratio-first)to(ratio-second)to(ratio-third)</h2>
 
 <p>2列または3列のセル幅を、 <code>(ratio) / 12</code> の比率にする。<br>
 (ratio-first)to(ratio-second)to(ratio-third)は <code>3to9, 4to8, 3to3to6, 0to12</code> に対応している。   </p>
-<div class="example"><table class="m-table m-table-bordered m-table-3to9 m-b">
-    <caption>.m-table-3to9</caption>
-    <tbody>
-        <tr>
-            <th>吾輩は猫である</th>
-            <td>名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
-        </tr>
-        <tr>
-            <th>吾輩は猫である名前はまだ無い。</th>
-            <td>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
-        </tr>
-    </tbody>
-</table>
+<div class="example"><div style="margin-bottom: 2rem;">
+    <table class="m-table m-table-bordered m-table-3to9">
+        <caption>.m-table-3to9</caption>
+        <tbody>
+            <tr>
+                <th>吾輩は猫である</th>
+                <td>名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+            </tr>
+            <tr>
+                <th>吾輩は猫である名前はまだ無い。</th>
+                <td>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
-<table class="m-table m-table-bordered m-table-4to8 m-b">
-    <caption>.m-table-4to8</caption>
-    <tbody>
-        <tr>
-            <th>吾輩は猫である</th>
-            <td>名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
-        </tr>
-        <tr>
-            <th>吾輩は猫である名前はまだ無い。</th>
-            <td>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
-        </tr>
-    </tbody>
-</table>
+<div style="margin-bottom: 2rem;">
+    <table class="m-table m-table-bordered m-table-4to8">
+        <caption>.m-table-4to8</caption>
+        <tbody>
+            <tr>
+                <th>吾輩は猫である</th>
+                <td>名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+            </tr>
+            <tr>
+                <th>吾輩は猫である名前はまだ無い。</th>
+                <td>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
-<table class="m-table m-table-bordered m-table-3to3to6 m-b">
-    <caption>.m-table-3to3to6</caption>
-    <tbody>
-        <tr>
-            <th>吾輩は猫である</th>
-            <td>名前はまだ無い。</td>
-            <td>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
-        </tr>
-        <tr>
-            <th>吾輩は猫である名前はまだ無い。</th>
-            <td>どこで生れたかとんと見当がつかぬ。</td>
-            <td>何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
-        </tr>
-    </tbody>
-</table>
+<div style="margin-bottom: 2rem;">
+    <table class="m-table m-table-bordered m-table-3to3to6">
+        <caption>.m-table-3to3to6</caption>
+        <tbody>
+            <tr>
+                <th>吾輩は猫である</th>
+                <td>名前はまだ無い。</td>
+                <td>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+            </tr>
+            <tr>
+                <th>吾輩は猫である名前はまだ無い。</th>
+                <td>どこで生れたかとんと見当がつかぬ。</td>
+                <td>何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
-<table class="m-table m-table-bordered m-table-0to12 m-b">
-    <caption>.m-table-0to12</caption>
-    <tbody>
-        <tr>
-            <th>吾輩は猫</th>
-            <td>である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
-        </tr>
-        <tr>
-            <th>吾輩はここで</th>
-            <td>始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</td>
-        </tr>
-        <tr>
-            <th>しかし</th>
-            <td>その当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</td>
-        </tr>
-    </tbody>
-</table>
-</div><div class="codeblock"><pre><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"m-table m-table-bordered m-table-3to9 m-b"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;caption&gt;</span>.m-table-3to9<span class="nt">&lt;/caption&gt;</span>
-    <span class="nt">&lt;tbody&gt;</span>
-        <span class="nt">&lt;tr&gt;</span>
-            <span class="nt">&lt;th&gt;</span>吾輩は猫である<span class="nt">&lt;/th&gt;</span>
-            <span class="nt">&lt;td&gt;</span>名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-        <span class="nt">&lt;tr&gt;</span>
-            <span class="nt">&lt;th&gt;</span>吾輩は猫である名前はまだ無い。<span class="nt">&lt;/th&gt;</span>
-            <span class="nt">&lt;td&gt;</span>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-    <span class="nt">&lt;/tbody&gt;</span>
-<span class="nt">&lt;/table&gt;</span>
+<div>
+    <table class="m-table m-table-bordered m-table-0to12">
+        <caption>.m-table-0to12</caption>
+        <tbody>
+            <tr>
+                <th>吾輩は猫</th>
+                <td>である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+            </tr>
+            <tr>
+                <th>吾輩はここで</th>
+                <td>始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</td>
+            </tr>
+            <tr>
+                <th>しかし</th>
+                <td>その当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 2rem;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"m-table m-table-bordered m-table-3to9"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;caption&gt;</span>.m-table-3to9<span class="nt">&lt;/caption&gt;</span>
+        <span class="nt">&lt;tbody&gt;</span>
+            <span class="nt">&lt;tr&gt;</span>
+                <span class="nt">&lt;th&gt;</span>吾輩は猫である<span class="nt">&lt;/th&gt;</span>
+                <span class="nt">&lt;td&gt;</span>名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;/tr&gt;</span>
+            <span class="nt">&lt;tr&gt;</span>
+                <span class="nt">&lt;th&gt;</span>吾輩は猫である名前はまだ無い。<span class="nt">&lt;/th&gt;</span>
+                <span class="nt">&lt;td&gt;</span>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;/tbody&gt;</span>
+    <span class="nt">&lt;/table&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 
-<span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"m-table m-table-bordered m-table-4to8 m-b"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;caption&gt;</span>.m-table-4to8<span class="nt">&lt;/caption&gt;</span>
-    <span class="nt">&lt;tbody&gt;</span>
-        <span class="nt">&lt;tr&gt;</span>
-            <span class="nt">&lt;th&gt;</span>吾輩は猫である<span class="nt">&lt;/th&gt;</span>
-            <span class="nt">&lt;td&gt;</span>名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-        <span class="nt">&lt;tr&gt;</span>
-            <span class="nt">&lt;th&gt;</span>吾輩は猫である名前はまだ無い。<span class="nt">&lt;/th&gt;</span>
-            <span class="nt">&lt;td&gt;</span>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-    <span class="nt">&lt;/tbody&gt;</span>
-<span class="nt">&lt;/table&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 2rem;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"m-table m-table-bordered m-table-4to8"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;caption&gt;</span>.m-table-4to8<span class="nt">&lt;/caption&gt;</span>
+        <span class="nt">&lt;tbody&gt;</span>
+            <span class="nt">&lt;tr&gt;</span>
+                <span class="nt">&lt;th&gt;</span>吾輩は猫である<span class="nt">&lt;/th&gt;</span>
+                <span class="nt">&lt;td&gt;</span>名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;/tr&gt;</span>
+            <span class="nt">&lt;tr&gt;</span>
+                <span class="nt">&lt;th&gt;</span>吾輩は猫である名前はまだ無い。<span class="nt">&lt;/th&gt;</span>
+                <span class="nt">&lt;td&gt;</span>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;/tbody&gt;</span>
+    <span class="nt">&lt;/table&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 
-<span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"m-table m-table-bordered m-table-3to3to6 m-b"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;caption&gt;</span>.m-table-3to3to6<span class="nt">&lt;/caption&gt;</span>
-    <span class="nt">&lt;tbody&gt;</span>
-        <span class="nt">&lt;tr&gt;</span>
-            <span class="nt">&lt;th&gt;</span>吾輩は猫である<span class="nt">&lt;/th&gt;</span>
-            <span class="nt">&lt;td&gt;</span>名前はまだ無い。<span class="nt">&lt;/td&gt;</span>
-            <span class="nt">&lt;td&gt;</span>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-        <span class="nt">&lt;tr&gt;</span>
-            <span class="nt">&lt;th&gt;</span>吾輩は猫である名前はまだ無い。<span class="nt">&lt;/th&gt;</span>
-            <span class="nt">&lt;td&gt;</span>どこで生れたかとんと見当がつかぬ。<span class="nt">&lt;/td&gt;</span>
-            <span class="nt">&lt;td&gt;</span>何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-    <span class="nt">&lt;/tbody&gt;</span>
-<span class="nt">&lt;/table&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 2rem;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"m-table m-table-bordered m-table-3to3to6"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;caption&gt;</span>.m-table-3to3to6<span class="nt">&lt;/caption&gt;</span>
+        <span class="nt">&lt;tbody&gt;</span>
+            <span class="nt">&lt;tr&gt;</span>
+                <span class="nt">&lt;th&gt;</span>吾輩は猫である<span class="nt">&lt;/th&gt;</span>
+                <span class="nt">&lt;td&gt;</span>名前はまだ無い。<span class="nt">&lt;/td&gt;</span>
+                <span class="nt">&lt;td&gt;</span>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;/tr&gt;</span>
+            <span class="nt">&lt;tr&gt;</span>
+                <span class="nt">&lt;th&gt;</span>吾輩は猫である名前はまだ無い。<span class="nt">&lt;/th&gt;</span>
+                <span class="nt">&lt;td&gt;</span>どこで生れたかとんと見当がつかぬ。<span class="nt">&lt;/td&gt;</span>
+                <span class="nt">&lt;td&gt;</span>何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;/tbody&gt;</span>
+    <span class="nt">&lt;/table&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 
-<span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"m-table m-table-bordered m-table-0to12 m-b"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;caption&gt;</span>.m-table-0to12<span class="nt">&lt;/caption&gt;</span>
-    <span class="nt">&lt;tbody&gt;</span>
-        <span class="nt">&lt;tr&gt;</span>
-            <span class="nt">&lt;th&gt;</span>吾輩は猫<span class="nt">&lt;/th&gt;</span>
-            <span class="nt">&lt;td&gt;</span>である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-        <span class="nt">&lt;tr&gt;</span>
-            <span class="nt">&lt;th&gt;</span>吾輩はここで<span class="nt">&lt;/th&gt;</span>
-            <span class="nt">&lt;td&gt;</span>始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-        <span class="nt">&lt;tr&gt;</span>
-            <span class="nt">&lt;th&gt;</span>しかし<span class="nt">&lt;/th&gt;</span>
-            <span class="nt">&lt;td&gt;</span>その当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-    <span class="nt">&lt;/tbody&gt;</span>
-<span class="nt">&lt;/table&gt;</span>
+<span class="nt">&lt;div&gt;</span>
+    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"m-table m-table-bordered m-table-0to12"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;caption&gt;</span>.m-table-0to12<span class="nt">&lt;/caption&gt;</span>
+        <span class="nt">&lt;tbody&gt;</span>
+            <span class="nt">&lt;tr&gt;</span>
+                <span class="nt">&lt;th&gt;</span>吾輩は猫<span class="nt">&lt;/th&gt;</span>
+                <span class="nt">&lt;td&gt;</span>である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;/tr&gt;</span>
+            <span class="nt">&lt;tr&gt;</span>
+                <span class="nt">&lt;th&gt;</span>吾輩はここで<span class="nt">&lt;/th&gt;</span>
+                <span class="nt">&lt;td&gt;</span>始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;/tr&gt;</span>
+            <span class="nt">&lt;tr&gt;</span>
+                <span class="nt">&lt;th&gt;</span>しかし<span class="nt">&lt;/th&gt;</span>
+                <span class="nt">&lt;td&gt;</span>その当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;/tbody&gt;</span>
+    <span class="nt">&lt;/table&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 </pre></div>
 <h2 id="table-05-break-sm-down" class="styleguide">m-table-break-sm-down</h2>
 
 <p>(breakpoint)が <code>sm</code> 以下のときに表組を解除する。<br>
 2カラム以上の表の場合は <code>.m-table-responsive</code> を推薦。</p>
-<div class="example"><table class="m-table m-table-break-sm-down m-table-bordered m-b">
+<div class="example"><table class="m-table m-table-break-sm-down m-table-bordered" style="margin-bottom: 2rem;">
     <thead>
         <tr>
             <th>吾輩は猫である</th>
@@ -474,7 +498,7 @@
         </tr>
     </tfoot>
 </table>
-</div><div class="codeblock"><pre><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"m-table m-table-break-sm-down m-table-bordered m-b"</span><span class="nt">&gt;</span>
+</div><div class="codeblock"><pre><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"m-table m-table-break-sm-down m-table-bordered"</span> <span class="na">style=</span><span class="s">"margin-bottom: 2rem;"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;thead&gt;</span>
         <span class="nt">&lt;tr&gt;</span>
             <span class="nt">&lt;th&gt;</span>吾輩は猫である<span class="nt">&lt;/th&gt;</span>

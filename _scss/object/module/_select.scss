@@ -11,22 +11,24 @@ category: module-select
 セレクトボックスのシェブロンは <code>/\_scss/mixin/mixin.css</code> の <code>chevron()</code>を参照。
 
 ``` example
-<div class="#{$pr}#{$m}select #{$pr}#{$u}m-b">
-<select>
-<option>月を選択...</option>
-<option value="">2017年</option>
-<option value="">2016年</option>
-<option value="">2015年</option>
-</select>
+<div style="margin-bottom: 1rem;">
+    <div class="#{$pr}#{$m}select">
+        <select>
+            <option>月を選択...</option>
+            <option value="">2017年</option>
+            <option value="">2016年</option>
+            <option value="">2015年</option>
+        </select>
+    </div>
 </div>
 
 <div class="#{$pr}#{$m}select #{$pr}#{$error}">
-<select>
-<option>月を選択...</option>
-<option value="">2017年</option>
-<option value="">2016年</option>
-<option value="">2015年</option>
-</select>
+    <select>
+        <option>月を選択...</option>
+        <option value="">2017年</option>
+        <option value="">2016年</option>
+        <option value="">2015年</option>
+    </select>
 </div>
 ```
 */
@@ -97,24 +99,24 @@ parent: select
 テキスト入力を即す欄の全体のサイズを変更する。(size)は <code>sm, lg</code> に対応している。
 
 ``` example
-<div class="#{$pr}#{$u}m-b">
-    <div class="#{$pr}#{$m}select #{$pr}#{$m}select-sm #{$pr}#{$u}m-b">
-    <select>
-    <option>月を選択...</option>
-    <option value="">2017年</option>
-    <option value="">2016年</option>
-    <option value="">2015年</option>
-    </select>
+<div style="margin-bottom: 1rem;">
+    <div class="#{$pr}#{$m}select #{$pr}#{$m}select-sm">
+        <select>
+            <option>月を選択...</option>
+            <option value="">2017年</option>
+            <option value="">2016年</option>
+            <option value="">2015年</option>
+        </select>
     </div>
 </div>
-<div class="#{$pr}#{$u}m-b">
-    <div class="#{$pr}#{$m}select #{$pr}#{$m}select-lg #{$pr}#{$u}m-b">
-    <select>
-    <option>月を選択...</option>
-    <option value="">2017年</option>
-    <option value="">2016年</option>
-    <option value="">2015年</option>
-    </select>
+<div>
+    <div class="#{$pr}#{$m}select #{$pr}#{$m}select-lg">
+        <select>
+            <option>月を選択...</option>
+            <option value="">2017年</option>
+            <option value="">2016年</option>
+            <option value="">2015年</option>
+        </select>
     </div>
 </div>
 ```

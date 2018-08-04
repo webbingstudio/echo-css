@@ -6,16 +6,16 @@ category: module-input
 ---
 
 テキスト入力を即す欄を表示する。要素に直接クラスを付与する（ほとんどの場合、input要素、textarea要素となる）。  
-余白・レイアウト等は <code>utility > .#{$pr}#{$u}m</code> や <code>component > .#{$pr}#{$c}form</code> で指定する。  
+余白・レイアウト等は <code>utility > .#{$pr}#{$u}margin</code> や <code>component > .#{$pr}#{$c}form</code> で指定する。  
 <code>.#{$pr}#{$error}</code> を同時に使用するとエラーがあったときの表示となる。 
 
 ``` example
-<div class="m-b">
-    <input type="text" class="#{$pr}#{$m}input" size="20" value="" placeholder="鈴木一朗" />
-    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$error}" size="20" value="" placeholder="鈴木一郎" />
+<div style="margin-bottom: 2rem;">
+    <input type="text" class="#{$pr}#{$m}input" size="20" value="吾輩は猫である。" />
+    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$error}" size="20" value="* なに？ *" />
 </div>
-<div class="m-b">
-    <textarea class="#{$pr}#{$m}input" rows="5" cols="60">メッセージをどうぞ</textarea>
+<div>
+    <textarea class="#{$pr}#{$m}input" rows="5" cols="60">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</textarea>
     <textarea class="#{$pr}#{$m}input #{$pr}#{$error}" rows="5" cols="60">* おおっと *</textarea>
 </div>
 ```
@@ -51,12 +51,12 @@ parent: input
 
 ``` example
 <div class="m-b">
-    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input-sm" size="20" value="" placeholder="鈴木一朗" />
-    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input-lg" size="20" value="" placeholder="鈴木一朗" />
+    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input-sm" size="20" value="吾輩は猫である。" />
+    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input-lg" size="20" value="吾輩は猫である。" />
 </div>
 <div class="m-b">
-    <textarea class="#{$pr}#{$m}input #{$pr}#{$m}input-sm" rows="5" cols="60">メッセージをどうぞ</textarea>
-    <textarea class="#{$pr}#{$m}input #{$pr}#{$m}input-lg" rows="5" cols="60">メッセージをどうぞ</textarea>
+    <textarea class="#{$pr}#{$m}input #{$pr}#{$m}input-sm" rows="5" cols="60">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</textarea>
+    <textarea class="#{$pr}#{$m}input #{$pr}#{$m}input-lg" rows="5" cols="60">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</textarea>
 </div>
 ```
 */
@@ -83,25 +83,25 @@ parent: input
 ボーダーの色を変更する。(color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
 
 ``` example
-<div class="#{$pr}#{$u}m-b-sm">
+<div style="margin-bottom: 1rem;">
     <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input-#{$__gray}" size="20" value="" placeholder="#{$__gray}" />
 </div>
-<div class="#{$pr}#{$u}m-b-sm">
+<div style="margin-bottom: 1rem;">
     <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input-#{$__first}" size="20" value="" placeholder="#{$__first}" />
 </div>
-<div class="#{$pr}#{$u}m-b-sm">
+<div style="margin-bottom: 1rem;">
     <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input-#{$__second}" size="20" value="" placeholder="#{$__second}" />
 </div>
-<div class="#{$pr}#{$u}m-b-sm">
+<div style="margin-bottom: 1rem;">
     <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input-#{$__third}" size="20" value="" placeholder="#{$__third}" />
 </div>
-<div class="#{$pr}#{$u}m-b-sm">
+<div style="margin-bottom: 1rem;">
     <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input-#{$__fourth}" size="20" value="" placeholder="#{$__fourth}" />
 </div>
-<div class="#{$pr}#{$u}m-b-sm">
+<div style="margin-bottom: 1rem;">
     <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input-#{$__info}" size="20" value="" placeholder="#{$__info}" />
 </div>
-<div class="#{$pr}#{$u}m-b-sm">
+<div>
     <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input-#{$__important}" size="20" value="" placeholder="#{$__important}" />
 </div>
 ```

@@ -10,11 +10,11 @@ parent: btn
 <code>.#{$pr}#{$m}btn-outline</code> と同時に使用すると、罫線のみの状態で反転する。
 
 ``` example
-<p class="#{$pr}#{$u}bg-inverse #{$pr}#{$u}p-y">
+<p style="background-color: #000; padding: 1rem 0;">
   <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-#{$__inverse}">#{$pr}#{$m}btn-#{$__inverse}</a>
   <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-#{$__inverse} disabled">#{$pr}#{$m}btn-#{$__inverse}</a>
 </p>
-<p class="#{$pr}#{$u}bg-#{$__inverse} #{$pr}#{$u}p-y">
+<p style="background-color: #000; padding: 1rem 0;">
   <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-outline #{$pr}#{$m}btn-#{$__inverse}">#{$pr}#{$m}btn-outline + #{$pr}#{$m}btn-#{$__inverse}</a>
   <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-outline #{$pr}#{$m}btn-#{$__inverse} disabled">#{$pr}#{$m}btn-outline + #{$pr}#{$m}btn-#{$__inverse}</a>
 </p>

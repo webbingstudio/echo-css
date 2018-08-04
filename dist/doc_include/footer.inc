@@ -60,8 +60,8 @@
 					            </li>
 					            <li class="s-sitemap-item"><span class="s-sitemap-label">utility</span>
 					                <ul class="s-sitemap-list s-sitemap-children">
-					                    <li class="s-sitemap-item"><a href="./utility-m.html">m</a></li>
-					                    <li class="s-sitemap-item"><a href="./utility-p.html">p</a></li>
+					                    <li class="s-sitemap-item"><a href="./utility-margin.html">margin</a></li>
+					                    <li class="s-sitemap-item"><a href="./utility-padding.html">padding</a></li>
 					                    <li class="s-sitemap-item"><a href="./utility-text.html">text</a></li>
 					                    <li class="s-sitemap-item"><a href="./utility-font.html">font</a></li>
 					                    <li class="s-sitemap-item"><a href="./utility-line.html">line</a></li>

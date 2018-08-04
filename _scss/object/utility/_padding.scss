@@ -1,0 +1,121 @@
+@if ($disabled-utility-class != true) {
+
+/*doc
+---
+title: #{$pr}#{$u}padding-(direction)-(size)
+name: padding
+category: utility-padding
+---
+
+ブロック要素の内部余白を変更する。
+
+``` example
+<div class="#{$pr}#{$u}padding-xs #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade #{$pr}#{$u}margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding-xs</div></div>
+<div class="#{$pr}#{$u}padding-t-xs #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade #{$pr}#{$u}margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding-t-xs</div></div>
+<div class="#{$pr}#{$u}padding-r-xs #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade #{$pr}#{$u}margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding-r-xs</div></div>
+<div class="#{$pr}#{$u}padding-b-xs #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade #{$pr}#{$u}margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding-b-xs</div></div>
+<div class="#{$pr}#{$u}padding-l-xs #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade #{$pr}#{$u}margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding-l-xs</div></div>
+
+<div class="#{$pr}#{$u}padding-sm #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade #{$pr}#{$u}margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding-sm</div></div>
+<div class="#{$pr}#{$u}padding-t-sm #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade #{$pr}#{$u}margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding-t-sm</div></div>
+<div class="#{$pr}#{$u}padding-r-sm #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade #{$pr}#{$u}margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding-r-sm</div></div>
+<div class="#{$pr}#{$u}padding-b-sm #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade #{$pr}#{$u}margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding-b-sm</div></div>
+<div class="#{$pr}#{$u}padding-l-sm #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade #{$pr}#{$u}margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding-l-sm</div></div>
+<div class="#{$pr}#{$u}padding-x-sm #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade #{$pr}#{$u}margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding-x-sm</div></div>
+<div class="#{$pr}#{$u}padding-y-sm #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade #{$pr}#{$u}margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding-y-sm</div></div>
+
+<div class="#{$pr}#{$u}padding #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade #{$pr}#{$u}margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding</div></div>
+<div class="#{$pr}#{$u}padding-t #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade #{$pr}#{$u}margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding-t</div></div>
+<div class="#{$pr}#{$u}padding-r #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade #{$pr}#{$u}margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding-r</div></div>
+<div class="#{$pr}#{$u}padding-b #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade #{$pr}#{$u}margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding-b</div></div>
+<div class="#{$pr}#{$u}padding-l #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade #{$pr}#{$u}margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding-l</div></div>
+<div class="#{$pr}#{$u}padding-x #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade #{$pr}#{$u}margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding-x</div></div>
+<div class="#{$pr}#{$u}padding-y #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade #{$pr}#{$u}margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding-y</div></div>
+
+<div class="#{$pr}#{$u}padding-lg #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade #{$pr}#{$u}margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding-lg</div></div>
+<div class="#{$pr}#{$u}padding-t-lg #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade #{$pr}#{$u}margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding-t-lg</div></div>
+<div class="#{$pr}#{$u}padding-r-lg #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade #{$pr}#{$u}margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding-r-lg</div></div>
+<div class="#{$pr}#{$u}padding-b-lg #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade #{$pr}#{$u}margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding-b-lg</div></div>
+<div class="#{$pr}#{$u}padding-l-lg #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade #{$pr}#{$u}margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding-l-lg</div></div>
+<div class="#{$pr}#{$u}padding-x-lg #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade #{$pr}#{$u}margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding-x-lg</div></div>
+<div class="#{$pr}#{$u}padding-y-lg #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade #{$pr}#{$u}margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding-y-lg</div></div>
+
+<div class="#{$pr}#{$u}padding-xl #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade #{$pr}#{$u}margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding-xl</div></div>
+<div class="#{$pr}#{$u}padding-t-xl #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade #{$pr}#{$u}margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding-t-xl</div></div>
+<div class="#{$pr}#{$u}padding-r-xl #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade #{$pr}#{$u}margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding-r-xl</div></div>
+<div class="#{$pr}#{$u}padding-b-xl #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade #{$pr}#{$u}margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding-b-xl</div></div>
+<div class="#{$pr}#{$u}padding-l-xl #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade #{$pr}#{$u}margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding-l-xl</div></div>
+<div class="#{$pr}#{$u}padding-x-xl #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade #{$pr}#{$u}margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding-x-xl</div></div>
+<div class="#{$pr}#{$u}padding-y-xl #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade #{$pr}#{$u}margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding-y-xl</div></div>
+
+<div class="#{$pr}#{$u}padding-xxl #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade #{$pr}#{$u}margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding-xxl</div></div>
+<div class="#{$pr}#{$u}padding-t-xxl #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade #{$pr}#{$u}margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding-t-xxl</div></div>
+<div class="#{$pr}#{$u}padding-r-xxl #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade #{$pr}#{$u}margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding-r-xxl</div></div>
+<div class="#{$pr}#{$u}padding-b-xxl #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade #{$pr}#{$u}margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding-b-xxl</div></div>
+<div class="#{$pr}#{$u}padding-l-xxl #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade #{$pr}#{$u}margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding-l-xxl</div></div>
+<div class="#{$pr}#{$u}padding-x-xxl #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade #{$pr}#{$u}margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding-x-xxl</div></div>
+<div class="#{$pr}#{$u}padding-y-xxl #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade #{$pr}#{$u}margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding-y-xxl</div></div>
+```
+*/
+
+#{$u-wrap} {
+
+	.#{$pr}#{$u}padding-0   { padding:        0 }
+	.#{$pr}#{$u}padding-t-0 { padding-top:    0 }
+	.#{$pr}#{$u}padding-r-0 { padding-right:  0 }
+	.#{$pr}#{$u}padding-b-0 { padding-bottom: 0 }
+	.#{$pr}#{$u}padding-l-0 { padding-left:   0 }
+	.#{$pr}#{$u}padding-x-0 { padding-right:  0; padding-left:   0 }
+	.#{$pr}#{$u}padding-y-0 { padding-top:    0; padding-bottom: 0 }
+
+	.#{$pr}#{$u}padding-xs   { padding:        ($spacer * .5) }
+	.#{$pr}#{$u}padding-t-xs { padding-top:    ($spacer * .5) }
+	.#{$pr}#{$u}padding-r-xs { padding-right:  ($spacer * .5) }
+	.#{$pr}#{$u}padding-b-xs { padding-bottom: ($spacer * .5) }
+	.#{$pr}#{$u}padding-l-xs { padding-left:   ($spacer * .5) }
+	.#{$pr}#{$u}padding-x-xs { padding-right:  ($spacer * .5); padding-left:   ($spacer * .5) }
+	.#{$pr}#{$u}padding-y-xs { padding-top:    ($spacer * .5); padding-bottom: ($spacer * .5) }
+
+	.#{$pr}#{$u}padding-sm   { padding:        $spacer }
+	.#{$pr}#{$u}padding-t-sm { padding-top:    $spacer }
+	.#{$pr}#{$u}padding-r-sm { padding-right:  $spacer }
+	.#{$pr}#{$u}padding-b-sm { padding-bottom: $spacer }
+	.#{$pr}#{$u}padding-l-sm { padding-left:   $spacer }
+	.#{$pr}#{$u}padding-x-sm { padding-right:  $spacer; padding-left:   $spacer }
+	.#{$pr}#{$u}padding-y-sm { padding-top:    $spacer; padding-bottom: $spacer }
+
+	.#{$pr}#{$u}padding   { padding:        ($spacer * 1.5) }
+	.#{$pr}#{$u}padding-t { padding-top:    ($spacer * 1.5) }
+	.#{$pr}#{$u}padding-r { padding-right:  ($spacer * 1.5) }
+	.#{$pr}#{$u}padding-b { padding-bottom: ($spacer * 1.5) }
+	.#{$pr}#{$u}padding-l { padding-left:   ($spacer * 1.5) }
+	.#{$pr}#{$u}padding-x { padding-right:  ($spacer * 1.5); padding-left:   ($spacer * 1.5) }
+	.#{$pr}#{$u}padding-y { padding-top:    ($spacer * 1.5); padding-bottom: ($spacer * 1.5) }
+
+	.#{$pr}#{$u}padding-lg   { padding:        ($spacer * 3) }
+	.#{$pr}#{$u}padding-t-lg { padding-top:    ($spacer * 3) }
+	.#{$pr}#{$u}padding-r-lg { padding-right:  ($spacer * 3) }
+	.#{$pr}#{$u}padding-b-lg { padding-bottom: ($spacer * 3) }
+	.#{$pr}#{$u}padding-l-lg { padding-left:   ($spacer * 3) }
+	.#{$pr}#{$u}padding-x-lg { padding-right:  ($spacer * 3); padding-left:   ($spacer * 3) }
+	.#{$pr}#{$u}padding-y-lg { padding-top:    ($spacer * 3); padding-bottom: ($spacer * 3) }
+
+	.#{$pr}#{$u}padding-xl   { padding:        ($spacer * 4.5) }
+	.#{$pr}#{$u}padding-t-xl { padding-top:    ($spacer * 4.5) }
+	.#{$pr}#{$u}padding-r-xl { padding-right:  ($spacer * 4.5) }
+	.#{$pr}#{$u}padding-b-xl { padding-bottom: ($spacer * 4.5) }
+	.#{$pr}#{$u}padding-l-xl { padding-left:   ($spacer * 4.5) }
+	.#{$pr}#{$u}padding-x-xl { padding-right:  ($spacer * 4.5); padding-left:   ($spacer * 4.5) }
+	.#{$pr}#{$u}padding-y-xl { padding-top:    ($spacer * 4.5); padding-bottom: ($spacer * 4.5) }
+
+	.#{$pr}#{$u}padding-xxl   { padding:        ($spacer * 6) }
+	.#{$pr}#{$u}padding-t-xxl { padding-top:    ($spacer * 6) }
+	.#{$pr}#{$u}padding-r-xxl { padding-right:  ($spacer * 6) }
+	.#{$pr}#{$u}padding-b-xxl { padding-bottom: ($spacer * 6) }
+	.#{$pr}#{$u}padding-l-xxl { padding-left:   ($spacer * 6) }
+	.#{$pr}#{$u}padding-x-xxl { padding-right:  ($spacer * 6); padding-left:   ($spacer * 6) }
+	.#{$pr}#{$u}padding-y-xxl { padding-top:    ($spacer * 6); padding-bottom: ($spacer * 6) }
+
+}
+
+}
