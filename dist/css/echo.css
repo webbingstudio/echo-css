@@ -6153,15 +6153,18 @@ category: component-hero
 ---
 
 メインビジュアルなどに使用される全面背景を持つコンポーネントを表示する。  
-高さは(breakpoint) が <code>sm</code> 以下で <code>50vh</code>、 <code>md</code> 以上で <code>75vh</code> としているため、適当調整すること。
+高さは(breakpoint) が <code>sm</code> 以下で <code>50vh</code>、 <code>md</code> 以上で <code>75vh</code> としているため、適当調整すること。  
+背景画像は透明度が50%となる。 <code>.c-hero-cover</code> の <code>opacity</code> を調整すること。
 
 ``` example
 <div class="c-hero">
     <div class="c-hero-cover" style="background-image: url(/images/_dummy/image_05.jpg);"></div>
     <div class="c-hero-contents">
-        <h2 class="c-hero-title">画像全面</h2>
-        <p class="c-hero-subtitle">吾輩は猫である。名前はまだ無い。</p>
-        <p class="c-hero-text">どこで生れたかとんと見当がつかぬ。</p>
+        <div class="c-hero-contents-inner">
+            <h2 class="c-hero-title">吾輩は猫である</h2>
+            <p class="c-hero-subtitle">名前はまだ無い</p>
+            <p class="c-hero-text">どこで生れたかとんと見当がつかぬ。</p>
+        </div><!-- /.c-hero-contents-inner -->
     </div><!-- /.c-hero-contents -->
 </div><!-- /.c-hero -->
 
@@ -6173,6 +6176,8 @@ category: component-hero
   width: 100%;
   height: 50vh;
   background-color: #000;
+  color: #fff;
+  line-height: 1;
 }
 @media (min-width: 1240px) {
   .c-hero {
@@ -6188,22 +6193,20 @@ category: component-hero
   right: 0;
   background: transparent none no-repeat center center;
   background-size: cover;
-  opacity: .7;
+  opacity: .5;
   z-index: 11;
 }
 
 .c-hero-contents {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
   max-width: 960px;
-  padding: 60px 10px;
-  color: #fff;
-  line-height: 1.5;
-  text-align: center;
-  z-index: 14;
+  height: 100%;
+  margin: 0 auto;
+  z-index: 12;
 }
 @media (min-width: 1240px) {
   .c-hero-contents {
@@ -6211,44 +6214,126 @@ category: component-hero
   }
 }
 
+.c-hero-contents-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 10px;
+  text-align: center;
+}
+@media (min-width: 1240px) {
+  .c-hero-contents-inner {
+    max-width: 960px;
+  }
+}
+
 .c-hero-title {
   margin: 0;
-  font-size: 2.5rem;
-  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  font-size: 2rem;
+  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
   font-weight: 300;
-  letter-spacing: .1em;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5), -1px 1px 5px rgba(0, 0, 0, 0.5), 1px -1px 5px rgba(0, 0, 0, 0.5), -1px -1px 5px rgba(0, 0, 0, 0.5);
+  letter-spacing: .05em;
 }
-@media (min-width: 425px) {
+@media (min-width: 768px) {
   .c-hero-title {
     font-size: 3rem;
-    letter-spacing: .25em;
+    letter-spacing: .1em;
+  }
+}
+@media (min-width: 1240px) {
+  .c-hero-title {
+    font-size: 3.5rem;
   }
 }
 
 .c-hero-subtitle {
-  margin: 5px 0 0;
-  font-size: 1.75rem;
+  margin: 0;
+  padding-top: 1em;
+  font-size: 1.125rem;
   font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
   font-weight: 300;
-  letter-spacing: .1em;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5), -1px 1px 5px rgba(0, 0, 0, 0.5), 1px -1px 5px rgba(0, 0, 0, 0.5), -1px -1px 5px rgba(0, 0, 0, 0.5);
 }
 @media (min-width: 425px) {
   .c-hero-subtitle {
-    font-size: 2.25rem;
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1240px) {
+  .c-hero-subtitle {
+    font-size: 1.75rem;
   }
 }
 
 .c-hero-text {
-  margin: 15px 0 0;
-  font-size: 1rem;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5), -1px 1px 3px rgba(0, 0, 0, 0.5), 1px -1px 3px rgba(0, 0, 0, 0.5), -1px -1px 3px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  padding-top: 2em;
+  font-size: .875rem;
+  line-height: 1.75;
 }
 @media (min-width: 425px) {
   .c-hero-text {
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
+}
+@media (min-width: 1240px) {
+  .c-hero-text {
+    font-size: 1.25rem;
+  }
+}
+
+/*doc
+---
+title: c-hero-(direction)
+name: hero-01-direction
+category: component-hero
+parent: hero
+---
+
+コンテンツブロックを指定した方向に寄せる。
+
+``` example
+<h3>.c-hero + .c-hero-l</h3>
+<div class="c-hero c-hero-l" style="margin-bottom: 2rem;">
+    <div class="c-hero-cover" style="background-image: url(/images/_dummy/image_05.jpg);"></div>
+    <div class="c-hero-contents">
+        <div class="c-hero-contents-inner">
+            <h2 class="c-hero-title">吾輩は猫である</h2>
+            <p class="c-hero-subtitle">名前はまだ無い</p>
+            <p class="c-hero-text">どこで生れたかとんと見当がつかぬ。</p>
+        </div><!-- /.c-hero-contents-inner -->
+    </div><!-- /.c-hero-contents -->
+</div><!-- /.c-hero -->
+
+<h3>.c-hero + .c-hero-r</h3>
+<div class="c-hero c-hero-r" style="margin-bottom: 2rem;">
+    <div class="c-hero-cover" style="background-image: url(/images/_dummy/image_05.jpg);"></div>
+    <div class="c-hero-contents">
+        <div class="c-hero-contents-inner">
+            <h2 class="c-hero-title">吾輩は猫である</h2>
+            <p class="c-hero-subtitle">名前はまだ無い</p>
+            <p class="c-hero-text">どこで生れたかとんと見当がつかぬ。</p>
+        </div><!-- /.c-hero-contents-inner -->
+    </div><!-- /.c-hero-contents -->
+</div><!-- /.c-hero -->
+
+```
+
+*/
+.c-hero-l .c-hero-contents {
+  justify-content: left;
+}
+.c-hero-l .c-hero-contents-inner {
+  margin-left: 0;
+  margin-right: auto;
+  text-align: left;
+}
+
+.c-hero-r .c-hero-contents {
+  justify-content: right;
+}
+.c-hero-r .c-hero-contents-inner {
+  margin-left: auto;
+  margin-right: 0;
+  text-align: right;
 }
 
 /*doc
@@ -6641,11 +6726,11 @@ When using the Japanese web font service, font weight is may not be change with 
   font-weight: 700;
 }
 #document .font-third {
-  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
   font-weight: 300;
 }
 #document .font-third.font-bold {
-  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
   font-weight: 700;
 }
 
