@@ -80,26 +80,24 @@
 
       }
 
-      @if ($disabled-grid-order-offset != true) {
-        @each $modifier in (pull, push, offset) {
-          @for $i from 0 through $columns {
-            @if ($i != 0) {
-              @if ($breakpoint == default) {
+      @each $modifier in (pull, push, offset) {
+        @for $i from 0 through $columns {
+          @if ($i != 0) {
+            @if ($breakpoint == default) {
 
-                @if ($optimize != true) or ( ($optimize == true) and ( $i < 11 ) ) {
+              @if ($optimize != true) or ( ($optimize == true) and ( $i < 11 ) ) {
 
-                  .#{$pr}#{$g}col-#{$modifier}-#{$i} {
-                    @include make-col-modifier-float($modifier, $i, $columns)
-                  }
-
+                .#{$pr}#{$g}col-#{$modifier}-#{$i} {
+                  @include make-col-modifier-float($modifier, $i, $columns)
                 }
 
-              } @else {
+              }
 
-                @if ($optimize != true) or ( ($optimize == true) and ( $breakpoint != 'xxs' ) and ( $breakpoint != 'xs' ) and ( $breakpoint != 'xl' ) and ( $breakpoint != 'xxl' ) and ( $i < 11 ) ) {
-                  .#{$pr}#{$g}col-#{$breakpoint}-#{$modifier}-#{$i} {
-                    @include make-col-modifier-float($modifier, $i, $columns)
-                  }
+            } @else {
+
+              @if ($optimize != true) or ( ($optimize == true) and ( $breakpoint != 'xxs' ) and ( $breakpoint != 'xs' ) and ( $breakpoint != 'xl' ) and ( $breakpoint != 'xxl' ) and ( $i < 11 ) ) {
+                .#{$pr}#{$g}col-#{$breakpoint}-#{$modifier}-#{$i} {
+                  @include make-col-modifier-float($modifier, $i, $columns)
                 }
               }
             }

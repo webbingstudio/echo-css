@@ -62,24 +62,20 @@
         }
       }
 
-      @if ($disabled-grid-order-offset != true) {
+      .#{$pr}#{$g}order#{$infix}-first { order: -1; }
 
-        .#{$pr}#{$g}order#{$infix}-first { order: -1; }
+      .#{$pr}#{$g}order#{$infix}-last { order: $columns + 1; }
 
-        .#{$pr}#{$g}order#{$infix}-last { order: $columns + 1; }
+      @for $i from 0 through $columns {
+        .#{$pr}#{$g}order#{$infix}-#{$i} { order: $i; }
+      }
 
-        @for $i from 0 through $columns {
-          .#{$pr}#{$g}order#{$infix}-#{$i} { order: $i; }
-        }
-
-        @for $i from 0 through ($columns - 1) {
-          @if not ($infix == "" and $i == 0) {
-            .#{$pr}#{$g}offset#{$infix}-#{$i} {
-              @include make-col-offset-flex($i, $columns);
-            }
+      @for $i from 0 through ($columns - 1) {
+        @if not ($infix == "" and $i == 0) {
+          .#{$pr}#{$g}offset#{$infix}-#{$i} {
+            @include make-col-offset-flex($i, $columns);
           }
         }
-
       }
 
     }
