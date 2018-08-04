@@ -5344,7 +5344,7 @@ category: component-card
 新着情報のエントリー繰り返し部分などに使用する、カード状のコンポーネントを表示する。  
 <code>.m-tite</code>, <code>.m-thumbnail</code>, <code>.m-btn</code>を含む可能性がある。  
 <code>.c-card-inner</code> はリンクを追加しない場合でも必須となる。  
-カードの境界は指定されていないため、<code>utility > .shadow</code>, <code>utility > .border</code> 等で調整すること。
+カードの境界は指定されていないため、<code>utility > .shadow</code> 等で調整すること。
 
 
 ``` example
@@ -6408,129 +6408,6 @@ parent: bg-01-color
 }
 #document .bg-important.bg-fade {
   background-color: #ffe3e9;
-}
-
-/*doc
----
-title: border
-name: border
-category: utility-border
----
-
-要素の周囲にボーダーを引く。ボーダー色は <code>\_config_basic.scss > $border-color</code> で指定した色となる。
-
-``` example
-<p class="border">border_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-```
-*/
-#document .border {
-  border: 1px solid #ccc;
-}
-
-/*doc
----
-title: border-(color)
-name: border-01-color
-category: utility-border
----
-
-ボーダー色を変更する。(color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
-
-``` example
-<p class="border-gray">border-gray_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="border-first">border-first_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="border-second">border-second_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="border-third">border-third_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="border-fourth">border-fourth_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="border-info">border-info_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="border-important">border-important_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-```
-*/
-/*doc
----
-title: border-mild
-name: border-02-mild
-category: utility-border
-parent: border-01-color
----
-
-ボーダー色を弱める。 <code>.border-(color)</code> と併用すると、指定した色を弱める。
-
-``` example
-<p class="border-gray border-mild">border-gray_border-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="border-first border-mild">border-first_border-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="border-second border-mild">border-second_border-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="border-third border-mild">border-third_border-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="border-fourth border-mild">border-fourth_border-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="border-info border-mild">border-info_border-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="border-important border-mild">border-important_border-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-```
-*/
-#document .border-gray {
-  border: 1px solid #333;
-}
-#document .border-gray.border-mild {
-  border-color: #888;
-}
-#document .border-first {
-  border: 1px solid #1976d2;
-}
-#document .border-first.border-mild {
-  border-color: #4690da;
-}
-#document .border-second {
-  border: 1px solid #3cade6;
-}
-#document .border-second.border-mild {
-  border-color: #6bb9ea;
-}
-#document .border-third {
-  border: 1px solid #49b070;
-}
-#document .border-third.border-mild {
-  border-color: #70b98c;
-}
-#document .border-fourth {
-  border: 1px solid #f38c10;
-}
-#document .border-fourth.border-mild {
-  border-color: #f0a346;
-}
-#document .border-info {
-  border: 1px solid #3cade6;
-}
-#document .border-info.border-mild {
-  border-color: #6bb9ea;
-}
-#document .border-important {
-  border: 1px solid #e33050;
-}
-#document .border-important.border-mild {
-  border-color: #eb758a;
-}
-
-/*doc
----
-title: border-inverse
-name: border-03-inverse
-category: utility-border
----
-
-ボーダー色を反転する。
-
-
-``` example
-<div class="bg-first p">
-    <p class="border-inverse">border-inverse_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-    <p class="border-inverse border-mild">border-inverse_border-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-</div>
-```
-*/
-#document .border-inverse {
-  border: 1px solid #fff;
-}
-#document .border-inverse.border-mild {
-  border-color: rgba(255, 255, 255, 0.5);
 }
 
 /*doc
