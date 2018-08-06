@@ -5,7 +5,7 @@ name: typography
 category: typography
 ---
 
-何もクラスを付与していないときの、各HTML要素のサンプル。すべての見出し要素には<code>margin-top: 2em</code>が指定されている。
+何もクラスを付与していないときの、各HTML要素のサンプル。すべての見出し要素は、上マージンが0となっている。
 
 ``` example
 <h1>あいうえおかきくけ10_h1</h1>
@@ -130,17 +130,14 @@ a {
 
 h1,
 h2 {
-    margin: 2em 0 1em;
+    margin: 0 0 1em;
 }
 
 h3,
-h4 {
-    margin: 2em 0 .5em;
-}
-
+h4,
 h5,
 h6 {
-    margin: 2em 0 0;
+    margin: 0 0 .5em;
 }
 
 h1 {

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>module-title | Style guide | echo-css</title>
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div class="l-document" id="document">
+
+    <header class="s-header">
+        <div class="s-header-brand">
+            <p class="s-title s-header-title"><img src="../images/common/logo_white.svg" height="24" alt="echo-css"> <span class="s-label">v0.8.0</span></p>
+        </div><!-- /.s-header-brand -->
+
+        <?php include('../doc_include/header_nav.inc'); ?>
+    </header>
+
+    <div class="s-container s-container-fluid">
+        <div class="s-contents s-contents-2col">
+            <main class="s-contents-main" role="main">
+
+                
+                <div class="s-pageheader">
+                    <h1 class="s-title s-pageheader-title">module-title</h1>
+                </div><!-- /.s-pageheader -->
+                
+
+                
+
+                <article class="s-post">
+                    <div class="s-post-contents styleguide-contents"><h1 id="title" class="styleguide">m-title-(type)</h1>
+
+<p>見出しを表示する。ウィンドウ幅によって外観が変動する。
+余白は <code>utility &gt; .margin</code> で別途調整する。</p>
+
+<p><code>(type)</code> は番号により、以下の箇所に使用する前提となっている。</p>
+
+<ul>
+<li><code>01 - 09</code> : コンテンツ見出し</li>
+<li><code>11 - 19</code> : <code>.c-card</code> 等のコンポーネント内見出し</li>
+<li><code>21 - 29</code> : <code>.c-hero</code> 等のディスプレイ見出し</li>
+</ul>
+<div class="example"><div style="margin-bottom: 2rem;">
+
+<h1 class="m-title-01">h1要素にm-title-01を付与しました</h1>
+<h1 class="m-title-02">h1要素にm-title-02を付与しました</h1>
+<h1 class="m-title-03">h1要素にm-title-03を付与しました</h1>
+<h1 class="m-title-04">h1要素にm-title-04を付与しました</h1>
+<h1 class="m-title-05">h1要素にm-title-05を付与しました</h1>
+
+</div>
+<div style="margin-bottom: 2rem;">
+
+<h2 class="m-title-11">h2要素にm-title-11を付与しました</h2>
+<h2 class="m-title-12">h2要素にm-title-12を付与しました</h2>
+<h2 class="m-title-13">h2要素にm-title-13を付与しました</h2>
+
+</div>
+<div style="margin-bottom: 2rem;">
+
+<h3 class="m-title-21">h3要素にm-title-21を付与しました</h3>
+<h3 class="m-title-22">h3要素にm-title-22を付与しました</h3>
+<h3 class="m-title-23">h3要素にm-title-23を付与しました</h3>
+
+</div>
+</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 2rem;"</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"m-title-01"</span><span class="nt">&gt;</span>h1要素にm-title-01を付与しました<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"m-title-02"</span><span class="nt">&gt;</span>h1要素にm-title-02を付与しました<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"m-title-03"</span><span class="nt">&gt;</span>h1要素にm-title-03を付与しました<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"m-title-04"</span><span class="nt">&gt;</span>h1要素にm-title-04を付与しました<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"m-title-05"</span><span class="nt">&gt;</span>h1要素にm-title-05を付与しました<span class="nt">&lt;/h1&gt;</span>
+
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 2rem;"</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"m-title-11"</span><span class="nt">&gt;</span>h2要素にm-title-11を付与しました<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"m-title-12"</span><span class="nt">&gt;</span>h2要素にm-title-12を付与しました<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"m-title-13"</span><span class="nt">&gt;</span>h2要素にm-title-13を付与しました<span class="nt">&lt;/h2&gt;</span>
+
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 2rem;"</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"m-title-21"</span><span class="nt">&gt;</span>h3要素にm-title-21を付与しました<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"m-title-22"</span><span class="nt">&gt;</span>h3要素にm-title-22を付与しました<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"m-title-23"</span><span class="nt">&gt;</span>h3要素にm-title-23を付与しました<span class="nt">&lt;/h3&gt;</span>
+
+<span class="nt">&lt;/div&gt;</span>
+</pre></div><?php include('../doc_include/footer.inc'); ?>

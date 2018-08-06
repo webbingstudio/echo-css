@@ -1,5 +1,4 @@
 @if ($disabled-utility-class != true) {
-@if ($use-font-in-reliable == true) {
 
 /*doc
 ---
@@ -22,7 +21,7 @@ category: utility-font
 
 /*doc
 ---
-title: .#{$pr}#{$u}font-bold
+title: #{$pr}#{$u}font-bold
 name: font-02-bold
 category: utility-font
 ---
@@ -31,18 +30,22 @@ category: utility-font
 
 ### 補足：日本語ウェブフォントの仕様
 
-日本語ウェブフォントサービスを利用した場合、 <code>font-weight</code> だけではウェイトの変更ができないことがある。このため、別途クラスが必要となる。
+多くの日本語ウェブフォントサービスでは、 <code>font-weight</code> だけではウェイトの変更ができない。  
+このため、「フォントも含めて太字に変更するクラス」が必要となる。  
+参考: 太字指定が反映されません。 | FONTPLUS  
+[https://webfont.fontplus.jp/faq/4125](https://webfont.fontplus.jp/faq/4125)
 
 ### Note: Web font in Japanese specification
 
-When using the Japanese web font service, font weight is may not be change with only <code> font-weight </code>. Therefore, a separate class is required.
+When using the Japanese web font service, font weight is may not be change with only <code> font-weight </code>. Therefore, "class to change to bold including font" is required.  
+Reference: Boldface designation is not reflected. | FONTPLUS  
+[https://webfont.fontplus.jp/faq/4125](https://webfont.fontplus.jp/faq/4125)
 
 ``` example
 <p class="#{$pr}#{$u}text-xl #{$pr}#{$u}font-first #{$pr}#{$u}font-bold">#{$pr}#{$u}font-first_#{$pr}#{$u}font-bold_フォント01に変更しました</p>
 <p class="#{$pr}#{$u}text-xl #{$pr}#{$u}font-second #{$pr}#{$u}font-bold">#{$pr}#{$u}font-second_#{$pr}#{$u}font-bold_フォント02に変更しました</p>
 <p class="#{$pr}#{$u}text-xl #{$pr}#{$u}font-third #{$pr}#{$u}font-bold">#{$pr}#{$u}font-third_#{$pr}#{$u}font-bold_フォント03に変更しました</p>
 <p class="#{$pr}#{$u}text-xl #{$pr}#{$u}font-first #{$pr}#{$u}font-bold">ここはフォント01ですが、<span class="#{$pr}#{$u}font-root #{$pr}#{$u}font-bold">#{$pr}#{$u}font-root_#{$pr}#{$u}font-bold_ここからbody要素のフォントに変更しました</span></p>
-<p class="#{$pr}#{$u}text-xl #{$pr}#{$u}font-mono #{$pr}#{$u}font-bold">#{$pr}#{$u}font-mono_#{$pr}#{$u}font-bold_等幅フォントに変更しました &lt;p class="#{$pr}#{$u}font-mono #{$pr}#{$u}font-bold"&gt;hello world!&lt;/p&gt;</p>
 ```
 
 */
@@ -99,5 +102,4 @@ When using the Japanese web font service, font weight is may not be change with 
 
 }
 
-}
 }

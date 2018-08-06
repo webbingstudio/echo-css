@@ -15,7 +15,9 @@ category: component-flip
     <div class="#{$pr}#{$c}flip-container">
         <div class="#{$pr}#{$c}flip-contents">
             <div class="#{$pr}#{$c}flip-contents-inner">
-                <div style="border: 1px solid #F68; padding: 10px;">(other component)</div>
+                <h2 class="#{$pr}#{$m}title-22">吾輩は猫である</h2>
+                <p class="#{$pr}#{$m}title-21 #{$pr}#{$u}margin-b-xs">名前はまだ無い</p>
+                <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
             </div><!-- /.#{$pr}#{$c}flip-contents-inner -->
         </div><!-- /.#{$pr}#{$c}flip-contents -->
     </div><!-- /.#{$pr}#{$c}flip-container -->
@@ -85,6 +87,8 @@ category: component-flip
             vertical-align: middle;
 
             @include media-breakpoint-up(lg) {
+                padding-left: ($spacer * 2);
+                padding-right: ($spacer * 2);
                 height: 100%;
             }
 
@@ -111,7 +115,9 @@ parent: flip
     <div class="#{$pr}#{$c}flip-container">
         <div class="#{$pr}#{$c}flip-contents">
             <div class="#{$pr}#{$c}flip-contents-inner">
-                <div style="border: 1px solid #F68; padding: 10px;">(other component)</div>
+                <h2 class="#{$pr}#{$m}title-22">吾輩は猫である</h2>
+                <p class="#{$pr}#{$m}title-21 #{$pr}#{$u}margin-b-xs">名前はまだ無い</p>
+                <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
             </div><!-- /.#{$pr}#{$c}flip-contents-inner -->
         </div><!-- /.#{$pr}#{$c}flip-contents -->
     </div><!-- /.#{$pr}#{$c}flip-container -->
@@ -151,7 +157,9 @@ parent: flip
     <div class="#{$pr}#{$c}flip-container">
         <div class="#{$pr}#{$c}flip-contents">
             <div class="#{$pr}#{$c}flip-contents-inner">
-                <div style="border: 1px solid #FF9; padding: 10px;">(other component)</div>
+                <h2 class="#{$pr}#{$m}title-22">吾輩は猫である</h2>
+                <p class="#{$pr}#{$m}title-21 #{$pr}#{$u}margin-b-xs">名前はまだ無い</p>
+                <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
             </div><!-- /.#{$pr}#{$c}flip-contents-inner -->
         </div><!-- /.#{$pr}#{$c}flip-contents -->
     </div><!-- /.#{$pr}#{$c}flip-container -->
@@ -160,13 +168,14 @@ parent: flip
 */
 
 .#{$pr}#{$c}flip-inverse {
+    background-color: $body-inverse-bg;
 
     .#{$pr}#{$c}flip-cover {
         background-color: $body-bg;
     }
 
     .#{$pr}#{$c}flip-contents {
-        color: darken($body-inverse-color, 5%);
+        color: $body-inverse-color;
         background-color: rgba($body-inverse-bg, .85);
     }
 

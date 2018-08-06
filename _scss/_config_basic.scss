@@ -14,7 +14,7 @@ $wysiwyg:   "wysiwyg" !default;
 $u-wrap:    "#document" !default;
 
 $spacer:    10px !default;
-$icon:      '[class*=fa-]' !default;
+$icon:      '[class*="fa-"]' !default;
 
 
 // Colors
@@ -24,12 +24,12 @@ $icon:      '[class*=fa-]' !default;
 $gray:                      #333 !default;
 $gray-strong:               #000 !default;
 $gray-mild:                 #888 !default;
-$gray-milder:               #ccc !default;
+$gray-milder:               #bbb !default;
 $gray-fade:                 #eee !default;
 
 // first: primary color
 $first:                     #1976d2 !default;
-$first-strong:              #096ed2 !default;
+$first-strong:              #0360bd !default;
 $first-text:                $first-strong !default;
 $first-mild:                #4690da !default;
 $first-fade:                #d7e7f7 !default;
@@ -127,7 +127,6 @@ $border-thumbnail-width:         0 !default;
 
 $border-alert-width:             $border-width !default;
 $border-box-width:               ($border-width * 2) !default;
-$border-card-width:              $border-width !default;
 
 
 // Font Mapping
@@ -142,34 +141,31 @@ $border-card-width:              $border-width !default;
 // Font family
 // -----------------------------------------
 
-// 確実なフォント設定を利用する場合は、値を「true」にする（CSSが冗長になる）
-// Set the value to "true" if you do want to use reliable font settings (CSS becomes redundant)
-$use-font-in-reliable: true !default;
+$font-family-mono:             'Consolas', 'Liberation Mono', 'Menlo', 'Courier', monospace !default;
 
+// root: body
 $font-family-root:             '-apple-system', 'BlinkMacSystemFont', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif !default;
 $font-weight-root:             300 !default;
 $font-family-bold-root:        $font-family-root;
 $font-weight-bold-root:        700 !default;
 
-$font-family-mono:             'Consolas', 'Liberation Mono', 'Menlo', 'Courier', monospace !default;
-
-// first: heading
+// first: title
 $font-family-first:            '游明朝', 'Yu Mincho', '游明朝体', 'YuMincho', 'Hiragino Mincho Pro', 'ＭＳ Ｐ明朝', 'MS PMincho', 'Bookman Old Style', 'Times New Roman', '-apple-system', 'BlinkMacSystemFont', serif !default;
 $font-weight-first:            300 !default;
 $font-family-bold-first:       $font-family-first;
 $font-weight-bold-first:       700 !default;
 
-// second: english, date, number, badge
+// second: english, date, number
 $font-family-second:           'Helvetica', 'Roboto', '-apple-system', 'Open Sans', 'Arial', sans-serif !default;
 $font-weight-second:           300 !default;
 $font-family-bold-second:      $font-family-second;
 $font-weight-bold-second:      700 !default;
 
-// third: hero, etc
-$font-family-third:            $font-family-first;
-$font-weight-third:            $font-weight-first;
-$font-family-bold-third:       $font-family-bold-first;
-$font-weight-bold-third:       $font-weight-bold-first;
+// third: title-21 to title-29
+$font-family-third:            $font-family-root;
+$font-weight-third:            $font-weight-root;
+$font-family-bold-third:       $font-family-bold-root;
+$font-weight-bold-third:       $font-weight-bold-root;
 
 
 // Font size
@@ -181,13 +177,6 @@ $font-size-sm:              .875rem !default;
 $font-size-md:              1rem !default;
 $font-size-lg:              1.125rem !default;
 $font-size-xl:              1.25rem !default;
-$font-size-xxl:             1.5rem !default;
-$font-size-3l:              1.75rem !default;
-
-$font-size-display-1:      5rem !default;
-$font-size-display-2:      4rem !default;
-$font-size-display-3:      3rem !default;
-$font-size-display-4:      2rem !default;
 
 
 // Line height
@@ -205,15 +194,17 @@ $line-height-lg:            2 !default;
 
 $nav-color:                  $body-color !default;
 $nav-bg:                     transparent !default;
-$nav-border:                 $border-color !default;
-
 $nav-hover-color:            $body-color !default;
-$nav-hover-bg:               $first-fade !default;
-$nav-hover-border:           $border-color !default;
+$nav-hover-bg:               rgba($first, .1) !default;
+$nav-current-color:          $first !default;
+$nav-current-bg:             rgba($first, .1) !default;
 
-$nav-current-color:          $body-inverse-color !default;
-$nav-current-bg:             $first !default;
-$nav-current-border:         $first !default;
+$nav-inverse-color:                  $body-inverse-color !default;
+$nav-inverse-bg:                     $first !default;
+$nav-inverse-hover-color:            $body-inverse-color !default;
+$nav-inverse-hover-bg:               rgba($first, .1) !default;
+$nav-inverse-current-color:          $body-inverse-color !default;
+$nav-inverse-current-bg:             rgba($first, .1) !default;
 
 
 // Radius
@@ -228,28 +219,28 @@ $border-radius-xl:   9px;
 // Buttons
 // -----------------------------------------
 
-$btn-font-size-sm:          $font-size-xs;
-$btn-padding-x-sm:          .5em !default;
-$btn-padding-y-sm:          .25em !default;
+$btn-font-size-sm:          .75rem;
+$btn-padding-x-sm:          .5rem !default;
+$btn-padding-y-sm:          .25rem !default;
 
-$btn-font-size-md:          $font-size-sm;
-$btn-padding-x-md:          1em !default;
-$btn-padding-y-md:          .5em !default;
+$btn-font-size-md:          .875rem;
+$btn-padding-x-md:          1rem !default;
+$btn-padding-y-md:          .5rem !default;
 
-$btn-font-size-lg:          $font-size-md;
-$btn-padding-x-lg:          1.5em !default;
-$btn-padding-y-lg:          .75em !default;
+$btn-font-size-lg:          1.25rem;
+$btn-padding-x-lg:          1rem !default;
+$btn-padding-y-lg:          .75rem !default;
 
-$btn-font-size-xl:          $font-size-lg;
-$btn-padding-x-xl:          3em !default;
-$btn-padding-y-xl:          .75em !default;
+$btn-font-size-xl:          1.5rem;
+$btn-padding-x-xl:          2rem !default;
+$btn-padding-y-xl:          1.25rem !default;
 
 $btn-round-width-sm:        2em;
-$btn-round-width-md:        2.5em;
-$btn-round-width-lg:        3.75em;
-$btn-round-width-xl:        5em;
+$btn-round-width-md:        2.5rem;
+$btn-round-width-lg:        3.75rem;
+$btn-round-width-xl:        5rem;
 
 $btn-square-width-sm:       1.5em;
-$btn-square-width-md:       2.5em;
-$btn-square-width-lg:       3.75em;
-$btn-square-width-xl:       5em;
+$btn-square-width-md:       2.5rem;
+$btn-square-width-lg:       3.75rem;
+$btn-square-width-xl:       5rem;

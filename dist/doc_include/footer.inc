@@ -26,55 +26,50 @@
 					                <ul class="s-sitemap-list s-sitemap-children">
 					                    <li class="s-sitemap-item"><a href="./module-badge.html">badge</a></li>
 					                    <li class="s-sitemap-item"><a href="./module-btn.html">btn</a></li>
-					                    <li class="s-sitemap-item"><a href="./module-input.html">input</a></li>
-					                    <li class="s-sitemap-item"><a href="./module-radio.html">radio</a></li>
 					                    <li class="s-sitemap-item"><a href="./module-checkbox.html">checkbox</a></li>
-					                    <li class="s-sitemap-item"><a href="./module-select.html">select</a></li>
+					                    <li class="s-sitemap-item"><a href="./module-embed.html">embed</a></li>
+					                    <li class="s-sitemap-item"><a href="./module-input.html">input</a></li>
 					                    <li class="s-sitemap-item"><a href="./module-label.html">label</a></li>
 					                    <li class="s-sitemap-item"><a href="./module-list.html">list</a></li>
 					                    <li class="s-sitemap-item"><a href="./module-nav.html">nav</a></li>
+					                    <li class="s-sitemap-item"><a href="./module-radio.html">radio</a></li>
+					                    <li class="s-sitemap-item"><a href="./module-select.html">select</a></li>
 					                    <li class="s-sitemap-item"><a href="./module-table.html">table</a></li>
+					                    <li class="s-sitemap-item"><a href="./module-title.html">title</a></li>
 					                    <li class="s-sitemap-item"><a href="./module-thumbnail.html">thumbnail</a></li>
-					                    <li class="s-sitemap-item"><a href="./module-embed.html">embed</a></li>
 					                </ul>
 					            </li>
 					            <li class="s-sitemap-item"><span class="s-sitemap-label">component</span>
 					                <ul class="s-sitemap-list s-sitemap-children">
-					                    <li class="s-sitemap-item"><a href="./component-box.html">box</a></li>
-					                    <li class="s-sitemap-item"><a href="./component-dfn.html">dfn</a></li>
 					                    <li class="s-sitemap-item"><a href="./component-alert.html">alert</a></li>
+					                    <li class="s-sitemap-item"><a href="./component-box.html">box</a></li>
 					                    <li class="s-sitemap-item"><a href="./component-card.html">card</a></li>
+					                    <li class="s-sitemap-item"><a href="./component-dfn.html">dfn</a></li>
 					                    <li class="s-sitemap-item"><a href="./component-flip.html">flip</a></li>
 					                    <li class="s-sitemap-item"><a href="./component-form.html">form</a></li>
 					                    <li class="s-sitemap-item"><a href="./component-headline.html">headline</a></li>
 					                    <li class="s-sitemap-item"><a href="./component-hero.html">hero</a></li>
-					                    <li class="s-sitemap-item"><a href="./component-lead.html">lead</a></li>
 					                    <li class="s-sitemap-item"><a href="./component-media.html">media</a></li>
-					                    <li class="s-sitemap-item"><a href="./component-nav.html">nav</a></li>
-					                    <li class="s-sitemap-item"><a href="./component-pagehead.html">pagehead</a></li>
-					                    <li class="s-sitemap-item"><a href="./component-post.html">post</a></li>
-					                    <li class="s-sitemap-item"><a href="./component-share.html">share</a></li>
-					                    <li class="s-sitemap-item"><a href="./component-slider.html">slider</a></li>
-					                    <li class="s-sitemap-item"><a href="./component-widget.html">widget</a></li>
+					                    <li class="s-sitemap-item"><a href="./component-panel.html">panel</a></li>
 					                </ul>
 					            </li>
 					            <li class="s-sitemap-item"><span class="s-sitemap-label">utility</span>
 					                <ul class="s-sitemap-list s-sitemap-children">
-					                    <li class="s-sitemap-item"><a href="./utility-margin.html">margin</a></li>
-					                    <li class="s-sitemap-item"><a href="./utility-padding.html">padding</a></li>
-					                    <li class="s-sitemap-item"><a href="./utility-text.html">text</a></li>
-					                    <li class="s-sitemap-item"><a href="./utility-font.html">font</a></li>
-					                    <li class="s-sitemap-item"><a href="./utility-line.html">line</a></li>
-					                    <li class="s-sitemap-item"><a href="./utility-img.html">img</a></li>
 					                    <li class="s-sitemap-item"><a href="./utility-bg.html">bg</a></li>
-					                    <li class="s-sitemap-item"><a href="./utility-shadow.html">shadow</a></li>
-					                    <li class="s-sitemap-item"><a href="./utility-hidden.html">hidden</a></li>
-					                    <li class="s-sitemap-item"><a href="./utility-float.html">float</a></li>
 					                    <li class="s-sitemap-item"><a href="./utility-clear.html">clear</a></li>
 					                    <li class="s-sitemap-item"><a href="./utility-clearfix.html">clearfix</a></li>
-					                    <li class="s-sitemap-item"><a href="./utility-position.html">position</a></li>
 					                    <li class="s-sitemap-item"><a href="./utility-container-expand.html">container expand</a></li>
+					                    <li class="s-sitemap-item"><a href="./utility-float.html">float</a></li>
+					                    <li class="s-sitemap-item"><a href="./utility-font.html">font</a></li>
+					                    <li class="s-sitemap-item"><a href="./utility-hidden.html">hidden</a></li>
+					                    <li class="s-sitemap-item"><a href="./utility-img.html">img</a></li>
+					                    <li class="s-sitemap-item"><a href="./utility-line.html">line</a></li>
+					                    <li class="s-sitemap-item"><a href="./utility-margin.html">margin</a></li>
+					                    <li class="s-sitemap-item"><a href="./utility-padding.html">padding</a></li>
+					                    <li class="s-sitemap-item"><a href="./utility-position.html">position</a></li>
+					                    <li class="s-sitemap-item"><a href="./utility-shadow.html">shadow</a></li>
 					                    <li class="s-sitemap-item"><a href="./utility-sr.html">screen reader</a></li>
+					                    <li class="s-sitemap-item"><a href="./utility-text.html">text</a></li>
 					                </ul>
 					            </li>
 					        </ul>

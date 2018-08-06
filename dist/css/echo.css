@@ -70,7 +70,7 @@ name: typography
 category: typography
 ---
 
-何もクラスを付与していないときの、各HTML要素のサンプル。すべての見出し要素には<code>margin-top: 2em</code>が指定されている。
+何もクラスを付与していないときの、各HTML要素のサンプル。すべての見出し要素は、上マージンが0となっている。
 
 ``` example
 <h1>あいうえおかきくけ10_h1</h1>
@@ -180,7 +180,7 @@ It is not appropriate to specify color or text-decoration for the link only with
 --------------------
 */
 a {
-  color: #096ed2;
+  color: #0360bd;
   text-decoration: underline;
 }
 a:hover, a:focus {
@@ -190,17 +190,14 @@ a:hover, a:focus {
 
 h1,
 h2 {
-  margin: 2em 0 1em;
+  margin: 0 0 1em;
 }
 
 h3,
-h4 {
-  margin: 2em 0 .5em;
-}
-
+h4,
 h5,
 h6 {
-  margin: 2em 0 0;
+  margin: 0 0 .5em;
 }
 
 h1 {
@@ -2123,7 +2120,7 @@ name: badge
 category: module-badge
 ---
 
-新着アイコンなどに使用する、バッジを表示する。英数字のみが入ることが前提となっている。
+新着アイコンなどに使用する、バッジを表示する。
 
 ``` example
 <p>
@@ -2140,10 +2137,10 @@ category: module-badge
   border-radius: 0 0 5px 5px;
   background: #fff;
   color: #333;
-  border: 1px solid #ccc;
+  border: 1px solid #bbb;
   font-size: .8em;
-  font-family: "Helvetica", "Roboto", "-apple-system", "Open Sans", "Arial", sans-serif;
-  font-weight: 300;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  font-weight: 700;
   letter-spacing: .1em;
   text-align: center;
   line-height: 1;
@@ -2258,7 +2255,7 @@ category: module-btn
   font-weight: 300;
   background-color: #fff;
   border: 1px solid transparent;
-  padding: 0.5em 1em;
+  padding: 0.5rem 1rem;
   text-align: center;
   line-height: 1;
   border-radius: 5px;
@@ -2386,7 +2383,7 @@ a:hover .m-btn-gray, a:focus .m-btn-gray, a:active .m-btn-gray {
 }
 .m-btn-first:hover, .m-btn-first:focus, .m-btn-first:active, .m-btn-first.active {
   color: #fff;
-  background-color: #096ed2;
+  background-color: #0360bd;
   border-color: transparent;
 }
 .m-btn-first.disabled, .m-btn-first:disabled, fieldset[disabled] .m-btn-first {
@@ -2399,7 +2396,7 @@ a:hover .m-btn-gray, a:focus .m-btn-gray, a:active .m-btn-gray {
 }
 a:hover .m-btn-first, a:focus .m-btn-first, a:active .m-btn-first {
   color: #fff;
-  background-color: #096ed2;
+  background-color: #0360bd;
   border-color: transparent;
 }
 
@@ -2826,31 +2823,31 @@ parent: btn
 ```
 */
 .m-btn-sm {
-  padding-top: 0.25em;
-  padding-bottom: 0.25em;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
   font-size: 0.75rem;
   border-radius: 3px;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .m-btn-lg {
-  padding-top: 0.75em;
-  padding-bottom: 0.75em;
-  font-size: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1.25rem;
   border-radius: 7px;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .m-btn-xl {
-  padding-top: 0.75em;
-  padding-bottom: 0.75em;
-  font-size: 1.125rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  font-size: 1.5rem;
   border-width: 2px;
   border-radius: 9px;
-  padding-left: 3em;
-  padding-right: 3em;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 /*doc
@@ -2933,9 +2930,9 @@ parent: btn
 */
 .m-btn-round {
   overflow: hidden;
-  width: 2.5em;
-  height: 2.5em;
-  line-height: 2.5em;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
   border-radius: 50%;
 }
 .m-btn-round.m-btn {
@@ -2944,7 +2941,7 @@ parent: btn
 .m-btn-round.m-btn img {
   transform: translate(0, -0.1em);
 }
-.m-btn-round.m-btn .fa {
+.m-btn-round.m-btn [class*="fa-"] {
   transform: translate(0, -0.1em);
 }
 .m-btn-round.m-btn-sm {
@@ -2953,25 +2950,25 @@ parent: btn
   line-height: 2em;
 }
 .m-btn-round.m-btn-lg {
-  width: 3.75em;
-  height: 3.75em;
-  line-height: 3.75em;
+  width: 3.75rem;
+  height: 3.75rem;
+  line-height: 3.75rem;
 }
 .m-btn-round.m-btn-lg img {
   transform: translate(0, -0.125em);
 }
-.m-btn-round.m-btn-lg .fa {
+.m-btn-round.m-btn-lg [class*="fa-"] {
   transform: translate(0, -0.125em);
 }
 .m-btn-round.m-btn-xl {
-  width: 5em;
-  height: 5em;
-  line-height: 5em;
+  width: 5rem;
+  height: 5rem;
+  line-height: 5rem;
 }
 .m-btn-round.m-btn-xl img {
   transform: translate(0, -0.15em);
 }
-.m-btn-round.m-btn-xl .fa {
+.m-btn-round.m-btn-xl [class*="fa-"] {
   transform: translate(0, -0.15em);
 }
 
@@ -3002,9 +2999,9 @@ parent: btn
 */
 .m-btn-square {
   overflow: hidden;
-  width: 2.5em;
-  height: 2.5em;
-  line-height: 2.5em;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
 }
 .m-btn-square.m-btn {
   padding: 0;
@@ -3012,7 +3009,7 @@ parent: btn
 .m-btn-square.m-btn img {
   transform: translate(0, -0.1em);
 }
-.m-btn-square.m-btn .fa {
+.m-btn-square.m-btn [class*="fa-"] {
   transform: translate(0, -0.1em);
 }
 .m-btn-square.m-btn-sm {
@@ -3021,25 +3018,25 @@ parent: btn
   line-height: 1.5em;
 }
 .m-btn-square.m-btn-lg {
-  width: 3.75em;
-  height: 3.75em;
-  line-height: 3.75em;
+  width: 3.75rem;
+  height: 3.75rem;
+  line-height: 3.75rem;
 }
 .m-btn-square.m-btn-lg img {
   transform: translate(0, -0.125em);
 }
-.m-btn-square.m-btn-lg .fa {
+.m-btn-square.m-btn-lg [class*="fa-"] {
   transform: translate(0, -0.125em);
 }
 .m-btn-square.m-btn-xl {
-  width: 5em;
-  height: 5em;
-  line-height: 5em;
+  width: 5rem;
+  height: 5rem;
+  line-height: 5rem;
 }
 .m-btn-square.m-btn-xl img {
   transform: translate(0, -0.15em);
 }
-.m-btn-square.m-btn-xl .fa {
+.m-btn-square.m-btn-xl [class*="fa-"] {
   transform: translate(0, -0.15em);
 }
 
@@ -3253,7 +3250,7 @@ category: module-input
 .m-input {
   padding: .375rem .5rem;
   background: #fff none;
-  border: 1px solid #ccc;
+  border: 1px solid #bbb;
   color: #333;
   border-radius: 3px;
   vertical-align: middle;
@@ -3577,13 +3574,13 @@ category: module-list
   list-style-type: none;
 }
 
-.p-m-list-item {
+.m-list-item {
   position: relative;
   margin: 0;
   line-height: 1.5;
 }
 
-.p-m-list-children {
+.m-list-children {
   margin: 0;
   padding-left: 0;
   list-style-type: none;
@@ -3623,15 +3620,15 @@ parent: list
 ```
 
 */
-.m-list-vertical .p-m-list-item {
+.m-list-vertical .m-list-item {
   margin-top: .75em;
   margin-bottom: .75em;
   padding-left: 1.5em;
 }
-.m-list-vertical .p-m-list-children {
+.m-list-vertical .m-list-children {
   padding-left: 0;
 }
-.m-list-vertical .p-m-list-children .p-m-list-item {
+.m-list-vertical .m-list-children .m-list-item {
   font-size: .9em;
 }
 
@@ -3658,16 +3655,16 @@ parent: list
 .m-list-horizontal {
   letter-spacing: -.4em;
 }
-.m-list-horizontal .p-m-list-item {
+.m-list-horizontal .m-list-item {
   display: inline-block;
   padding-left: 1em;
   padding-right: 1em;
   letter-spacing: normal;
 }
-.m-list-horizontal .p-m-list-item:first-child {
+.m-list-horizontal .m-list-item:first-child {
   padding-left: 0;
 }
-.m-list-horizontal .p-m-list-item:last-child {
+.m-list-horizontal .m-list-item:last-child {
   padding-right: 0;
 }
 
@@ -4048,7 +4045,7 @@ category: module-select
   width: 100%;
   padding: .5em 3em .5em 1em;
   background-color: transparent;
-  border: 1px solid #ccc;
+  border: 1px solid #bbb;
   vertical-align: middle;
   border-radius: 5px;
   outline: none;
@@ -4212,19 +4209,19 @@ parent: table
 */
 .m-table-bordered {
   width: 100%;
-  border-top: 1px solid #ccc;
-  border-left: 1px solid #ccc;
+  border-top: 1px solid #bbb;
+  border-left: 1px solid #bbb;
 }
 .m-table-bordered thead {
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid #bbb;
 }
 .m-table-bordered tfoot {
-  border-top: 2px solid #ccc;
+  border-top: 2px solid #bbb;
 }
 .m-table-bordered th,
 .m-table-bordered td {
-  border-bottom: 1px solid #ccc;
-  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #bbb;
+  border-right: 1px solid #bbb;
   padding: .5rem;
 }
 .m-table-bordered th:first-child,
@@ -4287,11 +4284,11 @@ parent: table
   width: 100%;
 }
 .m-table-ruled thead {
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid #bbb;
 }
 .m-table-ruled th,
 .m-table-ruled td {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #bbb;
   padding-top: 1rem;
   padding-bottom: .5rem;
 }
@@ -4614,6 +4611,196 @@ parent: table
 
 /*doc
 ---
+title: m-title-(type)
+name: title
+category: module-title
+---
+
+見出しを表示する。ウィンドウ幅によって外観が変動する。
+余白は <code>utility > .margin</code> で別途調整する。
+
+<code>(type)</code> は番号により、以下の箇所に使用する前提となっている。
+
+- <code>01 - 09</code> : コンテンツ見出し
+- <code>11 - 19</code> : <code>.c-card</code> 等のコンポーネント内見出し
+- <code>21 - 29</code> : <code>.c-hero</code> 等のディスプレイ見出し
+
+
+``` example
+<div style="margin-bottom: 2rem;">
+
+<h1 class="m-title-01">h1要素にm-title-01を付与しました</h1>
+<h1 class="m-title-02">h1要素にm-title-02を付与しました</h1>
+<h1 class="m-title-03">h1要素にm-title-03を付与しました</h1>
+<h1 class="m-title-04">h1要素にm-title-04を付与しました</h1>
+<h1 class="m-title-05">h1要素にm-title-05を付与しました</h1>
+
+</div>
+<div style="margin-bottom: 2rem;">
+
+<h2 class="m-title-11">h2要素にm-title-11を付与しました</h2>
+<h2 class="m-title-12">h2要素にm-title-12を付与しました</h2>
+<h2 class="m-title-13">h2要素にm-title-13を付与しました</h2>
+
+</div>
+<div style="margin-bottom: 2rem;">
+
+<h3 class="m-title-21">h3要素にm-title-21を付与しました</h3>
+<h3 class="m-title-22">h3要素にm-title-22を付与しました</h3>
+<h3 class="m-title-23">h3要素にm-title-23を付与しました</h3>
+
+</div>
+```
+*/
+*[class*="m-title-"] {
+  margin: 0;
+  line-height: 1.5;
+  list-style-type: none;
+}
+
+.m-title-01 {
+  font-size: 2rem;
+  font-weight: 300;
+  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
+  text-align: center;
+}
+@media (min-width: 1000px) {
+  .m-title-01 {
+    font-size: 3rem;
+  }
+}
+
+.m-title-02 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
+  text-align: center;
+}
+@media (min-width: 1000px) {
+  .m-title-02 {
+    font-size: 1.75rem;
+  }
+}
+
+.m-title-03 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  text-align: center;
+}
+@media (min-width: 1000px) {
+  .m-title-03 {
+    font-size: 1.75rem;
+  }
+}
+
+.m-title-04 {
+  font-size: 1.125rem;
+  font-weight: 300;
+  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
+  text-align: center;
+}
+@media (min-width: 1000px) {
+  .m-title-04 {
+    font-size: 1.25rem;
+  }
+}
+
+.m-title-05 {
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+@media (min-width: 1000px) {
+  .m-title-05 {
+    font-size: 1.125rem;
+  }
+}
+
+.m-title-11 {
+  font-size: 1.25rem;
+  font-weight: 300;
+  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
+  text-align: center;
+}
+@media (min-width: 1000px) {
+  .m-title-11 {
+    font-size: 1.5rem;
+  }
+}
+
+.m-title-12 {
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+@media (min-width: 1000px) {
+  .m-title-12 {
+    font-size: 1.25rem;
+  }
+}
+
+.m-title-13 {
+  font-size: .875rem;
+  font-weight: 700;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+@media (min-width: 1000px) {
+  .m-title-13 {
+    font-size: 1rem;
+  }
+}
+
+.m-title-21 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+@media (min-width: 425px) {
+  .m-title-21 {
+    font-size: 1.75rem;
+  }
+}
+@media (min-width: 1240px) {
+  .m-title-21 {
+    font-size: 2rem;
+  }
+}
+
+.m-title-22 {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+@media (min-width: 768px) {
+  .m-title-22 {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 1240px) {
+  .m-title-22 {
+    font-size: 3rem;
+  }
+}
+
+.m-title-23 {
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+@media (min-width: 768px) {
+  .m-title-23 {
+    font-size: 3.5rem;
+  }
+}
+@media (min-width: 1240px) {
+  .m-title-23 {
+    font-size: 4rem;
+  }
+}
+
+/*doc
+---
 title: m-thumbnail
 name: thumbnail
 category: module-thumbnail
@@ -4653,7 +4840,7 @@ category: module-thumbnail
   position: relative;
   display: inline-block;
   background: #000;
-  border: 0 solid #ccc;
+  border: 0 solid #bbb;
   vertical-align: bottom;
 }
 .m-thumbnail img {
@@ -5024,7 +5211,7 @@ category: component-alert
   margin: 0 0 30px;
   padding: 10px;
   background-color: #eee;
-  border: 1px solid #ccc;
+  border: 1px solid #bbb;
   line-height: 1.5;
 }
 @media (min-width: 768px) {
@@ -5046,7 +5233,7 @@ category: component-alert
   margin-right: 10px;
   text-align: left;
 }
-.c-alert-header [class*=fa-] {
+.c-alert-header [class*="fa-"] {
   font-size: 1.25em;
 }
 
@@ -5056,7 +5243,7 @@ category: component-alert
   margin-left: 10px;
   text-align: right;
 }
-.c-alert-control [class*=fa-] {
+.c-alert-control [class*="fa-"] {
   font-size: 1.25em;
 }
 
@@ -5096,7 +5283,7 @@ parent: alert
 
 */
 .c-alert-first {
-  color: #096ed2;
+  color: #0360bd;
   border-color: #4690da;
   background-color: #d7e7f7;
 }
@@ -5325,7 +5512,7 @@ parent: box
 */
 .c-box-outline {
   background-color: #fff;
-  border-color: #ccc;
+  border-color: #bbb;
 }
 .c-box-outline.c-box-first {
   border-color: #4690da;
@@ -5355,16 +5542,15 @@ category: component-card
 
 新着情報のエントリー繰り返し部分などに使用する、カード状のコンポーネントを表示する。  
 <code>.m-tite</code>, <code>.m-thumbnail</code>, <code>.m-btn</code>を含む可能性がある。  
-<code>.c-card-inner</code> はリンクを追加しない場合でも必須となる。  
-カードの境界は指定されていないため、<code>utility > .shadow</code> 等で調整すること。
-
+リンクが不要な場合であっても <code>.c-card-inner</code> が必須であることに注意する。  
+カード背景には、body要素の基本背景色が指定されている。
 
 ``` example
-
-<div class="c-card" style="margin-bottom: 2rem;">
+<div style="margin-bottom: 2rem; padding: 1rem; background-color: #aaddff;">
+<div class="c-card">
     <div class="c-card-inner">
         <div class="c-card-header">
-            <h3 class="m-title m-title-05">カードの見出しです</h3>
+            <h3 class="m-title-12">これはカードです</h3>
         </div>
         <div class="m-thumbnail m-thumbnail-ogimage">
             <picture>
@@ -5379,14 +5565,37 @@ category: component-card
             </picture>
         </div>
         <div class="c-card-contents">
-            <p class="c-card-body">カードの本文ですカードの本文ですカードの本文ですカードの本文ですカードの本文ですカードの本文ですカードの本文です</p>
+            <p class="c-card-body">これはカードの本文です。見出しに m-title-12 クラスを付与しています。最大幅は480ピクセルとなり、画面中央に配置されます。</p>
         </div>
     </div>
 </div>
+</div>
 
-<div class="l-row" style="margin-bottom: 2rem;">
-    <div class="l-col-8 l-col-md-4 l-col-xl-3" style="padding-bottom: 2rem;">
-        <div class="c-card shadow">
+<div style="margin-bottom: 2rem;">
+<div class="l-row">
+    <div class="l-col-6 l-col-md-3" style="padding-bottom: 1rem;">
+        <div class="c-card">
+            <a href="#" class="c-card-inner">
+                <div class="m-thumbnail m-thumbnail-ogimage">
+                    <picture>
+                    <source
+                        media="(max-width:640px)"
+                        srcset="/images/_dummy/image_02_s.jpg 640w"
+                        sizes="100vw">
+                    <source
+                        srcset="/images/_dummy/image_02.jpg 1280w"
+                        sizes="(max-width:1280px) 100vw, 1280px">
+                    <img alt="" src="/images/_dummy/image_02.jpg">
+                    </picture>
+                </div>
+                <div class="c-card-contents">
+                    <p>よくあるカラムレイアウトの例です</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="l-col-6 l-col-md-3" style="padding-bottom: 1rem;">
+        <div class="c-card">
             <a href="#" class="c-card-inner">
                 <div class="m-thumbnail m-thumbnail-ogimage">
                     <picture>
@@ -5406,8 +5615,8 @@ category: component-card
             </a>
         </div>
     </div>
-    <div class="l-col-8 l-col-md-4 l-col-xl-3" style="padding-bottom: 2rem;">
-        <div class="c-card shadow">
+    <div class="l-col-6 l-col-md-3" style="padding-bottom: 1rem;">
+        <div class="c-card">
             <a href="#" class="c-card-inner">
                 <div class="m-thumbnail m-thumbnail-ogimage">
                     <picture>
@@ -5422,13 +5631,13 @@ category: component-card
                     </picture>
                 </div>
                 <div class="c-card-contents">
-                    <p>l-row, l-col を併用しました</p>
+                    <p>l-row, l-col を使用して3カラムに並べました</p>
                 </div>
             </a>
         </div>
     </div>
-    <div class="l-col-8 l-col-md-4 l-col-xl-3" style="padding-bottom: 2rem;">
-        <div class="c-card shadow">
+    <div class="l-col-6 l-col-md-3" style="padding-bottom: 1rem;">
+        <div class="c-card">
             <a href="#" class="c-card-inner">
                 <div class="m-thumbnail m-thumbnail-ogimage">
                     <picture>
@@ -5443,30 +5652,57 @@ category: component-card
                     </picture>
                 </div>
                 <div class="c-card-contents">
-                    <p>グリッド内に配置した場合はmax-widthが解除されます</p>
+                    <p>グリッド内に配置した場合は最大幅が解除されます</p>
                 </div>
             </a>
         </div>
     </div>
 </div>
+</div>
 
-<div class="c-card bg-first">
-    <div class="c-card-inner">
-        <a href="#" class="m-thumbnail m-thumbnail-ogimage">
-            <picture>
-            <source
-                media="(max-width:640px)"
-                srcset="/images/_dummy/image_03_s.jpg 640w"
-                sizes="100vw">
-            <source
-                srcset="/images/_dummy/image_03.jpg 1280w"
-                sizes="(max-width:1280px) 100vw, 1280px">
-            <img alt="" src="/images/_dummy/image_03.jpg">
-            </picture>
-        </a>
-        <div class="c-card-contents">
-            <p>カードの画像とボタンがリンク範囲となっています</p>
-            <a href="#" class="m-btn m-btn-inverse m-btn-outline m-btn-block">ボタン</a>
+<div class="l-row">
+    <div class="l-col">
+        <div class="c-card bg-first">
+            <div class="c-card-inner">
+                <a href="#" class="m-thumbnail m-thumbnail-ogimage">
+                    <picture>
+                    <source
+                        media="(max-width:640px)"
+                        srcset="/images/_dummy/image_03_s.jpg 640w"
+                        sizes="100vw">
+                    <source
+                        srcset="/images/_dummy/image_03.jpg 1280w"
+                        sizes="(max-width:1280px) 100vw, 1280px">
+                    <img alt="" src="/images/_dummy/image_03.jpg">
+                    </picture>
+                </a>
+                <div class="c-card-contents">
+                    <p>カードの背景に bg-first クラスを指定して色を付けています</p>
+                    <a href="#" class="m-btn m-btn-inverse m-btn-outline m-btn-block">ボタン</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="l-col">
+        <div class="c-card bg-first">
+            <div class="c-card-inner">
+                <a href="#" class="m-thumbnail m-thumbnail-ogimage">
+                    <picture>
+                    <source
+                        media="(max-width:640px)"
+                        srcset="/images/_dummy/image_03_s.jpg 640w"
+                        sizes="100vw">
+                    <source
+                        srcset="/images/_dummy/image_03.jpg 1280w"
+                        sizes="(max-width:1280px) 100vw, 1280px">
+                    <img alt="" src="/images/_dummy/image_03.jpg">
+                    </picture>
+                </a>
+                <div class="c-card-contents">
+                    <p>カード全体ではなく、カードの画像とボタンだけがリンク範囲となっています</p>
+                    <a href="#" class="m-btn m-btn-inverse m-btn-outline m-btn-block">ボタン</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -5475,9 +5711,12 @@ category: component-card
 */
 .c-card {
   position: relative;
-  max-width: 320px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: #fff;
   color: #333;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
 }
 [class*="l-col"] > .c-card {
   max-width: none;
@@ -5571,7 +5810,7 @@ category: component-dfn
   display: block;
   margin: 0;
   padding-bottom: .5rem;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 300;
   line-height: 1;
   vertical-align: bottom;
@@ -5617,7 +5856,9 @@ category: component-flip
     <div class="c-flip-container">
         <div class="c-flip-contents">
             <div class="c-flip-contents-inner">
-                <div style="border: 1px solid #F68; padding: 10px;">(other component)</div>
+                <h2 class="m-title-22">吾輩は猫である</h2>
+                <p class="m-title-21 margin-b-xs">名前はまだ無い</p>
+                <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
             </div><!-- /.c-flip-contents-inner -->
         </div><!-- /.c-flip-contents -->
     </div><!-- /.c-flip-container -->
@@ -5689,6 +5930,8 @@ category: component-flip
 }
 @media (min-width: 1000px) {
   .c-flip .c-flip-contents .c-flip-contents-inner {
+    padding-left: 20px;
+    padding-right: 20px;
     height: 100%;
   }
 }
@@ -5709,7 +5952,9 @@ parent: flip
     <div class="c-flip-container">
         <div class="c-flip-contents">
             <div class="c-flip-contents-inner">
-                <div style="border: 1px solid #F68; padding: 10px;">(other component)</div>
+                <h2 class="m-title-22">吾輩は猫である</h2>
+                <p class="m-title-21 margin-b-xs">名前はまだ無い</p>
+                <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
             </div><!-- /.c-flip-contents-inner -->
         </div><!-- /.c-flip-contents -->
     </div><!-- /.c-flip-container -->
@@ -5740,18 +5985,23 @@ parent: flip
     <div class="c-flip-container">
         <div class="c-flip-contents">
             <div class="c-flip-contents-inner">
-                <div style="border: 1px solid #FF9; padding: 10px;">(other component)</div>
+                <h2 class="m-title-22">吾輩は猫である</h2>
+                <p class="m-title-21 margin-b-xs">名前はまだ無い</p>
+                <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
             </div><!-- /.c-flip-contents-inner -->
         </div><!-- /.c-flip-contents -->
     </div><!-- /.c-flip-container -->
 </div><!-- /.c-flip -->
 ```
 */
+.c-flip-inverse {
+  background-color: #000;
+}
 .c-flip-inverse .c-flip-cover {
   background-color: #fff;
 }
 .c-flip-inverse .c-flip-contents {
-  color: #f2f2f2;
+  color: #fff;
   background-color: rgba(0, 0, 0, 0.85);
 }
 
@@ -5988,11 +6238,11 @@ category: component-form
 .c-form-submit .m-btn {
   padding-left: 0;
   padding-right: 0;
-  width: 280px;
+  width: 320px;
 }
 @media (min-width: 1000px) {
   .c-form-submit .m-btn {
-    width: 360px;
+    width: 400px;
   }
 }
 
@@ -6018,7 +6268,7 @@ category: component-form
 }
 @media (min-width: 1000px) {
   .c-form-submit-2col .m-btn:not(:last-child) {
-    width: 240px;
+    width: 280px;
   }
 }
 
@@ -6153,6 +6403,7 @@ category: component-hero
 ---
 
 メインビジュアルなどに使用される全面背景を持つコンポーネントを表示する。  
+<code>.c-hero-contents-inner</code> が必須であることに注意する。  
 高さは(breakpoint) が <code>sm</code> 以下で <code>50vh</code>、 <code>md</code> 以上で <code>75vh</code> としているため、適当調整すること。  
 背景画像は透明度が50%となる。 <code>.c-hero-cover</code> の <code>opacity</code> を調整すること。
 
@@ -6161,9 +6412,9 @@ category: component-hero
     <div class="c-hero-cover" style="background-image: url(/images/_dummy/image_05.jpg);"></div>
     <div class="c-hero-contents">
         <div class="c-hero-contents-inner">
-            <h2 class="c-hero-title">吾輩は猫である</h2>
-            <p class="c-hero-subtitle">名前はまだ無い</p>
-            <p class="c-hero-text">どこで生れたかとんと見当がつかぬ。</p>
+            <h2 class="m-title-23">吾輩は猫である</h2>
+            <p class="m-title-21 margin-b-lg">名前はまだ無い</p>
+            <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
         </div><!-- /.c-hero-contents-inner -->
     </div><!-- /.c-hero-contents -->
 </div><!-- /.c-hero -->
@@ -6215,69 +6466,25 @@ category: component-hero
 }
 
 .c-hero-contents-inner {
-  max-width: 700px;
   margin: 0 auto;
   padding: 0 10px;
-  text-align: center;
-}
-@media (min-width: 1240px) {
-  .c-hero-contents-inner {
-    max-width: 960px;
-  }
-}
-
-.c-hero-title {
-  margin: 0;
-  font-size: 2rem;
-  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
-  font-weight: 300;
-  letter-spacing: .05em;
-}
-@media (min-width: 768px) {
-  .c-hero-title {
-    font-size: 3rem;
-    letter-spacing: .1em;
-  }
-}
-@media (min-width: 1240px) {
-  .c-hero-title {
-    font-size: 3.5rem;
-  }
-}
-
-.c-hero-subtitle {
-  margin: 0;
-  padding-top: 1em;
-  font-size: 1.125rem;
-  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
-  font-weight: 300;
-}
-@media (min-width: 425px) {
-  .c-hero-subtitle {
-    font-size: 1.5rem;
-  }
-}
-@media (min-width: 1240px) {
-  .c-hero-subtitle {
-    font-size: 1.75rem;
-  }
-}
-
-.c-hero-text {
-  margin: 0;
-  padding-top: 2em;
   font-size: .875rem;
   line-height: 1.75;
+  text-align: center;
 }
 @media (min-width: 425px) {
-  .c-hero-text {
+  .c-hero-contents-inner {
     font-size: 1rem;
   }
 }
 @media (min-width: 1240px) {
-  .c-hero-text {
-    font-size: 1.25rem;
+  .c-hero-contents-inner {
+    font-size: 1.125rem;
+    max-width: 700px;
   }
+}
+.c-hero-contents-inner p {
+  margin: 0;
 }
 
 /*doc
@@ -6296,9 +6503,9 @@ parent: hero
     <div class="c-hero-cover" style="background-image: url(/images/_dummy/image_05.jpg);"></div>
     <div class="c-hero-contents">
         <div class="c-hero-contents-inner">
-            <h2 class="c-hero-title">吾輩は猫である</h2>
-            <p class="c-hero-subtitle">名前はまだ無い</p>
-            <p class="c-hero-text">どこで生れたかとんと見当がつかぬ。</p>
+            <h2 class="m-title-23">吾輩は猫である</h2>
+            <p class="m-title-21 margin-b-lg">名前はまだ無い</p>
+            <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
         </div><!-- /.c-hero-contents-inner -->
     </div><!-- /.c-hero-contents -->
 </div><!-- /.c-hero -->
@@ -6308,9 +6515,9 @@ parent: hero
     <div class="c-hero-cover" style="background-image: url(/images/_dummy/image_05.jpg);"></div>
     <div class="c-hero-contents">
         <div class="c-hero-contents-inner">
-            <h2 class="c-hero-title">吾輩は猫である</h2>
-            <p class="c-hero-subtitle">名前はまだ無い</p>
-            <p class="c-hero-text">どこで生れたかとんと見当がつかぬ。</p>
+            <h2 class="m-title-23">吾輩は猫である</h2>
+            <p class="m-title-21 margin-b-lg">名前はまだ無い</p>
+            <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
         </div><!-- /.c-hero-contents-inner -->
     </div><!-- /.c-hero-contents -->
 </div><!-- /.c-hero -->
@@ -6334,6 +6541,284 @@ parent: hero
   margin-left: auto;
   margin-right: 0;
   text-align: right;
+}
+
+/*doc
+---
+title: c-media
+name: media
+category: component-media
+---
+
+サムネイル等のメディアオブジェクトと、テキストオブジェクトが並列しているコンポーネントを表示する。  
+<code>.m-tite</code>, <code>.m-thumbnail</code>, <code>.m-btn</code>を含む可能性がある。  
+<code>.c-media-object</code> の最大幅は <code>33.33333333%</code> となっているため、比率を大きくしたい場合は任意調整すること。    
+
+``` example
+<div style="margin-bottom: 2rem;">
+<div class="c-media">
+    <div class="c-media-object">
+        <div class="m-thumbnail">
+            <picture>
+            <source
+                media="(max-width:640px)"
+                srcset="/images/_dummy/image_04_s.jpg 640w"
+                sizes="100vw">
+            <source
+                srcset="/images/_dummy/image_04.jpg 1280w"
+                sizes="(max-width:1280px) 100vw, 1280px">
+            <img alt="" src="/images/_dummy/image_04.jpg">
+            </picture>
+        </div>
+    </div>
+    <div class="c-media-contents">
+        <h3 class="m-title-13"><a href="#">これはメディアです</a></h3>
+        <p>これはメディアの本文です。見出しに m-title-13 クラスを付与しています。</p>
+    </div>
+</div>
+</div>
+
+
+<div style="margin-bottom: 2rem;">
+<div class="l-row">
+    <div class="l-col-12 l-col-sm-6 l-col-lg-4" style="padding-bottom: 1rem;">
+        <a href="#" class="c-media">
+            <div class="c-media-object">
+                <div class="m-thumbnail">
+                    <picture>
+                    <source
+                        media="(max-width:640px)"
+                        srcset="/images/_dummy/image_04_s.jpg 640w"
+                        sizes="100vw">
+                    <source
+                        srcset="/images/_dummy/image_04.jpg 1280w"
+                        sizes="(max-width:1280px) 100vw, 1280px">
+                    <img alt="" src="/images/_dummy/image_04.jpg">
+                    </picture>
+                </div>
+            </div>
+            <div class="c-media-contents">
+                <p>よくあるカラムレイアウトの例です</p>
+                <span class="m-btn m-btn m-btn-first m-btn-outline">ボタン</span>
+            </div>
+        </a>
+    </div>
+    <div class="l-col-12 l-col-sm-6 l-col-lg-4" style="padding-bottom: 1rem;">
+        <a href="#" class="c-media">
+            <div class="c-media-object">
+                <div class="m-thumbnail">
+                    <picture>
+                    <source
+                        media="(max-width:640px)"
+                        srcset="/images/_dummy/image_04_s.jpg 640w"
+                        sizes="100vw">
+                    <source
+                        srcset="/images/_dummy/image_04.jpg 1280w"
+                        sizes="(max-width:1280px) 100vw, 1280px">
+                    <img alt="" src="/images/_dummy/image_04.jpg">
+                    </picture>
+                </div>
+            </div>
+            <div class="c-media-contents">
+                <p>l-row, l-col を使用して3カラムに並べました</p>
+                <span class="m-btn m-btn m-btn-first m-btn-outline">ボタン</span>
+            </div>
+        </a>
+    </div>
+    <div class="l-col-12 l-col-sm-6 l-col-lg-4" style="padding-bottom: 1rem;">
+        <a href="#" class="c-media">
+            <div class="c-media-object">
+                <div class="m-thumbnail">
+                    <picture>
+                    <source
+                        media="(max-width:640px)"
+                        srcset="/images/_dummy/image_04_s.jpg 640w"
+                        sizes="100vw">
+                    <source
+                        srcset="/images/_dummy/image_04.jpg 1280w"
+                        sizes="(max-width:1280px) 100vw, 1280px">
+                    <img alt="" src="/images/_dummy/image_04.jpg">
+                    </picture>
+                </div>
+            </div>
+            <div class="c-media-contents">
+                <p>メディア全体がリンク範囲となっています</p>
+                <span class="m-btn m-btn m-btn-first m-btn-outline">ボタン</span>
+            </div>
+        </a>
+    </div>
+</div>
+</div>
+
+```
+
+*/
+.c-media {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+a.c-media {
+  color: #333;
+  text-decoration: none;
+  transition: .3s all;
+}
+a.c-media:hover, a.c-media:focus {
+  color: #333;
+  text-decoration: none;
+  opacity: .8;
+}
+.c-media .c-media-object {
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 33.33333333%;
+}
+.c-media .c-media-object > a {
+  display: block;
+  text-decoration: none;
+  transition: .3s all;
+}
+.c-media .c-media-object > a:hover, .c-media .c-media-object > a:focus {
+  text-decoration: none;
+  opacity: .8;
+}
+.c-media .c-media-contents {
+  flex: 1 1 0;
+  width: auto;
+  padding-left: 10px;
+  line-height: 1.5;
+}
+@media (max-width: 999.9px) {
+  .c-media .c-media-contents {
+    font-size: 0.875rem;
+  }
+}
+@media (min-width: 1000px) {
+  .c-media .c-media-contents {
+    padding-left: 20px;
+  }
+}
+.c-media .c-media-contents time {
+  display: block;
+}
+.c-media .c-media-title > a {
+  color: #333;
+  text-decoration: underline;
+}
+.c-media .c-media-title > a:hover, .c-media .c-media-title > a:focus {
+  color: #333;
+  text-decoration: none;
+}
+
+/*doc
+---
+title: c-media-middle
+name: media-01-middle
+category: component-media
+parent: media
+---
+
+画像と本文を、上ではなく縦中央に整列させる。
+
+
+``` example
+<div style="margin-bottom: 2rem;">
+<div class="c-media c-media-middle">
+    <div class="c-media-object">
+        <div class="m-thumbnail">
+            <picture>
+            <source
+                media="(max-width:640px)"
+                srcset="/images/_dummy/image_06_s.jpg 640w"
+                sizes="100vw">
+            <source
+                srcset="/images/_dummy/image_06.jpg 1280w"
+                sizes="(max-width:1280px) 100vw, 1280px">
+            <img alt="" src="/images/_dummy/image_06.jpg">
+            </picture>
+        </div>
+    </div>
+
+    <div class="c-media-contents">
+        <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+        <p>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+        <p>この書生の掌の裏でしばらくはよい心持に坐っておったが、しばらくすると非常な速力で運転し始めた。書生が動くのか自分だけが動くのか分らないが無暗に眼が廻る。胸が悪くなる。到底助からないと思っていると、どさりと音がして眼から火が出た。それまでは記憶しているがあとは何の事やらいくら考え出そうとしても分らない。ふと気が付いて見ると書生はいない。たくさんおった兄弟が一疋も見えぬ。肝心の母親さえ姿を隠してしまった。その上今までの所とは違って無暗に明るい。眼を明いていられぬくらいだ。はてな何でも容子がおかしいと、のそのそ這い出して見ると非常に痛い。吾輩は藁の上から急に笹原の中へ棄てられたのである。</p>
+    </div>
+</div>
+</div>
+
+<div class="c-media c-media-middle">
+    <div class="c-media-object">
+        <div class="m-thumbnail">
+            <picture>
+            <source
+                media="(max-width:640px)"
+                srcset="/images/_dummy/image_06_s.jpg 640w"
+                sizes="100vw">
+            <source
+                srcset="/images/_dummy/image_06.jpg 1280w"
+                sizes="(max-width:1280px) 100vw, 1280px">
+            <img alt="" src="/images/_dummy/image_06.jpg">
+            </picture>
+        </div>
+    </div>
+
+    <div class="c-media-contents">
+        <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+    </div>
+</div>
+```
+
+*/
+.c-media-middle {
+  align-items: center;
+}
+
+/*doc
+---
+title: c-media-reverse
+name: media-02-reverse
+category: component-media
+parent: media
+---
+
+オブジェクトと本文の配置を逆にする。
+
+``` example
+<div class="c-media c-media-reverse">
+    <div class="c-media-object">
+        <div class="m-thumbnail">
+            <picture>
+            <source
+                media="(max-width:640px)"
+                srcset="/images/_dummy/image_07_s.jpg 640w"
+                sizes="100vw">
+            <source
+                srcset="/images/_dummy/image_07.jpg 1280w"
+                sizes="(max-width:1280px) 100vw, 1280px">
+            <img alt="" src="/images/_dummy/image_07.jpg">
+            </picture>
+        </div>
+    </div>
+    <div class="c-media-contents">
+        <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+    </div>
+</div>
+```
+
+*/
+.c-media-reverse {
+  flex-direction: row-reverse;
+}
+.c-media-reverse .c-media-object {
+  padding-right: 0;
+  padding-left: 10px;
+}
+@media (min-width: 768px) {
+  .c-media-reverse .c-media-object {
+    padding-left: 20px;
+  }
 }
 
 /*doc
@@ -6674,7 +7159,7 @@ category: utility-font
 */
 /*doc
 ---
-title: .font-bold
+title: font-bold
 name: font-02-bold
 category: utility-font
 ---
@@ -6683,18 +7168,22 @@ category: utility-font
 
 ### 補足：日本語ウェブフォントの仕様
 
-日本語ウェブフォントサービスを利用した場合、 <code>font-weight</code> だけではウェイトの変更ができないことがある。このため、別途クラスが必要となる。
+多くの日本語ウェブフォントサービスでは、 <code>font-weight</code> だけではウェイトの変更ができない。  
+このため、「フォントも含めて太字に変更するクラス」が必要となる。  
+参考: 太字指定が反映されません。 | FONTPLUS  
+[https://webfont.fontplus.jp/faq/4125](https://webfont.fontplus.jp/faq/4125)
 
 ### Note: Web font in Japanese specification
 
-When using the Japanese web font service, font weight is may not be change with only <code> font-weight </code>. Therefore, a separate class is required.
+When using the Japanese web font service, font weight is may not be change with only <code> font-weight </code>. Therefore, "class to change to bold including font" is required.  
+Reference: Boldface designation is not reflected. | FONTPLUS  
+[https://webfont.fontplus.jp/faq/4125](https://webfont.fontplus.jp/faq/4125)
 
 ``` example
 <p class="text-xl font-first font-bold">font-first_font-bold_フォント01に変更しました</p>
 <p class="text-xl font-second font-bold">font-second_font-bold_フォント02に変更しました</p>
 <p class="text-xl font-third font-bold">font-third_font-bold_フォント03に変更しました</p>
 <p class="text-xl font-first font-bold">ここはフォント01ですが、<span class="font-root font-bold">font-root_font-bold_ここからbody要素のフォントに変更しました</span></p>
-<p class="text-xl font-mono font-bold">font-mono_font-bold_等幅フォントに変更しました &lt;p class="font-mono font-bold"&gt;hello world!&lt;/p&gt;</p>
 ```
 
 */
@@ -6726,11 +7215,11 @@ When using the Japanese web font service, font weight is may not be change with 
   font-weight: 700;
 }
 #document .font-third {
-  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
   font-weight: 300;
 }
 #document .font-third.font-bold {
-  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
   font-weight: 700;
 }
 
@@ -6802,7 +7291,7 @@ category: utility-hidden
 
 /*doc
 ---
-title: .hidden-(breakpoint)-down
+title: hidden-(breakpoint)-down
 name: hidden-02-breakpoint-down
 category: utility-hidden
 ---
@@ -7638,7 +8127,7 @@ category: utility-text
   color: #888;
 }
 #document .text-first {
-  color: #096ed2;
+  color: #0360bd;
 }
 #document .text-first.text-mild {
   color: #4690da;
@@ -8341,10 +8830,10 @@ category: wysiwyg
 .wysiwyg hr:not([class]) {
   overflow: hidden;
   margin: 30px 0;
-  height: #ccc;
+  height: #bbb;
   border-width: 1px 0 0;
   border-style: solid none none;
-  border-color: #ccc transparent transparent;
+  border-color: #bbb transparent transparent;
 }
 .wysiwyg blockquote:not([class]) {
   overflow: hidden;
@@ -8362,7 +8851,7 @@ category: wysiwyg
   margin-bottom: 30px;
   border-width: 0 0 1px 1px;
   border-style: solid;
-  border-color: #ccc;
+  border-color: #bbb;
 }
 @media (min-width: 425px) {
   .wysiwyg table:not([class]) {
@@ -8383,7 +8872,7 @@ category: wysiwyg
 }
 .wysiwyg table:not([class]) tr {
   display: block;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid #bbb;
 }
 @media (min-width: 425px) {
   .wysiwyg table:not([class]) tr {
@@ -8398,7 +8887,7 @@ category: wysiwyg
   padding: 5px 10px;
   border-width: 1px 1px 0 0;
   border-style: solid;
-  border-color: #ccc;
+  border-color: #bbb;
   line-height: 1.5;
   vertical-align: top;
 }
