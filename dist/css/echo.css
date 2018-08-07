@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * echo.css - version 0.6.0 (under construction)
+ * echo.css - version 0.8.0 (under construction)
  * 
  * "echo" is CSS framework, built with consider CMS theming in East asian countries.
  * 
@@ -2113,106 +2113,6 @@ flexboxによるグリッドのセルの開始位置を、<code>(column) / 12</c
 
 ```
 */
-/*doc
----
-title: m-badge
-name: badge
-category: module-badge
----
-
-新着アイコンなどに使用する、バッジを表示する。
-
-``` example
-<p>
-  <span class="m-badge">Badge</span>
-</p>
-```
-
-*/
-.m-badge {
-  overflow: hidden;
-  display: inline-block;
-  min-width: 5em;
-  padding: 1em .5em .25em;
-  border-radius: 0 0 5px 5px;
-  background: #fff;
-  color: #333;
-  border: 1px solid #bbb;
-  font-size: .8em;
-  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-  font-weight: 700;
-  letter-spacing: .1em;
-  text-align: center;
-  line-height: 1;
-  white-space: nowrap;
-  vertical-align: middle;
-}
-
-/*doc
----
-title: m-badge-(color)
-name: badge-01-color
-category: module-badge
-parent: badge
----
-
-バッジの色を変更する。(color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
-
-``` example
-<p>
-  <span class="m-badge m-badge-gray">gray</span>
-  <span class="m-badge m-badge-first">first</span>
-  <span class="m-badge m-badge-second">second</span>
-  <span class="m-badge m-badge-third">third</span>
-  <span class="m-badge m-badge-fourth">fourth</span>
-  <span class="m-badge m-badge-info">info</span>
-  <span class="m-badge m-badge-important">important</span>
-</p>
-```
-
-*/
-.m-badge-gray {
-  color: #fff;
-  border-color: #333;
-  background-color: #333;
-}
-
-.m-badge-first {
-  color: #fff;
-  border-color: #1976d2;
-  background-color: #1976d2;
-}
-
-.m-badge-second {
-  color: #fff;
-  border-color: #3cade6;
-  background-color: #3cade6;
-}
-
-.m-badge-third {
-  color: #fff;
-  border-color: #49b070;
-  background-color: #49b070;
-}
-
-.m-badge-fourth {
-  color: #fff;
-  border-color: #f38c10;
-  background-color: #f38c10;
-}
-
-.m-badge-info {
-  color: #fff;
-  border-color: #3cade6;
-  background-color: #3cade6;
-}
-
-.m-badge-important {
-  color: #fff;
-  border-color: #e33050;
-  background-color: #e33050;
-}
-
 /*doc
 ---
 title: m-btn
@@ -5586,67 +5486,6 @@ category: component-card
 }
 .c-card .c-card-contents {
   font-size: 0.875rem;
-}
-
-/*doc
----
-title: c-dfn
-name: dfn
-category: component-dfn
----
-
-単語と、それを補足するテキストを表示する。補足テキストは改行に対応する。  
-(breakpoint)が <code>sm</code> 以上でインライン表示となる。
-
-``` example
-<div class="c-dfn" style="margin-bottom: 2rem;">
-    <h1 class="c-dfn-header">猫</h1>
-    <p class="c-dfn-contents">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-</div>
-
-<dl class="c-dfn">
-    <dt class="c-dfn-header font-first">I'm a Cat</dt>
-    <dd class="c-dfn-contents">There is no name yet.<br>
-    I have no idea where I was born.</dd>
-</dl>
-```
-*/
-@media (min-width: 425px) {
-  .c-dfn {
-    display: inline-block;
-  }
-}
-.c-dfn .c-dfn-header {
-  display: block;
-  margin: 0;
-  padding-bottom: .5rem;
-  font-size: 3rem;
-  font-weight: 300;
-  line-height: 1;
-  vertical-align: bottom;
-  white-space: nowrap;
-}
-@media (min-width: 425px) {
-  .c-dfn .c-dfn-header {
-    display: table-cell;
-    padding-bottom: 0;
-    padding-right: 1.5rem;
-  }
-}
-.c-dfn .c-dfn-contents {
-  display: block;
-  margin: 0;
-  font-size: 1rem;
-  line-height: 1.5;
-  vertical-align: bottom;
-  -webkit-transform: translate(0, -0.1em);
-  -ms-transform: translate(0, -0.1em);
-  transform: translate(0, -0.1em);
-}
-@media (min-width: 425px) {
-  .c-dfn .c-dfn-contents {
-    display: table-cell;
-  }
 }
 
 /*doc

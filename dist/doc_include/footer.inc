@@ -24,7 +24,6 @@
 					        <ul class="s-sitemap-list s-sitemap-children">
 					            <li class="s-sitemap-item"><span class="s-sitemap-label">module</span>
 					                <ul class="s-sitemap-list s-sitemap-children">
-					                    <li class="s-sitemap-item"><a href="./module-badge.html">badge</a></li>
 					                    <li class="s-sitemap-item"><a href="./module-btn.html">btn</a></li>
 					                    <li class="s-sitemap-item"><a href="./module-checkbox.html">checkbox</a></li>
 					                    <li class="s-sitemap-item"><a href="./module-embed.html">embed</a></li>
@@ -44,7 +43,6 @@
 					                    <li class="s-sitemap-item"><a href="./component-alert.html">alert</a></li>
 					                    <li class="s-sitemap-item"><a href="./component-box.html">box</a></li>
 					                    <li class="s-sitemap-item"><a href="./component-card.html">card</a></li>
-					                    <li class="s-sitemap-item"><a href="./component-dfn.html">dfn</a></li>
 					                    <li class="s-sitemap-item"><a href="./component-flip.html">flip</a></li>
 					                    <li class="s-sitemap-item"><a href="./component-form.html">form</a></li>
 					                    <li class="s-sitemap-item"><a href="./component-headline.html">headline</a></li>
