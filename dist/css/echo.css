@@ -4611,196 +4611,6 @@ parent: table
 
 /*doc
 ---
-title: m-title-(type)
-name: title
-category: module-title
----
-
-見出しを表示する。ウィンドウ幅によって外観が変動する。
-余白は <code>utility > .margin</code> で別途調整する。
-
-<code>(type)</code> は番号により、以下の箇所に使用する前提となっている。
-
-- <code>01 - 09</code> : コンテンツ見出し
-- <code>11 - 19</code> : <code>.c-card</code> 等のコンポーネント内見出し
-- <code>21 - 29</code> : <code>.c-hero</code> 等のディスプレイ見出し
-
-
-``` example
-<div style="margin-bottom: 2rem;">
-
-<h1 class="m-title-01">h1要素にm-title-01を付与しました</h1>
-<h1 class="m-title-02">h1要素にm-title-02を付与しました</h1>
-<h1 class="m-title-03">h1要素にm-title-03を付与しました</h1>
-<h1 class="m-title-04">h1要素にm-title-04を付与しました</h1>
-<h1 class="m-title-05">h1要素にm-title-05を付与しました</h1>
-
-</div>
-<div style="margin-bottom: 2rem;">
-
-<h2 class="m-title-11">h2要素にm-title-11を付与しました</h2>
-<h2 class="m-title-12">h2要素にm-title-12を付与しました</h2>
-<h2 class="m-title-13">h2要素にm-title-13を付与しました</h2>
-
-</div>
-<div style="margin-bottom: 2rem;">
-
-<h3 class="m-title-21">h3要素にm-title-21を付与しました</h3>
-<h3 class="m-title-22">h3要素にm-title-22を付与しました</h3>
-<h3 class="m-title-23">h3要素にm-title-23を付与しました</h3>
-
-</div>
-```
-*/
-*[class*="m-title-"] {
-  margin: 0;
-  line-height: 1.5;
-  list-style-type: none;
-}
-
-.m-title-01 {
-  font-size: 2rem;
-  font-weight: 300;
-  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
-  text-align: center;
-}
-@media (min-width: 1000px) {
-  .m-title-01 {
-    font-size: 3rem;
-  }
-}
-
-.m-title-02 {
-  font-size: 1.5rem;
-  font-weight: 300;
-  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
-  text-align: center;
-}
-@media (min-width: 1000px) {
-  .m-title-02 {
-    font-size: 1.75rem;
-  }
-}
-
-.m-title-03 {
-  font-size: 1.5rem;
-  font-weight: 300;
-  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-  text-align: center;
-}
-@media (min-width: 1000px) {
-  .m-title-03 {
-    font-size: 1.75rem;
-  }
-}
-
-.m-title-04 {
-  font-size: 1.125rem;
-  font-weight: 300;
-  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
-  text-align: center;
-}
-@media (min-width: 1000px) {
-  .m-title-04 {
-    font-size: 1.25rem;
-  }
-}
-
-.m-title-05 {
-  font-size: 1rem;
-  font-weight: 700;
-  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-}
-@media (min-width: 1000px) {
-  .m-title-05 {
-    font-size: 1.125rem;
-  }
-}
-
-.m-title-11 {
-  font-size: 1.25rem;
-  font-weight: 300;
-  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
-  text-align: center;
-}
-@media (min-width: 1000px) {
-  .m-title-11 {
-    font-size: 1.5rem;
-  }
-}
-
-.m-title-12 {
-  font-size: 1rem;
-  font-weight: 700;
-  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-}
-@media (min-width: 1000px) {
-  .m-title-12 {
-    font-size: 1.25rem;
-  }
-}
-
-.m-title-13 {
-  font-size: .875rem;
-  font-weight: 700;
-  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-}
-@media (min-width: 1000px) {
-  .m-title-13 {
-    font-size: 1rem;
-  }
-}
-
-.m-title-21 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-}
-@media (min-width: 425px) {
-  .m-title-21 {
-    font-size: 1.75rem;
-  }
-}
-@media (min-width: 1240px) {
-  .m-title-21 {
-    font-size: 2rem;
-  }
-}
-
-.m-title-22 {
-  font-size: 2rem;
-  font-weight: 700;
-  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-}
-@media (min-width: 768px) {
-  .m-title-22 {
-    font-size: 2.5rem;
-  }
-}
-@media (min-width: 1240px) {
-  .m-title-22 {
-    font-size: 3rem;
-  }
-}
-
-.m-title-23 {
-  font-size: 3rem;
-  font-weight: 700;
-  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-}
-@media (min-width: 768px) {
-  .m-title-23 {
-    font-size: 3.5rem;
-  }
-}
-@media (min-width: 1240px) {
-  .m-title-23 {
-    font-size: 4rem;
-  }
-}
-
-/*doc
----
 title: m-thumbnail
 name: thumbnail
 category: module-thumbnail
@@ -5550,7 +5360,7 @@ category: component-card
 <div class="c-card">
     <div class="c-card-inner">
         <div class="c-card-header">
-            <h3 class="m-title-12">これはカードです</h3>
+            <h3 class="p-title p-title-echo-11">これはカードです</h3>
         </div>
         <div class="m-thumbnail m-thumbnail-ogimage">
             <picture>
@@ -5565,7 +5375,7 @@ category: component-card
             </picture>
         </div>
         <div class="c-card-contents">
-            <p class="c-card-body">これはカードの本文です。見出しに m-title-12 クラスを付与しています。最大幅は480ピクセルとなり、画面中央に配置されます。</p>
+            <p class="c-card-body">これはカードの本文です。見出しに p-title-echo-11 クラスを付与しています。最大幅は480ピクセルとなり、画面中央に配置されます。</p>
         </div>
     </div>
 </div>
@@ -5847,8 +5657,9 @@ category: component-flip
 ---
 
 全面背景とボックスを持つ、フリップボードのようなコンポーネントを表示する。  
+<code>.c-flip-contents-inner</code> が必須であることに注意する。  
 <code>.c-flip-cover</code> の背景画像はインラインスタイル、もしくは追加CSSで定義する。  
-(breakpoint)が <code>md</code> 以下ではウィンドウの半分、 <code>lg</code> 以上ではウィンドウ全体の表示を前提としている。大きすぎる場合は都度調整すること。
+高さは(breakpoint) が <code>md</code> 以下で <code>50vh</code>、 <code>lg</code> 以上で <code>75vh</code> としているため、適当調整すること。
 
 ``` example
 <div class="c-flip">
@@ -5856,8 +5667,8 @@ category: component-flip
     <div class="c-flip-container">
         <div class="c-flip-contents">
             <div class="c-flip-contents-inner">
-                <h2 class="m-title-22">吾輩は猫である</h2>
-                <p class="m-title-21 margin-b-xs">名前はまだ無い</p>
+                <h2 class="p-title p-title-echo-22">吾輩は猫である</h2>
+                <p class="p-title p-title-echo-23 margin-b-sm">名前はまだ無い</p>
                 <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
             </div><!-- /.c-flip-contents-inner -->
         </div><!-- /.c-flip-contents -->
@@ -5871,7 +5682,7 @@ category: component-flip
 }
 @media (min-width: 1000px) {
   .c-flip {
-    height: 100vh;
+    height: 75vh;
   }
 }
 .c-flip .c-flip-cover {
@@ -5952,8 +5763,8 @@ parent: flip
     <div class="c-flip-container">
         <div class="c-flip-contents">
             <div class="c-flip-contents-inner">
-                <h2 class="m-title-22">吾輩は猫である</h2>
-                <p class="m-title-21 margin-b-xs">名前はまだ無い</p>
+                <h2 class="p-title p-title-echo-22">吾輩は猫である</h2>
+                <p class="p-title p-title-echo-23 margin-b-sm">名前はまだ無い</p>
                 <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
             </div><!-- /.c-flip-contents-inner -->
         </div><!-- /.c-flip-contents -->
@@ -5985,8 +5796,8 @@ parent: flip
     <div class="c-flip-container">
         <div class="c-flip-contents">
             <div class="c-flip-contents-inner">
-                <h2 class="m-title-22">吾輩は猫である</h2>
-                <p class="m-title-21 margin-b-xs">名前はまだ無い</p>
+                <h2 class="p-title p-title-echo-22">吾輩は猫である</h2>
+                <p class="p-title p-title-echo-23 margin-b-sm">名前はまだ無い</p>
                 <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
             </div><!-- /.c-flip-contents-inner -->
         </div><!-- /.c-flip-contents -->
@@ -6404,6 +6215,7 @@ category: component-hero
 
 メインビジュアルなどに使用される全面背景を持つコンポーネントを表示する。  
 <code>.c-hero-contents-inner</code> が必須であることに注意する。  
+<code>.c-hero-cover</code> の背景画像はインラインスタイル、もしくは追加CSSで定義する。  
 高さは(breakpoint) が <code>sm</code> 以下で <code>50vh</code>、 <code>md</code> 以上で <code>75vh</code> としているため、適当調整すること。  
 背景画像は透明度が50%となる。 <code>.c-hero-cover</code> の <code>opacity</code> を調整すること。
 
@@ -6412,8 +6224,8 @@ category: component-hero
     <div class="c-hero-cover" style="background-image: url(/images/_dummy/image_05.jpg);"></div>
     <div class="c-hero-contents">
         <div class="c-hero-contents-inner">
-            <h2 class="m-title-23">吾輩は猫である</h2>
-            <p class="m-title-21 margin-b-lg">名前はまだ無い</p>
+            <h2 class="p-title p-title-echo-21">吾輩は猫である</h2>
+            <p class="p-title p-title-echo-23 margin-b-lg">名前はまだ無い</p>
             <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
         </div><!-- /.c-hero-contents-inner -->
     </div><!-- /.c-hero-contents -->
@@ -6503,8 +6315,8 @@ parent: hero
     <div class="c-hero-cover" style="background-image: url(/images/_dummy/image_05.jpg);"></div>
     <div class="c-hero-contents">
         <div class="c-hero-contents-inner">
-            <h2 class="m-title-23">吾輩は猫である</h2>
-            <p class="m-title-21 margin-b-lg">名前はまだ無い</p>
+            <h2 class="p-title p-title-echo-21">吾輩は猫である</h2>
+            <p class="p-title p-title-echo-23 margin-b-lg">名前はまだ無い</p>
             <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
         </div><!-- /.c-hero-contents-inner -->
     </div><!-- /.c-hero-contents -->
@@ -6515,8 +6327,8 @@ parent: hero
     <div class="c-hero-cover" style="background-image: url(/images/_dummy/image_05.jpg);"></div>
     <div class="c-hero-contents">
         <div class="c-hero-contents-inner">
-            <h2 class="m-title-23">吾輩は猫である</h2>
-            <p class="m-title-21 margin-b-lg">名前はまだ無い</p>
+            <h2 class="p-title p-title-echo-21">吾輩は猫である</h2>
+            <p class="p-title p-title-echo-23 margin-b-lg">名前はまだ無い</p>
             <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
         </div><!-- /.c-hero-contents-inner -->
     </div><!-- /.c-hero-contents -->
@@ -6572,8 +6384,8 @@ category: component-media
         </div>
     </div>
     <div class="c-media-contents">
-        <h3 class="m-title-13"><a href="#">これはメディアです</a></h3>
-        <p>これはメディアの本文です。見出しに m-title-13 クラスを付与しています。</p>
+        <h3 class="p-title p-title-echo-12"><a href="#">これはメディアです</a></h3>
+        <p>これはメディアの本文です。見出しに p-title-echo-12 クラスを付与しています。</p>
     </div>
 </div>
 </div>
@@ -8459,6 +8271,208 @@ category: utility-text
 }
 #document .text-xxl {
   font-size: 2em;
+}
+
+/*doc
+---
+title: p-title-(type)
+name: title
+category: module-title
+---
+
+見出しを表示する。ウィンドウ幅によって外観が変動する。
+余白は <code>utility > .margin</code> で別途調整する。
+
+``` example
+<div style="margin-bottom: 2rem;">
+
+<h1 class="p-title">h1要素にp-titleを付与しました</h1>
+
+</div>
+<div style="margin-bottom: 2rem;">
+
+<h2 class="p-title">h2要素にp-titleを付与しました</h2>
+
+</div>
+<div style="margin-bottom: 2rem;">
+
+<h3 class="p-title">h3要素にp-titleを付与しました</h3>
+
+</div>
+```
+*/
+.p-title {
+  margin: 0;
+  line-height: 1.5;
+  list-style-type: none;
+}
+
+/*doc
+---
+title: p-title-(group)-(type)
+name: title-01-type
+category: module-title
+parent: title
+---
+
+見出しの大分類を <code>(group)</code> 、外観を <code>(type)</code> とする前提で命名する。  
+プロジェクトによって、適切な命名規則を考慮する。
+
+<code>(group)</code> は以下の例が考えられる。
+
+- <code>post / card / widget ...</code>
+- <code>widget01 / widget02 ...</code>
+- <code>news / product / event ...</code>
+- <code>bordered / based / icon ...</code>
+
+<code>(type)</code> は <code>01 / 02 / 03 ...</code> , <code>bordered / based / iconed ...</code> 等が考えられる。
+
+ここでは <code>p-title-echo-(type)</code> を仮に定義している。
+
+``` example
+<div style="margin-bottom: 2rem;">
+
+<h1 class="p-title p-title-echo-01">h1要素にp-title-echo-01を付与しました</h1>
+<h1 class="p-title p-title-echo-02">h1要素にp-title-echo-02を付与しました</h1>
+<h1 class="p-title p-title-echo-03">h1要素にp-title-echo-03を付与しました</h1>
+<h1 class="p-title p-title-echo-04">h1要素にp-title-echo-04を付与しました</h1>
+<h1 class="p-title p-title-echo-05">h1要素にp-title-echo-05を付与しました</h1>
+
+</div>
+<div style="margin-bottom: 2rem;">
+
+<p class="p-title p-title-echo-01">p要素にp-title-echo-01を付与しました</p>
+<p class="p-title p-title-echo-02">p要素にp-title-echo-02を付与しました</p>
+<p class="p-title p-title-echo-03">p要素にp-title-echo-03を付与しました</p>
+<p class="p-title p-title-echo-04">p要素にp-title-echo-04を付与しました</p>
+<p class="p-title p-title-echo-05">p要素にp-title-echo-05を付与しました</p>
+
+</div>
+```
+*/
+.p-title-echo-01 {
+  font-size: 2rem;
+  font-weight: 300;
+  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
+  text-align: center;
+}
+@media (min-width: 1000px) {
+  .p-title-echo-01 {
+    font-size: 3rem;
+  }
+}
+
+.p-title-echo-02 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
+  text-align: center;
+}
+@media (min-width: 1000px) {
+  .p-title-echo-02 {
+    font-size: 1.75rem;
+  }
+}
+
+.p-title-echo-11 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  text-align: center;
+}
+@media (min-width: 1000px) {
+  .p-title-echo-11 {
+    font-size: 1.5rem;
+  }
+}
+
+.p-title-echo-12 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+@media (min-width: 1000px) {
+  .p-title-echo-12 {
+    font-size: 1.25rem;
+  }
+}
+
+.p-title-echo-21 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+@media (min-width: 425px) {
+  .p-title-echo-21 {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 768px) {
+  .p-title-echo-21 {
+    font-size: 3.5rem;
+  }
+}
+@media (min-width: 1000px) {
+  .p-title-echo-21 {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 1240px) {
+  .p-title-echo-21 {
+    font-size: 4.5rem;
+  }
+}
+@media (min-width: 1640px) {
+  .p-title-echo-21 {
+    font-size: 5rem;
+  }
+}
+
+.p-title-echo-22 {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+@media (min-width: 425px) {
+  .p-title-echo-22 {
+    font-size: 2.25rem;
+  }
+}
+@media (min-width: 768px) {
+  .p-title-echo-22 {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 1000px) {
+  .p-title-echo-22 {
+    font-size: 2.75rem;
+  }
+}
+@media (min-width: 1240px) {
+  .p-title-echo-22 {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 1640px) {
+  .p-title-echo-22 {
+    font-size: 3.25rem;
+  }
+}
+
+.p-title-echo-23 {
+  font-size: 1.25rem;
+  font-weight: 300;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+@media (min-width: 425px) {
+  .p-title-echo-23 {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1240px) {
+  .p-title-echo-23 {
+    font-size: 1.75rem;
+  }
 }
 
 /*doc

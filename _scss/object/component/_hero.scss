@@ -7,6 +7,7 @@ category: component-hero
 
 メインビジュアルなどに使用される全面背景を持つコンポーネントを表示する。  
 <code>.#{$pr}#{$c}hero-contents-inner</code> が必須であることに注意する。  
+<code>.#{$pr}#{$c}hero-cover</code> の背景画像はインラインスタイル、もしくは追加CSSで定義する。  
 高さは(breakpoint) が <code>sm</code> 以下で <code>50vh</code>、 <code>md</code> 以上で <code>75vh</code> としているため、適当調整すること。  
 背景画像は透明度が50%となる。 <code>.#{$pr}#{$c}hero-cover</code> の <code>opacity</code> を調整すること。
 
@@ -15,8 +16,8 @@ category: component-hero
     <div class="#{$pr}#{$c}hero-cover" style="background-image: url(/images/_dummy/image_05.jpg);"></div>
     <div class="#{$pr}#{$c}hero-contents">
         <div class="#{$pr}#{$c}hero-contents-inner">
-            <h2 class="#{$pr}#{$m}title-23">吾輩は猫である</h2>
-            <p class="#{$pr}#{$m}title-21 #{$pr}#{$u}margin-b-lg">名前はまだ無い</p>
+            <h2 class="#{$pr}#{$p}title #{$pr}#{$p}title-echo-21">吾輩は猫である</h2>
+            <p class="#{$pr}#{$p}title #{$pr}#{$p}title-echo-23 #{$pr}#{$u}margin-b-lg">名前はまだ無い</p>
             <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
         </div><!-- /.#{$pr}#{$c}hero-contents-inner -->
     </div><!-- /.#{$pr}#{$c}hero-contents -->
@@ -109,8 +110,8 @@ parent: hero
     <div class="#{$pr}#{$c}hero-cover" style="background-image: url(/images/_dummy/image_05.jpg);"></div>
     <div class="#{$pr}#{$c}hero-contents">
         <div class="#{$pr}#{$c}hero-contents-inner">
-            <h2 class="#{$pr}#{$m}title-23">吾輩は猫である</h2>
-            <p class="#{$pr}#{$m}title-21 #{$pr}#{$u}margin-b-lg">名前はまだ無い</p>
+            <h2 class="#{$pr}#{$p}title #{$pr}#{$p}title-echo-21">吾輩は猫である</h2>
+            <p class="#{$pr}#{$p}title #{$pr}#{$p}title-echo-23 #{$pr}#{$u}margin-b-lg">名前はまだ無い</p>
             <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
         </div><!-- /.#{$pr}#{$c}hero-contents-inner -->
     </div><!-- /.#{$pr}#{$c}hero-contents -->
@@ -121,8 +122,8 @@ parent: hero
     <div class="#{$pr}#{$c}hero-cover" style="background-image: url(/images/_dummy/image_05.jpg);"></div>
     <div class="#{$pr}#{$c}hero-contents">
         <div class="#{$pr}#{$c}hero-contents-inner">
-            <h2 class="#{$pr}#{$m}title-23">吾輩は猫である</h2>
-            <p class="#{$pr}#{$m}title-21 #{$pr}#{$u}margin-b-lg">名前はまだ無い</p>
+            <h2 class="#{$pr}#{$p}title #{$pr}#{$p}title-echo-21">吾輩は猫である</h2>
+            <p class="#{$pr}#{$p}title #{$pr}#{$p}title-echo-23 #{$pr}#{$u}margin-b-lg">名前はまだ無い</p>
             <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
         </div><!-- /.#{$pr}#{$c}hero-contents-inner -->
     </div><!-- /.#{$pr}#{$c}hero-contents -->

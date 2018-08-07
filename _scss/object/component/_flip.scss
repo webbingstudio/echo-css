@@ -6,8 +6,9 @@ category: component-flip
 ---
 
 全面背景とボックスを持つ、フリップボードのようなコンポーネントを表示する。  
+<code>.#{$pr}#{$c}flip-contents-inner</code> が必須であることに注意する。  
 <code>.#{$pr}#{$c}flip-cover</code> の背景画像はインラインスタイル、もしくは追加CSSで定義する。  
-(breakpoint)が <code>md</code> 以下ではウィンドウの半分、 <code>lg</code> 以上ではウィンドウ全体の表示を前提としている。大きすぎる場合は都度調整すること。
+高さは(breakpoint) が <code>md</code> 以下で <code>50vh</code>、 <code>lg</code> 以上で <code>75vh</code> としているため、適当調整すること。
 
 ``` example
 <div class="#{$pr}#{$c}flip">
@@ -15,8 +16,8 @@ category: component-flip
     <div class="#{$pr}#{$c}flip-container">
         <div class="#{$pr}#{$c}flip-contents">
             <div class="#{$pr}#{$c}flip-contents-inner">
-                <h2 class="#{$pr}#{$m}title-22">吾輩は猫である</h2>
-                <p class="#{$pr}#{$m}title-21 #{$pr}#{$u}margin-b-xs">名前はまだ無い</p>
+                <h2 class="#{$pr}#{$p}title #{$pr}#{$p}title-echo-22">吾輩は猫である</h2>
+                <p class="#{$pr}#{$p}title #{$pr}#{$p}title-echo-23 #{$pr}#{$u}margin-b-sm">名前はまだ無い</p>
                 <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
             </div><!-- /.#{$pr}#{$c}flip-contents-inner -->
         </div><!-- /.#{$pr}#{$c}flip-contents -->
@@ -30,7 +31,7 @@ category: component-flip
     width: 100%;
 
     @include media-breakpoint-up(lg) {
-        height: 100vh;
+        height: 75vh;
     }
 
     .#{$pr}#{$c}flip-cover {
@@ -115,8 +116,8 @@ parent: flip
     <div class="#{$pr}#{$c}flip-container">
         <div class="#{$pr}#{$c}flip-contents">
             <div class="#{$pr}#{$c}flip-contents-inner">
-                <h2 class="#{$pr}#{$m}title-22">吾輩は猫である</h2>
-                <p class="#{$pr}#{$m}title-21 #{$pr}#{$u}margin-b-xs">名前はまだ無い</p>
+                <h2 class="#{$pr}#{$p}title #{$pr}#{$p}title-echo-22">吾輩は猫である</h2>
+                <p class="#{$pr}#{$p}title #{$pr}#{$p}title-echo-23 #{$pr}#{$u}margin-b-sm">名前はまだ無い</p>
                 <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
             </div><!-- /.#{$pr}#{$c}flip-contents-inner -->
         </div><!-- /.#{$pr}#{$c}flip-contents -->
@@ -157,8 +158,8 @@ parent: flip
     <div class="#{$pr}#{$c}flip-container">
         <div class="#{$pr}#{$c}flip-contents">
             <div class="#{$pr}#{$c}flip-contents-inner">
-                <h2 class="#{$pr}#{$m}title-22">吾輩は猫である</h2>
-                <p class="#{$pr}#{$m}title-21 #{$pr}#{$u}margin-b-xs">名前はまだ無い</p>
+                <h2 class="#{$pr}#{$p}title #{$pr}#{$p}title-echo-22">吾輩は猫である</h2>
+                <p class="#{$pr}#{$p}title #{$pr}#{$p}title-echo-23 #{$pr}#{$u}margin-b-sm">名前はまだ無い</p>
                 <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
             </div><!-- /.#{$pr}#{$c}flip-contents-inner -->
         </div><!-- /.#{$pr}#{$c}flip-contents -->

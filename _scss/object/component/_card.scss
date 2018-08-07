@@ -15,7 +15,7 @@ category: component-card
 <div class="#{$pr}#{$c}card">
     <div class="#{$pr}#{$c}card-inner">
         <div class="c-card-header">
-            <h3 class="#{$pr}#{$m}title-12">これはカードです</h3>
+            <h3 class="#{$pr}#{$p}title #{$pr}#{$p}title-echo-11">これはカードです</h3>
         </div>
         <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-ogimage">
             <picture>
@@ -30,7 +30,7 @@ category: component-card
             </picture>
         </div>
         <div class="#{$pr}#{$c}card-contents">
-            <p class="#{$pr}#{$c}card-body">これはカードの本文です。見出しに #{$pr}#{$m}title-12 クラスを付与しています。最大幅は480ピクセルとなり、画面中央に配置されます。</p>
+            <p class="#{$pr}#{$c}card-body">これはカードの本文です。見出しに #{$pr}#{$p}title-echo-11 クラスを付与しています。最大幅は480ピクセルとなり、画面中央に配置されます。</p>
         </div>
     </div>
 </div>

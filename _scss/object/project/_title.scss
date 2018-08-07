@@ -1,0 +1,211 @@
+/*doc
+---
+title: #{$pr}#{$p}title-(type)
+name: title
+category: module-title
+---
+
+見出しを表示する。ウィンドウ幅によって外観が変動する。
+余白は <code>utility > .#{$pr}#{$u}margin</code> で別途調整する。
+
+``` example
+<div style="margin-bottom: 2rem;">
+
+<h1 class="#{$pr}#{$p}title">h1要素に#{$pr}#{$p}titleを付与しました</h1>
+
+</div>
+<div style="margin-bottom: 2rem;">
+
+<h2 class="#{$pr}#{$p}title">h2要素に#{$pr}#{$p}titleを付与しました</h2>
+
+</div>
+<div style="margin-bottom: 2rem;">
+
+<h3 class="#{$pr}#{$p}title">h3要素に#{$pr}#{$p}titleを付与しました</h3>
+
+</div>
+```
+*/
+
+.#{$pr}#{$p}title {
+    margin: 0;
+    line-height: $line-height-sm;
+    list-style-type: none;
+}
+
+
+/*doc
+---
+title: #{$pr}#{$p}title-(group)-(type)
+name: title-01-type
+category: module-title
+parent: title
+---
+
+見出しの大分類を <code>(group)</code> 、外観を <code>(type)</code> とする前提で命名する。  
+プロジェクトによって、適切な命名規則を考慮する。
+
+<code>(group)</code> は以下の例が考えられる。
+
+- <code>post / card / widget ...</code>
+- <code>widget01 / widget02 ...</code>
+- <code>news / product / event ...</code>
+- <code>bordered / based / icon ...</code>
+
+<code>(type)</code> は <code>01 / 02 / 03 ...</code> , <code>bordered / based / iconed ...</code> 等が考えられる。
+
+ここでは <code>#{$pr}#{$p}title-echo-(type)</code> を仮に定義している。
+
+``` example
+<div style="margin-bottom: 2rem;">
+
+<h1 class="#{$pr}#{$p}title #{$pr}#{$p}title-echo-01">h1要素に#{$pr}#{$p}title-echo-01を付与しました</h1>
+<h1 class="#{$pr}#{$p}title #{$pr}#{$p}title-echo-02">h1要素に#{$pr}#{$p}title-echo-02を付与しました</h1>
+<h1 class="#{$pr}#{$p}title #{$pr}#{$p}title-echo-03">h1要素に#{$pr}#{$p}title-echo-03を付与しました</h1>
+<h1 class="#{$pr}#{$p}title #{$pr}#{$p}title-echo-04">h1要素に#{$pr}#{$p}title-echo-04を付与しました</h1>
+<h1 class="#{$pr}#{$p}title #{$pr}#{$p}title-echo-05">h1要素に#{$pr}#{$p}title-echo-05を付与しました</h1>
+
+</div>
+<div style="margin-bottom: 2rem;">
+
+<p class="#{$pr}#{$p}title #{$pr}#{$p}title-echo-01">p要素に#{$pr}#{$p}title-echo-01を付与しました</p>
+<p class="#{$pr}#{$p}title #{$pr}#{$p}title-echo-02">p要素に#{$pr}#{$p}title-echo-02を付与しました</p>
+<p class="#{$pr}#{$p}title #{$pr}#{$p}title-echo-03">p要素に#{$pr}#{$p}title-echo-03を付与しました</p>
+<p class="#{$pr}#{$p}title #{$pr}#{$p}title-echo-04">p要素に#{$pr}#{$p}title-echo-04を付与しました</p>
+<p class="#{$pr}#{$p}title #{$pr}#{$p}title-echo-05">p要素に#{$pr}#{$p}title-echo-05を付与しました</p>
+
+</div>
+```
+*/
+
+// 01: page title
+
+.#{$pr}#{$p}title-echo-01 {
+    font-size: 2rem;
+    font-weight: $font-weight-first;
+    font-family: $font-family-first;
+    text-align: center;
+
+    @include media-breakpoint-up(lg) {
+        font-size: 3rem;
+    }
+
+}
+
+// 02: page subtitle
+
+.#{$pr}#{$p}title-echo-02 {
+    font-size: 1.5rem;
+    font-weight: $font-weight-first;
+    font-family: $font-family-first;
+    text-align: center;
+
+    @include media-breakpoint-up(lg) {
+        font-size: 1.75rem;
+    }
+
+}
+
+
+// 11: component title(large)
+
+.#{$pr}#{$p}title-echo-11 {
+    font-size: 1.25rem;
+    font-weight: $font-weight-bold-root;
+    font-family: $font-family-bold-root;
+    text-align: center;
+
+    @include media-breakpoint-up(lg) {
+        font-size: 1.5rem;
+    }
+
+}
+
+// 12: component title(small)
+
+.#{$pr}#{$p}title-echo-12 {
+    font-size: 1.125rem;
+    font-weight: $font-weight-bold-root;
+    font-family: $font-family-bold-root;
+
+    @include media-breakpoint-up(lg) {
+        font-size: 1.25rem;
+    }
+
+}
+
+
+// 21: display title(large)
+
+.#{$pr}#{$p}title-echo-21 {
+    font-size: 2.25rem;
+    font-weight: $font-weight-bold-third;
+    font-family: $font-family-bold-third;
+
+    @include media-breakpoint-up(sm) {
+        font-size: 3rem;
+    }
+
+    @include media-breakpoint-up(md) {
+        font-size: 3.5rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+        font-size: 4rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+        font-size: 4.5rem;
+    }
+
+    @include media-breakpoint-up(xxl) {
+        font-size: 5rem;
+    }
+
+}
+
+// 22: display title(medium)
+
+.#{$pr}#{$p}title-echo-22 {
+    font-size: 2rem;
+    font-weight: $font-weight-bold-third;
+    font-family: $font-family-bold-third;
+
+    @include media-breakpoint-up(sm) {
+        font-size: 2.25rem;
+    }
+
+    @include media-breakpoint-up(md) {
+        font-size: 2.5rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+        font-size: 2.75rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+        font-size: 3rem;
+    }
+
+    @include media-breakpoint-up(xxl) {
+        font-size: 3.25rem;
+    }
+
+}
+
+// 23: display subtitle
+
+.#{$pr}#{$p}title-echo-23 {
+    font-size: 1.25rem;
+    font-weight: $font-weight-third;
+    font-family: $font-family-third;
+
+    @include media-breakpoint-up(sm) {
+        font-size: 1.5rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+        font-size: 1.75rem;
+    }
+
+}
