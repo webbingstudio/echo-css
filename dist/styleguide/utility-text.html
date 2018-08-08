@@ -94,10 +94,10 @@
 <h1 id="text-04-inverse" class="styleguide">text-inverse</h1>
 
 <p>文字色を反転する（背景色を文字色とする）。</p>
-<div class="example"><div class="bg-inverse">
+<div class="example"><div style="background-color: #000; padding: 1rem 0;">
     <p class="text-inverse">text-inverse_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
 </div>
-</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-inverse"</span><span class="nt">&gt;</span>
+</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"background-color: #000; padding: 1rem 0;"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-inverse"</span><span class="nt">&gt;</span>text-inverse_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </pre></div>
@@ -147,20 +147,28 @@
 </pre></div>
 <h1 id="text-06-size" class="styleguide">text-(size)</h1>
 
-<p>文字サイズを変更する。<br>
-<code>.text-md</code> のみ、単位が <code>em</code> ではなく <code>rem</code> （HTML要素の文字サイズ）である点に注意。</p>
+<p>文字サイズを、<strong>現在の文字サイズの相対値</strong>（ <code>em</code> ）で変更する。<br>
+ただし、 <code>.text-md</code> のみ、単位が <code>rem</code> （html要素の文字サイズ）となる。</p>
 <div class="example"><p class="text-xxs">text-xxs_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
 <p class="text-xs">text-xs_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
 <p class="text-sm">text-sm_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
 
-<p class="text-lg">text-lg_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="text-xl">text-xl_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="text-lg">text-lg_吾輩は猫である。<span class="text-md">名前はまだ無い。text-md_どこで生れたか</span>とんと見当がつかぬ。</p>
+<p class="text-xl">text-xl_吾輩は猫である。<span class="text-md">名前はまだ無い。text-md_どこで生れたか</span>とんと見当がつかぬ。</p>
 <p class="text-xxl">text-xxl_吾輩は猫である。<span class="text-md">名前はまだ無い。text-md_どこで生れたか</span>とんと見当がつかぬ。</p>
+
+<p class="text-lg">text-lg_吾輩は猫である。<span class="text-xxs">名前はまだ無い。text-xxs_どこで生れたか</span>とんと見当がつかぬ。</p>
+<p class="text-xl">text-xl_吾輩は猫である。<span class="text-xxs">名前はまだ無い。text-xxs_どこで生れたか</span>とんと見当がつかぬ。</p>
+<p class="text-xxl">text-xxl_吾輩は猫である。<span class="text-xxs">名前はまだ無い。text-xxs_どこで生れたか</span>とんと見当がつかぬ。</p>
 </div><div class="codeblock"><pre><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-xxs"</span><span class="nt">&gt;</span>text-xxs_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-xs"</span><span class="nt">&gt;</span>text-xs_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-sm"</span><span class="nt">&gt;</span>text-sm_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<span class="nt">&lt;/p&gt;</span>
 
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-lg"</span><span class="nt">&gt;</span>text-lg_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-xl"</span><span class="nt">&gt;</span>text-xl_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-lg"</span><span class="nt">&gt;</span>text-lg_吾輩は猫である。<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text-md"</span><span class="nt">&gt;</span>名前はまだ無い。text-md_どこで生れたか<span class="nt">&lt;/span&gt;</span>とんと見当がつかぬ。<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-xl"</span><span class="nt">&gt;</span>text-xl_吾輩は猫である。<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text-md"</span><span class="nt">&gt;</span>名前はまだ無い。text-md_どこで生れたか<span class="nt">&lt;/span&gt;</span>とんと見当がつかぬ。<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-xxl"</span><span class="nt">&gt;</span>text-xxl_吾輩は猫である。<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text-md"</span><span class="nt">&gt;</span>名前はまだ無い。text-md_どこで生れたか<span class="nt">&lt;/span&gt;</span>とんと見当がつかぬ。<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-lg"</span><span class="nt">&gt;</span>text-lg_吾輩は猫である。<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text-xxs"</span><span class="nt">&gt;</span>名前はまだ無い。text-xxs_どこで生れたか<span class="nt">&lt;/span&gt;</span>とんと見当がつかぬ。<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-xl"</span><span class="nt">&gt;</span>text-xl_吾輩は猫である。<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text-xxs"</span><span class="nt">&gt;</span>名前はまだ無い。text-xxs_どこで生れたか<span class="nt">&lt;/span&gt;</span>とんと見当がつかぬ。<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-xxl"</span><span class="nt">&gt;</span>text-xxl_吾輩は猫である。<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text-xxs"</span><span class="nt">&gt;</span>名前はまだ無い。text-xxs_どこで生れたか<span class="nt">&lt;/span&gt;</span>とんと見当がつかぬ。<span class="nt">&lt;/p&gt;</span>
 </pre></div><?php include('../doc_include/footer.inc'); ?>

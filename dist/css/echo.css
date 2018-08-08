@@ -7843,7 +7843,7 @@ category: utility-text
 
 
 ``` example
-<div class="bg-inverse">
+<div style="background-color: #000; padding: 1rem 0;">
     <p class="text-inverse">text-inverse_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
 </div>
 ```
@@ -8077,17 +8077,21 @@ name: text-06-size
 category: utility-text
 ---
 
-文字サイズを変更する。  
-<code>.text-md</code> のみ、単位が <code>em</code> ではなく <code>rem</code> （HTML要素の文字サイズ）である点に注意。
+文字サイズを、**現在の文字サイズの相対値**（ <code>em</code> ）で変更する。  
+ただし、 <code>.text-md</code> のみ、単位が <code>rem</code> （html要素の文字サイズ）となる。
 
 ``` example
 <p class="text-xxs">text-xxs_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
 <p class="text-xs">text-xs_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
 <p class="text-sm">text-sm_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
 
-<p class="text-lg">text-lg_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="text-xl">text-xl_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="text-lg">text-lg_吾輩は猫である。<span class="text-md">名前はまだ無い。text-md_どこで生れたか</span>とんと見当がつかぬ。</p>
+<p class="text-xl">text-xl_吾輩は猫である。<span class="text-md">名前はまだ無い。text-md_どこで生れたか</span>とんと見当がつかぬ。</p>
 <p class="text-xxl">text-xxl_吾輩は猫である。<span class="text-md">名前はまだ無い。text-md_どこで生れたか</span>とんと見当がつかぬ。</p>
+
+<p class="text-lg">text-lg_吾輩は猫である。<span class="text-xxs">名前はまだ無い。text-xxs_どこで生れたか</span>とんと見当がつかぬ。</p>
+<p class="text-xl">text-xl_吾輩は猫である。<span class="text-xxs">名前はまだ無い。text-xxs_どこで生れたか</span>とんと見当がつかぬ。</p>
+<p class="text-xxl">text-xxl_吾輩は猫である。<span class="text-xxs">名前はまだ無い。text-xxs_どこで生れたか</span>とんと見当がつかぬ。</p>
 ```
 */
 #document .text-xxs {
