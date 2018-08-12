@@ -3657,14 +3657,23 @@ category: module-nav
 }
 
 .m-nav-list,
+.m-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.m-nav-list,
 .m-nav > ul {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: stretch;
+}
+
+.m-nav-item,
+.m-nav li {
   margin: 0;
-  padding: 0;
-  list-style-type: none;
 }
 
 .m-nav-item,
@@ -3672,7 +3681,6 @@ category: module-nav
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: auto;
-  margin: 0;
 }
 
 .m-nav-label,
@@ -3682,7 +3690,7 @@ category: module-nav
   align-items: center;
   width: 100%;
   height: 100%;
-  min-height: 3rem;
+  min-height: 3em;
   color: #333;
   padding: .25em 1em;
   font-size: 1rem;
@@ -3743,26 +3751,48 @@ parent: nav
 ``` example
 <h3 class="text-lg">すべての要素にクラスを付与した場合</h3>
 <nav class="m-nav m-nav-vertical">
-    <div class="m-nav-list">
-        <p class="m-nav-item">
+    <ul class="m-nav-list">
+        <li class="m-nav-item">
             <a href="#" class="m-nav-label">ボタン</a>
-        </p>
-        <p class="m-nav-item">
+        </li>
+        <li class="m-nav-item">
             <a href="#" class="m-nav-label is-current">現在のページ</a>
-        </p>
-        <p class="m-nav-item">
+            <ul class="m-nav-list m-nav-children">
+                <li class="m-nav-item">
+                    <a href="#" class="m-nav-label">2階層目ボタン</a>
+                    <ul class="m-nav-list m-nav-children">
+                        <li class="m-nav-item">
+                            <a href="#" class="m-nav-label">3階層目ボタン</a>
+                        </li>
+                        <li class="m-nav-item">
+                            <a href="#" class="m-nav-label">3階層目ボタン</a>
+                        </li>
+                        <li class="m-nav-item">
+                            <a href="#" class="m-nav-label">3階層目ボタン</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="m-nav-item">
+                    <a href="#" class="m-nav-label">2階層目ボタン</a>
+                </li>
+                <li class="m-nav-item">
+                    <a href="#" class="m-nav-label">2階層目ボタン</a>
+                </li>
+            </ul>
+        </li>
+        <li class="m-nav-item">
             <a href="#" class="m-nav-label">文字数が多いボタンです</a>
-        </p>
-        <p class="m-nav-item">
+        </li>
+        <li class="m-nav-item">
             <a href="#" class="m-nav-label"><span class="m-nav-text"><span class="text-xs">複数行の</span><br>ボタン</span></a>
-        </p>
-        <p class="m-nav-item">
+        </li>
+        <li class="m-nav-item">
             <a href="#" class="m-nav-label">ボタン</a>
-        </p>
-        <p class="m-nav-item">
+        </li>
+        <li class="m-nav-item">
             <a href="#" class="m-nav-label">ボタン</a>
-        </p>
-    </div><!-- /.nav-list -->
+        </li>
+    </ul>
 </nav><!-- /.nav -->
 
 <h3 class="text-lg margin-t-lg">包括要素のみクラスを付与した場合</h3>
@@ -3773,6 +3803,28 @@ parent: nav
         </li>
         <li>
             <a href="#" class="is-current">現在のページ</a>
+            <ul>
+                <li>
+                    <a href="#">2階層目ボタン</a>
+                    <ul>
+                        <li>
+                            <a href="#">3階層目ボタン</a>
+                        </li>
+                        <li>
+                            <a href="#">3階層目ボタン</a>
+                        </li>
+                        <li>
+                            <a href="#">3階層目ボタン</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">2階層目ボタン</a>
+                </li>
+                <li>
+                    <a href="#">2階層目ボタン</a>
+                </li>
+            </ul>
         </li>
         <li>
             <a href="#"><span class="m-nav-text"><span class="text-xs">複数行の</span><br>ボタン</span></a>
@@ -3805,6 +3857,30 @@ parent: nav
 .m-nav-vertical .m-nav-label,
 .m-nav-vertical > ul li a {
   justify-content: flex-start;
+}
+
+.m-nav-children .m-nav-label,
+.m-nav-vertical > ul > li > ul > li a {
+  font-size: .875rem;
+  padding-left: 3rem;
+}
+@media (min-width: 425px) {
+  .m-nav-children .m-nav-label,
+  .m-nav-vertical > ul > li > ul > li a {
+    font-size: 1rem;
+  }
+}
+
+.m-nav-children .m-nav-children .m-nav-label,
+.m-nav-vertical > ul > li > ul > li > ul > li a {
+  font-size: .75rem;
+  padding-left: 5rem;
+}
+@media (min-width: 425px) {
+  .m-nav-children .m-nav-children .m-nav-label,
+  .m-nav-vertical > ul > li > ul > li > ul > li a {
+    font-size: .875rem;
+  }
 }
 
 /*doc

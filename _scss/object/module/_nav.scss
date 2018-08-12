@@ -88,14 +88,23 @@ category: module-nav
 }
 
 .#{$pr}#{$m}nav-list,
+.#{$pr}#{$m}nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.#{$pr}#{$m}nav-list,
 .#{$pr}#{$m}nav > ul {
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: stretch;
+}
+
+.#{$pr}#{$m}nav-item,
+.#{$pr}#{$m}nav li {
     margin: 0;
-    padding: 0;
-    list-style-type: none;
 }
 
 .#{$pr}#{$m}nav-item,
@@ -103,7 +112,6 @@ category: module-nav
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: auto;
-    margin: 0;
 }
 
 .#{$pr}#{$m}nav-label,
@@ -113,7 +121,7 @@ category: module-nav
     align-items: center;
     width: 100%;
     height: 100%;
-    min-height: 3rem;
+    min-height: 3em;
 
     color: $body-color;
     padding: .25em 1em;
@@ -180,26 +188,48 @@ parent: nav
 ``` example
 <h3 class="#{$pr}#{$u}text-lg">すべての要素にクラスを付与した場合</h3>
 <nav class="#{$pr}#{$m}nav #{$pr}#{$m}nav-vertical">
-    <div class="#{$pr}#{$m}nav-list">
-        <p class="#{$pr}#{$m}nav-item">
+    <ul class="#{$pr}#{$m}nav-list">
+        <li class="#{$pr}#{$m}nav-item">
             <a href="#" class="#{$pr}#{$m}nav-label">ボタン</a>
-        </p>
-        <p class="#{$pr}#{$m}nav-item">
+        </li>
+        <li class="#{$pr}#{$m}nav-item">
             <a href="#" class="#{$pr}#{$m}nav-label #{$nav-current}">現在のページ</a>
-        </p>
-        <p class="#{$pr}#{$m}nav-item">
+            <ul class="#{$pr}#{$m}nav-list #{$pr}#{$m}nav-children">
+                <li class="#{$pr}#{$m}nav-item">
+                    <a href="#" class="#{$pr}#{$m}nav-label">2階層目ボタン</a>
+                    <ul class="#{$pr}#{$m}nav-list #{$pr}#{$m}nav-children">
+                        <li class="#{$pr}#{$m}nav-item">
+                            <a href="#" class="#{$pr}#{$m}nav-label">3階層目ボタン</a>
+                        </li>
+                        <li class="#{$pr}#{$m}nav-item">
+                            <a href="#" class="#{$pr}#{$m}nav-label">3階層目ボタン</a>
+                        </li>
+                        <li class="#{$pr}#{$m}nav-item">
+                            <a href="#" class="#{$pr}#{$m}nav-label">3階層目ボタン</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="#{$pr}#{$m}nav-item">
+                    <a href="#" class="#{$pr}#{$m}nav-label">2階層目ボタン</a>
+                </li>
+                <li class="#{$pr}#{$m}nav-item">
+                    <a href="#" class="#{$pr}#{$m}nav-label">2階層目ボタン</a>
+                </li>
+            </ul>
+        </li>
+        <li class="#{$pr}#{$m}nav-item">
             <a href="#" class="#{$pr}#{$m}nav-label">文字数が多いボタンです</a>
-        </p>
-        <p class="#{$pr}#{$m}nav-item">
+        </li>
+        <li class="#{$pr}#{$m}nav-item">
             <a href="#" class="#{$pr}#{$m}nav-label"><span class="#{$pr}#{$m}nav-text"><span class="#{$pr}#{$u}text-xs">複数行の</span><br>ボタン</span></a>
-        </p>
-        <p class="#{$pr}#{$m}nav-item">
+        </li>
+        <li class="#{$pr}#{$m}nav-item">
             <a href="#" class="#{$pr}#{$m}nav-label">ボタン</a>
-        </p>
-        <p class="#{$pr}#{$m}nav-item">
+        </li>
+        <li class="#{$pr}#{$m}nav-item">
             <a href="#" class="#{$pr}#{$m}nav-label">ボタン</a>
-        </p>
-    </div><!-- /.nav-list -->
+        </li>
+    </ul>
 </nav><!-- /.nav -->
 
 <h3 class="#{$pr}#{$u}text-lg #{$pr}#{$u}margin-t-lg">包括要素のみクラスを付与した場合</h3>
@@ -210,6 +240,28 @@ parent: nav
         </li>
         <li>
             <a href="#" class="#{$nav-current}">現在のページ</a>
+            <ul>
+                <li>
+                    <a href="#">2階層目ボタン</a>
+                    <ul>
+                        <li>
+                            <a href="#">3階層目ボタン</a>
+                        </li>
+                        <li>
+                            <a href="#">3階層目ボタン</a>
+                        </li>
+                        <li>
+                            <a href="#">3階層目ボタン</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">2階層目ボタン</a>
+                </li>
+                <li>
+                    <a href="#">2階層目ボタン</a>
+                </li>
+            </ul>
         </li>
         <li>
             <a href="#"><span class="#{$pr}#{$m}nav-text"><span class="#{$pr}#{$u}text-xs">複数行の</span><br>ボタン</span></a>
@@ -244,3 +296,29 @@ parent: nav
 .#{$pr}#{$m}nav-vertical > ul li a {
     justify-content: flex-start;
 }
+
+
+.#{$pr}#{$m}nav-children .#{$pr}#{$m}nav-label,
+.#{$pr}#{$m}nav-vertical > ul > li > ul > li a {
+    font-size: .875rem;
+    padding-left: 3rem;
+
+    @include media-breakpoint-up(sm) {
+        font-size: 1rem;
+    }
+
+}
+
+
+.#{$pr}#{$m}nav-children .#{$pr}#{$m}nav-children .#{$pr}#{$m}nav-label,
+.#{$pr}#{$m}nav-vertical > ul > li > ul > li > ul > li a {
+    font-size: .75rem;
+    padding-left: 5rem;
+
+    @include media-breakpoint-up(sm) {
+        font-size: .875rem;
+    }
+
+}
+
+
