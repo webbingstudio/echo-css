@@ -3576,112 +3576,133 @@ category: module-nav
 ---
 
 クリック範囲が広いナビゲーションを表示する。  
-<code>ul > li a</code> の包括要素に使用した場合は、子要素にクラスを指定していなくても有効になる。
+<code>ul > li a</code> の包括要素に使用した場合は、子要素にクラスを指定していなくても有効になる。  
+現在地をハイライトする <code>.is-current</code> は <code>.m-nav-item , .m-nav-label</code> のどちらに付与してもよい。  
+テキストが複数行になった場合でも、ナビゲーションのすべてのテキストが縦中央に整列する。  
+<code>.m-nav-label</code> 内で装飾用の要素を使用すると崩れるため、その場合はダミーのインライン要素を加える。ここでは <code>span.m-nav-text</code> としている。  
 
 ``` example
 <h3 class="text-lg">すべての要素にクラスを付与した場合</h3>
-<div class="m-nav">
-    <p class="m-nav-list">
-        <a href="#" class="m-nav-item">メニューです</a>
-    </p>
-    <p class="m-nav-list">
-        <a href="#" class="m-nav-item is-current">現在のメニューです</a>
-    </p>
-    <p class="m-nav-list">
-        <a href="#" class="m-nav-item">メニューです</a>
-    </p>
-    <p class="m-nav-list">
-        <a href="#" class="m-nav-item">メニューです</a>
-    </p>
-    <p class="m-nav-list">
-        <a href="#" class="m-nav-item">メニューです</a>
-    </p>
-</div>
+<nav class="m-nav">
+    <div class="m-nav-list">
+        <p class="m-nav-item">
+            <a href="#" class="m-nav-label">ボタン</a>
+        </p>
+        <p class="m-nav-item">
+            <a href="#" class="m-nav-label is-current">現在のページ</a>
+        </p>
+        <p class="m-nav-item">
+            <a href="#" class="m-nav-label">文字数が多いボタンです</a>
+        </p>
+        <p class="m-nav-item">
+            <a href="#" class="m-nav-label"><span class="m-nav-text"><span class="text-xs">複数行の</span><br>ボタン</span></a>
+        </p>
+        <p class="m-nav-item">
+            <a href="#" class="m-nav-label">ボタン</a>
+        </p>
+        <p class="m-nav-item">
+            <a href="#" class="m-nav-label">ボタン</a>
+        </p>
+    </div><!-- /.nav-list -->
+</nav><!-- /.nav -->
 
-<h3 class="text-lg">包括要素のみクラスを付与した場合</h3>
-<div class="m-nav">
+<h3 class="text-lg margin-t-lg">包括要素のみクラスを付与した場合</h3>
+<nav class="m-nav">
     <ul>
         <li>
-            <a href="#">メニューです</a>
+            <a href="#">ボタン</a>
         </li>
         <li>
-            <a href="#" class="is-current">現在のメニューです</a>
+            <a href="#" class="is-current">現在のページ</a>
         </li>
         <li>
-            <a href="#">メニューです</a>
+            <a href="#"><span class="m-nav-text"><span class="text-xs">複数行の</span><br>ボタン</span></a>
         </li>
         <li>
-            <a href="#">メニューです</a>
+            <a href="#">ボタン</a>
         </li>
         <li>
-            <a href="#">メニューです</a>
+            <a href="#">文字数が多いボタンです</a>
+        </li>
+        <li>
+            <a href="#">ボタン</a>
         </li>
     </ul>
-</div>
+</nav><!-- /.nav -->
 
-<h3 class="text-lg">m-nav-itemのみ使用し、ナビゲーションの分割はグリッドにした場合</h3>
+<h3 class="text-lg margin-t-lg">m-nav-label のみ使用し、ナビゲーションの分割はグリッドにした場合</h3>
 <ul class="l-row l-row-0">
     <li class="l-col-6 l-col-md">
-        <a href="#" class="m-nav-item">メニューです</a>
+        <a href="#" class="m-nav-label">ボタン</a>
     </li>
     <li class="l-col-6 l-col-md">
-        <a href="#" class="m-nav-item is-current">現在のメニューです</a>
+        <a href="#" class="m-nav-label is-current">現在のページ</a>
     </li>
     <li class="l-col-4 l-col-md">
-        <a href="#" class="m-nav-item">メニューです</a>
+        <a href="#" class="m-nav-label">ボタン</a>
     </li>
     <li class="l-col-4 l-col-md">
-        <a href="#" class="m-nav-item">メニューです</a>
+        <a href="#" class="m-nav-label">ボタン</a>
     </li>
     <li class="l-col-4 l-col-md">
-        <a href="#" class="m-nav-item">メニューです</a>
+        <a href="#" class="m-nav-label">ボタン</a>
     </li>
 </ul>
 ```
 
 */
-.m-nav:not(ul),
-.m-nav > ul {
-  display: block;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.m-nav {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .m-nav-list,
-.m-nav > ul li {
+.m-nav > ul {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
   margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .m-nav-item,
+.m-nav > ul li {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  margin: 0;
+}
+
+.m-nav-label,
 .m-nav > ul li a {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: 3rem;
   color: #333;
-  padding: .75em 0;
+  padding: .25em 1em;
   font-size: 1rem;
-  text-align: center;
   line-height: 1;
-  vertical-align: middle;
   transition: .3s all;
   cursor: pointer;
 }
-a.m-nav-item, .m-nav > ul li a {
+@media (min-width: 425px) {
+  .m-nav-label,
+  .m-nav > ul li a {
+    font-size: 1.25rem;
+  }
+}
+a.m-nav-label, .m-nav > ul li a {
   text-decoration: none;
 }
-a.m-nav-item:hover, a.m-nav-item:focus, .m-nav > ul li a:hover, .m-nav > ul li a:focus {
+a.m-nav-label:hover, a.m-nav-label:focus, .m-nav > ul li a:hover, .m-nav > ul li a:focus {
   text-decoration: none;
 }
-.m-nav-item.is-current,
-.m-nav > ul li a.is-current {
-  background-color: #eee;
-}
-.m-nav-item.is-current:hover, .m-nav-item.is-current:focus, .m-nav-item.is-current:active,
-.m-nav > ul li a.is-current:hover,
-.m-nav > ul li a.is-current:focus,
-.m-nav > ul li a.is-current:active {
-  background-color: #eee;
-}
-.m-nav-item:hover, .m-nav-item:focus, .m-nav-item:active,
+.m-nav-label:hover, .m-nav-label:focus, .m-nav-label:active,
 .m-nav > ul li a:hover,
 .m-nav > ul li a:focus,
 .m-nav > ul li a:active {
@@ -3689,144 +3710,101 @@ a.m-nav-item:hover, a.m-nav-item:focus, .m-nav > ul li a:hover, .m-nav > ul li a
   background-color: #eee;
   text-decoration: none;
 }
-
-/*doc
----
-title: m-nav-horizontal
-name: nav-01-horizontal
-category: module-nav
-parent: nav
----
-
-水平ナビゲーションとして表示する。
-
-``` example
-<h3 class="text-lg">すべての要素にクラスを付与した場合</h3>
-<div class="m-nav m-nav-horizontal">
-    <p class="m-nav-list">
-        <a href="#" class="m-nav-item">メニューです</a>
-    </p>
-    <p class="m-nav-list">
-        <a href="#" class="m-nav-item is-current">現在のメニューです</a>
-    </p>
-    <p class="m-nav-list">
-        <a href="#" class="m-nav-item">メニューです</a>
-    </p>
-    <p class="m-nav-list">
-        <a href="#" class="m-nav-item">メニューです</a>
-    </p>
-    <p class="m-nav-list">
-        <a href="#" class="m-nav-item">メニューです</a>
-    </p>
-</div>
-
-<h3 class="text-lg">包括要素のみクラスを付与した場合</h3>
-<div class="m-nav m-nav-horizontal">
-    <ul>
-        <li>
-            <a href="#">メニューです</a>
-        </li>
-        <li>
-            <a href="#" class="is-current">現在のメニューです</a>
-        </li>
-        <li>
-            <a href="#">メニューです</a>
-        </li>
-        <li>
-            <a href="#">メニューです</a>
-        </li>
-        <li>
-            <a href="#">メニューです</a>
-        </li>
-    </ul>
-</div>
-```
-
-*/
-.m-nav-horizontal:not(ul),
-.m-nav-horizontal > ul {
-  display: flex;
-  flex-wrap: wrap;
+.m-nav-label [class*="fa-"],
+.m-nav > ul li a [class*="fa-"] {
+  transform: translate(0, -0.125em);
 }
 
-.m-nav-horizontal:not(ul) .m-nav-list,
-.m-nav-horizontal > ul li {
-  flex: 0 0 auto;
+.m-nav-label.is-current,
+.m-nav > ul li.is-current,
+.m-nav > ul li a.is-current {
+  background-color: #eee;
 }
-
-.m-nav-horizontal:not(ul) .m-nav-item,
-.m-nav-horizontal > ul li a {
-  padding-left: 20px;
-  padding-right: 20px;
+.m-nav-label.is-current:hover, .m-nav-label.is-current:focus, .m-nav-label.is-current:active,
+.m-nav > ul li.is-current:hover,
+.m-nav > ul li.is-current:focus,
+.m-nav > ul li.is-current:active,
+.m-nav > ul li a.is-current:hover,
+.m-nav > ul li a.is-current:focus,
+.m-nav > ul li a.is-current:active {
+  background-color: #eee;
 }
 
 /*doc
 ---
-title: m-nav-justify
-name: nav-02-justify
+title: m-nav-vertical
+name: nav-01-vertical
 category: module-nav
 parent: nav
 ---
 
-<code>.m-nav-horizontal</code> と併用する。水平ナビゲーションを包括要素全体に均等幅で表示する。
+幅100%の垂直ナビゲーションとして表示する。
 
 ``` example
 <h3 class="text-lg">すべての要素にクラスを付与した場合</h3>
-<div class="m-nav m-nav-horizontal m-nav-justify">
-    <p class="m-nav-list">
-        <a href="#" class="m-nav-item">メニューです</a>
-    </p>
-    <p class="m-nav-list">
-        <a href="#" class="m-nav-item is-current">現在のメニューです</a>
-    </p>
-    <p class="m-nav-list">
-        <a href="#" class="m-nav-item">メニューです</a>
-    </p>
-    <p class="m-nav-list">
-        <a href="#" class="m-nav-item">メニューです</a>
-    </p>
-    <p class="m-nav-list">
-        <a href="#" class="m-nav-item">メニューです</a>
-    </p>
-</div>
+<nav class="m-nav m-nav-vertical">
+    <div class="m-nav-list">
+        <p class="m-nav-item">
+            <a href="#" class="m-nav-label">ボタン</a>
+        </p>
+        <p class="m-nav-item">
+            <a href="#" class="m-nav-label is-current">現在のページ</a>
+        </p>
+        <p class="m-nav-item">
+            <a href="#" class="m-nav-label">文字数が多いボタンです</a>
+        </p>
+        <p class="m-nav-item">
+            <a href="#" class="m-nav-label"><span class="m-nav-text"><span class="text-xs">複数行の</span><br>ボタン</span></a>
+        </p>
+        <p class="m-nav-item">
+            <a href="#" class="m-nav-label">ボタン</a>
+        </p>
+        <p class="m-nav-item">
+            <a href="#" class="m-nav-label">ボタン</a>
+        </p>
+    </div><!-- /.nav-list -->
+</nav><!-- /.nav -->
 
-<h3 class="text-lg">包括要素のみクラスを付与した場合</h3>
-<div class="m-nav m-nav-horizontal m-nav-justify">
+<h3 class="text-lg margin-t-lg">包括要素のみクラスを付与した場合</h3>
+<nav class="m-nav m-nav-vertical">
     <ul>
         <li>
-            <a href="#">メニューです</a>
+            <a href="#">ボタン</a>
         </li>
         <li>
-            <a href="#" class="is-current">現在のメニューです</a>
+            <a href="#" class="is-current">現在のページ</a>
         </li>
         <li>
-            <a href="#">メニューです</a>
+            <a href="#"><span class="m-nav-text"><span class="text-xs">複数行の</span><br>ボタン</span></a>
         </li>
         <li>
-            <a href="#">メニューです</a>
+            <a href="#">ボタン</a>
         </li>
         <li>
-            <a href="#">メニューです</a>
+            <a href="#">文字数が多いボタンです</a>
+        </li>
+        <li>
+            <a href="#">ボタン</a>
         </li>
     </ul>
-</div>
+</nav><!-- /.nav -->
 ```
 
 */
-.m-nav-justify:not(ul),
-.m-nav-justify ul {
+.m-nav-vertical {
   width: 100%;
 }
 
-.m-nav-justify:not(ul) .m-nav-list,
-.m-nav-justify ul li {
-  flex-grow: 1;
+.m-nav-vertical .m-nav-list,
+.m-nav-vertical > ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
-.m-nav-justify:not(ul) .m-nav-item,
-.m-nav-justify > ul li a {
-  padding-left: 0;
-  padding-right: 0;
+.m-nav-vertical .m-nav-label,
+.m-nav-vertical > ul li a {
+  justify-content: flex-start;
 }
 
 /*doc
