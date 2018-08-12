@@ -8233,6 +8233,62 @@ category: utility-text
 
 /*doc
 ---
+title: width-(percentage)
+name: width
+category: utility-width
+---
+
+幅を親要素を基準とした割合に変更する。
+
+``` example
+<div class="width-20" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
+width-20
+</div>
+
+<div class="width-33" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
+width-33
+</div>
+
+<div class="width-50" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
+width-50
+</div>
+
+<div class="width-66" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
+width-66
+</div>
+
+<div class="width-75" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
+width-75
+</div>
+
+<div class="width-100" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
+width-100
+</div>
+
+```
+
+*/
+#document .width-20 {
+  width: 20%;
+}
+#document .width-33 {
+  width: 33.33333333%;
+}
+#document .width-50 {
+  width: 50%;
+}
+#document .width-66 {
+  width: 66.66666666%;
+}
+#document .width-75 {
+  width: 75%;
+}
+#document .width-100 {
+  width: 100%;
+}
+
+/*doc
+---
 title: p-title-(type)
 name: title
 category: project-title

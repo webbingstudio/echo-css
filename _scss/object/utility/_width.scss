@@ -1,0 +1,52 @@
+@if ($disabled-utility-class != true) {
+
+/*doc
+---
+title: #{$pr}#{$u}width-(percentage)
+name: width
+category: utility-width
+---
+
+幅を親要素を基準とした割合に変更する。
+
+``` example
+<div class="#{$pr}#{$u}width-20" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
+#{$pr}#{$u}width-20
+</div>
+
+<div class="#{$pr}#{$u}width-33" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
+#{$pr}#{$u}width-33
+</div>
+
+<div class="#{$pr}#{$u}width-50" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
+#{$pr}#{$u}width-50
+</div>
+
+<div class="#{$pr}#{$u}width-66" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
+#{$pr}#{$u}width-66
+</div>
+
+<div class="#{$pr}#{$u}width-75" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
+#{$pr}#{$u}width-75
+</div>
+
+<div class="#{$pr}#{$u}width-100" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
+#{$pr}#{$u}width-100
+</div>
+
+```
+
+*/
+
+#{$u-wrap} {
+
+	.#{$pr}#{$u}width-20 { width: 20%; }
+	.#{$pr}#{$u}width-33 { width: 33.33333333%; }
+	.#{$pr}#{$u}width-50  { width: 50%; }
+	.#{$pr}#{$u}width-66  { width: 66.66666666%; }
+	.#{$pr}#{$u}width-75  { width: 75%; }
+	.#{$pr}#{$u}width-100 { width: 100%; }
+
+}
+
+}

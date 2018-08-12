@@ -64,6 +64,7 @@
 					                    <li class="s-sitemap-item"><a href="./utility-shadow.html">shadow</a></li>
 					                    <li class="s-sitemap-item"><a href="./utility-sr.html">screen reader</a></li>
 					                    <li class="s-sitemap-item"><a href="./utility-text.html">text</a></li>
+					                    <li class="s-sitemap-item"><a href="./utility-width.html">width</a></li>
 					                </ul>
 					            </li>
 					            <li class="s-sitemap-item"><span class="s-sitemap-label">project</span>
