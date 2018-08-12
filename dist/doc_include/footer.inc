@@ -56,7 +56,7 @@
 					                    <li class="s-sitemap-item"><a href="./utility-bg.html">bg</a></li>
 					                    <li class="s-sitemap-item"><a href="./utility-clear.html">clear</a></li>
 					                    <li class="s-sitemap-item"><a href="./utility-clearfix.html">clearfix</a></li>
-					                    <li class="s-sitemap-item"><a href="./utility-container-expand.html">container expand</a></li>
+					                    <li class="s-sitemap-item"><a href="./utility-expand.html">expand</a></li>
 					                    <li class="s-sitemap-item"><a href="./utility-float.html">float</a></li>
 					                    <li class="s-sitemap-item"><a href="./utility-font.html">font</a></li>
 					                    <li class="s-sitemap-item"><a href="./utility-hidden.html">hidden</a></li>

@@ -1,0 +1,37 @@
+@if ($disabled-utility-class != true) {
+
+/*doc
+---
+title: #{$pr}#{$u}expand
+name: expand
+category: utility-expand
+---
+
+**コンテナブロックの最大幅を無視**して、要素のアウトラインのみをウィンドウ全体に広げる。  
+仕様上、2カラム以上のレイアウトでは使用できない。  
+<code>.#{$pr}#{$l}document</code> の <code>max-width</code> を解除していると、横スクロールバーが表示されてしまう。
+
+``` example
+<div class="#{$pr}#{$l}container #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-mild">
+    <div style="margin-bottom: 1rem; padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(#{$pr}#{$l}container > this)</div>
+
+    <div class="#{$pr}#{$u}expand #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-mild">
+        <div style="margin-bottom: 1rem; padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(#{$pr}#{$l}container > #{$pr}#{$u}expand > this)</div>
+    </div>
+</div>
+```
+
+*/
+
+#{$u-wrap} {
+
+	.#{$pr}#{$u}expand {
+	    margin-left: -100vw;
+	    margin-right: -100vw;
+	    padding-left: 100vw;
+	    padding-right: 100vw;
+	}
+
+}
+
+}

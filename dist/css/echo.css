@@ -6770,31 +6770,31 @@ category: utility-clearfix
 
 /*doc
 ---
-title: container-expand
-name: container-expand
-category: utility-container-expand
+title: expand
+name: expand
+category: utility-expand
 ---
 
-コンテナブロックの最大幅を無視して、要素の背景とボーダーのみをウィンドウ全体に広げる。  
+**コンテナブロックの最大幅を無視**して、要素のアウトラインのみをウィンドウ全体に広げる。  
 仕様上、2カラム以上のレイアウトでは使用できない。  
-<code>.l-document</code> の幅制限を解除していると、横スクロールバーが表示されてしまう。
+<code>.l-document</code> の <code>max-width</code> を解除していると、横スクロールバーが表示されてしまう。
 
 ``` example
 <div class="l-container bg-first bg-mild">
-    <div style="margin-bottom: 1rem; padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(l-container + contents)</div>
+    <div style="margin-bottom: 1rem; padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(l-container > this)</div>
 
-    <div class="container-expand bg-second bg-mild">
-        <div style="margin-bottom: 1rem; padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(l-container + container-expand + contents)</div>
+    <div class="expand bg-second bg-mild">
+        <div style="margin-bottom: 1rem; padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(l-container > expand > this)</div>
     </div>
 </div>
 ```
 
 */
-#document .container-expand {
-  margin-left: -9999px;
-  margin-right: -9999px;
-  padding-left: 9999px;
-  padding-right: 9999px;
+#document .expand {
+  margin-left: -100vw;
+  margin-right: -100vw;
+  padding-left: 100vw;
+  padding-right: 100vw;
 }
 
 /*doc

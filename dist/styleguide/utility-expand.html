@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>utility-expand | Style guide | echo-css</title>
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div class="l-document" id="document">
+
+    <header class="s-header">
+        <div class="s-header-brand">
+            <p class="s-title s-header-title"><img src="../images/common/logo_white.svg" height="24" alt="echo-css"> <span class="s-label">v0.8.0</span></p>
+        </div><!-- /.s-header-brand -->
+
+        <?php include('../doc_include/header_nav.inc'); ?>
+    </header>
+
+    <div class="s-container s-container-fluid">
+        <div class="s-contents s-contents-2col">
+            <main class="s-contents-main" role="main">
+
+                
+                <div class="s-pageheader">
+                    <h1 class="s-title s-pageheader-title">utility-expand</h1>
+                </div><!-- /.s-pageheader -->
+                
+
+                
+
+                <article class="s-post">
+                    <div class="s-post-contents styleguide-contents"><h1 id="expand" class="styleguide">expand</h1>
+
+<p><strong>コンテナブロックの最大幅を無視</strong>して、要素のアウトラインのみをウィンドウ全体に広げる。<br>
+仕様上、2カラム以上のレイアウトでは使用できない。<br>
+<code>.l-document</code> の <code>max-width</code> を解除していると、横スクロールバーが表示されてしまう。</p>
+<div class="example"><div class="l-container bg-first bg-mild">
+    <div style="margin-bottom: 1rem; padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(l-container > this)</div>
+
+    <div class="expand bg-second bg-mild">
+        <div style="margin-bottom: 1rem; padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(l-container > expand > this)</div>
+    </div>
+</div>
+</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-container bg-first bg-mild"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000"</span><span class="nt">&gt;</span>(l-container &gt; this)<span class="nt">&lt;/div&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"expand bg-second bg-mild"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000"</span><span class="nt">&gt;</span>(l-container &gt; expand &gt; this)<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div><?php include('../doc_include/footer.inc'); ?>
