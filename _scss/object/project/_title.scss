@@ -2,7 +2,7 @@
 ---
 title: #{$pr}#{$p}title-(type)
 name: title
-category: module-title
+category: project-title
 ---
 
 見出しを表示する。ウィンドウ幅によって外観が変動する。
@@ -38,7 +38,7 @@ category: module-title
 ---
 title: #{$pr}#{$p}title-(group)-(type)
 name: title-01-type
-category: module-title
+category: project-title
 parent: title
 ---
 
@@ -48,9 +48,7 @@ parent: title
 <code>(group)</code> は以下の例が考えられる。
 
 - <code>post / card / widget ...</code>
-- <code>widget01 / widget02 ...</code>
 - <code>news / product / event ...</code>
-- <code>bordered / based / icon ...</code>
 
 <code>(type)</code> は <code>01 / 02 / 03 ...</code> , <code>bordered / based / iconed ...</code> 等が考えられる。
 

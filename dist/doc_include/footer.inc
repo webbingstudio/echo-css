@@ -10,8 +10,6 @@
 
 					    <li class="s-sitemap-item"><a href="./typography.html">typography</a></li>
 
-					    <li class="s-sitemap-item"><a href="./wysiwyg.html">WYSIWYG</a></li>
-
 					    <li class="s-sitemap-item"><span class="s-sitemap-label">layout</span>
 					        <ul class="s-sitemap-list s-sitemap-children">
 					            <li class="s-sitemap-item"><a href="./layout-container.html">container</a></li>
@@ -34,7 +32,6 @@
 					                    <li class="s-sitemap-item"><a href="./module-radio.html">radio</a></li>
 					                    <li class="s-sitemap-item"><a href="./module-select.html">select</a></li>
 					                    <li class="s-sitemap-item"><a href="./module-table.html">table</a></li>
-					                    <li class="s-sitemap-item"><a href="./module-title.html">title</a></li>
 					                    <li class="s-sitemap-item"><a href="./module-thumbnail.html">thumbnail</a></li>
 					                </ul>
 					            </li>
@@ -48,7 +45,6 @@
 					                    <li class="s-sitemap-item"><a href="./component-headline.html">headline</a></li>
 					                    <li class="s-sitemap-item"><a href="./component-hero.html">hero</a></li>
 					                    <li class="s-sitemap-item"><a href="./component-media.html">media</a></li>
-					                    <li class="s-sitemap-item"><a href="./component-panel.html">panel</a></li>
 					                </ul>
 					            </li>
 					            <li class="s-sitemap-item"><span class="s-sitemap-label">utility</span>
@@ -68,6 +64,14 @@
 					                    <li class="s-sitemap-item"><a href="./utility-shadow.html">shadow</a></li>
 					                    <li class="s-sitemap-item"><a href="./utility-sr.html">screen reader</a></li>
 					                    <li class="s-sitemap-item"><a href="./utility-text.html">text</a></li>
+					                </ul>
+					            </li>
+					            <li class="s-sitemap-item"><span class="s-sitemap-label">project</span>
+					                <ul class="s-sitemap-list s-sitemap-children">
+					                    <li class="s-sitemap-item"><a href="./project-title.html">title</a></li>
+					                    <li class="s-sitemap-item"><a href="./project-widget.html">widget</a></li>
+					                    <li class="s-sitemap-item"><a href="./project-widgetarea.html">widgetarea</a></li>
+					                    <li class="s-sitemap-item"><a href="./project-wysiwyg.html">wysiwyg(WordPress)</a></li>
 					                </ul>
 					            </li>
 					        </ul>

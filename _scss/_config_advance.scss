@@ -44,7 +44,7 @@ $p: "p-" !default;
 
 // wysiwyg-class
 // ex. wysiwyg, freetext, richtext...
-$wysiwyg:   "wysiwyg" !default;
+$wysiwyg:   $p + "wysiwyg" !default;
 
 // widget-area-name
 // ex. widgetarea, layout, page, region...

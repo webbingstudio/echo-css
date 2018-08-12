@@ -1,17 +1,18 @@
 /*doc
 ---
 title: WYSIWYG Styles (WordPress)
-name: #{$wysiwyg}-wordpress
-category: wysiwyg
+name: #{$wysiwyg}
+category: project-wysiwyg
 ---
 
 コンテンツ・マネージメント・システムの仕様上、クラスを指定することができない、自由文エリアの標準スタイル。  
-以下の条件に合致する要素に適用される。この条件から漏れるようなコンポーネントは使用できない。
+<code>.#{$wysiwyg}</code> 内の最初の要素は、強制的に上マージンが0となる（!important）。  
+以下の条件に合致する要素に適用され、この条件から漏れるようなコンポーネントは使用できない。
 
 1. <code>.#{$wysiwyg}</code> を付与した要素で包括されている
-1. 要素自体に以下のクラスが付与されていない
+1. 要素に以下のクラスが付与されていない
     - a:  link, btn, label
-    - h:  title
+    - h1 - h6:  title
     - ul: list
     - ol: list
     - dl: list
@@ -23,7 +24,6 @@ category: wysiwyg
 1. figure要素に以下のクラスが付与されている
     - align-*
 
-なお、<code>.#{$wysiwyg}</code> 内の最初の要素は、強制的に上マージンが0となる。（!importantを使用している）
 
 
 ``` example
@@ -213,7 +213,7 @@ category: wysiwyg
     word-break: break-word;
     padding-bottom: ($spacer * 4);
 
-    *:first-child {
+    > *:first-child {
         margin-top: 0 !important;
     }
 

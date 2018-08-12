@@ -8235,7 +8235,7 @@ category: utility-text
 ---
 title: p-title-(type)
 name: title
-category: module-title
+category: project-title
 ---
 
 見出しを表示する。ウィンドウ幅によって外観が変動する。
@@ -8269,7 +8269,7 @@ category: module-title
 ---
 title: p-title-(group)-(type)
 name: title-01-type
-category: module-title
+category: project-title
 parent: title
 ---
 
@@ -8279,9 +8279,7 @@ parent: title
 <code>(group)</code> は以下の例が考えられる。
 
 - <code>post / card / widget ...</code>
-- <code>widget01 / widget02 ...</code>
 - <code>news / product / event ...</code>
-- <code>bordered / based / icon ...</code>
 
 <code>(type)</code> は <code>01 / 02 / 03 ...</code> , <code>bordered / based / iconed ...</code> 等が考えられる。
 
@@ -8436,17 +8434,18 @@ parent: title
 /*doc
 ---
 title: WYSIWYG Styles (WordPress)
-name: wysiwyg-wordpress
-category: wysiwyg
+name: p-wysiwyg
+category: project-wysiwyg
 ---
 
 コンテンツ・マネージメント・システムの仕様上、クラスを指定することができない、自由文エリアの標準スタイル。  
-以下の条件に合致する要素に適用される。この条件から漏れるようなコンポーネントは使用できない。
+<code>.p-wysiwyg</code> 内の最初の要素は、強制的に上マージンが0となる（!important）。  
+以下の条件に合致する要素に適用され、この条件から漏れるようなコンポーネントは使用できない。
 
-1. <code>.wysiwyg</code> を付与した要素で包括されている
-1. 要素自体に以下のクラスが付与されていない
+1. <code>.p-wysiwyg</code> を付与した要素で包括されている
+1. 要素に以下のクラスが付与されていない
     - a:  link, btn, label
-    - h:  title
+    - h1 - h6:  title
     - ul: list
     - ol: list
     - dl: list
@@ -8458,14 +8457,13 @@ category: wysiwyg
 1. figure要素に以下のクラスが付与されている
     - align-*
 
-なお、<code>.wysiwyg</code> 内の最初の要素は、強制的に上マージンが0となる。（!importantを使用している）
 
 
 ``` example
 <div class="c-box">
     <p>以下は、<a href="https://ja.wordpress.org/themes/" target="_blank">WordPressテーマディレクトリ</a>のサンプルコードを日本語訳し、より想定外のケースに対応したものです。</p>
 </div>
-<div class="wysiwyg">
+<div class="p-wysiwyg">
     <p>このHTMLの目的は、CSSを使ってどのようなデフォルト設定を決定し、可能なHTML要素がこのHTMLに含まれているかを確認し、サイトを設計する際に考えられる要素を見落とさないようにすることです。</p>
     <hr>
     <h1>見出し1</h1>
@@ -8644,26 +8642,26 @@ category: wysiwyg
 ```
 
 */
-.wysiwyg {
+.p-wysiwyg {
   word-break: break-word;
   padding-bottom: 40px;
 }
-.wysiwyg *:first-child {
+.p-wysiwyg > *:first-child {
   margin-top: 0 !important;
 }
-.wysiwyg a:not([class*="link"]):not([class*="btn"]):not([class*="label"]) {
+.p-wysiwyg a:not([class*="link"]):not([class*="btn"]):not([class*="label"]) {
   text-decoration: underline;
 }
-.wysiwyg a:not([class*="link"]):not([class*="btn"]):not([class*="label"]):hover {
+.p-wysiwyg a:not([class*="link"]):not([class*="btn"]):not([class*="label"]):hover {
   color: #4690da;
   text-decoration: none;
 }
-.wysiwyg h1:not([class*="title"]),
-.wysiwyg h2:not([class*="title"]),
-.wysiwyg h3:not([class*="title"]),
-.wysiwyg h4:not([class*="title"]),
-.wysiwyg h5:not([class*="title"]),
-.wysiwyg h6:not([class*="title"]) {
+.p-wysiwyg h1:not([class*="title"]),
+.p-wysiwyg h2:not([class*="title"]),
+.p-wysiwyg h3:not([class*="title"]),
+.p-wysiwyg h4:not([class*="title"]),
+.p-wysiwyg h5:not([class*="title"]),
+.p-wysiwyg h6:not([class*="title"]) {
   margin: 0;
   padding: 0;
   background: transparent none;
@@ -8674,21 +8672,21 @@ category: wysiwyg
   line-height: 1.5;
   border-radius: 0;
 }
-.wysiwyg h1:not([class*="title"]):before, .wysiwyg h1:not([class*="title"]):after,
-.wysiwyg h2:not([class*="title"]):before,
-.wysiwyg h2:not([class*="title"]):after,
-.wysiwyg h3:not([class*="title"]):before,
-.wysiwyg h3:not([class*="title"]):after,
-.wysiwyg h4:not([class*="title"]):before,
-.wysiwyg h4:not([class*="title"]):after,
-.wysiwyg h5:not([class*="title"]):before,
-.wysiwyg h5:not([class*="title"]):after,
-.wysiwyg h6:not([class*="title"]):before,
-.wysiwyg h6:not([class*="title"]):after {
+.p-wysiwyg h1:not([class*="title"]):before, .p-wysiwyg h1:not([class*="title"]):after,
+.p-wysiwyg h2:not([class*="title"]):before,
+.p-wysiwyg h2:not([class*="title"]):after,
+.p-wysiwyg h3:not([class*="title"]):before,
+.p-wysiwyg h3:not([class*="title"]):after,
+.p-wysiwyg h4:not([class*="title"]):before,
+.p-wysiwyg h4:not([class*="title"]):after,
+.p-wysiwyg h5:not([class*="title"]):before,
+.p-wysiwyg h5:not([class*="title"]):after,
+.p-wysiwyg h6:not([class*="title"]):before,
+.p-wysiwyg h6:not([class*="title"]):after {
   display: none;
 }
-.wysiwyg h1:not([class*="title"]),
-.wysiwyg h2:not([class*="title"]) {
+.p-wysiwyg h1:not([class*="title"]),
+.p-wysiwyg h2:not([class*="title"]) {
   font-size: 1.25rem;
   margin-top: 2em;
   margin-bottom: .75em;
@@ -8698,55 +8696,55 @@ category: wysiwyg
   -moz-osx-font-smoothing: grayscale;
 }
 @media (min-width: 1000px) {
-  .wysiwyg h1:not([class*="title"]),
-  .wysiwyg h2:not([class*="title"]) {
+  .p-wysiwyg h1:not([class*="title"]),
+  .p-wysiwyg h2:not([class*="title"]) {
     font-size: 1.75rem;
   }
 }
-.wysiwyg h3:not([class*="title"]) {
+.p-wysiwyg h3:not([class*="title"]) {
   font-size: 1.25rem;
   margin-top: 1.5em;
   margin-bottom: .75em;
 }
 @media (min-width: 1000px) {
-  .wysiwyg h3:not([class*="title"]) {
+  .p-wysiwyg h3:not([class*="title"]) {
     font-size: 1.5rem;
   }
 }
-.wysiwyg h4:not([class*="title"]) {
+.p-wysiwyg h4:not([class*="title"]) {
   font-size: 1.125rem;
   margin-top: 1em;
   margin-bottom: .5em;
 }
 @media (min-width: 1000px) {
-  .wysiwyg h4:not([class*="title"]) {
+  .p-wysiwyg h4:not([class*="title"]) {
     font-size: 1.25rem;
   }
 }
-.wysiwyg h5:not([class*="title"]) {
+.p-wysiwyg h5:not([class*="title"]) {
   font-size: 1rem;
   margin-top: 1em;
   margin-bottom: .5em;
 }
-.wysiwyg h6:not([class*="title"]) {
+.p-wysiwyg h6:not([class*="title"]) {
   font-size: 1rem;
   margin-bottom: .5em;
 }
-.wysiwyg ul:not([class*="list"]),
-.wysiwyg ol:not([class*="list"]) {
+.p-wysiwyg ul:not([class*="list"]),
+.p-wysiwyg ol:not([class*="list"]) {
   overflow: hidden;
 }
-.wysiwyg ul:not([class*="list"]) {
+.p-wysiwyg ul:not([class*="list"]) {
   margin: 0 0 .5rem;
   padding: 0;
 }
-.wysiwyg ul:not([class*="list"]) > li {
+.p-wysiwyg ul:not([class*="list"]) > li {
   position: relative;
   margin: .5rem 0;
   padding: 0 0 0 1.5rem;
   list-style-type: none;
 }
-.wysiwyg ul:not([class*="list"]) > li:before {
+.p-wysiwyg ul:not([class*="list"]) > li:before {
   display: block;
   content: "";
   position: absolute;
@@ -8756,23 +8754,23 @@ category: wysiwyg
   height: .25em;
   background-color: #333;
 }
-.wysiwyg ul:not([class*="list"]) > li ul:not([class*="list"]),
-.wysiwyg ul:not([class*="list"]) > li ol:not([class*="list"]) {
+.p-wysiwyg ul:not([class*="list"]) > li ul:not([class*="list"]),
+.p-wysiwyg ul:not([class*="list"]) > li ol:not([class*="list"]) {
   margin-top: .5rem !important;
   margin-bottom: 0 !important;
 }
-.wysiwyg ol:not([class*="list"]) {
+.p-wysiwyg ol:not([class*="list"]) {
   counter-reset: ol_number;
   margin: 0 0 .5rem;
   padding: 0;
 }
-.wysiwyg ol:not([class*="list"]) > li {
+.p-wysiwyg ol:not([class*="list"]) > li {
   position: relative;
   margin: .5rem 0;
   padding: 0 0 0 1.5rem;
   list-style-type: none;
 }
-.wysiwyg ol:not([class*="list"]) > li:before {
+.p-wysiwyg ol:not([class*="list"]) > li:before {
   display: block;
   counter-increment: ol_number;
   content: counter(ol_number) ".";
@@ -8782,24 +8780,24 @@ category: wysiwyg
   width: 1rem;
   text-align: center;
 }
-.wysiwyg ol:not([class*="list"]) > li ul:not([class*="list"]),
-.wysiwyg ol:not([class*="list"]) > li ol:not([class*="list"]) {
+.p-wysiwyg ol:not([class*="list"]) > li ul:not([class*="list"]),
+.p-wysiwyg ol:not([class*="list"]) > li ol:not([class*="list"]) {
   margin-top: .5em !important;
   margin-bottom: 0 !important;
 }
-.wysiwyg dl:not([class*="list"]) {
+.p-wysiwyg dl:not([class*="list"]) {
   margin: 0;
   padding: 0;
 }
-.wysiwyg dl:not([class*="list"]) > dt {
+.p-wysiwyg dl:not([class*="list"]) > dt {
   margin: 0 0 .5em;
   padding: 0;
 }
-.wysiwyg dl:not([class*="list"]) > dd {
+.p-wysiwyg dl:not([class*="list"]) > dd {
   margin: 0 0 .5em;
   padding: 0 0 0 1.5rem;
 }
-.wysiwyg hr:not([class]) {
+.p-wysiwyg hr:not([class]) {
   overflow: hidden;
   margin: 30px 0;
   height: #bbb;
@@ -8807,7 +8805,7 @@ category: wysiwyg
   border-style: solid none none;
   border-color: #bbb transparent transparent;
 }
-.wysiwyg blockquote:not([class]) {
+.p-wysiwyg blockquote:not([class]) {
   overflow: hidden;
   margin: 30px 0;
   padding: 10px;
@@ -8816,7 +8814,7 @@ category: wysiwyg
   border-color: transparent transparent transparent #d8f0f7;
   font-style: normal;
 }
-.wysiwyg table:not([class]) {
+.p-wysiwyg table:not([class]) {
   display: block;
   width: 100%;
   max-width: 100%;
@@ -8826,34 +8824,34 @@ category: wysiwyg
   border-color: #bbb;
 }
 @media (min-width: 425px) {
-  .wysiwyg table:not([class]) {
+  .p-wysiwyg table:not([class]) {
     display: table;
   }
 }
-.wysiwyg table:not([class]) thead,
-.wysiwyg table:not([class]) tbody,
-.wysiwyg table:not([class]) tfoot {
+.p-wysiwyg table:not([class]) thead,
+.p-wysiwyg table:not([class]) tbody,
+.p-wysiwyg table:not([class]) tfoot {
   display: block;
 }
 @media (min-width: 425px) {
-  .wysiwyg table:not([class]) thead,
-  .wysiwyg table:not([class]) tbody,
-  .wysiwyg table:not([class]) tfoot {
+  .p-wysiwyg table:not([class]) thead,
+  .p-wysiwyg table:not([class]) tbody,
+  .p-wysiwyg table:not([class]) tfoot {
     display: table-row-group;
   }
 }
-.wysiwyg table:not([class]) tr {
+.p-wysiwyg table:not([class]) tr {
   display: block;
   border-bottom: 2px solid #bbb;
 }
 @media (min-width: 425px) {
-  .wysiwyg table:not([class]) tr {
+  .p-wysiwyg table:not([class]) tr {
     display: table-row;
     border-bottom: 0 none;
   }
 }
-.wysiwyg table:not([class]) th,
-.wysiwyg table:not([class]) td {
+.p-wysiwyg table:not([class]) th,
+.p-wysiwyg table:not([class]) td {
   display: block;
   width: 100%;
   padding: 5px 10px;
@@ -8864,65 +8862,65 @@ category: wysiwyg
   vertical-align: top;
 }
 @media (min-width: 425px) {
-  .wysiwyg table:not([class]) th,
-  .wysiwyg table:not([class]) td {
+  .p-wysiwyg table:not([class]) th,
+  .p-wysiwyg table:not([class]) td {
     display: table-cell;
     width: auto;
   }
 }
-.wysiwyg table:not([class]) th {
+.p-wysiwyg table:not([class]) th {
   text-align: left;
 }
-.wysiwyg table:not([class]) th.line-c {
+.p-wysiwyg table:not([class]) th.line-c {
   text-align: center;
 }
-.wysiwyg table:not([class]) th.line-r {
+.p-wysiwyg table:not([class]) th.line-r {
   text-align: right;
 }
-.wysiwyg table:not([class]) thead th {
+.p-wysiwyg table:not([class]) thead th {
   vertical-align: bottom;
 }
-.wysiwyg img {
+.p-wysiwyg img {
   max-width: 100%;
   height: auto;
 }
-.wysiwyg img[class*="alignnone"],
-.wysiwyg figure[class*="alignnone"] {
+.p-wysiwyg img[class*="alignnone"],
+.p-wysiwyg figure[class*="alignnone"] {
   display: block !important;
   margin: 0 0 20px !important;
 }
-.wysiwyg img[class*="alignleft"],
-.wysiwyg figure[class*="alignleft"] {
+.p-wysiwyg img[class*="alignleft"],
+.p-wysiwyg figure[class*="alignleft"] {
   float: none !important;
   display: block !important;
   margin: 0 auto 20px !important;
 }
 @media (min-width: 425px) {
-  .wysiwyg img[class*="alignleft"],
-  .wysiwyg figure[class*="alignleft"] {
+  .p-wysiwyg img[class*="alignleft"],
+  .p-wysiwyg figure[class*="alignleft"] {
     float: left !important;
     margin: 0 20px 20px 0 !important;
   }
 }
-.wysiwyg img[class*="alignright"],
-.wysiwyg figure[class*="alignright"] {
+.p-wysiwyg img[class*="alignright"],
+.p-wysiwyg figure[class*="alignright"] {
   float: none !important;
   display: block !important;
   margin: 0 auto 20px !important;
 }
 @media (min-width: 425px) {
-  .wysiwyg img[class*="alignright"],
-  .wysiwyg figure[class*="alignright"] {
+  .p-wysiwyg img[class*="alignright"],
+  .p-wysiwyg figure[class*="alignright"] {
     float: right !important;
     margin: 0 0 20px 20px !important;
   }
 }
-.wysiwyg img[class*="aligncenter"],
-.wysiwyg figure[class*="aligncenter"] {
+.p-wysiwyg img[class*="aligncenter"],
+.p-wysiwyg figure[class*="aligncenter"] {
   display: block !important;
   margin: 0 auto 20px !important;
 }
-.wysiwyg .wp-caption-text {
+.p-wysiwyg .wp-caption-text {
   line-height: 1.5;
   color: #888;
   font-size: 0.875rem;
