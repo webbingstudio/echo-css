@@ -31,25 +31,53 @@
                 
 
                 
+                <nav class="s-anchor">
+                    <ul class="s-anchor-list">
+                        
+                        <li class="s-anchor-item"><a href="#expand" class="js-scrollto">expand</a></li>
+                        
+                        <li class="s-anchor-item"><a href="#expand-01-sm-down" class="js-scrollto">expand-sm-down</a></li>
+                        
+                    </ul>
+                </nav>
+                
 
                 <article class="s-post">
                     <div class="s-post-contents styleguide-contents"><h1 id="expand" class="styleguide">expand</h1>
 
-<p><strong>コンテナブロックの最大幅を無視</strong>して、要素のアウトラインのみをウィンドウ全体に広げる。<br>
-仕様上、2カラム以上のレイアウトでは使用できない。<br>
+<p><strong>コンテナブロックの最大幅を無視</strong>して、要素のアウトラインのみをウィンドウ幅全体に拡張する。<br>
 <code>.l-document</code> の <code>max-width</code> を解除していると、横スクロールバーが表示されてしまう。</p>
-<div class="example"><div class="l-container bg-first bg-mild">
+<div class="example"><div class="l-container" style="background-color: #ffaacc; padding-top: 1rem; padding-bottom: 1rem;">
     <div style="margin-bottom: 1rem; padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(l-container > this)</div>
 
-    <div class="expand bg-second bg-mild">
-        <div style="margin-bottom: 1rem; padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(l-container > expand > this)</div>
+    <div class="expand" style="background-color: #ffcc66;">
+        <div style="padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(l-container > expand > this)</div>
     </div>
 </div>
-</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-container bg-first bg-mild"</span><span class="nt">&gt;</span>
+</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-container"</span> <span class="na">style=</span><span class="s">"background-color: #ffaacc; padding-top: 1rem; padding-bottom: 1rem;"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000"</span><span class="nt">&gt;</span>(l-container &gt; this)<span class="nt">&lt;/div&gt;</span>
 
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"expand bg-second bg-mild"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000"</span><span class="nt">&gt;</span>(l-container &gt; expand &gt; this)<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"expand"</span> <span class="na">style=</span><span class="s">"background-color: #ffcc66;"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000"</span><span class="nt">&gt;</span>(l-container &gt; expand &gt; this)<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+<h2 id="expand-01-sm-down" class="styleguide">expand-sm-down</h2>
+
+<p>(breakpoint)が <code>sm</code> 以下のときのみ、コンテナブロックの余白を無視して、要素全体をウィンドウ幅全体に拡張する。<br>
+<code>expand</code> とは異なり、<code>.l-document</code> の変更による影響はない。</p>
+<div class="example"><div class="l-container" style="background-color: #ffaacc; padding-top: 1rem; padding-bottom: 1rem;">
+    <div style="margin-bottom: 1rem; padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(l-container > this)</div>
+
+    <div class="expand-sm-down" style="background-color: #ffcc66;">
+        <div style="padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(l-container > expand-sm-down > this)</div>
+    </div>
+</div>
+</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-container"</span> <span class="na">style=</span><span class="s">"background-color: #ffaacc; padding-top: 1rem; padding-bottom: 1rem;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000"</span><span class="nt">&gt;</span>(l-container &gt; this)<span class="nt">&lt;/div&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"expand-sm-down"</span> <span class="na">style=</span><span class="s">"background-color: #ffcc66;"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000"</span><span class="nt">&gt;</span>(l-container &gt; expand-sm-down &gt; this)<span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </pre></div><?php include('../doc_include/footer.inc'); ?>

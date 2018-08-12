@@ -7,16 +7,15 @@ name: expand
 category: utility-expand
 ---
 
-**コンテナブロックの最大幅を無視**して、要素のアウトラインのみをウィンドウ全体に広げる。  
-仕様上、2カラム以上のレイアウトでは使用できない。  
+**コンテナブロックの最大幅を無視**して、要素のアウトラインのみをウィンドウ幅全体に拡張する。  
 <code>.#{$pr}#{$l}document</code> の <code>max-width</code> を解除していると、横スクロールバーが表示されてしまう。
 
 ``` example
-<div class="#{$pr}#{$l}container #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-mild">
+<div class="#{$pr}#{$l}container" style="background-color: #ffaacc; padding-top: 1rem; padding-bottom: 1rem;">
     <div style="margin-bottom: 1rem; padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(#{$pr}#{$l}container > this)</div>
 
-    <div class="#{$pr}#{$u}expand #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-mild">
-        <div style="margin-bottom: 1rem; padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(#{$pr}#{$l}container > #{$pr}#{$u}expand > this)</div>
+    <div class="#{$pr}#{$u}expand" style="background-color: #ffcc66;">
+        <div style="padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(#{$pr}#{$l}container > #{$pr}#{$u}expand > this)</div>
     </div>
 </div>
 ```
@@ -33,5 +32,43 @@ category: utility-expand
 	}
 
 }
+
+
+
+/*doc
+---
+title: #{$pr}#{$u}expand-sm-down
+name: expand-01-sm-down
+category: utility-expand
+parent: expand
+---
+
+(breakpoint)が <code>sm</code> 以下のときのみ、コンテナブロックの余白を無視して、要素全体をウィンドウ幅全体に拡張する。  
+<code>#{$pr}#{$u}expand</code> とは異なり、<code>.#{$pr}#{$l}document</code> の変更による影響はない。
+
+``` example
+<div class="#{$pr}#{$l}container" style="background-color: #ffaacc; padding-top: 1rem; padding-bottom: 1rem;">
+    <div style="margin-bottom: 1rem; padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(#{$pr}#{$l}container > this)</div>
+
+    <div class="#{$pr}#{$u}expand-sm-down" style="background-color: #ffcc66;">
+        <div style="padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(#{$pr}#{$l}container > #{$pr}#{$u}expand-sm-down > this)</div>
+    </div>
+</div>
+```
+*/
+
+#{$u-wrap} {
+
+	.#{$pr}#{$u}expand-sm-down {
+
+	    @include media-breakpoint-down(sm) {
+		    margin-left: (map-get($grid-gutter-widths, md) / -2);
+		    margin-right: (map-get($grid-gutter-widths, md) / -2);
+	    }
+
+	}
+
+}
+
 
 }

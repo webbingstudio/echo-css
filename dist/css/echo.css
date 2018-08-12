@@ -468,37 +468,6 @@ parent: container
 
 /*doc
 ---
-title: l-container-full-md
-name: container-04-full-md
-category: layout-container
-parent: container
----
-
-(breakpoint)が <code>md</code> 以下のときにコンテナ余白を打ち消す。モバイル端末での幅100%表示等に使用する。
-
-``` example
-<div class="l-container l-container-full-md bg-fourth bg-mild margin-b">
-    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
-</div>
-
-<div class="l-container l-container-sm l-container-full-md bg-fourth bg-mild margin-b">
-    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
-</div>
-
-<div class="l-container l-container-lg l-container-full-md bg-fourth bg-mild margin-b">
-    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
-</div>
-```
-*/
-@media (max-width: 999.9px) {
-  .l-container-full-md {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-/*doc
----
 title: l-row
 name: grid-01-row
 category: layout-grid
@@ -6775,16 +6744,15 @@ name: expand
 category: utility-expand
 ---
 
-**コンテナブロックの最大幅を無視**して、要素のアウトラインのみをウィンドウ全体に広げる。  
-仕様上、2カラム以上のレイアウトでは使用できない。  
+**コンテナブロックの最大幅を無視**して、要素のアウトラインのみをウィンドウ幅全体に拡張する。  
 <code>.l-document</code> の <code>max-width</code> を解除していると、横スクロールバーが表示されてしまう。
 
 ``` example
-<div class="l-container bg-first bg-mild">
+<div class="l-container" style="background-color: #ffaacc; padding-top: 1rem; padding-bottom: 1rem;">
     <div style="margin-bottom: 1rem; padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(l-container > this)</div>
 
-    <div class="expand bg-second bg-mild">
-        <div style="margin-bottom: 1rem; padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(l-container > expand > this)</div>
+    <div class="expand" style="background-color: #ffcc66;">
+        <div style="padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(l-container > expand > this)</div>
     </div>
 </div>
 ```
@@ -6795,6 +6763,34 @@ category: utility-expand
   margin-right: -100vw;
   padding-left: 100vw;
   padding-right: 100vw;
+}
+
+/*doc
+---
+title: expand-sm-down
+name: expand-01-sm-down
+category: utility-expand
+parent: expand
+---
+
+(breakpoint)が <code>sm</code> 以下のときのみ、コンテナブロックの余白を無視して、要素全体をウィンドウ幅全体に拡張する。  
+<code>expand</code> とは異なり、<code>.l-document</code> の変更による影響はない。
+
+``` example
+<div class="l-container" style="background-color: #ffaacc; padding-top: 1rem; padding-bottom: 1rem;">
+    <div style="margin-bottom: 1rem; padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(l-container > this)</div>
+
+    <div class="expand-sm-down" style="background-color: #ffcc66;">
+        <div style="padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(l-container > expand-sm-down > this)</div>
+    </div>
+</div>
+```
+*/
+@media (max-width: 767.9px) {
+  #document .expand-sm-down {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
 }
 
 /*doc

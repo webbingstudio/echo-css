@@ -135,39 +135,3 @@ parent: container
     }
 
 }
-
-
-/*doc
----
-title: #{$pr}#{$l}container-full-md
-name: container-04-full-md
-category: layout-container
-parent: container
----
-
-(breakpoint)が <code>md</code> 以下のときにコンテナ余白を打ち消す。モバイル端末での幅100%表示等に使用する。
-
-``` example
-<div class="#{$pr}#{$l}container #{$pr}#{$l}container-full-md #{$pr}#{$u}bg-#{$__fourth} #{$pr}#{$u}bg-mild #{$pr}#{$u}margin-b">
-    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
-</div>
-
-<div class="#{$pr}#{$l}container #{$pr}#{$l}container-sm #{$pr}#{$l}container-full-md #{$pr}#{$u}bg-#{$__fourth} #{$pr}#{$u}bg-mild #{$pr}#{$u}margin-b">
-    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
-</div>
-
-<div class="#{$pr}#{$l}container #{$pr}#{$l}container-lg #{$pr}#{$l}container-full-md #{$pr}#{$u}bg-#{$__fourth} #{$pr}#{$u}bg-mild #{$pr}#{$u}margin-b">
-    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
-</div>
-```
-*/
-
-.#{$pr}#{$l}container-full-md {
-
-    @include media-breakpoint-down(md) {
-            padding-left: 0;
-            padding-right: 0;
-    }
-
-}
-
