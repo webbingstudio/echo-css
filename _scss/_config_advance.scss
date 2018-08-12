@@ -48,11 +48,11 @@ $wysiwyg:   $p + "wysiwyg" !default;
 
 // widget-area-name
 // ex. widgetarea, layout, page, region...
-$widgetarea: "widgetarea" !default;
+$widgetarea: $p + "widgetarea" !default;
 
 // widget-name
 // ex. widget, module, box, view...
-$widget: "widget" !default;
+$widget: $p + "widget" !default;
 
 // nav-current-name
 // ex. is-active, active, current, stay...

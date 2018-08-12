@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>project-widget | Style guide | echo-css</title>
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div class="l-document" id="document">
+
+    <header class="s-header">
+        <div class="s-header-brand">
+            <p class="s-title s-header-title"><img src="../images/common/logo_white.svg" height="24" alt="echo-css"> <span class="s-label">v0.8.0</span></p>
+        </div><!-- /.s-header-brand -->
+
+        <?php include('../doc_include/header_nav.inc'); ?>
+    </header>
+
+    <div class="s-container s-container-fluid">
+        <div class="s-contents s-contents-2col">
+            <main class="s-contents-main" role="main">
+
+                
+                <div class="s-pageheader">
+                    <h1 class="s-title s-pageheader-title">project-widget</h1>
+                </div><!-- /.s-pageheader -->
+                
+
+                
+
+                <article class="s-post">
+                    <div class="s-post-contents styleguide-contents"><h1 id="p-widget" class="styleguide">.p-widget</h1>
+
+<p>新着情報など、サイト内で配置が不定となる可能性があるパーツを表示する。<br>
+必ず他のobjectが含まれる。<br>
+このクラス単独では、下余白や <code>position: relative</code> の指定のみを行う。</p>
+<div class="example"><div class="p-widget">
+    <div class="p-widget-header">
+        <div style="padding: 1rem; text-align:center; background-color: #ddeeff;">(p-widget-header)</div>
+    </div><!-- /.p-widget-header -->
+
+    <div class="p-widget-contents">
+        <div style="padding: 1rem; text-align:center; background-color: #eeffdd;">(p-widget-contents)</div>
+    </div><!-- /.p-widget-contents -->
+
+    <div class="p-widget-footer">
+        <div style="padding: 1rem; text-align:center; background-color: #ffddee;">(p-widget-footer)</div>
+    </div><!-- /.p-widget-footer -->
+
+</div><!-- /.p-widget -->
+
+<div class="p-widget">
+    <div class="p-widget-header">
+        <div style="padding: 1rem; text-align:center; background-color: #ddeeff;">(p-widget-header)</div>
+    </div><!-- /.p-widget-header -->
+
+    <div class="p-widget-contents">
+        <div style="padding: 1rem; text-align:center; background-color: #eeffdd;">(p-widget-contents)</div>
+    </div><!-- /.p-widget-contents -->
+
+    <div class="p-widget-footer">
+        <div style="padding: 1rem; text-align:center; background-color: #ffddee;">(p-widget-footer)</div>
+    </div><!-- /.p-widget-footer -->
+
+</div><!-- /.p-widget -->
+</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-widget"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-widget-header"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; text-align:center; background-color: #ddeeff;"</span><span class="nt">&gt;</span>(p-widget-header)<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.p-widget-header --&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-widget-contents"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; text-align:center; background-color: #eeffdd;"</span><span class="nt">&gt;</span>(p-widget-contents)<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.p-widget-contents --&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-widget-footer"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; text-align:center; background-color: #ffddee;"</span><span class="nt">&gt;</span>(p-widget-footer)<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.p-widget-footer --&gt;</span>
+
+<span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.p-widget --&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-widget"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-widget-header"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; text-align:center; background-color: #ddeeff;"</span><span class="nt">&gt;</span>(p-widget-header)<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.p-widget-header --&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-widget-contents"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; text-align:center; background-color: #eeffdd;"</span><span class="nt">&gt;</span>(p-widget-contents)<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.p-widget-contents --&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-widget-footer"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; text-align:center; background-color: #ffddee;"</span><span class="nt">&gt;</span>(p-widget-footer)<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.p-widget-footer --&gt;</span>
+
+<span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.p-widget --&gt;</span>
+</pre></div><?php include('../doc_include/footer.inc'); ?>

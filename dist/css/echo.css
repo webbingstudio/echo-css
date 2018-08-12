@@ -8489,6 +8489,115 @@ parent: title
 
 /*doc
 ---
+title: .p-widget
+name: p-widget
+category: project-widget
+---
+
+新着情報など、サイト内で配置が不定となる可能性があるパーツを表示する。  
+必ず他のobjectが含まれる。  
+このクラス単独では、下余白や <code>position: relative</code> の指定のみを行う。
+
+``` example
+<div class="p-widget">
+    <div class="p-widget-header">
+        <div style="padding: 1rem; text-align:center; background-color: #ddeeff;">(p-widget-header)</div>
+    </div><!-- /.p-widget-header -->
+
+    <div class="p-widget-contents">
+        <div style="padding: 1rem; text-align:center; background-color: #eeffdd;">(p-widget-contents)</div>
+    </div><!-- /.p-widget-contents -->
+
+    <div class="p-widget-footer">
+        <div style="padding: 1rem; text-align:center; background-color: #ffddee;">(p-widget-footer)</div>
+    </div><!-- /.p-widget-footer -->
+
+</div><!-- /.p-widget -->
+
+<div class="p-widget">
+    <div class="p-widget-header">
+        <div style="padding: 1rem; text-align:center; background-color: #ddeeff;">(p-widget-header)</div>
+    </div><!-- /.p-widget-header -->
+
+    <div class="p-widget-contents">
+        <div style="padding: 1rem; text-align:center; background-color: #eeffdd;">(p-widget-contents)</div>
+    </div><!-- /.p-widget-contents -->
+
+    <div class="p-widget-footer">
+        <div style="padding: 1rem; text-align:center; background-color: #ffddee;">(p-widget-footer)</div>
+    </div><!-- /.p-widget-footer -->
+
+</div><!-- /.p-widget -->
+```
+
+*/
+.p-widget {
+  margin-bottom: 20px;
+}
+@media (min-width: 425px) {
+  .p-widget {
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 1000px) {
+  .p-widget {
+    margin-bottom: 40px;
+  }
+}
+.p-widget .p-widget-header,
+.p-widget .p-widget-contents,
+.p-widget .p-widget-footer {
+  position: relative;
+}
+.p-widget .p-widget-header:before, .p-widget .p-widget-header:after,
+.p-widget .p-widget-contents:before,
+.p-widget .p-widget-contents:after,
+.p-widget .p-widget-footer:before,
+.p-widget .p-widget-footer:after {
+  content: "";
+  display: table;
+}
+.p-widget .p-widget-header:after,
+.p-widget .p-widget-contents:after,
+.p-widget .p-widget-footer:after {
+  clear: both;
+}
+
+.p-widget-sm {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+@media (min-width: 768px) {
+  .p-widget-sm {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+}
+@media (min-width: 1240px) {
+  .p-widget-sm {
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+}
+.p-widget-sm .p-widget-header {
+  padding-bottom: 20px;
+}
+@media (min-width: 1000px) {
+  .p-widget-sm .p-widget-header {
+    padding-bottom: 30px;
+  }
+}
+.p-widget-sm .p-widget-footer {
+  padding-top: 20px;
+}
+@media (min-width: 1000px) {
+  .p-widget-sm .p-widget-footer {
+    padding-top: 30px;
+  }
+}
+
+/*doc
+---
 title: WYSIWYG Styles (WordPress)
 name: p-wysiwyg
 category: project-wysiwyg
