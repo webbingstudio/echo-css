@@ -42,49 +42,37 @@ $p: "p-" !default;
 // Name
 // -----------------------------------------
 
-// post-name
-// ex. post, entry, article...
-$post: "post" !default;
+// wysiwyg-class
+// ex. wysiwyg, freetext, richtext...
+$wysiwyg:   "wysiwyg" !default;
 
-// widget-name
+// widget-area-name
 // ex. widgetarea, layout, page, region...
 $widgetarea: "widgetarea" !default;
+
+// widget-name
 // ex. widget, module, box, view...
 $widget: "widget" !default;
-
-// nav-name
-// ex. menu, navigation...
-$nav: "nav" !default;
 
 // nav-current-name
 // ex. is-active, active, current, stay...
 $nav-current: "is-current" !default;
-
-// action-active-name
-// ex. is-active, active...
-$action-active: "is-active" !default;
-
-// action-open-name
-// ex. is-open, open, active...
-$action-open: "is-open" !default;
-
-// action-close-name
-// ex. is-close, is-hidden, close...
-$action-close: "is-close" !default;
 
 // error-name
 // ex. is-error, error...
 $error: "is-error" !default;
 
 
-// List
+// Selector
 // -----------------------------------------
 
-// ex. .list-item or li
-$list-item: "." + $pr + $m + "list-item" !default;
+// utillity-wrap-selector
+// ユーティリティクラスの優先順位を上昇させるために、点数が30（0.0.3.0）以上になるようなセレクタを指定する
+// In order to raise the priority of the utility class, specify a selector whose score is 30 (0.0.3.0) or more
+$u-wrap:    "#document" !default;
 
-// ex. .list-item or li > ul
-$list-children: "." + $pr + $m + "list-children" !default;
+// icon-selector
+$icon:      '[class*="fa-"]' !default;
 
 
 // Container
