@@ -9,7 +9,7 @@ category: module-list
 <code>ul</code> に使用した場合は、子要素にクラスを指定していなくても有効になる。  
 
 ``` example
-<h3 class="#{$pr}#{$u}text-lg">すべての要素にクラスを付与した場合</h3>
+<h3 class="#{$pr}#{$u}text#{$c3}lg">すべての要素にクラスを付与した場合</h3>
 <ul class="#{$pr}#{$m}list">
     <li class="#{$pr}#{$m}list-item">あいうえおかきくけ10さしすせ</li>
     <li class="#{$pr}#{$m}list-item">あいうえおかきく
@@ -31,7 +31,7 @@ category: module-list
     <li class="#{$pr}#{$m}list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
 </ul>
 
-<h3 class="#{$pr}#{$u}text-lg #{$pr}#{$u}margin-t-lg">ulのみクラスを付与した場合</h3>
+<h3 class="#{$pr}#{$u}text#{$c3}lg #{$pr}#{$u}margin#{$c1}t#{$c3}lg">ulのみクラスを付与した場合</h3>
 <ul class="#{$pr}#{$m}list">
     <li>あいうえおかきくけ10さしすせ</li>
     <li>あいうえおかきく
@@ -88,7 +88,7 @@ parent: list
 階層構造を持ったリストを表示する。階層が深くなるごとに文字が小さくなる。
 
 ``` example
-<h3 class="#{$pr}#{$u}text-lg">すべての要素にクラスを付与した場合</h3>
+<h3 class="#{$pr}#{$u}text#{$c3}lg">すべての要素にクラスを付与した場合</h3>
 <ul class="#{$pr}#{$m}list #{$pr}#{$m}list-vertical">
     <li class="#{$pr}#{$m}list-item">あいうえおかきくけ10さしすせ</li>
     <li class="#{$pr}#{$m}list-item">あいうえおかきく
@@ -110,7 +110,7 @@ parent: list
     <li class="#{$pr}#{$m}list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
 </ul>
 
-<h3 class="#{$pr}#{$u}text-lg #{$pr}#{$u}margin-t-lg">ulのみクラスを付与した場合</h3>
+<h3 class="#{$pr}#{$u}text#{$c3}lg #{$pr}#{$u}margin#{$c1}t#{$c3}lg">ulのみクラスを付与した場合</h3>
 <ul class="#{$pr}#{$m}list #{$pr}#{$m}list-vertical">
     <li>あいうえおかきくけ10さしすせ</li>
     <li>あいうえおかきく
@@ -163,7 +163,7 @@ parent: list
 水平に並列するリストを表示する。階層構造を持たせることはできない。  
 
 ``` example
-<h3 class="#{$pr}#{$u}text-lg">すべての要素にクラスを付与した場合</h3>
+<h3 class="#{$pr}#{$u}text#{$c3}lg">すべての要素にクラスを付与した場合</h3>
 <ul class="#{$pr}#{$m}list #{$pr}#{$m}list-horizontal">
     <li class="#{$pr}#{$m}list-item">あいうえおかきくけ10さしすせ</li>
     <li class="#{$pr}#{$m}list-item">あいうえおかきく</li>
@@ -171,7 +171,7 @@ parent: list
     <li class="#{$pr}#{$m}list-item">あいうえおかきくけ</li>
 </ul>
 
-<h3 class="#{$pr}#{$u}text-lg #{$pr}#{$u}margin-t-lg">ulのみクラスを付与した場合</h3>
+<h3 class="#{$pr}#{$u}text#{$c3}lg #{$pr}#{$u}margin#{$c1}t#{$c3}lg">ulのみクラスを付与した場合</h3>
 <ul class="#{$pr}#{$m}list #{$pr}#{$m}list-horizontal">
     <li>あいうえおかきくけ10さしすせ</li>
     <li>あいうえおかきく</li>

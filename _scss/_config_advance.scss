@@ -1,6 +1,20 @@
 // Config: advance
 // ========================================
 
+// Conjunction
+// -----------------------------------------
+
+$c1: '-';
+$c2: '-';
+$c3: '-';
+
+@if ($rule == 'bem') {
+  $c1: '__';  // $block to $element
+  $c2: '_';   // $element to $key
+  $c3: '_';   // $key to $value
+}
+
+
 // Code Optimize
 // -----------------------------------------
 
@@ -15,11 +29,6 @@ $disabled-utility-class: false !default;
 
 // Prefix
 // -----------------------------------------
-
-// common-prefix
-// 他のCSSフレームワークとの衝突を回避したい場合は、接頭辞を指定する
-// Specify the prefix, if you want to avoid conflicts with other CSS frameworks
-$pr: "" !default;
 
 // layout-group-prefix
 $l: "l-" !default;
@@ -56,11 +65,11 @@ $widget: "widget" !default;
 
 // grid-row-name
 // ex. row(bootstrap compatible), wrap...
-$row: $l + 'grid-row' !default;
+$row: $l + 'grid' + $c1 + 'row' !default;
 
 // grid-col-name
 // ex. col(bootstrap compatible), cel...
-$col: $l + 'grid-col' !default;
+$col: $l + 'grid' + $c1 + 'col' !default;
 
 // nav-current-name
 // ex. is-active, active, current, stay...

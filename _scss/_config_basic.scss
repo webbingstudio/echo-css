@@ -1,6 +1,20 @@
 // Config: basic
 // ========================================
 
+// Prefix
+// -----------------------------------------
+
+// Common prefix
+// 他のCSSフレームワークとの衝突を回避したい場合は、接頭辞を指定する
+// Specify the prefix, if you want to avoid conflicts with other CSS frameworks
+$pr: '' !default;
+
+// Naming convention
+// "bem" を指定するとBEM記法となる
+// Specifying "bem" results in BEM notation
+$rule: 'bem' !default;
+
+
 // Spacer
 // -----------------------------------------
 

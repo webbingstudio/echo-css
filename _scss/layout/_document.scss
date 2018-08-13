@@ -7,12 +7,12 @@ category: layout-document
 
 ドキュメント全体を包括する。  
 ユーティリティクラスの重要度を上げるための<code>id="#{$u-wrap}"</code>はこの包括ブロックに指定することを想定している。  
-ユーティリティクラス <code>.#{$pr}#{$u}container-expand</code> や、オフキャンバス等の画面全体に影響する演出の影響を受けないよう、幅を制限している。  
-<code>.#{$pr}#{$u}container-expand</code> を使用する予定がない場合や、他のライブラリ等と干渉する場合は、この要素は削除してもかまわない。
+ユーティリティクラス <code>.#{$pr}#{$u}expand</code> や、オフキャンバス等の画面全体に影響する演出の影響を受けないよう、幅を制限している。  
+<code>.#{$pr}#{$u}expand</code> を使用する予定がない場合や、他のライブラリ等と干渉する場合は、この要素は削除してもかまわない。
 
 ``` example
 <div id="#{$u-wrap}" class="#{$pr}#{$l}document">
-	<div style="background-color: rgba(255,160,160,.5); padding: 10px">(contents)</div>
+	<div style="background-color: #ffd5d5; padding: 10px; text-align: center;">(contents)</div>
 </div>
 ```
 */

@@ -308,12 +308,12 @@ category: layout-document
 
 ドキュメント全体を包括する。  
 ユーティリティクラスの重要度を上げるための<code>id="#document"</code>はこの包括ブロックに指定することを想定している。  
-ユーティリティクラス <code>.container-expand</code> や、オフキャンバス等の画面全体に影響する演出の影響を受けないよう、幅を制限している。  
-<code>.container-expand</code> を使用する予定がない場合や、他のライブラリ等と干渉する場合は、この要素は削除してもかまわない。
+ユーティリティクラス <code>.expand</code> や、オフキャンバス等の画面全体に影響する演出の影響を受けないよう、幅を制限している。  
+<code>.expand</code> を使用する予定がない場合や、他のライブラリ等と干渉する場合は、この要素は削除してもかまわない。
 
 ``` example
 <div id="#document" class="l-document">
-	<div style="background-color: rgba(255,160,160,.5); padding: 10px">(contents)</div>
+	<div style="background-color: #ffd5d5; padding: 10px; text-align: center;">(contents)</div>
 </div>
 ```
 */
@@ -333,8 +333,8 @@ category: layout-container
 <code>/\_scss/\_config_advance.scss</code> の「<code>$container-max-widths-md</code>」の定義を参照する。
 
 ``` example
-<div class="l-container bg-first bg-mild">
-    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
+<div class="l-container" style="background-color: #5ad;">
+    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5);">(contents)</div>
 </div>
 ```
 
@@ -379,7 +379,7 @@ category: layout-container
 }
 /*doc
 ---
-title: l-container-fluid
+title: l-container_fluid
 name: container-01-fluid
 category: layout-container
 parent: container
@@ -388,19 +388,19 @@ parent: container
 コンテナブロックの最大幅の制限を行わない。
 
 ``` example
-<div class="l-container l-container-fluid bg-second bg-mild">
-    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
+<div class="l-container l-container_fluid" style="background-color: #5ad;">
+    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5);">(contents)</div>
 </div>
 ```
 
 */
-.l-container-fluid {
+.l-container_fluid {
   max-width: none;
 }
 
 /*doc
 ---
-title: l-container-sm
+title: l-container_sm
 name: container-02-sm
 category: layout-container
 parent: container
@@ -410,26 +410,26 @@ parent: container
 <code>/\_scss/\_config_advance.scss</code> の「<code>$container-max-widths-sm</code>」の定義を参照する。
 
 ``` example
-<div class="l-container l-container-sm bg-third bg-mild">
-    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
+<div class="l-container l-container_sm" style="background-color: #5ad;">
+    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5);">(contents)</div>
 </div>
 ```
 
 */
 @media (min-width: 768px) {
-  .l-container-sm {
+  .l-container_sm {
     max-width: 700px;
   }
 }
 @media (min-width: 1000px) {
-  .l-container-sm {
+  .l-container_sm {
     max-width: 960px;
   }
 }
 
 /*doc
 ---
-title: l-container-lg
+title: l-container_lg
 name: container-03-lg
 category: layout-container
 parent: container
@@ -439,36 +439,36 @@ parent: container
 <code>/\_scss/\_config_advance.scss</code> の「<code>$container-max-widths-lg</code>」の定義を参照する。
 
 ``` example
-<div class="l-container l-container-lg bg-third bg-mild">
-    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
+<div class="l-container l-container_lg" style="background-color: #5ad;">
+    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5);">(contents)</div>
 </div>
 ```
 
 */
 @media (min-width: 768px) {
-  .l-container-lg {
+  .l-container_lg {
     max-width: 700px;
   }
 }
 @media (min-width: 1000px) {
-  .l-container-lg {
+  .l-container_lg {
     max-width: 960px;
   }
 }
 @media (min-width: 1240px) {
-  .l-container-lg {
+  .l-container_lg {
     max-width: 1200px;
   }
 }
 @media (min-width: 1640px) {
-  .l-container-lg {
+  .l-container_lg {
     max-width: 1600px;
   }
 }
 
 /*doc
 ---
-title: l-grid-row
+title: l-grid__row
 name: grid
 category: layout-grid
 ---
@@ -481,34 +481,34 @@ flexboxによるグリッドのグループを作成する。 <code>ul ,ol</code
 以下のクラスは、使用頻度が非常に低いため、このフレームワークでは除外されている。  
 <code>/\_scss/_config\_advance.scss</code> の変数 <code>$optimize</code> を <code>false</code> に変更すると、すべてのクラスに対応する。
 
-- .l-grid-col-1-(breakpoint)
-- .l-grid-col-(breakpoint)-11
-- .l-grid-col-offset-(breakpoint)-11
+- .l-grid__col-1-(breakpoint)
+- .l-grid__col-(breakpoint)-11
+- .l-grid__col-offset-(breakpoint)-11
 
 ### note: Exclusion of less frequently used classes
 
 The following classes are excluded in this framework because they are used very infrequently.  
 Variable in <code>/\_scss/_config\_advance.scss</code> Changing <code>$optimize</code> to <code>false</code> corresponds to all classes.
 
-- .l-grid-col-1-(breakpoint)
-- .l-grid-col-(breakpoint)-11
-- .l-grid-col-offset-(breakpoint)-11
+- .l-grid__col-1-(breakpoint)
+- .l-grid__col-(breakpoint)-11
+- .l-grid__col-offset-(breakpoint)-11
 
 ``` example
-<div class="l-grid-row">
-    <div class="l-grid-col">
-        <div style="padding: 1rem; background-color: #ddf6bb; height: 100%;">l-grid-col<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="l-grid__row">
+    <div class="l-grid__col">
+        <div style="padding: 1rem; background-color: #ddf6bb; height: 100%;">l-grid__col<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-grid-col">
-        <div style="padding: 1rem; background-color: #ddf6bb; height: 100%;">l-grid-col<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。</div>
+    <div class="l-grid__col">
+        <div style="padding: 1rem; background-color: #ddf6bb; height: 100%;">l-grid__col<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。</div>
     </div>
-    <div class="l-grid-col">
-        <div style="padding: 1rem; background-color: #ddf6bb; height: 100%;">l-grid-col<br>ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。</div>
+    <div class="l-grid__col">
+        <div style="padding: 1rem; background-color: #ddf6bb; height: 100%;">l-grid__col<br>ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。</div>
     </div>
 </div>
 ```
 */
-.l-grid-row {
+.l-grid__row {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -520,7 +520,7 @@ Variable in <code>/\_scss/_config\_advance.scss</code> Changing <code>$optimize<
 
 /*doc
 ---
-title: l-grid-row-(size)
+title: l-grid__row_(size)
 name: grid-01-row-size
 category: layout-grid
 parent: grid
@@ -528,79 +528,79 @@ parent: grid
 
 flexboxによるグリッドで余白が異なるグループを作成する。  
 (size)は<code>0, sm, lg</code> に対応している。  
-Bootstrap4の <code>.no-gutters</code> を <code>.l-grid-row-0</code> のエイリアスとしている。  
+Bootstrap4の <code>.no-gutters</code> を <code>.l-grid__row_0</code> のエイリアスとしている。  
 命名規則をbootstrapと同様にしたい場合は、 <code>/\_scss/_\config\_advance.scss</code> の変数 <code>$row</code> を変更すること。
 
 ``` example
-<div class="l-grid-row l-grid-row-0" style="margin-bottom: 2rem;">
-    <div class="l-grid-col">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">l-grid-row-0<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="l-grid__row l-grid__row_0" style="margin-bottom: 2rem;">
+    <div class="l-grid__col">
+        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">l-grid__row_0<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-grid-col">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%; opacity: 0.8;">l-grid-row-0<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-grid__col">
+        <div style="padding: 1rem; background-color: #ffdd99; height: 100%; opacity: 0.8;">l-grid__row_0<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-grid-col">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">l-grid-row-0<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-</div>
-
-<div class="l-grid-row l-grid-row-sm" style="margin-bottom: 2rem;">
-    <div class="l-grid-col">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">l-grid-row-sm<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="l-grid-col">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%; opacity: 0.8;">l-grid-row-sm<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="l-grid-col">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">l-grid-row-sm<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="l-grid__col">
+        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">l-grid__row_0<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 
-<div class="l-grid-row l-grid-row-lg">
-    <div class="l-grid-col">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">l-grid-row-lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="l-grid__row l-grid__row_sm" style="margin-bottom: 2rem;">
+    <div class="l-grid__col">
+        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">l-grid__row_sm<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-grid-col">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%; opacity: 0.8;">l-grid-row-lg<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-grid__col">
+        <div style="padding: 1rem; background-color: #ffdd99; height: 100%; opacity: 0.8;">l-grid__row_sm<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-grid-col">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">l-grid-row-lg<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="l-grid__col">
+        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">l-grid__row_sm<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    </div>
+</div>
+
+<div class="l-grid__row l-grid__row_lg">
+    <div class="l-grid__col">
+        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">l-grid__row_lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    </div>
+    <div class="l-grid__col">
+        <div style="padding: 1rem; background-color: #ffdd99; height: 100%; opacity: 0.8;">l-grid__row_lg<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    </div>
+    <div class="l-grid__col">
+        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">l-grid__row_lg<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 ```
 */
-.l-grid-row-0,
+.l-grid__row_0,
 .no-gutters {
   margin-left: 0;
   margin-right: 0;
 }
-.l-grid-row-0 [class*="l-grid-col"],
-.no-gutters [class*="l-grid-col"] {
+.l-grid__row_0 [class*="l-grid__col"],
+.no-gutters [class*="l-grid__col"] {
   padding-left: 0;
   padding-right: 0;
 }
 
-.l-grid-row-sm {
+.l-grid__row_sm {
   margin-left: -5px;
   margin-right: -5px;
 }
-.l-grid-row-sm [class*="l-grid-col"] {
+.l-grid__row_sm [class*="l-grid__col"] {
   padding-left: 5px;
   padding-right: 5px;
 }
 
-.l-grid-row-lg {
+.l-grid__row_lg {
   margin-left: -20px;
   margin-right: -20px;
 }
-.l-grid-row-lg [class*="l-grid-col"] {
+.l-grid__row_lg [class*="l-grid__col"] {
   padding-left: 20px;
   padding-right: 20px;
 }
 
 /*doc
 ---
-title: l-grid-col
+title: l-grid__col
 name: grid-02-col
 category: layout-grid
 ---
@@ -608,36 +608,36 @@ category: layout-grid
 flexboxによるグリッドのセルを作成する。このクラス単独では常に均等幅となる。  
 
 ``` example
-<div class="l-grid-row" style="margin-bottom: 2rem;">
-    <div class="l-grid-col">
-        <div style="padding: 1rem; background-color: #ddbbf6; height: 100%;">l-grid-col<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="l-grid__row" style="margin-bottom: 2rem;">
+    <div class="l-grid__col">
+        <div style="padding: 1rem; background-color: #ddbbf6; height: 100%;">l-grid__col<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
 </div>
 
-<div class="l-grid-row" style="margin-bottom: 2rem;">
-    <div class="l-grid-col">
-        <div style="padding: 1rem; background-color: #ddbbf6; height: 100%;">l-grid-col<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="l-grid__row" style="margin-bottom: 2rem;">
+    <div class="l-grid__col">
+        <div style="padding: 1rem; background-color: #ddbbf6; height: 100%;">l-grid__col<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-grid-col">
-        <div style="padding: 1rem; background-color: #ddbbf6; height: 100%;">l-grid-col<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-grid__col">
+        <div style="padding: 1rem; background-color: #ddbbf6; height: 100%;">l-grid__col<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
 </div>
 
-<div class="l-grid-row">
-    <div class="l-grid-col">
-        <div style="padding: 1rem; background-color: #ddbbf6; height: 100%;">l-grid-col<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="l-grid__row">
+    <div class="l-grid__col">
+        <div style="padding: 1rem; background-color: #ddbbf6; height: 100%;">l-grid__col<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-grid-col">
-        <div style="padding: 1rem; background-color: #ddbbf6; height: 100%;">l-grid-col<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-grid__col">
+        <div style="padding: 1rem; background-color: #ddbbf6; height: 100%;">l-grid__col<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-grid-col">
-        <div style="padding: 1rem; background-color: #ddbbf6; height: 100%;">l-grid-col<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="l-grid__col">
+        <div style="padding: 1rem; background-color: #ddbbf6; height: 100%;">l-grid__col<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 ```
 
 */
-[class*="l-grid-col"] {
+[class*="l-grid__col"] {
   position: relative;
   flex-shrink: 1;
   margin: 0;
@@ -645,1383 +645,1383 @@ flexboxによるグリッドのセルを作成する。このクラス単独で�
   padding-right: 10px;
 }
 
-.l-grid-col-2, .l-grid-col-3, .l-grid-col-4, .l-grid-col-5, .l-grid-col-6, .l-grid-col-7, .l-grid-col-8, .l-grid-col-9, .l-grid-col-10, .l-grid-col,
-.l-grid-col-auto, .l-grid-col-xxs-2, .l-grid-col-xxs-3, .l-grid-col-xxs-4, .l-grid-col-xxs-5, .l-grid-col-xxs-6, .l-grid-col-xxs-7, .l-grid-col-xxs-8, .l-grid-col-xxs-9, .l-grid-col-xxs-10, .l-grid-col-xxs,
-.l-grid-col-xxs-auto, .l-grid-col-xs-2, .l-grid-col-xs-3, .l-grid-col-xs-4, .l-grid-col-xs-5, .l-grid-col-xs-6, .l-grid-col-xs-7, .l-grid-col-xs-8, .l-grid-col-xs-9, .l-grid-col-xs-10, .l-grid-col-xs,
-.l-grid-col-xs-auto, .l-grid-col-sm-2, .l-grid-col-sm-3, .l-grid-col-sm-4, .l-grid-col-sm-5, .l-grid-col-sm-6, .l-grid-col-sm-7, .l-grid-col-sm-8, .l-grid-col-sm-9, .l-grid-col-sm-10, .l-grid-col-sm,
-.l-grid-col-sm-auto, .l-grid-col-md-2, .l-grid-col-md-3, .l-grid-col-md-4, .l-grid-col-md-5, .l-grid-col-md-6, .l-grid-col-md-7, .l-grid-col-md-8, .l-grid-col-md-9, .l-grid-col-md-10, .l-grid-col-md,
-.l-grid-col-md-auto, .l-grid-col-lg-2, .l-grid-col-lg-3, .l-grid-col-lg-4, .l-grid-col-lg-5, .l-grid-col-lg-6, .l-grid-col-lg-7, .l-grid-col-lg-8, .l-grid-col-lg-9, .l-grid-col-lg-10, .l-grid-col-lg,
-.l-grid-col-lg-auto, .l-grid-col-xl-2, .l-grid-col-xl-3, .l-grid-col-xl-4, .l-grid-col-xl-5, .l-grid-col-xl-6, .l-grid-col-xl-7, .l-grid-col-xl-8, .l-grid-col-xl-9, .l-grid-col-xl-10, .l-grid-col-xl,
-.l-grid-col-xl-auto, .l-grid-col-xxl-2, .l-grid-col-xxl-3, .l-grid-col-xxl-4, .l-grid-col-xxl-5, .l-grid-col-xxl-6, .l-grid-col-xxl-7, .l-grid-col-xxl-8, .l-grid-col-xxl-9, .l-grid-col-xxl-10, .l-grid-col-xxl,
-.l-grid-col-xxl-auto {
+.l-grid__col_2, .l-grid__col_3, .l-grid__col_4, .l-grid__col_5, .l-grid__col_6, .l-grid__col_7, .l-grid__col_8, .l-grid__col_9, .l-grid__col_10, .l-grid__col,
+.l-grid__col_auto, .l-grid__col_xxs_2, .l-grid__col_xxs_3, .l-grid__col_xxs_4, .l-grid__col_xxs_5, .l-grid__col_xxs_6, .l-grid__col_xxs_7, .l-grid__col_xxs_8, .l-grid__col_xxs_9, .l-grid__col_xxs_10, .l-grid__col_xxs,
+.l-grid__col_xxs_auto, .l-grid__col_xs_2, .l-grid__col_xs_3, .l-grid__col_xs_4, .l-grid__col_xs_5, .l-grid__col_xs_6, .l-grid__col_xs_7, .l-grid__col_xs_8, .l-grid__col_xs_9, .l-grid__col_xs_10, .l-grid__col_xs,
+.l-grid__col_xs_auto, .l-grid__col_sm_2, .l-grid__col_sm_3, .l-grid__col_sm_4, .l-grid__col_sm_5, .l-grid__col_sm_6, .l-grid__col_sm_7, .l-grid__col_sm_8, .l-grid__col_sm_9, .l-grid__col_sm_10, .l-grid__col_sm,
+.l-grid__col_sm_auto, .l-grid__col_md_2, .l-grid__col_md_3, .l-grid__col_md_4, .l-grid__col_md_5, .l-grid__col_md_6, .l-grid__col_md_7, .l-grid__col_md_8, .l-grid__col_md_9, .l-grid__col_md_10, .l-grid__col_md,
+.l-grid__col_md_auto, .l-grid__col_lg_2, .l-grid__col_lg_3, .l-grid__col_lg_4, .l-grid__col_lg_5, .l-grid__col_lg_6, .l-grid__col_lg_7, .l-grid__col_lg_8, .l-grid__col_lg_9, .l-grid__col_lg_10, .l-grid__col_lg,
+.l-grid__col_lg_auto, .l-grid__col_xl_2, .l-grid__col_xl_3, .l-grid__col_xl_4, .l-grid__col_xl_5, .l-grid__col_xl_6, .l-grid__col_xl_7, .l-grid__col_xl_8, .l-grid__col_xl_9, .l-grid__col_xl_10, .l-grid__col_xl,
+.l-grid__col_xl_auto, .l-grid__col_xxl_2, .l-grid__col_xxl_3, .l-grid__col_xxl_4, .l-grid__col_xxl_5, .l-grid__col_xxl_6, .l-grid__col_xxl_7, .l-grid__col_xxl_8, .l-grid__col_xxl_9, .l-grid__col_xxl_10, .l-grid__col_xxl,
+.l-grid__col_xxl_auto {
   flex-basis: 0;
   flex-grow: 1;
   max-width: 100%;
 }
 
-.l-grid-col {
+.l-grid__col {
   flex-basis: 0;
   flex-grow: 1;
   max-width: 100%;
 }
 
-.l-grid-col-auto {
+.l-grid__col_auto {
   width: auto;
   max-width: none;
 }
 
-.l-grid-col-2 {
+.l-grid__col_2 {
   flex-basis: 16.66667%;
   max-width: 16.66667%;
 }
 
-.l-grid-col-3 {
+.l-grid__col_3 {
   flex-basis: 25%;
   max-width: 25%;
 }
 
-.l-grid-col-4 {
+.l-grid__col_4 {
   flex-basis: 33.33333%;
   max-width: 33.33333%;
 }
 
-.l-grid-col-5 {
+.l-grid__col_5 {
   flex-basis: 41.66667%;
   max-width: 41.66667%;
 }
 
-.l-grid-col-6 {
+.l-grid__col_6 {
   flex-basis: 50%;
   max-width: 50%;
 }
 
-.l-grid-col-7 {
+.l-grid__col_7 {
   flex-basis: 58.33333%;
   max-width: 58.33333%;
 }
 
-.l-grid-col-8 {
+.l-grid__col_8 {
   flex-basis: 66.66667%;
   max-width: 66.66667%;
 }
 
-.l-grid-col-9 {
+.l-grid__col_9 {
   flex-basis: 75%;
   max-width: 75%;
 }
 
-.l-grid-col-10 {
+.l-grid__col_10 {
   flex-basis: 83.33333%;
   max-width: 83.33333%;
 }
 
-.l-grid-col-order-first {
+.l-grid__col_order_first {
   order: -1;
 }
 
-.l-grid-col-order-last {
+.l-grid__col_order_last {
   order: 13;
 }
 
-.l-grid-col-order-0 {
+.l-grid__col_order_0 {
   order: 0;
 }
 
-.l-grid-col-order-1 {
+.l-grid__col_order_1 {
   order: 1;
 }
 
-.l-grid-col-order-2 {
+.l-grid__col_order_2 {
   order: 2;
 }
 
-.l-grid-col-order-3 {
+.l-grid__col_order_3 {
   order: 3;
 }
 
-.l-grid-col-order-4 {
+.l-grid__col_order_4 {
   order: 4;
 }
 
-.l-grid-col-order-5 {
+.l-grid__col_order_5 {
   order: 5;
 }
 
-.l-grid-col-order-6 {
+.l-grid__col_order_6 {
   order: 6;
 }
 
-.l-grid-col-order-7 {
+.l-grid__col_order_7 {
   order: 7;
 }
 
-.l-grid-col-order-8 {
+.l-grid__col_order_8 {
   order: 8;
 }
 
-.l-grid-col-order-9 {
+.l-grid__col_order_9 {
   order: 9;
 }
 
-.l-grid-col-order-10 {
+.l-grid__col_order_10 {
   order: 10;
 }
 
-.l-grid-col-order-11 {
+.l-grid__col_order_11 {
   order: 11;
 }
 
-.l-grid-col-order-12 {
+.l-grid__col_order_12 {
   order: 12;
 }
 
-.l-grid-col-offset-1 {
+.l-grid__col_offset_1 {
   margin-left: 8.33333%;
 }
 
-.l-grid-col-offset-2 {
+.l-grid__col_offset_2 {
   margin-left: 16.66667%;
 }
 
-.l-grid-col-offset-3 {
+.l-grid__col_offset_3 {
   margin-left: 25%;
 }
 
-.l-grid-col-offset-4 {
+.l-grid__col_offset_4 {
   margin-left: 33.33333%;
 }
 
-.l-grid-col-offset-5 {
+.l-grid__col_offset_5 {
   margin-left: 41.66667%;
 }
 
-.l-grid-col-offset-6 {
+.l-grid__col_offset_6 {
   margin-left: 50%;
 }
 
-.l-grid-col-offset-7 {
+.l-grid__col_offset_7 {
   margin-left: 58.33333%;
 }
 
-.l-grid-col-offset-8 {
+.l-grid__col_offset_8 {
   margin-left: 66.66667%;
 }
 
-.l-grid-col-offset-9 {
+.l-grid__col_offset_9 {
   margin-left: 75%;
 }
 
-.l-grid-col-offset-10 {
+.l-grid__col_offset_10 {
   margin-left: 83.33333%;
 }
 
 @media (min-width: 320px) {
-  .l-grid-col-xxs {
+  .l-grid__col_xxs {
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%;
   }
 
-  .l-grid-col-xxs-auto {
+  .l-grid__col_xxs_auto {
     width: auto;
     max-width: none;
   }
 
-  .l-grid-col-xxs-2 {
+  .l-grid__col_xxs_2 {
     flex-basis: 16.66667%;
     max-width: 16.66667%;
   }
 
-  .l-grid-col-xxs-3 {
+  .l-grid__col_xxs_3 {
     flex-basis: 25%;
     max-width: 25%;
   }
 
-  .l-grid-col-xxs-4 {
+  .l-grid__col_xxs_4 {
     flex-basis: 33.33333%;
     max-width: 33.33333%;
   }
 
-  .l-grid-col-xxs-5 {
+  .l-grid__col_xxs_5 {
     flex-basis: 41.66667%;
     max-width: 41.66667%;
   }
 
-  .l-grid-col-xxs-6 {
+  .l-grid__col_xxs_6 {
     flex-basis: 50%;
     max-width: 50%;
   }
 
-  .l-grid-col-xxs-7 {
+  .l-grid__col_xxs_7 {
     flex-basis: 58.33333%;
     max-width: 58.33333%;
   }
 
-  .l-grid-col-xxs-8 {
+  .l-grid__col_xxs_8 {
     flex-basis: 66.66667%;
     max-width: 66.66667%;
   }
 
-  .l-grid-col-xxs-9 {
+  .l-grid__col_xxs_9 {
     flex-basis: 75%;
     max-width: 75%;
   }
 
-  .l-grid-col-xxs-10 {
+  .l-grid__col_xxs_10 {
     flex-basis: 83.33333%;
     max-width: 83.33333%;
   }
 
-  .l-grid-col-order-xxs-first {
+  .l-grid__col_order_xxs_first {
     order: -1;
   }
 
-  .l-grid-col-order-xxs-last {
+  .l-grid__col_order_xxs_last {
     order: 13;
   }
 
-  .l-grid-col-order-xxs-0 {
+  .l-grid__col_order_xxs_0 {
     order: 0;
   }
 
-  .l-grid-col-order-xxs-1 {
+  .l-grid__col_order_xxs_1 {
     order: 1;
   }
 
-  .l-grid-col-order-xxs-2 {
+  .l-grid__col_order_xxs_2 {
     order: 2;
   }
 
-  .l-grid-col-order-xxs-3 {
+  .l-grid__col_order_xxs_3 {
     order: 3;
   }
 
-  .l-grid-col-order-xxs-4 {
+  .l-grid__col_order_xxs_4 {
     order: 4;
   }
 
-  .l-grid-col-order-xxs-5 {
+  .l-grid__col_order_xxs_5 {
     order: 5;
   }
 
-  .l-grid-col-order-xxs-6 {
+  .l-grid__col_order_xxs_6 {
     order: 6;
   }
 
-  .l-grid-col-order-xxs-7 {
+  .l-grid__col_order_xxs_7 {
     order: 7;
   }
 
-  .l-grid-col-order-xxs-8 {
+  .l-grid__col_order_xxs_8 {
     order: 8;
   }
 
-  .l-grid-col-order-xxs-9 {
+  .l-grid__col_order_xxs_9 {
     order: 9;
   }
 
-  .l-grid-col-order-xxs-10 {
+  .l-grid__col_order_xxs_10 {
     order: 10;
   }
 
-  .l-grid-col-order-xxs-11 {
+  .l-grid__col_order_xxs_11 {
     order: 11;
   }
 
-  .l-grid-col-order-xxs-12 {
+  .l-grid__col_order_xxs_12 {
     order: 12;
   }
 
-  .l-grid-col-offset-xxs-0 {
+  .l-grid__col_offset_xxs_0 {
     margin-left: 0;
   }
 
-  .l-grid-col-offset-xxs-1 {
+  .l-grid__col_offset_xxs_1 {
     margin-left: 8.33333%;
   }
 
-  .l-grid-col-offset-xxs-2 {
+  .l-grid__col_offset_xxs_2 {
     margin-left: 16.66667%;
   }
 
-  .l-grid-col-offset-xxs-3 {
+  .l-grid__col_offset_xxs_3 {
     margin-left: 25%;
   }
 
-  .l-grid-col-offset-xxs-4 {
+  .l-grid__col_offset_xxs_4 {
     margin-left: 33.33333%;
   }
 
-  .l-grid-col-offset-xxs-5 {
+  .l-grid__col_offset_xxs_5 {
     margin-left: 41.66667%;
   }
 
-  .l-grid-col-offset-xxs-6 {
+  .l-grid__col_offset_xxs_6 {
     margin-left: 50%;
   }
 
-  .l-grid-col-offset-xxs-7 {
+  .l-grid__col_offset_xxs_7 {
     margin-left: 58.33333%;
   }
 
-  .l-grid-col-offset-xxs-8 {
+  .l-grid__col_offset_xxs_8 {
     margin-left: 66.66667%;
   }
 
-  .l-grid-col-offset-xxs-9 {
+  .l-grid__col_offset_xxs_9 {
     margin-left: 75%;
   }
 
-  .l-grid-col-offset-xxs-10 {
+  .l-grid__col_offset_xxs_10 {
     margin-left: 83.33333%;
   }
 }
 @media (min-width: 360px) {
-  .l-grid-col-xs {
+  .l-grid__col_xs {
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%;
   }
 
-  .l-grid-col-xs-auto {
+  .l-grid__col_xs_auto {
     width: auto;
     max-width: none;
   }
 
-  .l-grid-col-xs-2 {
+  .l-grid__col_xs_2 {
     flex-basis: 16.66667%;
     max-width: 16.66667%;
   }
 
-  .l-grid-col-xs-3 {
+  .l-grid__col_xs_3 {
     flex-basis: 25%;
     max-width: 25%;
   }
 
-  .l-grid-col-xs-4 {
+  .l-grid__col_xs_4 {
     flex-basis: 33.33333%;
     max-width: 33.33333%;
   }
 
-  .l-grid-col-xs-5 {
+  .l-grid__col_xs_5 {
     flex-basis: 41.66667%;
     max-width: 41.66667%;
   }
 
-  .l-grid-col-xs-6 {
+  .l-grid__col_xs_6 {
     flex-basis: 50%;
     max-width: 50%;
   }
 
-  .l-grid-col-xs-7 {
+  .l-grid__col_xs_7 {
     flex-basis: 58.33333%;
     max-width: 58.33333%;
   }
 
-  .l-grid-col-xs-8 {
+  .l-grid__col_xs_8 {
     flex-basis: 66.66667%;
     max-width: 66.66667%;
   }
 
-  .l-grid-col-xs-9 {
+  .l-grid__col_xs_9 {
     flex-basis: 75%;
     max-width: 75%;
   }
 
-  .l-grid-col-xs-10 {
+  .l-grid__col_xs_10 {
     flex-basis: 83.33333%;
     max-width: 83.33333%;
   }
 
-  .l-grid-col-order-xs-first {
+  .l-grid__col_order_xs_first {
     order: -1;
   }
 
-  .l-grid-col-order-xs-last {
+  .l-grid__col_order_xs_last {
     order: 13;
   }
 
-  .l-grid-col-order-xs-0 {
+  .l-grid__col_order_xs_0 {
     order: 0;
   }
 
-  .l-grid-col-order-xs-1 {
+  .l-grid__col_order_xs_1 {
     order: 1;
   }
 
-  .l-grid-col-order-xs-2 {
+  .l-grid__col_order_xs_2 {
     order: 2;
   }
 
-  .l-grid-col-order-xs-3 {
+  .l-grid__col_order_xs_3 {
     order: 3;
   }
 
-  .l-grid-col-order-xs-4 {
+  .l-grid__col_order_xs_4 {
     order: 4;
   }
 
-  .l-grid-col-order-xs-5 {
+  .l-grid__col_order_xs_5 {
     order: 5;
   }
 
-  .l-grid-col-order-xs-6 {
+  .l-grid__col_order_xs_6 {
     order: 6;
   }
 
-  .l-grid-col-order-xs-7 {
+  .l-grid__col_order_xs_7 {
     order: 7;
   }
 
-  .l-grid-col-order-xs-8 {
+  .l-grid__col_order_xs_8 {
     order: 8;
   }
 
-  .l-grid-col-order-xs-9 {
+  .l-grid__col_order_xs_9 {
     order: 9;
   }
 
-  .l-grid-col-order-xs-10 {
+  .l-grid__col_order_xs_10 {
     order: 10;
   }
 
-  .l-grid-col-order-xs-11 {
+  .l-grid__col_order_xs_11 {
     order: 11;
   }
 
-  .l-grid-col-order-xs-12 {
+  .l-grid__col_order_xs_12 {
     order: 12;
   }
 
-  .l-grid-col-offset-xs-0 {
+  .l-grid__col_offset_xs_0 {
     margin-left: 0;
   }
 
-  .l-grid-col-offset-xs-1 {
+  .l-grid__col_offset_xs_1 {
     margin-left: 8.33333%;
   }
 
-  .l-grid-col-offset-xs-2 {
+  .l-grid__col_offset_xs_2 {
     margin-left: 16.66667%;
   }
 
-  .l-grid-col-offset-xs-3 {
+  .l-grid__col_offset_xs_3 {
     margin-left: 25%;
   }
 
-  .l-grid-col-offset-xs-4 {
+  .l-grid__col_offset_xs_4 {
     margin-left: 33.33333%;
   }
 
-  .l-grid-col-offset-xs-5 {
+  .l-grid__col_offset_xs_5 {
     margin-left: 41.66667%;
   }
 
-  .l-grid-col-offset-xs-6 {
+  .l-grid__col_offset_xs_6 {
     margin-left: 50%;
   }
 
-  .l-grid-col-offset-xs-7 {
+  .l-grid__col_offset_xs_7 {
     margin-left: 58.33333%;
   }
 
-  .l-grid-col-offset-xs-8 {
+  .l-grid__col_offset_xs_8 {
     margin-left: 66.66667%;
   }
 
-  .l-grid-col-offset-xs-9 {
+  .l-grid__col_offset_xs_9 {
     margin-left: 75%;
   }
 
-  .l-grid-col-offset-xs-10 {
+  .l-grid__col_offset_xs_10 {
     margin-left: 83.33333%;
   }
 }
 @media (min-width: 425px) {
-  .l-grid-col-sm {
+  .l-grid__col_sm {
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%;
   }
 
-  .l-grid-col-sm-auto {
+  .l-grid__col_sm_auto {
     width: auto;
     max-width: none;
   }
 
-  .l-grid-col-sm-2 {
+  .l-grid__col_sm_2 {
     flex-basis: 16.66667%;
     max-width: 16.66667%;
   }
 
-  .l-grid-col-sm-3 {
+  .l-grid__col_sm_3 {
     flex-basis: 25%;
     max-width: 25%;
   }
 
-  .l-grid-col-sm-4 {
+  .l-grid__col_sm_4 {
     flex-basis: 33.33333%;
     max-width: 33.33333%;
   }
 
-  .l-grid-col-sm-5 {
+  .l-grid__col_sm_5 {
     flex-basis: 41.66667%;
     max-width: 41.66667%;
   }
 
-  .l-grid-col-sm-6 {
+  .l-grid__col_sm_6 {
     flex-basis: 50%;
     max-width: 50%;
   }
 
-  .l-grid-col-sm-7 {
+  .l-grid__col_sm_7 {
     flex-basis: 58.33333%;
     max-width: 58.33333%;
   }
 
-  .l-grid-col-sm-8 {
+  .l-grid__col_sm_8 {
     flex-basis: 66.66667%;
     max-width: 66.66667%;
   }
 
-  .l-grid-col-sm-9 {
+  .l-grid__col_sm_9 {
     flex-basis: 75%;
     max-width: 75%;
   }
 
-  .l-grid-col-sm-10 {
+  .l-grid__col_sm_10 {
     flex-basis: 83.33333%;
     max-width: 83.33333%;
   }
 
-  .l-grid-col-order-sm-first {
+  .l-grid__col_order_sm_first {
     order: -1;
   }
 
-  .l-grid-col-order-sm-last {
+  .l-grid__col_order_sm_last {
     order: 13;
   }
 
-  .l-grid-col-order-sm-0 {
+  .l-grid__col_order_sm_0 {
     order: 0;
   }
 
-  .l-grid-col-order-sm-1 {
+  .l-grid__col_order_sm_1 {
     order: 1;
   }
 
-  .l-grid-col-order-sm-2 {
+  .l-grid__col_order_sm_2 {
     order: 2;
   }
 
-  .l-grid-col-order-sm-3 {
+  .l-grid__col_order_sm_3 {
     order: 3;
   }
 
-  .l-grid-col-order-sm-4 {
+  .l-grid__col_order_sm_4 {
     order: 4;
   }
 
-  .l-grid-col-order-sm-5 {
+  .l-grid__col_order_sm_5 {
     order: 5;
   }
 
-  .l-grid-col-order-sm-6 {
+  .l-grid__col_order_sm_6 {
     order: 6;
   }
 
-  .l-grid-col-order-sm-7 {
+  .l-grid__col_order_sm_7 {
     order: 7;
   }
 
-  .l-grid-col-order-sm-8 {
+  .l-grid__col_order_sm_8 {
     order: 8;
   }
 
-  .l-grid-col-order-sm-9 {
+  .l-grid__col_order_sm_9 {
     order: 9;
   }
 
-  .l-grid-col-order-sm-10 {
+  .l-grid__col_order_sm_10 {
     order: 10;
   }
 
-  .l-grid-col-order-sm-11 {
+  .l-grid__col_order_sm_11 {
     order: 11;
   }
 
-  .l-grid-col-order-sm-12 {
+  .l-grid__col_order_sm_12 {
     order: 12;
   }
 
-  .l-grid-col-offset-sm-0 {
+  .l-grid__col_offset_sm_0 {
     margin-left: 0;
   }
 
-  .l-grid-col-offset-sm-1 {
+  .l-grid__col_offset_sm_1 {
     margin-left: 8.33333%;
   }
 
-  .l-grid-col-offset-sm-2 {
+  .l-grid__col_offset_sm_2 {
     margin-left: 16.66667%;
   }
 
-  .l-grid-col-offset-sm-3 {
+  .l-grid__col_offset_sm_3 {
     margin-left: 25%;
   }
 
-  .l-grid-col-offset-sm-4 {
+  .l-grid__col_offset_sm_4 {
     margin-left: 33.33333%;
   }
 
-  .l-grid-col-offset-sm-5 {
+  .l-grid__col_offset_sm_5 {
     margin-left: 41.66667%;
   }
 
-  .l-grid-col-offset-sm-6 {
+  .l-grid__col_offset_sm_6 {
     margin-left: 50%;
   }
 
-  .l-grid-col-offset-sm-7 {
+  .l-grid__col_offset_sm_7 {
     margin-left: 58.33333%;
   }
 
-  .l-grid-col-offset-sm-8 {
+  .l-grid__col_offset_sm_8 {
     margin-left: 66.66667%;
   }
 
-  .l-grid-col-offset-sm-9 {
+  .l-grid__col_offset_sm_9 {
     margin-left: 75%;
   }
 
-  .l-grid-col-offset-sm-10 {
+  .l-grid__col_offset_sm_10 {
     margin-left: 83.33333%;
   }
 }
 @media (min-width: 768px) {
-  .l-grid-col-md {
+  .l-grid__col_md {
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%;
   }
 
-  .l-grid-col-md-auto {
+  .l-grid__col_md_auto {
     width: auto;
     max-width: none;
   }
 
-  .l-grid-col-md-2 {
+  .l-grid__col_md_2 {
     flex-basis: 16.66667%;
     max-width: 16.66667%;
   }
 
-  .l-grid-col-md-3 {
+  .l-grid__col_md_3 {
     flex-basis: 25%;
     max-width: 25%;
   }
 
-  .l-grid-col-md-4 {
+  .l-grid__col_md_4 {
     flex-basis: 33.33333%;
     max-width: 33.33333%;
   }
 
-  .l-grid-col-md-5 {
+  .l-grid__col_md_5 {
     flex-basis: 41.66667%;
     max-width: 41.66667%;
   }
 
-  .l-grid-col-md-6 {
+  .l-grid__col_md_6 {
     flex-basis: 50%;
     max-width: 50%;
   }
 
-  .l-grid-col-md-7 {
+  .l-grid__col_md_7 {
     flex-basis: 58.33333%;
     max-width: 58.33333%;
   }
 
-  .l-grid-col-md-8 {
+  .l-grid__col_md_8 {
     flex-basis: 66.66667%;
     max-width: 66.66667%;
   }
 
-  .l-grid-col-md-9 {
+  .l-grid__col_md_9 {
     flex-basis: 75%;
     max-width: 75%;
   }
 
-  .l-grid-col-md-10 {
+  .l-grid__col_md_10 {
     flex-basis: 83.33333%;
     max-width: 83.33333%;
   }
 
-  .l-grid-col-order-md-first {
+  .l-grid__col_order_md_first {
     order: -1;
   }
 
-  .l-grid-col-order-md-last {
+  .l-grid__col_order_md_last {
     order: 13;
   }
 
-  .l-grid-col-order-md-0 {
+  .l-grid__col_order_md_0 {
     order: 0;
   }
 
-  .l-grid-col-order-md-1 {
+  .l-grid__col_order_md_1 {
     order: 1;
   }
 
-  .l-grid-col-order-md-2 {
+  .l-grid__col_order_md_2 {
     order: 2;
   }
 
-  .l-grid-col-order-md-3 {
+  .l-grid__col_order_md_3 {
     order: 3;
   }
 
-  .l-grid-col-order-md-4 {
+  .l-grid__col_order_md_4 {
     order: 4;
   }
 
-  .l-grid-col-order-md-5 {
+  .l-grid__col_order_md_5 {
     order: 5;
   }
 
-  .l-grid-col-order-md-6 {
+  .l-grid__col_order_md_6 {
     order: 6;
   }
 
-  .l-grid-col-order-md-7 {
+  .l-grid__col_order_md_7 {
     order: 7;
   }
 
-  .l-grid-col-order-md-8 {
+  .l-grid__col_order_md_8 {
     order: 8;
   }
 
-  .l-grid-col-order-md-9 {
+  .l-grid__col_order_md_9 {
     order: 9;
   }
 
-  .l-grid-col-order-md-10 {
+  .l-grid__col_order_md_10 {
     order: 10;
   }
 
-  .l-grid-col-order-md-11 {
+  .l-grid__col_order_md_11 {
     order: 11;
   }
 
-  .l-grid-col-order-md-12 {
+  .l-grid__col_order_md_12 {
     order: 12;
   }
 
-  .l-grid-col-offset-md-0 {
+  .l-grid__col_offset_md_0 {
     margin-left: 0;
   }
 
-  .l-grid-col-offset-md-1 {
+  .l-grid__col_offset_md_1 {
     margin-left: 8.33333%;
   }
 
-  .l-grid-col-offset-md-2 {
+  .l-grid__col_offset_md_2 {
     margin-left: 16.66667%;
   }
 
-  .l-grid-col-offset-md-3 {
+  .l-grid__col_offset_md_3 {
     margin-left: 25%;
   }
 
-  .l-grid-col-offset-md-4 {
+  .l-grid__col_offset_md_4 {
     margin-left: 33.33333%;
   }
 
-  .l-grid-col-offset-md-5 {
+  .l-grid__col_offset_md_5 {
     margin-left: 41.66667%;
   }
 
-  .l-grid-col-offset-md-6 {
+  .l-grid__col_offset_md_6 {
     margin-left: 50%;
   }
 
-  .l-grid-col-offset-md-7 {
+  .l-grid__col_offset_md_7 {
     margin-left: 58.33333%;
   }
 
-  .l-grid-col-offset-md-8 {
+  .l-grid__col_offset_md_8 {
     margin-left: 66.66667%;
   }
 
-  .l-grid-col-offset-md-9 {
+  .l-grid__col_offset_md_9 {
     margin-left: 75%;
   }
 
-  .l-grid-col-offset-md-10 {
+  .l-grid__col_offset_md_10 {
     margin-left: 83.33333%;
   }
 }
 @media (min-width: 1000px) {
-  .l-grid-col-lg {
+  .l-grid__col_lg {
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%;
   }
 
-  .l-grid-col-lg-auto {
+  .l-grid__col_lg_auto {
     width: auto;
     max-width: none;
   }
 
-  .l-grid-col-lg-2 {
+  .l-grid__col_lg_2 {
     flex-basis: 16.66667%;
     max-width: 16.66667%;
   }
 
-  .l-grid-col-lg-3 {
+  .l-grid__col_lg_3 {
     flex-basis: 25%;
     max-width: 25%;
   }
 
-  .l-grid-col-lg-4 {
+  .l-grid__col_lg_4 {
     flex-basis: 33.33333%;
     max-width: 33.33333%;
   }
 
-  .l-grid-col-lg-5 {
+  .l-grid__col_lg_5 {
     flex-basis: 41.66667%;
     max-width: 41.66667%;
   }
 
-  .l-grid-col-lg-6 {
+  .l-grid__col_lg_6 {
     flex-basis: 50%;
     max-width: 50%;
   }
 
-  .l-grid-col-lg-7 {
+  .l-grid__col_lg_7 {
     flex-basis: 58.33333%;
     max-width: 58.33333%;
   }
 
-  .l-grid-col-lg-8 {
+  .l-grid__col_lg_8 {
     flex-basis: 66.66667%;
     max-width: 66.66667%;
   }
 
-  .l-grid-col-lg-9 {
+  .l-grid__col_lg_9 {
     flex-basis: 75%;
     max-width: 75%;
   }
 
-  .l-grid-col-lg-10 {
+  .l-grid__col_lg_10 {
     flex-basis: 83.33333%;
     max-width: 83.33333%;
   }
 
-  .l-grid-col-order-lg-first {
+  .l-grid__col_order_lg_first {
     order: -1;
   }
 
-  .l-grid-col-order-lg-last {
+  .l-grid__col_order_lg_last {
     order: 13;
   }
 
-  .l-grid-col-order-lg-0 {
+  .l-grid__col_order_lg_0 {
     order: 0;
   }
 
-  .l-grid-col-order-lg-1 {
+  .l-grid__col_order_lg_1 {
     order: 1;
   }
 
-  .l-grid-col-order-lg-2 {
+  .l-grid__col_order_lg_2 {
     order: 2;
   }
 
-  .l-grid-col-order-lg-3 {
+  .l-grid__col_order_lg_3 {
     order: 3;
   }
 
-  .l-grid-col-order-lg-4 {
+  .l-grid__col_order_lg_4 {
     order: 4;
   }
 
-  .l-grid-col-order-lg-5 {
+  .l-grid__col_order_lg_5 {
     order: 5;
   }
 
-  .l-grid-col-order-lg-6 {
+  .l-grid__col_order_lg_6 {
     order: 6;
   }
 
-  .l-grid-col-order-lg-7 {
+  .l-grid__col_order_lg_7 {
     order: 7;
   }
 
-  .l-grid-col-order-lg-8 {
+  .l-grid__col_order_lg_8 {
     order: 8;
   }
 
-  .l-grid-col-order-lg-9 {
+  .l-grid__col_order_lg_9 {
     order: 9;
   }
 
-  .l-grid-col-order-lg-10 {
+  .l-grid__col_order_lg_10 {
     order: 10;
   }
 
-  .l-grid-col-order-lg-11 {
+  .l-grid__col_order_lg_11 {
     order: 11;
   }
 
-  .l-grid-col-order-lg-12 {
+  .l-grid__col_order_lg_12 {
     order: 12;
   }
 
-  .l-grid-col-offset-lg-0 {
+  .l-grid__col_offset_lg_0 {
     margin-left: 0;
   }
 
-  .l-grid-col-offset-lg-1 {
+  .l-grid__col_offset_lg_1 {
     margin-left: 8.33333%;
   }
 
-  .l-grid-col-offset-lg-2 {
+  .l-grid__col_offset_lg_2 {
     margin-left: 16.66667%;
   }
 
-  .l-grid-col-offset-lg-3 {
+  .l-grid__col_offset_lg_3 {
     margin-left: 25%;
   }
 
-  .l-grid-col-offset-lg-4 {
+  .l-grid__col_offset_lg_4 {
     margin-left: 33.33333%;
   }
 
-  .l-grid-col-offset-lg-5 {
+  .l-grid__col_offset_lg_5 {
     margin-left: 41.66667%;
   }
 
-  .l-grid-col-offset-lg-6 {
+  .l-grid__col_offset_lg_6 {
     margin-left: 50%;
   }
 
-  .l-grid-col-offset-lg-7 {
+  .l-grid__col_offset_lg_7 {
     margin-left: 58.33333%;
   }
 
-  .l-grid-col-offset-lg-8 {
+  .l-grid__col_offset_lg_8 {
     margin-left: 66.66667%;
   }
 
-  .l-grid-col-offset-lg-9 {
+  .l-grid__col_offset_lg_9 {
     margin-left: 75%;
   }
 
-  .l-grid-col-offset-lg-10 {
+  .l-grid__col_offset_lg_10 {
     margin-left: 83.33333%;
   }
 }
 @media (min-width: 1240px) {
-  .l-grid-col-xl {
+  .l-grid__col_xl {
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%;
   }
 
-  .l-grid-col-xl-auto {
+  .l-grid__col_xl_auto {
     width: auto;
     max-width: none;
   }
 
-  .l-grid-col-xl-2 {
+  .l-grid__col_xl_2 {
     flex-basis: 16.66667%;
     max-width: 16.66667%;
   }
 
-  .l-grid-col-xl-3 {
+  .l-grid__col_xl_3 {
     flex-basis: 25%;
     max-width: 25%;
   }
 
-  .l-grid-col-xl-4 {
+  .l-grid__col_xl_4 {
     flex-basis: 33.33333%;
     max-width: 33.33333%;
   }
 
-  .l-grid-col-xl-5 {
+  .l-grid__col_xl_5 {
     flex-basis: 41.66667%;
     max-width: 41.66667%;
   }
 
-  .l-grid-col-xl-6 {
+  .l-grid__col_xl_6 {
     flex-basis: 50%;
     max-width: 50%;
   }
 
-  .l-grid-col-xl-7 {
+  .l-grid__col_xl_7 {
     flex-basis: 58.33333%;
     max-width: 58.33333%;
   }
 
-  .l-grid-col-xl-8 {
+  .l-grid__col_xl_8 {
     flex-basis: 66.66667%;
     max-width: 66.66667%;
   }
 
-  .l-grid-col-xl-9 {
+  .l-grid__col_xl_9 {
     flex-basis: 75%;
     max-width: 75%;
   }
 
-  .l-grid-col-xl-10 {
+  .l-grid__col_xl_10 {
     flex-basis: 83.33333%;
     max-width: 83.33333%;
   }
 
-  .l-grid-col-order-xl-first {
+  .l-grid__col_order_xl_first {
     order: -1;
   }
 
-  .l-grid-col-order-xl-last {
+  .l-grid__col_order_xl_last {
     order: 13;
   }
 
-  .l-grid-col-order-xl-0 {
+  .l-grid__col_order_xl_0 {
     order: 0;
   }
 
-  .l-grid-col-order-xl-1 {
+  .l-grid__col_order_xl_1 {
     order: 1;
   }
 
-  .l-grid-col-order-xl-2 {
+  .l-grid__col_order_xl_2 {
     order: 2;
   }
 
-  .l-grid-col-order-xl-3 {
+  .l-grid__col_order_xl_3 {
     order: 3;
   }
 
-  .l-grid-col-order-xl-4 {
+  .l-grid__col_order_xl_4 {
     order: 4;
   }
 
-  .l-grid-col-order-xl-5 {
+  .l-grid__col_order_xl_5 {
     order: 5;
   }
 
-  .l-grid-col-order-xl-6 {
+  .l-grid__col_order_xl_6 {
     order: 6;
   }
 
-  .l-grid-col-order-xl-7 {
+  .l-grid__col_order_xl_7 {
     order: 7;
   }
 
-  .l-grid-col-order-xl-8 {
+  .l-grid__col_order_xl_8 {
     order: 8;
   }
 
-  .l-grid-col-order-xl-9 {
+  .l-grid__col_order_xl_9 {
     order: 9;
   }
 
-  .l-grid-col-order-xl-10 {
+  .l-grid__col_order_xl_10 {
     order: 10;
   }
 
-  .l-grid-col-order-xl-11 {
+  .l-grid__col_order_xl_11 {
     order: 11;
   }
 
-  .l-grid-col-order-xl-12 {
+  .l-grid__col_order_xl_12 {
     order: 12;
   }
 
-  .l-grid-col-offset-xl-0 {
+  .l-grid__col_offset_xl_0 {
     margin-left: 0;
   }
 
-  .l-grid-col-offset-xl-1 {
+  .l-grid__col_offset_xl_1 {
     margin-left: 8.33333%;
   }
 
-  .l-grid-col-offset-xl-2 {
+  .l-grid__col_offset_xl_2 {
     margin-left: 16.66667%;
   }
 
-  .l-grid-col-offset-xl-3 {
+  .l-grid__col_offset_xl_3 {
     margin-left: 25%;
   }
 
-  .l-grid-col-offset-xl-4 {
+  .l-grid__col_offset_xl_4 {
     margin-left: 33.33333%;
   }
 
-  .l-grid-col-offset-xl-5 {
+  .l-grid__col_offset_xl_5 {
     margin-left: 41.66667%;
   }
 
-  .l-grid-col-offset-xl-6 {
+  .l-grid__col_offset_xl_6 {
     margin-left: 50%;
   }
 
-  .l-grid-col-offset-xl-7 {
+  .l-grid__col_offset_xl_7 {
     margin-left: 58.33333%;
   }
 
-  .l-grid-col-offset-xl-8 {
+  .l-grid__col_offset_xl_8 {
     margin-left: 66.66667%;
   }
 
-  .l-grid-col-offset-xl-9 {
+  .l-grid__col_offset_xl_9 {
     margin-left: 75%;
   }
 
-  .l-grid-col-offset-xl-10 {
+  .l-grid__col_offset_xl_10 {
     margin-left: 83.33333%;
   }
 }
 @media (min-width: 1640px) {
-  .l-grid-col-xxl {
+  .l-grid__col_xxl {
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%;
   }
 
-  .l-grid-col-xxl-auto {
+  .l-grid__col_xxl_auto {
     width: auto;
     max-width: none;
   }
 
-  .l-grid-col-xxl-2 {
+  .l-grid__col_xxl_2 {
     flex-basis: 16.66667%;
     max-width: 16.66667%;
   }
 
-  .l-grid-col-xxl-3 {
+  .l-grid__col_xxl_3 {
     flex-basis: 25%;
     max-width: 25%;
   }
 
-  .l-grid-col-xxl-4 {
+  .l-grid__col_xxl_4 {
     flex-basis: 33.33333%;
     max-width: 33.33333%;
   }
 
-  .l-grid-col-xxl-5 {
+  .l-grid__col_xxl_5 {
     flex-basis: 41.66667%;
     max-width: 41.66667%;
   }
 
-  .l-grid-col-xxl-6 {
+  .l-grid__col_xxl_6 {
     flex-basis: 50%;
     max-width: 50%;
   }
 
-  .l-grid-col-xxl-7 {
+  .l-grid__col_xxl_7 {
     flex-basis: 58.33333%;
     max-width: 58.33333%;
   }
 
-  .l-grid-col-xxl-8 {
+  .l-grid__col_xxl_8 {
     flex-basis: 66.66667%;
     max-width: 66.66667%;
   }
 
-  .l-grid-col-xxl-9 {
+  .l-grid__col_xxl_9 {
     flex-basis: 75%;
     max-width: 75%;
   }
 
-  .l-grid-col-xxl-10 {
+  .l-grid__col_xxl_10 {
     flex-basis: 83.33333%;
     max-width: 83.33333%;
   }
 
-  .l-grid-col-order-xxl-first {
+  .l-grid__col_order_xxl_first {
     order: -1;
   }
 
-  .l-grid-col-order-xxl-last {
+  .l-grid__col_order_xxl_last {
     order: 13;
   }
 
-  .l-grid-col-order-xxl-0 {
+  .l-grid__col_order_xxl_0 {
     order: 0;
   }
 
-  .l-grid-col-order-xxl-1 {
+  .l-grid__col_order_xxl_1 {
     order: 1;
   }
 
-  .l-grid-col-order-xxl-2 {
+  .l-grid__col_order_xxl_2 {
     order: 2;
   }
 
-  .l-grid-col-order-xxl-3 {
+  .l-grid__col_order_xxl_3 {
     order: 3;
   }
 
-  .l-grid-col-order-xxl-4 {
+  .l-grid__col_order_xxl_4 {
     order: 4;
   }
 
-  .l-grid-col-order-xxl-5 {
+  .l-grid__col_order_xxl_5 {
     order: 5;
   }
 
-  .l-grid-col-order-xxl-6 {
+  .l-grid__col_order_xxl_6 {
     order: 6;
   }
 
-  .l-grid-col-order-xxl-7 {
+  .l-grid__col_order_xxl_7 {
     order: 7;
   }
 
-  .l-grid-col-order-xxl-8 {
+  .l-grid__col_order_xxl_8 {
     order: 8;
   }
 
-  .l-grid-col-order-xxl-9 {
+  .l-grid__col_order_xxl_9 {
     order: 9;
   }
 
-  .l-grid-col-order-xxl-10 {
+  .l-grid__col_order_xxl_10 {
     order: 10;
   }
 
-  .l-grid-col-order-xxl-11 {
+  .l-grid__col_order_xxl_11 {
     order: 11;
   }
 
-  .l-grid-col-order-xxl-12 {
+  .l-grid__col_order_xxl_12 {
     order: 12;
   }
 
-  .l-grid-col-offset-xxl-0 {
+  .l-grid__col_offset_xxl_0 {
     margin-left: 0;
   }
 
-  .l-grid-col-offset-xxl-1 {
+  .l-grid__col_offset_xxl_1 {
     margin-left: 8.33333%;
   }
 
-  .l-grid-col-offset-xxl-2 {
+  .l-grid__col_offset_xxl_2 {
     margin-left: 16.66667%;
   }
 
-  .l-grid-col-offset-xxl-3 {
+  .l-grid__col_offset_xxl_3 {
     margin-left: 25%;
   }
 
-  .l-grid-col-offset-xxl-4 {
+  .l-grid__col_offset_xxl_4 {
     margin-left: 33.33333%;
   }
 
-  .l-grid-col-offset-xxl-5 {
+  .l-grid__col_offset_xxl_5 {
     margin-left: 41.66667%;
   }
 
-  .l-grid-col-offset-xxl-6 {
+  .l-grid__col_offset_xxl_6 {
     margin-left: 50%;
   }
 
-  .l-grid-col-offset-xxl-7 {
+  .l-grid__col_offset_xxl_7 {
     margin-left: 58.33333%;
   }
 
-  .l-grid-col-offset-xxl-8 {
+  .l-grid__col_offset_xxl_8 {
     margin-left: 66.66667%;
   }
 
-  .l-grid-col-offset-xxl-9 {
+  .l-grid__col_offset_xxl_9 {
     margin-left: 75%;
   }
 
-  .l-grid-col-offset-xxl-10 {
+  .l-grid__col_offset_xxl_10 {
     margin-left: 83.33333%;
   }
 }
 /*doc
 ---
-title: l-grid-col-(breakpoint)-(column)
+title: l-grid__col_(breakpoint)_(column)
 name: grid-03-col-column
 category: layout-grid
 ---
 
 flexboxによるグリッドのセルの幅を、<code>(column) / 12</code>の割合にする。  
-Bootstrap 4との互換性の関係で、**シングルクラス**となっている（l-grid-colを常に付与する必要はない）。  
+Bootstrap 4との互換性の関係で、**シングルクラス**となっている（l-grid__colを常に付与する必要はない）。  
 (breakpoint)の指定がない場合は、常にその幅となる。  
 (breakpoint)の指定がある場合は、(breakpoint)**以上**のときに、指定した幅となる。
 
 ``` example
-<h3 class="text-lg">(column)のみ指定している場合</h3>
-<div class="l-grid-row" style="margin-bottom: 2rem;">
-    <div class="l-grid-col-3">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col-3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<h3 class="text_lg">(column)のみ指定している場合</h3>
+<div class="l-grid__row" style="margin-bottom: 2rem;">
+    <div class="l-grid__col_3">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col_3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-grid-col-3">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col-3<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-grid__col_3">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col_3<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-grid-col-3">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col-3<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-</div>
-
-<h3 class="text-lg margin-t-lg">(column)と(breakpoint)の両方を指定している場合</h3>
-<div class="l-grid-row" style="margin-bottom: 2rem;">
-    <div class="l-grid-col-lg-2">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col-lg-2<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="l-grid-col-lg-6">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col-lg-6<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="l-grid-col-lg-4">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col-lg-4<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="l-grid__col_3">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col_3<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 
-<h3 class="text-lg margin-t-lg">(column)の指定があるセルと、ないセルが同列に混在している場合</h3>
+<h3 class="text_lg margin__t_lg">(column)と(breakpoint)の両方を指定している場合</h3>
+<div class="l-grid__row" style="margin-bottom: 2rem;">
+    <div class="l-grid__col_lg_2">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col_lg_2<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    </div>
+    <div class="l-grid__col_lg_6">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col_lg_6<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    </div>
+    <div class="l-grid__col_lg_4">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col_lg_4<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    </div>
+</div>
+
+<h3 class="text_lg margin__t_lg">(column)の指定があるセルと、ないセルが同列に混在している場合</h3>
 <p>(column)の指定がないセルは、常に空間を埋めるように伸縮する（Bootstrapのautoと同様）。</p>
-<div class="l-grid-row" style="margin-bottom: 2rem;">
-    <div class="l-grid-col-sm-6">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col-sm-6<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="l-grid__row" style="margin-bottom: 2rem;">
+    <div class="l-grid__col_sm_6">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col_sm_6<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-grid-col">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-grid__col">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-grid-col-xl-2">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col-xl-2<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
+    <div class="l-grid__col_xl_2">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col_xl_2<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
     </div>
 </div>
 
-<h3 class="text-lg margin-t-lg">複雑な指定の例</h3>
-<p>ウィンドウ幅が狭くなるに従って、段組が変化する。セルが複数行になる場合は、l-grid-colにはmarginではなくpaddingを付与する。</p>
-<div class="l-grid-row">
-    <div class="l-grid-col-6 l-grid-col-sm-4 l-grid-col-lg-3 l-grid-col-xxl-2" style="padding-bottom: 1rem;">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col-6 l-grid-col-sm-4 l-grid-col-lg-3 l-grid-col-xxl-2<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<h3 class="text_lg margin__t_lg">複雑な指定の例</h3>
+<p>ウィンドウ幅が狭くなるに従って、段組が変化する。セルが複数行になる場合は、l-grid__colにはmarginではなくpaddingを付与する。</p>
+<div class="l-grid__row">
+    <div class="l-grid__col_6 l-grid__col_sm_4 l-grid__col_lg_3 l-grid__col_xxl_2" style="padding-bottom: 1rem;">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col_6 l-grid__col_sm_4 l-grid__col_lg_3 l-grid__col_xxl_2<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-grid-col-6 l-grid-col-sm-4 l-grid-col-lg-3 l-grid-col-xxl-2" style="padding-bottom: 1rem;">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col-6 l-grid-col-sm-4 l-grid-col-lg-3 l-grid-col-xxl-2<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-grid__col_6 l-grid__col_sm_4 l-grid__col_lg_3 l-grid__col_xxl_2" style="padding-bottom: 1rem;">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col_6 l-grid__col_sm_4 l-grid__col_lg_3 l-grid__col_xxl_2<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-grid-col-6 l-grid-col-sm-4 l-grid-col-lg-3 l-grid-col-xxl-2" style="padding-bottom: 1rem;">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col-6 l-grid-col-sm-4 l-grid-col-lg-3 l-grid-col-xxl-2<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="l-grid__col_6 l-grid__col_sm_4 l-grid__col_lg_3 l-grid__col_xxl_2" style="padding-bottom: 1rem;">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col_6 l-grid__col_sm_4 l-grid__col_lg_3 l-grid__col_xxl_2<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
-    <div class="l-grid-col-6 l-grid-col-sm-4 l-grid-col-lg-3 l-grid-col-xxl-2" style="padding-bottom: 1rem;">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col-6 l-grid-col-sm-4 l-grid-col-lg-3 l-grid-col-xxl-2<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
+    <div class="l-grid__col_6 l-grid__col_sm_4 l-grid__col_lg_3 l-grid__col_xxl_2" style="padding-bottom: 1rem;">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col_6 l-grid__col_sm_4 l-grid__col_lg_3 l-grid__col_xxl_2<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
     </div>
-    <div class="l-grid-col-6 l-grid-col-sm-4 l-grid-col-lg-3 l-grid-col-xxl-2" style="padding-bottom: 1rem;">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col-6 l-grid-col-sm-4 l-grid-col-lg-3 l-grid-col-xxl-2<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="l-grid__col_6 l-grid__col_sm_4 l-grid__col_lg_3 l-grid__col_xxl_2" style="padding-bottom: 1rem;">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col_6 l-grid__col_sm_4 l-grid__col_lg_3 l-grid__col_xxl_2<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
-    <div class="l-grid-col-6 l-grid-col-sm-4 l-grid-col-lg-3 l-grid-col-xxl-2" style="padding-bottom: 1rem;">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col-6 l-grid-col-sm-4 l-grid-col-lg-3 l-grid-col-xxl-2<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
+    <div class="l-grid__col_6 l-grid__col_sm_4 l-grid__col_lg_3 l-grid__col_xxl_2" style="padding-bottom: 1rem;">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col_6 l-grid__col_sm_4 l-grid__col_lg_3 l-grid__col_xxl_2<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
     </div>
 </div>
 ```
 */
 /*doc
 ---
-title: l-grid-col-order-(breakpoint)-(first or last or number)
+title: l-grid__col_order_(breakpoint)_(first or last or number)
 name: grid-04-order
 category: layout-grid
 parent: grid-02-col
@@ -2032,47 +2032,47 @@ flexboxによるグリッドのセルを、指定した順番にする。
 (breakpoint)の指定がある場合は、(breakpoint)**以上**のときに、指定した順番となる。
 
 ``` example
-<div class="l-grid-row" style="margin-bottom: 2rem;">
-    <div class="l-grid-col-order-last l-grid-col">
-        <div style="padding: 1rem; background-color: #f8ccdd; height: 100%;">1:<br>l-grid-col-order-last<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="l-grid__row" style="margin-bottom: 2rem;">
+    <div class="l-grid__col_order_last l-grid__col">
+        <div style="padding: 1rem; background-color: #f8ccdd; height: 100%;">1:<br>l-grid__col_order_last<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-grid-col">
+    <div class="l-grid__col">
         <div style="padding: 1rem; background-color: #f8ccdd; height: 100%;">2:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-grid-col-order-first l-grid-col">
-        <div style="padding: 1rem; background-color: #f8ccdd; height: 100%;">3:<br>l-grid-col-order-first<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-grid__col_order_first l-grid__col">
+        <div style="padding: 1rem; background-color: #f8ccdd; height: 100%;">3:<br>l-grid__col_order_first<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-grid-col">
+    <div class="l-grid__col">
         <div style="padding: 1rem; background-color: #f8ccdd; height: 100%;">4:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
 </div>
 
-<div class="l-grid-row" style="margin-bottom: 2rem;">
-    <div class="l-grid-col-order-3 l-grid-col">
-        <div style="padding: 1rem; background-color: #bbd3ff; height: 100%;">1:<br>l-grid-col-order-3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="l-grid__row" style="margin-bottom: 2rem;">
+    <div class="l-grid__col_order_3 l-grid__col">
+        <div style="padding: 1rem; background-color: #bbd3ff; height: 100%;">1:<br>l-grid__col_order_3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-grid-col-order-1 l-grid-col">
-        <div style="padding: 1rem; background-color: #bbd3ff; height: 100%;">2:<br>l-grid-col-order-1<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-grid__col_order_1 l-grid__col">
+        <div style="padding: 1rem; background-color: #bbd3ff; height: 100%;">2:<br>l-grid__col_order_1<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-grid-col-order-4 l-grid-col">
-        <div style="padding: 1rem; background-color: #bbd3ff; height: 100%;">3:<br>l-grid-col-order-4<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-grid__col_order_4 l-grid__col">
+        <div style="padding: 1rem; background-color: #bbd3ff; height: 100%;">3:<br>l-grid__col_order_4<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-grid-col-order-2 l-grid-col">
-        <div style="padding: 1rem; background-color: #bbd3ff; height: 100%;">4:<br>l-grid-col-order-2<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-grid__col_order_2 l-grid__col">
+        <div style="padding: 1rem; background-color: #bbd3ff; height: 100%;">4:<br>l-grid__col_order_2<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
 </div>
 
-<div class="l-grid-row">
-    <div class="l-grid-col-order-sm-last l-grid-col-sm-6 l-grid-col-lg-3">
-        <div style="padding: 1rem; background-color: #e6d6aa; height: 100%;">1:<br>l-grid-col-order-sm-last<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="l-grid__row">
+    <div class="l-grid__col_order_sm_last l-grid__col_sm_6 l-grid__col_lg_3">
+        <div style="padding: 1rem; background-color: #e6d6aa; height: 100%;">1:<br>l-grid__col_order_sm_last<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-grid-col-sm-6 l-grid-col-lg-3">
+    <div class="l-grid__col_sm_6 l-grid__col_lg_3">
         <div style="padding: 1rem; background-color: #e6d6aa; height: 100%;">2:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-grid-col-order-xl-first l-grid-col-sm-6 l-grid-col-lg-3">
-        <div style="padding: 1rem; background-color: #e6d6aa; height: 100%;">3:<br>l-grid-col-order-xl-first<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-grid__col_order_xl_first l-grid__col_sm_6 l-grid__col_lg_3">
+        <div style="padding: 1rem; background-color: #e6d6aa; height: 100%;">3:<br>l-grid__col_order_xl_first<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-grid-col-sm-6 l-grid-col-lg-3">
+    <div class="l-grid__col_sm_6 l-grid__col_lg_3">
         <div style="padding: 1rem; background-color: #e6d6aa; height: 100%;">4:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
 </div>
@@ -2080,30 +2080,30 @@ flexboxによるグリッドのセルを、指定した順番にする。
 */
 /*doc
 ---
-title: l-grid-col-offset-(breakpoint)-(column)
+title: l-grid__col_offset_(breakpoint)_(column)
 name: grid-05-offset
 category: layout-grid
 parent: grid-02-col
 ---
 
 flexboxによるグリッドのセルの開始位置を、<code>(column) / 12</code>の割合だけ右にずらす。  
-<code>l-grid-col-(column)</code> と、<code>l-grid-col-offset-(column)</code> の合計値が<code>12</code>を超えた場合は、offsetの値が優先される。  
+<code>l-grid__col_(column)</code> と、<code>l-grid__col_offset_(column)</code> の合計値が<code>12</code>を超えた場合は、offsetの値が優先される。  
 (breakpoint)の指定がない場合は、常にその位置となる。  
 (breakpoint)の指定がある場合は、(breakpoint)**以上**のときに、指定した位置となる。
 
 ``` example
-<div class="l-grid-row" style="margin-bottom: 2rem;">
-    <div class="l-grid-col-offset-1 l-grid-col-10">
-        <div style="padding: 1rem; background-color: #aaeccc; height: 100%;">l-grid-col-offset-3<br>l-grid-col-10<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="l-grid__row" style="margin-bottom: 2rem;">
+    <div class="l-grid__col_offset_1 l-grid__col_10">
+        <div style="padding: 1rem; background-color: #aaeccc; height: 100%;">l-grid__col_offset_3<br>l-grid__col_10<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
 </div>
 
-<div class="l-grid-row" style="margin-bottom: 2rem;">
-    <div class="l-grid-col-offset-lg-8 l-grid-col-6">
-        <div style="padding: 1rem; background-color: #aaeccc; height: 100%;">l-grid-col-offset-lg-8<br>l-grid-col-6<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="l-grid__row" style="margin-bottom: 2rem;">
+    <div class="l-grid__col_offset_lg_8 l-grid__col_6">
+        <div style="padding: 1rem; background-color: #aaeccc; height: 100%;">l-grid__col_offset_lg_8<br>l-grid__col_6<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-grid-col-offset-lg-4 l-grid-col-offset-md-8 l-grid-col-3">
-        <div style="padding: 1rem; background-color: #aaeccc; height: 100%;">l-grid-col-offset-lg-4<br>l-grid-col-offset-md-8<br>l-grid-col-3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    <div class="l-grid__col_offset_lg_4 l-grid__col_offset_md_8 l-grid__col_3">
+        <div style="padding: 1rem; background-color: #aaeccc; height: 100%;">l-grid__col_offset_lg_4<br>l-grid__col_offset_md_8<br>l-grid__col_3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
 </div>
 
@@ -3441,7 +3441,7 @@ category: module-list
 <code>ul</code> に使用した場合は、子要素にクラスを指定していなくても有効になる。  
 
 ``` example
-<h3 class="text-lg">すべての要素にクラスを付与した場合</h3>
+<h3 class="text_lg">すべての要素にクラスを付与した場合</h3>
 <ul class="m-list">
     <li class="m-list-item">あいうえおかきくけ10さしすせ</li>
     <li class="m-list-item">あいうえおかきく
@@ -3463,7 +3463,7 @@ category: module-list
     <li class="m-list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
 </ul>
 
-<h3 class="text-lg margin-t-lg">ulのみクラスを付与した場合</h3>
+<h3 class="text_lg margin__t_lg">ulのみクラスを付与した場合</h3>
 <ul class="m-list">
     <li>あいうえおかきくけ10さしすせ</li>
     <li>あいうえおかきく
@@ -3518,7 +3518,7 @@ parent: list
 階層構造を持ったリストを表示する。階層が深くなるごとに文字が小さくなる。
 
 ``` example
-<h3 class="text-lg">すべての要素にクラスを付与した場合</h3>
+<h3 class="text_lg">すべての要素にクラスを付与した場合</h3>
 <ul class="m-list m-list-vertical">
     <li class="m-list-item">あいうえおかきくけ10さしすせ</li>
     <li class="m-list-item">あいうえおかきく
@@ -3540,7 +3540,7 @@ parent: list
     <li class="m-list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
 </ul>
 
-<h3 class="text-lg margin-t-lg">ulのみクラスを付与した場合</h3>
+<h3 class="text_lg margin__t_lg">ulのみクラスを付与した場合</h3>
 <ul class="m-list m-list-vertical">
     <li>あいうえおかきくけ10さしすせ</li>
     <li>あいうえおかきく
@@ -3591,7 +3591,7 @@ parent: list
 水平に並列するリストを表示する。階層構造を持たせることはできない。  
 
 ``` example
-<h3 class="text-lg">すべての要素にクラスを付与した場合</h3>
+<h3 class="text_lg">すべての要素にクラスを付与した場合</h3>
 <ul class="m-list m-list-horizontal">
     <li class="m-list-item">あいうえおかきくけ10さしすせ</li>
     <li class="m-list-item">あいうえおかきく</li>
@@ -3599,7 +3599,7 @@ parent: list
     <li class="m-list-item">あいうえおかきくけ</li>
 </ul>
 
-<h3 class="text-lg margin-t-lg">ulのみクラスを付与した場合</h3>
+<h3 class="text_lg margin__t_lg">ulのみクラスを付与した場合</h3>
 <ul class="m-list m-list-horizontal">
     <li>あいうえおかきくけ10さしすせ</li>
     <li>あいうえおかきく</li>
@@ -3643,7 +3643,7 @@ category: module-nav
 <code>.m-nav-label</code> 内で装飾用の要素を使用すると崩れるため、その場合はダミーのインライン要素を加える。ここでは <code>span.m-nav-text</code> としている。  
 
 ``` example
-<h3 class="text-lg">すべての要素にクラスを付与した場合</h3>
+<h3 class="text_lg">すべての要素にクラスを付与した場合</h3>
 <nav class="m-nav">
     <div class="m-nav-list">
         <p class="m-nav-item">
@@ -3667,7 +3667,7 @@ category: module-nav
     </div><!-- /.nav-list -->
 </nav><!-- /.nav -->
 
-<h3 class="text-lg margin-t-lg">包括要素のみクラスを付与した場合</h3>
+<h3 class="text_lg margin__t_lg">包括要素のみクラスを付与した場合</h3>
 <nav class="m-nav">
     <ul>
         <li>
@@ -3691,21 +3691,21 @@ category: module-nav
     </ul>
 </nav><!-- /.nav -->
 
-<h3 class="text-lg margin-t-lg">m-nav-label のみ使用し、ナビゲーションの分割はグリッドにした場合</h3>
-<ul class="l-grid-row l-grid-row-0">
-    <li class="l-grid-col-6 l-grid-col-md">
+<h3 class="text_lg margin__t_lg">m-nav-label のみ使用し、ナビゲーションの分割はグリッドにした場合</h3>
+<ul class="l-grid__row l-grid__row-0">
+    <li class="l-grid__col-6 l-grid__col-md">
         <a href="#" class="m-nav-label">ボタン</a>
     </li>
-    <li class="l-grid-col-6 l-grid-col-md">
+    <li class="l-grid__col-6 l-grid__col-md">
         <a href="#" class="m-nav-label is-current">現在のページ</a>
     </li>
-    <li class="l-grid-col-4 l-grid-col-md">
+    <li class="l-grid__col-4 l-grid__col-md">
         <a href="#" class="m-nav-label">ボタン</a>
     </li>
-    <li class="l-grid-col-4 l-grid-col-md">
+    <li class="l-grid__col-4 l-grid__col-md">
         <a href="#" class="m-nav-label">ボタン</a>
     </li>
-    <li class="l-grid-col-4 l-grid-col-md">
+    <li class="l-grid__col-4 l-grid__col-md">
         <a href="#" class="m-nav-label">ボタン</a>
     </li>
 </ul>
@@ -3810,7 +3810,7 @@ parent: nav
 幅100%の垂直ナビゲーションとして表示する。3階層まで表示できる。
 
 ``` example
-<h3 class="text-lg">すべての要素にクラスを付与した場合</h3>
+<h3 class="text_lg">すべての要素にクラスを付与した場合</h3>
 <nav class="m-nav m-nav-vertical">
     <ul class="m-nav-list">
         <li class="m-nav-item">
@@ -3856,7 +3856,7 @@ parent: nav
     </ul>
 </nav><!-- /.nav -->
 
-<h3 class="text-lg margin-t-lg">包括要素のみクラスを付与した場合</h3>
+<h3 class="text_lg margin__t_lg">包括要素のみクラスを付与した場合</h3>
 <nav class="m-nav m-nav-vertical">
     <ul>
         <li>
@@ -5397,8 +5397,8 @@ category: component-card
 </div>
 
 <div style="margin-bottom: 2rem;">
-<div class="l-grid-row">
-    <div class="l-grid-col-6 l-grid-col-md-3" style="padding-bottom: 1rem;">
+<div class="l-grid__row">
+    <div class="l-grid__col-6 l-grid__col-md-3" style="padding-bottom: 1rem;">
         <div class="c-card">
             <a href="#" class="c-card-inner">
                 <div class="m-thumbnail m-thumbnail-ogimage">
@@ -5419,7 +5419,7 @@ category: component-card
             </a>
         </div>
     </div>
-    <div class="l-grid-col-6 l-grid-col-md-3" style="padding-bottom: 1rem;">
+    <div class="l-grid__col-6 l-grid__col-md-3" style="padding-bottom: 1rem;">
         <div class="c-card">
             <a href="#" class="c-card-inner">
                 <div class="m-thumbnail m-thumbnail-ogimage">
@@ -5440,7 +5440,7 @@ category: component-card
             </a>
         </div>
     </div>
-    <div class="l-grid-col-6 l-grid-col-md-3" style="padding-bottom: 1rem;">
+    <div class="l-grid__col-6 l-grid__col-md-3" style="padding-bottom: 1rem;">
         <div class="c-card">
             <a href="#" class="c-card-inner">
                 <div class="m-thumbnail m-thumbnail-ogimage">
@@ -5456,12 +5456,12 @@ category: component-card
                     </picture>
                 </div>
                 <div class="c-card-contents">
-                    <p>l-grid-row, l-grid-col を使用して3カラムに並べました</p>
+                    <p>l-grid__row, l-grid__col を使用して3カラムに並べました</p>
                 </div>
             </a>
         </div>
     </div>
-    <div class="l-grid-col-6 l-grid-col-md-3" style="padding-bottom: 1rem;">
+    <div class="l-grid__col-6 l-grid__col-md-3" style="padding-bottom: 1rem;">
         <div class="c-card">
             <a href="#" class="c-card-inner">
                 <div class="m-thumbnail m-thumbnail-ogimage">
@@ -5485,8 +5485,8 @@ category: component-card
 </div>
 </div>
 
-<div class="l-grid-row">
-    <div class="l-grid-col">
+<div class="l-grid__row">
+    <div class="l-grid__col">
         <div class="c-card bg-first">
             <div class="c-card-inner">
                 <a href="#" class="m-thumbnail m-thumbnail-ogimage">
@@ -5508,7 +5508,7 @@ category: component-card
             </div>
         </div>
     </div>
-    <div class="l-grid-col">
+    <div class="l-grid__col">
         <div class="c-card bg-first">
             <div class="c-card-inner">
                 <a href="#" class="m-thumbnail m-thumbnail-ogimage">
@@ -5543,7 +5543,7 @@ category: component-card
   color: #333;
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
 }
-[class*="l-grid-col"] > .c-card {
+[class*="l-grid__col"] > .c-card {
   max-width: none;
   height: 100%;
 }
@@ -6346,8 +6346,8 @@ category: component-media
 
 
 <div style="margin-bottom: 2rem;">
-<div class="l-grid-row">
-    <div class="l-grid-col-12 l-grid-col-sm-6 l-grid-col-lg-4" style="padding-bottom: 1rem;">
+<div class="l-grid__row">
+    <div class="l-grid__col-12 l-grid__col-sm-6 l-grid__col-lg-4" style="padding-bottom: 1rem;">
         <a href="#" class="c-media">
             <div class="c-media-object">
                 <div class="m-thumbnail">
@@ -6369,7 +6369,7 @@ category: component-media
             </div>
         </a>
     </div>
-    <div class="l-grid-col-12 l-grid-col-sm-6 l-grid-col-lg-4" style="padding-bottom: 1rem;">
+    <div class="l-grid__col-12 l-grid__col-sm-6 l-grid__col-lg-4" style="padding-bottom: 1rem;">
         <a href="#" class="c-media">
             <div class="c-media-object">
                 <div class="m-thumbnail">
@@ -6386,12 +6386,12 @@ category: component-media
                 </div>
             </div>
             <div class="c-media-contents">
-                <p>l-grid-row, l-grid-col を使用して3カラムに並べました</p>
+                <p>l-grid__row, l-grid__col を使用して3カラムに並べました</p>
                 <span class="m-btn m-btn m-btn-first m-btn-outline">ボタン</span>
             </div>
         </a>
     </div>
-    <div class="l-grid-col-12 l-grid-col-sm-6 l-grid-col-lg-4" style="padding-bottom: 1rem;">
+    <div class="l-grid__col-12 l-grid__col-sm-6 l-grid__col-lg-4" style="padding-bottom: 1rem;">
         <a href="#" class="c-media">
             <div class="c-media-object">
                 <div class="m-thumbnail">
@@ -7713,7 +7713,7 @@ category: utility-position
 
 /*doc
 ---
-title: shadow-(size)
+title: shadow
 name: shadow
 category: utility-shadow
 ---
@@ -7721,7 +7721,7 @@ category: utility-shadow
 要素に影をつける。
 
 ``` example
-<p><a href="#" class="m-btn m-btn-first m-btn-block shadow">shadow</a></p>
+<p><a href="#" class="m-btn m-btn_first m-btn_block shadow">shadow</a></p>
 ```
 */
 #document .shadow {
@@ -7730,7 +7730,7 @@ category: utility-shadow
 
 /*doc
 ---
-title: shadow-(size)
+title: shadow_(size)
 name: shadow-01-size
 category: utility-shadow
 ---
@@ -7738,14 +7738,14 @@ category: utility-shadow
 影をつけた要素と背景の、擬似的な距離を変更する。
 
 ``` example
-<p><a href="#" class="m-btn m-btn-first m-btn-block shadow shadow-sm">shadow-sm</a></p>
-<p><a href="#" class="m-btn m-btn-first m-btn-block shadow shadow-lg">shadow-lg</a></p>
+<p><a href="#" class="m-btn m-btn_first m-btn_block shadow shadow_sm">shadow_sm</a></p>
+<p><a href="#" class="m-btn m-btn_first m-btn_block shadow shadow_lg">shadow_lg</a></p>
 ```
 */
-#document .shadow-sm {
+#document .shadow_sm {
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
 }
-#document .shadow-lg {
+#document .shadow_lg {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 2px 6px 12px rgba(0, 0, 0, 0.2);
 }
 
@@ -7775,7 +7775,7 @@ category: utility-sr
 
 /*doc
 ---
-title: sr-focus
+title: sr_focus
 name: sr-01-focus
 category: utility-sr
 ---
@@ -7783,10 +7783,10 @@ category: utility-sr
 要素そのものにフォーカスしたときにテキストが表示される。
 
 ``` example
-<p>sr-focus -> <input type="button" class="sr-focus" value="フォーカスしましたね" /></p>
+<p>sr_focus -> <input type="button" class="sr_focus" value="フォーカスしましたね" /></p>
 ```
 */
-#document .sr-focus {
+#document .sr_focus {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -7796,7 +7796,7 @@ category: utility-sr
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
-#document .sr-focus:focus, #document .sr-focus:active {
+#document .sr_focus:focus, #document .sr_focus:active {
   position: static;
   width: auto;
   height: auto;
@@ -7807,7 +7807,7 @@ category: utility-sr
 
 /*doc
 ---
-title: sr-focus-inner
+title: sr_focus_inner
 name: sr-02-focus-inner
 category: utility-sr
 ---
@@ -7815,10 +7815,10 @@ category: utility-sr
 包括要素にフォーカスしたときにテキストが表示される。
 
 ``` example
-<p><a href="#" class="m-btn m-btn-second sr-focus-inner">&raquo; sr-focus-inner <span class="sr">フォーカスしましたね</span></a></p>
+<p><a href="#" class="m-btn m-btn_second sr_focus_inner">&raquo; sr_focus_inner <span class="sr">フォーカスしましたね</span></a></p>
 ```
 */
-#document .sr-focus-inner .sr {
+#document .sr_focus_inner .sr {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -7828,7 +7828,7 @@ category: utility-sr
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
-#document .sr-focus-inner:focus .sr, #document .sr-focus-inner:active .sr {
+#document .sr_focus_inner:focus .sr, #document .sr_focus_inner:active .sr {
   position: static;
   width: auto;
   height: auto;
@@ -7839,7 +7839,7 @@ category: utility-sr
 
 /*doc
 ---
-title: text-(color)
+title: text_(color)
 name: text-01-color
 category: utility-text
 ---
@@ -7847,36 +7847,36 @@ category: utility-text
 文字色を変更する。(color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
 
 ``` example
-<p class="text-first">text-first_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="text-second">text-second_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="text-third">text-third_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="text-fourth">text-fourth_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="text-info">text-info_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="text-important">text-important_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="text_first">text_first:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="text_second">text_second:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="text_third">text_third:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="text_fourth">text_fourth:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="text_info">text_info:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="text_important">text_important:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
 ```
 */
-#document .text-first {
+#document .text_first {
   color: #0360bd;
 }
-#document .text-second {
+#document .text_second {
   color: #26a9d0;
 }
-#document .text-third {
+#document .text_third {
   color: #229644;
 }
-#document .text-fourth {
+#document .text_fourth {
   color: #f37910;
 }
-#document .text-info {
+#document .text_info {
   color: #26a9d0;
 }
-#document .text-important {
+#document .text_important {
   color: #d70022;
 }
 
 /*doc
 ---
-title: text-root
+title: text_root
 name: text-02-root
 category: utility-text
 ---
@@ -7884,17 +7884,17 @@ category: utility-text
 文字色をbody要素の文字色に戻す。
 
 ``` example
-<p class="text-first">ここは文字色が first ですが、<span class="text-root">text-root_ここからbody要素の文字色に変更しました</span></p>
+<p class="text_first">ここは文字色が first ですが、<span class="text_root">ここからbody要素の文字色に変更しました</span></p>
 ```
 
 */
-#document .text-root {
+#document .text_root {
   color: #333;
 }
 
 /*doc
 ---
-title: text-inverse
+title: text_inverse
 name: text-03-inverse
 category: utility-text
 ---
@@ -7904,17 +7904,17 @@ category: utility-text
 
 ``` example
 <div style="background-color: #000; padding: 1rem 0;">
-    <p class="text-inverse">text-inverse_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+    <p class="text_inverse">text_inverse:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
 </div>
 ```
 */
-#document .text-inverse {
+#document .text_inverse {
   color: #fff;
 }
 
 /*doc
 ---
-title: text-(direction)(-(breakpont)-(up or down))
+title: text_(direction)(_(breakpont)_(up or down))
 name: text-05-direction
 category: utility-text
 ---
@@ -7924,258 +7924,258 @@ category: utility-text
 (breakpoint)の指定がある場合は、(breakpoint)以上、もしくは以下のときに、指定した方向へ寄せる。
 
 ``` example
-<p class="text-center">text-center_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
-<p class="text-right">text-right_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+<p class="text_center">text_center:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+<p class="text_right">text_right:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
 
-<div class="bg-second bg-fade text-center">
-    <p>text-center_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-    <p class="text-left">text-left_何でも薄暗いじめじめした所で</p>
+<div class="text_center" style="background-color: #dee;">
+    <p>text_center:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+    <p class="text_left">text_left:何でも薄暗いじめじめした所で</p>
     <p>ニャーニャー泣いていた事だけは記憶している。</p>
 </div>
 
-<p class="text-center-lg-up">text-center-lg-up_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
-<p class="text-right-sm-up">text-right-sm-up_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+<p class="text_center_lg_up">text_center_lg_up:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+<p class="text_right_sm_up">text_right_sm_up:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
 
-<div class="bg-second bg-fade text-center-lg-up">
-    <p>text-center-lg-up_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-    <p class="text-left-sm-down">text-left-sm-down_何でも薄暗いじめじめした所で</p>
+<div class="text_center_lg_up" style="background-color: #dee;">
+    <p>text_center_lg_up:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+    <p class="text_left_sm_down">text_left_sm_down:何でも薄暗いじめじめした所で</p>
     <p>ニャーニャー泣いていた事だけは記憶している。</p>
 </div>
 
-<p class="text-right text-center-lg-up">text-right_text-center-lg-up_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+<p class="text_right text_center_lg_up">text_right:text_center_lg_up:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
 ```
 */
-#document .text-left {
+#document .text_left {
   text-align: left;
 }
-#document .text-center {
+#document .text_center {
   text-align: center;
 }
-#document .text-right {
+#document .text_right {
   text-align: right;
 }
-#document .text-left-default-up {
+#document .text_left_default_up {
   text-align: left;
 }
-#document .text-center-default-up {
+#document .text_center_default_up {
   text-align: center;
 }
-#document .text-right-default-up {
+#document .text_right_default_up {
   text-align: right;
 }
 @media (max-width: 319.9px) {
-  #document .text-left-default-down {
+  #document .text_left_default-down {
     text-align: left;
   }
-  #document .text-center-default-down {
+  #document .text_center_default-down {
     text-align: center;
   }
-  #document .text-right-default-down {
+  #document .text_right_default-down {
     text-align: right;
   }
 }
 @media (min-width: 320px) {
-  #document .text-left-xxs-up {
+  #document .text_left_xxs_up {
     text-align: left;
   }
-  #document .text-center-xxs-up {
+  #document .text_center_xxs_up {
     text-align: center;
   }
-  #document .text-right-xxs-up {
+  #document .text_right_xxs_up {
     text-align: right;
   }
 }
 @media (max-width: 359.9px) {
-  #document .text-left-xxs-down {
+  #document .text_left_xxs-down {
     text-align: left;
   }
-  #document .text-center-xxs-down {
+  #document .text_center_xxs-down {
     text-align: center;
   }
-  #document .text-right-xxs-down {
+  #document .text_right_xxs-down {
     text-align: right;
   }
 }
 @media (min-width: 360px) {
-  #document .text-left-xs-up {
+  #document .text_left_xs_up {
     text-align: left;
   }
-  #document .text-center-xs-up {
+  #document .text_center_xs_up {
     text-align: center;
   }
-  #document .text-right-xs-up {
+  #document .text_right_xs_up {
     text-align: right;
   }
 }
 @media (max-width: 424.9px) {
-  #document .text-left-xs-down {
+  #document .text_left_xs-down {
     text-align: left;
   }
-  #document .text-center-xs-down {
+  #document .text_center_xs-down {
     text-align: center;
   }
-  #document .text-right-xs-down {
+  #document .text_right_xs-down {
     text-align: right;
   }
 }
 @media (min-width: 425px) {
-  #document .text-left-sm-up {
+  #document .text_left_sm_up {
     text-align: left;
   }
-  #document .text-center-sm-up {
+  #document .text_center_sm_up {
     text-align: center;
   }
-  #document .text-right-sm-up {
+  #document .text_right_sm_up {
     text-align: right;
   }
 }
 @media (max-width: 767.9px) {
-  #document .text-left-sm-down {
+  #document .text_left_sm-down {
     text-align: left;
   }
-  #document .text-center-sm-down {
+  #document .text_center_sm-down {
     text-align: center;
   }
-  #document .text-right-sm-down {
+  #document .text_right_sm-down {
     text-align: right;
   }
 }
 @media (min-width: 768px) {
-  #document .text-left-md-up {
+  #document .text_left_md_up {
     text-align: left;
   }
-  #document .text-center-md-up {
+  #document .text_center_md_up {
     text-align: center;
   }
-  #document .text-right-md-up {
+  #document .text_right_md_up {
     text-align: right;
   }
 }
 @media (max-width: 999.9px) {
-  #document .text-left-md-down {
+  #document .text_left_md-down {
     text-align: left;
   }
-  #document .text-center-md-down {
+  #document .text_center_md-down {
     text-align: center;
   }
-  #document .text-right-md-down {
+  #document .text_right_md-down {
     text-align: right;
   }
 }
 @media (min-width: 1000px) {
-  #document .text-left-lg-up {
+  #document .text_left_lg_up {
     text-align: left;
   }
-  #document .text-center-lg-up {
+  #document .text_center_lg_up {
     text-align: center;
   }
-  #document .text-right-lg-up {
+  #document .text_right_lg_up {
     text-align: right;
   }
 }
 @media (max-width: 1239.9px) {
-  #document .text-left-lg-down {
+  #document .text_left_lg-down {
     text-align: left;
   }
-  #document .text-center-lg-down {
+  #document .text_center_lg-down {
     text-align: center;
   }
-  #document .text-right-lg-down {
+  #document .text_right_lg-down {
     text-align: right;
   }
 }
 @media (min-width: 1240px) {
-  #document .text-left-xl-up {
+  #document .text_left_xl_up {
     text-align: left;
   }
-  #document .text-center-xl-up {
+  #document .text_center_xl_up {
     text-align: center;
   }
-  #document .text-right-xl-up {
+  #document .text_right_xl_up {
     text-align: right;
   }
 }
 @media (max-width: 1639.9px) {
-  #document .text-left-xl-down {
+  #document .text_left_xl-down {
     text-align: left;
   }
-  #document .text-center-xl-down {
+  #document .text_center_xl-down {
     text-align: center;
   }
-  #document .text-right-xl-down {
+  #document .text_right_xl-down {
     text-align: right;
   }
 }
 @media (min-width: 1640px) {
-  #document .text-left-xxl-up {
+  #document .text_left_xxl_up {
     text-align: left;
   }
-  #document .text-center-xxl-up {
+  #document .text_center_xxl_up {
     text-align: center;
   }
-  #document .text-right-xxl-up {
+  #document .text_right_xxl_up {
     text-align: right;
   }
 }
-#document .text-left-xxl-down {
+#document .text_left_xxl-down {
   text-align: left;
 }
-#document .text-center-xxl-down {
+#document .text_center_xxl-down {
   text-align: center;
 }
-#document .text-right-xxl-down {
+#document .text_right_xxl-down {
   text-align: right;
 }
 
 /*doc
 ---
-title: text-(size)
+title: text_(size)
 name: text-06-size
 category: utility-text
 ---
 
 文字サイズを、**現在の文字サイズの相対値**（ <code>em</code> ）で変更する。  
-ただし、 <code>.text-md</code> のみ、単位が <code>rem</code> （html要素の文字サイズ）となる。
+ただし、 <code>.text_md</code> のみ、単位が <code>rem</code> （html要素の文字サイズ）となる。
 
 ``` example
-<p class="text-xxs">text-xxs_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="text-xs">text-xs_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="text-sm">text-sm_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="text_xxs">text_xxs:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="text_xs">text_xs:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="text_sm">text_sm:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
 
-<p class="text-lg">text-lg_吾輩は猫である。<span class="text-md">名前はまだ無い。text-md_どこで生れたか</span>とんと見当がつかぬ。</p>
-<p class="text-xl">text-xl_吾輩は猫である。<span class="text-md">名前はまだ無い。text-md_どこで生れたか</span>とんと見当がつかぬ。</p>
-<p class="text-xxl">text-xxl_吾輩は猫である。<span class="text-md">名前はまだ無い。text-md_どこで生れたか</span>とんと見当がつかぬ。</p>
+<p class="text_lg">text_lg:吾輩は猫である。<span class="text_md">名前はまだ無い。text_md:どこで生れたか</span>とんと見当がつかぬ。</p>
+<p class="text_xl">text_xl:吾輩は猫である。<span class="text_md">名前はまだ無い。text_md:どこで生れたか</span>とんと見当がつかぬ。</p>
+<p class="text_xxl">text_xxl:吾輩は猫である。<span class="text_md">名前はまだ無い。text_md:どこで生れたか</span>とんと見当がつかぬ。</p>
 
-<p class="text-lg">text-lg_吾輩は猫である。<span class="text-xxs">名前はまだ無い。text-xxs_どこで生れたか</span>とんと見当がつかぬ。</p>
-<p class="text-xl">text-xl_吾輩は猫である。<span class="text-xxs">名前はまだ無い。text-xxs_どこで生れたか</span>とんと見当がつかぬ。</p>
-<p class="text-xxl">text-xxl_吾輩は猫である。<span class="text-xxs">名前はまだ無い。text-xxs_どこで生れたか</span>とんと見当がつかぬ。</p>
+<p class="text_lg">text_lg:吾輩は猫である。<span class="text_xxs">名前はまだ無い。text_xxs:どこで生れたか</span>とんと見当がつかぬ。</p>
+<p class="text_xl">text_xl:吾輩は猫である。<span class="text_xxs">名前はまだ無い。text_xxs:どこで生れたか</span>とんと見当がつかぬ。</p>
+<p class="text_xxl">text_xxl:吾輩は猫である。<span class="text_xxs">名前はまだ無い。text_xxs:どこで生れたか</span>とんと見当がつかぬ。</p>
 ```
 */
-#document .text-xxs {
+#document .text_xxs {
   font-size: .625em;
 }
-#document .text-xs {
+#document .text_xs {
   font-size: .75em;
 }
-#document .text-sm {
+#document .text_sm {
   font-size: .875em;
 }
-#document .text-md {
+#document .text_md {
   font-size: 1rem;
 }
-#document .text-lg {
+#document .text_lg {
   font-size: 1.25em;
 }
-#document .text-xl {
+#document .text_xl {
   font-size: 1.5em;
 }
-#document .text-xxl {
+#document .text_xxl {
   font-size: 2em;
 }
 
 /*doc
 ---
-title: width-(percentage)
+title: width_(percentage)
 name: width
 category: utility-width
 ---
@@ -8183,49 +8183,49 @@ category: utility-width
 幅を親要素を基準とした割合に変更する。
 
 ``` example
-<div class="width-20" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
-width-20
+<div class="width_20" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
+width_20
 </div>
 
-<div class="width-33" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
-width-33
+<div class="width_33" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
+width_33
 </div>
 
-<div class="width-50" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
-width-50
+<div class="width_50" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
+width_50
 </div>
 
-<div class="width-66" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
-width-66
+<div class="width_66" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
+width_66
 </div>
 
-<div class="width-75" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
-width-75
+<div class="width_75" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
+width_75
 </div>
 
-<div class="width-100" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
-width-100
+<div class="width_100" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
+width_100
 </div>
 
 ```
 
 */
-#document .width-20 {
+#document .width_20 {
   width: 20%;
 }
-#document .width-33 {
+#document .width_33 {
   width: 33.33333333%;
 }
-#document .width-50 {
+#document .width_50 {
   width: 50%;
 }
-#document .width-66 {
+#document .width_66 {
   width: 66.66666666%;
 }
-#document .width-75 {
+#document .width_75 {
   width: 75%;
 }
-#document .width-100 {
+#document .width_100 {
   width: 100%;
 }
 

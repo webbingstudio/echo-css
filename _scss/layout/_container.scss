@@ -9,8 +9,8 @@ category: layout-container
 <code>/\_scss/\_config_advance.scss</code> の「<code>$container-max-widths-md</code>」の定義を参照する。
 
 ``` example
-<div class="#{$pr}#{$l}container #{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-mild">
-    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
+<div class="#{$pr}#{$l}container" style="background-color: #5ad;">
+    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5);">(contents)</div>
 </div>
 ```
 
@@ -48,7 +48,7 @@ category: layout-container
 
 /*doc
 ---
-title: #{$pr}#{$l}container-fluid
+title: #{$pr}#{$l}container#{$c3}fluid
 name: container-01-fluid
 category: layout-container
 parent: container
@@ -57,14 +57,14 @@ parent: container
 コンテナブロックの最大幅の制限を行わない。
 
 ``` example
-<div class="#{$pr}#{$l}container #{$pr}#{$l}container-fluid #{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-mild">
-    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
+<div class="#{$pr}#{$l}container #{$pr}#{$l}container#{$c3}fluid" style="background-color: #5ad;">
+    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5);">(contents)</div>
 </div>
 ```
 
 */
 
-.#{$pr}#{$l}container-fluid {
+.#{$pr}#{$l}container#{$c3}fluid {
 
     @include media-breakpoint-up(0px) {
         max-width: none;
@@ -75,7 +75,7 @@ parent: container
 
 /*doc
 ---
-title: #{$pr}#{$l}container-sm
+title: #{$pr}#{$l}container#{$c3}sm
 name: container-02-sm
 category: layout-container
 parent: container
@@ -85,14 +85,14 @@ parent: container
 <code>/\_scss/\_config_advance.scss</code> の「<code>$container-max-widths-sm</code>」の定義を参照する。
 
 ``` example
-<div class="#{$pr}#{$l}container #{$pr}#{$l}container-sm #{$pr}#{$u}bg-#{$__third} #{$pr}#{$u}bg-mild">
-    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
+<div class="#{$pr}#{$l}container #{$pr}#{$l}container#{$c3}sm" style="background-color: #5ad;">
+    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5);">(contents)</div>
 </div>
 ```
 
 */
 
-.#{$pr}#{$l}container-sm {
+.#{$pr}#{$l}container#{$c3}sm {
 
     @each $breakpoint, $container-max-width-sm in $container-max-widths-sm {
 
@@ -107,7 +107,7 @@ parent: container
 
 /*doc
 ---
-title: #{$pr}#{$l}container-lg
+title: #{$pr}#{$l}container#{$c3}lg
 name: container-03-lg
 category: layout-container
 parent: container
@@ -117,14 +117,14 @@ parent: container
 <code>/\_scss/\_config_advance.scss</code> の「<code>$container-max-widths-lg</code>」の定義を参照する。
 
 ``` example
-<div class="#{$pr}#{$l}container #{$pr}#{$l}container-lg #{$pr}#{$u}bg-#{$__third} #{$pr}#{$u}bg-mild">
-    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5); color: #000">(contents)</div>
+<div class="#{$pr}#{$l}container #{$pr}#{$l}container#{$c3}lg" style="background-color: #5ad;">
+    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5);">(contents)</div>
 </div>
 ```
 
 */
 
-.#{$pr}#{$l}container-lg {
+.#{$pr}#{$l}container#{$c3}lg {
 
     @each $breakpoint, $container-max-width-lg in $container-max-widths-lg {
 

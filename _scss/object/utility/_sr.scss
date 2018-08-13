@@ -31,7 +31,7 @@ category: utility-sr
 
 /*doc
 ---
-title: #{$pr}#{$u}sr-focus
+title: #{$pr}#{$u}sr#{$c3}focus
 name: sr-01-focus
 category: utility-sr
 ---
@@ -39,13 +39,13 @@ category: utility-sr
 要素そのものにフォーカスしたときにテキストが表示される。
 
 ``` example
-<p>#{$pr}#{$u}sr-focus -> <input type="button" class="#{$pr}#{$u}sr-focus" value="フォーカスしましたね" /></p>
+<p>#{$pr}#{$u}sr#{$c3}focus -> <input type="button" class="#{$pr}#{$u}sr#{$c3}focus" value="フォーカスしましたね" /></p>
 ```
 */
 
 #{$u-wrap} {
 
-    .#{$pr}#{$u}sr-focus {
+    .#{$pr}#{$u}sr#{$c3}focus {
         position: absolute;
         width: 1px;
         height: 1px;
@@ -71,7 +71,7 @@ category: utility-sr
 
 /*doc
 ---
-title: #{$pr}#{$u}sr-focus-inner
+title: #{$pr}#{$u}sr#{$c3}focus#{$c3}inner
 name: sr-02-focus-inner
 category: utility-sr
 ---
@@ -79,13 +79,13 @@ category: utility-sr
 包括要素にフォーカスしたときにテキストが表示される。
 
 ``` example
-<p><a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-second #{$pr}#{$u}sr-focus-inner">&raquo; #{$pr}#{$u}sr-focus-inner <span class="#{$pr}#{$u}sr">フォーカスしましたね</span></a></p>
+<p><a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}second #{$pr}#{$u}sr#{$c3}focus#{$c3}inner">&raquo; #{$pr}#{$u}sr#{$c3}focus#{$c3}inner <span class="#{$pr}#{$u}sr">フォーカスしましたね</span></a></p>
 ```
 */
 
 #{$u-wrap} {
 
-    .#{$pr}#{$u}sr-focus-inner {
+    .#{$pr}#{$u}sr#{$c3}focus#{$c3}inner {
 
         .#{$pr}#{$u}sr {
             position: absolute;

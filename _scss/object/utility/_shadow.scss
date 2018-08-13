@@ -2,7 +2,7 @@
 
 /*doc
 ---
-title: #{$pr}#{$u}shadow-(size)
+title: #{$pr}#{$u}shadow
 name: shadow
 category: utility-shadow
 ---
@@ -10,7 +10,7 @@ category: utility-shadow
 要素に影をつける。
 
 ``` example
-<p><a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-first #{$pr}#{$m}btn-block #{$pr}#{$u}shadow">#{$pr}#{$u}shadow</a></p>
+<p><a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}first #{$pr}#{$m}btn#{$c3}block #{$pr}#{$u}shadow">#{$pr}#{$u}shadow</a></p>
 ```
 */
 
@@ -24,7 +24,7 @@ category: utility-shadow
 
 /*doc
 ---
-title: #{$pr}#{$u}shadow-(size)
+title: #{$pr}#{$u}shadow#{$c3}(size)
 name: shadow-01-size
 category: utility-shadow
 ---
@@ -32,18 +32,18 @@ category: utility-shadow
 影をつけた要素と背景の、擬似的な距離を変更する。
 
 ``` example
-<p><a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-first #{$pr}#{$m}btn-block #{$pr}#{$u}shadow #{$pr}#{$u}shadow-sm">#{$pr}#{$u}shadow-sm</a></p>
-<p><a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-first #{$pr}#{$m}btn-block #{$pr}#{$u}shadow #{$pr}#{$u}shadow-lg">#{$pr}#{$u}shadow-lg</a></p>
+<p><a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}first #{$pr}#{$m}btn#{$c3}block #{$pr}#{$u}shadow #{$pr}#{$u}shadow#{$c3}sm">#{$pr}#{$u}shadow#{$c3}sm</a></p>
+<p><a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}first #{$pr}#{$m}btn#{$c3}block #{$pr}#{$u}shadow #{$pr}#{$u}shadow#{$c3}lg">#{$pr}#{$u}shadow#{$c3}lg</a></p>
 ```
 */
 
 #{$u-wrap} {
 
-	.#{$pr}#{$u}shadow-sm {
+	.#{$pr}#{$u}shadow#{$c3}sm {
 	    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
 	}
 
-	.#{$pr}#{$u}shadow-lg {
+	.#{$pr}#{$u}shadow#{$c3}lg {
 	    box-shadow:
 	        0 2px 4px rgba(0, 0, 0, 0.1),
 	        2px 6px 12px rgba(0, 0, 0, 0.2);

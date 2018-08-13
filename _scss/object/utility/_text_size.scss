@@ -2,56 +2,56 @@
 
 /*doc
 ---
-title: #{$pr}#{$u}text-(size)
+title: #{$pr}#{$u}text#{$c3}(size)
 name: text-06-size
 category: utility-text
 ---
 
 文字サイズを、**現在の文字サイズの相対値**（ <code>em</code> ）で変更する。  
-ただし、 <code>.#{$pr}#{$u}text-md</code> のみ、単位が <code>rem</code> （html要素の文字サイズ）となる。
+ただし、 <code>.#{$pr}#{$u}text#{$c3}md</code> のみ、単位が <code>rem</code> （html要素の文字サイズ）となる。
 
 ``` example
-<p class="#{$pr}#{$u}text-xxs">#{$pr}#{$u}text-xxs_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="#{$pr}#{$u}text-xs">#{$pr}#{$u}text-xs_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="#{$pr}#{$u}text-sm">#{$pr}#{$u}text-sm_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$pr}#{$u}text#{$c3}xxs">#{$pr}#{$u}text#{$c3}xxs:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$pr}#{$u}text#{$c3}xs">#{$pr}#{$u}text#{$c3}xs:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$pr}#{$u}text#{$c3}sm">#{$pr}#{$u}text#{$c3}sm:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
 
-<p class="#{$pr}#{$u}text-lg">#{$pr}#{$u}text-lg_吾輩は猫である。<span class="#{$pr}#{$u}text-md">名前はまだ無い。#{$pr}#{$u}text-md_どこで生れたか</span>とんと見当がつかぬ。</p>
-<p class="#{$pr}#{$u}text-xl">#{$pr}#{$u}text-xl_吾輩は猫である。<span class="#{$pr}#{$u}text-md">名前はまだ無い。#{$pr}#{$u}text-md_どこで生れたか</span>とんと見当がつかぬ。</p>
-<p class="#{$pr}#{$u}text-xxl">#{$pr}#{$u}text-xxl_吾輩は猫である。<span class="#{$pr}#{$u}text-md">名前はまだ無い。#{$pr}#{$u}text-md_どこで生れたか</span>とんと見当がつかぬ。</p>
+<p class="#{$pr}#{$u}text#{$c3}lg">#{$pr}#{$u}text#{$c3}lg:吾輩は猫である。<span class="#{$pr}#{$u}text#{$c3}md">名前はまだ無い。#{$pr}#{$u}text#{$c3}md:どこで生れたか</span>とんと見当がつかぬ。</p>
+<p class="#{$pr}#{$u}text#{$c3}xl">#{$pr}#{$u}text#{$c3}xl:吾輩は猫である。<span class="#{$pr}#{$u}text#{$c3}md">名前はまだ無い。#{$pr}#{$u}text#{$c3}md:どこで生れたか</span>とんと見当がつかぬ。</p>
+<p class="#{$pr}#{$u}text#{$c3}xxl">#{$pr}#{$u}text#{$c3}xxl:吾輩は猫である。<span class="#{$pr}#{$u}text#{$c3}md">名前はまだ無い。#{$pr}#{$u}text#{$c3}md:どこで生れたか</span>とんと見当がつかぬ。</p>
 
-<p class="#{$pr}#{$u}text-lg">#{$pr}#{$u}text-lg_吾輩は猫である。<span class="#{$pr}#{$u}text-xxs">名前はまだ無い。#{$pr}#{$u}text-xxs_どこで生れたか</span>とんと見当がつかぬ。</p>
-<p class="#{$pr}#{$u}text-xl">#{$pr}#{$u}text-xl_吾輩は猫である。<span class="#{$pr}#{$u}text-xxs">名前はまだ無い。#{$pr}#{$u}text-xxs_どこで生れたか</span>とんと見当がつかぬ。</p>
-<p class="#{$pr}#{$u}text-xxl">#{$pr}#{$u}text-xxl_吾輩は猫である。<span class="#{$pr}#{$u}text-xxs">名前はまだ無い。#{$pr}#{$u}text-xxs_どこで生れたか</span>とんと見当がつかぬ。</p>
+<p class="#{$pr}#{$u}text#{$c3}lg">#{$pr}#{$u}text#{$c3}lg:吾輩は猫である。<span class="#{$pr}#{$u}text#{$c3}xxs">名前はまだ無い。#{$pr}#{$u}text#{$c3}xxs:どこで生れたか</span>とんと見当がつかぬ。</p>
+<p class="#{$pr}#{$u}text#{$c3}xl">#{$pr}#{$u}text#{$c3}xl:吾輩は猫である。<span class="#{$pr}#{$u}text#{$c3}xxs">名前はまだ無い。#{$pr}#{$u}text#{$c3}xxs:どこで生れたか</span>とんと見当がつかぬ。</p>
+<p class="#{$pr}#{$u}text#{$c3}xxl">#{$pr}#{$u}text#{$c3}xxl:吾輩は猫である。<span class="#{$pr}#{$u}text#{$c3}xxs">名前はまだ無い。#{$pr}#{$u}text#{$c3}xxs:どこで生れたか</span>とんと見当がつかぬ。</p>
 ```
 */
 
 #{$u-wrap} {
 
-	.#{$pr}#{$u}text-xxs {
+	.#{$pr}#{$u}text#{$c3}xxs {
 	    font-size: .625em;
 	}
 
-	.#{$pr}#{$u}text-xs {
+	.#{$pr}#{$u}text#{$c3}xs {
 	    font-size: .75em;
 	}
 
-	.#{$pr}#{$u}text-sm {
+	.#{$pr}#{$u}text#{$c3}sm {
 	    font-size: .875em;
 	}
 
-	.#{$pr}#{$u}text-md {
+	.#{$pr}#{$u}text#{$c3}md {
 	    font-size: 1rem;
 	}
 
-	.#{$pr}#{$u}text-lg {
+	.#{$pr}#{$u}text#{$c3}lg {
 	    font-size: 1.25em;
 	}
 
-	.#{$pr}#{$u}text-xl {
+	.#{$pr}#{$u}text#{$c3}xl {
 	    font-size: 1.5em;
 	}
 
-	.#{$pr}#{$u}text-xxl {
+	.#{$pr}#{$u}text#{$c3}xxl {
 	    font-size: 2em;
 	}
 

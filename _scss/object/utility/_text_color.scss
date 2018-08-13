@@ -2,7 +2,7 @@
 
 /*doc
 ---
-title: #{$pr}#{$u}text-(color)
+title: #{$pr}#{$u}text#{$c3}(color)
 name: text-01-color
 category: utility-text
 ---
@@ -10,38 +10,38 @@ category: utility-text
 文字色を変更する。(color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
 
 ``` example
-<p class="#{$pr}#{$u}text-#{$__first}">#{$pr}#{$u}text-#{$__first}_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="#{$pr}#{$u}text-#{$__second}">#{$pr}#{$u}text-#{$__second}_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="#{$pr}#{$u}text-#{$__third}">#{$pr}#{$u}text-#{$__third}_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="#{$pr}#{$u}text-#{$__fourth}">#{$pr}#{$u}text-#{$__fourth}_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="#{$pr}#{$u}text-#{$__info}">#{$pr}#{$u}text-#{$__info}_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="#{$pr}#{$u}text-#{$__important}">#{$pr}#{$u}text-#{$__important}_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$pr}#{$u}text#{$c3}#{$__first}">#{$pr}#{$u}text#{$c3}#{$__first}:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$pr}#{$u}text#{$c3}#{$__second}">#{$pr}#{$u}text#{$c3}#{$__second}:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$pr}#{$u}text#{$c3}#{$__third}">#{$pr}#{$u}text#{$c3}#{$__third}:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$pr}#{$u}text#{$c3}#{$__fourth}">#{$pr}#{$u}text#{$c3}#{$__fourth}:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$pr}#{$u}text#{$c3}#{$__info}">#{$pr}#{$u}text#{$c3}#{$__info}:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="#{$pr}#{$u}text#{$c3}#{$__important}">#{$pr}#{$u}text#{$c3}#{$__important}:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
 ```
 */
 
 #{$u-wrap} {
 
-    .#{$pr}#{$u}text-#{$__first} {
+    .#{$pr}#{$u}text#{$c3}#{$__first} {
         color: $first-text;
     }
 
-    .#{$pr}#{$u}text-#{$__second} {
+    .#{$pr}#{$u}text#{$c3}#{$__second} {
         color: $second-text;
     }
 
-    .#{$pr}#{$u}text-#{$__third} {
+    .#{$pr}#{$u}text#{$c3}#{$__third} {
         color: $third-text;
     }
 
-    .#{$pr}#{$u}text-#{$__fourth} {
+    .#{$pr}#{$u}text#{$c3}#{$__fourth} {
         color: $fourth-text;
     }
 
-    .#{$pr}#{$u}text-#{$__info} {
+    .#{$pr}#{$u}text#{$c3}#{$__info} {
         color: $info-text;
     }
 
-    .#{$pr}#{$u}text-#{$__important} {
+    .#{$pr}#{$u}text#{$c3}#{$__important} {
         color: $important-text;
     }
 
@@ -50,7 +50,7 @@ category: utility-text
 
 /*doc
 ---
-title: #{$pr}#{$u}text-root
+title: #{$pr}#{$u}text#{$c3}root
 name: text-02-root
 category: utility-text
 ---
@@ -58,14 +58,14 @@ category: utility-text
 文字色をbody要素の文字色に戻す。
 
 ``` example
-<p class="#{$pr}#{$u}text-first">ここは文字色が first ですが、<span class="#{$pr}#{$u}text-root">#{$pr}#{$u}text-root_ここからbody要素の文字色に変更しました</span></p>
+<p class="#{$pr}#{$u}text#{$c3}first">ここは文字色が first ですが、<span class="#{$pr}#{$u}text#{$c3}root">ここからbody要素の文字色に変更しました</span></p>
 ```
 
 */
 
 #{$u-wrap} {
 
-    .#{$pr}#{$u}text-root {
+    .#{$pr}#{$u}text#{$c3}root {
         color: $body-color;
     }
 
@@ -74,7 +74,7 @@ category: utility-text
 
 /*doc
 ---
-title: #{$pr}#{$u}text-#{$__inverse}
+title: #{$pr}#{$u}text#{$c3}#{$__inverse}
 name: text-03-inverse
 category: utility-text
 ---
@@ -84,14 +84,14 @@ category: utility-text
 
 ``` example
 <div style="background-color: #000; padding: 1rem 0;">
-    <p class="#{$pr}#{$u}text-#{$__inverse}">#{$pr}#{$u}text-#{$__inverse}_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+    <p class="#{$pr}#{$u}text#{$c3}#{$__inverse}">#{$pr}#{$u}text#{$c3}#{$__inverse}:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
 </div>
 ```
 */
 
 #{$u-wrap} {
 
-    .#{$pr}#{$u}text-#{$__inverse} {
+    .#{$pr}#{$u}text#{$c3}#{$__inverse} {
         color: $body-inverse-color;
     }
 
