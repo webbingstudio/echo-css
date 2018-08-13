@@ -2,26 +2,27 @@
 
 /*doc
 ---
-title: #{$pr}#{$u}font-(face)
+title: #{$pr}#{$u}font#{$c3}(face)
 name: font-01-face
 category: utility-font
 ---
 
-フォントを変更する。オブジェクト・コンポーネントを可能な限り上書きする。
+フォントを変更する。オブジェクト・コンポーネントを可能な限り上書きする。  
+(face)は、<a href="../documentation/design_tokens/fonts.html">フォントファミリー</a>を参照。
 
 ``` example
-<p class="#{$pr}#{$u}text-xl #{$pr}#{$u}font-first">#{$pr}#{$u}font-first_フォント01に変更しました</p>
-<p class="#{$pr}#{$u}text-xl #{$pr}#{$u}font-second">#{$pr}#{$u}font-second_フォント02に変更しました</p>
-<p class="#{$pr}#{$u}text-xl #{$pr}#{$u}font-third">#{$pr}#{$u}font-third_フォント03に変更しました</p>
-<p class="#{$pr}#{$u}text-xl #{$pr}#{$u}font-first">ここはフォント01ですが、<span class="#{$pr}#{$u}font-root">#{$pr}#{$u}font-root_ここからbody要素のフォントに変更しました</span></p>
-<p class="#{$pr}#{$u}text-xl #{$pr}#{$u}font-mono">#{$pr}#{$u}font-mono_等幅フォントに変更しました &lt;p class="#{$pr}#{$u}font-mono"&gt;hello world!&lt;/p&gt;</p>
+<p class="#{$pr}#{$u}text#{$c3}xl #{$pr}#{$u}font#{$c3}first">#{$pr}#{$u}font#{$c3}first:見出し用のフォントに変更しました</p>
+<p class="#{$pr}#{$u}text#{$c3}xl #{$pr}#{$u}font#{$c3}second">#{$pr}#{$u}font#{$c3}second:英数字用のフォントに変更しました</p>
+<p class="#{$pr}#{$u}text#{$c3}xl #{$pr}#{$u}font#{$c3}third">#{$pr}#{$u}font#{$c3}third:ディスプレイ用のフォントに変更しました</p>
+<p class="#{$pr}#{$u}text#{$c3}xl #{$pr}#{$u}font#{$c3}first">ここは見出し用のフォントですが、<span class="#{$pr}#{$u}font#{$c3}root">ここからbody要素のフォントに変更しました</span></p>
+<p class="#{$pr}#{$u}text#{$c3}xl #{$pr}#{$u}font#{$c3}mono">#{$pr}#{$u}font#{$c3}mono:等幅フォントに変更しました &lt;p class="#{$pr}#{$u}font#{$c3}mono"&gt;hello world!&lt;/p&gt;</p>
 ```
 
 */
 
 /*doc
 ---
-title: #{$pr}#{$u}font-bold
+title: #{$pr}#{$u}font#{$c3}bold
 name: font-02-bold
 category: utility-font
 ---
@@ -42,58 +43,58 @@ Reference: Boldface designation is not reflected. | FONTPLUS
 [https://webfont.fontplus.jp/faq/4125](https://webfont.fontplus.jp/faq/4125)
 
 ``` example
-<p class="#{$pr}#{$u}text-xl #{$pr}#{$u}font-first #{$pr}#{$u}font-bold">#{$pr}#{$u}font-first_#{$pr}#{$u}font-bold_フォント01に変更しました</p>
-<p class="#{$pr}#{$u}text-xl #{$pr}#{$u}font-second #{$pr}#{$u}font-bold">#{$pr}#{$u}font-second_#{$pr}#{$u}font-bold_フォント02に変更しました</p>
-<p class="#{$pr}#{$u}text-xl #{$pr}#{$u}font-third #{$pr}#{$u}font-bold">#{$pr}#{$u}font-third_#{$pr}#{$u}font-bold_フォント03に変更しました</p>
-<p class="#{$pr}#{$u}text-xl #{$pr}#{$u}font-first #{$pr}#{$u}font-bold">ここはフォント01ですが、<span class="#{$pr}#{$u}font-root #{$pr}#{$u}font-bold">#{$pr}#{$u}font-root_#{$pr}#{$u}font-bold_ここからbody要素のフォントに変更しました</span></p>
+<p class="#{$pr}#{$u}text#{$c3}xl #{$pr}#{$u}font#{$c3}first #{$pr}#{$u}font#{$c3}bold">#{$pr}#{$u}font#{$c3}first_#{$pr}#{$u}font#{$c3}bold:見出し用のフォントに変更しました</p>
+<p class="#{$pr}#{$u}text#{$c3}xl #{$pr}#{$u}font#{$c3}second #{$pr}#{$u}font#{$c3}bold">#{$pr}#{$u}font#{$c3}second_#{$pr}#{$u}font#{$c3}bold:英数字用のフォントに変更しました</p>
+<p class="#{$pr}#{$u}text#{$c3}xl #{$pr}#{$u}font#{$c3}third #{$pr}#{$u}font#{$c3}bold">#{$pr}#{$u}font#{$c3}third_#{$pr}#{$u}font#{$c3}bold:ディスプレイ用のフォントに変更しました</p>
+<p class="#{$pr}#{$u}text#{$c3}xl #{$pr}#{$u}font#{$c3}first #{$pr}#{$u}font#{$c3}bold">ここは見出し用のフォントですが、<span class="#{$pr}#{$u}font#{$c3}root #{$pr}#{$u}font#{$c3}bold">ここからbody要素のフォントに変更しました</span></p>
 ```
 
 */
 
 #{$u-wrap} {
 
-    .#{$pr}#{$u}font-root {
+    .#{$pr}#{$u}font#{$c3}root {
         font-family: $font-family-root;
         font-family: $font-weight-root;
 
-        &.#{$pr}#{$u}font-bold {
+        &.#{$pr}#{$u}font#{$c3}bold {
             font-family: $font-family-bold-root;
             font-weight: $font-weight-bold-root;
         }
 
     }
 
-    .#{$pr}#{$u}font-mono {
+    .#{$pr}#{$u}font#{$c3}mono {
         font-family: $font-family-mono;
     }
 
-    .#{$pr}#{$u}font-first {
+    .#{$pr}#{$u}font#{$c3}first {
         font-family: $font-family-first;
         font-weight: $font-weight-first;
 
-        &.#{$pr}#{$u}font-bold {
+        &.#{$pr}#{$u}font#{$c3}bold {
             font-family: $font-family-bold-first;
             font-weight: $font-weight-bold-first;
         }
 
     }
 
-    .#{$pr}#{$u}font-second {
+    .#{$pr}#{$u}font#{$c3}second {
         font-family: $font-family-second;
         font-weight: $font-weight-second;
 
-        &.#{$pr}#{$u}font-bold {
+        &.#{$pr}#{$u}font#{$c3}bold {
             font-family: $font-family-bold-second;
             font-weight: $font-weight-bold-second;
         }
 
     }
 
-    .#{$pr}#{$u}font-third {
+    .#{$pr}#{$u}font#{$c3}third {
         font-family: $font-family-third;
         font-weight: $font-weight-third;
 
-        &.#{$pr}#{$u}font-bold {
+        &.#{$pr}#{$u}font#{$c3}bold {
             font-family: $font-family-bold-third;
             font-weight: $font-weight-bold-third;
         }

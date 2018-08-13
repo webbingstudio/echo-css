@@ -2,18 +2,17 @@
 
 /*doc
 ---
-title: #{$pr}#{$u}float-(direction)
+title: #{$pr}#{$u}float#{$c3}(direction)
 name: float-direction
 category: utility-float
 ---
 
-指定した要素を(direction)で指示した方向に寄せる。
+指定した要素を(direction)で指示した方向に寄せ、かつ余白を確保する。  
+余白の大きさは(breakpoint)によって変化する。
 
 ``` example
-<div class="#{$pr}#{$u}float-l">
-    <div class="#{$pr}#{$m}thumbnail">
-        <img src="https://placehold.jp/150x150.jpg?text=float-l" alt="">
-    </div>
+<div class="#{$pr}#{$u}float#{$c3}left">
+    <img src="/images/_dummy/image_05_s.jpg" alt="" style="width: 25vw">
 </div>
 
 <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
@@ -24,10 +23,8 @@ category: utility-float
 のみならず顔の真中があまりに突起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。<br>
 これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
 
-<div class="#{$pr}#{$u}float-r">
-    <div class="#{$pr}#{$m}thumbnail">
-        <img src="https://placehold.jp/150x150.jpg?text=float-r" alt="">
-    </div>
+<div class="#{$pr}#{$u}float#{$c3}right">
+    <img src="/images/_dummy/image_06_s.jpg" alt="" style="width: 25vw">
 </div>
 
 <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
@@ -43,12 +40,34 @@ category: utility-float
 
 #{$u-wrap} {
 
-	.#{$pr}#{$u}float-l {
+	.#{$pr}#{$u}float#{$c3}left {
 		float: left;
+		margin-right: ($spacer * 1.5);
+		margin-bottom: $spacer;
+
+        @include media-breakpoint-up(sm) {
+			margin-right: ($spacer * 2);
+        }
+
+        @include media-breakpoint-up(lg) {
+			margin-right: ($spacer * 3);
+        }
+
 	}
 
-	.#{$pr}#{$u}float-r {
+	.#{$pr}#{$u}float#{$c3}right {
 		float: right;
+		margin-left: ($spacer * 1.5);
+		margin-bottom: $spacer;
+
+        @include media-breakpoint-up(sm) {
+			margin-left: ($spacer * 2);
+        }
+
+        @include media-breakpoint-up(lg) {
+			margin-left: ($spacer * 3);
+        }
+
 	}
 
 }

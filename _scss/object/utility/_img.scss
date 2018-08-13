@@ -2,22 +2,22 @@
 
 /*doc
 ---
-title: #{$pr}#{$u}img-responsive
-name: img-responsive
-category: utility-img
+title: #{$pr}#{$u}image#{$c3}responsive
+name: image-01-responsive
+category: utility-image
 ---
 
 画像が包括要素よりも大きくなった場合のみ、縦横比を保って伸縮させる。
 
 ``` example
-<img src="https://placehold.jp/960x100.jpg?text=img-responsive" alt="" class="#{$pr}#{$u}img-responsive">
+<img src="/images/_dummy/image_01_s.jpg" alt="" class="#{$pr}#{$u}image#{$c3}responsive">
 ```
 
 */
 
 #{$u-wrap} {
 
-	.#{$pr}#{$u}img-responsive {
+	.#{$pr}#{$u}image#{$c3}responsive {
 	    max-width: 100%;
 	    height: auto;
 	}
@@ -26,22 +26,22 @@ category: utility-img
 
 /*doc
 ---
-title: #{$pr}#{$u}img-fill
-name: img-fill
-category: utility-img
+title: #{$pr}#{$u}image#{$c3}fill
+name: image-02-fill
+category: utility-image
 ---
 
 画像の大きさに関係なく、常に包括要素の幅いっぱいに伸縮させる。
 
 ``` example
-<img src="https://placehold.jp/960x100.jpg?text=img-fill" alt="" class="#{$pr}#{$u}img-fill">
+<img src="/images/_dummy/image_01_s.jpg" alt="" class="#{$pr}#{$u}image#{$c3}fill">
 ```
 
 */
 
 #{$u-wrap} {
 
-	.#{$pr}#{$u}img-fill {
+	.#{$pr}#{$u}image#{$c3}fill {
 	    width: 100%;
 	    height: auto;
 	}

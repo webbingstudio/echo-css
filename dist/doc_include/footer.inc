@@ -56,7 +56,7 @@
 					                    <li class="s-sitemap-item"><a href="./utility-float.html">float</a></li>
 					                    <li class="s-sitemap-item"><a href="./utility-font.html">font</a></li>
 					                    <li class="s-sitemap-item"><a href="./utility-hidden.html">hidden</a></li>
-					                    <li class="s-sitemap-item"><a href="./utility-img.html">img</a></li>
+					                    <li class="s-sitemap-item"><a href="./utility-image.html">image</a></li>
 					                    <li class="s-sitemap-item"><a href="./utility-line.html">line</a></li>
 					                    <li class="s-sitemap-item"><a href="./utility-margin.html">margin</a></li>
 					                    <li class="s-sitemap-item"><a href="./utility-padding.html">padding</a></li>

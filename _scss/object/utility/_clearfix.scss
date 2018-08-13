@@ -10,22 +10,16 @@ category: utility-clearfix
 指定された包括要素が閉じられた時点でfloatを解除する。
 
 ``` example
-<div class="#{$pr}#{$u}bg-first #{$pr}#{$u}bg-fade #{$pr}#{$u}clearfix">
+<div class="#{$pr}#{$u}clearfix" style="background-color: #fffadd;">
 
-<div class="#{$pr}#{$u}float-l">
-    <div class="#{$pr}#{$m}thumbnail">
-        <img src="https://placehold.jp/100x100.jpg?text=float-l" alt="">
-    </div>
+<div class="#{$pr}#{$u}float#{$c3}left">
+    <img src="/images/_dummy/image_02_s.jpg" alt="" width="150">
 </div>
-<div class="#{$pr}#{$u}float-l">
-    <div class="#{$pr}#{$m}thumbnail">
-        <img src="https://placehold.jp/100x100.jpg?text=float-l" alt="">
-    </div>
+<div class="#{$pr}#{$u}float#{$c3}left">
+    <img src="/images/_dummy/image_03_s.jpg" alt="" width="150">
 </div>
-<div class="#{$pr}#{$u}float-l">
-    <div class="#{$pr}#{$m}thumbnail">
-        <img src="https://placehold.jp/100x100.jpg?text=float-l" alt="">
-    </div>
+<div class="#{$pr}#{$u}float#{$c3}left">
+    <img src="/images/_dummy/image_04_s.jpg" alt="" width="150">
 </div>
 
 <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
@@ -33,7 +27,7 @@ category: utility-clearfix
 
 </div>
 
-<p>この前でclearfix_この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+<p>この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
 ```
 
 */

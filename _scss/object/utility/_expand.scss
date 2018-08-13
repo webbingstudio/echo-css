@@ -37,8 +37,8 @@ category: utility-expand
 
 /*doc
 ---
-title: #{$pr}#{$u}expand-sm-down
-name: expand-01-sm-down
+title: #{$pr}#{$u}expand#{$c3}sm#{$c3}down
+name: expand-01#{$c3}sm#{$c3}down
 category: utility-expand
 parent: expand
 ---
@@ -50,8 +50,8 @@ parent: expand
 <div class="#{$pr}#{$l}container" style="background-color: #ffaacc; padding-top: 1rem; padding-bottom: 1rem;">
     <div style="margin-bottom: 1rem; padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(#{$pr}#{$l}container > this)</div>
 
-    <div class="#{$pr}#{$u}expand-sm-down" style="background-color: #ffcc66;">
-        <div style="padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(#{$pr}#{$l}container > #{$pr}#{$u}expand-sm-down > this)</div>
+    <div class="#{$pr}#{$u}expand#{$c3}sm#{$c3}down" style="background-color: #ffcc66;">
+        <div style="padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(#{$pr}#{$l}container > #{$pr}#{$u}expand#{$c3}sm#{$c3}down > this)</div>
     </div>
 </div>
 ```
@@ -59,7 +59,7 @@ parent: expand
 
 #{$u-wrap} {
 
-	.#{$pr}#{$u}expand-sm-down {
+	.#{$pr}#{$u}expand#{$c3}sm#{$c3}down {
 
 	    @include media-breakpoint-down(sm) {
 		    margin-left: (map-get($grid-gutter-widths, md) / -2);

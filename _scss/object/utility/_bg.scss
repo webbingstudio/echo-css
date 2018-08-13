@@ -2,7 +2,7 @@
 
 /*doc
 ---
-title: #{$pr}#{$u}bg-(color)
+title: #{$pr}#{$u}bg#{$c3}(color)
 name: bg-01-color
 category: utility-bg
 ---
@@ -11,45 +11,45 @@ category: utility-bg
 (color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
 
 ``` example
-<div class="#{$pr}#{$u}bg-#{$__gray}">bg-#{$__gray}</div>
-<div class="#{$pr}#{$u}bg-#{$__first}">bg-#{$__first}</div>
-<div class="#{$pr}#{$u}bg-#{$__second}">bg-#{$__second}</div>
-<div class="#{$pr}#{$u}bg-#{$__third}">bg-#{$__third}</div>
-<div class="#{$pr}#{$u}bg-#{$__fourth}">bg-#{$__fourth}</div>
-<div class="#{$pr}#{$u}bg-#{$__info}">bg-#{$__info}</div>
-<div class="#{$pr}#{$u}bg-#{$__important}">bg-#{$__important}</div>
+<div class="#{$pr}#{$u}bg#{$c3}#{$__gray}">bg#{$c3}#{$__gray}</div>
+<div class="#{$pr}#{$u}bg#{$c3}#{$__first}">bg#{$c3}#{$__first}</div>
+<div class="#{$pr}#{$u}bg#{$c3}#{$__second}">bg#{$c3}#{$__second}</div>
+<div class="#{$pr}#{$u}bg#{$c3}#{$__third}">bg#{$c3}#{$__third}</div>
+<div class="#{$pr}#{$u}bg#{$c3}#{$__fourth}">bg#{$c3}#{$__fourth}</div>
+<div class="#{$pr}#{$u}bg#{$c3}#{$__info}">bg#{$c3}#{$__info}</div>
+<div class="#{$pr}#{$u}bg#{$c3}#{$__important}">bg#{$c3}#{$__important}</div>
 ```
 
 */
 
 /*doc
 ---
-title: #{$pr}#{$u}bg-fade
+title: #{$pr}#{$u}bg#{$c3}fade
 name: bg-02-fade
 category: utility-bg
 parent: bg-01-color
 ---
 
-.#{$pr}#{$u}bg-(color)と併用すると背景色を薄くする。
+<code>.#{$pr}#{$u}bg#{$c3}(color)</code> と併用すると背景色を薄くする。
 
 ``` example
-<div class="#{$pr}#{$u}bg-#{$__gray_light} #{$pr}#{$u}bg-fade">bg-#{$__gray_light}</div>
-<div class="#{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-fade">bg-#{$__first}</div>
-<div class="#{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-fade">bg-#{$__second}</div>
-<div class="#{$pr}#{$u}bg-#{$__third} #{$pr}#{$u}bg-fade">bg-#{$__third}</div>
-<div class="#{$pr}#{$u}bg-#{$__fourth} #{$pr}#{$u}bg-fade">bg-#{$__fourth}</div>
-<div class="#{$pr}#{$u}bg-#{$__info} #{$pr}#{$u}bg-fade">bg-#{$__info}</div>
-<div class="#{$pr}#{$u}bg-#{$__important} #{$pr}#{$u}bg-fade">bg-#{$__important}</div>
+<div class="#{$pr}#{$u}bg#{$c3}#{$__gray_light} #{$pr}#{$u}bg#{$c3}fade">bg#{$c3}#{$__gray_light}</div>
+<div class="#{$pr}#{$u}bg#{$c3}#{$__first} #{$pr}#{$u}bg#{$c3}fade">bg#{$c3}#{$__first}</div>
+<div class="#{$pr}#{$u}bg#{$c3}#{$__second} #{$pr}#{$u}bg#{$c3}fade">bg#{$c3}#{$__second}</div>
+<div class="#{$pr}#{$u}bg#{$c3}#{$__third} #{$pr}#{$u}bg#{$c3}fade">bg#{$c3}#{$__third}</div>
+<div class="#{$pr}#{$u}bg#{$c3}#{$__fourth} #{$pr}#{$u}bg#{$c3}fade">bg#{$c3}#{$__fourth}</div>
+<div class="#{$pr}#{$u}bg#{$c3}#{$__info} #{$pr}#{$u}bg#{$c3}fade">bg#{$c3}#{$__info}</div>
+<div class="#{$pr}#{$u}bg#{$c3}#{$__important} #{$pr}#{$u}bg#{$c3}fade">bg#{$c3}#{$__important}</div>
 ```
 
 */
 
 #{$u-wrap} {
 
-    .#{$pr}#{$u}bg-#{$__gray} {
+    .#{$pr}#{$u}bg#{$c3}#{$__gray} {
         background-color: $gray;
 
-        &:not(.#{$pr}#{$u}bg-fade) {
+        &:not(.#{$pr}#{$u}bg#{$c3}fade) {
             color: $body-inverse-color;
 
             & a:not([class]) {
@@ -60,18 +60,18 @@ parent: bg-01-color
 
     }
 
-    .#{$pr}#{$u}bg-#{$__gray_light} {
+    .#{$pr}#{$u}bg#{$c3}#{$__gray_light} {
 
-        &.#{$pr}#{$u}bg-fade {
+        &.#{$pr}#{$u}bg#{$c3}fade {
             background-color: $gray-fade;
         }
 
     }
 
-    .#{$pr}#{$u}bg-#{$__first} {
+    .#{$pr}#{$u}bg#{$c3}#{$__first} {
         background-color: $first;
 
-        &:not(.#{$pr}#{$u}bg-fade) {
+        &:not(.#{$pr}#{$u}bg#{$c3}fade) {
             color: $body-inverse-color;
 
             & a:not([class]) {
@@ -80,16 +80,16 @@ parent: bg-01-color
 
         }
 
-        &.#{$pr}#{$u}bg-fade {
+        &.#{$pr}#{$u}bg#{$c3}fade {
             background-color: $first-fade;
         }
 
     }
 
-    .#{$pr}#{$u}bg-#{$__second} {
+    .#{$pr}#{$u}bg#{$c3}#{$__second} {
         background-color: $second;
 
-        &:not(.#{$pr}#{$u}bg-fade) {
+        &:not(.#{$pr}#{$u}bg#{$c3}fade) {
             color: $body-inverse-color;
 
             & a:not([class]) {
@@ -98,16 +98,16 @@ parent: bg-01-color
 
         }
 
-        &.#{$pr}#{$u}bg-fade {
+        &.#{$pr}#{$u}bg#{$c3}fade {
             background-color: $second-fade;
         }
 
     }
 
-    .#{$pr}#{$u}bg-#{$__third} {
+    .#{$pr}#{$u}bg#{$c3}#{$__third} {
         background-color: $third;
 
-        &:not(.#{$pr}#{$u}bg-fade) {
+        &:not(.#{$pr}#{$u}bg#{$c3}fade) {
             color: $body-inverse-color;
 
             & a:not([class]) {
@@ -116,16 +116,16 @@ parent: bg-01-color
 
         }
 
-        &.#{$pr}#{$u}bg-fade {
+        &.#{$pr}#{$u}bg#{$c3}fade {
             background-color: $third-fade;
         }
 
     }
 
-    .#{$pr}#{$u}bg-#{$__fourth} {
+    .#{$pr}#{$u}bg#{$c3}#{$__fourth} {
         background-color: $fourth;
 
-        &:not(.#{$pr}#{$u}bg-fade) {
+        &:not(.#{$pr}#{$u}bg#{$c3}fade) {
             color: $body-inverse-color;
 
             & a:not([class]) {
@@ -134,16 +134,16 @@ parent: bg-01-color
 
         }
 
-        &.#{$pr}#{$u}bg-fade {
+        &.#{$pr}#{$u}bg#{$c3}fade {
             background-color: $fourth-fade;
         }
 
     }
 
-    .#{$pr}#{$u}bg-#{$__info} {
+    .#{$pr}#{$u}bg#{$c3}#{$__info} {
         background-color: $info;
 
-        &:not(.#{$pr}#{$u}bg-fade) {
+        &:not(.#{$pr}#{$u}bg#{$c3}fade) {
             color: $body-inverse-color;
 
             & a:not([class]) {
@@ -152,16 +152,16 @@ parent: bg-01-color
 
         }
 
-        &.#{$pr}#{$u}bg-fade {
+        &.#{$pr}#{$u}bg#{$c3}fade {
             background-color: $info-fade;
         }
 
     }
 
-    .#{$pr}#{$u}bg-#{$__important} {
+    .#{$pr}#{$u}bg#{$c3}#{$__important} {
         background-color: $important;
 
-        &:not(.#{$pr}#{$u}bg-fade) {
+        &:not(.#{$pr}#{$u}bg#{$c3}fade) {
             color: $body-inverse-color;
 
             & a:not([class]) {
@@ -170,7 +170,7 @@ parent: bg-01-color
 
         }
 
-        &.#{$pr}#{$u}bg-fade {
+        &.#{$pr}#{$u}bg#{$c3}fade {
             background-color: $important-fade;
         }
 

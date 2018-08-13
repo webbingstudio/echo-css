@@ -7,7 +7,7 @@ name: hidden
 category: utility-hidden
 ---
 
-常に要素を非表示にする。スクリーンリーダーに対応する場合は <code>.#{$pr}sr</code> を使用すること。
+常に要素を非表示にする。スクリーンリーダーに対応する場合は <code>.#{$pr}#{$u}sr</code> を使用すること。
 
 */
 
@@ -21,19 +21,19 @@ category: utility-hidden
 
 /*doc
 ---
-title: #{$pr}#{$u}hidden-(breakpoint)-up
-name: hidden-01-breakpoint-up
+title: #{$pr}#{$u}hidden#{$c3}(breakpoint)#{$c3}up
+name: hidden-01-breakpoint#{$c3}up
 category: utility-hidden
 ---
 
-(breakpoint)で指定した画面幅以上で要素を非表示にする。特性上、#{$pr}#{$u}hidden-xs-upはない。
+(breakpoint)で指定した画面幅以上で要素を非表示にする。特性上、#{$pr}#{$u}hidden#{$c3}xs#{$c3}upはない。
 
 ``` example
-<div class="#{$pr}#{$u}hidden-sm-up" style="margin-bottom: 1rem;"><span class="#{$pr}#{$m}btn #{$pr}#{$m}btn-first">#{$pr}#{$u}hidden-sm-up</span></div>
-<div class="#{$pr}#{$u}hidden-md-up" style="margin-bottom: 1rem;"><span class="#{$pr}#{$m}btn #{$pr}#{$m}btn-second">#{$pr}#{$u}hidden-md-up</span></div>
-<div class="#{$pr}#{$u}hidden-lg-up" style="margin-bottom: 1rem;"><span class="#{$pr}#{$m}btn #{$pr}#{$m}btn-third">#{$pr}#{$u}hidden-lg-up</span></div>
-<div class="#{$pr}#{$u}hidden-xl-up" style="margin-bottom: 1rem;"><span class="#{$pr}#{$m}btn #{$pr}#{$m}btn-fourth">#{$pr}#{$u}hidden-xl-up</span></div>
-<div class="#{$pr}#{$u}hidden-xxl-up" style="margin-bottom: 1rem;"><span class="#{$pr}#{$m}btn #{$pr}#{$m}btn-important">#{$pr}#{$u}hidden-xxl-up</span></div>
+<div class="#{$pr}#{$u}hidden#{$c3}sm#{$c3}up" style="margin-bottom: 1rem;"><span class="#{$pr}#{$m}btn #{$pr}#{$m}btn-first">#{$pr}#{$u}hidden#{$c3}sm#{$c3}up</span></div>
+<div class="#{$pr}#{$u}hidden#{$c3}md#{$c3}up" style="margin-bottom: 1rem;"><span class="#{$pr}#{$m}btn #{$pr}#{$m}btn-second">#{$pr}#{$u}hidden#{$c3}md#{$c3}up</span></div>
+<div class="#{$pr}#{$u}hidden#{$c3}lg#{$c3}up" style="margin-bottom: 1rem;"><span class="#{$pr}#{$m}btn #{$pr}#{$m}btn-third">#{$pr}#{$u}hidden#{$c3}lg#{$c3}up</span></div>
+<div class="#{$pr}#{$u}hidden#{$c3}xl#{$c3}up" style="margin-bottom: 1rem;"><span class="#{$pr}#{$m}btn #{$pr}#{$m}btn-fourth">#{$pr}#{$u}hidden#{$c3}xl#{$c3}up</span></div>
+<div class="#{$pr}#{$u}hidden#{$c3}xxl#{$c3}up" style="margin-bottom: 1rem;"><span class="#{$pr}#{$m}btn #{$pr}#{$m}btn-important">#{$pr}#{$u}hidden#{$c3}xxl#{$c3}up</span></div>
 ```
 
 */
@@ -42,7 +42,7 @@ category: utility-hidden
     @each $breakpoint in map-keys($grid-breakpoints) {
         @include media-breakpoint-up($breakpoint) {
             @if ($breakpoint != 'xxs') {
-                .#{$pr}#{$u}hidden-#{$breakpoint}-up {
+                .#{$pr}#{$u}hidden#{$c3}#{$breakpoint}#{$c3}up {
                     display: none;
                 }
             }
@@ -52,19 +52,19 @@ category: utility-hidden
 
 /*doc
 ---
-title: #{$pr}#{$u}hidden-(breakpoint)-down
-name: hidden-02-breakpoint-down
+title: #{$pr}#{$u}hidden#{$c3}(breakpoint)#{$c3}down
+name: hidden-02-breakpoint#{$c3}down
 category: utility-hidden
 ---
 
-(breakpoint)で指定した画面幅未満で要素を非表示にする。特性上、#{$pr}#{$u}hidden-xxl-downはない。
+(breakpoint)で指定した画面幅未満で要素を非表示にする。特性上、#{$pr}#{$u}hidden#{$c3}xxl#{$c3}downはない。
 
 ``` example
-<div class="#{$pr}#{$u}hidden-xs-down" style="margin-bottom: 1rem;"><span class="#{$pr}#{$m}btn #{$pr}#{$m}btn-first">#{$pr}#{$u}hidden-xs-down</span></div>
-<div class="#{$pr}#{$u}hidden-sm-down" style="margin-bottom: 1rem;"><span class="#{$pr}#{$m}btn #{$pr}#{$m}btn-second">#{$pr}#{$u}hidden-sm-down</span></div>
-<div class="#{$pr}#{$u}hidden-md-down" style="margin-bottom: 1rem;"><span class="#{$pr}#{$m}btn #{$pr}#{$m}btn-third">#{$pr}#{$u}hidden-md-down</span></div>
-<div class="#{$pr}#{$u}hidden-lg-down" style="margin-bottom: 1rem;"><span class="#{$pr}#{$m}btn #{$pr}#{$m}btn-fourth">#{$pr}#{$u}hidden-lg-down</span></div>
-<div class="#{$pr}#{$u}hidden-xl-down" style="margin-bottom: 1rem;"><span class="#{$pr}#{$m}btn #{$pr}#{$m}btn-important">#{$pr}#{$u}hidden-xl-down</span></div>
+<div class="#{$pr}#{$u}hidden#{$c3}xs#{$c3}down" style="margin-bottom: 1rem;"><span class="#{$pr}#{$m}btn #{$pr}#{$m}btn-first">#{$pr}#{$u}hidden#{$c3}xs#{$c3}down</span></div>
+<div class="#{$pr}#{$u}hidden#{$c3}sm#{$c3}down" style="margin-bottom: 1rem;"><span class="#{$pr}#{$m}btn #{$pr}#{$m}btn-second">#{$pr}#{$u}hidden#{$c3}sm#{$c3}down</span></div>
+<div class="#{$pr}#{$u}hidden#{$c3}md#{$c3}down" style="margin-bottom: 1rem;"><span class="#{$pr}#{$m}btn #{$pr}#{$m}btn-third">#{$pr}#{$u}hidden#{$c3}md#{$c3}down</span></div>
+<div class="#{$pr}#{$u}hidden#{$c3}lg#{$c3}down" style="margin-bottom: 1rem;"><span class="#{$pr}#{$m}btn #{$pr}#{$m}btn-fourth">#{$pr}#{$u}hidden#{$c3}lg#{$c3}down</span></div>
+<div class="#{$pr}#{$u}hidden#{$c3}xl#{$c3}down" style="margin-bottom: 1rem;"><span class="#{$pr}#{$m}btn #{$pr}#{$m}btn-important">#{$pr}#{$u}hidden#{$c3}xl#{$c3}down</span></div>
 ```
 
 */
@@ -73,7 +73,7 @@ category: utility-hidden
     @each $breakpoint in map-keys($grid-breakpoints) {
         @include media-breakpoint-down($breakpoint) {
             @if ($breakpoint != 'xxl') {
-                .#{$pr}#{$u}hidden-#{$breakpoint}-down {
+                .#{$pr}#{$u}hidden#{$c3}#{$breakpoint}#{$c3}down {
                     display: none;
                 }
             }

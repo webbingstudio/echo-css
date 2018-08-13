@@ -56,39 +56,39 @@
                     <div class="s-post-contents styleguide-contents"><h1 id="form" class="styleguide">c-form</h1>
 
 <p>システムで可能な限りフォームの各入力セットを包括する。<br>
-幅の調整が必要な場合は <code>.width-(percentage)</code> を併用すること。<br>
+幅の調整が必要な場合は <code>.u-width-(percentage)</code> を併用すること。<br>
 フォーム内のパーツは <code>.m-input, .m-radio, .m-select, .m-checkbox, .m-btn</code> を参照。</p>
 <div class="example"><div class="c-form">
     <label for="demo01-01" class="c-form-label">氏名</label>
-    <input type="text" class="m-input width-50" id="demo01-01" name="demo00" value="" placeholder="山田一郎" />
+    <input type="text" class="m-input u-width-50" id="demo01-01" name="demo00" value="" placeholder="山田一郎" />
 </div><!-- /.c-form -->
 
 <div class="c-form">
     <span class="c-form-label">好きな食べ物</span>
-    <label class="m-checkbox margin-r" for="checkbox1"><input type="checkbox" name="checkbox1" id="checkbox1" class="margin-r-sm" value="りんご">りんご</label>
-    <label class="m-checkbox margin-r" for="checkbox2"><input type="checkbox" name="checkbox2" id="checkbox2" class="margin-r-sm" value="バナナ">バナナ</label>
-    <label class="m-checkbox" for="checkbox3"><input type="checkbox" name="checkbox3" id="checkbox3" class="margin-r-sm" value="メロン">メロン</label>
+    <label class="m-checkbox u-margin-r" for="checkbox1"><input type="checkbox" name="checkbox1" id="checkbox1" class="u-margin-r-sm" value="りんご">りんご</label>
+    <label class="m-checkbox u-margin-r" for="checkbox2"><input type="checkbox" name="checkbox2" id="checkbox2" class="u-margin-r-sm" value="バナナ">バナナ</label>
+    <label class="m-checkbox" for="checkbox3"><input type="checkbox" name="checkbox3" id="checkbox3" class="u-margin-r-sm" value="メロン">メロン</label>
 </div><!-- /.c-form -->
 
 <div class="c-form">
     <label for="demo01-02" class="c-form-label">メッセージ</label>
-    <textarea id="demo01-02" name="demo02" rows="5" class="m-input width-50" placeholder="メッセージをどうぞ"></textarea>
+    <textarea id="demo01-02" name="demo02" rows="5" class="m-input u-width-50" placeholder="メッセージをどうぞ"></textarea>
 </div><!-- /.c-form -->
 </div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-form"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"demo01-01"</span> <span class="na">class=</span><span class="s">"c-form-label"</span><span class="nt">&gt;</span>氏名<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"m-input width-50"</span> <span class="na">id=</span><span class="s">"demo01-01"</span> <span class="na">name=</span><span class="s">"demo00"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">placeholder=</span><span class="s">"山田一郎"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"m-input u-width-50"</span> <span class="na">id=</span><span class="s">"demo01-01"</span> <span class="na">name=</span><span class="s">"demo00"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">placeholder=</span><span class="s">"山田一郎"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.c-form --&gt;</span>
 
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-form"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"c-form-label"</span><span class="nt">&gt;</span>好きな食べ物<span class="nt">&lt;/span&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"m-checkbox margin-r"</span> <span class="na">for=</span><span class="s">"checkbox1"</span><span class="nt">&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"checkbox1"</span> <span class="na">id=</span><span class="s">"checkbox1"</span> <span class="na">class=</span><span class="s">"margin-r-sm"</span> <span class="na">value=</span><span class="s">"りんご"</span><span class="nt">&gt;</span>りんご<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"m-checkbox margin-r"</span> <span class="na">for=</span><span class="s">"checkbox2"</span><span class="nt">&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"checkbox2"</span> <span class="na">id=</span><span class="s">"checkbox2"</span> <span class="na">class=</span><span class="s">"margin-r-sm"</span> <span class="na">value=</span><span class="s">"バナナ"</span><span class="nt">&gt;</span>バナナ<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"m-checkbox"</span> <span class="na">for=</span><span class="s">"checkbox3"</span><span class="nt">&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"checkbox3"</span> <span class="na">id=</span><span class="s">"checkbox3"</span> <span class="na">class=</span><span class="s">"margin-r-sm"</span> <span class="na">value=</span><span class="s">"メロン"</span><span class="nt">&gt;</span>メロン<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"m-checkbox u-margin-r"</span> <span class="na">for=</span><span class="s">"checkbox1"</span><span class="nt">&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"checkbox1"</span> <span class="na">id=</span><span class="s">"checkbox1"</span> <span class="na">class=</span><span class="s">"u-margin-r-sm"</span> <span class="na">value=</span><span class="s">"りんご"</span><span class="nt">&gt;</span>りんご<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"m-checkbox u-margin-r"</span> <span class="na">for=</span><span class="s">"checkbox2"</span><span class="nt">&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"checkbox2"</span> <span class="na">id=</span><span class="s">"checkbox2"</span> <span class="na">class=</span><span class="s">"u-margin-r-sm"</span> <span class="na">value=</span><span class="s">"バナナ"</span><span class="nt">&gt;</span>バナナ<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"m-checkbox"</span> <span class="na">for=</span><span class="s">"checkbox3"</span><span class="nt">&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"checkbox3"</span> <span class="na">id=</span><span class="s">"checkbox3"</span> <span class="na">class=</span><span class="s">"u-margin-r-sm"</span> <span class="na">value=</span><span class="s">"メロン"</span><span class="nt">&gt;</span>メロン<span class="nt">&lt;/label&gt;</span>
 <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.c-form --&gt;</span>
 
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-form"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"demo01-02"</span> <span class="na">class=</span><span class="s">"c-form-label"</span><span class="nt">&gt;</span>メッセージ<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;textarea</span> <span class="na">id=</span><span class="s">"demo01-02"</span> <span class="na">name=</span><span class="s">"demo02"</span> <span class="na">rows=</span><span class="s">"5"</span> <span class="na">class=</span><span class="s">"m-input width-50"</span> <span class="na">placeholder=</span><span class="s">"メッセージをどうぞ"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+    <span class="nt">&lt;textarea</span> <span class="na">id=</span><span class="s">"demo01-02"</span> <span class="na">name=</span><span class="s">"demo02"</span> <span class="na">rows=</span><span class="s">"5"</span> <span class="na">class=</span><span class="s">"m-input u-width-50"</span> <span class="na">placeholder=</span><span class="s">"メッセージをどうぞ"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
 <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.c-form --&gt;</span>
 </pre></div>
 <h2 id="form-01-inline" class="styleguide">c-form-inline</h2>
@@ -167,12 +167,12 @@
 <p>フォームの入力を間違えたときの補助テキストを表示する。</p>
 <div class="example"><div class="c-form c-form-inline">
     <label for="demo01-01" class="c-form-label">フリガナ</label>
-    <input type="text" class="m-input width-50 is-error" id="demo01-01" name="demo00" value="山田一郎" />
+    <input type="text" class="m-input u-width-50 is-error" id="demo01-01" name="demo00" value="山田一郎" />
     <p class="c-form-error">フリガナはカタカナで入力してください。</p>
 </div><!-- /.c-form -->
 </div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-form c-form-inline"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"demo01-01"</span> <span class="na">class=</span><span class="s">"c-form-label"</span><span class="nt">&gt;</span>フリガナ<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"m-input width-50 is-error"</span> <span class="na">id=</span><span class="s">"demo01-01"</span> <span class="na">name=</span><span class="s">"demo00"</span> <span class="na">value=</span><span class="s">"山田一郎"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"m-input u-width-50 is-error"</span> <span class="na">id=</span><span class="s">"demo01-01"</span> <span class="na">name=</span><span class="s">"demo00"</span> <span class="na">value=</span><span class="s">"山田一郎"</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"c-form-error"</span><span class="nt">&gt;</span>フリガナはカタカナで入力してください。<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.c-form --&gt;</span>
 </pre></div>

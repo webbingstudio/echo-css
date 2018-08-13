@@ -13,7 +13,7 @@ flexboxによるグリッドのグループを作成する。 <code>ul ,ol</code
 以下のクラスは、使用頻度が非常に低いため、このフレームワークでは除外されている。  
 <code>/\_scss/_config\_advance.scss</code> の変数 <code>$optimize</code> を <code>false</code> に変更すると、すべてのクラスに対応する。
 
-- .#{$pr}#{$col}-1-(breakpoint)
+- .#{$pr}#{$col}-(breakpoint)-1
 - .#{$pr}#{$col}-(breakpoint)-#{$grid-columns-max}
 - .#{$pr}#{$col}-offset-(breakpoint)-#{$grid-columns-max}
 
@@ -22,7 +22,7 @@ flexboxによるグリッドのグループを作成する。 <code>ul ,ol</code
 The following classes are excluded in this framework because they are used very infrequently.  
 Variable in <code>/\_scss/_config\_advance.scss</code> Changing <code>$optimize</code> to <code>false</code> corresponds to all classes.
 
-- .#{$pr}#{$col}-1-(breakpoint)
+- .#{$pr}#{$col}-(breakpoint)-1
 - .#{$pr}#{$col}-(breakpoint)-#{$grid-columns-max}
 - .#{$pr}#{$col}-offset-(breakpoint)-#{$grid-columns-max}
 

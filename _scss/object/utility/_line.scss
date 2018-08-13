@@ -2,7 +2,7 @@
 
 /*doc
 ---
-title: #{$pr}#{$u}line-(size)
+title: #{$pr}#{$u}line#{$c3}(size)
 name: line-01-size
 category: utility-line
 ---
@@ -11,28 +11,28 @@ category: utility-line
 行間を最低にするクラスは、0ではなく <code>none</code> である点に注意。
 
 ``` example
-<p class="#{$pr}#{$u}line-none">#{$pr}#{$u}line-none_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
-<p class="#{$pr}#{$u}line-sm">#{$pr}#{$u}line-sm_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
-<p class="#{$pr}#{$u}line-md">#{$pr}#{$u}line-md_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
-<p class="#{$pr}#{$u}line-lg">#{$pr}#{$u}line-lg_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+<p class="#{$pr}#{$u}line#{$c3}none">#{$pr}#{$u}line#{$c3}none:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+<p class="#{$pr}#{$u}line#{$c3}sm">#{$pr}#{$u}line#{$c3}sm:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+<p class="#{$pr}#{$u}line#{$c3}md">#{$pr}#{$u}line#{$c3}md:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+<p class="#{$pr}#{$u}line#{$c3}lg">#{$pr}#{$u}line#{$c3}lg:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
 ```
 */
 
 #{$u-wrap} {
 
-	.#{$pr}#{$u}line-none {
+	.#{$pr}#{$u}line#{$c3}none {
 	    line-height: $line-height-none;
 	}
 
-	.#{$pr}#{$u}line-sm {
+	.#{$pr}#{$u}line#{$c3}sm {
 	    line-height: $line-height-sm;
 	}
 
-	.#{$pr}#{$u}line-md {
+	.#{$pr}#{$u}line#{$c3}md {
 	    line-height: $line-height-md;
 	}
 
-	.#{$pr}#{$u}line-lg {
+	.#{$pr}#{$u}line#{$c3}lg {
 	    line-height: $line-height-lg;
 	}
 

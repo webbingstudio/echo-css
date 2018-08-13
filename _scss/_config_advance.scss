@@ -4,14 +4,14 @@
 // Conjunction
 // -----------------------------------------
 
-$c1: '-';
-$c2: '-';
-$c3: '-';
+$c1: '-' !default;  // to $element
+$c2: '-' !default;   // to $key
+$c3: '-' !default;   // to $value
 
 @if ($rule == 'bem') {
-  $c1: '__';  // $block to $element
-  $c2: '_';   // $element to $key
-  $c3: '_';   // $key to $value
+  $c1: '__';  // to $element
+  $c2: '--';   // to $key
+  $c3: '--';   // to $value
 }
 
 
@@ -40,9 +40,7 @@ $m: "m-" !default;
 $c: "c-" !default;
 
 // utility-group-prefix
-// ユーティリティクラスは、意図的に接頭辞を指定していない。システムの編集者も使用する可能性があるため、覚えやすいよう簡略化している
-// Utility class does not intentionally specify a prefix. there is a possibility that editors of system, use it, it simplified for easier to remember
-$u: "" !default;
+$u: "u-" !default;
 
 // project-group-prefix
 $p: "p-" !default;

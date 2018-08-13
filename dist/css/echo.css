@@ -308,8 +308,8 @@ category: layout-document
 
 ドキュメント全体を包括する。  
 ユーティリティクラスの重要度を上げるための<code>id="#document"</code>はこの包括ブロックに指定することを想定している。  
-ユーティリティクラス <code>.expand</code> や、オフキャンバス等の画面全体に影響する演出の影響を受けないよう、幅を制限している。  
-<code>.expand</code> を使用する予定がない場合や、他のライブラリ等と干渉する場合は、この要素は削除してもかまわない。
+ユーティリティクラス <code>.u-expand</code> や、オフキャンバス等の画面全体に影響する演出の影響を受けないよう、幅を制限している。  
+<code>.u-expand</code> を使用する予定がない場合や、他のライブラリ等と干渉する場合は、この要素は削除してもかまわない。
 
 ``` example
 <div id="#document" class="l-document">
@@ -379,7 +379,7 @@ category: layout-container
 }
 /*doc
 ---
-title: l-container_fluid
+title: l-container--fluid
 name: container-01-fluid
 category: layout-container
 parent: container
@@ -388,19 +388,19 @@ parent: container
 コンテナブロックの最大幅の制限を行わない。
 
 ``` example
-<div class="l-container l-container_fluid" style="background-color: #5ad;">
+<div class="l-container l-container--fluid" style="background-color: #5ad;">
     <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5);">(contents)</div>
 </div>
 ```
 
 */
-.l-container_fluid {
+.l-container--fluid {
   max-width: none;
 }
 
 /*doc
 ---
-title: l-container_sm
+title: l-container--sm
 name: container-02-sm
 category: layout-container
 parent: container
@@ -410,26 +410,26 @@ parent: container
 <code>/\_scss/\_config_advance.scss</code> の「<code>$container-max-widths-sm</code>」の定義を参照する。
 
 ``` example
-<div class="l-container l-container_sm" style="background-color: #5ad;">
+<div class="l-container l-container--sm" style="background-color: #5ad;">
     <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5);">(contents)</div>
 </div>
 ```
 
 */
 @media (min-width: 768px) {
-  .l-container_sm {
+  .l-container--sm {
     max-width: 700px;
   }
 }
 @media (min-width: 1000px) {
-  .l-container_sm {
+  .l-container--sm {
     max-width: 960px;
   }
 }
 
 /*doc
 ---
-title: l-container_lg
+title: l-container--lg
 name: container-03-lg
 category: layout-container
 parent: container
@@ -439,29 +439,29 @@ parent: container
 <code>/\_scss/\_config_advance.scss</code> の「<code>$container-max-widths-lg</code>」の定義を参照する。
 
 ``` example
-<div class="l-container l-container_lg" style="background-color: #5ad;">
+<div class="l-container l-container--lg" style="background-color: #5ad;">
     <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5);">(contents)</div>
 </div>
 ```
 
 */
 @media (min-width: 768px) {
-  .l-container_lg {
+  .l-container--lg {
     max-width: 700px;
   }
 }
 @media (min-width: 1000px) {
-  .l-container_lg {
+  .l-container--lg {
     max-width: 960px;
   }
 }
 @media (min-width: 1240px) {
-  .l-container_lg {
+  .l-container--lg {
     max-width: 1200px;
   }
 }
 @media (min-width: 1640px) {
-  .l-container_lg {
+  .l-container--lg {
     max-width: 1600px;
   }
 }
@@ -481,7 +481,7 @@ flexboxによるグリッドのグループを作成する。 <code>ul ,ol</code
 以下のクラスは、使用頻度が非常に低いため、このフレームワークでは除外されている。  
 <code>/\_scss/_config\_advance.scss</code> の変数 <code>$optimize</code> を <code>false</code> に変更すると、すべてのクラスに対応する。
 
-- .l-grid__col-1-(breakpoint)
+- .l-grid__col-(breakpoint)-1
 - .l-grid__col-(breakpoint)-11
 - .l-grid__col-offset-(breakpoint)-11
 
@@ -490,7 +490,7 @@ flexboxによるグリッドのグループを作成する。 <code>ul ,ol</code
 The following classes are excluded in this framework because they are used very infrequently.  
 Variable in <code>/\_scss/_config\_advance.scss</code> Changing <code>$optimize</code> to <code>false</code> corresponds to all classes.
 
-- .l-grid__col-1-(breakpoint)
+- .l-grid__col-(breakpoint)-1
 - .l-grid__col-(breakpoint)-11
 - .l-grid__col-offset-(breakpoint)-11
 
@@ -520,7 +520,7 @@ Variable in <code>/\_scss/_config\_advance.scss</code> Changing <code>$optimize<
 
 /*doc
 ---
-title: l-grid__row_(size)
+title: l-grid__row--(size)
 name: grid-01-row-size
 category: layout-grid
 parent: grid
@@ -528,72 +528,72 @@ parent: grid
 
 flexboxによるグリッドで余白が異なるグループを作成する。  
 (size)は<code>0, sm, lg</code> に対応している。  
-Bootstrap4の <code>.no-gutters</code> を <code>.l-grid__row_0</code> のエイリアスとしている。  
+Bootstrap4の <code>.no-gutters</code> を <code>.l-grid__row--0</code> のエイリアスとしている。  
 命名規則をbootstrapと同様にしたい場合は、 <code>/\_scss/_\config\_advance.scss</code> の変数 <code>$row</code> を変更すること。
 
 ``` example
-<div class="l-grid__row l-grid__row_0" style="margin-bottom: 2rem;">
+<div class="l-grid__row l-grid__row--0" style="margin-bottom: 2rem;">
     <div class="l-grid__col">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">l-grid__row_0<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">l-grid__row--0<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
     <div class="l-grid__col">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%; opacity: 0.8;">l-grid__row_0<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+        <div style="padding: 1rem; background-color: #ffdd99; height: 100%; opacity: 0.8;">l-grid__row--0<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
     <div class="l-grid__col">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">l-grid__row_0<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-</div>
-
-<div class="l-grid__row l-grid__row_sm" style="margin-bottom: 2rem;">
-    <div class="l-grid__col">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">l-grid__row_sm<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="l-grid__col">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%; opacity: 0.8;">l-grid__row_sm<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="l-grid__col">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">l-grid__row_sm<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">l-grid__row--0<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 
-<div class="l-grid__row l-grid__row_lg">
+<div class="l-grid__row l-grid__row--sm" style="margin-bottom: 2rem;">
     <div class="l-grid__col">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">l-grid__row_lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">l-grid__row--sm<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
     <div class="l-grid__col">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%; opacity: 0.8;">l-grid__row_lg<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+        <div style="padding: 1rem; background-color: #ffdd99; height: 100%; opacity: 0.8;">l-grid__row--sm<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
     <div class="l-grid__col">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">l-grid__row_lg<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">l-grid__row--sm<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    </div>
+</div>
+
+<div class="l-grid__row l-grid__row--lg">
+    <div class="l-grid__col">
+        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">l-grid__row--lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    </div>
+    <div class="l-grid__col">
+        <div style="padding: 1rem; background-color: #ffdd99; height: 100%; opacity: 0.8;">l-grid__row--lg<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    </div>
+    <div class="l-grid__col">
+        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">l-grid__row--lg<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 ```
 */
-.l-grid__row_0,
+.l-grid__row--0,
 .no-gutters {
   margin-left: 0;
   margin-right: 0;
 }
-.l-grid__row_0 [class*="l-grid__col"],
+.l-grid__row--0 [class*="l-grid__col"],
 .no-gutters [class*="l-grid__col"] {
   padding-left: 0;
   padding-right: 0;
 }
 
-.l-grid__row_sm {
+.l-grid__row--sm {
   margin-left: -5px;
   margin-right: -5px;
 }
-.l-grid__row_sm [class*="l-grid__col"] {
+.l-grid__row--sm [class*="l-grid__col"] {
   padding-left: 5px;
   padding-right: 5px;
 }
 
-.l-grid__row_lg {
+.l-grid__row--lg {
   margin-left: -20px;
   margin-right: -20px;
 }
-.l-grid__row_lg [class*="l-grid__col"] {
+.l-grid__row--lg [class*="l-grid__col"] {
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -645,15 +645,15 @@ flexboxによるグリッドのセルを作成する。このクラス単独で�
   padding-right: 10px;
 }
 
-.l-grid__col_2, .l-grid__col_3, .l-grid__col_4, .l-grid__col_5, .l-grid__col_6, .l-grid__col_7, .l-grid__col_8, .l-grid__col_9, .l-grid__col_10, .l-grid__col,
-.l-grid__col_auto, .l-grid__col_xxs_2, .l-grid__col_xxs_3, .l-grid__col_xxs_4, .l-grid__col_xxs_5, .l-grid__col_xxs_6, .l-grid__col_xxs_7, .l-grid__col_xxs_8, .l-grid__col_xxs_9, .l-grid__col_xxs_10, .l-grid__col_xxs,
-.l-grid__col_xxs_auto, .l-grid__col_xs_2, .l-grid__col_xs_3, .l-grid__col_xs_4, .l-grid__col_xs_5, .l-grid__col_xs_6, .l-grid__col_xs_7, .l-grid__col_xs_8, .l-grid__col_xs_9, .l-grid__col_xs_10, .l-grid__col_xs,
-.l-grid__col_xs_auto, .l-grid__col_sm_2, .l-grid__col_sm_3, .l-grid__col_sm_4, .l-grid__col_sm_5, .l-grid__col_sm_6, .l-grid__col_sm_7, .l-grid__col_sm_8, .l-grid__col_sm_9, .l-grid__col_sm_10, .l-grid__col_sm,
-.l-grid__col_sm_auto, .l-grid__col_md_2, .l-grid__col_md_3, .l-grid__col_md_4, .l-grid__col_md_5, .l-grid__col_md_6, .l-grid__col_md_7, .l-grid__col_md_8, .l-grid__col_md_9, .l-grid__col_md_10, .l-grid__col_md,
-.l-grid__col_md_auto, .l-grid__col_lg_2, .l-grid__col_lg_3, .l-grid__col_lg_4, .l-grid__col_lg_5, .l-grid__col_lg_6, .l-grid__col_lg_7, .l-grid__col_lg_8, .l-grid__col_lg_9, .l-grid__col_lg_10, .l-grid__col_lg,
-.l-grid__col_lg_auto, .l-grid__col_xl_2, .l-grid__col_xl_3, .l-grid__col_xl_4, .l-grid__col_xl_5, .l-grid__col_xl_6, .l-grid__col_xl_7, .l-grid__col_xl_8, .l-grid__col_xl_9, .l-grid__col_xl_10, .l-grid__col_xl,
-.l-grid__col_xl_auto, .l-grid__col_xxl_2, .l-grid__col_xxl_3, .l-grid__col_xxl_4, .l-grid__col_xxl_5, .l-grid__col_xxl_6, .l-grid__col_xxl_7, .l-grid__col_xxl_8, .l-grid__col_xxl_9, .l-grid__col_xxl_10, .l-grid__col_xxl,
-.l-grid__col_xxl_auto {
+.l-grid__col--2, .l-grid__col--3, .l-grid__col--4, .l-grid__col--5, .l-grid__col--6, .l-grid__col--7, .l-grid__col--8, .l-grid__col--9, .l-grid__col--10, .l-grid__col,
+.l-grid__col--auto, .l-grid__col--xxs--2, .l-grid__col--xxs--3, .l-grid__col--xxs--4, .l-grid__col--xxs--5, .l-grid__col--xxs--6, .l-grid__col--xxs--7, .l-grid__col--xxs--8, .l-grid__col--xxs--9, .l-grid__col--xxs--10, .l-grid__col--xxs,
+.l-grid__col--xxs--auto, .l-grid__col--xs--2, .l-grid__col--xs--3, .l-grid__col--xs--4, .l-grid__col--xs--5, .l-grid__col--xs--6, .l-grid__col--xs--7, .l-grid__col--xs--8, .l-grid__col--xs--9, .l-grid__col--xs--10, .l-grid__col--xs,
+.l-grid__col--xs--auto, .l-grid__col--sm--2, .l-grid__col--sm--3, .l-grid__col--sm--4, .l-grid__col--sm--5, .l-grid__col--sm--6, .l-grid__col--sm--7, .l-grid__col--sm--8, .l-grid__col--sm--9, .l-grid__col--sm--10, .l-grid__col--sm,
+.l-grid__col--sm--auto, .l-grid__col--md--2, .l-grid__col--md--3, .l-grid__col--md--4, .l-grid__col--md--5, .l-grid__col--md--6, .l-grid__col--md--7, .l-grid__col--md--8, .l-grid__col--md--9, .l-grid__col--md--10, .l-grid__col--md,
+.l-grid__col--md--auto, .l-grid__col--lg--2, .l-grid__col--lg--3, .l-grid__col--lg--4, .l-grid__col--lg--5, .l-grid__col--lg--6, .l-grid__col--lg--7, .l-grid__col--lg--8, .l-grid__col--lg--9, .l-grid__col--lg--10, .l-grid__col--lg,
+.l-grid__col--lg--auto, .l-grid__col--xl--2, .l-grid__col--xl--3, .l-grid__col--xl--4, .l-grid__col--xl--5, .l-grid__col--xl--6, .l-grid__col--xl--7, .l-grid__col--xl--8, .l-grid__col--xl--9, .l-grid__col--xl--10, .l-grid__col--xl,
+.l-grid__col--xl--auto, .l-grid__col--xxl--2, .l-grid__col--xxl--3, .l-grid__col--xxl--4, .l-grid__col--xxl--5, .l-grid__col--xxl--6, .l-grid__col--xxl--7, .l-grid__col--xxl--8, .l-grid__col--xxl--9, .l-grid__col--xxl--10, .l-grid__col--xxl,
+.l-grid__col--xxl--auto {
   flex-basis: 0;
   flex-grow: 1;
   max-width: 100%;
@@ -665,1286 +665,1286 @@ flexboxによるグリッドのセルを作成する。このクラス単独で�
   max-width: 100%;
 }
 
-.l-grid__col_auto {
+.l-grid__col--auto {
   width: auto;
   max-width: none;
 }
 
-.l-grid__col_2 {
+.l-grid__col--2 {
   flex-basis: 16.66667%;
   max-width: 16.66667%;
 }
 
-.l-grid__col_3 {
+.l-grid__col--3 {
   flex-basis: 25%;
   max-width: 25%;
 }
 
-.l-grid__col_4 {
+.l-grid__col--4 {
   flex-basis: 33.33333%;
   max-width: 33.33333%;
 }
 
-.l-grid__col_5 {
+.l-grid__col--5 {
   flex-basis: 41.66667%;
   max-width: 41.66667%;
 }
 
-.l-grid__col_6 {
+.l-grid__col--6 {
   flex-basis: 50%;
   max-width: 50%;
 }
 
-.l-grid__col_7 {
+.l-grid__col--7 {
   flex-basis: 58.33333%;
   max-width: 58.33333%;
 }
 
-.l-grid__col_8 {
+.l-grid__col--8 {
   flex-basis: 66.66667%;
   max-width: 66.66667%;
 }
 
-.l-grid__col_9 {
+.l-grid__col--9 {
   flex-basis: 75%;
   max-width: 75%;
 }
 
-.l-grid__col_10 {
+.l-grid__col--10 {
   flex-basis: 83.33333%;
   max-width: 83.33333%;
 }
 
-.l-grid__col_order_first {
+.l-grid__col--order--first {
   order: -1;
 }
 
-.l-grid__col_order_last {
+.l-grid__col--order--last {
   order: 13;
 }
 
-.l-grid__col_order_0 {
+.l-grid__col--order--0 {
   order: 0;
 }
 
-.l-grid__col_order_1 {
+.l-grid__col--order--1 {
   order: 1;
 }
 
-.l-grid__col_order_2 {
+.l-grid__col--order--2 {
   order: 2;
 }
 
-.l-grid__col_order_3 {
+.l-grid__col--order--3 {
   order: 3;
 }
 
-.l-grid__col_order_4 {
+.l-grid__col--order--4 {
   order: 4;
 }
 
-.l-grid__col_order_5 {
+.l-grid__col--order--5 {
   order: 5;
 }
 
-.l-grid__col_order_6 {
+.l-grid__col--order--6 {
   order: 6;
 }
 
-.l-grid__col_order_7 {
+.l-grid__col--order--7 {
   order: 7;
 }
 
-.l-grid__col_order_8 {
+.l-grid__col--order--8 {
   order: 8;
 }
 
-.l-grid__col_order_9 {
+.l-grid__col--order--9 {
   order: 9;
 }
 
-.l-grid__col_order_10 {
+.l-grid__col--order--10 {
   order: 10;
 }
 
-.l-grid__col_order_11 {
+.l-grid__col--order--11 {
   order: 11;
 }
 
-.l-grid__col_order_12 {
+.l-grid__col--order--12 {
   order: 12;
 }
 
-.l-grid__col_offset_1 {
+.l-grid__col--offset--1 {
   margin-left: 8.33333%;
 }
 
-.l-grid__col_offset_2 {
+.l-grid__col--offset--2 {
   margin-left: 16.66667%;
 }
 
-.l-grid__col_offset_3 {
+.l-grid__col--offset--3 {
   margin-left: 25%;
 }
 
-.l-grid__col_offset_4 {
+.l-grid__col--offset--4 {
   margin-left: 33.33333%;
 }
 
-.l-grid__col_offset_5 {
+.l-grid__col--offset--5 {
   margin-left: 41.66667%;
 }
 
-.l-grid__col_offset_6 {
+.l-grid__col--offset--6 {
   margin-left: 50%;
 }
 
-.l-grid__col_offset_7 {
+.l-grid__col--offset--7 {
   margin-left: 58.33333%;
 }
 
-.l-grid__col_offset_8 {
+.l-grid__col--offset--8 {
   margin-left: 66.66667%;
 }
 
-.l-grid__col_offset_9 {
+.l-grid__col--offset--9 {
   margin-left: 75%;
 }
 
-.l-grid__col_offset_10 {
+.l-grid__col--offset--10 {
   margin-left: 83.33333%;
 }
 
 @media (min-width: 320px) {
-  .l-grid__col_xxs {
+  .l-grid__col--xxs {
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%;
   }
 
-  .l-grid__col_xxs_auto {
+  .l-grid__col--xxs--auto {
     width: auto;
     max-width: none;
   }
 
-  .l-grid__col_xxs_2 {
+  .l-grid__col--xxs--2 {
     flex-basis: 16.66667%;
     max-width: 16.66667%;
   }
 
-  .l-grid__col_xxs_3 {
+  .l-grid__col--xxs--3 {
     flex-basis: 25%;
     max-width: 25%;
   }
 
-  .l-grid__col_xxs_4 {
+  .l-grid__col--xxs--4 {
     flex-basis: 33.33333%;
     max-width: 33.33333%;
   }
 
-  .l-grid__col_xxs_5 {
+  .l-grid__col--xxs--5 {
     flex-basis: 41.66667%;
     max-width: 41.66667%;
   }
 
-  .l-grid__col_xxs_6 {
+  .l-grid__col--xxs--6 {
     flex-basis: 50%;
     max-width: 50%;
   }
 
-  .l-grid__col_xxs_7 {
+  .l-grid__col--xxs--7 {
     flex-basis: 58.33333%;
     max-width: 58.33333%;
   }
 
-  .l-grid__col_xxs_8 {
+  .l-grid__col--xxs--8 {
     flex-basis: 66.66667%;
     max-width: 66.66667%;
   }
 
-  .l-grid__col_xxs_9 {
+  .l-grid__col--xxs--9 {
     flex-basis: 75%;
     max-width: 75%;
   }
 
-  .l-grid__col_xxs_10 {
+  .l-grid__col--xxs--10 {
     flex-basis: 83.33333%;
     max-width: 83.33333%;
   }
 
-  .l-grid__col_order_xxs_first {
+  .l-grid__col--order--xxs--first {
     order: -1;
   }
 
-  .l-grid__col_order_xxs_last {
+  .l-grid__col--order--xxs--last {
     order: 13;
   }
 
-  .l-grid__col_order_xxs_0 {
+  .l-grid__col--order--xxs--0 {
     order: 0;
   }
 
-  .l-grid__col_order_xxs_1 {
+  .l-grid__col--order--xxs--1 {
     order: 1;
   }
 
-  .l-grid__col_order_xxs_2 {
+  .l-grid__col--order--xxs--2 {
     order: 2;
   }
 
-  .l-grid__col_order_xxs_3 {
+  .l-grid__col--order--xxs--3 {
     order: 3;
   }
 
-  .l-grid__col_order_xxs_4 {
+  .l-grid__col--order--xxs--4 {
     order: 4;
   }
 
-  .l-grid__col_order_xxs_5 {
+  .l-grid__col--order--xxs--5 {
     order: 5;
   }
 
-  .l-grid__col_order_xxs_6 {
+  .l-grid__col--order--xxs--6 {
     order: 6;
   }
 
-  .l-grid__col_order_xxs_7 {
+  .l-grid__col--order--xxs--7 {
     order: 7;
   }
 
-  .l-grid__col_order_xxs_8 {
+  .l-grid__col--order--xxs--8 {
     order: 8;
   }
 
-  .l-grid__col_order_xxs_9 {
+  .l-grid__col--order--xxs--9 {
     order: 9;
   }
 
-  .l-grid__col_order_xxs_10 {
+  .l-grid__col--order--xxs--10 {
     order: 10;
   }
 
-  .l-grid__col_order_xxs_11 {
+  .l-grid__col--order--xxs--11 {
     order: 11;
   }
 
-  .l-grid__col_order_xxs_12 {
+  .l-grid__col--order--xxs--12 {
     order: 12;
   }
 
-  .l-grid__col_offset_xxs_0 {
+  .l-grid__col--offset--xxs--0 {
     margin-left: 0;
   }
 
-  .l-grid__col_offset_xxs_1 {
+  .l-grid__col--offset--xxs--1 {
     margin-left: 8.33333%;
   }
 
-  .l-grid__col_offset_xxs_2 {
+  .l-grid__col--offset--xxs--2 {
     margin-left: 16.66667%;
   }
 
-  .l-grid__col_offset_xxs_3 {
+  .l-grid__col--offset--xxs--3 {
     margin-left: 25%;
   }
 
-  .l-grid__col_offset_xxs_4 {
+  .l-grid__col--offset--xxs--4 {
     margin-left: 33.33333%;
   }
 
-  .l-grid__col_offset_xxs_5 {
+  .l-grid__col--offset--xxs--5 {
     margin-left: 41.66667%;
   }
 
-  .l-grid__col_offset_xxs_6 {
+  .l-grid__col--offset--xxs--6 {
     margin-left: 50%;
   }
 
-  .l-grid__col_offset_xxs_7 {
+  .l-grid__col--offset--xxs--7 {
     margin-left: 58.33333%;
   }
 
-  .l-grid__col_offset_xxs_8 {
+  .l-grid__col--offset--xxs--8 {
     margin-left: 66.66667%;
   }
 
-  .l-grid__col_offset_xxs_9 {
+  .l-grid__col--offset--xxs--9 {
     margin-left: 75%;
   }
 
-  .l-grid__col_offset_xxs_10 {
+  .l-grid__col--offset--xxs--10 {
     margin-left: 83.33333%;
   }
 }
 @media (min-width: 360px) {
-  .l-grid__col_xs {
+  .l-grid__col--xs {
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%;
   }
 
-  .l-grid__col_xs_auto {
+  .l-grid__col--xs--auto {
     width: auto;
     max-width: none;
   }
 
-  .l-grid__col_xs_2 {
+  .l-grid__col--xs--2 {
     flex-basis: 16.66667%;
     max-width: 16.66667%;
   }
 
-  .l-grid__col_xs_3 {
+  .l-grid__col--xs--3 {
     flex-basis: 25%;
     max-width: 25%;
   }
 
-  .l-grid__col_xs_4 {
+  .l-grid__col--xs--4 {
     flex-basis: 33.33333%;
     max-width: 33.33333%;
   }
 
-  .l-grid__col_xs_5 {
+  .l-grid__col--xs--5 {
     flex-basis: 41.66667%;
     max-width: 41.66667%;
   }
 
-  .l-grid__col_xs_6 {
+  .l-grid__col--xs--6 {
     flex-basis: 50%;
     max-width: 50%;
   }
 
-  .l-grid__col_xs_7 {
+  .l-grid__col--xs--7 {
     flex-basis: 58.33333%;
     max-width: 58.33333%;
   }
 
-  .l-grid__col_xs_8 {
+  .l-grid__col--xs--8 {
     flex-basis: 66.66667%;
     max-width: 66.66667%;
   }
 
-  .l-grid__col_xs_9 {
+  .l-grid__col--xs--9 {
     flex-basis: 75%;
     max-width: 75%;
   }
 
-  .l-grid__col_xs_10 {
+  .l-grid__col--xs--10 {
     flex-basis: 83.33333%;
     max-width: 83.33333%;
   }
 
-  .l-grid__col_order_xs_first {
+  .l-grid__col--order--xs--first {
     order: -1;
   }
 
-  .l-grid__col_order_xs_last {
+  .l-grid__col--order--xs--last {
     order: 13;
   }
 
-  .l-grid__col_order_xs_0 {
+  .l-grid__col--order--xs--0 {
     order: 0;
   }
 
-  .l-grid__col_order_xs_1 {
+  .l-grid__col--order--xs--1 {
     order: 1;
   }
 
-  .l-grid__col_order_xs_2 {
+  .l-grid__col--order--xs--2 {
     order: 2;
   }
 
-  .l-grid__col_order_xs_3 {
+  .l-grid__col--order--xs--3 {
     order: 3;
   }
 
-  .l-grid__col_order_xs_4 {
+  .l-grid__col--order--xs--4 {
     order: 4;
   }
 
-  .l-grid__col_order_xs_5 {
+  .l-grid__col--order--xs--5 {
     order: 5;
   }
 
-  .l-grid__col_order_xs_6 {
+  .l-grid__col--order--xs--6 {
     order: 6;
   }
 
-  .l-grid__col_order_xs_7 {
+  .l-grid__col--order--xs--7 {
     order: 7;
   }
 
-  .l-grid__col_order_xs_8 {
+  .l-grid__col--order--xs--8 {
     order: 8;
   }
 
-  .l-grid__col_order_xs_9 {
+  .l-grid__col--order--xs--9 {
     order: 9;
   }
 
-  .l-grid__col_order_xs_10 {
+  .l-grid__col--order--xs--10 {
     order: 10;
   }
 
-  .l-grid__col_order_xs_11 {
+  .l-grid__col--order--xs--11 {
     order: 11;
   }
 
-  .l-grid__col_order_xs_12 {
+  .l-grid__col--order--xs--12 {
     order: 12;
   }
 
-  .l-grid__col_offset_xs_0 {
+  .l-grid__col--offset--xs--0 {
     margin-left: 0;
   }
 
-  .l-grid__col_offset_xs_1 {
+  .l-grid__col--offset--xs--1 {
     margin-left: 8.33333%;
   }
 
-  .l-grid__col_offset_xs_2 {
+  .l-grid__col--offset--xs--2 {
     margin-left: 16.66667%;
   }
 
-  .l-grid__col_offset_xs_3 {
+  .l-grid__col--offset--xs--3 {
     margin-left: 25%;
   }
 
-  .l-grid__col_offset_xs_4 {
+  .l-grid__col--offset--xs--4 {
     margin-left: 33.33333%;
   }
 
-  .l-grid__col_offset_xs_5 {
+  .l-grid__col--offset--xs--5 {
     margin-left: 41.66667%;
   }
 
-  .l-grid__col_offset_xs_6 {
+  .l-grid__col--offset--xs--6 {
     margin-left: 50%;
   }
 
-  .l-grid__col_offset_xs_7 {
+  .l-grid__col--offset--xs--7 {
     margin-left: 58.33333%;
   }
 
-  .l-grid__col_offset_xs_8 {
+  .l-grid__col--offset--xs--8 {
     margin-left: 66.66667%;
   }
 
-  .l-grid__col_offset_xs_9 {
+  .l-grid__col--offset--xs--9 {
     margin-left: 75%;
   }
 
-  .l-grid__col_offset_xs_10 {
+  .l-grid__col--offset--xs--10 {
     margin-left: 83.33333%;
   }
 }
 @media (min-width: 425px) {
-  .l-grid__col_sm {
+  .l-grid__col--sm {
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%;
   }
 
-  .l-grid__col_sm_auto {
+  .l-grid__col--sm--auto {
     width: auto;
     max-width: none;
   }
 
-  .l-grid__col_sm_2 {
+  .l-grid__col--sm--2 {
     flex-basis: 16.66667%;
     max-width: 16.66667%;
   }
 
-  .l-grid__col_sm_3 {
+  .l-grid__col--sm--3 {
     flex-basis: 25%;
     max-width: 25%;
   }
 
-  .l-grid__col_sm_4 {
+  .l-grid__col--sm--4 {
     flex-basis: 33.33333%;
     max-width: 33.33333%;
   }
 
-  .l-grid__col_sm_5 {
+  .l-grid__col--sm--5 {
     flex-basis: 41.66667%;
     max-width: 41.66667%;
   }
 
-  .l-grid__col_sm_6 {
+  .l-grid__col--sm--6 {
     flex-basis: 50%;
     max-width: 50%;
   }
 
-  .l-grid__col_sm_7 {
+  .l-grid__col--sm--7 {
     flex-basis: 58.33333%;
     max-width: 58.33333%;
   }
 
-  .l-grid__col_sm_8 {
+  .l-grid__col--sm--8 {
     flex-basis: 66.66667%;
     max-width: 66.66667%;
   }
 
-  .l-grid__col_sm_9 {
+  .l-grid__col--sm--9 {
     flex-basis: 75%;
     max-width: 75%;
   }
 
-  .l-grid__col_sm_10 {
+  .l-grid__col--sm--10 {
     flex-basis: 83.33333%;
     max-width: 83.33333%;
   }
 
-  .l-grid__col_order_sm_first {
+  .l-grid__col--order--sm--first {
     order: -1;
   }
 
-  .l-grid__col_order_sm_last {
+  .l-grid__col--order--sm--last {
     order: 13;
   }
 
-  .l-grid__col_order_sm_0 {
+  .l-grid__col--order--sm--0 {
     order: 0;
   }
 
-  .l-grid__col_order_sm_1 {
+  .l-grid__col--order--sm--1 {
     order: 1;
   }
 
-  .l-grid__col_order_sm_2 {
+  .l-grid__col--order--sm--2 {
     order: 2;
   }
 
-  .l-grid__col_order_sm_3 {
+  .l-grid__col--order--sm--3 {
     order: 3;
   }
 
-  .l-grid__col_order_sm_4 {
+  .l-grid__col--order--sm--4 {
     order: 4;
   }
 
-  .l-grid__col_order_sm_5 {
+  .l-grid__col--order--sm--5 {
     order: 5;
   }
 
-  .l-grid__col_order_sm_6 {
+  .l-grid__col--order--sm--6 {
     order: 6;
   }
 
-  .l-grid__col_order_sm_7 {
+  .l-grid__col--order--sm--7 {
     order: 7;
   }
 
-  .l-grid__col_order_sm_8 {
+  .l-grid__col--order--sm--8 {
     order: 8;
   }
 
-  .l-grid__col_order_sm_9 {
+  .l-grid__col--order--sm--9 {
     order: 9;
   }
 
-  .l-grid__col_order_sm_10 {
+  .l-grid__col--order--sm--10 {
     order: 10;
   }
 
-  .l-grid__col_order_sm_11 {
+  .l-grid__col--order--sm--11 {
     order: 11;
   }
 
-  .l-grid__col_order_sm_12 {
+  .l-grid__col--order--sm--12 {
     order: 12;
   }
 
-  .l-grid__col_offset_sm_0 {
+  .l-grid__col--offset--sm--0 {
     margin-left: 0;
   }
 
-  .l-grid__col_offset_sm_1 {
+  .l-grid__col--offset--sm--1 {
     margin-left: 8.33333%;
   }
 
-  .l-grid__col_offset_sm_2 {
+  .l-grid__col--offset--sm--2 {
     margin-left: 16.66667%;
   }
 
-  .l-grid__col_offset_sm_3 {
+  .l-grid__col--offset--sm--3 {
     margin-left: 25%;
   }
 
-  .l-grid__col_offset_sm_4 {
+  .l-grid__col--offset--sm--4 {
     margin-left: 33.33333%;
   }
 
-  .l-grid__col_offset_sm_5 {
+  .l-grid__col--offset--sm--5 {
     margin-left: 41.66667%;
   }
 
-  .l-grid__col_offset_sm_6 {
+  .l-grid__col--offset--sm--6 {
     margin-left: 50%;
   }
 
-  .l-grid__col_offset_sm_7 {
+  .l-grid__col--offset--sm--7 {
     margin-left: 58.33333%;
   }
 
-  .l-grid__col_offset_sm_8 {
+  .l-grid__col--offset--sm--8 {
     margin-left: 66.66667%;
   }
 
-  .l-grid__col_offset_sm_9 {
+  .l-grid__col--offset--sm--9 {
     margin-left: 75%;
   }
 
-  .l-grid__col_offset_sm_10 {
+  .l-grid__col--offset--sm--10 {
     margin-left: 83.33333%;
   }
 }
 @media (min-width: 768px) {
-  .l-grid__col_md {
+  .l-grid__col--md {
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%;
   }
 
-  .l-grid__col_md_auto {
+  .l-grid__col--md--auto {
     width: auto;
     max-width: none;
   }
 
-  .l-grid__col_md_2 {
+  .l-grid__col--md--2 {
     flex-basis: 16.66667%;
     max-width: 16.66667%;
   }
 
-  .l-grid__col_md_3 {
+  .l-grid__col--md--3 {
     flex-basis: 25%;
     max-width: 25%;
   }
 
-  .l-grid__col_md_4 {
+  .l-grid__col--md--4 {
     flex-basis: 33.33333%;
     max-width: 33.33333%;
   }
 
-  .l-grid__col_md_5 {
+  .l-grid__col--md--5 {
     flex-basis: 41.66667%;
     max-width: 41.66667%;
   }
 
-  .l-grid__col_md_6 {
+  .l-grid__col--md--6 {
     flex-basis: 50%;
     max-width: 50%;
   }
 
-  .l-grid__col_md_7 {
+  .l-grid__col--md--7 {
     flex-basis: 58.33333%;
     max-width: 58.33333%;
   }
 
-  .l-grid__col_md_8 {
+  .l-grid__col--md--8 {
     flex-basis: 66.66667%;
     max-width: 66.66667%;
   }
 
-  .l-grid__col_md_9 {
+  .l-grid__col--md--9 {
     flex-basis: 75%;
     max-width: 75%;
   }
 
-  .l-grid__col_md_10 {
+  .l-grid__col--md--10 {
     flex-basis: 83.33333%;
     max-width: 83.33333%;
   }
 
-  .l-grid__col_order_md_first {
+  .l-grid__col--order--md--first {
     order: -1;
   }
 
-  .l-grid__col_order_md_last {
+  .l-grid__col--order--md--last {
     order: 13;
   }
 
-  .l-grid__col_order_md_0 {
+  .l-grid__col--order--md--0 {
     order: 0;
   }
 
-  .l-grid__col_order_md_1 {
+  .l-grid__col--order--md--1 {
     order: 1;
   }
 
-  .l-grid__col_order_md_2 {
+  .l-grid__col--order--md--2 {
     order: 2;
   }
 
-  .l-grid__col_order_md_3 {
+  .l-grid__col--order--md--3 {
     order: 3;
   }
 
-  .l-grid__col_order_md_4 {
+  .l-grid__col--order--md--4 {
     order: 4;
   }
 
-  .l-grid__col_order_md_5 {
+  .l-grid__col--order--md--5 {
     order: 5;
   }
 
-  .l-grid__col_order_md_6 {
+  .l-grid__col--order--md--6 {
     order: 6;
   }
 
-  .l-grid__col_order_md_7 {
+  .l-grid__col--order--md--7 {
     order: 7;
   }
 
-  .l-grid__col_order_md_8 {
+  .l-grid__col--order--md--8 {
     order: 8;
   }
 
-  .l-grid__col_order_md_9 {
+  .l-grid__col--order--md--9 {
     order: 9;
   }
 
-  .l-grid__col_order_md_10 {
+  .l-grid__col--order--md--10 {
     order: 10;
   }
 
-  .l-grid__col_order_md_11 {
+  .l-grid__col--order--md--11 {
     order: 11;
   }
 
-  .l-grid__col_order_md_12 {
+  .l-grid__col--order--md--12 {
     order: 12;
   }
 
-  .l-grid__col_offset_md_0 {
+  .l-grid__col--offset--md--0 {
     margin-left: 0;
   }
 
-  .l-grid__col_offset_md_1 {
+  .l-grid__col--offset--md--1 {
     margin-left: 8.33333%;
   }
 
-  .l-grid__col_offset_md_2 {
+  .l-grid__col--offset--md--2 {
     margin-left: 16.66667%;
   }
 
-  .l-grid__col_offset_md_3 {
+  .l-grid__col--offset--md--3 {
     margin-left: 25%;
   }
 
-  .l-grid__col_offset_md_4 {
+  .l-grid__col--offset--md--4 {
     margin-left: 33.33333%;
   }
 
-  .l-grid__col_offset_md_5 {
+  .l-grid__col--offset--md--5 {
     margin-left: 41.66667%;
   }
 
-  .l-grid__col_offset_md_6 {
+  .l-grid__col--offset--md--6 {
     margin-left: 50%;
   }
 
-  .l-grid__col_offset_md_7 {
+  .l-grid__col--offset--md--7 {
     margin-left: 58.33333%;
   }
 
-  .l-grid__col_offset_md_8 {
+  .l-grid__col--offset--md--8 {
     margin-left: 66.66667%;
   }
 
-  .l-grid__col_offset_md_9 {
+  .l-grid__col--offset--md--9 {
     margin-left: 75%;
   }
 
-  .l-grid__col_offset_md_10 {
+  .l-grid__col--offset--md--10 {
     margin-left: 83.33333%;
   }
 }
 @media (min-width: 1000px) {
-  .l-grid__col_lg {
+  .l-grid__col--lg {
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%;
   }
 
-  .l-grid__col_lg_auto {
+  .l-grid__col--lg--auto {
     width: auto;
     max-width: none;
   }
 
-  .l-grid__col_lg_2 {
+  .l-grid__col--lg--2 {
     flex-basis: 16.66667%;
     max-width: 16.66667%;
   }
 
-  .l-grid__col_lg_3 {
+  .l-grid__col--lg--3 {
     flex-basis: 25%;
     max-width: 25%;
   }
 
-  .l-grid__col_lg_4 {
+  .l-grid__col--lg--4 {
     flex-basis: 33.33333%;
     max-width: 33.33333%;
   }
 
-  .l-grid__col_lg_5 {
+  .l-grid__col--lg--5 {
     flex-basis: 41.66667%;
     max-width: 41.66667%;
   }
 
-  .l-grid__col_lg_6 {
+  .l-grid__col--lg--6 {
     flex-basis: 50%;
     max-width: 50%;
   }
 
-  .l-grid__col_lg_7 {
+  .l-grid__col--lg--7 {
     flex-basis: 58.33333%;
     max-width: 58.33333%;
   }
 
-  .l-grid__col_lg_8 {
+  .l-grid__col--lg--8 {
     flex-basis: 66.66667%;
     max-width: 66.66667%;
   }
 
-  .l-grid__col_lg_9 {
+  .l-grid__col--lg--9 {
     flex-basis: 75%;
     max-width: 75%;
   }
 
-  .l-grid__col_lg_10 {
+  .l-grid__col--lg--10 {
     flex-basis: 83.33333%;
     max-width: 83.33333%;
   }
 
-  .l-grid__col_order_lg_first {
+  .l-grid__col--order--lg--first {
     order: -1;
   }
 
-  .l-grid__col_order_lg_last {
+  .l-grid__col--order--lg--last {
     order: 13;
   }
 
-  .l-grid__col_order_lg_0 {
+  .l-grid__col--order--lg--0 {
     order: 0;
   }
 
-  .l-grid__col_order_lg_1 {
+  .l-grid__col--order--lg--1 {
     order: 1;
   }
 
-  .l-grid__col_order_lg_2 {
+  .l-grid__col--order--lg--2 {
     order: 2;
   }
 
-  .l-grid__col_order_lg_3 {
+  .l-grid__col--order--lg--3 {
     order: 3;
   }
 
-  .l-grid__col_order_lg_4 {
+  .l-grid__col--order--lg--4 {
     order: 4;
   }
 
-  .l-grid__col_order_lg_5 {
+  .l-grid__col--order--lg--5 {
     order: 5;
   }
 
-  .l-grid__col_order_lg_6 {
+  .l-grid__col--order--lg--6 {
     order: 6;
   }
 
-  .l-grid__col_order_lg_7 {
+  .l-grid__col--order--lg--7 {
     order: 7;
   }
 
-  .l-grid__col_order_lg_8 {
+  .l-grid__col--order--lg--8 {
     order: 8;
   }
 
-  .l-grid__col_order_lg_9 {
+  .l-grid__col--order--lg--9 {
     order: 9;
   }
 
-  .l-grid__col_order_lg_10 {
+  .l-grid__col--order--lg--10 {
     order: 10;
   }
 
-  .l-grid__col_order_lg_11 {
+  .l-grid__col--order--lg--11 {
     order: 11;
   }
 
-  .l-grid__col_order_lg_12 {
+  .l-grid__col--order--lg--12 {
     order: 12;
   }
 
-  .l-grid__col_offset_lg_0 {
+  .l-grid__col--offset--lg--0 {
     margin-left: 0;
   }
 
-  .l-grid__col_offset_lg_1 {
+  .l-grid__col--offset--lg--1 {
     margin-left: 8.33333%;
   }
 
-  .l-grid__col_offset_lg_2 {
+  .l-grid__col--offset--lg--2 {
     margin-left: 16.66667%;
   }
 
-  .l-grid__col_offset_lg_3 {
+  .l-grid__col--offset--lg--3 {
     margin-left: 25%;
   }
 
-  .l-grid__col_offset_lg_4 {
+  .l-grid__col--offset--lg--4 {
     margin-left: 33.33333%;
   }
 
-  .l-grid__col_offset_lg_5 {
+  .l-grid__col--offset--lg--5 {
     margin-left: 41.66667%;
   }
 
-  .l-grid__col_offset_lg_6 {
+  .l-grid__col--offset--lg--6 {
     margin-left: 50%;
   }
 
-  .l-grid__col_offset_lg_7 {
+  .l-grid__col--offset--lg--7 {
     margin-left: 58.33333%;
   }
 
-  .l-grid__col_offset_lg_8 {
+  .l-grid__col--offset--lg--8 {
     margin-left: 66.66667%;
   }
 
-  .l-grid__col_offset_lg_9 {
+  .l-grid__col--offset--lg--9 {
     margin-left: 75%;
   }
 
-  .l-grid__col_offset_lg_10 {
+  .l-grid__col--offset--lg--10 {
     margin-left: 83.33333%;
   }
 }
 @media (min-width: 1240px) {
-  .l-grid__col_xl {
+  .l-grid__col--xl {
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%;
   }
 
-  .l-grid__col_xl_auto {
+  .l-grid__col--xl--auto {
     width: auto;
     max-width: none;
   }
 
-  .l-grid__col_xl_2 {
+  .l-grid__col--xl--2 {
     flex-basis: 16.66667%;
     max-width: 16.66667%;
   }
 
-  .l-grid__col_xl_3 {
+  .l-grid__col--xl--3 {
     flex-basis: 25%;
     max-width: 25%;
   }
 
-  .l-grid__col_xl_4 {
+  .l-grid__col--xl--4 {
     flex-basis: 33.33333%;
     max-width: 33.33333%;
   }
 
-  .l-grid__col_xl_5 {
+  .l-grid__col--xl--5 {
     flex-basis: 41.66667%;
     max-width: 41.66667%;
   }
 
-  .l-grid__col_xl_6 {
+  .l-grid__col--xl--6 {
     flex-basis: 50%;
     max-width: 50%;
   }
 
-  .l-grid__col_xl_7 {
+  .l-grid__col--xl--7 {
     flex-basis: 58.33333%;
     max-width: 58.33333%;
   }
 
-  .l-grid__col_xl_8 {
+  .l-grid__col--xl--8 {
     flex-basis: 66.66667%;
     max-width: 66.66667%;
   }
 
-  .l-grid__col_xl_9 {
+  .l-grid__col--xl--9 {
     flex-basis: 75%;
     max-width: 75%;
   }
 
-  .l-grid__col_xl_10 {
+  .l-grid__col--xl--10 {
     flex-basis: 83.33333%;
     max-width: 83.33333%;
   }
 
-  .l-grid__col_order_xl_first {
+  .l-grid__col--order--xl--first {
     order: -1;
   }
 
-  .l-grid__col_order_xl_last {
+  .l-grid__col--order--xl--last {
     order: 13;
   }
 
-  .l-grid__col_order_xl_0 {
+  .l-grid__col--order--xl--0 {
     order: 0;
   }
 
-  .l-grid__col_order_xl_1 {
+  .l-grid__col--order--xl--1 {
     order: 1;
   }
 
-  .l-grid__col_order_xl_2 {
+  .l-grid__col--order--xl--2 {
     order: 2;
   }
 
-  .l-grid__col_order_xl_3 {
+  .l-grid__col--order--xl--3 {
     order: 3;
   }
 
-  .l-grid__col_order_xl_4 {
+  .l-grid__col--order--xl--4 {
     order: 4;
   }
 
-  .l-grid__col_order_xl_5 {
+  .l-grid__col--order--xl--5 {
     order: 5;
   }
 
-  .l-grid__col_order_xl_6 {
+  .l-grid__col--order--xl--6 {
     order: 6;
   }
 
-  .l-grid__col_order_xl_7 {
+  .l-grid__col--order--xl--7 {
     order: 7;
   }
 
-  .l-grid__col_order_xl_8 {
+  .l-grid__col--order--xl--8 {
     order: 8;
   }
 
-  .l-grid__col_order_xl_9 {
+  .l-grid__col--order--xl--9 {
     order: 9;
   }
 
-  .l-grid__col_order_xl_10 {
+  .l-grid__col--order--xl--10 {
     order: 10;
   }
 
-  .l-grid__col_order_xl_11 {
+  .l-grid__col--order--xl--11 {
     order: 11;
   }
 
-  .l-grid__col_order_xl_12 {
+  .l-grid__col--order--xl--12 {
     order: 12;
   }
 
-  .l-grid__col_offset_xl_0 {
+  .l-grid__col--offset--xl--0 {
     margin-left: 0;
   }
 
-  .l-grid__col_offset_xl_1 {
+  .l-grid__col--offset--xl--1 {
     margin-left: 8.33333%;
   }
 
-  .l-grid__col_offset_xl_2 {
+  .l-grid__col--offset--xl--2 {
     margin-left: 16.66667%;
   }
 
-  .l-grid__col_offset_xl_3 {
+  .l-grid__col--offset--xl--3 {
     margin-left: 25%;
   }
 
-  .l-grid__col_offset_xl_4 {
+  .l-grid__col--offset--xl--4 {
     margin-left: 33.33333%;
   }
 
-  .l-grid__col_offset_xl_5 {
+  .l-grid__col--offset--xl--5 {
     margin-left: 41.66667%;
   }
 
-  .l-grid__col_offset_xl_6 {
+  .l-grid__col--offset--xl--6 {
     margin-left: 50%;
   }
 
-  .l-grid__col_offset_xl_7 {
+  .l-grid__col--offset--xl--7 {
     margin-left: 58.33333%;
   }
 
-  .l-grid__col_offset_xl_8 {
+  .l-grid__col--offset--xl--8 {
     margin-left: 66.66667%;
   }
 
-  .l-grid__col_offset_xl_9 {
+  .l-grid__col--offset--xl--9 {
     margin-left: 75%;
   }
 
-  .l-grid__col_offset_xl_10 {
+  .l-grid__col--offset--xl--10 {
     margin-left: 83.33333%;
   }
 }
 @media (min-width: 1640px) {
-  .l-grid__col_xxl {
+  .l-grid__col--xxl {
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%;
   }
 
-  .l-grid__col_xxl_auto {
+  .l-grid__col--xxl--auto {
     width: auto;
     max-width: none;
   }
 
-  .l-grid__col_xxl_2 {
+  .l-grid__col--xxl--2 {
     flex-basis: 16.66667%;
     max-width: 16.66667%;
   }
 
-  .l-grid__col_xxl_3 {
+  .l-grid__col--xxl--3 {
     flex-basis: 25%;
     max-width: 25%;
   }
 
-  .l-grid__col_xxl_4 {
+  .l-grid__col--xxl--4 {
     flex-basis: 33.33333%;
     max-width: 33.33333%;
   }
 
-  .l-grid__col_xxl_5 {
+  .l-grid__col--xxl--5 {
     flex-basis: 41.66667%;
     max-width: 41.66667%;
   }
 
-  .l-grid__col_xxl_6 {
+  .l-grid__col--xxl--6 {
     flex-basis: 50%;
     max-width: 50%;
   }
 
-  .l-grid__col_xxl_7 {
+  .l-grid__col--xxl--7 {
     flex-basis: 58.33333%;
     max-width: 58.33333%;
   }
 
-  .l-grid__col_xxl_8 {
+  .l-grid__col--xxl--8 {
     flex-basis: 66.66667%;
     max-width: 66.66667%;
   }
 
-  .l-grid__col_xxl_9 {
+  .l-grid__col--xxl--9 {
     flex-basis: 75%;
     max-width: 75%;
   }
 
-  .l-grid__col_xxl_10 {
+  .l-grid__col--xxl--10 {
     flex-basis: 83.33333%;
     max-width: 83.33333%;
   }
 
-  .l-grid__col_order_xxl_first {
+  .l-grid__col--order--xxl--first {
     order: -1;
   }
 
-  .l-grid__col_order_xxl_last {
+  .l-grid__col--order--xxl--last {
     order: 13;
   }
 
-  .l-grid__col_order_xxl_0 {
+  .l-grid__col--order--xxl--0 {
     order: 0;
   }
 
-  .l-grid__col_order_xxl_1 {
+  .l-grid__col--order--xxl--1 {
     order: 1;
   }
 
-  .l-grid__col_order_xxl_2 {
+  .l-grid__col--order--xxl--2 {
     order: 2;
   }
 
-  .l-grid__col_order_xxl_3 {
+  .l-grid__col--order--xxl--3 {
     order: 3;
   }
 
-  .l-grid__col_order_xxl_4 {
+  .l-grid__col--order--xxl--4 {
     order: 4;
   }
 
-  .l-grid__col_order_xxl_5 {
+  .l-grid__col--order--xxl--5 {
     order: 5;
   }
 
-  .l-grid__col_order_xxl_6 {
+  .l-grid__col--order--xxl--6 {
     order: 6;
   }
 
-  .l-grid__col_order_xxl_7 {
+  .l-grid__col--order--xxl--7 {
     order: 7;
   }
 
-  .l-grid__col_order_xxl_8 {
+  .l-grid__col--order--xxl--8 {
     order: 8;
   }
 
-  .l-grid__col_order_xxl_9 {
+  .l-grid__col--order--xxl--9 {
     order: 9;
   }
 
-  .l-grid__col_order_xxl_10 {
+  .l-grid__col--order--xxl--10 {
     order: 10;
   }
 
-  .l-grid__col_order_xxl_11 {
+  .l-grid__col--order--xxl--11 {
     order: 11;
   }
 
-  .l-grid__col_order_xxl_12 {
+  .l-grid__col--order--xxl--12 {
     order: 12;
   }
 
-  .l-grid__col_offset_xxl_0 {
+  .l-grid__col--offset--xxl--0 {
     margin-left: 0;
   }
 
-  .l-grid__col_offset_xxl_1 {
+  .l-grid__col--offset--xxl--1 {
     margin-left: 8.33333%;
   }
 
-  .l-grid__col_offset_xxl_2 {
+  .l-grid__col--offset--xxl--2 {
     margin-left: 16.66667%;
   }
 
-  .l-grid__col_offset_xxl_3 {
+  .l-grid__col--offset--xxl--3 {
     margin-left: 25%;
   }
 
-  .l-grid__col_offset_xxl_4 {
+  .l-grid__col--offset--xxl--4 {
     margin-left: 33.33333%;
   }
 
-  .l-grid__col_offset_xxl_5 {
+  .l-grid__col--offset--xxl--5 {
     margin-left: 41.66667%;
   }
 
-  .l-grid__col_offset_xxl_6 {
+  .l-grid__col--offset--xxl--6 {
     margin-left: 50%;
   }
 
-  .l-grid__col_offset_xxl_7 {
+  .l-grid__col--offset--xxl--7 {
     margin-left: 58.33333%;
   }
 
-  .l-grid__col_offset_xxl_8 {
+  .l-grid__col--offset--xxl--8 {
     margin-left: 66.66667%;
   }
 
-  .l-grid__col_offset_xxl_9 {
+  .l-grid__col--offset--xxl--9 {
     margin-left: 75%;
   }
 
-  .l-grid__col_offset_xxl_10 {
+  .l-grid__col--offset--xxl--10 {
     margin-left: 83.33333%;
   }
 }
 /*doc
 ---
-title: l-grid__col_(breakpoint)_(column)
+title: l-grid__col--(breakpoint)--(column)
 name: grid-03-col-column
 category: layout-grid
 ---
@@ -1955,73 +1955,73 @@ Bootstrap 4との互換性の関係で、**シングルクラス**となって�
 (breakpoint)の指定がある場合は、(breakpoint)**以上**のときに、指定した幅となる。
 
 ``` example
-<h3 class="text_lg">(column)のみ指定している場合</h3>
+<h3 class="u-text--lg">(column)のみ指定している場合</h3>
 <div class="l-grid__row" style="margin-bottom: 2rem;">
-    <div class="l-grid__col_3">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col_3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    <div class="l-grid__col--3">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col--3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-grid__col_3">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col_3<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-grid__col--3">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col--3<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-grid__col_3">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col_3<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="l-grid__col--3">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col--3<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 
-<h3 class="text_lg margin__t_lg">(column)と(breakpoint)の両方を指定している場合</h3>
+<h3 class="u-text--lg u-margin__t--lg">(column)と(breakpoint)の両方を指定している場合</h3>
 <div class="l-grid__row" style="margin-bottom: 2rem;">
-    <div class="l-grid__col_lg_2">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col_lg_2<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    <div class="l-grid__col--lg--2">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col--lg--2<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-grid__col_lg_6">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col_lg_6<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-grid__col--lg--6">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col--lg--6<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-grid__col_lg_4">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col_lg_4<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="l-grid__col--lg--4">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col--lg--4<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 
-<h3 class="text_lg margin__t_lg">(column)の指定があるセルと、ないセルが同列に混在している場合</h3>
+<h3 class="u-text--lg u-margin__t--lg">(column)の指定があるセルと、ないセルが同列に混在している場合</h3>
 <p>(column)の指定がないセルは、常に空間を埋めるように伸縮する（Bootstrapのautoと同様）。</p>
 <div class="l-grid__row" style="margin-bottom: 2rem;">
-    <div class="l-grid__col_sm_6">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col_sm_6<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    <div class="l-grid__col--sm--6">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col--sm--6<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
     <div class="l-grid__col">
         <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-grid__col_xl_2">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col_xl_2<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
+    <div class="l-grid__col--xl--2">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col--xl--2<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
     </div>
 </div>
 
-<h3 class="text_lg margin__t_lg">複雑な指定の例</h3>
+<h3 class="u-text--lg u-margin__t--lg">複雑な指定の例</h3>
 <p>ウィンドウ幅が狭くなるに従って、段組が変化する。セルが複数行になる場合は、l-grid__colにはmarginではなくpaddingを付与する。</p>
 <div class="l-grid__row">
-    <div class="l-grid__col_6 l-grid__col_sm_4 l-grid__col_lg_3 l-grid__col_xxl_2" style="padding-bottom: 1rem;">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col_6 l-grid__col_sm_4 l-grid__col_lg_3 l-grid__col_xxl_2<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    <div class="l-grid__col--6 l-grid__col--sm--4 l-grid__col--lg--3 l-grid__col--xxl--2" style="padding-bottom: 1rem;">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col--6 l-grid__col--sm--4 l-grid__col--lg--3 l-grid__col--xxl--2<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-grid__col_6 l-grid__col_sm_4 l-grid__col_lg_3 l-grid__col_xxl_2" style="padding-bottom: 1rem;">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col_6 l-grid__col_sm_4 l-grid__col_lg_3 l-grid__col_xxl_2<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-grid__col--6 l-grid__col--sm--4 l-grid__col--lg--3 l-grid__col--xxl--2" style="padding-bottom: 1rem;">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col--6 l-grid__col--sm--4 l-grid__col--lg--3 l-grid__col--xxl--2<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-grid__col_6 l-grid__col_sm_4 l-grid__col_lg_3 l-grid__col_xxl_2" style="padding-bottom: 1rem;">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col_6 l-grid__col_sm_4 l-grid__col_lg_3 l-grid__col_xxl_2<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="l-grid__col--6 l-grid__col--sm--4 l-grid__col--lg--3 l-grid__col--xxl--2" style="padding-bottom: 1rem;">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col--6 l-grid__col--sm--4 l-grid__col--lg--3 l-grid__col--xxl--2<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
-    <div class="l-grid__col_6 l-grid__col_sm_4 l-grid__col_lg_3 l-grid__col_xxl_2" style="padding-bottom: 1rem;">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col_6 l-grid__col_sm_4 l-grid__col_lg_3 l-grid__col_xxl_2<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
+    <div class="l-grid__col--6 l-grid__col--sm--4 l-grid__col--lg--3 l-grid__col--xxl--2" style="padding-bottom: 1rem;">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col--6 l-grid__col--sm--4 l-grid__col--lg--3 l-grid__col--xxl--2<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
     </div>
-    <div class="l-grid__col_6 l-grid__col_sm_4 l-grid__col_lg_3 l-grid__col_xxl_2" style="padding-bottom: 1rem;">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col_6 l-grid__col_sm_4 l-grid__col_lg_3 l-grid__col_xxl_2<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="l-grid__col--6 l-grid__col--sm--4 l-grid__col--lg--3 l-grid__col--xxl--2" style="padding-bottom: 1rem;">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col--6 l-grid__col--sm--4 l-grid__col--lg--3 l-grid__col--xxl--2<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
-    <div class="l-grid__col_6 l-grid__col_sm_4 l-grid__col_lg_3 l-grid__col_xxl_2" style="padding-bottom: 1rem;">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col_6 l-grid__col_sm_4 l-grid__col_lg_3 l-grid__col_xxl_2<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
+    <div class="l-grid__col--6 l-grid__col--sm--4 l-grid__col--lg--3 l-grid__col--xxl--2" style="padding-bottom: 1rem;">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col--6 l-grid__col--sm--4 l-grid__col--lg--3 l-grid__col--xxl--2<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
     </div>
 </div>
 ```
 */
 /*doc
 ---
-title: l-grid__col_order_(breakpoint)_(first or last or number)
+title: l-grid__col--order--(breakpoint)--(first or last or number)
 name: grid-04-order
 category: layout-grid
 parent: grid-02-col
@@ -2033,14 +2033,14 @@ flexboxによるグリッドのセルを、指定した順番にする。
 
 ``` example
 <div class="l-grid__row" style="margin-bottom: 2rem;">
-    <div class="l-grid__col_order_last l-grid__col">
-        <div style="padding: 1rem; background-color: #f8ccdd; height: 100%;">1:<br>l-grid__col_order_last<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    <div class="l-grid__col--order--last l-grid__col">
+        <div style="padding: 1rem; background-color: #f8ccdd; height: 100%;">1:<br>l-grid__col--order--last<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
     <div class="l-grid__col">
         <div style="padding: 1rem; background-color: #f8ccdd; height: 100%;">2:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-grid__col_order_first l-grid__col">
-        <div style="padding: 1rem; background-color: #f8ccdd; height: 100%;">3:<br>l-grid__col_order_first<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-grid__col--order--first l-grid__col">
+        <div style="padding: 1rem; background-color: #f8ccdd; height: 100%;">3:<br>l-grid__col--order--first<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
     <div class="l-grid__col">
         <div style="padding: 1rem; background-color: #f8ccdd; height: 100%;">4:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
@@ -2048,31 +2048,31 @@ flexboxによるグリッドのセルを、指定した順番にする。
 </div>
 
 <div class="l-grid__row" style="margin-bottom: 2rem;">
-    <div class="l-grid__col_order_3 l-grid__col">
-        <div style="padding: 1rem; background-color: #bbd3ff; height: 100%;">1:<br>l-grid__col_order_3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    <div class="l-grid__col--order--3 l-grid__col">
+        <div style="padding: 1rem; background-color: #bbd3ff; height: 100%;">1:<br>l-grid__col--order--3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-grid__col_order_1 l-grid__col">
-        <div style="padding: 1rem; background-color: #bbd3ff; height: 100%;">2:<br>l-grid__col_order_1<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-grid__col--order--1 l-grid__col">
+        <div style="padding: 1rem; background-color: #bbd3ff; height: 100%;">2:<br>l-grid__col--order--1<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-grid__col_order_4 l-grid__col">
-        <div style="padding: 1rem; background-color: #bbd3ff; height: 100%;">3:<br>l-grid__col_order_4<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-grid__col--order--4 l-grid__col">
+        <div style="padding: 1rem; background-color: #bbd3ff; height: 100%;">3:<br>l-grid__col--order--4<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-grid__col_order_2 l-grid__col">
-        <div style="padding: 1rem; background-color: #bbd3ff; height: 100%;">4:<br>l-grid__col_order_2<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-grid__col--order--2 l-grid__col">
+        <div style="padding: 1rem; background-color: #bbd3ff; height: 100%;">4:<br>l-grid__col--order--2<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
 </div>
 
 <div class="l-grid__row">
-    <div class="l-grid__col_order_sm_last l-grid__col_sm_6 l-grid__col_lg_3">
-        <div style="padding: 1rem; background-color: #e6d6aa; height: 100%;">1:<br>l-grid__col_order_sm_last<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    <div class="l-grid__col--order--sm--last l-grid__col--sm--6 l-grid__col--lg--3">
+        <div style="padding: 1rem; background-color: #e6d6aa; height: 100%;">1:<br>l-grid__col--order--sm--last<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-grid__col_sm_6 l-grid__col_lg_3">
+    <div class="l-grid__col--sm--6 l-grid__col--lg--3">
         <div style="padding: 1rem; background-color: #e6d6aa; height: 100%;">2:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-grid__col_order_xl_first l-grid__col_sm_6 l-grid__col_lg_3">
-        <div style="padding: 1rem; background-color: #e6d6aa; height: 100%;">3:<br>l-grid__col_order_xl_first<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-grid__col--order--xl--first l-grid__col--sm--6 l-grid__col--lg--3">
+        <div style="padding: 1rem; background-color: #e6d6aa; height: 100%;">3:<br>l-grid__col--order--xl--first<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-grid__col_sm_6 l-grid__col_lg_3">
+    <div class="l-grid__col--sm--6 l-grid__col--lg--3">
         <div style="padding: 1rem; background-color: #e6d6aa; height: 100%;">4:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
 </div>
@@ -2080,30 +2080,30 @@ flexboxによるグリッドのセルを、指定した順番にする。
 */
 /*doc
 ---
-title: l-grid__col_offset_(breakpoint)_(column)
+title: l-grid__col--offset--(breakpoint)--(column)
 name: grid-05-offset
 category: layout-grid
 parent: grid-02-col
 ---
 
 flexboxによるグリッドのセルの開始位置を、<code>(column) / 12</code>の割合だけ右にずらす。  
-<code>l-grid__col_(column)</code> と、<code>l-grid__col_offset_(column)</code> の合計値が<code>12</code>を超えた場合は、offsetの値が優先される。  
+<code>l-grid__col--(column)</code> と、<code>l-grid__col--offset--(column)</code> の合計値が<code>12</code>を超えた場合は、offsetの値が優先される。  
 (breakpoint)の指定がない場合は、常にその位置となる。  
 (breakpoint)の指定がある場合は、(breakpoint)**以上**のときに、指定した位置となる。
 
 ``` example
 <div class="l-grid__row" style="margin-bottom: 2rem;">
-    <div class="l-grid__col_offset_1 l-grid__col_10">
-        <div style="padding: 1rem; background-color: #aaeccc; height: 100%;">l-grid__col_offset_3<br>l-grid__col_10<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    <div class="l-grid__col--offset--1 l-grid__col--10">
+        <div style="padding: 1rem; background-color: #aaeccc; height: 100%;">l-grid__col--offset--3<br>l-grid__col--10<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
 </div>
 
 <div class="l-grid__row" style="margin-bottom: 2rem;">
-    <div class="l-grid__col_offset_lg_8 l-grid__col_6">
-        <div style="padding: 1rem; background-color: #aaeccc; height: 100%;">l-grid__col_offset_lg_8<br>l-grid__col_6<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    <div class="l-grid__col--offset--lg--8 l-grid__col--6">
+        <div style="padding: 1rem; background-color: #aaeccc; height: 100%;">l-grid__col--offset--lg--8<br>l-grid__col--6<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-grid__col_offset_lg_4 l-grid__col_offset_md_8 l-grid__col_3">
-        <div style="padding: 1rem; background-color: #aaeccc; height: 100%;">l-grid__col_offset_lg_4<br>l-grid__col_offset_md_8<br>l-grid__col_3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    <div class="l-grid__col--offset--lg--4 l-grid__col--offset--md--8 l-grid__col--3">
+        <div style="padding: 1rem; background-color: #aaeccc; height: 100%;">l-grid__col--offset--lg--4<br>l-grid__col--offset--md--8<br>l-grid__col--3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
 </div>
 
@@ -2944,14 +2944,14 @@ category: module-checkbox
 ---
 
 チェックボックスとラベルをインライン表示する。input要素ではなく、包括している要素にクラスを付与する（ほとんどの場合、label要素となる）。  
-余白・レイアウト等は <code>utility > .padding</code> や <code>component > .c-form</code> で指定する。  
+余白・レイアウト等は <code>utility > .u-padding</code> や <code>component > .c-form</code> で指定する。  
 <code>.is-error</code> を同時に使用するとエラーがあったときの表示となる。 
 
 ``` example
 <p>
-<label class="m-checkbox margin-r" for="checkbox1"><input type="checkbox" name="checkbox1" id="checkbox1" class="margin-r-sm" value="1">m-checkbox</label>
-<label class="m-checkbox margin-r" for="checkbox2"><input type="checkbox" name="checkbox2" id="checkbox2" class="margin-r-sm" value="2" checked="checked">m-checkbox</label>
-<label class="m-checkbox is-error" for="checkbox3"><input type="checkbox" name="checkbox3" id="checkbox3" class="margin-r-sm" value="3">m-checkbox</label>
+<label class="m-checkbox u-margin-r" for="checkbox1"><input type="checkbox" name="checkbox1" id="checkbox1" class="u-margin-r-sm" value="1">m-checkbox</label>
+<label class="m-checkbox u-margin-r" for="checkbox2"><input type="checkbox" name="checkbox2" id="checkbox2" class="u-margin-r-sm" value="2" checked="checked">m-checkbox</label>
+<label class="m-checkbox is-error" for="checkbox3"><input type="checkbox" name="checkbox3" id="checkbox3" class="u-margin-r-sm" value="3">m-checkbox</label>
 </p>
 ```
 */
@@ -3129,7 +3129,7 @@ category: module-input
 ---
 
 テキスト入力を即す欄を表示する。要素に直接クラスを付与する（ほとんどの場合、input要素、textarea要素となる）。  
-余白・レイアウト等は <code>utility > .margin</code> や <code>component > .c-form</code> で指定する。  
+余白・レイアウト等は <code>utility > .u-margin</code> や <code>component > .c-form</code> で指定する。  
 <code>.is-error</code> を同時に使用するとエラーがあったときの表示となる。 
 
 ``` example
@@ -3441,7 +3441,7 @@ category: module-list
 <code>ul</code> に使用した場合は、子要素にクラスを指定していなくても有効になる。  
 
 ``` example
-<h3 class="text_lg">すべての要素にクラスを付与した場合</h3>
+<h3 class="u-text--lg">すべての要素にクラスを付与した場合</h3>
 <ul class="m-list">
     <li class="m-list-item">あいうえおかきくけ10さしすせ</li>
     <li class="m-list-item">あいうえおかきく
@@ -3463,7 +3463,7 @@ category: module-list
     <li class="m-list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
 </ul>
 
-<h3 class="text_lg margin__t_lg">ulのみクラスを付与した場合</h3>
+<h3 class="u-text--lg u-margin__t--lg">ulのみクラスを付与した場合</h3>
 <ul class="m-list">
     <li>あいうえおかきくけ10さしすせ</li>
     <li>あいうえおかきく
@@ -3518,7 +3518,7 @@ parent: list
 階層構造を持ったリストを表示する。階層が深くなるごとに文字が小さくなる。
 
 ``` example
-<h3 class="text_lg">すべての要素にクラスを付与した場合</h3>
+<h3 class="u-text--lg">すべての要素にクラスを付与した場合</h3>
 <ul class="m-list m-list-vertical">
     <li class="m-list-item">あいうえおかきくけ10さしすせ</li>
     <li class="m-list-item">あいうえおかきく
@@ -3540,7 +3540,7 @@ parent: list
     <li class="m-list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
 </ul>
 
-<h3 class="text_lg margin__t_lg">ulのみクラスを付与した場合</h3>
+<h3 class="u-text--lg u-margin__t--lg">ulのみクラスを付与した場合</h3>
 <ul class="m-list m-list-vertical">
     <li>あいうえおかきくけ10さしすせ</li>
     <li>あいうえおかきく
@@ -3591,7 +3591,7 @@ parent: list
 水平に並列するリストを表示する。階層構造を持たせることはできない。  
 
 ``` example
-<h3 class="text_lg">すべての要素にクラスを付与した場合</h3>
+<h3 class="u-text--lg">すべての要素にクラスを付与した場合</h3>
 <ul class="m-list m-list-horizontal">
     <li class="m-list-item">あいうえおかきくけ10さしすせ</li>
     <li class="m-list-item">あいうえおかきく</li>
@@ -3599,7 +3599,7 @@ parent: list
     <li class="m-list-item">あいうえおかきくけ</li>
 </ul>
 
-<h3 class="text_lg margin__t_lg">ulのみクラスを付与した場合</h3>
+<h3 class="u-text--lg u-margin__t--lg">ulのみクラスを付与した場合</h3>
 <ul class="m-list m-list-horizontal">
     <li>あいうえおかきくけ10さしすせ</li>
     <li>あいうえおかきく</li>
@@ -3643,7 +3643,7 @@ category: module-nav
 <code>.m-nav-label</code> 内で装飾用の要素を使用すると崩れるため、その場合はダミーのインライン要素を加える。ここでは <code>span.m-nav-text</code> としている。  
 
 ``` example
-<h3 class="text_lg">すべての要素にクラスを付与した場合</h3>
+<h3 class="u-text--lg">すべての要素にクラスを付与した場合</h3>
 <nav class="m-nav">
     <div class="m-nav-list">
         <p class="m-nav-item">
@@ -3656,7 +3656,7 @@ category: module-nav
             <a href="#" class="m-nav-label">文字数が多いボタンです</a>
         </p>
         <p class="m-nav-item">
-            <a href="#" class="m-nav-label"><span class="m-nav-text"><span class="text-xs">複数行の</span><br>ボタン</span></a>
+            <a href="#" class="m-nav-label"><span class="m-nav-text"><span class="u-text-xs">複数行の</span><br>ボタン</span></a>
         </p>
         <p class="m-nav-item">
             <a href="#" class="m-nav-label">ボタン</a>
@@ -3667,7 +3667,7 @@ category: module-nav
     </div><!-- /.nav-list -->
 </nav><!-- /.nav -->
 
-<h3 class="text_lg margin__t_lg">包括要素のみクラスを付与した場合</h3>
+<h3 class="u-text--lg u-margin__t--lg">包括要素のみクラスを付与した場合</h3>
 <nav class="m-nav">
     <ul>
         <li>
@@ -3677,7 +3677,7 @@ category: module-nav
             <a href="#" class="is-current">現在のページ</a>
         </li>
         <li>
-            <a href="#"><span class="m-nav-text"><span class="text-xs">複数行の</span><br>ボタン</span></a>
+            <a href="#"><span class="m-nav-text"><span class="u-text-xs">複数行の</span><br>ボタン</span></a>
         </li>
         <li>
             <a href="#">ボタン</a>
@@ -3691,7 +3691,7 @@ category: module-nav
     </ul>
 </nav><!-- /.nav -->
 
-<h3 class="text_lg margin__t_lg">m-nav-label のみ使用し、ナビゲーションの分割はグリッドにした場合</h3>
+<h3 class="u-text--lg u-margin__t--lg">m-nav-label のみ使用し、ナビゲーションの分割はグリッドにした場合</h3>
 <ul class="l-grid__row l-grid__row-0">
     <li class="l-grid__col-6 l-grid__col-md">
         <a href="#" class="m-nav-label">ボタン</a>
@@ -3810,7 +3810,7 @@ parent: nav
 幅100%の垂直ナビゲーションとして表示する。3階層まで表示できる。
 
 ``` example
-<h3 class="text_lg">すべての要素にクラスを付与した場合</h3>
+<h3 class="u-text--lg">すべての要素にクラスを付与した場合</h3>
 <nav class="m-nav m-nav-vertical">
     <ul class="m-nav-list">
         <li class="m-nav-item">
@@ -3845,7 +3845,7 @@ parent: nav
             <a href="#" class="m-nav-label">文字数が多いボタンです</a>
         </li>
         <li class="m-nav-item">
-            <a href="#" class="m-nav-label"><span class="m-nav-text"><span class="text-xs">複数行の</span><br>ボタン</span></a>
+            <a href="#" class="m-nav-label"><span class="m-nav-text"><span class="u-text-xs">複数行の</span><br>ボタン</span></a>
         </li>
         <li class="m-nav-item">
             <a href="#" class="m-nav-label">ボタン</a>
@@ -3856,7 +3856,7 @@ parent: nav
     </ul>
 </nav><!-- /.nav -->
 
-<h3 class="text_lg margin__t_lg">包括要素のみクラスを付与した場合</h3>
+<h3 class="u-text--lg u-margin__t--lg">包括要素のみクラスを付与した場合</h3>
 <nav class="m-nav m-nav-vertical">
     <ul>
         <li>
@@ -3888,7 +3888,7 @@ parent: nav
             </ul>
         </li>
         <li>
-            <a href="#"><span class="m-nav-text"><span class="text-xs">複数行の</span><br>ボタン</span></a>
+            <a href="#"><span class="m-nav-text"><span class="u-text-xs">複数行の</span><br>ボタン</span></a>
         </li>
         <li>
             <a href="#">ボタン</a>
@@ -3952,14 +3952,14 @@ category: module-radio
 ---
 
 ラジオボタンとラベルをインライン表示する。input要素ではなく、包括している要素にクラスを付与する（ほとんどの場合、label要素となる）。  
-余白・レイアウト等は <code>utility > .padding</code> や <code>component > .c-form</code> で指定する。  
+余白・レイアウト等は <code>utility > .u-padding</code> や <code>component > .c-form</code> で指定する。  
 <code>.is-error</code> を同時に使用するとエラーがあったときの表示となる。 
 
 ``` example
 <p>
-<label class="m-radio margin-r" for="radio1"><input type="radio" name="radio" id="radio1" class="margin-r-sm" value="1">m-radio 1</label>
-<label class="m-radio margin-r" for="radio2"><input type="radio" name="radio" id="radio2" class="margin-r-sm" value="2" checked="checked">m-radio 2</label>
-<label class="m-radio margin-r is-error" for="radio3"><input type="radio" name="radio" id="radio3" class="margin-r-sm" value="3">m-radio 3</label>
+<label class="m-radio u-margin-r" for="radio1"><input type="radio" name="radio" id="radio1" class="u-margin-r-sm" value="1">m-radio 1</label>
+<label class="m-radio u-margin-r" for="radio2"><input type="radio" name="radio" id="radio2" class="u-margin-r-sm" value="2" checked="checked">m-radio 2</label>
+<label class="m-radio u-margin-r is-error" for="radio3"><input type="radio" name="radio" id="radio3" class="u-margin-r-sm" value="3">m-radio 3</label>
 </p>
 ```
 */
@@ -3987,7 +3987,7 @@ category: module-select
 ---
 
 セレクトボックスをインライン表示する。select要素ではなく、包括している要素にクラスを付与する。  
-余白・レイアウト等は <code>utility > .p</code> や <code>component > .c-form</code> で指定する。  
+余白・レイアウト等は <code>utility > .u-p</code> や <code>component > .c-form</code> で指定する。  
 <code>.is-error</code> を同時に使用するとエラーがあったときの表示となる。  
 セレクトボックスのシェブロンは <code>/\_scss/mixin/mixin.css</code> の <code>chevron()</code>を参照。
 
@@ -4127,7 +4127,7 @@ category: module-table
 ---
 
 表組を整形する。このクラス単独では整列のみ行う。  
-幅は常に100%、セル内の文字は常に左寄せとなる。寄せ方向を変更したい場合は <code>utility > .line-(direction)</code> を使用する。
+幅は常に100%、セル内の文字は常に左寄せとなる。寄せ方向を変更したい場合は <code>utility > .u-line-(direction)</code> を使用する。
 
 ``` example
 <table class="m-table">
@@ -4635,25 +4635,25 @@ category: module-thumbnail
 このクラス単独ではそのままのサイズと縦横比で表示する。幅が制限されていると、そのサイズを超えないよう画像が縮小される。
 
 ``` example
-<div class="clearfix m-b">
+<div class="u-clearfix u-m-b">
 
-<div class="float-l m-r">
+<div class="float-l u-m-r">
     <div class="m-thumbnail">
         <img src="https://placehold.jp/150x150.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l m-r">
+<div class="float-l u-m-r">
     <div class="m-thumbnail">
         <img src="https://placehold.jp/240x320.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l m-r" style="width: 200px;">
+<div class="float-l u-m-r" style="width: 200px;">
     <div class="m-thumbnail">
         <img src="https://placehold.jp/480x360.jpg" alt="">
     </div>
-    <p class="m-y-0">↑width: 200px</p>
+    <p class="u-m-y-0">↑width: 200px</p>
 </div>
 
 </div>
@@ -4687,21 +4687,21 @@ parent: thumbnail
 横長の画像では、上下に余白ができるため、 <code>m-thumbnail-vertical</code> を併用する必要がある。
 
 ``` example
-<div class="clearfix m-b">
+<div class="u-clearfix u-m-b">
 
-<div class="float-l m-r" style="width: 200px;">
+<div class="float-l u-m-r" style="width: 200px;">
     <div class="m-thumbnail m-thumbnail-round">
         <img src="https://placehold.jp/200x200.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l m-r" style="width: 200px;">
+<div class="float-l u-m-r" style="width: 200px;">
     <div class="m-thumbnail m-thumbnail-round">
         <img src="https://placehold.jp/200x100.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l m-r" style="width: 200px;">
+<div class="float-l u-m-r" style="width: 200px;">
     <div class="m-thumbnail m-thumbnail-round">
         <img src="https://placehold.jp/200x300.jpg" alt="">
     </div>
@@ -4723,21 +4723,21 @@ parent: thumbnail
 横長の画像では、上下に余白ができるため、 <code>m-thumbnail-vertical</code> を併用すること。
 
 ``` example
-<div class="clearfix m-b">
+<div class="u-clearfix u-m-b">
 
-<div class="float-l m-r" style="width: 200px;">
+<div class="float-l u-m-r" style="width: 200px;">
     <div class="m-thumbnail m-thumbnail-square">
         <img src="https://placehold.jp/200x200.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l m-r" style="width: 200px;">
+<div class="float-l u-m-r" style="width: 200px;">
     <div class="m-thumbnail m-thumbnail-square">
         <img src="https://placehold.jp/200x100.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l m-r" style="width: 200px;">
+<div class="float-l u-m-r" style="width: 200px;">
     <div class="m-thumbnail m-thumbnail-square">
         <img src="https://placehold.jp/200x300.jpg" alt="">
     </div>
@@ -4786,33 +4786,33 @@ parent: thumbnail
 指定した比率を超える超横長の画像だった場合は、上下に余白ができる。
 
 ``` example
-<div class="clearfix m-b">
+<div class="u-clearfix u-m-b">
 
-<div class="float-l m-r" style="width: 200px;">
+<div class="float-l u-m-r" style="width: 200px;">
     <div class="m-thumbnail m-thumbnail-3to2">
         <img src="https://placehold.jp/480x360.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l m-r" style="width: 200px;">
+<div class="float-l u-m-r" style="width: 200px;">
     <div class="m-thumbnail m-thumbnail-4to3">
         <img src="https://placehold.jp/480x360.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l m-r" style="width: 200px;">
+<div class="float-l u-m-r" style="width: 200px;">
     <div class="m-thumbnail m-thumbnail-16to9">
         <img src="https://placehold.jp/480x360.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l m-r" style="width: 200px;">
+<div class="float-l u-m-r" style="width: 200px;">
     <div class="m-thumbnail m-thumbnail-ogimage">
         <img src="https://placehold.jp/480x360.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l m-r" style="width: 200px;">
+<div class="float-l u-m-r" style="width: 200px;">
     <div class="m-thumbnail m-thumbnail-21to9">
         <img src="https://placehold.jp/480x360.jpg" alt="">
     </div>
@@ -4821,33 +4821,33 @@ parent: thumbnail
 </div>
 
 
-<div class="clearfix m-b">
+<div class="u-clearfix u-m-b">
 
-<div class="float-l m-r" style="width: 200px;">
+<div class="float-l u-m-r" style="width: 200px;">
     <div class="m-thumbnail m-thumbnail-3to2">
         <img src="https://placehold.jp/320x480.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l m-r" style="width: 200px;">
+<div class="float-l u-m-r" style="width: 200px;">
     <div class="m-thumbnail m-thumbnail-4to3">
         <img src="https://placehold.jp/320x480.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l m-r" style="width: 200px;">
+<div class="float-l u-m-r" style="width: 200px;">
     <div class="m-thumbnail m-thumbnail-16to9">
         <img src="https://placehold.jp/320x480.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l m-r" style="width: 200px;">
+<div class="float-l u-m-r" style="width: 200px;">
     <div class="m-thumbnail m-thumbnail-ogimage">
         <img src="https://placehold.jp/320x480.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l m-r" style="width: 200px;">
+<div class="float-l u-m-r" style="width: 200px;">
     <div class="m-thumbnail m-thumbnail-21to9">
         <img src="https://placehold.jp/320x480.jpg" alt="">
     </div>
@@ -4856,33 +4856,33 @@ parent: thumbnail
 </div>
 
 
-<div class="clearfix m-b">
+<div class="u-clearfix u-m-b">
 
-<div class="float-l m-r" style="width: 200px;">
+<div class="float-l u-m-r" style="width: 200px;">
     <div class="m-thumbnail m-thumbnail-3to2">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l m-r" style="width: 200px;">
+<div class="float-l u-m-r" style="width: 200px;">
     <div class="m-thumbnail m-thumbnail-4to3">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l m-r" style="width: 200px;">
+<div class="float-l u-m-r" style="width: 200px;">
     <div class="m-thumbnail m-thumbnail-16to9">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l m-r" style="width: 200px;">
+<div class="float-l u-m-r" style="width: 200px;">
     <div class="m-thumbnail m-thumbnail-ogimage">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l m-r" style="width: 200px;">
+<div class="float-l u-m-r" style="width: 200px;">
     <div class="m-thumbnail m-thumbnail-21to9">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
@@ -4947,15 +4947,15 @@ parent: thumbnail
 <code>m-thumbnail-round, m-thumbnail-square, m-thumbnail-(ratio-x)to(ratio-y)</code> を使用したときに、幅ではなく高さを基準にトリミングする。
 
 ``` example
-<div class="clearfix m-b">
+<div class="u-clearfix u-m-b">
 
-<div class="float-l m-r" style="width: 200px;">
+<div class="float-l u-m-r" style="width: 200px;">
     <div class="m-thumbnail m-thumbnail-vertical m-thumbnail-square">
         <img src="https://placehold.jp/480x320.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l m-r" style="width: 200px;">
+<div class="float-l u-m-r" style="width: 200px;">
     <div class="m-thumbnail m-thumbnail-vertical m-thumbnail-round">
         <img src="https://placehold.jp/480x320.jpg" alt="">
     </div>
@@ -4963,33 +4963,33 @@ parent: thumbnail
 
 </div>
 
-<div class="clearfix m-b">
+<div class="u-clearfix u-m-b">
 
-<div class="float-l m-r" style="width: 200px;">
+<div class="float-l u-m-r" style="width: 200px;">
     <div class="m-thumbnail m-thumbnail-vertical m-thumbnail-3to2">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l m-r" style="width: 200px;">
+<div class="float-l u-m-r" style="width: 200px;">
     <div class="m-thumbnail m-thumbnail-vertical m-thumbnail-4to3">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l m-r" style="width: 200px;">
+<div class="float-l u-m-r" style="width: 200px;">
     <div class="m-thumbnail m-thumbnail-vertical m-thumbnail-16to9">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l m-r" style="width: 200px;">
+<div class="float-l u-m-r" style="width: 200px;">
     <div class="m-thumbnail m-thumbnail-vertical m-thumbnail-ogimage">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l m-r" style="width: 200px;">
+<div class="float-l u-m-r" style="width: 200px;">
     <div class="m-thumbnail m-thumbnail-vertical m-thumbnail-21to9">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
@@ -5013,7 +5013,7 @@ category: component-alert
 
 システム側の注意文を表示する。 <code>p</code> のみ、もしくは <code>div</code> と <code>p, ul</code> でマークアップすることができる。  
 連続して表示すると <code>.c-alert</code> 間の余白が**通常よりも狭くなる。**  
-下以外の余白は <code>utility > .margin</code> 等で指定する。
+下以外の余白は <code>utility > .u-margin</code> 等で指定する。
 
 ``` example
 <div>
@@ -5021,11 +5021,11 @@ category: component-alert
 </div>
 
 <div>
-<p class="c-alert"><span class="c-alert-header"><i class="fas fa-info-circle"></i><span class="sr">お知らせ</span></span>c-alert_これはシステムからの注意文です。</p>
+<p class="c-alert"><span class="c-alert-header"><i class="fas fa-info-circle"></i><span class="u-sr">お知らせ</span></span>c-alert_これはシステムからの注意文です。</p>
 </div>
 
 <div>
-<div class="c-alert"><p>c-alert_これはシステムからの注意文です。</p><span class="c-alert-control"><i class="fas fa-times-circle"></i><span class="sr">閉じる</span></span></div>
+<div class="c-alert"><p>c-alert_これはシステムからの注意文です。</p><span class="c-alert-control"><i class="fas fa-times-circle"></i><span class="u-sr">閉じる</span></span></div>
 </div>
 ```
 
@@ -5091,19 +5091,19 @@ parent: alert
 <p class="c-alert c-alert-info">c-alert_これはシステムからの注意文です。</p>
 <p class="c-alert c-alert-important">c-alert_これはシステムからの注意文です。</p>
 
-<p class="c-alert c-alert-first"><span class="c-alert-header"><i class="fas fa-info-circle"></i><span class="sr">お知らせ</span></span>c-alert_これはシステムからの注意文です。</p>
-<p class="c-alert c-alert-second"><span class="c-alert-header"><i class="fas fa-info-circle"></i><span class="sr">お知らせ</span></span>c-alert_これはシステムからの注意文です。</p>
-<p class="c-alert c-alert-third"><span class="c-alert-header"><i class="fas fa-info-circle"></i><span class="sr">お知らせ</span></span>c-alert_これはシステムからの注意文です。</p>
-<p class="c-alert c-alert-fourth"><span class="c-alert-header"><i class="fas fa-info-circle"></i><span class="sr">お知らせ</span></span>c-alert_これはシステムからの注意文です。</p>
-<p class="c-alert c-alert-info"><span class="c-alert-header"><i class="fas fa-info-circle"></i><span class="sr">お知らせ</span></span>c-alert_これはシステムからの注意文です。</p>
-<p class="c-alert c-alert-important"><span class="c-alert-header"><i class="fas fa-info-circle"></i><span class="sr">お知らせ</span></span>c-alert_これはシステムからの注意文です。</p>
+<p class="c-alert c-alert-first"><span class="c-alert-header"><i class="fas fa-info-circle"></i><span class="u-sr">お知らせ</span></span>c-alert_これはシステムからの注意文です。</p>
+<p class="c-alert c-alert-second"><span class="c-alert-header"><i class="fas fa-info-circle"></i><span class="u-sr">お知らせ</span></span>c-alert_これはシステムからの注意文です。</p>
+<p class="c-alert c-alert-third"><span class="c-alert-header"><i class="fas fa-info-circle"></i><span class="u-sr">お知らせ</span></span>c-alert_これはシステムからの注意文です。</p>
+<p class="c-alert c-alert-fourth"><span class="c-alert-header"><i class="fas fa-info-circle"></i><span class="u-sr">お知らせ</span></span>c-alert_これはシステムからの注意文です。</p>
+<p class="c-alert c-alert-info"><span class="c-alert-header"><i class="fas fa-info-circle"></i><span class="u-sr">お知らせ</span></span>c-alert_これはシステムからの注意文です。</p>
+<p class="c-alert c-alert-important"><span class="c-alert-header"><i class="fas fa-info-circle"></i><span class="u-sr">お知らせ</span></span>c-alert_これはシステムからの注意文です。</p>
 
-<div class="c-alert c-alert-first"><p>c-alert_これはシステムからの注意文です。</p><span class="c-alert-control"><i class="fas fa-times-circle"></i><span class="sr">閉じる</span></span></div>
-<div class="c-alert c-alert-second"><p>c-alert_これはシステムからの注意文です。</p><span class="c-alert-control"><i class="fas fa-times-circle"></i><span class="sr">閉じる</span></span></div>
-<div class="c-alert c-alert-third"><p>c-alert_これはシステムからの注意文です。</p><span class="c-alert-control"><i class="fas fa-times-circle"></i><span class="sr">閉じる</span></span></div>
-<div class="c-alert c-alert-fourth"><p>c-alert_これはシステムからの注意文です。</p><span class="c-alert-control"><i class="fas fa-times-circle"></i><span class="sr">閉じる</span></span></div>
-<div class="c-alert c-alert-info"><p>c-alert_これはシステムからの注意文です。</p><span class="c-alert-control"><i class="fas fa-times-circle"></i><span class="sr">閉じる</span></span></div>
-<div class="c-alert c-alert-important"><p>c-alert_これはシステムからの注意文です。</p><span class="c-alert-control"><i class="fas fa-times-circle"></i><span class="sr">閉じる</span></span></div>
+<div class="c-alert c-alert-first"><p>c-alert_これはシステムからの注意文です。</p><span class="c-alert-control"><i class="fas fa-times-circle"></i><span class="u-sr">閉じる</span></span></div>
+<div class="c-alert c-alert-second"><p>c-alert_これはシステムからの注意文です。</p><span class="c-alert-control"><i class="fas fa-times-circle"></i><span class="u-sr">閉じる</span></span></div>
+<div class="c-alert c-alert-third"><p>c-alert_これはシステムからの注意文です。</p><span class="c-alert-control"><i class="fas fa-times-circle"></i><span class="u-sr">閉じる</span></span></div>
+<div class="c-alert c-alert-fourth"><p>c-alert_これはシステムからの注意文です。</p><span class="c-alert-control"><i class="fas fa-times-circle"></i><span class="u-sr">閉じる</span></span></div>
+<div class="c-alert c-alert-info"><p>c-alert_これはシステムからの注意文です。</p><span class="c-alert-control"><i class="fas fa-times-circle"></i><span class="u-sr">閉じる</span></span></div>
+<div class="c-alert c-alert-important"><p>c-alert_これはシステムからの注意文です。</p><span class="c-alert-control"><i class="fas fa-times-circle"></i><span class="u-sr">閉じる</span></span></div>
 ```
 
 */
@@ -5487,7 +5487,7 @@ category: component-card
 
 <div class="l-grid__row">
     <div class="l-grid__col">
-        <div class="c-card bg-first">
+        <div class="c-card u-bg-first">
             <div class="c-card-inner">
                 <a href="#" class="m-thumbnail m-thumbnail-ogimage">
                     <picture>
@@ -5502,14 +5502,14 @@ category: component-card
                     </picture>
                 </a>
                 <div class="c-card-contents">
-                    <p>カードの背景に bg-first クラスを指定して色を付けています</p>
+                    <p>カードの背景に u-bg-first クラスを指定して色を付けています</p>
                     <a href="#" class="m-btn m-btn-inverse m-btn-outline m-btn-block">ボタン</a>
                 </div>
             </div>
         </div>
     </div>
     <div class="l-grid__col">
-        <div class="c-card bg-first">
+        <div class="c-card u-bg-first">
             <div class="c-card-inner">
                 <a href="#" class="m-thumbnail m-thumbnail-ogimage">
                     <picture>
@@ -5622,7 +5622,7 @@ category: component-flip
         <div class="c-flip-contents">
             <div class="c-flip-contents-inner">
                 <h2 class="p-title p-title-echo-22">吾輩は猫である</h2>
-                <p class="p-title p-title-echo-23 margin-b-sm">名前はまだ無い</p>
+                <p class="p-title p-title-echo-23 u-margin-b-sm">名前はまだ無い</p>
                 <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
             </div><!-- /.c-flip-contents-inner -->
         </div><!-- /.c-flip-contents -->
@@ -5718,7 +5718,7 @@ parent: flip
         <div class="c-flip-contents">
             <div class="c-flip-contents-inner">
                 <h2 class="p-title p-title-echo-22">吾輩は猫である</h2>
-                <p class="p-title p-title-echo-23 margin-b-sm">名前はまだ無い</p>
+                <p class="p-title p-title-echo-23 u-margin-b-sm">名前はまだ無い</p>
                 <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
             </div><!-- /.c-flip-contents-inner -->
         </div><!-- /.c-flip-contents -->
@@ -5751,7 +5751,7 @@ parent: flip
         <div class="c-flip-contents">
             <div class="c-flip-contents-inner">
                 <h2 class="p-title p-title-echo-22">吾輩は猫である</h2>
-                <p class="p-title p-title-echo-23 margin-b-sm">名前はまだ無い</p>
+                <p class="p-title p-title-echo-23 u-margin-b-sm">名前はまだ無い</p>
                 <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
             </div><!-- /.c-flip-contents-inner -->
         </div><!-- /.c-flip-contents -->
@@ -5778,25 +5778,25 @@ category: component-form
 ---
 
 システムで可能な限りフォームの各入力セットを包括する。  
-幅の調整が必要な場合は <code>.width-(percentage)</code> を併用すること。  
+幅の調整が必要な場合は <code>.u-width-(percentage)</code> を併用すること。  
 フォーム内のパーツは <code>.m-input, .m-radio, .m-select, .m-checkbox, .m-btn</code> を参照。
 
 ``` example
 <div class="c-form">
     <label for="demo01-01" class="c-form-label">氏名</label>
-    <input type="text" class="m-input width-50" id="demo01-01" name="demo00" value="" placeholder="山田一郎" />
+    <input type="text" class="m-input u-width-50" id="demo01-01" name="demo00" value="" placeholder="山田一郎" />
 </div><!-- /.c-form -->
 
 <div class="c-form">
     <span class="c-form-label">好きな食べ物</span>
-    <label class="m-checkbox margin-r" for="checkbox1"><input type="checkbox" name="checkbox1" id="checkbox1" class="margin-r-sm" value="りんご">りんご</label>
-    <label class="m-checkbox margin-r" for="checkbox2"><input type="checkbox" name="checkbox2" id="checkbox2" class="margin-r-sm" value="バナナ">バナナ</label>
-    <label class="m-checkbox" for="checkbox3"><input type="checkbox" name="checkbox3" id="checkbox3" class="margin-r-sm" value="メロン">メロン</label>
+    <label class="m-checkbox u-margin-r" for="checkbox1"><input type="checkbox" name="checkbox1" id="checkbox1" class="u-margin-r-sm" value="りんご">りんご</label>
+    <label class="m-checkbox u-margin-r" for="checkbox2"><input type="checkbox" name="checkbox2" id="checkbox2" class="u-margin-r-sm" value="バナナ">バナナ</label>
+    <label class="m-checkbox" for="checkbox3"><input type="checkbox" name="checkbox3" id="checkbox3" class="u-margin-r-sm" value="メロン">メロン</label>
 </div><!-- /.c-form -->
 
 <div class="c-form">
     <label for="demo01-02" class="c-form-label">メッセージ</label>
-    <textarea id="demo01-02" name="demo02" rows="5" class="m-input width-50" placeholder="メッセージをどうぞ"></textarea>
+    <textarea id="demo01-02" name="demo02" rows="5" class="m-input u-width-50" placeholder="メッセージをどうぞ"></textarea>
 </div><!-- /.c-form -->
 ```
 */
@@ -5952,7 +5952,7 @@ category: component-form
 ``` example
 <div class="c-form c-form-inline">
     <label for="demo01-01" class="c-form-label">フリガナ</label>
-    <input type="text" class="m-input width-50 is-error" id="demo01-01" name="demo00" value="山田一郎" />
+    <input type="text" class="m-input u-width-50 is-error" id="demo01-01" name="demo00" value="山田一郎" />
     <p class="c-form-error">フリガナはカタカナで入力してください。</p>
 </div><!-- /.c-form -->
 ```
@@ -6179,7 +6179,7 @@ category: component-hero
     <div class="c-hero-contents">
         <div class="c-hero-contents-inner">
             <h2 class="p-title p-title-echo-21">吾輩は猫である</h2>
-            <p class="p-title p-title-echo-23 margin-b-lg">名前はまだ無い</p>
+            <p class="p-title p-title-echo-23 u-margin-b-lg">名前はまだ無い</p>
             <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
         </div><!-- /.c-hero-contents-inner -->
     </div><!-- /.c-hero-contents -->
@@ -6270,7 +6270,7 @@ parent: hero
     <div class="c-hero-contents">
         <div class="c-hero-contents-inner">
             <h2 class="p-title p-title-echo-21">吾輩は猫である</h2>
-            <p class="p-title p-title-echo-23 margin-b-lg">名前はまだ無い</p>
+            <p class="p-title p-title-echo-23 u-margin-b-lg">名前はまだ無い</p>
             <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
         </div><!-- /.c-hero-contents-inner -->
     </div><!-- /.c-hero-contents -->
@@ -6282,7 +6282,7 @@ parent: hero
     <div class="c-hero-contents">
         <div class="c-hero-contents-inner">
             <h2 class="p-title p-title-echo-21">吾輩は猫である</h2>
-            <p class="p-title p-title-echo-23 margin-b-lg">名前はまだ無い</p>
+            <p class="p-title p-title-echo-23 u-margin-b-lg">名前はまだ無い</p>
             <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
         </div><!-- /.c-hero-contents-inner -->
     </div><!-- /.c-hero-contents -->
@@ -6589,7 +6589,7 @@ parent: media
 
 /*doc
 ---
-title: bg-(color)
+title: u-bg--(color)
 name: bg-01-color
 category: utility-bg
 ---
@@ -6598,125 +6598,125 @@ category: utility-bg
 (color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
 
 ``` example
-<div class="bg-gray">bg-gray</div>
-<div class="bg-first">bg-first</div>
-<div class="bg-second">bg-second</div>
-<div class="bg-third">bg-third</div>
-<div class="bg-fourth">bg-fourth</div>
-<div class="bg-info">bg-info</div>
-<div class="bg-important">bg-important</div>
+<div class="u-bg--gray">bg--gray</div>
+<div class="u-bg--first">bg--first</div>
+<div class="u-bg--second">bg--second</div>
+<div class="u-bg--third">bg--third</div>
+<div class="u-bg--fourth">bg--fourth</div>
+<div class="u-bg--info">bg--info</div>
+<div class="u-bg--important">bg--important</div>
 ```
 
 */
 /*doc
 ---
-title: bg-fade
+title: u-bg--fade
 name: bg-02-fade
 category: utility-bg
 parent: bg-01-color
 ---
 
-.bg-(color)と併用すると背景色を薄くする。
+<code>.u-bg--(color)</code> と併用すると背景色を薄くする。
 
 ``` example
-<div class="bg-gray bg-fade">bg-gray</div>
-<div class="bg-first bg-fade">bg-first</div>
-<div class="bg-second bg-fade">bg-second</div>
-<div class="bg-third bg-fade">bg-third</div>
-<div class="bg-fourth bg-fade">bg-fourth</div>
-<div class="bg-info bg-fade">bg-info</div>
-<div class="bg-important bg-fade">bg-important</div>
+<div class="u-bg--gray u-bg--fade">bg--gray</div>
+<div class="u-bg--first u-bg--fade">bg--first</div>
+<div class="u-bg--second u-bg--fade">bg--second</div>
+<div class="u-bg--third u-bg--fade">bg--third</div>
+<div class="u-bg--fourth u-bg--fade">bg--fourth</div>
+<div class="u-bg--info u-bg--fade">bg--info</div>
+<div class="u-bg--important u-bg--fade">bg--important</div>
 ```
 
 */
-#document .bg-gray {
+#document .u-bg--gray {
   background-color: #333;
 }
-#document .bg-gray:not(.bg-fade) {
+#document .u-bg--gray:not(.u-bg--fade) {
   color: #fff;
 }
-#document .bg-gray:not(.bg-fade) a:not([class]) {
+#document .u-bg--gray:not(.u-bg--fade) a:not([class]) {
   color: #fff;
 }
-#document .bg-gray.bg-fade {
+#document .u-bg--gray.u-bg--fade {
   background-color: #eee;
 }
-#document .bg-first {
+#document .u-bg--first {
   background-color: #1976d2;
 }
-#document .bg-first:not(.bg-fade) {
+#document .u-bg--first:not(.u-bg--fade) {
   color: #fff;
 }
-#document .bg-first:not(.bg-fade) a:not([class]) {
+#document .u-bg--first:not(.u-bg--fade) a:not([class]) {
   color: #fff;
 }
-#document .bg-first.bg-fade {
+#document .u-bg--first.u-bg--fade {
   background-color: #d7e7f7;
 }
-#document .bg-second {
+#document .u-bg--second {
   background-color: #3cade6;
 }
-#document .bg-second:not(.bg-fade) {
+#document .u-bg--second:not(.u-bg--fade) {
   color: #fff;
 }
-#document .bg-second:not(.bg-fade) a:not([class]) {
+#document .u-bg--second:not(.u-bg--fade) a:not([class]) {
   color: #fff;
 }
-#document .bg-second.bg-fade {
+#document .u-bg--second.u-bg--fade {
   background-color: #d8f0f7;
 }
-#document .bg-third {
+#document .u-bg--third {
   background-color: #49b070;
 }
-#document .bg-third:not(.bg-fade) {
+#document .u-bg--third:not(.u-bg--fade) {
   color: #fff;
 }
-#document .bg-third:not(.bg-fade) a:not([class]) {
+#document .u-bg--third:not(.u-bg--fade) a:not([class]) {
   color: #fff;
 }
-#document .bg-third.bg-fade {
+#document .u-bg--third.u-bg--fade {
   background-color: #d5f0e1;
 }
-#document .bg-fourth {
+#document .u-bg--fourth {
   background-color: #f38c10;
 }
-#document .bg-fourth:not(.bg-fade) {
+#document .u-bg--fourth:not(.u-bg--fade) {
   color: #fff;
 }
-#document .bg-fourth:not(.bg-fade) a:not([class]) {
+#document .u-bg--fourth:not(.u-bg--fade) a:not([class]) {
   color: #fff;
 }
-#document .bg-fourth.bg-fade {
+#document .u-bg--fourth.u-bg--fade {
   background-color: #ffeccc;
 }
-#document .bg-info {
+#document .u-bg--info {
   background-color: #3cade6;
 }
-#document .bg-info:not(.bg-fade) {
+#document .u-bg--info:not(.u-bg--fade) {
   color: #fff;
 }
-#document .bg-info:not(.bg-fade) a:not([class]) {
+#document .u-bg--info:not(.u-bg--fade) a:not([class]) {
   color: #fff;
 }
-#document .bg-info.bg-fade {
+#document .u-bg--info.u-bg--fade {
   background-color: #d8f0f7;
 }
-#document .bg-important {
+#document .u-bg--important {
   background-color: #e33050;
 }
-#document .bg-important:not(.bg-fade) {
+#document .u-bg--important:not(.u-bg--fade) {
   color: #fff;
 }
-#document .bg-important:not(.bg-fade) a:not([class]) {
+#document .u-bg--important:not(.u-bg--fade) a:not([class]) {
   color: #fff;
 }
-#document .bg-important.bg-fade {
+#document .u-bg--important.u-bg--fade {
   background-color: #ffe3e9;
 }
 
 /*doc
 ---
-title: clear
+title: u-clear
 name: clear
 category: utility-clear
 ---
@@ -6724,27 +6724,25 @@ category: utility-clear
 floatを解除する。
 
 ``` example
-<div class="float-l">
-    <div class="m-thumbnail">
-        <img src="https://placehold.jp/150x150.jpg?text=float-l" alt="">
-    </div>
+<div class="u-float--left">
+    <img src="/images/_dummy/image_01_s.jpg" alt="" width="300">
 </div>
 
 <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
 吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
 
-<p class="clear">clear_掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。<br>
+<p class="u-clear">u-clear:掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。<br>
 第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</p>
 ```
 
 */
-#document .clear {
+#document .u-clear {
   clear: both;
 }
 
 /*doc
 ---
-title: clearfix
+title: u-clearfix
 name: clearfix
 category: utility-clearfix
 ---
@@ -6752,22 +6750,16 @@ category: utility-clearfix
 指定された包括要素が閉じられた時点でfloatを解除する。
 
 ``` example
-<div class="bg-first bg-fade clearfix">
+<div class="u-clearfix" style="background-color: #fffadd;">
 
-<div class="float-l">
-    <div class="m-thumbnail">
-        <img src="https://placehold.jp/100x100.jpg?text=float-l" alt="">
-    </div>
+<div class="u-float--left">
+    <img src="/images/_dummy/image_02_s.jpg" alt="" width="150">
 </div>
-<div class="float-l">
-    <div class="m-thumbnail">
-        <img src="https://placehold.jp/100x100.jpg?text=float-l" alt="">
-    </div>
+<div class="u-float--left">
+    <img src="/images/_dummy/image_03_s.jpg" alt="" width="150">
 </div>
-<div class="float-l">
-    <div class="m-thumbnail">
-        <img src="https://placehold.jp/100x100.jpg?text=float-l" alt="">
-    </div>
+<div class="u-float--left">
+    <img src="/images/_dummy/image_04_s.jpg" alt="" width="150">
 </div>
 
 <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
@@ -6775,21 +6767,21 @@ category: utility-clearfix
 
 </div>
 
-<p>この前でclearfix_この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+<p>この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
 ```
 
 */
-#document .clearfix:before, #document .clearfix:after {
+#document .u-clearfix:before, #document .u-clearfix:after {
   content: "";
   display: table;
 }
-#document .clearfix:after {
+#document .u-clearfix:after {
   clear: both;
 }
 
 /*doc
 ---
-title: expand
+title: u-expand
 name: expand
 category: utility-expand
 ---
@@ -6801,14 +6793,14 @@ category: utility-expand
 <div class="l-container" style="background-color: #ffaacc; padding-top: 1rem; padding-bottom: 1rem;">
     <div style="margin-bottom: 1rem; padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(l-container > this)</div>
 
-    <div class="expand" style="background-color: #ffcc66;">
-        <div style="padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(l-container > expand > this)</div>
+    <div class="u-expand" style="background-color: #ffcc66;">
+        <div style="padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(l-container > u-expand > this)</div>
     </div>
 </div>
 ```
 
 */
-#document .expand {
+#document .u-expand {
   margin-left: -100vw;
   margin-right: -100vw;
   padding-left: 100vw;
@@ -6817,27 +6809,27 @@ category: utility-expand
 
 /*doc
 ---
-title: expand-sm-down
-name: expand-01-sm-down
+title: u-expand--sm--down
+name: expand-01--sm--down
 category: utility-expand
 parent: expand
 ---
 
 (breakpoint)が <code>sm</code> 以下のときのみ、コンテナブロックの余白を無視して、要素全体をウィンドウ幅全体に拡張する。  
-<code>expand</code> とは異なり、<code>.l-document</code> の変更による影響はない。
+<code>u-expand</code> とは異なり、<code>.l-document</code> の変更による影響はない。
 
 ``` example
 <div class="l-container" style="background-color: #ffaacc; padding-top: 1rem; padding-bottom: 1rem;">
     <div style="margin-bottom: 1rem; padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(l-container > this)</div>
 
-    <div class="expand-sm-down" style="background-color: #ffcc66;">
-        <div style="padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(l-container > expand-sm-down > this)</div>
+    <div class="u-expand--sm--down" style="background-color: #ffcc66;">
+        <div style="padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(l-container > u-expand--sm--down > this)</div>
     </div>
 </div>
 ```
 */
 @media (max-width: 767.9px) {
-  #document .expand-sm-down {
+  #document .u-expand--sm--down {
     margin-left: -10px;
     margin-right: -10px;
   }
@@ -6845,18 +6837,17 @@ parent: expand
 
 /*doc
 ---
-title: float-(direction)
+title: u-float--(direction)
 name: float-direction
 category: utility-float
 ---
 
-指定した要素を(direction)で指示した方向に寄せる。
+指定した要素を(direction)で指示した方向に寄せ、かつ余白を確保する。  
+余白の大きさは(breakpoint)によって変化する。
 
 ``` example
-<div class="float-l">
-    <div class="m-thumbnail">
-        <img src="https://placehold.jp/150x150.jpg?text=float-l" alt="">
-    </div>
+<div class="u-float--left">
+    <img src="/images/_dummy/image_05_s.jpg" alt="" style="width: 25vw">
 </div>
 
 <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
@@ -6867,10 +6858,8 @@ category: utility-float
 のみならず顔の真中があまりに突起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。<br>
 これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
 
-<div class="float-r">
-    <div class="m-thumbnail">
-        <img src="https://placehold.jp/150x150.jpg?text=float-r" alt="">
-    </div>
+<div class="u-float--right">
+    <img src="/images/_dummy/image_06_s.jpg" alt="" style="width: 25vw">
 </div>
 
 <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
@@ -6883,34 +6872,59 @@ category: utility-float
 ```
 
 */
-#document .float-l {
+#document .u-float--left {
   float: left;
+  margin-right: 15px;
+  margin-bottom: 10px;
 }
-#document .float-r {
+@media (min-width: 425px) {
+  #document .u-float--left {
+    margin-right: 20px;
+  }
+}
+@media (min-width: 1000px) {
+  #document .u-float--left {
+    margin-right: 30px;
+  }
+}
+#document .u-float--right {
   float: right;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+@media (min-width: 425px) {
+  #document .u-float--right {
+    margin-left: 20px;
+  }
+}
+@media (min-width: 1000px) {
+  #document .u-float--right {
+    margin-left: 30px;
+  }
 }
 
 /*doc
 ---
-title: font-(face)
+title: u-font--(face)
 name: font-01-face
 category: utility-font
 ---
 
-フォントを変更する。オブジェクト・コンポーネントを可能な限り上書きする。
+フォントを変更する。オブジェクト・コンポーネントを可能な限り上書きする。  
+(face)は、<a href="../documentation/design_tokens/fonts.html">フォントファミリー</a>を参照。
 
 ``` example
-<p class="text-xl font-first">font-first_フォント01に変更しました</p>
-<p class="text-xl font-second">font-second_フォント02に変更しました</p>
-<p class="text-xl font-third">font-third_フォント03に変更しました</p>
-<p class="text-xl font-first">ここはフォント01ですが、<span class="font-root">font-root_ここからbody要素のフォントに変更しました</span></p>
-<p class="text-xl font-mono">font-mono_等幅フォントに変更しました &lt;p class="font-mono"&gt;hello world!&lt;/p&gt;</p>
+<p class="u-text--xl u-font--first">u-font--first:見出し用のフォントに変更しました</p>
+<p class="u-text--xl u-font--second">u-font--second:英数字用のフォントに変更しました</p>
+<p class="u-text--xl u-font--third">u-font--third:ディスプレイ用のフォントに変更しました</p>
+<p class="u-text--xl u-font--first">ここは見出し用のフォントですが、<span class="u-font--root">ここからbody要素のフォントに変更しました</span></p>
+<p class="u-text--xl u-font--mono">u-font--mono:等幅フォントに変更しました &lt;p class="u-font--mono"&gt;hello world!&lt;/p&gt;</p>
 ```
 
 */
 /*doc
 ---
-title: font-bold
+title: u-font--bold
 name: font-02-bold
 category: utility-font
 ---
@@ -6931,210 +6945,210 @@ Reference: Boldface designation is not reflected. | FONTPLUS
 [https://webfont.fontplus.jp/faq/4125](https://webfont.fontplus.jp/faq/4125)
 
 ``` example
-<p class="text-xl font-first font-bold">font-first_font-bold_フォント01に変更しました</p>
-<p class="text-xl font-second font-bold">font-second_font-bold_フォント02に変更しました</p>
-<p class="text-xl font-third font-bold">font-third_font-bold_フォント03に変更しました</p>
-<p class="text-xl font-first font-bold">ここはフォント01ですが、<span class="font-root font-bold">font-root_font-bold_ここからbody要素のフォントに変更しました</span></p>
+<p class="u-text--xl u-font--first u-font--bold">u-font--first_u-font--bold:見出し用のフォントに変更しました</p>
+<p class="u-text--xl u-font--second u-font--bold">u-font--second_u-font--bold:英数字用のフォントに変更しました</p>
+<p class="u-text--xl u-font--third u-font--bold">u-font--third_u-font--bold:ディスプレイ用のフォントに変更しました</p>
+<p class="u-text--xl u-font--first u-font--bold">ここは見出し用のフォントですが、<span class="u-font--root u-font--bold">ここからbody要素のフォントに変更しました</span></p>
 ```
 
 */
-#document .font-root {
+#document .u-font--root {
   font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
   font-family: 300;
 }
-#document .font-root.font-bold {
+#document .u-font--root.u-font--bold {
   font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
   font-weight: 700;
 }
-#document .font-mono {
+#document .u-font--mono {
   font-family: "Consolas", "Liberation Mono", "Menlo", "Courier", monospace;
 }
-#document .font-first {
+#document .u-font--first {
   font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
   font-weight: 300;
 }
-#document .font-first.font-bold {
+#document .u-font--first.u-font--bold {
   font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
   font-weight: 700;
 }
-#document .font-second {
+#document .u-font--second {
   font-family: "Helvetica", "Roboto", "-apple-system", "Open Sans", "Arial", sans-serif;
   font-weight: 300;
 }
-#document .font-second.font-bold {
+#document .u-font--second.u-font--bold {
   font-family: "Helvetica", "Roboto", "-apple-system", "Open Sans", "Arial", sans-serif;
   font-weight: 700;
 }
-#document .font-third {
+#document .u-font--third {
   font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
   font-weight: 300;
 }
-#document .font-third.font-bold {
+#document .u-font--third.u-font--bold {
   font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
   font-weight: 700;
 }
 
 /*doc
 ---
-title: hidden
+title: u-hidden
 name: hidden
 category: utility-hidden
 ---
 
-常に要素を非表示にする。スクリーンリーダーに対応する場合は <code>.sr</code> を使用すること。
+常に要素を非表示にする。スクリーンリーダーに対応する場合は <code>.u-sr</code> を使用すること。
 
 */
-#document .hidden {
+#document .u-hidden {
   display: none;
 }
 
 /*doc
 ---
-title: hidden-(breakpoint)-up
-name: hidden-01-breakpoint-up
+title: u-hidden--(breakpoint)--up
+name: hidden-01-breakpoint--up
 category: utility-hidden
 ---
 
-(breakpoint)で指定した画面幅以上で要素を非表示にする。特性上、hidden-xs-upはない。
+(breakpoint)で指定した画面幅以上で要素を非表示にする。特性上、u-hidden--xs--upはない。
 
 ``` example
-<div class="hidden-sm-up" style="margin-bottom: 1rem;"><span class="m-btn m-btn-first">hidden-sm-up</span></div>
-<div class="hidden-md-up" style="margin-bottom: 1rem;"><span class="m-btn m-btn-second">hidden-md-up</span></div>
-<div class="hidden-lg-up" style="margin-bottom: 1rem;"><span class="m-btn m-btn-third">hidden-lg-up</span></div>
-<div class="hidden-xl-up" style="margin-bottom: 1rem;"><span class="m-btn m-btn-fourth">hidden-xl-up</span></div>
-<div class="hidden-xxl-up" style="margin-bottom: 1rem;"><span class="m-btn m-btn-important">hidden-xxl-up</span></div>
+<div class="u-hidden--sm--up" style="margin-bottom: 1rem;"><span class="m-btn m-btn-first">u-hidden--sm--up</span></div>
+<div class="u-hidden--md--up" style="margin-bottom: 1rem;"><span class="m-btn m-btn-second">u-hidden--md--up</span></div>
+<div class="u-hidden--lg--up" style="margin-bottom: 1rem;"><span class="m-btn m-btn-third">u-hidden--lg--up</span></div>
+<div class="u-hidden--xl--up" style="margin-bottom: 1rem;"><span class="m-btn m-btn-fourth">u-hidden--xl--up</span></div>
+<div class="u-hidden--xxl--up" style="margin-bottom: 1rem;"><span class="m-btn m-btn-important">u-hidden--xxl--up</span></div>
 ```
 
 */
-#document .hidden-default-up {
+#document .u-hidden--default--up {
   display: none;
 }
 @media (min-width: 360px) {
-  #document .hidden-xs-up {
+  #document .u-hidden--xs--up {
     display: none;
   }
 }
 @media (min-width: 425px) {
-  #document .hidden-sm-up {
+  #document .u-hidden--sm--up {
     display: none;
   }
 }
 @media (min-width: 768px) {
-  #document .hidden-md-up {
+  #document .u-hidden--md--up {
     display: none;
   }
 }
 @media (min-width: 1000px) {
-  #document .hidden-lg-up {
+  #document .u-hidden--lg--up {
     display: none;
   }
 }
 @media (min-width: 1240px) {
-  #document .hidden-xl-up {
+  #document .u-hidden--xl--up {
     display: none;
   }
 }
 @media (min-width: 1640px) {
-  #document .hidden-xxl-up {
+  #document .u-hidden--xxl--up {
     display: none;
   }
 }
 
 /*doc
 ---
-title: hidden-(breakpoint)-down
-name: hidden-02-breakpoint-down
+title: u-hidden--(breakpoint)--down
+name: hidden-02-breakpoint--down
 category: utility-hidden
 ---
 
-(breakpoint)で指定した画面幅未満で要素を非表示にする。特性上、hidden-xxl-downはない。
+(breakpoint)で指定した画面幅未満で要素を非表示にする。特性上、u-hidden--xxl--downはない。
 
 ``` example
-<div class="hidden-xs-down" style="margin-bottom: 1rem;"><span class="m-btn m-btn-first">hidden-xs-down</span></div>
-<div class="hidden-sm-down" style="margin-bottom: 1rem;"><span class="m-btn m-btn-second">hidden-sm-down</span></div>
-<div class="hidden-md-down" style="margin-bottom: 1rem;"><span class="m-btn m-btn-third">hidden-md-down</span></div>
-<div class="hidden-lg-down" style="margin-bottom: 1rem;"><span class="m-btn m-btn-fourth">hidden-lg-down</span></div>
-<div class="hidden-xl-down" style="margin-bottom: 1rem;"><span class="m-btn m-btn-important">hidden-xl-down</span></div>
+<div class="u-hidden--xs--down" style="margin-bottom: 1rem;"><span class="m-btn m-btn-first">u-hidden--xs--down</span></div>
+<div class="u-hidden--sm--down" style="margin-bottom: 1rem;"><span class="m-btn m-btn-second">u-hidden--sm--down</span></div>
+<div class="u-hidden--md--down" style="margin-bottom: 1rem;"><span class="m-btn m-btn-third">u-hidden--md--down</span></div>
+<div class="u-hidden--lg--down" style="margin-bottom: 1rem;"><span class="m-btn m-btn-fourth">u-hidden--lg--down</span></div>
+<div class="u-hidden--xl--down" style="margin-bottom: 1rem;"><span class="m-btn m-btn-important">u-hidden--xl--down</span></div>
 ```
 
 */
 @media (max-width: 319.9px) {
-  #document .hidden-default-down {
+  #document .u-hidden--default--down {
     display: none;
   }
 }
 @media (max-width: 359.9px) {
-  #document .hidden-xxs-down {
+  #document .u-hidden--xxs--down {
     display: none;
   }
 }
 @media (max-width: 424.9px) {
-  #document .hidden-xs-down {
+  #document .u-hidden--xs--down {
     display: none;
   }
 }
 @media (max-width: 767.9px) {
-  #document .hidden-sm-down {
+  #document .u-hidden--sm--down {
     display: none;
   }
 }
 @media (max-width: 999.9px) {
-  #document .hidden-md-down {
+  #document .u-hidden--md--down {
     display: none;
   }
 }
 @media (max-width: 1239.9px) {
-  #document .hidden-lg-down {
+  #document .u-hidden--lg--down {
     display: none;
   }
 }
 @media (max-width: 1639.9px) {
-  #document .hidden-xl-down {
+  #document .u-hidden--xl--down {
     display: none;
   }
 }
 
 /*doc
 ---
-title: img-responsive
-name: img-responsive
-category: utility-img
+title: u-image--responsive
+name: image-01-responsive
+category: utility-image
 ---
 
 画像が包括要素よりも大きくなった場合のみ、縦横比を保って伸縮させる。
 
 ``` example
-<img src="https://placehold.jp/960x100.jpg?text=img-responsive" alt="" class="img-responsive">
+<img src="/images/_dummy/image_01_s.jpg" alt="" class="u-image--responsive">
 ```
 
 */
-#document .img-responsive {
+#document .u-image--responsive {
   max-width: 100%;
   height: auto;
 }
 
 /*doc
 ---
-title: img-fill
-name: img-fill
-category: utility-img
+title: u-image--fill
+name: image-02-fill
+category: utility-image
 ---
 
 画像の大きさに関係なく、常に包括要素の幅いっぱいに伸縮させる。
 
 ``` example
-<img src="https://placehold.jp/960x100.jpg?text=img-fill" alt="" class="img-fill">
+<img src="/images/_dummy/image_01_s.jpg" alt="" class="u-image--fill">
 ```
 
 */
-#document .img-fill {
+#document .u-image--fill {
   width: 100%;
   height: auto;
 }
 
 /*doc
 ---
-title: line-(size)
+title: u-line--(size)
 name: line-01-size
 category: utility-line
 ---
@@ -7143,28 +7157,28 @@ category: utility-line
 行間を最低にするクラスは、0ではなく <code>none</code> である点に注意。
 
 ``` example
-<p class="line-none">line-none_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
-<p class="line-sm">line-sm_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
-<p class="line-md">line-md_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
-<p class="line-lg">line-lg_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+<p class="u-line--none">u-line--none:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+<p class="u-line--sm">u-line--sm:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+<p class="u-line--md">u-line--md:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+<p class="u-line--lg">u-line--lg:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
 ```
 */
-#document .line-none {
+#document .u-line--none {
   line-height: 1;
 }
-#document .line-sm {
+#document .u-line--sm {
   line-height: 1.5;
 }
-#document .line-md {
+#document .u-line--md {
   line-height: 1.75;
 }
-#document .line-lg {
+#document .u-line--lg {
   line-height: 2;
 }
 
 /*doc
 ---
-title: margin-(direction)-(size)
+title: u-margin--(direction)--(size)
 name: margin
 category: utility-margin
 ---
@@ -7172,226 +7186,226 @@ category: utility-margin
 ブロック要素の外部余白を変更する。
 
 ``` example
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-x-a" style="background-color: rgba(255,255,255,.35); width: 50%;">margin-x-a</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--x--a" style="background-color: rgba(255,255,255,.35); width: 50%;">u-margin--x--a</div></div>
 
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-xs" style="background-color: rgba(255,255,255,.35);">margin-xs</div></div>
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-t-xs" style="background-color: rgba(255,255,255,.35);">margin-t-xs</div></div>
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-r-xs" style="background-color: rgba(255,255,255,.35);">margin-r-xs</div></div>
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-b-xs" style="background-color: rgba(255,255,255,.35);">margin-b-xs</div></div>
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-l-xs" style="background-color: rgba(255,255,255,.35);">margin-l-xs</div></div>
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-x-xs" style="background-color: rgba(255,255,255,.35);">margin-x-xs</div></div>
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-y-xs" style="background-color: rgba(255,255,255,.35);">margin-y-xs</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--xs" style="background-color: rgba(255,255,255,.35);">u-margin--xs</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--t--xs" style="background-color: rgba(255,255,255,.35);">u-margin--t--xs</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--r--xs" style="background-color: rgba(255,255,255,.35);">u-margin--r--xs</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--b--xs" style="background-color: rgba(255,255,255,.35);">u-margin--b--xs</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--l--xs" style="background-color: rgba(255,255,255,.35);">u-margin--l--xs</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--x--xs" style="background-color: rgba(255,255,255,.35);">u-margin--x--xs</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--y--xs" style="background-color: rgba(255,255,255,.35);">u-margin--y--xs</div></div>
 
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-sm" style="background-color: rgba(255,255,255,.35);">margin-sm</div></div>
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-t-sm" style="background-color: rgba(255,255,255,.35);">margin-t-sm</div></div>
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-r-sm" style="background-color: rgba(255,255,255,.35);">margin-r-sm</div></div>
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-b-sm" style="background-color: rgba(255,255,255,.35);">margin-b-sm</div></div>
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-l-sm" style="background-color: rgba(255,255,255,.35);">margin-l-sm</div></div>
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-x-sm" style="background-color: rgba(255,255,255,.35);">margin-x-sm</div></div>
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-y-sm" style="background-color: rgba(255,255,255,.35);">margin-y-sm</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--sm" style="background-color: rgba(255,255,255,.35);">u-margin--sm</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--t--sm" style="background-color: rgba(255,255,255,.35);">u-margin--t--sm</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--r--sm" style="background-color: rgba(255,255,255,.35);">u-margin--r--sm</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--b--sm" style="background-color: rgba(255,255,255,.35);">u-margin--b--sm</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--l--sm" style="background-color: rgba(255,255,255,.35);">u-margin--l--sm</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--x--sm" style="background-color: rgba(255,255,255,.35);">u-margin--x--sm</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--y--sm" style="background-color: rgba(255,255,255,.35);">u-margin--y--sm</div></div>
 
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="m" style="background-color: rgba(255,255,255,.35);">m</div></div>
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-t" style="background-color: rgba(255,255,255,.35);">margin-t</div></div>
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-r" style="background-color: rgba(255,255,255,.35);">margin-r</div></div>
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-b" style="background-color: rgba(255,255,255,.35);">margin-b</div></div>
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-l" style="background-color: rgba(255,255,255,.35);">margin-l</div></div>
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-x" style="background-color: rgba(255,255,255,.35);">margin-x</div></div>
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-y" style="background-color: rgba(255,255,255,.35);">margin-y</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-m" style="background-color: rgba(255,255,255,.35);">u-m</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--t" style="background-color: rgba(255,255,255,.35);">u-margin--t</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--r" style="background-color: rgba(255,255,255,.35);">u-margin--r</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--b" style="background-color: rgba(255,255,255,.35);">u-margin--b</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--l" style="background-color: rgba(255,255,255,.35);">u-margin--l</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--x" style="background-color: rgba(255,255,255,.35);">u-margin--x</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--y" style="background-color: rgba(255,255,255,.35);">u-margin--y</div></div>
 
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-lg" style="background-color: rgba(255,255,255,.35);">margin-lg</div></div>
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-t-lg" style="background-color: rgba(255,255,255,.35);">margin-t-lg</div></div>
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-r-lg" style="background-color: rgba(255,255,255,.35);">margin-r-lg</div></div>
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-b-lg" style="background-color: rgba(255,255,255,.35);">margin-b-lg</div></div>
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-l-lg" style="background-color: rgba(255,255,255,.35);">margin-l-lg</div></div>
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-x-lg" style="background-color: rgba(255,255,255,.35);">margin-x-lg</div></div>
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-y-lg" style="background-color: rgba(255,255,255,.35);">margin-y-lg</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--lg" style="background-color: rgba(255,255,255,.35);">u-margin--lg</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--t--lg" style="background-color: rgba(255,255,255,.35);">u-margin--t--lg</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--r--lg" style="background-color: rgba(255,255,255,.35);">u-margin--r--lg</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--b--lg" style="background-color: rgba(255,255,255,.35);">u-margin--b--lg</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--l--lg" style="background-color: rgba(255,255,255,.35);">u-margin--l--lg</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--x--lg" style="background-color: rgba(255,255,255,.35);">u-margin--x--lg</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--y--lg" style="background-color: rgba(255,255,255,.35);">u-margin--y--lg</div></div>
 
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-xl" style="background-color: rgba(255,255,255,.35);">margin-xl</div></div>
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-t-xl" style="background-color: rgba(255,255,255,.35);">margin-t-xl</div></div>
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-r-xl" style="background-color: rgba(255,255,255,.35);">margin-r-xl</div></div>
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-b-xl" style="background-color: rgba(255,255,255,.35);">margin-b-xl</div></div>
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-l-xl" style="background-color: rgba(255,255,255,.35);">margin-l-xl</div></div>
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-x-xl" style="background-color: rgba(255,255,255,.35);">margin-x-xl</div></div>
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-y-xl" style="background-color: rgba(255,255,255,.35);">margin-y-xl</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--xl" style="background-color: rgba(255,255,255,.35);">u-margin--xl</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--t--xl" style="background-color: rgba(255,255,255,.35);">u-margin--t--xl</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--r--xl" style="background-color: rgba(255,255,255,.35);">u-margin--r--xl</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--b--xl" style="background-color: rgba(255,255,255,.35);">u-margin--b--xl</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--l--xl" style="background-color: rgba(255,255,255,.35);">u-margin--l--xl</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--x--xl" style="background-color: rgba(255,255,255,.35);">u-margin--x--xl</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--y--xl" style="background-color: rgba(255,255,255,.35);">u-margin--y--xl</div></div>
 
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-xxl" style="background-color: rgba(255,255,255,.35);">margin-xxl</div></div>
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-t-xxl" style="background-color: rgba(255,255,255,.35);">margin-t-xxl</div></div>
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-r-xxl" style="background-color: rgba(255,255,255,.35);">margin-r-xxl</div></div>
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-b-xxl" style="background-color: rgba(255,255,255,.35);">margin-b-xxl</div></div>
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-l-xxl" style="background-color: rgba(255,255,255,.35);">margin-l-xxl</div></div>
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-x-xxl" style="background-color: rgba(255,255,255,.35);">margin-x-xxl</div></div>
-<div class="margin-b-sm bg-first bg-fade" style="padding: 1px;"><div class="margin-y-xxl" style="background-color: rgba(255,255,255,.35);">margin-y-xxl</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--xxl" style="background-color: rgba(255,255,255,.35);">u-margin--xxl</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--t--xxl" style="background-color: rgba(255,255,255,.35);">u-margin--t--xxl</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--r--xxl" style="background-color: rgba(255,255,255,.35);">u-margin--r--xxl</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--b--xxl" style="background-color: rgba(255,255,255,.35);">u-margin--b--xxl</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--l--xxl" style="background-color: rgba(255,255,255,.35);">u-margin--l--xxl</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--x--xxl" style="background-color: rgba(255,255,255,.35);">u-margin--x--xxl</div></div>
+<div class="u-margin--b--sm" style="padding: 1px; background-color: #7de;"><div class="u-margin--y--xxl" style="background-color: rgba(255,255,255,.35);">u-margin--y--xxl</div></div>
 ```
 */
-#document .margin-x-a {
+#document .u-margin--x--a {
   margin-right: auto;
   margin-left: auto;
 }
-#document .margin-0 {
+#document .u-margin--0 {
   margin: 0;
 }
-#document .margin-t-0 {
+#document .u-margin--t--0 {
   margin-top: 0;
 }
-#document .margin-r-0 {
+#document .u-margin--r--0 {
   margin-right: 0;
 }
-#document .margin-b-0 {
+#document .u-margin--b--0 {
   margin-bottom: 0;
 }
-#document .margin-l-0 {
+#document .u-margin--l--0 {
   margin-left: 0;
 }
-#document .margin-x-0 {
+#document .u-margin--x--0 {
   margin-right: 0;
   margin-left: 0;
 }
-#document .margin-y-0 {
+#document .u-margin--y--0 {
   margin-top: 0;
   margin-bottom: 0;
 }
-#document .margin-xs {
+#document .u-margin--xs {
   margin: 5px;
 }
-#document .margin-t-xs {
+#document .u-margin--t--xs {
   margin-top: 5px;
 }
-#document .margin-r-xs {
+#document .u-margin--r--xs {
   margin-right: 5px;
 }
-#document .margin-b-xs {
+#document .u-margin--b--xs {
   margin-bottom: 5px;
 }
-#document .margin-l-xs {
+#document .u-margin--l--xs {
   margin-left: 5px;
 }
-#document .margin-x-xs {
+#document .u-margin--x--xs {
   margin-right: 5px;
   margin-left: 5px;
 }
-#document .margin-y-xs {
+#document .u-margin--y--xs {
   margin-top: 5px;
   margin-bottom: 5px;
 }
-#document .margin-sm {
+#document .u-margin--sm {
   margin: 10px;
 }
-#document .margin-t-sm {
+#document .u-margin--t--sm {
   margin-top: 10px;
 }
-#document .margin-r-sm {
+#document .u-margin--r--sm {
   margin-right: 10px;
 }
-#document .margin-b-sm {
+#document .u-margin--b--sm {
   margin-bottom: 10px;
 }
-#document .margin-l-sm {
+#document .u-margin--l--sm {
   margin-left: 10px;
 }
-#document .margin-x-sm {
+#document .u-margin--x--sm {
   margin-right: 10px;
   margin-left: 10px;
 }
-#document .margin-y-sm {
+#document .u-margin--y--sm {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-#document .margin {
+#document .u-margin {
   margin: 15px;
 }
-#document .margin-t {
+#document .u-margin--t {
   margin-top: 15px;
 }
-#document .margin-r {
+#document .u-margin--r {
   margin-right: 15px;
 }
-#document .margin-b {
+#document .u-margin--b {
   margin-bottom: 15px;
 }
-#document .margin-l {
+#document .u-margin--l {
   margin-left: 15px;
 }
-#document .margin-x {
+#document .u-margin--x {
   margin-right: 15px;
   margin-left: 15px;
 }
-#document .margin-y {
+#document .u-margin--y {
   margin-top: 15px;
   margin-bottom: 15px;
 }
-#document .margin-lg {
+#document .u-margin--lg {
   margin: 30px;
 }
-#document .margin-t-lg {
+#document .u-margin--t--lg {
   margin-top: 30px;
 }
-#document .margin-r-lg {
+#document .u-margin--r--lg {
   margin-right: 30px;
 }
-#document .margin-b-lg {
+#document .u-margin--b--lg {
   margin-bottom: 30px;
 }
-#document .margin-l-lg {
+#document .u-margin--l--lg {
   margin-left: 30px;
 }
-#document .margin-x-lg {
+#document .u-margin--x--lg {
   margin-right: 30px;
   margin-left: 30px;
 }
-#document .margin-y-lg {
+#document .u-margin--y--lg {
   margin-top: 30px;
   margin-bottom: 30px;
 }
-#document .margin-xl {
+#document .u-margin--xl {
   margin: 45px;
 }
-#document .margin-t-xl {
+#document .u-margin--t--xl {
   margin-top: 45px;
 }
-#document .margin-r-xl {
+#document .u-margin--r--xl {
   margin-right: 45px;
 }
-#document .margin-b-xl {
+#document .u-margin--b--xl {
   margin-bottom: 45px;
 }
-#document .margin-l-xl {
+#document .u-margin--l--xl {
   margin-left: 45px;
 }
-#document .margin-x-xl {
+#document .u-margin--x--xl {
   margin-right: 45px;
   margin-left: 45px;
 }
-#document .margin-y-xl {
+#document .u-margin--y--xl {
   margin-top: 45px;
   margin-bottom: 45px;
 }
-#document .margin-xxl {
+#document .u-margin--xxl {
   margin: 60px;
 }
-#document .margin-t-xxl {
+#document .u-margin--t--xxl {
   margin-top: 60px;
 }
-#document .margin-r-xxl {
+#document .u-margin--r--xxl {
   margin-right: 60px;
 }
-#document .margin-b-xxl {
+#document .u-margin--b--xxl {
   margin-bottom: 60px;
 }
-#document .margin-l-xxl {
+#document .u-margin--l--xxl {
   margin-left: 60px;
 }
-#document .margin-x-xxl {
+#document .u-margin--x--xxl {
   margin-right: 60px;
   margin-left: 60px;
 }
-#document .margin-y-xxl {
+#document .u-margin--y--xxl {
   margin-top: 60px;
   margin-bottom: 60px;
 }
 
 /*doc
 ---
-title: padding-(direction)-(size)
+title: u-padding--(direction)--(size)
 name: padding
 category: utility-padding
 ---
@@ -7399,218 +7413,218 @@ category: utility-padding
 ブロック要素の内部余白を変更する。
 
 ``` example
-<div class="padding-xs bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-xs</div></div>
-<div class="padding-t-xs bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-t-xs</div></div>
-<div class="padding-r-xs bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-r-xs</div></div>
-<div class="padding-b-xs bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-b-xs</div></div>
-<div class="padding-l-xs bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-l-xs</div></div>
+<div class="u-padding--xs u-margin--b--sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding--xs</div></div>
+<div class="u-padding--t--xs u-margin--b--sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding--t--xs</div></div>
+<div class="u-padding--r--xs u-margin--b--sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding--r--xs</div></div>
+<div class="u-padding--b--xs u-margin--b--sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding--b--xs</div></div>
+<div class="u-padding--l--xs u-margin--b--sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding--l--xs</div></div>
 
-<div class="padding-sm bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-sm</div></div>
-<div class="padding-t-sm bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-t-sm</div></div>
-<div class="padding-r-sm bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-r-sm</div></div>
-<div class="padding-b-sm bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-b-sm</div></div>
-<div class="padding-l-sm bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-l-sm</div></div>
-<div class="padding-x-sm bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-x-sm</div></div>
-<div class="padding-y-sm bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-y-sm</div></div>
+<div class="u-padding--sm u-margin--b--sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding--sm</div></div>
+<div class="u-padding--t--sm u-margin--b--sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding--t--sm</div></div>
+<div class="u-padding--r--sm u-margin--b--sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding--r--sm</div></div>
+<div class="u-padding--b--sm u-margin--b--sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding--b--sm</div></div>
+<div class="u-padding--l--sm u-margin--b--sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding--l--sm</div></div>
+<div class="u-padding--x--sm u-margin--b--sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding--x--sm</div></div>
+<div class="u-padding--y--sm u-margin--b--sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding--y--sm</div></div>
 
-<div class="padding bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding</div></div>
-<div class="padding-t bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-t</div></div>
-<div class="padding-r bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-r</div></div>
-<div class="padding-b bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-b</div></div>
-<div class="padding-l bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-l</div></div>
-<div class="padding-x bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-x</div></div>
-<div class="padding-y bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-y</div></div>
+<div class="u-padding u-margin--b--sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding</div></div>
+<div class="u-padding--t u-margin--b--sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding--t</div></div>
+<div class="u-padding--r u-margin--b--sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding--r</div></div>
+<div class="u-padding--b u-margin--b--sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding--b</div></div>
+<div class="u-padding--l u-margin--b--sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding--l</div></div>
+<div class="u-padding--x u-margin--b--sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding--x</div></div>
+<div class="u-padding--y u-margin--b--sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding--y</div></div>
 
-<div class="padding-lg bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-lg</div></div>
-<div class="padding-t-lg bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-t-lg</div></div>
-<div class="padding-r-lg bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-r-lg</div></div>
-<div class="padding-b-lg bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-b-lg</div></div>
-<div class="padding-l-lg bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-l-lg</div></div>
-<div class="padding-x-lg bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-x-lg</div></div>
-<div class="padding-y-lg bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-y-lg</div></div>
+<div class="u-padding--lg u-margin--b--sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding--lg</div></div>
+<div class="u-padding--t--lg u-margin--b--sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding--t--lg</div></div>
+<div class="u-padding--r--lg u-margin--b--sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding--r--lg</div></div>
+<div class="u-padding--b--lg u-margin--b--sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding--b--lg</div></div>
+<div class="u-padding--l--lg u-margin--b--sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding--l--lg</div></div>
+<div class="u-padding--x--lg u-margin--b--sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding--x--lg</div></div>
+<div class="u-padding--y--lg u-margin--b--sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding--y--lg</div></div>
 
-<div class="padding-xl bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-xl</div></div>
-<div class="padding-t-xl bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-t-xl</div></div>
-<div class="padding-r-xl bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-r-xl</div></div>
-<div class="padding-b-xl bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-b-xl</div></div>
-<div class="padding-l-xl bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-l-xl</div></div>
-<div class="padding-x-xl bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-x-xl</div></div>
-<div class="padding-y-xl bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-y-xl</div></div>
+<div class="u-padding--xl u-margin--b--sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding--xl</div></div>
+<div class="u-padding--t--xl u-margin--b--sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding--t--xl</div></div>
+<div class="u-padding--r--xl u-margin--b--sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding--r--xl</div></div>
+<div class="u-padding--b--xl u-margin--b--sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding--b--xl</div></div>
+<div class="u-padding--l--xl u-margin--b--sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding--l--xl</div></div>
+<div class="u-padding--x--xl u-margin--b--sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding--x--xl</div></div>
+<div class="u-padding--y--xl u-margin--b--sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding--y--xl</div></div>
 
-<div class="padding-xxl bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-xxl</div></div>
-<div class="padding-t-xxl bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-t-xxl</div></div>
-<div class="padding-r-xxl bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-r-xxl</div></div>
-<div class="padding-b-xxl bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-b-xxl</div></div>
-<div class="padding-l-xxl bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-l-xxl</div></div>
-<div class="padding-x-xxl bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-x-xxl</div></div>
-<div class="padding-y-xxl bg-second bg-fade margin-b-sm"><div style="background-color: rgba(255,255,255,.35);">padding-y-xxl</div></div>
+<div class="u-padding--xxl u-margin--b--sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding--xxl</div></div>
+<div class="u-padding--t--xxl u-margin--b--sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding--t--xxl</div></div>
+<div class="u-padding--r--xxl u-margin--b--sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding--r--xxl</div></div>
+<div class="u-padding--b--xxl u-margin--b--sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding--b--xxl</div></div>
+<div class="u-padding--l--xxl u-margin--b--sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding--l--xxl</div></div>
+<div class="u-padding--x--xxl u-margin--b--sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding--x--xxl</div></div>
+<div class="u-padding--y--xxl u-margin--b--sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding--y--xxl</div></div>
 ```
 */
-#document .padding-0 {
+#document .u-padding--0 {
   padding: 0;
 }
-#document .padding-t-0 {
+#document .u-padding--t--0 {
   padding-top: 0;
 }
-#document .padding-r-0 {
+#document .u-padding--r--0 {
   padding-right: 0;
 }
-#document .padding-b-0 {
+#document .u-padding--b--0 {
   padding-bottom: 0;
 }
-#document .padding-l-0 {
+#document .u-padding--l--0 {
   padding-left: 0;
 }
-#document .padding-x-0 {
+#document .u-padding--x--0 {
   padding-right: 0;
   padding-left: 0;
 }
-#document .padding-y-0 {
+#document .u-padding--y--0 {
   padding-top: 0;
   padding-bottom: 0;
 }
-#document .padding-xs {
+#document .u-padding--xs {
   padding: 5px;
 }
-#document .padding-t-xs {
+#document .u-padding--t--xs {
   padding-top: 5px;
 }
-#document .padding-r-xs {
+#document .u-padding--r--xs {
   padding-right: 5px;
 }
-#document .padding-b-xs {
+#document .u-padding--b--xs {
   padding-bottom: 5px;
 }
-#document .padding-l-xs {
+#document .u-padding--l--xs {
   padding-left: 5px;
 }
-#document .padding-x-xs {
+#document .u-padding--x--xs {
   padding-right: 5px;
   padding-left: 5px;
 }
-#document .padding-y-xs {
+#document .u-padding--y--xs {
   padding-top: 5px;
   padding-bottom: 5px;
 }
-#document .padding-sm {
+#document .u-padding--sm {
   padding: 10px;
 }
-#document .padding-t-sm {
+#document .u-padding--t--sm {
   padding-top: 10px;
 }
-#document .padding-r-sm {
+#document .u-padding--r--sm {
   padding-right: 10px;
 }
-#document .padding-b-sm {
+#document .u-padding--b--sm {
   padding-bottom: 10px;
 }
-#document .padding-l-sm {
+#document .u-padding--l--sm {
   padding-left: 10px;
 }
-#document .padding-x-sm {
+#document .u-padding--x--sm {
   padding-right: 10px;
   padding-left: 10px;
 }
-#document .padding-y-sm {
+#document .u-padding--y--sm {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-#document .padding {
+#document .u-padding {
   padding: 15px;
 }
-#document .padding-t {
+#document .u-padding--t {
   padding-top: 15px;
 }
-#document .padding-r {
+#document .u-padding--r {
   padding-right: 15px;
 }
-#document .padding-b {
+#document .u-padding--b {
   padding-bottom: 15px;
 }
-#document .padding-l {
+#document .u-padding--l {
   padding-left: 15px;
 }
-#document .padding-x {
+#document .u-padding--x {
   padding-right: 15px;
   padding-left: 15px;
 }
-#document .padding-y {
+#document .u-padding--y {
   padding-top: 15px;
   padding-bottom: 15px;
 }
-#document .padding-lg {
+#document .u-padding--lg {
   padding: 30px;
 }
-#document .padding-t-lg {
+#document .u-padding--t--lg {
   padding-top: 30px;
 }
-#document .padding-r-lg {
+#document .u-padding--r--lg {
   padding-right: 30px;
 }
-#document .padding-b-lg {
+#document .u-padding--b--lg {
   padding-bottom: 30px;
 }
-#document .padding-l-lg {
+#document .u-padding--l--lg {
   padding-left: 30px;
 }
-#document .padding-x-lg {
+#document .u-padding--x--lg {
   padding-right: 30px;
   padding-left: 30px;
 }
-#document .padding-y-lg {
+#document .u-padding--y--lg {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-#document .padding-xl {
+#document .u-padding--xl {
   padding: 45px;
 }
-#document .padding-t-xl {
+#document .u-padding--t--xl {
   padding-top: 45px;
 }
-#document .padding-r-xl {
+#document .u-padding--r--xl {
   padding-right: 45px;
 }
-#document .padding-b-xl {
+#document .u-padding--b--xl {
   padding-bottom: 45px;
 }
-#document .padding-l-xl {
+#document .u-padding--l--xl {
   padding-left: 45px;
 }
-#document .padding-x-xl {
+#document .u-padding--x--xl {
   padding-right: 45px;
   padding-left: 45px;
 }
-#document .padding-y-xl {
+#document .u-padding--y--xl {
   padding-top: 45px;
   padding-bottom: 45px;
 }
-#document .padding-xxl {
+#document .u-padding--xxl {
   padding: 60px;
 }
-#document .padding-t-xxl {
+#document .u-padding--t--xxl {
   padding-top: 60px;
 }
-#document .padding-r-xxl {
+#document .u-padding--r--xxl {
   padding-right: 60px;
 }
-#document .padding-b-xxl {
+#document .u-padding--b--xxl {
   padding-bottom: 60px;
 }
-#document .padding-l-xxl {
+#document .u-padding--l--xxl {
   padding-left: 60px;
 }
-#document .padding-x-xxl {
+#document .u-padding--x--xxl {
   padding-right: 60px;
   padding-left: 60px;
 }
-#document .padding-y-xxl {
+#document .u-padding--y--xxl {
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
 /*doc
 ---
-title: position-(y)-(x)
+title: u-position--(y)-(x)
 name: position
 category: utility-position
 ---
@@ -7619,101 +7633,91 @@ category: utility-position
 親要素に <code>position:relative</code> を指定している必要がある。
 
 ``` example
-<div>position-tl</div>
-<div class="bg-first bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="position-tl" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+<div>u-position--top--left</div>
+<div style="position: relative; background-color: #bbb; margin-bottom: 5px; width: 100px; height: 100px;"><span class="u-position--top--left" style="background-color: #333; width: 10px; height: 10px;"></span></div>
 
-<div>position-tc</div>
-<div class="bg-first bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="position-tc" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+<div>u-position--top--center</div>
+<div style="position: relative; background-color: #bbb; margin-bottom: 5px; width: 100px; height: 100px;"><span class="u-position--top--center" style="background-color: #333; width: 10px; height: 10px;"></span></div>
 
-<div>position-tr</div>
-<div class="bg-first bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="position-tr" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+<div>u-position--top--right</div>
+<div style="position: relative; background-color: #bbb; margin-bottom: 5px; width: 100px; height: 100px;"><span class="u-position--top--right" style="background-color: #333; width: 10px; height: 10px;"></span></div>
 
-<div>position-cl</div>
-<div class="bg-second bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="position-cl" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+<div>u-position--center--left</div>
+<div style="position: relative; background-color: #bbb; margin-bottom: 5px; width: 100px; height: 100px;"><span class="u-position--center--left" style="background-color: #333; width: 10px; height: 10px;"></span></div>
 
-<div>position-cc</div>
-<div class="bg-second bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="position-cc" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+<div>u-position--center--center</div>
+<div style="position: relative; background-color: #bbb; margin-bottom: 5px; width: 100px; height: 100px;"><span class="u-position--center--center" style="background-color: #333; width: 10px; height: 10px;"></span></div>
 
-<div>position-cr</div>
-<div class="bg-second bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="position-cr" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+<div>u-position--center--right</div>
+<div style="position: relative; background-color: #bbb; margin-bottom: 5px; width: 100px; height: 100px;"><span class="u-position--center--right" style="background-color: #333; width: 10px; height: 10px;"></span></div>
 
-<div>position-bl</div>
-<div class="bg-third bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="position-bl" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+<div>u-position--bottom--left</div>
+<div style="position: relative; background-color: #bbb; margin-bottom: 5px; width: 100px; height: 100px;"><span class="u-position--bottom--left" style="background-color: #333; width: 10px; height: 10px;"></span></div>
 
-<div>position-bc</div>
-<div class="bg-third bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="position-bc" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+<div>u-position--bottom--center</div>
+<div style="position: relative; background-color: #bbb; margin-bottom: 5px; width: 100px; height: 100px;"><span class="u-position--bottom--center" style="background-color: #333; width: 10px; height: 10px;"></span></div>
 
-<div>position-br</div>
-<div class="bg-third bg-fade" style="position: relative; margin-bottom: 5px; width: 100px; height: 100px;"><span class="position-br" style="background-color: #333; width: 10px; height: 10px;"></span></div>
+<div>u-position--bottom--right</div>
+<div style="position: relative; background-color: #bbb; margin-bottom: 5px; width: 100px; height: 100px;"><span class="u-position--bottom--right" style="background-color: #333; width: 10px; height: 10px;"></span></div>
 ```
 */
-#document .position-tl,
-#document .position-tc,
-#document .position-tr,
-#document .position-cl,
-#document .position-cc,
-#document .position-cr,
-#document .position-bl,
-#document .position-bc,
-#document .position-br {
+#document .u-position--top--left,
+#document .u-position--top--center,
+#document .u-position--top--right,
+#document .u-position--center--left,
+#document .u-position--center--center,
+#document .u-position--center--right,
+#document .u-position--bottom--left,
+#document .u-position--bottom--center,
+#document .u-position--bottom--right {
   position: absolute;
   z-index: 99;
 }
-#document .position-tl {
+#document .u-position--top--left {
   top: 0;
   left: 0;
 }
-#document .position-tc {
+#document .u-position--top--center {
   top: 0;
   left: 50%;
-  -webkit-transform: translate(-50%, 0);
-  -ms-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
 }
-#document .position-tr {
+#document .u-position--top--right {
   top: 0;
   right: 0;
 }
-#document .position-cl {
+#document .u-position--center--left {
   top: 50%;
   left: 0;
-  -webkit-transform: translate(0, -50%);
-  -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
 }
-#document .position-cc {
+#document .u-position--center--center {
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, 0);
-  -ms-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
 }
-#document .position-cr {
+#document .u-position--center--right {
   top: 50%;
   right: 0;
-  -webkit-transform: translate(0, -50%);
-  -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
 }
-#document .position-bl {
+#document .u-position--bottom--left {
   bottom: 0;
   left: 0;
 }
-#document .position-bc {
+#document .u-position--bottom--center {
   bottom: 0;
   left: 50%;
-  -webkit-transform: translate(-50%, 0);
-  -ms-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
 }
-#document .position-br {
+#document .u-position--bottom--right {
   bottom: 0;
   right: 0;
 }
 
 /*doc
 ---
-title: shadow
+title: u-shadow
 name: shadow
 category: utility-shadow
 ---
@@ -7721,16 +7725,16 @@ category: utility-shadow
 要素に影をつける。
 
 ``` example
-<p><a href="#" class="m-btn m-btn_first m-btn_block shadow">shadow</a></p>
+<p><a href="#" class="m-btn m-btn--first m-btn--block u-shadow">u-shadow</a></p>
 ```
 */
-#document .shadow {
+#document .u-shadow {
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 /*doc
 ---
-title: shadow_(size)
+title: u-shadow--(size)
 name: shadow-01-size
 category: utility-shadow
 ---
@@ -7738,20 +7742,20 @@ category: utility-shadow
 影をつけた要素と背景の、擬似的な距離を変更する。
 
 ``` example
-<p><a href="#" class="m-btn m-btn_first m-btn_block shadow shadow_sm">shadow_sm</a></p>
-<p><a href="#" class="m-btn m-btn_first m-btn_block shadow shadow_lg">shadow_lg</a></p>
+<p><a href="#" class="m-btn m-btn--first m-btn--block u-shadow u-shadow--sm">u-shadow--sm</a></p>
+<p><a href="#" class="m-btn m-btn--first m-btn--block u-shadow u-shadow--lg">u-shadow--lg</a></p>
 ```
 */
-#document .shadow_sm {
+#document .u-shadow--sm {
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
 }
-#document .shadow_lg {
+#document .u-shadow--lg {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 2px 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 /*doc
 ---
-title: sr
+title: u-sr
 name: sr
 category: utility-sr
 ---
@@ -7759,10 +7763,10 @@ category: utility-sr
 要素内の文章をスクリーンリーダーに反応するよう、外見のみ非表示にする。
 
 ``` example
-<p><a href="#" class="m-btn m-btn-first m-btn-round">&raquo; sr <span class="sr">この文字は表示されません</span></a></p>
+<p><a href="#" class="m-btn m-btn-first m-btn-round">&raquo; u-sr <span class="u-sr">この文字は表示されません</span></a></p>
 ```
 */
-#document .sr {
+#document .u-sr {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -7775,7 +7779,7 @@ category: utility-sr
 
 /*doc
 ---
-title: sr_focus
+title: u-sr--focus
 name: sr-01-focus
 category: utility-sr
 ---
@@ -7783,10 +7787,10 @@ category: utility-sr
 要素そのものにフォーカスしたときにテキストが表示される。
 
 ``` example
-<p>sr_focus -> <input type="button" class="sr_focus" value="フォーカスしましたね" /></p>
+<p>u-sr--focus -> <input type="button" class="u-sr--focus" value="フォーカスしましたね" /></p>
 ```
 */
-#document .sr_focus {
+#document .u-sr--focus {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -7796,7 +7800,7 @@ category: utility-sr
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
-#document .sr_focus:focus, #document .sr_focus:active {
+#document .u-sr--focus:focus, #document .u-sr--focus:active {
   position: static;
   width: auto;
   height: auto;
@@ -7807,7 +7811,7 @@ category: utility-sr
 
 /*doc
 ---
-title: sr_focus_inner
+title: u-sr--focus--inner
 name: sr-02-focus-inner
 category: utility-sr
 ---
@@ -7815,10 +7819,10 @@ category: utility-sr
 包括要素にフォーカスしたときにテキストが表示される。
 
 ``` example
-<p><a href="#" class="m-btn m-btn_second sr_focus_inner">&raquo; sr_focus_inner <span class="sr">フォーカスしましたね</span></a></p>
+<p><a href="#" class="m-btn m-btn--second u-sr--focus--inner">&raquo; u-sr--focus--inner <span class="u-sr">フォーカスしましたね</span></a></p>
 ```
 */
-#document .sr_focus_inner .sr {
+#document .u-sr--focus--inner .u-sr {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -7828,7 +7832,7 @@ category: utility-sr
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
-#document .sr_focus_inner:focus .sr, #document .sr_focus_inner:active .sr {
+#document .u-sr--focus--inner:focus .u-sr, #document .u-sr--focus--inner:active .u-sr {
   position: static;
   width: auto;
   height: auto;
@@ -7839,7 +7843,7 @@ category: utility-sr
 
 /*doc
 ---
-title: text_(color)
+title: u-text--(color)
 name: text-01-color
 category: utility-text
 ---
@@ -7847,36 +7851,36 @@ category: utility-text
 文字色を変更する。(color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
 
 ``` example
-<p class="text_first">text_first:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="text_second">text_second:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="text_third">text_third:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="text_fourth">text_fourth:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="text_info">text_info:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="text_important">text_important:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="u-text--first">u-text--first:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="u-text--second">u-text--second:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="u-text--third">u-text--third:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="u-text--fourth">u-text--fourth:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="u-text--info">u-text--info:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="u-text--important">u-text--important:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
 ```
 */
-#document .text_first {
+#document .u-text--first {
   color: #0360bd;
 }
-#document .text_second {
+#document .u-text--second {
   color: #26a9d0;
 }
-#document .text_third {
+#document .u-text--third {
   color: #229644;
 }
-#document .text_fourth {
+#document .u-text--fourth {
   color: #f37910;
 }
-#document .text_info {
+#document .u-text--info {
   color: #26a9d0;
 }
-#document .text_important {
+#document .u-text--important {
   color: #d70022;
 }
 
 /*doc
 ---
-title: text_root
+title: u-text--root
 name: text-02-root
 category: utility-text
 ---
@@ -7884,17 +7888,17 @@ category: utility-text
 文字色をbody要素の文字色に戻す。
 
 ``` example
-<p class="text_first">ここは文字色が first ですが、<span class="text_root">ここからbody要素の文字色に変更しました</span></p>
+<p class="u-text--first">ここは文字色が first ですが、<span class="u-text--root">ここからbody要素の文字色に変更しました</span></p>
 ```
 
 */
-#document .text_root {
+#document .u-text--root {
   color: #333;
 }
 
 /*doc
 ---
-title: text_inverse
+title: u-text--inverse
 name: text-03-inverse
 category: utility-text
 ---
@@ -7904,17 +7908,17 @@ category: utility-text
 
 ``` example
 <div style="background-color: #000; padding: 1rem 0;">
-    <p class="text_inverse">text_inverse:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+    <p class="u-text--inverse">u-text--inverse:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
 </div>
 ```
 */
-#document .text_inverse {
+#document .u-text--inverse {
   color: #fff;
 }
 
 /*doc
 ---
-title: text_(direction)(_(breakpont)_(up or down))
+title: u-text--(direction)(--(breakpont)--(up or down))
 name: text-05-direction
 category: utility-text
 ---
@@ -7924,258 +7928,258 @@ category: utility-text
 (breakpoint)の指定がある場合は、(breakpoint)以上、もしくは以下のときに、指定した方向へ寄せる。
 
 ``` example
-<p class="text_center">text_center:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
-<p class="text_right">text_right:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+<p class="u-text--center">u-text--center:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+<p class="u-text--right">u-text--right:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
 
-<div class="text_center" style="background-color: #dee;">
-    <p>text_center:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-    <p class="text_left">text_left:何でも薄暗いじめじめした所で</p>
+<div class="u-text--center" style="background-color: #dee;">
+    <p>u-text--center:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+    <p class="u-text--left">u-text--left:何でも薄暗いじめじめした所で</p>
     <p>ニャーニャー泣いていた事だけは記憶している。</p>
 </div>
 
-<p class="text_center_lg_up">text_center_lg_up:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
-<p class="text_right_sm_up">text_right_sm_up:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+<p class="u-text--center--lg--up">u-text--center--lg--up:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+<p class="u-text--right--sm--up">u-text--right--sm--up:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
 
-<div class="text_center_lg_up" style="background-color: #dee;">
-    <p>text_center_lg_up:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-    <p class="text_left_sm_down">text_left_sm_down:何でも薄暗いじめじめした所で</p>
+<div class="u-text--center--lg--up" style="background-color: #dee;">
+    <p>u-text--center--lg--up:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+    <p class="u-text--left--sm--down">u-text--left--sm--down:何でも薄暗いじめじめした所で</p>
     <p>ニャーニャー泣いていた事だけは記憶している。</p>
 </div>
 
-<p class="text_right text_center_lg_up">text_right:text_center_lg_up:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+<p class="u-text--right u-text--center--lg--up">u-text--right:u-text--center--lg--up:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
 ```
 */
-#document .text_left {
+#document .u-text--left {
   text-align: left;
 }
-#document .text_center {
+#document .u-text--center {
   text-align: center;
 }
-#document .text_right {
+#document .u-text--right {
   text-align: right;
 }
-#document .text_left_default_up {
+#document .u-text--left--default--up {
   text-align: left;
 }
-#document .text_center_default_up {
+#document .u-text--center--default--up {
   text-align: center;
 }
-#document .text_right_default_up {
+#document .u-text--right--default--up {
   text-align: right;
 }
 @media (max-width: 319.9px) {
-  #document .text_left_default-down {
+  #document .u-text--left--default-down {
     text-align: left;
   }
-  #document .text_center_default-down {
+  #document .u-text--center--default-down {
     text-align: center;
   }
-  #document .text_right_default-down {
+  #document .u-text--right--default-down {
     text-align: right;
   }
 }
 @media (min-width: 320px) {
-  #document .text_left_xxs_up {
+  #document .u-text--left--xxs--up {
     text-align: left;
   }
-  #document .text_center_xxs_up {
+  #document .u-text--center--xxs--up {
     text-align: center;
   }
-  #document .text_right_xxs_up {
+  #document .u-text--right--xxs--up {
     text-align: right;
   }
 }
 @media (max-width: 359.9px) {
-  #document .text_left_xxs-down {
+  #document .u-text--left--xxs-down {
     text-align: left;
   }
-  #document .text_center_xxs-down {
+  #document .u-text--center--xxs-down {
     text-align: center;
   }
-  #document .text_right_xxs-down {
+  #document .u-text--right--xxs-down {
     text-align: right;
   }
 }
 @media (min-width: 360px) {
-  #document .text_left_xs_up {
+  #document .u-text--left--xs--up {
     text-align: left;
   }
-  #document .text_center_xs_up {
+  #document .u-text--center--xs--up {
     text-align: center;
   }
-  #document .text_right_xs_up {
+  #document .u-text--right--xs--up {
     text-align: right;
   }
 }
 @media (max-width: 424.9px) {
-  #document .text_left_xs-down {
+  #document .u-text--left--xs-down {
     text-align: left;
   }
-  #document .text_center_xs-down {
+  #document .u-text--center--xs-down {
     text-align: center;
   }
-  #document .text_right_xs-down {
+  #document .u-text--right--xs-down {
     text-align: right;
   }
 }
 @media (min-width: 425px) {
-  #document .text_left_sm_up {
+  #document .u-text--left--sm--up {
     text-align: left;
   }
-  #document .text_center_sm_up {
+  #document .u-text--center--sm--up {
     text-align: center;
   }
-  #document .text_right_sm_up {
+  #document .u-text--right--sm--up {
     text-align: right;
   }
 }
 @media (max-width: 767.9px) {
-  #document .text_left_sm-down {
+  #document .u-text--left--sm-down {
     text-align: left;
   }
-  #document .text_center_sm-down {
+  #document .u-text--center--sm-down {
     text-align: center;
   }
-  #document .text_right_sm-down {
+  #document .u-text--right--sm-down {
     text-align: right;
   }
 }
 @media (min-width: 768px) {
-  #document .text_left_md_up {
+  #document .u-text--left--md--up {
     text-align: left;
   }
-  #document .text_center_md_up {
+  #document .u-text--center--md--up {
     text-align: center;
   }
-  #document .text_right_md_up {
+  #document .u-text--right--md--up {
     text-align: right;
   }
 }
 @media (max-width: 999.9px) {
-  #document .text_left_md-down {
+  #document .u-text--left--md-down {
     text-align: left;
   }
-  #document .text_center_md-down {
+  #document .u-text--center--md-down {
     text-align: center;
   }
-  #document .text_right_md-down {
+  #document .u-text--right--md-down {
     text-align: right;
   }
 }
 @media (min-width: 1000px) {
-  #document .text_left_lg_up {
+  #document .u-text--left--lg--up {
     text-align: left;
   }
-  #document .text_center_lg_up {
+  #document .u-text--center--lg--up {
     text-align: center;
   }
-  #document .text_right_lg_up {
+  #document .u-text--right--lg--up {
     text-align: right;
   }
 }
 @media (max-width: 1239.9px) {
-  #document .text_left_lg-down {
+  #document .u-text--left--lg-down {
     text-align: left;
   }
-  #document .text_center_lg-down {
+  #document .u-text--center--lg-down {
     text-align: center;
   }
-  #document .text_right_lg-down {
+  #document .u-text--right--lg-down {
     text-align: right;
   }
 }
 @media (min-width: 1240px) {
-  #document .text_left_xl_up {
+  #document .u-text--left--xl--up {
     text-align: left;
   }
-  #document .text_center_xl_up {
+  #document .u-text--center--xl--up {
     text-align: center;
   }
-  #document .text_right_xl_up {
+  #document .u-text--right--xl--up {
     text-align: right;
   }
 }
 @media (max-width: 1639.9px) {
-  #document .text_left_xl-down {
+  #document .u-text--left--xl-down {
     text-align: left;
   }
-  #document .text_center_xl-down {
+  #document .u-text--center--xl-down {
     text-align: center;
   }
-  #document .text_right_xl-down {
+  #document .u-text--right--xl-down {
     text-align: right;
   }
 }
 @media (min-width: 1640px) {
-  #document .text_left_xxl_up {
+  #document .u-text--left--xxl--up {
     text-align: left;
   }
-  #document .text_center_xxl_up {
+  #document .u-text--center--xxl--up {
     text-align: center;
   }
-  #document .text_right_xxl_up {
+  #document .u-text--right--xxl--up {
     text-align: right;
   }
 }
-#document .text_left_xxl-down {
+#document .u-text--left--xxl-down {
   text-align: left;
 }
-#document .text_center_xxl-down {
+#document .u-text--center--xxl-down {
   text-align: center;
 }
-#document .text_right_xxl-down {
+#document .u-text--right--xxl-down {
   text-align: right;
 }
 
 /*doc
 ---
-title: text_(size)
+title: u-text--(size)
 name: text-06-size
 category: utility-text
 ---
 
 文字サイズを、**現在の文字サイズの相対値**（ <code>em</code> ）で変更する。  
-ただし、 <code>.text_md</code> のみ、単位が <code>rem</code> （html要素の文字サイズ）となる。
+ただし、 <code>.u-text--md</code> のみ、単位が <code>rem</code> （html要素の文字サイズ）となる。
 
 ``` example
-<p class="text_xxs">text_xxs:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="text_xs">text_xs:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="text_sm">text_sm:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="u-text--xxs">u-text--xxs:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="u-text--xs">u-text--xs:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="u-text--sm">u-text--sm:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
 
-<p class="text_lg">text_lg:吾輩は猫である。<span class="text_md">名前はまだ無い。text_md:どこで生れたか</span>とんと見当がつかぬ。</p>
-<p class="text_xl">text_xl:吾輩は猫である。<span class="text_md">名前はまだ無い。text_md:どこで生れたか</span>とんと見当がつかぬ。</p>
-<p class="text_xxl">text_xxl:吾輩は猫である。<span class="text_md">名前はまだ無い。text_md:どこで生れたか</span>とんと見当がつかぬ。</p>
+<p class="u-text--lg">u-text--lg:吾輩は猫である。<span class="u-text--md">名前はまだ無い。u-text--md:どこで生れたか</span>とんと見当がつかぬ。</p>
+<p class="u-text--xl">u-text--xl:吾輩は猫である。<span class="u-text--md">名前はまだ無い。u-text--md:どこで生れたか</span>とんと見当がつかぬ。</p>
+<p class="u-text--xxl">u-text--xxl:吾輩は猫である。<span class="u-text--md">名前はまだ無い。u-text--md:どこで生れたか</span>とんと見当がつかぬ。</p>
 
-<p class="text_lg">text_lg:吾輩は猫である。<span class="text_xxs">名前はまだ無い。text_xxs:どこで生れたか</span>とんと見当がつかぬ。</p>
-<p class="text_xl">text_xl:吾輩は猫である。<span class="text_xxs">名前はまだ無い。text_xxs:どこで生れたか</span>とんと見当がつかぬ。</p>
-<p class="text_xxl">text_xxl:吾輩は猫である。<span class="text_xxs">名前はまだ無い。text_xxs:どこで生れたか</span>とんと見当がつかぬ。</p>
+<p class="u-text--lg">u-text--lg:吾輩は猫である。<span class="u-text--xxs">名前はまだ無い。u-text--xxs:どこで生れたか</span>とんと見当がつかぬ。</p>
+<p class="u-text--xl">u-text--xl:吾輩は猫である。<span class="u-text--xxs">名前はまだ無い。u-text--xxs:どこで生れたか</span>とんと見当がつかぬ。</p>
+<p class="u-text--xxl">u-text--xxl:吾輩は猫である。<span class="u-text--xxs">名前はまだ無い。u-text--xxs:どこで生れたか</span>とんと見当がつかぬ。</p>
 ```
 */
-#document .text_xxs {
+#document .u-text--xxs {
   font-size: .625em;
 }
-#document .text_xs {
+#document .u-text--xs {
   font-size: .75em;
 }
-#document .text_sm {
+#document .u-text--sm {
   font-size: .875em;
 }
-#document .text_md {
+#document .u-text--md {
   font-size: 1rem;
 }
-#document .text_lg {
+#document .u-text--lg {
   font-size: 1.25em;
 }
-#document .text_xl {
+#document .u-text--xl {
   font-size: 1.5em;
 }
-#document .text_xxl {
+#document .u-text--xxl {
   font-size: 2em;
 }
 
 /*doc
 ---
-title: width_(percentage)
+title: u-width--(percentage)
 name: width
 category: utility-width
 ---
@@ -8183,49 +8187,49 @@ category: utility-width
 幅を親要素を基準とした割合に変更する。
 
 ``` example
-<div class="width_20" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
-width_20
+<div class="u-width--20" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
+u-width--20
 </div>
 
-<div class="width_33" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
-width_33
+<div class="u-width--33" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
+u-width--33
 </div>
 
-<div class="width_50" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
-width_50
+<div class="u-width--50" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
+u-width--50
 </div>
 
-<div class="width_66" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
-width_66
+<div class="u-width--66" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
+u-width--66
 </div>
 
-<div class="width_75" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
-width_75
+<div class="u-width--75" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
+u-width--75
 </div>
 
-<div class="width_100" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
-width_100
+<div class="u-width--100" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
+u-width--100
 </div>
 
 ```
 
 */
-#document .width_20 {
+#document .u-width--20 {
   width: 20%;
 }
-#document .width_33 {
+#document .u-width--33 {
   width: 33.33333333%;
 }
-#document .width_50 {
+#document .u-width--50 {
   width: 50%;
 }
-#document .width_66 {
+#document .u-width--66 {
   width: 66.66666666%;
 }
-#document .width_75 {
+#document .u-width--75 {
   width: 75%;
 }
-#document .width_100 {
+#document .u-width--100 {
   width: 100%;
 }
 
@@ -8237,7 +8241,7 @@ category: project-title
 ---
 
 見出しを表示する。ウィンドウ幅によって外観が変動する。
-余白は <code>utility > .margin</code> で別途調整する。
+余白は <code>utility > .u-margin</code> で別途調整する。
 
 ``` example
 <div style="margin-bottom: 2rem;">
