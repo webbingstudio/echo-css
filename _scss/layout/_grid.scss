@@ -6,20 +6,25 @@ category: layout-grid
 ---
 
 flexboxによるグリッドのグループを作成する。 <code>ul ,ol</code> にも使用できる。  
-命名規則をbootstrapと同様にしたい場合は、 <code>/\_scss/_\config\_advance.scss</code> の変数 <code>$row</code> を変更すること。
+命名規則をbootstrapと同様にしたい場合は、 <code>/\_scss/_config\_advance.scss</code> の変数 <code>$row</code> を変更すること。
 
 ### 補足：使用頻度が低いクラスの除外
 
 以下のクラスは、使用頻度が非常に低いため、このフレームワークでは除外されている。  
-<code>/\_scss/_\config\_advance.scss</code> の変数 <code>$optimize</code> を <code>false</code> に変更すると、すべてのクラスに対応する。
+<code>/\_scss/_config\_advance.scss</code> の変数 <code>$optimize</code> を <code>false</code> に変更すると、すべてのクラスに対応する。
 
 - .#{$pr}#{$col}-1-(breakpoint)
 - .#{$pr}#{$col}-(breakpoint)-#{$grid-columns-max}
 - .#{$pr}#{$col}-offset-(breakpoint)-#{$grid-columns-max}
 
-### note: Padding in button
+### note: Exclusion of less frequently used classes
 
-In <code>.#{$pr}#{$m}btn-block, .#{$pr}#{$m}btn-round, .#{$pr}#{$m}btn-square</code>, need to override the default padding of <code>.#{$pr}#{$m}btn</code>. For this reason, intentionally add classes to increase priority.
+The following classes are excluded in this framework because they are used very infrequently.  
+Variable in <code>/\_scss/_config\_advance.scss</code> Changing <code>$optimize</code> to <code>false</code> corresponds to all classes.
+
+- .#{$pr}#{$col}-1-(breakpoint)
+- .#{$pr}#{$col}-(breakpoint)-#{$grid-columns-max}
+- .#{$pr}#{$col}-offset-(breakpoint)-#{$grid-columns-max}
 
 ``` example
 <div class="#{$pr}#{$row}">

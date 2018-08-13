@@ -474,20 +474,25 @@ category: layout-grid
 ---
 
 flexboxによるグリッドのグループを作成する。 <code>ul ,ol</code> にも使用できる。  
-命名規則をbootstrapと同様にしたい場合は、 <code>/\_scss/_\config\_advance.scss</code> の変数 <code>$row</code> を変更すること。
+命名規則をbootstrapと同様にしたい場合は、 <code>/\_scss/_config\_advance.scss</code> の変数 <code>$row</code> を変更すること。
 
 ### 補足：使用頻度が低いクラスの除外
 
 以下のクラスは、使用頻度が非常に低いため、このフレームワークでは除外されている。  
-<code>/\_scss/_\config\_advance.scss</code> の変数 <code>$optimize</code> を <code>false</code> に変更すると、すべてのクラスに対応する。
+<code>/\_scss/_config\_advance.scss</code> の変数 <code>$optimize</code> を <code>false</code> に変更すると、すべてのクラスに対応する。
 
 - .l-grid-col-1-(breakpoint)
 - .l-grid-col-(breakpoint)-11
 - .l-grid-col-offset-(breakpoint)-11
 
-### note: Padding in button
+### note: Exclusion of less frequently used classes
 
-In <code>.m-btn-block, .m-btn-round, .m-btn-square</code>, need to override the default padding of <code>.m-btn</code>. For this reason, intentionally add classes to increase priority.
+The following classes are excluded in this framework because they are used very infrequently.  
+Variable in <code>/\_scss/_config\_advance.scss</code> Changing <code>$optimize</code> to <code>false</code> corresponds to all classes.
+
+- .l-grid-col-1-(breakpoint)
+- .l-grid-col-(breakpoint)-11
+- .l-grid-col-offset-(breakpoint)-11
 
 ``` example
 <div class="l-grid-row">
@@ -6605,29 +6610,8 @@ category: utility-bg
 */
 /*doc
 ---
-title: bg-mild
-name: bg-02-mild
-category: utility-bg
-parent: bg-01-color
----
-
-.bg-(color)と併用すると背景色を弱める。
-
-``` example
-<div class="bg-gray bg-mild">bg-gray</div>
-<div class="bg-first bg-mild">bg-first</div>
-<div class="bg-second bg-mild">bg-second</div>
-<div class="bg-third bg-mild">bg-third</div>
-<div class="bg-fourth bg-mild">bg-fourth</div>
-<div class="bg-info bg-mild">bg-info</div>
-<div class="bg-important bg-mild">bg-important</div>
-```
-
-*/
-/*doc
----
 title: bg-fade
-name: bg-03-fade
+name: bg-02-fade
 category: utility-bg
 parent: bg-01-color
 ---
@@ -6654,9 +6638,6 @@ parent: bg-01-color
 #document .bg-gray:not(.bg-fade) a:not([class]) {
   color: #fff;
 }
-#document .bg-gray.bg-mild {
-  background-color: #888;
-}
 #document .bg-gray.bg-fade {
   background-color: #eee;
 }
@@ -6668,9 +6649,6 @@ parent: bg-01-color
 }
 #document .bg-first:not(.bg-fade) a:not([class]) {
   color: #fff;
-}
-#document .bg-first.bg-mild {
-  background-color: #4690da;
 }
 #document .bg-first.bg-fade {
   background-color: #d7e7f7;
@@ -6684,9 +6662,6 @@ parent: bg-01-color
 #document .bg-second:not(.bg-fade) a:not([class]) {
   color: #fff;
 }
-#document .bg-second.bg-mild {
-  background-color: #6bb9ea;
-}
 #document .bg-second.bg-fade {
   background-color: #d8f0f7;
 }
@@ -6698,9 +6673,6 @@ parent: bg-01-color
 }
 #document .bg-third:not(.bg-fade) a:not([class]) {
   color: #fff;
-}
-#document .bg-third.bg-mild {
-  background-color: #70b98c;
 }
 #document .bg-third.bg-fade {
   background-color: #d5f0e1;
@@ -6714,9 +6686,6 @@ parent: bg-01-color
 #document .bg-fourth:not(.bg-fade) a:not([class]) {
   color: #fff;
 }
-#document .bg-fourth.bg-mild {
-  background-color: #f0a346;
-}
 #document .bg-fourth.bg-fade {
   background-color: #ffeccc;
 }
@@ -6729,9 +6698,6 @@ parent: bg-01-color
 #document .bg-info:not(.bg-fade) a:not([class]) {
   color: #fff;
 }
-#document .bg-info.bg-mild {
-  background-color: #6bb9ea;
-}
 #document .bg-info.bg-fade {
   background-color: #d8f0f7;
 }
@@ -6743,9 +6709,6 @@ parent: bg-01-color
 }
 #document .bg-important:not(.bg-fade) a:not([class]) {
   color: #fff;
-}
-#document .bg-important.bg-mild {
-  background-color: #eb758a;
 }
 #document .bg-important.bg-fade {
   background-color: #ffe3e9;
@@ -7892,69 +7855,29 @@ category: utility-text
 <p class="text-important">text-important_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
 ```
 */
-/*doc
----
-title: text-mild
-name: text-02-mild
-category: utility-text
----
-
-文字色を弱める。 <code>.text-(color)</code> と併用すると、指定した色を弱める。
-
-``` example
-<p class="text-mild">text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="text-first text-mild">text-first_text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="text-second text-mild">text-second_text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="text-third text-mild">text-third_text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="text-fourth text-mild">text-fourth_text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="text-info text-mild">text-info_text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="text-important text-mild">text-important_text-mild_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-```
-*/
-#document .text-mild {
-  color: #888;
-}
 #document .text-first {
   color: #0360bd;
-}
-#document .text-first.text-mild {
-  color: #4690da;
 }
 #document .text-second {
   color: #26a9d0;
 }
-#document .text-second.text-mild {
-  color: #6bb9ea;
-}
 #document .text-third {
   color: #229644;
-}
-#document .text-third.text-mild {
-  color: #70b98c;
 }
 #document .text-fourth {
   color: #f37910;
 }
-#document .text-fourth.text-mild {
-  color: #f0a346;
-}
 #document .text-info {
   color: #26a9d0;
 }
-#document .text-info.text-mild {
-  color: #6bb9ea;
-}
 #document .text-important {
   color: #d70022;
-}
-#document .text-important.text-mild {
-  color: #eb758a;
 }
 
 /*doc
 ---
 title: text-root
-name: text-03-root
+name: text-02-root
 category: utility-text
 ---
 
@@ -7972,7 +7895,7 @@ category: utility-text
 /*doc
 ---
 title: text-inverse
-name: text-04-inverse
+name: text-03-inverse
 category: utility-text
 ---
 
@@ -7987,9 +7910,6 @@ category: utility-text
 */
 #document .text-inverse {
   color: #fff;
-}
-#document .text-inverse.text-mild {
-  color: rgba(255, 255, 255, 0.5);
 }
 
 /*doc

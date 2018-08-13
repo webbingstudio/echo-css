@@ -24,30 +24,8 @@ category: utility-bg
 
 /*doc
 ---
-title: #{$pr}#{$u}bg-mild
-name: bg-02-mild
-category: utility-bg
-parent: bg-01-color
----
-
-.#{$pr}#{$u}bg-(color)と併用すると背景色を弱める。
-
-``` example
-<div class="#{$pr}#{$u}bg-#{$__gray} #{$pr}#{$u}bg-mild">bg-#{$__gray}</div>
-<div class="#{$pr}#{$u}bg-#{$__first} #{$pr}#{$u}bg-mild">bg-#{$__first}</div>
-<div class="#{$pr}#{$u}bg-#{$__second} #{$pr}#{$u}bg-mild">bg-#{$__second}</div>
-<div class="#{$pr}#{$u}bg-#{$__third} #{$pr}#{$u}bg-mild">bg-#{$__third}</div>
-<div class="#{$pr}#{$u}bg-#{$__fourth} #{$pr}#{$u}bg-mild">bg-#{$__fourth}</div>
-<div class="#{$pr}#{$u}bg-#{$__info} #{$pr}#{$u}bg-mild">bg-#{$__info}</div>
-<div class="#{$pr}#{$u}bg-#{$__important} #{$pr}#{$u}bg-mild">bg-#{$__important}</div>
-```
-
-*/
-
-/*doc
----
 title: #{$pr}#{$u}bg-fade
-name: bg-03-fade
+name: bg-02-fade
 category: utility-bg
 parent: bg-01-color
 ---
@@ -80,10 +58,6 @@ parent: bg-01-color
 
         }
 
-        &.#{$pr}#{$u}bg-mild {
-            background-color: $gray-mild;
-        }
-
     }
 
     .#{$pr}#{$u}bg-#{$__gray_light} {
@@ -106,10 +80,6 @@ parent: bg-01-color
 
         }
 
-        &.#{$pr}#{$u}bg-mild {
-            background-color: $first-mild;
-        }
-
         &.#{$pr}#{$u}bg-fade {
             background-color: $first-fade;
         }
@@ -126,10 +96,6 @@ parent: bg-01-color
                 color: $body-inverse-color;
             }
 
-        }
-
-        &.#{$pr}#{$u}bg-mild {
-            background-color: $second-mild;
         }
 
         &.#{$pr}#{$u}bg-fade {
@@ -150,10 +116,6 @@ parent: bg-01-color
 
         }
 
-        &.#{$pr}#{$u}bg-mild {
-            background-color: $third-mild;
-        }
-
         &.#{$pr}#{$u}bg-fade {
             background-color: $third-fade;
         }
@@ -170,10 +132,6 @@ parent: bg-01-color
                 color: $body-inverse-color;
             }
 
-        }
-
-        &.#{$pr}#{$u}bg-mild {
-            background-color: $fourth-mild;
         }
 
         &.#{$pr}#{$u}bg-fade {
@@ -194,10 +152,6 @@ parent: bg-01-color
 
         }
 
-        &.#{$pr}#{$u}bg-mild {
-            background-color: $info-mild;
-        }
-
         &.#{$pr}#{$u}bg-fade {
             background-color: $info-fade;
         }
@@ -214,10 +168,6 @@ parent: bg-01-color
                 color: $body-inverse-color;
             }
 
-        }
-
-        &.#{$pr}#{$u}bg-mild {
-            background-color: $important-mild;
         }
 
         &.#{$pr}#{$u}bg-fade {
