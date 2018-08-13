@@ -54,6 +54,14 @@ $widgetarea: $p + "widgetarea" !default;
 // ex. widget, module, box, view...
 $widget: $p + "widget" !default;
 
+// grid-row-name
+// ex. row(bootstrap compatible), wrap...
+$row: $l + 'grid-row' !default;
+
+// grid-col-name
+// ex. col(bootstrap compatible), cel...
+$col: $l + 'grid-col' !default;
+
 // nav-current-name
 // ex. is-active, active, current, stay...
 $nav-current: "is-current" !default;
@@ -100,14 +108,6 @@ $container-max-widths-lg: (
 // Grid
 // -----------------------------------------
 
-// grid type: float, flexbox(or others)
-$grid-type: "flexbox" !default;
-
-// layout-group-grid-prefix
-// グリッドシステムのみBootstrapに対応したい場合は、接頭辞を "" （空）にする
-// If you only want to support Bootstrap on the grid system, set the prefix to "" (empty)
-$g: $l !default;
-
 $grid-breakpoints: (
   default: 0,
   xxs: 320px,
@@ -119,7 +119,8 @@ $grid-breakpoints: (
   xxl: 1640px
 ) !default;
 
-$grid-columns:    12 !default;
+$grid-columns:        12 !default;
+$grid-columns-max:    $grid-columns - 1 !default;
 
 $grid-gutter-widths: (
   none: 0,

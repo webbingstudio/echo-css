@@ -37,8 +37,8 @@ category: component-card
 </div>
 
 <div style="margin-bottom: 2rem;">
-<div class="#{$pr}#{$g}row">
-    <div class="#{$pr}#{$g}col-6 #{$pr}#{$g}col-md-3" style="padding-bottom: 1rem;">
+<div class="#{$pr}#{$row}">
+    <div class="#{$pr}#{$col}-6 #{$pr}#{$col}-md-3" style="padding-bottom: 1rem;">
         <div class="#{$pr}#{$c}card">
             <a href="#" class="#{$pr}#{$c}card-inner">
                 <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-ogimage">
@@ -59,7 +59,7 @@ category: component-card
             </a>
         </div>
     </div>
-    <div class="#{$pr}#{$g}col-6 #{$pr}#{$g}col-md-3" style="padding-bottom: 1rem;">
+    <div class="#{$pr}#{$col}-6 #{$pr}#{$col}-md-3" style="padding-bottom: 1rem;">
         <div class="#{$pr}#{$c}card">
             <a href="#" class="#{$pr}#{$c}card-inner">
                 <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-ogimage">
@@ -80,7 +80,7 @@ category: component-card
             </a>
         </div>
     </div>
-    <div class="#{$pr}#{$g}col-6 #{$pr}#{$g}col-md-3" style="padding-bottom: 1rem;">
+    <div class="#{$pr}#{$col}-6 #{$pr}#{$col}-md-3" style="padding-bottom: 1rem;">
         <div class="#{$pr}#{$c}card">
             <a href="#" class="#{$pr}#{$c}card-inner">
                 <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-ogimage">
@@ -96,12 +96,12 @@ category: component-card
                     </picture>
                 </div>
                 <div class="#{$pr}#{$c}card-contents">
-                    <p>#{$pr}#{$g}row, #{$pr}#{$g}col を使用して3カラムに並べました</p>
+                    <p>#{$pr}#{$row}, #{$pr}#{$col} を使用して3カラムに並べました</p>
                 </div>
             </a>
         </div>
     </div>
-    <div class="#{$pr}#{$g}col-6 #{$pr}#{$g}col-md-3" style="padding-bottom: 1rem;">
+    <div class="#{$pr}#{$col}-6 #{$pr}#{$col}-md-3" style="padding-bottom: 1rem;">
         <div class="#{$pr}#{$c}card">
             <a href="#" class="#{$pr}#{$c}card-inner">
                 <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-ogimage">
@@ -125,8 +125,8 @@ category: component-card
 </div>
 </div>
 
-<div class="#{$pr}#{$g}row">
-    <div class="#{$pr}#{$g}col">
+<div class="#{$pr}#{$row}">
+    <div class="#{$pr}#{$col}">
         <div class="#{$pr}#{$c}card #{$pr}#{$u}bg-#{$__first}">
             <div class="#{$pr}#{$c}card-inner">
                 <a href="#" class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-ogimage">
@@ -148,7 +148,7 @@ category: component-card
             </div>
         </div>
     </div>
-    <div class="#{$pr}#{$g}col">
+    <div class="#{$pr}#{$col}">
         <div class="#{$pr}#{$c}card #{$pr}#{$u}bg-#{$__first}">
             <div class="#{$pr}#{$c}card-inner">
                 <a href="#" class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-ogimage">
@@ -184,7 +184,7 @@ category: component-card
     color: $body-color;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
 
-    [class*="#{$pr}#{$g}col"] > & {
+    [class*="#{$pr}#{$col}"] > & {
         max-width: none;
         height: 100%;
     }

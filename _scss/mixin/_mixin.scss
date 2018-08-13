@@ -1,5 +1,4 @@
-@import "./_grid_float.scss";
-@import "./_grid_flex.scss";
+@import "./_grid.scss";
 @import "./_text.scss";
 
 @mixin chevron( $rotate: 'right', $color: $body-color ) {
@@ -68,21 +67,6 @@
     &:after {
       clear: both;
     }
-}
-
-
-@mixin sprites($type, $file, $width, $height, $imgwidth:100%, $imgheight:100%, $position:center center) {
-
-  @if ($type == icon) {
-      content: "";
-      display: inline-block;
-      width: $width;
-      height: $height;
-      vertical-align: middle;
-  }
-  background: url(../images/#{$file}) $position no-repeat;
-  background-size: $imgwidth $imgheight;
-
 }
 
 

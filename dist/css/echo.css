@@ -468,1534 +468,1556 @@ parent: container
 
 /*doc
 ---
-title: l-row
-name: grid-01-row
+title: l-grid-row
+name: grid
 category: layout-grid
 ---
 
-flexboxによるグリッドのグループを作成する。 <code>ul</code> 要素にも使用できる。
+flexboxによるグリッドのグループを作成する。 <code>ul ,ol</code> にも使用できる。  
+命名規則をbootstrapと同様にしたい場合は、 <code>/\_scss/_\config\_advance.scss</code> の変数 <code>$row</code> を変更すること。
 
-余白・段組のブレークポイントを変更したい場合は <code>/\_scss/config\_advance.css</code> の各変数を調整すること。  
-命名規則をbootstrapと同様にしたい場合は、 <code>/\_scss/_\config\_advance.scss</code> の変数 <code>$g</code> を空にすること。
+### 補足：使用頻度が低いクラスの除外
+
+以下のクラスは、使用頻度が非常に低いため、このフレームワークでは除外されている。  
+<code>/\_scss/_\config\_advance.scss</code> の変数 <code>$optimize</code> を <code>false</code> に変更すると、すべてのクラスに対応する。
+
+- .l-grid-col-1-(breakpoint)
+- .l-grid-col-(breakpoint)-11
+- .l-grid-col-offset-(breakpoint)-11
+
+### note: Padding in button
+
+In <code>.m-btn-block, .m-btn-round, .m-btn-square</code>, need to override the default padding of <code>.m-btn</code>. For this reason, intentionally add classes to increase priority.
 
 ``` example
-<div class="l-row" style="margin-bottom: 2rem;">
-    <div class="l-col">
-        <div class="bg-first" style="padding: 1rem; height: 100%;">l-col-lg-4<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="l-grid-row">
+    <div class="l-grid-col">
+        <div style="padding: 1rem; background-color: #ddf6bb; height: 100%;">l-grid-col<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col">
-        <div class="bg-first" style="padding: 1rem; height: 100%;">l-col-lg-4<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。</div>
+    <div class="l-grid-col">
+        <div style="padding: 1rem; background-color: #ddf6bb; height: 100%;">l-grid-col<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。</div>
     </div>
-    <div class="l-col">
-        <div class="bg-first" style="padding: 1rem; height: 100%;">l-col-lg-4<br>ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。</div>
+    <div class="l-grid-col">
+        <div style="padding: 1rem; background-color: #ddf6bb; height: 100%;">l-grid-col<br>ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。</div>
     </div>
 </div>
 ```
 */
-.l-row {
+.l-grid-row {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
   list-style-type: none;
+  margin: 0 -10px;
   padding: 0;
-  margin-left: -10px;
-  margin-right: -10px;
 }
 
 /*doc
 ---
-title: l-row-(size)
-name: grid-01-row-01-size
+title: l-grid-row-(size)
+name: grid-01-row-size
 category: layout-grid
-parent: grid-01-row
+parent: grid
 ---
 
 flexboxによるグリッドで余白が異なるグループを作成する。  
 (size)は<code>0, sm, lg</code> に対応している。  
-Bootstrap4の <code>.no-gutters</code> は <code>.l-row-0</code> のエイリアスとなる。
+Bootstrap4の <code>.no-gutters</code> を <code>.l-grid-row-0</code> のエイリアスとしている。  
+命名規則をbootstrapと同様にしたい場合は、 <code>/\_scss/_\config\_advance.scss</code> の変数 <code>$row</code> を変更すること。
 
 ``` example
-<div class="l-row l-row-0" style="margin-bottom: 2rem;">
-    <div class="l-col">
-        <div class="bg-first" style="padding: 1rem; height: 100%;">l-row-0<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="l-grid-row l-grid-row-0" style="margin-bottom: 2rem;">
+    <div class="l-grid-col">
+        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">l-grid-row-0<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col">
-        <div class="bg-first" style="padding: 1rem; height: 100%; opacity: 0.8;">l-row-0<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-grid-col">
+        <div style="padding: 1rem; background-color: #ffdd99; height: 100%; opacity: 0.8;">l-grid-row-0<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-col">
-        <div class="bg-first" style="padding: 1rem; height: 100%;">l-row-0<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-</div>
-
-<div class="l-row l-row-sm" style="margin-bottom: 2rem;">
-    <div class="l-col">
-        <div class="bg-second" style="padding: 1rem; height: 100%;">l-row-sm<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="l-col">
-        <div class="bg-second" style="padding: 1rem; height: 100%; opacity: 0.8;">l-row-sm<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="l-col">
-        <div class="bg-second" style="padding: 1rem; height: 100%;">l-row-sm<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="l-grid-col">
+        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">l-grid-row-0<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 
-<div class="l-row l-row-lg">
-    <div class="l-col">
-        <div class="bg-third" style="padding: 1rem; height: 100%;">l-row-lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="l-grid-row l-grid-row-sm" style="margin-bottom: 2rem;">
+    <div class="l-grid-col">
+        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">l-grid-row-sm<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col">
-        <div class="bg-third" style="padding: 1rem; height: 100%; opacity: 0.8;">l-row-lg<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-grid-col">
+        <div style="padding: 1rem; background-color: #ffdd99; height: 100%; opacity: 0.8;">l-grid-row-sm<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-col">
-        <div class="bg-third" style="padding: 1rem; height: 100%;">l-row-lg<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="l-grid-col">
+        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">l-grid-row-sm<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    </div>
+</div>
+
+<div class="l-grid-row l-grid-row-lg">
+    <div class="l-grid-col">
+        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">l-grid-row-lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    </div>
+    <div class="l-grid-col">
+        <div style="padding: 1rem; background-color: #ffdd99; height: 100%; opacity: 0.8;">l-grid-row-lg<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    </div>
+    <div class="l-grid-col">
+        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">l-grid-row-lg<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 ```
 */
-.l-row-0,
+.l-grid-row-0,
 .no-gutters {
   margin-left: 0;
   margin-right: 0;
 }
-.l-row-0 [class*="l-col"],
-.no-gutters [class*="l-col"] {
+.l-grid-row-0 [class*="l-grid-col"],
+.no-gutters [class*="l-grid-col"] {
   padding-left: 0;
   padding-right: 0;
 }
 
-.l-row-sm {
+.l-grid-row-sm {
   margin-left: -5px;
   margin-right: -5px;
 }
-.l-row-sm [class*="l-col"] {
+.l-grid-row-sm [class*="l-grid-col"] {
   padding-left: 5px;
   padding-right: 5px;
 }
 
-.l-row-lg {
+.l-grid-row-lg {
   margin-left: -20px;
   margin-right: -20px;
 }
-.l-row-lg [class*="l-col"] {
+.l-grid-row-lg [class*="l-grid-col"] {
   padding-left: 20px;
   padding-right: 20px;
 }
 
 /*doc
 ---
-title: l-col
+title: l-grid-col
 name: grid-02-col
 category: layout-grid
 ---
 
-flexboxによるグリッドのセルを作成する。このクラス単独では常に均等幅となる。
-
-Bootstrap 4との互換の関係で、**このカテゴリーのみシングルクラスとなっている（l-colを常に付与する必要はない）**ことに注意。
+flexboxによるグリッドのセルを作成する。このクラス単独では常に均等幅となる。  
 
 ``` example
-<div class="l-row" style="margin-bottom: 2rem;">
-    <div class="l-col">
-        <div class="bg-first" style="padding: 1rem; height: 100%;">l-col<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="l-grid-row" style="margin-bottom: 2rem;">
+    <div class="l-grid-col">
+        <div style="padding: 1rem; background-color: #ddbbf6; height: 100%;">l-grid-col<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
 </div>
 
-<div class="l-row" style="margin-bottom: 2rem;">
-    <div class="l-col">
-        <div class="bg-second" style="padding: 1rem; height: 100%;">l-col<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="l-grid-row" style="margin-bottom: 2rem;">
+    <div class="l-grid-col">
+        <div style="padding: 1rem; background-color: #ddbbf6; height: 100%;">l-grid-col<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col">
-        <div class="bg-second" style="padding: 1rem; height: 100%;">l-col<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-grid-col">
+        <div style="padding: 1rem; background-color: #ddbbf6; height: 100%;">l-grid-col<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
 </div>
 
-<div class="l-row">
-    <div class="l-col">
-        <div class="bg-third" style="padding: 1rem; height: 100%;">l-col<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="l-grid-row">
+    <div class="l-grid-col">
+        <div style="padding: 1rem; background-color: #ddbbf6; height: 100%;">l-grid-col<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col">
-        <div class="bg-third" style="padding: 1rem; height: 100%;">l-col<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-grid-col">
+        <div style="padding: 1rem; background-color: #ddbbf6; height: 100%;">l-grid-col<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-col">
-        <div class="bg-third" style="padding: 1rem; height: 100%;">l-col<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="l-grid-col">
+        <div style="padding: 1rem; background-color: #ddbbf6; height: 100%;">l-grid-col<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 ```
 
 */
-[class*="l-col"] {
+[class*="l-grid-col"] {
   position: relative;
-  width: 100%;
-  min-height: 1px;
+  flex-shrink: 1;
+  margin: 0;
   padding-left: 10px;
   padding-right: 10px;
 }
 
-.l-col-2, .l-col-3, .l-col-4, .l-col-5, .l-col-6, .l-col-7, .l-col-8, .l-col-9, .l-col-10, .l-col,
-.l-col-auto, .l-col-xxs-2, .l-col-xxs-3, .l-col-xxs-4, .l-col-xxs-5, .l-col-xxs-6, .l-col-xxs-7, .l-col-xxs-8, .l-col-xxs-9, .l-col-xxs-10, .l-col-xxs,
-.l-col-xxs-auto, .l-col-xs-2, .l-col-xs-3, .l-col-xs-4, .l-col-xs-5, .l-col-xs-6, .l-col-xs-7, .l-col-xs-8, .l-col-xs-9, .l-col-xs-10, .l-col-xs,
-.l-col-xs-auto, .l-col-sm-2, .l-col-sm-3, .l-col-sm-4, .l-col-sm-5, .l-col-sm-6, .l-col-sm-7, .l-col-sm-8, .l-col-sm-9, .l-col-sm-10, .l-col-sm,
-.l-col-sm-auto, .l-col-md-2, .l-col-md-3, .l-col-md-4, .l-col-md-5, .l-col-md-6, .l-col-md-7, .l-col-md-8, .l-col-md-9, .l-col-md-10, .l-col-md,
-.l-col-md-auto, .l-col-lg-2, .l-col-lg-3, .l-col-lg-4, .l-col-lg-5, .l-col-lg-6, .l-col-lg-7, .l-col-lg-8, .l-col-lg-9, .l-col-lg-10, .l-col-lg,
-.l-col-lg-auto, .l-col-xl-2, .l-col-xl-3, .l-col-xl-4, .l-col-xl-5, .l-col-xl-6, .l-col-xl-7, .l-col-xl-8, .l-col-xl-9, .l-col-xl-10, .l-col-xl,
-.l-col-xl-auto, .l-col-xxl-2, .l-col-xxl-3, .l-col-xxl-4, .l-col-xxl-5, .l-col-xxl-6, .l-col-xxl-7, .l-col-xxl-8, .l-col-xxl-9, .l-col-xxl-10, .l-col-xxl,
-.l-col-xxl-auto {
-  position: relative;
-  width: 100%;
-  min-height: 1px;
-  margin: 0;
-}
-
-.l-col {
+.l-grid-col-2, .l-grid-col-3, .l-grid-col-4, .l-grid-col-5, .l-grid-col-6, .l-grid-col-7, .l-grid-col-8, .l-grid-col-9, .l-grid-col-10, .l-grid-col,
+.l-grid-col-auto, .l-grid-col-xxs-2, .l-grid-col-xxs-3, .l-grid-col-xxs-4, .l-grid-col-xxs-5, .l-grid-col-xxs-6, .l-grid-col-xxs-7, .l-grid-col-xxs-8, .l-grid-col-xxs-9, .l-grid-col-xxs-10, .l-grid-col-xxs,
+.l-grid-col-xxs-auto, .l-grid-col-xs-2, .l-grid-col-xs-3, .l-grid-col-xs-4, .l-grid-col-xs-5, .l-grid-col-xs-6, .l-grid-col-xs-7, .l-grid-col-xs-8, .l-grid-col-xs-9, .l-grid-col-xs-10, .l-grid-col-xs,
+.l-grid-col-xs-auto, .l-grid-col-sm-2, .l-grid-col-sm-3, .l-grid-col-sm-4, .l-grid-col-sm-5, .l-grid-col-sm-6, .l-grid-col-sm-7, .l-grid-col-sm-8, .l-grid-col-sm-9, .l-grid-col-sm-10, .l-grid-col-sm,
+.l-grid-col-sm-auto, .l-grid-col-md-2, .l-grid-col-md-3, .l-grid-col-md-4, .l-grid-col-md-5, .l-grid-col-md-6, .l-grid-col-md-7, .l-grid-col-md-8, .l-grid-col-md-9, .l-grid-col-md-10, .l-grid-col-md,
+.l-grid-col-md-auto, .l-grid-col-lg-2, .l-grid-col-lg-3, .l-grid-col-lg-4, .l-grid-col-lg-5, .l-grid-col-lg-6, .l-grid-col-lg-7, .l-grid-col-lg-8, .l-grid-col-lg-9, .l-grid-col-lg-10, .l-grid-col-lg,
+.l-grid-col-lg-auto, .l-grid-col-xl-2, .l-grid-col-xl-3, .l-grid-col-xl-4, .l-grid-col-xl-5, .l-grid-col-xl-6, .l-grid-col-xl-7, .l-grid-col-xl-8, .l-grid-col-xl-9, .l-grid-col-xl-10, .l-grid-col-xl,
+.l-grid-col-xl-auto, .l-grid-col-xxl-2, .l-grid-col-xxl-3, .l-grid-col-xxl-4, .l-grid-col-xxl-5, .l-grid-col-xxl-6, .l-grid-col-xxl-7, .l-grid-col-xxl-8, .l-grid-col-xxl-9, .l-grid-col-xxl-10, .l-grid-col-xxl,
+.l-grid-col-xxl-auto {
   flex-basis: 0;
   flex-grow: 1;
   max-width: 100%;
 }
 
-.l-col-2 {
-  flex: 0 0 16.66667%;
+.l-grid-col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+.l-grid-col-auto {
+  width: auto;
+  max-width: none;
+}
+
+.l-grid-col-2 {
+  flex-basis: 16.66667%;
   max-width: 16.66667%;
 }
 
-.l-col-3 {
-  flex: 0 0 25%;
+.l-grid-col-3 {
+  flex-basis: 25%;
   max-width: 25%;
 }
 
-.l-col-4 {
-  flex: 0 0 33.33333%;
+.l-grid-col-4 {
+  flex-basis: 33.33333%;
   max-width: 33.33333%;
 }
 
-.l-col-5 {
-  flex: 0 0 41.66667%;
+.l-grid-col-5 {
+  flex-basis: 41.66667%;
   max-width: 41.66667%;
 }
 
-.l-col-6 {
-  flex: 0 0 50%;
+.l-grid-col-6 {
+  flex-basis: 50%;
   max-width: 50%;
 }
 
-.l-col-7 {
-  flex: 0 0 58.33333%;
+.l-grid-col-7 {
+  flex-basis: 58.33333%;
   max-width: 58.33333%;
 }
 
-.l-col-8 {
-  flex: 0 0 66.66667%;
+.l-grid-col-8 {
+  flex-basis: 66.66667%;
   max-width: 66.66667%;
 }
 
-.l-col-9 {
-  flex: 0 0 75%;
+.l-grid-col-9 {
+  flex-basis: 75%;
   max-width: 75%;
 }
 
-.l-col-10 {
-  flex: 0 0 83.33333%;
+.l-grid-col-10 {
+  flex-basis: 83.33333%;
   max-width: 83.33333%;
 }
 
-.l-order-first {
+.l-grid-col-order-first {
   order: -1;
 }
 
-.l-order-last {
+.l-grid-col-order-last {
   order: 13;
 }
 
-.l-order-0 {
+.l-grid-col-order-0 {
   order: 0;
 }
 
-.l-order-1 {
+.l-grid-col-order-1 {
   order: 1;
 }
 
-.l-order-2 {
+.l-grid-col-order-2 {
   order: 2;
 }
 
-.l-order-3 {
+.l-grid-col-order-3 {
   order: 3;
 }
 
-.l-order-4 {
+.l-grid-col-order-4 {
   order: 4;
 }
 
-.l-order-5 {
+.l-grid-col-order-5 {
   order: 5;
 }
 
-.l-order-6 {
+.l-grid-col-order-6 {
   order: 6;
 }
 
-.l-order-7 {
+.l-grid-col-order-7 {
   order: 7;
 }
 
-.l-order-8 {
+.l-grid-col-order-8 {
   order: 8;
 }
 
-.l-order-9 {
+.l-grid-col-order-9 {
   order: 9;
 }
 
-.l-order-10 {
+.l-grid-col-order-10 {
   order: 10;
 }
 
-.l-order-11 {
+.l-grid-col-order-11 {
   order: 11;
 }
 
-.l-order-12 {
+.l-grid-col-order-12 {
   order: 12;
 }
 
-.l-offset-1 {
+.l-grid-col-offset-1 {
   margin-left: 8.33333%;
 }
 
-.l-offset-2 {
+.l-grid-col-offset-2 {
   margin-left: 16.66667%;
 }
 
-.l-offset-3 {
+.l-grid-col-offset-3 {
   margin-left: 25%;
 }
 
-.l-offset-4 {
+.l-grid-col-offset-4 {
   margin-left: 33.33333%;
 }
 
-.l-offset-5 {
+.l-grid-col-offset-5 {
   margin-left: 41.66667%;
 }
 
-.l-offset-6 {
+.l-grid-col-offset-6 {
   margin-left: 50%;
 }
 
-.l-offset-7 {
+.l-grid-col-offset-7 {
   margin-left: 58.33333%;
 }
 
-.l-offset-8 {
+.l-grid-col-offset-8 {
   margin-left: 66.66667%;
 }
 
-.l-offset-9 {
+.l-grid-col-offset-9 {
   margin-left: 75%;
 }
 
-.l-offset-10 {
+.l-grid-col-offset-10 {
   margin-left: 83.33333%;
 }
 
-.l-offset-11 {
-  margin-left: 91.66667%;
-}
-
 @media (min-width: 320px) {
-  .l-col-xxs {
+  .l-grid-col-xxs {
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%;
   }
 
-  .l-col-xxs-2 {
-    flex: 0 0 16.66667%;
+  .l-grid-col-xxs-auto {
+    width: auto;
+    max-width: none;
+  }
+
+  .l-grid-col-xxs-2 {
+    flex-basis: 16.66667%;
     max-width: 16.66667%;
   }
 
-  .l-col-xxs-3 {
-    flex: 0 0 25%;
+  .l-grid-col-xxs-3 {
+    flex-basis: 25%;
     max-width: 25%;
   }
 
-  .l-col-xxs-4 {
-    flex: 0 0 33.33333%;
+  .l-grid-col-xxs-4 {
+    flex-basis: 33.33333%;
     max-width: 33.33333%;
   }
 
-  .l-col-xxs-5 {
-    flex: 0 0 41.66667%;
+  .l-grid-col-xxs-5 {
+    flex-basis: 41.66667%;
     max-width: 41.66667%;
   }
 
-  .l-col-xxs-6 {
-    flex: 0 0 50%;
+  .l-grid-col-xxs-6 {
+    flex-basis: 50%;
     max-width: 50%;
   }
 
-  .l-col-xxs-7 {
-    flex: 0 0 58.33333%;
+  .l-grid-col-xxs-7 {
+    flex-basis: 58.33333%;
     max-width: 58.33333%;
   }
 
-  .l-col-xxs-8 {
-    flex: 0 0 66.66667%;
+  .l-grid-col-xxs-8 {
+    flex-basis: 66.66667%;
     max-width: 66.66667%;
   }
 
-  .l-col-xxs-9 {
-    flex: 0 0 75%;
+  .l-grid-col-xxs-9 {
+    flex-basis: 75%;
     max-width: 75%;
   }
 
-  .l-col-xxs-10 {
-    flex: 0 0 83.33333%;
+  .l-grid-col-xxs-10 {
+    flex-basis: 83.33333%;
     max-width: 83.33333%;
   }
 
-  .l-order-xxs-first {
+  .l-grid-col-order-xxs-first {
     order: -1;
   }
 
-  .l-order-xxs-last {
+  .l-grid-col-order-xxs-last {
     order: 13;
   }
 
-  .l-order-xxs-0 {
+  .l-grid-col-order-xxs-0 {
     order: 0;
   }
 
-  .l-order-xxs-1 {
+  .l-grid-col-order-xxs-1 {
     order: 1;
   }
 
-  .l-order-xxs-2 {
+  .l-grid-col-order-xxs-2 {
     order: 2;
   }
 
-  .l-order-xxs-3 {
+  .l-grid-col-order-xxs-3 {
     order: 3;
   }
 
-  .l-order-xxs-4 {
+  .l-grid-col-order-xxs-4 {
     order: 4;
   }
 
-  .l-order-xxs-5 {
+  .l-grid-col-order-xxs-5 {
     order: 5;
   }
 
-  .l-order-xxs-6 {
+  .l-grid-col-order-xxs-6 {
     order: 6;
   }
 
-  .l-order-xxs-7 {
+  .l-grid-col-order-xxs-7 {
     order: 7;
   }
 
-  .l-order-xxs-8 {
+  .l-grid-col-order-xxs-8 {
     order: 8;
   }
 
-  .l-order-xxs-9 {
+  .l-grid-col-order-xxs-9 {
     order: 9;
   }
 
-  .l-order-xxs-10 {
+  .l-grid-col-order-xxs-10 {
     order: 10;
   }
 
-  .l-order-xxs-11 {
+  .l-grid-col-order-xxs-11 {
     order: 11;
   }
 
-  .l-order-xxs-12 {
+  .l-grid-col-order-xxs-12 {
     order: 12;
   }
 
-  .l-offset-xxs-0 {
+  .l-grid-col-offset-xxs-0 {
     margin-left: 0;
   }
 
-  .l-offset-xxs-1 {
+  .l-grid-col-offset-xxs-1 {
     margin-left: 8.33333%;
   }
 
-  .l-offset-xxs-2 {
+  .l-grid-col-offset-xxs-2 {
     margin-left: 16.66667%;
   }
 
-  .l-offset-xxs-3 {
+  .l-grid-col-offset-xxs-3 {
     margin-left: 25%;
   }
 
-  .l-offset-xxs-4 {
+  .l-grid-col-offset-xxs-4 {
     margin-left: 33.33333%;
   }
 
-  .l-offset-xxs-5 {
+  .l-grid-col-offset-xxs-5 {
     margin-left: 41.66667%;
   }
 
-  .l-offset-xxs-6 {
+  .l-grid-col-offset-xxs-6 {
     margin-left: 50%;
   }
 
-  .l-offset-xxs-7 {
+  .l-grid-col-offset-xxs-7 {
     margin-left: 58.33333%;
   }
 
-  .l-offset-xxs-8 {
+  .l-grid-col-offset-xxs-8 {
     margin-left: 66.66667%;
   }
 
-  .l-offset-xxs-9 {
+  .l-grid-col-offset-xxs-9 {
     margin-left: 75%;
   }
 
-  .l-offset-xxs-10 {
+  .l-grid-col-offset-xxs-10 {
     margin-left: 83.33333%;
-  }
-
-  .l-offset-xxs-11 {
-    margin-left: 91.66667%;
   }
 }
 @media (min-width: 360px) {
-  .l-col-xs {
+  .l-grid-col-xs {
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%;
   }
 
-  .l-col-xs-2 {
-    flex: 0 0 16.66667%;
+  .l-grid-col-xs-auto {
+    width: auto;
+    max-width: none;
+  }
+
+  .l-grid-col-xs-2 {
+    flex-basis: 16.66667%;
     max-width: 16.66667%;
   }
 
-  .l-col-xs-3 {
-    flex: 0 0 25%;
+  .l-grid-col-xs-3 {
+    flex-basis: 25%;
     max-width: 25%;
   }
 
-  .l-col-xs-4 {
-    flex: 0 0 33.33333%;
+  .l-grid-col-xs-4 {
+    flex-basis: 33.33333%;
     max-width: 33.33333%;
   }
 
-  .l-col-xs-5 {
-    flex: 0 0 41.66667%;
+  .l-grid-col-xs-5 {
+    flex-basis: 41.66667%;
     max-width: 41.66667%;
   }
 
-  .l-col-xs-6 {
-    flex: 0 0 50%;
+  .l-grid-col-xs-6 {
+    flex-basis: 50%;
     max-width: 50%;
   }
 
-  .l-col-xs-7 {
-    flex: 0 0 58.33333%;
+  .l-grid-col-xs-7 {
+    flex-basis: 58.33333%;
     max-width: 58.33333%;
   }
 
-  .l-col-xs-8 {
-    flex: 0 0 66.66667%;
+  .l-grid-col-xs-8 {
+    flex-basis: 66.66667%;
     max-width: 66.66667%;
   }
 
-  .l-col-xs-9 {
-    flex: 0 0 75%;
+  .l-grid-col-xs-9 {
+    flex-basis: 75%;
     max-width: 75%;
   }
 
-  .l-col-xs-10 {
-    flex: 0 0 83.33333%;
+  .l-grid-col-xs-10 {
+    flex-basis: 83.33333%;
     max-width: 83.33333%;
   }
 
-  .l-order-xs-first {
+  .l-grid-col-order-xs-first {
     order: -1;
   }
 
-  .l-order-xs-last {
+  .l-grid-col-order-xs-last {
     order: 13;
   }
 
-  .l-order-xs-0 {
+  .l-grid-col-order-xs-0 {
     order: 0;
   }
 
-  .l-order-xs-1 {
+  .l-grid-col-order-xs-1 {
     order: 1;
   }
 
-  .l-order-xs-2 {
+  .l-grid-col-order-xs-2 {
     order: 2;
   }
 
-  .l-order-xs-3 {
+  .l-grid-col-order-xs-3 {
     order: 3;
   }
 
-  .l-order-xs-4 {
+  .l-grid-col-order-xs-4 {
     order: 4;
   }
 
-  .l-order-xs-5 {
+  .l-grid-col-order-xs-5 {
     order: 5;
   }
 
-  .l-order-xs-6 {
+  .l-grid-col-order-xs-6 {
     order: 6;
   }
 
-  .l-order-xs-7 {
+  .l-grid-col-order-xs-7 {
     order: 7;
   }
 
-  .l-order-xs-8 {
+  .l-grid-col-order-xs-8 {
     order: 8;
   }
 
-  .l-order-xs-9 {
+  .l-grid-col-order-xs-9 {
     order: 9;
   }
 
-  .l-order-xs-10 {
+  .l-grid-col-order-xs-10 {
     order: 10;
   }
 
-  .l-order-xs-11 {
+  .l-grid-col-order-xs-11 {
     order: 11;
   }
 
-  .l-order-xs-12 {
+  .l-grid-col-order-xs-12 {
     order: 12;
   }
 
-  .l-offset-xs-0 {
+  .l-grid-col-offset-xs-0 {
     margin-left: 0;
   }
 
-  .l-offset-xs-1 {
+  .l-grid-col-offset-xs-1 {
     margin-left: 8.33333%;
   }
 
-  .l-offset-xs-2 {
+  .l-grid-col-offset-xs-2 {
     margin-left: 16.66667%;
   }
 
-  .l-offset-xs-3 {
+  .l-grid-col-offset-xs-3 {
     margin-left: 25%;
   }
 
-  .l-offset-xs-4 {
+  .l-grid-col-offset-xs-4 {
     margin-left: 33.33333%;
   }
 
-  .l-offset-xs-5 {
+  .l-grid-col-offset-xs-5 {
     margin-left: 41.66667%;
   }
 
-  .l-offset-xs-6 {
+  .l-grid-col-offset-xs-6 {
     margin-left: 50%;
   }
 
-  .l-offset-xs-7 {
+  .l-grid-col-offset-xs-7 {
     margin-left: 58.33333%;
   }
 
-  .l-offset-xs-8 {
+  .l-grid-col-offset-xs-8 {
     margin-left: 66.66667%;
   }
 
-  .l-offset-xs-9 {
+  .l-grid-col-offset-xs-9 {
     margin-left: 75%;
   }
 
-  .l-offset-xs-10 {
+  .l-grid-col-offset-xs-10 {
     margin-left: 83.33333%;
-  }
-
-  .l-offset-xs-11 {
-    margin-left: 91.66667%;
   }
 }
 @media (min-width: 425px) {
-  .l-col-sm {
+  .l-grid-col-sm {
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%;
   }
 
-  .l-col-sm-2 {
-    flex: 0 0 16.66667%;
+  .l-grid-col-sm-auto {
+    width: auto;
+    max-width: none;
+  }
+
+  .l-grid-col-sm-2 {
+    flex-basis: 16.66667%;
     max-width: 16.66667%;
   }
 
-  .l-col-sm-3 {
-    flex: 0 0 25%;
+  .l-grid-col-sm-3 {
+    flex-basis: 25%;
     max-width: 25%;
   }
 
-  .l-col-sm-4 {
-    flex: 0 0 33.33333%;
+  .l-grid-col-sm-4 {
+    flex-basis: 33.33333%;
     max-width: 33.33333%;
   }
 
-  .l-col-sm-5 {
-    flex: 0 0 41.66667%;
+  .l-grid-col-sm-5 {
+    flex-basis: 41.66667%;
     max-width: 41.66667%;
   }
 
-  .l-col-sm-6 {
-    flex: 0 0 50%;
+  .l-grid-col-sm-6 {
+    flex-basis: 50%;
     max-width: 50%;
   }
 
-  .l-col-sm-7 {
-    flex: 0 0 58.33333%;
+  .l-grid-col-sm-7 {
+    flex-basis: 58.33333%;
     max-width: 58.33333%;
   }
 
-  .l-col-sm-8 {
-    flex: 0 0 66.66667%;
+  .l-grid-col-sm-8 {
+    flex-basis: 66.66667%;
     max-width: 66.66667%;
   }
 
-  .l-col-sm-9 {
-    flex: 0 0 75%;
+  .l-grid-col-sm-9 {
+    flex-basis: 75%;
     max-width: 75%;
   }
 
-  .l-col-sm-10 {
-    flex: 0 0 83.33333%;
+  .l-grid-col-sm-10 {
+    flex-basis: 83.33333%;
     max-width: 83.33333%;
   }
 
-  .l-order-sm-first {
+  .l-grid-col-order-sm-first {
     order: -1;
   }
 
-  .l-order-sm-last {
+  .l-grid-col-order-sm-last {
     order: 13;
   }
 
-  .l-order-sm-0 {
+  .l-grid-col-order-sm-0 {
     order: 0;
   }
 
-  .l-order-sm-1 {
+  .l-grid-col-order-sm-1 {
     order: 1;
   }
 
-  .l-order-sm-2 {
+  .l-grid-col-order-sm-2 {
     order: 2;
   }
 
-  .l-order-sm-3 {
+  .l-grid-col-order-sm-3 {
     order: 3;
   }
 
-  .l-order-sm-4 {
+  .l-grid-col-order-sm-4 {
     order: 4;
   }
 
-  .l-order-sm-5 {
+  .l-grid-col-order-sm-5 {
     order: 5;
   }
 
-  .l-order-sm-6 {
+  .l-grid-col-order-sm-6 {
     order: 6;
   }
 
-  .l-order-sm-7 {
+  .l-grid-col-order-sm-7 {
     order: 7;
   }
 
-  .l-order-sm-8 {
+  .l-grid-col-order-sm-8 {
     order: 8;
   }
 
-  .l-order-sm-9 {
+  .l-grid-col-order-sm-9 {
     order: 9;
   }
 
-  .l-order-sm-10 {
+  .l-grid-col-order-sm-10 {
     order: 10;
   }
 
-  .l-order-sm-11 {
+  .l-grid-col-order-sm-11 {
     order: 11;
   }
 
-  .l-order-sm-12 {
+  .l-grid-col-order-sm-12 {
     order: 12;
   }
 
-  .l-offset-sm-0 {
+  .l-grid-col-offset-sm-0 {
     margin-left: 0;
   }
 
-  .l-offset-sm-1 {
+  .l-grid-col-offset-sm-1 {
     margin-left: 8.33333%;
   }
 
-  .l-offset-sm-2 {
+  .l-grid-col-offset-sm-2 {
     margin-left: 16.66667%;
   }
 
-  .l-offset-sm-3 {
+  .l-grid-col-offset-sm-3 {
     margin-left: 25%;
   }
 
-  .l-offset-sm-4 {
+  .l-grid-col-offset-sm-4 {
     margin-left: 33.33333%;
   }
 
-  .l-offset-sm-5 {
+  .l-grid-col-offset-sm-5 {
     margin-left: 41.66667%;
   }
 
-  .l-offset-sm-6 {
+  .l-grid-col-offset-sm-6 {
     margin-left: 50%;
   }
 
-  .l-offset-sm-7 {
+  .l-grid-col-offset-sm-7 {
     margin-left: 58.33333%;
   }
 
-  .l-offset-sm-8 {
+  .l-grid-col-offset-sm-8 {
     margin-left: 66.66667%;
   }
 
-  .l-offset-sm-9 {
+  .l-grid-col-offset-sm-9 {
     margin-left: 75%;
   }
 
-  .l-offset-sm-10 {
+  .l-grid-col-offset-sm-10 {
     margin-left: 83.33333%;
-  }
-
-  .l-offset-sm-11 {
-    margin-left: 91.66667%;
   }
 }
 @media (min-width: 768px) {
-  .l-col-md {
+  .l-grid-col-md {
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%;
   }
 
-  .l-col-md-2 {
-    flex: 0 0 16.66667%;
+  .l-grid-col-md-auto {
+    width: auto;
+    max-width: none;
+  }
+
+  .l-grid-col-md-2 {
+    flex-basis: 16.66667%;
     max-width: 16.66667%;
   }
 
-  .l-col-md-3 {
-    flex: 0 0 25%;
+  .l-grid-col-md-3 {
+    flex-basis: 25%;
     max-width: 25%;
   }
 
-  .l-col-md-4 {
-    flex: 0 0 33.33333%;
+  .l-grid-col-md-4 {
+    flex-basis: 33.33333%;
     max-width: 33.33333%;
   }
 
-  .l-col-md-5 {
-    flex: 0 0 41.66667%;
+  .l-grid-col-md-5 {
+    flex-basis: 41.66667%;
     max-width: 41.66667%;
   }
 
-  .l-col-md-6 {
-    flex: 0 0 50%;
+  .l-grid-col-md-6 {
+    flex-basis: 50%;
     max-width: 50%;
   }
 
-  .l-col-md-7 {
-    flex: 0 0 58.33333%;
+  .l-grid-col-md-7 {
+    flex-basis: 58.33333%;
     max-width: 58.33333%;
   }
 
-  .l-col-md-8 {
-    flex: 0 0 66.66667%;
+  .l-grid-col-md-8 {
+    flex-basis: 66.66667%;
     max-width: 66.66667%;
   }
 
-  .l-col-md-9 {
-    flex: 0 0 75%;
+  .l-grid-col-md-9 {
+    flex-basis: 75%;
     max-width: 75%;
   }
 
-  .l-col-md-10 {
-    flex: 0 0 83.33333%;
+  .l-grid-col-md-10 {
+    flex-basis: 83.33333%;
     max-width: 83.33333%;
   }
 
-  .l-order-md-first {
+  .l-grid-col-order-md-first {
     order: -1;
   }
 
-  .l-order-md-last {
+  .l-grid-col-order-md-last {
     order: 13;
   }
 
-  .l-order-md-0 {
+  .l-grid-col-order-md-0 {
     order: 0;
   }
 
-  .l-order-md-1 {
+  .l-grid-col-order-md-1 {
     order: 1;
   }
 
-  .l-order-md-2 {
+  .l-grid-col-order-md-2 {
     order: 2;
   }
 
-  .l-order-md-3 {
+  .l-grid-col-order-md-3 {
     order: 3;
   }
 
-  .l-order-md-4 {
+  .l-grid-col-order-md-4 {
     order: 4;
   }
 
-  .l-order-md-5 {
+  .l-grid-col-order-md-5 {
     order: 5;
   }
 
-  .l-order-md-6 {
+  .l-grid-col-order-md-6 {
     order: 6;
   }
 
-  .l-order-md-7 {
+  .l-grid-col-order-md-7 {
     order: 7;
   }
 
-  .l-order-md-8 {
+  .l-grid-col-order-md-8 {
     order: 8;
   }
 
-  .l-order-md-9 {
+  .l-grid-col-order-md-9 {
     order: 9;
   }
 
-  .l-order-md-10 {
+  .l-grid-col-order-md-10 {
     order: 10;
   }
 
-  .l-order-md-11 {
+  .l-grid-col-order-md-11 {
     order: 11;
   }
 
-  .l-order-md-12 {
+  .l-grid-col-order-md-12 {
     order: 12;
   }
 
-  .l-offset-md-0 {
+  .l-grid-col-offset-md-0 {
     margin-left: 0;
   }
 
-  .l-offset-md-1 {
+  .l-grid-col-offset-md-1 {
     margin-left: 8.33333%;
   }
 
-  .l-offset-md-2 {
+  .l-grid-col-offset-md-2 {
     margin-left: 16.66667%;
   }
 
-  .l-offset-md-3 {
+  .l-grid-col-offset-md-3 {
     margin-left: 25%;
   }
 
-  .l-offset-md-4 {
+  .l-grid-col-offset-md-4 {
     margin-left: 33.33333%;
   }
 
-  .l-offset-md-5 {
+  .l-grid-col-offset-md-5 {
     margin-left: 41.66667%;
   }
 
-  .l-offset-md-6 {
+  .l-grid-col-offset-md-6 {
     margin-left: 50%;
   }
 
-  .l-offset-md-7 {
+  .l-grid-col-offset-md-7 {
     margin-left: 58.33333%;
   }
 
-  .l-offset-md-8 {
+  .l-grid-col-offset-md-8 {
     margin-left: 66.66667%;
   }
 
-  .l-offset-md-9 {
+  .l-grid-col-offset-md-9 {
     margin-left: 75%;
   }
 
-  .l-offset-md-10 {
+  .l-grid-col-offset-md-10 {
     margin-left: 83.33333%;
-  }
-
-  .l-offset-md-11 {
-    margin-left: 91.66667%;
   }
 }
 @media (min-width: 1000px) {
-  .l-col-lg {
+  .l-grid-col-lg {
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%;
   }
 
-  .l-col-lg-2 {
-    flex: 0 0 16.66667%;
+  .l-grid-col-lg-auto {
+    width: auto;
+    max-width: none;
+  }
+
+  .l-grid-col-lg-2 {
+    flex-basis: 16.66667%;
     max-width: 16.66667%;
   }
 
-  .l-col-lg-3 {
-    flex: 0 0 25%;
+  .l-grid-col-lg-3 {
+    flex-basis: 25%;
     max-width: 25%;
   }
 
-  .l-col-lg-4 {
-    flex: 0 0 33.33333%;
+  .l-grid-col-lg-4 {
+    flex-basis: 33.33333%;
     max-width: 33.33333%;
   }
 
-  .l-col-lg-5 {
-    flex: 0 0 41.66667%;
+  .l-grid-col-lg-5 {
+    flex-basis: 41.66667%;
     max-width: 41.66667%;
   }
 
-  .l-col-lg-6 {
-    flex: 0 0 50%;
+  .l-grid-col-lg-6 {
+    flex-basis: 50%;
     max-width: 50%;
   }
 
-  .l-col-lg-7 {
-    flex: 0 0 58.33333%;
+  .l-grid-col-lg-7 {
+    flex-basis: 58.33333%;
     max-width: 58.33333%;
   }
 
-  .l-col-lg-8 {
-    flex: 0 0 66.66667%;
+  .l-grid-col-lg-8 {
+    flex-basis: 66.66667%;
     max-width: 66.66667%;
   }
 
-  .l-col-lg-9 {
-    flex: 0 0 75%;
+  .l-grid-col-lg-9 {
+    flex-basis: 75%;
     max-width: 75%;
   }
 
-  .l-col-lg-10 {
-    flex: 0 0 83.33333%;
+  .l-grid-col-lg-10 {
+    flex-basis: 83.33333%;
     max-width: 83.33333%;
   }
 
-  .l-order-lg-first {
+  .l-grid-col-order-lg-first {
     order: -1;
   }
 
-  .l-order-lg-last {
+  .l-grid-col-order-lg-last {
     order: 13;
   }
 
-  .l-order-lg-0 {
+  .l-grid-col-order-lg-0 {
     order: 0;
   }
 
-  .l-order-lg-1 {
+  .l-grid-col-order-lg-1 {
     order: 1;
   }
 
-  .l-order-lg-2 {
+  .l-grid-col-order-lg-2 {
     order: 2;
   }
 
-  .l-order-lg-3 {
+  .l-grid-col-order-lg-3 {
     order: 3;
   }
 
-  .l-order-lg-4 {
+  .l-grid-col-order-lg-4 {
     order: 4;
   }
 
-  .l-order-lg-5 {
+  .l-grid-col-order-lg-5 {
     order: 5;
   }
 
-  .l-order-lg-6 {
+  .l-grid-col-order-lg-6 {
     order: 6;
   }
 
-  .l-order-lg-7 {
+  .l-grid-col-order-lg-7 {
     order: 7;
   }
 
-  .l-order-lg-8 {
+  .l-grid-col-order-lg-8 {
     order: 8;
   }
 
-  .l-order-lg-9 {
+  .l-grid-col-order-lg-9 {
     order: 9;
   }
 
-  .l-order-lg-10 {
+  .l-grid-col-order-lg-10 {
     order: 10;
   }
 
-  .l-order-lg-11 {
+  .l-grid-col-order-lg-11 {
     order: 11;
   }
 
-  .l-order-lg-12 {
+  .l-grid-col-order-lg-12 {
     order: 12;
   }
 
-  .l-offset-lg-0 {
+  .l-grid-col-offset-lg-0 {
     margin-left: 0;
   }
 
-  .l-offset-lg-1 {
+  .l-grid-col-offset-lg-1 {
     margin-left: 8.33333%;
   }
 
-  .l-offset-lg-2 {
+  .l-grid-col-offset-lg-2 {
     margin-left: 16.66667%;
   }
 
-  .l-offset-lg-3 {
+  .l-grid-col-offset-lg-3 {
     margin-left: 25%;
   }
 
-  .l-offset-lg-4 {
+  .l-grid-col-offset-lg-4 {
     margin-left: 33.33333%;
   }
 
-  .l-offset-lg-5 {
+  .l-grid-col-offset-lg-5 {
     margin-left: 41.66667%;
   }
 
-  .l-offset-lg-6 {
+  .l-grid-col-offset-lg-6 {
     margin-left: 50%;
   }
 
-  .l-offset-lg-7 {
+  .l-grid-col-offset-lg-7 {
     margin-left: 58.33333%;
   }
 
-  .l-offset-lg-8 {
+  .l-grid-col-offset-lg-8 {
     margin-left: 66.66667%;
   }
 
-  .l-offset-lg-9 {
+  .l-grid-col-offset-lg-9 {
     margin-left: 75%;
   }
 
-  .l-offset-lg-10 {
+  .l-grid-col-offset-lg-10 {
     margin-left: 83.33333%;
-  }
-
-  .l-offset-lg-11 {
-    margin-left: 91.66667%;
   }
 }
 @media (min-width: 1240px) {
-  .l-col-xl {
+  .l-grid-col-xl {
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%;
   }
 
-  .l-col-xl-2 {
-    flex: 0 0 16.66667%;
+  .l-grid-col-xl-auto {
+    width: auto;
+    max-width: none;
+  }
+
+  .l-grid-col-xl-2 {
+    flex-basis: 16.66667%;
     max-width: 16.66667%;
   }
 
-  .l-col-xl-3 {
-    flex: 0 0 25%;
+  .l-grid-col-xl-3 {
+    flex-basis: 25%;
     max-width: 25%;
   }
 
-  .l-col-xl-4 {
-    flex: 0 0 33.33333%;
+  .l-grid-col-xl-4 {
+    flex-basis: 33.33333%;
     max-width: 33.33333%;
   }
 
-  .l-col-xl-5 {
-    flex: 0 0 41.66667%;
+  .l-grid-col-xl-5 {
+    flex-basis: 41.66667%;
     max-width: 41.66667%;
   }
 
-  .l-col-xl-6 {
-    flex: 0 0 50%;
+  .l-grid-col-xl-6 {
+    flex-basis: 50%;
     max-width: 50%;
   }
 
-  .l-col-xl-7 {
-    flex: 0 0 58.33333%;
+  .l-grid-col-xl-7 {
+    flex-basis: 58.33333%;
     max-width: 58.33333%;
   }
 
-  .l-col-xl-8 {
-    flex: 0 0 66.66667%;
+  .l-grid-col-xl-8 {
+    flex-basis: 66.66667%;
     max-width: 66.66667%;
   }
 
-  .l-col-xl-9 {
-    flex: 0 0 75%;
+  .l-grid-col-xl-9 {
+    flex-basis: 75%;
     max-width: 75%;
   }
 
-  .l-col-xl-10 {
-    flex: 0 0 83.33333%;
+  .l-grid-col-xl-10 {
+    flex-basis: 83.33333%;
     max-width: 83.33333%;
   }
 
-  .l-order-xl-first {
+  .l-grid-col-order-xl-first {
     order: -1;
   }
 
-  .l-order-xl-last {
+  .l-grid-col-order-xl-last {
     order: 13;
   }
 
-  .l-order-xl-0 {
+  .l-grid-col-order-xl-0 {
     order: 0;
   }
 
-  .l-order-xl-1 {
+  .l-grid-col-order-xl-1 {
     order: 1;
   }
 
-  .l-order-xl-2 {
+  .l-grid-col-order-xl-2 {
     order: 2;
   }
 
-  .l-order-xl-3 {
+  .l-grid-col-order-xl-3 {
     order: 3;
   }
 
-  .l-order-xl-4 {
+  .l-grid-col-order-xl-4 {
     order: 4;
   }
 
-  .l-order-xl-5 {
+  .l-grid-col-order-xl-5 {
     order: 5;
   }
 
-  .l-order-xl-6 {
+  .l-grid-col-order-xl-6 {
     order: 6;
   }
 
-  .l-order-xl-7 {
+  .l-grid-col-order-xl-7 {
     order: 7;
   }
 
-  .l-order-xl-8 {
+  .l-grid-col-order-xl-8 {
     order: 8;
   }
 
-  .l-order-xl-9 {
+  .l-grid-col-order-xl-9 {
     order: 9;
   }
 
-  .l-order-xl-10 {
+  .l-grid-col-order-xl-10 {
     order: 10;
   }
 
-  .l-order-xl-11 {
+  .l-grid-col-order-xl-11 {
     order: 11;
   }
 
-  .l-order-xl-12 {
+  .l-grid-col-order-xl-12 {
     order: 12;
   }
 
-  .l-offset-xl-0 {
+  .l-grid-col-offset-xl-0 {
     margin-left: 0;
   }
 
-  .l-offset-xl-1 {
+  .l-grid-col-offset-xl-1 {
     margin-left: 8.33333%;
   }
 
-  .l-offset-xl-2 {
+  .l-grid-col-offset-xl-2 {
     margin-left: 16.66667%;
   }
 
-  .l-offset-xl-3 {
+  .l-grid-col-offset-xl-3 {
     margin-left: 25%;
   }
 
-  .l-offset-xl-4 {
+  .l-grid-col-offset-xl-4 {
     margin-left: 33.33333%;
   }
 
-  .l-offset-xl-5 {
+  .l-grid-col-offset-xl-5 {
     margin-left: 41.66667%;
   }
 
-  .l-offset-xl-6 {
+  .l-grid-col-offset-xl-6 {
     margin-left: 50%;
   }
 
-  .l-offset-xl-7 {
+  .l-grid-col-offset-xl-7 {
     margin-left: 58.33333%;
   }
 
-  .l-offset-xl-8 {
+  .l-grid-col-offset-xl-8 {
     margin-left: 66.66667%;
   }
 
-  .l-offset-xl-9 {
+  .l-grid-col-offset-xl-9 {
     margin-left: 75%;
   }
 
-  .l-offset-xl-10 {
+  .l-grid-col-offset-xl-10 {
     margin-left: 83.33333%;
-  }
-
-  .l-offset-xl-11 {
-    margin-left: 91.66667%;
   }
 }
 @media (min-width: 1640px) {
-  .l-col-xxl {
+  .l-grid-col-xxl {
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%;
   }
 
-  .l-col-xxl-2 {
-    flex: 0 0 16.66667%;
+  .l-grid-col-xxl-auto {
+    width: auto;
+    max-width: none;
+  }
+
+  .l-grid-col-xxl-2 {
+    flex-basis: 16.66667%;
     max-width: 16.66667%;
   }
 
-  .l-col-xxl-3 {
-    flex: 0 0 25%;
+  .l-grid-col-xxl-3 {
+    flex-basis: 25%;
     max-width: 25%;
   }
 
-  .l-col-xxl-4 {
-    flex: 0 0 33.33333%;
+  .l-grid-col-xxl-4 {
+    flex-basis: 33.33333%;
     max-width: 33.33333%;
   }
 
-  .l-col-xxl-5 {
-    flex: 0 0 41.66667%;
+  .l-grid-col-xxl-5 {
+    flex-basis: 41.66667%;
     max-width: 41.66667%;
   }
 
-  .l-col-xxl-6 {
-    flex: 0 0 50%;
+  .l-grid-col-xxl-6 {
+    flex-basis: 50%;
     max-width: 50%;
   }
 
-  .l-col-xxl-7 {
-    flex: 0 0 58.33333%;
+  .l-grid-col-xxl-7 {
+    flex-basis: 58.33333%;
     max-width: 58.33333%;
   }
 
-  .l-col-xxl-8 {
-    flex: 0 0 66.66667%;
+  .l-grid-col-xxl-8 {
+    flex-basis: 66.66667%;
     max-width: 66.66667%;
   }
 
-  .l-col-xxl-9 {
-    flex: 0 0 75%;
+  .l-grid-col-xxl-9 {
+    flex-basis: 75%;
     max-width: 75%;
   }
 
-  .l-col-xxl-10 {
-    flex: 0 0 83.33333%;
+  .l-grid-col-xxl-10 {
+    flex-basis: 83.33333%;
     max-width: 83.33333%;
   }
 
-  .l-order-xxl-first {
+  .l-grid-col-order-xxl-first {
     order: -1;
   }
 
-  .l-order-xxl-last {
+  .l-grid-col-order-xxl-last {
     order: 13;
   }
 
-  .l-order-xxl-0 {
+  .l-grid-col-order-xxl-0 {
     order: 0;
   }
 
-  .l-order-xxl-1 {
+  .l-grid-col-order-xxl-1 {
     order: 1;
   }
 
-  .l-order-xxl-2 {
+  .l-grid-col-order-xxl-2 {
     order: 2;
   }
 
-  .l-order-xxl-3 {
+  .l-grid-col-order-xxl-3 {
     order: 3;
   }
 
-  .l-order-xxl-4 {
+  .l-grid-col-order-xxl-4 {
     order: 4;
   }
 
-  .l-order-xxl-5 {
+  .l-grid-col-order-xxl-5 {
     order: 5;
   }
 
-  .l-order-xxl-6 {
+  .l-grid-col-order-xxl-6 {
     order: 6;
   }
 
-  .l-order-xxl-7 {
+  .l-grid-col-order-xxl-7 {
     order: 7;
   }
 
-  .l-order-xxl-8 {
+  .l-grid-col-order-xxl-8 {
     order: 8;
   }
 
-  .l-order-xxl-9 {
+  .l-grid-col-order-xxl-9 {
     order: 9;
   }
 
-  .l-order-xxl-10 {
+  .l-grid-col-order-xxl-10 {
     order: 10;
   }
 
-  .l-order-xxl-11 {
+  .l-grid-col-order-xxl-11 {
     order: 11;
   }
 
-  .l-order-xxl-12 {
+  .l-grid-col-order-xxl-12 {
     order: 12;
   }
 
-  .l-offset-xxl-0 {
+  .l-grid-col-offset-xxl-0 {
     margin-left: 0;
   }
 
-  .l-offset-xxl-1 {
+  .l-grid-col-offset-xxl-1 {
     margin-left: 8.33333%;
   }
 
-  .l-offset-xxl-2 {
+  .l-grid-col-offset-xxl-2 {
     margin-left: 16.66667%;
   }
 
-  .l-offset-xxl-3 {
+  .l-grid-col-offset-xxl-3 {
     margin-left: 25%;
   }
 
-  .l-offset-xxl-4 {
+  .l-grid-col-offset-xxl-4 {
     margin-left: 33.33333%;
   }
 
-  .l-offset-xxl-5 {
+  .l-grid-col-offset-xxl-5 {
     margin-left: 41.66667%;
   }
 
-  .l-offset-xxl-6 {
+  .l-grid-col-offset-xxl-6 {
     margin-left: 50%;
   }
 
-  .l-offset-xxl-7 {
+  .l-grid-col-offset-xxl-7 {
     margin-left: 58.33333%;
   }
 
-  .l-offset-xxl-8 {
+  .l-grid-col-offset-xxl-8 {
     margin-left: 66.66667%;
   }
 
-  .l-offset-xxl-9 {
+  .l-grid-col-offset-xxl-9 {
     margin-left: 75%;
   }
 
-  .l-offset-xxl-10 {
+  .l-grid-col-offset-xxl-10 {
     margin-left: 83.33333%;
-  }
-
-  .l-offset-xxl-11 {
-    margin-left: 91.66667%;
   }
 }
 /*doc
 ---
-title: l-col-(column)-(breakpoint)
-name: grid-03-col-column-breakpoint
+title: l-grid-col-(breakpoint)-(column)
+name: grid-03-col-column
 category: layout-grid
 ---
 
 flexboxによるグリッドのセルの幅を、<code>(column) / 12</code>の割合にする。  
+Bootstrap 4との互換性の関係で、**シングルクラス**となっている（l-grid-colを常に付与する必要はない）。  
 (breakpoint)の指定がない場合は、常にその幅となる。  
 (breakpoint)の指定がある場合は、(breakpoint)**以上**のときに、指定した幅となる。
 
 ``` example
-<div class="l-row" style="margin-bottom: 2rem;">
-    <div class="l-col-3">
-        <div class="bg-first" style="padding: 1rem; height: 100%;">l-col-3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<h3 class="text-lg">(column)のみ指定している場合</h3>
+<div class="l-grid-row" style="margin-bottom: 2rem;">
+    <div class="l-grid-col-3">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col-3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col-sm-3">
-        <div class="bg-first" style="padding: 1rem; height: 100%;">l-col-sm-3<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-grid-col-3">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col-3<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-col-sm-3">
-        <div class="bg-first" style="padding: 1rem; height: 100%;">l-col-sm-3<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-</div>
-
-<div class="l-row" style="margin-bottom: 2rem;">
-    <div class="l-col-md-3">
-        <div class="bg-second" style="padding: 1rem; height: 100%;">l-col-md-3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="l-col-md-3">
-        <div class="bg-second" style="padding: 1rem; height: 100%;">l-col-md-3<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="l-col-md-3">
-        <div class="bg-second" style="padding: 1rem; height: 100%;">l-col-md-3<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-    <div class="l-col-md-3">
-        <div class="bg-second" style="padding: 1rem; height: 100%;">l-col-md-3<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
+    <div class="l-grid-col-3">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col-3<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 
-<div class="l-row" style="margin-bottom: 2rem;">
-    <div class="l-col-lg-4">
-        <div class="bg-third" style="padding: 1rem; height: 100%;">l-col-lg-4<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<h3 class="text-lg margin-t-lg">(column)と(breakpoint)の両方を指定している場合</h3>
+<div class="l-grid-row" style="margin-bottom: 2rem;">
+    <div class="l-grid-col-lg-2">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col-lg-2<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col-lg-4">
-        <div class="bg-third" style="padding: 1rem; height: 100%;">l-col-lg-4<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-grid-col-lg-6">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col-lg-6<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-col-lg-4">
-        <div class="bg-third" style="padding: 1rem; height: 100%;">l-col-lg-4<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="l-grid-col-lg-4">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col-lg-4<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
     </div>
 </div>
 
-<div class="l-row">
-    <div class="l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2">
-        <div class="bg-fourth" style="padding: 1rem; height: 100%;">l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<h3 class="text-lg margin-t-lg">(column)の指定があるセルと、ないセルが同列に混在している場合</h3>
+<p>(column)の指定がないセルは、常に空間を埋めるように伸縮する（Bootstrapのautoと同様）。</p>
+<div class="l-grid-row" style="margin-bottom: 2rem;">
+    <div class="l-grid-col-sm-6">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col-sm-6<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2">
-        <div class="bg-fourth" style="padding: 1rem; height: 100%;">l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-grid-col">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2">
-        <div class="bg-fourth" style="padding: 1rem; height: 100%;">l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="l-grid-col-xl-2">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col-xl-2<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
     </div>
-    <div class="l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2">
-        <div class="bg-fourth" style="padding: 1rem; height: 100%;">l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
+</div>
+
+<h3 class="text-lg margin-t-lg">複雑な指定の例</h3>
+<p>ウィンドウ幅が狭くなるに従って、段組が変化する。セルが複数行になる場合は、l-grid-colにはmarginではなくpaddingを付与する。</p>
+<div class="l-grid-row">
+    <div class="l-grid-col-6 l-grid-col-sm-4 l-grid-col-lg-3 l-grid-col-xxl-2" style="padding-bottom: 1rem;">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col-6 l-grid-col-sm-4 l-grid-col-lg-3 l-grid-col-xxl-2<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2">
-        <div class="bg-fourth" style="padding: 1rem; height: 100%;">l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    <div class="l-grid-col-6 l-grid-col-sm-4 l-grid-col-lg-3 l-grid-col-xxl-2" style="padding-bottom: 1rem;">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col-6 l-grid-col-sm-4 l-grid-col-lg-3 l-grid-col-xxl-2<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2">
-        <div class="bg-fourth" style="padding: 1rem; height: 100%;">l-col-6 l-col-sm-4 l-col-lg-3 l-col-xxl-2<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
+    <div class="l-grid-col-6 l-grid-col-sm-4 l-grid-col-lg-3 l-grid-col-xxl-2" style="padding-bottom: 1rem;">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col-6 l-grid-col-sm-4 l-grid-col-lg-3 l-grid-col-xxl-2<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    </div>
+    <div class="l-grid-col-6 l-grid-col-sm-4 l-grid-col-lg-3 l-grid-col-xxl-2" style="padding-bottom: 1rem;">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col-6 l-grid-col-sm-4 l-grid-col-lg-3 l-grid-col-xxl-2<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
+    </div>
+    <div class="l-grid-col-6 l-grid-col-sm-4 l-grid-col-lg-3 l-grid-col-xxl-2" style="padding-bottom: 1rem;">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col-6 l-grid-col-sm-4 l-grid-col-lg-3 l-grid-col-xxl-2<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+    </div>
+    <div class="l-grid-col-6 l-grid-col-sm-4 l-grid-col-lg-3 l-grid-col-xxl-2" style="padding-bottom: 1rem;">
+        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col-6 l-grid-col-sm-4 l-grid-col-lg-3 l-grid-col-xxl-2<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
     </div>
 </div>
 ```
 */
 /*doc
 ---
-title: l-order-(breakpoint)-(first or last or number)
-name: grid-04-order-breakpoint
+title: l-grid-col-order-(breakpoint)-(first or last or number)
+name: grid-04-order
 category: layout-grid
 parent: grid-02-col
 ---
@@ -2005,78 +2027,78 @@ flexboxによるグリッドのセルを、指定した順番にする。
 (breakpoint)の指定がある場合は、(breakpoint)**以上**のときに、指定した順番となる。
 
 ``` example
-<div class="l-row" style="margin-bottom: 2rem;">
-    <div class="l-order-last l-col">
-        <div class="bg-first" style="padding: 1rem; height: 100%;">1:<br>l-order-last<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="l-grid-row" style="margin-bottom: 2rem;">
+    <div class="l-grid-col-order-last l-grid-col">
+        <div style="padding: 1rem; background-color: #f8ccdd; height: 100%;">1:<br>l-grid-col-order-last<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col">
-        <div class="bg-first bg-mild" style="padding: 1rem; height: 100%;">2:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-grid-col">
+        <div style="padding: 1rem; background-color: #f8ccdd; height: 100%;">2:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-order-first l-col">
-        <div class="bg-first" style="padding: 1rem; height: 100%;">3:<br>l-order-first<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-grid-col-order-first l-grid-col">
+        <div style="padding: 1rem; background-color: #f8ccdd; height: 100%;">3:<br>l-grid-col-order-first<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-col">
-        <div class="bg-first bg-mild" style="padding: 1rem; height: 100%;">4:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-</div>
-
-<div class="l-row" style="margin-bottom: 2rem;">
-    <div class="l-order-3 l-col">
-        <div class="bg-second" style="padding: 1rem; height: 100%;">1:<br>l-order-3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="l-order-1 l-col">
-        <div class="bg-second" style="padding: 1rem; height: 100%;">2:<br>l-order-1<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="l-order-4 l-col">
-        <div class="bg-second" style="padding: 1rem; height: 100%;">3:<br>l-order-4<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="l-order-2 l-col">
-        <div class="bg-second" style="padding: 1rem; height: 100%;">4:<br>l-order-2<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-grid-col">
+        <div style="padding: 1rem; background-color: #f8ccdd; height: 100%;">4:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
 </div>
 
-<div class="l-row">
-    <div class="l-order-sm-last l-col-sm-6 l-col-lg-3">
-        <div class="bg-third" style="padding: 1rem; height: 100%;">1:<br>l-order-sm-last<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="l-grid-row" style="margin-bottom: 2rem;">
+    <div class="l-grid-col-order-3 l-grid-col">
+        <div style="padding: 1rem; background-color: #bbd3ff; height: 100%;">1:<br>l-grid-col-order-3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-col-sm-6 l-col-lg-3">
-        <div class="bg-third bg-mild" style="padding: 1rem; height: 100%;">2:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-grid-col-order-1 l-grid-col">
+        <div style="padding: 1rem; background-color: #bbd3ff; height: 100%;">2:<br>l-grid-col-order-1<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-order-xl-first l-col-sm-6 l-col-lg-3">
-        <div class="bg-third" style="padding: 1rem; height: 100%;">3:<br>l-order-xl-first<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-grid-col-order-4 l-grid-col">
+        <div style="padding: 1rem; background-color: #bbd3ff; height: 100%;">3:<br>l-grid-col-order-4<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
-    <div class="l-col-sm-6 l-col-lg-3">
-        <div class="bg-third bg-mild" style="padding: 1rem; height: 100%;">4:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    <div class="l-grid-col-order-2 l-grid-col">
+        <div style="padding: 1rem; background-color: #bbd3ff; height: 100%;">4:<br>l-grid-col-order-2<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    </div>
+</div>
+
+<div class="l-grid-row">
+    <div class="l-grid-col-order-sm-last l-grid-col-sm-6 l-grid-col-lg-3">
+        <div style="padding: 1rem; background-color: #e6d6aa; height: 100%;">1:<br>l-grid-col-order-sm-last<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    </div>
+    <div class="l-grid-col-sm-6 l-grid-col-lg-3">
+        <div style="padding: 1rem; background-color: #e6d6aa; height: 100%;">2:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    </div>
+    <div class="l-grid-col-order-xl-first l-grid-col-sm-6 l-grid-col-lg-3">
+        <div style="padding: 1rem; background-color: #e6d6aa; height: 100%;">3:<br>l-grid-col-order-xl-first<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+    </div>
+    <div class="l-grid-col-sm-6 l-grid-col-lg-3">
+        <div style="padding: 1rem; background-color: #e6d6aa; height: 100%;">4:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
     </div>
 </div>
 ```
 */
 /*doc
 ---
-title: l-offset-(breakpoint)-(column)
-name: grid-05-offset-breakpoint
+title: l-grid-col-offset-(breakpoint)-(column)
+name: grid-05-offset
 category: layout-grid
 parent: grid-02-col
 ---
 
 flexboxによるグリッドのセルの開始位置を、<code>(column) / 12</code>の割合だけ右にずらす。  
-<code>l-col-(column)</code> と、<code>l-offset-(column)</code> の合計値が<code>12</code>を超えてしまうと、セルが右にはみ出す。  
+<code>l-grid-col-(column)</code> と、<code>l-grid-col-offset-(column)</code> の合計値が<code>12</code>を超えた場合は、offsetの値が優先される。  
 (breakpoint)の指定がない場合は、常にその位置となる。  
 (breakpoint)の指定がある場合は、(breakpoint)**以上**のときに、指定した位置となる。
 
 ``` example
-<div class="l-row" style="margin-bottom: 2rem;">
-    <div class="l-offset-1 l-col-10">
-        <div class="bg-first" style="padding: 1rem; height: 100%;">l-offset-3<br>l-col-10<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="l-grid-row" style="margin-bottom: 2rem;">
+    <div class="l-grid-col-offset-1 l-grid-col-10">
+        <div style="padding: 1rem; background-color: #aaeccc; height: 100%;">l-grid-col-offset-3<br>l-grid-col-10<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
 </div>
 
-<div class="l-row" style="margin-bottom: 2rem;">
-    <div class="l-offset-lg-8 l-col-6">
-        <div class="bg-second" style="padding: 1rem; height: 100%;">l-offset-lg-8<br>l-col-6<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+<div class="l-grid-row" style="margin-bottom: 2rem;">
+    <div class="l-grid-col-offset-lg-8 l-grid-col-6">
+        <div style="padding: 1rem; background-color: #aaeccc; height: 100%;">l-grid-col-offset-lg-8<br>l-grid-col-6<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
-    <div class="l-offset-lg-4 l-offset-md-8 l-col-3">
-        <div class="bg-second" style="padding: 1rem; height: 100%;">l-offset-lg-4<br>l-offset-md-8<br>l-col-3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+    <div class="l-grid-col-offset-lg-4 l-grid-col-offset-md-8 l-grid-col-3">
+        <div style="padding: 1rem; background-color: #aaeccc; height: 100%;">l-grid-col-offset-lg-4<br>l-grid-col-offset-md-8<br>l-grid-col-3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
     </div>
 </div>
 
@@ -3665,20 +3687,20 @@ category: module-nav
 </nav><!-- /.nav -->
 
 <h3 class="text-lg margin-t-lg">m-nav-label のみ使用し、ナビゲーションの分割はグリッドにした場合</h3>
-<ul class="l-row l-row-0">
-    <li class="l-col-6 l-col-md">
+<ul class="l-grid-row l-grid-row-0">
+    <li class="l-grid-col-6 l-grid-col-md">
         <a href="#" class="m-nav-label">ボタン</a>
     </li>
-    <li class="l-col-6 l-col-md">
+    <li class="l-grid-col-6 l-grid-col-md">
         <a href="#" class="m-nav-label is-current">現在のページ</a>
     </li>
-    <li class="l-col-4 l-col-md">
+    <li class="l-grid-col-4 l-grid-col-md">
         <a href="#" class="m-nav-label">ボタン</a>
     </li>
-    <li class="l-col-4 l-col-md">
+    <li class="l-grid-col-4 l-grid-col-md">
         <a href="#" class="m-nav-label">ボタン</a>
     </li>
-    <li class="l-col-4 l-col-md">
+    <li class="l-grid-col-4 l-grid-col-md">
         <a href="#" class="m-nav-label">ボタン</a>
     </li>
 </ul>
@@ -5370,8 +5392,8 @@ category: component-card
 </div>
 
 <div style="margin-bottom: 2rem;">
-<div class="l-row">
-    <div class="l-col-6 l-col-md-3" style="padding-bottom: 1rem;">
+<div class="l-grid-row">
+    <div class="l-grid-col-6 l-grid-col-md-3" style="padding-bottom: 1rem;">
         <div class="c-card">
             <a href="#" class="c-card-inner">
                 <div class="m-thumbnail m-thumbnail-ogimage">
@@ -5392,7 +5414,7 @@ category: component-card
             </a>
         </div>
     </div>
-    <div class="l-col-6 l-col-md-3" style="padding-bottom: 1rem;">
+    <div class="l-grid-col-6 l-grid-col-md-3" style="padding-bottom: 1rem;">
         <div class="c-card">
             <a href="#" class="c-card-inner">
                 <div class="m-thumbnail m-thumbnail-ogimage">
@@ -5413,7 +5435,7 @@ category: component-card
             </a>
         </div>
     </div>
-    <div class="l-col-6 l-col-md-3" style="padding-bottom: 1rem;">
+    <div class="l-grid-col-6 l-grid-col-md-3" style="padding-bottom: 1rem;">
         <div class="c-card">
             <a href="#" class="c-card-inner">
                 <div class="m-thumbnail m-thumbnail-ogimage">
@@ -5429,12 +5451,12 @@ category: component-card
                     </picture>
                 </div>
                 <div class="c-card-contents">
-                    <p>l-row, l-col を使用して3カラムに並べました</p>
+                    <p>l-grid-row, l-grid-col を使用して3カラムに並べました</p>
                 </div>
             </a>
         </div>
     </div>
-    <div class="l-col-6 l-col-md-3" style="padding-bottom: 1rem;">
+    <div class="l-grid-col-6 l-grid-col-md-3" style="padding-bottom: 1rem;">
         <div class="c-card">
             <a href="#" class="c-card-inner">
                 <div class="m-thumbnail m-thumbnail-ogimage">
@@ -5458,8 +5480,8 @@ category: component-card
 </div>
 </div>
 
-<div class="l-row">
-    <div class="l-col">
+<div class="l-grid-row">
+    <div class="l-grid-col">
         <div class="c-card bg-first">
             <div class="c-card-inner">
                 <a href="#" class="m-thumbnail m-thumbnail-ogimage">
@@ -5481,7 +5503,7 @@ category: component-card
             </div>
         </div>
     </div>
-    <div class="l-col">
+    <div class="l-grid-col">
         <div class="c-card bg-first">
             <div class="c-card-inner">
                 <a href="#" class="m-thumbnail m-thumbnail-ogimage">
@@ -5516,7 +5538,7 @@ category: component-card
   color: #333;
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
 }
-[class*="l-col"] > .c-card {
+[class*="l-grid-col"] > .c-card {
   max-width: none;
   height: 100%;
 }
@@ -6319,8 +6341,8 @@ category: component-media
 
 
 <div style="margin-bottom: 2rem;">
-<div class="l-row">
-    <div class="l-col-12 l-col-sm-6 l-col-lg-4" style="padding-bottom: 1rem;">
+<div class="l-grid-row">
+    <div class="l-grid-col-12 l-grid-col-sm-6 l-grid-col-lg-4" style="padding-bottom: 1rem;">
         <a href="#" class="c-media">
             <div class="c-media-object">
                 <div class="m-thumbnail">
@@ -6342,7 +6364,7 @@ category: component-media
             </div>
         </a>
     </div>
-    <div class="l-col-12 l-col-sm-6 l-col-lg-4" style="padding-bottom: 1rem;">
+    <div class="l-grid-col-12 l-grid-col-sm-6 l-grid-col-lg-4" style="padding-bottom: 1rem;">
         <a href="#" class="c-media">
             <div class="c-media-object">
                 <div class="m-thumbnail">
@@ -6359,12 +6381,12 @@ category: component-media
                 </div>
             </div>
             <div class="c-media-contents">
-                <p>l-row, l-col を使用して3カラムに並べました</p>
+                <p>l-grid-row, l-grid-col を使用して3カラムに並べました</p>
                 <span class="m-btn m-btn m-btn-first m-btn-outline">ボタン</span>
             </div>
         </a>
     </div>
-    <div class="l-col-12 l-col-sm-6 l-col-lg-4" style="padding-bottom: 1rem;">
+    <div class="l-grid-col-12 l-grid-col-sm-6 l-grid-col-lg-4" style="padding-bottom: 1rem;">
         <a href="#" class="c-media">
             <div class="c-media-object">
                 <div class="m-thumbnail">

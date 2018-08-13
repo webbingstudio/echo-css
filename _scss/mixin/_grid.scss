@@ -1,0 +1,73 @@
+@mixin make-col-flex($size, $columns: $grid-columns) {
+  flex-basis: percentage($size / $columns);
+  max-width: percentage($size / $columns);
+}
+
+@mixin make-col-offset-flex($size, $columns: $grid-columns) {
+  $num: $size / $columns;
+  margin-left: if($num == 0, 0, percentage($num));
+}
+
+@mixin make-grid-columns-flex($columns: $grid-columns, $breakpoints: $grid-breakpoints) {
+  %grid-column {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+
+  @each $breakpoint in map-keys($breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+    @for $i from 1 through $columns {
+      @if ($optimize != true) or ( ($optimize == true) and ( $i > 1 ) and ( $i < $grid-columns-max ) ) {
+        .#{$pr}#{$col}#{$infix}-#{$i} {
+          @extend %grid-column;
+        }
+      }
+    }
+    .#{$pr}#{$col}#{$infix},
+    .#{$pr}#{$col}#{$infix}-auto {
+      @extend %grid-column;
+    }
+
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      .#{$pr}#{$col}#{$infix} {
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%;
+      }
+
+      .#{$pr}#{$col}#{$infix}-auto {
+        width: auto;
+        max-width: none;
+      }
+
+      @for $i from 1 through $columns {
+        @if ($optimize != true) or ( ($optimize == true) and ( $i > 1 ) and ( $i < $grid-columns-max ) ) {
+          .#{$pr}#{$col}#{$infix}-#{$i} {
+            @include make-col-flex($i, $columns);
+          }
+        }
+      }
+
+      .#{$pr}#{$col}-order#{$infix}-first { order: -1; }
+
+      .#{$pr}#{$col}-order#{$infix}-last { order: $columns + 1; }
+
+      @for $i from 0 through $columns {
+        .#{$pr}#{$col}-order#{$infix}-#{$i} { order: $i; }
+      }
+
+      @for $i from 0 through ($columns - 1) {
+        @if ($optimize != true) or ( ($optimize == true) and ( $i < $grid-columns-max ) ) {
+          @if not ($infix == "" and $i == 0) {
+            .#{$pr}#{$col}-offset#{$infix}-#{$i} {
+              @include make-col-offset-flex($i, $columns);
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
