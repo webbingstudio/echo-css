@@ -1,13 +1,13 @@
 /*doc
 ---
-title: .#{$widget}
+title: #{$widget}
 name: #{$widget}
-category: project-widget
+category: project-#{$widget}
 ---
 
 新着情報など、サイト内で配置が不定となる可能性があるパーツを表示する。  
-必ず他のobjectが含まれる。  
-このクラス単独では、下余白や <code>position: relative</code> の指定のみを行う。
+必ず他のオブジェクトが含まれる。  
+このクラス単独では、余白や <code>position: relative</code> の指定のみを行う。
 
 ``` example
 <div class="#{$widget}">
@@ -16,11 +16,11 @@ category: project-widget
     </div><!-- /.#{$widget}-header -->
 
     <div class="#{$widget}-contents">
-        <div style="padding: 1rem; text-align:center; background-color: #eeffdd;">(#{$widget}-contents)</div>
+        <div style="padding: 1rem; text-align:center; background-color: #e4fcd0;">(#{$widget}-contents)</div>
     </div><!-- /.#{$widget}-contents -->
 
     <div class="#{$widget}-footer">
-        <div style="padding: 1rem; text-align:center; background-color: #ffddee;">(#{$widget}-footer)</div>
+        <div style="padding: 1rem; text-align:center; background-color: #ffe6f3;">(#{$widget}-footer)</div>
     </div><!-- /.#{$widget}-footer -->
 
 </div><!-- /.#{$widget} -->
@@ -31,11 +31,11 @@ category: project-widget
     </div><!-- /.#{$widget}-header -->
 
     <div class="#{$widget}-contents">
-        <div style="padding: 1rem; text-align:center; background-color: #eeffdd;">(#{$widget}-contents)</div>
+        <div style="padding: 1rem; text-align:center; background-color: #e4fcd0;">(#{$widget}-contents)</div>
     </div><!-- /.#{$widget}-contents -->
 
     <div class="#{$widget}-footer">
-        <div style="padding: 1rem; text-align:center; background-color: #ffddee;">(#{$widget}-footer)</div>
+        <div style="padding: 1rem; text-align:center; background-color: #ffe6f3;">(#{$widget}-footer)</div>
     </div><!-- /.#{$widget}-footer -->
 
 </div><!-- /.#{$widget} -->
@@ -44,14 +44,14 @@ category: project-widget
 */
 
 .#{$widget} {
-    margin-bottom: ($spacer * 2);
+    margin-bottom: ($spacer * 3);
 
-    @include media-breakpoint-up(sm) {
-        margin-bottom: ($spacer * 3);
+    &:last-child {
+        margin-bottom: 0;
     }
 
     @include media-breakpoint-up(lg) {
-        margin-bottom: ($spacer * 4);
+        margin-bottom: ($spacer * 4.5);
     }
 
     .#{$widget}-header,
@@ -61,41 +61,103 @@ category: project-widget
         @include clearfix();
     }
 
-}
-
-
-
-
-.#{$widget}-sm {
-    padding-top: ($spacer * 2);
-    padding-bottom: ($spacer * 1);
-
-    @include media-breakpoint-up(md) {
-        padding-top: ($spacer * 4);
-        padding-bottom: ($spacer * 2);
-    }
-
-    @include media-breakpoint-up(xl) {
-        padding-top: ($spacer * 6);
-        padding-bottom: ($spacer * 3);
-    }
-
     .#{$widget}-header {
         padding-bottom: ($spacer * 2);
-
-        @include media-breakpoint-up(lg) {
-            padding-bottom: ($spacer * 3);
-        }
-
     }
 
     .#{$widget}-footer {
         padding-top: ($spacer * 2);
+    }
 
-        @include media-breakpoint-up(lg) {
-            padding-top: ($spacer * 3);
-        }
+}
 
+
+/*doc
+---
+title: #{$widget}-(size)
+name: #{$widget}-size
+category: project-#{$widget}
+parent: #{$widget};
+---
+
+ウィジェットのサイズを変える。(size)は、 <code>sm, lg</code> に対応している。
+
+``` example
+<div class="#{$widget} #{$widget}-sm">
+    <div class="#{$widget}-header">
+        <div style="padding: 1rem; text-align:center; background-color: #ddeeff;">(#{$widget}-header)</div>
+    </div><!-- /.#{$widget}-header -->
+
+    <div class="#{$widget}-contents">
+        <div style="padding: 1rem; text-align:center; background-color: #e4fcd0;">(#{$widget}-contents)</div>
+    </div><!-- /.#{$widget}-contents -->
+
+    <div class="#{$widget}-footer">
+        <div style="padding: 1rem; text-align:center; background-color: #ffe6f3;">(#{$widget}-footer)</div>
+    </div><!-- /.#{$widget}-footer -->
+
+</div><!-- /.#{$widget} -->
+
+<div class="#{$widget} #{$widget}-lg">
+    <div class="#{$widget}-header">
+        <div style="padding: 1rem; text-align:center; background-color: #ddeeff;">(#{$widget}-header)</div>
+    </div><!-- /.#{$widget}-header -->
+
+    <div class="#{$widget}-contents">
+        <div style="padding: 1rem; text-align:center; background-color: #e4fcd0;">(#{$widget}-contents)</div>
+    </div><!-- /.#{$widget}-contents -->
+
+    <div class="#{$widget}-footer">
+        <div style="padding: 1rem; text-align:center; background-color: #ffe6f3;">(#{$widget}-footer)</div>
+    </div><!-- /.#{$widget}-footer -->
+
+</div><!-- /.#{$widget} -->
+```
+
+*/
+
+.#{$widget}-sm {
+    margin-bottom: ($spacer * 2);
+
+    @include media-breakpoint-up(lg) {
+        margin-bottom: ($spacer * 3);
+    }
+
+    .#{$widget}-header,
+    .#{$widget}-contents,
+    .#{$widget}-footer {
+        font-size: $font-size-sm;
+    }
+
+    .#{$widget}-header {
+        padding-bottom: ($spacer * 1.5);
+    }
+
+    .#{$widget}-footer {
+        padding-top: ($spacer * 1.5);
+    }
+
+}
+
+.#{$widget}-lg {
+    margin-bottom: ($spacer * 4.5);
+
+    @include media-breakpoint-up(lg) {
+        margin-bottom: ($spacer * 6);
+    }
+
+    .#{$widget}-header,
+    .#{$widget}-contents,
+    .#{$widget}-footer {
+        font-size: $font-size-lg;
+    }
+
+    .#{$widget}-header {
+        padding-bottom: ($spacer * 3);
+    }
+
+    .#{$widget}-footer {
+        padding-top: ($spacer * 3);
     }
 
 }

@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * echo.css - version 0.8.0 (under construction)
+ * echo.css - version 0.9.0 (under construction)
  * 
  * "echo" is CSS framework, built with consider CMS theming in East asian countries.
  * 
@@ -3754,7 +3754,7 @@ category: module-nav
   min-height: 3em;
   color: #333;
   padding: .25em 1em;
-  font-size: 1rem;
+  font-size: .875rem;
   line-height: 1;
   transition: .3s all;
   cursor: pointer;
@@ -3762,7 +3762,7 @@ category: module-nav
 @media (min-width: 425px) {
   .m-nav-label,
   .m-nav > ul li a {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 }
 a.m-nav-label, .m-nav > ul li a {
@@ -8431,111 +8431,165 @@ parent: title
 
 /*doc
 ---
-title: .p-widget
-name: p-widget
+title: widget
+name: widget
 category: project-widget
 ---
 
 新着情報など、サイト内で配置が不定となる可能性があるパーツを表示する。  
-必ず他のobjectが含まれる。  
-このクラス単独では、下余白や <code>position: relative</code> の指定のみを行う。
+必ず他のオブジェクトが含まれる。  
+このクラス単独では、余白や <code>position: relative</code> の指定のみを行う。
 
 ``` example
-<div class="p-widget">
-    <div class="p-widget-header">
-        <div style="padding: 1rem; text-align:center; background-color: #ddeeff;">(p-widget-header)</div>
-    </div><!-- /.p-widget-header -->
+<div class="widget">
+    <div class="widget-header">
+        <div style="padding: 1rem; text-align:center; background-color: #ddeeff;">(widget-header)</div>
+    </div><!-- /.widget-header -->
 
-    <div class="p-widget-contents">
-        <div style="padding: 1rem; text-align:center; background-color: #eeffdd;">(p-widget-contents)</div>
-    </div><!-- /.p-widget-contents -->
+    <div class="widget-contents">
+        <div style="padding: 1rem; text-align:center; background-color: #e4fcd0;">(widget-contents)</div>
+    </div><!-- /.widget-contents -->
 
-    <div class="p-widget-footer">
-        <div style="padding: 1rem; text-align:center; background-color: #ffddee;">(p-widget-footer)</div>
-    </div><!-- /.p-widget-footer -->
+    <div class="widget-footer">
+        <div style="padding: 1rem; text-align:center; background-color: #ffe6f3;">(widget-footer)</div>
+    </div><!-- /.widget-footer -->
 
-</div><!-- /.p-widget -->
+</div><!-- /.widget -->
 
-<div class="p-widget">
-    <div class="p-widget-header">
-        <div style="padding: 1rem; text-align:center; background-color: #ddeeff;">(p-widget-header)</div>
-    </div><!-- /.p-widget-header -->
+<div class="widget">
+    <div class="widget-header">
+        <div style="padding: 1rem; text-align:center; background-color: #ddeeff;">(widget-header)</div>
+    </div><!-- /.widget-header -->
 
-    <div class="p-widget-contents">
-        <div style="padding: 1rem; text-align:center; background-color: #eeffdd;">(p-widget-contents)</div>
-    </div><!-- /.p-widget-contents -->
+    <div class="widget-contents">
+        <div style="padding: 1rem; text-align:center; background-color: #e4fcd0;">(widget-contents)</div>
+    </div><!-- /.widget-contents -->
 
-    <div class="p-widget-footer">
-        <div style="padding: 1rem; text-align:center; background-color: #ffddee;">(p-widget-footer)</div>
-    </div><!-- /.p-widget-footer -->
+    <div class="widget-footer">
+        <div style="padding: 1rem; text-align:center; background-color: #ffe6f3;">(widget-footer)</div>
+    </div><!-- /.widget-footer -->
 
-</div><!-- /.p-widget -->
+</div><!-- /.widget -->
 ```
 
 */
-.p-widget {
-  margin-bottom: 20px;
+.widget {
+  margin-bottom: 30px;
 }
-@media (min-width: 425px) {
-  .p-widget {
-    margin-bottom: 30px;
-  }
+.widget:last-child {
+  margin-bottom: 0;
 }
 @media (min-width: 1000px) {
-  .p-widget {
-    margin-bottom: 40px;
+  .widget {
+    margin-bottom: 45px;
   }
 }
-.p-widget .p-widget-header,
-.p-widget .p-widget-contents,
-.p-widget .p-widget-footer {
+.widget .widget-header,
+.widget .widget-contents,
+.widget .widget-footer {
   position: relative;
 }
-.p-widget .p-widget-header:before, .p-widget .p-widget-header:after,
-.p-widget .p-widget-contents:before,
-.p-widget .p-widget-contents:after,
-.p-widget .p-widget-footer:before,
-.p-widget .p-widget-footer:after {
+.widget .widget-header:before, .widget .widget-header:after,
+.widget .widget-contents:before,
+.widget .widget-contents:after,
+.widget .widget-footer:before,
+.widget .widget-footer:after {
   content: "";
   display: table;
 }
-.p-widget .p-widget-header:after,
-.p-widget .p-widget-contents:after,
-.p-widget .p-widget-footer:after {
+.widget .widget-header:after,
+.widget .widget-contents:after,
+.widget .widget-footer:after {
   clear: both;
 }
-
-.p-widget-sm {
-  padding-top: 20px;
-  padding-bottom: 10px;
-}
-@media (min-width: 768px) {
-  .p-widget-sm {
-    padding-top: 40px;
-    padding-bottom: 20px;
-  }
-}
-@media (min-width: 1240px) {
-  .p-widget-sm {
-    padding-top: 60px;
-    padding-bottom: 30px;
-  }
-}
-.p-widget-sm .p-widget-header {
+.widget .widget-header {
   padding-bottom: 20px;
 }
-@media (min-width: 1000px) {
-  .p-widget-sm .p-widget-header {
-    padding-bottom: 30px;
-  }
-}
-.p-widget-sm .p-widget-footer {
+.widget .widget-footer {
   padding-top: 20px;
 }
+
+/*doc
+---
+title: widget-(size)
+name: widget-size
+category: project-widget
+parent: widget;
+---
+
+ウィジェットのサイズを変える。(size)は、 <code>sm, lg</code> に対応している。
+
+``` example
+<div class="widget widget-sm">
+    <div class="widget-header">
+        <div style="padding: 1rem; text-align:center; background-color: #ddeeff;">(widget-header)</div>
+    </div><!-- /.widget-header -->
+
+    <div class="widget-contents">
+        <div style="padding: 1rem; text-align:center; background-color: #e4fcd0;">(widget-contents)</div>
+    </div><!-- /.widget-contents -->
+
+    <div class="widget-footer">
+        <div style="padding: 1rem; text-align:center; background-color: #ffe6f3;">(widget-footer)</div>
+    </div><!-- /.widget-footer -->
+
+</div><!-- /.widget -->
+
+<div class="widget widget-lg">
+    <div class="widget-header">
+        <div style="padding: 1rem; text-align:center; background-color: #ddeeff;">(widget-header)</div>
+    </div><!-- /.widget-header -->
+
+    <div class="widget-contents">
+        <div style="padding: 1rem; text-align:center; background-color: #e4fcd0;">(widget-contents)</div>
+    </div><!-- /.widget-contents -->
+
+    <div class="widget-footer">
+        <div style="padding: 1rem; text-align:center; background-color: #ffe6f3;">(widget-footer)</div>
+    </div><!-- /.widget-footer -->
+
+</div><!-- /.widget -->
+```
+
+*/
+.widget-sm {
+  margin-bottom: 20px;
+}
 @media (min-width: 1000px) {
-  .p-widget-sm .p-widget-footer {
-    padding-top: 30px;
+  .widget-sm {
+    margin-bottom: 30px;
   }
+}
+.widget-sm .widget-header,
+.widget-sm .widget-contents,
+.widget-sm .widget-footer {
+  font-size: 0.875rem;
+}
+.widget-sm .widget-header {
+  padding-bottom: 15px;
+}
+.widget-sm .widget-footer {
+  padding-top: 15px;
+}
+
+.widget-lg {
+  margin-bottom: 45px;
+}
+@media (min-width: 1000px) {
+  .widget-lg {
+    margin-bottom: 60px;
+  }
+}
+.widget-lg .widget-header,
+.widget-lg .widget-contents,
+.widget-lg .widget-footer {
+  font-size: 1.125rem;
+}
+.widget-lg .widget-header {
+  padding-bottom: 30px;
+}
+.widget-lg .widget-footer {
+  padding-top: 30px;
 }
 
 /*doc
