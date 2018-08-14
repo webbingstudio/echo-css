@@ -10,117 +10,117 @@ category: utility-margin
 ブロック要素の外部余白を変更する。
 
 ``` example
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}x#{$c3}a" style="background-color: rgba(255,255,255,.35); width: 50%;">#{$pr}#{$u}margin#{$c3}x#{$c3}a</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}x#{$c3}auto" style="background-color: rgba(255,255,255,.35); width: 50%;">#{$pr}#{$u}margin#{$c2}x#{$c3}auto</div></div>
 
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}xs" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}xs</div></div>
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}t#{$c3}xs" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}t#{$c3}xs</div></div>
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}r#{$c3}xs" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}r#{$c3}xs</div></div>
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}b#{$c3}xs" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}b#{$c3}xs</div></div>
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}l#{$c3}xs" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}l#{$c3}xs</div></div>
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}x#{$c3}xs" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}x#{$c3}xs</div></div>
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}y#{$c3}xs" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}y#{$c3}xs</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}xs" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}xs</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}top#{$c3}xs" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}top#{$c3}xs</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}right#{$c3}xs" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}right#{$c3}xs</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}bottom#{$c3}xs" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}bottom#{$c3}xs</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}left#{$c3}xs" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}left#{$c3}xs</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}x#{$c3}xs" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}x#{$c3}xs</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}y#{$c3}xs" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}y#{$c3}xs</div></div>
 
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}sm" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}sm</div></div>
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}t#{$c3}sm" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}t#{$c3}sm</div></div>
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}r#{$c3}sm" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}r#{$c3}sm</div></div>
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}b#{$c3}sm</div></div>
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}l#{$c3}sm" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}l#{$c3}sm</div></div>
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}x#{$c3}sm" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}x#{$c3}sm</div></div>
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}y#{$c3}sm" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}y#{$c3}sm</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}sm" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}sm</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}top#{$c3}sm" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}top#{$c3}sm</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}right#{$c3}sm" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}right#{$c3}sm</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}bottom#{$c3}sm" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}bottom#{$c3}sm</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}left#{$c3}sm" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}left#{$c3}sm</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}x#{$c3}sm" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}x#{$c3}sm</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}y#{$c3}sm" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}y#{$c3}sm</div></div>
 
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}m" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}m</div></div>
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}t" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}t</div></div>
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}r" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}r</div></div>
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}b" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}b</div></div>
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}l" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}l</div></div>
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}x" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}x</div></div>
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}y" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}y</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}m#{$c3}md" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}md</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}top#{$c3}md" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}top#{$c3}md</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}right#{$c3}md" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}right#{$c3}md</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}bottom#{$c3}md" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}bottom#{$c3}md</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}left#{$c3}md" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}left#{$c3}md</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}x#{$c3}md" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}x#{$c3}md</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}y#{$c3}md" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}y#{$c3}md</div></div>
 
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}lg" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}lg</div></div>
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}t#{$c3}lg" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}t#{$c3}lg</div></div>
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}r#{$c3}lg" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}r#{$c3}lg</div></div>
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}b#{$c3}lg" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}b#{$c3}lg</div></div>
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}l#{$c3}lg" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}l#{$c3}lg</div></div>
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}x#{$c3}lg" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}x#{$c3}lg</div></div>
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}y#{$c3}lg" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}y#{$c3}lg</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}lg" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}lg</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}top#{$c3}lg" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}top#{$c3}lg</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}right#{$c3}lg" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}right#{$c3}lg</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}bottom#{$c3}lg" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}bottom#{$c3}lg</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}left#{$c3}lg" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}left#{$c3}lg</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}x#{$c3}lg" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}x#{$c3}lg</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}y#{$c3}lg" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}y#{$c3}lg</div></div>
 
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}xl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}xl</div></div>
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}t#{$c3}xl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}t#{$c3}xl</div></div>
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}r#{$c3}xl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}r#{$c3}xl</div></div>
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}b#{$c3}xl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}b#{$c3}xl</div></div>
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}l#{$c3}xl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}l#{$c3}xl</div></div>
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}x#{$c3}xl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}x#{$c3}xl</div></div>
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}y#{$c3}xl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}y#{$c3}xl</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}xl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}xl</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}top#{$c3}xl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}top#{$c3}xl</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}right#{$c3}xl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}right#{$c3}xl</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}bottom#{$c3}xl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}bottom#{$c3}xl</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}left#{$c3}xl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}left#{$c3}xl</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}x#{$c3}xl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}x#{$c3}xl</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}y#{$c3}xl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}y#{$c3}xl</div></div>
 
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}xxl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}xxl</div></div>
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}t#{$c3}xxl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}t#{$c3}xxl</div></div>
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}r#{$c3}xxl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}r#{$c3}xxl</div></div>
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}b#{$c3}xxl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}b#{$c3}xxl</div></div>
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}l#{$c3}xxl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}l#{$c3}xxl</div></div>
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}x#{$c3}xxl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}x#{$c3}xxl</div></div>
-<div class="#{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}y#{$c3}xxl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}y#{$c3}xxl</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}xxl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}xxl</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}top#{$c3}xxl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}top#{$c3}xxl</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}right#{$c3}xxl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}right#{$c3}xxl</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}bottom#{$c3}xxl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}bottom#{$c3}xxl</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}left#{$c3}xxl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}left#{$c3}xxl</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}x#{$c3}xxl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}x#{$c3}xxl</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}y#{$c3}xxl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}y#{$c3}xxl</div></div>
 ```
 */
 
 #{$u-wrap} {
 
-	.#{$pr}#{$u}margin#{$c3}x#{$c3}a { margin-right:  auto; margin-left:   auto }
+	.#{$pr}#{$u}margin#{$c2}x#{$c3}auto     { margin-right:  auto; margin-left:   auto }
 
-	.#{$pr}#{$u}margin#{$c3}0        { margin:        0 }
-	.#{$pr}#{$u}margin#{$c3}t#{$c3}0 { margin-top:    0 }
-	.#{$pr}#{$u}margin#{$c3}r#{$c3}0 { margin-right:  0 }
-	.#{$pr}#{$u}margin#{$c3}b#{$c3}0 { margin-bottom: 0 }
-	.#{$pr}#{$u}margin#{$c3}l#{$c3}0 { margin-left:   0 }
-	.#{$pr}#{$u}margin#{$c3}x#{$c3}0 { margin-right:  0; margin-left:   0 }
-	.#{$pr}#{$u}margin#{$c3}y#{$c3}0 { margin-top:    0; margin-bottom: 0 }
+	.#{$pr}#{$u}margin#{$c3}0               { margin:        0 }
+	.#{$pr}#{$u}margin#{$c2}top#{$c3}0      { margin-top:    0 }
+	.#{$pr}#{$u}margin#{$c2}right#{$c3}0    { margin-right:  0 }
+	.#{$pr}#{$u}margin#{$c2}bottom#{$c3}0   { margin-bottom: 0 }
+	.#{$pr}#{$u}margin#{$c2}left#{$c3}0     { margin-left:   0 }
+	.#{$pr}#{$u}margin#{$c2}x#{$c3}0        { margin-right:  0; margin-left:   0 }
+	.#{$pr}#{$u}margin#{$c2}y#{$c3}0        { margin-top:    0; margin-bottom: 0 }
 
-	.#{$pr}#{$u}margin#{$c3}xs        { margin:        ($spacer * .5) }
-	.#{$pr}#{$u}margin#{$c3}t#{$c3}xs { margin-top:    ($spacer * .5) }
-	.#{$pr}#{$u}margin#{$c3}r#{$c3}xs { margin-right:  ($spacer * .5) }
-	.#{$pr}#{$u}margin#{$c3}b#{$c3}xs { margin-bottom: ($spacer * .5) }
-	.#{$pr}#{$u}margin#{$c3}l#{$c3}xs { margin-left:   ($spacer * .5) }
-	.#{$pr}#{$u}margin#{$c3}x#{$c3}xs { margin-right:  ($spacer * .5); margin-left:   ($spacer * .5) }
-	.#{$pr}#{$u}margin#{$c3}y#{$c3}xs { margin-top:    ($spacer * .5); margin-bottom: ($spacer * .5) }
+	.#{$pr}#{$u}margin#{$c3}xs              { margin:        ($spacer * .5) }
+	.#{$pr}#{$u}margin#{$c2}top#{$c3}xs     { margin-top:    ($spacer * .5) }
+	.#{$pr}#{$u}margin#{$c2}right#{$c3}xs   { margin-right:  ($spacer * .5) }
+	.#{$pr}#{$u}margin#{$c2}bottom#{$c3}xs  { margin-bottom: ($spacer * .5) }
+	.#{$pr}#{$u}margin#{$c2}left#{$c3}xs    { margin-left:   ($spacer * .5) }
+	.#{$pr}#{$u}margin#{$c2}x#{$c3}xs       { margin-right:  ($spacer * .5); margin-left:   ($spacer * .5) }
+	.#{$pr}#{$u}margin#{$c2}y#{$c3}xs       { margin-top:    ($spacer * .5); margin-bottom: ($spacer * .5) }
 
-	.#{$pr}#{$u}margin#{$c3}sm        { margin:        $spacer }
-	.#{$pr}#{$u}margin#{$c3}t#{$c3}sm { margin-top:    $spacer }
-	.#{$pr}#{$u}margin#{$c3}r#{$c3}sm { margin-right:  $spacer }
-	.#{$pr}#{$u}margin#{$c3}b#{$c3}sm { margin-bottom: $spacer }
-	.#{$pr}#{$u}margin#{$c3}l#{$c3}sm { margin-left:   $spacer }
-	.#{$pr}#{$u}margin#{$c3}x#{$c3}sm { margin-right:  $spacer; margin-left:   $spacer }
-	.#{$pr}#{$u}margin#{$c3}y#{$c3}sm { margin-top:    $spacer; margin-bottom: $spacer }
+	.#{$pr}#{$u}margin#{$c3}sm              { margin:        $spacer }
+	.#{$pr}#{$u}margin#{$c2}top#{$c3}sm     { margin-top:    $spacer }
+	.#{$pr}#{$u}margin#{$c2}right#{$c3}sm   { margin-right:  $spacer }
+	.#{$pr}#{$u}margin#{$c2}bottom#{$c3}sm  { margin-bottom: $spacer }
+	.#{$pr}#{$u}margin#{$c2}left#{$c3}sm    { margin-left:   $spacer }
+	.#{$pr}#{$u}margin#{$c2}x#{$c3}sm       { margin-right:  $spacer; margin-left:   $spacer }
+	.#{$pr}#{$u}margin#{$c2}y#{$c3}sm       { margin-top:    $spacer; margin-bottom: $spacer }
 
-	.#{$pr}#{$u}margin        { margin:        ($spacer * 1.5) }
-	.#{$pr}#{$u}margin#{$c3}t { margin-top:    ($spacer * 1.5) }
-	.#{$pr}#{$u}margin#{$c3}r { margin-right:  ($spacer * 1.5) }
-	.#{$pr}#{$u}margin#{$c3}b { margin-bottom: ($spacer * 1.5) }
-	.#{$pr}#{$u}margin#{$c3}l { margin-left:   ($spacer * 1.5) }
-	.#{$pr}#{$u}margin#{$c3}x { margin-right:  ($spacer * 1.5); margin-left:   ($spacer * 1.5) }
-	.#{$pr}#{$u}margin#{$c3}y { margin-top:    ($spacer * 1.5); margin-bottom: ($spacer * 1.5) }
+	.#{$pr}#{$u}margin#{$c3}md              { margin:        ($spacer * 1.5) }
+	.#{$pr}#{$u}margin#{$c2}top#{$c3}md     { margin-top:    ($spacer * 1.5) }
+	.#{$pr}#{$u}margin#{$c2}right#{$c3}md   { margin-right:  ($spacer * 1.5) }
+	.#{$pr}#{$u}margin#{$c2}bottom#{$c3}md  { margin-bottom: ($spacer * 1.5) }
+	.#{$pr}#{$u}margin#{$c2}left#{$c3}md    { margin-left:   ($spacer * 1.5) }
+	.#{$pr}#{$u}margin#{$c3}x#{$c3}md       { margin-right:  ($spacer * 1.5); margin-left:   ($spacer * 1.5) }
+	.#{$pr}#{$u}margin#{$c3}y#{$c3}md       { margin-top:    ($spacer * 1.5); margin-bottom: ($spacer * 1.5) }
 
-	.#{$pr}#{$u}margin#{$c3}lg        { margin:        ($spacer * 3) }
-	.#{$pr}#{$u}margin#{$c3}t#{$c3}lg { margin-top:    ($spacer * 3) }
-	.#{$pr}#{$u}margin#{$c3}r#{$c3}lg { margin-right:  ($spacer * 3) }
-	.#{$pr}#{$u}margin#{$c3}b#{$c3}lg { margin-bottom: ($spacer * 3) }
-	.#{$pr}#{$u}margin#{$c3}l#{$c3}lg { margin-left:   ($spacer * 3) }
-	.#{$pr}#{$u}margin#{$c3}x#{$c3}lg { margin-right:  ($spacer * 3); margin-left:   ($spacer * 3) }
-	.#{$pr}#{$u}margin#{$c3}y#{$c3}lg { margin-top:    ($spacer * 3); margin-bottom: ($spacer * 3) }
+	.#{$pr}#{$u}margin#{$c3}lg              { margin:        ($spacer * 3) }
+	.#{$pr}#{$u}margin#{$c2}top#{$c3}lg     { margin-top:    ($spacer * 3) }
+	.#{$pr}#{$u}margin#{$c2}right#{$c3}lg   { margin-right:  ($spacer * 3) }
+	.#{$pr}#{$u}margin#{$c2}bottom#{$c3}lg  { margin-bottom: ($spacer * 3) }
+	.#{$pr}#{$u}margin#{$c2}left#{$c3}lg    { margin-left:   ($spacer * 3) }
+	.#{$pr}#{$u}margin#{$c2}x#{$c3}lg       { margin-right:  ($spacer * 3); margin-left:   ($spacer * 3) }
+	.#{$pr}#{$u}margin#{$c2}y#{$c3}lg       { margin-top:    ($spacer * 3); margin-bottom: ($spacer * 3) }
 
-	.#{$pr}#{$u}margin#{$c3}xl        { margin:        ($spacer * 4.5) }
-	.#{$pr}#{$u}margin#{$c3}t#{$c3}xl { margin-top:    ($spacer * 4.5) }
-	.#{$pr}#{$u}margin#{$c3}r#{$c3}xl { margin-right:  ($spacer * 4.5) }
-	.#{$pr}#{$u}margin#{$c3}b#{$c3}xl { margin-bottom: ($spacer * 4.5) }
-	.#{$pr}#{$u}margin#{$c3}l#{$c3}xl { margin-left:   ($spacer * 4.5) }
-	.#{$pr}#{$u}margin#{$c3}x#{$c3}xl { margin-right:  ($spacer * 4.5); margin-left:   ($spacer * 4.5) }
-	.#{$pr}#{$u}margin#{$c3}y#{$c3}xl { margin-top:    ($spacer * 4.5); margin-bottom: ($spacer * 4.5) }
+	.#{$pr}#{$u}margin#{$c3}xl              { margin:        ($spacer * 4.5) }
+	.#{$pr}#{$u}margin#{$c2}top#{$c3}xl     { margin-top:    ($spacer * 4.5) }
+	.#{$pr}#{$u}margin#{$c2}right#{$c3}xl   { margin-right:  ($spacer * 4.5) }
+	.#{$pr}#{$u}margin#{$c2}bottom#{$c3}xl  { margin-bottom: ($spacer * 4.5) }
+	.#{$pr}#{$u}margin#{$c2}left#{$c3}xl    { margin-left:   ($spacer * 4.5) }
+	.#{$pr}#{$u}margin#{$c2}x#{$c3}xl       { margin-right:  ($spacer * 4.5); margin-left:   ($spacer * 4.5) }
+	.#{$pr}#{$u}margin#{$c2}y#{$c3}xl       { margin-top:    ($spacer * 4.5); margin-bottom: ($spacer * 4.5) }
 
-	.#{$pr}#{$u}margin#{$c3}xxl        { margin:        ($spacer * 6) }
-	.#{$pr}#{$u}margin#{$c3}t#{$c3}xxl { margin-top:    ($spacer * 6) }
-	.#{$pr}#{$u}margin#{$c3}r#{$c3}xxl { margin-right:  ($spacer * 6) }
-	.#{$pr}#{$u}margin#{$c3}b#{$c3}xxl { margin-bottom: ($spacer * 6) }
-	.#{$pr}#{$u}margin#{$c3}l#{$c3}xxl { margin-left:   ($spacer * 6) }
-	.#{$pr}#{$u}margin#{$c3}x#{$c3}xxl { margin-right:  ($spacer * 6); margin-left:   ($spacer * 6) }
-	.#{$pr}#{$u}margin#{$c3}y#{$c3}xxl { margin-top:    ($spacer * 6); margin-bottom: ($spacer * 6) }
+	.#{$pr}#{$u}margin#{$c3}xxl             { margin:        ($spacer * 6) }
+	.#{$pr}#{$u}margin#{$c2}top#{$c3}xxl    { margin-top:    ($spacer * 6) }
+	.#{$pr}#{$u}margin#{$c2}right#{$c3}xxl  { margin-right:  ($spacer * 6) }
+	.#{$pr}#{$u}margin#{$c2}bottom#{$c3}xxl { margin-bottom: ($spacer * 6) }
+	.#{$pr}#{$u}margin#{$c2}left#{$c3}xxl   { margin-left:   ($spacer * 6) }
+	.#{$pr}#{$u}margin#{$c2}x#{$c3}xxl      { margin-right:  ($spacer * 6); margin-left:   ($spacer * 6) }
+	.#{$pr}#{$u}margin#{$c2}y#{$c3}xxl      { margin-top:    ($spacer * 6); margin-bottom: ($spacer * 6) }
 
 }
 

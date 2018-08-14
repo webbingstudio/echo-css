@@ -11,32 +11,32 @@ category: project-#{$widget}
 
 ``` example
 <div class="#{$widget}">
-    <div class="#{$widget}-header">
-        <div style="padding: 1rem; text-align:center; background-color: #ddeeff;">(#{$widget}-header)</div>
-    </div><!-- /.#{$widget}-header -->
+    <div class="#{$widget}#{$c1}header">
+        <div style="padding: 1rem; text-align:center; background-color: #ddeeff;">(#{$widget}#{$c1}header)</div>
+    </div><!-- /.#{$widget}#{$c1}header -->
 
-    <div class="#{$widget}-contents">
-        <div style="padding: 1rem; text-align:center; background-color: #e4fcd0;">(#{$widget}-contents)</div>
-    </div><!-- /.#{$widget}-contents -->
+    <div class="#{$widget}#{$c1}contents">
+        <div style="padding: 1rem; text-align:center; background-color: #e4fcd0;">(#{$widget}#{$c1}contents)</div>
+    </div><!-- /.#{$widget}#{$c1}contents -->
 
-    <div class="#{$widget}-footer">
-        <div style="padding: 1rem; text-align:center; background-color: #ffe6f3;">(#{$widget}-footer)</div>
-    </div><!-- /.#{$widget}-footer -->
+    <div class="#{$widget}#{$c1}footer">
+        <div style="padding: 1rem; text-align:center; background-color: #ffe6f3;">(#{$widget}#{$c1}footer)</div>
+    </div><!-- /.#{$widget}#{$c1}footer -->
 
 </div><!-- /.#{$widget} -->
 
 <div class="#{$widget}">
-    <div class="#{$widget}-header">
-        <div style="padding: 1rem; text-align:center; background-color: #ddeeff;">(#{$widget}-header)</div>
-    </div><!-- /.#{$widget}-header -->
+    <div class="#{$widget}#{$c1}header">
+        <div style="padding: 1rem; text-align:center; background-color: #ddeeff;">(#{$widget}#{$c1}header)</div>
+    </div><!-- /.#{$widget}#{$c1}header -->
 
-    <div class="#{$widget}-contents">
-        <div style="padding: 1rem; text-align:center; background-color: #e4fcd0;">(#{$widget}-contents)</div>
-    </div><!-- /.#{$widget}-contents -->
+    <div class="#{$widget}#{$c1}contents">
+        <div style="padding: 1rem; text-align:center; background-color: #e4fcd0;">(#{$widget}#{$c1}contents)</div>
+    </div><!-- /.#{$widget}#{$c1}contents -->
 
-    <div class="#{$widget}-footer">
-        <div style="padding: 1rem; text-align:center; background-color: #ffe6f3;">(#{$widget}-footer)</div>
-    </div><!-- /.#{$widget}-footer -->
+    <div class="#{$widget}#{$c1}footer">
+        <div style="padding: 1rem; text-align:center; background-color: #ffe6f3;">(#{$widget}#{$c1}footer)</div>
+    </div><!-- /.#{$widget}#{$c1}footer -->
 
 </div><!-- /.#{$widget} -->
 ```
@@ -54,18 +54,18 @@ category: project-#{$widget}
         margin-bottom: ($spacer * 4.5);
     }
 
-    .#{$widget}-header,
-    .#{$widget}-contents,
-    .#{$widget}-footer {
+    .#{$widget}#{$c1}header,
+    .#{$widget}#{$c1}contents,
+    .#{$widget}#{$c1}footer {
         position: relative;
         @include clearfix();
     }
 
-    .#{$widget}-header {
+    .#{$widget}#{$c1}header {
         padding-bottom: ($spacer * 2);
     }
 
-    .#{$widget}-footer {
+    .#{$widget}#{$c1}footer {
         padding-top: ($spacer * 2);
     }
 
@@ -74,8 +74,8 @@ category: project-#{$widget}
 
 /*doc
 ---
-title: #{$widget}-(size)
-name: #{$widget}-size
+title: #{$widget}#{$c3}(size)
+name: #{$widget}#{$c3}size
 category: project-#{$widget}
 parent: #{$widget};
 ---
@@ -83,80 +83,80 @@ parent: #{$widget};
 ウィジェットのサイズを変える。(size)は、 <code>sm, lg</code> に対応している。
 
 ``` example
-<div class="#{$widget} #{$widget}-sm">
-    <div class="#{$widget}-header">
-        <div style="padding: 1rem; text-align:center; background-color: #ddeeff;">(#{$widget}-header)</div>
-    </div><!-- /.#{$widget}-header -->
+<div class="#{$widget} #{$widget}#{$c3}sm">
+    <div class="#{$widget}#{$c1}header">
+        <div style="padding: 1rem; text-align:center; background-color: #ddeeff;">(#{$widget}#{$c1}header)</div>
+    </div><!-- /.#{$widget}#{$c1}header -->
 
-    <div class="#{$widget}-contents">
-        <div style="padding: 1rem; text-align:center; background-color: #e4fcd0;">(#{$widget}-contents)</div>
-    </div><!-- /.#{$widget}-contents -->
+    <div class="#{$widget}#{$c1}contents">
+        <div style="padding: 1rem; text-align:center; background-color: #e4fcd0;">(#{$widget}#{$c1}contents)</div>
+    </div><!-- /.#{$widget}#{$c1}contents -->
 
-    <div class="#{$widget}-footer">
-        <div style="padding: 1rem; text-align:center; background-color: #ffe6f3;">(#{$widget}-footer)</div>
-    </div><!-- /.#{$widget}-footer -->
+    <div class="#{$widget}#{$c1}footer">
+        <div style="padding: 1rem; text-align:center; background-color: #ffe6f3;">(#{$widget}#{$c1}footer)</div>
+    </div><!-- /.#{$widget}#{$c1}footer -->
 
 </div><!-- /.#{$widget} -->
 
-<div class="#{$widget} #{$widget}-lg">
-    <div class="#{$widget}-header">
-        <div style="padding: 1rem; text-align:center; background-color: #ddeeff;">(#{$widget}-header)</div>
-    </div><!-- /.#{$widget}-header -->
+<div class="#{$widget} #{$widget}#{$c3}lg">
+    <div class="#{$widget}#{$c1}header">
+        <div style="padding: 1rem; text-align:center; background-color: #ddeeff;">(#{$widget}#{$c1}header)</div>
+    </div><!-- /.#{$widget}#{$c1}header -->
 
-    <div class="#{$widget}-contents">
-        <div style="padding: 1rem; text-align:center; background-color: #e4fcd0;">(#{$widget}-contents)</div>
-    </div><!-- /.#{$widget}-contents -->
+    <div class="#{$widget}#{$c1}contents">
+        <div style="padding: 1rem; text-align:center; background-color: #e4fcd0;">(#{$widget}#{$c1}contents)</div>
+    </div><!-- /.#{$widget}#{$c1}contents -->
 
-    <div class="#{$widget}-footer">
-        <div style="padding: 1rem; text-align:center; background-color: #ffe6f3;">(#{$widget}-footer)</div>
-    </div><!-- /.#{$widget}-footer -->
+    <div class="#{$widget}#{$c1}footer">
+        <div style="padding: 1rem; text-align:center; background-color: #ffe6f3;">(#{$widget}#{$c1}footer)</div>
+    </div><!-- /.#{$widget}#{$c1}footer -->
 
 </div><!-- /.#{$widget} -->
 ```
 
 */
 
-.#{$widget}-sm {
+.#{$widget}#{$c3}sm {
     margin-bottom: ($spacer * 2);
 
     @include media-breakpoint-up(lg) {
         margin-bottom: ($spacer * 3);
     }
 
-    .#{$widget}-header,
-    .#{$widget}-contents,
-    .#{$widget}-footer {
+    .#{$widget}#{$c1}header,
+    .#{$widget}#{$c1}contents,
+    .#{$widget}#{$c1}footer {
         font-size: $font-size-sm;
     }
 
-    .#{$widget}-header {
+    .#{$widget}#{$c1}header {
         padding-bottom: ($spacer * 1.5);
     }
 
-    .#{$widget}-footer {
+    .#{$widget}#{$c1}footer {
         padding-top: ($spacer * 1.5);
     }
 
 }
 
-.#{$widget}-lg {
+.#{$widget}#{$c3}lg {
     margin-bottom: ($spacer * 4.5);
 
     @include media-breakpoint-up(lg) {
         margin-bottom: ($spacer * 6);
     }
 
-    .#{$widget}-header,
-    .#{$widget}-contents,
-    .#{$widget}-footer {
+    .#{$widget}#{$c1}header,
+    .#{$widget}#{$c1}contents,
+    .#{$widget}#{$c1}footer {
         font-size: $font-size-lg;
     }
 
-    .#{$widget}-header {
+    .#{$widget}#{$c1}header {
         padding-bottom: ($spacer * 3);
     }
 
-    .#{$widget}-footer {
+    .#{$widget}#{$c1}footer {
         padding-top: ($spacer * 3);
     }
 

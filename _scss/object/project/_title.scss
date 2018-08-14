@@ -1,6 +1,6 @@
 /*doc
 ---
-title: #{$pr}#{$p}title-(type)
+title: #{$pr}#{$p}title#{$c3}(type)
 name: title
 category: project-title
 ---
@@ -36,7 +36,7 @@ category: project-title
 
 /*doc
 ---
-title: #{$pr}#{$p}title-(group)-(type)
+title: #{$pr}#{$p}title#{$c3}(group)#{$c3}(type)
 name: title-01-type
 category: project-title
 parent: title
@@ -52,25 +52,25 @@ parent: title
 
 <code>(type)</code> は <code>01 / 02 / 03 ...</code> , <code>bordered / based / iconed ...</code> 等が考えられる。
 
-ここでは <code>#{$pr}#{$p}title-echo-(type)</code> を仮に定義している。
+ここでは <code>#{$pr}#{$p}title#{$c3}echo#{$c3}(type)</code> を仮に定義している。
 
 ``` example
 <div style="margin-bottom: 2rem;">
 
-<h1 class="#{$pr}#{$p}title #{$pr}#{$p}title-echo-01">h1要素に#{$pr}#{$p}title-echo-01を付与しました</h1>
-<h1 class="#{$pr}#{$p}title #{$pr}#{$p}title-echo-02">h1要素に#{$pr}#{$p}title-echo-02を付与しました</h1>
-<h1 class="#{$pr}#{$p}title #{$pr}#{$p}title-echo-03">h1要素に#{$pr}#{$p}title-echo-03を付与しました</h1>
-<h1 class="#{$pr}#{$p}title #{$pr}#{$p}title-echo-04">h1要素に#{$pr}#{$p}title-echo-04を付与しました</h1>
-<h1 class="#{$pr}#{$p}title #{$pr}#{$p}title-echo-05">h1要素に#{$pr}#{$p}title-echo-05を付与しました</h1>
+<h1 class="#{$pr}#{$p}title #{$pr}#{$p}title#{$c3}echo#{$c3}01">h1要素に#{$pr}#{$p}title#{$c3}echo#{$c3}01を付与しました</h1>
+<h1 class="#{$pr}#{$p}title #{$pr}#{$p}title#{$c3}echo#{$c3}02">h1要素に#{$pr}#{$p}title#{$c3}echo#{$c3}02を付与しました</h1>
+<h1 class="#{$pr}#{$p}title #{$pr}#{$p}title#{$c3}echo#{$c3}03">h1要素に#{$pr}#{$p}title#{$c3}echo#{$c3}03を付与しました</h1>
+<h1 class="#{$pr}#{$p}title #{$pr}#{$p}title#{$c3}echo#{$c3}04">h1要素に#{$pr}#{$p}title#{$c3}echo#{$c3}04を付与しました</h1>
+<h1 class="#{$pr}#{$p}title #{$pr}#{$p}title#{$c3}echo#{$c3}05">h1要素に#{$pr}#{$p}title#{$c3}echo#{$c3}05を付与しました</h1>
 
 </div>
 <div style="margin-bottom: 2rem;">
 
-<p class="#{$pr}#{$p}title #{$pr}#{$p}title-echo-01">p要素に#{$pr}#{$p}title-echo-01を付与しました</p>
-<p class="#{$pr}#{$p}title #{$pr}#{$p}title-echo-02">p要素に#{$pr}#{$p}title-echo-02を付与しました</p>
-<p class="#{$pr}#{$p}title #{$pr}#{$p}title-echo-03">p要素に#{$pr}#{$p}title-echo-03を付与しました</p>
-<p class="#{$pr}#{$p}title #{$pr}#{$p}title-echo-04">p要素に#{$pr}#{$p}title-echo-04を付与しました</p>
-<p class="#{$pr}#{$p}title #{$pr}#{$p}title-echo-05">p要素に#{$pr}#{$p}title-echo-05を付与しました</p>
+<p class="#{$pr}#{$p}title #{$pr}#{$p}title#{$c3}echo#{$c3}01">p要素に#{$pr}#{$p}title#{$c3}echo#{$c3}01を付与しました</p>
+<p class="#{$pr}#{$p}title #{$pr}#{$p}title#{$c3}echo#{$c3}02">p要素に#{$pr}#{$p}title#{$c3}echo#{$c3}02を付与しました</p>
+<p class="#{$pr}#{$p}title #{$pr}#{$p}title#{$c3}echo#{$c3}03">p要素に#{$pr}#{$p}title#{$c3}echo#{$c3}03を付与しました</p>
+<p class="#{$pr}#{$p}title #{$pr}#{$p}title#{$c3}echo#{$c3}04">p要素に#{$pr}#{$p}title#{$c3}echo#{$c3}04を付与しました</p>
+<p class="#{$pr}#{$p}title #{$pr}#{$p}title#{$c3}echo#{$c3}05">p要素に#{$pr}#{$p}title#{$c3}echo#{$c3}05を付与しました</p>
 
 </div>
 ```
@@ -78,7 +78,7 @@ parent: title
 
 // 01: page title
 
-.#{$pr}#{$p}title-echo-01 {
+.#{$pr}#{$p}title#{$c3}echo#{$c3}01 {
     font-size: 2rem;
     font-weight: $font-weight-first;
     font-family: $font-family-first;
@@ -92,7 +92,7 @@ parent: title
 
 // 02: page subtitle
 
-.#{$pr}#{$p}title-echo-02 {
+.#{$pr}#{$p}title#{$c3}echo#{$c3}02 {
     font-size: 1.5rem;
     font-weight: $font-weight-first;
     font-family: $font-family-first;
@@ -107,7 +107,7 @@ parent: title
 
 // 11: component title(large)
 
-.#{$pr}#{$p}title-echo-11 {
+.#{$pr}#{$p}title#{$c3}echo#{$c3}11 {
     font-size: 1.25rem;
     font-weight: $font-weight-bold-root;
     font-family: $font-family-bold-root;
@@ -121,7 +121,7 @@ parent: title
 
 // 12: component title(small)
 
-.#{$pr}#{$p}title-echo-12 {
+.#{$pr}#{$p}title#{$c3}echo#{$c3}12 {
     font-size: 1.125rem;
     font-weight: $font-weight-bold-root;
     font-family: $font-family-bold-root;
@@ -135,7 +135,7 @@ parent: title
 
 // 21: display title(large)
 
-.#{$pr}#{$p}title-echo-21 {
+.#{$pr}#{$p}title#{$c3}echo#{$c3}21 {
     font-size: 2.25rem;
     font-weight: $font-weight-bold-third;
     font-family: $font-family-bold-third;
@@ -164,7 +164,7 @@ parent: title
 
 // 22: display title(medium)
 
-.#{$pr}#{$p}title-echo-22 {
+.#{$pr}#{$p}title#{$c3}echo#{$c3}22 {
     font-size: 2rem;
     font-weight: $font-weight-bold-third;
     font-family: $font-family-bold-third;
@@ -193,7 +193,7 @@ parent: title
 
 // 23: display subtitle
 
-.#{$pr}#{$p}title-echo-23 {
+.#{$pr}#{$p}title#{$c3}echo#{$c3}23 {
     font-size: 1.25rem;
     font-weight: $font-weight-third;
     font-family: $font-family-third;

@@ -2,7 +2,7 @@
 
 /*doc
 ---
-title: #{$pr}#{$u}padding#{$c3}(direction)#{$c3}(size)
+title: #{$pr}#{$u}padding#{$c2}(direction)#{$c3}(size)
 name: padding
 category: utility-padding
 ---
@@ -10,111 +10,111 @@ category: utility-padding
 ブロック要素の内部余白を変更する。
 
 ``` example
-<div class="#{$pr}#{$u}padding#{$c3}xs #{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}xs</div></div>
-<div class="#{$pr}#{$u}padding#{$c3}t#{$c3}xs #{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}t#{$c3}xs</div></div>
-<div class="#{$pr}#{$u}padding#{$c3}r#{$c3}xs #{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}r#{$c3}xs</div></div>
-<div class="#{$pr}#{$u}padding#{$c3}b#{$c3}xs #{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}b#{$c3}xs</div></div>
-<div class="#{$pr}#{$u}padding#{$c3}l#{$c3}xs #{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}l#{$c3}xs</div></div>
+<div class="#{$pr}#{$u}padding#{$c3}xs" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}xs</div></div>
+<div class="#{$pr}#{$u}padding#{$c2}top#{$c3}xs" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c2}top#{$c3}xs</div></div>
+<div class="#{$pr}#{$u}padding#{$c2}right#{$c3}xs" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c2}right#{$c3}xs</div></div>
+<div class="#{$pr}#{$u}padding#{$c2}bottom#{$c3}xs" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c2}bottom#{$c3}xs</div></div>
+<div class="#{$pr}#{$u}padding#{$c2}left#{$c3}xs" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c2}left#{$c3}xs</div></div>
 
-<div class="#{$pr}#{$u}padding#{$c3}sm #{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}sm</div></div>
-<div class="#{$pr}#{$u}padding#{$c3}t#{$c3}sm #{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}t#{$c3}sm</div></div>
-<div class="#{$pr}#{$u}padding#{$c3}r#{$c3}sm #{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}r#{$c3}sm</div></div>
-<div class="#{$pr}#{$u}padding#{$c3}b#{$c3}sm #{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}b#{$c3}sm</div></div>
-<div class="#{$pr}#{$u}padding#{$c3}l#{$c3}sm #{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}l#{$c3}sm</div></div>
-<div class="#{$pr}#{$u}padding#{$c3}x#{$c3}sm #{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}x#{$c3}sm</div></div>
-<div class="#{$pr}#{$u}padding#{$c3}y#{$c3}sm #{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}y#{$c3}sm</div></div>
+<div class="#{$pr}#{$u}padding#{$c3}sm" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}sm</div></div>
+<div class="#{$pr}#{$u}padding#{$c2}top#{$c3}sm" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c2}top#{$c3}sm</div></div>
+<div class="#{$pr}#{$u}padding#{$c2}right#{$c3}sm" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c2}right#{$c3}sm</div></div>
+<div class="#{$pr}#{$u}padding#{$c2}bottom#{$c3}sm" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c2}bottom#{$c3}sm</div></div>
+<div class="#{$pr}#{$u}padding#{$c2}left#{$c3}sm" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c2}left#{$c3}sm</div></div>
+<div class="#{$pr}#{$u}padding#{$c2}x#{$c3}sm" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c2}x#{$c3}sm</div></div>
+<div class="#{$pr}#{$u}padding#{$c2}y#{$c3}sm" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c2}y#{$c3}sm</div></div>
 
-<div class="#{$pr}#{$u}padding #{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding</div></div>
-<div class="#{$pr}#{$u}padding#{$c3}t #{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}t</div></div>
-<div class="#{$pr}#{$u}padding#{$c3}r #{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}r</div></div>
-<div class="#{$pr}#{$u}padding#{$c3}b #{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}b</div></div>
-<div class="#{$pr}#{$u}padding#{$c3}l #{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}l</div></div>
-<div class="#{$pr}#{$u}padding#{$c3}x #{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}x</div></div>
-<div class="#{$pr}#{$u}padding#{$c3}y #{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}y</div></div>
+<div class="#{$pr}#{$u}padding#{$c3}md" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}md</div></div>
+<div class="#{$pr}#{$u}padding#{$c2}top#{$c3}md" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c2}top#{$c3}md</div></div>
+<div class="#{$pr}#{$u}padding#{$c2}right#{$c3}md" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c2}right#{$c3}md</div></div>
+<div class="#{$pr}#{$u}padding#{$c2}bottom#{$c3}md" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c2}bottom#{$c3}md</div></div>
+<div class="#{$pr}#{$u}padding#{$c2}left#{$c3}md" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c2}left#{$c3}md</div></div>
+<div class="#{$pr}#{$u}padding#{$c3}x#{$c3}md" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}x#{$c3}md</div></div>
+<div class="#{$pr}#{$u}padding#{$c3}y#{$c3}md" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}y#{$c3}md</div></div>
 
-<div class="#{$pr}#{$u}padding#{$c3}lg #{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}lg</div></div>
-<div class="#{$pr}#{$u}padding#{$c3}t#{$c3}lg #{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}t#{$c3}lg</div></div>
-<div class="#{$pr}#{$u}padding#{$c3}r#{$c3}lg #{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}r#{$c3}lg</div></div>
-<div class="#{$pr}#{$u}padding#{$c3}b#{$c3}lg #{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}b#{$c3}lg</div></div>
-<div class="#{$pr}#{$u}padding#{$c3}l#{$c3}lg #{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}l#{$c3}lg</div></div>
-<div class="#{$pr}#{$u}padding#{$c3}x#{$c3}lg #{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}x#{$c3}lg</div></div>
-<div class="#{$pr}#{$u}padding#{$c3}y#{$c3}lg #{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}y#{$c3}lg</div></div>
+<div class="#{$pr}#{$u}padding#{$c3}lg" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}lg</div></div>
+<div class="#{$pr}#{$u}padding#{$c2}top#{$c3}lg" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c2}top#{$c3}lg</div></div>
+<div class="#{$pr}#{$u}padding#{$c2}right#{$c3}lg" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c2}right#{$c3}lg</div></div>
+<div class="#{$pr}#{$u}padding#{$c2}bottom#{$c3}lg" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c2}bottom#{$c3}lg</div></div>
+<div class="#{$pr}#{$u}padding#{$c2}left#{$c3}lg" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c2}left#{$c3}lg</div></div>
+<div class="#{$pr}#{$u}padding#{$c2}x#{$c3}lg" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c2}x#{$c3}lg</div></div>
+<div class="#{$pr}#{$u}padding#{$c2}y#{$c3}lg" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c2}y#{$c3}lg</div></div>
 
-<div class="#{$pr}#{$u}padding#{$c3}xl #{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}xl</div></div>
-<div class="#{$pr}#{$u}padding#{$c3}t#{$c3}xl #{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}t#{$c3}xl</div></div>
-<div class="#{$pr}#{$u}padding#{$c3}r#{$c3}xl #{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}r#{$c3}xl</div></div>
-<div class="#{$pr}#{$u}padding#{$c3}b#{$c3}xl #{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}b#{$c3}xl</div></div>
-<div class="#{$pr}#{$u}padding#{$c3}l#{$c3}xl #{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}l#{$c3}xl</div></div>
-<div class="#{$pr}#{$u}padding#{$c3}x#{$c3}xl #{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}x#{$c3}xl</div></div>
-<div class="#{$pr}#{$u}padding#{$c3}y#{$c3}xl #{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}y#{$c3}xl</div></div>
+<div class="#{$pr}#{$u}padding#{$c3}xl" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}xl</div></div>
+<div class="#{$pr}#{$u}padding#{$c2}top#{$c3}xl" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c2}top#{$c3}xl</div></div>
+<div class="#{$pr}#{$u}padding#{$c2}right#{$c3}xl" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c2}right#{$c3}xl</div></div>
+<div class="#{$pr}#{$u}padding#{$c2}bottom#{$c3}xl" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c2}bottom#{$c3}xl</div></div>
+<div class="#{$pr}#{$u}padding#{$c2}left#{$c3}xl" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c2}left#{$c3}xl</div></div>
+<div class="#{$pr}#{$u}padding#{$c2}x#{$c3}xl" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c2}x#{$c3}xl</div></div>
+<div class="#{$pr}#{$u}padding#{$c2}y#{$c3}xl" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c2}y#{$c3}xl</div></div>
 
-<div class="#{$pr}#{$u}padding#{$c3}xxl #{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}xxl</div></div>
-<div class="#{$pr}#{$u}padding#{$c3}t#{$c3}xxl #{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}t#{$c3}xxl</div></div>
-<div class="#{$pr}#{$u}padding#{$c3}r#{$c3}xxl #{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}r#{$c3}xxl</div></div>
-<div class="#{$pr}#{$u}padding#{$c3}b#{$c3}xxl #{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}b#{$c3}xxl</div></div>
-<div class="#{$pr}#{$u}padding#{$c3}l#{$c3}xxl #{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}l#{$c3}xxl</div></div>
-<div class="#{$pr}#{$u}padding#{$c3}x#{$c3}xxl #{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}x#{$c3}xxl</div></div>
-<div class="#{$pr}#{$u}padding#{$c3}y#{$c3}xxl #{$pr}#{$u}margin#{$c3}b#{$c3}sm" style="background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}y#{$c3}xxl</div></div>
+<div class="#{$pr}#{$u}padding#{$c3}xxl" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c3}xxl</div></div>
+<div class="#{$pr}#{$u}padding#{$c2}top#{$c3}xxl" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c2}top#{$c3}xxl</div></div>
+<div class="#{$pr}#{$u}padding#{$c2}right#{$c3}xxl" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c2}right#{$c3}xxl</div></div>
+<div class="#{$pr}#{$u}padding#{$c2}bottom#{$c3}xxl" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c2}bottom#{$c3}xxl</div></div>
+<div class="#{$pr}#{$u}padding#{$c2}left#{$c3}xxl" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c2}left#{$c3}xxl</div></div>
+<div class="#{$pr}#{$u}padding#{$c2}x#{$c3}xxl" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c2}x#{$c3}xxl</div></div>
+<div class="#{$pr}#{$u}padding#{$c2}y#{$c3}xxl" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}padding#{$c2}y#{$c3}xxl</div></div>
 ```
 */
 
 #{$u-wrap} {
 
-	.#{$pr}#{$u}padding#{$c3}0   { padding:        0 }
-	.#{$pr}#{$u}padding#{$c3}t#{$c3}0 { padding-top:    0 }
-	.#{$pr}#{$u}padding#{$c3}r#{$c3}0 { padding-right:  0 }
-	.#{$pr}#{$u}padding#{$c3}b#{$c3}0 { padding-bottom: 0 }
-	.#{$pr}#{$u}padding#{$c3}l#{$c3}0 { padding-left:   0 }
-	.#{$pr}#{$u}padding#{$c3}x#{$c3}0 { padding-right:  0; padding-left:   0 }
-	.#{$pr}#{$u}padding#{$c3}y#{$c3}0 { padding-top:    0; padding-bottom: 0 }
+	.#{$pr}#{$u}padding#{$c3}0               { padding:        0 }
+	.#{$pr}#{$u}padding#{$c2}top#{$c3}0      { padding-top:    0 }
+	.#{$pr}#{$u}padding#{$c2}right#{$c3}0    { padding-right:  0 }
+	.#{$pr}#{$u}padding#{$c2}bottom#{$c3}0   { padding-bottom: 0 }
+	.#{$pr}#{$u}padding#{$c2}left#{$c3}0     { padding-left:   0 }
+	.#{$pr}#{$u}padding#{$c2}x#{$c3}0        { padding-right:  0; padding-left:   0 }
+	.#{$pr}#{$u}padding#{$c2}y#{$c3}0        { padding-top:    0; padding-bottom: 0 }
 
-	.#{$pr}#{$u}padding#{$c3}xs   { padding:        ($spacer * .5) }
-	.#{$pr}#{$u}padding#{$c3}t#{$c3}xs { padding-top:    ($spacer * .5) }
-	.#{$pr}#{$u}padding#{$c3}r#{$c3}xs { padding-right:  ($spacer * .5) }
-	.#{$pr}#{$u}padding#{$c3}b#{$c3}xs { padding-bottom: ($spacer * .5) }
-	.#{$pr}#{$u}padding#{$c3}l#{$c3}xs { padding-left:   ($spacer * .5) }
-	.#{$pr}#{$u}padding#{$c3}x#{$c3}xs { padding-right:  ($spacer * .5); padding-left:   ($spacer * .5) }
-	.#{$pr}#{$u}padding#{$c3}y#{$c3}xs { padding-top:    ($spacer * .5); padding-bottom: ($spacer * .5) }
+	.#{$pr}#{$u}padding#{$c3}xs              { padding:        ($spacer * .5) }
+	.#{$pr}#{$u}padding#{$c2}top#{$c3}xs     { padding-top:    ($spacer * .5) }
+	.#{$pr}#{$u}padding#{$c2}right#{$c3}xs   { padding-right:  ($spacer * .5) }
+	.#{$pr}#{$u}padding#{$c2}bottom#{$c3}xs  { padding-bottom: ($spacer * .5) }
+	.#{$pr}#{$u}padding#{$c2}left#{$c3}xs    { padding-left:   ($spacer * .5) }
+	.#{$pr}#{$u}padding#{$c2}x#{$c3}xs       { padding-right:  ($spacer * .5); padding-left:   ($spacer * .5) }
+	.#{$pr}#{$u}padding#{$c2}y#{$c3}xs       { padding-top:    ($spacer * .5); padding-bottom: ($spacer * .5) }
 
-	.#{$pr}#{$u}padding#{$c3}sm   { padding:        $spacer }
-	.#{$pr}#{$u}padding#{$c3}t#{$c3}sm { padding-top:    $spacer }
-	.#{$pr}#{$u}padding#{$c3}r#{$c3}sm { padding-right:  $spacer }
-	.#{$pr}#{$u}padding#{$c3}b#{$c3}sm { padding-bottom: $spacer }
-	.#{$pr}#{$u}padding#{$c3}l#{$c3}sm { padding-left:   $spacer }
-	.#{$pr}#{$u}padding#{$c3}x#{$c3}sm { padding-right:  $spacer; padding-left:   $spacer }
-	.#{$pr}#{$u}padding#{$c3}y#{$c3}sm { padding-top:    $spacer; padding-bottom: $spacer }
+	.#{$pr}#{$u}padding#{$c3}sm              { padding:        $spacer }
+	.#{$pr}#{$u}padding#{$c2}top#{$c3}sm     { padding-top:    $spacer }
+	.#{$pr}#{$u}padding#{$c2}right#{$c3}sm   { padding-right:  $spacer }
+	.#{$pr}#{$u}padding#{$c2}bottom#{$c3}sm  { padding-bottom: $spacer }
+	.#{$pr}#{$u}padding#{$c2}left#{$c3}sm    { padding-left:   $spacer }
+	.#{$pr}#{$u}padding#{$c2}x#{$c3}sm       { padding-right:  $spacer; padding-left:   $spacer }
+	.#{$pr}#{$u}padding#{$c2}y#{$c3}sm       { padding-top:    $spacer; padding-bottom: $spacer }
 
-	.#{$pr}#{$u}padding   { padding:        ($spacer * 1.5) }
-	.#{$pr}#{$u}padding#{$c3}t { padding-top:    ($spacer * 1.5) }
-	.#{$pr}#{$u}padding#{$c3}r { padding-right:  ($spacer * 1.5) }
-	.#{$pr}#{$u}padding#{$c3}b { padding-bottom: ($spacer * 1.5) }
-	.#{$pr}#{$u}padding#{$c3}l { padding-left:   ($spacer * 1.5) }
-	.#{$pr}#{$u}padding#{$c3}x { padding-right:  ($spacer * 1.5); padding-left:   ($spacer * 1.5) }
-	.#{$pr}#{$u}padding#{$c3}y { padding-top:    ($spacer * 1.5); padding-bottom: ($spacer * 1.5) }
+	.#{$pr}#{$u}padding#{$c3}md              { padding:        ($spacer * 1.5) }
+	.#{$pr}#{$u}padding#{$c2}top#{$c3}md     { padding-top:    ($spacer * 1.5) }
+	.#{$pr}#{$u}padding#{$c2}right#{$c3}md   { padding-right:  ($spacer * 1.5) }
+	.#{$pr}#{$u}padding#{$c2}bottom#{$c3}md  { padding-bottom: ($spacer * 1.5) }
+	.#{$pr}#{$u}padding#{$c2}left#{$c3}md    { padding-left:   ($spacer * 1.5) }
+	.#{$pr}#{$u}padding#{$c2}x#{$c3}md       { padding-right:  ($spacer * 1.5); padding-left:   ($spacer * 1.5) }
+	.#{$pr}#{$u}padding#{$c2}y#{$c3}md       { padding-top:    ($spacer * 1.5); padding-bottom: ($spacer * 1.5) }
 
-	.#{$pr}#{$u}padding#{$c3}lg   { padding:        ($spacer * 3) }
-	.#{$pr}#{$u}padding#{$c3}t#{$c3}lg { padding-top:    ($spacer * 3) }
-	.#{$pr}#{$u}padding#{$c3}r#{$c3}lg { padding-right:  ($spacer * 3) }
-	.#{$pr}#{$u}padding#{$c3}b#{$c3}lg { padding-bottom: ($spacer * 3) }
-	.#{$pr}#{$u}padding#{$c3}l#{$c3}lg { padding-left:   ($spacer * 3) }
-	.#{$pr}#{$u}padding#{$c3}x#{$c3}lg { padding-right:  ($spacer * 3); padding-left:   ($spacer * 3) }
-	.#{$pr}#{$u}padding#{$c3}y#{$c3}lg { padding-top:    ($spacer * 3); padding-bottom: ($spacer * 3) }
+	.#{$pr}#{$u}padding#{$c3}lg              { padding:        ($spacer * 3) }
+	.#{$pr}#{$u}padding#{$c2}top#{$c3}lg     { padding-top:    ($spacer * 3) }
+	.#{$pr}#{$u}padding#{$c2}right#{$c3}lg   { padding-right:  ($spacer * 3) }
+	.#{$pr}#{$u}padding#{$c2}bottom#{$c3}lg  { padding-bottom: ($spacer * 3) }
+	.#{$pr}#{$u}padding#{$c2}left#{$c3}lg    { padding-left:   ($spacer * 3) }
+	.#{$pr}#{$u}padding#{$c2}x#{$c3}lg       { padding-right:  ($spacer * 3); padding-left:   ($spacer * 3) }
+	.#{$pr}#{$u}padding#{$c2}y#{$c3}lg       { padding-top:    ($spacer * 3); padding-bottom: ($spacer * 3) }
 
-	.#{$pr}#{$u}padding#{$c3}xl   { padding:        ($spacer * 4.5) }
-	.#{$pr}#{$u}padding#{$c3}t#{$c3}xl { padding-top:    ($spacer * 4.5) }
-	.#{$pr}#{$u}padding#{$c3}r#{$c3}xl { padding-right:  ($spacer * 4.5) }
-	.#{$pr}#{$u}padding#{$c3}b#{$c3}xl { padding-bottom: ($spacer * 4.5) }
-	.#{$pr}#{$u}padding#{$c3}l#{$c3}xl { padding-left:   ($spacer * 4.5) }
-	.#{$pr}#{$u}padding#{$c3}x#{$c3}xl { padding-right:  ($spacer * 4.5); padding-left:   ($spacer * 4.5) }
-	.#{$pr}#{$u}padding#{$c3}y#{$c3}xl { padding-top:    ($spacer * 4.5); padding-bottom: ($spacer * 4.5) }
+	.#{$pr}#{$u}padding#{$c3}xl              { padding:        ($spacer * 4.5) }
+	.#{$pr}#{$u}padding#{$c2}top#{$c3}xl     { padding-top:    ($spacer * 4.5) }
+	.#{$pr}#{$u}padding#{$c2}right#{$c3}xl   { padding-right:  ($spacer * 4.5) }
+	.#{$pr}#{$u}padding#{$c2}bottom#{$c3}xl  { padding-bottom: ($spacer * 4.5) }
+	.#{$pr}#{$u}padding#{$c2}left#{$c3}xl    { padding-left:   ($spacer * 4.5) }
+	.#{$pr}#{$u}padding#{$c2}x#{$c3}xl       { padding-right:  ($spacer * 4.5); padding-left:   ($spacer * 4.5) }
+	.#{$pr}#{$u}padding#{$c2}y#{$c3}xl       { padding-top:    ($spacer * 4.5); padding-bottom: ($spacer * 4.5) }
 
-	.#{$pr}#{$u}padding#{$c3}xxl   { padding:        ($spacer * 6) }
-	.#{$pr}#{$u}padding#{$c3}t#{$c3}xxl { padding-top:    ($spacer * 6) }
-	.#{$pr}#{$u}padding#{$c3}r#{$c3}xxl { padding-right:  ($spacer * 6) }
-	.#{$pr}#{$u}padding#{$c3}b#{$c3}xxl { padding-bottom: ($spacer * 6) }
-	.#{$pr}#{$u}padding#{$c3}l#{$c3}xxl { padding-left:   ($spacer * 6) }
-	.#{$pr}#{$u}padding#{$c3}x#{$c3}xxl { padding-right:  ($spacer * 6); padding-left:   ($spacer * 6) }
-	.#{$pr}#{$u}padding#{$c3}y#{$c3}xxl { padding-top:    ($spacer * 6); padding-bottom: ($spacer * 6) }
+	.#{$pr}#{$u}padding#{$c3}xxl             { padding:        ($spacer * 6) }
+	.#{$pr}#{$u}padding#{$c2}top#{$c3}xxl    { padding-top:    ($spacer * 6) }
+	.#{$pr}#{$u}padding#{$c2}right#{$c3}xxl  { padding-right:  ($spacer * 6) }
+	.#{$pr}#{$u}padding#{$c2}bottom#{$c3}xxl { padding-bottom: ($spacer * 6) }
+	.#{$pr}#{$u}padding#{$c2}left#{$c3}xxl   { padding-left:   ($spacer * 6) }
+	.#{$pr}#{$u}padding#{$c2}x#{$c3}xxl      { padding-right:  ($spacer * 6); padding-left:   ($spacer * 6) }
+	.#{$pr}#{$u}padding#{$c2}y#{$c3}xxl      { padding-top:    ($spacer * 6); padding-bottom: ($spacer * 6) }
 
 }
 
