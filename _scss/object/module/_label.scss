@@ -48,7 +48,7 @@ category: module-label
 
 /*doc
 ---
-title: #{$pr}#{$m}label-(color)
+title: #{$pr}#{$m}label#{$c3}(color)
 name: label-01-color
 category: module-label
 parent: label
@@ -57,73 +57,73 @@ parent: label
 ラベルの色を変更する。(color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
 
 ``` example
-<p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label-#{$__gray}">#{$pr}#{$m}label-#{$__gray}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label-#{$__gray}">#{$pr}#{$m}label-#{$__gray}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-<p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label-#{$__first}">#{$pr}#{$m}label-#{$__first}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label-#{$__first}">#{$pr}#{$m}label-#{$__first}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-<p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label-#{$__second}">#{$pr}#{$m}label-#{$__second}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label-#{$__second}">#{$pr}#{$m}label-#{$__second}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-<p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label-#{$__third}">#{$pr}#{$m}label-#{$__third}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label-#{$__third}">#{$pr}#{$m}label-#{$__third}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-<p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label-#{$__fourth}">#{$pr}#{$m}label-#{$__fourth}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label-#{$__fourth}">#{$pr}#{$m}label-#{$__fourth}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-<p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label-#{$__info}">#{$pr}#{$m}label-#{$__info}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label-#{$__info}">#{$pr}#{$m}label-#{$__info}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-<p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label-#{$__important}">#{$pr}#{$m}label-#{$__important}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label-#{$__important}">#{$pr}#{$m}label-#{$__important}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}#{$__gray}">#{$pr}#{$m}label#{$c3}#{$__gray}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}#{$__gray}">#{$pr}#{$m}label#{$c3}#{$__gray}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}#{$__first}">#{$pr}#{$m}label#{$c3}#{$__first}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}#{$__first}">#{$pr}#{$m}label#{$c3}#{$__first}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}#{$__second}">#{$pr}#{$m}label#{$c3}#{$__second}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}#{$__second}">#{$pr}#{$m}label#{$c3}#{$__second}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}#{$__third}">#{$pr}#{$m}label#{$c3}#{$__third}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}#{$__third}">#{$pr}#{$m}label#{$c3}#{$__third}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}#{$__fourth}">#{$pr}#{$m}label#{$c3}#{$__fourth}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}#{$__fourth}">#{$pr}#{$m}label#{$c3}#{$__fourth}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}#{$__info}">#{$pr}#{$m}label#{$c3}#{$__info}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}#{$__info}">#{$pr}#{$m}label#{$c3}#{$__info}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}#{$__important}">#{$pr}#{$m}label#{$c3}#{$__important}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}#{$__important}">#{$pr}#{$m}label#{$c3}#{$__important}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
 ```
 
 */
 
-.#{$pr}#{$m}label-#{$__gray} {
+.#{$pr}#{$m}label#{$c3}#{$__gray} {
     background-color: $gray;
 }
 
-.#{$pr}#{$m}label-#{$__first} {
+.#{$pr}#{$m}label#{$c3}#{$__first} {
     background-color: $first;
 }
 
-.#{$pr}#{$m}label-#{$__second} {
+.#{$pr}#{$m}label#{$c3}#{$__second} {
     background-color: $second;
 }
 
-.#{$pr}#{$m}label-#{$__third} {
+.#{$pr}#{$m}label#{$c3}#{$__third} {
     background-color: $third;
 }
 
-.#{$pr}#{$m}label-#{$__fourth} {
+.#{$pr}#{$m}label#{$c3}#{$__fourth} {
     background-color: $fourth;
 }
 
-.#{$pr}#{$m}label-#{$__info} {
+.#{$pr}#{$m}label#{$c3}#{$__info} {
     background-color: $info;
 }
 
-.#{$pr}#{$m}label-#{$__important} {
+.#{$pr}#{$m}label#{$c3}#{$__important} {
     background-color: $important;
 }
 
 
 /*doc
 ---
-title: #{$pr}#{$m}label-#{$__inverse}
+title: #{$pr}#{$m}label#{$c3}#{$__inverse}
 name: label-03-inverse
 category: module-label
 parent: label
 ---
 
 ラベルの文字色をbody要素の文字色、背景色をbody要素の背景色にする。  
-<code>.#{$pr}#{$m}label-(color)</code> と同時に使用すると、文字色が指定した色になる。
+<code>.#{$pr}#{$m}label#{$c3}(color)</code> と同時に使用すると、文字色が指定した色になる。
 
 
 ``` example
-<div class="bg-#{$__first} bg-mild p-y">
-    <p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label-#{$__inverse}">#{$pr}#{$m}label-#{$__inverse}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label-#{$__inverse}">#{$pr}#{$m}label-#{$__inverse}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-    <p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label-#{$__inverse} #{$pr}#{$m}label-#{$__first}">#{$pr}#{$m}label-#{$__inverse}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label-#{$__inverse} #{$pr}#{$m}label-#{$__first}">#{$pr}#{$m}label-#{$__inverse}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-    <p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label-#{$__inverse} #{$pr}#{$m}label-#{$__second}">#{$pr}#{$m}label-#{$__inverse}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label-#{$__inverse} #{$pr}#{$m}label-#{$__second}">#{$pr}#{$m}label-#{$__inverse}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-    <p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label-#{$__inverse} #{$pr}#{$m}label-#{$__third}">#{$pr}#{$m}label-#{$__inverse}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label-#{$__inverse} #{$pr}#{$m}label-#{$__third}">#{$pr}#{$m}label-#{$__inverse}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-    <p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label-#{$__inverse} #{$pr}#{$m}label-#{$__fourth}">#{$pr}#{$m}label-#{$__inverse}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label-#{$__inverse} #{$pr}#{$m}label-#{$__fourth}">#{$pr}#{$m}label-#{$__inverse}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-    <p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label-#{$__inverse} #{$pr}#{$m}label-#{$__info}">#{$pr}#{$m}label-#{$__inverse}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label-#{$__inverse} #{$pr}#{$m}label-#{$__info}">#{$pr}#{$m}label-#{$__inverse}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-    <p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label-#{$__inverse} #{$pr}#{$m}label-#{$__important}">#{$pr}#{$m}label-#{$__inverse}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label-#{$__inverse} #{$pr}#{$m}label-#{$__important}">#{$pr}#{$m}label-#{$__inverse}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<div style="background-color: #999; padding: 1rem; color: #eee;">
+    <p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}#{$__inverse}">#{$pr}#{$m}label#{$c3}#{$__inverse}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}#{$__inverse}">#{$pr}#{$m}label#{$c3}#{$__inverse}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+    <p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}#{$__inverse} #{$pr}#{$m}label#{$c3}#{$__first}">#{$pr}#{$m}label#{$c3}#{$__inverse}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}#{$__inverse} #{$pr}#{$m}label#{$c3}#{$__first}">#{$pr}#{$m}label#{$c3}#{$__inverse}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+    <p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}#{$__inverse} #{$pr}#{$m}label#{$c3}#{$__second}">#{$pr}#{$m}label#{$c3}#{$__inverse}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}#{$__inverse} #{$pr}#{$m}label#{$c3}#{$__second}">#{$pr}#{$m}label#{$c3}#{$__inverse}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+    <p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}#{$__inverse} #{$pr}#{$m}label#{$c3}#{$__third}">#{$pr}#{$m}label#{$c3}#{$__inverse}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}#{$__inverse} #{$pr}#{$m}label#{$c3}#{$__third}">#{$pr}#{$m}label#{$c3}#{$__inverse}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+    <p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}#{$__inverse} #{$pr}#{$m}label#{$c3}#{$__fourth}">#{$pr}#{$m}label#{$c3}#{$__inverse}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}#{$__inverse} #{$pr}#{$m}label#{$c3}#{$__fourth}">#{$pr}#{$m}label#{$c3}#{$__inverse}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+    <p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}#{$__inverse} #{$pr}#{$m}label#{$c3}#{$__info}">#{$pr}#{$m}label#{$c3}#{$__inverse}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}#{$__inverse} #{$pr}#{$m}label#{$c3}#{$__info}">#{$pr}#{$m}label#{$c3}#{$__inverse}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+    <p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}#{$__inverse} #{$pr}#{$m}label#{$c3}#{$__important}">#{$pr}#{$m}label#{$c3}#{$__inverse}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}#{$__inverse} #{$pr}#{$m}label#{$c3}#{$__important}">#{$pr}#{$m}label#{$c3}#{$__inverse}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
 </div>
 ```
 
 */
 
-.#{$pr}#{$m}label-#{$__inverse} {
+.#{$pr}#{$m}label#{$c3}#{$__inverse} {
     color: $body-color;
     background-color: $body-bg;
 
@@ -135,7 +135,7 @@ parent: label
 
     }
 
-    &.#{$pr}#{$m}label-#{$__first} {
+    &.#{$pr}#{$m}label#{$c3}#{$__first} {
 
         color: #{$__first}-text;
 
@@ -149,7 +149,7 @@ parent: label
 
     }
 
-    &.#{$pr}#{$m}label-#{$__second} {
+    &.#{$pr}#{$m}label#{$c3}#{$__second} {
 
         color: $second-text;
 
@@ -163,7 +163,7 @@ parent: label
 
     }
 
-    &.#{$pr}#{$m}label-#{$__third} {
+    &.#{$pr}#{$m}label#{$c3}#{$__third} {
 
         color: $third-text;
 
@@ -177,7 +177,7 @@ parent: label
 
     }
 
-    &.#{$pr}#{$m}label-#{$__fourth} {
+    &.#{$pr}#{$m}label#{$c3}#{$__fourth} {
         color: $fourth-text;
         @at-root {
             a#{&} {
@@ -186,7 +186,7 @@ parent: label
         }
     }
 
-    &.#{$pr}#{$m}label-#{$__info} {
+    &.#{$pr}#{$m}label#{$c3}#{$__info} {
 
         color: $info-text;
 
@@ -200,7 +200,7 @@ parent: label
 
     }
 
-    &.#{$pr}#{$m}label-#{$__important} {
+    &.#{$pr}#{$m}label#{$c3}#{$__important} {
 
         color: $important-text;
 
@@ -219,7 +219,7 @@ parent: label
 
 /*doc
 ---
-title: #{$pr}#{$m}label-round
+title: #{$pr}#{$m}label#{$c3}round
 name: label-04-round
 category: module-label
 parent: label
@@ -228,19 +228,19 @@ parent: label
 ラベルが小判型になる。
 
 ``` example
-<p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label-round #{$pr}#{$m}label-#{$__gray}">#{$pr}#{$m}label-#{$__gray}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label-round #{$pr}#{$m}label-#{$__gray}">#{$pr}#{$m}label-#{$__gray}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-<p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label-round #{$pr}#{$m}label-#{$__first}">#{$pr}#{$m}label-#{$__first}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label-round #{$pr}#{$m}label-#{$__first}">#{$pr}#{$m}label-#{$__first}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-<p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label-round #{$pr}#{$m}label-#{$__second}">#{$pr}#{$m}label-#{$__second}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label-round #{$pr}#{$m}label-#{$__second}">#{$pr}#{$m}label-#{$__second}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-<p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label-round #{$pr}#{$m}label-#{$__third}">#{$pr}#{$m}label-#{$__third}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label-round #{$pr}#{$m}label-#{$__third}">#{$pr}#{$m}label-#{$__third}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-<p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label-round #{$pr}#{$m}label-#{$__fourth}">#{$pr}#{$m}label-#{$__fourth}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label-round #{$pr}#{$m}label-#{$__fourth}">#{$pr}#{$m}label-#{$__fourth}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-<p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label-round #{$pr}#{$m}label-#{$__info}">#{$pr}#{$m}label-#{$__info}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label-round #{$pr}#{$m}label-#{$__info}">#{$pr}#{$m}label-#{$__info}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-<p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label-round #{$pr}#{$m}label-#{$__important}">#{$pr}#{$m}label-#{$__important}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label-round #{$pr}#{$m}label-#{$__important}">#{$pr}#{$m}label-#{$__important}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}round #{$pr}#{$m}label#{$c3}#{$__gray}">#{$pr}#{$m}label#{$c3}#{$__gray}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}round #{$pr}#{$m}label#{$c3}#{$__gray}">#{$pr}#{$m}label#{$c3}#{$__gray}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}round #{$pr}#{$m}label#{$c3}#{$__first}">#{$pr}#{$m}label#{$c3}#{$__first}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}round #{$pr}#{$m}label#{$c3}#{$__first}">#{$pr}#{$m}label#{$c3}#{$__first}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}round #{$pr}#{$m}label#{$c3}#{$__second}">#{$pr}#{$m}label#{$c3}#{$__second}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}round #{$pr}#{$m}label#{$c3}#{$__second}">#{$pr}#{$m}label#{$c3}#{$__second}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}round #{$pr}#{$m}label#{$c3}#{$__third}">#{$pr}#{$m}label#{$c3}#{$__third}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}round #{$pr}#{$m}label#{$c3}#{$__third}">#{$pr}#{$m}label#{$c3}#{$__third}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}round #{$pr}#{$m}label#{$c3}#{$__fourth}">#{$pr}#{$m}label#{$c3}#{$__fourth}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}round #{$pr}#{$m}label#{$c3}#{$__fourth}">#{$pr}#{$m}label#{$c3}#{$__fourth}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}round #{$pr}#{$m}label#{$c3}#{$__info}">#{$pr}#{$m}label#{$c3}#{$__info}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}round #{$pr}#{$m}label#{$c3}#{$__info}">#{$pr}#{$m}label#{$c3}#{$__info}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}round #{$pr}#{$m}label#{$c3}#{$__important}">#{$pr}#{$m}label#{$c3}#{$__important}</span><a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}round #{$pr}#{$m}label#{$c3}#{$__important}">#{$pr}#{$m}label#{$c3}#{$__important}(link)</a>どこで生れたかとんと見当がつかぬ。</p>
 ```
 
 */
 
-.#{$pr}#{$m}label-round {
-    border-radius: 1em;
+.#{$pr}#{$m}label#{$c3}round {
+    border-radius: 5em;
     padding-left: 1em;
     padding-right: 1em;
 }

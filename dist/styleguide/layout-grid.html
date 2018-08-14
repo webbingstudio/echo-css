@@ -367,7 +367,7 @@ Bootstrap4の <code>.no-gutters</code> を <code>.l-grid_<em>row--0</code> の�
 <h1 id="grid-03-col-column" class="styleguide">l-grid__col--(breakpoint)--(column)</h1>
 
 <p>flexboxによるグリッドのセルの幅を、<code>(column) / 12</code>の割合にする。<br>
-Bootstrap 4との互換性の関係で、<strong>シングルクラス</strong>となっている（l-grid__colを常に付与する必要はない）。<br>
+<strong>シングルクラス</strong>となっている（l-grid__colを常に付与する必要はない）。<br>
 (breakpoint)の指定がない場合は、常にその幅となる。<br>
 (breakpoint)の指定がある場合は、(breakpoint)<strong>以上</strong>のときに、指定した幅となる。</p>
 <div class="example"><h3 class="u-text--lg">(column)のみ指定している場合</h3>
@@ -383,7 +383,7 @@ Bootstrap 4との互換性の関係で、<strong>シングルクラス</strong>�
     </div>
 </div>
 
-<h3 class="u-text--lg u-margin__t--lg">(column)と(breakpoint)の両方を指定している場合</h3>
+<h3 class="u-text--lg u-margin--top--lg">(column)と(breakpoint)の両方を指定している場合</h3>
 <div class="l-grid__row" style="margin-bottom: 2rem;">
     <div class="l-grid__col--lg--2">
         <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col--lg--2<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
@@ -396,7 +396,7 @@ Bootstrap 4との互換性の関係で、<strong>シングルクラス</strong>�
     </div>
 </div>
 
-<h3 class="u-text--lg u-margin__t--lg">(column)の指定があるセルと、ないセルが同列に混在している場合</h3>
+<h3 class="u-text--lg u-margin--top--lg">(column)の指定があるセルと、ないセルが同列に混在している場合</h3>
 <p>(column)の指定がないセルは、常に空間を埋めるように伸縮する（Bootstrapのautoと同様）。</p>
 <div class="l-grid__row" style="margin-bottom: 2rem;">
     <div class="l-grid__col--sm--6">
@@ -410,7 +410,7 @@ Bootstrap 4との互換性の関係で、<strong>シングルクラス</strong>�
     </div>
 </div>
 
-<h3 class="u-text--lg u-margin__t--lg">複雑な指定の例</h3>
+<h3 class="u-text--lg u-margin--top--lg">複雑な指定の例</h3>
 <p>ウィンドウ幅が狭くなるに従って、段組が変化する。セルが複数行になる場合は、l-grid__colにはmarginではなくpaddingを付与する。</p>
 <div class="l-grid__row">
     <div class="l-grid__col--6 l-grid__col--sm--4 l-grid__col--lg--3 l-grid__col--xxl--2" style="padding-bottom: 1rem;">
@@ -445,7 +445,7 @@ Bootstrap 4との互換性の関係で、<strong>シングルクラス</strong>�
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
-<span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"u-text--lg u-margin__t--lg"</span><span class="nt">&gt;</span>(column)と(breakpoint)の両方を指定している場合<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"u-text--lg u-margin--top--lg"</span><span class="nt">&gt;</span>(column)と(breakpoint)の両方を指定している場合<span class="nt">&lt;/h3&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-grid__row"</span> <span class="na">style=</span><span class="s">"margin-bottom: 2rem;"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-grid__col--lg--2"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #ccddff; height: 100%;"</span><span class="nt">&gt;</span>l-grid__col--lg--2<span class="nt">&lt;br&gt;</span>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/div&gt;</span>
@@ -458,7 +458,7 @@ Bootstrap 4との互換性の関係で、<strong>シングルクラス</strong>�
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
-<span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"u-text--lg u-margin__t--lg"</span><span class="nt">&gt;</span>(column)の指定があるセルと、ないセルが同列に混在している場合<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"u-text--lg u-margin--top--lg"</span><span class="nt">&gt;</span>(column)の指定があるセルと、ないセルが同列に混在している場合<span class="nt">&lt;/h3&gt;</span>
 <span class="nt">&lt;p&gt;</span>(column)の指定がないセルは、常に空間を埋めるように伸縮する（Bootstrapのautoと同様）。<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-grid__row"</span> <span class="na">style=</span><span class="s">"margin-bottom: 2rem;"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-grid__col--sm--6"</span><span class="nt">&gt;</span>
@@ -472,7 +472,7 @@ Bootstrap 4との互換性の関係で、<strong>シングルクラス</strong>�
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
-<span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"u-text--lg u-margin__t--lg"</span><span class="nt">&gt;</span>複雑な指定の例<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"u-text--lg u-margin--top--lg"</span><span class="nt">&gt;</span>複雑な指定の例<span class="nt">&lt;/h3&gt;</span>
 <span class="nt">&lt;p&gt;</span>ウィンドウ幅が狭くなるに従って、段組が変化する。セルが複数行になる場合は、l-grid__colにはmarginではなくpaddingを付与する。<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-grid__row"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-grid__col--6 l-grid__col--sm--4 l-grid__col--lg--3 l-grid__col--xxl--2"</span> <span class="na">style=</span><span class="s">"padding-bottom: 1rem;"</span><span class="nt">&gt;</span>

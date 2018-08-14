@@ -8,8 +8,8 @@
     &:after {
         content: "";
         position: absolute;
-        width: .5em;
-        height: 2px;
+        width: 8px;
+        height: 1px;
         background-color: $color;
     }
 
@@ -18,16 +18,12 @@
         &:before {
             top: 55%;
             margin-left: -1px;
-            -webkit-transform: rotate(40deg);
             transform: rotate(40deg);
-            -webkit-transform-origin: 100% 100%;
             transform-origin: 100% 100%;
         }
         &:after {
             top: 55%;
-            -webkit-transform: rotate(-40deg);
             transform: rotate(-40deg);
-            -webkit-transform-origin: 100% 100%;
             transform-origin: 100% 100%;
         }
 
@@ -37,17 +33,13 @@
 
         &:before {
             top: 55%;
-            -webkit-transform: rotate(50deg);
-            transform: rotate(50deg);
-            -webkit-transform-origin: 100% 100%;
+            transform: rotate(45deg);
             transform-origin: 100% 100%;
         }
         &:after {
             top: 55%;
             margin-right: -1px;
-            -webkit-transform: rotate(-50deg);
-            transform: rotate(-50deg);
-            -webkit-transform-origin: 0% 100%;
+            transform: rotate(-45deg);
             transform-origin: 0% 100%;
         }
 

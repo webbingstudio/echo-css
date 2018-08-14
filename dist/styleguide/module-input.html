@@ -36,9 +36,9 @@
                         
                         <li class="s-anchor-item"><a href="#input" class="js-scrollto">m-input</a></li>
                         
-                        <li class="s-anchor-item"><a href="#input-01-size" class="js-scrollto">m-input-(size)</a></li>
+                        <li class="s-anchor-item"><a href="#input-01-size" class="js-scrollto">m-input--(size)</a></li>
                         
-                        <li class="s-anchor-item"><a href="#input-02-color" class="js-scrollto">m-input-(color)</a></li>
+                        <li class="s-anchor-item"><a href="#input-02-color" class="js-scrollto">m-input--(color)</a></li>
                         
                     </ul>
                 </nav>
@@ -67,69 +67,69 @@
     <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"m-input is-error"</span> <span class="na">rows=</span><span class="s">"5"</span> <span class="na">cols=</span><span class="s">"60"</span><span class="nt">&gt;</span>* おおっと *<span class="nt">&lt;/textarea&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </pre></div>
-<h2 id="input-01-size" class="styleguide">m-input-(size)</h2>
+<h2 id="input-01-size" class="styleguide">m-input--(size)</h2>
 
 <p>テキスト入力を即す欄の全体のサイズを変更する。(size)は <code>sm, lg</code> に対応している。</p>
-<div class="example"><div class="m-b">
-    <input type="text" class="m-input m-input-sm" size="20" value="吾輩は猫である。" />
-    <input type="text" class="m-input m-input-lg" size="20" value="吾輩は猫である。" />
+<div class="example"><div style="margin-bottom: 2rem;">
+    <input type="text" class="m-input m-input--sm" size="20" value="吾輩は猫である。" />
+    <input type="text" class="m-input m-input--lg" size="20" value="吾輩は猫である。" />
 </div>
-<div class="m-b">
-    <textarea class="m-input m-input-sm" rows="5" cols="60">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</textarea>
-    <textarea class="m-input m-input-lg" rows="5" cols="60">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</textarea>
+<div>
+    <textarea class="m-input m-input--sm" rows="5" cols="60">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</textarea>
+    <textarea class="m-input m-input--lg" rows="5" cols="60">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</textarea>
 </div>
-</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-b"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"m-input m-input-sm"</span> <span class="na">size=</span><span class="s">"20"</span> <span class="na">value=</span><span class="s">"吾輩は猫である。"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"m-input m-input-lg"</span> <span class="na">size=</span><span class="s">"20"</span> <span class="na">value=</span><span class="s">"吾輩は猫である。"</span> <span class="nt">/&gt;</span>
+</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 2rem;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"m-input m-input--sm"</span> <span class="na">size=</span><span class="s">"20"</span> <span class="na">value=</span><span class="s">"吾輩は猫である。"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"m-input m-input--lg"</span> <span class="na">size=</span><span class="s">"20"</span> <span class="na">value=</span><span class="s">"吾輩は猫である。"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-b"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"m-input m-input-sm"</span> <span class="na">rows=</span><span class="s">"5"</span> <span class="na">cols=</span><span class="s">"60"</span><span class="nt">&gt;</span>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<span class="nt">&lt;/textarea&gt;</span>
-    <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"m-input m-input-lg"</span> <span class="na">rows=</span><span class="s">"5"</span> <span class="na">cols=</span><span class="s">"60"</span><span class="nt">&gt;</span>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<span class="nt">&lt;/textarea&gt;</span>
+<span class="nt">&lt;div&gt;</span>
+    <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"m-input m-input--sm"</span> <span class="na">rows=</span><span class="s">"5"</span> <span class="na">cols=</span><span class="s">"60"</span><span class="nt">&gt;</span>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<span class="nt">&lt;/textarea&gt;</span>
+    <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"m-input m-input--lg"</span> <span class="na">rows=</span><span class="s">"5"</span> <span class="na">cols=</span><span class="s">"60"</span><span class="nt">&gt;</span>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<span class="nt">&lt;/textarea&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </pre></div>
-<h2 id="input-02-color" class="styleguide">m-input-(color)</h2>
+<h2 id="input-02-color" class="styleguide">m-input--(color)</h2>
 
 <p>ボーダーの色を変更する。(color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。</p>
 <div class="example"><div style="margin-bottom: 1rem;">
-    <input type="text" class="m-input m-input-gray" size="20" value="" placeholder="gray" />
+    <input type="text" class="m-input m-input--gray" size="20" value="" placeholder="gray" />
 </div>
 <div style="margin-bottom: 1rem;">
-    <input type="text" class="m-input m-input-first" size="20" value="" placeholder="first" />
+    <input type="text" class="m-input m-input--first" size="20" value="" placeholder="first" />
 </div>
 <div style="margin-bottom: 1rem;">
-    <input type="text" class="m-input m-input-second" size="20" value="" placeholder="second" />
+    <input type="text" class="m-input m-input--second" size="20" value="" placeholder="second" />
 </div>
 <div style="margin-bottom: 1rem;">
-    <input type="text" class="m-input m-input-third" size="20" value="" placeholder="third" />
+    <input type="text" class="m-input m-input--third" size="20" value="" placeholder="third" />
 </div>
 <div style="margin-bottom: 1rem;">
-    <input type="text" class="m-input m-input-fourth" size="20" value="" placeholder="fourth" />
+    <input type="text" class="m-input m-input--fourth" size="20" value="" placeholder="fourth" />
 </div>
 <div style="margin-bottom: 1rem;">
-    <input type="text" class="m-input m-input-info" size="20" value="" placeholder="info" />
+    <input type="text" class="m-input m-input--info" size="20" value="" placeholder="info" />
 </div>
 <div>
-    <input type="text" class="m-input m-input-important" size="20" value="" placeholder="important" />
+    <input type="text" class="m-input m-input--important" size="20" value="" placeholder="important" />
 </div>
 </div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"m-input m-input-gray"</span> <span class="na">size=</span><span class="s">"20"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">placeholder=</span><span class="s">"gray"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"m-input m-input--gray"</span> <span class="na">size=</span><span class="s">"20"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">placeholder=</span><span class="s">"gray"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"m-input m-input-first"</span> <span class="na">size=</span><span class="s">"20"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">placeholder=</span><span class="s">"first"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"m-input m-input--first"</span> <span class="na">size=</span><span class="s">"20"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">placeholder=</span><span class="s">"first"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"m-input m-input-second"</span> <span class="na">size=</span><span class="s">"20"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">placeholder=</span><span class="s">"second"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"m-input m-input--second"</span> <span class="na">size=</span><span class="s">"20"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">placeholder=</span><span class="s">"second"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"m-input m-input-third"</span> <span class="na">size=</span><span class="s">"20"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">placeholder=</span><span class="s">"third"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"m-input m-input--third"</span> <span class="na">size=</span><span class="s">"20"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">placeholder=</span><span class="s">"third"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"m-input m-input-fourth"</span> <span class="na">size=</span><span class="s">"20"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">placeholder=</span><span class="s">"fourth"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"m-input m-input--fourth"</span> <span class="na">size=</span><span class="s">"20"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">placeholder=</span><span class="s">"fourth"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"m-input m-input-info"</span> <span class="na">size=</span><span class="s">"20"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">placeholder=</span><span class="s">"info"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"m-input m-input--info"</span> <span class="na">size=</span><span class="s">"20"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">placeholder=</span><span class="s">"info"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"m-input m-input-important"</span> <span class="na">size=</span><span class="s">"20"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">placeholder=</span><span class="s">"important"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"m-input m-input--important"</span> <span class="na">size=</span><span class="s">"20"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">placeholder=</span><span class="s">"important"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </pre></div><?php include('../doc_include/footer.inc'); ?>

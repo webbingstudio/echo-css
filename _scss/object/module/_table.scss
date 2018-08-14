@@ -67,7 +67,7 @@ category: module-table
 
 /*doc
 ---
-title: #{$pr}#{$m}table-bordered
+title: #{$pr}#{$m}table#{$c3}bordered
 name: table-01-bordered
 category: module-table
 parent: table
@@ -76,7 +76,7 @@ parent: table
 表組のセル全てにグリッド罫線を引く。
 
 ``` example
-<table class="#{$pr}#{$m}table #{$pr}#{$m}table-bordered">
+<table class="#{$pr}#{$m}table #{$pr}#{$m}table#{$c3}bordered">
     <thead>
         <tr>
             <th>吾輩は</th>
@@ -113,7 +113,7 @@ parent: table
 
 */
 
-.#{$pr}#{$m}table-bordered {
+.#{$pr}#{$m}table#{$c3}bordered {
     width: 100%;
     border-top: $border-table-width solid $border-color;
     border-left: $border-table-width solid $border-color;
@@ -147,7 +147,7 @@ parent: table
 
 /*doc
 ---
-title: #{$pr}#{$m}table-ruled
+title: #{$pr}#{$m}table#{$c3}ruled
 name: table-02-ruled
 category: module-table
 parent: table
@@ -156,7 +156,7 @@ parent: table
 表組の各セルの下のみ罫線を引く。Bootstrapの <code>.table</code> と同じ。
 
 ``` example
-<table class="#{$pr}#{$m}table #{$pr}#{$m}table-ruled">
+<table class="#{$pr}#{$m}table #{$pr}#{$m}table#{$c3}ruled">
     <thead>
         <tr>
             <th>吾輩は</th>
@@ -193,7 +193,7 @@ parent: table
 
 */
 
-.#{$pr}#{$m}table-ruled {
+.#{$pr}#{$m}table#{$c3}ruled {
     width: 100%;
 
     thead {
@@ -212,7 +212,7 @@ parent: table
 
 /*doc
 ---
-title: #{$pr}#{$m}table-justify
+title: #{$pr}#{$m}table#{$c3}justify
 name: table-03-justify
 category: module-table
 parent: table
@@ -222,7 +222,7 @@ parent: table
 
 ``` example
 <div style="margin-bottom: 2rem;">
-    <table class="#{$pr}#{$m}table #{$pr}#{$m}table-bordered #{$pr}#{$m}table-justify">
+    <table class="#{$pr}#{$m}table #{$pr}#{$m}table#{$c3}bordered #{$pr}#{$m}table#{$c3}justify">
         <tbody>
             <tr>
                 <td>吾輩は猫である名前はまだ無い。どこで生れたかとんと見当がつかぬ。</td>
@@ -233,7 +233,7 @@ parent: table
 </div>
 
 <div style="margin-bottom: 2rem;">
-    <table class="#{$pr}#{$m}table #{$pr}#{$m}table-bordered #{$pr}#{$m}table-justify">
+    <table class="#{$pr}#{$m}table #{$pr}#{$m}table#{$c3}bordered #{$pr}#{$m}table#{$c3}justify">
         <tbody>
             <tr>
                 <td>吾輩は猫である名前は</td>
@@ -254,7 +254,7 @@ parent: table
 
 */
 
-.#{$pr}#{$m}table-justify {
+.#{$pr}#{$m}table#{$c3}justify {
     width: 100%;
     table-layout: fixed;
 }
@@ -262,7 +262,7 @@ parent: table
 
 /*doc
 ---
-title: #{$pr}#{$m}table-(ratio-first)to(ratio-second)to(ratio-third)
+title: #{$pr}#{$m}table#{$c3}(ratio-first)to(ratio-second)to(ratio-third)
 name: table-04-ratio
 category: module-table
 parent: table
@@ -273,8 +273,8 @@ parent: table
 
 ``` example
 <div style="margin-bottom: 2rem;">
-    <table class="#{$pr}#{$m}table #{$pr}#{$m}table-bordered #{$pr}#{$m}table-3to9">
-        <caption>.#{$pr}#{$m}table-3to9</caption>
+    <table class="#{$pr}#{$m}table #{$pr}#{$m}table#{$c3}bordered #{$pr}#{$m}table#{$c3}3to9">
+        <caption>.#{$pr}#{$m}table#{$c3}3to9</caption>
         <tbody>
             <tr>
                 <th>吾輩は猫である</th>
@@ -289,8 +289,8 @@ parent: table
 </div>
 
 <div style="margin-bottom: 2rem;">
-    <table class="#{$pr}#{$m}table #{$pr}#{$m}table-bordered #{$pr}#{$m}table-4to8">
-        <caption>.#{$pr}#{$m}table-4to8</caption>
+    <table class="#{$pr}#{$m}table #{$pr}#{$m}table#{$c3}bordered #{$pr}#{$m}table#{$c3}4to8">
+        <caption>.#{$pr}#{$m}table#{$c3}4to8</caption>
         <tbody>
             <tr>
                 <th>吾輩は猫である</th>
@@ -305,8 +305,8 @@ parent: table
 </div>
 
 <div style="margin-bottom: 2rem;">
-    <table class="#{$pr}#{$m}table #{$pr}#{$m}table-bordered #{$pr}#{$m}table-3to3to6">
-        <caption>.#{$pr}#{$m}table-3to3to6</caption>
+    <table class="#{$pr}#{$m}table #{$pr}#{$m}table#{$c3}bordered #{$pr}#{$m}table#{$c3}3to3to6">
+        <caption>.#{$pr}#{$m}table#{$c3}3to3to6</caption>
         <tbody>
             <tr>
                 <th>吾輩は猫である</th>
@@ -323,8 +323,8 @@ parent: table
 </div>
 
 <div>
-    <table class="#{$pr}#{$m}table #{$pr}#{$m}table-bordered #{$pr}#{$m}table-0to12">
-        <caption>.#{$pr}#{$m}table-0to12</caption>
+    <table class="#{$pr}#{$m}table #{$pr}#{$m}table#{$c3}bordered #{$pr}#{$m}table#{$c3}0to12">
+        <caption>.#{$pr}#{$m}table#{$c3}0to12</caption>
         <tbody>
             <tr>
                 <th>吾輩は猫</th>
@@ -345,7 +345,7 @@ parent: table
 
 */
 
-.#{$pr}#{$m}table-3to9 {
+.#{$pr}#{$m}table#{$c3}3to9 {
 
     tr {
 
@@ -363,7 +363,7 @@ parent: table
 
 }
 
-.#{$pr}#{$m}table-4to8 {
+.#{$pr}#{$m}table#{$c3}4to8 {
 
     tr {
 
@@ -381,7 +381,7 @@ parent: table
 
 }
 
-.#{$pr}#{$m}table-3to3to6 {
+.#{$pr}#{$m}table#{$c3}3to3to6 {
 
     tr {
 
@@ -399,7 +399,7 @@ parent: table
 
 }
 
-.#{$pr}#{$m}table-0to12 {
+.#{$pr}#{$m}table#{$c3}0to12 {
 
     tr {
 
@@ -421,17 +421,17 @@ parent: table
 
 /*doc
 ---
-title: #{$pr}#{$m}table-break-sm-down
-name: table-05-break-sm-down
+title: #{$pr}#{$m}table#{$c2}break#{$c2}sm#{$c3}down
+name: table-05-break#{$c2}sm#{$c3}down
 category: module-table
 parent: table
 ---
 
 (breakpoint)が <code>sm</code> 以下のときに表組を解除する。  
-2カラム以上の表の場合は <code>.#{$pr}#{$m}table-responsive</code> を推薦。
+2カラム以上の表の場合は <code>.#{$pr}#{$m}table#{$c3}responsive</code> を推薦。
 
 ``` example
-<table class="#{$pr}#{$m}table #{$pr}#{$m}table-break-sm-down #{$pr}#{$m}table-bordered" style="margin-bottom: 2rem;">
+<table class="#{$pr}#{$m}table #{$pr}#{$m}table#{$c3}break#{$c2}sm#{$c3}down #{$pr}#{$m}table#{$c3}bordered" style="margin-bottom: 2rem;">
     <thead>
         <tr>
             <th>吾輩は猫である</th>
@@ -460,7 +460,7 @@ parent: table
     </tfoot>
 </table>
 
-<table class="#{$pr}#{$m}table #{$pr}#{$m}table-break-sm-down #{$pr}#{$m}table-ruled">
+<table class="#{$pr}#{$m}table #{$pr}#{$m}table#{$c3}break#{$c2}sm#{$c3}down #{$pr}#{$m}table#{$c3}ruled">
     <thead>
         <tr>
             <th>吾輩は猫である</th>
@@ -492,7 +492,7 @@ parent: table
 
 */
 
-.#{$pr}#{$m}table-break-sm-down {
+.#{$pr}#{$m}table#{$c3}break#{$c2}sm#{$c3}down {
 
     @include media-breakpoint-down(sm) {
         display: block;
@@ -526,7 +526,7 @@ parent: table
 
     }
 
-    &.#{$pr}#{$m}table-bordered {
+    &.#{$pr}#{$m}table#{$c3}bordered {
 
         thead {
             border-bottom-width: $border-table-width;
@@ -538,7 +538,7 @@ parent: table
 
     }
 
-    &.#{$pr}#{$m}table-ruled {
+    &.#{$pr}#{$m}table#{$c3}ruled {
 
         thead {
             border-bottom-width: $border-table-width;
@@ -553,7 +553,7 @@ parent: table
 
 /*doc
 ---
-title: #{$pr}#{$m}table-responsive
+title: #{$pr}#{$m}table#{$c3}responsive
 name: table-06-responsive
 category: module-table
 parent: table
@@ -562,8 +562,8 @@ parent: table
 (breakpoint)が <code>md</code> 以下のときにスクロールバーを表示する。
 
 ``` example
-<div class="#{$pr}#{$m}table-responsive">
-    <table class="#{$pr}#{$m}table #{$pr}#{$m}table-bordered">
+<div class="#{$pr}#{$m}table#{$c3}responsive">
+    <table class="#{$pr}#{$m}table #{$pr}#{$m}table#{$c3}bordered">
         <tbody>
             <tr>
                 <th>吾輩は猫である</th>
@@ -582,7 +582,7 @@ parent: table
 
 */
 
-.#{$pr}#{$m}table-responsive {
+.#{$pr}#{$m}table#{$c3}responsive {
     display: block;
     width: 100%;
     overflow-x: auto;

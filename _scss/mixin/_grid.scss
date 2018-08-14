@@ -20,13 +20,13 @@
 
     @for $i from 1 through $columns {
       @if ($optimize != true) or ( ($optimize == true) and ( $i > 1 ) and ( $i < $grid-columns-max ) ) {
-        .#{$pr}#{$col}#{$infix}#{$c2}#{$i} {
+        .#{$pr}#{$col}#{$infix}#{$c3}#{$i} {
           @extend %grid-column;
         }
       }
     }
     .#{$pr}#{$col}#{$infix},
-    .#{$pr}#{$col}#{$infix}#{$c2}auto {
+    .#{$pr}#{$col}#{$infix}#{$c3}auto {
       @extend %grid-column;
     }
 
@@ -37,31 +37,31 @@
         max-width: 100%;
       }
 
-      .#{$pr}#{$col}#{$infix}#{$c2}auto {
+      .#{$pr}#{$col}#{$infix}#{$c3}auto {
         width: auto;
         max-width: none;
       }
 
       @for $i from 1 through $columns {
         @if ($optimize != true) or ( ($optimize == true) and ( $i > 1 ) and ( $i < $grid-columns-max ) ) {
-          .#{$pr}#{$col}#{$infix}#{$c2}#{$i} {
+          .#{$pr}#{$col}#{$infix}#{$c3}#{$i} {
             @include make-col-flex($i, $columns);
           }
         }
       }
 
-      .#{$pr}#{$col}#{$c2}order#{$infix}#{$c2}first { order: -1; }
+      .#{$pr}#{$col}#{$c2}order#{$infix}#{$c3}first { order: -1; }
 
-      .#{$pr}#{$col}#{$c2}order#{$infix}#{$c2}last { order: $columns + 1; }
+      .#{$pr}#{$col}#{$c2}order#{$infix}#{$c3}last { order: $columns + 1; }
 
       @for $i from 0 through $columns {
-        .#{$pr}#{$col}#{$c2}order#{$infix}#{$c2}#{$i} { order: $i; }
+        .#{$pr}#{$col}#{$c2}order#{$infix}#{$c3}#{$i} { order: $i; }
       }
 
       @for $i from 0 through ($columns - 1) {
         @if ($optimize != true) or ( ($optimize == true) and ( $i < $grid-columns-max ) ) {
           @if not ($infix == "" and $i == 0) {
-            .#{$pr}#{$col}#{$c2}offset#{$infix}#{$c2}#{$i} {
+            .#{$pr}#{$col}#{$c2}offset#{$infix}#{$c3}#{$i} {
               @include make-col-offset-flex($i, $columns);
             }
           }

@@ -1,0 +1,131 @@
+/*doc
+---
+title: #{$pr}#{$m}btn#{$c3}bordered
+name: btn-02-bordered
+category: module-btn
+parent: btn
+---
+
+ボタンを罫線のみの見た目にする。背景色は <code>$body-bg</code> ではなく <code>transparent</code> なので注意。  
+<code>.#{$pr}#{$m}btn#{$c3}(color)</code> と同時に使用することが前提となっており、罫線の色が変わる。
+
+``` example
+<p>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__gray}">#{$pr}#{$m}btn#{$c3}#{$__gray}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__gray} disabled">#{$pr}#{$m}btn#{$c3}#{$__gray}</a>
+</p>
+
+<p>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__first}">#{$pr}#{$m}btn#{$c3}#{$__first}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__first} disabled">#{$pr}#{$m}btn#{$c3}#{$__first}</a>
+</p>
+
+<p>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__second}">#{$pr}#{$m}btn#{$c3}#{$__second}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__second} disabled">#{$pr}#{$m}btn#{$c3}#{$__second}</a>
+</p>
+
+<p>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__third}">#{$pr}#{$m}btn#{$c3}#{$__third}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__third} disabled">#{$pr}#{$m}btn#{$c3}#{$__third}</a>
+</p>
+
+<p>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__fourth}">#{$pr}#{$m}btn#{$c3}#{$__fourth}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__fourth} disabled">#{$pr}#{$m}btn#{$c3}#{$__fourth}</a>
+</p>
+
+<p>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__info}">#{$pr}#{$m}btn#{$c3}#{$__info}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__info} disabled">#{$pr}#{$m}btn#{$c3}#{$__info}</a>
+</p>
+
+<p>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__important}">#{$pr}#{$m}btn#{$c3}#{$__important}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__important} disabled">#{$pr}#{$m}btn#{$c3}#{$__important}</a>
+</p>
+```
+*/
+
+.#{$pr}#{$m}btn#{$c3}bordered {
+    box-shadow: none;
+
+    &.#{$pr}#{$m}btn#{$c3}#{$__gray} {
+        @include button-variant(
+            inherit,
+            transparent,
+            $gray,
+            $body-inverse-color,
+            $gray,
+            transparent
+        );
+    }
+
+    &.#{$pr}#{$m}btn#{$c3}#{$__first} {
+        @include button-variant(
+            inherit,
+            transparent,
+            $first,
+            $body-inverse-color,
+            $first,
+            transparent
+        );
+    }
+
+    &.#{$pr}#{$m}btn#{$c3}#{$__second} {
+        @include button-variant(
+            inherit,
+            transparent,
+            $second,
+            $body-inverse-color,
+            $second,
+            transparent
+        );
+    }
+
+    &.#{$pr}#{$m}btn#{$c3}#{$__third} {
+        @include button-variant(
+            inherit,
+            transparent,
+            $third,
+            $body-inverse-color,
+            $third,
+            transparent
+        );
+    }
+
+    &.#{$pr}#{$m}btn#{$c3}#{$__fourth} {
+        @include button-variant(
+            inherit,
+            transparent,
+            $fourth,
+            $body-inverse-color,
+            $fourth,
+            transparent
+        );
+    }
+
+    &.#{$pr}#{$m}btn#{$c3}#{$__info} {
+        @include button-variant(
+            inherit,
+            transparent,
+            $info,
+            $body-inverse-color,
+            $info,
+            transparent
+        );
+    }
+
+    &.#{$pr}#{$m}btn#{$c3}#{$__important} {
+        @include button-variant(
+            inherit,
+            transparent,
+            $important,
+            $body-inverse-color,
+            $important,
+            transparent
+        );
+    }
+
+}
+

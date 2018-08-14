@@ -90,17 +90,17 @@ category: module-select
 
 /*doc
 ---
-title: #{$pr}#{$m}select-(size)
+title: #{$pr}#{$m}select#{$c3}(size)
 name: select-01-size
 category: module-select
 parent: select
 ---
 
-テキスト入力を即す欄の全体のサイズを変更する。(size)は <code>sm, lg</code> に対応している。
+セレクトボックスの全体のサイズを変更する。(size)は <code>sm, lg</code> に対応している。
 
 ``` example
 <div style="margin-bottom: 1rem;">
-    <div class="#{$pr}#{$m}select #{$pr}#{$m}select-sm">
+    <div class="#{$pr}#{$m}select #{$pr}#{$m}select#{$c3}sm">
         <select>
             <option>月を選択...</option>
             <option value="">2017年</option>
@@ -110,7 +110,7 @@ parent: select
     </div>
 </div>
 <div>
-    <div class="#{$pr}#{$m}select #{$pr}#{$m}select-lg">
+    <div class="#{$pr}#{$m}select #{$pr}#{$m}select#{$c3}lg">
         <select>
             <option>月を選択...</option>
             <option value="">2017年</option>
@@ -122,7 +122,7 @@ parent: select
 ```
 */
 
-.#{$pr}#{$m}select-sm {
+.#{$pr}#{$m}select#{$c3}sm {
 
     select {
         font-size: $font-size-sm;
@@ -131,7 +131,7 @@ parent: select
 
 }
 
-.#{$pr}#{$m}select-lg {
+.#{$pr}#{$m}select#{$c3}lg {
 
     select {
         font-size: $font-size-lg;

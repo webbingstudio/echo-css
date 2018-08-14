@@ -6,27 +6,27 @@ category: module-btn
 ---
 
 リンク、インライン要素、フォームのボタン要素をボタン状に表示する。  
-<code>.disabled</code> または <code>disabled="disabled"</code>が付与されていると、反応しない見た目となる（クリックはできるので注意）。
+<code>disabled</code> 属性が付与されていると、反応しない見た目となる（クリックはできるので注意）。
 
 ``` example
 <p>
   <a href="#" class="#{$pr}#{$m}btn">#{$pr}#{$m}btn</a>
-  <a href="#" class="#{$pr}#{$m}btn disabled">#{$pr}#{$m}btn</a>
+  <a href="#" class="#{$pr}#{$m}btn" disabled>#{$pr}#{$m}btn</a>
 </p>
 
 <p>
   <span class="#{$pr}#{$m}btn">#{$pr}#{$m}btn</span>
-  <span class="#{$pr}#{$m}btn disabled">#{$pr}#{$m}btn</span>
+  <span class="#{$pr}#{$m}btn" disabled>#{$pr}#{$m}btn</span>
 </p>
 
 <p>
   <input type="button" class="#{$pr}#{$m}btn" value="#{$pr}#{$m}btn" />
-  <input type="button" class="#{$pr}#{$m}btn" value="#{$pr}#{$m}btn" disabled="disabled" />
+  <input type="button" class="#{$pr}#{$m}btn" value="#{$pr}#{$m}btn" disabled />
 </p>
 
 <p>
   <button class="#{$pr}#{$m}btn">#{$pr}#{$m}btn</button>
-  <button class="#{$pr}#{$m}btn" disabled="disabled">#{$pr}#{$m}btn</button>
+  <button class="#{$pr}#{$m}btn" disabled>#{$pr}#{$m}btn</button>
 </p>
 ```
 
@@ -73,8 +73,7 @@ category: module-btn
         text-decoration: none;
     }
 
-    &.disabled,
-    &:disabled,
+    &[disabled],
     fieldset[disabled] & {
         cursor: default;
         opacity: .65;
@@ -109,17 +108,14 @@ category: module-btn
         vertical-align: middle;
     }
 
-    .fa {
+    [class*="fa"] {
         vertical-align: middle;
-    }
-
-    .fa:before {
         font-size: 1.25em;
     }
 
 }
 
-a.#{$pr}#{$m}btn.disaabled,
+a.#{$pr}#{$m}btn[disabled],
 fieldset[disabled] a.#{$pr}#{$m}btn {
     pointer-events: none;
 }

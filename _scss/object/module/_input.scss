@@ -41,7 +41,7 @@ category: module-input
 
 /*doc
 ---
-title: #{$pr}#{$m}input-(size)
+title: #{$pr}#{$m}input#{$c3}(size)
 name: input-01-size
 category: module-input
 parent: input
@@ -50,23 +50,23 @@ parent: input
 テキスト入力を即す欄の全体のサイズを変更する。(size)は <code>sm, lg</code> に対応している。
 
 ``` example
-<div class="m-b">
-    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input-sm" size="20" value="吾輩は猫である。" />
-    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input-lg" size="20" value="吾輩は猫である。" />
+<div style="margin-bottom: 2rem;">
+    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input#{$c3}sm" size="20" value="吾輩は猫である。" />
+    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input#{$c3}lg" size="20" value="吾輩は猫である。" />
 </div>
-<div class="m-b">
-    <textarea class="#{$pr}#{$m}input #{$pr}#{$m}input-sm" rows="5" cols="60">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</textarea>
-    <textarea class="#{$pr}#{$m}input #{$pr}#{$m}input-lg" rows="5" cols="60">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</textarea>
+<div>
+    <textarea class="#{$pr}#{$m}input #{$pr}#{$m}input#{$c3}sm" rows="5" cols="60">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</textarea>
+    <textarea class="#{$pr}#{$m}input #{$pr}#{$m}input#{$c3}lg" rows="5" cols="60">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</textarea>
 </div>
 ```
 */
 
-.#{$pr}#{$m}input-sm {
+.#{$pr}#{$m}input#{$c3}sm {
     padding: .25rem;
     font-size: $font-size-sm;
 }
 
-.#{$pr}#{$m}input-lg {
+.#{$pr}#{$m}input#{$c3}lg {
     padding: .5rem .5rem;
     font-size: $font-size-lg;
 }
@@ -74,7 +74,7 @@ parent: input
 
 /*doc
 ---
-title: #{$pr}#{$m}input-(color)
+title: #{$pr}#{$m}input#{$c3}(color)
 name: input-02-color
 category: module-input
 parent: input
@@ -84,52 +84,52 @@ parent: input
 
 ``` example
 <div style="margin-bottom: 1rem;">
-    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input-#{$__gray}" size="20" value="" placeholder="#{$__gray}" />
+    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input#{$c3}#{$__gray}" size="20" value="" placeholder="#{$__gray}" />
 </div>
 <div style="margin-bottom: 1rem;">
-    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input-#{$__first}" size="20" value="" placeholder="#{$__first}" />
+    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input#{$c3}#{$__first}" size="20" value="" placeholder="#{$__first}" />
 </div>
 <div style="margin-bottom: 1rem;">
-    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input-#{$__second}" size="20" value="" placeholder="#{$__second}" />
+    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input#{$c3}#{$__second}" size="20" value="" placeholder="#{$__second}" />
 </div>
 <div style="margin-bottom: 1rem;">
-    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input-#{$__third}" size="20" value="" placeholder="#{$__third}" />
+    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input#{$c3}#{$__third}" size="20" value="" placeholder="#{$__third}" />
 </div>
 <div style="margin-bottom: 1rem;">
-    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input-#{$__fourth}" size="20" value="" placeholder="#{$__fourth}" />
+    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input#{$c3}#{$__fourth}" size="20" value="" placeholder="#{$__fourth}" />
 </div>
 <div style="margin-bottom: 1rem;">
-    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input-#{$__info}" size="20" value="" placeholder="#{$__info}" />
+    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input#{$c3}#{$__info}" size="20" value="" placeholder="#{$__info}" />
 </div>
 <div>
-    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input-#{$__important}" size="20" value="" placeholder="#{$__important}" />
+    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input#{$c3}#{$__important}" size="20" value="" placeholder="#{$__important}" />
 </div>
 ```
 */
 
-.#{$pr}#{$m}input-#{$__gray} {
+.#{$pr}#{$m}input#{$c3}#{$__gray} {
     border-color: $gray;
 }
 
-.#{$pr}#{$m}input-#{$__first} {
+.#{$pr}#{$m}input#{$c3}#{$__first} {
     border-color: $first;
 }
 
-.#{$pr}#{$m}input-#{$__second} {
+.#{$pr}#{$m}input#{$c3}#{$__second} {
     border-color: $second;
 }
 
-.#{$pr}#{$m}input-#{$__third} {
+.#{$pr}#{$m}input#{$c3}#{$__third} {
     border-color: $third;
 }
 
-.#{$pr}#{$m}input-#{$__fourth} {
+.#{$pr}#{$m}input#{$c3}#{$__fourth} {
     border-color: $fourth;
 }
 
-.#{$pr}#{$m}input-#{$__info} {
+.#{$pr}#{$m}input#{$c3}#{$__info} {
     border-color: $info;
 }
-.#{$pr}#{$m}input-#{$__important} {
+.#{$pr}#{$m}input#{$c3}#{$__important} {
     border-color: $important;
 }

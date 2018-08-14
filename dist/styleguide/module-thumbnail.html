@@ -36,13 +36,13 @@
                         
                         <li class="s-anchor-item"><a href="#thumbnail" class="js-scrollto">m-thumbnail</a></li>
                         
-                        <li class="s-anchor-item"><a href="#thumbnail-01-round" class="js-scrollto">m-thumbnail-round</a></li>
+                        <li class="s-anchor-item"><a href="#thumbnail-01-round" class="js-scrollto">m-thumbnail--round</a></li>
                         
-                        <li class="s-anchor-item"><a href="#thumbnail-02-square" class="js-scrollto">m-thumbnail-square</a></li>
+                        <li class="s-anchor-item"><a href="#thumbnail-02-square" class="js-scrollto">m-thumbnail--square</a></li>
                         
-                        <li class="s-anchor-item"><a href="#thumbnail-03-ratio" class="js-scrollto">m-thumbnail-(ratio-x)to(ratio-y)</a></li>
+                        <li class="s-anchor-item"><a href="#thumbnail-03-ratio" class="js-scrollto">m-thumbnail--(ratio-x)to(ratio-y)</a></li>
                         
-                        <li class="s-anchor-item"><a href="#thumbnail-04-vertical" class="js-scrollto">m-thumbnail-vertical</a></li>
+                        <li class="s-anchor-item"><a href="#thumbnail-04-vertical" class="js-scrollto">m-thumbnail--vertical</a></li>
                         
                     </ul>
                 </nav>
@@ -55,19 +55,19 @@
 このクラス単独ではそのままのサイズと縦横比で表示する。幅が制限されていると、そのサイズを超えないよう画像が縮小される。</p>
 <div class="example"><div class="u-clearfix u-m-b">
 
-<div class="float-l u-m-r">
+<div class="u-float--left u-margin--r--md">
     <div class="m-thumbnail">
         <img src="https://placehold.jp/150x150.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r">
+<div class="u-float--left u-margin--r--md">
     <div class="m-thumbnail">
         <img src="https://placehold.jp/240x320.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
     <div class="m-thumbnail">
         <img src="https://placehold.jp/480x360.jpg" alt="">
     </div>
@@ -77,19 +77,19 @@
 </div>
 </div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-clearfix u-m-b"</span><span class="nt">&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"float-l u-m-r"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-float--left u-margin--r--md"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placehold.jp/150x150.jpg"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"float-l u-m-r"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-float--left u-margin--r--md"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placehold.jp/240x320.jpg"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"float-l u-m-r"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-float--left u-margin--r--md"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placehold.jp/480x360.jpg"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
@@ -98,26 +98,26 @@
 
 <span class="nt">&lt;/div&gt;</span>
 </pre></div>
-<h2 id="thumbnail-01-round" class="styleguide">m-thumbnail-round</h2>
+<h2 id="thumbnail-01-round" class="styleguide">m-thumbnail--round</h2>
 
 <p>画像を正円にトリミングして表示する。別途、幅を指定する必要がある。<br>
-横長の画像では、上下に余白ができるため、 <code>m-thumbnail-vertical</code> を併用する必要がある。</p>
+横長の画像では上下に余白ができるため、余白を出したくない場合は <code>.m-thumbnail--vertical</code> を併用する必要がある。</p>
 <div class="example"><div class="u-clearfix u-m-b">
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-round">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--round">
         <img src="https://placehold.jp/200x200.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-round">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--round">
         <img src="https://placehold.jp/200x100.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-round">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--round">
         <img src="https://placehold.jp/200x300.jpg" alt="">
     </div>
 </div>
@@ -125,46 +125,46 @@
 </div>
 </div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-clearfix u-m-b"</span><span class="nt">&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"float-l u-m-r"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail-round"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-float--left u-margin--r--md"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail--round"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placehold.jp/200x200.jpg"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"float-l u-m-r"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail-round"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-float--left u-margin--r--md"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail--round"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placehold.jp/200x100.jpg"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"float-l u-m-r"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail-round"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-float--left u-margin--r--md"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail--round"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placehold.jp/200x300.jpg"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
 <span class="nt">&lt;/div&gt;</span>
 </pre></div>
-<h2 id="thumbnail-02-square" class="styleguide">m-thumbnail-square</h2>
+<h2 id="thumbnail-02-square" class="styleguide">m-thumbnail--square</h2>
 
 <p>画像を正方形にトリミングして表示する。別途、幅を指定する必要がある。<br>
-横長の画像では、上下に余白ができるため、 <code>m-thumbnail-vertical</code> を併用すること。</p>
+横長の画像では上下に余白ができるため、余白を出したくない場合は <code>m-thumbnail--vertical</code> を併用する必要がある。</p>
 <div class="example"><div class="u-clearfix u-m-b">
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-square">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--square">
         <img src="https://placehold.jp/200x200.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-square">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--square">
         <img src="https://placehold.jp/200x100.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-square">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--square">
         <img src="https://placehold.jp/200x300.jpg" alt="">
     </div>
 </div>
@@ -172,59 +172,59 @@
 </div>
 </div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-clearfix u-m-b"</span><span class="nt">&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"float-l u-m-r"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail-square"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-float--left u-margin--r--md"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail--square"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placehold.jp/200x200.jpg"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"float-l u-m-r"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail-square"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-float--left u-margin--r--md"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail--square"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placehold.jp/200x100.jpg"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"float-l u-m-r"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail-square"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-float--left u-margin--r--md"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail--square"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placehold.jp/200x300.jpg"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
 <span class="nt">&lt;/div&gt;</span>
 </pre></div>
-<h2 id="thumbnail-03-ratio" class="styleguide">m-thumbnail-(ratio-x)to(ratio-y)</h2>
+<h2 id="thumbnail-03-ratio" class="styleguide">m-thumbnail--(ratio-x)to(ratio-y)</h2>
 
 <p>画像を指定した縦横比で、かつトリミングして表示する。別途、幅を指定する必要がある。<br>
 (ratio-x)to(ratio-y)は <code>3to2, 4to3, 16to9, ogimage(1.91:1), 21to9</code> に対応している。<br>
 指定した比率を超える超横長の画像だった場合は、上下に余白ができる。</p>
 <div class="example"><div class="u-clearfix u-m-b">
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-3to2">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--3to2">
         <img src="https://placehold.jp/480x360.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-4to3">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--4to3">
         <img src="https://placehold.jp/480x360.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-16to9">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--16to9">
         <img src="https://placehold.jp/480x360.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-ogimage">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--ogimage">
         <img src="https://placehold.jp/480x360.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-21to9">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--21to9">
         <img src="https://placehold.jp/480x360.jpg" alt="">
     </div>
 </div>
@@ -234,32 +234,32 @@
 
 <div class="u-clearfix u-m-b">
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-3to2">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--3to2">
         <img src="https://placehold.jp/320x480.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-4to3">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--4to3">
         <img src="https://placehold.jp/320x480.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-16to9">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--16to9">
         <img src="https://placehold.jp/320x480.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-ogimage">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--ogimage">
         <img src="https://placehold.jp/320x480.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-21to9">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--21to9">
         <img src="https://placehold.jp/320x480.jpg" alt="">
     </div>
 </div>
@@ -269,32 +269,32 @@
 
 <div class="u-clearfix u-m-b">
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-3to2">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--3to2">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-4to3">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--4to3">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-16to9">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--16to9">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-ogimage">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--ogimage">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-21to9">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--21to9">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
@@ -302,32 +302,32 @@
 </div>
 </div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-clearfix u-m-b"</span><span class="nt">&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"float-l u-m-r"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail-3to2"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-float--left u-margin--r--md"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail--3to2"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placehold.jp/480x360.jpg"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"float-l u-m-r"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail-4to3"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-float--left u-margin--r--md"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail--4to3"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placehold.jp/480x360.jpg"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"float-l u-m-r"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail-16to9"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-float--left u-margin--r--md"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail--16to9"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placehold.jp/480x360.jpg"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"float-l u-m-r"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail-ogimage"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-float--left u-margin--r--md"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail--ogimage"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placehold.jp/480x360.jpg"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"float-l u-m-r"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail-21to9"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-float--left u-margin--r--md"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail--21to9"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placehold.jp/480x360.jpg"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
@@ -337,32 +337,32 @@
 
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-clearfix u-m-b"</span><span class="nt">&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"float-l u-m-r"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail-3to2"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-float--left u-margin--r--md"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail--3to2"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placehold.jp/320x480.jpg"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"float-l u-m-r"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail-4to3"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-float--left u-margin--r--md"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail--4to3"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placehold.jp/320x480.jpg"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"float-l u-m-r"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail-16to9"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-float--left u-margin--r--md"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail--16to9"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placehold.jp/320x480.jpg"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"float-l u-m-r"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail-ogimage"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-float--left u-margin--r--md"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail--ogimage"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placehold.jp/320x480.jpg"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"float-l u-m-r"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail-21to9"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-float--left u-margin--r--md"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail--21to9"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placehold.jp/320x480.jpg"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
@@ -372,51 +372,51 @@
 
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-clearfix u-m-b"</span><span class="nt">&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"float-l u-m-r"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail-3to2"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-float--left u-margin--r--md"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail--3to2"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placehold.jp/600x200.jpg"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"float-l u-m-r"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail-4to3"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-float--left u-margin--r--md"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail--4to3"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placehold.jp/600x200.jpg"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"float-l u-m-r"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail-16to9"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-float--left u-margin--r--md"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail--16to9"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placehold.jp/600x200.jpg"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"float-l u-m-r"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail-ogimage"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-float--left u-margin--r--md"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail--ogimage"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placehold.jp/600x200.jpg"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"float-l u-m-r"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail-21to9"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-float--left u-margin--r--md"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail--21to9"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placehold.jp/600x200.jpg"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
 <span class="nt">&lt;/div&gt;</span>
 </pre></div>
-<h2 id="thumbnail-04-vertical" class="styleguide">m-thumbnail-vertical</h2>
+<h2 id="thumbnail-04-vertical" class="styleguide">m-thumbnail--vertical</h2>
 
-<p><code>m-thumbnail-round, m-thumbnail-square, m-thumbnail-(ratio-x)to(ratio-y)</code> を使用したときに、幅ではなく高さを基準にトリミングする。</p>
+<p><code>m-thumbnail--round, m-thumbnail--square, m-thumbnail--(ratio-x)to(ratio-y)</code> を使用したときに、幅ではなく高さを基準にトリミングする。</p>
 <div class="example"><div class="u-clearfix u-m-b">
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-vertical m-thumbnail-square">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--vertical m-thumbnail--square">
         <img src="https://placehold.jp/480x320.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-vertical m-thumbnail-round">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--vertical m-thumbnail--round">
         <img src="https://placehold.jp/480x320.jpg" alt="">
     </div>
 </div>
@@ -425,32 +425,32 @@
 
 <div class="u-clearfix u-m-b">
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-vertical m-thumbnail-3to2">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--vertical m-thumbnail--3to2">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-vertical m-thumbnail-4to3">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--vertical m-thumbnail--4to3">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-vertical m-thumbnail-16to9">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--vertical m-thumbnail--16to9">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-vertical m-thumbnail-ogimage">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--vertical m-thumbnail--ogimage">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-vertical m-thumbnail-21to9">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--vertical m-thumbnail--21to9">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
@@ -458,14 +458,14 @@
 </div>
 </div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-clearfix u-m-b"</span><span class="nt">&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"float-l u-m-r"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail-vertical m-thumbnail-square"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-float--left u-margin--r--md"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail--vertical m-thumbnail--square"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placehold.jp/480x320.jpg"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"float-l u-m-r"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail-vertical m-thumbnail-round"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-float--left u-margin--r--md"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail--vertical m-thumbnail--round"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placehold.jp/480x320.jpg"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
@@ -474,32 +474,32 @@
 
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-clearfix u-m-b"</span><span class="nt">&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"float-l u-m-r"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail-vertical m-thumbnail-3to2"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-float--left u-margin--r--md"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail--vertical m-thumbnail--3to2"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placehold.jp/600x200.jpg"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"float-l u-m-r"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail-vertical m-thumbnail-4to3"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-float--left u-margin--r--md"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail--vertical m-thumbnail--4to3"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placehold.jp/600x200.jpg"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"float-l u-m-r"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail-vertical m-thumbnail-16to9"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-float--left u-margin--r--md"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail--vertical m-thumbnail--16to9"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placehold.jp/600x200.jpg"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"float-l u-m-r"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail-vertical m-thumbnail-ogimage"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-float--left u-margin--r--md"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail--vertical m-thumbnail--ogimage"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placehold.jp/600x200.jpg"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"float-l u-m-r"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail-vertical m-thumbnail-21to9"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-float--left u-margin--r--md"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail m-thumbnail--vertical m-thumbnail--21to9"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placehold.jp/600x200.jpg"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>

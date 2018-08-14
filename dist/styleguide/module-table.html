@@ -36,17 +36,17 @@
                         
                         <li class="s-anchor-item"><a href="#table" class="js-scrollto">m-table</a></li>
                         
-                        <li class="s-anchor-item"><a href="#table-01-bordered" class="js-scrollto">m-table-bordered</a></li>
+                        <li class="s-anchor-item"><a href="#table-01-bordered" class="js-scrollto">m-table--bordered</a></li>
                         
-                        <li class="s-anchor-item"><a href="#table-02-ruled" class="js-scrollto">m-table-ruled</a></li>
+                        <li class="s-anchor-item"><a href="#table-02-ruled" class="js-scrollto">m-table--ruled</a></li>
                         
-                        <li class="s-anchor-item"><a href="#table-03-justify" class="js-scrollto">m-table-justify</a></li>
+                        <li class="s-anchor-item"><a href="#table-03-justify" class="js-scrollto">m-table--justify</a></li>
                         
-                        <li class="s-anchor-item"><a href="#table-04-ratio" class="js-scrollto">m-table-(ratio-first)to(ratio-second)to(ratio-third)</a></li>
+                        <li class="s-anchor-item"><a href="#table-04-ratio" class="js-scrollto">m-table--(ratio-first)to(ratio-second)to(ratio-third)</a></li>
                         
-                        <li class="s-anchor-item"><a href="#table-05-break-sm-down" class="js-scrollto">m-table-break-sm-down</a></li>
+                        <li class="s-anchor-item"><a href="#table-05-break--sm--down" class="js-scrollto">m-table--break--sm--down</a></li>
                         
-                        <li class="s-anchor-item"><a href="#table-06-responsive" class="js-scrollto">m-table-responsive</a></li>
+                        <li class="s-anchor-item"><a href="#table-06-responsive" class="js-scrollto">m-table--responsive</a></li>
                         
                     </ul>
                 </nav>
@@ -92,10 +92,10 @@
     <span class="nt">&lt;/tbody&gt;</span>
 <span class="nt">&lt;/table&gt;</span>
 </pre></div>
-<h2 id="table-01-bordered" class="styleguide">m-table-bordered</h2>
+<h2 id="table-01-bordered" class="styleguide">m-table--bordered</h2>
 
 <p>表組のセル全てにグリッド罫線を引く。</p>
-<div class="example"><table class="m-table m-table-bordered">
+<div class="example"><table class="m-table m-table--bordered">
     <thead>
         <tr>
             <th>吾輩は</th>
@@ -128,7 +128,7 @@
         </tr>
     </tfoot>
 </table>
-</div><div class="codeblock"><pre><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"m-table m-table-bordered"</span><span class="nt">&gt;</span>
+</div><div class="codeblock"><pre><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"m-table m-table--bordered"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;thead&gt;</span>
         <span class="nt">&lt;tr&gt;</span>
             <span class="nt">&lt;th&gt;</span>吾輩は<span class="nt">&lt;/th&gt;</span>
@@ -162,10 +162,10 @@
     <span class="nt">&lt;/tfoot&gt;</span>
 <span class="nt">&lt;/table&gt;</span>
 </pre></div>
-<h2 id="table-02-ruled" class="styleguide">m-table-ruled</h2>
+<h2 id="table-02-ruled" class="styleguide">m-table--ruled</h2>
 
 <p>表組の各セルの下のみ罫線を引く。Bootstrapの <code>.table</code> と同じ。</p>
-<div class="example"><table class="m-table m-table-ruled">
+<div class="example"><table class="m-table m-table--ruled">
     <thead>
         <tr>
             <th>吾輩は</th>
@@ -198,7 +198,7 @@
         </tr>
     </tfoot>
 </table>
-</div><div class="codeblock"><pre><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"m-table m-table-ruled"</span><span class="nt">&gt;</span>
+</div><div class="codeblock"><pre><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"m-table m-table--ruled"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;thead&gt;</span>
         <span class="nt">&lt;tr&gt;</span>
             <span class="nt">&lt;th&gt;</span>吾輩は<span class="nt">&lt;/th&gt;</span>
@@ -232,11 +232,11 @@
     <span class="nt">&lt;/tfoot&gt;</span>
 <span class="nt">&lt;/table&gt;</span>
 </pre></div>
-<h2 id="table-03-justify" class="styleguide">m-table-justify</h2>
+<h2 id="table-03-justify" class="styleguide">m-table--justify</h2>
 
 <p>列数、内容にかかわらず、セルを均等な幅にする。</p>
 <div class="example"><div style="margin-bottom: 2rem;">
-    <table class="m-table m-table-bordered m-table-justify">
+    <table class="m-table m-table--bordered m-table--justify">
         <tbody>
             <tr>
                 <td>吾輩は猫である名前はまだ無い。どこで生れたかとんと見当がつかぬ。</td>
@@ -247,7 +247,7 @@
 </div>
 
 <div style="margin-bottom: 2rem;">
-    <table class="m-table m-table-bordered m-table-justify">
+    <table class="m-table m-table--bordered m-table--justify">
         <tbody>
             <tr>
                 <td>吾輩は猫である名前は</td>
@@ -265,7 +265,7 @@
     </table>
 </div>
 </div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 2rem;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"m-table m-table-bordered m-table-justify"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"m-table m-table--bordered m-table--justify"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;tbody&gt;</span>
             <span class="nt">&lt;tr&gt;</span>
                 <span class="nt">&lt;td&gt;</span>吾輩は猫である名前はまだ無い。どこで生れたかとんと見当がつかぬ。<span class="nt">&lt;/td&gt;</span>
@@ -276,7 +276,7 @@
 <span class="nt">&lt;/div&gt;</span>
 
 <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 2rem;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"m-table m-table-bordered m-table-justify"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"m-table m-table--bordered m-table--justify"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;tbody&gt;</span>
             <span class="nt">&lt;tr&gt;</span>
                 <span class="nt">&lt;td&gt;</span>吾輩は猫である名前は<span class="nt">&lt;/td&gt;</span>
@@ -294,13 +294,13 @@
     <span class="nt">&lt;/table&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </pre></div>
-<h2 id="table-04-ratio" class="styleguide">m-table-(ratio-first)to(ratio-second)to(ratio-third)</h2>
+<h2 id="table-04-ratio" class="styleguide">m-table--(ratio-first)to(ratio-second)to(ratio-third)</h2>
 
 <p>2列または3列のセル幅を、 <code>(ratio) / 12</code> の比率にする。<br>
 (ratio-first)to(ratio-second)to(ratio-third)は <code>3to9, 4to8, 3to3to6, 0to12</code> に対応している。   </p>
 <div class="example"><div style="margin-bottom: 2rem;">
-    <table class="m-table m-table-bordered m-table-3to9">
-        <caption>.m-table-3to9</caption>
+    <table class="m-table m-table--bordered m-table--3to9">
+        <caption>.m-table--3to9</caption>
         <tbody>
             <tr>
                 <th>吾輩は猫である</th>
@@ -315,8 +315,8 @@
 </div>
 
 <div style="margin-bottom: 2rem;">
-    <table class="m-table m-table-bordered m-table-4to8">
-        <caption>.m-table-4to8</caption>
+    <table class="m-table m-table--bordered m-table--4to8">
+        <caption>.m-table--4to8</caption>
         <tbody>
             <tr>
                 <th>吾輩は猫である</th>
@@ -331,8 +331,8 @@
 </div>
 
 <div style="margin-bottom: 2rem;">
-    <table class="m-table m-table-bordered m-table-3to3to6">
-        <caption>.m-table-3to3to6</caption>
+    <table class="m-table m-table--bordered m-table--3to3to6">
+        <caption>.m-table--3to3to6</caption>
         <tbody>
             <tr>
                 <th>吾輩は猫である</th>
@@ -349,8 +349,8 @@
 </div>
 
 <div>
-    <table class="m-table m-table-bordered m-table-0to12">
-        <caption>.m-table-0to12</caption>
+    <table class="m-table m-table--bordered m-table--0to12">
+        <caption>.m-table--0to12</caption>
         <tbody>
             <tr>
                 <th>吾輩は猫</th>
@@ -368,8 +368,8 @@
     </table>
 </div>
 </div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 2rem;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"m-table m-table-bordered m-table-3to9"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;caption&gt;</span>.m-table-3to9<span class="nt">&lt;/caption&gt;</span>
+    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"m-table m-table--bordered m-table--3to9"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;caption&gt;</span>.m-table--3to9<span class="nt">&lt;/caption&gt;</span>
         <span class="nt">&lt;tbody&gt;</span>
             <span class="nt">&lt;tr&gt;</span>
                 <span class="nt">&lt;th&gt;</span>吾輩は猫である<span class="nt">&lt;/th&gt;</span>
@@ -384,8 +384,8 @@
 <span class="nt">&lt;/div&gt;</span>
 
 <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 2rem;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"m-table m-table-bordered m-table-4to8"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;caption&gt;</span>.m-table-4to8<span class="nt">&lt;/caption&gt;</span>
+    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"m-table m-table--bordered m-table--4to8"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;caption&gt;</span>.m-table--4to8<span class="nt">&lt;/caption&gt;</span>
         <span class="nt">&lt;tbody&gt;</span>
             <span class="nt">&lt;tr&gt;</span>
                 <span class="nt">&lt;th&gt;</span>吾輩は猫である<span class="nt">&lt;/th&gt;</span>
@@ -400,8 +400,8 @@
 <span class="nt">&lt;/div&gt;</span>
 
 <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 2rem;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"m-table m-table-bordered m-table-3to3to6"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;caption&gt;</span>.m-table-3to3to6<span class="nt">&lt;/caption&gt;</span>
+    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"m-table m-table--bordered m-table--3to3to6"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;caption&gt;</span>.m-table--3to3to6<span class="nt">&lt;/caption&gt;</span>
         <span class="nt">&lt;tbody&gt;</span>
             <span class="nt">&lt;tr&gt;</span>
                 <span class="nt">&lt;th&gt;</span>吾輩は猫である<span class="nt">&lt;/th&gt;</span>
@@ -418,8 +418,8 @@
 <span class="nt">&lt;/div&gt;</span>
 
 <span class="nt">&lt;div&gt;</span>
-    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"m-table m-table-bordered m-table-0to12"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;caption&gt;</span>.m-table-0to12<span class="nt">&lt;/caption&gt;</span>
+    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"m-table m-table--bordered m-table--0to12"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;caption&gt;</span>.m-table--0to12<span class="nt">&lt;/caption&gt;</span>
         <span class="nt">&lt;tbody&gt;</span>
             <span class="nt">&lt;tr&gt;</span>
                 <span class="nt">&lt;th&gt;</span>吾輩は猫<span class="nt">&lt;/th&gt;</span>
@@ -437,11 +437,11 @@
     <span class="nt">&lt;/table&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </pre></div>
-<h2 id="table-05-break-sm-down" class="styleguide">m-table-break-sm-down</h2>
+<h2 id="table-05-break--sm--down" class="styleguide">m-table--break--sm--down</h2>
 
 <p>(breakpoint)が <code>sm</code> 以下のときに表組を解除する。<br>
-2カラム以上の表の場合は <code>.m-table-responsive</code> を推薦。</p>
-<div class="example"><table class="m-table m-table-break-sm-down m-table-bordered" style="margin-bottom: 2rem;">
+2カラム以上の表の場合は <code>.m-table--responsive</code> を推薦。</p>
+<div class="example"><table class="m-table m-table--break--sm--down m-table--bordered" style="margin-bottom: 2rem;">
     <thead>
         <tr>
             <th>吾輩は猫である</th>
@@ -470,7 +470,7 @@
     </tfoot>
 </table>
 
-<table class="m-table m-table-break-sm-down m-table-ruled">
+<table class="m-table m-table--break--sm--down m-table--ruled">
     <thead>
         <tr>
             <th>吾輩は猫である</th>
@@ -498,7 +498,7 @@
         </tr>
     </tfoot>
 </table>
-</div><div class="codeblock"><pre><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"m-table m-table-break-sm-down m-table-bordered"</span> <span class="na">style=</span><span class="s">"margin-bottom: 2rem;"</span><span class="nt">&gt;</span>
+</div><div class="codeblock"><pre><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"m-table m-table--break--sm--down m-table--bordered"</span> <span class="na">style=</span><span class="s">"margin-bottom: 2rem;"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;thead&gt;</span>
         <span class="nt">&lt;tr&gt;</span>
             <span class="nt">&lt;th&gt;</span>吾輩は猫である<span class="nt">&lt;/th&gt;</span>
@@ -527,7 +527,7 @@
     <span class="nt">&lt;/tfoot&gt;</span>
 <span class="nt">&lt;/table&gt;</span>
 
-<span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"m-table m-table-break-sm-down m-table-ruled"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"m-table m-table--break--sm--down m-table--ruled"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;thead&gt;</span>
         <span class="nt">&lt;tr&gt;</span>
             <span class="nt">&lt;th&gt;</span>吾輩は猫である<span class="nt">&lt;/th&gt;</span>
@@ -556,11 +556,11 @@
     <span class="nt">&lt;/tfoot&gt;</span>
 <span class="nt">&lt;/table&gt;</span>
 </pre></div>
-<h2 id="table-06-responsive" class="styleguide">m-table-responsive</h2>
+<h2 id="table-06-responsive" class="styleguide">m-table--responsive</h2>
 
 <p>(breakpoint)が <code>md</code> 以下のときにスクロールバーを表示する。</p>
-<div class="example"><div class="m-table-responsive">
-    <table class="m-table m-table-bordered">
+<div class="example"><div class="m-table--responsive">
+    <table class="m-table m-table--bordered">
         <tbody>
             <tr>
                 <th>吾輩は猫である</th>
@@ -575,8 +575,8 @@
         </tbody>
     </table>
 </div>
-</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-table-responsive"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"m-table m-table-bordered"</span><span class="nt">&gt;</span>
+</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-table--responsive"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"m-table m-table--bordered"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;tbody&gt;</span>
             <span class="nt">&lt;tr&gt;</span>
                 <span class="nt">&lt;th&gt;</span>吾輩は猫である<span class="nt">&lt;/th&gt;</span>

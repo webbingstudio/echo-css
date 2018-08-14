@@ -1950,7 +1950,7 @@ category: layout-grid
 ---
 
 flexboxによるグリッドのセルの幅を、<code>(column) / 12</code>の割合にする。  
-Bootstrap 4との互換性の関係で、**シングルクラス**となっている（l-grid__colを常に付与する必要はない）。  
+**シングルクラス**となっている（l-grid__colを常に付与する必要はない）。  
 (breakpoint)の指定がない場合は、常にその幅となる。  
 (breakpoint)の指定がある場合は、(breakpoint)**以上**のときに、指定した幅となる。
 
@@ -1968,7 +1968,7 @@ Bootstrap 4との互換性の関係で、**シングルクラス**となって�
     </div>
 </div>
 
-<h3 class="u-text--lg u-margin__t--lg">(column)と(breakpoint)の両方を指定している場合</h3>
+<h3 class="u-text--lg u-margin--top--lg">(column)と(breakpoint)の両方を指定している場合</h3>
 <div class="l-grid__row" style="margin-bottom: 2rem;">
     <div class="l-grid__col--lg--2">
         <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid__col--lg--2<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
@@ -1981,7 +1981,7 @@ Bootstrap 4との互換性の関係で、**シングルクラス**となって�
     </div>
 </div>
 
-<h3 class="u-text--lg u-margin__t--lg">(column)の指定があるセルと、ないセルが同列に混在している場合</h3>
+<h3 class="u-text--lg u-margin--top--lg">(column)の指定があるセルと、ないセルが同列に混在している場合</h3>
 <p>(column)の指定がないセルは、常に空間を埋めるように伸縮する（Bootstrapのautoと同様）。</p>
 <div class="l-grid__row" style="margin-bottom: 2rem;">
     <div class="l-grid__col--sm--6">
@@ -1995,7 +1995,7 @@ Bootstrap 4との互換性の関係で、**シングルクラス**となって�
     </div>
 </div>
 
-<h3 class="u-text--lg u-margin__t--lg">複雑な指定の例</h3>
+<h3 class="u-text--lg u-margin--top--lg">複雑な指定の例</h3>
 <p>ウィンドウ幅が狭くなるに従って、段組が変化する。セルが複数行になる場合は、l-grid__colにはmarginではなくpaddingを付与する。</p>
 <div class="l-grid__row">
     <div class="l-grid__col--6 l-grid__col--sm--4 l-grid__col--lg--3 l-grid__col--xxl--2" style="padding-bottom: 1rem;">
@@ -2117,27 +2117,27 @@ category: module-btn
 ---
 
 リンク、インライン要素、フォームのボタン要素をボタン状に表示する。  
-<code>.disabled</code> または <code>disabled="disabled"</code>が付与されていると、反応しない見た目となる（クリックはできるので注意）。
+<code>disabled</code> 属性が付与されていると、反応しない見た目となる（クリックはできるので注意）。
 
 ``` example
 <p>
   <a href="#" class="m-btn">m-btn</a>
-  <a href="#" class="m-btn disabled">m-btn</a>
+  <a href="#" class="m-btn" disabled>m-btn</a>
 </p>
 
 <p>
   <span class="m-btn">m-btn</span>
-  <span class="m-btn disabled">m-btn</span>
+  <span class="m-btn" disabled>m-btn</span>
 </p>
 
 <p>
   <input type="button" class="m-btn" value="m-btn" />
-  <input type="button" class="m-btn" value="m-btn" disabled="disabled" />
+  <input type="button" class="m-btn" value="m-btn" disabled />
 </p>
 
 <p>
   <button class="m-btn">m-btn</button>
-  <button class="m-btn" disabled="disabled">m-btn</button>
+  <button class="m-btn" disabled>m-btn</button>
 </p>
 ```
 
@@ -2170,12 +2170,12 @@ a.m-btn:hover, a.m-btn:focus {
   background-color: #eee;
   text-decoration: none;
 }
-.m-btn.disabled, .m-btn:disabled, fieldset[disabled] .m-btn {
+.m-btn[disabled], fieldset[disabled] .m-btn {
   cursor: default;
   opacity: .65;
   cursor: default;
 }
-.m-btn.disabled:hover, .m-btn.disabled.hover, .m-btn.disabled:focus, .m-btn.disabled.focus, .m-btn.disabled:active, .m-btn.disabled.active, .m-btn:disabled:hover, .m-btn:disabled.hover, .m-btn:disabled:focus, .m-btn:disabled.focus, .m-btn:disabled:active, .m-btn:disabled.active, fieldset[disabled] .m-btn:hover, fieldset[disabled] .m-btn.hover, fieldset[disabled] .m-btn:focus, fieldset[disabled] .m-btn.focus, fieldset[disabled] .m-btn:active, fieldset[disabled] .m-btn.active {
+.m-btn[disabled]:hover, .m-btn[disabled].hover, .m-btn[disabled]:focus, .m-btn[disabled].focus, .m-btn[disabled]:active, .m-btn[disabled].active, fieldset[disabled] .m-btn:hover, fieldset[disabled] .m-btn.hover, fieldset[disabled] .m-btn:focus, fieldset[disabled] .m-btn.focus, fieldset[disabled] .m-btn:active, fieldset[disabled] .m-btn.active {
   background-color: transparent;
 }
 a:hover .m-btn, a:focus .m-btn, a:active .m-btn {
@@ -2188,21 +2188,19 @@ a:hover .m-btn, a:focus .m-btn, a:active .m-btn {
   height: 1.25em;
   vertical-align: middle;
 }
-.m-btn .fa {
+.m-btn [class*="fa"] {
   vertical-align: middle;
-}
-.m-btn .fa:before {
   font-size: 1.25em;
 }
 
-a.m-btn.disaabled,
+a.m-btn[disabled],
 fieldset[disabled] a.m-btn {
   pointer-events: none;
 }
 
 /*doc
 ---
-title: m-btn-(color)
+title: m-btn--(color)
 name: btn-01-color
 category: module-btn
 parent: btn
@@ -2212,205 +2210,205 @@ parent: btn
 
 ``` example
 <p>
-  <a href="#" class="m-btn m-btn-gray">m-btn-gray</a>
-  <a href="#" class="m-btn m-btn-gray disabled">m-btn-gray</a>
+  <a href="#" class="m-btn m-btn--gray">m-btn--gray</a>
+  <a href="#" class="m-btn m-btn--gray disabled">m-btn--gray</a>
 </p>
 
 <p>
-  <a href="#" class="m-btn m-btn-first">m-btn-first</a>
-  <a href="#" class="m-btn m-btn-first disabled">m-btn-first</a>
+  <a href="#" class="m-btn m-btn--first">m-btn--first</a>
+  <a href="#" class="m-btn m-btn--first disabled">m-btn--first</a>
 </p>
 
 <p>
-  <a href="#" class="m-btn m-btn-second">m-btn-second</a>
-  <a href="#" class="m-btn m-btn-second disabled">m-btn-second</a>
+  <a href="#" class="m-btn m-btn--second">m-btn--second</a>
+  <a href="#" class="m-btn m-btn--second disabled">m-btn--second</a>
 </p>
 
 <p>
-  <a href="#" class="m-btn m-btn-third">m-btn-third</a>
-  <a href="#" class="m-btn m-btn-third disabled">m-btn-third</a>
+  <a href="#" class="m-btn m-btn--third">m-btn--third</a>
+  <a href="#" class="m-btn m-btn--third disabled">m-btn--third</a>
 </p>
 
 <p>
-  <a href="#" class="m-btn m-btn-fourth">m-btn-fourth</a>
-  <a href="#" class="m-btn m-btn-fourth disabled">m-btn-fourth</a>
+  <a href="#" class="m-btn m-btn--fourth">m-btn--fourth</a>
+  <a href="#" class="m-btn m-btn--fourth disabled">m-btn--fourth</a>
 </p>
 
 <p>
-  <a href="#" class="m-btn m-btn-info">m-btn-info</a>
-  <a href="#" class="m-btn m-btn-info disabled">m-btn-info</a>
+  <a href="#" class="m-btn m-btn--info">m-btn--info</a>
+  <a href="#" class="m-btn m-btn--info disabled">m-btn--info</a>
 </p>
 
 <p>
-  <a href="#" class="m-btn m-btn-important">m-btn-important</a>
-  <a href="#" class="m-btn m-btn-important disabled">m-btn-important</a>
+  <a href="#" class="m-btn m-btn--important">m-btn--important</a>
+  <a href="#" class="m-btn m-btn--important disabled">m-btn--important</a>
 </p>
 ```
 
 */
-.m-btn-gray {
+.m-btn--gray {
   color: #fff;
   background-color: #333;
   border-color: transparent;
 }
-.m-btn-gray:hover, .m-btn-gray:focus, .m-btn-gray:active, .m-btn-gray.active {
+.m-btn--gray:hover, .m-btn--gray:focus, .m-btn--gray:active, .m-btn--gray.active {
   color: #fff;
   background-color: #000;
   border-color: transparent;
 }
-.m-btn-gray.disabled, .m-btn-gray:disabled, fieldset[disabled] .m-btn-gray {
+.m-btn--gray.disabled, .m-btn--gray:disabled, fieldset[disabled] .m-btn--gray {
   opacity: .8;
 }
-.m-btn-gray.disabled:hover, .m-btn-gray.disabled.hover, .m-btn-gray.disabled:focus, .m-btn-gray.disabled.focus, .m-btn-gray:disabled:hover, .m-btn-gray:disabled.hover, .m-btn-gray:disabled:focus, .m-btn-gray:disabled.focus, fieldset[disabled] .m-btn-gray:hover, fieldset[disabled] .m-btn-gray.hover, fieldset[disabled] .m-btn-gray:focus, fieldset[disabled] .m-btn-gray.focus {
+.m-btn--gray.disabled:hover, .m-btn--gray.disabled.hover, .m-btn--gray.disabled:focus, .m-btn--gray.disabled.focus, .m-btn--gray:disabled:hover, .m-btn--gray:disabled.hover, .m-btn--gray:disabled:focus, .m-btn--gray:disabled.focus, fieldset[disabled] .m-btn--gray:hover, fieldset[disabled] .m-btn--gray.hover, fieldset[disabled] .m-btn--gray:focus, fieldset[disabled] .m-btn--gray.focus {
   color: #fff;
   background-color: #333;
   border-color: transparent;
 }
-a:hover .m-btn-gray, a:focus .m-btn-gray, a:active .m-btn-gray {
+a:hover .m-btn--gray, a:focus .m-btn--gray, a:active .m-btn--gray {
   color: #fff;
   background-color: #000;
   border-color: transparent;
 }
 
-.m-btn-first {
+.m-btn--first {
   color: #fff;
   background-color: #1976d2;
   border-color: transparent;
 }
-.m-btn-first:hover, .m-btn-first:focus, .m-btn-first:active, .m-btn-first.active {
+.m-btn--first:hover, .m-btn--first:focus, .m-btn--first:active, .m-btn--first.active {
   color: #fff;
   background-color: #0360bd;
   border-color: transparent;
 }
-.m-btn-first.disabled, .m-btn-first:disabled, fieldset[disabled] .m-btn-first {
+.m-btn--first.disabled, .m-btn--first:disabled, fieldset[disabled] .m-btn--first {
   opacity: .8;
 }
-.m-btn-first.disabled:hover, .m-btn-first.disabled.hover, .m-btn-first.disabled:focus, .m-btn-first.disabled.focus, .m-btn-first:disabled:hover, .m-btn-first:disabled.hover, .m-btn-first:disabled:focus, .m-btn-first:disabled.focus, fieldset[disabled] .m-btn-first:hover, fieldset[disabled] .m-btn-first.hover, fieldset[disabled] .m-btn-first:focus, fieldset[disabled] .m-btn-first.focus {
+.m-btn--first.disabled:hover, .m-btn--first.disabled.hover, .m-btn--first.disabled:focus, .m-btn--first.disabled.focus, .m-btn--first:disabled:hover, .m-btn--first:disabled.hover, .m-btn--first:disabled:focus, .m-btn--first:disabled.focus, fieldset[disabled] .m-btn--first:hover, fieldset[disabled] .m-btn--first.hover, fieldset[disabled] .m-btn--first:focus, fieldset[disabled] .m-btn--first.focus {
   color: #fff;
   background-color: #1976d2;
   border-color: transparent;
 }
-a:hover .m-btn-first, a:focus .m-btn-first, a:active .m-btn-first {
+a:hover .m-btn--first, a:focus .m-btn--first, a:active .m-btn--first {
   color: #fff;
   background-color: #0360bd;
   border-color: transparent;
 }
 
-.m-btn-second {
+.m-btn--second {
   color: #fff;
   background-color: #3cade6;
   border-color: transparent;
 }
-.m-btn-second:hover, .m-btn-second:focus, .m-btn-second:active, .m-btn-second.active {
+.m-btn--second:hover, .m-btn--second:focus, .m-btn--second:active, .m-btn--second.active {
   color: #fff;
   background-color: #26a9d0;
   border-color: transparent;
 }
-.m-btn-second.disabled, .m-btn-second:disabled, fieldset[disabled] .m-btn-second {
+.m-btn--second.disabled, .m-btn--second:disabled, fieldset[disabled] .m-btn--second {
   opacity: .8;
 }
-.m-btn-second.disabled:hover, .m-btn-second.disabled.hover, .m-btn-second.disabled:focus, .m-btn-second.disabled.focus, .m-btn-second:disabled:hover, .m-btn-second:disabled.hover, .m-btn-second:disabled:focus, .m-btn-second:disabled.focus, fieldset[disabled] .m-btn-second:hover, fieldset[disabled] .m-btn-second.hover, fieldset[disabled] .m-btn-second:focus, fieldset[disabled] .m-btn-second.focus {
+.m-btn--second.disabled:hover, .m-btn--second.disabled.hover, .m-btn--second.disabled:focus, .m-btn--second.disabled.focus, .m-btn--second:disabled:hover, .m-btn--second:disabled.hover, .m-btn--second:disabled:focus, .m-btn--second:disabled.focus, fieldset[disabled] .m-btn--second:hover, fieldset[disabled] .m-btn--second.hover, fieldset[disabled] .m-btn--second:focus, fieldset[disabled] .m-btn--second.focus {
   color: #fff;
   background-color: #3cade6;
   border-color: transparent;
 }
-a:hover .m-btn-second, a:focus .m-btn-second, a:active .m-btn-second {
+a:hover .m-btn--second, a:focus .m-btn--second, a:active .m-btn--second {
   color: #fff;
   background-color: #26a9d0;
   border-color: transparent;
 }
 
-.m-btn-third {
+.m-btn--third {
   color: #fff;
   background-color: #49b070;
   border-color: transparent;
 }
-.m-btn-third:hover, .m-btn-third:focus, .m-btn-third:active, .m-btn-third.active {
+.m-btn--third:hover, .m-btn--third:focus, .m-btn--third:active, .m-btn--third.active {
   color: #fff;
   background-color: #229644;
   border-color: transparent;
 }
-.m-btn-third.disabled, .m-btn-third:disabled, fieldset[disabled] .m-btn-third {
+.m-btn--third.disabled, .m-btn--third:disabled, fieldset[disabled] .m-btn--third {
   opacity: .8;
 }
-.m-btn-third.disabled:hover, .m-btn-third.disabled.hover, .m-btn-third.disabled:focus, .m-btn-third.disabled.focus, .m-btn-third:disabled:hover, .m-btn-third:disabled.hover, .m-btn-third:disabled:focus, .m-btn-third:disabled.focus, fieldset[disabled] .m-btn-third:hover, fieldset[disabled] .m-btn-third.hover, fieldset[disabled] .m-btn-third:focus, fieldset[disabled] .m-btn-third.focus {
+.m-btn--third.disabled:hover, .m-btn--third.disabled.hover, .m-btn--third.disabled:focus, .m-btn--third.disabled.focus, .m-btn--third:disabled:hover, .m-btn--third:disabled.hover, .m-btn--third:disabled:focus, .m-btn--third:disabled.focus, fieldset[disabled] .m-btn--third:hover, fieldset[disabled] .m-btn--third.hover, fieldset[disabled] .m-btn--third:focus, fieldset[disabled] .m-btn--third.focus {
   color: #fff;
   background-color: #49b070;
   border-color: transparent;
 }
-a:hover .m-btn-third, a:focus .m-btn-third, a:active .m-btn-third {
+a:hover .m-btn--third, a:focus .m-btn--third, a:active .m-btn--third {
   color: #fff;
   background-color: #229644;
   border-color: transparent;
 }
 
-.m-btn-fourth {
+.m-btn--fourth {
   color: #fff;
   background-color: #f38c10;
   border-color: transparent;
 }
-.m-btn-fourth:hover, .m-btn-fourth:focus, .m-btn-fourth:active, .m-btn-fourth.active {
+.m-btn--fourth:hover, .m-btn--fourth:focus, .m-btn--fourth:active, .m-btn--fourth.active {
   color: #fff;
   background-color: #f37910;
   border-color: transparent;
 }
-.m-btn-fourth.disabled, .m-btn-fourth:disabled, fieldset[disabled] .m-btn-fourth {
+.m-btn--fourth.disabled, .m-btn--fourth:disabled, fieldset[disabled] .m-btn--fourth {
   opacity: .8;
 }
-.m-btn-fourth.disabled:hover, .m-btn-fourth.disabled.hover, .m-btn-fourth.disabled:focus, .m-btn-fourth.disabled.focus, .m-btn-fourth:disabled:hover, .m-btn-fourth:disabled.hover, .m-btn-fourth:disabled:focus, .m-btn-fourth:disabled.focus, fieldset[disabled] .m-btn-fourth:hover, fieldset[disabled] .m-btn-fourth.hover, fieldset[disabled] .m-btn-fourth:focus, fieldset[disabled] .m-btn-fourth.focus {
+.m-btn--fourth.disabled:hover, .m-btn--fourth.disabled.hover, .m-btn--fourth.disabled:focus, .m-btn--fourth.disabled.focus, .m-btn--fourth:disabled:hover, .m-btn--fourth:disabled.hover, .m-btn--fourth:disabled:focus, .m-btn--fourth:disabled.focus, fieldset[disabled] .m-btn--fourth:hover, fieldset[disabled] .m-btn--fourth.hover, fieldset[disabled] .m-btn--fourth:focus, fieldset[disabled] .m-btn--fourth.focus {
   color: #fff;
   background-color: #f38c10;
   border-color: transparent;
 }
-a:hover .m-btn-fourth, a:focus .m-btn-fourth, a:active .m-btn-fourth {
+a:hover .m-btn--fourth, a:focus .m-btn--fourth, a:active .m-btn--fourth {
   color: #fff;
   background-color: #f37910;
   border-color: transparent;
 }
 
-.m-btn-info {
+.m-btn--info {
   color: #fff;
   background-color: #3cade6;
   border-color: transparent;
 }
-.m-btn-info:hover, .m-btn-info:focus, .m-btn-info:active, .m-btn-info.active {
+.m-btn--info:hover, .m-btn--info:focus, .m-btn--info:active, .m-btn--info.active {
   color: #fff;
   background-color: #26a9d0;
   border-color: transparent;
 }
-.m-btn-info.disabled, .m-btn-info:disabled, fieldset[disabled] .m-btn-info {
+.m-btn--info.disabled, .m-btn--info:disabled, fieldset[disabled] .m-btn--info {
   opacity: .8;
 }
-.m-btn-info.disabled:hover, .m-btn-info.disabled.hover, .m-btn-info.disabled:focus, .m-btn-info.disabled.focus, .m-btn-info:disabled:hover, .m-btn-info:disabled.hover, .m-btn-info:disabled:focus, .m-btn-info:disabled.focus, fieldset[disabled] .m-btn-info:hover, fieldset[disabled] .m-btn-info.hover, fieldset[disabled] .m-btn-info:focus, fieldset[disabled] .m-btn-info.focus {
+.m-btn--info.disabled:hover, .m-btn--info.disabled.hover, .m-btn--info.disabled:focus, .m-btn--info.disabled.focus, .m-btn--info:disabled:hover, .m-btn--info:disabled.hover, .m-btn--info:disabled:focus, .m-btn--info:disabled.focus, fieldset[disabled] .m-btn--info:hover, fieldset[disabled] .m-btn--info.hover, fieldset[disabled] .m-btn--info:focus, fieldset[disabled] .m-btn--info.focus {
   color: #fff;
   background-color: #3cade6;
   border-color: transparent;
 }
-a:hover .m-btn-info, a:focus .m-btn-info, a:active .m-btn-info {
+a:hover .m-btn--info, a:focus .m-btn--info, a:active .m-btn--info {
   color: #fff;
   background-color: #26a9d0;
   border-color: transparent;
 }
 
-.m-btn-important {
+.m-btn--important {
   color: #fff;
   background-color: #e33050;
   border-color: transparent;
 }
-.m-btn-important:hover, .m-btn-important:focus, .m-btn-important:active, .m-btn-important.active {
+.m-btn--important:hover, .m-btn--important:focus, .m-btn--important:active, .m-btn--important.active {
   color: #fff;
   background-color: #d70022;
   border-color: transparent;
 }
-.m-btn-important.disabled, .m-btn-important:disabled, fieldset[disabled] .m-btn-important {
+.m-btn--important.disabled, .m-btn--important:disabled, fieldset[disabled] .m-btn--important {
   opacity: .8;
 }
-.m-btn-important.disabled:hover, .m-btn-important.disabled.hover, .m-btn-important.disabled:focus, .m-btn-important.disabled.focus, .m-btn-important:disabled:hover, .m-btn-important:disabled.hover, .m-btn-important:disabled:focus, .m-btn-important:disabled.focus, fieldset[disabled] .m-btn-important:hover, fieldset[disabled] .m-btn-important.hover, fieldset[disabled] .m-btn-important:focus, fieldset[disabled] .m-btn-important.focus {
+.m-btn--important.disabled:hover, .m-btn--important.disabled.hover, .m-btn--important.disabled:focus, .m-btn--important.disabled.focus, .m-btn--important:disabled:hover, .m-btn--important:disabled.hover, .m-btn--important:disabled:focus, .m-btn--important:disabled.focus, fieldset[disabled] .m-btn--important:hover, fieldset[disabled] .m-btn--important.hover, fieldset[disabled] .m-btn--important:focus, fieldset[disabled] .m-btn--important.focus {
   color: #fff;
   background-color: #e33050;
   border-color: transparent;
 }
-a:hover .m-btn-important, a:focus .m-btn-important, a:active .m-btn-important {
+a:hover .m-btn--important, a:focus .m-btn--important, a:active .m-btn--important {
   color: #fff;
   background-color: #d70022;
   border-color: transparent;
@@ -2418,69 +2416,282 @@ a:hover .m-btn-important, a:focus .m-btn-important, a:active .m-btn-important {
 
 /*doc
 ---
-title: m-btn-inverse
+title: m-btn--bordered
+name: btn-02-bordered
+category: module-btn
+parent: btn
+---
+
+ボタンを罫線のみの見た目にする。背景色は <code>$body-bg</code> ではなく <code>transparent</code> なので注意。  
+<code>.m-btn--(color)</code> と同時に使用することが前提となっており、罫線の色が変わる。
+
+``` example
+<p>
+  <a href="#" class="m-btn m-btn--bordered m-btn--gray">m-btn--gray</a>
+  <a href="#" class="m-btn m-btn--bordered m-btn--gray disabled">m-btn--gray</a>
+</p>
+
+<p>
+  <a href="#" class="m-btn m-btn--bordered m-btn--first">m-btn--first</a>
+  <a href="#" class="m-btn m-btn--bordered m-btn--first disabled">m-btn--first</a>
+</p>
+
+<p>
+  <a href="#" class="m-btn m-btn--bordered m-btn--second">m-btn--second</a>
+  <a href="#" class="m-btn m-btn--bordered m-btn--second disabled">m-btn--second</a>
+</p>
+
+<p>
+  <a href="#" class="m-btn m-btn--bordered m-btn--third">m-btn--third</a>
+  <a href="#" class="m-btn m-btn--bordered m-btn--third disabled">m-btn--third</a>
+</p>
+
+<p>
+  <a href="#" class="m-btn m-btn--bordered m-btn--fourth">m-btn--fourth</a>
+  <a href="#" class="m-btn m-btn--bordered m-btn--fourth disabled">m-btn--fourth</a>
+</p>
+
+<p>
+  <a href="#" class="m-btn m-btn--bordered m-btn--info">m-btn--info</a>
+  <a href="#" class="m-btn m-btn--bordered m-btn--info disabled">m-btn--info</a>
+</p>
+
+<p>
+  <a href="#" class="m-btn m-btn--bordered m-btn--important">m-btn--important</a>
+  <a href="#" class="m-btn m-btn--bordered m-btn--important disabled">m-btn--important</a>
+</p>
+```
+*/
+.m-btn--bordered {
+  box-shadow: none;
+}
+.m-btn--bordered.m-btn--gray {
+  color: inherit;
+  background-color: transparent;
+  border-color: #333;
+}
+.m-btn--bordered.m-btn--gray:hover, .m-btn--bordered.m-btn--gray:focus, .m-btn--bordered.m-btn--gray:active, .m-btn--bordered.m-btn--gray.active {
+  color: #fff;
+  background-color: #333;
+  border-color: transparent;
+}
+.m-btn--bordered.m-btn--gray.disabled, .m-btn--bordered.m-btn--gray:disabled, fieldset[disabled] .m-btn--bordered.m-btn--gray {
+  opacity: .8;
+}
+.m-btn--bordered.m-btn--gray.disabled:hover, .m-btn--bordered.m-btn--gray.disabled.hover, .m-btn--bordered.m-btn--gray.disabled:focus, .m-btn--bordered.m-btn--gray.disabled.focus, .m-btn--bordered.m-btn--gray:disabled:hover, .m-btn--bordered.m-btn--gray:disabled.hover, .m-btn--bordered.m-btn--gray:disabled:focus, .m-btn--bordered.m-btn--gray:disabled.focus, fieldset[disabled] .m-btn--bordered.m-btn--gray:hover, fieldset[disabled] .m-btn--bordered.m-btn--gray.hover, fieldset[disabled] .m-btn--bordered.m-btn--gray:focus, fieldset[disabled] .m-btn--bordered.m-btn--gray.focus {
+  color: inherit;
+  background-color: transparent;
+  border-color: #333;
+}
+a:hover .m-btn--bordered.m-btn--gray, a:focus .m-btn--bordered.m-btn--gray, a:active .m-btn--bordered.m-btn--gray {
+  color: #fff;
+  background-color: #333;
+  border-color: transparent;
+}
+.m-btn--bordered.m-btn--first {
+  color: inherit;
+  background-color: transparent;
+  border-color: #1976d2;
+}
+.m-btn--bordered.m-btn--first:hover, .m-btn--bordered.m-btn--first:focus, .m-btn--bordered.m-btn--first:active, .m-btn--bordered.m-btn--first.active {
+  color: #fff;
+  background-color: #1976d2;
+  border-color: transparent;
+}
+.m-btn--bordered.m-btn--first.disabled, .m-btn--bordered.m-btn--first:disabled, fieldset[disabled] .m-btn--bordered.m-btn--first {
+  opacity: .8;
+}
+.m-btn--bordered.m-btn--first.disabled:hover, .m-btn--bordered.m-btn--first.disabled.hover, .m-btn--bordered.m-btn--first.disabled:focus, .m-btn--bordered.m-btn--first.disabled.focus, .m-btn--bordered.m-btn--first:disabled:hover, .m-btn--bordered.m-btn--first:disabled.hover, .m-btn--bordered.m-btn--first:disabled:focus, .m-btn--bordered.m-btn--first:disabled.focus, fieldset[disabled] .m-btn--bordered.m-btn--first:hover, fieldset[disabled] .m-btn--bordered.m-btn--first.hover, fieldset[disabled] .m-btn--bordered.m-btn--first:focus, fieldset[disabled] .m-btn--bordered.m-btn--first.focus {
+  color: inherit;
+  background-color: transparent;
+  border-color: #1976d2;
+}
+a:hover .m-btn--bordered.m-btn--first, a:focus .m-btn--bordered.m-btn--first, a:active .m-btn--bordered.m-btn--first {
+  color: #fff;
+  background-color: #1976d2;
+  border-color: transparent;
+}
+.m-btn--bordered.m-btn--second {
+  color: inherit;
+  background-color: transparent;
+  border-color: #3cade6;
+}
+.m-btn--bordered.m-btn--second:hover, .m-btn--bordered.m-btn--second:focus, .m-btn--bordered.m-btn--second:active, .m-btn--bordered.m-btn--second.active {
+  color: #fff;
+  background-color: #3cade6;
+  border-color: transparent;
+}
+.m-btn--bordered.m-btn--second.disabled, .m-btn--bordered.m-btn--second:disabled, fieldset[disabled] .m-btn--bordered.m-btn--second {
+  opacity: .8;
+}
+.m-btn--bordered.m-btn--second.disabled:hover, .m-btn--bordered.m-btn--second.disabled.hover, .m-btn--bordered.m-btn--second.disabled:focus, .m-btn--bordered.m-btn--second.disabled.focus, .m-btn--bordered.m-btn--second:disabled:hover, .m-btn--bordered.m-btn--second:disabled.hover, .m-btn--bordered.m-btn--second:disabled:focus, .m-btn--bordered.m-btn--second:disabled.focus, fieldset[disabled] .m-btn--bordered.m-btn--second:hover, fieldset[disabled] .m-btn--bordered.m-btn--second.hover, fieldset[disabled] .m-btn--bordered.m-btn--second:focus, fieldset[disabled] .m-btn--bordered.m-btn--second.focus {
+  color: inherit;
+  background-color: transparent;
+  border-color: #3cade6;
+}
+a:hover .m-btn--bordered.m-btn--second, a:focus .m-btn--bordered.m-btn--second, a:active .m-btn--bordered.m-btn--second {
+  color: #fff;
+  background-color: #3cade6;
+  border-color: transparent;
+}
+.m-btn--bordered.m-btn--third {
+  color: inherit;
+  background-color: transparent;
+  border-color: #49b070;
+}
+.m-btn--bordered.m-btn--third:hover, .m-btn--bordered.m-btn--third:focus, .m-btn--bordered.m-btn--third:active, .m-btn--bordered.m-btn--third.active {
+  color: #fff;
+  background-color: #49b070;
+  border-color: transparent;
+}
+.m-btn--bordered.m-btn--third.disabled, .m-btn--bordered.m-btn--third:disabled, fieldset[disabled] .m-btn--bordered.m-btn--third {
+  opacity: .8;
+}
+.m-btn--bordered.m-btn--third.disabled:hover, .m-btn--bordered.m-btn--third.disabled.hover, .m-btn--bordered.m-btn--third.disabled:focus, .m-btn--bordered.m-btn--third.disabled.focus, .m-btn--bordered.m-btn--third:disabled:hover, .m-btn--bordered.m-btn--third:disabled.hover, .m-btn--bordered.m-btn--third:disabled:focus, .m-btn--bordered.m-btn--third:disabled.focus, fieldset[disabled] .m-btn--bordered.m-btn--third:hover, fieldset[disabled] .m-btn--bordered.m-btn--third.hover, fieldset[disabled] .m-btn--bordered.m-btn--third:focus, fieldset[disabled] .m-btn--bordered.m-btn--third.focus {
+  color: inherit;
+  background-color: transparent;
+  border-color: #49b070;
+}
+a:hover .m-btn--bordered.m-btn--third, a:focus .m-btn--bordered.m-btn--third, a:active .m-btn--bordered.m-btn--third {
+  color: #fff;
+  background-color: #49b070;
+  border-color: transparent;
+}
+.m-btn--bordered.m-btn--fourth {
+  color: inherit;
+  background-color: transparent;
+  border-color: #f38c10;
+}
+.m-btn--bordered.m-btn--fourth:hover, .m-btn--bordered.m-btn--fourth:focus, .m-btn--bordered.m-btn--fourth:active, .m-btn--bordered.m-btn--fourth.active {
+  color: #fff;
+  background-color: #f38c10;
+  border-color: transparent;
+}
+.m-btn--bordered.m-btn--fourth.disabled, .m-btn--bordered.m-btn--fourth:disabled, fieldset[disabled] .m-btn--bordered.m-btn--fourth {
+  opacity: .8;
+}
+.m-btn--bordered.m-btn--fourth.disabled:hover, .m-btn--bordered.m-btn--fourth.disabled.hover, .m-btn--bordered.m-btn--fourth.disabled:focus, .m-btn--bordered.m-btn--fourth.disabled.focus, .m-btn--bordered.m-btn--fourth:disabled:hover, .m-btn--bordered.m-btn--fourth:disabled.hover, .m-btn--bordered.m-btn--fourth:disabled:focus, .m-btn--bordered.m-btn--fourth:disabled.focus, fieldset[disabled] .m-btn--bordered.m-btn--fourth:hover, fieldset[disabled] .m-btn--bordered.m-btn--fourth.hover, fieldset[disabled] .m-btn--bordered.m-btn--fourth:focus, fieldset[disabled] .m-btn--bordered.m-btn--fourth.focus {
+  color: inherit;
+  background-color: transparent;
+  border-color: #f38c10;
+}
+a:hover .m-btn--bordered.m-btn--fourth, a:focus .m-btn--bordered.m-btn--fourth, a:active .m-btn--bordered.m-btn--fourth {
+  color: #fff;
+  background-color: #f38c10;
+  border-color: transparent;
+}
+.m-btn--bordered.m-btn--info {
+  color: inherit;
+  background-color: transparent;
+  border-color: #3cade6;
+}
+.m-btn--bordered.m-btn--info:hover, .m-btn--bordered.m-btn--info:focus, .m-btn--bordered.m-btn--info:active, .m-btn--bordered.m-btn--info.active {
+  color: #fff;
+  background-color: #3cade6;
+  border-color: transparent;
+}
+.m-btn--bordered.m-btn--info.disabled, .m-btn--bordered.m-btn--info:disabled, fieldset[disabled] .m-btn--bordered.m-btn--info {
+  opacity: .8;
+}
+.m-btn--bordered.m-btn--info.disabled:hover, .m-btn--bordered.m-btn--info.disabled.hover, .m-btn--bordered.m-btn--info.disabled:focus, .m-btn--bordered.m-btn--info.disabled.focus, .m-btn--bordered.m-btn--info:disabled:hover, .m-btn--bordered.m-btn--info:disabled.hover, .m-btn--bordered.m-btn--info:disabled:focus, .m-btn--bordered.m-btn--info:disabled.focus, fieldset[disabled] .m-btn--bordered.m-btn--info:hover, fieldset[disabled] .m-btn--bordered.m-btn--info.hover, fieldset[disabled] .m-btn--bordered.m-btn--info:focus, fieldset[disabled] .m-btn--bordered.m-btn--info.focus {
+  color: inherit;
+  background-color: transparent;
+  border-color: #3cade6;
+}
+a:hover .m-btn--bordered.m-btn--info, a:focus .m-btn--bordered.m-btn--info, a:active .m-btn--bordered.m-btn--info {
+  color: #fff;
+  background-color: #3cade6;
+  border-color: transparent;
+}
+.m-btn--bordered.m-btn--important {
+  color: inherit;
+  background-color: transparent;
+  border-color: #e33050;
+}
+.m-btn--bordered.m-btn--important:hover, .m-btn--bordered.m-btn--important:focus, .m-btn--bordered.m-btn--important:active, .m-btn--bordered.m-btn--important.active {
+  color: #fff;
+  background-color: #e33050;
+  border-color: transparent;
+}
+.m-btn--bordered.m-btn--important.disabled, .m-btn--bordered.m-btn--important:disabled, fieldset[disabled] .m-btn--bordered.m-btn--important {
+  opacity: .8;
+}
+.m-btn--bordered.m-btn--important.disabled:hover, .m-btn--bordered.m-btn--important.disabled.hover, .m-btn--bordered.m-btn--important.disabled:focus, .m-btn--bordered.m-btn--important.disabled.focus, .m-btn--bordered.m-btn--important:disabled:hover, .m-btn--bordered.m-btn--important:disabled.hover, .m-btn--bordered.m-btn--important:disabled:focus, .m-btn--bordered.m-btn--important:disabled.focus, fieldset[disabled] .m-btn--bordered.m-btn--important:hover, fieldset[disabled] .m-btn--bordered.m-btn--important.hover, fieldset[disabled] .m-btn--bordered.m-btn--important:focus, fieldset[disabled] .m-btn--bordered.m-btn--important.focus {
+  color: inherit;
+  background-color: transparent;
+  border-color: #e33050;
+}
+a:hover .m-btn--bordered.m-btn--important, a:focus .m-btn--bordered.m-btn--important, a:active .m-btn--bordered.m-btn--important {
+  color: #fff;
+  background-color: #e33050;
+  border-color: transparent;
+}
+
+/*doc
+---
+title: m-btn--inverse
 name: btn-03-inverse
 category: module-btn
 parent: btn
 ---
 
 ボタンの文字色と背景色を反転する。  
-<code>.m-btn-outline</code> と同時に使用すると、罫線のみの状態で反転する。
+<code>.m-btn--bordered</code> と同時に使用すると、罫線のみの状態で反転する。
 
 ``` example
 <p style="background-color: #000; padding: 1rem 0;">
-  <a href="#" class="m-btn m-btn-inverse">m-btn-inverse</a>
-  <a href="#" class="m-btn m-btn-inverse disabled">m-btn-inverse</a>
+  <a href="#" class="m-btn m-btn--inverse">m-btn--inverse</a>
+  <a href="#" class="m-btn m-btn--inverse" disabled>m-btn--inverse</a>
 </p>
 <p style="background-color: #000; padding: 1rem 0;">
-  <a href="#" class="m-btn m-btn-outline m-btn-inverse">m-btn-outline + m-btn-inverse</a>
-  <a href="#" class="m-btn m-btn-outline m-btn-inverse disabled">m-btn-outline + m-btn-inverse</a>
+  <a href="#" class="m-btn m-btn--bordered m-btn--inverse">m-btn--bordered + m-btn--inverse</a>
+  <a href="#" class="m-btn m-btn--bordered m-btn--inverse" disabled>m-btn--bordered + m-btn--inverse</a>
 </p>
 ```
 
 */
-.m-btn-inverse {
+.m-btn--inverse {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.25);
   border-color: transparent;
 }
-.m-btn-inverse:hover, .m-btn-inverse:focus, .m-btn-inverse:active, .m-btn-inverse.active {
+.m-btn--inverse:hover, .m-btn--inverse:focus, .m-btn--inverse:active, .m-btn--inverse.active {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.4);
   border-color: transparent;
 }
-.m-btn-inverse.disabled, .m-btn-inverse:disabled, fieldset[disabled] .m-btn-inverse {
+.m-btn--inverse.disabled, .m-btn--inverse:disabled, fieldset[disabled] .m-btn--inverse {
   opacity: .8;
 }
-.m-btn-inverse.disabled:hover, .m-btn-inverse.disabled.hover, .m-btn-inverse.disabled:focus, .m-btn-inverse.disabled.focus, .m-btn-inverse:disabled:hover, .m-btn-inverse:disabled.hover, .m-btn-inverse:disabled:focus, .m-btn-inverse:disabled.focus, fieldset[disabled] .m-btn-inverse:hover, fieldset[disabled] .m-btn-inverse.hover, fieldset[disabled] .m-btn-inverse:focus, fieldset[disabled] .m-btn-inverse.focus {
+.m-btn--inverse.disabled:hover, .m-btn--inverse.disabled.hover, .m-btn--inverse.disabled:focus, .m-btn--inverse.disabled.focus, .m-btn--inverse:disabled:hover, .m-btn--inverse:disabled.hover, .m-btn--inverse:disabled:focus, .m-btn--inverse:disabled.focus, fieldset[disabled] .m-btn--inverse:hover, fieldset[disabled] .m-btn--inverse.hover, fieldset[disabled] .m-btn--inverse:focus, fieldset[disabled] .m-btn--inverse.focus {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.25);
   border-color: transparent;
 }
-a:hover .m-btn-inverse, a:focus .m-btn-inverse, a:active .m-btn-inverse {
+a:hover .m-btn--inverse, a:focus .m-btn--inverse, a:active .m-btn--inverse {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.4);
   border-color: transparent;
 }
-.m-btn-inverse.m-btn-outline {
+.m-btn--inverse.m-btn--bordered {
   color: #fff;
   background-color: transparent;
   border-color: rgba(255, 255, 255, 0.8);
 }
-.m-btn-inverse.m-btn-outline:hover, .m-btn-inverse.m-btn-outline:focus, .m-btn-inverse.m-btn-outline:active, .m-btn-inverse.m-btn-outline.active {
+.m-btn--inverse.m-btn--bordered:hover, .m-btn--inverse.m-btn--bordered:focus, .m-btn--inverse.m-btn--bordered:active, .m-btn--inverse.m-btn--bordered.active {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.2);
   border-color: #fff;
 }
-.m-btn-inverse.m-btn-outline.disabled, .m-btn-inverse.m-btn-outline:disabled, fieldset[disabled] .m-btn-inverse.m-btn-outline {
+.m-btn--inverse.m-btn--bordered.disabled, .m-btn--inverse.m-btn--bordered:disabled, fieldset[disabled] .m-btn--inverse.m-btn--bordered {
   opacity: .8;
 }
-.m-btn-inverse.m-btn-outline.disabled:hover, .m-btn-inverse.m-btn-outline.disabled.hover, .m-btn-inverse.m-btn-outline.disabled:focus, .m-btn-inverse.m-btn-outline.disabled.focus, .m-btn-inverse.m-btn-outline:disabled:hover, .m-btn-inverse.m-btn-outline:disabled.hover, .m-btn-inverse.m-btn-outline:disabled:focus, .m-btn-inverse.m-btn-outline:disabled.focus, fieldset[disabled] .m-btn-inverse.m-btn-outline:hover, fieldset[disabled] .m-btn-inverse.m-btn-outline.hover, fieldset[disabled] .m-btn-inverse.m-btn-outline:focus, fieldset[disabled] .m-btn-inverse.m-btn-outline.focus {
+.m-btn--inverse.m-btn--bordered.disabled:hover, .m-btn--inverse.m-btn--bordered.disabled.hover, .m-btn--inverse.m-btn--bordered.disabled:focus, .m-btn--inverse.m-btn--bordered.disabled.focus, .m-btn--inverse.m-btn--bordered:disabled:hover, .m-btn--inverse.m-btn--bordered:disabled.hover, .m-btn--inverse.m-btn--bordered:disabled:focus, .m-btn--inverse.m-btn--bordered:disabled.focus, fieldset[disabled] .m-btn--inverse.m-btn--bordered:hover, fieldset[disabled] .m-btn--inverse.m-btn--bordered.hover, fieldset[disabled] .m-btn--inverse.m-btn--bordered:focus, fieldset[disabled] .m-btn--inverse.m-btn--bordered.focus {
   color: #fff;
   background-color: transparent;
   border-color: rgba(255, 255, 255, 0.8);
 }
-a:hover .m-btn-inverse.m-btn-outline, a:focus .m-btn-inverse.m-btn-outline, a:active .m-btn-inverse.m-btn-outline {
+a:hover .m-btn--inverse.m-btn--bordered, a:focus .m-btn--inverse.m-btn--bordered, a:active .m-btn--inverse.m-btn--bordered {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.2);
   border-color: #fff;
@@ -2488,220 +2699,7 @@ a:hover .m-btn-inverse.m-btn-outline, a:focus .m-btn-inverse.m-btn-outline, a:ac
 
 /*doc
 ---
-title: m-btn-outline
-name: btn-02-outline
-category: module-btn
-parent: btn
----
-
-ボタンを罫線のみの見た目にする。背景色は <code>$body-bg</code> ではなく <code>transparent</code> なので注意。  
-<code>.m-btn-(color)</code> と同時に使用することが前提となっており、罫線の色が変わる。
-
-``` example
-<p>
-  <a href="#" class="m-btn m-btn-outline m-btn-gray">m-btn-gray</a>
-  <a href="#" class="m-btn m-btn-outline m-btn-gray disabled">m-btn-gray</a>
-</p>
-
-<p>
-  <a href="#" class="m-btn m-btn-outline m-btn-first">m-btn-first</a>
-  <a href="#" class="m-btn m-btn-outline m-btn-first disabled">m-btn-first</a>
-</p>
-
-<p>
-  <a href="#" class="m-btn m-btn-outline m-btn-second">m-btn-second</a>
-  <a href="#" class="m-btn m-btn-outline m-btn-second disabled">m-btn-second</a>
-</p>
-
-<p>
-  <a href="#" class="m-btn m-btn-outline m-btn-third">m-btn-third</a>
-  <a href="#" class="m-btn m-btn-outline m-btn-third disabled">m-btn-third</a>
-</p>
-
-<p>
-  <a href="#" class="m-btn m-btn-outline m-btn-fourth">m-btn-fourth</a>
-  <a href="#" class="m-btn m-btn-outline m-btn-fourth disabled">m-btn-fourth</a>
-</p>
-
-<p>
-  <a href="#" class="m-btn m-btn-outline m-btn-info">m-btn-info</a>
-  <a href="#" class="m-btn m-btn-outline m-btn-info disabled">m-btn-info</a>
-</p>
-
-<p>
-  <a href="#" class="m-btn m-btn-outline m-btn-important">m-btn-important</a>
-  <a href="#" class="m-btn m-btn-outline m-btn-important disabled">m-btn-important</a>
-</p>
-```
-*/
-.m-btn-outline {
-  box-shadow: none;
-}
-.m-btn-outline.m-btn-gray {
-  color: inherit;
-  background-color: transparent;
-  border-color: #333;
-}
-.m-btn-outline.m-btn-gray:hover, .m-btn-outline.m-btn-gray:focus, .m-btn-outline.m-btn-gray:active, .m-btn-outline.m-btn-gray.active {
-  color: #fff;
-  background-color: #333;
-  border-color: transparent;
-}
-.m-btn-outline.m-btn-gray.disabled, .m-btn-outline.m-btn-gray:disabled, fieldset[disabled] .m-btn-outline.m-btn-gray {
-  opacity: .8;
-}
-.m-btn-outline.m-btn-gray.disabled:hover, .m-btn-outline.m-btn-gray.disabled.hover, .m-btn-outline.m-btn-gray.disabled:focus, .m-btn-outline.m-btn-gray.disabled.focus, .m-btn-outline.m-btn-gray:disabled:hover, .m-btn-outline.m-btn-gray:disabled.hover, .m-btn-outline.m-btn-gray:disabled:focus, .m-btn-outline.m-btn-gray:disabled.focus, fieldset[disabled] .m-btn-outline.m-btn-gray:hover, fieldset[disabled] .m-btn-outline.m-btn-gray.hover, fieldset[disabled] .m-btn-outline.m-btn-gray:focus, fieldset[disabled] .m-btn-outline.m-btn-gray.focus {
-  color: inherit;
-  background-color: transparent;
-  border-color: #333;
-}
-a:hover .m-btn-outline.m-btn-gray, a:focus .m-btn-outline.m-btn-gray, a:active .m-btn-outline.m-btn-gray {
-  color: #fff;
-  background-color: #333;
-  border-color: transparent;
-}
-.m-btn-outline.m-btn-first {
-  color: inherit;
-  background-color: transparent;
-  border-color: #1976d2;
-}
-.m-btn-outline.m-btn-first:hover, .m-btn-outline.m-btn-first:focus, .m-btn-outline.m-btn-first:active, .m-btn-outline.m-btn-first.active {
-  color: #fff;
-  background-color: #1976d2;
-  border-color: transparent;
-}
-.m-btn-outline.m-btn-first.disabled, .m-btn-outline.m-btn-first:disabled, fieldset[disabled] .m-btn-outline.m-btn-first {
-  opacity: .8;
-}
-.m-btn-outline.m-btn-first.disabled:hover, .m-btn-outline.m-btn-first.disabled.hover, .m-btn-outline.m-btn-first.disabled:focus, .m-btn-outline.m-btn-first.disabled.focus, .m-btn-outline.m-btn-first:disabled:hover, .m-btn-outline.m-btn-first:disabled.hover, .m-btn-outline.m-btn-first:disabled:focus, .m-btn-outline.m-btn-first:disabled.focus, fieldset[disabled] .m-btn-outline.m-btn-first:hover, fieldset[disabled] .m-btn-outline.m-btn-first.hover, fieldset[disabled] .m-btn-outline.m-btn-first:focus, fieldset[disabled] .m-btn-outline.m-btn-first.focus {
-  color: inherit;
-  background-color: transparent;
-  border-color: #1976d2;
-}
-a:hover .m-btn-outline.m-btn-first, a:focus .m-btn-outline.m-btn-first, a:active .m-btn-outline.m-btn-first {
-  color: #fff;
-  background-color: #1976d2;
-  border-color: transparent;
-}
-.m-btn-outline.m-btn-second {
-  color: inherit;
-  background-color: transparent;
-  border-color: #3cade6;
-}
-.m-btn-outline.m-btn-second:hover, .m-btn-outline.m-btn-second:focus, .m-btn-outline.m-btn-second:active, .m-btn-outline.m-btn-second.active {
-  color: #fff;
-  background-color: #3cade6;
-  border-color: transparent;
-}
-.m-btn-outline.m-btn-second.disabled, .m-btn-outline.m-btn-second:disabled, fieldset[disabled] .m-btn-outline.m-btn-second {
-  opacity: .8;
-}
-.m-btn-outline.m-btn-second.disabled:hover, .m-btn-outline.m-btn-second.disabled.hover, .m-btn-outline.m-btn-second.disabled:focus, .m-btn-outline.m-btn-second.disabled.focus, .m-btn-outline.m-btn-second:disabled:hover, .m-btn-outline.m-btn-second:disabled.hover, .m-btn-outline.m-btn-second:disabled:focus, .m-btn-outline.m-btn-second:disabled.focus, fieldset[disabled] .m-btn-outline.m-btn-second:hover, fieldset[disabled] .m-btn-outline.m-btn-second.hover, fieldset[disabled] .m-btn-outline.m-btn-second:focus, fieldset[disabled] .m-btn-outline.m-btn-second.focus {
-  color: inherit;
-  background-color: transparent;
-  border-color: #3cade6;
-}
-a:hover .m-btn-outline.m-btn-second, a:focus .m-btn-outline.m-btn-second, a:active .m-btn-outline.m-btn-second {
-  color: #fff;
-  background-color: #3cade6;
-  border-color: transparent;
-}
-.m-btn-outline.m-btn-third {
-  color: inherit;
-  background-color: transparent;
-  border-color: #49b070;
-}
-.m-btn-outline.m-btn-third:hover, .m-btn-outline.m-btn-third:focus, .m-btn-outline.m-btn-third:active, .m-btn-outline.m-btn-third.active {
-  color: #fff;
-  background-color: #49b070;
-  border-color: transparent;
-}
-.m-btn-outline.m-btn-third.disabled, .m-btn-outline.m-btn-third:disabled, fieldset[disabled] .m-btn-outline.m-btn-third {
-  opacity: .8;
-}
-.m-btn-outline.m-btn-third.disabled:hover, .m-btn-outline.m-btn-third.disabled.hover, .m-btn-outline.m-btn-third.disabled:focus, .m-btn-outline.m-btn-third.disabled.focus, .m-btn-outline.m-btn-third:disabled:hover, .m-btn-outline.m-btn-third:disabled.hover, .m-btn-outline.m-btn-third:disabled:focus, .m-btn-outline.m-btn-third:disabled.focus, fieldset[disabled] .m-btn-outline.m-btn-third:hover, fieldset[disabled] .m-btn-outline.m-btn-third.hover, fieldset[disabled] .m-btn-outline.m-btn-third:focus, fieldset[disabled] .m-btn-outline.m-btn-third.focus {
-  color: inherit;
-  background-color: transparent;
-  border-color: #49b070;
-}
-a:hover .m-btn-outline.m-btn-third, a:focus .m-btn-outline.m-btn-third, a:active .m-btn-outline.m-btn-third {
-  color: #fff;
-  background-color: #49b070;
-  border-color: transparent;
-}
-.m-btn-outline.m-btn-fourth {
-  color: inherit;
-  background-color: transparent;
-  border-color: #f38c10;
-}
-.m-btn-outline.m-btn-fourth:hover, .m-btn-outline.m-btn-fourth:focus, .m-btn-outline.m-btn-fourth:active, .m-btn-outline.m-btn-fourth.active {
-  color: #fff;
-  background-color: #f38c10;
-  border-color: transparent;
-}
-.m-btn-outline.m-btn-fourth.disabled, .m-btn-outline.m-btn-fourth:disabled, fieldset[disabled] .m-btn-outline.m-btn-fourth {
-  opacity: .8;
-}
-.m-btn-outline.m-btn-fourth.disabled:hover, .m-btn-outline.m-btn-fourth.disabled.hover, .m-btn-outline.m-btn-fourth.disabled:focus, .m-btn-outline.m-btn-fourth.disabled.focus, .m-btn-outline.m-btn-fourth:disabled:hover, .m-btn-outline.m-btn-fourth:disabled.hover, .m-btn-outline.m-btn-fourth:disabled:focus, .m-btn-outline.m-btn-fourth:disabled.focus, fieldset[disabled] .m-btn-outline.m-btn-fourth:hover, fieldset[disabled] .m-btn-outline.m-btn-fourth.hover, fieldset[disabled] .m-btn-outline.m-btn-fourth:focus, fieldset[disabled] .m-btn-outline.m-btn-fourth.focus {
-  color: inherit;
-  background-color: transparent;
-  border-color: #f38c10;
-}
-a:hover .m-btn-outline.m-btn-fourth, a:focus .m-btn-outline.m-btn-fourth, a:active .m-btn-outline.m-btn-fourth {
-  color: #fff;
-  background-color: #f38c10;
-  border-color: transparent;
-}
-.m-btn-outline.m-btn-info {
-  color: inherit;
-  background-color: transparent;
-  border-color: #3cade6;
-}
-.m-btn-outline.m-btn-info:hover, .m-btn-outline.m-btn-info:focus, .m-btn-outline.m-btn-info:active, .m-btn-outline.m-btn-info.active {
-  color: #fff;
-  background-color: #3cade6;
-  border-color: transparent;
-}
-.m-btn-outline.m-btn-info.disabled, .m-btn-outline.m-btn-info:disabled, fieldset[disabled] .m-btn-outline.m-btn-info {
-  opacity: .8;
-}
-.m-btn-outline.m-btn-info.disabled:hover, .m-btn-outline.m-btn-info.disabled.hover, .m-btn-outline.m-btn-info.disabled:focus, .m-btn-outline.m-btn-info.disabled.focus, .m-btn-outline.m-btn-info:disabled:hover, .m-btn-outline.m-btn-info:disabled.hover, .m-btn-outline.m-btn-info:disabled:focus, .m-btn-outline.m-btn-info:disabled.focus, fieldset[disabled] .m-btn-outline.m-btn-info:hover, fieldset[disabled] .m-btn-outline.m-btn-info.hover, fieldset[disabled] .m-btn-outline.m-btn-info:focus, fieldset[disabled] .m-btn-outline.m-btn-info.focus {
-  color: inherit;
-  background-color: transparent;
-  border-color: #3cade6;
-}
-a:hover .m-btn-outline.m-btn-info, a:focus .m-btn-outline.m-btn-info, a:active .m-btn-outline.m-btn-info {
-  color: #fff;
-  background-color: #3cade6;
-  border-color: transparent;
-}
-.m-btn-outline.m-btn-important {
-  color: inherit;
-  background-color: transparent;
-  border-color: #e33050;
-}
-.m-btn-outline.m-btn-important:hover, .m-btn-outline.m-btn-important:focus, .m-btn-outline.m-btn-important:active, .m-btn-outline.m-btn-important.active {
-  color: #fff;
-  background-color: #e33050;
-  border-color: transparent;
-}
-.m-btn-outline.m-btn-important.disabled, .m-btn-outline.m-btn-important:disabled, fieldset[disabled] .m-btn-outline.m-btn-important {
-  opacity: .8;
-}
-.m-btn-outline.m-btn-important.disabled:hover, .m-btn-outline.m-btn-important.disabled.hover, .m-btn-outline.m-btn-important.disabled:focus, .m-btn-outline.m-btn-important.disabled.focus, .m-btn-outline.m-btn-important:disabled:hover, .m-btn-outline.m-btn-important:disabled.hover, .m-btn-outline.m-btn-important:disabled:focus, .m-btn-outline.m-btn-important:disabled.focus, fieldset[disabled] .m-btn-outline.m-btn-important:hover, fieldset[disabled] .m-btn-outline.m-btn-important.hover, fieldset[disabled] .m-btn-outline.m-btn-important:focus, fieldset[disabled] .m-btn-outline.m-btn-important.focus {
-  color: inherit;
-  background-color: transparent;
-  border-color: #e33050;
-}
-a:hover .m-btn-outline.m-btn-important, a:focus .m-btn-outline.m-btn-important, a:active .m-btn-outline.m-btn-important {
-  color: #fff;
-  background-color: #e33050;
-  border-color: transparent;
-}
-
-/*doc
----
-title: m-btn-(size)
+title: m-btn--(size)
 name: btn-04-size
 category: module-btn
 parent: btn
@@ -2711,14 +2709,14 @@ parent: btn
 
 ``` example
 <p>
-  <a href="#" class="m-btn m-btn-first m-btn-sm">m-btn-sm</a>
-  <a href="#" class="m-btn m-btn-first">default</a>
-  <a href="#" class="m-btn m-btn-first m-btn-lg">m-btn-lg</a>
-  <a href="#" class="m-btn m-btn-first m-btn-xl">m-btn-xl</a>
+  <a href="#" class="m-btn m-btn--first m-btn--sm">m-btn--sm</a>
+  <a href="#" class="m-btn m-btn--first">default</a>
+  <a href="#" class="m-btn m-btn--first m-btn--lg">m-btn--lg</a>
+  <a href="#" class="m-btn m-btn--first m-btn--xl">m-btn--xl</a>
 </p>
 ```
 */
-.m-btn-sm {
+.m-btn--sm {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   font-size: 0.75rem;
@@ -2727,7 +2725,7 @@ parent: btn
   padding-right: 0.5rem;
 }
 
-.m-btn-lg {
+.m-btn--lg {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   font-size: 1.25rem;
@@ -2736,7 +2734,7 @@ parent: btn
   padding-right: 1rem;
 }
 
-.m-btn-xl {
+.m-btn--xl {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
   font-size: 1.5rem;
@@ -2748,7 +2746,7 @@ parent: btn
 
 /*doc
 ---
-title: m-btn-block
+title: m-btn--block
 name: btn-05-block
 category: module-btn
 parent: btn
@@ -2758,50 +2756,50 @@ parent: btn
 
 ### 補足：ボタンの余白
 
-<code>.m-btn-block, .m-btn-round, .m-btn-square</code> では、<code>.m-btn</code> のpaddingの初期値を上書きする必要があるため、意図的にクラスを追加して優先度を上げている。
+<code>.m-btn--block, .m-btn--round, .m-btn--square</code> では、<code>.m-btn</code> のpaddingの初期値を上書きする必要があるため、意図的にクラスを追加して優先度を上げている。
 
 ### note: Padding in button
 
-In <code>.m-btn-block, .m-btn-round, .m-btn-square</code>, need to override the default padding of <code>.m-btn</code>. For this reason, intentionally add classes to increase priority.
+In <code>.m-btn--block, .m-btn--round, .m-btn--square</code>, need to override the default padding of <code>.m-btn</code>. For this reason, intentionally add classes to increase priority.
 
 ``` example
 <p>
-  <a href="#" class="m-btn m-btn-first m-btn-sm m-btn-block">m-btn-block</a>
+  <a href="#" class="m-btn m-btn--first m-btn--sm m-btn--block">m-btn--block</a>
 </p>
 <p>
-  <a href="#" class="m-btn m-btn-first m-btn-block">m-btn-block</a>
+  <a href="#" class="m-btn m-btn--first m-btn--block">m-btn--block</a>
 </p>
 <p>
-  <a href="#" class="m-btn m-btn-first m-btn-lg m-btn-block">m-btn-block</a>
+  <a href="#" class="m-btn m-btn--first m-btn--lg m-btn--block">m-btn--block</a>
 </p>
 <p>
-  <a href="#" class="m-btn m-btn-first m-btn-xl m-btn-block">m-btn-block</a>
+  <a href="#" class="m-btn m-btn--first m-btn--xl m-btn--block">m-btn--block</a>
 </p>
 ```
 */
-.m-btn-block {
+.m-btn--block {
   display: block;
   width: 100%;
   max-width: 320px;
   margin: 0 auto;
 }
-.m-btn-block.m-btn {
+.m-btn--block.m-btn {
   padding-left: .5rem;
   padding-right: .5rem;
 }
-.m-btn-block.m-btn-sm {
+.m-btn--block.m-btn--sm {
   max-width: 180px;
 }
-.m-btn-block.m-btn-lg {
+.m-btn--block.m-btn--lg {
   max-width: 640px;
 }
-.m-btn-block.m-btn-xl {
+.m-btn--block.m-btn--xl {
   max-width: 960px;
 }
 
 /*doc
 ---
-title: m-btn-round
+title: m-btn--round
 name: btn-06-round
 category: module-btn
 parent: btn
@@ -2811,66 +2809,66 @@ parent: btn
 
 ``` example
 <p>
-  <a href="#" class="m-btn m-btn-first m-btn-sm m-btn-round">R</a>
+  <a href="#" class="m-btn m-btn--first m-btn--sm m-btn--round">R</a>
 </p>
 <p>
-  <a href="#" class="m-btn m-btn-first m-btn-round">R</a>
+  <a href="#" class="m-btn m-btn--first m-btn--round">R</a>
 </p>
 <p>
-  <a href="#" class="m-btn m-btn-first m-btn-lg m-btn-round">R</a>
+  <a href="#" class="m-btn m-btn--first m-btn--lg m-btn--round">R</a>
 </p>
 <p>
-  <a href="#" class="m-btn m-btn-first m-btn-xl m-btn-round">R</a>
+  <a href="#" class="m-btn m-btn--first m-btn--xl m-btn--round">R</a>
 </p>
 ```
 */
-.m-btn-round {
+.m-btn--round {
   overflow: hidden;
   width: 2.5rem;
   height: 2.5rem;
   line-height: 2.5rem;
   border-radius: 50%;
 }
-.m-btn-round.m-btn {
+.m-btn--round.m-btn {
   padding: 0;
 }
-.m-btn-round.m-btn img {
+.m-btn--round.m-btn img {
   transform: translate(0, -0.1em);
 }
-.m-btn-round.m-btn [class*="fa-"] {
+.m-btn--round.m-btn [class*="fa-"] {
   transform: translate(0, -0.1em);
 }
-.m-btn-round.m-btn-sm {
+.m-btn--round.m-btn--sm {
   width: 2em;
   height: 2em;
   line-height: 2em;
 }
-.m-btn-round.m-btn-lg {
+.m-btn--round.m-btn--lg {
   width: 3.75rem;
   height: 3.75rem;
   line-height: 3.75rem;
 }
-.m-btn-round.m-btn-lg img {
+.m-btn--round.m-btn--lg img {
   transform: translate(0, -0.125em);
 }
-.m-btn-round.m-btn-lg [class*="fa-"] {
+.m-btn--round.m-btn--lg [class*="fa-"] {
   transform: translate(0, -0.125em);
 }
-.m-btn-round.m-btn-xl {
+.m-btn--round.m-btn--xl {
   width: 5rem;
   height: 5rem;
   line-height: 5rem;
 }
-.m-btn-round.m-btn-xl img {
+.m-btn--round.m-btn--xl img {
   transform: translate(0, -0.15em);
 }
-.m-btn-round.m-btn-xl [class*="fa-"] {
+.m-btn--round.m-btn--xl [class*="fa-"] {
   transform: translate(0, -0.15em);
 }
 
 /*doc
 ---
-title: m-btn-square
+title: m-btn--square
 name: btn-07-square
 category: module-btn
 parent: btn
@@ -2880,59 +2878,59 @@ parent: btn
 
 ``` example
 <p>
-  <a href="#" class="m-btn m-btn-first m-btn-sm m-btn-square">R</a>
+  <a href="#" class="m-btn m-btn--first m-btn--sm m-btn--square">R</a>
 </p>
 <p>
-  <a href="#" class="m-btn m-btn-first m-btn-square">R</a>
+  <a href="#" class="m-btn m-btn--first m-btn--square">R</a>
 </p>
 <p>
-  <a href="#" class="m-btn m-btn-first m-btn-lg m-btn-square">R</a>
+  <a href="#" class="m-btn m-btn--first m-btn--lg m-btn--square">R</a>
 </p>
 <p>
-  <a href="#" class="m-btn m-btn-first m-btn-xl m-btn-square">R</a>
+  <a href="#" class="m-btn m-btn--first m-btn--xl m-btn--square">R</a>
 </p>
 ```
 */
-.m-btn-square {
+.m-btn--square {
   overflow: hidden;
   width: 2.5rem;
   height: 2.5rem;
   line-height: 2.5rem;
 }
-.m-btn-square.m-btn {
+.m-btn--square.m-btn {
   padding: 0;
 }
-.m-btn-square.m-btn img {
+.m-btn--square.m-btn img {
   transform: translate(0, -0.1em);
 }
-.m-btn-square.m-btn [class*="fa-"] {
+.m-btn--square.m-btn [class*="fa-"] {
   transform: translate(0, -0.1em);
 }
-.m-btn-square.m-btn-sm {
+.m-btn--square.m-btn--sm {
   width: 1.5em;
   height: 1.5em;
   line-height: 1.5em;
 }
-.m-btn-square.m-btn-lg {
+.m-btn--square.m-btn--lg {
   width: 3.75rem;
   height: 3.75rem;
   line-height: 3.75rem;
 }
-.m-btn-square.m-btn-lg img {
+.m-btn--square.m-btn--lg img {
   transform: translate(0, -0.125em);
 }
-.m-btn-square.m-btn-lg [class*="fa-"] {
+.m-btn--square.m-btn--lg [class*="fa-"] {
   transform: translate(0, -0.125em);
 }
-.m-btn-square.m-btn-xl {
+.m-btn--square.m-btn--xl {
   width: 5rem;
   height: 5rem;
   line-height: 5rem;
 }
-.m-btn-square.m-btn-xl img {
+.m-btn--square.m-btn--xl img {
   transform: translate(0, -0.15em);
 }
-.m-btn-square.m-btn-xl [class*="fa-"] {
+.m-btn--square.m-btn--xl [class*="fa-"] {
   transform: translate(0, -0.15em);
 }
 
@@ -2949,9 +2947,9 @@ category: module-checkbox
 
 ``` example
 <p>
-<label class="m-checkbox u-margin-r" for="checkbox1"><input type="checkbox" name="checkbox1" id="checkbox1" class="u-margin-r-sm" value="1">m-checkbox</label>
-<label class="m-checkbox u-margin-r" for="checkbox2"><input type="checkbox" name="checkbox2" id="checkbox2" class="u-margin-r-sm" value="2" checked="checked">m-checkbox</label>
-<label class="m-checkbox is-error" for="checkbox3"><input type="checkbox" name="checkbox3" id="checkbox3" class="u-margin-r-sm" value="3">m-checkbox</label>
+<label class="m-checkbox u-margin--right--md" for="checkbox1"><input type="checkbox" name="checkbox1" id="checkbox1" class="u-margin--right--sm" value="1">m-checkbox</label>
+<label class="m-checkbox u-margin--right--md" for="checkbox2"><input type="checkbox" name="checkbox2" id="checkbox2" class="u-margin--right--sm" value="2" checked="checked">m-checkbox</label>
+<label class="m-checkbox is-error" for="checkbox3"><input type="checkbox" name="checkbox3" id="checkbox3" class="u-margin--right--sm" value="3">m-checkbox</label>
 </p>
 ```
 */
@@ -3008,7 +3006,7 @@ category: module-embed
 
 /*doc
 ---
-title: m-embed-square
+title: m-embed--square
 name: object-01-square
 category: module-object
 parent: object
@@ -3019,7 +3017,7 @@ parent: object
 ``` example
 <div style="max-width: 320px;">
 
-<div class="m-embed m-embed-square">
+<div class="m-embed m-embed--square">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4CZpUy_YWA?rel=0" frameborder="0" allowfullscreen></iframe>
 </div>
 
@@ -3029,7 +3027,7 @@ parent: object
 */
 /*doc
 ---
-title: m-embed-(ratio-x)to(ratio-y)
+title: m-embed--(ratio-x)to(ratio-y)
 name: embed-02-ratio
 category: module-embed
 parent: embed
@@ -3041,23 +3039,23 @@ parent: embed
 ``` example
 <div style="max-width: 320px;">
 
-<div class="m-embed m-embed-3to2 m-b">
+<div class="m-embed m-embed--3to2" style="margin-bottom: 1rem;">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4CZpUy_YWA?rel=0" frameborder="0" allowfullscreen></iframe>
 </div>
 
-<div class="m-embed m-embed-4to3 m-b">
+<div class="m-embed m-embed--4to3" style="margin-bottom: 1rem;">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4CZpUy_YWA?rel=0" frameborder="0" allowfullscreen></iframe>
 </div>
 
-<div class="m-embed m-embed-16to9 m-b">
+<div class="m-embed m-embed--16to9" style="margin-bottom: 1rem;">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4CZpUy_YWA?rel=0" frameborder="0" allowfullscreen></iframe>
 </div>
 
-<div class="m-embed m-embed-ogimage m-b">
+<div class="m-embed m-embed--ogimage" style="margin-bottom: 1rem;">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4CZpUy_YWA?rel=0" frameborder="0" allowfullscreen></iframe>
 </div>
 
-<div class="m-embed m-embed-21to9 m-b">
+<div class="m-embed m-embed--21to9" style="margin-bottom: 1rem;">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4CZpUy_YWA?rel=0" frameborder="0" allowfullscreen></iframe>
 </div>
 
@@ -3065,30 +3063,30 @@ parent: embed
 ```
 
 */
-.m-embed-square iframe,
-.m-embed-square embed,
-.m-embed-square object,
-.m-embed-square video,
-.m-embed-3to2 iframe,
-.m-embed-3to2 embed,
-.m-embed-3to2 object,
-.m-embed-3to2 video,
-.m-embed-4to3 iframe,
-.m-embed-4to3 embed,
-.m-embed-4to3 object,
-.m-embed-4to3 video,
-.m-embed-16to9 iframe,
-.m-embed-16to9 embed,
-.m-embed-16to9 object,
-.m-embed-16to9 video,
-.m-embed-ogimage iframe,
-.m-embed-ogimage embed,
-.m-embed-ogimage object,
-.m-embed-ogimage video,
-.m-embed-21to9 iframe,
-.m-embed-21to9 embed,
-.m-embed-21to9 object,
-.m-embed-21to9 video {
+.m-embed--square iframe,
+.m-embed--square embed,
+.m-embed--square object,
+.m-embed--square video,
+.m-embed--3to2 iframe,
+.m-embed--3to2 embed,
+.m-embed--3to2 object,
+.m-embed--3to2 video,
+.m-embed--4to3 iframe,
+.m-embed--4to3 embed,
+.m-embed--4to3 object,
+.m-embed--4to3 video,
+.m-embed--16to9 iframe,
+.m-embed--16to9 embed,
+.m-embed--16to9 object,
+.m-embed--16to9 video,
+.m-embed--ogimage iframe,
+.m-embed--ogimage embed,
+.m-embed--ogimage object,
+.m-embed--ogimage video,
+.m-embed--21to9 iframe,
+.m-embed--21to9 embed,
+.m-embed--21to9 object,
+.m-embed--21to9 video {
   position: absolute;
   top: 0;
   left: 0;
@@ -3097,27 +3095,27 @@ parent: embed
   border: 0;
 }
 
-.m-embed-square:before {
+.m-embed--square:before {
   padding-top: 100%;
 }
 
-.m-embed-3to2:before {
+.m-embed--3to2:before {
   padding-top: 66.66667%;
 }
 
-.m-embed-4to3:before {
+.m-embed--4to3:before {
   padding-top: 75%;
 }
 
-.m-embed-16to9:before {
+.m-embed--16to9:before {
   padding-top: 56.25%;
 }
 
-.m-embed-ogimage:before {
+.m-embed--ogimage:before {
   padding-top: 52.35602%;
 }
 
-.m-embed-21to9:before {
+.m-embed--21to9:before {
   padding-top: 42.85714%;
 }
 
@@ -3159,7 +3157,7 @@ category: module-input
 
 /*doc
 ---
-title: m-input-(size)
+title: m-input--(size)
 name: input-01-size
 category: module-input
 parent: input
@@ -3168,29 +3166,29 @@ parent: input
 テキスト入力を即す欄の全体のサイズを変更する。(size)は <code>sm, lg</code> に対応している。
 
 ``` example
-<div class="m-b">
-    <input type="text" class="m-input m-input-sm" size="20" value="吾輩は猫である。" />
-    <input type="text" class="m-input m-input-lg" size="20" value="吾輩は猫である。" />
+<div style="margin-bottom: 2rem;">
+    <input type="text" class="m-input m-input--sm" size="20" value="吾輩は猫である。" />
+    <input type="text" class="m-input m-input--lg" size="20" value="吾輩は猫である。" />
 </div>
-<div class="m-b">
-    <textarea class="m-input m-input-sm" rows="5" cols="60">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</textarea>
-    <textarea class="m-input m-input-lg" rows="5" cols="60">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</textarea>
+<div>
+    <textarea class="m-input m-input--sm" rows="5" cols="60">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</textarea>
+    <textarea class="m-input m-input--lg" rows="5" cols="60">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</textarea>
 </div>
 ```
 */
-.m-input-sm {
+.m-input--sm {
   padding: .25rem;
   font-size: 0.875rem;
 }
 
-.m-input-lg {
+.m-input--lg {
   padding: .5rem .5rem;
   font-size: 1.125rem;
 }
 
 /*doc
 ---
-title: m-input-(color)
+title: m-input--(color)
 name: input-02-color
 category: module-input
 parent: input
@@ -3200,53 +3198,53 @@ parent: input
 
 ``` example
 <div style="margin-bottom: 1rem;">
-    <input type="text" class="m-input m-input-gray" size="20" value="" placeholder="gray" />
+    <input type="text" class="m-input m-input--gray" size="20" value="" placeholder="gray" />
 </div>
 <div style="margin-bottom: 1rem;">
-    <input type="text" class="m-input m-input-first" size="20" value="" placeholder="first" />
+    <input type="text" class="m-input m-input--first" size="20" value="" placeholder="first" />
 </div>
 <div style="margin-bottom: 1rem;">
-    <input type="text" class="m-input m-input-second" size="20" value="" placeholder="second" />
+    <input type="text" class="m-input m-input--second" size="20" value="" placeholder="second" />
 </div>
 <div style="margin-bottom: 1rem;">
-    <input type="text" class="m-input m-input-third" size="20" value="" placeholder="third" />
+    <input type="text" class="m-input m-input--third" size="20" value="" placeholder="third" />
 </div>
 <div style="margin-bottom: 1rem;">
-    <input type="text" class="m-input m-input-fourth" size="20" value="" placeholder="fourth" />
+    <input type="text" class="m-input m-input--fourth" size="20" value="" placeholder="fourth" />
 </div>
 <div style="margin-bottom: 1rem;">
-    <input type="text" class="m-input m-input-info" size="20" value="" placeholder="info" />
+    <input type="text" class="m-input m-input--info" size="20" value="" placeholder="info" />
 </div>
 <div>
-    <input type="text" class="m-input m-input-important" size="20" value="" placeholder="important" />
+    <input type="text" class="m-input m-input--important" size="20" value="" placeholder="important" />
 </div>
 ```
 */
-.m-input-gray {
+.m-input--gray {
   border-color: #333;
 }
 
-.m-input-first {
+.m-input--first {
   border-color: #1976d2;
 }
 
-.m-input-second {
+.m-input--second {
   border-color: #3cade6;
 }
 
-.m-input-third {
+.m-input--third {
   border-color: #49b070;
 }
 
-.m-input-fourth {
+.m-input--fourth {
   border-color: #f38c10;
 }
 
-.m-input-info {
+.m-input--info {
   border-color: #3cade6;
 }
 
-.m-input-important {
+.m-input--important {
   border-color: #e33050;
 }
 
@@ -3287,7 +3285,7 @@ a.m-label {
 
 /*doc
 ---
-title: m-label-(color)
+title: m-label--(color)
 name: label-01-color
 category: module-label
 parent: label
@@ -3296,116 +3294,116 @@ parent: label
 ラベルの色を変更する。(color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
 
 ``` example
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-gray">m-label-gray</span><a href="#" class="m-label m-label-gray">m-label-gray(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-first">m-label-first</span><a href="#" class="m-label m-label-first">m-label-first(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-second">m-label-second</span><a href="#" class="m-label m-label-second">m-label-second(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-third">m-label-third</span><a href="#" class="m-label m-label-third">m-label-third(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-fourth">m-label-fourth</span><a href="#" class="m-label m-label-fourth">m-label-fourth(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-info">m-label-info</span><a href="#" class="m-label m-label-info">m-label-info(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-important">m-label-important</span><a href="#" class="m-label m-label-important">m-label-important(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label--gray">m-label--gray</span><a href="#" class="m-label m-label--gray">m-label--gray(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label--first">m-label--first</span><a href="#" class="m-label m-label--first">m-label--first(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label--second">m-label--second</span><a href="#" class="m-label m-label--second">m-label--second(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label--third">m-label--third</span><a href="#" class="m-label m-label--third">m-label--third(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label--fourth">m-label--fourth</span><a href="#" class="m-label m-label--fourth">m-label--fourth(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label--info">m-label--info</span><a href="#" class="m-label m-label--info">m-label--info(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label--important">m-label--important</span><a href="#" class="m-label m-label--important">m-label--important(link)</a>どこで生れたかとんと見当がつかぬ。</p>
 ```
 
 */
-.m-label-gray {
+.m-label--gray {
   background-color: #333;
 }
 
-.m-label-first {
+.m-label--first {
   background-color: #1976d2;
 }
 
-.m-label-second {
+.m-label--second {
   background-color: #3cade6;
 }
 
-.m-label-third {
+.m-label--third {
   background-color: #49b070;
 }
 
-.m-label-fourth {
+.m-label--fourth {
   background-color: #f38c10;
 }
 
-.m-label-info {
+.m-label--info {
   background-color: #3cade6;
 }
 
-.m-label-important {
+.m-label--important {
   background-color: #e33050;
 }
 
 /*doc
 ---
-title: m-label-inverse
+title: m-label--inverse
 name: label-03-inverse
 category: module-label
 parent: label
 ---
 
 ラベルの文字色をbody要素の文字色、背景色をbody要素の背景色にする。  
-<code>.m-label-(color)</code> と同時に使用すると、文字色が指定した色になる。
+<code>.m-label--(color)</code> と同時に使用すると、文字色が指定した色になる。
 
 
 ``` example
-<div class="bg-first bg-mild p-y">
-    <p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-inverse">m-label-inverse</span><a href="#" class="m-label m-label-inverse">m-label-inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-    <p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-inverse m-label-first">m-label-inverse</span><a href="#" class="m-label m-label-inverse m-label-first">m-label-inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-    <p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-inverse m-label-second">m-label-inverse</span><a href="#" class="m-label m-label-inverse m-label-second">m-label-inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-    <p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-inverse m-label-third">m-label-inverse</span><a href="#" class="m-label m-label-inverse m-label-third">m-label-inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-    <p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-inverse m-label-fourth">m-label-inverse</span><a href="#" class="m-label m-label-inverse m-label-fourth">m-label-inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-    <p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-inverse m-label-info">m-label-inverse</span><a href="#" class="m-label m-label-inverse m-label-info">m-label-inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-    <p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-inverse m-label-important">m-label-inverse</span><a href="#" class="m-label m-label-inverse m-label-important">m-label-inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<div style="background-color: #999; padding: 1rem; color: #eee;">
+    <p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label--inverse">m-label--inverse</span><a href="#" class="m-label m-label--inverse">m-label--inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+    <p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label--inverse m-label--first">m-label--inverse</span><a href="#" class="m-label m-label--inverse m-label--first">m-label--inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+    <p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label--inverse m-label--second">m-label--inverse</span><a href="#" class="m-label m-label--inverse m-label--second">m-label--inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+    <p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label--inverse m-label--third">m-label--inverse</span><a href="#" class="m-label m-label--inverse m-label--third">m-label--inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+    <p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label--inverse m-label--fourth">m-label--inverse</span><a href="#" class="m-label m-label--inverse m-label--fourth">m-label--inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+    <p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label--inverse m-label--info">m-label--inverse</span><a href="#" class="m-label m-label--inverse m-label--info">m-label--inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+    <p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label--inverse m-label--important">m-label--inverse</span><a href="#" class="m-label m-label--inverse m-label--important">m-label--inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
 </div>
 ```
 
 */
-.m-label-inverse {
+.m-label--inverse {
   color: #333;
   background-color: #fff;
 }
-a.m-label-inverse {
+a.m-label--inverse {
   color: #333;
 }
-.m-label-inverse.m-label-first {
+.m-label--inverse.m-label--first {
   color: first-text;
 }
-a.m-label-inverse.m-label-first {
+a.m-label--inverse.m-label--first {
   color: first-text;
 }
-.m-label-inverse.m-label-second {
+.m-label--inverse.m-label--second {
   color: #26a9d0;
 }
-a.m-label-inverse.m-label-second {
+a.m-label--inverse.m-label--second {
   color: #26a9d0;
 }
-.m-label-inverse.m-label-third {
+.m-label--inverse.m-label--third {
   color: #229644;
 }
-a.m-label-inverse.m-label-third {
+a.m-label--inverse.m-label--third {
   color: #229644;
 }
-.m-label-inverse.m-label-fourth {
+.m-label--inverse.m-label--fourth {
   color: #f37910;
 }
-a.m-label-inverse.m-label-fourth {
+a.m-label--inverse.m-label--fourth {
   color: #f37910;
 }
-.m-label-inverse.m-label-info {
+.m-label--inverse.m-label--info {
   color: #26a9d0;
 }
-a.m-label-inverse.m-label-info {
+a.m-label--inverse.m-label--info {
   color: #26a9d0;
 }
-.m-label-inverse.m-label-important {
+.m-label--inverse.m-label--important {
   color: #d70022;
 }
-a.m-label-inverse.m-label-important {
+a.m-label--inverse.m-label--important {
   color: #d70022;
 }
 
 /*doc
 ---
-title: m-label-round
+title: m-label--round
 name: label-04-round
 category: module-label
 parent: label
@@ -3414,18 +3412,18 @@ parent: label
 ラベルが小判型になる。
 
 ``` example
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-round m-label-gray">m-label-gray</span><a href="#" class="m-label m-label-round m-label-gray">m-label-gray(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-round m-label-first">m-label-first</span><a href="#" class="m-label m-label-round m-label-first">m-label-first(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-round m-label-second">m-label-second</span><a href="#" class="m-label m-label-round m-label-second">m-label-second(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-round m-label-third">m-label-third</span><a href="#" class="m-label m-label-round m-label-third">m-label-third(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-round m-label-fourth">m-label-fourth</span><a href="#" class="m-label m-label-round m-label-fourth">m-label-fourth(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-round m-label-info">m-label-info</span><a href="#" class="m-label m-label-round m-label-info">m-label-info(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-round m-label-important">m-label-important</span><a href="#" class="m-label m-label-round m-label-important">m-label-important(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label--round m-label--gray">m-label--gray</span><a href="#" class="m-label m-label--round m-label--gray">m-label--gray(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label--round m-label--first">m-label--first</span><a href="#" class="m-label m-label--round m-label--first">m-label--first(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label--round m-label--second">m-label--second</span><a href="#" class="m-label m-label--round m-label--second">m-label--second(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label--round m-label--third">m-label--third</span><a href="#" class="m-label m-label--round m-label--third">m-label--third(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label--round m-label--fourth">m-label--fourth</span><a href="#" class="m-label m-label--round m-label--fourth">m-label--fourth(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label--round m-label--info">m-label--info</span><a href="#" class="m-label m-label--round m-label--info">m-label--info(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label--round m-label--important">m-label--important</span><a href="#" class="m-label m-label--round m-label--important">m-label--important(link)</a>どこで生れたかとんと見当がつかぬ。</p>
 ```
 
 */
-.m-label-round {
-  border-radius: 1em;
+.m-label--round {
+  border-radius: 5em;
   padding-left: 1em;
   padding-right: 1em;
 }
@@ -3443,27 +3441,27 @@ category: module-list
 ``` example
 <h3 class="u-text--lg">すべての要素にクラスを付与した場合</h3>
 <ul class="m-list">
-    <li class="m-list-item">あいうえおかきくけ10さしすせ</li>
-    <li class="m-list-item">あいうえおかきく
-        <ul class="m-list-children">
-            <li class="m-list-item">あいうえお</li>
-            <li class="m-list-item">あいうえおかきくけ10さしすせそたちつて20
-                <ul class="m-list-children">
-                    <li class="m-list-item">あいうえお</li>
-                    <li class="m-list-item">あいうえおかきくけ10さしすせそたちつて20</li>
-                    <li class="m-list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
-                    <li class="m-list-item">あいうえおかきくけ10</li>
+    <li class="m-list__item">あいうえおかきくけ10さしすせ</li>
+    <li class="m-list__item">あいうえおかきく
+        <ul class="m-list__children">
+            <li class="m-list__item">あいうえお</li>
+            <li class="m-list__item">あいうえおかきくけ10さしすせそたちつて20
+                <ul class="m-list__children">
+                    <li class="m-list__item">あいうえお</li>
+                    <li class="m-list__item">あいうえおかきくけ10さしすせそたちつて20</li>
+                    <li class="m-list__item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
+                    <li class="m-list__item">あいうえおかきくけ10</li>
                 </ul>
             </li>
-            <li class="m-list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
-            <li class="m-list-item">あいうえおかきくけ10</li>
+            <li class="m-list__item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
+            <li class="m-list__item">あいうえおかきくけ10</li>
         </ul>
     </li>
-    <li class="m-list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
-    <li class="m-list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
+    <li class="m-list__item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
+    <li class="m-list__item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
 </ul>
 
-<h3 class="u-text--lg u-margin__t--lg">ulのみクラスを付与した場合</h3>
+<h3 class="u-text--lg u-margin--top--lg">ulのみクラスを付与した場合</h3>
 <ul class="m-list">
     <li>あいうえおかきくけ10さしすせ</li>
     <li>あいうえおかきく
@@ -3494,14 +3492,14 @@ category: module-list
 }
 
 ul.m-list li,
-.m-list-item {
+.m-list__item {
   position: relative;
   margin: 0;
   line-height: 1.5;
 }
 
 ul.m-list li ul,
-.m-list-children {
+.m-list__children {
   margin: 0;
   padding-left: 0;
   list-style-type: none;
@@ -3509,7 +3507,7 @@ ul.m-list li ul,
 
 /*doc
 ---
-title: m-list-vertical
+title: m-list--vertical
 name: list-01-vertical
 category: module-list
 parent: list
@@ -3519,29 +3517,29 @@ parent: list
 
 ``` example
 <h3 class="u-text--lg">すべての要素にクラスを付与した場合</h3>
-<ul class="m-list m-list-vertical">
-    <li class="m-list-item">あいうえおかきくけ10さしすせ</li>
-    <li class="m-list-item">あいうえおかきく
-        <ul class="m-list-children">
-            <li class="m-list-item">あいうえお</li>
-            <li class="m-list-item">あいうえおかきくけ10さしすせそたちつて20
-                <ul class="m-list-children">
-                    <li class="m-list-item">あいうえお</li>
-                    <li class="m-list-item">あいうえおかきくけ10さしすせそたちつて20</li>
-                    <li class="m-list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20</li>
-                    <li class="m-list-item">あいうえおかきくけ10</li>
+<ul class="m-list m-list--vertical">
+    <li class="m-list__item">あいうえおかきくけ10さしすせ</li>
+    <li class="m-list__item">あいうえおかきく
+        <ul class="m-list__children">
+            <li class="m-list__item">あいうえお</li>
+            <li class="m-list__item">あいうえおかきくけ10さしすせそたちつて20
+                <ul class="m-list__children">
+                    <li class="m-list__item">あいうえお</li>
+                    <li class="m-list__item">あいうえおかきくけ10さしすせそたちつて20</li>
+                    <li class="m-list__item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20</li>
+                    <li class="m-list__item">あいうえおかきくけ10</li>
                 </ul>
             </li>
-            <li class="m-list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのは</li>
-            <li class="m-list-item">あいうえおかきくけ10</li>
+            <li class="m-list__item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのは</li>
+            <li class="m-list__item">あいうえおかきくけ10</li>
         </ul>
     </li>
-    <li class="m-list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえ</li>
-    <li class="m-list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
+    <li class="m-list__item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえ</li>
+    <li class="m-list__item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
 </ul>
 
-<h3 class="u-text--lg u-margin__t--lg">ulのみクラスを付与した場合</h3>
-<ul class="m-list m-list-vertical">
+<h3 class="u-text--lg u-margin--top--lg">ulのみクラスを付与した場合</h3>
+<ul class="m-list m-list--vertical">
     <li>あいうえおかきくけ10さしすせ</li>
     <li>あいうえおかきく
         <ul>
@@ -3564,25 +3562,25 @@ parent: list
 ```
 
 */
-ul.m-list-vertical li,
-.m-list-vertical .m-list-item {
+ul.m-list--vertical li,
+.m-list--vertical .m-list__item {
   margin-top: .75em;
   margin-bottom: .75em;
 }
 
-ul.m-list-vertical li ul,
-.m-list-vertical .m-list-children {
+ul.m-list--vertical li ul,
+.m-list--vertical .m-list__children {
   padding-left: 1.5em;
 }
 
-ul.m-list-vertical li ul li,
-.m-list-vertical .m-list-children .m-list-item {
+ul.m-list--vertical li ul li,
+.m-list--vertical .m-list__children .m-list__item {
   font-size: .9em;
 }
 
 /*doc
 ---
-title: m-list-horizontal
+title: m-list--horizontal
 name: list-02-horizontal
 category: module-list
 parent: list
@@ -3592,15 +3590,15 @@ parent: list
 
 ``` example
 <h3 class="u-text--lg">すべての要素にクラスを付与した場合</h3>
-<ul class="m-list m-list-horizontal">
-    <li class="m-list-item">あいうえおかきくけ10さしすせ</li>
-    <li class="m-list-item">あいうえおかきく</li>
-    <li class="m-list-item">あいうえお</li>
-    <li class="m-list-item">あいうえおかきくけ</li>
+<ul class="m-list m-list--horizontal">
+    <li class="m-list__item">あいうえおかきくけ10さしすせ</li>
+    <li class="m-list__item">あいうえおかきく</li>
+    <li class="m-list__item">あいうえお</li>
+    <li class="m-list__item">あいうえおかきくけ</li>
 </ul>
 
-<h3 class="u-text--lg u-margin__t--lg">ulのみクラスを付与した場合</h3>
-<ul class="m-list m-list-horizontal">
+<h3 class="u-text--lg u-margin--top--lg">ulのみクラスを付与した場合</h3>
+<ul class="m-list m-list--horizontal">
     <li>あいうえおかきくけ10さしすせ</li>
     <li>あいうえおかきく</li>
     <li>あいうえお</li>
@@ -3609,23 +3607,23 @@ parent: list
 ```
 
 */
-.m-list-horizontal {
+.m-list--horizontal {
   letter-spacing: -.4em;
 }
 
-ul.m-list-horizontal li,
-.m-list-horizontal .m-list-item {
+ul.m-list--horizontal li,
+.m-list--horizontal .m-list__item {
   display: inline;
   padding-left: 1em;
   padding-right: 1em;
   letter-spacing: normal;
 }
-ul.m-list-horizontal li:first-child,
-.m-list-horizontal .m-list-item:first-child {
+ul.m-list--horizontal li:first-child,
+.m-list--horizontal .m-list__item:first-child {
   padding-left: 0;
 }
-ul.m-list-horizontal li:last-child,
-.m-list-horizontal .m-list-item:last-child {
+ul.m-list--horizontal li:last-child,
+.m-list--horizontal .m-list__item:last-child {
   padding-right: 0;
 }
 
@@ -3645,29 +3643,29 @@ category: module-nav
 ``` example
 <h3 class="u-text--lg">すべての要素にクラスを付与した場合</h3>
 <nav class="m-nav">
-    <div class="m-nav-list">
-        <p class="m-nav-item">
-            <a href="#" class="m-nav-label">ボタン</a>
+    <div class="m-nav__list">
+        <p class="m-nav__item">
+            <a href="#" class="m-nav__label">ボタン</a>
         </p>
-        <p class="m-nav-item">
-            <a href="#" class="m-nav-label is-current">現在のページ</a>
+        <p class="m-nav__item">
+            <a href="#" class="m-nav__label is-current">現在のページ</a>
         </p>
-        <p class="m-nav-item">
-            <a href="#" class="m-nav-label">文字数が多いボタンです</a>
+        <p class="m-nav__item">
+            <a href="#" class="m-nav__label">文字数が多いボタンです</a>
         </p>
-        <p class="m-nav-item">
-            <a href="#" class="m-nav-label"><span class="m-nav-text"><span class="u-text-xs">複数行の</span><br>ボタン</span></a>
+        <p class="m-nav__item">
+            <a href="#" class="m-nav__label"><span class="m-nav__text"><span class="u-text--xs">複数行の</span><br>ボタン</span></a>
         </p>
-        <p class="m-nav-item">
-            <a href="#" class="m-nav-label">ボタン</a>
+        <p class="m-nav__item">
+            <a href="#" class="m-nav__label">ボタン</a>
         </p>
-        <p class="m-nav-item">
-            <a href="#" class="m-nav-label">ボタン</a>
+        <p class="m-nav__item">
+            <a href="#" class="m-nav__label">ボタン</a>
         </p>
     </div><!-- /.nav-list -->
 </nav><!-- /.nav -->
 
-<h3 class="u-text--lg u-margin__t--lg">包括要素のみクラスを付与した場合</h3>
+<h3 class="u-text--lg u-margin--top--lg">包括要素のみクラスを付与した場合</h3>
 <nav class="m-nav">
     <ul>
         <li>
@@ -3677,7 +3675,7 @@ category: module-nav
             <a href="#" class="is-current">現在のページ</a>
         </li>
         <li>
-            <a href="#"><span class="m-nav-text"><span class="u-text-xs">複数行の</span><br>ボタン</span></a>
+            <a href="#"><span class="m-nav__text"><span class="u-text--xs">複数行の</span><br>ボタン</span></a>
         </li>
         <li>
             <a href="#">ボタン</a>
@@ -3691,22 +3689,22 @@ category: module-nav
     </ul>
 </nav><!-- /.nav -->
 
-<h3 class="u-text--lg u-margin__t--lg">m-nav-label のみ使用し、ナビゲーションの分割はグリッドにした場合</h3>
-<ul class="l-grid__row l-grid__row-0">
-    <li class="l-grid__col-6 l-grid__col-md">
-        <a href="#" class="m-nav-label">ボタン</a>
+<h3 class="u-text--lg u-margin--top--lg">m-nav__label のみ使用し、ナビゲーションの分割はグリッドにした場合</h3>
+<ul class="l-grid__row l-grid__row--0">
+    <li class="l-grid__col--6 l-grid__col--md">
+        <a href="#" class="m-nav__label">ボタン</a>
     </li>
-    <li class="l-grid__col-6 l-grid__col-md">
-        <a href="#" class="m-nav-label is-current">現在のページ</a>
+    <li class="l-grid__col--6 l-grid__col--md">
+        <a href="#" class="m-nav__label is-current">現在のページ</a>
     </li>
-    <li class="l-grid__col-4 l-grid__col-md">
-        <a href="#" class="m-nav-label">ボタン</a>
+    <li class="l-grid__col--4 l-grid__col--md">
+        <a href="#" class="m-nav__label">ボタン</a>
     </li>
-    <li class="l-grid__col-4 l-grid__col-md">
-        <a href="#" class="m-nav-label">ボタン</a>
+    <li class="l-grid__col--4 l-grid__col--md">
+        <a href="#" class="m-nav__label">ボタン</a>
     </li>
-    <li class="l-grid__col-4 l-grid__col-md">
-        <a href="#" class="m-nav-label">ボタン</a>
+    <li class="l-grid__col--4 l-grid__col--md">
+        <a href="#" class="m-nav__label">ボタン</a>
     </li>
 </ul>
 ```
@@ -3717,14 +3715,14 @@ category: module-nav
   vertical-align: middle;
 }
 
-.m-nav-list,
+.m-nav__list,
 .m-nav ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.m-nav-list,
+.m-nav__list,
 .m-nav > ul {
   display: flex;
   flex-wrap: nowrap;
@@ -3732,19 +3730,19 @@ category: module-nav
   align-items: stretch;
 }
 
-.m-nav-item,
+.m-nav__item,
 .m-nav li {
   margin: 0;
 }
 
-.m-nav-item,
+.m-nav__item,
 .m-nav > ul li {
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: auto;
 }
 
-.m-nav-label,
+.m-nav__label,
 .m-nav > ul li a {
   display: flex;
   justify-content: center;
@@ -3760,18 +3758,18 @@ category: module-nav
   cursor: pointer;
 }
 @media (min-width: 425px) {
-  .m-nav-label,
+  .m-nav__label,
   .m-nav > ul li a {
     font-size: 1rem;
   }
 }
-a.m-nav-label, .m-nav > ul li a {
+a.m-nav__label, .m-nav > ul li a {
   text-decoration: none;
 }
-a.m-nav-label:hover, a.m-nav-label:focus, .m-nav > ul li a:hover, .m-nav > ul li a:focus {
+a.m-nav__label:hover, a.m-nav__label:focus, .m-nav > ul li a:hover, .m-nav > ul li a:focus {
   text-decoration: none;
 }
-.m-nav-label:hover, .m-nav-label:focus, .m-nav-label:active,
+.m-nav__label:hover, .m-nav__label:focus, .m-nav__label:active,
 .m-nav > ul li a:hover,
 .m-nav > ul li a:focus,
 .m-nav > ul li a:active {
@@ -3779,17 +3777,17 @@ a.m-nav-label:hover, a.m-nav-label:focus, .m-nav > ul li a:hover, .m-nav > ul li
   background-color: #eee;
   text-decoration: none;
 }
-.m-nav-label [class*="fa-"],
+.m-nav__label [class*="fa-"],
 .m-nav > ul li a [class*="fa-"] {
   transform: translate(0, -0.125em);
 }
 
-.m-nav-label.is-current,
+.m-nav__label.is-current,
 .m-nav > ul li.is-current,
 .m-nav > ul li a.is-current {
   background-color: #eee;
 }
-.m-nav-label.is-current:hover, .m-nav-label.is-current:focus, .m-nav-label.is-current:active,
+.m-nav__label.is-current:hover, .m-nav__label.is-current:focus, .m-nav__label.is-current:active,
 .m-nav > ul li.is-current:hover,
 .m-nav > ul li.is-current:focus,
 .m-nav > ul li.is-current:active,
@@ -3801,7 +3799,7 @@ a.m-nav-label:hover, a.m-nav-label:focus, .m-nav > ul li a:hover, .m-nav > ul li
 
 /*doc
 ---
-title: m-nav-vertical
+title: m-nav--vertical
 name: nav-01-vertical
 category: module-nav
 parent: nav
@@ -3811,53 +3809,53 @@ parent: nav
 
 ``` example
 <h3 class="u-text--lg">すべての要素にクラスを付与した場合</h3>
-<nav class="m-nav m-nav-vertical">
-    <ul class="m-nav-list">
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label">ボタン</a>
+<nav class="m-nav m-nav--vertical">
+    <ul class="m-nav__list">
+        <li class="m-nav__item">
+            <a href="#" class="m-nav__label">ボタン</a>
         </li>
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label is-current">現在のページ</a>
-            <ul class="m-nav-list m-nav-children">
-                <li class="m-nav-item">
-                    <a href="#" class="m-nav-label">2階層目ボタン</a>
-                    <ul class="m-nav-list m-nav-children">
-                        <li class="m-nav-item">
-                            <a href="#" class="m-nav-label">3階層目ボタン</a>
+        <li class="m-nav__item">
+            <a href="#" class="m-nav__label is-current">現在のページ</a>
+            <ul class="m-nav__list m-nav__children">
+                <li class="m-nav__item">
+                    <a href="#" class="m-nav__label">2階層目ボタン</a>
+                    <ul class="m-nav__list m-nav__children">
+                        <li class="m-nav__item">
+                            <a href="#" class="m-nav__label">3階層目ボタン</a>
                         </li>
-                        <li class="m-nav-item">
-                            <a href="#" class="m-nav-label">3階層目ボタン</a>
+                        <li class="m-nav__item">
+                            <a href="#" class="m-nav__label">3階層目ボタン</a>
                         </li>
-                        <li class="m-nav-item">
-                            <a href="#" class="m-nav-label">3階層目ボタン</a>
+                        <li class="m-nav__item">
+                            <a href="#" class="m-nav__label">3階層目ボタン</a>
                         </li>
                     </ul>
                 </li>
-                <li class="m-nav-item">
-                    <a href="#" class="m-nav-label">2階層目ボタン</a>
+                <li class="m-nav__item">
+                    <a href="#" class="m-nav__label">2階層目ボタン</a>
                 </li>
-                <li class="m-nav-item">
-                    <a href="#" class="m-nav-label">2階層目ボタン</a>
+                <li class="m-nav__item">
+                    <a href="#" class="m-nav__label">2階層目ボタン</a>
                 </li>
             </ul>
         </li>
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label">文字数が多いボタンです</a>
+        <li class="m-nav__item">
+            <a href="#" class="m-nav__label">文字数が多いボタンです</a>
         </li>
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label"><span class="m-nav-text"><span class="u-text-xs">複数行の</span><br>ボタン</span></a>
+        <li class="m-nav__item">
+            <a href="#" class="m-nav__label"><span class="m-nav__text"><span class="u-text--xs">複数行の</span><br>ボタン</span></a>
         </li>
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label">ボタン</a>
+        <li class="m-nav__item">
+            <a href="#" class="m-nav__label">ボタン</a>
         </li>
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label">ボタン</a>
+        <li class="m-nav__item">
+            <a href="#" class="m-nav__label">ボタン</a>
         </li>
     </ul>
 </nav><!-- /.nav -->
 
-<h3 class="u-text--lg u-margin__t--lg">包括要素のみクラスを付与した場合</h3>
-<nav class="m-nav m-nav-vertical">
+<h3 class="u-text--lg u-margin--top--lg">包括要素のみクラスを付与した場合</h3>
+<nav class="m-nav m-nav--vertical">
     <ul>
         <li>
             <a href="#">ボタン</a>
@@ -3888,7 +3886,7 @@ parent: nav
             </ul>
         </li>
         <li>
-            <a href="#"><span class="m-nav-text"><span class="u-text-xs">複数行の</span><br>ボタン</span></a>
+            <a href="#"><span class="m-nav__text"><span class="u-text--xs">複数行の</span><br>ボタン</span></a>
         </li>
         <li>
             <a href="#">ボタン</a>
@@ -3904,42 +3902,42 @@ parent: nav
 ```
 
 */
-.m-nav-vertical {
+.m-nav--vertical {
   width: 100%;
 }
 
-.m-nav-vertical .m-nav-list,
-.m-nav-vertical > ul {
+.m-nav--vertical .m-nav__list,
+.m-nav--vertical > ul {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
 }
 
-.m-nav-vertical .m-nav-label,
-.m-nav-vertical > ul li a {
+.m-nav--vertical .m-nav__label,
+.m-nav--vertical > ul li a {
   justify-content: flex-start;
 }
 
-.m-nav-children .m-nav-label,
-.m-nav-vertical > ul > li > ul > li a {
+.m-nav__children .m-nav__label,
+.m-nav--vertical > ul > li > ul > li a {
   font-size: .875rem;
   padding-left: 3rem;
 }
 @media (min-width: 425px) {
-  .m-nav-children .m-nav-label,
-  .m-nav-vertical > ul > li > ul > li a {
+  .m-nav__children .m-nav__label,
+  .m-nav--vertical > ul > li > ul > li a {
     font-size: 1rem;
   }
 }
 
-.m-nav-children .m-nav-children .m-nav-label,
-.m-nav-vertical > ul > li > ul > li > ul > li a {
+.m-nav__children .m-nav__children .m-nav__label,
+.m-nav--vertical > ul > li > ul > li > ul > li a {
   font-size: .75rem;
   padding-left: 5rem;
 }
 @media (min-width: 425px) {
-  .m-nav-children .m-nav-children .m-nav-label,
-  .m-nav-vertical > ul > li > ul > li > ul > li a {
+  .m-nav__children .m-nav__children .m-nav__label,
+  .m-nav--vertical > ul > li > ul > li > ul > li a {
     font-size: .875rem;
   }
 }
@@ -3957,9 +3955,9 @@ category: module-radio
 
 ``` example
 <p>
-<label class="m-radio u-margin-r" for="radio1"><input type="radio" name="radio" id="radio1" class="u-margin-r-sm" value="1">m-radio 1</label>
-<label class="m-radio u-margin-r" for="radio2"><input type="radio" name="radio" id="radio2" class="u-margin-r-sm" value="2" checked="checked">m-radio 2</label>
-<label class="m-radio u-margin-r is-error" for="radio3"><input type="radio" name="radio" id="radio3" class="u-margin-r-sm" value="3">m-radio 3</label>
+<label class="m-radio u-margin--right--md" for="radio1"><input type="radio" name="radio" id="radio1" class="u-margin--right--sm" value="1">m-radio 1</label>
+<label class="m-radio u-margin--right--md" for="radio2"><input type="radio" name="radio" id="radio2" class="u-margin--right--sm" value="2" checked="checked">m-radio 2</label>
+<label class="m-radio u-margin--right--md is-error" for="radio3"><input type="radio" name="radio" id="radio3" class="u-margin--right--sm" value="3">m-radio 3</label>
 </p>
 ```
 */
@@ -4020,23 +4018,19 @@ category: module-select
 .m-select:before, .m-select:after {
   content: "";
   position: absolute;
-  width: .5em;
-  height: 2px;
+  width: 8px;
+  height: 1px;
   background-color: #333;
 }
 .m-select:before {
   top: 55%;
-  -webkit-transform: rotate(50deg);
-  transform: rotate(50deg);
-  -webkit-transform-origin: 100% 100%;
+  transform: rotate(45deg);
   transform-origin: 100% 100%;
 }
 .m-select:after {
   top: 55%;
   margin-right: -1px;
-  -webkit-transform: rotate(-50deg);
-  transform: rotate(-50deg);
-  -webkit-transform-origin: 0% 100%;
+  transform: rotate(-45deg);
   transform-origin: 0% 100%;
 }
 .m-select:before, .m-select:after {
@@ -4078,17 +4072,17 @@ category: module-select
 
 /*doc
 ---
-title: m-select-(size)
+title: m-select--(size)
 name: select-01-size
 category: module-select
 parent: select
 ---
 
-テキスト入力を即す欄の全体のサイズを変更する。(size)は <code>sm, lg</code> に対応している。
+セレクトボックスの全体のサイズを変更する。(size)は <code>sm, lg</code> に対応している。
 
 ``` example
 <div style="margin-bottom: 1rem;">
-    <div class="m-select m-select-sm">
+    <div class="m-select m-select--sm">
         <select>
             <option>月を選択...</option>
             <option value="">2017年</option>
@@ -4098,7 +4092,7 @@ parent: select
     </div>
 </div>
 <div>
-    <div class="m-select m-select-lg">
+    <div class="m-select m-select--lg">
         <select>
             <option>月を選択...</option>
             <option value="">2017年</option>
@@ -4109,12 +4103,12 @@ parent: select
 </div>
 ```
 */
-.m-select-sm select {
+.m-select--sm select {
   font-size: 0.875rem;
   padding: .5em 3em .5em 1em;
 }
 
-.m-select-lg select {
+.m-select--lg select {
   font-size: 1.125rem;
   padding: .75em 3em .75em 1em;
 }
@@ -4177,7 +4171,7 @@ category: module-table
 
 /*doc
 ---
-title: m-table-bordered
+title: m-table--bordered
 name: table-01-bordered
 category: module-table
 parent: table
@@ -4186,7 +4180,7 @@ parent: table
 表組のセル全てにグリッド罫線を引く。
 
 ``` example
-<table class="m-table m-table-bordered">
+<table class="m-table m-table--bordered">
     <thead>
         <tr>
             <th>吾輩は</th>
@@ -4222,35 +4216,35 @@ parent: table
 ```
 
 */
-.m-table-bordered {
+.m-table--bordered {
   width: 100%;
   border-top: 1px solid #bbb;
   border-left: 1px solid #bbb;
 }
-.m-table-bordered thead {
+.m-table--bordered thead {
   border-bottom: 2px solid #bbb;
 }
-.m-table-bordered tfoot {
+.m-table--bordered tfoot {
   border-top: 2px solid #bbb;
 }
-.m-table-bordered th,
-.m-table-bordered td {
+.m-table--bordered th,
+.m-table--bordered td {
   border-bottom: 1px solid #bbb;
   border-right: 1px solid #bbb;
   padding: .5rem;
 }
-.m-table-bordered th:first-child,
-.m-table-bordered td:first-child {
+.m-table--bordered th:first-child,
+.m-table--bordered td:first-child {
   padding-left: .5rem;
 }
-.m-table-bordered th:last-child,
-.m-table-bordered td:last-child {
+.m-table--bordered th:last-child,
+.m-table--bordered td:last-child {
   padding-right: .5rem;
 }
 
 /*doc
 ---
-title: m-table-ruled
+title: m-table--ruled
 name: table-02-ruled
 category: module-table
 parent: table
@@ -4259,7 +4253,7 @@ parent: table
 表組の各セルの下のみ罫線を引く。Bootstrapの <code>.table</code> と同じ。
 
 ``` example
-<table class="m-table m-table-ruled">
+<table class="m-table m-table--ruled">
     <thead>
         <tr>
             <th>吾輩は</th>
@@ -4295,14 +4289,14 @@ parent: table
 ```
 
 */
-.m-table-ruled {
+.m-table--ruled {
   width: 100%;
 }
-.m-table-ruled thead {
+.m-table--ruled thead {
   border-bottom: 2px solid #bbb;
 }
-.m-table-ruled th,
-.m-table-ruled td {
+.m-table--ruled th,
+.m-table--ruled td {
   border-bottom: 1px solid #bbb;
   padding-top: 1rem;
   padding-bottom: .5rem;
@@ -4310,7 +4304,7 @@ parent: table
 
 /*doc
 ---
-title: m-table-justify
+title: m-table--justify
 name: table-03-justify
 category: module-table
 parent: table
@@ -4320,7 +4314,7 @@ parent: table
 
 ``` example
 <div style="margin-bottom: 2rem;">
-    <table class="m-table m-table-bordered m-table-justify">
+    <table class="m-table m-table--bordered m-table--justify">
         <tbody>
             <tr>
                 <td>吾輩は猫である名前はまだ無い。どこで生れたかとんと見当がつかぬ。</td>
@@ -4331,7 +4325,7 @@ parent: table
 </div>
 
 <div style="margin-bottom: 2rem;">
-    <table class="m-table m-table-bordered m-table-justify">
+    <table class="m-table m-table--bordered m-table--justify">
         <tbody>
             <tr>
                 <td>吾輩は猫である名前は</td>
@@ -4351,14 +4345,14 @@ parent: table
 ```
 
 */
-.m-table-justify {
+.m-table--justify {
   width: 100%;
   table-layout: fixed;
 }
 
 /*doc
 ---
-title: m-table-(ratio-first)to(ratio-second)to(ratio-third)
+title: m-table--(ratio-first)to(ratio-second)to(ratio-third)
 name: table-04-ratio
 category: module-table
 parent: table
@@ -4369,8 +4363,8 @@ parent: table
 
 ``` example
 <div style="margin-bottom: 2rem;">
-    <table class="m-table m-table-bordered m-table-3to9">
-        <caption>.m-table-3to9</caption>
+    <table class="m-table m-table--bordered m-table--3to9">
+        <caption>.m-table--3to9</caption>
         <tbody>
             <tr>
                 <th>吾輩は猫である</th>
@@ -4385,8 +4379,8 @@ parent: table
 </div>
 
 <div style="margin-bottom: 2rem;">
-    <table class="m-table m-table-bordered m-table-4to8">
-        <caption>.m-table-4to8</caption>
+    <table class="m-table m-table--bordered m-table--4to8">
+        <caption>.m-table--4to8</caption>
         <tbody>
             <tr>
                 <th>吾輩は猫である</th>
@@ -4401,8 +4395,8 @@ parent: table
 </div>
 
 <div style="margin-bottom: 2rem;">
-    <table class="m-table m-table-bordered m-table-3to3to6">
-        <caption>.m-table-3to3to6</caption>
+    <table class="m-table m-table--bordered m-table--3to3to6">
+        <caption>.m-table--3to3to6</caption>
         <tbody>
             <tr>
                 <th>吾輩は猫である</th>
@@ -4419,8 +4413,8 @@ parent: table
 </div>
 
 <div>
-    <table class="m-table m-table-bordered m-table-0to12">
-        <caption>.m-table-0to12</caption>
+    <table class="m-table m-table--bordered m-table--0to12">
+        <caption>.m-table--0to12</caption>
         <tbody>
             <tr>
                 <th>吾輩は猫</th>
@@ -4440,56 +4434,56 @@ parent: table
 ```
 
 */
-.m-table-3to9 tr th,
-.m-table-3to9 tr td {
+.m-table--3to9 tr th,
+.m-table--3to9 tr td {
   width: 75%;
 }
-.m-table-3to9 tr th:first-child,
-.m-table-3to9 tr td:first-child {
+.m-table--3to9 tr th:first-child,
+.m-table--3to9 tr td:first-child {
   width: 25%;
 }
 
-.m-table-4to8 tr th,
-.m-table-4to8 tr td {
+.m-table--4to8 tr th,
+.m-table--4to8 tr td {
   width: 66.66667%;
 }
-.m-table-4to8 tr th:first-child,
-.m-table-4to8 tr td:first-child {
+.m-table--4to8 tr th:first-child,
+.m-table--4to8 tr td:first-child {
   width: 33.33333%;
 }
 
-.m-table-3to3to6 tr th,
-.m-table-3to3to6 tr td {
+.m-table--3to3to6 tr th,
+.m-table--3to3to6 tr td {
   width: 25%;
 }
-.m-table-3to3to6 tr th:last-child,
-.m-table-3to3to6 tr td:last-child {
+.m-table--3to3to6 tr th:last-child,
+.m-table--3to3to6 tr td:last-child {
   width: 50%;
 }
 
-.m-table-0to12 tr th,
-.m-table-0to12 tr td {
+.m-table--0to12 tr th,
+.m-table--0to12 tr td {
   width: 99.9%;
 }
-.m-table-0to12 tr th:first-child,
-.m-table-0to12 tr td:first-child {
+.m-table--0to12 tr th:first-child,
+.m-table--0to12 tr td:first-child {
   width: auto;
   white-space: nowrap;
 }
 
 /*doc
 ---
-title: m-table-break-sm-down
-name: table-05-break-sm-down
+title: m-table--break--sm--down
+name: table-05-break--sm--down
 category: module-table
 parent: table
 ---
 
 (breakpoint)が <code>sm</code> 以下のときに表組を解除する。  
-2カラム以上の表の場合は <code>.m-table-responsive</code> を推薦。
+2カラム以上の表の場合は <code>.m-table--responsive</code> を推薦。
 
 ``` example
-<table class="m-table m-table-break-sm-down m-table-bordered" style="margin-bottom: 2rem;">
+<table class="m-table m-table--break--sm--down m-table--bordered" style="margin-bottom: 2rem;">
     <thead>
         <tr>
             <th>吾輩は猫である</th>
@@ -4518,7 +4512,7 @@ parent: table
     </tfoot>
 </table>
 
-<table class="m-table m-table-break-sm-down m-table-ruled">
+<table class="m-table m-table--break--sm--down m-table--ruled">
     <thead>
         <tr>
             <th>吾輩は猫である</th>
@@ -4550,42 +4544,42 @@ parent: table
 
 */
 @media (max-width: 767.9px) {
-  .m-table-break-sm-down {
+  .m-table--break--sm--down {
     display: block;
   }
 }
 @media (max-width: 767.9px) {
-  .m-table-break-sm-down thead,
-  .m-table-break-sm-down tbody,
-  .m-table-break-sm-down tfoot {
+  .m-table--break--sm--down thead,
+  .m-table--break--sm--down tbody,
+  .m-table--break--sm--down tfoot {
     display: block;
   }
 }
 @media (max-width: 767.9px) {
-  .m-table-break-sm-down tr {
+  .m-table--break--sm--down tr {
     display: block;
   }
 }
 @media (max-width: 767.9px) {
-  .m-table-break-sm-down th,
-  .m-table-break-sm-down td {
+  .m-table--break--sm--down th,
+  .m-table--break--sm--down td {
     display: block;
     width: 100%;
   }
 }
-.m-table-break-sm-down.m-table-bordered thead {
+.m-table--break--sm--down.m-table--bordered thead {
   border-bottom-width: 1px;
 }
-.m-table-break-sm-down.m-table-bordered tfoot {
+.m-table--break--sm--down.m-table--bordered tfoot {
   border-top-width: 1px;
 }
-.m-table-break-sm-down.m-table-ruled thead {
+.m-table--break--sm--down.m-table--ruled thead {
   border-bottom-width: 1px;
 }
 
 /*doc
 ---
-title: m-table-responsive
+title: m-table--responsive
 name: table-06-responsive
 category: module-table
 parent: table
@@ -4594,8 +4588,8 @@ parent: table
 (breakpoint)が <code>md</code> 以下のときにスクロールバーを表示する。
 
 ``` example
-<div class="m-table-responsive">
-    <table class="m-table m-table-bordered">
+<div class="m-table--responsive">
+    <table class="m-table m-table--bordered">
         <tbody>
             <tr>
                 <th>吾輩は猫である</th>
@@ -4613,14 +4607,14 @@ parent: table
 ```
 
 */
-.m-table-responsive {
+.m-table--responsive {
   display: block;
   width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
-.m-table-responsive > .m-table {
+.m-table--responsive > .m-table {
   min-width: 768px;
 }
 
@@ -4637,19 +4631,19 @@ category: module-thumbnail
 ``` example
 <div class="u-clearfix u-m-b">
 
-<div class="float-l u-m-r">
+<div class="u-float--left u-margin--r--md">
     <div class="m-thumbnail">
         <img src="https://placehold.jp/150x150.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r">
+<div class="u-float--left u-margin--r--md">
     <div class="m-thumbnail">
         <img src="https://placehold.jp/240x320.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
     <div class="m-thumbnail">
         <img src="https://placehold.jp/480x360.jpg" alt="">
     </div>
@@ -4677,32 +4671,32 @@ category: module-thumbnail
 
 /*doc
 ---
-title: m-thumbnail-round
+title: m-thumbnail--round
 name: thumbnail-01-round
 category: module-thumbnail
 parent: thumbnail
 ---
 
 画像を正円にトリミングして表示する。別途、幅を指定する必要がある。  
-横長の画像では、上下に余白ができるため、 <code>m-thumbnail-vertical</code> を併用する必要がある。
+横長の画像では上下に余白ができるため、余白を出したくない場合は <code>.m-thumbnail--vertical</code> を併用する必要がある。
 
 ``` example
 <div class="u-clearfix u-m-b">
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-round">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--round">
         <img src="https://placehold.jp/200x200.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-round">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--round">
         <img src="https://placehold.jp/200x100.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-round">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--round">
         <img src="https://placehold.jp/200x300.jpg" alt="">
     </div>
 </div>
@@ -4713,32 +4707,32 @@ parent: thumbnail
 */
 /*doc
 ---
-title: m-thumbnail-square
+title: m-thumbnail--square
 name: thumbnail-02-square
 category: module-thumbnail
 parent: thumbnail
 ---
 
 画像を正方形にトリミングして表示する。別途、幅を指定する必要がある。  
-横長の画像では、上下に余白ができるため、 <code>m-thumbnail-vertical</code> を併用すること。
+横長の画像では上下に余白ができるため、余白を出したくない場合は <code>m-thumbnail--vertical</code> を併用する必要がある。
 
 ``` example
 <div class="u-clearfix u-m-b">
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-square">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--square">
         <img src="https://placehold.jp/200x200.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-square">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--square">
         <img src="https://placehold.jp/200x100.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-square">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--square">
         <img src="https://placehold.jp/200x300.jpg" alt="">
     </div>
 </div>
@@ -4747,14 +4741,14 @@ parent: thumbnail
 ```
 
 */
-.m-thumbnail-round,
-.m-thumbnail-square {
+.m-thumbnail--round,
+.m-thumbnail--square {
   width: 100%;
   height: 0;
   padding-bottom: 100%;
 }
-.m-thumbnail-round img,
-.m-thumbnail-square img {
+.m-thumbnail--round img,
+.m-thumbnail--square img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -4766,7 +4760,7 @@ parent: thumbnail
   transform: translate(-50%, -50%);
 }
 
-.m-thumbnail-round {
+.m-thumbnail--round {
   width: 100%;
   height: 0;
   padding-bottom: 100%;
@@ -4775,7 +4769,7 @@ parent: thumbnail
 
 /*doc
 ---
-title: m-thumbnail-(ratio-x)to(ratio-y)
+title: m-thumbnail--(ratio-x)to(ratio-y)
 name: thumbnail-03-ratio
 category: module-thumbnail
 parent: thumbnail
@@ -4788,32 +4782,32 @@ parent: thumbnail
 ``` example
 <div class="u-clearfix u-m-b">
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-3to2">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--3to2">
         <img src="https://placehold.jp/480x360.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-4to3">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--4to3">
         <img src="https://placehold.jp/480x360.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-16to9">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--16to9">
         <img src="https://placehold.jp/480x360.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-ogimage">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--ogimage">
         <img src="https://placehold.jp/480x360.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-21to9">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--21to9">
         <img src="https://placehold.jp/480x360.jpg" alt="">
     </div>
 </div>
@@ -4823,32 +4817,32 @@ parent: thumbnail
 
 <div class="u-clearfix u-m-b">
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-3to2">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--3to2">
         <img src="https://placehold.jp/320x480.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-4to3">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--4to3">
         <img src="https://placehold.jp/320x480.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-16to9">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--16to9">
         <img src="https://placehold.jp/320x480.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-ogimage">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--ogimage">
         <img src="https://placehold.jp/320x480.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-21to9">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--21to9">
         <img src="https://placehold.jp/320x480.jpg" alt="">
     </div>
 </div>
@@ -4858,32 +4852,32 @@ parent: thumbnail
 
 <div class="u-clearfix u-m-b">
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-3to2">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--3to2">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-4to3">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--4to3">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-16to9">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--16to9">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-ogimage">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--ogimage">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-21to9">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--21to9">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
@@ -4892,19 +4886,19 @@ parent: thumbnail
 ```
 
 */
-.m-thumbnail-3to2,
-.m-thumbnail-4to3,
-.m-thumbnail-16to9,
-.m-thumbnail-ogimage,
-.m-thumbnail-21to9 {
+.m-thumbnail--3to2,
+.m-thumbnail--4to3,
+.m-thumbnail--16to9,
+.m-thumbnail--ogimage,
+.m-thumbnail--21to9 {
   width: 100%;
   height: 0;
 }
-.m-thumbnail-3to2 img,
-.m-thumbnail-4to3 img,
-.m-thumbnail-16to9 img,
-.m-thumbnail-ogimage img,
-.m-thumbnail-21to9 img {
+.m-thumbnail--3to2 img,
+.m-thumbnail--4to3 img,
+.m-thumbnail--16to9 img,
+.m-thumbnail--ogimage img,
+.m-thumbnail--21to9 img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -4916,47 +4910,47 @@ parent: thumbnail
   transform: translate(-50%, -50%);
 }
 
-.m-thumbnail-3to2 {
+.m-thumbnail--3to2 {
   padding-bottom: 66.66667%;
 }
 
-.m-thumbnail-4to3 {
+.m-thumbnail--4to3 {
   padding-bottom: 75%;
 }
 
-.m-thumbnail-16to9 {
+.m-thumbnail--16to9 {
   padding-bottom: 56.25%;
 }
 
-.m-thumbnail-ogimage {
+.m-thumbnail--ogimage {
   padding-bottom: 52.35602%;
 }
 
-.m-thumbnail-21to9 {
+.m-thumbnail--21to9 {
   padding-bottom: 42.85714%;
 }
 
 /*doc
 ---
-title: m-thumbnail-vertical
+title: m-thumbnail--vertical
 name: thumbnail-04-vertical
 category: module-thumbnail
 parent: thumbnail
 ---
 
-<code>m-thumbnail-round, m-thumbnail-square, m-thumbnail-(ratio-x)to(ratio-y)</code> を使用したときに、幅ではなく高さを基準にトリミングする。
+<code>m-thumbnail--round, m-thumbnail--square, m-thumbnail--(ratio-x)to(ratio-y)</code> を使用したときに、幅ではなく高さを基準にトリミングする。
 
 ``` example
 <div class="u-clearfix u-m-b">
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-vertical m-thumbnail-square">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--vertical m-thumbnail--square">
         <img src="https://placehold.jp/480x320.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-vertical m-thumbnail-round">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--vertical m-thumbnail--round">
         <img src="https://placehold.jp/480x320.jpg" alt="">
     </div>
 </div>
@@ -4965,32 +4959,32 @@ parent: thumbnail
 
 <div class="u-clearfix u-m-b">
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-vertical m-thumbnail-3to2">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--vertical m-thumbnail--3to2">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-vertical m-thumbnail-4to3">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--vertical m-thumbnail--4to3">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-vertical m-thumbnail-16to9">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--vertical m-thumbnail--16to9">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-vertical m-thumbnail-ogimage">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--vertical m-thumbnail--ogimage">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
 
-<div class="float-l u-m-r" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-vertical m-thumbnail-21to9">
+<div class="u-float--left u-margin--r--md" style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail--vertical m-thumbnail--21to9">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
@@ -4998,7 +4992,7 @@ parent: thumbnail
 </div>
 ```
 */
-.m-thumbnail-vertical img {
+.m-thumbnail--vertical img {
   width: auto;
   max-width: none;
   height: 102%;

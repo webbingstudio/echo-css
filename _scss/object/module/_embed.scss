@@ -41,7 +41,7 @@ category: module-embed
 
 /*doc
 ---
-title: #{$pr}#{$m}embed-square
+title: #{$pr}#{$m}embed#{$c3}square
 name: object-01-square
 category: module-object
 parent: object
@@ -52,7 +52,7 @@ parent: object
 ``` example
 <div style="max-width: 320px;">
 
-<div class="#{$pr}#{$m}embed #{$pr}#{$m}embed-square">
+<div class="#{$pr}#{$m}embed #{$pr}#{$m}embed#{$c3}square">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4CZpUy_YWA?rel=0" frameborder="0" allowfullscreen></iframe>
 </div>
 
@@ -64,7 +64,7 @@ parent: object
 
 /*doc
 ---
-title: #{$pr}#{$m}embed-(ratio-x)to(ratio-y)
+title: #{$pr}#{$m}embed#{$c3}(ratio-x)to(ratio-y)
 name: embed-02-ratio
 category: module-embed
 parent: embed
@@ -76,23 +76,23 @@ parent: embed
 ``` example
 <div style="max-width: 320px;">
 
-<div class="#{$pr}#{$m}embed #{$pr}#{$m}embed-3to2 m-b">
+<div class="#{$pr}#{$m}embed #{$pr}#{$m}embed#{$c3}3to2" style="margin-bottom: 1rem;">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4CZpUy_YWA?rel=0" frameborder="0" allowfullscreen></iframe>
 </div>
 
-<div class="#{$pr}#{$m}embed #{$pr}#{$m}embed-4to3 m-b">
+<div class="#{$pr}#{$m}embed #{$pr}#{$m}embed#{$c3}4to3" style="margin-bottom: 1rem;">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4CZpUy_YWA?rel=0" frameborder="0" allowfullscreen></iframe>
 </div>
 
-<div class="#{$pr}#{$m}embed #{$pr}#{$m}embed-16to9 m-b">
+<div class="#{$pr}#{$m}embed #{$pr}#{$m}embed#{$c3}16to9" style="margin-bottom: 1rem;">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4CZpUy_YWA?rel=0" frameborder="0" allowfullscreen></iframe>
 </div>
 
-<div class="#{$pr}#{$m}embed #{$pr}#{$m}embed-ogimage m-b">
+<div class="#{$pr}#{$m}embed #{$pr}#{$m}embed#{$c3}ogimage" style="margin-bottom: 1rem;">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4CZpUy_YWA?rel=0" frameborder="0" allowfullscreen></iframe>
 </div>
 
-<div class="#{$pr}#{$m}embed #{$pr}#{$m}embed-21to9 m-b">
+<div class="#{$pr}#{$m}embed #{$pr}#{$m}embed#{$c3}21to9" style="margin-bottom: 1rem;">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4CZpUy_YWA?rel=0" frameborder="0" allowfullscreen></iframe>
 </div>
 
@@ -101,12 +101,12 @@ parent: embed
 
 */
 
-.#{$pr}#{$m}embed-square,
-.#{$pr}#{$m}embed-3to2,
-.#{$pr}#{$m}embed-4to3,
-.#{$pr}#{$m}embed-16to9,
-.#{$pr}#{$m}embed-ogimage,
-.#{$pr}#{$m}embed-21to9 {
+.#{$pr}#{$m}embed#{$c3}square,
+.#{$pr}#{$m}embed#{$c3}3to2,
+.#{$pr}#{$m}embed#{$c3}4to3,
+.#{$pr}#{$m}embed#{$c3}16to9,
+.#{$pr}#{$m}embed#{$c3}ogimage,
+.#{$pr}#{$m}embed#{$c3}21to9 {
 
     iframe,
     embed,
@@ -122,7 +122,7 @@ parent: embed
 
 }
 
-.#{$pr}#{$m}embed-square {
+.#{$pr}#{$m}embed#{$c3}square {
 
     &:before {
         padding-top: percentage(1 / 1);
@@ -130,7 +130,7 @@ parent: embed
 
 }
 
-.#{$pr}#{$m}embed-3to2 {
+.#{$pr}#{$m}embed#{$c3}3to2 {
 
     &:before {
         padding-top: percentage(2 / 3);
@@ -138,7 +138,7 @@ parent: embed
 
 }
 
-.#{$pr}#{$m}embed-4to3 {
+.#{$pr}#{$m}embed#{$c3}4to3 {
 
     &:before {
         padding-top: percentage(3 / 4);
@@ -146,7 +146,7 @@ parent: embed
 
 }
 
-.#{$pr}#{$m}embed-16to9 {
+.#{$pr}#{$m}embed#{$c3}16to9 {
 
     &:before {
         padding-top: percentage(9 / 16);
@@ -154,7 +154,7 @@ parent: embed
 
 }
 
-.#{$pr}#{$m}embed-ogimage {
+.#{$pr}#{$m}embed#{$c3}ogimage {
 
     &:before {
         padding-top: percentage(100 / 191);
@@ -162,7 +162,7 @@ parent: embed
 
 }
 
-.#{$pr}#{$m}embed-21to9 {
+.#{$pr}#{$m}embed#{$c3}21to9 {
 
     &:before {
         padding-top: percentage(9 / 21);

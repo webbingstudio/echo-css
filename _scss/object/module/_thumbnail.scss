@@ -11,19 +11,19 @@ category: module-thumbnail
 ``` example
 <div class="#{$pr}#{$u}clearfix #{$u}m-b">
 
-<div class="#{$pr}float-l #{$u}m-r">
+<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md">
     <div class="#{$pr}#{$m}thumbnail">
         <img src="https://placehold.jp/150x150.jpg" alt="">
     </div>
 </div>
 
-<div class="#{$pr}float-l #{$u}m-r">
+<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md">
     <div class="#{$pr}#{$m}thumbnail">
         <img src="https://placehold.jp/240x320.jpg" alt="">
     </div>
 </div>
 
-<div class="#{$pr}float-l #{$u}m-r" style="width: 200px;">
+<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
     <div class="#{$pr}#{$m}thumbnail">
         <img src="https://placehold.jp/480x360.jpg" alt="">
     </div>
@@ -55,32 +55,32 @@ category: module-thumbnail
 
 /*doc
 ---
-title: #{$pr}#{$m}thumbnail-round
+title: #{$pr}#{$m}thumbnail#{$c3}round
 name: thumbnail-01-round
 category: module-thumbnail
 parent: thumbnail
 ---
 
 画像を正円にトリミングして表示する。別途、幅を指定する必要がある。  
-横長の画像では、上下に余白ができるため、 <code>#{$pr}#{$m}thumbnail-vertical</code> を併用する必要がある。
+横長の画像では上下に余白ができるため、余白を出したくない場合は <code>.#{$pr}#{$m}thumbnail#{$c3}vertical</code> を併用する必要がある。
 
 ``` example
 <div class="#{$pr}#{$u}clearfix #{$u}m-b">
 
-<div class="#{$pr}float-l #{$u}m-r" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-round">
+<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
+    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}round">
         <img src="https://placehold.jp/200x200.jpg" alt="">
     </div>
 </div>
 
-<div class="#{$pr}float-l #{$u}m-r" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-round">
+<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
+    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}round">
         <img src="https://placehold.jp/200x100.jpg" alt="">
     </div>
 </div>
 
-<div class="#{$pr}float-l #{$u}m-r" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-round">
+<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
+    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}round">
         <img src="https://placehold.jp/200x300.jpg" alt="">
     </div>
 </div>
@@ -93,32 +93,32 @@ parent: thumbnail
 
 /*doc
 ---
-title: #{$pr}#{$m}thumbnail-square
+title: #{$pr}#{$m}thumbnail#{$c3}square
 name: thumbnail-02-square
 category: module-thumbnail
 parent: thumbnail
 ---
 
 画像を正方形にトリミングして表示する。別途、幅を指定する必要がある。  
-横長の画像では、上下に余白ができるため、 <code>#{$pr}#{$m}thumbnail-vertical</code> を併用すること。
+横長の画像では上下に余白ができるため、余白を出したくない場合は <code>#{$pr}#{$m}thumbnail#{$c3}vertical</code> を併用する必要がある。
 
 ``` example
 <div class="#{$pr}#{$u}clearfix #{$u}m-b">
 
-<div class="#{$pr}float-l #{$u}m-r" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-square">
+<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
+    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}square">
         <img src="https://placehold.jp/200x200.jpg" alt="">
     </div>
 </div>
 
-<div class="#{$pr}float-l #{$u}m-r" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-square">
+<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
+    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}square">
         <img src="https://placehold.jp/200x100.jpg" alt="">
     </div>
 </div>
 
-<div class="#{$pr}float-l #{$u}m-r" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-square">
+<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
+    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}square">
         <img src="https://placehold.jp/200x300.jpg" alt="">
     </div>
 </div>
@@ -128,8 +128,8 @@ parent: thumbnail
 
 */
 
-.#{$pr}#{$m}thumbnail-round,
-.#{$pr}#{$m}thumbnail-square {
+.#{$pr}#{$m}thumbnail#{$c3}round,
+.#{$pr}#{$m}thumbnail#{$c3}square {
     width: 100%;
     height: 0;
     padding-bottom: percentage(1 / 1);
@@ -152,7 +152,7 @@ parent: thumbnail
 
 }
 
-.#{$pr}#{$m}thumbnail-round {
+.#{$pr}#{$m}thumbnail#{$c3}round {
     width: 100%;
     height: 0;
     padding-bottom: percentage(1 / 1);
@@ -162,7 +162,7 @@ parent: thumbnail
 
 /*doc
 ---
-title: #{$pr}#{$m}thumbnail-(ratio-x)to(ratio-y)
+title: #{$pr}#{$m}thumbnail#{$c3}(ratio-x)to(ratio-y)
 name: thumbnail-03-ratio
 category: module-thumbnail
 parent: thumbnail
@@ -175,32 +175,32 @@ parent: thumbnail
 ``` example
 <div class="#{$pr}#{$u}clearfix #{$u}m-b">
 
-<div class="#{$pr}float-l #{$u}m-r" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-3to2">
+<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
+    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}3to2">
         <img src="https://placehold.jp/480x360.jpg" alt="">
     </div>
 </div>
 
-<div class="#{$pr}float-l #{$u}m-r" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-4to3">
+<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
+    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}4to3">
         <img src="https://placehold.jp/480x360.jpg" alt="">
     </div>
 </div>
 
-<div class="#{$pr}float-l #{$u}m-r" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-16to9">
+<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
+    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}16to9">
         <img src="https://placehold.jp/480x360.jpg" alt="">
     </div>
 </div>
 
-<div class="#{$pr}float-l #{$u}m-r" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-ogimage">
+<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
+    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}ogimage">
         <img src="https://placehold.jp/480x360.jpg" alt="">
     </div>
 </div>
 
-<div class="#{$pr}float-l #{$u}m-r" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-21to9">
+<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
+    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}21to9">
         <img src="https://placehold.jp/480x360.jpg" alt="">
     </div>
 </div>
@@ -210,32 +210,32 @@ parent: thumbnail
 
 <div class="#{$pr}#{$u}clearfix #{$u}m-b">
 
-<div class="#{$pr}float-l #{$u}m-r" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-3to2">
+<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
+    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}3to2">
         <img src="https://placehold.jp/320x480.jpg" alt="">
     </div>
 </div>
 
-<div class="#{$pr}float-l #{$u}m-r" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-4to3">
+<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
+    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}4to3">
         <img src="https://placehold.jp/320x480.jpg" alt="">
     </div>
 </div>
 
-<div class="#{$pr}float-l #{$u}m-r" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-16to9">
+<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
+    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}16to9">
         <img src="https://placehold.jp/320x480.jpg" alt="">
     </div>
 </div>
 
-<div class="#{$pr}float-l #{$u}m-r" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-ogimage">
+<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
+    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}ogimage">
         <img src="https://placehold.jp/320x480.jpg" alt="">
     </div>
 </div>
 
-<div class="#{$pr}float-l #{$u}m-r" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-21to9">
+<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
+    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}21to9">
         <img src="https://placehold.jp/320x480.jpg" alt="">
     </div>
 </div>
@@ -245,32 +245,32 @@ parent: thumbnail
 
 <div class="#{$pr}#{$u}clearfix #{$u}m-b">
 
-<div class="#{$pr}float-l #{$u}m-r" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-3to2">
+<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
+    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}3to2">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
 
-<div class="#{$pr}float-l #{$u}m-r" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-4to3">
+<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
+    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}4to3">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
 
-<div class="#{$pr}float-l #{$u}m-r" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-16to9">
+<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
+    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}16to9">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
 
-<div class="#{$pr}float-l #{$u}m-r" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-ogimage">
+<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
+    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}ogimage">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
 
-<div class="#{$pr}float-l #{$u}m-r" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-21to9">
+<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
+    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}21to9">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
@@ -280,11 +280,11 @@ parent: thumbnail
 
 */
 
-.#{$pr}#{$m}thumbnail-3to2,
-.#{$pr}#{$m}thumbnail-4to3,
-.#{$pr}#{$m}thumbnail-16to9,
-.#{$pr}#{$m}thumbnail-ogimage,
-.#{$pr}#{$m}thumbnail-21to9 {
+.#{$pr}#{$m}thumbnail#{$c3}3to2,
+.#{$pr}#{$m}thumbnail#{$c3}4to3,
+.#{$pr}#{$m}thumbnail#{$c3}16to9,
+.#{$pr}#{$m}thumbnail#{$c3}ogimage,
+.#{$pr}#{$m}thumbnail#{$c3}21to9 {
     width: 100%;
     height: 0;
 
@@ -306,23 +306,23 @@ parent: thumbnail
 
 }
 
-.#{$pr}#{$m}thumbnail-3to2 {
+.#{$pr}#{$m}thumbnail#{$c3}3to2 {
     padding-bottom: percentage(2 / 3);
 }
 
-.#{$pr}#{$m}thumbnail-4to3 {
+.#{$pr}#{$m}thumbnail#{$c3}4to3 {
     padding-bottom: percentage(3 / 4);
 }
 
-.#{$pr}#{$m}thumbnail-16to9 {
+.#{$pr}#{$m}thumbnail#{$c3}16to9 {
     padding-bottom: percentage(9 / 16);
 }
 
-.#{$pr}#{$m}thumbnail-ogimage {
+.#{$pr}#{$m}thumbnail#{$c3}ogimage {
     padding-bottom: percentage(100 / 191);
 }
 
-.#{$pr}#{$m}thumbnail-21to9 {
+.#{$pr}#{$m}thumbnail#{$c3}21to9 {
     padding-bottom: percentage(9 / 21);
 }
 
@@ -331,25 +331,25 @@ parent: thumbnail
 
 /*doc
 ---
-title: #{$pr}#{$m}thumbnail-vertical
+title: #{$pr}#{$m}thumbnail#{$c3}vertical
 name: thumbnail-04-vertical
 category: module-thumbnail
 parent: thumbnail
 ---
 
-<code>#{$pr}#{$m}thumbnail-round, #{$pr}#{$m}thumbnail-square, #{$pr}#{$m}thumbnail-(ratio-x)to(ratio-y)</code> を使用したときに、幅ではなく高さを基準にトリミングする。
+<code>#{$pr}#{$m}thumbnail#{$c3}round, #{$pr}#{$m}thumbnail#{$c3}square, #{$pr}#{$m}thumbnail#{$c3}(ratio-x)to(ratio-y)</code> を使用したときに、幅ではなく高さを基準にトリミングする。
 
 ``` example
 <div class="#{$pr}#{$u}clearfix #{$u}m-b">
 
-<div class="#{$pr}float-l #{$u}m-r" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-vertical #{$pr}#{$m}thumbnail-square">
+<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
+    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}vertical #{$pr}#{$m}thumbnail#{$c3}square">
         <img src="https://placehold.jp/480x320.jpg" alt="">
     </div>
 </div>
 
-<div class="#{$pr}float-l #{$u}m-r" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-vertical #{$pr}#{$m}thumbnail-round">
+<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
+    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}vertical #{$pr}#{$m}thumbnail#{$c3}round">
         <img src="https://placehold.jp/480x320.jpg" alt="">
     </div>
 </div>
@@ -358,32 +358,32 @@ parent: thumbnail
 
 <div class="#{$pr}#{$u}clearfix #{$u}m-b">
 
-<div class="#{$pr}float-l #{$u}m-r" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-vertical #{$pr}#{$m}thumbnail-3to2">
+<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
+    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}vertical #{$pr}#{$m}thumbnail#{$c3}3to2">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
 
-<div class="#{$pr}float-l #{$u}m-r" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-vertical #{$pr}#{$m}thumbnail-4to3">
+<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
+    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}vertical #{$pr}#{$m}thumbnail#{$c3}4to3">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
 
-<div class="#{$pr}float-l #{$u}m-r" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-vertical #{$pr}#{$m}thumbnail-16to9">
+<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
+    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}vertical #{$pr}#{$m}thumbnail#{$c3}16to9">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
 
-<div class="#{$pr}float-l #{$u}m-r" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-vertical #{$pr}#{$m}thumbnail-ogimage">
+<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
+    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}vertical #{$pr}#{$m}thumbnail#{$c3}ogimage">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
 
-<div class="#{$pr}float-l #{$u}m-r" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail-vertical #{$pr}#{$m}thumbnail-21to9">
+<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
+    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}vertical #{$pr}#{$m}thumbnail#{$c3}21to9">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
@@ -392,7 +392,7 @@ parent: thumbnail
 ```
 */
 
-.#{$pr}#{$m}thumbnail-vertical {
+.#{$pr}#{$m}thumbnail#{$c3}vertical {
 
     img {
 

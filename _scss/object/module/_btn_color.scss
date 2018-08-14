@@ -1,6 +1,6 @@
 /*doc
 ---
-title: #{$pr}#{$m}btn-(color)
+title: #{$pr}#{$m}btn#{$c3}(color)
 name: btn-01-color
 category: module-btn
 parent: btn
@@ -10,44 +10,44 @@ parent: btn
 
 ``` example
 <p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-#{$__gray}">#{$pr}#{$m}btn-#{$__gray}</a>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-#{$__gray} disabled">#{$pr}#{$m}btn-#{$__gray}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__gray}">#{$pr}#{$m}btn#{$c3}#{$__gray}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__gray} disabled">#{$pr}#{$m}btn#{$c3}#{$__gray}</a>
 </p>
 
 <p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-#{$__first}">#{$pr}#{$m}btn-#{$__first}</a>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-#{$__first} disabled">#{$pr}#{$m}btn-#{$__first}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__first}">#{$pr}#{$m}btn#{$c3}#{$__first}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__first} disabled">#{$pr}#{$m}btn#{$c3}#{$__first}</a>
 </p>
 
 <p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-#{$__second}">#{$pr}#{$m}btn-#{$__second}</a>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-#{$__second} disabled">#{$pr}#{$m}btn-#{$__second}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__second}">#{$pr}#{$m}btn#{$c3}#{$__second}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__second} disabled">#{$pr}#{$m}btn#{$c3}#{$__second}</a>
 </p>
 
 <p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-#{$__third}">#{$pr}#{$m}btn-#{$__third}</a>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-#{$__third} disabled">#{$pr}#{$m}btn-#{$__third}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__third}">#{$pr}#{$m}btn#{$c3}#{$__third}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__third} disabled">#{$pr}#{$m}btn#{$c3}#{$__third}</a>
 </p>
 
 <p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-#{$__fourth}">#{$pr}#{$m}btn-#{$__fourth}</a>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-#{$__fourth} disabled">#{$pr}#{$m}btn-#{$__fourth}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__fourth}">#{$pr}#{$m}btn#{$c3}#{$__fourth}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__fourth} disabled">#{$pr}#{$m}btn#{$c3}#{$__fourth}</a>
 </p>
 
 <p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-#{$__info}">#{$pr}#{$m}btn-#{$__info}</a>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-#{$__info} disabled">#{$pr}#{$m}btn-#{$__info}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__info}">#{$pr}#{$m}btn#{$c3}#{$__info}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__info} disabled">#{$pr}#{$m}btn#{$c3}#{$__info}</a>
 </p>
 
 <p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-#{$__important}">#{$pr}#{$m}btn-#{$__important}</a>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn-#{$__important} disabled">#{$pr}#{$m}btn-#{$__important}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__important}">#{$pr}#{$m}btn#{$c3}#{$__important}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__important} disabled">#{$pr}#{$m}btn#{$c3}#{$__important}</a>
 </p>
 ```
 
 */
 
-.#{$pr}#{$m}btn-#{$__gray} {
+.#{$pr}#{$m}btn#{$c3}#{$__gray} {
   @include button-variant(
     $body-inverse-color,
     $gray,
@@ -58,7 +58,7 @@ parent: btn
   );
 }
 
-.#{$pr}#{$m}btn-#{$__first} {
+.#{$pr}#{$m}btn#{$c3}#{$__first} {
   @include button-variant(
     $body-inverse-color,
     $first,
@@ -69,7 +69,7 @@ parent: btn
   );
 }
 
-.#{$pr}#{$m}btn-#{$__second} {
+.#{$pr}#{$m}btn#{$c3}#{$__second} {
   @include button-variant(
     $body-inverse-color,
     $second,
@@ -80,7 +80,7 @@ parent: btn
   );
 }
 
-.#{$pr}#{$m}btn-#{$__third} {
+.#{$pr}#{$m}btn#{$c3}#{$__third} {
   @include button-variant(
     $body-inverse-color,
     $third,
@@ -91,7 +91,7 @@ parent: btn
   );
 }
 
-.#{$pr}#{$m}btn-#{$__fourth} {
+.#{$pr}#{$m}btn#{$c3}#{$__fourth} {
   @include button-variant(
     $body-inverse-color,
     $fourth,
@@ -102,7 +102,7 @@ parent: btn
   );
 }
 
-.#{$pr}#{$m}btn-#{$__info} {
+.#{$pr}#{$m}btn#{$c3}#{$__info} {
   @include button-variant(
     $body-inverse-color,
     $info,
@@ -113,7 +113,7 @@ parent: btn
   );
 }
 
-.#{$pr}#{$m}btn-#{$__important} {
+.#{$pr}#{$m}btn#{$c3}#{$__important} {
   @include button-variant(
     $body-inverse-color,
     $important,
