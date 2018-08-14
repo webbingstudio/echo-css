@@ -5,7 +5,7 @@ echo.css
 
 CSS framework optimized for CMS theming
 
-version 0.9.0 (under construction)
+version 1.0.0
 
 Copyright 2018 WebbingStudio  
 Released under the MIT license  
@@ -24,7 +24,9 @@ https://github.com/hiloki/flocss
 - CMSを組み込んだウェブサイトの制作に最適化
 - 東アジア諸国の言語に配慮したタイポグラフィ
 - スケーラビリティ: モジュールの拡張を想定した構造
-- SassやGulpを使用できないコーダーとのプロジェクト進行を想定
+- Atomic Designを導入しやすい構造
+- 色の名称を変更可能（Sassの利用が前提）
+- コーディングルールをBEMに変更可能（Sassの利用が前提）
 
 ----
 
@@ -39,5 +41,8 @@ https://github.com/hiloki/flocss
 - Optimized for the creation of website incorporating CMS
 - Language-friendly typography in East Asian countries
 - Scalability: Structure assuming expansion of modules
-- Assumed project work with corder who can not use Sass / Gulp
+- Easy to introduce Atomic Design
+- Name of color can be changed (Sass premise)
+- Coding rule can be changed from SMACSS to BEM (Sass premise)
+
 
