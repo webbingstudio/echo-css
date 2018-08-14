@@ -12,13 +12,7 @@ $pr: '' !default;
 // Coding rules
 // "bem" を指定するとBEMとなる（デフォルトはSMACSS）。
 // When specified "bem", it becomes BEM. (default: SMACSS)
-$rule: 'bem' !default;
-
-
-// Spacer
-// -----------------------------------------
-
-$spacer:    10px !default;
+$rule: '' !default;
 
 
 // Colors
@@ -214,10 +208,11 @@ $nav-inverse-current-bg:             rgba($first, .1) !default;
 // Radius
 // -----------------------------------------
 
-$border-radius-sm:   3px;
-$border-radius-md:   5px;
-$border-radius-lg:   7px;
-$border-radius-xl:   9px;
+$border-radius-sm:    3px;
+$border-radius-md:    5px;
+$border-radius-lg:    7px;
+$border-radius-xl:    9px;
+$border-radius-xxl:   9px;
 
 
 // Buttons
@@ -231,20 +226,26 @@ $btn-font-size-md:          .875rem;
 $btn-padding-x-md:          1rem !default;
 $btn-padding-y-md:          .5rem !default;
 
-$btn-font-size-lg:          1.25rem;
+$btn-font-size-lg:          1rem;
 $btn-padding-x-lg:          1rem !default;
 $btn-padding-y-lg:          .75rem !default;
 
-$btn-font-size-xl:          1.5rem;
+$btn-font-size-xl:          1.25rem;
 $btn-padding-x-xl:          2rem !default;
-$btn-padding-y-xl:          1.25rem !default;
+$btn-padding-y-xl:          1rem !default;
 
-$btn-round-width-sm:        2em;
+$btn-font-size-xxl:         1.5rem;
+$btn-padding-x-xxl:         3rem !default;
+$btn-padding-y-xxl:         1.5rem !default;
+
+$btn-round-width-sm:        2rem;
 $btn-round-width-md:        2.5rem;
-$btn-round-width-lg:        3.75rem;
-$btn-round-width-xl:        5rem;
+$btn-round-width-lg:        3rem;
+$btn-round-width-xl:        4rem;
+$btn-round-width-xxl:       5rem;
 
-$btn-square-width-sm:       1.5em;
+$btn-square-width-sm:       2rem;
 $btn-square-width-md:       2.5rem;
-$btn-square-width-lg:       3.75rem;
-$btn-square-width-xl:       5rem;
+$btn-square-width-lg:       3rem;
+$btn-square-width-xl:       4rem;
+$btn-square-width-xxl:      5rem;

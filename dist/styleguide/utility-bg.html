@@ -14,7 +14,7 @@
 
     <header class="s-header">
         <div class="s-header-brand">
-            <p class="s-title s-header-title"><img src="../images/common/logo_white.svg" height="24" alt="echo-css"> <span class="s-label">v0.9.0</span></p>
+            <p class="s-title s-header-title"><img src="../images/common/logo_white.svg" height="24" alt="echo-css"> <span class="s-label">v1.0.0</span></p>
         </div><!-- /.s-header-brand -->
 
         <?php include('../doc_include/header_nav.inc'); ?>
@@ -34,49 +34,49 @@
                 <nav class="s-anchor">
                     <ul class="s-anchor-list">
                         
-                        <li class="s-anchor-item"><a href="#bg-01-color" class="js-scrollto">u-bg--(color)</a></li>
+                        <li class="s-anchor-item"><a href="#bg-01-color" class="js-scrollto">u-bg-(color)</a></li>
                         
-                        <li class="s-anchor-item"><a href="#bg-02-fade" class="js-scrollto">u-bg--fade</a></li>
+                        <li class="s-anchor-item"><a href="#bg-02-fade" class="js-scrollto">u-bg-fade</a></li>
                         
                     </ul>
                 </nav>
                 
 
                 <article class="s-post">
-                    <div class="s-post-contents styleguide-contents"><h1 id="bg-01-color" class="styleguide">u-bg--(color)</h1>
+                    <div class="s-post-contents styleguide-contents"><h1 id="bg-01-color" class="styleguide">u-bg-(color)</h1>
 
 <p>背景に色をつける。オブジェクト・コンポーネントを可能な限り上書きする。<br>
 (color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。</p>
-<div class="example"><div class="u-bg--gray">bg--gray</div>
-<div class="u-bg--first">bg--first</div>
-<div class="u-bg--second">bg--second</div>
-<div class="u-bg--third">bg--third</div>
-<div class="u-bg--fourth">bg--fourth</div>
-<div class="u-bg--info">bg--info</div>
-<div class="u-bg--important">bg--important</div>
-</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-bg--gray"</span><span class="nt">&gt;</span>bg--gray<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-bg--first"</span><span class="nt">&gt;</span>bg--first<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-bg--second"</span><span class="nt">&gt;</span>bg--second<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-bg--third"</span><span class="nt">&gt;</span>bg--third<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-bg--fourth"</span><span class="nt">&gt;</span>bg--fourth<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-bg--info"</span><span class="nt">&gt;</span>bg--info<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-bg--important"</span><span class="nt">&gt;</span>bg--important<span class="nt">&lt;/div&gt;</span>
+<div class="example"><div class="u-bg-gray">bg-gray</div>
+<div class="u-bg-first">bg-first</div>
+<div class="u-bg-second">bg-second</div>
+<div class="u-bg-third">bg-third</div>
+<div class="u-bg-fourth">bg-fourth</div>
+<div class="u-bg-info">bg-info</div>
+<div class="u-bg-important">bg-important</div>
+</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-bg-gray"</span><span class="nt">&gt;</span>bg-gray<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-bg-first"</span><span class="nt">&gt;</span>bg-first<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-bg-second"</span><span class="nt">&gt;</span>bg-second<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-bg-third"</span><span class="nt">&gt;</span>bg-third<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-bg-fourth"</span><span class="nt">&gt;</span>bg-fourth<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-bg-info"</span><span class="nt">&gt;</span>bg-info<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-bg-important"</span><span class="nt">&gt;</span>bg-important<span class="nt">&lt;/div&gt;</span>
 </pre></div>
-<h2 id="bg-02-fade" class="styleguide">u-bg--fade</h2>
+<h2 id="bg-02-fade" class="styleguide">u-bg-fade</h2>
 
-<p><code>.u-bg--(color)</code> と併用すると背景色を薄くする。</p>
-<div class="example"><div class="u-bg--gray u-bg--fade">bg--gray</div>
-<div class="u-bg--first u-bg--fade">bg--first</div>
-<div class="u-bg--second u-bg--fade">bg--second</div>
-<div class="u-bg--third u-bg--fade">bg--third</div>
-<div class="u-bg--fourth u-bg--fade">bg--fourth</div>
-<div class="u-bg--info u-bg--fade">bg--info</div>
-<div class="u-bg--important u-bg--fade">bg--important</div>
-</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-bg--gray u-bg--fade"</span><span class="nt">&gt;</span>bg--gray<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-bg--first u-bg--fade"</span><span class="nt">&gt;</span>bg--first<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-bg--second u-bg--fade"</span><span class="nt">&gt;</span>bg--second<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-bg--third u-bg--fade"</span><span class="nt">&gt;</span>bg--third<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-bg--fourth u-bg--fade"</span><span class="nt">&gt;</span>bg--fourth<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-bg--info u-bg--fade"</span><span class="nt">&gt;</span>bg--info<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-bg--important u-bg--fade"</span><span class="nt">&gt;</span>bg--important<span class="nt">&lt;/div&gt;</span>
+<p><code>.u-bg-(color)</code> と併用すると背景色を薄くする。</p>
+<div class="example"><div class="u-bg-gray u-bg-fade">bg-gray</div>
+<div class="u-bg-first u-bg-fade">bg-first</div>
+<div class="u-bg-second u-bg-fade">bg-second</div>
+<div class="u-bg-third u-bg-fade">bg-third</div>
+<div class="u-bg-fourth u-bg-fade">bg-fourth</div>
+<div class="u-bg-info u-bg-fade">bg-info</div>
+<div class="u-bg-important u-bg-fade">bg-important</div>
+</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-bg-gray u-bg-fade"</span><span class="nt">&gt;</span>bg-gray<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-bg-first u-bg-fade"</span><span class="nt">&gt;</span>bg-first<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-bg-second u-bg-fade"</span><span class="nt">&gt;</span>bg-second<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-bg-third u-bg-fade"</span><span class="nt">&gt;</span>bg-third<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-bg-fourth u-bg-fade"</span><span class="nt">&gt;</span>bg-fourth<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-bg-info u-bg-fade"</span><span class="nt">&gt;</span>bg-info<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-bg-important u-bg-fade"</span><span class="nt">&gt;</span>bg-important<span class="nt">&lt;/div&gt;</span>
 </pre></div><?php include('../doc_include/footer.inc'); ?>

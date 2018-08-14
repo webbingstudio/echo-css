@@ -29,13 +29,32 @@ In <code>.#{$pr}#{$m}btn#{$c3}block, .#{$pr}#{$m}btn#{$c3}round, .#{$pr}#{$m}btn
 <p>
   <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}xl #{$pr}#{$m}btn#{$c3}block">#{$pr}#{$m}btn#{$c3}block</a>
 </p>
+<p>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}xxl #{$pr}#{$m}btn#{$c3}block">#{$pr}#{$m}btn#{$c3}block</a>
+</p>
+
+<p>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}sm #{$pr}#{$m}btn#{$c3}block">#{$pr}#{$m}btn#{$c3}block</a>
+</p>
+<p>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}block">#{$pr}#{$m}btn#{$c3}block</a>
+</p>
+<p>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}lg #{$pr}#{$m}btn#{$c3}block">#{$pr}#{$m}btn#{$c3}block</a>
+</p>
+<p>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}xl #{$pr}#{$m}btn#{$c3}block">#{$pr}#{$m}btn#{$c3}block</a>
+</p>
+<p>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}xxl #{$pr}#{$m}btn#{$c3}block">#{$pr}#{$m}btn#{$c3}block</a>
+</p>
 ```
 */
 
 .#{$pr}#{$m}btn#{$c3}block {
     display: block;
     width: 100%;
-    max-width: 320px; 
+    max-width: 320px;
     margin: 0 auto;
 
     &.#{$pr}#{$m}btn {
@@ -43,16 +62,24 @@ In <code>.#{$pr}#{$m}btn#{$c3}block, .#{$pr}#{$m}btn#{$c3}round, .#{$pr}#{$m}btn
         padding-right: .5rem;
     }
 
-    &.#{$pr}#{$m}btn#{$c3}sm {
-      max-width: 180px; 
-    }
-
-    &.#{$pr}#{$m}btn#{$c3}lg {
-      max-width: 640px; 
-    }
-
     &.#{$pr}#{$m}btn#{$c3}xl {
-      max-width: map-get($container-max-widths-md, lg); 
+
+        @include media-breakpoint-up(sm) {
+            max-width: 480px;
+        }
+
+    }
+
+    &.#{$pr}#{$m}btn#{$c3}xxl {
+
+        @include media-breakpoint-up(sm) {
+            max-width: 480px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            max-width: map-get($container-max-widths-md, lg); 
+        }
+
     }
 
 }
@@ -60,8 +87,96 @@ In <code>.#{$pr}#{$m}btn#{$c3}block, .#{$pr}#{$m}btn#{$c3}round, .#{$pr}#{$m}btn
 
 /*doc
 ---
+title: #{$pr}#{$m}btn#{$c3}oval
+name: btn-06-oval
+category: module-btn
+parent: btn
+---
+
+ボタンを小判型にする。
+
+``` example
+<p>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}#{$__gray}">#{$pr}#{$m}btn#{$c3}#{$__gray}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}#{$__gray} disabled">#{$pr}#{$m}btn#{$c3}#{$__gray}</a>
+</p>
+
+<p>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}#{$__first}">#{$pr}#{$m}btn#{$c3}#{$__first}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}#{$__first} disabled">#{$pr}#{$m}btn#{$c3}#{$__first}</a>
+</p>
+
+<p>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}#{$__second}">#{$pr}#{$m}btn#{$c3}#{$__second}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}#{$__second} disabled">#{$pr}#{$m}btn#{$c3}#{$__second}</a>
+</p>
+
+<p>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}#{$__third}">#{$pr}#{$m}btn#{$c3}#{$__third}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}#{$__third} disabled">#{$pr}#{$m}btn#{$c3}#{$__third}</a>
+</p>
+
+<p>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}#{$__fourth}">#{$pr}#{$m}btn#{$c3}#{$__fourth}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}#{$__fourth} disabled">#{$pr}#{$m}btn#{$c3}#{$__fourth}</a>
+</p>
+
+<p>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}#{$__info}">#{$pr}#{$m}btn#{$c3}#{$__info}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}#{$__info} disabled">#{$pr}#{$m}btn#{$c3}#{$__info}</a>
+</p>
+
+<p>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}#{$__important}">#{$pr}#{$m}btn#{$c3}#{$__important}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}#{$__important} disabled">#{$pr}#{$m}btn#{$c3}#{$__important}</a>
+</p>
+
+<p>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__gray}">#{$pr}#{$m}btn#{$c3}#{$__gray}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__gray} disabled">#{$pr}#{$m}btn#{$c3}#{$__gray}</a>
+</p>
+
+<p>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__first}">#{$pr}#{$m}btn#{$c3}#{$__first}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__first} disabled">#{$pr}#{$m}btn#{$c3}#{$__first}</a>
+</p>
+
+<p>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__second}">#{$pr}#{$m}btn#{$c3}#{$__second}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__second} disabled">#{$pr}#{$m}btn#{$c3}#{$__second}</a>
+</p>
+
+<p>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__third}">#{$pr}#{$m}btn#{$c3}#{$__third}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__third} disabled">#{$pr}#{$m}btn#{$c3}#{$__third}</a>
+</p>
+
+<p>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__fourth}">#{$pr}#{$m}btn#{$c3}#{$__fourth}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__fourth} disabled">#{$pr}#{$m}btn#{$c3}#{$__fourth}</a>
+</p>
+
+<p>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__info}">#{$pr}#{$m}btn#{$c3}#{$__info}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__info} disabled">#{$pr}#{$m}btn#{$c3}#{$__info}</a>
+</p>
+
+<p>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__important}">#{$pr}#{$m}btn#{$c3}#{$__important}</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__important} disabled">#{$pr}#{$m}btn#{$c3}#{$__important}</a>
+</p>
+```
+*/
+
+.#{$pr}#{$m}btn#{$c3}oval {
+    border-radius: 10em;  // emで大きな値を指定すると小判型になる
+}
+
+
+/*doc
+---
 title: #{$pr}#{$m}btn#{$c3}round
-name: btn-06-round
+name: btn-07-round
 category: module-btn
 parent: btn
 ---
@@ -81,6 +196,9 @@ parent: btn
 <p>
   <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}xl #{$pr}#{$m}btn#{$c3}round">R</a>
 </p>
+<p>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}xxl #{$pr}#{$m}btn#{$c3}round">R</a>
+</p>
 ```
 */
 
@@ -93,15 +211,6 @@ parent: btn
 
     &.#{$pr}#{$m}btn {
         padding: 0;
-
-        img {
-            transform: translate(0, -.1em);
-        }
-
-        [class*="fa-"] {
-            transform: translate(0, -.1em);
-        }
-
     }
 
     &.#{$pr}#{$m}btn#{$c3}sm {
@@ -114,28 +223,29 @@ parent: btn
         width: $btn-round-width-lg;
         height: $btn-round-width-lg;
         line-height: $btn-round-width-lg;
-
-        img {
-            transform: translate(0, -.125em);
-        }
-
-        [class*="fa-"] {
-            transform: translate(0, -.125em);
-        }
-
     }
 
     &.#{$pr}#{$m}btn#{$c3}xl {
+        width: $btn-round-width-lg;
+        height: $btn-round-width-lg;
+        line-height: $btn-round-width-lg;
+
+        @include media-breakpoint-up(md) {
+            width: $btn-round-width-xl;
+            height: $btn-round-width-xl;
+            line-height: $btn-round-width-xl;
+        }
+    }
+
+    &.#{$pr}#{$m}btn#{$c3}xxl {
         width: $btn-round-width-xl;
         height: $btn-round-width-xl;
         line-height: $btn-round-width-xl;
 
-        img {
-            transform: translate(0, -.15em);
-        }
-
-        [class*="fa-"] {
-            transform: translate(0, -.15em);
+        @include media-breakpoint-up(md) {
+            width: $btn-round-width-xxl;
+            height: $btn-round-width-xxl;
+            line-height: $btn-round-width-xxl;
         }
 
     }
@@ -146,7 +256,7 @@ parent: btn
 /*doc
 ---
 title: #{$pr}#{$m}btn#{$c3}square
-name: btn-07-square
+name: btn-08-square
 category: module-btn
 parent: btn
 ---
@@ -166,6 +276,9 @@ parent: btn
 <p>
   <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}xl #{$pr}#{$m}btn#{$c3}square">R</a>
 </p>
+<p>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}xxl #{$pr}#{$m}btn#{$c3}square">R</a>
+</p>
 ```
 */
 
@@ -177,15 +290,6 @@ parent: btn
 
     &.#{$pr}#{$m}btn {
         padding: 0;
-
-        img {
-            transform: translate(0, -.1em);
-        }
-
-        [class*="fa-"] {
-            transform: translate(0, -.1em);
-        }
-
     }
 
     &.#{$pr}#{$m}btn#{$c3}sm {
@@ -198,28 +302,30 @@ parent: btn
         width: $btn-square-width-lg;
         height: $btn-square-width-lg;
         line-height: $btn-square-width-lg;
+    }
 
-        img {
-            transform: translate(0, -.125em);
-        }
+    &.#{$pr}#{$m}btn#{$c3}xl {
+        width: $btn-square-width-lg;
+        height: $btn-square-width-lg;
+        line-height: $btn-square-width-lg;
 
-        [class*="fa-"] {
-            transform: translate(0, -.125em);
+        @include media-breakpoint-up(md) {
+            width: $btn-square-width-xl;
+            height: $btn-square-width-xl;
+            line-height: $btn-square-width-xl;
         }
 
     }
 
-    &.#{$pr}#{$m}btn#{$c3}xl {
+    &.#{$pr}#{$m}btn#{$c3}xxl {
         width: $btn-square-width-xl;
         height: $btn-square-width-xl;
         line-height: $btn-square-width-xl;
 
-        img {
-            transform: translate(0, -.15em);
-        }
-
-        [class*="fa-"] {
-            transform: translate(0, -.15em);
+        @include media-breakpoint-up(md) {
+            width: $btn-square-width-xxl;
+            height: $btn-square-width-xxl;
+            line-height: $btn-square-width-xxl;
         }
 
     }

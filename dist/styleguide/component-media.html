@@ -14,7 +14,7 @@
 
     <header class="s-header">
         <div class="s-header-brand">
-            <p class="s-title s-header-title"><img src="../images/common/logo_white.svg" height="24" alt="echo-css"> <span class="s-label">v0.9.0</span></p>
+            <p class="s-title s-header-title"><img src="../images/common/logo_white.svg" height="24" alt="echo-css"> <span class="s-label">v1.0.0</span></p>
         </div><!-- /.s-header-brand -->
 
         <?php include('../doc_include/header_nav.inc'); ?>
@@ -48,7 +48,7 @@
                     <div class="s-post-contents styleguide-contents"><h1 id="media" class="styleguide">c-media</h1>
 
 <p>サムネイル等のメディアオブジェクトと、テキストオブジェクトが並列しているコンポーネントを表示する。<br>
-<code>.m-tite</code>, <code>.m-thumbnail</code>, <code>.m-btn</code>を含む可能性がある。<br>
+<code>.m-title</code>, <code>.m-thumbnail</code>, <code>.m-btn</code>を含む可能性がある。<br>
 <code>.c-media-object</code> の最大幅は <code>33.33333333%</code> となっているため、比率を大きくしたい場合は任意調整すること。    </p>
 <div class="example"><div style="margin-bottom: 2rem;">
 <div class="c-media">
@@ -75,8 +75,8 @@
 
 
 <div style="margin-bottom: 2rem;">
-<div class="l-grid__row">
-    <div class="l-grid__col-12 l-grid__col-sm-6 l-grid__col-lg-4" style="padding-bottom: 1rem;">
+<div class="l-grid-row">
+    <div class="l-grid-col-sm-6 l-grid-col-lg-4" style="padding-bottom: 1rem;">
         <a href="#" class="c-media">
             <div class="c-media-object">
                 <div class="m-thumbnail">
@@ -94,11 +94,11 @@
             </div>
             <div class="c-media-contents">
                 <p>よくあるカラムレイアウトの例です</p>
-                <span class="m-btn m-btn m-btn-first m-btn-outline">ボタン</span>
+                <span class="m-btn m-btn-sm m-btn-first m-btn-bordered">ボタン</span>
             </div>
         </a>
     </div>
-    <div class="l-grid__col-12 l-grid__col-sm-6 l-grid__col-lg-4" style="padding-bottom: 1rem;">
+    <div class="l-grid-col-sm-6 l-grid-col-lg-4" style="padding-bottom: 1rem;">
         <a href="#" class="c-media">
             <div class="c-media-object">
                 <div class="m-thumbnail">
@@ -115,12 +115,12 @@
                 </div>
             </div>
             <div class="c-media-contents">
-                <p>l-grid__row, l-grid__col を使用して3カラムに並べました</p>
-                <span class="m-btn m-btn m-btn-first m-btn-outline">ボタン</span>
+                <p>l-grid-row, l-grid-col を使用して3カラムに並べました</p>
+                <span class="m-btn m-btn-sm m-btn-first m-btn-bordered">ボタン</span>
             </div>
         </a>
     </div>
-    <div class="l-grid__col-12 l-grid__col-sm-6 l-grid__col-lg-4" style="padding-bottom: 1rem;">
+    <div class="l-grid-col-sm-6 l-grid-col-lg-4" style="padding-bottom: 1rem;">
         <a href="#" class="c-media">
             <div class="c-media-object">
                 <div class="m-thumbnail">
@@ -138,7 +138,7 @@
             </div>
             <div class="c-media-contents">
                 <p>メディア全体がリンク範囲となっています</p>
-                <span class="m-btn m-btn m-btn-first m-btn-outline">ボタン</span>
+                <span class="m-btn m-btn-sm m-btn-first m-btn-bordered">ボタン</span>
             </div>
         </a>
     </div>
@@ -170,8 +170,8 @@
 
 
 <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 2rem;"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-grid__row"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-grid__col-12 l-grid__col-sm-6 l-grid__col-lg-4"</span> <span class="na">style=</span><span class="s">"padding-bottom: 1rem;"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-grid-row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-grid-col-sm-6 l-grid-col-lg-4"</span> <span class="na">style=</span><span class="s">"padding-bottom: 1rem;"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"c-media"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-media-object"</span><span class="nt">&gt;</span>
                 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail"</span><span class="nt">&gt;</span>
@@ -189,11 +189,11 @@
             <span class="nt">&lt;/div&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-media-contents"</span><span class="nt">&gt;</span>
                 <span class="nt">&lt;p&gt;</span>よくあるカラムレイアウトの例です<span class="nt">&lt;/p&gt;</span>
-                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m-btn m-btn m-btn-first m-btn-outline"</span><span class="nt">&gt;</span>ボタン<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m-btn m-btn-sm m-btn-first m-btn-bordered"</span><span class="nt">&gt;</span>ボタン<span class="nt">&lt;/span&gt;</span>
             <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-grid__col-12 l-grid__col-sm-6 l-grid__col-lg-4"</span> <span class="na">style=</span><span class="s">"padding-bottom: 1rem;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-grid-col-sm-6 l-grid-col-lg-4"</span> <span class="na">style=</span><span class="s">"padding-bottom: 1rem;"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"c-media"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-media-object"</span><span class="nt">&gt;</span>
                 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail"</span><span class="nt">&gt;</span>
@@ -210,12 +210,12 @@
                 <span class="nt">&lt;/div&gt;</span>
             <span class="nt">&lt;/div&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-media-contents"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;p&gt;</span>l-grid__row, l-grid__col を使用して3カラムに並べました<span class="nt">&lt;/p&gt;</span>
-                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m-btn m-btn m-btn-first m-btn-outline"</span><span class="nt">&gt;</span>ボタン<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;p&gt;</span>l-grid-row, l-grid-col を使用して3カラムに並べました<span class="nt">&lt;/p&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m-btn m-btn-sm m-btn-first m-btn-bordered"</span><span class="nt">&gt;</span>ボタン<span class="nt">&lt;/span&gt;</span>
             <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-grid__col-12 l-grid__col-sm-6 l-grid__col-lg-4"</span> <span class="na">style=</span><span class="s">"padding-bottom: 1rem;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-grid-col-sm-6 l-grid-col-lg-4"</span> <span class="na">style=</span><span class="s">"padding-bottom: 1rem;"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"c-media"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-media-object"</span><span class="nt">&gt;</span>
                 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-thumbnail"</span><span class="nt">&gt;</span>
@@ -233,7 +233,7 @@
             <span class="nt">&lt;/div&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-media-contents"</span><span class="nt">&gt;</span>
                 <span class="nt">&lt;p&gt;</span>メディア全体がリンク範囲となっています<span class="nt">&lt;/p&gt;</span>
-                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m-btn m-btn m-btn-first m-btn-outline"</span><span class="nt">&gt;</span>ボタン<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"m-btn m-btn-sm m-btn-first m-btn-bordered"</span><span class="nt">&gt;</span>ボタン<span class="nt">&lt;/span&gt;</span>
             <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;/div&gt;</span>

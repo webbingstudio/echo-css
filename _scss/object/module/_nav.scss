@@ -62,22 +62,46 @@ category: module-nav
 
 <h3 class="#{$pr}#{$u}text#{$c3}lg #{$pr}#{$u}margin#{$c2}top#{$c3}lg">#{$pr}#{$m}nav#{$c1}label のみ使用し、ナビゲーションの分割はグリッドにした場合</h3>
 <ul class="#{$pr}#{$row} #{$pr}#{$row}#{$c3}0">
-    <li class="#{$pr}#{$col}#{$c3}6 #{$pr}#{$col}#{$c2}md">
+    <li class="#{$pr}#{$col}#{$c3}4 #{$pr}#{$col}#{$c2}md#{$c3}2">
         <a href="#" class="#{$pr}#{$m}nav#{$c1}label">ボタン</a>
     </li>
-    <li class="#{$pr}#{$col}#{$c3}6 #{$pr}#{$col}#{$c2}md">
+    <li class="#{$pr}#{$col}#{$c3}4 #{$pr}#{$col}#{$c2}md#{$c3}3">
         <a href="#" class="#{$pr}#{$m}nav#{$c1}label #{$nav-current}">現在のページ</a>
     </li>
-    <li class="#{$pr}#{$col}#{$c3}4 #{$pr}#{$col}#{$c2}md">
+    <li class="#{$pr}#{$col}#{$c3}4 #{$pr}#{$col}#{$c2}md#{$c3}3">
         <a href="#" class="#{$pr}#{$m}nav#{$c1}label">ボタン</a>
     </li>
-    <li class="#{$pr}#{$col}#{$c3}4 #{$pr}#{$col}#{$c2}md">
+    <li class="#{$pr}#{$col}#{$c3}6 #{$pr}#{$col}#{$c2}md#{$c3}2">
         <a href="#" class="#{$pr}#{$m}nav#{$c1}label">ボタン</a>
     </li>
-    <li class="#{$pr}#{$col}#{$c3}4 #{$pr}#{$col}#{$c2}md">
+    <li class="#{$pr}#{$col}#{$c3}6 #{$pr}#{$col}#{$c2}md#{$c3}2">
         <a href="#" class="#{$pr}#{$m}nav#{$c1}label">ボタン</a>
     </li>
 </ul>
+
+<h3 class="#{$pr}#{$u}text#{$c3}lg #{$pr}#{$u}margin#{$c2}top#{$c3}lg">アイコンを併用した例（幅を100%にすると自動的に均等幅となる）</h3>
+<nav class="#{$pr}#{$m}nav" style="width: 100%;">
+    <ul class="#{$pr}#{$m}nav#{$c1}list">
+        <li class="#{$pr}#{$m}nav#{$c1}item">
+            <a href="#" class="#{$pr}#{$m}nav#{$c1}label"><span class="#{$pr}#{$m}nav#{$c1}text"><i class="fas fa-home" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"></i>吾輩は</span></a>
+        </li>
+        <li class="#{$pr}#{$m}nav#{$c1}item">
+            <a href="#" class="#{$pr}#{$m}nav#{$c1}label"><span class="#{$pr}#{$m}nav#{$c1}text"><i class="fas fa-user" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"></i>猫である</span></a>
+        </li>
+        <li class="#{$pr}#{$m}nav#{$c1}item">
+            <a href="#" class="#{$pr}#{$m}nav#{$c1}label"><span class="#{$pr}#{$m}nav#{$c1}text"><i class="fas fa-taxi" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"></i>名前はまだ無い</span></a>
+        </li>
+        <li class="#{$pr}#{$m}nav#{$c1}item">
+            <a href="#" class="#{$pr}#{$m}nav#{$c1}label"><span class="#{$pr}#{$m}nav#{$c1}text"><i class="fas fa-map" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"></i>どこで</span></a>
+        </li>
+        <li class="#{$pr}#{$m}nav#{$c1}item">
+            <a href="#" class="#{$pr}#{$m}nav#{$c1}label"><span class="#{$pr}#{$m}nav#{$c1}text"><i class="fas fa-envelope" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"></i>生れたか</span></a>
+        </li>
+        <li class="#{$pr}#{$m}nav#{$c1}item">
+            <a href="#" class="#{$pr}#{$m}nav#{$c1}label"><span class="#{$pr}#{$m}nav#{$c1}text"><i class="fas fa-shopping-cart" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"></i>とんと</span></a>
+        </li>
+    </ul>
+</nav><!-- /.nav -->
 ```
 
 */
@@ -111,7 +135,7 @@ category: module-nav
 .#{$pr}#{$m}nav > ul li {
     flex-grow: 1;
     flex-shrink: 1;
-    flex-basis: auto;
+    flex-basis: 0%;
 }
 
 .#{$pr}#{$m}nav#{$c1}label,
@@ -119,6 +143,7 @@ category: module-nav
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     width: 100%;
     height: 100%;
     min-height: 3em;
@@ -153,10 +178,6 @@ category: module-nav
         color: $body-color;
         background-color: $gray-fade;
         text-decoration: none;
-    }
-
-    [class*="fa-"] {
-        transform: translate(0, -.125em);
     }
 
 }
@@ -277,6 +298,30 @@ parent: nav
         </li>
     </ul>
 </nav><!-- /.nav -->
+
+<h3 class="#{$pr}#{$u}text#{$c3}lg #{$pr}#{$u}margin#{$c2}top#{$c3}lg">アイコンを併用した例</h3>
+<nav class="#{$pr}#{$m}nav #{$pr}#{$m}nav#{$c3}vertical">
+    <ul class="#{$pr}#{$m}nav#{$c1}list">
+        <li class="#{$pr}#{$m}nav#{$c1}item">
+            <a href="#" class="#{$pr}#{$m}nav#{$c1}label"><span class="#{$pr}#{$m}nav#{$c1}text"><i class="fas fa-home" style="font-size: 1.25em; width: 1.5em; text-align: center; margin-right: .5em;"></i>吾輩は</span></a>
+        </li>
+        <li class="#{$pr}#{$m}nav#{$c1}item">
+            <a href="#" class="#{$pr}#{$m}nav#{$c1}label"><span class="#{$pr}#{$m}nav#{$c1}text"><i class="fas fa-user" style="font-size: 1.25em; width: 1.5em; text-align: center; margin-right: .5em;"></i>猫である</span></a>
+        </li>
+        <li class="#{$pr}#{$m}nav#{$c1}item">
+            <a href="#" class="#{$pr}#{$m}nav#{$c1}label"><span class="#{$pr}#{$m}nav#{$c1}text"><i class="fas fa-taxi" style="font-size: 1.25em; width: 1.5em; text-align: center; margin-right: .5em;"></i>名前はまだ無い</span></a>
+        </li>
+        <li class="#{$pr}#{$m}nav#{$c1}item">
+            <a href="#" class="#{$pr}#{$m}nav#{$c1}label"><span class="#{$pr}#{$m}nav#{$c1}text"><i class="fas fa-map" style="font-size: 1.25em; width: 1.5em; text-align: center; margin-right: .5em;"></i>どこで</span></a>
+        </li>
+        <li class="#{$pr}#{$m}nav#{$c1}item">
+            <a href="#" class="#{$pr}#{$m}nav#{$c1}label"><span class="#{$pr}#{$m}nav#{$c1}text"><i class="fas fa-envelope" style="font-size: 1.25em; width: 1.5em; text-align: center; margin-right: .5em;"></i>生れたか</span></a>
+        </li>
+        <li class="#{$pr}#{$m}nav#{$c1}item">
+            <a href="#" class="#{$pr}#{$m}nav#{$c1}label"><span class="#{$pr}#{$m}nav#{$c1}text"><i class="fas fa-shopping-cart" style="font-size: 1.25em; width: 1.5em; text-align: center; margin-right: .5em;"></i>とんと</span></a>
+        </li>
+    </ul>
+</nav><!-- /.nav -->
 ```
 
 */
@@ -295,6 +340,7 @@ parent: nav
 .#{$pr}#{$m}nav#{$c3}vertical .#{$pr}#{$m}nav#{$c1}label,
 .#{$pr}#{$m}nav#{$c3}vertical > ul li a {
     justify-content: flex-start;
+    text-align: left;
 }
 
 

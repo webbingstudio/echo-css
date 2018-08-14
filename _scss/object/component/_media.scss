@@ -6,13 +6,13 @@ category: component-media
 ---
 
 サムネイル等のメディアオブジェクトと、テキストオブジェクトが並列しているコンポーネントを表示する。  
-<code>.#{$pr}#{$m}tite</code>, <code>.#{$pr}#{$m}thumbnail</code>, <code>.#{$pr}#{$m}btn</code>を含む可能性がある。  
-<code>.#{$pr}#{$c}media-object</code> の最大幅は <code>33.33333333%</code> となっているため、比率を大きくしたい場合は任意調整すること。    
+<code>.#{$pr}#{$m}title</code>, <code>.#{$pr}#{$m}thumbnail</code>, <code>.#{$pr}#{$m}btn</code>を含む可能性がある。  
+<code>.#{$pr}#{$c}media#{$c1}object</code> の最大幅は <code>33.33333333%</code> となっているため、比率を大きくしたい場合は任意調整すること。    
 
 ``` example
 <div style="margin-bottom: 2rem;">
 <div class="#{$pr}#{$c}media">
-    <div class="#{$pr}#{$c}media-object">
+    <div class="#{$pr}#{$c}media#{$c1}object">
         <div class="#{$pr}#{$m}thumbnail">
             <picture>
             <source
@@ -26,9 +26,9 @@ category: component-media
             </picture>
         </div>
     </div>
-    <div class="#{$pr}#{$c}media-contents">
-        <h3 class="#{$pr}#{$p}title #{$pr}#{$p}title-echo-12"><a href="#">これはメディアです</a></h3>
-        <p>これはメディアの本文です。見出しに #{$pr}#{$p}title-echo-12 クラスを付与しています。</p>
+    <div class="#{$pr}#{$c}media#{$c1}contents">
+        <h3 class="#{$pr}#{$p}title #{$pr}#{$p}title#{$c2}echo#{$c3}12"><a href="#">これはメディアです</a></h3>
+        <p>これはメディアの本文です。見出しに #{$pr}#{$p}title#{$c2}echo#{$c3}12 クラスを付与しています。</p>
     </div>
 </div>
 </div>
@@ -36,9 +36,9 @@ category: component-media
 
 <div style="margin-bottom: 2rem;">
 <div class="#{$pr}#{$row}">
-    <div class="#{$pr}#{$col}-12 #{$pr}#{$col}-sm-6 #{$pr}#{$col}-lg-4" style="padding-bottom: 1rem;">
+    <div class="#{$pr}#{$col}#{$c2}sm#{$c3}6 #{$pr}#{$col}#{$c2}lg#{$c3}4" style="padding-bottom: 1rem;">
         <a href="#" class="#{$pr}#{$c}media">
-            <div class="#{$pr}#{$c}media-object">
+            <div class="#{$pr}#{$c}media#{$c1}object">
                 <div class="#{$pr}#{$m}thumbnail">
                     <picture>
                     <source
@@ -52,15 +52,15 @@ category: component-media
                     </picture>
                 </div>
             </div>
-            <div class="#{$pr}#{$c}media-contents">
+            <div class="#{$pr}#{$c}media#{$c1}contents">
                 <p>よくあるカラムレイアウトの例です</p>
-                <span class="#{$pr}#{$m}btn #{$pr}#{$m}btn #{$pr}#{$m}btn-first #{$pr}#{$m}btn-outline">ボタン</span>
+                <span class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}sm #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}bordered">ボタン</span>
             </div>
         </a>
     </div>
-    <div class="#{$pr}#{$col}-12 #{$pr}#{$col}-sm-6 #{$pr}#{$col}-lg-4" style="padding-bottom: 1rem;">
+    <div class="#{$pr}#{$col}#{$c2}sm#{$c3}6 #{$pr}#{$col}#{$c2}lg#{$c3}4" style="padding-bottom: 1rem;">
         <a href="#" class="#{$pr}#{$c}media">
-            <div class="#{$pr}#{$c}media-object">
+            <div class="#{$pr}#{$c}media#{$c1}object">
                 <div class="#{$pr}#{$m}thumbnail">
                     <picture>
                     <source
@@ -74,15 +74,15 @@ category: component-media
                     </picture>
                 </div>
             </div>
-            <div class="#{$pr}#{$c}media-contents">
+            <div class="#{$pr}#{$c}media#{$c1}contents">
                 <p>#{$pr}#{$row}, #{$pr}#{$col} を使用して3カラムに並べました</p>
-                <span class="#{$pr}#{$m}btn #{$pr}#{$m}btn #{$pr}#{$m}btn-first #{$pr}#{$m}btn-outline">ボタン</span>
+                <span class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}sm #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}bordered">ボタン</span>
             </div>
         </a>
     </div>
-    <div class="#{$pr}#{$col}-12 #{$pr}#{$col}-sm-6 #{$pr}#{$col}-lg-4" style="padding-bottom: 1rem;">
+    <div class="#{$pr}#{$col}#{$c2}sm#{$c3}6 #{$pr}#{$col}#{$c2}lg#{$c3}4" style="padding-bottom: 1rem;">
         <a href="#" class="#{$pr}#{$c}media">
-            <div class="#{$pr}#{$c}media-object">
+            <div class="#{$pr}#{$c}media#{$c1}object">
                 <div class="#{$pr}#{$m}thumbnail">
                     <picture>
                     <source
@@ -96,9 +96,9 @@ category: component-media
                     </picture>
                 </div>
             </div>
-            <div class="#{$pr}#{$c}media-contents">
+            <div class="#{$pr}#{$c}media#{$c1}contents">
                 <p>メディア全体がリンク範囲となっています</p>
-                <span class="#{$pr}#{$m}btn #{$pr}#{$m}btn #{$pr}#{$m}btn-first #{$pr}#{$m}btn-outline">ボタン</span>
+                <span class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}sm #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}bordered">ボタン</span>
             </div>
         </a>
     </div>
@@ -133,9 +133,10 @@ category: component-media
 
     }
 
-    .#{$pr}#{$c}media-object {
-        flex: 0 0 auto;
-        width: 100%;
+    .#{$pr}#{$c}media#{$c1}object {
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto;
         max-width: 33.33333333%;
 
         > a {
@@ -153,9 +154,10 @@ category: component-media
 
     }
 
-    .#{$pr}#{$c}media-contents {
-        flex: 1 1 0;
-        width: auto;
+    .#{$pr}#{$c}media#{$c1}contents {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 0%;
         padding-left: $spacer;
         line-height: $line-height-sm;
 
@@ -167,13 +169,9 @@ category: component-media
             padding-left: $spacer * 2;
         }
 
-        time {
-            display: block;
-        }
-
     }
 
-    .#{$pr}#{$c}media-title {
+    .#{$pr}#{$c}media#{$c1}title {
 
         > a {
             color: $body-color;
@@ -195,7 +193,7 @@ category: component-media
 
 /*doc
 ---
-title: #{$pr}#{$c}media-middle
+title: #{$pr}#{$c}media#{$c1}middle
 name: media-01-middle
 category: component-media
 parent: media
@@ -206,8 +204,8 @@ parent: media
 
 ``` example
 <div style="margin-bottom: 2rem;">
-<div class="#{$pr}#{$c}media #{$pr}#{$c}media-middle">
-    <div class="#{$pr}#{$c}media-object">
+<div class="#{$pr}#{$c}media #{$pr}#{$c}media#{$c1}middle">
+    <div class="#{$pr}#{$c}media#{$c1}object">
         <div class="#{$pr}#{$m}thumbnail">
             <picture>
             <source
@@ -222,7 +220,7 @@ parent: media
         </div>
     </div>
 
-    <div class="#{$pr}#{$c}media-contents">
+    <div class="#{$pr}#{$c}media#{$c1}contents">
         <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
         <p>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
         <p>この書生の掌の裏でしばらくはよい心持に坐っておったが、しばらくすると非常な速力で運転し始めた。書生が動くのか自分だけが動くのか分らないが無暗に眼が廻る。胸が悪くなる。到底助からないと思っていると、どさりと音がして眼から火が出た。それまでは記憶しているがあとは何の事やらいくら考え出そうとしても分らない。ふと気が付いて見ると書生はいない。たくさんおった兄弟が一疋も見えぬ。肝心の母親さえ姿を隠してしまった。その上今までの所とは違って無暗に明るい。眼を明いていられぬくらいだ。はてな何でも容子がおかしいと、のそのそ這い出して見ると非常に痛い。吾輩は藁の上から急に笹原の中へ棄てられたのである。</p>
@@ -230,8 +228,8 @@ parent: media
 </div>
 </div>
 
-<div class="#{$pr}#{$c}media #{$pr}#{$c}media-middle">
-    <div class="#{$pr}#{$c}media-object">
+<div class="#{$pr}#{$c}media #{$pr}#{$c}media#{$c1}middle">
+    <div class="#{$pr}#{$c}media#{$c1}object">
         <div class="#{$pr}#{$m}thumbnail">
             <picture>
             <source
@@ -246,7 +244,7 @@ parent: media
         </div>
     </div>
 
-    <div class="#{$pr}#{$c}media-contents">
+    <div class="#{$pr}#{$c}media#{$c1}contents">
         <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
     </div>
 </div>
@@ -254,7 +252,7 @@ parent: media
 
 */
 
-.#{$pr}#{$c}media-middle {
+.#{$pr}#{$c}media#{$c1}middle {
     align-items: center;
 }
 
@@ -262,7 +260,7 @@ parent: media
 
 /*doc
 ---
-title: #{$pr}#{$c}media-reverse
+title: #{$pr}#{$c}media#{$c3}reverse
 name: media-02-reverse
 category: component-media
 parent: media
@@ -271,8 +269,8 @@ parent: media
 オブジェクトと本文の配置を逆にする。
 
 ``` example
-<div class="#{$pr}#{$c}media #{$pr}#{$c}media-reverse">
-    <div class="#{$pr}#{$c}media-object">
+<div class="#{$pr}#{$c}media #{$pr}#{$c}media#{$c3}reverse">
+    <div class="#{$pr}#{$c}media#{$c1}object">
         <div class="#{$pr}#{$m}thumbnail">
             <picture>
             <source
@@ -286,7 +284,7 @@ parent: media
             </picture>
         </div>
     </div>
-    <div class="#{$pr}#{$c}media-contents">
+    <div class="#{$pr}#{$c}media#{$c1}contents">
         <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
     </div>
 </div>
@@ -294,10 +292,10 @@ parent: media
 
 */
 
-.#{$pr}#{$c}media-reverse {
+.#{$pr}#{$c}media#{$c3}reverse {
     flex-direction: row-reverse;
 
-    .#{$pr}#{$c}media-object {
+    .#{$pr}#{$c}media#{$c1}object {
         padding-right: 0;
         padding-left: $spacer;
 

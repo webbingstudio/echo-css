@@ -15,6 +15,12 @@ $c3: '-' !default;   // to $value
 }
 
 
+// Spacer
+// -----------------------------------------
+
+$spacer:    10px !default;
+
+
 // Code Optimize
 // -----------------------------------------
 
@@ -44,6 +50,18 @@ $u: "u-" !default;
 
 // project-group-prefix
 $p: "p-" !default;
+
+
+// Selector
+// -----------------------------------------
+
+// utillity-wrap-selector
+// ユーティリティクラスの優先順位を上昇させるために、点数が30（0.0.3.0）以上になるようなセレクタを指定する
+// In order to raise the priority of the utility class, specify a selector whose score is 30 (0.0.3.0) or more
+$u-wrap:    "#document" !default;
+
+// icon-selector
+$icon:      '[class*="#{$pr}#{$p}icon#{$c3}"], [class*="fa-"]' !default;
 
 
 // Name
@@ -76,18 +94,6 @@ $nav-current: "is-current" !default;
 // error-name
 // ex. is-error, error...
 $error: "is-error" !default;
-
-
-// Selector
-// -----------------------------------------
-
-// utillity-wrap-selector
-// ユーティリティクラスの優先順位を上昇させるために、点数が30（0.0.3.0）以上になるようなセレクタを指定する
-// In order to raise the priority of the utility class, specify a selector whose score is 30 (0.0.3.0) or more
-$u-wrap:    "#document" !default;
-
-// icon-selector
-$icon:      '[class*="fa-"]' !default;
 
 
 // Container

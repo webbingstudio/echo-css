@@ -10,40 +10,46 @@
 
 @mixin make-grid-columns-flex($columns: $grid-columns, $breakpoints: $grid-breakpoints) {
   %grid-column {
-    flex-basis: 0;
+    flex-basis: 0%;
     flex-grow: 1;
     max-width: 100%;
+  }
+
+  [class*="#{$pr}#{$col}"] {
+    position: relative;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+    margin: 0;
+    padding-left: (map-get($grid-gutter-widths, md) / 2);
+    padding-right: (map-get($grid-gutter-widths, md) / 2);
   }
 
   @each $breakpoint in map-keys($breakpoints) {
     $infix: breakpoint-infix($breakpoint, $breakpoints);
 
+    @if ($breakpoint == 'sm') {
+      @include media-breakpoint-down(sm) {
+        .#{$pr}#{$col} {
+          flex-basis: 100%;
+        }
+      }
+    }
+
     @for $i from 1 through $columns {
-      @if ($optimize != true) or ( ($optimize == true) and ( $i > 1 ) and ( $i < $grid-columns-max ) ) {
+      @if ($optimize != true) or ( ($optimize == true) and ( $i > 1 ) and ( $i != $grid-columns-max ) ) {
         .#{$pr}#{$col}#{$infix}#{$c3}#{$i} {
           @extend %grid-column;
         }
       }
     }
-    .#{$pr}#{$col}#{$infix},
-    .#{$pr}#{$col}#{$infix}#{$c3}auto {
+    .#{$pr}#{$col}#{$infix} {
       @extend %grid-column;
     }
 
     @include media-breakpoint-up($breakpoint, $breakpoints) {
-      .#{$pr}#{$col}#{$infix} {
-        flex-basis: 0;
-        flex-grow: 1;
-        max-width: 100%;
-      }
-
-      .#{$pr}#{$col}#{$infix}#{$c3}auto {
-        width: auto;
-        max-width: none;
-      }
-
       @for $i from 1 through $columns {
-        @if ($optimize != true) or ( ($optimize == true) and ( $i > 1 ) and ( $i < $grid-columns-max ) ) {
+        @if ($optimize != true) or ( ($optimize == true) and ( $i > 1 ) and ( $i != $grid-columns-max ) ) {
           .#{$pr}#{$col}#{$infix}#{$c3}#{$i} {
             @include make-col-flex($i, $columns);
           }

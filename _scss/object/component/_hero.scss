@@ -13,14 +13,14 @@ category: component-hero
 
 ``` example
 <div class="#{$pr}#{$c}hero">
-    <div class="#{$pr}#{$c}hero-cover" style="background-image: url(/images/_dummy/image_05.jpg);"></div>
-    <div class="#{$pr}#{$c}hero-contents">
-        <div class="#{$pr}#{$c}hero-contents-inner">
-            <h2 class="#{$pr}#{$p}title #{$pr}#{$p}title-echo-21">吾輩は猫である</h2>
-            <p class="#{$pr}#{$p}title #{$pr}#{$p}title-echo-23 #{$pr}#{$u}margin-b-lg">名前はまだ無い</p>
+    <div class="#{$pr}#{$c}hero#{$c1}cover" style="background-image: url(/images/_dummy/image_05.jpg);"></div>
+    <div class="#{$pr}#{$c}hero#{$c1}contents">
+        <div class="#{$pr}#{$c}hero#{$c1}contents#{$c1}inner">
+            <h2 class="#{$pr}#{$p}title #{$pr}#{$p}title#{$c2}echo#{$c3}21">吾輩は猫である</h2>
+            <p class="#{$pr}#{$p}title #{$pr}#{$p}title#{$c2}echo#{$c3}23 #{$pr}#{$u}margin#{$c2}bottom#{$c3}lg">名前はまだ無い</p>
             <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
-        </div><!-- /.#{$pr}#{$c}hero-contents-inner -->
-    </div><!-- /.#{$pr}#{$c}hero-contents -->
+        </div><!-- /.#{$pr}#{$c}hero#{$c1}contents#{$c1}inner -->
+    </div><!-- /.#{$pr}#{$c}hero#{$c1}contents -->
 </div><!-- /.#{$pr}#{$c}hero -->
 
 ```
@@ -41,7 +41,7 @@ category: component-hero
 
 }
 
-.#{$pr}#{$c}hero-cover {
+.#{$pr}#{$c}hero#{$c1}cover {
     position: absolute;
     top: 0;
     left: 0;
@@ -53,7 +53,7 @@ category: component-hero
     z-index: 11;
 }
 
-.#{$pr}#{$c}hero-contents {
+.#{$pr}#{$c}hero#{$c1}contents {
     position: relative;
     display: flex;
     align-items: center;
@@ -70,7 +70,7 @@ category: component-hero
 
 }
 
-.#{$pr}#{$c}hero-contents-inner {
+.#{$pr}#{$c}hero#{$c1}contents#{$c1}inner {
     max-width: map-get($container-max-widths-md, sm);
     margin: 0 auto;
     padding: 0 (map-get($grid-gutter-widths, md) / 2);
@@ -96,7 +96,7 @@ category: component-hero
 
 /*doc
 ---
-title: #{$pr}#{$c}hero-(direction)
+title: #{$pr}#{$c}hero#{$c1}(direction)
 name: hero-01-direction
 category: component-hero
 parent: hero
@@ -105,41 +105,41 @@ parent: hero
 コンテンツブロックを指定した方向に寄せる。
 
 ``` example
-<h3>.#{$pr}#{$c}hero + .#{$pr}#{$c}hero-l</h3>
-<div class="#{$pr}#{$c}hero #{$pr}#{$c}hero-l" style="margin-bottom: 2rem;">
-    <div class="#{$pr}#{$c}hero-cover" style="background-image: url(/images/_dummy/image_05.jpg);"></div>
-    <div class="#{$pr}#{$c}hero-contents">
-        <div class="#{$pr}#{$c}hero-contents-inner">
-            <h2 class="#{$pr}#{$p}title #{$pr}#{$p}title-echo-21">吾輩は猫である</h2>
-            <p class="#{$pr}#{$p}title #{$pr}#{$p}title-echo-23 #{$pr}#{$u}margin-b-lg">名前はまだ無い</p>
+<h3>.#{$pr}#{$c}hero + .#{$pr}#{$c}hero#{$c3}left</h3>
+<div class="#{$pr}#{$c}hero #{$pr}#{$c}hero#{$c3}left" style="margin-bottom: 2rem;">
+    <div class="#{$pr}#{$c}hero#{$c1}cover" style="background-image: url(/images/_dummy/image_05.jpg);"></div>
+    <div class="#{$pr}#{$c}hero#{$c1}contents">
+        <div class="#{$pr}#{$c}hero#{$c1}contents#{$c1}inner">
+            <h2 class="#{$pr}#{$p}title #{$pr}#{$p}title#{$c2}echo#{$c3}21">吾輩は猫である</h2>
+            <p class="#{$pr}#{$p}title #{$pr}#{$p}title#{$c2}echo#{$c3}23 #{$pr}#{$u}margin#{$c2}bottom#{$c3}lg">名前はまだ無い</p>
             <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
-        </div><!-- /.#{$pr}#{$c}hero-contents-inner -->
-    </div><!-- /.#{$pr}#{$c}hero-contents -->
+        </div><!-- /.#{$pr}#{$c}hero#{$c1}contents#{$c1}inner -->
+    </div><!-- /.#{$pr}#{$c}hero#{$c1}contents -->
 </div><!-- /.#{$pr}#{$c}hero -->
 
-<h3>.#{$pr}#{$c}hero + .#{$pr}#{$c}hero-r</h3>
-<div class="#{$pr}#{$c}hero #{$pr}#{$c}hero-r" style="margin-bottom: 2rem;">
-    <div class="#{$pr}#{$c}hero-cover" style="background-image: url(/images/_dummy/image_05.jpg);"></div>
-    <div class="#{$pr}#{$c}hero-contents">
-        <div class="#{$pr}#{$c}hero-contents-inner">
-            <h2 class="#{$pr}#{$p}title #{$pr}#{$p}title-echo-21">吾輩は猫である</h2>
-            <p class="#{$pr}#{$p}title #{$pr}#{$p}title-echo-23 #{$pr}#{$u}margin-b-lg">名前はまだ無い</p>
+<h3>.#{$pr}#{$c}hero + .#{$pr}#{$c}hero#{$c3}right</h3>
+<div class="#{$pr}#{$c}hero #{$pr}#{$c}hero#{$c3}right" style="margin-bottom: 2rem;">
+    <div class="#{$pr}#{$c}hero#{$c1}cover" style="background-image: url(/images/_dummy/image_05.jpg);"></div>
+    <div class="#{$pr}#{$c}hero#{$c1}contents">
+        <div class="#{$pr}#{$c}hero#{$c1}contents#{$c1}inner">
+            <h2 class="#{$pr}#{$p}title #{$pr}#{$p}title#{$c2}echo#{$c3}21">吾輩は猫である</h2>
+            <p class="#{$pr}#{$p}title #{$pr}#{$p}title#{$c2}echo#{$c3}23 #{$pr}#{$u}margin#{$c2}bottom#{$c3}lg">名前はまだ無い</p>
             <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
-        </div><!-- /.#{$pr}#{$c}hero-contents-inner -->
-    </div><!-- /.#{$pr}#{$c}hero-contents -->
+        </div><!-- /.#{$pr}#{$c}hero#{$c1}contents#{$c1}inner -->
+    </div><!-- /.#{$pr}#{$c}hero#{$c1}contents -->
 </div><!-- /.#{$pr}#{$c}hero -->
 
 ```
 
 */
 
-.#{$pr}#{$c}hero-l {
+.#{$pr}#{$c}hero#{$c3}left {
 
-    .#{$pr}#{$c}hero-contents {
+    .#{$pr}#{$c}hero#{$c1}contents {
         justify-content: left;
     }
 
-    .#{$pr}#{$c}hero-contents-inner {
+    .#{$pr}#{$c}hero#{$c1}contents#{$c1}inner {
         margin-left: 0;
         margin-right: auto;
         text-align: left;
@@ -147,13 +147,13 @@ parent: hero
 
 }
 
-.#{$pr}#{$c}hero-r {
+.#{$pr}#{$c}hero#{$c3}right {
 
-    .#{$pr}#{$c}hero-contents {
+    .#{$pr}#{$c}hero#{$c1}contents {
         justify-content: right;
     }
 
-    .#{$pr}#{$c}hero-contents-inner {
+    .#{$pr}#{$c}hero#{$c1}contents#{$c1}inner {
         margin-left: auto;
         margin-right: 0;
         text-align: right;

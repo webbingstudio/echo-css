@@ -222,6 +222,7 @@
 
 .s-sitemap {
     width: 100%;
+    font-size: 1.125rem;
 }
 
 .s-contents-main .s-sitemap {
@@ -237,29 +238,13 @@
 .s-sitemap a,
 .s-sitemap .s-sitemap-label {
     display: block;
-    padding: .25em 0 .25em .25em;
-    border-bottom: 1px solid #bbb;
-}
-
-.s-contents-main .s-sitemap a,
-.s-contents-main .s-sitemap .s-sitemap-label {
-    font-size: 1em;
-    padding: .5em 0 .5em .5em;
-}
-
-.s-sitemap a {
-    text-decoration: none;
-}
-
-.s-sitemap a:hover {
-    text-decoration: underline;
+    padding: .25em 0 .25em .5em;
 }
 
 .s-sitemap-list {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    border-top: 1px solid #bbb;
 }
 
 .s-sitemap-item {
@@ -268,21 +253,14 @@
 }
 
 .s-sitemap-children {
-    border-top: 0 none;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-left: 1.5rem;
+    border-top: 1px solid #bbb;
 }
 
 .s-sitemap-children .s-sitemap-item {
     font-size: 90%;
-}
-
-.s-sitemap-children .s-sitemap-item a,
-.s-sitemap-children .s-sitemap-item .s-sitemap-label {
-    padding-left: 1.5rem;
-}
-
-.s-sitemap-children .s-sitemap-children .s-sitemap-item a,
-.s-sitemap-children .s-sitemap-children .s-sitemap-item .s-sitemap-label {
-    padding-left: 3rem;
 }
 
 .s-footer {

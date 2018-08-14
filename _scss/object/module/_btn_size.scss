@@ -8,12 +8,22 @@ parent: btn
 
 ボタンのサイズを変える。(size)は、 <code>sm, lg, xl</code> に対応している。
 
+### 補足：xl, xxlの挙動
+
+<code>.#{$pr}#{$m}btn#{$c3}xl, .#{$pr}#{$m}btn#{$c3}xxl</code> は、(breakpoint)が <code>sm</code> 以下では一段階小さくなる。
+
+### note: Behavior of xl, xxl
+
+<code>.#{$pr}#{$m}btn#{$c3}xl, .#{$pr}#{$m}btn#{$c3}xxl</code> decreases by one level when (breakpoint) is less than sm.
+
+
 ``` example
 <p>
   <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}sm">#{$pr}#{$m}btn#{$c3}sm</a>
   <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__first}">default</a>
   <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}lg">#{$pr}#{$m}btn#{$c3}lg</a>
   <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}xl">#{$pr}#{$m}btn#{$c3}xl</a>
+  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}xxl">#{$pr}#{$m}btn#{$c3}xl</a>
 </p>
 ```
 */
@@ -37,6 +47,26 @@ parent: btn
 }
 
 .#{$pr}#{$m}btn#{$c3}xl {
+    padding-top: $btn-padding-y-lg;
+    padding-bottom: $btn-padding-y-lg;
+    font-size: $btn-font-size-lg;
+    border-radius: $border-radius-lg;
+    padding-left: $btn-padding-x-lg;
+    padding-right: $btn-padding-x-lg;
+
+    @include media-breakpoint-up(md) {
+        padding-top: $btn-padding-y-xl;
+        padding-bottom: $btn-padding-y-xl;
+        font-size: $btn-font-size-xl;
+        border-width: ($border-width * 2);
+        border-radius: $border-radius-xl;
+        padding-left: $btn-padding-x-xl;
+        padding-right: $btn-padding-x-xl;
+    }
+
+}
+
+.#{$pr}#{$m}btn#{$c3}xxl {
     padding-top: $btn-padding-y-xl;
     padding-bottom: $btn-padding-y-xl;
     font-size: $btn-font-size-xl;
@@ -44,5 +74,15 @@ parent: btn
     border-radius: $border-radius-xl;
     padding-left: $btn-padding-x-xl;
     padding-right: $btn-padding-x-xl;
+
+    @include media-breakpoint-up(md) {
+        padding-top: $btn-padding-y-xxl;
+        padding-bottom: $btn-padding-y-xxl;
+        font-size: $btn-font-size-xxl;
+        border-radius: $border-radius-xxl;
+        padding-left: $btn-padding-x-xxl;
+        padding-right: $btn-padding-x-xxl;
+    }
+
 }
 

@@ -8,8 +8,6 @@
 
 					<ul class="s-sitemap-list">
 
-					    <li class="s-sitemap-item"><a href="./typography.html">typography</a></li>
-
 					    <li class="s-sitemap-item"><span class="s-sitemap-label">layout</span>
 					        <ul class="s-sitemap-list s-sitemap-children">
 					            <li class="s-sitemap-item"><a href="./layout-container.html">container</a></li>
