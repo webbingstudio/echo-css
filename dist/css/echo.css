@@ -3098,7 +3098,6 @@ category: module-embed
   overflow: hidden;
   position: relative;
   display: block;
-  background-color: #000;
   width: 100%;
 }
 .m-embed:before {
@@ -4813,7 +4812,7 @@ category: module-thumbnail
   overflow: hidden;
   position: relative;
   display: inline-block;
-  background: #000;
+  background: #fff;
   border: 0 solid #bbb;
   vertical-align: bottom;
 }
@@ -4908,9 +4907,9 @@ parent: thumbnail
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 102%;
+  width: auto;
+  height: 100%;
   max-width: none;
-  height: auto;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -5088,8 +5087,8 @@ parent: thumbnail
 
 /*doc
 ---
-title: m-thumbnail-vertical
-name: thumbnail-04-vertical
+title: m-thumbnail-horizontal
+name: thumbnail-04-horizontal
 category: module-thumbnail
 parent: thumbnail
 ---
@@ -5100,13 +5099,13 @@ parent: thumbnail
 <div class="u-clearfix u-m-b">
 
 <div class="u-float-left u-margin-r-md" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-vertical m-thumbnail-square">
+    <div class="m-thumbnail m-thumbnail-horizontal m-thumbnail-square">
         <img src="https://placehold.jp/480x320.jpg" alt="">
     </div>
 </div>
 
 <div class="u-float-left u-margin-r-md" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-vertical m-thumbnail-round">
+    <div class="m-thumbnail m-thumbnail-horizontal m-thumbnail-round">
         <img src="https://placehold.jp/480x320.jpg" alt="">
     </div>
 </div>
@@ -5116,31 +5115,31 @@ parent: thumbnail
 <div class="u-clearfix u-m-b">
 
 <div class="u-float-left u-margin-r-md" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-vertical m-thumbnail-3to2">
+    <div class="m-thumbnail m-thumbnail-horizontal m-thumbnail-3to2">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
 
 <div class="u-float-left u-margin-r-md" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-vertical m-thumbnail-4to3">
+    <div class="m-thumbnail m-thumbnail-horizontal m-thumbnail-4to3">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
 
 <div class="u-float-left u-margin-r-md" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-vertical m-thumbnail-16to9">
+    <div class="m-thumbnail m-thumbnail-horizontal m-thumbnail-16to9">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
 
 <div class="u-float-left u-margin-r-md" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-vertical m-thumbnail-ogimage">
+    <div class="m-thumbnail m-thumbnail-horizontal m-thumbnail-ogimage">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
 
 <div class="u-float-left u-margin-r-md" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-vertical m-thumbnail-21to9">
+    <div class="m-thumbnail m-thumbnail-horizontal m-thumbnail-21to9">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
@@ -5148,10 +5147,10 @@ parent: thumbnail
 </div>
 ```
 */
-.m-thumbnail-vertical img {
-  width: auto;
+.m-thumbnail-horizontal img {
+  height: auto;
   max-width: none;
-  height: 102%;
+  width: 102%;
 }
 
 /*doc

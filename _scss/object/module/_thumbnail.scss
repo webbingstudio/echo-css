@@ -39,7 +39,7 @@ category: module-thumbnail
     overflow: hidden;
     position: relative;
     display: inline-block;
-    background: $body-inverse-bg;
+    background: $body-bg;
     border: $border-thumbnail-width solid $border-color;
     vertical-align: bottom;
 
@@ -140,11 +140,9 @@ parent: thumbnail
         top: 50%;
         left: 50%;
 
-        // 隙間ができてしまうことがあるので2%増やす
-        // Increase 2% because it may become a gap
-        width: 102%;
+        width: auto;
+        height: 100%;
         max-width: none;
-        height: auto;
 
         -webkit-transform:translate(-50%, -50%);
         -ms-transform:translate(-50%, -50%);
@@ -332,8 +330,8 @@ parent: thumbnail
 
 /*doc
 ---
-title: #{$pr}#{$m}thumbnail#{$c3}vertical
-name: thumbnail-04-vertical
+title: #{$pr}#{$m}thumbnail#{$c3}horizontal
+name: thumbnail-04-horizontal
 category: module-thumbnail
 parent: thumbnail
 ---
@@ -344,13 +342,13 @@ parent: thumbnail
 <div class="#{$pr}#{$u}clearfix #{$u}m-b">
 
 <div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}vertical #{$pr}#{$m}thumbnail#{$c3}square">
+    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}horizontal #{$pr}#{$m}thumbnail#{$c3}square">
         <img src="https://placehold.jp/480x320.jpg" alt="">
     </div>
 </div>
 
 <div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}vertical #{$pr}#{$m}thumbnail#{$c3}round">
+    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}horizontal #{$pr}#{$m}thumbnail#{$c3}round">
         <img src="https://placehold.jp/480x320.jpg" alt="">
     </div>
 </div>
@@ -360,31 +358,31 @@ parent: thumbnail
 <div class="#{$pr}#{$u}clearfix #{$u}m-b">
 
 <div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}vertical #{$pr}#{$m}thumbnail#{$c3}3to2">
+    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}horizontal #{$pr}#{$m}thumbnail#{$c3}3to2">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
 
 <div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}vertical #{$pr}#{$m}thumbnail#{$c3}4to3">
+    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}horizontal #{$pr}#{$m}thumbnail#{$c3}4to3">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
 
 <div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}vertical #{$pr}#{$m}thumbnail#{$c3}16to9">
+    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}horizontal #{$pr}#{$m}thumbnail#{$c3}16to9">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
 
 <div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}vertical #{$pr}#{$m}thumbnail#{$c3}ogimage">
+    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}horizontal #{$pr}#{$m}thumbnail#{$c3}ogimage">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
 
 <div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}vertical #{$pr}#{$m}thumbnail#{$c3}21to9">
+    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}horizontal #{$pr}#{$m}thumbnail#{$c3}21to9">
         <img src="https://placehold.jp/600x200.jpg" alt="">
     </div>
 </div>
@@ -393,15 +391,12 @@ parent: thumbnail
 ```
 */
 
-.#{$pr}#{$m}thumbnail#{$c3}vertical {
+.#{$pr}#{$m}thumbnail#{$c3}horizontal {
 
     img {
-
-        // 隙間ができてしまうことがあるので2%増やす
-        // Increase 2% because it may become a gap
-        width: auto;
+        height: auto;
         max-width: none;
-        height: 102%;
+        width: 102%;
     }
 
 }
