@@ -2,7 +2,6 @@ const gulp = require('gulp');
 
 const plumber = require('gulp-plumber');
 const sass = require('gulp-ruby-sass');
-const hologram = require('gulp-hologram');
 const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
 
@@ -38,13 +37,6 @@ gulp.task('sassmin', () =>
     .pipe(gulp.dest(dist_dir + 'css/'))
 );
 
-// hologram
-// sassの終了後に処理する
-gulp.task('hologram', ['sass'], function() {
-  gulp.src( './hologram_config.yml' )
-    .pipe(hologram());
-});
-
 // js
 // gulp.task('js', function() {
 //     gulp.src('_js/**/*.js')
@@ -67,7 +59,6 @@ gulp.task('watch', function(){
     ], function(event) {
     gulp.run('sass');
     gulp.run('sassmin');
-    gulp.run('hologram');
   });
 
 //  gulp.watch([
