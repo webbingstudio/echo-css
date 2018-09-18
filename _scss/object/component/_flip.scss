@@ -1,29 +1,7 @@
-/*doc
----
-title: #{$pr}#{$c}flip
-name: flip
-category: component-flip
----
-
-全面背景とボックスを持つ、フリップボードのようなコンポーネントを表示する。  
-<code>.#{$pr}#{$c}flip-contents-inner</code> が必須であることに注意する。  
-<code>.#{$pr}#{$c}flip-cover</code> の背景画像はインラインスタイル、もしくは追加CSSで定義する。  
-高さは(breakpoint) が <code>md</code> 以下で <code>50vh</code>、 <code>lg</code> 以上で <code>75vh</code> としているため、適当調整すること。
-
-``` example
-<div class="#{$pr}#{$c}flip">
-    <div class="#{$pr}#{$c}flip#{$c1}cover" style="background-image: url(/images/_dummy/image_03.jpg)"></div>
-    <div class="#{$pr}#{$c}flip#{$c1}container">
-        <div class="#{$pr}#{$c}flip#{$c1}contents">
-            <div class="#{$pr}#{$c}flip#{$c1}contents#{$c1}inner">
-                <h2 class="#{$pr}#{$p}title #{$pr}#{$p}title#{$c2}echo#{$c3}22">吾輩は猫である</h2>
-                <p class="#{$pr}#{$p}title #{$pr}#{$p}title#{$c2}echo#{$c3}23 #{$pr}#{$u}margin#{$c2}bottom#{$c3}sm">名前はまだ無い</p>
-                <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
-            </div><!-- /.#{$pr}#{$c}flip#{$c1}contents#{$c1}inner -->
-        </div><!-- /.#{$pr}#{$c}flip#{$c1}contents -->
-    </div><!-- /.#{$pr}#{$c}flip#{$c1}container -->
-</div><!-- /.#{$pr}#{$c}flip -->
-```
+/*
+--------------------
+#{$pr}#{$c}flip
+--------------------
 */
 
 .#{$pr}#{$c}flip {
@@ -100,30 +78,10 @@ category: component-flip
 }
 
 
-/*doc
----
-title: #{$pr}#{$c}flip#{$c3}reverse
-name: flip-01-reverse
-category: component-flip
-parent: flip
----
-
-(breakpoint)が <code>lg</code> 以上でのコンテンツの位置が逆となる。
-
-``` example
-<div class="#{$pr}#{$c}flip #{$pr}#{$c}flip#{$c3}reverse">
-    <div class="#{$pr}#{$c}flip#{$c1}cover" style="background-image: url(/images/_dummy/image_03.jpg)"></div>
-    <div class="#{$pr}#{$c}flip#{$c1}container">
-        <div class="#{$pr}#{$c}flip#{$c1}contents">
-            <div class="#{$pr}#{$c}flip#{$c1}contents#{$c1}inner">
-                <h2 class="#{$pr}#{$p}title #{$pr}#{$p}title#{$c2}echo#{$c3}22">吾輩は猫である</h2>
-                <p class="#{$pr}#{$p}title #{$pr}#{$p}title#{$c2}echo#{$c3}23 #{$pr}#{$u}margin#{$c2}bottom#{$c3}sm">名前はまだ無い</p>
-                <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
-            </div><!-- /.#{$pr}#{$c}flip#{$c1}contents#{$c1}inner -->
-        </div><!-- /.#{$pr}#{$c}flip#{$c1}contents -->
-    </div><!-- /.#{$pr}#{$c}flip#{$c1}container -->
-</div><!-- /.#{$pr}#{$c}flip -->
-```
+/*
+--------------------
+#{$pr}#{$c}flip#{$c3}reverse
+--------------------
 */
 
 .#{$pr}#{$c}flip#{$c3}reverse {
@@ -140,32 +98,10 @@ parent: flip
 }
 
 
-
-/*doc
----
-title: #{$pr}#{$c}flip#{$c3}inverse
-name: flip-02-inverse
-category: component-flip
-parent: flip
----
-
-コンテンツの色が反転する。  
-テキストリンク、ボタン等の色は反転前とは変わらないことに注意。
-
-``` example
-<div class="#{$pr}#{$c}flip #{$pr}#{$c}flip#{$c3}reverse #{$pr}#{$c}flip#{$c3}inverse">
-    <div class="#{$pr}#{$c}flip#{$c1}cover" style="background-image: url(/images/_dummy/image_07.jpg)"></div>
-    <div class="#{$pr}#{$c}flip#{$c1}container">
-        <div class="#{$pr}#{$c}flip#{$c1}contents">
-            <div class="#{$pr}#{$c}flip#{$c1}contents#{$c1}inner">
-                <h2 class="#{$pr}#{$p}title #{$pr}#{$p}title#{$c2}echo#{$c3}22">吾輩は猫である</h2>
-                <p class="#{$pr}#{$p}title #{$pr}#{$p}title#{$c2}echo#{$c3}23 #{$pr}#{$u}margin#{$c2}bottom#{$c3}sm">名前はまだ無い</p>
-                <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
-            </div><!-- /.#{$pr}#{$c}flip#{$c1}contents#{$c1}inner -->
-        </div><!-- /.#{$pr}#{$c}flip#{$c1}contents -->
-    </div><!-- /.#{$pr}#{$c}flip#{$c1}container -->
-</div><!-- /.#{$pr}#{$c}flip -->
-```
+/*
+--------------------
+#{$pr}#{$c}flip#{$c3}inverse
+--------------------
 */
 
 .#{$pr}#{$c}flip#{$c3}inverse {

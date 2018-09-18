@@ -1,33 +1,7 @@
-/*doc
----
-title: #{$pr}#{$c}alert
-name: alert
-category: component-alert
----
-
-システム側の注意文を表示する。アイコンを併用することを想定している。  
-<code>p</code> のみ、もしくは <code>div</code> と <code>p, ul</code> でマークアップすることができる。  
-連続して表示すると <code>.#{$pr}#{$c}alert</code> 間の余白が**通常よりも狭くなる。**  
-下以外の余白は <code>utility > .#{$pr}#{$u}margin</code> 等で指定する。
-
-``` example
-<div>
-<p class="#{$pr}#{$c}alert">#{$pr}#{$c}alert:これはシステムからの注意文です。</p>
-</div>
-
-<div>
-<p class="#{$pr}#{$c}alert"><span class="#{$pr}#{$c}alert#{$c1}header"><i class="fas fa-info-circle"></i><span class="#{$pr}#{$u}sr">お知らせ</span></span>#{$pr}#{$c}alert:これはシステムからの注意文です。</p>
-</div>
-
-<div>
-<div class="#{$pr}#{$c}alert"><p>#{$pr}#{$c}alert:これはシステムからの注意文です。</p><span class="#{$pr}#{$c}alert#{$c1}footer"><i class="fas fa-times-circle"></i><span class="#{$pr}#{$u}sr">閉じる</span></span></div>
-</div>
-
-<div>
-<p class="#{$pr}#{$c}alert"><span class="#{$pr}#{$c}alert#{$c1}header"><i class="fas fa-info-circle"></i><span class="#{$pr}#{$u}sr">お知らせ</span></span>#{$pr}#{$c}alert:これはシステムからの注意文です。<span class="#{$pr}#{$c}alert#{$c1}footer"><i class="fas fa-times-circle"></i><span class="#{$pr}#{$u}sr">閉じる</span></span></p>
-</div>
-```
-
+/*
+--------------------
+#{$pr}#{$c}alert
+--------------------
 */
 
 .#{$pr}#{$c}alert {
@@ -79,27 +53,10 @@ category: component-alert
 }
 
 
-
-/*doc
----
-title: #{$pr}#{$c}alert#{$c3}(color)
-name: alert-01-color
-category: component-alert
-parent: alert
----
-
-注意文の色を変更する。  
-(color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
-
-``` example
-<p class="#{$pr}#{$c}alert #{$pr}#{$c}alert#{$c3}#{$__first}">#{$pr}#{$c}alert:これはシステムからの注意文です。</p>
-<p class="#{$pr}#{$c}alert #{$pr}#{$c}alert#{$c3}#{$__second}">#{$pr}#{$c}alert:これはシステムからの注意文です。</p>
-<p class="#{$pr}#{$c}alert #{$pr}#{$c}alert#{$c3}#{$__third}">#{$pr}#{$c}alert:これはシステムからの注意文です。</p>
-<p class="#{$pr}#{$c}alert #{$pr}#{$c}alert#{$c3}#{$__fourth}">#{$pr}#{$c}alert:これはシステムからの注意文です。</p>
-<p class="#{$pr}#{$c}alert #{$pr}#{$c}alert#{$c3}#{$__info}">#{$pr}#{$c}alert:これはシステムからの注意文です。</p>
-<p class="#{$pr}#{$c}alert #{$pr}#{$c}alert#{$c3}#{$__important}">#{$pr}#{$c}alert:これはシステムからの注意文です。</p>
-```
-
+/*
+--------------------
+#{$pr}#{$c}alert#{$c3}(color)
+--------------------
 */
 
 .#{$pr}#{$c}alert#{$c3}#{$__first} {

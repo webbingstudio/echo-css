@@ -1,45 +1,9 @@
-/*doc
----
-title: #{$pr}#{$row}
-name: grid
-category: layout-grid
----
-
-flexboxによるグリッドのグループを作成する。 <code>ul ,ol</code> にも使用できる。  
-命名規則をbootstrapと同様にしたい場合は、 <code>/\_scss/_config\_advance.scss</code> の変数 <code>$row</code> を変更すること。
-
-### 補足：使用頻度が低いクラスの除外
-
-以下のクラスは、使用頻度が非常に低いため、このフレームワークでは除外されている。  
-<code>/\_scss/_config\_advance.scss</code> の変数 <code>$optimize</code> を <code>false</code> に変更すると、すべてのクラスに対応する。
-
-- .#{$pr}#{$col}-(breakpoint)-1
-- .#{$pr}#{$col}-(breakpoint)-#{$grid-columns-max}
-- .#{$pr}#{$col}-offset-(breakpoint)-#{$grid-columns-max}
-
-### note: Exclusion of less frequently used classes
-
-The following classes are excluded in this framework because they are used very infrequently.  
-Variable in <code>/\_scss/_config\_advance.scss</code> Changing <code>$optimize</code> to <code>false</code> corresponds to all classes.
-
-- .#{$pr}#{$col}-(breakpoint)-1
-- .#{$pr}#{$col}-(breakpoint)-#{$grid-columns-max}
-- .#{$pr}#{$col}-offset-(breakpoint)-#{$grid-columns-max}
-
-``` example
-<div class="#{$pr}#{$row}">
-    <div class="#{$pr}#{$col}">
-        <div style="padding: 1rem; background-color: #ddf6bb; height: 100%;">#{$pr}#{$col}<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="#{$pr}#{$col}">
-        <div style="padding: 1rem; background-color: #ddf6bb; height: 100%;">#{$pr}#{$col}<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。</div>
-    </div>
-    <div class="#{$pr}#{$col}">
-        <div style="padding: 1rem; background-color: #ddf6bb; height: 100%;">#{$pr}#{$col}<br>ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。</div>
-    </div>
-</div>
-```
+/*
+--------------------
+#{$pr}#{$row}
+--------------------
 */
+
 .#{$pr}#{$row} {
     display: flex;
     flex-wrap: wrap;
@@ -51,56 +15,10 @@ Variable in <code>/\_scss/_config\_advance.scss</code> Changing <code>$optimize<
 }
 
 
-/*doc
----
-title: #{$pr}#{$row}#{$c3}(size)
-name: grid-01-row-size
-category: layout-grid
-parent: grid
----
-
-flexboxによるグリッドで余白が異なるグループを作成する。  
-(size)は<code>0, sm, lg</code> に対応している。  
-Bootstrap4の <code>.no-gutters</code> を <code>.#{$pr}#{$row}#{$c3}0</code> のエイリアスとしている。  
-命名規則をbootstrapと同様にしたい場合は、 <code>/\_scss/_\config\_advance.scss</code> の変数 <code>$row</code> を変更すること。
-
-``` example
-<div class="#{$pr}#{$row} #{$pr}#{$row}#{$c3}0" style="margin-bottom: 2rem;">
-    <div class="#{$pr}#{$col}">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">#{$pr}#{$row}#{$c3}0<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="#{$pr}#{$col}">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%; opacity: 0.8;">#{$pr}#{$row}#{$c3}0<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="#{$pr}#{$col}">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">#{$pr}#{$row}#{$c3}0<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-</div>
-
-<div class="#{$pr}#{$row} #{$pr}#{$row}#{$c3}sm" style="margin-bottom: 2rem;">
-    <div class="#{$pr}#{$col}">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">#{$pr}#{$row}#{$c3}sm<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="#{$pr}#{$col}">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%; opacity: 0.8;">#{$pr}#{$row}#{$c3}sm<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="#{$pr}#{$col}">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">#{$pr}#{$row}#{$c3}sm<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-</div>
-
-<div class="#{$pr}#{$row} #{$pr}#{$row}#{$c3}lg">
-    <div class="#{$pr}#{$col}">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">#{$pr}#{$row}#{$c3}lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="#{$pr}#{$col}">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%; opacity: 0.8;">#{$pr}#{$row}#{$c3}lg<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="#{$pr}#{$col}">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">#{$pr}#{$row}#{$c3}lg<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-</div>
-```
+/*
+--------------------
+#{$pr}#{$row}#{$c3}(size)
+--------------------
 */
 
 .#{$pr}#{$row}#{$c3}0,
@@ -138,215 +56,14 @@ Bootstrap4の <code>.no-gutters</code> を <code>.#{$pr}#{$row}#{$c3}0</code> �
 }
 
 
-/*doc
----
-title: #{$pr}#{$col}
-name: grid-02-col
-category: layout-grid
----
-
-flexboxによるグリッドのセルを作成する。  
-このクラス単独では均等幅となり、(breakpoint)が <code>sm</code> 以下でグリッドが解除される。  
-
-``` example
-<div class="#{$pr}#{$row}" style="margin-bottom: 2rem;">
-    <div class="#{$pr}#{$col}">
-        <div style="padding: 1rem; background-color: #ddbbf6; height: 100%;">#{$pr}#{$col}<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-</div>
-
-<div class="#{$pr}#{$row}" style="margin-bottom: 2rem;">
-    <div class="#{$pr}#{$col}">
-        <div style="padding: 1rem; background-color: #ddbbf6; height: 100%;">#{$pr}#{$col}<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="#{$pr}#{$col}">
-        <div style="padding: 1rem; background-color: #ddbbf6; height: 100%;">#{$pr}#{$col}<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-</div>
-
-<div class="#{$pr}#{$row}">
-    <div class="#{$pr}#{$col}">
-        <div style="padding: 1rem; background-color: #ddbbf6; height: 100%;">#{$pr}#{$col}<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="#{$pr}#{$col}">
-        <div style="padding: 1rem; background-color: #ddbbf6; height: 100%;">#{$pr}#{$col}<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="#{$pr}#{$col}">
-        <div style="padding: 1rem; background-color: #ddbbf6; height: 100%;">#{$pr}#{$col}<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-</div>
-```
-
+/*
+--------------------
+#{$pr}#{$col}
+#{$pr}#{$col}#{$c2}(breakpoint)#{$c3}(column)
+#{$pr}#{$col}#{$c2}order#{$c2}(breakpoint)#{$c2}(first or last or number)
+#{$pr}#{$col}#{$c2}offset#{$c2}(breakpoint)#{$c3}(column)
+--------------------
 */
 
 @include make-grid-columns-flex();
 
-
-/*doc
----
-title: #{$pr}#{$col}#{$c2}(breakpoint)#{$c3}(column)
-name: grid-03-col-column
-category: layout-grid
----
-
-flexboxによるグリッドのセルの幅を、<code>(column) / #{$grid-columns}</code>の割合にする。  
-**シングルクラス**となっている（#{$pr}#{$col}を常に付与する必要はない）。  
-(breakpoint)の指定がない場合は、常にその幅となる。  
-(breakpoint)の指定がある場合は、(breakpoint)**以上**のときに、指定した幅となる。
-
-``` example
-<h3 class="#{$pr}#{$u}text#{$c3}lg">(column)のみ指定している場合</h3>
-<div class="#{$pr}#{$row}" style="margin-bottom: 2rem;">
-    <div class="#{$pr}#{$col}#{$c3}3">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">#{$pr}#{$col}#{$c3}3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="#{$pr}#{$col}#{$c3}3">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">#{$pr}#{$col}#{$c3}3<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="#{$pr}#{$col}#{$c3}3">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">#{$pr}#{$col}#{$c3}3<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-</div>
-
-<h3 class="#{$pr}#{$u}text#{$c3}lg #{$pr}#{$u}margin#{$c2}top#{$c3}lg">(column)と(breakpoint)の両方を指定している場合</h3>
-<p>(column)が <code>#{$grid-columns}</code> の場合は、指定した(breakpoint)以上で幅100%となる。</p>
-<div class="#{$pr}#{$row}" style="margin-bottom: 2rem;">
-    <div class="#{$pr}#{$col}#{$c2}lg#{$c3}2 #{$pr}#{$col}#{$c2}xl#{$c3}12">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">#{$pr}#{$col}#{$c2}lg#{$c3}2 #{$pr}#{$col}#{$c2}xl#{$c3}12<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="#{$pr}#{$col}#{$c2}lg#{$c3}6 #{$pr}#{$col}#{$c2}xl#{$c3}12">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">#{$pr}#{$col}#{$c2}lg#{$c3}6 #{$pr}#{$col}#{$c2}xl#{$c3}12<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="#{$pr}#{$col}#{$c2}lg#{$c3}4 #{$pr}#{$col}#{$c2}xl#{$c3}12">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">#{$pr}#{$col}#{$c3}12 #{$pr}#{$col}#{$c2}lg#{$c3}4<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-</div>
-
-<h3 class="#{$pr}#{$u}text#{$c3}lg #{$pr}#{$u}margin#{$c2}top#{$c3}lg">(column)の指定があるセルと、ないセルが同列に混在している場合</h3>
-<p>(column)の指定がないセルは、常に空間を埋めるように伸縮しようとする。</p>
-<div class="#{$pr}#{$row}" style="margin-bottom: 2rem;">
-    <div class="#{$pr}#{$col}#{$c2}sm#{$c3}4">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">#{$pr}#{$col}#{$c2}sm#{$c3}4<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="#{$pr}#{$col}">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">#{$pr}#{$col}<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-</div>
-
-<h3 class="#{$pr}#{$u}text#{$c3}lg #{$pr}#{$u}margin#{$c2}top#{$c3}lg">複雑な指定の例</h3>
-<p>ウィンドウ幅が狭くなるに従って、段組が変化する。セルが複数行になる場合は、#{$pr}#{$col}にはmarginではなくpaddingを付与する。</p>
-<div class="#{$pr}#{$row}">
-    <div class="#{$pr}#{$col}#{$c3}6 #{$pr}#{$col}#{$c2}sm#{$c3}4 #{$pr}#{$col}#{$c2}lg#{$c3}3 #{$pr}#{$col}#{$c2}xxl#{$c3}2" style="padding-bottom: 1rem;">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">#{$pr}#{$col}#{$c3}6 #{$pr}#{$col}#{$c2}sm#{$c3}4 #{$pr}#{$col}#{$c2}lg#{$c3}3 #{$pr}#{$col}#{$c2}xxl#{$c3}2<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="#{$pr}#{$col}#{$c3}6 #{$pr}#{$col}#{$c2}sm#{$c3}4 #{$pr}#{$col}#{$c2}lg#{$c3}3 #{$pr}#{$col}#{$c2}xxl#{$c3}2" style="padding-bottom: 1rem;">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">#{$pr}#{$col}#{$c3}6 #{$pr}#{$col}#{$c2}sm#{$c3}4 #{$pr}#{$col}#{$c2}lg#{$c3}3 #{$pr}#{$col}#{$c2}xxl#{$c3}2<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="#{$pr}#{$col}#{$c3}6 #{$pr}#{$col}#{$c2}sm#{$c3}4 #{$pr}#{$col}#{$c2}lg#{$c3}3 #{$pr}#{$col}#{$c2}xxl#{$c3}2" style="padding-bottom: 1rem;">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">#{$pr}#{$col}#{$c3}6 #{$pr}#{$col}#{$c2}sm#{$c3}4 #{$pr}#{$col}#{$c2}lg#{$c3}3 #{$pr}#{$col}#{$c2}xxl#{$c3}2<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-    <div class="#{$pr}#{$col}#{$c3}6 #{$pr}#{$col}#{$c2}sm#{$c3}4 #{$pr}#{$col}#{$c2}lg#{$c3}3 #{$pr}#{$col}#{$c2}xxl#{$c3}2" style="padding-bottom: 1rem;">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">#{$pr}#{$col}#{$c3}6 #{$pr}#{$col}#{$c2}sm#{$c3}4 #{$pr}#{$col}#{$c2}lg#{$c3}3 #{$pr}#{$col}#{$c2}xxl#{$c3}2<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
-    </div>
-    <div class="#{$pr}#{$col}#{$c3}6 #{$pr}#{$col}#{$c2}sm#{$c3}4 #{$pr}#{$col}#{$c2}lg#{$c3}3 #{$pr}#{$col}#{$c2}xxl#{$c3}2" style="padding-bottom: 1rem;">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">#{$pr}#{$col}#{$c3}6 #{$pr}#{$col}#{$c2}sm#{$c3}4 #{$pr}#{$col}#{$c2}lg#{$c3}3 #{$pr}#{$col}#{$c2}xxl#{$c3}2<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-    <div class="#{$pr}#{$col}#{$c3}6 #{$pr}#{$col}#{$c2}sm#{$c3}4 #{$pr}#{$col}#{$c2}lg#{$c3}3 #{$pr}#{$col}#{$c2}xxl#{$c3}2" style="padding-bottom: 1rem;">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">#{$pr}#{$col}#{$c3}6 #{$pr}#{$col}#{$c2}sm#{$c3}4 #{$pr}#{$col}#{$c2}lg#{$c3}3 #{$pr}#{$col}#{$c2}xxl#{$c3}2<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
-    </div>
-</div>
-```
-*/
-
-
-/*doc
----
-title: #{$pr}#{$col}#{$c2}order#{$c2}(breakpoint)#{$c2}(first or last or number)
-name: grid-04-order
-category: layout-grid
-parent: grid-02-col
----
-
-flexboxによるグリッドのセルを、指定した順番にする。  
-(breakpoint)の指定がない場合は、常にその順番となる。  
-(breakpoint)の指定がある場合は、(breakpoint)**以上**のときに、指定した順番となる。
-
-``` example
-<div class="#{$pr}#{$row}" style="margin-bottom: 2rem;">
-    <div class="#{$pr}#{$col}#{$c2}order#{$c2}last #{$pr}#{$col}#{$c3}3">
-        <div style="padding: 1rem; background-color: #f8ccdd; height: 100%;">1:<br>#{$pr}#{$col}#{$c2}order#{$c2}last<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="#{$pr}#{$col}#{$c3}3">
-        <div style="padding: 1rem; background-color: #f8ccdd; height: 100%;">2:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="#{$pr}#{$col}#{$c2}order#{$c2}first #{$pr}#{$col}#{$c3}3">
-        <div style="padding: 1rem; background-color: #f8ccdd; height: 100%;">3:<br>#{$pr}#{$col}#{$c2}order#{$c2}first<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="#{$pr}#{$col}#{$c3}3">
-        <div style="padding: 1rem; background-color: #f8ccdd; height: 100%;">4:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-</div>
-
-<div class="#{$pr}#{$row}" style="margin-bottom: 2rem;">
-    <div class="#{$pr}#{$col}#{$c2}order#{$c2}3 #{$pr}#{$col}#{$c3}3">
-        <div style="padding: 1rem; background-color: #bbd3ff; height: 100%;">1:<br>#{$pr}#{$col}#{$c2}order#{$c2}3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="#{$pr}#{$col}#{$c2}order#{$c2}1 #{$pr}#{$col}#{$c3}3">
-        <div style="padding: 1rem; background-color: #bbd3ff; height: 100%;">2:<br>#{$pr}#{$col}#{$c2}order#{$c2}1<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="#{$pr}#{$col}#{$c2}order#{$c3}4 #{$pr}#{$col}#{$c3}3">
-        <div style="padding: 1rem; background-color: #bbd3ff; height: 100%;">3:<br>#{$pr}#{$col}#{$c2}order#{$c3}4<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="#{$pr}#{$col}#{$c2}order#{$c3}2 #{$pr}#{$col}#{$c3}3">
-        <div style="padding: 1rem; background-color: #bbd3ff; height: 100%;">4:<br>#{$pr}#{$col}#{$c2}order#{$c3}2<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-</div>
-
-<div class="#{$pr}#{$row}">
-    <div class="#{$pr}#{$col}#{$c2}order#{$c2}sm#{$c3}last #{$pr}#{$col}#{$c3}3">
-        <div style="padding: 1rem; background-color: #e6d6aa; height: 100%;">1:<br>#{$pr}#{$col}#{$c2}order#{$c2}sm#{$c3}last<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="#{$pr}#{$col}#{$c3}3">
-        <div style="padding: 1rem; background-color: #e6d6aa; height: 100%;">2:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="#{$pr}#{$col}#{$c2}order#{$c2}xl#{$c3}first #{$pr}#{$col}#{$c3}3">
-        <div style="padding: 1rem; background-color: #e6d6aa; height: 100%;">3:<br>#{$pr}#{$col}#{$c2}order#{$c2}xl#{$c3}first<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="#{$pr}#{$col}#{$c3}3">
-        <div style="padding: 1rem; background-color: #e6d6aa; height: 100%;">4:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-</div>
-```
-*/
-
-/*doc
----
-title: #{$pr}#{$col}#{$c2}offset#{$c2}(breakpoint)#{$c3}(column)
-name: grid-05-offset
-category: layout-grid
-parent: grid-02-col
----
-
-flexboxによるグリッドのセルの開始位置を、<code>(column) / #{$grid-columns}</code>の割合だけ右にずらす。  
-<code>#{$pr}#{$col}#{$c3}(column)</code> と、<code>#{$pr}#{$col}#{$c2}offset#{$c3}(column)</code> の合計値が<code>#{$grid-columns}</code>を超えた場合は、offsetの値が優先される。  
-(breakpoint)の指定がない場合は、常にその位置となる。  
-(breakpoint)の指定がある場合は、(breakpoint)**以上**のときに、指定した位置となる。
-
-``` example
-<div class="#{$pr}#{$row}" style="margin-bottom: 2rem;">
-    <div class="#{$pr}#{$col}#{$c2}offset#{$c3}1 #{$pr}#{$col}#{$c3}10">
-        <div style="padding: 1rem; background-color: #aaeccc; height: 100%;">#{$pr}#{$col}#{$c2}offset#{$c3}3<br>#{$pr}#{$col}#{$c3}10<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-</div>
-
-<div class="#{$pr}#{$row}" style="margin-bottom: 2rem;">
-    <div class="#{$pr}#{$col}#{$c2}offset#{$c2}lg#{$c3}8 #{$pr}#{$col}#{$c3}6">
-        <div style="padding: 1rem; background-color: #aaeccc; height: 100%;">#{$pr}#{$col}#{$c2}offset#{$c2}lg#{$c3}8<br>#{$pr}#{$col}#{$c3}6<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="#{$pr}#{$col}#{$c2}offset#{$c2}lg#{$c3}4 #{$pr}#{$col}#{$c2}offset#{$c2}md#{$c3}8 #{$pr}#{$col}#{$c3}3">
-        <div style="padding: 1rem; background-color: #aaeccc; height: 100%;">#{$pr}#{$col}#{$c2}offset#{$c2}lg#{$c3}4<br>#{$pr}#{$col}#{$c2}offset#{$c2}md#{$c3}8<br>#{$pr}#{$col}#{$c3}3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-</div>
-
-```
-*/

@@ -1,61 +1,7 @@
-/*doc
----
-title: #{$pr}#{$c}headline
-name: headline
-category: component-headline
----
-
-新着情報のエントリー繰り返し部分などに使用する、ヘッダとタイトルを併記したコンポーネントを表示する。  
-<code>article</code> と <code>div</code> 、もしくは <code>dl</code> と <code>dt, dd</code> でマークアップすることができる。  
-(breakpoint)が <code>sm</code> 以上でインライン表示となる。
-
-``` example
-
-<h3>article要素の場合</h3>
-
-<article class="#{$pr}#{$c}headline">
-    <time class="#{$pr}#{$c}headline#{$c1}date" datetime="2017-08-01T09:00:00+09:00">2017年08月01日</time>
-    <p class="#{$pr}#{$c}headline#{$c1}category">
-        <a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}#{$__first}">カテゴリー</a>
-    </p>
-    <p class="#{$pr}#{$c}headline#{$c1}title"><a href="#">吾輩は猫である。名前はまだ無い。</a></p>
-</article>
-
-<article class="#{$pr}#{$c}headline">
-    <time class="#{$pr}#{$c}headline#{$c1}date" datetime="2017-08-01T09:00:00+09:00">2017年08月01日</time>
-    <p class="#{$pr}#{$c}headline#{$c1}category">
-        <a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}#{$__second}">カテゴリー</a>
-    </p>
-    <p class="#{$pr}#{$c}headline#{$c1}title"><a href="#">どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</a></p>
-</article>
-
-<article class="#{$pr}#{$c}headline">
-    <time class="#{$pr}#{$c}headline#{$c1}date" datetime="2017-08-01T09:00:00+09:00">2017年08月01日</time>
-    <p class="#{$pr}#{$c}headline#{$c1}category">
-        <a href="#" class="#{$pr}#{$m}label #{$pr}#{$m}label#{$c3}#{$__third}">カテゴリー</a>
-    </p>
-    <p class="#{$pr}#{$c}headline#{$c1}title"><a href="#">掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。</a></p>
-</article>
-
-<h3>dl要素の場合</h3>
-
-<dl class="#{$pr}#{$c}headline">
-    <dt class="#{$pr}#{$c}headline#{$c1}date">2017年08月01日</dt>
-    <p class="#{$pr}#{$c}headline#{$c1}title"><a href="#">吾輩は猫である。名前はまだ無い。</a></p>
-</dl>
-
-<dl class="#{$pr}#{$c}headline">
-    <dt class="#{$pr}#{$c}headline#{$c1}date">2017年08月01日</dt>
-    <p class="#{$pr}#{$c}headline#{$c1}title"><a href="#">どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</a></p>
-</dl>
-
-<dl class="#{$pr}#{$c}headline">
-    <dt class="#{$pr}#{$c}headline#{$c1}date">2017年08月01日</dt>
-    <p class="#{$pr}#{$c}headline#{$c1}title"><a href="#">掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。</a></p>
-</dl>
-
-
-```
+/*
+--------------------
+#{$pr}#{$c}headline
+--------------------
 */
 
 .#{$pr}#{$c}headline {

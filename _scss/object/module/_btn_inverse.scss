@@ -1,25 +1,7 @@
-/*doc
----
-title: #{$pr}#{$m}btn#{$c3}#{$__inverse}
-name: btn-03-inverse
-category: module-btn
-parent: btn
----
-
-ボタンの文字色と背景色を反転する。  
-<code>.#{$pr}#{$m}btn#{$c3}bordered</code> と同時に使用すると、罫線のみの状態で反転する。
-
-``` example
-<p style="background-color: #000; padding: 1rem 0;">
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__inverse}">#{$pr}#{$m}btn#{$c3}#{$__inverse}</a>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__inverse}" disabled>#{$pr}#{$m}btn#{$c3}#{$__inverse}</a>
-</p>
-<p style="background-color: #000; padding: 1rem 0;">
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__inverse}">#{$pr}#{$m}btn#{$c3}bordered + #{$pr}#{$m}btn#{$c3}#{$__inverse}</a>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__inverse}" disabled>#{$pr}#{$m}btn#{$c3}bordered + #{$pr}#{$m}btn#{$c3}#{$__inverse}</a>
-</p>
-```
-
+/*
+--------------------
+#{$pr}#{$m}btn#{$c3}#{$__inverse}
+--------------------
 */
 
 .#{$pr}#{$m}btn#{$c3}#{$__inverse} {
@@ -41,5 +23,7 @@ parent: btn
             rgba($body-inverse-color, .2),
             $body-inverse-color
         );
+
     }
+
 }

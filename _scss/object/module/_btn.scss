@@ -1,35 +1,7 @@
-/*doc
----
-title: #{$pr}#{$m}btn
-name: btn
-category: module-btn
----
-
-リンク、インライン要素、フォームのボタン要素をボタン状に表示する。  
-<code>disabled</code> 属性が付与されていると、反応しない見た目となる（クリックはできるので注意）。
-
-``` example
-<p>
-  <a href="#" class="#{$pr}#{$m}btn">#{$pr}#{$m}btn</a>
-  <a href="#" class="#{$pr}#{$m}btn" disabled>#{$pr}#{$m}btn</a>
-</p>
-
-<p>
-  <span class="#{$pr}#{$m}btn">#{$pr}#{$m}btn</span>
-  <span class="#{$pr}#{$m}btn" disabled>#{$pr}#{$m}btn</span>
-</p>
-
-<p>
-  <input type="button" class="#{$pr}#{$m}btn" value="#{$pr}#{$m}btn" />
-  <input type="button" class="#{$pr}#{$m}btn" value="#{$pr}#{$m}btn" disabled />
-</p>
-
-<p>
-  <button class="#{$pr}#{$m}btn">#{$pr}#{$m}btn</button>
-  <button class="#{$pr}#{$m}btn" disabled>#{$pr}#{$m}btn</button>
-</p>
-```
-
+/*
+--------------------
+#{$pr}#{$m}btn
+--------------------
 */
 
 .#{$pr}#{$m}btn {
@@ -50,6 +22,7 @@ category: module-btn
     cursor: pointer;
 
     @at-root {
+
         a#{&} {
             text-decoration: none;
 

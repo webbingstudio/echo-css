@@ -1,50 +1,7 @@
-/*doc
----
-title: #{$pr}#{$m}btn#{$c3}(color)
-name: btn-01-color
-category: module-btn
-parent: btn
----
-
-ボタンの色を変更する。(color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
-
-``` example
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__gray}">#{$pr}#{$m}btn#{$c3}#{$__gray}</a>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__gray} disabled">#{$pr}#{$m}btn#{$c3}#{$__gray}</a>
-</p>
-
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__first}">#{$pr}#{$m}btn#{$c3}#{$__first}</a>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__first} disabled">#{$pr}#{$m}btn#{$c3}#{$__first}</a>
-</p>
-
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__second}">#{$pr}#{$m}btn#{$c3}#{$__second}</a>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__second} disabled">#{$pr}#{$m}btn#{$c3}#{$__second}</a>
-</p>
-
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__third}">#{$pr}#{$m}btn#{$c3}#{$__third}</a>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__third} disabled">#{$pr}#{$m}btn#{$c3}#{$__third}</a>
-</p>
-
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__fourth}">#{$pr}#{$m}btn#{$c3}#{$__fourth}</a>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__fourth} disabled">#{$pr}#{$m}btn#{$c3}#{$__fourth}</a>
-</p>
-
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__info}">#{$pr}#{$m}btn#{$c3}#{$__info}</a>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__info} disabled">#{$pr}#{$m}btn#{$c3}#{$__info}</a>
-</p>
-
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__important}">#{$pr}#{$m}btn#{$c3}#{$__important}</a>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__important} disabled">#{$pr}#{$m}btn#{$c3}#{$__important}</a>
-</p>
-```
-
+/*
+--------------------
+#{$pr}#{$m}btn#{$c3}(color)
+--------------------
 */
 
 .#{$pr}#{$m}btn#{$c3}#{$__gray} {

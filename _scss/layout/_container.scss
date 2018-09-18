@@ -1,19 +1,7 @@
-/*doc
----
-title: #{$pr}#{$l}container
-name: container
-category: layout-container
----
-
-デバイスに応じて適切に本文幅を調整するコンテナブロック。  
-<code>/\_scss/\_config_advance.scss</code> の「<code>$container-max-widths-md</code>」の定義を参照する。
-
-``` example
-<div class="#{$pr}#{$l}container" style="background-color: #5ad;">
-    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5);">(contents)</div>
-</div>
-```
-
+/*
+--------------------
+#{$pr}#{$l}container
+--------------------
 */
 
 .#{$pr}#{$l}container {
@@ -32,6 +20,7 @@ category: layout-container
 
 /*
 .#{$pr}#{$l}containerが二重になった場合の対策
+--------------------
 */
 @include media-breakpoint-up(sm) {
 
@@ -46,22 +35,11 @@ category: layout-container
 
 }
 
-/*doc
----
-title: #{$pr}#{$l}container#{$c3}fluid
-name: container-01-fluid
-category: layout-container
-parent: container
----
 
-コンテナブロックの最大幅の制限を行わない。
-
-``` example
-<div class="#{$pr}#{$l}container #{$pr}#{$l}container#{$c3}fluid" style="background-color: #5ad;">
-    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5);">(contents)</div>
-</div>
-```
-
+/*
+--------------------
+#{$pr}#{$l}container#{$c3}fluid
+--------------------
 */
 
 .#{$pr}#{$l}container#{$c3}fluid {
@@ -73,23 +51,10 @@ parent: container
 }
 
 
-/*doc
----
-title: #{$pr}#{$l}container#{$c3}sm
-name: container-02-sm
-category: layout-container
-parent: container
----
-
-コンテナブロックの最大幅が通常よりも狭くなる。  
-<code>/\_scss/\_config_advance.scss</code> の「<code>$container-max-widths-sm</code>」の定義を参照する。
-
-``` example
-<div class="#{$pr}#{$l}container #{$pr}#{$l}container#{$c3}sm" style="background-color: #5ad;">
-    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5);">(contents)</div>
-</div>
-```
-
+/*
+--------------------
+#{$pr}#{$l}container#{$c3}sm
+--------------------
 */
 
 .#{$pr}#{$l}container#{$c3}sm {
@@ -105,23 +70,10 @@ parent: container
 }
 
 
-/*doc
----
-title: #{$pr}#{$l}container#{$c3}lg
-name: container-03-lg
-category: layout-container
-parent: container
----
-
-コンテナブロックの最大幅が通常よりも広くなる。  
-<code>/\_scss/\_config_advance.scss</code> の「<code>$container-max-widths-lg</code>」の定義を参照する。
-
-``` example
-<div class="#{$pr}#{$l}container #{$pr}#{$l}container#{$c3}lg" style="background-color: #5ad;">
-    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5);">(contents)</div>
-</div>
-```
-
+/*
+--------------------
+#{$pr}#{$l}container#{$c3}lg
+--------------------
 */
 
 .#{$pr}#{$l}container#{$c3}lg {

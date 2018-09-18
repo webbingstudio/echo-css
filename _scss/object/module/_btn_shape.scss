@@ -1,54 +1,7 @@
-/*doc
----
-title: #{$pr}#{$m}btn#{$c3}block
-name: btn-05-block
-category: module-btn
-parent: btn
----
-
-ボタンを中央に寄せたブロック要素として表示する。幅は100%ではなく、一般的に考えられる幅を最大値とする。
-
-### 補足：ボタンの余白
-
-<code>.#{$pr}#{$m}btn#{$c3}block, .#{$pr}#{$m}btn#{$c3}round, .#{$pr}#{$m}btn#{$c3}square</code> では、<code>.#{$pr}#{$m}btn</code> のpaddingの初期値を上書きする必要があるため、意図的にクラスを追加して優先度を上げている。
-
-### note: Padding in button
-
-In <code>.#{$pr}#{$m}btn#{$c3}block, .#{$pr}#{$m}btn#{$c3}round, .#{$pr}#{$m}btn#{$c3}square</code>, need to override the default padding of <code>.#{$pr}#{$m}btn</code>. For this reason, intentionally add classes to increase priority.
-
-``` example
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}sm #{$pr}#{$m}btn#{$c3}block">#{$pr}#{$m}btn#{$c3}block</a>
-</p>
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}block">#{$pr}#{$m}btn#{$c3}block</a>
-</p>
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}lg #{$pr}#{$m}btn#{$c3}block">#{$pr}#{$m}btn#{$c3}block</a>
-</p>
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}xl #{$pr}#{$m}btn#{$c3}block">#{$pr}#{$m}btn#{$c3}block</a>
-</p>
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}xxl #{$pr}#{$m}btn#{$c3}block">#{$pr}#{$m}btn#{$c3}block</a>
-</p>
-
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}sm #{$pr}#{$m}btn#{$c3}block">#{$pr}#{$m}btn#{$c3}block</a>
-</p>
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}block">#{$pr}#{$m}btn#{$c3}block</a>
-</p>
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}lg #{$pr}#{$m}btn#{$c3}block">#{$pr}#{$m}btn#{$c3}block</a>
-</p>
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}xl #{$pr}#{$m}btn#{$c3}block">#{$pr}#{$m}btn#{$c3}block</a>
-</p>
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}xxl #{$pr}#{$m}btn#{$c3}block">#{$pr}#{$m}btn#{$c3}block</a>
-</p>
-```
+/*
+--------------------
+#{$pr}#{$m}btn#{$c3}block
+--------------------
 */
 
 .#{$pr}#{$m}btn#{$c3}block {
@@ -85,121 +38,28 @@ In <code>.#{$pr}#{$m}btn#{$c3}block, .#{$pr}#{$m}btn#{$c3}round, .#{$pr}#{$m}btn
 }
 
 
-/*doc
----
-title: #{$pr}#{$m}btn#{$c3}oval
-name: btn-06-oval
-category: module-btn
-parent: btn
----
+/*
+--------------------
+#{$pr}#{$m}btn#{$c3}oval
+--------------------
+*/
 
-ボタンを小判型にする。
-
-``` example
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}#{$__gray}">#{$pr}#{$m}btn#{$c3}#{$__gray}</a>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}#{$__gray} disabled">#{$pr}#{$m}btn#{$c3}#{$__gray}</a>
-</p>
-
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}#{$__first}">#{$pr}#{$m}btn#{$c3}#{$__first}</a>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}#{$__first} disabled">#{$pr}#{$m}btn#{$c3}#{$__first}</a>
-</p>
-
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}#{$__second}">#{$pr}#{$m}btn#{$c3}#{$__second}</a>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}#{$__second} disabled">#{$pr}#{$m}btn#{$c3}#{$__second}</a>
-</p>
-
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}#{$__third}">#{$pr}#{$m}btn#{$c3}#{$__third}</a>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}#{$__third} disabled">#{$pr}#{$m}btn#{$c3}#{$__third}</a>
-</p>
-
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}#{$__fourth}">#{$pr}#{$m}btn#{$c3}#{$__fourth}</a>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}#{$__fourth} disabled">#{$pr}#{$m}btn#{$c3}#{$__fourth}</a>
-</p>
-
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}#{$__info}">#{$pr}#{$m}btn#{$c3}#{$__info}</a>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}#{$__info} disabled">#{$pr}#{$m}btn#{$c3}#{$__info}</a>
-</p>
-
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}#{$__important}">#{$pr}#{$m}btn#{$c3}#{$__important}</a>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}#{$__important} disabled">#{$pr}#{$m}btn#{$c3}#{$__important}</a>
-</p>
-
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__gray}">#{$pr}#{$m}btn#{$c3}#{$__gray}</a>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__gray} disabled">#{$pr}#{$m}btn#{$c3}#{$__gray}</a>
-</p>
-
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__first}">#{$pr}#{$m}btn#{$c3}#{$__first}</a>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__first} disabled">#{$pr}#{$m}btn#{$c3}#{$__first}</a>
-</p>
-
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__second}">#{$pr}#{$m}btn#{$c3}#{$__second}</a>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__second} disabled">#{$pr}#{$m}btn#{$c3}#{$__second}</a>
-</p>
-
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__third}">#{$pr}#{$m}btn#{$c3}#{$__third}</a>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__third} disabled">#{$pr}#{$m}btn#{$c3}#{$__third}</a>
-</p>
-
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__fourth}">#{$pr}#{$m}btn#{$c3}#{$__fourth}</a>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__fourth} disabled">#{$pr}#{$m}btn#{$c3}#{$__fourth}</a>
-</p>
-
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__info}">#{$pr}#{$m}btn#{$c3}#{$__info}</a>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__info} disabled">#{$pr}#{$m}btn#{$c3}#{$__info}</a>
-</p>
-
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__important}">#{$pr}#{$m}btn#{$c3}#{$__important}</a>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}oval #{$pr}#{$m}btn#{$c3}bordered #{$pr}#{$m}btn#{$c3}#{$__important} disabled">#{$pr}#{$m}btn#{$c3}#{$__important}</a>
-</p>
-```
+/*
+note: Meaning of "10em"
+「em」で大きな値を指定すると、ボタンが小判型になります。
+Specify a large value for "em", the button becomes an oval type
+--------------------
 */
 
 .#{$pr}#{$m}btn#{$c3}oval {
-    border-radius: 10em;  // emで大きな値を指定すると小判型になる
+    border-radius: 10em;
 }
 
 
-/*doc
----
-title: #{$pr}#{$m}btn#{$c3}round
-name: btn-07-round
-category: module-btn
-parent: btn
----
-
-ボタンを正円で表示する。幅を超えるようなテキストを入れることはできない。
-
-``` example
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}sm #{$pr}#{$m}btn#{$c3}round">R</a>
-</p>
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}round">R</a>
-</p>
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}lg #{$pr}#{$m}btn#{$c3}round">R</a>
-</p>
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}xl #{$pr}#{$m}btn#{$c3}round">R</a>
-</p>
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}xxl #{$pr}#{$m}btn#{$c3}round">R</a>
-</p>
-```
+/*
+--------------------
+#{$pr}#{$m}btn#{$c3}round
+--------------------
 */
 
 .#{$pr}#{$m}btn#{$c3}round {
@@ -253,33 +113,10 @@ parent: btn
 }
 
 
-/*doc
----
-title: #{$pr}#{$m}btn#{$c3}square
-name: btn-08-square
-category: module-btn
-parent: btn
----
-
-ボタンを正方形で表示する。幅を超えるようなテキストを入れることはできない。
-
-``` example
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}sm #{$pr}#{$m}btn#{$c3}square">R</a>
-</p>
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}square">R</a>
-</p>
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}lg #{$pr}#{$m}btn#{$c3}square">R</a>
-</p>
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}xl #{$pr}#{$m}btn#{$c3}square">R</a>
-</p>
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}xxl #{$pr}#{$m}btn#{$c3}square">R</a>
-</p>
-```
+/*
+--------------------
+#{$pr}#{$m}btn#{$c3}square
+--------------------
 */
 
 .#{$pr}#{$m}btn#{$c3}square {

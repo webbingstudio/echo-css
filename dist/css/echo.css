@@ -10,6 +10,7 @@
  * 
  */
 /*
+--------------------
 reset
 --------------------
 */
@@ -63,103 +64,10 @@ input[type="reset"] {
   cursor: pointer;
 }
 
-/*doc
----
-title: typography
-name: typography
-category: typography
----
-
-何もクラスを付与していないときの、各HTML要素のサンプル。すべての見出し要素は、上マージンが0となっている。
-
-``` example
-<h1>あいうえおかきくけ10_h1</h1>
-
-<h2>あいうえおかきくけ10_h2</h2>
-
-<p>あいうえおかきくけ10さしすせ<strong>太字です</strong>そたちつて20なにぬねのはひ<em>斜体です</em>ふへ30まみむめもやゆよっ40らりるれろわをんー50<br>
-あいうえおかきく<strong><em>太字＋斜体です</em></strong>け10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおか<em><strong>斜体＋太字です</strong></em>きくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</p>
-
-<h3>さしすせそたちつて20_h3</h3>
-
-<p>あいうえおかきくけ10さし<a href="#">リンクを貼りました</a>すせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</p>
-
-<h4>なにぬねのはひふへ30_h4</h4>
-
-<p>あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30ま<br>みむめもやゆよっ40らりるれろわをんー50あいうえおかき<br>くけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</p>
-
-<h5>まみむめもやゆよっ40_h5</h5>
-
-<p>あいうえおかきくけ10さしすせそたちつて20<br>なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそた<br>ちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</p>
-
-<h6>らりるれろわをんー50_h6</h6>
-
-<p>あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40ら<br>りるれろわをんー50あいうえおかきくけ10<br>さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</p>
-
-<ul>
-  <li>マーク付きリスト</li>
-  <li>マーク付きリスト</li>
-  <li>マーク付きリスト
-    <ul>
-      <li>マーク付きリスト子</li>
-      <li>マーク付きリスト子</li>
-    </ul>
-  </li>
-  <li>マーク付きリスト</li>
-  <li>マーク付きリスト</li>
-</ul>
-
-<ol>
-  <li>数字リスト</li>
-  <li>数字リスト</li>
-  <li>数字リスト
-    <ol>
-      <li>数字リスト子</li>
-      <li>数字リスト子</li>
-    </ol>
-  </li>
-  <li>数字リスト</li>
-  <li>数字リスト</li>
-</ol>
-
-<ul>
-  <li>マーク付きリスト</li>
-  <li>マーク付きリスト</li>
-  <li>マーク付きリスト
-    <ol>
-      <li>数字リスト子</li>
-      <li>数字リスト子</li>
-    </ol>
-  </li>
-  <li>マーク付きリスト</li>
-  <li>マーク付きリスト</li>
-</ul>
-
-<ol>
-  <li>数字リスト</li>
-  <li>数字リスト</li>
-  <li>数字リスト
-    <ul>
-      <li>マーク付きリスト子</li>
-      <li>マーク付きリスト子</li>
-    </ul>
-  </li>
-  <li>数字リスト</li>
-  <li>数字リスト</li>
-</ol>
-
-<dl>
-  <dt>定義語</dt>
-  <dd>あいうえおかきくけ10さしすせそたちつて20なにぬ</dd>
-  <dt>定義語</dt>
-  <dd>あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40</dd>
-  <dt>定義語</dt>
-  <dd>あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよ</dd>
-  <dt>定義語</dt>
-  <dd>あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30ま</dd>
-</dl>
-```
-
+/*
+--------------------
+typography
+--------------------
 */
 html {
   font-size: 1rem;
@@ -299,45 +207,20 @@ select {
   line-height: 1;
 }
 
-/*doc
----
-title: l-document
-name: document
-category: layout-document
----
-
-ドキュメント全体を包括する。  
-ユーティリティクラスの重要度を上げるための<code>id="#document"</code>はこの包括ブロックに指定することを想定している。  
-ユーティリティクラス <code>.u-expand</code> や、オフキャンバス等の画面全体に影響する演出の影響を受けないよう、幅を制限している。  
-<code>.u-expand</code> を使用する予定がない場合や、他のライブラリ等と干渉する場合は、この要素は削除してもかまわない。
-
-``` example
-<div id="#document" class="l-document">
-	<div style="background-color: #ffd5d5; padding: 10px; text-align: center;">(contents)</div>
-</div>
-```
+/*
+--------------------
+l-document
+--------------------
 */
 .l-document {
   overflow: hidden;
   max-width: 100%;
 }
 
-/*doc
----
-title: l-container
-name: container
-category: layout-container
----
-
-デバイスに応じて適切に本文幅を調整するコンテナブロック。  
-<code>/\_scss/\_config_advance.scss</code> の「<code>$container-max-widths-md</code>」の定義を参照する。
-
-``` example
-<div class="l-container" style="background-color: #5ad;">
-    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5);">(contents)</div>
-</div>
-```
-
+/*
+--------------------
+l-container
+--------------------
 */
 .l-container {
   margin-right: auto;
@@ -370,6 +253,7 @@ category: layout-container
 
 /*
 .l-containerが二重になった場合の対策
+--------------------
 */
 @media (min-width: 425px) {
   .l-container .l-container {
@@ -377,44 +261,19 @@ category: layout-container
     padding-right: 0;
   }
 }
-/*doc
----
-title: l-container-fluid
-name: container-01-fluid
-category: layout-container
-parent: container
----
-
-コンテナブロックの最大幅の制限を行わない。
-
-``` example
-<div class="l-container l-container-fluid" style="background-color: #5ad;">
-    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5);">(contents)</div>
-</div>
-```
-
+/*
+--------------------
+l-container-fluid
+--------------------
 */
 .l-container-fluid {
   max-width: none;
 }
 
-/*doc
----
-title: l-container-sm
-name: container-02-sm
-category: layout-container
-parent: container
----
-
-コンテナブロックの最大幅が通常よりも狭くなる。  
-<code>/\_scss/\_config_advance.scss</code> の「<code>$container-max-widths-sm</code>」の定義を参照する。
-
-``` example
-<div class="l-container l-container-sm" style="background-color: #5ad;">
-    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5);">(contents)</div>
-</div>
-```
-
+/*
+--------------------
+l-container-sm
+--------------------
 */
 @media (min-width: 768px) {
   .l-container-sm {
@@ -427,23 +286,10 @@ parent: container
   }
 }
 
-/*doc
----
-title: l-container-lg
-name: container-03-lg
-category: layout-container
-parent: container
----
-
-コンテナブロックの最大幅が通常よりも広くなる。  
-<code>/\_scss/\_config_advance.scss</code> の「<code>$container-max-widths-lg</code>」の定義を参照する。
-
-``` example
-<div class="l-container l-container-lg" style="background-color: #5ad;">
-    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5);">(contents)</div>
-</div>
-```
-
+/*
+--------------------
+l-container-lg
+--------------------
 */
 @media (min-width: 768px) {
   .l-container-lg {
@@ -466,47 +312,10 @@ parent: container
   }
 }
 
-/*doc
----
-title: l-grid-row
-name: grid
-category: layout-grid
----
-
-flexboxによるグリッドのグループを作成する。 <code>ul ,ol</code> にも使用できる。  
-命名規則をbootstrapと同様にしたい場合は、 <code>/\_scss/_config\_advance.scss</code> の変数 <code>$row</code> を変更すること。
-
-### 補足：使用頻度が低いクラスの除外
-
-以下のクラスは、使用頻度が非常に低いため、このフレームワークでは除外されている。  
-<code>/\_scss/_config\_advance.scss</code> の変数 <code>$optimize</code> を <code>false</code> に変更すると、すべてのクラスに対応する。
-
-- .l-grid-col-(breakpoint)-1
-- .l-grid-col-(breakpoint)-11
-- .l-grid-col-offset-(breakpoint)-11
-
-### note: Exclusion of less frequently used classes
-
-The following classes are excluded in this framework because they are used very infrequently.  
-Variable in <code>/\_scss/_config\_advance.scss</code> Changing <code>$optimize</code> to <code>false</code> corresponds to all classes.
-
-- .l-grid-col-(breakpoint)-1
-- .l-grid-col-(breakpoint)-11
-- .l-grid-col-offset-(breakpoint)-11
-
-``` example
-<div class="l-grid-row">
-    <div class="l-grid-col">
-        <div style="padding: 1rem; background-color: #ddf6bb; height: 100%;">l-grid-col<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="l-grid-col">
-        <div style="padding: 1rem; background-color: #ddf6bb; height: 100%;">l-grid-col<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。</div>
-    </div>
-    <div class="l-grid-col">
-        <div style="padding: 1rem; background-color: #ddf6bb; height: 100%;">l-grid-col<br>ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。</div>
-    </div>
-</div>
-```
+/*
+--------------------
+l-grid-row
+--------------------
 */
 .l-grid-row {
   display: flex;
@@ -518,56 +327,10 @@ Variable in <code>/\_scss/_config\_advance.scss</code> Changing <code>$optimize<
   padding: 0;
 }
 
-/*doc
----
-title: l-grid-row-(size)
-name: grid-01-row-size
-category: layout-grid
-parent: grid
----
-
-flexboxによるグリッドで余白が異なるグループを作成する。  
-(size)は<code>0, sm, lg</code> に対応している。  
-Bootstrap4の <code>.no-gutters</code> を <code>.l-grid-row-0</code> のエイリアスとしている。  
-命名規則をbootstrapと同様にしたい場合は、 <code>/\_scss/_\config\_advance.scss</code> の変数 <code>$row</code> を変更すること。
-
-``` example
-<div class="l-grid-row l-grid-row-0" style="margin-bottom: 2rem;">
-    <div class="l-grid-col">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">l-grid-row-0<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="l-grid-col">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%; opacity: 0.8;">l-grid-row-0<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="l-grid-col">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">l-grid-row-0<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-</div>
-
-<div class="l-grid-row l-grid-row-sm" style="margin-bottom: 2rem;">
-    <div class="l-grid-col">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">l-grid-row-sm<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="l-grid-col">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%; opacity: 0.8;">l-grid-row-sm<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="l-grid-col">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">l-grid-row-sm<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-</div>
-
-<div class="l-grid-row l-grid-row-lg">
-    <div class="l-grid-col">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">l-grid-row-lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="l-grid-col">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%; opacity: 0.8;">l-grid-row-lg<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="l-grid-col">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">l-grid-row-lg<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-</div>
-```
+/*
+--------------------
+l-grid-row-(size)
+--------------------
 */
 .l-grid-row-0,
 .no-gutters {
@@ -598,45 +361,13 @@ Bootstrap4の <code>.no-gutters</code> を <code>.l-grid-row-0</code> のエイ�
   padding-right: 20px;
 }
 
-/*doc
----
-title: l-grid-col
-name: grid-02-col
-category: layout-grid
----
-
-flexboxによるグリッドのセルを作成する。  
-このクラス単独では均等幅となり、(breakpoint)が <code>sm</code> 以下でグリッドが解除される。  
-
-``` example
-<div class="l-grid-row" style="margin-bottom: 2rem;">
-    <div class="l-grid-col">
-        <div style="padding: 1rem; background-color: #ddbbf6; height: 100%;">l-grid-col<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-</div>
-
-<div class="l-grid-row" style="margin-bottom: 2rem;">
-    <div class="l-grid-col">
-        <div style="padding: 1rem; background-color: #ddbbf6; height: 100%;">l-grid-col<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="l-grid-col">
-        <div style="padding: 1rem; background-color: #ddbbf6; height: 100%;">l-grid-col<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-</div>
-
-<div class="l-grid-row">
-    <div class="l-grid-col">
-        <div style="padding: 1rem; background-color: #ddbbf6; height: 100%;">l-grid-col<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="l-grid-col">
-        <div style="padding: 1rem; background-color: #ddbbf6; height: 100%;">l-grid-col<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="l-grid-col">
-        <div style="padding: 1rem; background-color: #ddbbf6; height: 100%;">l-grid-col<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-</div>
-```
-
+/*
+--------------------
+l-grid-col
+l-grid-col-(breakpoint)-(column)
+l-grid-col-order-(breakpoint)-(first or last or number)
+l-grid-col-offset-(breakpoint)-(column)
+--------------------
 */
 .l-grid-col-2, .l-grid-col-3, .l-grid-col-4, .l-grid-col-5, .l-grid-col-6, .l-grid-col-7, .l-grid-col-8, .l-grid-col-9, .l-grid-col-10, .l-grid-col-12, .l-grid-col, .l-grid-col-xxs-2, .l-grid-col-xxs-3, .l-grid-col-xxs-4, .l-grid-col-xxs-5, .l-grid-col-xxs-6, .l-grid-col-xxs-7, .l-grid-col-xxs-8, .l-grid-col-xxs-9, .l-grid-col-xxs-10, .l-grid-col-xxs-12, .l-grid-col-xxs, .l-grid-col-xs-2, .l-grid-col-xs-3, .l-grid-col-xs-4, .l-grid-col-xs-5, .l-grid-col-xs-6, .l-grid-col-xs-7, .l-grid-col-xs-8, .l-grid-col-xs-9, .l-grid-col-xs-10, .l-grid-col-xs-12, .l-grid-col-xs, .l-grid-col-sm-2, .l-grid-col-sm-3, .l-grid-col-sm-4, .l-grid-col-sm-5, .l-grid-col-sm-6, .l-grid-col-sm-7, .l-grid-col-sm-8, .l-grid-col-sm-9, .l-grid-col-sm-10, .l-grid-col-sm-12, .l-grid-col-sm, .l-grid-col-md-2, .l-grid-col-md-3, .l-grid-col-md-4, .l-grid-col-md-5, .l-grid-col-md-6, .l-grid-col-md-7, .l-grid-col-md-8, .l-grid-col-md-9, .l-grid-col-md-10, .l-grid-col-md-12, .l-grid-col-md, .l-grid-col-lg-2, .l-grid-col-lg-3, .l-grid-col-lg-4, .l-grid-col-lg-5, .l-grid-col-lg-6, .l-grid-col-lg-7, .l-grid-col-lg-8, .l-grid-col-lg-9, .l-grid-col-lg-10, .l-grid-col-lg-12, .l-grid-col-lg, .l-grid-col-xl-2, .l-grid-col-xl-3, .l-grid-col-xl-4, .l-grid-col-xl-5, .l-grid-col-xl-6, .l-grid-col-xl-7, .l-grid-col-xl-8, .l-grid-col-xl-9, .l-grid-col-xl-10, .l-grid-col-xl-12, .l-grid-col-xl, .l-grid-col-xxl-2, .l-grid-col-xxl-3, .l-grid-col-xxl-4, .l-grid-col-xxl-5, .l-grid-col-xxl-6, .l-grid-col-xxl-7, .l-grid-col-xxl-8, .l-grid-col-xxl-9, .l-grid-col-xxl-10, .l-grid-col-xxl-12, .l-grid-col-xxl {
   flex-basis: 0%;
@@ -1894,203 +1625,10 @@ flexboxによるグリッドのセルを作成する。
     margin-left: 83.33333%;
   }
 }
-/*doc
----
-title: l-grid-col-(breakpoint)-(column)
-name: grid-03-col-column
-category: layout-grid
----
-
-flexboxによるグリッドのセルの幅を、<code>(column) / 12</code>の割合にする。  
-**シングルクラス**となっている（l-grid-colを常に付与する必要はない）。  
-(breakpoint)の指定がない場合は、常にその幅となる。  
-(breakpoint)の指定がある場合は、(breakpoint)**以上**のときに、指定した幅となる。
-
-``` example
-<h3 class="u-text-lg">(column)のみ指定している場合</h3>
-<div class="l-grid-row" style="margin-bottom: 2rem;">
-    <div class="l-grid-col-3">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col-3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="l-grid-col-3">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col-3<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="l-grid-col-3">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col-3<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-</div>
-
-<h3 class="u-text-lg u-margin-top-lg">(column)と(breakpoint)の両方を指定している場合</h3>
-<p>(column)が <code>12</code> の場合は、指定した(breakpoint)以上で幅100%となる。</p>
-<div class="l-grid-row" style="margin-bottom: 2rem;">
-    <div class="l-grid-col-lg-2 l-grid-col-xl-12">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col-lg-2 l-grid-col-xl-12<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="l-grid-col-lg-6 l-grid-col-xl-12">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col-lg-6 l-grid-col-xl-12<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="l-grid-col-lg-4 l-grid-col-xl-12">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col-12 l-grid-col-lg-4<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-</div>
-
-<h3 class="u-text-lg u-margin-top-lg">(column)の指定があるセルと、ないセルが同列に混在している場合</h3>
-<p>(column)の指定がないセルは、常に空間を埋めるように伸縮しようとする。</p>
-<div class="l-grid-row" style="margin-bottom: 2rem;">
-    <div class="l-grid-col-sm-4">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col-sm-4<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="l-grid-col">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-</div>
-
-<h3 class="u-text-lg u-margin-top-lg">複雑な指定の例</h3>
-<p>ウィンドウ幅が狭くなるに従って、段組が変化する。セルが複数行になる場合は、l-grid-colにはmarginではなくpaddingを付与する。</p>
-<div class="l-grid-row">
-    <div class="l-grid-col-6 l-grid-col-sm-4 l-grid-col-lg-3 l-grid-col-xxl-2" style="padding-bottom: 1rem;">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col-6 l-grid-col-sm-4 l-grid-col-lg-3 l-grid-col-xxl-2<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="l-grid-col-6 l-grid-col-sm-4 l-grid-col-lg-3 l-grid-col-xxl-2" style="padding-bottom: 1rem;">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col-6 l-grid-col-sm-4 l-grid-col-lg-3 l-grid-col-xxl-2<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="l-grid-col-6 l-grid-col-sm-4 l-grid-col-lg-3 l-grid-col-xxl-2" style="padding-bottom: 1rem;">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col-6 l-grid-col-sm-4 l-grid-col-lg-3 l-grid-col-xxl-2<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-    <div class="l-grid-col-6 l-grid-col-sm-4 l-grid-col-lg-3 l-grid-col-xxl-2" style="padding-bottom: 1rem;">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col-6 l-grid-col-sm-4 l-grid-col-lg-3 l-grid-col-xxl-2<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
-    </div>
-    <div class="l-grid-col-6 l-grid-col-sm-4 l-grid-col-lg-3 l-grid-col-xxl-2" style="padding-bottom: 1rem;">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col-6 l-grid-col-sm-4 l-grid-col-lg-3 l-grid-col-xxl-2<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-    <div class="l-grid-col-6 l-grid-col-sm-4 l-grid-col-lg-3 l-grid-col-xxl-2" style="padding-bottom: 1rem;">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">l-grid-col-6 l-grid-col-sm-4 l-grid-col-lg-3 l-grid-col-xxl-2<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
-    </div>
-</div>
-```
-*/
-/*doc
----
-title: l-grid-col-order-(breakpoint)-(first or last or number)
-name: grid-04-order
-category: layout-grid
-parent: grid-02-col
----
-
-flexboxによるグリッドのセルを、指定した順番にする。  
-(breakpoint)の指定がない場合は、常にその順番となる。  
-(breakpoint)の指定がある場合は、(breakpoint)**以上**のときに、指定した順番となる。
-
-``` example
-<div class="l-grid-row" style="margin-bottom: 2rem;">
-    <div class="l-grid-col-order-last l-grid-col-3">
-        <div style="padding: 1rem; background-color: #f8ccdd; height: 100%;">1:<br>l-grid-col-order-last<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="l-grid-col-3">
-        <div style="padding: 1rem; background-color: #f8ccdd; height: 100%;">2:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="l-grid-col-order-first l-grid-col-3">
-        <div style="padding: 1rem; background-color: #f8ccdd; height: 100%;">3:<br>l-grid-col-order-first<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="l-grid-col-3">
-        <div style="padding: 1rem; background-color: #f8ccdd; height: 100%;">4:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-</div>
-
-<div class="l-grid-row" style="margin-bottom: 2rem;">
-    <div class="l-grid-col-order-3 l-grid-col-3">
-        <div style="padding: 1rem; background-color: #bbd3ff; height: 100%;">1:<br>l-grid-col-order-3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="l-grid-col-order-1 l-grid-col-3">
-        <div style="padding: 1rem; background-color: #bbd3ff; height: 100%;">2:<br>l-grid-col-order-1<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="l-grid-col-order-4 l-grid-col-3">
-        <div style="padding: 1rem; background-color: #bbd3ff; height: 100%;">3:<br>l-grid-col-order-4<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="l-grid-col-order-2 l-grid-col-3">
-        <div style="padding: 1rem; background-color: #bbd3ff; height: 100%;">4:<br>l-grid-col-order-2<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-</div>
-
-<div class="l-grid-row">
-    <div class="l-grid-col-order-sm-last l-grid-col-3">
-        <div style="padding: 1rem; background-color: #e6d6aa; height: 100%;">1:<br>l-grid-col-order-sm-last<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="l-grid-col-3">
-        <div style="padding: 1rem; background-color: #e6d6aa; height: 100%;">2:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="l-grid-col-order-xl-first l-grid-col-3">
-        <div style="padding: 1rem; background-color: #e6d6aa; height: 100%;">3:<br>l-grid-col-order-xl-first<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="l-grid-col-3">
-        <div style="padding: 1rem; background-color: #e6d6aa; height: 100%;">4:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-</div>
-```
-*/
-/*doc
----
-title: l-grid-col-offset-(breakpoint)-(column)
-name: grid-05-offset
-category: layout-grid
-parent: grid-02-col
----
-
-flexboxによるグリッドのセルの開始位置を、<code>(column) / 12</code>の割合だけ右にずらす。  
-<code>l-grid-col-(column)</code> と、<code>l-grid-col-offset-(column)</code> の合計値が<code>12</code>を超えた場合は、offsetの値が優先される。  
-(breakpoint)の指定がない場合は、常にその位置となる。  
-(breakpoint)の指定がある場合は、(breakpoint)**以上**のときに、指定した位置となる。
-
-``` example
-<div class="l-grid-row" style="margin-bottom: 2rem;">
-    <div class="l-grid-col-offset-1 l-grid-col-10">
-        <div style="padding: 1rem; background-color: #aaeccc; height: 100%;">l-grid-col-offset-3<br>l-grid-col-10<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-</div>
-
-<div class="l-grid-row" style="margin-bottom: 2rem;">
-    <div class="l-grid-col-offset-lg-8 l-grid-col-6">
-        <div style="padding: 1rem; background-color: #aaeccc; height: 100%;">l-grid-col-offset-lg-8<br>l-grid-col-6<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="l-grid-col-offset-lg-4 l-grid-col-offset-md-8 l-grid-col-3">
-        <div style="padding: 1rem; background-color: #aaeccc; height: 100%;">l-grid-col-offset-lg-4<br>l-grid-col-offset-md-8<br>l-grid-col-3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-</div>
-
-```
-*/
-/*doc
----
-title: m-btn
-name: btn
-category: module-btn
----
-
-リンク、インライン要素、フォームのボタン要素をボタン状に表示する。  
-<code>disabled</code> 属性が付与されていると、反応しない見た目となる（クリックはできるので注意）。
-
-``` example
-<p>
-  <a href="#" class="m-btn">m-btn</a>
-  <a href="#" class="m-btn" disabled>m-btn</a>
-</p>
-
-<p>
-  <span class="m-btn">m-btn</span>
-  <span class="m-btn" disabled>m-btn</span>
-</p>
-
-<p>
-  <input type="button" class="m-btn" value="m-btn" />
-  <input type="button" class="m-btn" value="m-btn" disabled />
-</p>
-
-<p>
-  <button class="m-btn">m-btn</button>
-  <button class="m-btn" disabled>m-btn</button>
-</p>
-```
-
+/*
+--------------------
+m-btn
+--------------------
 */
 .m-btn {
   position: relative;
@@ -2148,53 +1686,10 @@ fieldset[disabled] a.m-btn {
   pointer-events: none;
 }
 
-/*doc
----
-title: m-btn-(color)
-name: btn-01-color
-category: module-btn
-parent: btn
----
-
-ボタンの色を変更する。(color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
-
-``` example
-<p>
-  <a href="#" class="m-btn m-btn-gray">m-btn-gray</a>
-  <a href="#" class="m-btn m-btn-gray disabled">m-btn-gray</a>
-</p>
-
-<p>
-  <a href="#" class="m-btn m-btn-first">m-btn-first</a>
-  <a href="#" class="m-btn m-btn-first disabled">m-btn-first</a>
-</p>
-
-<p>
-  <a href="#" class="m-btn m-btn-second">m-btn-second</a>
-  <a href="#" class="m-btn m-btn-second disabled">m-btn-second</a>
-</p>
-
-<p>
-  <a href="#" class="m-btn m-btn-third">m-btn-third</a>
-  <a href="#" class="m-btn m-btn-third disabled">m-btn-third</a>
-</p>
-
-<p>
-  <a href="#" class="m-btn m-btn-fourth">m-btn-fourth</a>
-  <a href="#" class="m-btn m-btn-fourth disabled">m-btn-fourth</a>
-</p>
-
-<p>
-  <a href="#" class="m-btn m-btn-info">m-btn-info</a>
-  <a href="#" class="m-btn m-btn-info disabled">m-btn-info</a>
-</p>
-
-<p>
-  <a href="#" class="m-btn m-btn-important">m-btn-important</a>
-  <a href="#" class="m-btn m-btn-important disabled">m-btn-important</a>
-</p>
-```
-
+/*
+--------------------
+m-btn-(color)
+--------------------
 */
 .m-btn-gray {
   color: #fff;
@@ -2364,53 +1859,10 @@ a:hover .m-btn-important, a:focus .m-btn-important, a:active .m-btn-important {
   border-color: transparent;
 }
 
-/*doc
----
-title: m-btn-bordered
-name: btn-02-bordered
-category: module-btn
-parent: btn
----
-
-ボタンを罫線のみの見た目にする。背景色は <code>$body-bg</code> ではなく <code>transparent</code> なので注意。  
-<code>.m-btn-(color)</code> と同時に使用することが前提となっており、罫線の色が変わる。
-
-``` example
-<p>
-  <a href="#" class="m-btn m-btn-bordered m-btn-gray">m-btn-gray</a>
-  <a href="#" class="m-btn m-btn-bordered m-btn-gray disabled">m-btn-gray</a>
-</p>
-
-<p>
-  <a href="#" class="m-btn m-btn-bordered m-btn-first">m-btn-first</a>
-  <a href="#" class="m-btn m-btn-bordered m-btn-first disabled">m-btn-first</a>
-</p>
-
-<p>
-  <a href="#" class="m-btn m-btn-bordered m-btn-second">m-btn-second</a>
-  <a href="#" class="m-btn m-btn-bordered m-btn-second disabled">m-btn-second</a>
-</p>
-
-<p>
-  <a href="#" class="m-btn m-btn-bordered m-btn-third">m-btn-third</a>
-  <a href="#" class="m-btn m-btn-bordered m-btn-third disabled">m-btn-third</a>
-</p>
-
-<p>
-  <a href="#" class="m-btn m-btn-bordered m-btn-fourth">m-btn-fourth</a>
-  <a href="#" class="m-btn m-btn-bordered m-btn-fourth disabled">m-btn-fourth</a>
-</p>
-
-<p>
-  <a href="#" class="m-btn m-btn-bordered m-btn-info">m-btn-info</a>
-  <a href="#" class="m-btn m-btn-bordered m-btn-info disabled">m-btn-info</a>
-</p>
-
-<p>
-  <a href="#" class="m-btn m-btn-bordered m-btn-important">m-btn-important</a>
-  <a href="#" class="m-btn m-btn-bordered m-btn-important disabled">m-btn-important</a>
-</p>
-```
+/*
+--------------------
+m-btn-bordered
+--------------------
 */
 .m-btn-bordered {
   box-shadow: none;
@@ -2577,28 +2029,10 @@ a:hover .m-btn-bordered.m-btn-important, a:focus .m-btn-bordered.m-btn-important
   border-color: transparent;
 }
 
-/*doc
----
-title: m-btn-inverse
-name: btn-03-inverse
-category: module-btn
-parent: btn
----
-
-ボタンの文字色と背景色を反転する。  
-<code>.m-btn-bordered</code> と同時に使用すると、罫線のみの状態で反転する。
-
-``` example
-<p style="background-color: #000; padding: 1rem 0;">
-  <a href="#" class="m-btn m-btn-inverse">m-btn-inverse</a>
-  <a href="#" class="m-btn m-btn-inverse" disabled>m-btn-inverse</a>
-</p>
-<p style="background-color: #000; padding: 1rem 0;">
-  <a href="#" class="m-btn m-btn-bordered m-btn-inverse">m-btn-bordered + m-btn-inverse</a>
-  <a href="#" class="m-btn m-btn-bordered m-btn-inverse" disabled>m-btn-bordered + m-btn-inverse</a>
-</p>
-```
-
+/*
+--------------------
+m-btn-inverse
+--------------------
 */
 .m-btn-inverse {
   color: #fff;
@@ -2647,34 +2081,10 @@ a:hover .m-btn-inverse.m-btn-bordered, a:focus .m-btn-inverse.m-btn-bordered, a:
   border-color: #fff;
 }
 
-/*doc
----
-title: m-btn-(size)
-name: btn-04-size
-category: module-btn
-parent: btn
----
-
-ボタンのサイズを変える。(size)は、 <code>sm, lg, xl</code> に対応している。
-
-### 補足：xl, xxlの挙動
-
-<code>.m-btn-xl, .m-btn-xxl</code> は、(breakpoint)が <code>sm</code> 以下では一段階小さくなる。
-
-### note: Behavior of xl, xxl
-
-<code>.m-btn-xl, .m-btn-xxl</code> decreases by one level when (breakpoint) is less than sm.
-
-
-``` example
-<p>
-  <a href="#" class="m-btn m-btn-first m-btn-sm">m-btn-sm</a>
-  <a href="#" class="m-btn m-btn-first">default</a>
-  <a href="#" class="m-btn m-btn-first m-btn-lg">m-btn-lg</a>
-  <a href="#" class="m-btn m-btn-first m-btn-xl">m-btn-xl</a>
-  <a href="#" class="m-btn m-btn-first m-btn-xxl">m-btn-xl</a>
-</p>
-```
+/*
+--------------------
+m-btn-(size)
+--------------------
 */
 .m-btn-sm {
   padding-top: 0.25rem;
@@ -2734,57 +2144,10 @@ parent: btn
   }
 }
 
-/*doc
----
-title: m-btn-block
-name: btn-05-block
-category: module-btn
-parent: btn
----
-
-ボタンを中央に寄せたブロック要素として表示する。幅は100%ではなく、一般的に考えられる幅を最大値とする。
-
-### 補足：ボタンの余白
-
-<code>.m-btn-block, .m-btn-round, .m-btn-square</code> では、<code>.m-btn</code> のpaddingの初期値を上書きする必要があるため、意図的にクラスを追加して優先度を上げている。
-
-### note: Padding in button
-
-In <code>.m-btn-block, .m-btn-round, .m-btn-square</code>, need to override the default padding of <code>.m-btn</code>. For this reason, intentionally add classes to increase priority.
-
-``` example
-<p>
-  <a href="#" class="m-btn m-btn-first m-btn-sm m-btn-block">m-btn-block</a>
-</p>
-<p>
-  <a href="#" class="m-btn m-btn-first m-btn-block">m-btn-block</a>
-</p>
-<p>
-  <a href="#" class="m-btn m-btn-first m-btn-lg m-btn-block">m-btn-block</a>
-</p>
-<p>
-  <a href="#" class="m-btn m-btn-first m-btn-xl m-btn-block">m-btn-block</a>
-</p>
-<p>
-  <a href="#" class="m-btn m-btn-first m-btn-xxl m-btn-block">m-btn-block</a>
-</p>
-
-<p>
-  <a href="#" class="m-btn m-btn-bordered m-btn-first m-btn-sm m-btn-block">m-btn-block</a>
-</p>
-<p>
-  <a href="#" class="m-btn m-btn-bordered m-btn-first m-btn-block">m-btn-block</a>
-</p>
-<p>
-  <a href="#" class="m-btn m-btn-bordered m-btn-first m-btn-lg m-btn-block">m-btn-block</a>
-</p>
-<p>
-  <a href="#" class="m-btn m-btn-bordered m-btn-first m-btn-xl m-btn-block">m-btn-block</a>
-</p>
-<p>
-  <a href="#" class="m-btn m-btn-bordered m-btn-first m-btn-xxl m-btn-block">m-btn-block</a>
-</p>
-```
+/*
+--------------------
+m-btn-block
+--------------------
 */
 .m-btn-block {
   display: block;
@@ -2812,119 +2175,25 @@ In <code>.m-btn-block, .m-btn-round, .m-btn-square</code>, need to override the 
   }
 }
 
-/*doc
----
-title: m-btn-oval
-name: btn-06-oval
-category: module-btn
-parent: btn
----
-
-ボタンを小判型にする。
-
-``` example
-<p>
-  <a href="#" class="m-btn m-btn-oval m-btn-gray">m-btn-gray</a>
-  <a href="#" class="m-btn m-btn-oval m-btn-gray disabled">m-btn-gray</a>
-</p>
-
-<p>
-  <a href="#" class="m-btn m-btn-oval m-btn-first">m-btn-first</a>
-  <a href="#" class="m-btn m-btn-oval m-btn-first disabled">m-btn-first</a>
-</p>
-
-<p>
-  <a href="#" class="m-btn m-btn-oval m-btn-second">m-btn-second</a>
-  <a href="#" class="m-btn m-btn-oval m-btn-second disabled">m-btn-second</a>
-</p>
-
-<p>
-  <a href="#" class="m-btn m-btn-oval m-btn-third">m-btn-third</a>
-  <a href="#" class="m-btn m-btn-oval m-btn-third disabled">m-btn-third</a>
-</p>
-
-<p>
-  <a href="#" class="m-btn m-btn-oval m-btn-fourth">m-btn-fourth</a>
-  <a href="#" class="m-btn m-btn-oval m-btn-fourth disabled">m-btn-fourth</a>
-</p>
-
-<p>
-  <a href="#" class="m-btn m-btn-oval m-btn-info">m-btn-info</a>
-  <a href="#" class="m-btn m-btn-oval m-btn-info disabled">m-btn-info</a>
-</p>
-
-<p>
-  <a href="#" class="m-btn m-btn-oval m-btn-important">m-btn-important</a>
-  <a href="#" class="m-btn m-btn-oval m-btn-important disabled">m-btn-important</a>
-</p>
-
-<p>
-  <a href="#" class="m-btn m-btn-oval m-btn-bordered m-btn-gray">m-btn-gray</a>
-  <a href="#" class="m-btn m-btn-oval m-btn-bordered m-btn-gray disabled">m-btn-gray</a>
-</p>
-
-<p>
-  <a href="#" class="m-btn m-btn-oval m-btn-bordered m-btn-first">m-btn-first</a>
-  <a href="#" class="m-btn m-btn-oval m-btn-bordered m-btn-first disabled">m-btn-first</a>
-</p>
-
-<p>
-  <a href="#" class="m-btn m-btn-oval m-btn-bordered m-btn-second">m-btn-second</a>
-  <a href="#" class="m-btn m-btn-oval m-btn-bordered m-btn-second disabled">m-btn-second</a>
-</p>
-
-<p>
-  <a href="#" class="m-btn m-btn-oval m-btn-bordered m-btn-third">m-btn-third</a>
-  <a href="#" class="m-btn m-btn-oval m-btn-bordered m-btn-third disabled">m-btn-third</a>
-</p>
-
-<p>
-  <a href="#" class="m-btn m-btn-oval m-btn-bordered m-btn-fourth">m-btn-fourth</a>
-  <a href="#" class="m-btn m-btn-oval m-btn-bordered m-btn-fourth disabled">m-btn-fourth</a>
-</p>
-
-<p>
-  <a href="#" class="m-btn m-btn-oval m-btn-bordered m-btn-info">m-btn-info</a>
-  <a href="#" class="m-btn m-btn-oval m-btn-bordered m-btn-info disabled">m-btn-info</a>
-</p>
-
-<p>
-  <a href="#" class="m-btn m-btn-oval m-btn-bordered m-btn-important">m-btn-important</a>
-  <a href="#" class="m-btn m-btn-oval m-btn-bordered m-btn-important disabled">m-btn-important</a>
-</p>
-```
+/*
+--------------------
+m-btn-oval
+--------------------
+*/
+/*
+note: Meaning of "10em"
+「em」で大きな値を指定すると、ボタンが小判型になります。
+Specify a large value for "em", the button becomes an oval type
+--------------------
 */
 .m-btn-oval {
   border-radius: 10em;
 }
 
-/*doc
----
-title: m-btn-round
-name: btn-07-round
-category: module-btn
-parent: btn
----
-
-ボタンを正円で表示する。幅を超えるようなテキストを入れることはできない。
-
-``` example
-<p>
-  <a href="#" class="m-btn m-btn-first m-btn-sm m-btn-round">R</a>
-</p>
-<p>
-  <a href="#" class="m-btn m-btn-first m-btn-round">R</a>
-</p>
-<p>
-  <a href="#" class="m-btn m-btn-first m-btn-lg m-btn-round">R</a>
-</p>
-<p>
-  <a href="#" class="m-btn m-btn-first m-btn-xl m-btn-round">R</a>
-</p>
-<p>
-  <a href="#" class="m-btn m-btn-first m-btn-xxl m-btn-round">R</a>
-</p>
-```
+/*
+--------------------
+m-btn-round
+--------------------
 */
 .m-btn-round {
   overflow: hidden;
@@ -2971,33 +2240,10 @@ parent: btn
   }
 }
 
-/*doc
----
-title: m-btn-square
-name: btn-08-square
-category: module-btn
-parent: btn
----
-
-ボタンを正方形で表示する。幅を超えるようなテキストを入れることはできない。
-
-``` example
-<p>
-  <a href="#" class="m-btn m-btn-first m-btn-sm m-btn-square">R</a>
-</p>
-<p>
-  <a href="#" class="m-btn m-btn-first m-btn-square">R</a>
-</p>
-<p>
-  <a href="#" class="m-btn m-btn-first m-btn-lg m-btn-square">R</a>
-</p>
-<p>
-  <a href="#" class="m-btn m-btn-first m-btn-xl m-btn-square">R</a>
-</p>
-<p>
-  <a href="#" class="m-btn m-btn-first m-btn-xxl m-btn-square">R</a>
-</p>
-```
+/*
+--------------------
+m-btn-square
+--------------------
 */
 .m-btn-square {
   overflow: hidden;
@@ -3043,7 +2289,7 @@ parent: btn
   }
 }
 
-/*doc
+/*
 ---
 title: m-checkbox
 name: checkbox
@@ -3077,7 +2323,7 @@ category: module-checkbox
   transform: translate(0, -10%);
 }
 
-/*doc
+/*
 ---
 title: m-embed
 name: embed
@@ -3112,7 +2358,7 @@ category: module-embed
   margin: 0 auto;
 }
 
-/*doc
+/*
 ---
 title: m-embed-square
 name: object-01-square
@@ -3133,7 +2379,7 @@ parent: object
 ```
 
 */
-/*doc
+/*
 ---
 title: m-embed-(ratio-x)to(ratio-y)
 name: embed-02-ratio
@@ -3227,7 +2473,7 @@ parent: embed
   padding-top: 42.85714%;
 }
 
-/*doc
+/*
 ---
 title: m-input
 name: input
@@ -3263,7 +2509,7 @@ category: module-input
   color: #d70022;
 }
 
-/*doc
+/*
 ---
 title: m-input-(size)
 name: input-01-size
@@ -3294,7 +2540,7 @@ parent: input
   font-size: 1.125rem;
 }
 
-/*doc
+/*
 ---
 title: m-input-(color)
 name: input-02-color
@@ -3356,7 +2602,7 @@ parent: input
   border-color: #e33050;
 }
 
-/*doc
+/*
 ---
 title: m-label
 name: label
@@ -3391,7 +2637,7 @@ a.m-label {
   text-decoration: none;
 }
 
-/*doc
+/*
 ---
 title: m-label-(color)
 name: label-01-color
@@ -3440,7 +2686,7 @@ parent: label
   background-color: #e33050;
 }
 
-/*doc
+/*
 ---
 title: m-label-inverse
 name: label-03-inverse
@@ -3509,7 +2755,7 @@ a.m-label-inverse.m-label-important {
   color: #d70022;
 }
 
-/*doc
+/*
 ---
 title: m-label-round
 name: label-04-round
@@ -3536,7 +2782,7 @@ parent: label
   padding-right: 1em;
 }
 
-/*doc
+/*
 ---
 title: m-list
 name: list
@@ -3613,7 +2859,7 @@ ul.m-list li ul,
   list-style-type: none;
 }
 
-/*doc
+/*
 ---
 title: m-list-vertical
 name: list-01-vertical
@@ -3686,7 +2932,7 @@ ul.m-list-vertical li ul li,
   font-size: .9em;
 }
 
-/*doc
+/*
 ---
 title: m-list-horizontal
 name: list-02-horizontal
@@ -3735,7 +2981,7 @@ ul.m-list-horizontal li:last-child,
   padding-right: 0;
 }
 
-/*doc
+/*
 ---
 title: m-nav
 name: nav
@@ -3926,7 +3172,7 @@ a.m-nav-label:hover, a.m-nav-label:focus, .m-nav > ul li a:hover, .m-nav > ul li
   background-color: #eee;
 }
 
-/*doc
+/*
 ---
 title: m-nav-vertical
 name: nav-01-vertical
@@ -4096,7 +3342,7 @@ parent: nav
   }
 }
 
-/*doc
+/*
 ---
 title: m-radio
 name: radio
@@ -4131,7 +3377,7 @@ category: module-radio
   transform: translate(0, -15%);
 }
 
-/*doc
+/*
 ---
 title: m-select
 name: select
@@ -4224,7 +3470,7 @@ category: module-select
   outline: none;
 }
 
-/*doc
+/*
 ---
 title: m-select-(size)
 name: select-01-size
@@ -4267,7 +3513,7 @@ parent: select
   padding: .75em 3em .75em 1em;
 }
 
-/*doc
+/*
 ---
 title: m-table
 name: table
@@ -4323,7 +3569,7 @@ category: module-table
   line-height: 1.5;
 }
 
-/*doc
+/*
 ---
 title: m-table-bordered
 name: table-01-bordered
@@ -4396,7 +3642,7 @@ parent: table
   padding-right: .5rem;
 }
 
-/*doc
+/*
 ---
 title: m-table-ruled
 name: table-02-ruled
@@ -4456,7 +3702,7 @@ parent: table
   padding-bottom: .5rem;
 }
 
-/*doc
+/*
 ---
 title: m-table-justify
 name: table-03-justify
@@ -4504,7 +3750,7 @@ parent: table
   table-layout: fixed;
 }
 
-/*doc
+/*
 ---
 title: m-table-(ratio-first)to(ratio-second)to(ratio-third)
 name: table-04-ratio
@@ -4625,7 +3871,7 @@ parent: table
   white-space: nowrap;
 }
 
-/*doc
+/*
 ---
 title: m-table-break-sm-down
 name: table-05-break-sm-down
@@ -4731,7 +3977,7 @@ parent: table
   border-bottom-width: 1px;
 }
 
-/*doc
+/*
 ---
 title: m-table-responsive
 name: table-06-responsive
@@ -4772,7 +4018,7 @@ parent: table
   min-width: 768px;
 }
 
-/*doc
+/*
 ---
 title: m-thumbnail
 name: thumbnail
@@ -4824,7 +4070,7 @@ category: module-thumbnail
   height: auto;
 }
 
-/*doc
+/*
 ---
 title: m-thumbnail-round
 name: thumbnail-01-round
@@ -4860,7 +4106,7 @@ parent: thumbnail
 ```
 
 */
-/*doc
+/*
 ---
 title: m-thumbnail-square
 name: thumbnail-02-square
@@ -4922,7 +4168,7 @@ parent: thumbnail
   border-radius: 50%;
 }
 
-/*doc
+/*
 ---
 title: m-thumbnail-(ratio-x)to(ratio-y)
 name: thumbnail-03-ratio
@@ -5085,7 +4331,7 @@ parent: thumbnail
   padding-bottom: 42.85714%;
 }
 
-/*doc
+/*
 ---
 title: m-thumbnail-horizontal
 name: thumbnail-04-horizontal
@@ -5153,36 +4399,10 @@ parent: thumbnail
   width: 102%;
 }
 
-/*doc
----
-title: c-alert
-name: alert
-category: component-alert
----
-
-システム側の注意文を表示する。アイコンを併用することを想定している。  
-<code>p</code> のみ、もしくは <code>div</code> と <code>p, ul</code> でマークアップすることができる。  
-連続して表示すると <code>.c-alert</code> 間の余白が**通常よりも狭くなる。**  
-下以外の余白は <code>utility > .u-margin</code> 等で指定する。
-
-``` example
-<div>
-<p class="c-alert">c-alert:これはシステムからの注意文です。</p>
-</div>
-
-<div>
-<p class="c-alert"><span class="c-alert-header"><i class="fas fa-info-circle"></i><span class="u-sr">お知らせ</span></span>c-alert:これはシステムからの注意文です。</p>
-</div>
-
-<div>
-<div class="c-alert"><p>c-alert:これはシステムからの注意文です。</p><span class="c-alert-footer"><i class="fas fa-times-circle"></i><span class="u-sr">閉じる</span></span></div>
-</div>
-
-<div>
-<p class="c-alert"><span class="c-alert-header"><i class="fas fa-info-circle"></i><span class="u-sr">お知らせ</span></span>c-alert:これはシステムからの注意文です。<span class="c-alert-footer"><i class="fas fa-times-circle"></i><span class="u-sr">閉じる</span></span></p>
-</div>
-```
-
+/*
+--------------------
+c-alert
+--------------------
 */
 .c-alert {
   display: flex;
@@ -5226,26 +4446,10 @@ category: component-alert
   font-size: 1.25em;
 }
 
-/*doc
----
-title: c-alert-(color)
-name: alert-01-color
-category: component-alert
-parent: alert
----
-
-注意文の色を変更する。  
-(color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
-
-``` example
-<p class="c-alert c-alert-first">c-alert:これはシステムからの注意文です。</p>
-<p class="c-alert c-alert-second">c-alert:これはシステムからの注意文です。</p>
-<p class="c-alert c-alert-third">c-alert:これはシステムからの注意文です。</p>
-<p class="c-alert c-alert-fourth">c-alert:これはシステムからの注意文です。</p>
-<p class="c-alert c-alert-info">c-alert:これはシステムからの注意文です。</p>
-<p class="c-alert c-alert-important">c-alert:これはシステムからの注意文です。</p>
-```
-
+/*
+--------------------
+c-alert-(color)
+--------------------
 */
 .c-alert-first {
   color: #0360bd;
@@ -5283,24 +4487,10 @@ parent: alert
   background-color: #ffe3e9;
 }
 
-/*doc
----
-title: c-box
-name: box
-category: component-box
----
-
-ブロック要素を網掛けで囲んで、箱状に強調する。画面サイズによって余白が変化する。
-
-``` example
-<div class="c-box">
-    <p>c-box:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
-    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
-    <p>この書生というのは時々我々を捕えて煮て食うという話である。
-    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
-</div>
-```
-
+/*
+--------------------
+c-box
+--------------------
 */
 .c-box {
   position: relative;
@@ -5334,60 +4524,10 @@ category: component-box
   margin-bottom: 0;
 }
 
-/*doc
----
-title: c-box-(color)
-name: box-01-color
-category: component-box
-parent: box
----
-
-箱の色を変更する。(color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
-
-``` example
-<div class="c-box c-box-first">
-    <p>c-box-first:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
-    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
-    <p>この書生というのは時々我々を捕えて煮て食うという話である。
-    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
-</div>
-
-<div class="c-box c-box-second">
-    <p>c-box-second:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
-    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
-    <p>この書生というのは時々我々を捕えて煮て食うという話である。
-    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
-</div>
-
-<div class="c-box c-box-third">
-    <p>c-box-third:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
-    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
-    <p>この書生というのは時々我々を捕えて煮て食うという話である。
-    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
-</div>
-
-<div class="c-box c-box-fourth">
-    <p>c-box-fourth:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
-    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
-    <p>この書生というのは時々我々を捕えて煮て食うという話である。
-    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
-</div>
-
-<div class="c-box c-box-info">
-    <p>c-box-info:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
-    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
-    <p>この書生というのは時々我々を捕えて煮て食うという話である。
-    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
-</div>
-
-<div class="c-box c-box-important">
-    <p>c-box-important:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
-    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
-    <p>この書生というのは時々我々を捕えて煮て食うという話である。
-    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
-</div>
-```
-
+/*
+--------------------
+c-box-(color)
+--------------------
 */
 .c-box-first {
   background-color: #d7e7f7;
@@ -5413,67 +4553,10 @@ parent: box
   background-color: #ffe3e9;
 }
 
-/*doc
----
-title: c-box-bordered
-name: box-02-outline
-category: component-box
-parent: box
----
-
-箱を網掛けではなく、罫線にする。同時に(color)を指定すると罫線の色が変わる。
-
-``` example
-<div class="c-box c-box-bordered">
-    <p>c-box-bordered_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
-    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
-    <p>この書生というのは時々我々を捕えて煮て食うという話である。
-    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
-</div>
-
-<div class="c-box c-box-bordered c-box-first">
-    <p>c-box-first:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
-    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
-    <p>この書生というのは時々我々を捕えて煮て食うという話である。
-    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
-</div>
-
-<div class="c-box c-box-bordered c-box-second">
-    <p>c-box-second:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
-    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
-    <p>この書生というのは時々我々を捕えて煮て食うという話である。
-    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
-</div>
-
-<div class="c-box c-box-bordered c-box-third">
-    <p>c-box-third:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
-    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
-    <p>この書生というのは時々我々を捕えて煮て食うという話である。
-    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
-</div>
-
-<div class="c-box c-box-bordered c-box-fourth">
-    <p>c-box-fourth:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
-    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
-    <p>この書生というのは時々我々を捕えて煮て食うという話である。
-    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
-</div>
-
-<div class="c-box c-box-bordered c-box-info">
-    <p>c-box-info:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
-    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
-    <p>この書生というのは時々我々を捕えて煮て食うという話である。
-    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
-</div>
-
-<div class="c-box c-box-bordered c-box-important">
-    <p>c-box-important:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
-    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
-    <p>この書生というのは時々我々を捕えて煮て食うという話である。
-    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
-</div>
-```
-
+/*
+--------------------
+c-box-bordered
+--------------------
 */
 .c-box-bordered {
   background-color: #fff;
@@ -5498,181 +4581,10 @@ parent: box
   border-color: #eb758a;
 }
 
-/*doc
----
-title: c-card
-name: card
-category: component-card
----
-
-新着情報のエントリー繰り返し部分などに使用する、カード状のコンポーネントを表示する。  
-<code>.m-tite</code>, <code>.m-thumbnail</code>, <code>.m-btn</code>を含む可能性がある。  
-リンクが不要な場合であっても <code>.c-card-inner</code> が必須であることに注意する。  
-カード背景には、body要素の基本背景色が指定されている。
-
-``` example
-<div style="margin-bottom: 2rem; padding: 1rem; background-color: #aaddff;">
-<div class="c-card">
-    <div class="c-card-inner">
-        <div class="c-card-header">
-            <h3 class="p-title p-title{$c2}echo{$c3}11">これはカードです</h3>
-        </div>
-        <div class="m-thumbnail m-thumbnail-ogimage">
-            <picture>
-            <source
-                media="(max-width:640px)"
-                srcset="/images/_dummy/image_01_s.jpg 640w"
-                sizes="100vw">
-            <source
-                srcset="/images/_dummy/image_01.jpg 1280w"
-                sizes="(max-width:1280px) 100vw, 1280px">
-            <img alt="" src="/images/_dummy/image_01.jpg">
-            </picture>
-        </div>
-        <div class="c-card-contents">
-            <p class="c-card-body">これはカードの本文です。見出しに p-title-echo-11 クラスを付与しています。最大幅は480ピクセルとなり、画面中央に配置されます。</p>
-        </div>
-    </div>
-</div>
-</div>
-
-<div style="margin-bottom: 2rem;">
-<div class="l-grid-row">
-    <div class="l-grid-col-6 l-grid-col-md-3" style="padding-bottom: 1rem;">
-        <div class="c-card">
-            <a href="#" class="c-card-inner">
-                <div class="m-thumbnail m-thumbnail-ogimage">
-                    <picture>
-                    <source
-                        media="(max-width:640px)"
-                        srcset="/images/_dummy/image_02_s.jpg 640w"
-                        sizes="100vw">
-                    <source
-                        srcset="/images/_dummy/image_02.jpg 1280w"
-                        sizes="(max-width:1280px) 100vw, 1280px">
-                    <img alt="" src="/images/_dummy/image_02.jpg">
-                    </picture>
-                </div>
-                <div class="c-card-contents">
-                    <p>よくあるカラムレイアウトの例です</p>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="l-grid-col-6 l-grid-col-md-3" style="padding-bottom: 1rem;">
-        <div class="c-card">
-            <a href="#" class="c-card-inner">
-                <div class="m-thumbnail m-thumbnail-ogimage">
-                    <picture>
-                    <source
-                        media="(max-width:640px)"
-                        srcset="/images/_dummy/image_02_s.jpg 640w"
-                        sizes="100vw">
-                    <source
-                        srcset="/images/_dummy/image_02.jpg 1280w"
-                        sizes="(max-width:1280px) 100vw, 1280px">
-                    <img alt="" src="/images/_dummy/image_02.jpg">
-                    </picture>
-                </div>
-                <div class="c-card-contents">
-                    <p>カード全体がリンク範囲となっています</p>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="l-grid-col-6 l-grid-col-md-3" style="padding-bottom: 1rem;">
-        <div class="c-card">
-            <a href="#" class="c-card-inner">
-                <div class="m-thumbnail m-thumbnail-ogimage">
-                    <picture>
-                    <source
-                        media="(max-width:640px)"
-                        srcset="/images/_dummy/image_02_s.jpg 640w"
-                        sizes="100vw">
-                    <source
-                        srcset="/images/_dummy/image_02.jpg 1280w"
-                        sizes="(max-width:1280px) 100vw, 1280px">
-                    <img alt="" src="/images/_dummy/image_02.jpg">
-                    </picture>
-                </div>
-                <div class="c-card-contents">
-                    <p>l-grid-row, l-grid-col を使用して4カラムに並べました</p>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="l-grid-col-6 l-grid-col-md-3" style="padding-bottom: 1rem;">
-        <div class="c-card">
-            <a href="#" class="c-card-inner">
-                <div class="m-thumbnail m-thumbnail-ogimage">
-                    <picture>
-                    <source
-                        media="(max-width:640px)"
-                        srcset="/images/_dummy/image_02_s.jpg 640w"
-                        sizes="100vw">
-                    <source
-                        srcset="/images/_dummy/image_02.jpg 1280w"
-                        sizes="(max-width:1280px) 100vw, 1280px">
-                    <img alt="" src="/images/_dummy/image_02.jpg">
-                    </picture>
-                </div>
-                <div class="c-card-contents">
-                    <p>グリッド内に配置した場合は最大幅が解除されます</p>
-                </div>
-            </a>
-        </div>
-    </div>
-</div>
-</div>
-
-<div class="l-grid-row">
-    <div class="l-grid-col">
-        <div class="c-card u-bg-first">
-            <div class="c-card-inner">
-                <a href="#" class="m-thumbnail m-thumbnail-ogimage">
-                    <picture>
-                    <source
-                        media="(max-width:640px)"
-                        srcset="/images/_dummy/image_03_s.jpg 640w"
-                        sizes="100vw">
-                    <source
-                        srcset="/images/_dummy/image_03.jpg 1280w"
-                        sizes="(max-width:1280px) 100vw, 1280px">
-                    <img alt="" src="/images/_dummy/image_03.jpg">
-                    </picture>
-                </a>
-                <div class="c-card-contents">
-                    <p>カードの背景に u-bg-first クラスを指定して色を付けています</p>
-                    <a href="#" class="m-btn m-btn-inverse m-btn-bordered m-btn-block">ボタン</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="l-grid-col">
-        <div class="c-card u-bg-first">
-            <div class="c-card-inner">
-                <a href="#" class="m-thumbnail m-thumbnail-ogimage">
-                    <picture>
-                    <source
-                        media="(max-width:640px)"
-                        srcset="/images/_dummy/image_03_s.jpg 640w"
-                        sizes="100vw">
-                    <source
-                        srcset="/images/_dummy/image_03.jpg 1280w"
-                        sizes="(max-width:1280px) 100vw, 1280px">
-                    <img alt="" src="/images/_dummy/image_03.jpg">
-                    </picture>
-                </a>
-                <div class="c-card-contents">
-                    <p>カード全体ではなく、カードの画像とボタンだけがリンク範囲となっています</p>
-                    <a href="#" class="m-btn m-btn-inverse m-btn-bordered m-btn-block">ボタン</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-```
-
+/*
+--------------------
+c-card
+--------------------
 */
 .c-card {
   position: relative;
@@ -5743,32 +4655,10 @@ category: component-card
   font-size: 0.875rem;
 }
 
-/*doc
----
-title: c-flip
-name: flip
-category: component-flip
----
-
-全面背景とボックスを持つ、フリップボードのようなコンポーネントを表示する。  
-<code>.c-flip-contents-inner</code> が必須であることに注意する。  
-<code>.c-flip-cover</code> の背景画像はインラインスタイル、もしくは追加CSSで定義する。  
-高さは(breakpoint) が <code>md</code> 以下で <code>50vh</code>、 <code>lg</code> 以上で <code>75vh</code> としているため、適当調整すること。
-
-``` example
-<div class="c-flip">
-    <div class="c-flip-cover" style="background-image: url(/images/_dummy/image_03.jpg)"></div>
-    <div class="c-flip-container">
-        <div class="c-flip-contents">
-            <div class="c-flip-contents-inner">
-                <h2 class="p-title p-title-echo-22">吾輩は猫である</h2>
-                <p class="p-title p-title-echo-23 u-margin-bottom-sm">名前はまだ無い</p>
-                <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
-            </div><!-- /.c-flip-contents-inner -->
-        </div><!-- /.c-flip-contents -->
-    </div><!-- /.c-flip-container -->
-</div><!-- /.c-flip -->
-```
+/*
+--------------------
+c-flip
+--------------------
 */
 .c-flip {
   position: relative;
@@ -5841,30 +4731,10 @@ category: component-flip
   }
 }
 
-/*doc
----
-title: c-flip-reverse
-name: flip-01-reverse
-category: component-flip
-parent: flip
----
-
-(breakpoint)が <code>lg</code> 以上でのコンテンツの位置が逆となる。
-
-``` example
-<div class="c-flip c-flip-reverse">
-    <div class="c-flip-cover" style="background-image: url(/images/_dummy/image_03.jpg)"></div>
-    <div class="c-flip-container">
-        <div class="c-flip-contents">
-            <div class="c-flip-contents-inner">
-                <h2 class="p-title p-title-echo-22">吾輩は猫である</h2>
-                <p class="p-title p-title-echo-23 u-margin-bottom-sm">名前はまだ無い</p>
-                <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
-            </div><!-- /.c-flip-contents-inner -->
-        </div><!-- /.c-flip-contents -->
-    </div><!-- /.c-flip-container -->
-</div><!-- /.c-flip -->
-```
+/*
+--------------------
+c-flip-reverse
+--------------------
 */
 @media (min-width: 1000px) {
   .c-flip-reverse .c-flip-contents {
@@ -5873,31 +4743,10 @@ parent: flip
   }
 }
 
-/*doc
----
-title: c-flip-inverse
-name: flip-02-inverse
-category: component-flip
-parent: flip
----
-
-コンテンツの色が反転する。  
-テキストリンク、ボタン等の色は反転前とは変わらないことに注意。
-
-``` example
-<div class="c-flip c-flip-reverse c-flip-inverse">
-    <div class="c-flip-cover" style="background-image: url(/images/_dummy/image_07.jpg)"></div>
-    <div class="c-flip-container">
-        <div class="c-flip-contents">
-            <div class="c-flip-contents-inner">
-                <h2 class="p-title p-title-echo-22">吾輩は猫である</h2>
-                <p class="p-title p-title-echo-23 u-margin-bottom-sm">名前はまだ無い</p>
-                <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
-            </div><!-- /.c-flip-contents-inner -->
-        </div><!-- /.c-flip-contents -->
-    </div><!-- /.c-flip-container -->
-</div><!-- /.c-flip -->
-```
+/*
+--------------------
+c-flip-inverse
+--------------------
 */
 .c-flip-inverse {
   background-color: #000;
@@ -5910,35 +4759,10 @@ parent: flip
   background-color: rgba(0, 0, 0, 0.85);
 }
 
-/*doc
----
-title: c-form
-name: form
-category: component-form
----
-
-システムで可能な限りフォームの各入力セットを包括する。  
-幅の調整が必要な場合は <code>.u-width-(percentage)</code> を併用すること。  
-フォーム内のパーツは <code>.m-input, .m-radio, .m-select, .m-checkbox, .m-btn</code> を参照。
-
-``` example
-<div class="c-form">
-    <label for="demo01-01" class="c-form-label">氏名</label>
-    <input type="text" class="m-input u-width-50" id="demo01-01" name="demo00" value="" placeholder="山田一郎" />
-</div><!-- /.c-form -->
-
-<div class="c-form">
-    <span class="c-form-label">好きな食べ物</span>
-    <label class="m-checkbox u-margin-right-md for="checkbox1"><input type="checkbox" name="checkbox1" id="checkbox1" class="u-margin-right-sm" value="りんご">りんご</label>
-    <label class="m-checkbox u-margin-right-md for="checkbox2"><input type="checkbox" name="checkbox2" id="checkbox2" class="u-margin-right-sm" value="バナナ">バナナ</label>
-    <label class="m-checkbox" for="checkbox3"><input type="checkbox" name="checkbox3" id="checkbox3" class="u-margin-right-sm" value="メロン">メロン</label>
-</div><!-- /.c-form -->
-
-<div class="c-form">
-    <label for="demo01-02" class="c-form-label">メッセージ</label>
-    <textarea id="demo01-02" name="demo02" rows="5" class="m-input u-width-50" placeholder="メッセージをどうぞ"></textarea>
-</div><!-- /.c-form -->
-```
+/*
+--------------------
+c-form
+--------------------
 */
 .c-form {
   width: 100%;
@@ -5952,32 +4776,10 @@ category: component-form
   line-height: 1;
 }
 
-/*doc
----
-title: c-form-inline
-name: form-01-inline
-category: component-form
-parent: form
----
-
-フォームの入力欄とボタン、またはラベルをインラインで表示する。  
-**複数並べた場合の、モバイル環境でのオーバーフローを想定していない**ことに注意。
-
-``` example
-<div class="c-form c-form-inline">
-    <label for="demo02-01" class="c-form-label">姓</label>
-    <input type="text" class="m-input" id="demo02-01" name="demo02_01" value="" placeholder="山田" />
-    <label for="demo02-02" class="c-form-label">名</label>
-    <input type="text" class="m-input" id="demo02-02" name="demo02_02" value="" placeholder="一郎" />
-</div>
-<div class="c-form c-form-inline">
-    <label for="demo02-03" class="c-form-label">アカウント名</label>
-    <input type="text" class="m-input" id="demo02-03" name="demo02_03" value="" placeholder="山田" />
-    <label for="demo02-04" class="c-form-label">パスワード</label>
-    <input type="text" class="m-input" id="demo02-04" name="demo02_04" value="" placeholder="一郎" />
-    <button class="m-btn m-btn-gray">ログイン</button>
-</div>
-```
+/*
+--------------------
+c-form-inline
+--------------------
 */
 .c-form-inline {
   display: flex;
@@ -6023,30 +4825,10 @@ parent: form
   margin-right: 0;
 }
 
-/*doc
----
-title: c-form-grow
-name: form-02-grow
-category: component-form
-parent: form
----
-
-<code>.c-form-inline</code>と併用する。  
-フォームの入力欄が <code>.c-form</code> 全体を埋めるように伸びる。
-
-``` example
-<div class="c-form c-form-inline c-form-grow">
-    <label for="demo03-01" class="c-form-label">氏名</label>
-    <input type="text" class="m-input" id="demo03-01" name="demo00" value="" placeholder="山田一郎" />
-</div>
-<div class="c-form c-form-inline c-form-grow">
-    <label for="demo03-02" class="c-form-label">アカウント名</label>
-    <input type="text" class="m-input" id="demo03-02" name="demo03_02" value="" placeholder="山田" />
-    <label for="demo03-03" class="c-form-label">パスワード</label>
-    <input type="text" class="m-input" id="demo03-03" name="demo03_03" value="" placeholder="一郎" />
-    <button class="m-btn m-btn-gray">ログイン</button>
-</div>
-```
+/*
+--------------------
+c-form-grow
+--------------------
 */
 .c-form-grow .m-input,
 .c-form-grow .m-select {
@@ -6054,23 +4836,10 @@ parent: form
   flex-basis: 0%;
 }
 
-/*doc
----
-title: c-form-append
-name: form-03-append
-category: component-form
-parent: form
----
-
-<code>.c-form-inline</code>と併用する。  
-<code>.m-input</code> に <code>.m-btn</code> が接していた場合は角丸を解除する。
-
-``` example
-<div class="c-form c-form-inline c-form-append">
-    <input type="text" name="search" class="m-input m-input-first" placeholder="Keyword" />
-    <button class="m-btn m-btn-first">検索</button>
-</div>
-```
+/*
+--------------------
+c-form-append
+--------------------
 */
 .c-form-append .m-input {
   margin-right: 0;
@@ -6083,22 +4852,10 @@ parent: form
   border-bottom-left-radius: 0;
 }
 
-/*doc
----
-title: c-form-error
-name: form-04-error
-category: component-form
----
-
-フォームの入力を間違えたときの補助テキストを表示する。
-
-``` example
-<div class="c-form c-form-inline">
-    <label for="demo01-01" class="c-form-label">フリガナ</label>
-    <input type="text" class="m-input u-width-50 is-error" id="demo01-01" name="demo00" value="山田一郎" />
-    <p class="c-form-error">フリガナはカタカナで入力してください。</p>
-</div><!-- /.c-form -->
-```
+/*
+--------------------
+c-form-error
+--------------------
 */
 .c-form-error {
   width: 100%;
@@ -6108,20 +4865,10 @@ category: component-form
   line-height: 1.5;
 }
 
-/*doc
----
-title: c-form-submit
-name: form-05-submit
-category: component-form
----
-
-フォームの送信ボタンを表示する。 <code>.m-btn-xl</code> を使用する前提となっている。
-
-``` example
-<div class="c-form-submit">
-    <button class="m-btn m-btn-xl m-btn-first">入力内容の確認</button>
-</div>
-```
+/*
+--------------------
+c-form-submit
+--------------------
 */
 .c-form-submit {
   padding-top: 30px;
@@ -6154,22 +4901,10 @@ category: component-form
   }
 }
 
-/*doc
----
-title: c-form-submit-2col
-name: form-06-submit-2col
-category: component-form
----
-
-<code>.c-form-submit</code>と併用する。  
-ボタンを複数個表示する場合に、**最後のボタン以外**の幅を詰め、最後のボタンを強調して表示する。
-
-``` example
-<div class="c-form-submit c-form-submit-2col">
-    <button class="m-btn m-btn-xl m-btn-first m-btn-bordered">入力画面にもどる</button>
-    <button class="m-btn m-btn-xl m-btn-first">この内容で送信</button>
-</div>
-```
+/*
+--------------------
+c-form-submit-2col
+--------------------
 */
 .c-form-submit-2col .m-btn {
   margin: 0 10px 10px;
@@ -6180,64 +4915,10 @@ category: component-form
   }
 }
 
-/*doc
----
-title: c-headline
-name: headline
-category: component-headline
----
-
-新着情報のエントリー繰り返し部分などに使用する、ヘッダとタイトルを併記したコンポーネントを表示する。  
-<code>article</code> と <code>div</code> 、もしくは <code>dl</code> と <code>dt, dd</code> でマークアップすることができる。  
-(breakpoint)が <code>sm</code> 以上でインライン表示となる。
-
-``` example
-
-<h3>article要素の場合</h3>
-
-<article class="c-headline">
-    <time class="c-headline-date" datetime="2017-08-01T09:00:00+09:00">2017年08月01日</time>
-    <p class="c-headline-category">
-        <a href="#" class="m-label m-label-first">カテゴリー</a>
-    </p>
-    <p class="c-headline-title"><a href="#">吾輩は猫である。名前はまだ無い。</a></p>
-</article>
-
-<article class="c-headline">
-    <time class="c-headline-date" datetime="2017-08-01T09:00:00+09:00">2017年08月01日</time>
-    <p class="c-headline-category">
-        <a href="#" class="m-label m-label-second">カテゴリー</a>
-    </p>
-    <p class="c-headline-title"><a href="#">どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</a></p>
-</article>
-
-<article class="c-headline">
-    <time class="c-headline-date" datetime="2017-08-01T09:00:00+09:00">2017年08月01日</time>
-    <p class="c-headline-category">
-        <a href="#" class="m-label m-label-third">カテゴリー</a>
-    </p>
-    <p class="c-headline-title"><a href="#">掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。</a></p>
-</article>
-
-<h3>dl要素の場合</h3>
-
-<dl class="c-headline">
-    <dt class="c-headline-date">2017年08月01日</dt>
-    <p class="c-headline-title"><a href="#">吾輩は猫である。名前はまだ無い。</a></p>
-</dl>
-
-<dl class="c-headline">
-    <dt class="c-headline-date">2017年08月01日</dt>
-    <p class="c-headline-title"><a href="#">どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</a></p>
-</dl>
-
-<dl class="c-headline">
-    <dt class="c-headline-date">2017年08月01日</dt>
-    <p class="c-headline-title"><a href="#">掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。</a></p>
-</dl>
-
-
-```
+/*
+--------------------
+c-headline
+--------------------
 */
 .c-headline {
   position: relative;
@@ -6308,33 +4989,10 @@ category: component-headline
   text-decoration: underline;
 }
 
-/*doc
----
-title: c-hero
-name: hero
-category: component-hero
----
-
-メインビジュアルなどに使用される全面背景を持つコンポーネントを表示する。  
-<code>.c-hero-contents-inner</code> が必須であることに注意する。  
-<code>.c-hero-cover</code> の背景画像はインラインスタイル、もしくは追加CSSで定義する。  
-高さは(breakpoint) が <code>sm</code> 以下で <code>50vh</code>、 <code>md</code> 以上で <code>75vh</code> としているため、適当調整すること。  
-背景画像は透明度が50%となる。 <code>.c-hero-cover</code> の <code>opacity</code> を調整すること。
-
-``` example
-<div class="c-hero">
-    <div class="c-hero-cover" style="background-image: url(/images/_dummy/image_05.jpg);"></div>
-    <div class="c-hero-contents">
-        <div class="c-hero-contents-inner">
-            <h2 class="p-title p-title-echo-21">吾輩は猫である</h2>
-            <p class="p-title p-title-echo-23 u-margin-bottom-lg">名前はまだ無い</p>
-            <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
-        </div><!-- /.c-hero-contents-inner -->
-    </div><!-- /.c-hero-contents -->
-</div><!-- /.c-hero -->
-
-```
-
+/*
+--------------------
+c-hero
+--------------------
 */
 .c-hero {
   position: relative;
@@ -6401,43 +5059,10 @@ category: component-hero
   margin: 0;
 }
 
-/*doc
----
-title: c-hero-(direction)
-name: hero-01-direction
-category: component-hero
-parent: hero
----
-
-コンテンツブロックを指定した方向に寄せる。
-
-``` example
-<h3>.c-hero + .c-hero-left</h3>
-<div class="c-hero c-hero-left" style="margin-bottom: 2rem;">
-    <div class="c-hero-cover" style="background-image: url(/images/_dummy/image_05.jpg);"></div>
-    <div class="c-hero-contents">
-        <div class="c-hero-contents-inner">
-            <h2 class="p-title p-title-echo-21">吾輩は猫である</h2>
-            <p class="p-title p-title-echo-23 u-margin-bottom-lg">名前はまだ無い</p>
-            <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
-        </div><!-- /.c-hero-contents-inner -->
-    </div><!-- /.c-hero-contents -->
-</div><!-- /.c-hero -->
-
-<h3>.c-hero + .c-hero-right</h3>
-<div class="c-hero c-hero-right" style="margin-bottom: 2rem;">
-    <div class="c-hero-cover" style="background-image: url(/images/_dummy/image_05.jpg);"></div>
-    <div class="c-hero-contents">
-        <div class="c-hero-contents-inner">
-            <h2 class="p-title p-title-echo-21">吾輩は猫である</h2>
-            <p class="p-title p-title-echo-23 u-margin-bottom-lg">名前はまだ無い</p>
-            <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
-        </div><!-- /.c-hero-contents-inner -->
-    </div><!-- /.c-hero-contents -->
-</div><!-- /.c-hero -->
-
-```
-
+/*
+--------------------
+c-hero-(direction)
+--------------------
 */
 .c-hero-left .c-hero-contents {
   justify-content: left;
@@ -6457,115 +5082,10 @@ parent: hero
   text-align: right;
 }
 
-/*doc
----
-title: c-media
-name: media
-category: component-media
----
-
-サムネイル等のメディアオブジェクトと、テキストオブジェクトが並列しているコンポーネントを表示する。  
-<code>.m-title</code>, <code>.m-thumbnail</code>, <code>.m-btn</code>を含む可能性がある。  
-<code>.c-media-object</code> の最大幅は <code>33.33333333%</code> となっているため、比率を大きくしたい場合は任意調整すること。    
-
-``` example
-<div style="margin-bottom: 2rem;">
-<div class="c-media">
-    <div class="c-media-object">
-        <div class="m-thumbnail">
-            <picture>
-            <source
-                media="(max-width:640px)"
-                srcset="/images/_dummy/image_04_s.jpg 640w"
-                sizes="100vw">
-            <source
-                srcset="/images/_dummy/image_04.jpg 1280w"
-                sizes="(max-width:1280px) 100vw, 1280px">
-            <img alt="" src="/images/_dummy/image_04.jpg">
-            </picture>
-        </div>
-    </div>
-    <div class="c-media-contents">
-        <h3 class="p-title p-title-echo-12"><a href="#">これはメディアです</a></h3>
-        <p>これはメディアの本文です。見出しに p-title-echo-12 クラスを付与しています。</p>
-    </div>
-</div>
-</div>
-
-
-<div style="margin-bottom: 2rem;">
-<div class="l-grid-row">
-    <div class="l-grid-col-sm-6 l-grid-col-lg-4" style="padding-bottom: 1rem;">
-        <a href="#" class="c-media">
-            <div class="c-media-object">
-                <div class="m-thumbnail">
-                    <picture>
-                    <source
-                        media="(max-width:640px)"
-                        srcset="/images/_dummy/image_04_s.jpg 640w"
-                        sizes="100vw">
-                    <source
-                        srcset="/images/_dummy/image_04.jpg 1280w"
-                        sizes="(max-width:1280px) 100vw, 1280px">
-                    <img alt="" src="/images/_dummy/image_04.jpg">
-                    </picture>
-                </div>
-            </div>
-            <div class="c-media-contents">
-                <p>よくあるカラムレイアウトの例です</p>
-                <span class="m-btn m-btn-sm m-btn-first m-btn-bordered">ボタン</span>
-            </div>
-        </a>
-    </div>
-    <div class="l-grid-col-sm-6 l-grid-col-lg-4" style="padding-bottom: 1rem;">
-        <a href="#" class="c-media">
-            <div class="c-media-object">
-                <div class="m-thumbnail">
-                    <picture>
-                    <source
-                        media="(max-width:640px)"
-                        srcset="/images/_dummy/image_04_s.jpg 640w"
-                        sizes="100vw">
-                    <source
-                        srcset="/images/_dummy/image_04.jpg 1280w"
-                        sizes="(max-width:1280px) 100vw, 1280px">
-                    <img alt="" src="/images/_dummy/image_04.jpg">
-                    </picture>
-                </div>
-            </div>
-            <div class="c-media-contents">
-                <p>l-grid-row, l-grid-col を使用して3カラムに並べました</p>
-                <span class="m-btn m-btn-sm m-btn-first m-btn-bordered">ボタン</span>
-            </div>
-        </a>
-    </div>
-    <div class="l-grid-col-sm-6 l-grid-col-lg-4" style="padding-bottom: 1rem;">
-        <a href="#" class="c-media">
-            <div class="c-media-object">
-                <div class="m-thumbnail">
-                    <picture>
-                    <source
-                        media="(max-width:640px)"
-                        srcset="/images/_dummy/image_04_s.jpg 640w"
-                        sizes="100vw">
-                    <source
-                        srcset="/images/_dummy/image_04.jpg 1280w"
-                        sizes="(max-width:1280px) 100vw, 1280px">
-                    <img alt="" src="/images/_dummy/image_04.jpg">
-                    </picture>
-                </div>
-            </div>
-            <div class="c-media-contents">
-                <p>メディア全体がリンク範囲となっています</p>
-                <span class="m-btn m-btn-sm m-btn-first m-btn-bordered">ボタン</span>
-            </div>
-        </a>
-    </div>
-</div>
-</div>
-
-```
-
+/*
+--------------------
+c-media
+--------------------
 */
 .c-media {
   display: flex;
@@ -6624,102 +5144,19 @@ a.c-media:hover, a.c-media:focus {
   text-decoration: none;
 }
 
-/*doc
----
-title: c-media-middle
-name: media-01-middle
-category: component-media
-parent: media
----
-
-画像と本文を、上ではなく縦中央に整列させる。
-
-
-``` example
-<div style="margin-bottom: 2rem;">
-<div class="c-media c-media-middle">
-    <div class="c-media-object">
-        <div class="m-thumbnail">
-            <picture>
-            <source
-                media="(max-width:640px)"
-                srcset="/images/_dummy/image_06_s.jpg 640w"
-                sizes="100vw">
-            <source
-                srcset="/images/_dummy/image_06.jpg 1280w"
-                sizes="(max-width:1280px) 100vw, 1280px">
-            <img alt="" src="/images/_dummy/image_06.jpg">
-            </picture>
-        </div>
-    </div>
-
-    <div class="c-media-contents">
-        <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
-        <p>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
-        <p>この書生の掌の裏でしばらくはよい心持に坐っておったが、しばらくすると非常な速力で運転し始めた。書生が動くのか自分だけが動くのか分らないが無暗に眼が廻る。胸が悪くなる。到底助からないと思っていると、どさりと音がして眼から火が出た。それまでは記憶しているがあとは何の事やらいくら考え出そうとしても分らない。ふと気が付いて見ると書生はいない。たくさんおった兄弟が一疋も見えぬ。肝心の母親さえ姿を隠してしまった。その上今までの所とは違って無暗に明るい。眼を明いていられぬくらいだ。はてな何でも容子がおかしいと、のそのそ這い出して見ると非常に痛い。吾輩は藁の上から急に笹原の中へ棄てられたのである。</p>
-    </div>
-</div>
-</div>
-
-<div class="c-media c-media-middle">
-    <div class="c-media-object">
-        <div class="m-thumbnail">
-            <picture>
-            <source
-                media="(max-width:640px)"
-                srcset="/images/_dummy/image_06_s.jpg 640w"
-                sizes="100vw">
-            <source
-                srcset="/images/_dummy/image_06.jpg 1280w"
-                sizes="(max-width:1280px) 100vw, 1280px">
-            <img alt="" src="/images/_dummy/image_06.jpg">
-            </picture>
-        </div>
-    </div>
-
-    <div class="c-media-contents">
-        <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
-    </div>
-</div>
-```
-
+/*
+--------------------
+c-media-middle
+--------------------
 */
 .c-media-middle {
   align-items: center;
 }
 
-/*doc
----
-title: c-media-reverse
-name: media-02-reverse
-category: component-media
-parent: media
----
-
-オブジェクトと本文の配置を逆にする。
-
-``` example
-<div class="c-media c-media-reverse">
-    <div class="c-media-object">
-        <div class="m-thumbnail">
-            <picture>
-            <source
-                media="(max-width:640px)"
-                srcset="/images/_dummy/image_07_s.jpg 640w"
-                sizes="100vw">
-            <source
-                srcset="/images/_dummy/image_07.jpg 1280w"
-                sizes="(max-width:1280px) 100vw, 1280px">
-            <img alt="" src="/images/_dummy/image_07.jpg">
-            </picture>
-        </div>
-    </div>
-    <div class="c-media-contents">
-        <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
-    </div>
-</div>
-```
-
+/*
+--------------------
+c-media-reverse
+--------------------
 */
 .c-media-reverse {
   flex-direction: row-reverse;
@@ -6734,7 +5171,7 @@ parent: media
   }
 }
 
-/*doc
+/*
 ---
 title: u-bg-(color)
 name: bg-01-color
@@ -6755,7 +5192,7 @@ category: utility-bg
 ```
 
 */
-/*doc
+/*
 ---
 title: u-bg-fade
 name: bg-02-fade
@@ -6861,7 +5298,7 @@ parent: bg-01-color
   background-color: #ffe3e9;
 }
 
-/*doc
+/*
 ---
 title: u-clear
 name: clear
@@ -6887,7 +5324,7 @@ floatを解除する。
   clear: both;
 }
 
-/*doc
+/*
 ---
 title: u-clearfix
 name: clearfix
@@ -6926,7 +5363,7 @@ category: utility-clearfix
   clear: both;
 }
 
-/*doc
+/*
 ---
 title: u-expand
 name: expand
@@ -6954,7 +5391,7 @@ category: utility-expand
   padding-right: 100vw;
 }
 
-/*doc
+/*
 ---
 title: u-expand-sm-down
 name: expand-01-sm-down
@@ -6982,7 +5419,7 @@ parent: expand
   }
 }
 
-/*doc
+/*
 ---
 title: u-float-(direction)
 name: float-direction
@@ -7050,7 +5487,7 @@ category: utility-float
   }
 }
 
-/*doc
+/*
 ---
 title: u-font-(face)
 name: font-01-face
@@ -7069,7 +5506,7 @@ category: utility-font
 ```
 
 */
-/*doc
+/*
 ---
 title: u-font-bold
 name: font-02-bold
@@ -7135,7 +5572,7 @@ Reference: Boldface designation is not reflected. | FONTPLUS
   font-weight: 700;
 }
 
-/*doc
+/*
 ---
 title: u-hidden
 name: hidden
@@ -7149,7 +5586,7 @@ category: utility-hidden
   display: none;
 }
 
-/*doc
+/*
 ---
 title: u-hidden-(breakpoint)-up
 name: hidden-01-breakpoint-up
@@ -7201,7 +5638,7 @@ category: utility-hidden
   }
 }
 
-/*doc
+/*
 ---
 title: u-hidden-(breakpoint)-down
 name: hidden-02-breakpoint-down
@@ -7255,7 +5692,7 @@ category: utility-hidden
   }
 }
 
-/*doc
+/*
 ---
 title: u-image-responsive
 name: image-01-responsive
@@ -7274,7 +5711,7 @@ category: utility-image
   height: auto;
 }
 
-/*doc
+/*
 ---
 title: u-image-fill
 name: image-02-fill
@@ -7293,7 +5730,7 @@ category: utility-image
   height: auto;
 }
 
-/*doc
+/*
 ---
 title: u-line-(size)
 name: line-01-size
@@ -7323,7 +5760,7 @@ category: utility-line
   line-height: 2;
 }
 
-/*doc
+/*
 ---
 title: u-margin-(direction)-(size)
 name: margin
@@ -7550,7 +5987,7 @@ category: utility-margin
   margin-bottom: 60px;
 }
 
-/*doc
+/*
 ---
 title: u-padding-(direction)-(size)
 name: padding
@@ -7769,7 +6206,7 @@ category: utility-padding
   padding-bottom: 60px;
 }
 
-/*doc
+/*
 ---
 title: u-position-(y)-(x)
 name: position
@@ -7862,7 +6299,7 @@ category: utility-position
   right: 0;
 }
 
-/*doc
+/*
 ---
 title: u-shadow
 name: shadow
@@ -7879,7 +6316,7 @@ category: utility-shadow
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-/*doc
+/*
 ---
 title: u-shadow-(size)
 name: shadow-01-size
@@ -7900,7 +6337,7 @@ category: utility-shadow
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 2px 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/*doc
+/*
 ---
 title: u-sr
 name: sr
@@ -7924,7 +6361,7 @@ category: utility-sr
   border: 0;
 }
 
-/*doc
+/*
 ---
 title: u-sr-focus
 name: sr-01-focus
@@ -7956,7 +6393,7 @@ category: utility-sr
   clip: auto;
 }
 
-/*doc
+/*
 ---
 title: u-sr-focus-inner
 name: sr-02-focus-inner
@@ -7988,7 +6425,7 @@ category: utility-sr
   clip: auto;
 }
 
-/*doc
+/*
 ---
 title: u-text-(color)
 name: text-01-color
@@ -8025,7 +6462,7 @@ category: utility-text
   color: #d70022;
 }
 
-/*doc
+/*
 ---
 title: u-text-root
 name: text-02-root
@@ -8043,7 +6480,7 @@ category: utility-text
   color: #333;
 }
 
-/*doc
+/*
 ---
 title: u-text-inverse
 name: text-03-inverse
@@ -8063,7 +6500,7 @@ category: utility-text
   color: #fff;
 }
 
-/*doc
+/*
 ---
 title: u-text-(direction)(-(breakpont)-(up or down))
 name: text-05-direction
@@ -8278,7 +6715,7 @@ category: utility-text
   text-align: right;
 }
 
-/*doc
+/*
 ---
 title: u-text-(size)
 name: text-06-size
@@ -8324,7 +6761,7 @@ category: utility-text
   font-size: 2em;
 }
 
-/*doc
+/*
 ---
 title: u-width-(percentage)
 name: width
@@ -8380,7 +6817,7 @@ u-width-100
   width: 100%;
 }
 
-/*doc
+/*
 ---
 title: p-title
 name: title
@@ -8414,7 +6851,7 @@ category: project-title
   list-style-type: none;
 }
 
-/*doc
+/*
 ---
 title: p-title-(group)-(type)
 name: title-01-type
@@ -8580,7 +7017,7 @@ parent: title
   }
 }
 
-/*doc
+/*
 ---
 title: widget
 name: widget
@@ -8660,7 +7097,7 @@ category: project-widget
   padding-top: 20px;
 }
 
-/*doc
+/*
 ---
 title: widget-(size)
 name: widget-size
@@ -8743,7 +7180,7 @@ parent: widget;
   padding-top: 30px;
 }
 
-/*doc
+/*
 ---
 title: WYSIWYG Styles (WordPress)
 name: p-wysiwyg

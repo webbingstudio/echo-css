@@ -1,31 +1,7 @@
-/*doc
----
-title: #{$pr}#{$m}btn#{$c3}(size)
-name: btn-04-size
-category: module-btn
-parent: btn
----
-
-ボタンのサイズを変える。(size)は、 <code>sm, lg, xl</code> に対応している。
-
-### 補足：xl, xxlの挙動
-
-<code>.#{$pr}#{$m}btn#{$c3}xl, .#{$pr}#{$m}btn#{$c3}xxl</code> は、(breakpoint)が <code>sm</code> 以下では一段階小さくなる。
-
-### note: Behavior of xl, xxl
-
-<code>.#{$pr}#{$m}btn#{$c3}xl, .#{$pr}#{$m}btn#{$c3}xxl</code> decreases by one level when (breakpoint) is less than sm.
-
-
-``` example
-<p>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}sm">#{$pr}#{$m}btn#{$c3}sm</a>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__first}">default</a>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}lg">#{$pr}#{$m}btn#{$c3}lg</a>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}xl">#{$pr}#{$m}btn#{$c3}xl</a>
-  <a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__first} #{$pr}#{$m}btn#{$c3}xxl">#{$pr}#{$m}btn#{$c3}xl</a>
-</p>
-```
+/*
+--------------------
+#{$pr}#{$m}btn#{$c3}(size)
+--------------------
 */
 
 .#{$pr}#{$m}btn#{$c3}sm {
