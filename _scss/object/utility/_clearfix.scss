@@ -1,5 +1,3 @@
-@if ($disabled-utility-class != true) {
-
 /*
 --------------------
 #{$pr}#{$u}clearfix
@@ -11,7 +9,5 @@
     .#{$pr}#{$u}clearfix {
       @include clearfix();
     }
-
-}
 
 }

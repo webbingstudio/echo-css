@@ -1,5 +1,3 @@
-@if ($disabled-utility-class != true) {
-
 /*
 --------------------
 #{$pr}#{$u}padding#{$c2}(direction)#{$c3}(size)
@@ -63,7 +61,5 @@
 	.#{$pr}#{$u}padding#{$c2}left#{$c3}xxl   { padding-left:   ($spacer * 6) }
 	.#{$pr}#{$u}padding#{$c2}x#{$c3}xxl      { padding-right:  ($spacer * 6); padding-left:   ($spacer * 6) }
 	.#{$pr}#{$u}padding#{$c2}y#{$c3}xxl      { padding-top:    ($spacer * 6); padding-bottom: ($spacer * 6) }
-
-}
 
 }
