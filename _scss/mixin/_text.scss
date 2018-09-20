@@ -1,46 +1,50 @@
 @mixin make-text-direction($b: $grid-breakpoints) {
-  .#{$pr}#{$u}text#{$c3}left {
-    text-align: left;
-  }
-
-  .#{$pr}#{$u}text#{$c3}center {
-    text-align: center;
-  }
-
-  .#{$pr}#{$u}text#{$c3}right {
-    text-align: right;
-  }
-
-  @each $breakpoint in map-keys($b) {
-    @include media-breakpoint-up($breakpoint, $b) {
-      .#{$pr}#{$u}text#{$c3}left#{$c3}#{$breakpoint}#{$c3}up {
+    .#{$pr}#{$u}text#{$c3}left {
         text-align: left;
-      }
-
-      .#{$pr}#{$u}text#{$c3}center#{$c3}#{$breakpoint}#{$c3}up {
-        text-align: center;
-      }
-
-      .#{$pr}#{$u}text#{$c3}right#{$c3}#{$breakpoint}#{$c3}up {
-        text-align: right;
-      }
-
-    }
-    @include media-breakpoint-down($breakpoint, $b) {
-      .#{$pr}#{$u}text#{$c3}left#{$c3}#{$breakpoint}-down {
-        text-align: left;
-      }
-
-      .#{$pr}#{$u}text#{$c3}center#{$c3}#{$breakpoint}-down {
-        text-align: center;
-      }
-
-      .#{$pr}#{$u}text#{$c3}right#{$c3}#{$breakpoint}-down {
-        text-align: right;
-      }
-
     }
 
-  }
+    .#{$pr}#{$u}text#{$c3}center {
+        text-align: center;
+    }
+
+    .#{$pr}#{$u}text#{$c3}right {
+        text-align: right;
+    }
+
+    @each $breakpoint in map-keys($b) {
+
+        @include media-breakpoint-up($breakpoint, $b) {
+
+            .#{$pr}#{$u}text#{$c3}left#{$c3}#{$breakpoint}#{$c3}up {
+                text-align: left;
+            }
+
+            .#{$pr}#{$u}text#{$c3}center#{$c3}#{$breakpoint}#{$c3}up {
+                text-align: center;
+            }
+
+            .#{$pr}#{$u}text#{$c3}right#{$c3}#{$breakpoint}#{$c3}up {
+                text-align: right;
+            }
+
+        }
+
+        @include media-breakpoint-down($breakpoint, $b) {
+
+            .#{$pr}#{$u}text#{$c3}left#{$c3}#{$breakpoint}-down {
+                text-align: left;
+            }
+
+            .#{$pr}#{$u}text#{$c3}center#{$c3}#{$breakpoint}-down {
+                text-align: center;
+            }
+
+            .#{$pr}#{$u}text#{$c3}right#{$c3}#{$breakpoint}-down {
+                text-align: right;
+            }
+
+        }
+
+    }
 
 }

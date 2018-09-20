@@ -5,15 +5,15 @@ typography
 */
 
 html {
-  font-size: $font-size-md;
-  font-family: $font-family-root;
-  font-weight: $font-weight-root;
+    font-size: $font-size-md;
+    font-family: $font-family-root;
+    font-weight: $font-weight-root;
 }
 
 body {
-  background-color: $body-bg;
-  color: $body-color;
-  line-height: $line-height-md;
+    background-color: $body-bg;
+    color: $body-color;
+    line-height: $line-height-md;
 }
 
 /*
@@ -24,14 +24,14 @@ It is not appropriate to specify color or text-decoration for the link only with
 */
 
 a {
-  color: $link-color;
-  text-decoration: underline;
+    color: $link-color;
+    text-decoration: underline;
 
-  &:hover,
-  &:focus {
-    color: $link-hover-color;
-    text-decoration: none;
-  }
+    &:hover,
+    &:focus {
+        color: $link-hover-color;
+        text-decoration: none;
+    }
 
 }
 
@@ -112,10 +112,11 @@ dd {
     &:last-child {
         margin-bottom: 0;
     }
+
 }
 
 img {
-  border: 0 none;
+    border: 0 none;
 }
 
 /*

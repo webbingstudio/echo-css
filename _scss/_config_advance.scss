@@ -4,21 +4,21 @@
 // Conjunction
 // -----------------------------------------
 
-$c1: '-' !default;  // to $element
-$c2: '-' !default;   // to $key
-$c3: '-' !default;   // to $value
+$c1: '-' !default;   // to element
+$c2: '-' !default;   // to key
+$c3: '-' !default;   // to value
 
 @if ($rule == 'bem') {
-  $c1: '__';  // to $element
-  $c2: '--';   // to $key
-  $c3: '--';   // to $value
+    $c1: '__';   // to element
+    $c2: '--';   // to key
+    $c3: '--';   // to value
 }
 
 
 // Spacer
 // -----------------------------------------
 
-$spacer:    10px !default;
+$spacer: 10px !default;
 
 
 // Code Optimize
@@ -100,21 +100,21 @@ $error: "is-error" !default;
 // -----------------------------------------
 
 $container-max-widths-sm: (
-  md: 700px,
-  lg: 960px
+    md: 700px,
+    lg: 960px
 ) !default;
 
 $container-max-widths-md: (
-  md: 700px,
-  lg: 960px,
-  xl: 1200px
+    md: 700px,
+    lg: 960px,
+    xl: 1200px
 ) !default;
 
 $container-max-widths-lg: (
-  md: 700px,
-  lg: 960px,
-  xl: 1200px,
-  xxl: 1600px,
+    md:  700px,
+    lg:  960px,
+    xl:  1200px,
+    xxl: 1600px,
 ) !default;
 
 
@@ -122,24 +122,24 @@ $container-max-widths-lg: (
 // -----------------------------------------
 
 $grid-breakpoints: (
-  default: 0,
-  xxs: 320px,
-  xs:  360px,
-  sm:  425px,
-  md:  768px,
-  lg:  1000px,
-  xl:  1240px,
-  xxl: 1640px
+    default: 0,
+    xxs:     320px,
+    xs:      360px,
+    sm:      425px,
+    md:      768px,
+    lg:      1000px,
+    xl:      1240px,
+    xxl:     1640px
 ) !default;
 
 $grid-columns:        12 !default;
 $grid-columns-max:    $grid-columns - 1 !default;
 
 $grid-gutter-widths: (
-  none: 0,
-  sm:   $spacer,
-  md:   ($spacer * 2),
-  lg:   ($spacer * 4)
+    none:   0,
+    sm:     $spacer,
+    md:     ($spacer * 2),
+    lg:     ($spacer * 4)
 ) !default;
 
 

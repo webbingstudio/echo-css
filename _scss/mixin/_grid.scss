@@ -1,79 +1,108 @@
 @mixin make-col-flex($size, $columns: $grid-columns) {
-  flex-basis: percentage($size / $columns);
-  max-width: percentage($size / $columns);
+    flex-basis: percentage($size / $columns);
+    max-width: percentage($size / $columns);
 }
 
 @mixin make-col-offset-flex($size, $columns: $grid-columns) {
-  $num: $size / $columns;
-  margin-left: if($num == 0, 0, percentage($num));
+    $num: $size / $columns;
+    margin-left: if($num == 0, 0, percentage($num));
 }
 
 @mixin make-grid-columns-flex($columns: $grid-columns, $breakpoints: $grid-breakpoints) {
-  %grid-column {
-    flex-basis: 0%;
-    flex-grow: 1;
-    max-width: 100%;
-  }
-
-  [class*="#{$pr}#{$col}"] {
-    position: relative;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 0%;
-    margin: 0;
-    padding-left: (map-get($grid-gutter-widths, md) / 2);
-    padding-right: (map-get($grid-gutter-widths, md) / 2);
-  }
-
-  @each $breakpoint in map-keys($breakpoints) {
-    $infix: breakpoint-infix($breakpoint, $breakpoints);
-
-    @if ($breakpoint == 'sm') {
-      @include media-breakpoint-down(sm) {
-        .#{$pr}#{$col} {
-          flex-basis: 100%;
-        }
-      }
+    %grid-column {
+        flex-basis: 0%;
+        flex-grow: 1;
+        max-width: 100%;
     }
 
-    @for $i from 1 through $columns {
-      @if ($optimize != true) or ( ($optimize == true) and ( $i > 1 ) and ( $i != $grid-columns-max ) ) {
-        .#{$pr}#{$col}#{$infix}#{$c3}#{$i} {
-          @extend %grid-column;
-        }
-      }
+    [class*="#{$pr}#{$col}"] {
+        position: relative;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 0%;
+        margin: 0;
+        padding-left: (map-get($grid-gutter-widths, md) / 2);
+        padding-right: (map-get($grid-gutter-widths, md) / 2);
     }
-    .#{$pr}#{$col}#{$infix} {
-      @extend %grid-column;
-    }
 
-    @include media-breakpoint-up($breakpoint, $breakpoints) {
-      @for $i from 1 through $columns {
-        @if ($optimize != true) or ( ($optimize == true) and ( $i > 1 ) and ( $i != $grid-columns-max ) ) {
-          .#{$pr}#{$col}#{$infix}#{$c3}#{$i} {
-            @include make-col-flex($i, $columns);
-          }
-        }
-      }
+    @each $breakpoint in map-keys($breakpoints) {
+        $infix: breakpoint-infix($breakpoint, $breakpoints);
 
-      .#{$pr}#{$col}#{$c2}order#{$infix}#{$c3}first { order: -1; }
+        @if ($breakpoint == 'sm') {
 
-      .#{$pr}#{$col}#{$c2}order#{$infix}#{$c3}last { order: $columns + 1; }
+            @include media-breakpoint-down(sm) {
+                .#{$pr}#{$col} {
+                    flex-basis: 100%;
+                }
 
-      @for $i from 0 through $columns {
-        .#{$pr}#{$col}#{$c2}order#{$infix}#{$c3}#{$i} { order: $i; }
-      }
-
-      @for $i from 0 through ($columns - 1) {
-        @if ($optimize != true) or ( ($optimize == true) and ( $i < $grid-columns-max ) ) {
-          @if not ($infix == "" and $i == 0) {
-            .#{$pr}#{$col}#{$c2}offset#{$infix}#{$c3}#{$i} {
-              @include make-col-offset-flex($i, $columns);
             }
-          }
+
         }
-      }
+
+        @for $i from 1 through $columns {
+
+            @if ($optimize != true) or ( ($optimize == true) and ( $i > 1 ) and ( $i != $grid-columns-max ) ) {
+
+                .#{$pr}#{$col}#{$infix}#{$c3}#{$i} {
+                    @extend %grid-column;
+                }
+
+            }
+
+        }
+
+        .#{$pr}#{$col}#{$infix} {
+            @extend %grid-column;
+        }
+
+        @include media-breakpoint-up($breakpoint, $breakpoints) {
+
+            @for $i from 1 through $columns {
+
+                @if ($optimize != true) or ( ($optimize == true) and ( $i > 1 ) and ( $i != $grid-columns-max ) ) {
+
+                    .#{$pr}#{$col}#{$infix}#{$c3}#{$i} {
+                        @include make-col-flex($i, $columns);
+                    }
+
+                }
+
+            }
+
+            .#{$pr}#{$col}#{$c2}order#{$infix}#{$c3}first {
+                order: -1;
+            }
+
+            .#{$pr}#{$col}#{$c2}order#{$infix}#{$c3}last {
+                order: $columns + 1;
+            }
+
+            @for $i from 0 through $columns {
+
+                .#{$pr}#{$col}#{$c2}order#{$infix}#{$c3}#{$i} {
+                    order: $i;
+                }
+
+            }
+
+            @for $i from 0 through ($columns - 1) {
+
+                @if ($optimize != true) or ( ($optimize == true) and ( $i < $grid-columns-max ) ) {
+
+                    @if not ($infix == "" and $i == 0) {
+
+                        .#{$pr}#{$col}#{$c2}offset#{$infix}#{$c3}#{$i} {
+                            @include make-col-offset-flex($i, $columns);
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
 
     }
-  }
+
 }

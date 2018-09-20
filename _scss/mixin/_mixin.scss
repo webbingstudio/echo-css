@@ -66,115 +66,119 @@
 
 
 @function breakpoint-next($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map-keys($breakpoints)) {
-  $n: index($breakpoint-names, $name);
-  @return if($n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
+    $n: index($breakpoint-names, $name);
+    @return if($n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
 }
 
 @function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
-  $min: map-get($breakpoints, $name);
-  @return if($min != 0, $min, null);
+    $min: map-get($breakpoints, $name);
+    @return if($min != 0, $min, null);
 }
 
 @function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
-  $next: breakpoint-next($name, $breakpoints);
-  @return if($next, breakpoint-min($next, $breakpoints) - 0.1, null);
+    $next: breakpoint-next($name, $breakpoints);
+    @return if($next, breakpoint-min($next, $breakpoints) - 0.1, null);
 }
 
 @function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
-  @return if(breakpoint-min($name, $breakpoints) == null, "", "#{$c2}#{$name}");
+    @return if(breakpoint-min($name, $breakpoints) == null, "", "#{$c2}#{$name}");
 }
 
 
 @mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
-  $min: breakpoint-min($name, $breakpoints);
-  @if $min {
-    @media (min-width: $min) {
-      @content;
+    $min: breakpoint-min($name, $breakpoints);
+
+    @if $min {
+        @media (min-width: $min) {
+          @content;
+        }
+
+    } @else {
+        @content;
+
     }
-  } @else {
-    @content;
-  }
+
 }
 
 
 @mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
-  $max: breakpoint-max($name, $breakpoints);
-  @if $max {
-    @media (max-width: $max) {
-      @content;
+    $max: breakpoint-max($name, $breakpoints);
+
+    @if $max {
+        @media (max-width: $max) {
+        @content;
     }
-  } @else {
-    @content;
-  }
+
+    } @else {
+        @content;
+
+    }
+
 }
 
 
 @mixin media-breakpoint-only($name, $breakpoints: $grid-breakpoints) {
-  @include media-breakpoint-up($name, $breakpoints) {
-    @include media-breakpoint-down($name, $breakpoints) {
-      @content;
+
+    @include media-breakpoint-up($name, $breakpoints) {
+
+        @include media-breakpoint-down($name, $breakpoints) {
+            @content;
+        }
+
     }
-  }
-}
 
-
-@mixin make-container($gutter: $grid-gutter-widths) {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left:  (map-get($grid-gutter-widths, md) / 2);
-  padding-right: (map-get($grid-gutter-widths, md) / 2);
-  @include clearfix();
 }
 
 
 @mixin button-variant(
-  $color,
-  $background,
-  $border,
-  $hover-color,
-  $hover-background,
-  $hover-border
+    $color,
+    $background,
+    $border,
+    $hover-color,
+    $hover-background,
+    $hover-border
 ) {
-  color: $color;
-  background-color: $background;
-  border-color: $border;
 
-  &:hover,
-  &:focus,
-  &:active,
-  &.active {
-    color: $hover-color;
-    background-color: $hover-background;
-    border-color: $hover-border;
-  }
-
-  &.disabled,
-  &:disabled,
-  fieldset[disabled] & {
-    opacity: .8;
+    color: $color;
+    background-color: $background;
+    border-color: $border;
 
     &:hover,
-    &.hover,
     &:focus,
-    &.focus {
-      color: $color;
-      background-color: $background;
-      border-color: $border;
+    &:active,
+    &.active {
+        color: $hover-color;
+        background-color: $hover-background;
+        border-color: $hover-border;
     }
 
-  }
+    &.disabled,
+    &:disabled,
+    fieldset[disabled] & {
+        opacity: .8;
 
-  @at-root {
+        &:hover,
+        &.hover,
+        &:focus,
+        &.focus {
+            color: $color;
+            background-color: $background;
+            border-color: $border;
+        }
 
-    a:hover &,
-    a:focus &,
-    a:active & {
-      color: $hover-color;
-      background-color: $hover-background;
-      border-color: $hover-border;
     }
 
-  }
+    @at-root {
+
+        a:hover &,
+        a:focus &,
+        a:active & {
+            color: $hover-color;
+            background-color: $hover-background;
+            border-color: $hover-border;
+        }
+
+    }
 
 }
 
