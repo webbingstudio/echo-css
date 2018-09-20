@@ -1,19 +1,7 @@
 /*
----
-title: #{$pr}#{$m}embed
-name: embed
-category: module-embed
----
-
-インラインフレームなどの埋め込みオブジェクトを表示する。要素自体ではなく、包括している要素にクラスを付与する。  
-このクラス単独ではそのままのサイズで表示する。
-
-``` example
-<div class="#{$pr}#{$m}embed">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4CZpUy_YWA?rel=0" frameborder="0" allowfullscreen></iframe>
-</div>
-```
-
+--------------------
+#{$pr}#{$m}embed
+--------------------
 */
 
 .#{$pr}#{$m}embed {
@@ -39,65 +27,10 @@ category: module-embed
 
 
 /*
----
-title: #{$pr}#{$m}embed#{$c3}square
-name: object-01-square
-category: module-object
-parent: object
----
-
-埋め込みオブジェクトを正方形にトリミングして表示する。別途、幅を指定する必要がある。
-
-``` example
-<div style="max-width: 320px;">
-
-<div class="#{$pr}#{$m}embed #{$pr}#{$m}embed#{$c3}square">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4CZpUy_YWA?rel=0" frameborder="0" allowfullscreen></iframe>
-</div>
-
-</div>
-```
-
-*/
-
-
-/*
----
-title: #{$pr}#{$m}embed#{$c3}(ratio-x)to(ratio-y)
-name: embed-02-ratio
-category: module-embed
-parent: embed
----
-
-埋め込みオブジェクトを指定した縦横比で表示する。別途、幅を指定する必要がある。  
-(ratio-x)to(ratio-y)は <code>3to2, 4to3, 16to9, ogimage(1.91:1), 21to9</code> に対応している。   
-
-``` example
-<div style="max-width: 320px;">
-
-<div class="#{$pr}#{$m}embed #{$pr}#{$m}embed#{$c3}3to2" style="margin-bottom: 1rem;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4CZpUy_YWA?rel=0" frameborder="0" allowfullscreen></iframe>
-</div>
-
-<div class="#{$pr}#{$m}embed #{$pr}#{$m}embed#{$c3}4to3" style="margin-bottom: 1rem;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4CZpUy_YWA?rel=0" frameborder="0" allowfullscreen></iframe>
-</div>
-
-<div class="#{$pr}#{$m}embed #{$pr}#{$m}embed#{$c3}16to9" style="margin-bottom: 1rem;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4CZpUy_YWA?rel=0" frameborder="0" allowfullscreen></iframe>
-</div>
-
-<div class="#{$pr}#{$m}embed #{$pr}#{$m}embed#{$c3}ogimage" style="margin-bottom: 1rem;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4CZpUy_YWA?rel=0" frameborder="0" allowfullscreen></iframe>
-</div>
-
-<div class="#{$pr}#{$m}embed #{$pr}#{$m}embed#{$c3}21to9" style="margin-bottom: 1rem;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4CZpUy_YWA?rel=0" frameborder="0" allowfullscreen></iframe>
-</div>
-
-</div>
-```
-
+--------------------
+#{$pr}#{$m}embed#{$c3}square
+#{$pr}#{$m}embed#{$c3}(ratio-x)to(ratio-y)
+--------------------
 */
 
 .#{$pr}#{$m}embed#{$c3}square,

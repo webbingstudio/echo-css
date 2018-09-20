@@ -2290,23 +2290,9 @@ m-btn-square
 }
 
 /*
----
-title: m-checkbox
-name: checkbox
-category: module-checkbox
----
-
-チェックボックスとラベルをインライン表示する。input要素ではなく、包括している要素にクラスを付与する（ほとんどの場合、label要素となる）。  
-余白・レイアウト等は <code>utility > .u-padding</code> や <code>component > .c-form</code> で指定する。  
-<code>.is-error</code> を同時に使用するとエラーがあったときの表示となる。 
-
-``` example
-<p>
-<label class="m-checkbox u-margin-right-md" for="checkbox1"><input type="checkbox" name="checkbox1" id="checkbox1" class="u-margin-right-sm" value="1">m-checkbox</label>
-<label class="m-checkbox u-margin-right-md" for="checkbox2"><input type="checkbox" name="checkbox2" id="checkbox2" class="u-margin-right-sm" value="2" checked="checked">m-checkbox</label>
-<label class="m-checkbox is-error" for="checkbox3"><input type="checkbox" name="checkbox3" id="checkbox3" class="u-margin-right-sm" value="3">m-checkbox</label>
-</p>
-```
+--------------------
+m-checkbox
+--------------------
 */
 .m-checkbox {
   display: inline-block;
@@ -2324,21 +2310,9 @@ category: module-checkbox
 }
 
 /*
----
-title: m-embed
-name: embed
-category: module-embed
----
-
-インラインフレームなどの埋め込みオブジェクトを表示する。要素自体ではなく、包括している要素にクラスを付与する。  
-このクラス単独ではそのままのサイズで表示する。
-
-``` example
-<div class="m-embed">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4CZpUy_YWA?rel=0" frameborder="0" allowfullscreen></iframe>
-</div>
-```
-
+--------------------
+m-embed
+--------------------
 */
 .m-embed {
   overflow: hidden;
@@ -2359,63 +2333,10 @@ category: module-embed
 }
 
 /*
----
-title: m-embed-square
-name: object-01-square
-category: module-object
-parent: object
----
-
-埋め込みオブジェクトを正方形にトリミングして表示する。別途、幅を指定する必要がある。
-
-``` example
-<div style="max-width: 320px;">
-
-<div class="m-embed m-embed-square">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4CZpUy_YWA?rel=0" frameborder="0" allowfullscreen></iframe>
-</div>
-
-</div>
-```
-
-*/
-/*
----
-title: m-embed-(ratio-x)to(ratio-y)
-name: embed-02-ratio
-category: module-embed
-parent: embed
----
-
-埋め込みオブジェクトを指定した縦横比で表示する。別途、幅を指定する必要がある。  
-(ratio-x)to(ratio-y)は <code>3to2, 4to3, 16to9, ogimage(1.91:1), 21to9</code> に対応している。   
-
-``` example
-<div style="max-width: 320px;">
-
-<div class="m-embed m-embed-3to2" style="margin-bottom: 1rem;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4CZpUy_YWA?rel=0" frameborder="0" allowfullscreen></iframe>
-</div>
-
-<div class="m-embed m-embed-4to3" style="margin-bottom: 1rem;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4CZpUy_YWA?rel=0" frameborder="0" allowfullscreen></iframe>
-</div>
-
-<div class="m-embed m-embed-16to9" style="margin-bottom: 1rem;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4CZpUy_YWA?rel=0" frameborder="0" allowfullscreen></iframe>
-</div>
-
-<div class="m-embed m-embed-ogimage" style="margin-bottom: 1rem;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4CZpUy_YWA?rel=0" frameborder="0" allowfullscreen></iframe>
-</div>
-
-<div class="m-embed m-embed-21to9" style="margin-bottom: 1rem;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4CZpUy_YWA?rel=0" frameborder="0" allowfullscreen></iframe>
-</div>
-
-</div>
-```
-
+--------------------
+m-embed-square
+m-embed-(ratio-x)to(ratio-y)
+--------------------
 */
 .m-embed-square iframe,
 .m-embed-square embed,
@@ -2474,26 +2395,9 @@ parent: embed
 }
 
 /*
----
-title: m-input
-name: input
-category: module-input
----
-
-テキスト入力を即す欄を表示する。要素に直接クラスを付与する（ほとんどの場合、input要素、textarea要素となる）。  
-余白・レイアウト等は <code>utility > .u-margin</code> や <code>component > .c-form</code> で指定する。  
-<code>.is-error</code> を同時に使用するとエラーがあったときの表示となる。 
-
-``` example
-<div style="margin-bottom: 2rem;">
-    <input type="text" class="m-input" size="20" value="吾輩は猫である。" />
-    <input type="text" class="m-input is-error" size="20" value="* なに？ *" />
-</div>
-<div>
-    <textarea class="m-input" rows="5" cols="60">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</textarea>
-    <textarea class="m-input is-error" rows="5" cols="60">* おおっと *</textarea>
-</div>
-```
+--------------------
+m-input
+--------------------
 */
 .m-input {
   padding: .375rem .5rem;
@@ -2510,25 +2414,9 @@ category: module-input
 }
 
 /*
----
-title: m-input-(size)
-name: input-01-size
-category: module-input
-parent: input
----
-
-テキスト入力を即す欄の全体のサイズを変更する。(size)は <code>sm, lg</code> に対応している。
-
-``` example
-<div style="margin-bottom: 2rem;">
-    <input type="text" class="m-input m-input-sm" size="20" value="吾輩は猫である。" />
-    <input type="text" class="m-input m-input-lg" size="20" value="吾輩は猫である。" />
-</div>
-<div>
-    <textarea class="m-input m-input-sm" rows="5" cols="60">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</textarea>
-    <textarea class="m-input m-input-lg" rows="5" cols="60">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</textarea>
-</div>
-```
+--------------------
+m-input-(size)
+--------------------
 */
 .m-input-sm {
   padding: .25rem;
@@ -2541,38 +2429,9 @@ parent: input
 }
 
 /*
----
-title: m-input-(color)
-name: input-02-color
-category: module-input
-parent: input
----
-
-ボーダーの色を変更する。(color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
-
-``` example
-<div style="margin-bottom: 1rem;">
-    <input type="text" class="m-input m-input-gray" size="20" value="" placeholder="gray" />
-</div>
-<div style="margin-bottom: 1rem;">
-    <input type="text" class="m-input m-input-first" size="20" value="" placeholder="first" />
-</div>
-<div style="margin-bottom: 1rem;">
-    <input type="text" class="m-input m-input-second" size="20" value="" placeholder="second" />
-</div>
-<div style="margin-bottom: 1rem;">
-    <input type="text" class="m-input m-input-third" size="20" value="" placeholder="third" />
-</div>
-<div style="margin-bottom: 1rem;">
-    <input type="text" class="m-input m-input-fourth" size="20" value="" placeholder="fourth" />
-</div>
-<div style="margin-bottom: 1rem;">
-    <input type="text" class="m-input m-input-info" size="20" value="" placeholder="info" />
-</div>
-<div>
-    <input type="text" class="m-input m-input-important" size="20" value="" placeholder="important" />
-</div>
-```
+--------------------
+m-input-(color)
+--------------------
 */
 .m-input-gray {
   border-color: #333;
@@ -2603,27 +2462,15 @@ parent: input
 }
 
 /*
----
-title: m-label
-name: label
-category: module-label
----
-
-カテゴリー名などに使用する、小さなラベルを表示する。a要素にも指定できる。
-
-``` example
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label">m-label</span><a href="#" class="m-label">m-label(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-```
-
+--------------------
+m-label
+--------------------
 */
 .m-label {
   display: inline-block;
   min-width: 3em;
   margin-right: .5em;
-  padding: .3rem .75em .25rem;
-  -webkit-transform: translate(0, -0.125rem);
-  -ms-transform: translate(0, -0.125rem);
-  transform: translate(0, -0.125rem);
+  padding: .3rem .75em;
   background-color: #888;
   font-size: .75em;
   font-weight: 300;
@@ -2638,25 +2485,9 @@ a.m-label {
 }
 
 /*
----
-title: m-label-(color)
-name: label-01-color
-category: module-label
-parent: label
----
-
-ラベルの色を変更する。(color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
-
-``` example
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-gray">m-label-gray</span><a href="#" class="m-label m-label-gray">m-label-gray(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-first">m-label-first</span><a href="#" class="m-label m-label-first">m-label-first(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-second">m-label-second</span><a href="#" class="m-label m-label-second">m-label-second(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-third">m-label-third</span><a href="#" class="m-label m-label-third">m-label-third(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-fourth">m-label-fourth</span><a href="#" class="m-label m-label-fourth">m-label-fourth(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-info">m-label-info</span><a href="#" class="m-label m-label-info">m-label-info(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-important">m-label-important</span><a href="#" class="m-label m-label-important">m-label-important(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-```
-
+--------------------
+m-label-(color)
+--------------------
 */
 .m-label-gray {
   background-color: #333;
@@ -2687,29 +2518,9 @@ parent: label
 }
 
 /*
----
-title: m-label-inverse
-name: label-03-inverse
-category: module-label
-parent: label
----
-
-ラベルの文字色をbody要素の文字色、背景色をbody要素の背景色にする。  
-<code>.m-label-(color)</code> と同時に使用すると、文字色が指定した色になる。
-
-
-``` example
-<div style="background-color: #999; padding: 1rem; color: #eee;">
-    <p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-inverse">m-label-inverse</span><a href="#" class="m-label m-label-inverse">m-label-inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-    <p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-inverse m-label-first">m-label-inverse</span><a href="#" class="m-label m-label-inverse m-label-first">m-label-inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-    <p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-inverse m-label-second">m-label-inverse</span><a href="#" class="m-label m-label-inverse m-label-second">m-label-inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-    <p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-inverse m-label-third">m-label-inverse</span><a href="#" class="m-label m-label-inverse m-label-third">m-label-inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-    <p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-inverse m-label-fourth">m-label-inverse</span><a href="#" class="m-label m-label-inverse m-label-fourth">m-label-inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-    <p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-inverse m-label-info">m-label-inverse</span><a href="#" class="m-label m-label-inverse m-label-info">m-label-inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-    <p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-inverse m-label-important">m-label-inverse</span><a href="#" class="m-label m-label-inverse m-label-important">m-label-inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-</div>
-```
-
+--------------------
+m-label-inverse
+--------------------
 */
 .m-label-inverse {
   color: #333;
@@ -2756,88 +2567,20 @@ a.m-label-inverse.m-label-important {
 }
 
 /*
----
-title: m-label-round
-name: label-04-round
-category: module-label
-parent: label
----
-
-ラベルが小判型になる。
-
-``` example
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-round m-label-gray">m-label-gray</span><a href="#" class="m-label m-label-round m-label-gray">m-label-gray(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-round m-label-first">m-label-first</span><a href="#" class="m-label m-label-round m-label-first">m-label-first(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-round m-label-second">m-label-second</span><a href="#" class="m-label m-label-round m-label-second">m-label-second(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-round m-label-third">m-label-third</span><a href="#" class="m-label m-label-round m-label-third">m-label-third(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-round m-label-fourth">m-label-fourth</span><a href="#" class="m-label m-label-round m-label-fourth">m-label-fourth(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-round m-label-info">m-label-info</span><a href="#" class="m-label m-label-round m-label-info">m-label-info(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-round m-label-important">m-label-important</span><a href="#" class="m-label m-label-round m-label-important">m-label-important(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-```
-
+--------------------
+m-label-oval
+--------------------
 */
-.m-label-round {
+.m-label-oval {
   border-radius: 5em;
   padding-left: 1em;
   padding-right: 1em;
 }
 
 /*
----
-title: m-list
-name: list
-category: module-list
----
-
-改行される可能性があるテキストの表示を前提としたリストを表示する。このクラス単独では整列のみ行う。  
-<code>ul</code> に使用した場合は、子要素にクラスを指定していなくても有効になる。  
-
-``` example
-<h3 class="u-text-lg">すべての要素にクラスを付与した場合</h3>
-<ul class="m-list">
-    <li class="m-list-item">あいうえおかきくけ10さしすせ</li>
-    <li class="m-list-item">あいうえおかきく
-        <ul class="m-list-children">
-            <li class="m-list-item">あいうえお</li>
-            <li class="m-list-item">あいうえおかきくけ10さしすせそたちつて20
-                <ul class="m-list-children">
-                    <li class="m-list-item">あいうえお</li>
-                    <li class="m-list-item">あいうえおかきくけ10さしすせそたちつて20</li>
-                    <li class="m-list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
-                    <li class="m-list-item">あいうえおかきくけ10</li>
-                </ul>
-            </li>
-            <li class="m-list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
-            <li class="m-list-item">あいうえおかきくけ10</li>
-        </ul>
-    </li>
-    <li class="m-list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
-    <li class="m-list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
-</ul>
-
-<h3 class="u-text-lg u-margin-top-lg">ulのみクラスを付与した場合</h3>
-<ul class="m-list">
-    <li>あいうえおかきくけ10さしすせ</li>
-    <li>あいうえおかきく
-        <ul>
-            <li>あいうえお</li>
-            <li>あいうえおかきくけ10さしすせそたちつて20
-                <ul>
-                    <li>あいうえお</li>
-                    <li>あいうえおかきくけ10さしすせそたちつて20</li>
-                    <li>あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
-                    <li>あいうえおかきくけ10</li>
-                </ul>
-            </li>
-            <li>あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
-            <li>あいうえおかきくけ10</li>
-        </ul>
-    </li>
-    <li>あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
-    <li>あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
-</ul>
-```
-
+--------------------
+m-list
+--------------------
 */
 .m-list {
   margin: 0;
@@ -2860,61 +2603,9 @@ ul.m-list li ul,
 }
 
 /*
----
-title: m-list-vertical
-name: list-01-vertical
-category: module-list
-parent: list
----
-
-階層構造を持ったリストを表示する。階層が深くなるごとに文字が小さくなる。
-
-``` example
-<h3 class="u-text-lg">すべての要素にクラスを付与した場合</h3>
-<ul class="m-list m-list-vertical">
-    <li class="m-list-item">あいうえおかきくけ10さしすせ</li>
-    <li class="m-list-item">あいうえおかきく
-        <ul class="m-list-children">
-            <li class="m-list-item">あいうえお</li>
-            <li class="m-list-item">あいうえおかきくけ10さしすせそたちつて20
-                <ul class="m-list-children">
-                    <li class="m-list-item">あいうえお</li>
-                    <li class="m-list-item">あいうえおかきくけ10さしすせそたちつて20</li>
-                    <li class="m-list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20</li>
-                    <li class="m-list-item">あいうえおかきくけ10</li>
-                </ul>
-            </li>
-            <li class="m-list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのは</li>
-            <li class="m-list-item">あいうえおかきくけ10</li>
-        </ul>
-    </li>
-    <li class="m-list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえ</li>
-    <li class="m-list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
-</ul>
-
-<h3 class="u-text-lg u-margin-top-lg">ulのみクラスを付与した場合</h3>
-<ul class="m-list m-list-vertical">
-    <li>あいうえおかきくけ10さしすせ</li>
-    <li>あいうえおかきく
-        <ul>
-            <li>あいうえお</li>
-            <li>あいうえおかきくけ10さしすせそたちつて20
-                <ul>
-                    <li>あいうえお</li>
-                    <li>あいうえおかきくけ10さしすせそたちつて20</li>
-                    <li>あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
-                    <li>あいうえおかきくけ10</li>
-                </ul>
-            </li>
-            <li>あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
-            <li>あいうえおかきくけ10</li>
-        </ul>
-    </li>
-    <li>あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
-    <li>あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
-</ul>
-```
-
+--------------------
+m-list-vertical
+--------------------
 */
 ul.m-list-vertical li,
 .m-list-vertical .m-list-item {
@@ -2933,33 +2624,9 @@ ul.m-list-vertical li ul li,
 }
 
 /*
----
-title: m-list-horizontal
-name: list-02-horizontal
-category: module-list
-parent: list
----
-
-水平に並列するリストを表示する。階層構造を持たせることはできない。  
-
-``` example
-<h3 class="u-text-lg">すべての要素にクラスを付与した場合</h3>
-<ul class="m-list m-list-horizontal">
-    <li class="m-list-item">あいうえおかきくけ10さしすせ</li>
-    <li class="m-list-item">あいうえおかきく</li>
-    <li class="m-list-item">あいうえお</li>
-    <li class="m-list-item">あいうえおかきくけ</li>
-</ul>
-
-<h3 class="u-text-lg u-margin-top-lg">ulのみクラスを付与した場合</h3>
-<ul class="m-list m-list-horizontal">
-    <li>あいうえおかきくけ10さしすせ</li>
-    <li>あいうえおかきく</li>
-    <li>あいうえお</li>
-    <li>あいうえおかきくけ</li>
-</ul>
-```
-
+--------------------
+m-list-horizontal
+--------------------
 */
 .m-list-horizontal {
   letter-spacing: -.4em;
@@ -2982,111 +2649,9 @@ ul.m-list-horizontal li:last-child,
 }
 
 /*
----
-title: m-nav
-name: nav
-category: module-nav
----
-
-クリック範囲が広いナビゲーションを表示する。  
-<code>ul > li a</code> の包括要素に使用した場合は、子要素にクラスを指定していなくても有効になる。  
-現在地をハイライトする <code>.is-current</code> は <code>.m-nav-item , .m-nav-label</code> のどちらに付与してもよい。  
-テキストが複数行になった場合でも、ナビゲーションのすべてのテキストが縦中央に整列する。  
-<code>.m-nav-label</code> 内で装飾用の要素を使用すると崩れるため、その場合はダミーのインライン要素を加える。ここでは <code>span.m-nav-text</code> としている。  
-
-``` example
-<h3 class="u-text-lg">すべての要素にクラスを付与した場合</h3>
-<nav class="m-nav">
-    <div class="m-nav-list">
-        <p class="m-nav-item">
-            <a href="#" class="m-nav-label">ボタン</a>
-        </p>
-        <p class="m-nav-item">
-            <a href="#" class="m-nav-label is-current">現在のページ</a>
-        </p>
-        <p class="m-nav-item">
-            <a href="#" class="m-nav-label">文字数が多いボタンです</a>
-        </p>
-        <p class="m-nav-item">
-            <a href="#" class="m-nav-label"><span class="m-nav-text"><span class="u-text-xs">複数行の</span><br>ボタン</span></a>
-        </p>
-        <p class="m-nav-item">
-            <a href="#" class="m-nav-label">ボタン</a>
-        </p>
-        <p class="m-nav-item">
-            <a href="#" class="m-nav-label">ボタン</a>
-        </p>
-    </div><!-- /.nav-list -->
-</nav><!-- /.nav -->
-
-<h3 class="u-text-lg u-margin-top-lg">包括要素のみクラスを付与した場合</h3>
-<nav class="m-nav">
-    <ul>
-        <li>
-            <a href="#">ボタン</a>
-        </li>
-        <li>
-            <a href="#" class="is-current">現在のページ</a>
-        </li>
-        <li>
-            <a href="#"><span class="m-nav-text"><span class="u-text-xs">複数行の</span><br>ボタン</span></a>
-        </li>
-        <li>
-            <a href="#">ボタン</a>
-        </li>
-        <li>
-            <a href="#">文字数が多いボタンです</a>
-        </li>
-        <li>
-            <a href="#">ボタン</a>
-        </li>
-    </ul>
-</nav><!-- /.nav -->
-
-<h3 class="u-text-lg u-margin-top-lg">m-nav-label のみ使用し、ナビゲーションの分割はグリッドにした場合</h3>
-<ul class="l-grid-row l-grid-row-0">
-    <li class="l-grid-col-4 l-grid-col-md-2">
-        <a href="#" class="m-nav-label">ボタン</a>
-    </li>
-    <li class="l-grid-col-4 l-grid-col-md-3">
-        <a href="#" class="m-nav-label is-current">現在のページ</a>
-    </li>
-    <li class="l-grid-col-4 l-grid-col-md-3">
-        <a href="#" class="m-nav-label">ボタン</a>
-    </li>
-    <li class="l-grid-col-6 l-grid-col-md-2">
-        <a href="#" class="m-nav-label">ボタン</a>
-    </li>
-    <li class="l-grid-col-6 l-grid-col-md-2">
-        <a href="#" class="m-nav-label">ボタン</a>
-    </li>
-</ul>
-
-<h3 class="u-text-lg u-margin-top-lg">アイコンを併用した例（幅を100%にすると自動的に均等幅となる）</h3>
-<nav class="m-nav" style="width: 100%;">
-    <ul class="m-nav-list">
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label"><span class="m-nav-text"><i class="fas fa-home" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"></i>吾輩は</span></a>
-        </li>
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label"><span class="m-nav-text"><i class="fas fa-user" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"></i>猫である</span></a>
-        </li>
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label"><span class="m-nav-text"><i class="fas fa-taxi" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"></i>名前はまだ無い</span></a>
-        </li>
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label"><span class="m-nav-text"><i class="fas fa-map" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"></i>どこで</span></a>
-        </li>
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label"><span class="m-nav-text"><i class="fas fa-envelope" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"></i>生れたか</span></a>
-        </li>
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label"><span class="m-nav-text"><i class="fas fa-shopping-cart" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"></i>とんと</span></a>
-        </li>
-    </ul>
-</nav><!-- /.nav -->
-```
-
+--------------------
+m-nav
+--------------------
 */
 .m-nav {
   display: inline-block;
@@ -3173,133 +2738,9 @@ a.m-nav-label:hover, a.m-nav-label:focus, .m-nav > ul li a:hover, .m-nav > ul li
 }
 
 /*
----
-title: m-nav-vertical
-name: nav-01-vertical
-category: module-nav
-parent: nav
----
-
-幅100%の垂直ナビゲーションとして表示する。3階層まで表示できる。
-
-``` example
-<h3 class="u-text-lg">すべての要素にクラスを付与した場合</h3>
-<nav class="m-nav m-nav-vertical">
-    <ul class="m-nav-list">
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label">ボタン</a>
-        </li>
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label is-current">現在のページ</a>
-            <ul class="m-nav-list m-nav-children">
-                <li class="m-nav-item">
-                    <a href="#" class="m-nav-label">2階層目ボタン</a>
-                    <ul class="m-nav-list m-nav-children">
-                        <li class="m-nav-item">
-                            <a href="#" class="m-nav-label">3階層目ボタン</a>
-                        </li>
-                        <li class="m-nav-item">
-                            <a href="#" class="m-nav-label">3階層目ボタン</a>
-                        </li>
-                        <li class="m-nav-item">
-                            <a href="#" class="m-nav-label">3階層目ボタン</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="m-nav-item">
-                    <a href="#" class="m-nav-label">2階層目ボタン</a>
-                </li>
-                <li class="m-nav-item">
-                    <a href="#" class="m-nav-label">2階層目ボタン</a>
-                </li>
-            </ul>
-        </li>
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label">文字数が多いボタンです</a>
-        </li>
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label"><span class="m-nav-text"><span class="u-text-xs">複数行の</span><br>ボタン</span></a>
-        </li>
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label">ボタン</a>
-        </li>
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label">ボタン</a>
-        </li>
-    </ul>
-</nav><!-- /.nav -->
-
-<h3 class="u-text-lg u-margin-top-lg">包括要素のみクラスを付与した場合</h3>
-<nav class="m-nav m-nav-vertical">
-    <ul>
-        <li>
-            <a href="#">ボタン</a>
-        </li>
-        <li>
-            <a href="#" class="is-current">現在のページ</a>
-            <ul>
-                <li>
-                    <a href="#">2階層目ボタン</a>
-                    <ul>
-                        <li>
-                            <a href="#">3階層目ボタン</a>
-                        </li>
-                        <li>
-                            <a href="#">3階層目ボタン</a>
-                        </li>
-                        <li>
-                            <a href="#">3階層目ボタン</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">2階層目ボタン</a>
-                </li>
-                <li>
-                    <a href="#">2階層目ボタン</a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a href="#"><span class="m-nav-text"><span class="u-text-xs">複数行の</span><br>ボタン</span></a>
-        </li>
-        <li>
-            <a href="#">ボタン</a>
-        </li>
-        <li>
-            <a href="#">文字数が多いボタンです</a>
-        </li>
-        <li>
-            <a href="#">ボタン</a>
-        </li>
-    </ul>
-</nav><!-- /.nav -->
-
-<h3 class="u-text-lg u-margin-top-lg">アイコンを併用した例</h3>
-<nav class="m-nav m-nav-vertical">
-    <ul class="m-nav-list">
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label"><span class="m-nav-text"><i class="fas fa-home" style="font-size: 1.25em; width: 1.5em; text-align: center; margin-right: .5em;"></i>吾輩は</span></a>
-        </li>
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label"><span class="m-nav-text"><i class="fas fa-user" style="font-size: 1.25em; width: 1.5em; text-align: center; margin-right: .5em;"></i>猫である</span></a>
-        </li>
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label"><span class="m-nav-text"><i class="fas fa-taxi" style="font-size: 1.25em; width: 1.5em; text-align: center; margin-right: .5em;"></i>名前はまだ無い</span></a>
-        </li>
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label"><span class="m-nav-text"><i class="fas fa-map" style="font-size: 1.25em; width: 1.5em; text-align: center; margin-right: .5em;"></i>どこで</span></a>
-        </li>
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label"><span class="m-nav-text"><i class="fas fa-envelope" style="font-size: 1.25em; width: 1.5em; text-align: center; margin-right: .5em;"></i>生れたか</span></a>
-        </li>
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label"><span class="m-nav-text"><i class="fas fa-shopping-cart" style="font-size: 1.25em; width: 1.5em; text-align: center; margin-right: .5em;"></i>とんと</span></a>
-        </li>
-    </ul>
-</nav><!-- /.nav -->
-```
-
+--------------------
+m-nav-vertical
+--------------------
 */
 .m-nav-vertical {
   width: 100%;
@@ -3343,23 +2784,9 @@ parent: nav
 }
 
 /*
----
-title: m-radio
-name: radio
-category: module-radio
----
-
-ラジオボタンとラベルをインライン表示する。input要素ではなく、包括している要素にクラスを付与する（ほとんどの場合、label要素となる）。  
-余白・レイアウト等は <code>utility > .u-padding</code> や <code>component > .c-form</code> で指定する。  
-<code>.is-error</code> を同時に使用するとエラーがあったときの表示となる。 
-
-``` example
-<p>
-<label class="m-radio u-margin-right-md" for="radio1"><input type="radio" name="radio" id="radio1" class="u-margin-right-sm" value="1">m-radio 1</label>
-<label class="m-radio u-margin-right-md" for="radio2"><input type="radio" name="radio" id="radio2" class="u-margin-right-sm" value="2" checked="checked">m-radio 2</label>
-<label class="m-radio u-margin-right-md is-error" for="radio3"><input type="radio" name="radio" id="radio3" class="u-margin-right-sm" value="3">m-radio 3</label>
-</p>
-```
+--------------------
+m-radio
+--------------------
 */
 .m-radio {
   position: relative;
@@ -3372,44 +2799,13 @@ category: module-radio
   display: inline-block;
   margin: 0;
   vertical-align: middle;
-  -webkit-transform: translate(0, -15%);
-  -ms-transform: translate(0, -15%);
   transform: translate(0, -15%);
 }
 
 /*
----
-title: m-select
-name: select
-category: module-select
----
-
-セレクトボックスをインライン表示する。select要素ではなく、包括している要素にクラスを付与する。  
-余白・レイアウト等は <code>utility > .u-p</code> や <code>component > .c-form</code> で指定する。  
-<code>.is-error</code> を同時に使用するとエラーがあったときの表示となる。  
-セレクトボックスのシェブロンは <code>/\_scss/mixin/mixin.css</code> の <code>chevron()</code>を参照。
-
-``` example
-<div style="margin-bottom: 1rem;">
-    <div class="m-select">
-        <select>
-            <option>月を選択...</option>
-            <option value="">2017年</option>
-            <option value="">2016年</option>
-            <option value="">2015年</option>
-        </select>
-    </div>
-</div>
-
-<div class="m-select is-error">
-    <select>
-        <option>月を選択...</option>
-        <option value="">2017年</option>
-        <option value="">2016年</option>
-        <option value="">2015年</option>
-    </select>
-</div>
-```
+--------------------
+m-select
+--------------------
 */
 .m-select {
   display: inline-block;
@@ -3446,8 +2842,6 @@ category: module-select
 }
 .m-select select {
   position: relative;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   font-size: 1rem;
   color: #333;
@@ -3471,78 +2865,24 @@ category: module-select
 }
 
 /*
----
-title: m-select-(size)
-name: select-01-size
-category: module-select
-parent: select
----
-
-セレクトボックスの全体のサイズを変更する。(size)は <code>sm, lg</code> に対応している。
-
-``` example
-<div style="margin-bottom: 1rem;">
-    <div class="m-select m-select-sm">
-        <select>
-            <option>月を選択...</option>
-            <option value="">2017年</option>
-            <option value="">2016年</option>
-            <option value="">2015年</option>
-        </select>
-    </div>
-</div>
-<div>
-    <div class="m-select m-select-lg">
-        <select>
-            <option>月を選択...</option>
-            <option value="">2017年</option>
-            <option value="">2016年</option>
-            <option value="">2015年</option>
-        </select>
-    </div>
-</div>
-```
+--------------------
+m-select-(size)
+--------------------
 */
-.m-select-sm select {
+.m-select-sm > select {
   font-size: 0.875rem;
   padding: .5em 3em .5em 1em;
 }
 
-.m-select-lg select {
+.m-select-lg > select {
   font-size: 1.125rem;
   padding: .75em 3em .75em 1em;
 }
 
 /*
----
-title: m-table
-name: table
-category: module-table
----
-
-表組を整形する。このクラス単独では整列のみ行う。  
-幅は常に100%、セル内の文字は常に左寄せとなる。寄せ方向を変更したい場合は <code>utility > .u-line-(direction)</code> を使用する。
-
-``` example
-<table class="m-table">
-    <caption>キャプション</caption>
-    <tbody>
-        <tr>
-            <th>吾輩は猫である</th>
-            <td>名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
-        </tr>
-        <tr>
-            <th>吾輩は猫である名前はまだ無い。</th>
-            <td>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
-        </tr>
-        <tr>
-            <th>吾輩は猫</th>
-            <td>である名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
-        </tr>
-    </tbody>
-</table>
-```
-
+--------------------
+m-table
+--------------------
 */
 .m-table {
   max-width: 100%;
@@ -3570,51 +2910,9 @@ category: module-table
 }
 
 /*
----
-title: m-table-bordered
-name: table-01-bordered
-category: module-table
-parent: table
----
-
-表組のセル全てにグリッド罫線を引く。
-
-``` example
-<table class="m-table m-table-bordered">
-    <thead>
-        <tr>
-            <th>吾輩は</th>
-            <th>猫である</th>
-            <th>名前はまだ無い</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th>吾輩は猫である</th>
-            <td>名前はまだ無い</td>
-            <td>どこで生れたかとんと見当がつかぬ</td>
-        </tr>
-        <tr>
-            <th>何でも薄暗い</th>
-            <td>じめじめした所でニャーニャー</td>
-            <td>泣いていた事だけは記憶している</td>
-        </tr>
-        <tr>
-            <th>吾輩はここで始めて</th>
-            <td>人間というものを見た</td>
-            <td>しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</td>
-        </tr>
-    </tbody>
-    <tfoot>
-        <tr>
-            <th>どこで生れたか</th>
-            <td>とんと</td>
-            <td>見当がつかぬ</td>
-        </tr>
-    </tfoot>
-</table>
-```
-
+--------------------
+m-table-bordered
+--------------------
 */
 .m-table-bordered {
   width: 100%;
@@ -3643,51 +2941,9 @@ parent: table
 }
 
 /*
----
-title: m-table-ruled
-name: table-02-ruled
-category: module-table
-parent: table
----
-
-表組の各セルの下のみ罫線を引く。Bootstrapの <code>.table</code> と同じ。
-
-``` example
-<table class="m-table m-table-ruled">
-    <thead>
-        <tr>
-            <th>吾輩は</th>
-            <th>猫である</th>
-            <th>名前はまだ無い</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th>吾輩は猫である</th>
-            <td>名前はまだ無い</td>
-            <td>どこで生れたかとんと見当がつかぬ</td>
-        </tr>
-        <tr>
-            <th>何でも薄暗い</th>
-            <td>じめじめした所でニャーニャー</td>
-            <td>泣いていた事だけは記憶している</td>
-        </tr>
-        <tr>
-            <th>吾輩はここで始めて</th>
-            <td>人間というものを見た</td>
-            <td>しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</td>
-        </tr>
-    </tbody>
-    <tfoot>
-        <tr>
-            <th>どこで生れたか</th>
-            <td>とんと</td>
-            <td>見当がつかぬ</td>
-        </tr>
-    </tfoot>
-</table>
-```
-
+--------------------
+m-table-ruled
+--------------------
 */
 .m-table-ruled {
   width: 100%;
@@ -3703,47 +2959,9 @@ parent: table
 }
 
 /*
----
-title: m-table-justify
-name: table-03-justify
-category: module-table
-parent: table
----
-
-列数、内容にかかわらず、セルを均等な幅にする。
-
-``` example
-<div style="margin-bottom: 2rem;">
-    <table class="m-table m-table-bordered m-table-justify">
-        <tbody>
-            <tr>
-                <td>吾輩は猫である名前はまだ無い。どこで生れたかとんと見当がつかぬ。</td>
-                <td>何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-<div style="margin-bottom: 2rem;">
-    <table class="m-table m-table-bordered m-table-justify">
-        <tbody>
-            <tr>
-                <td>吾輩は猫である名前は</td>
-                <td>まだ無い。どこで生れたか</td>
-                <td>とんと見当がつかぬ。</td>
-                <td>何でも薄暗いじめじめした所で</td>
-                <td rowspan="2">ニャーニャー泣いていた事だけは記憶している。</td>
-            </tr>
-            <tr>
-                <td>吾輩は猫である</td>
-                <td>名前はまだ無い。</td>
-                <td colspan="2">どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所で</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-```
-
+--------------------
+m-table-justify
+--------------------
 */
 .m-table-justify {
   width: 100%;
@@ -3751,88 +2969,9 @@ parent: table
 }
 
 /*
----
-title: m-table-(ratio-first)to(ratio-second)to(ratio-third)
-name: table-04-ratio
-category: module-table
-parent: table
----
-
-2列または3列のセル幅を、 <code>(ratio) / 12</code> の比率にする。  
-(ratio-first)to(ratio-second)to(ratio-third)は <code>3to9, 4to8, 3to3to6, 0to12</code> に対応している。   
-
-``` example
-<div style="margin-bottom: 2rem;">
-    <table class="m-table m-table-bordered m-table-3to9">
-        <caption>.m-table-3to9</caption>
-        <tbody>
-            <tr>
-                <th>吾輩は猫である</th>
-                <td>名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
-            </tr>
-            <tr>
-                <th>吾輩は猫である名前はまだ無い。</th>
-                <td>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-<div style="margin-bottom: 2rem;">
-    <table class="m-table m-table-bordered m-table-4to8">
-        <caption>.m-table-4to8</caption>
-        <tbody>
-            <tr>
-                <th>吾輩は猫である</th>
-                <td>名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
-            </tr>
-            <tr>
-                <th>吾輩は猫である名前はまだ無い。</th>
-                <td>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-<div style="margin-bottom: 2rem;">
-    <table class="m-table m-table-bordered m-table-3to3to6">
-        <caption>.m-table-3to3to6</caption>
-        <tbody>
-            <tr>
-                <th>吾輩は猫である</th>
-                <td>名前はまだ無い。</td>
-                <td>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
-            </tr>
-            <tr>
-                <th>吾輩は猫である名前はまだ無い。</th>
-                <td>どこで生れたかとんと見当がつかぬ。</td>
-                <td>何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-<div>
-    <table class="m-table m-table-bordered m-table-0to12">
-        <caption>.m-table-0to12</caption>
-        <tbody>
-            <tr>
-                <th>吾輩は猫</th>
-                <td>である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
-            </tr>
-            <tr>
-                <th>吾輩はここで</th>
-                <td>始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</td>
-            </tr>
-            <tr>
-                <th>しかし</th>
-                <td>その当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-```
-
+--------------------
+m-table-(ratio-first)to(ratio-second)to(ratio-third)
+--------------------
 */
 .m-table-3to9 tr th,
 .m-table-3to9 tr td {
@@ -3872,76 +3011,9 @@ parent: table
 }
 
 /*
----
-title: m-table-break-sm-down
-name: table-05-break-sm-down
-category: module-table
-parent: table
----
-
-(breakpoint)が <code>sm</code> 以下のときに表組を解除する。  
-2カラム以上の表の場合は <code>.m-table-responsive</code> を推薦。
-
-``` example
-<table class="m-table m-table-break-sm-down m-table-bordered" style="margin-bottom: 2rem;">
-    <thead>
-        <tr>
-            <th>吾輩は猫である</th>
-            <th>名前はまだ無い</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th>吾輩は猫である名前はまだ無い</th>
-            <td>どこで生れたかとんと見当がつかぬ</td>
-        </tr>
-        <tr>
-            <th>何でも薄暗いじめじめした所で</th>
-            <td>ニャーニャー泣いていた事だけは記憶している</td>
-        </tr>
-        <tr>
-            <th>吾輩はここで始めて人間というものを見た</th>
-            <td>しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</td>
-        </tr>
-    </tbody>
-    <tfoot>
-        <tr>
-            <th>どこで生れたか</th>
-            <td>とんと見当がつかぬ</td>
-        </tr>
-    </tfoot>
-</table>
-
-<table class="m-table m-table-break-sm-down m-table-ruled">
-    <thead>
-        <tr>
-            <th>吾輩は猫である</th>
-            <th>名前はまだ無い</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th>吾輩は猫である名前はまだ無い</th>
-            <td>どこで生れたかとんと見当がつかぬ</td>
-        </tr>
-        <tr>
-            <th>何でも薄暗いじめじめした所で</th>
-            <td>ニャーニャー泣いていた事だけは記憶している</td>
-        </tr>
-        <tr>
-            <th>吾輩はここで始めて人間というものを見た</th>
-            <td>しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</td>
-        </tr>
-    </tbody>
-    <tfoot>
-        <tr>
-            <th>どこで生れたか</th>
-            <td>とんと見当がつかぬ</td>
-        </tr>
-    </tfoot>
-</table>
-```
-
+--------------------
+m-table-break-sm-down
+--------------------
 */
 @media (max-width: 767.9px) {
   .m-table-break-sm-down {
@@ -3978,34 +3050,9 @@ parent: table
 }
 
 /*
----
-title: m-table-responsive
-name: table-06-responsive
-category: module-table
-parent: table
----
-
-(breakpoint)が <code>md</code> 以下のときにスクロールバーを表示する。
-
-``` example
-<div class="m-table-responsive">
-    <table class="m-table m-table-bordered">
-        <tbody>
-            <tr>
-                <th>吾輩は猫である</th>
-                <td>名前はまだ無い</td>
-                <td>どこで生れたかとんと見当がつかぬ</td>
-            </tr>
-            <tr>
-                <th>何でも薄暗い</th>
-                <td>じめじめした所でニャーニャー</td>
-                <td>泣いていた事だけは記憶している</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-```
-
+--------------------
+m-table-responsive
+--------------------
 */
 .m-table-responsive {
   display: block;
@@ -4019,40 +3066,9 @@ parent: table
 }
 
 /*
----
-title: m-thumbnail
-name: thumbnail
-category: module-thumbnail
----
-
-一覧ページ、記事中で縮小された画像を表示する。要素自体ではなく、包括している要素にクラスを付与する。  
-このクラス単独ではそのままのサイズと縦横比で表示する。幅が制限されていると、そのサイズを超えないよう画像が縮小される。
-
-``` example
-<div class="u-clearfix u-m-b">
-
-<div class="u-float-left u-margin-r-md">
-    <div class="m-thumbnail">
-        <img src="https://placehold.jp/150x150.jpg" alt="">
-    </div>
-</div>
-
-<div class="u-float-left u-margin-r-md">
-    <div class="m-thumbnail">
-        <img src="https://placehold.jp/240x320.jpg" alt="">
-    </div>
-</div>
-
-<div class="u-float-left u-margin-r-md" style="width: 200px;">
-    <div class="m-thumbnail">
-        <img src="https://placehold.jp/480x360.jpg" alt="">
-    </div>
-    <p class="u-m-y-0">↑width: 200px</p>
-</div>
-
-</div>
-```
-
+--------------------
+m-thumbnail
+--------------------
 */
 .m-thumbnail {
   overflow: hidden;
@@ -4071,76 +3087,10 @@ category: module-thumbnail
 }
 
 /*
----
-title: m-thumbnail-round
-name: thumbnail-01-round
-category: module-thumbnail
-parent: thumbnail
----
-
-画像を正円にトリミングして表示する。別途、幅を指定する必要がある。  
-横長の画像では上下に余白ができるため、余白を出したくない場合は <code>.m-thumbnail-vertical</code> を併用する必要がある。
-
-``` example
-<div class="u-clearfix u-m-b">
-
-<div class="u-float-left u-margin-r-md" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-round">
-        <img src="https://placehold.jp/200x200.jpg" alt="">
-    </div>
-</div>
-
-<div class="u-float-left u-margin-r-md" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-round">
-        <img src="https://placehold.jp/200x100.jpg" alt="">
-    </div>
-</div>
-
-<div class="u-float-left u-margin-r-md" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-round">
-        <img src="https://placehold.jp/200x300.jpg" alt="">
-    </div>
-</div>
-
-</div>
-```
-
-*/
-/*
----
-title: m-thumbnail-square
-name: thumbnail-02-square
-category: module-thumbnail
-parent: thumbnail
----
-
-画像を正方形にトリミングして表示する。別途、幅を指定する必要がある。  
-横長の画像では上下に余白ができるため、余白を出したくない場合は <code>m-thumbnail-vertical</code> を併用する必要がある。
-
-``` example
-<div class="u-clearfix u-m-b">
-
-<div class="u-float-left u-margin-r-md" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-square">
-        <img src="https://placehold.jp/200x200.jpg" alt="">
-    </div>
-</div>
-
-<div class="u-float-left u-margin-r-md" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-square">
-        <img src="https://placehold.jp/200x100.jpg" alt="">
-    </div>
-</div>
-
-<div class="u-float-left u-margin-r-md" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-square">
-        <img src="https://placehold.jp/200x300.jpg" alt="">
-    </div>
-</div>
-
-</div>
-```
-
+--------------------
+m-thumbnail-round
+m-thumbnail-square
+--------------------
 */
 .m-thumbnail-round,
 .m-thumbnail-square {
@@ -4156,8 +3106,6 @@ parent: thumbnail
   width: auto;
   height: 100%;
   max-width: none;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -4169,123 +3117,9 @@ parent: thumbnail
 }
 
 /*
----
-title: m-thumbnail-(ratio-x)to(ratio-y)
-name: thumbnail-03-ratio
-category: module-thumbnail
-parent: thumbnail
----
-
-画像を指定した縦横比で、かつトリミングして表示する。別途、幅を指定する必要がある。  
-(ratio-x)to(ratio-y)は <code>3to2, 4to3, 16to9, ogimage(1.91:1), 21to9</code> に対応している。  
-指定した比率を超える超横長の画像だった場合は、上下に余白ができる。
-
-``` example
-<div class="u-clearfix u-m-b">
-
-<div class="u-float-left u-margin-r-md" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-3to2">
-        <img src="https://placehold.jp/480x360.jpg" alt="">
-    </div>
-</div>
-
-<div class="u-float-left u-margin-r-md" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-4to3">
-        <img src="https://placehold.jp/480x360.jpg" alt="">
-    </div>
-</div>
-
-<div class="u-float-left u-margin-r-md" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-16to9">
-        <img src="https://placehold.jp/480x360.jpg" alt="">
-    </div>
-</div>
-
-<div class="u-float-left u-margin-r-md" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-ogimage">
-        <img src="https://placehold.jp/480x360.jpg" alt="">
-    </div>
-</div>
-
-<div class="u-float-left u-margin-r-md" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-21to9">
-        <img src="https://placehold.jp/480x360.jpg" alt="">
-    </div>
-</div>
-
-</div>
-
-
-<div class="u-clearfix u-m-b">
-
-<div class="u-float-left u-margin-r-md" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-3to2">
-        <img src="https://placehold.jp/320x480.jpg" alt="">
-    </div>
-</div>
-
-<div class="u-float-left u-margin-r-md" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-4to3">
-        <img src="https://placehold.jp/320x480.jpg" alt="">
-    </div>
-</div>
-
-<div class="u-float-left u-margin-r-md" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-16to9">
-        <img src="https://placehold.jp/320x480.jpg" alt="">
-    </div>
-</div>
-
-<div class="u-float-left u-margin-r-md" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-ogimage">
-        <img src="https://placehold.jp/320x480.jpg" alt="">
-    </div>
-</div>
-
-<div class="u-float-left u-margin-r-md" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-21to9">
-        <img src="https://placehold.jp/320x480.jpg" alt="">
-    </div>
-</div>
-
-</div>
-
-
-<div class="u-clearfix u-m-b">
-
-<div class="u-float-left u-margin-r-md" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-3to2">
-        <img src="https://placehold.jp/600x200.jpg" alt="">
-    </div>
-</div>
-
-<div class="u-float-left u-margin-r-md" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-4to3">
-        <img src="https://placehold.jp/600x200.jpg" alt="">
-    </div>
-</div>
-
-<div class="u-float-left u-margin-r-md" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-16to9">
-        <img src="https://placehold.jp/600x200.jpg" alt="">
-    </div>
-</div>
-
-<div class="u-float-left u-margin-r-md" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-ogimage">
-        <img src="https://placehold.jp/600x200.jpg" alt="">
-    </div>
-</div>
-
-<div class="u-float-left u-margin-r-md" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-21to9">
-        <img src="https://placehold.jp/600x200.jpg" alt="">
-    </div>
-</div>
-
-</div>
-```
-
+--------------------
+m-thumbnail-(ratio-x)to(ratio-y)
+--------------------
 */
 .m-thumbnail-3to2,
 .m-thumbnail-4to3,
@@ -4303,11 +3137,9 @@ parent: thumbnail
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 102%;
+  width: 100%;
   max-width: none;
   height: auto;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -4332,71 +3164,14 @@ parent: thumbnail
 }
 
 /*
----
-title: m-thumbnail-horizontal
-name: thumbnail-04-horizontal
-category: module-thumbnail
-parent: thumbnail
----
-
-<code>m-thumbnail-round, m-thumbnail-square, m-thumbnail-(ratio-x)to(ratio-y)</code> を使用したときに、幅ではなく高さを基準にトリミングする。
-
-``` example
-<div class="u-clearfix u-m-b">
-
-<div class="u-float-left u-margin-r-md" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-horizontal m-thumbnail-square">
-        <img src="https://placehold.jp/480x320.jpg" alt="">
-    </div>
-</div>
-
-<div class="u-float-left u-margin-r-md" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-horizontal m-thumbnail-round">
-        <img src="https://placehold.jp/480x320.jpg" alt="">
-    </div>
-</div>
-
-</div>
-
-<div class="u-clearfix u-m-b">
-
-<div class="u-float-left u-margin-r-md" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-horizontal m-thumbnail-3to2">
-        <img src="https://placehold.jp/600x200.jpg" alt="">
-    </div>
-</div>
-
-<div class="u-float-left u-margin-r-md" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-horizontal m-thumbnail-4to3">
-        <img src="https://placehold.jp/600x200.jpg" alt="">
-    </div>
-</div>
-
-<div class="u-float-left u-margin-r-md" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-horizontal m-thumbnail-16to9">
-        <img src="https://placehold.jp/600x200.jpg" alt="">
-    </div>
-</div>
-
-<div class="u-float-left u-margin-r-md" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-horizontal m-thumbnail-ogimage">
-        <img src="https://placehold.jp/600x200.jpg" alt="">
-    </div>
-</div>
-
-<div class="u-float-left u-margin-r-md" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-horizontal m-thumbnail-21to9">
-        <img src="https://placehold.jp/600x200.jpg" alt="">
-    </div>
-</div>
-
-</div>
-```
+--------------------
+m-thumbnail-horizontal
+--------------------
 */
 .m-thumbnail-horizontal img {
   height: auto;
   max-width: none;
-  width: 102%;
+  width: 100%;
 }
 
 /*
@@ -5172,46 +3947,10 @@ c-media-reverse
 }
 
 /*
----
-title: u-bg-(color)
-name: bg-01-color
-category: utility-bg
----
-
-背景に色をつける。オブジェクト・コンポーネントを可能な限り上書きする。  
-(color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
-
-``` example
-<div class="u-bg-gray">bg-gray</div>
-<div class="u-bg-first">bg-first</div>
-<div class="u-bg-second">bg-second</div>
-<div class="u-bg-third">bg-third</div>
-<div class="u-bg-fourth">bg-fourth</div>
-<div class="u-bg-info">bg-info</div>
-<div class="u-bg-important">bg-important</div>
-```
-
-*/
-/*
----
-title: u-bg-fade
-name: bg-02-fade
-category: utility-bg
-parent: bg-01-color
----
-
-<code>.u-bg-(color)</code> と併用すると背景色を薄くする。
-
-``` example
-<div class="u-bg-gray u-bg-fade">bg-gray</div>
-<div class="u-bg-first u-bg-fade">bg-first</div>
-<div class="u-bg-second u-bg-fade">bg-second</div>
-<div class="u-bg-third u-bg-fade">bg-third</div>
-<div class="u-bg-fourth u-bg-fade">bg-fourth</div>
-<div class="u-bg-info u-bg-fade">bg-info</div>
-<div class="u-bg-important u-bg-fade">bg-important</div>
-```
-
+--------------------
+u-bg-(color)
+u-bg-fade
+--------------------
 */
 #document .u-bg-gray {
   background-color: #333;
@@ -5299,61 +4038,18 @@ parent: bg-01-color
 }
 
 /*
----
-title: u-clear
-name: clear
-category: utility-clear
----
-
-floatを解除する。
-
-``` example
-<div class="u-float-left">
-    <img src="/images/_dummy/image_01_s.jpg" alt="" width="300">
-</div>
-
-<p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
-吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
-
-<p class="u-clear">u-clear:掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。<br>
-第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</p>
-```
-
+--------------------
+u-clear
+--------------------
 */
 #document .u-clear {
   clear: both;
 }
 
 /*
----
-title: u-clearfix
-name: clearfix
-category: utility-clearfix
----
-
-指定された包括要素が閉じられた時点でfloatを解除する。
-
-``` example
-<div class="u-clearfix" style="background-color: #fffadd;">
-
-<div class="u-float-left">
-    <img src="/images/_dummy/image_02_s.jpg" alt="" width="150">
-</div>
-<div class="u-float-left">
-    <img src="/images/_dummy/image_03_s.jpg" alt="" width="150">
-</div>
-<div class="u-float-left">
-    <img src="/images/_dummy/image_04_s.jpg" alt="" width="150">
-</div>
-
-<p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
-吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
-
-</div>
-
-<p>この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
-```
-
+--------------------
+u-clearfix
+--------------------
 */
 #document .u-clearfix:before, #document .u-clearfix:after {
   content: "";
@@ -5364,25 +4060,9 @@ category: utility-clearfix
 }
 
 /*
----
-title: u-expand
-name: expand
-category: utility-expand
----
-
-**コンテナブロックの最大幅を無視**して、要素のアウトラインのみをウィンドウ幅全体に拡張する。  
-<code>.l-document</code> の <code>max-width</code> を解除していると、横スクロールバーが表示されてしまう。
-
-``` example
-<div class="l-container" style="background-color: #ffaacc; padding-top: 1rem; padding-bottom: 1rem;">
-    <div style="margin-bottom: 1rem; padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(l-container > this)</div>
-
-    <div class="u-expand" style="background-color: #ffcc66;">
-        <div style="padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(l-container > u-expand > this)</div>
-    </div>
-</div>
-```
-
+--------------------
+u-expand
+--------------------
 */
 #document .u-expand {
   margin-left: -100vw;
@@ -5392,25 +4072,9 @@ category: utility-expand
 }
 
 /*
----
-title: u-expand-sm-down
-name: expand-01-sm-down
-category: utility-expand
-parent: expand
----
-
-(breakpoint)が <code>sm</code> 以下のときのみ、コンテナブロックの余白を無視して、要素全体をウィンドウ幅全体に拡張する。  
-<code>u-expand</code> とは異なり、<code>.l-document</code> の変更による影響はない。
-
-``` example
-<div class="l-container" style="background-color: #ffaacc; padding-top: 1rem; padding-bottom: 1rem;">
-    <div style="margin-bottom: 1rem; padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(l-container > this)</div>
-
-    <div class="u-expand-sm-down" style="background-color: #ffcc66;">
-        <div style="padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(l-container > u-expand-sm-down > this)</div>
-    </div>
-</div>
-```
+--------------------
+u-expand-sm-down
+--------------------
 */
 @media (max-width: 767.9px) {
   #document .u-expand-sm-down {
@@ -5420,41 +4084,9 @@ parent: expand
 }
 
 /*
----
-title: u-float-(direction)
-name: float-direction
-category: utility-float
----
-
-指定した要素を(direction)で指示した方向に寄せ、かつ余白を確保する。  
-余白の大きさは(breakpoint)によって変化する。
-
-``` example
-<div class="u-float-left">
-    <img src="/images/_dummy/image_05_s.jpg" alt="" style="width: 25vw">
-</div>
-
-<p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
-吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
-
-<p>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。<br>
-第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。<br>
-のみならず顔の真中があまりに突起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。<br>
-これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
-
-<div class="u-float-right">
-    <img src="/images/_dummy/image_06_s.jpg" alt="" style="width: 25vw">
-</div>
-
-<p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
-吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
-
-<p>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。<br>
-第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。<br>
-のみならず顔の真中があまりに突起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。<br>
-これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
-```
-
+--------------------
+u-float-(direction)
+--------------------
 */
 #document .u-float-left {
   float: left;
@@ -5488,53 +4120,10 @@ category: utility-float
 }
 
 /*
----
-title: u-font-(face)
-name: font-01-face
-category: utility-font
----
-
-フォントを変更する。オブジェクト・コンポーネントを可能な限り上書きする。  
-(face)は、<a href="../documentation/design_tokens/fonts.html">フォントファミリー</a>を参照。
-
-``` example
-<p class="u-text-xl u-font-first">u-font-first:見出し用のフォントに変更しました</p>
-<p class="u-text-xl u-font-second">u-font-second:英数字用のフォントに変更しました</p>
-<p class="u-text-xl u-font-third">u-font-third:ディスプレイ用のフォントに変更しました</p>
-<p class="u-text-xl u-font-first">ここは見出し用のフォントですが、<span class="u-font-root">ここからbody要素のフォントに変更しました</span></p>
-<p class="u-text-xl u-font-mono">u-font-mono:等幅フォントに変更しました &lt;p class="u-font-mono"&gt;hello world!&lt;/p&gt;</p>
-```
-
-*/
-/*
----
-title: u-font-bold
-name: font-02-bold
-category: utility-font
----
-
-ボールドフォントに変更する。
-
-### 補足：日本語ウェブフォントの仕様
-
-多くの日本語ウェブフォントサービスでは、 <code>font-weight</code> だけではウェイトの変更ができない。  
-このため、「フォントも含めて太字に変更するクラス」が必要となる。  
-参考: 太字指定が反映されません。 | FONTPLUS  
-[https://webfont.fontplus.jp/faq/4125](https://webfont.fontplus.jp/faq/4125)
-
-### Note: Web font in Japanese specification
-
-When using the Japanese web font service, font weight is may not be change with only <code> font-weight </code>. Therefore, "class to change to bold including font" is required.  
-Reference: Boldface designation is not reflected. | FONTPLUS  
-[https://webfont.fontplus.jp/faq/4125](https://webfont.fontplus.jp/faq/4125)
-
-``` example
-<p class="u-text-xl u-font-first u-font-bold">u-font-first_u-font-bold:見出し用のフォントに変更しました</p>
-<p class="u-text-xl u-font-second u-font-bold">u-font-second_u-font-bold:英数字用のフォントに変更しました</p>
-<p class="u-text-xl u-font-third u-font-bold">u-font-third_u-font-bold:ディスプレイ用のフォントに変更しました</p>
-<p class="u-text-xl u-font-first u-font-bold">ここは見出し用のフォントですが、<span class="u-font-root u-font-bold">ここからbody要素のフォントに変更しました</span></p>
-```
-
+--------------------
+u-font-(face)
+u-font-bold
+--------------------
 */
 #document .u-font-root {
   font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
@@ -5573,36 +4162,18 @@ Reference: Boldface designation is not reflected. | FONTPLUS
 }
 
 /*
----
-title: u-hidden
-name: hidden
-category: utility-hidden
----
-
-常に要素を非表示にする。スクリーンリーダーに対応する場合は <code>.u-sr</code> を使用すること。
-
+--------------------
+u-hidden
+--------------------
 */
 #document .u-hidden {
   display: none;
 }
 
 /*
----
-title: u-hidden-(breakpoint)-up
-name: hidden-01-breakpoint-up
-category: utility-hidden
----
-
-(breakpoint)で指定した画面幅以上で要素を非表示にする。特性上、u-hidden-xs-upはない。
-
-``` example
-<div class="u-hidden-sm-up" style="margin-bottom: 1rem;"><span class="m-btn m-btn-first">u-hidden-sm-up</span></div>
-<div class="u-hidden-md-up" style="margin-bottom: 1rem;"><span class="m-btn m-btn-second">u-hidden-md-up</span></div>
-<div class="u-hidden-lg-up" style="margin-bottom: 1rem;"><span class="m-btn m-btn-third">u-hidden-lg-up</span></div>
-<div class="u-hidden-xl-up" style="margin-bottom: 1rem;"><span class="m-btn m-btn-fourth">u-hidden-xl-up</span></div>
-<div class="u-hidden-xxl-up" style="margin-bottom: 1rem;"><span class="m-btn m-btn-important">u-hidden-xxl-up</span></div>
-```
-
+--------------------
+u-hidden-(breakpoint)-up
+--------------------
 */
 #document .u-hidden-default-up {
   display: none;
@@ -5639,22 +4210,9 @@ category: utility-hidden
 }
 
 /*
----
-title: u-hidden-(breakpoint)-down
-name: hidden-02-breakpoint-down
-category: utility-hidden
----
-
-(breakpoint)で指定した画面幅未満で要素を非表示にする。特性上、u-hidden-xxl-downはない。
-
-``` example
-<div class="u-hidden-xs-down" style="margin-bottom: 1rem;"><span class="m-btn m-btn-first">u-hidden-xs-down</span></div>
-<div class="u-hidden-sm-down" style="margin-bottom: 1rem;"><span class="m-btn m-btn-second">u-hidden-sm-down</span></div>
-<div class="u-hidden-md-down" style="margin-bottom: 1rem;"><span class="m-btn m-btn-third">u-hidden-md-down</span></div>
-<div class="u-hidden-lg-down" style="margin-bottom: 1rem;"><span class="m-btn m-btn-fourth">u-hidden-lg-down</span></div>
-<div class="u-hidden-xl-down" style="margin-bottom: 1rem;"><span class="m-btn m-btn-important">u-hidden-xl-down</span></div>
-```
-
+--------------------
+u-hidden-(breakpoint)-down
+--------------------
 */
 @media (max-width: 319.9px) {
   #document .u-hidden-default-down {
@@ -5693,18 +4251,9 @@ category: utility-hidden
 }
 
 /*
----
-title: u-image-responsive
-name: image-01-responsive
-category: utility-image
----
-
-画像が包括要素よりも大きくなった場合のみ、縦横比を保って伸縮させる。
-
-``` example
-<img src="/images/_dummy/image_01_s.jpg" alt="" class="u-image-responsive">
-```
-
+--------------------
+u-image-responsive
+--------------------
 */
 #document .u-image-responsive {
   max-width: 100%;
@@ -5712,18 +4261,9 @@ category: utility-image
 }
 
 /*
----
-title: u-image-fill
-name: image-02-fill
-category: utility-image
----
-
-画像の大きさに関係なく、常に包括要素の幅いっぱいに伸縮させる。
-
-``` example
-<img src="/images/_dummy/image_01_s.jpg" alt="" class="u-image-fill">
-```
-
+--------------------
+u-image-fill
+--------------------
 */
 #document .u-image-fill {
   width: 100%;
@@ -5731,21 +4271,9 @@ category: utility-image
 }
 
 /*
----
-title: u-line-(size)
-name: line-01-size
-category: utility-line
----
-
-文章を指定した行高さに変更する。 <code>none, sm, md, lg</code> に対応している。  
-行間を最低にするクラスは、0ではなく <code>none</code> である点に注意。
-
-``` example
-<p class="u-line-none">u-line-none:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
-<p class="u-line-sm">u-line-sm:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
-<p class="u-line-md">u-line-md:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
-<p class="u-line-lg">u-line-lg:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
-```
+--------------------
+u-line-(size)
+--------------------
 */
 #document .u-line-none {
   line-height: 1;
@@ -5761,65 +4289,9 @@ category: utility-line
 }
 
 /*
----
-title: u-margin-(direction)-(size)
-name: margin
-category: utility-margin
----
-
-ブロック要素の外部余白を変更する。
-
-``` example
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-x-auto" style="background-color: rgba(255,255,255,.35); width: 50%;">u-margin-x-auto</div></div>
-
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-xs" style="background-color: rgba(255,255,255,.35);">u-margin-xs</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-top-xs" style="background-color: rgba(255,255,255,.35);">u-margin-top-xs</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-right-xs" style="background-color: rgba(255,255,255,.35);">u-margin-right-xs</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-bottom-xs" style="background-color: rgba(255,255,255,.35);">u-margin-bottom-xs</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-left-xs" style="background-color: rgba(255,255,255,.35);">u-margin-left-xs</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-x-xs" style="background-color: rgba(255,255,255,.35);">u-margin-x-xs</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-y-xs" style="background-color: rgba(255,255,255,.35);">u-margin-y-xs</div></div>
-
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-sm" style="background-color: rgba(255,255,255,.35);">u-margin-sm</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-top-sm" style="background-color: rgba(255,255,255,.35);">u-margin-top-sm</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-right-sm" style="background-color: rgba(255,255,255,.35);">u-margin-right-sm</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-bottom-sm" style="background-color: rgba(255,255,255,.35);">u-margin-bottom-sm</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-left-sm" style="background-color: rgba(255,255,255,.35);">u-margin-left-sm</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-x-sm" style="background-color: rgba(255,255,255,.35);">u-margin-x-sm</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-y-sm" style="background-color: rgba(255,255,255,.35);">u-margin-y-sm</div></div>
-
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-m-md" style="background-color: rgba(255,255,255,.35);">u-margin-md</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-top-md" style="background-color: rgba(255,255,255,.35);">u-margin-top-md</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-right-md" style="background-color: rgba(255,255,255,.35);">u-margin-right-md</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-bottom-md" style="background-color: rgba(255,255,255,.35);">u-margin-bottom-md</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-left-md" style="background-color: rgba(255,255,255,.35);">u-margin-left-md</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-x-md" style="background-color: rgba(255,255,255,.35);">u-margin-x-md</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-y-md" style="background-color: rgba(255,255,255,.35);">u-margin-y-md</div></div>
-
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-lg" style="background-color: rgba(255,255,255,.35);">u-margin-lg</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-top-lg" style="background-color: rgba(255,255,255,.35);">u-margin-top-lg</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-right-lg" style="background-color: rgba(255,255,255,.35);">u-margin-right-lg</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-bottom-lg" style="background-color: rgba(255,255,255,.35);">u-margin-bottom-lg</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-left-lg" style="background-color: rgba(255,255,255,.35);">u-margin-left-lg</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-x-lg" style="background-color: rgba(255,255,255,.35);">u-margin-x-lg</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-y-lg" style="background-color: rgba(255,255,255,.35);">u-margin-y-lg</div></div>
-
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-xl" style="background-color: rgba(255,255,255,.35);">u-margin-xl</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-top-xl" style="background-color: rgba(255,255,255,.35);">u-margin-top-xl</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-right-xl" style="background-color: rgba(255,255,255,.35);">u-margin-right-xl</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-bottom-xl" style="background-color: rgba(255,255,255,.35);">u-margin-bottom-xl</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-left-xl" style="background-color: rgba(255,255,255,.35);">u-margin-left-xl</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-x-xl" style="background-color: rgba(255,255,255,.35);">u-margin-x-xl</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-y-xl" style="background-color: rgba(255,255,255,.35);">u-margin-y-xl</div></div>
-
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-xxl" style="background-color: rgba(255,255,255,.35);">u-margin-xxl</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-top-xxl" style="background-color: rgba(255,255,255,.35);">u-margin-top-xxl</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-right-xxl" style="background-color: rgba(255,255,255,.35);">u-margin-right-xxl</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-bottom-xxl" style="background-color: rgba(255,255,255,.35);">u-margin-bottom-xxl</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-left-xxl" style="background-color: rgba(255,255,255,.35);">u-margin-left-xxl</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-x-xxl" style="background-color: rgba(255,255,255,.35);">u-margin-x-xxl</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="u-margin-y-xxl" style="background-color: rgba(255,255,255,.35);">u-margin-y-xxl</div></div>
-```
+--------------------
+u-margin-(direction)-(size)
+--------------------
 */
 #document .u-margin-x-auto {
   margin-right: auto;
@@ -5988,61 +4460,9 @@ category: utility-margin
 }
 
 /*
----
-title: u-padding-(direction)-(size)
-name: padding
-category: utility-padding
----
-
-ブロック要素の内部余白を変更する。
-
-``` example
-<div class="u-padding-xs" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding-xs</div></div>
-<div class="u-padding-top-xs" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding-top-xs</div></div>
-<div class="u-padding-right-xs" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding-right-xs</div></div>
-<div class="u-padding-bottom-xs" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding-bottom-xs</div></div>
-<div class="u-padding-left-xs" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding-left-xs</div></div>
-
-<div class="u-padding-sm" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding-sm</div></div>
-<div class="u-padding-top-sm" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding-top-sm</div></div>
-<div class="u-padding-right-sm" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding-right-sm</div></div>
-<div class="u-padding-bottom-sm" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding-bottom-sm</div></div>
-<div class="u-padding-left-sm" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding-left-sm</div></div>
-<div class="u-padding-x-sm" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding-x-sm</div></div>
-<div class="u-padding-y-sm" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding-y-sm</div></div>
-
-<div class="u-padding-md" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding-md</div></div>
-<div class="u-padding-top-md" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding-top-md</div></div>
-<div class="u-padding-right-md" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding-right-md</div></div>
-<div class="u-padding-bottom-md" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding-bottom-md</div></div>
-<div class="u-padding-left-md" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding-left-md</div></div>
-<div class="u-padding-x-md" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding-x-md</div></div>
-<div class="u-padding-y-md" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding-y-md</div></div>
-
-<div class="u-padding-lg" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding-lg</div></div>
-<div class="u-padding-top-lg" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding-top-lg</div></div>
-<div class="u-padding-right-lg" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding-right-lg</div></div>
-<div class="u-padding-bottom-lg" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding-bottom-lg</div></div>
-<div class="u-padding-left-lg" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding-left-lg</div></div>
-<div class="u-padding-x-lg" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding-x-lg</div></div>
-<div class="u-padding-y-lg" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding-y-lg</div></div>
-
-<div class="u-padding-xl" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding-xl</div></div>
-<div class="u-padding-top-xl" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding-top-xl</div></div>
-<div class="u-padding-right-xl" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding-right-xl</div></div>
-<div class="u-padding-bottom-xl" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding-bottom-xl</div></div>
-<div class="u-padding-left-xl" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding-left-xl</div></div>
-<div class="u-padding-x-xl" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding-x-xl</div></div>
-<div class="u-padding-y-xl" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding-y-xl</div></div>
-
-<div class="u-padding-xxl" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding-xxl</div></div>
-<div class="u-padding-top-xxl" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding-top-xxl</div></div>
-<div class="u-padding-right-xxl" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding-right-xxl</div></div>
-<div class="u-padding-bottom-xxl" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding-bottom-xxl</div></div>
-<div class="u-padding-left-xxl" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding-left-xxl</div></div>
-<div class="u-padding-x-xxl" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding-x-xxl</div></div>
-<div class="u-padding-y-xxl" style="margin-bottom: 1rem; background-color: #f38899;"><div style="background-color: rgba(255,255,255,.35);">u-padding-y-xxl</div></div>
-```
+--------------------
+u-padding-(direction)-(size)
+--------------------
 */
 #document .u-padding-0 {
   padding: 0;
@@ -6207,43 +4627,9 @@ category: utility-padding
 }
 
 /*
----
-title: u-position-(y)-(x)
-name: position
-category: utility-position
----
-
-ブロック要素を親要素の指定した位置に絶対配置する。  
-親要素に <code>position:relative</code> を指定している必要がある。
-
-``` example
-<div>u-position-top-left</div>
-<div style="position: relative; background-color: #bbb; margin-bottom: 5px; width: 100px; height: 100px;"><span class="u-position-top-left" style="background-color: #333; width: 10px; height: 10px;"></span></div>
-
-<div>u-position-top-center</div>
-<div style="position: relative; background-color: #bbb; margin-bottom: 5px; width: 100px; height: 100px;"><span class="u-position-top-center" style="background-color: #333; width: 10px; height: 10px;"></span></div>
-
-<div>u-position-top-right</div>
-<div style="position: relative; background-color: #bbb; margin-bottom: 5px; width: 100px; height: 100px;"><span class="u-position-top-right" style="background-color: #333; width: 10px; height: 10px;"></span></div>
-
-<div>u-position-center-left</div>
-<div style="position: relative; background-color: #bbb; margin-bottom: 5px; width: 100px; height: 100px;"><span class="u-position-center-left" style="background-color: #333; width: 10px; height: 10px;"></span></div>
-
-<div>u-position-center-center</div>
-<div style="position: relative; background-color: #bbb; margin-bottom: 5px; width: 100px; height: 100px;"><span class="u-position-center-center" style="background-color: #333; width: 10px; height: 10px;"></span></div>
-
-<div>u-position-center-right</div>
-<div style="position: relative; background-color: #bbb; margin-bottom: 5px; width: 100px; height: 100px;"><span class="u-position-center-right" style="background-color: #333; width: 10px; height: 10px;"></span></div>
-
-<div>u-position-bottom-left</div>
-<div style="position: relative; background-color: #bbb; margin-bottom: 5px; width: 100px; height: 100px;"><span class="u-position-bottom-left" style="background-color: #333; width: 10px; height: 10px;"></span></div>
-
-<div>u-position-bottom-center</div>
-<div style="position: relative; background-color: #bbb; margin-bottom: 5px; width: 100px; height: 100px;"><span class="u-position-bottom-center" style="background-color: #333; width: 10px; height: 10px;"></span></div>
-
-<div>u-position-bottom-right</div>
-<div style="position: relative; background-color: #bbb; margin-bottom: 5px; width: 100px; height: 100px;"><span class="u-position-bottom-right" style="background-color: #333; width: 10px; height: 10px;"></span></div>
-```
+--------------------
+u-position-(y)-(x)
+--------------------
 */
 #document .u-position-top-left,
 #document .u-position-top-center,
@@ -6300,35 +4686,18 @@ category: utility-position
 }
 
 /*
----
-title: u-shadow
-name: shadow
-category: utility-shadow
----
-
-要素に影をつける。
-
-``` example
-<p><a href="#" class="m-btn m-btn-first m-btn-block u-shadow">u-shadow</a></p>
-```
+--------------------
+u-shadow
+--------------------
 */
 #document .u-shadow {
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 /*
----
-title: u-shadow-(size)
-name: shadow-01-size
-category: utility-shadow
----
-
-影をつけた要素と背景の、擬似的な距離を変更する。
-
-``` example
-<p><a href="#" class="m-btn m-btn-first m-btn-block u-shadow u-shadow-sm">u-shadow-sm</a></p>
-<p><a href="#" class="m-btn m-btn-first m-btn-block u-shadow u-shadow-lg">u-shadow-lg</a></p>
-```
+--------------------
+u-shadow-(size)
+--------------------
 */
 #document .u-shadow-sm {
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
@@ -6338,17 +4707,9 @@ category: utility-shadow
 }
 
 /*
----
-title: u-sr
-name: sr
-category: utility-sr
----
-
-要素内の文章をスクリーンリーダーに反応するよう、外見のみ非表示にする。
-
-``` example
-<p><a href="#" class="m-btn m-btn-first">&raquo; u-sr <span class="u-sr">この文字は表示されません</span></a></p>
-```
+--------------------
+u-sr
+--------------------
 */
 #document .u-sr {
   position: absolute;
@@ -6362,17 +4723,9 @@ category: utility-sr
 }
 
 /*
----
-title: u-sr-focus
-name: sr-01-focus
-category: utility-sr
----
-
-要素そのものにフォーカスしたときにテキストが表示される。
-
-``` example
-<p>u-sr-focus -> <input type="button" class="u-sr-focus" value="フォーカスしましたね" /></p>
-```
+--------------------
+u-sr-focus
+--------------------
 */
 #document .u-sr-focus {
   position: absolute;
@@ -6394,17 +4747,9 @@ category: utility-sr
 }
 
 /*
----
-title: u-sr-focus-inner
-name: sr-02-focus-inner
-category: utility-sr
----
-
-包括要素にフォーカスしたときにテキストが表示される。
-
-``` example
-<p><a href="#" class="m-btn m-btn-second u-sr-focus-inner">&raquo; u-sr-focus-inner <span class="u-sr">フォーカスしましたね</span></a></p>
-```
+--------------------
+u-sr-focus-inner
+--------------------
 */
 #document .u-sr-focus-inner .u-sr {
   position: absolute;
@@ -6426,22 +4771,9 @@ category: utility-sr
 }
 
 /*
----
-title: u-text-(color)
-name: text-01-color
-category: utility-text
----
-
-文字色を変更する。(color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
-
-``` example
-<p class="u-text-first">u-text-first:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="u-text-second">u-text-second:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="u-text-third">u-text-third:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="u-text-fourth">u-text-fourth:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="u-text-info">u-text-info:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="u-text-important">u-text-important:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-```
+--------------------
+u-text-(color)
+--------------------
 */
 #document .u-text-first {
   color: #0360bd;
@@ -6463,75 +4795,28 @@ category: utility-text
 }
 
 /*
----
-title: u-text-root
-name: text-02-root
-category: utility-text
----
-
-文字色をbody要素の文字色に戻す。
-
-``` example
-<p class="u-text-first">ここは文字色が first ですが、<span class="u-text-root">ここからbody要素の文字色に変更しました</span></p>
-```
-
+--------------------
+u-text-root
+--------------------
 */
 #document .u-text-root {
   color: #333;
 }
 
 /*
----
-title: u-text-inverse
-name: text-03-inverse
-category: utility-text
----
-
-文字色を反転する（背景色を文字色とする）。
-
-
-``` example
-<div style="background-color: #000; padding: 1rem 0;">
-    <p class="u-text-inverse">u-text-inverse:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-</div>
-```
+--------------------
+u-text-inverse
+--------------------
 */
 #document .u-text-inverse {
   color: #fff;
 }
 
 /*
----
-title: u-text-(direction)(-(breakpont)-(up or down))
-name: text-05-direction
-category: utility-text
----
-
-ブロック要素内の文章を指定した方向へ寄せる。  
-(breakpoint)の指定がない場合は、常にその方向となる。  
-(breakpoint)の指定がある場合は、(breakpoint)以上、もしくは以下のときに、指定した方向へ寄せる。
-
-``` example
-<p class="u-text-center">u-text-center:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
-<p class="u-text-right">u-text-right:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
-
-<div class="u-text-center" style="background-color: #dee;">
-    <p>u-text-center:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-    <p class="u-text-left">u-text-left:何でも薄暗いじめじめした所で</p>
-    <p>ニャーニャー泣いていた事だけは記憶している。</p>
-</div>
-
-<p class="u-text-center-lg-up">u-text-center-lg-up:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
-<p class="u-text-right-sm-up">u-text-right-sm-up:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
-
-<div class="u-text-center-lg-up" style="background-color: #dee;">
-    <p>u-text-center-lg-up:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-    <p class="u-text-left-sm-down">u-text-left-sm-down:何でも薄暗いじめじめした所で</p>
-    <p>ニャーニャー泣いていた事だけは記憶している。</p>
-</div>
-
-<p class="u-text-right u-text-center-lg-up">u-text-right:u-text-center-lg-up:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
-```
+--------------------
+u-text-(direction)
+u-text-(direction)-(breakpont)-(up or down)
+--------------------
 */
 #document .u-text-left {
   text-align: left;
@@ -6716,28 +5001,9 @@ category: utility-text
 }
 
 /*
----
-title: u-text-(size)
-name: text-06-size
-category: utility-text
----
-
-文字サイズを、**現在の文字サイズの相対値**（ <code>em</code> ）で変更する。  
-ただし、 <code>.u-text-md</code> のみ、単位が <code>rem</code> （html要素の文字サイズ）となる。
-
-``` example
-<p class="u-text-xxs">u-text-xxs:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="u-text-xs">u-text-xs:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="u-text-sm">u-text-sm:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-
-<p class="u-text-lg">u-text-lg:吾輩は猫である。<span class="u-text-md">名前はまだ無い。u-text-md:どこで生れたか</span>とんと見当がつかぬ。</p>
-<p class="u-text-xl">u-text-xl:吾輩は猫である。<span class="u-text-md">名前はまだ無い。u-text-md:どこで生れたか</span>とんと見当がつかぬ。</p>
-<p class="u-text-xxl">u-text-xxl:吾輩は猫である。<span class="u-text-md">名前はまだ無い。u-text-md:どこで生れたか</span>とんと見当がつかぬ。</p>
-
-<p class="u-text-lg">u-text-lg:吾輩は猫である。<span class="u-text-xxs">名前はまだ無い。u-text-xxs:どこで生れたか</span>とんと見当がつかぬ。</p>
-<p class="u-text-xl">u-text-xl:吾輩は猫である。<span class="u-text-xxs">名前はまだ無い。u-text-xxs:どこで生れたか</span>とんと見当がつかぬ。</p>
-<p class="u-text-xxl">u-text-xxl:吾輩は猫である。<span class="u-text-xxs">名前はまだ無い。u-text-xxs:どこで生れたか</span>とんと見当がつかぬ。</p>
-```
+--------------------
+u-text-(size)
+--------------------
 */
 #document .u-text-xxs {
   font-size: .625em;
@@ -6762,44 +5028,15 @@ category: utility-text
 }
 
 /*
----
-title: u-width-(percentage)
-name: width
-category: utility-width
----
-
-幅を親要素を基準とした割合に変更する。
-
-``` example
-<div class="u-width-20" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
-u-width-20
-</div>
-
-<div class="u-width-33" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
-u-width-33
-</div>
-
-<div class="u-width-50" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
-u-width-50
-</div>
-
-<div class="u-width-66" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
-u-width-66
-</div>
-
-<div class="u-width-75" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
-u-width-75
-</div>
-
-<div class="u-width-100" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
-u-width-100
-</div>
-
-```
-
+--------------------
+u-width-(percentage)
+--------------------
 */
 #document .u-width-20 {
   width: 20%;
+}
+#document .u-width-25 {
+  width: 25%;
 }
 #document .u-width-33 {
   width: 33.33333333%;
@@ -6818,32 +5055,9 @@ u-width-100
 }
 
 /*
----
-title: p-title
-name: title
-category: project-title
----
-
-見出しを表示する。このクラス単独ではマージン、行間のリセットのみ行う。  
-余白は <code>utility > .u-margin</code> で別途調整する。
-
-``` example
-<div style="margin-bottom: 2rem;">
-
-<h1 class="p-title">h1要素にp-titleを付与しました</h1>
-
-</div>
-<div style="margin-bottom: 2rem;">
-
-<h2 class="p-title">h2要素にp-titleを付与しました</h2>
-
-</div>
-<div style="margin-bottom: 2rem;">
-
-<h3 class="p-title">h3要素にp-titleを付与しました</h3>
-
-</div>
-```
+--------------------
+p-title
+--------------------
 */
 .p-title {
   margin: 0;
@@ -6852,45 +5066,13 @@ category: project-title
 }
 
 /*
----
-title: p-title-(group)-(type)
-name: title-01-type
-category: project-title
-parent: title
----
-
-見出しの大分類を <code>(group)</code> 、外観を <code>(type)</code> とする前提で命名する。  
-プロジェクトによって、適切な命名規則を考慮する。
-
-<code>(group)</code> は以下の例が考えられる。
-
-- <code>post / card / widget ...</code>
-- <code>news / product / event ...</code>
-
-<code>(type)</code> は <code>01 / 02 / 03 ...</code> , <code>bordered / based / iconed ...</code> 等が考えられる。
-
-ここでは <code>p-title-echo-(type)</code> を仮に定義している。
-
-``` example
-<div style="margin-bottom: 2rem;">
-
-<h1 class="p-title p-title-echo-01">h1要素にp-title-echo-01を付与しました</h1>
-<h1 class="p-title p-title-echo-02">h1要素にp-title-echo-02を付与しました</h1>
-<h1 class="p-title p-title-echo-03">h1要素にp-title-echo-03を付与しました</h1>
-<h1 class="p-title p-title-echo-04">h1要素にp-title-echo-04を付与しました</h1>
-<h1 class="p-title p-title-echo-05">h1要素にp-title-echo-05を付与しました</h1>
-
-</div>
-<div style="margin-bottom: 2rem;">
-
-<p class="p-title p-title-echo-01">p要素にp-title-echo-01を付与しました</p>
-<p class="p-title p-title-echo-02">p要素にp-title-echo-02を付与しました</p>
-<p class="p-title p-title-echo-03">p要素にp-title-echo-03を付与しました</p>
-<p class="p-title p-title-echo-04">p要素にp-title-echo-04を付与しました</p>
-<p class="p-title p-title-echo-05">p要素にp-title-echo-05を付与しました</p>
-
-</div>
-```
+--------------------
+p-title-(group)-(type)
+--------------------
+*/
+/*
+01: page title
+--------------------
 */
 .p-title-echo-01 {
   font-size: 2rem;
@@ -6904,6 +5086,10 @@ parent: title
   }
 }
 
+/*
+02: page subtitle
+--------------------
+*/
 .p-title-echo-02 {
   font-size: 1.5rem;
   font-weight: 300;
@@ -6916,6 +5102,10 @@ parent: title
   }
 }
 
+/*
+11: component title(large)
+--------------------
+*/
 .p-title-echo-11 {
   font-size: 1.25rem;
   font-weight: 700;
@@ -6928,6 +5118,10 @@ parent: title
   }
 }
 
+/*
+12: component title(small)
+--------------------
+*/
 .p-title-echo-12 {
   font-size: 1.125rem;
   font-weight: 700;
@@ -6939,6 +5133,10 @@ parent: title
   }
 }
 
+/*
+21: display title(large)
+--------------------
+*/
 .p-title-echo-21 {
   font-size: 2.25rem;
   font-weight: 700;
@@ -6970,6 +5168,10 @@ parent: title
   }
 }
 
+/*
+22: display title(medium)
+--------------------
+*/
 .p-title-echo-22 {
   font-size: 2rem;
   font-weight: 700;
@@ -7001,6 +5203,10 @@ parent: title
   }
 }
 
+/*
+23: display subtitle
+--------------------
+*/
 .p-title-echo-23 {
   font-size: 1.25rem;
   font-weight: 300;
@@ -7018,48 +5224,9 @@ parent: title
 }
 
 /*
----
-title: widget
-name: widget
-category: project-widget
----
-
-新着情報など、サイト内で配置が不定となる可能性があるパーツを表示する。  
-必ず他のオブジェクトが含まれる。  
-このクラス単独では、余白や <code>position: relative</code> の指定のみを行う。
-
-``` example
-<div class="widget">
-    <div class="widget-header">
-        <div style="padding: 1rem; text-align:center; background-color: #ddeeff;">(widget-header)</div>
-    </div><!-- /.widget-header -->
-
-    <div class="widget-contents">
-        <div style="padding: 1rem; text-align:center; background-color: #e4fcd0;">(widget-contents)</div>
-    </div><!-- /.widget-contents -->
-
-    <div class="widget-footer">
-        <div style="padding: 1rem; text-align:center; background-color: #ffe6f3;">(widget-footer)</div>
-    </div><!-- /.widget-footer -->
-
-</div><!-- /.widget -->
-
-<div class="widget">
-    <div class="widget-header">
-        <div style="padding: 1rem; text-align:center; background-color: #ddeeff;">(widget-header)</div>
-    </div><!-- /.widget-header -->
-
-    <div class="widget-contents">
-        <div style="padding: 1rem; text-align:center; background-color: #e4fcd0;">(widget-contents)</div>
-    </div><!-- /.widget-contents -->
-
-    <div class="widget-footer">
-        <div style="padding: 1rem; text-align:center; background-color: #ffe6f3;">(widget-footer)</div>
-    </div><!-- /.widget-footer -->
-
-</div><!-- /.widget -->
-```
-
+--------------------
+widget
+--------------------
 */
 .widget {
   margin-bottom: 30px;
@@ -7098,47 +5265,9 @@ category: project-widget
 }
 
 /*
----
-title: widget-(size)
-name: widget-size
-category: project-widget
-parent: widget;
----
-
-ウィジェットのサイズを変える。(size)は、 <code>sm, lg</code> に対応している。
-
-``` example
-<div class="widget widget-sm">
-    <div class="widget-header">
-        <div style="padding: 1rem; text-align:center; background-color: #ddeeff;">(widget-header)</div>
-    </div><!-- /.widget-header -->
-
-    <div class="widget-contents">
-        <div style="padding: 1rem; text-align:center; background-color: #e4fcd0;">(widget-contents)</div>
-    </div><!-- /.widget-contents -->
-
-    <div class="widget-footer">
-        <div style="padding: 1rem; text-align:center; background-color: #ffe6f3;">(widget-footer)</div>
-    </div><!-- /.widget-footer -->
-
-</div><!-- /.widget -->
-
-<div class="widget widget-lg">
-    <div class="widget-header">
-        <div style="padding: 1rem; text-align:center; background-color: #ddeeff;">(widget-header)</div>
-    </div><!-- /.widget-header -->
-
-    <div class="widget-contents">
-        <div style="padding: 1rem; text-align:center; background-color: #e4fcd0;">(widget-contents)</div>
-    </div><!-- /.widget-contents -->
-
-    <div class="widget-footer">
-        <div style="padding: 1rem; text-align:center; background-color: #ffe6f3;">(widget-footer)</div>
-    </div><!-- /.widget-footer -->
-
-</div><!-- /.widget -->
-```
-
+--------------------
+widget-(size)
+--------------------
 */
 .widget-sm {
   margin-bottom: 20px;
@@ -7181,215 +5310,9 @@ parent: widget;
 }
 
 /*
----
-title: WYSIWYG Styles (WordPress)
-name: p-wysiwyg
-category: project-wysiwyg
----
-
-コンテンツ・マネージメント・システムの仕様上、クラスを指定することができない、自由文エリアの標準スタイル。  
-<code>.p-wysiwyg</code> 内の最初の要素は、強制的に上マージンが0となる（!important）。  
-以下の条件に合致する要素に適用され、この条件から漏れるようなコンポーネントは使用できない。
-
-1. <code>.p-wysiwyg</code> を付与した要素で包括されている
-1. 要素に以下のクラスが付与されていない
-    - a:  link, btn, label
-    - h1 - h6:  title
-    - ul: list
-    - ol: list
-    - dl: list
-    - hr: すべてのクラス
-    - blockquote: すべてのクラス
-    - table: すべてのクラス
-1. img要素に以下のクラスが付与されている
-    - align-*
-1. figure要素に以下のクラスが付与されている
-    - align-*
-
-
-
-``` example
-<div class="c-box">
-    <p>以下は、<a href="https://ja.wordpress.org/themes/" target="_blank">WordPressテーマディレクトリ</a>のサンプルコードを日本語訳し、より想定外のケースに対応したものです。</p>
-</div>
-<div class="p-wysiwyg">
-    <p>このHTMLの目的は、CSSを使ってどのようなデフォルト設定を決定し、可能なHTML要素がこのHTMLに含まれているかを確認し、サイトを設計する際に考えられる要素を見落とさないようにすることです。</p>
-    <hr>
-    <h1>見出し1</h1>
-    <h2>見出し2</h2>
-    <h3>見出し3</h3>
-    <h4>見出し4</h4>
-    <h5>見出し5</h5>
-    <h6>見出し6</h6>
-    <p><small><a href="#top">[ページ先頭へもどる]</a></small></p>
-    <hr>
-    <h2 id="paragraph">段落</h2>
-    <p>吾輩は猫である。名前はまだ無い。<a href="#" title="テストリンクです">テストリンクです</a>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
-    <p>吾輩は猫である。名前は<em>弱い強調です</em>まだ無い。どこで生れたかとんと見当がつかぬ。何でも<strong>強い強調です</strong>薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
-    <p><small><a href="#top">[ページ先頭へもどる]</a></small></p>
-    <hr>
-    <h2 id="list_types">リストタイプ</h2>
-    <h3>定義リスト</h3>
-    <dl>
-        <dt>定義リストのタイトル</dt>
-        <dd>これは定義リストの説明です。</dd>
-        <dt>定義リストのタイトル</dt>
-        <dd>これは定義リストの説明ですが、とても長く複数行になるくらい文字数があります。これは定義リストの説明ですが、とても長く複数行になるくらい文字数があります。これは定義リストの説明ですが、とても長く複数行になるくらい文字数があります。これは定義リストの説明ですが、とても長く複数行になるくらい文字数があります。これは定義リストの説明ですが、とても長く複数行になるくらい文字数があります。</dd>
-        <dt>定義リストのタイトル</dt>
-        <dd>これは定義リストの説明です。</dd>
-    </dl>
-    <h3>番号リスト</h3>
-    <ol>
-        <li>これは1番目の番号リストです。</li>
-        <li>これは2番目の番号リストですが、とても長く複数行になるくらい文字数があります。これは2番目の番号リストですが、とても長く複数行になるくらい文字数があります。これは2番目の番号リストですが、とても長く複数行になるくらい文字数があります。これは2番目の番号リストですが、とても長く複数行になるくらい文字数があります。</li>
-        <li>これは3番目の番号リストです。
-            <ol>
-                <li>これは1番目の番号リストです。</li>
-                <li>これは2番目の番号リストです。</li>
-                <li>これは3番目の番号リストです。</li>
-            </ol>
-        </li>
-        <li>これは4番目の番号リストです。</li>
-        <li>これは5番目の番号リストです。
-            <ul>
-                <li>これは1番目の順序なしリストです。</li>
-                <li>これは2番目の順序なしリストです。</li>
-                <li>これは3番目の順序なしリストです。</li>
-            </ul>
-        </li>
-        <li>これは6番目の番号リストです。</li>
-    </ol>
-    <h3>順序なしリスト</h3>
-    <ul>
-        <li>これは1番目の順序なしリストです。</li>
-        <li>これは2番目の順序なしリストですが、とても長く複数行になるくらい文字数があります。これは2番目の順序なしリストですが、とても長く複数行になるくらい文字数があります。これは2番目の順序なしリストですが、とても長く複数行になるくらい文字数があります。これは2番目の順序なしリストですが、とても長く複数行になるくらい文字数があります。</li>
-        <li>これは3番目の順序なしリストです。
-            <ul>
-                <li>これは1番目の順序なしリストです。</li>
-                <li>これは2番目の順序なしリストです。</li>
-                <li>これは3番目の順序なしリストです。</li>
-            </ul>
-        </li>
-        <li>これは4番目の順序なしリストです。</li>
-        <li>これは5番目の順序なしリストです。
-            <ol>
-                <li>これは1番目の番号リストです。</li>
-                <li>これは2番目の番号リストです。</li>
-                <li>これは3番目の番号リストです。</li>
-            </ol>
-        </li>
-        <li>これは6番目の順序なしリストです。</li>
-    </ul>
-    <p><small><a href="#top">[ページ先頭へもどる]</a></small></p>
-    <hr>
-    <h2 id="images">画像</h2>
-    <figure style="width: 640px" class="wp-caption alignnone"><img class="wp-image-999" alt="" src="/images/_dummy/image_01_s.jpg" width="640"><figcaption class="wp-caption-text">画像のキャプションです</figcaption></figure>
-    <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
-    <figure style="width: 320px" class="wp-caption alignleft"><img class="wp-image-999" alt="" src="/images/_dummy/image_02_s.jpg" width="320"><figcaption class="wp-caption-text">画像のキャプションです</figcaption></figure>
-    <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
-    <figure style="width: 320px" class="wp-caption alignright"><img class="wp-image-999" alt="" src="/images/_dummy/image_03_s.jpg" width="320"><figcaption class="wp-caption-text">画像のキャプションです</figcaption></figure>
-    <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
-    <p>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
-    <figure style="width: 640px" class="wp-caption aligncenter"><img class="wp-image-999" alt="" src="/images/_dummy/image_04_s.jpg" width="640"><figcaption class="wp-caption-text">画像のキャプションです</figcaption></figure>
-    <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
-    <p><small><a href="#top">[ページ先頭へもどる]</a></small></p>
-    <hr>
-    <h2 id="form_elements">フォーム</h2>
-    <fieldset>
-        <legend>legend要素（フィールドセットの表題）</legend>
-        <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</p>
-        <form>
-            <h2>フォーム内要素</h2>
-            <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</p>
-            <p><label for="text_field">テキスト入力:</label><br>
-                    <input type="text" id="text_field"></p>
-            <p><label for="text_area">複数行テキスト入力:</label><br>
-                    <textarea id="text_area"></textarea></p>
-            <p><label for="select_element">プルダウンリスト:</label><br>
-                        <select name="select_element">
-                        <optgroup label="オプショングループ1"><option value="1">オプション1</option><option value="2">オプション2</option><option value="3">オプション3</option></optgroup>
-                        <optgroup label="オプショングループ2"><option value="1">オプション1</option><option value="2">オプション2</option><option value="3">オプション3</option></optgroup>
-                    </select></p>
-            <p><label for="radio_buttons">ラジオボタン:</label></p>
-            <p>         <input type="radio" class="radio" name="radio_button" value="radio_1"> ラジオボタン1<br>
-                            <input type="radio" class="radio" name="radio_button" value="radio_2"> ラジオボタン2<br>
-                            <input type="radio" class="radio" name="radio_button" value="radio_3"> ラジオボタン3
-                    </p>
-    <p><label for="checkboxes">チェックボックス:</label></p>
-    <p>         <input type="checkbox" class="checkbox" name="checkboxes" value="check_1"> チェックボックス1<br>
-                    <input type="checkbox" class="checkbox" name="checkboxes" value="check_2"> チェックボックス2<br>
-                    <input type="checkbox" class="checkbox" name="checkboxes" value="check_3"> チェックボックス3
-            </p>
-    <p><label for="password">パスワード:</label></p>
-    <p>         <input type="password" class="password" name="password">
-            </p>
-    <p><label for="file">ファイルアップロード:</label><br>
-                <input type="file" class="file" name="file">
-            </p>
-    <p><input class="button" type="reset" value="消去"> <input class="button" type="submit" value="送信">
-            </p>
-    <p></p></form>
-    </fieldset>
-    <p><small><a href="#top">[ページ先頭へもどる]</a></small></p>
-    <hr>
-    <h2 id="tables">表組</h2>
-    <table cellspacing="0" cellpadding="0">
-    <tbody><tr>
-    <th>表見出し1</th>
-    <th>表見出し2</th>
-    <th>表見出し3</th>
-    </tr>
-    <tr>
-    <td>表のデータ1</td>
-    <td>表のデータ2</td>
-    <td>表のデータ3</td>
-    </tr>
-    <tr class="even">
-    <td>表のデータ1</td>
-    <td>表のデータ2</td>
-    <td>表のデータ3</td>
-    </tr>
-    <tr>
-    <td>表のデータ1</td>
-    <td>表のデータ2</td>
-    <td>表のデータ3</td>
-    </tr>
-    </tbody></table>
-    <p><small><a href="#top">[ページ先頭へもどる]</a></small></p>
-    <hr>
-    <h2 id="misc">その他 - abbr、acronym、pre、code、sub、supなど</h2>
-    <p>Lorem <sup>superscript</sup> dolor <sub>subscript</sub> amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. <cite>cite</cite>. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. <acronym title="National Basketball Association">NBA</acronym> Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.  <abbr title="Avenue">AVE</abbr></p>
-    <pre><p>
-    Lorem ipsum dolor sit amet,
-     consectetuer adipiscing elit.
-     Nullam dignissim convallis est.
-     Quisque aliquam. Donec faucibus. 
-    Nunc iaculis suscipit dui. 
-    Nam sit amet sem. 
-    Aliquam libero nisi, imperdiet at,
-     tincidunt nec, gravida vehicula,
-     nisl. 
-    Praesent mattis, massa quis 
-    luctus fermentum, turpis mi 
-    volutpat justo, eu volutpat 
-    enim diam eget metus. 
-    Maecenas ornare tortor. 
-    Donec sed tellus eget sapien
-     fringilla nonummy. 
-    <acronym title="National Basketball Association">NBA</acronym> 
-    Mauris a ante. Suspendisse
-     quam sem, consequat at, 
-    commodo vitae, feugiat in, 
-    nunc. Morbi imperdiet augue
-     quis tellus.  
-    <abbr title="Avenue">AVE</abbr></p></pre>
-    <blockquote><p>
-        "このスタイルシートは<br>とても驚くほど助けになるだろう" - 引用
-    </p></blockquote>
-    <p><small><a href="#top">[ページ先頭へもどる]</a></small></p>
-</div>
-```
-
+--------------------
+WYSIWYG Styles (WordPress)
+--------------------
 */
 .p-wysiwyg {
   word-break: break-word;

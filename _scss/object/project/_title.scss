@@ -1,30 +1,7 @@
 /*
----
-title: #{$pr}#{$p}title
-name: title
-category: project-title
----
-
-見出しを表示する。このクラス単独ではマージン、行間のリセットのみ行う。  
-余白は <code>utility > .#{$pr}#{$u}margin</code> で別途調整する。
-
-``` example
-<div style="margin-bottom: 2rem;">
-
-<h1 class="#{$pr}#{$p}title">h1要素に#{$pr}#{$p}titleを付与しました</h1>
-
-</div>
-<div style="margin-bottom: 2rem;">
-
-<h2 class="#{$pr}#{$p}title">h2要素に#{$pr}#{$p}titleを付与しました</h2>
-
-</div>
-<div style="margin-bottom: 2rem;">
-
-<h3 class="#{$pr}#{$p}title">h3要素に#{$pr}#{$p}titleを付与しました</h3>
-
-</div>
-```
+--------------------
+#{$pr}#{$p}title
+--------------------
 */
 
 .#{$pr}#{$p}title {
@@ -35,48 +12,15 @@ category: project-title
 
 
 /*
----
-title: #{$pr}#{$p}title#{$c3}(group)#{$c3}(type)
-name: title-01-type
-category: project-title
-parent: title
----
-
-見出しの大分類を <code>(group)</code> 、外観を <code>(type)</code> とする前提で命名する。  
-プロジェクトによって、適切な命名規則を考慮する。
-
-<code>(group)</code> は以下の例が考えられる。
-
-- <code>post / card / widget ...</code>
-- <code>news / product / event ...</code>
-
-<code>(type)</code> は <code>01 / 02 / 03 ...</code> , <code>bordered / based / iconed ...</code> 等が考えられる。
-
-ここでは <code>#{$pr}#{$p}title#{$c3}echo#{$c3}(type)</code> を仮に定義している。
-
-``` example
-<div style="margin-bottom: 2rem;">
-
-<h1 class="#{$pr}#{$p}title #{$pr}#{$p}title#{$c3}echo#{$c3}01">h1要素に#{$pr}#{$p}title#{$c3}echo#{$c3}01を付与しました</h1>
-<h1 class="#{$pr}#{$p}title #{$pr}#{$p}title#{$c3}echo#{$c3}02">h1要素に#{$pr}#{$p}title#{$c3}echo#{$c3}02を付与しました</h1>
-<h1 class="#{$pr}#{$p}title #{$pr}#{$p}title#{$c3}echo#{$c3}03">h1要素に#{$pr}#{$p}title#{$c3}echo#{$c3}03を付与しました</h1>
-<h1 class="#{$pr}#{$p}title #{$pr}#{$p}title#{$c3}echo#{$c3}04">h1要素に#{$pr}#{$p}title#{$c3}echo#{$c3}04を付与しました</h1>
-<h1 class="#{$pr}#{$p}title #{$pr}#{$p}title#{$c3}echo#{$c3}05">h1要素に#{$pr}#{$p}title#{$c3}echo#{$c3}05を付与しました</h1>
-
-</div>
-<div style="margin-bottom: 2rem;">
-
-<p class="#{$pr}#{$p}title #{$pr}#{$p}title#{$c3}echo#{$c3}01">p要素に#{$pr}#{$p}title#{$c3}echo#{$c3}01を付与しました</p>
-<p class="#{$pr}#{$p}title #{$pr}#{$p}title#{$c3}echo#{$c3}02">p要素に#{$pr}#{$p}title#{$c3}echo#{$c3}02を付与しました</p>
-<p class="#{$pr}#{$p}title #{$pr}#{$p}title#{$c3}echo#{$c3}03">p要素に#{$pr}#{$p}title#{$c3}echo#{$c3}03を付与しました</p>
-<p class="#{$pr}#{$p}title #{$pr}#{$p}title#{$c3}echo#{$c3}04">p要素に#{$pr}#{$p}title#{$c3}echo#{$c3}04を付与しました</p>
-<p class="#{$pr}#{$p}title #{$pr}#{$p}title#{$c3}echo#{$c3}05">p要素に#{$pr}#{$p}title#{$c3}echo#{$c3}05を付与しました</p>
-
-</div>
-```
+--------------------
+#{$pr}#{$p}title#{$c3}(group)#{$c3}(type)
+--------------------
 */
 
-// 01: page title
+/*
+01: page title
+--------------------
+*/
 
 .#{$pr}#{$p}title#{$c3}echo#{$c3}01 {
     font-size: 2rem;
@@ -90,7 +34,10 @@ parent: title
 
 }
 
-// 02: page subtitle
+/*
+02: page subtitle
+--------------------
+*/
 
 .#{$pr}#{$p}title#{$c3}echo#{$c3}02 {
     font-size: 1.5rem;
@@ -104,8 +51,10 @@ parent: title
 
 }
 
-
-// 11: component title(large)
+/*
+11: component title(large)
+--------------------
+*/
 
 .#{$pr}#{$p}title#{$c3}echo#{$c3}11 {
     font-size: 1.25rem;
@@ -119,7 +68,10 @@ parent: title
 
 }
 
-// 12: component title(small)
+/*
+12: component title(small)
+--------------------
+*/
 
 .#{$pr}#{$p}title#{$c3}echo#{$c3}12 {
     font-size: 1.125rem;
@@ -133,7 +85,10 @@ parent: title
 }
 
 
-// 21: display title(large)
+/*
+21: display title(large)
+--------------------
+*/
 
 .#{$pr}#{$p}title#{$c3}echo#{$c3}21 {
     font-size: 2.25rem;
@@ -162,7 +117,10 @@ parent: title
 
 }
 
-// 22: display title(medium)
+/*
+22: display title(medium)
+--------------------
+*/
 
 .#{$pr}#{$p}title#{$c3}echo#{$c3}22 {
     font-size: 2rem;
@@ -191,7 +149,10 @@ parent: title
 
 }
 
-// 23: display subtitle
+/*
+23: display subtitle
+--------------------
+*/
 
 .#{$pr}#{$p}title#{$c3}echo#{$c3}23 {
     font-size: 1.25rem;

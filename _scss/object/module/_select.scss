@@ -1,36 +1,7 @@
 /*
----
-title: #{$pr}#{$m}select
-name: select
-category: module-select
----
-
-セレクトボックスをインライン表示する。select要素ではなく、包括している要素にクラスを付与する。  
-余白・レイアウト等は <code>utility > .#{$pr}#{$u}p</code> や <code>component > .#{$pr}#{$c}form</code> で指定する。  
-<code>.#{$pr}#{$error}</code> を同時に使用するとエラーがあったときの表示となる。  
-セレクトボックスのシェブロンは <code>/\_scss/mixin/mixin.css</code> の <code>chevron()</code>を参照。
-
-``` example
-<div style="margin-bottom: 1rem;">
-    <div class="#{$pr}#{$m}select">
-        <select>
-            <option>月を選択...</option>
-            <option value="">2017年</option>
-            <option value="">2016年</option>
-            <option value="">2015年</option>
-        </select>
-    </div>
-</div>
-
-<div class="#{$pr}#{$m}select #{$pr}#{$error}">
-    <select>
-        <option>月を選択...</option>
-        <option value="">2017年</option>
-        <option value="">2016年</option>
-        <option value="">2015年</option>
-    </select>
-</div>
-```
+--------------------
+#{$pr}#{$m}select
+--------------------
 */
 
 .#{$pr}#{$m}select {
@@ -56,8 +27,6 @@ category: module-select
 
     select {
         position: relative;
-        -webkit-appearance: none;
-        -moz-appearance: none;
         appearance: none;
         font-size: $font-size-md;
         color: $body-color;
@@ -89,42 +58,14 @@ category: module-select
 
 
 /*
----
-title: #{$pr}#{$m}select#{$c3}(size)
-name: select-01-size
-category: module-select
-parent: select
----
-
-セレクトボックスの全体のサイズを変更する。(size)は <code>sm, lg</code> に対応している。
-
-``` example
-<div style="margin-bottom: 1rem;">
-    <div class="#{$pr}#{$m}select #{$pr}#{$m}select#{$c3}sm">
-        <select>
-            <option>月を選択...</option>
-            <option value="">2017年</option>
-            <option value="">2016年</option>
-            <option value="">2015年</option>
-        </select>
-    </div>
-</div>
-<div>
-    <div class="#{$pr}#{$m}select #{$pr}#{$m}select#{$c3}lg">
-        <select>
-            <option>月を選択...</option>
-            <option value="">2017年</option>
-            <option value="">2016年</option>
-            <option value="">2015年</option>
-        </select>
-    </div>
-</div>
-```
+--------------------
+#{$pr}#{$m}select#{$c3}(size)
+--------------------
 */
 
 .#{$pr}#{$m}select#{$c3}sm {
 
-    select {
+    > select {
         font-size: $font-size-sm;
         padding: .5em 3em .5em 1em;
     }
@@ -133,7 +74,7 @@ parent: select
 
 .#{$pr}#{$m}select#{$c3}lg {
 
-    select {
+    > select {
         font-size: $font-size-lg;
         padding: .75em 3em .75em 1em;
     }

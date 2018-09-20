@@ -1,24 +1,7 @@
 /*
----
-title: #{$pr}#{$m}input
-name: input
-category: module-input
----
-
-テキスト入力を即す欄を表示する。要素に直接クラスを付与する（ほとんどの場合、input要素、textarea要素となる）。  
-余白・レイアウト等は <code>utility > .#{$pr}#{$u}margin</code> や <code>component > .#{$pr}#{$c}form</code> で指定する。  
-<code>.#{$pr}#{$error}</code> を同時に使用するとエラーがあったときの表示となる。 
-
-``` example
-<div style="margin-bottom: 2rem;">
-    <input type="text" class="#{$pr}#{$m}input" size="20" value="吾輩は猫である。" />
-    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$error}" size="20" value="* なに？ *" />
-</div>
-<div>
-    <textarea class="#{$pr}#{$m}input" rows="5" cols="60">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</textarea>
-    <textarea class="#{$pr}#{$m}input #{$pr}#{$error}" rows="5" cols="60">* おおっと *</textarea>
-</div>
-```
+--------------------
+#{$pr}#{$m}input
+--------------------
 */
 
 .#{$pr}#{$m}input {
@@ -40,25 +23,9 @@ category: module-input
 
 
 /*
----
-title: #{$pr}#{$m}input#{$c3}(size)
-name: input-01-size
-category: module-input
-parent: input
----
-
-テキスト入力を即す欄の全体のサイズを変更する。(size)は <code>sm, lg</code> に対応している。
-
-``` example
-<div style="margin-bottom: 2rem;">
-    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input#{$c3}sm" size="20" value="吾輩は猫である。" />
-    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input#{$c3}lg" size="20" value="吾輩は猫である。" />
-</div>
-<div>
-    <textarea class="#{$pr}#{$m}input #{$pr}#{$m}input#{$c3}sm" rows="5" cols="60">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</textarea>
-    <textarea class="#{$pr}#{$m}input #{$pr}#{$m}input#{$c3}lg" rows="5" cols="60">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</textarea>
-</div>
-```
+--------------------
+#{$pr}#{$m}input#{$c3}(size)
+--------------------
 */
 
 .#{$pr}#{$m}input#{$c3}sm {
@@ -73,38 +40,9 @@ parent: input
 
 
 /*
----
-title: #{$pr}#{$m}input#{$c3}(color)
-name: input-02-color
-category: module-input
-parent: input
----
-
-ボーダーの色を変更する。(color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
-
-``` example
-<div style="margin-bottom: 1rem;">
-    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input#{$c3}#{$__gray}" size="20" value="" placeholder="#{$__gray}" />
-</div>
-<div style="margin-bottom: 1rem;">
-    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input#{$c3}#{$__first}" size="20" value="" placeholder="#{$__first}" />
-</div>
-<div style="margin-bottom: 1rem;">
-    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input#{$c3}#{$__second}" size="20" value="" placeholder="#{$__second}" />
-</div>
-<div style="margin-bottom: 1rem;">
-    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input#{$c3}#{$__third}" size="20" value="" placeholder="#{$__third}" />
-</div>
-<div style="margin-bottom: 1rem;">
-    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input#{$c3}#{$__fourth}" size="20" value="" placeholder="#{$__fourth}" />
-</div>
-<div style="margin-bottom: 1rem;">
-    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input#{$c3}#{$__info}" size="20" value="" placeholder="#{$__info}" />
-</div>
-<div>
-    <input type="text" class="#{$pr}#{$m}input #{$pr}#{$m}input#{$c3}#{$__important}" size="20" value="" placeholder="#{$__important}" />
-</div>
-```
+--------------------
+#{$pr}#{$m}input#{$c3}(color)
+--------------------
 */
 
 .#{$pr}#{$m}input#{$c3}#{$__gray} {

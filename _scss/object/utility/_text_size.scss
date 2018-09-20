@@ -1,28 +1,9 @@
 @if ($disabled-utility-class != true) {
 
 /*
----
-title: #{$pr}#{$u}text#{$c3}(size)
-name: text-06-size
-category: utility-text
----
-
-文字サイズを、**現在の文字サイズの相対値**（ <code>em</code> ）で変更する。  
-ただし、 <code>.#{$pr}#{$u}text#{$c3}md</code> のみ、単位が <code>rem</code> （html要素の文字サイズ）となる。
-
-``` example
-<p class="#{$pr}#{$u}text#{$c3}xxs">#{$pr}#{$u}text#{$c3}xxs:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="#{$pr}#{$u}text#{$c3}xs">#{$pr}#{$u}text#{$c3}xs:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="#{$pr}#{$u}text#{$c3}sm">#{$pr}#{$u}text#{$c3}sm:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-
-<p class="#{$pr}#{$u}text#{$c3}lg">#{$pr}#{$u}text#{$c3}lg:吾輩は猫である。<span class="#{$pr}#{$u}text#{$c3}md">名前はまだ無い。#{$pr}#{$u}text#{$c3}md:どこで生れたか</span>とんと見当がつかぬ。</p>
-<p class="#{$pr}#{$u}text#{$c3}xl">#{$pr}#{$u}text#{$c3}xl:吾輩は猫である。<span class="#{$pr}#{$u}text#{$c3}md">名前はまだ無い。#{$pr}#{$u}text#{$c3}md:どこで生れたか</span>とんと見当がつかぬ。</p>
-<p class="#{$pr}#{$u}text#{$c3}xxl">#{$pr}#{$u}text#{$c3}xxl:吾輩は猫である。<span class="#{$pr}#{$u}text#{$c3}md">名前はまだ無い。#{$pr}#{$u}text#{$c3}md:どこで生れたか</span>とんと見当がつかぬ。</p>
-
-<p class="#{$pr}#{$u}text#{$c3}lg">#{$pr}#{$u}text#{$c3}lg:吾輩は猫である。<span class="#{$pr}#{$u}text#{$c3}xxs">名前はまだ無い。#{$pr}#{$u}text#{$c3}xxs:どこで生れたか</span>とんと見当がつかぬ。</p>
-<p class="#{$pr}#{$u}text#{$c3}xl">#{$pr}#{$u}text#{$c3}xl:吾輩は猫である。<span class="#{$pr}#{$u}text#{$c3}xxs">名前はまだ無い。#{$pr}#{$u}text#{$c3}xxs:どこで生れたか</span>とんと見当がつかぬ。</p>
-<p class="#{$pr}#{$u}text#{$c3}xxl">#{$pr}#{$u}text#{$c3}xxl:吾輩は猫である。<span class="#{$pr}#{$u}text#{$c3}xxs">名前はまだ無い。#{$pr}#{$u}text#{$c3}xxs:どこで生れたか</span>とんと見当がつかぬ。</p>
-```
+--------------------
+#{$pr}#{$u}text#{$c3}(size)
+--------------------
 */
 
 #{$u-wrap} {

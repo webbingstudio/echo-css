@@ -1,65 +1,9 @@
 @if ($disabled-utility-class != true) {
 
 /*
----
-title: #{$pr}#{$u}margin#{$c3}(direction)#{$c3}(size)
-name: margin
-category: utility-margin
----
-
-ブロック要素の外部余白を変更する。
-
-``` example
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}x#{$c3}auto" style="background-color: rgba(255,255,255,.35); width: 50%;">#{$pr}#{$u}margin#{$c2}x#{$c3}auto</div></div>
-
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}xs" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}xs</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}top#{$c3}xs" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}top#{$c3}xs</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}right#{$c3}xs" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}right#{$c3}xs</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}bottom#{$c3}xs" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}bottom#{$c3}xs</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}left#{$c3}xs" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}left#{$c3}xs</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}x#{$c3}xs" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}x#{$c3}xs</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}y#{$c3}xs" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}y#{$c3}xs</div></div>
-
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}sm" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}sm</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}top#{$c3}sm" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}top#{$c3}sm</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}right#{$c3}sm" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}right#{$c3}sm</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}bottom#{$c3}sm" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}bottom#{$c3}sm</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}left#{$c3}sm" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}left#{$c3}sm</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}x#{$c3}sm" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}x#{$c3}sm</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}y#{$c3}sm" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}y#{$c3}sm</div></div>
-
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}m#{$c3}md" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}md</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}top#{$c3}md" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}top#{$c3}md</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}right#{$c3}md" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}right#{$c3}md</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}bottom#{$c3}md" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}bottom#{$c3}md</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}left#{$c3}md" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}left#{$c3}md</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}x#{$c3}md" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}x#{$c3}md</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}y#{$c3}md" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}y#{$c3}md</div></div>
-
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}lg" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}lg</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}top#{$c3}lg" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}top#{$c3}lg</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}right#{$c3}lg" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}right#{$c3}lg</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}bottom#{$c3}lg" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}bottom#{$c3}lg</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}left#{$c3}lg" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}left#{$c3}lg</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}x#{$c3}lg" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}x#{$c3}lg</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}y#{$c3}lg" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}y#{$c3}lg</div></div>
-
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}xl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}xl</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}top#{$c3}xl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}top#{$c3}xl</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}right#{$c3}xl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}right#{$c3}xl</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}bottom#{$c3}xl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}bottom#{$c3}xl</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}left#{$c3}xl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}left#{$c3}xl</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}x#{$c3}xl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}x#{$c3}xl</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}y#{$c3}xl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}y#{$c3}xl</div></div>
-
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c3}xxl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c3}xxl</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}top#{$c3}xxl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}top#{$c3}xxl</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}right#{$c3}xxl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}right#{$c3}xxl</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}bottom#{$c3}xxl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}bottom#{$c3}xxl</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}left#{$c3}xxl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}left#{$c3}xxl</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}x#{$c3}xxl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}x#{$c3}xxl</div></div>
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="#{$pr}#{$u}margin#{$c2}y#{$c3}xxl" style="background-color: rgba(255,255,255,.35);">#{$pr}#{$u}margin#{$c2}y#{$c3}xxl</div></div>
-```
+--------------------
+#{$pr}#{$u}margin#{$c3}(direction)#{$c3}(size)
+--------------------
 */
 
 #{$u-wrap} {

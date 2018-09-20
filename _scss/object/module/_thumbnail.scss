@@ -1,38 +1,7 @@
 /*
----
-title: #{$pr}#{$m}thumbnail
-name: thumbnail
-category: module-thumbnail
----
-
-一覧ページ、記事中で縮小された画像を表示する。要素自体ではなく、包括している要素にクラスを付与する。  
-このクラス単独ではそのままのサイズと縦横比で表示する。幅が制限されていると、そのサイズを超えないよう画像が縮小される。
-
-``` example
-<div class="#{$pr}#{$u}clearfix #{$u}m-b">
-
-<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md">
-    <div class="#{$pr}#{$m}thumbnail">
-        <img src="https://placehold.jp/150x150.jpg" alt="">
-    </div>
-</div>
-
-<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md">
-    <div class="#{$pr}#{$m}thumbnail">
-        <img src="https://placehold.jp/240x320.jpg" alt="">
-    </div>
-</div>
-
-<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail">
-        <img src="https://placehold.jp/480x360.jpg" alt="">
-    </div>
-    <p class="#{$u}m-y-0">↑width: 200px</p>
-</div>
-
-</div>
-```
-
+--------------------
+#{$pr}#{$m}thumbnail
+--------------------
 */
 
 .#{$pr}#{$m}thumbnail {
@@ -55,78 +24,10 @@ category: module-thumbnail
 
 
 /*
----
-title: #{$pr}#{$m}thumbnail#{$c3}round
-name: thumbnail-01-round
-category: module-thumbnail
-parent: thumbnail
----
-
-画像を正円にトリミングして表示する。別途、幅を指定する必要がある。  
-横長の画像では上下に余白ができるため、余白を出したくない場合は <code>.#{$pr}#{$m}thumbnail#{$c3}vertical</code> を併用する必要がある。
-
-``` example
-<div class="#{$pr}#{$u}clearfix #{$u}m-b">
-
-<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}round">
-        <img src="https://placehold.jp/200x200.jpg" alt="">
-    </div>
-</div>
-
-<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}round">
-        <img src="https://placehold.jp/200x100.jpg" alt="">
-    </div>
-</div>
-
-<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}round">
-        <img src="https://placehold.jp/200x300.jpg" alt="">
-    </div>
-</div>
-
-</div>
-```
-
-*/
-
-
-/*
----
-title: #{$pr}#{$m}thumbnail#{$c3}square
-name: thumbnail-02-square
-category: module-thumbnail
-parent: thumbnail
----
-
-画像を正方形にトリミングして表示する。別途、幅を指定する必要がある。  
-横長の画像では上下に余白ができるため、余白を出したくない場合は <code>#{$pr}#{$m}thumbnail#{$c3}vertical</code> を併用する必要がある。
-
-``` example
-<div class="#{$pr}#{$u}clearfix #{$u}m-b">
-
-<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}square">
-        <img src="https://placehold.jp/200x200.jpg" alt="">
-    </div>
-</div>
-
-<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}square">
-        <img src="https://placehold.jp/200x100.jpg" alt="">
-    </div>
-</div>
-
-<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}square">
-        <img src="https://placehold.jp/200x300.jpg" alt="">
-    </div>
-</div>
-
-</div>
-```
-
+--------------------
+#{$pr}#{$m}thumbnail#{$c3}round
+#{$pr}#{$m}thumbnail#{$c3}square
+--------------------
 */
 
 .#{$pr}#{$m}thumbnail#{$c3}round,
@@ -139,13 +40,9 @@ parent: thumbnail
         position: absolute;
         top: 50%;
         left: 50%;
-
         width: auto;
         height: 100%;
         max-width: none;
-
-        -webkit-transform:translate(-50%, -50%);
-        -ms-transform:translate(-50%, -50%);
         transform:translate(-50%, -50%);
     }
 
@@ -160,123 +57,9 @@ parent: thumbnail
 
 
 /*
----
-title: #{$pr}#{$m}thumbnail#{$c3}(ratio-x)to(ratio-y)
-name: thumbnail-03-ratio
-category: module-thumbnail
-parent: thumbnail
----
-
-画像を指定した縦横比で、かつトリミングして表示する。別途、幅を指定する必要がある。  
-(ratio-x)to(ratio-y)は <code>3to2, 4to3, 16to9, ogimage(1.91:1), 21to9</code> に対応している。  
-指定した比率を超える超横長の画像だった場合は、上下に余白ができる。
-
-``` example
-<div class="#{$pr}#{$u}clearfix #{$u}m-b">
-
-<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}3to2">
-        <img src="https://placehold.jp/480x360.jpg" alt="">
-    </div>
-</div>
-
-<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}4to3">
-        <img src="https://placehold.jp/480x360.jpg" alt="">
-    </div>
-</div>
-
-<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}16to9">
-        <img src="https://placehold.jp/480x360.jpg" alt="">
-    </div>
-</div>
-
-<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}ogimage">
-        <img src="https://placehold.jp/480x360.jpg" alt="">
-    </div>
-</div>
-
-<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}21to9">
-        <img src="https://placehold.jp/480x360.jpg" alt="">
-    </div>
-</div>
-
-</div>
-
-
-<div class="#{$pr}#{$u}clearfix #{$u}m-b">
-
-<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}3to2">
-        <img src="https://placehold.jp/320x480.jpg" alt="">
-    </div>
-</div>
-
-<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}4to3">
-        <img src="https://placehold.jp/320x480.jpg" alt="">
-    </div>
-</div>
-
-<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}16to9">
-        <img src="https://placehold.jp/320x480.jpg" alt="">
-    </div>
-</div>
-
-<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}ogimage">
-        <img src="https://placehold.jp/320x480.jpg" alt="">
-    </div>
-</div>
-
-<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}21to9">
-        <img src="https://placehold.jp/320x480.jpg" alt="">
-    </div>
-</div>
-
-</div>
-
-
-<div class="#{$pr}#{$u}clearfix #{$u}m-b">
-
-<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}3to2">
-        <img src="https://placehold.jp/600x200.jpg" alt="">
-    </div>
-</div>
-
-<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}4to3">
-        <img src="https://placehold.jp/600x200.jpg" alt="">
-    </div>
-</div>
-
-<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}16to9">
-        <img src="https://placehold.jp/600x200.jpg" alt="">
-    </div>
-</div>
-
-<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}ogimage">
-        <img src="https://placehold.jp/600x200.jpg" alt="">
-    </div>
-</div>
-
-<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}21to9">
-        <img src="https://placehold.jp/600x200.jpg" alt="">
-    </div>
-</div>
-
-</div>
-```
-
+--------------------
+#{$pr}#{$m}thumbnail#{$c3}(ratio-x)to(ratio-y)
+--------------------
 */
 
 .#{$pr}#{$m}thumbnail#{$c3}3to2,
@@ -291,15 +74,9 @@ parent: thumbnail
         position: absolute;
         top: 50%;
         left: 50%;
-
-        // 隙間ができてしまうことがあるので2%増やす
-        // Increase 2% because it may become a gap
-        width: 102%;
+        width: 100%;
         max-width: none;
         height: auto;
-
-        -webkit-transform:translate(-50%, -50%);
-        -ms-transform:translate(-50%, -50%);
         transform:translate(-50%, -50%);
     }
 
@@ -326,69 +103,10 @@ parent: thumbnail
 }
 
 
-
-
 /*
----
-title: #{$pr}#{$m}thumbnail#{$c3}horizontal
-name: thumbnail-04-horizontal
-category: module-thumbnail
-parent: thumbnail
----
-
-<code>#{$pr}#{$m}thumbnail#{$c3}round, #{$pr}#{$m}thumbnail#{$c3}square, #{$pr}#{$m}thumbnail#{$c3}(ratio-x)to(ratio-y)</code> を使用したときに、幅ではなく高さを基準にトリミングする。
-
-``` example
-<div class="#{$pr}#{$u}clearfix #{$u}m-b">
-
-<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}horizontal #{$pr}#{$m}thumbnail#{$c3}square">
-        <img src="https://placehold.jp/480x320.jpg" alt="">
-    </div>
-</div>
-
-<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}horizontal #{$pr}#{$m}thumbnail#{$c3}round">
-        <img src="https://placehold.jp/480x320.jpg" alt="">
-    </div>
-</div>
-
-</div>
-
-<div class="#{$pr}#{$u}clearfix #{$u}m-b">
-
-<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}horizontal #{$pr}#{$m}thumbnail#{$c3}3to2">
-        <img src="https://placehold.jp/600x200.jpg" alt="">
-    </div>
-</div>
-
-<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}horizontal #{$pr}#{$m}thumbnail#{$c3}4to3">
-        <img src="https://placehold.jp/600x200.jpg" alt="">
-    </div>
-</div>
-
-<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}horizontal #{$pr}#{$m}thumbnail#{$c3}16to9">
-        <img src="https://placehold.jp/600x200.jpg" alt="">
-    </div>
-</div>
-
-<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}horizontal #{$pr}#{$m}thumbnail#{$c3}ogimage">
-        <img src="https://placehold.jp/600x200.jpg" alt="">
-    </div>
-</div>
-
-<div class="#{$pr}#{$u}float#{$c3}left #{$u}margin#{$c2}r#{$c3}md" style="width: 200px;">
-    <div class="#{$pr}#{$m}thumbnail #{$pr}#{$m}thumbnail#{$c3}horizontal #{$pr}#{$m}thumbnail#{$c3}21to9">
-        <img src="https://placehold.jp/600x200.jpg" alt="">
-    </div>
-</div>
-
-</div>
-```
+--------------------
+#{$pr}#{$m}thumbnail#{$c3}horizontal
+--------------------
 */
 
 .#{$pr}#{$m}thumbnail#{$c3}horizontal {
@@ -396,7 +114,7 @@ parent: thumbnail
     img {
         height: auto;
         max-width: none;
-        width: 102%;
+        width: 100%;
     }
 
 }

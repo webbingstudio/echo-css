@@ -1,22 +1,9 @@
 @if ($disabled-utility-class != true) {
 
 /*
----
-title: #{$pr}#{$u}text#{$c3}(color)
-name: text-01-color
-category: utility-text
----
-
-文字色を変更する。(color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
-
-``` example
-<p class="#{$pr}#{$u}text#{$c3}#{$__first}">#{$pr}#{$u}text#{$c3}#{$__first}:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="#{$pr}#{$u}text#{$c3}#{$__second}">#{$pr}#{$u}text#{$c3}#{$__second}:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="#{$pr}#{$u}text#{$c3}#{$__third}">#{$pr}#{$u}text#{$c3}#{$__third}:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="#{$pr}#{$u}text#{$c3}#{$__fourth}">#{$pr}#{$u}text#{$c3}#{$__fourth}:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="#{$pr}#{$u}text#{$c3}#{$__info}">#{$pr}#{$u}text#{$c3}#{$__info}:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="#{$pr}#{$u}text#{$c3}#{$__important}">#{$pr}#{$u}text#{$c3}#{$__important}:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-```
+--------------------
+#{$pr}#{$u}text#{$c3}(color)
+--------------------
 */
 
 #{$u-wrap} {
@@ -49,18 +36,9 @@ category: utility-text
 
 
 /*
----
-title: #{$pr}#{$u}text#{$c3}root
-name: text-02-root
-category: utility-text
----
-
-文字色をbody要素の文字色に戻す。
-
-``` example
-<p class="#{$pr}#{$u}text#{$c3}first">ここは文字色が first ですが、<span class="#{$pr}#{$u}text#{$c3}root">ここからbody要素の文字色に変更しました</span></p>
-```
-
+--------------------
+#{$pr}#{$u}text#{$c3}root
+--------------------
 */
 
 #{$u-wrap} {
@@ -73,20 +51,9 @@ category: utility-text
 
 
 /*
----
-title: #{$pr}#{$u}text#{$c3}#{$__inverse}
-name: text-03-inverse
-category: utility-text
----
-
-文字色を反転する（背景色を文字色とする）。
-
-
-``` example
-<div style="background-color: #000; padding: 1rem 0;">
-    <p class="#{$pr}#{$u}text#{$c3}#{$__inverse}">#{$pr}#{$u}text#{$c3}#{$__inverse}:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-</div>
-```
+--------------------
+#{$pr}#{$u}text#{$c3}#{$__inverse}
+--------------------
 */
 
 #{$u-wrap} {

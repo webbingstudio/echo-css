@@ -1,17 +1,9 @@
 @if ($disabled-utility-class != true) {
 
 /*
----
-title: #{$pr}#{$u}shadow
-name: shadow
-category: utility-shadow
----
-
-要素に影をつける。
-
-``` example
-<p><a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}first #{$pr}#{$m}btn#{$c3}block #{$pr}#{$u}shadow">#{$pr}#{$u}shadow</a></p>
-```
+--------------------
+#{$pr}#{$u}shadow
+--------------------
 */
 
 #{$u-wrap} {
@@ -22,19 +14,11 @@ category: utility-shadow
 
 }
 
+
 /*
----
-title: #{$pr}#{$u}shadow#{$c3}(size)
-name: shadow-01-size
-category: utility-shadow
----
-
-影をつけた要素と背景の、擬似的な距離を変更する。
-
-``` example
-<p><a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}first #{$pr}#{$m}btn#{$c3}block #{$pr}#{$u}shadow #{$pr}#{$u}shadow#{$c3}sm">#{$pr}#{$u}shadow#{$c3}sm</a></p>
-<p><a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}first #{$pr}#{$m}btn#{$c3}block #{$pr}#{$u}shadow #{$pr}#{$u}shadow#{$c3}lg">#{$pr}#{$u}shadow#{$c3}lg</a></p>
-```
+--------------------
+#{$pr}#{$u}shadow#{$c3}(size)
+--------------------
 */
 
 #{$u-wrap} {

@@ -1,18 +1,9 @@
 @if ($disabled-utility-class != true) {
 
 /*
----
-title: #{$pr}#{$u}image#{$c3}responsive
-name: image-01-responsive
-category: utility-image
----
-
-画像が包括要素よりも大きくなった場合のみ、縦横比を保って伸縮させる。
-
-``` example
-<img src="/images/_dummy/image_01_s.jpg" alt="" class="#{$pr}#{$u}image#{$c3}responsive">
-```
-
+--------------------
+#{$pr}#{$u}image#{$c3}responsive
+--------------------
 */
 
 #{$u-wrap} {
@@ -24,19 +15,11 @@ category: utility-image
 
 }
 
+
 /*
----
-title: #{$pr}#{$u}image#{$c3}fill
-name: image-02-fill
-category: utility-image
----
-
-画像の大きさに関係なく、常に包括要素の幅いっぱいに伸縮させる。
-
-``` example
-<img src="/images/_dummy/image_01_s.jpg" alt="" class="#{$pr}#{$u}image#{$c3}fill">
-```
-
+--------------------
+#{$pr}#{$u}image#{$c3}fill
+--------------------
 */
 
 #{$u-wrap} {

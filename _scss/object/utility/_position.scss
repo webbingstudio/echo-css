@@ -1,43 +1,9 @@
 @if ($disabled-utility-class != true) {
 
 /*
----
-title: #{$pr}#{$u}position#{$c3}(y)-(x)
-name: position
-category: utility-position
----
-
-ブロック要素を親要素の指定した位置に絶対配置する。  
-親要素に <code>position:relative</code> を指定している必要がある。
-
-``` example
-<div>#{$pr}#{$u}position#{$c3}top#{$c3}left</div>
-<div style="position: relative; background-color: #bbb; margin-bottom: 5px; width: 100px; height: 100px;"><span class="#{$pr}#{$u}position#{$c3}top#{$c3}left" style="background-color: #333; width: 10px; height: 10px;"></span></div>
-
-<div>#{$pr}#{$u}position#{$c3}top#{$c3}center</div>
-<div style="position: relative; background-color: #bbb; margin-bottom: 5px; width: 100px; height: 100px;"><span class="#{$pr}#{$u}position#{$c3}top#{$c3}center" style="background-color: #333; width: 10px; height: 10px;"></span></div>
-
-<div>#{$pr}#{$u}position#{$c3}top#{$c3}right</div>
-<div style="position: relative; background-color: #bbb; margin-bottom: 5px; width: 100px; height: 100px;"><span class="#{$pr}#{$u}position#{$c3}top#{$c3}right" style="background-color: #333; width: 10px; height: 10px;"></span></div>
-
-<div>#{$pr}#{$u}position#{$c3}center#{$c3}left</div>
-<div style="position: relative; background-color: #bbb; margin-bottom: 5px; width: 100px; height: 100px;"><span class="#{$pr}#{$u}position#{$c3}center#{$c3}left" style="background-color: #333; width: 10px; height: 10px;"></span></div>
-
-<div>#{$pr}#{$u}position#{$c3}center#{$c3}center</div>
-<div style="position: relative; background-color: #bbb; margin-bottom: 5px; width: 100px; height: 100px;"><span class="#{$pr}#{$u}position#{$c3}center#{$c3}center" style="background-color: #333; width: 10px; height: 10px;"></span></div>
-
-<div>#{$pr}#{$u}position#{$c3}center#{$c3}right</div>
-<div style="position: relative; background-color: #bbb; margin-bottom: 5px; width: 100px; height: 100px;"><span class="#{$pr}#{$u}position#{$c3}center#{$c3}right" style="background-color: #333; width: 10px; height: 10px;"></span></div>
-
-<div>#{$pr}#{$u}position#{$c3}bottom#{$c3}left</div>
-<div style="position: relative; background-color: #bbb; margin-bottom: 5px; width: 100px; height: 100px;"><span class="#{$pr}#{$u}position#{$c3}bottom#{$c3}left" style="background-color: #333; width: 10px; height: 10px;"></span></div>
-
-<div>#{$pr}#{$u}position#{$c3}bottom#{$c3}center</div>
-<div style="position: relative; background-color: #bbb; margin-bottom: 5px; width: 100px; height: 100px;"><span class="#{$pr}#{$u}position#{$c3}bottom#{$c3}center" style="background-color: #333; width: 10px; height: 10px;"></span></div>
-
-<div>#{$pr}#{$u}position#{$c3}bottom#{$c3}right</div>
-<div style="position: relative; background-color: #bbb; margin-bottom: 5px; width: 100px; height: 100px;"><span class="#{$pr}#{$u}position#{$c3}bottom#{$c3}right" style="background-color: #333; width: 10px; height: 10px;"></span></div>
-```
+--------------------
+#{$pr}#{$u}position#{$c3}(y)-(x)
+--------------------
 */
 
 #{$u-wrap} {

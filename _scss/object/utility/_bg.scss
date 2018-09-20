@@ -1,47 +1,10 @@
 @if ($disabled-utility-class != true) {
 
 /*
----
-title: #{$pr}#{$u}bg#{$c3}(color)
-name: bg-01-color
-category: utility-bg
----
-
-背景に色をつける。オブジェクト・コンポーネントを可能な限り上書きする。  
-(color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。
-
-``` example
-<div class="#{$pr}#{$u}bg#{$c3}#{$__gray}">bg#{$c3}#{$__gray}</div>
-<div class="#{$pr}#{$u}bg#{$c3}#{$__first}">bg#{$c3}#{$__first}</div>
-<div class="#{$pr}#{$u}bg#{$c3}#{$__second}">bg#{$c3}#{$__second}</div>
-<div class="#{$pr}#{$u}bg#{$c3}#{$__third}">bg#{$c3}#{$__third}</div>
-<div class="#{$pr}#{$u}bg#{$c3}#{$__fourth}">bg#{$c3}#{$__fourth}</div>
-<div class="#{$pr}#{$u}bg#{$c3}#{$__info}">bg#{$c3}#{$__info}</div>
-<div class="#{$pr}#{$u}bg#{$c3}#{$__important}">bg#{$c3}#{$__important}</div>
-```
-
-*/
-
-/*
----
-title: #{$pr}#{$u}bg#{$c3}fade
-name: bg-02-fade
-category: utility-bg
-parent: bg-01-color
----
-
-<code>.#{$pr}#{$u}bg#{$c3}(color)</code> と併用すると背景色を薄くする。
-
-``` example
-<div class="#{$pr}#{$u}bg#{$c3}#{$__gray_light} #{$pr}#{$u}bg#{$c3}fade">bg#{$c3}#{$__gray_light}</div>
-<div class="#{$pr}#{$u}bg#{$c3}#{$__first} #{$pr}#{$u}bg#{$c3}fade">bg#{$c3}#{$__first}</div>
-<div class="#{$pr}#{$u}bg#{$c3}#{$__second} #{$pr}#{$u}bg#{$c3}fade">bg#{$c3}#{$__second}</div>
-<div class="#{$pr}#{$u}bg#{$c3}#{$__third} #{$pr}#{$u}bg#{$c3}fade">bg#{$c3}#{$__third}</div>
-<div class="#{$pr}#{$u}bg#{$c3}#{$__fourth} #{$pr}#{$u}bg#{$c3}fade">bg#{$c3}#{$__fourth}</div>
-<div class="#{$pr}#{$u}bg#{$c3}#{$__info} #{$pr}#{$u}bg#{$c3}fade">bg#{$c3}#{$__info}</div>
-<div class="#{$pr}#{$u}bg#{$c3}#{$__important} #{$pr}#{$u}bg#{$c3}fade">bg#{$c3}#{$__important}</div>
-```
-
+--------------------
+#{$pr}#{$u}bg#{$c3}(color)
+#{$pr}#{$u}bg#{$c3}fade
+--------------------
 */
 
 #{$u-wrap} {

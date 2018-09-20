@@ -1,17 +1,9 @@
 @if ($disabled-utility-class != true) {
 
 /*
----
-title: #{$pr}#{$u}sr
-name: sr
-category: utility-sr
----
-
-要素内の文章をスクリーンリーダーに反応するよう、外見のみ非表示にする。
-
-``` example
-<p><a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}#{$__first}">&raquo; #{$pr}#{$u}sr <span class="#{$pr}#{$u}sr">この文字は表示されません</span></a></p>
-```
+--------------------
+#{$pr}#{$u}sr
+--------------------
 */
 
 #{$u-wrap} {
@@ -29,18 +21,11 @@ category: utility-sr
 
 }
 
+
 /*
----
-title: #{$pr}#{$u}sr#{$c3}focus
-name: sr-01-focus
-category: utility-sr
----
-
-要素そのものにフォーカスしたときにテキストが表示される。
-
-``` example
-<p>#{$pr}#{$u}sr#{$c3}focus -> <input type="button" class="#{$pr}#{$u}sr#{$c3}focus" value="フォーカスしましたね" /></p>
-```
+--------------------
+#{$pr}#{$u}sr#{$c3}focus
+--------------------
 */
 
 #{$u-wrap} {
@@ -69,18 +54,11 @@ category: utility-sr
 
 }
 
+
 /*
----
-title: #{$pr}#{$u}sr#{$c3}focus#{$c3}inner
-name: sr-02-focus-inner
-category: utility-sr
----
-
-包括要素にフォーカスしたときにテキストが表示される。
-
-``` example
-<p><a href="#" class="#{$pr}#{$m}btn #{$pr}#{$m}btn#{$c3}second #{$pr}#{$u}sr#{$c3}focus#{$c3}inner">&raquo; #{$pr}#{$u}sr#{$c3}focus#{$c3}inner <span class="#{$pr}#{$u}sr">フォーカスしましたね</span></a></p>
-```
+--------------------
+#{$pr}#{$u}sr#{$c3}focus#{$c3}inner
+--------------------
 */
 
 #{$u-wrap} {

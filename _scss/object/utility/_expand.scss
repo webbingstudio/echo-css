@@ -1,25 +1,9 @@
 @if ($disabled-utility-class != true) {
 
 /*
----
-title: #{$pr}#{$u}expand
-name: expand
-category: utility-expand
----
-
-**コンテナブロックの最大幅を無視**して、要素のアウトラインのみをウィンドウ幅全体に拡張する。  
-<code>.#{$pr}#{$l}document</code> の <code>max-width</code> を解除していると、横スクロールバーが表示されてしまう。
-
-``` example
-<div class="#{$pr}#{$l}container" style="background-color: #ffaacc; padding-top: 1rem; padding-bottom: 1rem;">
-    <div style="margin-bottom: 1rem; padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(#{$pr}#{$l}container > this)</div>
-
-    <div class="#{$pr}#{$u}expand" style="background-color: #ffcc66;">
-        <div style="padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(#{$pr}#{$l}container > #{$pr}#{$u}expand > this)</div>
-    </div>
-</div>
-```
-
+--------------------
+#{$pr}#{$u}expand
+--------------------
 */
 
 #{$u-wrap} {
@@ -34,27 +18,10 @@ category: utility-expand
 }
 
 
-
 /*
----
-title: #{$pr}#{$u}expand#{$c3}sm#{$c3}down
-name: expand-01#{$c3}sm#{$c3}down
-category: utility-expand
-parent: expand
----
-
-(breakpoint)が <code>sm</code> 以下のときのみ、コンテナブロックの余白を無視して、要素全体をウィンドウ幅全体に拡張する。  
-<code>#{$pr}#{$u}expand</code> とは異なり、<code>.#{$pr}#{$l}document</code> の変更による影響はない。
-
-``` example
-<div class="#{$pr}#{$l}container" style="background-color: #ffaacc; padding-top: 1rem; padding-bottom: 1rem;">
-    <div style="margin-bottom: 1rem; padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(#{$pr}#{$l}container > this)</div>
-
-    <div class="#{$pr}#{$u}expand#{$c3}sm#{$c3}down" style="background-color: #ffcc66;">
-        <div style="padding: 1rem; text-align:center; background-color: rgba(255,255,255,.5); color: #000">(#{$pr}#{$l}container > #{$pr}#{$u}expand#{$c3}sm#{$c3}down > this)</div>
-    </div>
-</div>
-```
+--------------------
+#{$pr}#{$u}expand#{$c3}sm#{$c3}down
+--------------------
 */
 
 #{$u-wrap} {

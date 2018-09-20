@@ -1,46 +1,7 @@
 /*
----
-title: #{$widget}
-name: #{$widget}
-category: project-#{$widget}
----
-
-新着情報など、サイト内で配置が不定となる可能性があるパーツを表示する。  
-必ず他のオブジェクトが含まれる。  
-このクラス単独では、余白や <code>position: relative</code> の指定のみを行う。
-
-``` example
-<div class="#{$widget}">
-    <div class="#{$widget}#{$c1}header">
-        <div style="padding: 1rem; text-align:center; background-color: #ddeeff;">(#{$widget}#{$c1}header)</div>
-    </div><!-- /.#{$widget}#{$c1}header -->
-
-    <div class="#{$widget}#{$c1}contents">
-        <div style="padding: 1rem; text-align:center; background-color: #e4fcd0;">(#{$widget}#{$c1}contents)</div>
-    </div><!-- /.#{$widget}#{$c1}contents -->
-
-    <div class="#{$widget}#{$c1}footer">
-        <div style="padding: 1rem; text-align:center; background-color: #ffe6f3;">(#{$widget}#{$c1}footer)</div>
-    </div><!-- /.#{$widget}#{$c1}footer -->
-
-</div><!-- /.#{$widget} -->
-
-<div class="#{$widget}">
-    <div class="#{$widget}#{$c1}header">
-        <div style="padding: 1rem; text-align:center; background-color: #ddeeff;">(#{$widget}#{$c1}header)</div>
-    </div><!-- /.#{$widget}#{$c1}header -->
-
-    <div class="#{$widget}#{$c1}contents">
-        <div style="padding: 1rem; text-align:center; background-color: #e4fcd0;">(#{$widget}#{$c1}contents)</div>
-    </div><!-- /.#{$widget}#{$c1}contents -->
-
-    <div class="#{$widget}#{$c1}footer">
-        <div style="padding: 1rem; text-align:center; background-color: #ffe6f3;">(#{$widget}#{$c1}footer)</div>
-    </div><!-- /.#{$widget}#{$c1}footer -->
-
-</div><!-- /.#{$widget} -->
-```
-
+--------------------
+#{$widget}
+--------------------
 */
 
 .#{$widget} {
@@ -73,47 +34,9 @@ category: project-#{$widget}
 
 
 /*
----
-title: #{$widget}#{$c3}(size)
-name: #{$widget}#{$c3}size
-category: project-#{$widget}
-parent: #{$widget};
----
-
-ウィジェットのサイズを変える。(size)は、 <code>sm, lg</code> に対応している。
-
-``` example
-<div class="#{$widget} #{$widget}#{$c3}sm">
-    <div class="#{$widget}#{$c1}header">
-        <div style="padding: 1rem; text-align:center; background-color: #ddeeff;">(#{$widget}#{$c1}header)</div>
-    </div><!-- /.#{$widget}#{$c1}header -->
-
-    <div class="#{$widget}#{$c1}contents">
-        <div style="padding: 1rem; text-align:center; background-color: #e4fcd0;">(#{$widget}#{$c1}contents)</div>
-    </div><!-- /.#{$widget}#{$c1}contents -->
-
-    <div class="#{$widget}#{$c1}footer">
-        <div style="padding: 1rem; text-align:center; background-color: #ffe6f3;">(#{$widget}#{$c1}footer)</div>
-    </div><!-- /.#{$widget}#{$c1}footer -->
-
-</div><!-- /.#{$widget} -->
-
-<div class="#{$widget} #{$widget}#{$c3}lg">
-    <div class="#{$widget}#{$c1}header">
-        <div style="padding: 1rem; text-align:center; background-color: #ddeeff;">(#{$widget}#{$c1}header)</div>
-    </div><!-- /.#{$widget}#{$c1}header -->
-
-    <div class="#{$widget}#{$c1}contents">
-        <div style="padding: 1rem; text-align:center; background-color: #e4fcd0;">(#{$widget}#{$c1}contents)</div>
-    </div><!-- /.#{$widget}#{$c1}contents -->
-
-    <div class="#{$widget}#{$c1}footer">
-        <div style="padding: 1rem; text-align:center; background-color: #ffe6f3;">(#{$widget}#{$c1}footer)</div>
-    </div><!-- /.#{$widget}#{$c1}footer -->
-
-</div><!-- /.#{$widget} -->
-```
-
+--------------------
+#{$widget}#{$c3}(size)
+--------------------
 */
 
 .#{$widget}#{$c3}sm {
