@@ -13,7 +13,7 @@
     display: block;
     padding-bottom: $spacer;
     font-weight: $font-weight-bold-root;
-    line-height: $line-height-none;
+    line-height: 1;
 }
 
 
@@ -145,7 +145,7 @@
 .#{$pr}#{$c}form#{$c1}submit {
     @include clearfix();
     padding-top: ($spacer * 3);
-    line-height: $line-height-none;
+    line-height: 1;
     text-align: center;
 
     @include media-breakpoint-up(lg) {
