@@ -51,53 +51,17 @@
 
 
 @mixin clearfix() {
+
     &:before,
     &:after {
       content: "";
       display: table;
     }
+
     &:after {
       clear: both;
     }
-}
 
-
-@mixin animation($delay, $duration, $function, $animation-name) {
-  -moz-animation-delay: $delay;
-  -moz-animation-duration: $duration;
-  -moz-animation-timing-function: $function;
-  -moz-animation-name: $animation-name;
-  -moz-animation-fill-mode: forwards;
-
-  -o-animation-delay: $delay;
-  -o-animation-duration: $duration;
-  -o-animation-timing-function: $function;
-  -o-animation-name: $animation-name;
-  -o-animation-fill-mode: forwards;
-
-  animation-delay: $delay;
-  animation-duration: $duration;
-  animation-timing-function: $function;
-  animation-name: $animation-name;
-  animation-fill-mode: forwards;
-}
-
-@mixin keyframes($animation-name) {
-  @-webkit-keyframes #{$animation-name} {
-    @content;
-  }
-
-  @-moz-keyframes #{$animation-name} {
-    @content;
-  }
-
-  @-o-keyframes #{$animation-name} {
-    @content;
-  }
-
-  @keyframes #{$animation-name} {
-    @content;
-  }
 }
 
 
@@ -120,6 +84,7 @@
   @return if(breakpoint-min($name, $breakpoints) == null, "", "#{$c2}#{$name}");
 }
 
+
 @mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
   $min: breakpoint-min($name, $breakpoints);
   @if $min {
@@ -130,6 +95,7 @@
     @content;
   }
 }
+
 
 @mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
   $max: breakpoint-max($name, $breakpoints);
@@ -142,6 +108,7 @@
   }
 }
 
+
 @mixin media-breakpoint-only($name, $breakpoints: $grid-breakpoints) {
   @include media-breakpoint-up($name, $breakpoints) {
     @include media-breakpoint-down($name, $breakpoints) {
@@ -150,6 +117,7 @@
   }
 }
 
+
 @mixin make-container($gutter: $grid-gutter-widths) {
   margin-right: auto;
   margin-left: auto;
@@ -157,6 +125,7 @@
   padding-right: (map-get($grid-gutter-widths, md) / 2);
   @include clearfix();
 }
+
 
 @mixin button-variant(
   $color,
