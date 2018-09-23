@@ -50,31 +50,42 @@
     .#{$pr}#{$c}card#{$c1}header,
     .#{$pr}#{$c}card#{$c1}contents {
         @include clearfix();
-        padding: (map-get($grid-gutter-widths, md) / 2);
         line-height: $line-height-sm;
         word-break: break-word;
 
-        .#{$pr}#{$m}title,
         p {
-            margin: 0 0 .5em;
+            margin: 0;
         }
+
+    }
+
+    .#{$pr}#{$c}card#{$c1}header {
+        padding: $spacer (map-get($grid-gutter-widths, md) / 2);
+    }
+
+    .#{$pr}#{$c}card#{$c1}contents {
+        font-size: $font-size-sm;
+        padding: ($spacer * 2) (map-get($grid-gutter-widths, md) / 2);
 
         .#{$pr}#{$m}btn {
             margin: 1em auto .5em;
             max-width: 12em;
         }
 
-        > *:last-child {
-            margin-bottom: 0;
+    }
+
+    .#{$pr}#{$c}card#{$c1}title {
+        margin: 0;
+        font-size: 1.125rem;
+        font-weight: $font-weight-bold-root;
+        font-family: $font-family-bold-root;
+        line-height: $line-height-sm;
+        text-align: center;
+
+        @include media-breakpoint-up(lg) {
+            font-size: 1.25rem;
         }
 
-    }
-
-    .#{$pr}#{$c}card#{$c1}header {
-    }
-
-    .#{$pr}#{$c}card#{$c1}contents {
-        font-size: $font-size-sm;
     }
 
 }

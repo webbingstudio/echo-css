@@ -67,6 +67,16 @@
     }
 
     .#{$pr}#{$c}media#{$c1}title {
+        margin: 0;
+        padding-bottom: $spacer;
+        font-size: 1.125rem;
+        font-weight: $font-weight-bold-root;
+        font-family: $font-family-bold-root;
+        line-height: $line-height-sm;
+
+        @include media-breakpoint-up(lg) {
+            font-size: 1.25rem;
+        }
 
         > a {
             color: $body-color;

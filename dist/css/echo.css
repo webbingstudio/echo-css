@@ -3395,7 +3395,6 @@ c-card
 }
 .c-card .c-card-header,
 .c-card .c-card-contents {
-  padding: 10px;
   line-height: 1.5;
   word-break: break-word;
 }
@@ -3409,23 +3408,33 @@ c-card
 .c-card .c-card-contents:after {
   clear: both;
 }
-.c-card .c-card-header .m-title,
 .c-card .c-card-header p,
-.c-card .c-card-contents .m-title,
 .c-card .c-card-contents p {
-  margin: 0 0 .5em;
+  margin: 0;
 }
-.c-card .c-card-header .m-btn,
+.c-card .c-card-header {
+  padding: 10px 10px;
+}
+.c-card .c-card-contents {
+  font-size: 0.875rem;
+  padding: 20px 10px;
+}
 .c-card .c-card-contents .m-btn {
   margin: 1em auto .5em;
   max-width: 12em;
 }
-.c-card .c-card-header > *:last-child,
-.c-card .c-card-contents > *:last-child {
-  margin-bottom: 0;
+.c-card .c-card-title {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 700;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  line-height: 1.5;
+  text-align: center;
 }
-.c-card .c-card-contents {
-  font-size: 0.875rem;
+@media (min-width: 1000px) {
+  .c-card .c-card-title {
+    font-size: 1.25rem;
+  }
 }
 
 /*
@@ -3501,6 +3510,55 @@ c-flip
     padding-left: 20px;
     padding-right: 20px;
     height: 100%;
+  }
+}
+.c-flip .c-flip-title {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  line-height: 1.5;
+}
+@media (min-width: 425px) {
+  .c-flip .c-flip-title {
+    font-size: 2.25rem;
+  }
+}
+@media (min-width: 768px) {
+  .c-flip .c-flip-title {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 1000px) {
+  .c-flip .c-flip-title {
+    font-size: 2.75rem;
+  }
+}
+@media (min-width: 1240px) {
+  .c-flip .c-flip-title {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 1640px) {
+  .c-flip .c-flip-title {
+    font-size: 3.25rem;
+  }
+}
+.c-flip .c-flip-caption {
+  margin: 0;
+  padding-bottom: 20px;
+  font-size: 1.25rem;
+  font-weight: 300;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+@media (min-width: 425px) {
+  .c-flip .c-flip-caption {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1240px) {
+  .c-flip .c-flip-caption {
+    font-size: 1.75rem;
   }
 }
 
@@ -3813,23 +3871,80 @@ c-hero
 .c-hero-contents-inner {
   margin: 0 auto;
   padding: 0 10px;
-  font-size: .875rem;
   line-height: 1.75;
   text-align: center;
 }
-@media (min-width: 425px) {
-  .c-hero-contents-inner {
-    font-size: 1rem;
-  }
-}
 @media (min-width: 1240px) {
   .c-hero-contents-inner {
-    font-size: 1.125rem;
     max-width: 700px;
   }
 }
-.c-hero-contents-inner p {
+
+.c-hero-title {
   margin: 0;
+  font-size: 2.25rem;
+  font-weight: 300;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  line-height: 1;
+}
+@media (min-width: 425px) {
+  .c-hero-title {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 768px) {
+  .c-hero-title {
+    font-size: 3.5rem;
+  }
+}
+@media (min-width: 1000px) {
+  .c-hero-title {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 1240px) {
+  .c-hero-title {
+    font-size: 4.5rem;
+  }
+}
+@media (min-width: 1640px) {
+  .c-hero-title {
+    font-size: 5rem;
+  }
+}
+
+.c-hero-caption {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 300;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  line-height: 1;
+}
+@media (min-width: 425px) {
+  .c-hero-caption {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1240px) {
+  .c-hero-caption {
+    font-size: 1.75rem;
+  }
+}
+.c-hero-title + .c-hero-caption {
+  padding-top: 20px;
+}
+
+.c-hero-body {
+  margin: 0;
+  font-size: .75rem;
+}
+@media (min-width: 1240px) {
+  .c-hero-body {
+    font-size: .875rem;
+  }
+}
+.c-hero-title + .c-hero-body, .c-hero-caption + .c-hero-body {
+  padding-top: 45px;
 }
 
 /*
@@ -3846,12 +3961,19 @@ c-hero-(direction)
   text-align: left;
 }
 
+.c-hero-right {
+  /* 長文は右寄せにしない */
+}
 .c-hero-right .c-hero-contents {
   justify-content: right;
 }
 .c-hero-right .c-hero-contents-inner {
   margin-left: auto;
   margin-right: 0;
+  text-align: left;
+}
+.c-hero-right .c-hero-title,
+.c-hero-right .c-hero-caption {
   text-align: right;
 }
 
@@ -3906,6 +4028,19 @@ a.c-media:hover, a.c-media:focus {
 @media (min-width: 1000px) {
   .c-media .c-media-contents {
     padding-left: 20px;
+  }
+}
+.c-media .c-media-title {
+  margin: 0;
+  padding-bottom: 10px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  line-height: 1.5;
+}
+@media (min-width: 1000px) {
+  .c-media .c-media-title {
+    font-size: 1.25rem;
   }
 }
 .c-media .c-media-title > a {
@@ -5059,175 +5194,6 @@ u-width-(percentage)
 }
 #document .u-width-100 {
   width: 100%;
-}
-
-/*
---------------------
-p-title
---------------------
-*/
-.p-title {
-  margin: 0;
-  line-height: 1.5;
-  list-style-type: none;
-}
-
-/*
---------------------
-p-title-(group)-(type)
---------------------
-*/
-/*
-01: page title
---------------------
-*/
-.p-title-echo-01 {
-  font-size: 2rem;
-  font-weight: 300;
-  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
-  text-align: center;
-}
-@media (min-width: 1000px) {
-  .p-title-echo-01 {
-    font-size: 3rem;
-  }
-}
-
-/*
-02: page subtitle
---------------------
-*/
-.p-title-echo-02 {
-  font-size: 1.5rem;
-  font-weight: 300;
-  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
-  text-align: center;
-}
-@media (min-width: 1000px) {
-  .p-title-echo-02 {
-    font-size: 1.75rem;
-  }
-}
-
-/*
-11: component title(large)
---------------------
-*/
-.p-title-echo-11 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-  text-align: center;
-}
-@media (min-width: 1000px) {
-  .p-title-echo-11 {
-    font-size: 1.5rem;
-  }
-}
-
-/*
-12: component title(small)
---------------------
-*/
-.p-title-echo-12 {
-  font-size: 1.125rem;
-  font-weight: 700;
-  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-}
-@media (min-width: 1000px) {
-  .p-title-echo-12 {
-    font-size: 1.25rem;
-  }
-}
-
-/*
-21: display title(large)
---------------------
-*/
-.p-title-echo-21 {
-  font-size: 2.25rem;
-  font-weight: 700;
-  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-}
-@media (min-width: 425px) {
-  .p-title-echo-21 {
-    font-size: 3rem;
-  }
-}
-@media (min-width: 768px) {
-  .p-title-echo-21 {
-    font-size: 3.5rem;
-  }
-}
-@media (min-width: 1000px) {
-  .p-title-echo-21 {
-    font-size: 4rem;
-  }
-}
-@media (min-width: 1240px) {
-  .p-title-echo-21 {
-    font-size: 4.5rem;
-  }
-}
-@media (min-width: 1640px) {
-  .p-title-echo-21 {
-    font-size: 5rem;
-  }
-}
-
-/*
-22: display title(medium)
---------------------
-*/
-.p-title-echo-22 {
-  font-size: 2rem;
-  font-weight: 700;
-  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-}
-@media (min-width: 425px) {
-  .p-title-echo-22 {
-    font-size: 2.25rem;
-  }
-}
-@media (min-width: 768px) {
-  .p-title-echo-22 {
-    font-size: 2.5rem;
-  }
-}
-@media (min-width: 1000px) {
-  .p-title-echo-22 {
-    font-size: 2.75rem;
-  }
-}
-@media (min-width: 1240px) {
-  .p-title-echo-22 {
-    font-size: 3rem;
-  }
-}
-@media (min-width: 1640px) {
-  .p-title-echo-22 {
-    font-size: 3.25rem;
-  }
-}
-
-/*
-23: display subtitle
---------------------
-*/
-.p-title-echo-23 {
-  font-size: 1.25rem;
-  font-weight: 300;
-  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-}
-@media (min-width: 425px) {
-  .p-title-echo-23 {
-    font-size: 1.5rem;
-  }
-}
-@media (min-width: 1240px) {
-  .p-title-echo-23 {
-    font-size: 1.75rem;
-  }
 }
 
 /*

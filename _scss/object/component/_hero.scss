@@ -51,21 +51,76 @@
     max-width: map-get($container-max-widths-md, sm);
     margin: 0 auto;
     padding: 0 (map-get($grid-gutter-widths, md) / 2);
-    font-size: .875rem;
     line-height: $line-height-md;
     text-align: center;
 
-    @include media-breakpoint-up(sm) {
-        font-size: 1rem;
-    }
-
     @include media-breakpoint-up(xl) {
-        font-size: 1.125rem;
         max-width: map-get($container-max-widths-md, md);
     }
 
-    p {
-        margin: 0;
+}
+
+.#{$pr}#{$c}hero#{$c1}title {
+    margin: 0;
+    font-size: 2.25rem;
+    font-weight: $font-weight-third;
+    font-family: $font-family-third;
+    line-height: 1;
+
+    @include media-breakpoint-up(sm) {
+        font-size: 3rem;
+    }
+
+    @include media-breakpoint-up(md) {
+        font-size: 3.5rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+        font-size: 4rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+        font-size: 4.5rem;
+    }
+
+    @include media-breakpoint-up(xxl) {
+        font-size: 5rem;
+    }
+
+}
+
+.#{$pr}#{$c}hero#{$c1}caption {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: $font-weight-third;
+    font-family: $font-family-third;
+    line-height: 1;
+
+    @include media-breakpoint-up(sm) {
+        font-size: 1.5rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+        font-size: 1.75rem;
+    }
+
+    .#{$pr}#{$c}hero#{$c1}title + & {
+        padding-top: ($spacer * 2);
+    }
+
+}
+
+.#{$pr}#{$c}hero#{$c1}body {
+    margin: 0;
+    font-size: .75rem;
+
+    @include media-breakpoint-up(xl) {
+        font-size: .875rem;
+    }
+
+    .#{$pr}#{$c}hero#{$c1}title + &,
+    .#{$pr}#{$c}hero#{$c1}caption + & {
+        padding-top: ($spacer * 4.5);
     }
 
 }
@@ -97,9 +152,15 @@
         justify-content: right;
     }
 
+    /* 長文は右寄せにしない */
     .#{$pr}#{$c}hero#{$c1}contents#{$c1}inner {
         margin-left: auto;
         margin-right: 0;
+        text-align: left;
+    }
+
+    .#{$pr}#{$c}hero#{$c1}title,
+    .#{$pr}#{$c}hero#{$c1}caption {
         text-align: right;
     }
 
