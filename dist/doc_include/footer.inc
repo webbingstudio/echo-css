@@ -10,7 +10,7 @@
 
 					    <li class="s-sitemap-item"><span class="s-sitemap-label">layout</span>
 					        <ul class="s-sitemap-list s-sitemap-children">
-					            <li class="s-sitemap-item"><a href="./layout-container.html">container</a></li>
+					            <li class="s-sitemap-item"><a href="./">container</a></li>
 					            <li class="s-sitemap-item"><a href="./layout-document.html">document</a></li>
 					            <li class="s-sitemap-item"><a href="./layout-grid.html">grid</a></li>
 					        </ul>

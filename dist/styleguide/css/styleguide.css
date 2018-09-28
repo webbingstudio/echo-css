@@ -88,11 +88,28 @@
     }
 }
 
+.s-header.is-active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: rgba(89,170,108,.85);
+}
+
 .s-header-brand {
+    overflow: hidden;
+    transition: .3s all;
 }
 @media (min-width: 768px) {
     .s-header-brand {
         flex: 0 0 auto;
+    }
+}
+
+@media (max-width: 767.9px) {
+    .s-header.is-active .s-header-brand {
+        height: 1px;
     }
 }
 
@@ -101,6 +118,7 @@
     padding: 0 15px;
     font-size: 1.5rem;
 }
+
 @media (max-width: 767.9px) {
     .s-header-title {
         height: 3rem;
@@ -109,12 +127,26 @@
         vertical-align: middle;
     }
 }
+
+@media (min-width: 768px) {
+    .s-header.is-active .s-header-title {
+        font-size: 1.25rem;
+    }
+}
+
 .s-header-title img {
     display: inline-block;
     width: auto;
     height: 2.25rem;
     vertical-align: middle;
     transform:translate(0, -.1em);
+    transition: .3s all;
+}
+
+@media (min-width: 768px) {
+    .s-header.is-active .s-header-title img {
+        height: 1.75rem;
+    }
 }
 
 .s-header-title .s-label {
@@ -130,6 +162,7 @@
     vertical-align: middle;
 }
 
+
 .s-globalnav {
     font-size: .75rem;
     font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
@@ -139,6 +172,11 @@
     .s-globalnav {
         border-top: 1px solid rgba(255,255,255,.6);
     }
+
+    .s-header.is-active .s-globalnav {
+        border-top-color: transparent;
+    }
+
 }
 @media (min-width: 768px) {
     .s-globalnav {
@@ -180,7 +218,12 @@
         height: 3.5em;
         line-height: 3.5em;
     }
+    .s-header.is-active .s-globalnav-item a {
+        height: 2em;
+        line-height: 2em;
+    }
 }
+
 
 @media (min-width: 768px) {
     .s-globalnav-item:first-child a {
@@ -192,7 +235,7 @@
 .s-globalnav-item a:focus,
 .s-globalnav-item a:active {
     color: #fff;
-    background-color: rgba(0,0,0,.2);
+    background-color: rgba(0,64,0,.3);
 }
 
 .s-pageheader {
