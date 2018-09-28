@@ -7,27 +7,37 @@
 .#{$widget} {
     margin-bottom: ($spacer * 3);
 
-    &:last-child {
-        margin-bottom: 0;
-    }
-
     @include media-breakpoint-up(lg) {
         margin-bottom: ($spacer * 4.5);
     }
 
-    .#{$widget}#{$c1}header,
-    .#{$widget}#{$c1}contents,
-    .#{$widget}#{$c1}footer {
-        position: relative;
-        @include clearfix();
-    }
+}
 
-    .#{$widget}#{$c1}header {
-        padding-bottom: ($spacer * 2);
-    }
+.#{$widget}#{$c1}header,
+.#{$widget}#{$c1}contents,
+.#{$widget}#{$c1}footer {
+    position: relative;
+    @include clearfix();
+}
 
-    .#{$widget}#{$c1}footer {
-        padding-top: ($spacer * 2);
+.#{$widget}#{$c1}header {
+    padding-bottom: ($spacer * 2);
+}
+
+.#{$widget}#{$c1}footer {
+    padding-top: ($spacer * 2);
+}
+
+.#{$widget}#{$c1}title {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: $font-weight-bold-root;
+    font-family: $font-family-bold-root;
+    line-height: $line-height-sm;
+    text-align: center;
+
+    @include media-breakpoint-up(lg) {
+        font-size: 1.25rem;
     }
 
 }
@@ -60,6 +70,16 @@
         padding-top: ($spacer * 1.5);
     }
 
+    .#{$widget}#{$c1}title {
+        font-size: 1rem;
+        text-align: left;
+
+        @include media-breakpoint-up(lg) {
+            font-size: 1.125rem;
+        }
+
+    }
+
 }
 
 .#{$widget}#{$c3}lg {
@@ -81,6 +101,15 @@
 
     .#{$widget}#{$c1}footer {
         padding-top: ($spacer * 3);
+    }
+
+    .#{$widget}#{$c1}title {
+        font-size: 1.5rem;
+
+        @include media-breakpoint-up(lg) {
+            font-size: 1.75rem;
+        }
+
     }
 
 }
