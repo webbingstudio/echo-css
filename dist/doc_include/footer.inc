@@ -67,6 +67,9 @@
 					            </li>
 					            <li class="s-sitemap-item"><span class="s-sitemap-label">project</span>
 					                <ul class="s-sitemap-list s-sitemap-children">
+							            <li class="s-sitemap-item"><a href="./project-header.html">header</a></li>
+							            <li class="s-sitemap-item"><a href="./project-main.html">main</a></li>
+							            <li class="s-sitemap-item"><a href="./project-footer.html">footer</a></li>
 					                    <li class="s-sitemap-item"><a href="./project-widget.html">widget</a></li>
 					                    <li class="s-sitemap-item"><a href="./project-wysiwyg.html">wysiwyg(WordPress)</a></li>
 					                </ul>

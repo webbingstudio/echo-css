@@ -5198,6 +5198,53 @@ u-width-(percentage)
 
 /*
 --------------------
+p-header
+--------------------
+*/
+.p-header {
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #333;
+}
+@media (min-width: 1000px) {
+  .p-header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+/*
+--------------------
+p-main
+--------------------
+*/
+.p-main {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+@media (min-width: 1000px) {
+  .p-main {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+}
+
+/*
+--------------------
+p-footer
+--------------------
+*/
+.p-footer {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 60px;
+  border-top: 2px solid #333;
+}
+
+/*
+--------------------
 p-widget
 --------------------
 */
