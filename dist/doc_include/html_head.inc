@@ -1,5 +1,4 @@
     <link rel="stylesheet" href="../css/echo.min.css<?php echo '?var=' . date('YmdHis'); ?>">
-    <link rel="stylesheet" href="../css/styles.css<?php echo '?var=' . date('YmdHis'); ?>">
 
     <script
         src="https://code.jquery.com/jquery-2.2.4.min.js"
