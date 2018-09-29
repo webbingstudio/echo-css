@@ -5,7 +5,7 @@ const sass = require('gulp-ruby-sass');
 const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
 
-// var theme_name = 'example';
+// var theme_name = 'echo';
 
 // Static Website --------------------
 var dist_dir = 'dist/';
@@ -38,18 +38,18 @@ gulp.task('sassmin', () =>
 );
 
 // js
-// gulp.task('js', function() {
-//     gulp.src('_js/**/*.js')
-//     .pipe(plumber())
-//     .pipe(gulp.dest(dist_dir + 'js/'));
-// });
-// gulp.task('jsmin', ['js'], function() {
-//     gulp.src('_js/**/*.js')
-//     .pipe(plumber())
-//     .pipe(uglify())
-//     .pipe(rename({extname: '.min.js'}))
-//     .pipe(gulp.dest(dist_dir + 'js/'));
-// });
+gulp.task('js', function() {
+    gulp.src('_js/**/*.js')
+    .pipe(plumber())
+    .pipe(gulp.dest(dist_dir + 'js/'));
+});
+gulp.task('jsmin', ['js'], function() {
+    gulp.src('_js/**/*.js')
+    .pipe(plumber())
+    .pipe(uglify())
+    .pipe(rename({extname: '.min.js'}))
+    .pipe(gulp.dest(dist_dir + 'js/'));
+});
 
 // watch
 gulp.task('watch', function(){
@@ -61,17 +61,17 @@ gulp.task('watch', function(){
     gulp.run('sassmin');
   });
 
-//  gulp.watch([
-//      '_js/**/*.js'
-//    ], function(event) {
-//    gulp.run('js');
-//  });
+gulp.watch([
+    '_js/**/*.js'
+  ], function(event) {
+  gulp.run('js');
+});
 
-//  gulp.watch([
-//      '_js/**/*.js'
-//    ], function(event) {
-//    gulp.run('jsmin');
-//  });
+gulp.watch([
+    '_js/**/*.js'
+  ], function(event) {
+  gulp.run('jsmin');
+});
 
 });
 
