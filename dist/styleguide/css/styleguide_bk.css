@@ -1,173 +1,347 @@
 @charset 'utf-8';
 
-.p-header {
-    padding: 0;
-    font-size: .875rem;
-    line-height: 1;
+.s-title {
+    margin: 0;
+    font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+    font-weight: 700;
+    line-height: 1.5;
 }
 
-.p-header-contents {
-    padding-bottom: 0;
+.s-container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 10px;
+    padding-right: 10px;
 }
-
 @media (min-width: 768px) {
-    .p-header-contents {
+    .s-container {
+        max-width: 700px;
+    }
+}
+@media (min-width: 1000px) {
+    .s-container {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1280px) {
+    .s-container {
+        max-width: 1200px;
+    }
+}
+.s-container-fluid {
+    max-width: none;
+}
+
+.s-contents-main {
+    padding-bottom: 32px;
+}
+.s-contents-main:before, .s-contents-main:after {
+    content: "";
+    display: table;
+}
+.s-contents-main:after {
+    clear: both;
+}
+
+.s-contents-sub {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+.s-contents-sub:before, .s-contents-sub:after {
+    content: "";
+    display: table;
+}
+.s-contents-sub:after {
+    clear: both;
+}
+
+
+@media (min-width: 1024px) {
+    .s-contents-2col {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .s-contents-2col > .s-contents-main {
+        flex: 1;
+        width: auto;
+        padding-left: 64px;
+        padding-bottom: 64px;
+    }
+
+    .s-contents-2col > .s-contents-sub {
+        padding-top: 0;
+        width: 200px;
+    }
+
+}
+
+.s-header {
+    background-color: #59aa6c;
+    color: #fff;
+    margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+    .s-header {
         display: flex;
         align-items: center;
-        align-content: space-between;
     }
 }
 
-.p-header-brand {
+.s-header.is-active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: rgba(89,170,108,.85);
+}
+
+.s-header-brand {
     overflow: hidden;
-    margin: 0;
-    padding-bottom: .25rem;
-    font-size: 1rem;
-    text-align: center;
+    transition: .3s all;
+}
+@media (min-width: 768px) {
+    .s-header-brand {
+        flex: 0 0 auto;
+    }
+}
+
+@media (max-width: 767.9px) {
+    .s-header.is-active .s-header-brand {
+        height: 1px;
+    }
+}
+
+.s-header-title {
+    white-space: nowrap;
+    padding: 0 15px;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 767.9px) {
+    .s-header-title {
+        height: 3rem;
+        line-height: 3rem;
+        text-align: center;
+        vertical-align: middle;
+    }
 }
 
 @media (min-width: 768px) {
-    .p-header-brand {
-        flex: 0 0 auto;
-        text-align: left;
+    .s-header.is-active .s-header-title {
+        font-size: 1.25rem;
     }
 }
 
-img.p-header-logo {
+.s-header-title img {
     display: inline-block;
     width: auto;
     height: 2.25rem;
     vertical-align: middle;
+    transform:translate(0, -.1em);
+    transition: .3s all;
 }
 
 @media (min-width: 768px) {
-
-    .img.p-header-logo {
+    .s-header.is-active .s-header-title img {
         height: 1.75rem;
     }
-
 }
 
-.p-header-version {
-    margin-left: .5rem;
-    letter-spacing: .1rem;
-    transform: translate(0, .25rem);
+.s-header-title .s-label {
+    display: inline-block;
+    background-color: #fff;
+    color: #59aa6c;
+    font-size: .6em;
+    margin-left: .5em;
+    padding: 0 1em;
+    line-height: 1.5;
+    letter-spacing: .2em;
+    border-radius: .1em;
+    vertical-align: middle;
 }
 
 
-.p-header-nav {
+.s-globalnav {
+    font-size: .75rem;
+    font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+    font-weight: 300;
 }
+@media (max-width: 767.9px) {
+    .s-globalnav {
+        border-top: 1px solid rgba(255,255,255,.6);
+    }
 
-@media (min-width: 768px) {
-
-    .p-header-nav {
-        flex: 1 1 auto;
-        text-align: right;
+    .s-header.is-active .s-globalnav {
+        border-top-color: transparent;
     }
 
 }
-
-.p-header-nav .m-nav-label {
-    white-space: nowrap;
+@media (min-width: 768px) {
+    .s-globalnav {
+        flex: 0 0 auto;
+        font-size: 1rem;
+    }
 }
 
-.p-pagehead {
+.s-globalnav-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.s-globalnav-item {
+    flex: 0 1 auto;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.s-globalnav-item a {
+    display: block;
+    padding: 0 .5em;
+    height: 3em;
+    line-height: 3em;
+    vertical-align: middle;
+    color: #fff;
+    text-decoration: none;
+    transition: .3s all;
+}
+
+@media (min-width: 768px) {
+    .s-globalnav-item a {
+        padding: 0 15px;
+        height: 3.5em;
+        line-height: 3.5em;
+    }
+    .s-header.is-active .s-globalnav-item a {
+        height: 2em;
+        line-height: 2em;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .s-globalnav-item:first-child a {
+        border-left: 1px solid rgba(255,255,255,.6);
+    }
+}
+
+.s-globalnav-item a:hover,
+.s-globalnav-item a:focus,
+.s-globalnav-item a:active {
+    color: #fff;
+    background-color: rgba(0,64,0,.3);
+}
+
+.s-pageheader {
     padding: 0 0 1rem;
     text-align: center;
-    line-height: 1.25;
 }
 
-.p-pagehead-title {
-    margin: 0;
+.s-pageheader-title {
     font-size: 2rem;
 }
 
-.p-anchor {
-    text-align: center;
-    line-height: 1.25;
+.s-anchor {
 }
 
-.p-post {
-}
-
-.p-sub {
-    position: relative;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    border-top: 1px solid #333;
-}
-
-.p-sub-title {
+.s-anchor-list {
+    list-style-type: none;
     margin: 0;
-    padding-bottom: .5em;
+    padding: 0;
+    text-align: center;
 }
 
-.p-sitemap {
+.s-anchor-item {
+    display: inline-block;
+    margin: 0;
+    padding: 0 1em;
+}
+
+.s-sitemap {
     width: 100%;
+    font-size: 1.125rem;
 }
 
-.p-sitemap .m-nav-label {
-    font-weight: bold;
-    white-space: nowrap;
-    min-height: 2.5em;
+.s-contents-main .s-sitemap {
+    max-width: 480px;
+    margin: 0 auto;
 }
 
-.p-sitemap span.m-nav-label {
-    padding-left: 0;
-    padding-right: 0;
-}
-
-.p-sitemap .m-nav-children .m-nav-item a.m-nav-label {
-    padding-left: 1rem;
-}
-
-.p-sitemap > .m-nav-list > .m-nav-item > .m-nav-label {
+.s-sitemap-title {
+    padding-bottom: .5rem;
     font-size: 1.25rem;
 }
 
-.p-sitemap .m-nav-item:nth-child(1) .m-nav-children .m-nav-label {
-    font-weight: normal;
+.s-sitemap a,
+.s-sitemap .s-sitemap-label {
+    display: block;
+    padding: .25em 0 .25em .5em;
 }
 
-.p-sitemap .m-nav-children .m-nav-children .m-nav-label {
-    font-weight: normal;
+.s-sitemap-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-.p-sitemap .m-nav-item:nth-child(2) .m-nav-children {
-    padding-left: 1rem;
+.s-sitemap-item {
+    margin: 0;
+    padding: 0;
 }
 
-.p-sitemap .m-nav-item:nth-child(1) .m-nav-children,
-.p-sitemap .m-nav-item:nth-child(2) .m-nav-children .m-nav-children {
-    padding-left: 1rem;
-    flex-direction: row;
-    justify-content: flex-start;
+.s-sitemap-children {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-left: 1.5rem;
+    border-top: 1px solid #bbb;
 }
 
-.p-sitemap .m-nav-item:nth-child(1) .m-nav-children > .m-nav-item,
-.p-sitemap .m-nav-item:nth-child(2) .m-nav-children .m-nav-children > .m-nav-item {
-    flex-grow: 0;
+.s-sitemap-children .s-sitemap-item {
+    font-size: 90%;
 }
 
-
-
-
-.p-footer {
-    font-size: .875rem;
+.s-footer {
+    padding: 32px 0;
+    background-color: #59aa6c;
+    color: #fff;
+    font-size: .75rem;
 }
 
-.p-footer-copyright {
+.s-footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.s-footer a:hover,
+.s-footer a:focus,
+.s-footer a:active {
+    color: #fff;
+    text-decoration: none;
+}
+
+.s-footer-copyright {
     margin: 0;
     padding-bottom: .5rem;
     text-align: center;
     letter-spacing: .05em;
 }
 
-.p-footer-notice {
+.s-footer-notice {
     margin: 0;
     text-align: center;
     letter-spacing: .05em;
 }
+
+
+
+
+
 
 
 
@@ -207,11 +381,6 @@ img.p-header-logo {
 }
 
 
-
-
-/*
-hologram styleguide
-*/
 
 h1.styleguide {
     font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;

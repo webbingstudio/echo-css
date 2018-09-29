@@ -9,35 +9,25 @@
     vertical-align: middle;
 }
 
-.#{$pr}#{$m}nav#{$c1}list,
-.#{$pr}#{$m}nav ul {
+.#{$pr}#{$m}nav#{$c1}list {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
 
-.#{$pr}#{$m}nav#{$c1}list,
-.#{$pr}#{$m}nav > ul {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: stretch;
-}
-
-.#{$pr}#{$m}nav#{$c1}item,
-.#{$pr}#{$m}nav li {
-    margin: 0;
-}
-
-.#{$pr}#{$m}nav#{$c1}item,
-.#{$pr}#{$m}nav > ul li {
+.#{$pr}#{$m}nav#{$c1}item {
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 0%;
+    margin: 0;
+    padding: 0;
 }
 
-.#{$pr}#{$m}nav#{$c1}label,
-.#{$pr}#{$m}nav > ul li a {
+.#{$pr}#{$m}nav#{$c1}label {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,7 +41,6 @@
     font-size: .875rem;
     line-height: 1;
     transition: .3s all;
-    cursor: pointer;
 
     @include media-breakpoint-up(sm) {
         font-size: 1rem;
@@ -60,9 +49,12 @@
     @at-root {
         a#{&} {
             text-decoration: none;
+            cursor: pointer;
 
             &:hover,
             &:focus {
+                color: $body-color;
+                background-color: $gray-fade;
                 text-decoration: none;
             }
 
@@ -70,19 +62,9 @@
 
     }
 
-    &:hover,
-    &:focus,
-    &:active {
-        color: $body-color;
-        background-color: $gray-fade;
-        text-decoration: none;
-    }
-
 }
 
-.#{$pr}#{$m}nav#{$c1}label.#{$nav-current},
-.#{$pr}#{$m}nav > ul li.#{$nav-current},
-.#{$pr}#{$m}nav > ul li a.#{$nav-current} {
+.#{$pr}#{$m}nav#{$c1}label.#{$nav-current} {
     background-color: $gray-fade;
 
     &:hover,
@@ -104,22 +86,19 @@
     width: 100%;
 }
 
-.#{$pr}#{$m}nav#{$c3}vertical .#{$pr}#{$m}nav#{$c1}list,
-.#{$pr}#{$m}nav#{$c3}vertical > ul {
+.#{$pr}#{$m}nav#{$c3}vertical .#{$pr}#{$m}nav#{$c1}list {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
 }
 
-.#{$pr}#{$m}nav#{$c3}vertical .#{$pr}#{$m}nav#{$c1}label,
-.#{$pr}#{$m}nav#{$c3}vertical > ul li a {
+.#{$pr}#{$m}nav#{$c3}vertical .#{$pr}#{$m}nav#{$c1}label {
     justify-content: flex-start;
     text-align: left;
 }
 
 
-.#{$pr}#{$m}nav#{$c1}children .#{$pr}#{$m}nav#{$c1}label,
-.#{$pr}#{$m}nav#{$c3}vertical > ul > li > ul > li a {
+.#{$pr}#{$m}nav#{$c1}children .#{$pr}#{$m}nav#{$c1}label {
     font-size: .875rem;
     padding-left: 3rem;
 
@@ -130,8 +109,7 @@
 }
 
 
-.#{$pr}#{$m}nav#{$c1}children .#{$pr}#{$m}nav#{$c1}children .#{$pr}#{$m}nav#{$c1}label,
-.#{$pr}#{$m}nav#{$c3}vertical > ul > li > ul > li > ul > li a {
+.#{$pr}#{$m}nav#{$c1}children .#{$pr}#{$m}nav#{$c1}children .#{$pr}#{$m}nav#{$c1}label {
     font-size: .75rem;
     padding-left: 5rem;
 
