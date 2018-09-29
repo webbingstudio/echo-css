@@ -1,3 +1,12 @@
+/*!
+ * echo.scroll.js v1.0.0
+ * Scroll smoothly to the position that considers the navigation fixed at the top of the screen.
+ * 
+ * Copyright 2018 WebbingStudio
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ */
+
 ;(function($){
 "use strict";
 

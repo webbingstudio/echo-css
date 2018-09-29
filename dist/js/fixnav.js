@@ -1,3 +1,12 @@
+/*!
+ * echo.fixnav.js v1.0.0
+ * Give a class to fix the element at any scroll position.
+ * 
+ * Copyright 2018 WebbingStudio
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ */
+
 ;(function($){
 "use strict";
 
