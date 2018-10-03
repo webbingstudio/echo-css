@@ -7,15 +7,10 @@
 .#{$pr}#{$c}hero {
     position: relative;
     width: 100%;
-    height: 50vh;
+    height: 100vh;
     background-color: $body-inverse-bg;
     color: $body-inverse-color;
     line-height: 1;
-
-    @include media-breakpoint-up(xl) {
-        height: 75vh;
-    }
-
 }
 
 .#{$pr}#{$c}hero#{$c1}cover {
@@ -40,11 +35,6 @@
     height: 100%;
     margin: 0 auto;
     z-index: 12;
-
-    @include media-breakpoint-up(xl) {
-        max-width: map-get($container-max-widths-md, xl);
-    }
-
 }
 
 .#{$pr}#{$c}hero#{$c1}contents#{$c1}inner {

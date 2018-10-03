@@ -12,113 +12,142 @@
         height: 75vh;
     }
 
-    .#{$pr}#{$c}flip#{$c1}cover {
+}
+
+.#{$pr}#{$c}flip#{$c1}cover {
+    width: 100%;
+    height: 33.33333333vh;
+    background: $body-bg none no-repeat center center;
+    background-size: cover;
+    z-index: 11;
+
+    @include media-breakpoint-up(lg) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+    }
+
+}
+
+.#{$pr}#{$c}flip#{$c1}container {
+    position: relative;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include media-breakpoint-up(lg) {
+        max-width: map-get($container-max-widths-lg, lg);
+        height: 100%;
+    }
+
+    @include media-breakpoint-up(xl) {
+        max-width: map-get($container-max-widths-lg, xl);
+    }
+
+    @include media-breakpoint-up(xxl) {
+        max-width: map-get($container-max-widths-lg, xxl);
+    }
+
+}
+
+.#{$pr}#{$c}flip#{$c1}contents {
+    width: 100%;
+    position: relative;
+    background-color: rgba($body-bg, .75);
+    z-index: 12;
+
+    @include media-breakpoint-up(lg) {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 45%;
+        height: 100%;
+    }
+
+}
+
+.#{$pr}#{$c}flip#{$c1}contents#{$c1}inner {
+    padding: $spacer;
+
+    @include media-breakpoint-up(lg) {
+        position: absolute;
+        top: 50%;
+        left: 0;
         width: 100%;
-        height: 50vh;
-        background: $body-inverse-bg none no-repeat center center;
-        background-size: cover;
-        z-index: 11;
-
-        @include media-breakpoint-up(lg) {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-        }
-
+        transform: translate(0, -50%);
+        padding-left: ($spacer * 2);
+        padding-right: ($spacer * 2);
     }
 
-    .#{$pr}#{$c}flip#{$c1}container {
-        position: relative;
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
+}
 
-        @include media-breakpoint-up(lg) {
-            max-width: map-get($container-max-widths-md, lg);
-            height: 100%;
-        }
+.#{$pr}#{$c}flip#{$c1}title {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: $font-weight-third;
+    font-family: $font-family-third;
+    line-height: $line-height-xs;
 
-        @include media-breakpoint-up(xl) {
-            max-width: map-get($container-max-widths-md, xl);
-        }
+    @include media-breakpoint-up(sm) {
+        font-size: 2.25rem;
     }
 
-    .#{$pr}#{$c}flip#{$c1}contents {
-        display: table;
-        width: 100%;
-        position: relative;
-        background-color: rgba($body-bg, .85);
-        z-index: 12;
-
-        @include media-breakpoint-up(lg) {
-            position: absolute;
-            left: 0;
-            top: 50%;
-            width: 50%;
-            height: 100%;
-            transform: translate(0, -50%);
-        }
-
-        .#{$pr}#{$c}flip#{$c1}contents#{$c1}inner {
-            display: table-cell;
-            padding: $spacer;
-            vertical-align: middle;
-
-            @include media-breakpoint-up(lg) {
-                padding-left: ($spacer * 2);
-                padding-right: ($spacer * 2);
-                height: 100%;
-            }
-
-        }
-
+    @include media-breakpoint-up(md) {
+        font-size: 2.5rem;
     }
 
-    .#{$pr}#{$c}flip#{$c1}title {
-        margin: 0;
-        font-size: 2rem;
-        font-weight: $font-weight-third;
-        font-family: $font-family-third;
-        line-height: $line-height-xs;
-
-        @include media-breakpoint-up(sm) {
-            font-size: 2.25rem;
-        }
-
-        @include media-breakpoint-up(md) {
-            font-size: 2.5rem;
-        }
-
-        @include media-breakpoint-up(lg) {
-            font-size: 2.75rem;
-        }
-
-        @include media-breakpoint-up(xl) {
-            font-size: 3rem;
-        }
-
-        @include media-breakpoint-up(xxl) {
-            font-size: 3.25rem;
-        }
-
+    @include media-breakpoint-up(lg) {
+        font-size: 2.75rem;
     }
 
-    .#{$pr}#{$c}flip#{$c1}caption {
-        margin: 0;
-        padding-bottom: ($spacer * 2);
+    @include media-breakpoint-up(xl) {
+        font-size: 3rem;
+    }
+
+    @include media-breakpoint-up(xxl) {
+        font-size: 3.25rem;
+    }
+
+}
+
+.#{$pr}#{$c}flip#{$c1}caption {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: $font-weight-third;
+    font-family: $font-family-third;
+    line-height: $line-height-xs;
+
+    @include media-breakpoint-up(sm) {
         font-size: 1.25rem;
-        font-weight: $font-weight-third;
-        font-family: $font-family-third;
+    }
 
-        @include media-breakpoint-up(sm) {
-            font-size: 1.5rem;
-        }
+    @include media-breakpoint-up(lg) {
+        font-size: 1.5rem;
+    }
 
-        @include media-breakpoint-up(xl) {
-            font-size: 1.75rem;
-        }
+    .#{$pr}#{$c}flip#{$c1}title + & {
+        padding-top: .5em;
+    }
 
+}
+
+.#{$pr}#{$c}flip#{$c1}body {
+    margin: 0;
+    font-size: .625rem;
+    line-height: $line-height-lg;
+
+    @include media-breakpoint-up(sm) {
+        font-size: .75rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+        font-size: 1rem;
+    }
+
+    .#{$pr}#{$c}flip#{$c1}title + &,
+    .#{$pr}#{$c}flip#{$c1}caption + & {
+        padding-top: 2em;
     }
 
 }
@@ -132,11 +161,47 @@
 
 .#{$pr}#{$c}flip#{$c3}reverse {
 
+    .#{$pr}#{$c}flip#{$c1}cover {
+
+        @include media-breakpoint-up(lg) {
+            right: auto;
+            left: 0;
+        }
+
+    }
+
     .#{$pr}#{$c}flip#{$c1}contents {
 
         @include media-breakpoint-up(lg) {
             left: auto;
             right: 0;
+        }
+
+    }
+
+}
+
+
+/*
+--------------------
+#{$pr}#{$c}flip#{$c3}half
+--------------------
+*/
+
+.#{$pr}#{$c}flip#{$c3}half {
+
+    .#{$pr}#{$c}flip#{$c1}cover {
+
+        @include media-breakpoint-up(lg) {
+            width: 50%;
+        }
+
+    }
+
+    .#{$pr}#{$c}flip#{$c1}contents {
+
+        @include media-breakpoint-up(lg) {
+            width: 50%;
         }
 
     }
@@ -154,12 +219,12 @@
     background-color: $body-inverse-bg;
 
     .#{$pr}#{$c}flip#{$c1}cover {
-        background-color: $body-bg;
+        background-color: $body-inverse-bg;
     }
 
     .#{$pr}#{$c}flip#{$c1}contents {
         color: $body-inverse-color;
-        background-color: rgba($body-inverse-bg, .85);
+        background-color: rgba($body-inverse-bg, .75);
     }
 
 }
