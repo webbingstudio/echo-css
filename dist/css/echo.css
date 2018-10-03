@@ -2809,6 +2809,7 @@ m-select
 }
 .m-select select {
   position: relative;
+  -webkit-appearance: none;
   appearance: none;
   font-size: 1rem;
   color: #333;
@@ -3484,7 +3485,7 @@ c-flip
 .c-flip .c-flip-title {
   margin: 0;
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 300;
   font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
   line-height: 1.5;
 }
