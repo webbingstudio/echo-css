@@ -189,19 +189,23 @@ $line-height-lg:            2 !default;
 // Navigation
 // -----------------------------------------
 
-$nav-color:                 $body-color !default;
-$nav-bg:                    transparent !default;
-$nav-hover-color:           $body-color !default;
-$nav-hover-bg:              rgba($first, .1) !default;
-$nav-current-color:         $first !default;
-$nav-current-bg:            rgba($first, .1) !default;
+$nav-color:                       $body-color !default;
+$nav-bg:                          transparent !default;
+$nav-hover-color:                 $body-color !default;
+$nav-hover-bg:                    rgba($body-inverse-bg, .05) !default;
+$nav-current-color:               $nav-hover-color !default;
+$nav-current-bg:                  $nav-hover-bg !default;
+$nav-current-hover-color:         $nav-hover-color !default;
+$nav-current-hover-bg:            $nav-hover-bg !default;
 
-$nav-inverse-color:         $body-inverse-color !default;
-$nav-inverse-bg:            $first !default;
-$nav-inverse-hover-color:   $body-inverse-color !default;
-$nav-inverse-hover-bg:      rgba($first, .1) !default;
-$nav-inverse-current-color: $body-inverse-color !default;
-$nav-inverse-current-bg:    rgba($first, .1) !default;
+$nav-inverse-color:               $body-inverse-color !default;
+$nav-inverse-bg:                  $body-inverse-bg !default;
+$nav-inverse-hover-color:         $body-inverse-color !default;
+$nav-inverse-hover-bg:            rgba($body-bg, .15) !default;
+$nav-inverse-current-color:       $nav-inverse-hover-color !default;
+$nav-inverse-current-bg:          $nav-inverse-hover-bg !default;
+$nav-inverse-current-hover-color: $nav-inverse-hover-color !default;
+$nav-inverse-current-hover-bg:    $nav-inverse-hover-bg !default;
 
 
 // Radius

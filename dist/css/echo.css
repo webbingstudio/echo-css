@@ -2683,6 +2683,7 @@ m-nav
   height: 100%;
   min-height: 3em;
   color: #333;
+  background-color: transparent;
   padding: .25em 1em;
   font-size: .875rem;
   line-height: 1;
@@ -2699,15 +2700,17 @@ a.m-nav-label {
 }
 a.m-nav-label:hover, a.m-nav-label:focus {
   color: #333;
-  background-color: #eee;
+  background-color: rgba(0, 0, 0, 0.05);
   text-decoration: none;
 }
 
 .m-nav-label.is-current {
-  background-color: #eee;
+  color: #333;
+  background-color: rgba(0, 0, 0, 0.05);
 }
 .m-nav-label.is-current:hover, .m-nav-label.is-current:focus, .m-nav-label.is-current:active {
-  background-color: #eee;
+  color: #333;
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 /*
@@ -2748,6 +2751,32 @@ m-nav-vertical
   .m-nav-children .m-nav-children .m-nav-label {
     font-size: .875rem;
   }
+}
+
+/*
+--------------------
+m-nav-inverse
+--------------------
+*/
+.m-nav-inverse {
+  background-color: #000;
+}
+.m-nav-inverse .m-nav-label {
+  color: #fff;
+  background-color: #000;
+}
+.m-nav-inverse a.m-nav-label:hover, .m-nav-inverse a.m-nav-label:focus {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.15);
+  text-decoration: none;
+}
+.m-nav-inverse .m-nav-label.is-current {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.m-nav-inverse .m-nav-label.is-current:hover, .m-nav-inverse .m-nav-label.is-current:focus, .m-nav-inverse .m-nav-label.is-current:active {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 /*
