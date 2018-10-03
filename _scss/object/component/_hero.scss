@@ -48,11 +48,9 @@
 }
 
 .#{$pr}#{$c}hero#{$c1}contents#{$c1}inner {
-    max-width: map-get($container-max-widths-md, sm);
+    max-width: map-get($container-max-widths-md, md);
     margin: 0 auto;
     padding: 0 (map-get($grid-gutter-widths, md) / 2);
-    line-height: $line-height-md;
-    text-align: center;
 
     @include media-breakpoint-up(xl) {
         max-width: map-get($container-max-widths-md, md);
@@ -66,37 +64,47 @@
     font-weight: $font-weight-third;
     font-family: $font-family-third;
     line-height: 1;
+    text-align: center;
 
     @include media-breakpoint-up(sm) {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     @include media-breakpoint-up(md) {
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
 
     @include media-breakpoint-up(lg) {
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
 
     @include media-breakpoint-up(xl) {
-        font-size: 4.5rem;
+        font-size: 4rem;
     }
 
     @include media-breakpoint-up(xxl) {
-        font-size: 5rem;
+        font-size: 4.5rem;
     }
 
 }
 
 .#{$pr}#{$c}hero#{$c1}caption {
     margin: 0;
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: $font-weight-third;
     font-family: $font-family-third;
     line-height: 1;
+    text-align: center;
 
     @include media-breakpoint-up(sm) {
+        font-size: 1.125rem;
+    }
+
+    @include media-breakpoint-up(md) {
+        font-size: 1.25rem;
+    }
+
+    @include media-breakpoint-up(lg) {
         font-size: 1.5rem;
     }
 
@@ -105,22 +113,32 @@
     }
 
     .#{$pr}#{$c}hero#{$c1}title + & {
-        padding-top: ($spacer * 2);
+        padding-top: 1em;
     }
 
 }
 
 .#{$pr}#{$c}hero#{$c1}body {
     margin: 0;
-    font-size: .75rem;
+    font-size: .625rem;
+    line-height: $line-height-lg;
+    text-align: center;
+
+    @include media-breakpoint-up(sm) {
+        font-size: .75rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+        font-size: .875rem;
+    }
 
     @include media-breakpoint-up(xl) {
-        font-size: .875rem;
+        font-size: 1rem;
     }
 
     .#{$pr}#{$c}hero#{$c1}title + &,
     .#{$pr}#{$c}hero#{$c1}caption + & {
-        padding-top: ($spacer * 4.5);
+        padding-top: 2em;
     }
 
 }
@@ -141,6 +159,14 @@
     .#{$pr}#{$c}hero#{$c1}contents#{$c1}inner {
         margin-left: 0;
         margin-right: auto;
+    }
+
+    .#{$pr}#{$c}hero#{$c1}title,
+    .#{$pr}#{$c}hero#{$c1}caption {
+        text-align: left;
+    }
+
+    .#{$pr}#{$c}hero#{$c1}body {
         text-align: left;
     }
 
@@ -152,16 +178,19 @@
         justify-content: right;
     }
 
-    /* 長文は右寄せにしない */
     .#{$pr}#{$c}hero#{$c1}contents#{$c1}inner {
         margin-left: auto;
         margin-right: 0;
-        text-align: left;
     }
 
     .#{$pr}#{$c}hero#{$c1}title,
     .#{$pr}#{$c}hero#{$c1}caption {
         text-align: right;
+    }
+
+    /* 長文は右寄せにしない */
+    .#{$pr}#{$c}hero#{$c1}body {
+        text-align: left;
     }
 
 }

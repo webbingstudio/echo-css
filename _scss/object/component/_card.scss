@@ -50,7 +50,6 @@
     .#{$pr}#{$c}card#{$c1}header,
     .#{$pr}#{$c}card#{$c1}contents {
         @include clearfix();
-        line-height: $line-height-sm;
         word-break: break-word;
 
         p {
@@ -79,7 +78,7 @@
         font-size: 1.125rem;
         font-weight: $font-weight-bold-root;
         font-family: $font-family-bold-root;
-        line-height: $line-height-sm;
+        line-height: $line-height-xs;
         text-align: center;
 
         @include media-breakpoint-up(lg) {

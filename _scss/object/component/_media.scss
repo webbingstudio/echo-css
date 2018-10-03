@@ -54,7 +54,6 @@
         flex-shrink: 1;
         flex-basis: 0%;
         padding-left: $spacer;
-        line-height: $line-height-sm;
 
         @include media-breakpoint-down(md) {
             font-size: $font-size-sm;
@@ -72,7 +71,7 @@
         font-size: 1.125rem;
         font-weight: $font-weight-bold-root;
         font-family: $font-family-bold-root;
-        line-height: $line-height-sm;
+        line-height: $line-height-xs;
 
         @include media-breakpoint-up(lg) {
             font-size: 1.25rem;

@@ -17,7 +17,7 @@
         display: block;
         overflow: hidden;
         margin: 0;
-        line-height: $line-height-sm;
+        line-height: $line-height-xs;
     }
 
 }
@@ -40,7 +40,7 @@
     @include media-breakpoint-up(md) {
         float: left;
         padding-bottom: 0;
-        padding-right: ($spacer * 2);
+        padding-right: $spacer;
     }
 
     .#{$pr}#{$m}label {

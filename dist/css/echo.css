@@ -3365,7 +3365,6 @@ c-card
 }
 .c-card .c-card-header,
 .c-card .c-card-contents {
-  line-height: 1.5;
   word-break: break-word;
 }
 .c-card .c-card-header:before, .c-card .c-card-header:after,
@@ -3398,7 +3397,7 @@ c-card
   font-size: 1.125rem;
   font-weight: 700;
   font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-  line-height: 1.5;
+  line-height: 1.25;
   text-align: center;
 }
 @media (min-width: 1000px) {
@@ -3487,7 +3486,7 @@ c-flip
   font-size: 2rem;
   font-weight: 300;
   font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-  line-height: 1.5;
+  line-height: 1.25;
 }
 @media (min-width: 425px) {
   .c-flip .c-flip-title {
@@ -3741,7 +3740,7 @@ c-headline
   display: block;
   overflow: hidden;
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.25;
 }
 
 .c-headline-date {
@@ -3763,7 +3762,7 @@ c-headline
   .c-headline-category {
     float: left;
     padding-bottom: 0;
-    padding-right: 20px;
+    padding-right: 10px;
   }
 }
 .c-headline-category .m-label {
@@ -3839,10 +3838,9 @@ c-hero
 }
 
 .c-hero-contents-inner {
+  max-width: 700px;
   margin: 0 auto;
   padding: 0 10px;
-  line-height: 1.75;
-  text-align: center;
 }
 @media (min-width: 1240px) {
   .c-hero-contents-inner {
@@ -3856,41 +3854,53 @@ c-hero
   font-weight: 300;
   font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
   line-height: 1;
+  text-align: center;
 }
 @media (min-width: 425px) {
   .c-hero-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 @media (min-width: 768px) {
   .c-hero-title {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 }
 @media (min-width: 1000px) {
   .c-hero-title {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 }
 @media (min-width: 1240px) {
   .c-hero-title {
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
 }
 @media (min-width: 1640px) {
   .c-hero-title {
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
 }
 
 .c-hero-caption {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 300;
   font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
   line-height: 1;
+  text-align: center;
 }
 @media (min-width: 425px) {
+  .c-hero-caption {
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 768px) {
+  .c-hero-caption {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 1000px) {
   .c-hero-caption {
     font-size: 1.5rem;
   }
@@ -3901,20 +3911,32 @@ c-hero
   }
 }
 .c-hero-title + .c-hero-caption {
-  padding-top: 20px;
+  padding-top: 1em;
 }
 
 .c-hero-body {
   margin: 0;
-  font-size: .75rem;
+  font-size: .625rem;
+  line-height: 2;
+  text-align: center;
 }
-@media (min-width: 1240px) {
+@media (min-width: 425px) {
+  .c-hero-body {
+    font-size: .75rem;
+  }
+}
+@media (min-width: 1000px) {
   .c-hero-body {
     font-size: .875rem;
   }
 }
+@media (min-width: 1240px) {
+  .c-hero-body {
+    font-size: 1rem;
+  }
+}
 .c-hero-title + .c-hero-body, .c-hero-caption + .c-hero-body {
-  padding-top: 45px;
+  padding-top: 2em;
 }
 
 /*
@@ -3928,6 +3950,12 @@ c-hero-(direction)
 .c-hero-left .c-hero-contents-inner {
   margin-left: 0;
   margin-right: auto;
+}
+.c-hero-left .c-hero-title,
+.c-hero-left .c-hero-caption {
+  text-align: left;
+}
+.c-hero-left .c-hero-body {
   text-align: left;
 }
 
@@ -3940,11 +3968,13 @@ c-hero-(direction)
 .c-hero-right .c-hero-contents-inner {
   margin-left: auto;
   margin-right: 0;
-  text-align: left;
 }
 .c-hero-right .c-hero-title,
 .c-hero-right .c-hero-caption {
   text-align: right;
+}
+.c-hero-right .c-hero-body {
+  text-align: left;
 }
 
 /*
@@ -3988,7 +4018,6 @@ a.c-media:hover, a.c-media:focus {
   flex-shrink: 1;
   flex-basis: 0%;
   padding-left: 10px;
-  line-height: 1.5;
 }
 @media (max-width: 999.9px) {
   .c-media .c-media-contents {
@@ -4006,7 +4035,7 @@ a.c-media:hover, a.c-media:focus {
   font-size: 1.125rem;
   font-weight: 700;
   font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-  line-height: 1.5;
+  line-height: 1.25;
 }
 @media (min-width: 1000px) {
   .c-media .c-media-title {
@@ -5362,7 +5391,7 @@ WYSIWYG Styles (WordPress)
   color: #333;
   font-weight: bold;
   text-align: left;
-  line-height: 1.5;
+  line-height: 1.25;
   border-radius: 0;
 }
 .p-wysiwyg h1:not([class*="title"]):before, .p-wysiwyg h1:not([class*="title"]):after,
