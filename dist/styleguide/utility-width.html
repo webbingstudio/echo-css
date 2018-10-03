@@ -11,29 +11,17 @@
 </head>
 <body>
 <div class="l-document" id="document">
+    <?php include('../doc_include/header.inc'); ?>
 
-    <header class="s-header js-fixnav">
-        <div class="s-header-brand">
-            <p class="s-title s-header-title"><img src="../images/common/logo_white.svg" height="24" alt="echo-css"> <span class="s-label">v1.0.7</span></p>
-        </div><!-- /.s-header-brand -->
+    <main class="p-main" role="main">
+        <div class="l-container l-container-fluid">
 
-        <?php include('../doc_include/header_nav.inc'); ?>
-    </header>
+            <div class="p-pagehead">
+                <h1 class="p-pagehead-title">utility-width</h1>
+            </div><!-- /.p-pagehead -->
 
-    <div class="s-container s-container-fluid">
-        <div class="s-contents s-contents-2col">
-            <main class="s-contents-main" role="main">
-
-                
-                <div class="s-pageheader">
-                    <h1 class="s-title s-pageheader-title">utility-width</h1>
-                </div><!-- /.s-pageheader -->
-                
-
-                
-
-                <article class="s-post">
-                    <div class="s-post-contents styleguide-contents"><h1 id="width" class="styleguide">u-width-(percentage)</h1>
+            <article class="s-post">
+                <div class="s-post-contents styleguide-contents"><h1 id="width" class="styleguide">u-width-(percentage)</h1>
 
 <p>幅を親要素を基準とした割合に変更する。</p>
 <div class="example"><div class="u-width-20" style="margin-bottom: 1rem; padding: .5rem; background-color: #ffddaa; text-align: center;">
@@ -92,4 +80,6 @@ u-width-75
 u-width-100
 <span class="nt">&lt;/div&gt;</span>
 
-</pre></div><?php include('../doc_include/footer.inc'); ?>
+</pre></div>
+
+<?php include('../doc_include/footer.inc'); ?>

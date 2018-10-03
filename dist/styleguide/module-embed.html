@@ -12,38 +12,27 @@
 <body>
 <div class="l-document" id="document">
 
-    <header class="s-header js-fixnav">
-        <div class="s-header-brand">
-            <p class="s-title s-header-title"><img src="../images/common/logo_white.svg" height="24" alt="echo-css"> <span class="s-label">v1.0.7</span></p>
-        </div><!-- /.s-header-brand -->
+    <?php include('../doc_include/header.inc'); ?>
 
-        <?php include('../doc_include/header_nav.inc'); ?>
-    </header>
+    <main class="p-main" role="main">
+        <div class="l-container l-container-fluid">
 
-    <div class="s-container s-container-fluid">
-        <div class="s-contents s-contents-2col">
-            <main class="s-contents-main" role="main">
+            <div class="p-pagehead">
+                <h1 class="p-pagehead-title">module-embed</h1>
+            </div><!-- /.p-pagehead -->
 
-                
-                <div class="s-pageheader">
-                    <h1 class="s-title s-pageheader-title">module-embed</h1>
-                </div><!-- /.s-pageheader -->
-                
-
-                
-                <nav class="s-anchor">
-                    <ul class="s-anchor-list">
+            <nav class="p-anchor">
+                <ul class="m-list m-list-horizontal">
                         
-                        <li class="s-anchor-item"><a href="#embed" class="js-scrollto">m-embed</a></li>
-                        
-                        <li class="s-anchor-item"><a href="#embed-02-ratio" class="js-scrollto">m-embed-(ratio-x)to(ratio-y)</a></li>
-                        
-                    </ul>
-                </nav>
-                
+                    <li class="m-list-item"><a href="#embed" class="js-scrollto">m-embed</a></li>
+                    
+                    <li class="m-list-item"><a href="#embed-02-ratio" class="js-scrollto">m-embed-(ratio-x)to(ratio-y)</a></li>
+                    
+                </ul>
+            </nav>
 
-                <article class="s-post">
-                    <div class="s-post-contents styleguide-contents"><h1 id="embed" class="styleguide">m-embed</h1>
+            <article class="s-post">
+                <div class="s-post-contents styleguide-contents"><h1 id="embed" class="styleguide">m-embed</h1>
 
 <p>インラインフレームなどの埋め込みオブジェクトを表示する。要素自体ではなく、包括している要素にクラスを付与する。<br>
 このクラス単独ではそのままのサイズで表示する。</p>
@@ -104,4 +93,6 @@
 <span class="nt">&lt;/div&gt;</span>
 
 <span class="nt">&lt;/div&gt;</span>
-</pre></div><?php include('../doc_include/footer.inc'); ?>
+</pre></div>
+
+<?php include('../doc_include/footer.inc'); ?>

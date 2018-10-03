@@ -12,48 +12,38 @@
 <body>
 <div class="l-document" id="document">
 
-    <header class="s-header js-fixnav">
-        <div class="s-header-brand">
-            <p class="s-title s-header-title"><img src="../images/common/logo_white.svg" height="24" alt="echo-css"> <span class="s-label">v1.0.7</span></p>
-        </div><!-- /.s-header-brand -->
+    <?php include('../doc_include/header.inc'); ?>
 
-        <?php include('../doc_include/header_nav.inc'); ?>
-    </header>
+    <main class="p-main" role="main">
+        <div class="l-container l-container-fluid">
 
-    <div class="s-container s-container-fluid">
-        <div class="s-contents s-contents-2col">
-            <main class="s-contents-main" role="main">
+            <div class="p-pagehead">
+                <h1 class="p-pagehead-title">module-table</h1>
+            </div><!-- /.p-pagehead -->
 
-                
-                <div class="s-pageheader">
-                    <h1 class="s-title s-pageheader-title">module-table</h1>
-                </div><!-- /.s-pageheader -->
-                
+            <nav class="p-anchor">
+                <ul class="m-list m-list-horizontal">
 
-                
-                <nav class="s-anchor">
-                    <ul class="s-anchor-list">
-                        
-                        <li class="s-anchor-item"><a href="#table" class="js-scrollto">m-table</a></li>
-                        
-                        <li class="s-anchor-item"><a href="#table-01-bordered" class="js-scrollto">m-table-bordered</a></li>
-                        
-                        <li class="s-anchor-item"><a href="#table-02-ruled" class="js-scrollto">m-table-ruled</a></li>
-                        
-                        <li class="s-anchor-item"><a href="#table-03-justify" class="js-scrollto">m-table-justify</a></li>
-                        
-                        <li class="s-anchor-item"><a href="#table-04-ratio" class="js-scrollto">m-table-(ratio-first)to(ratio-second)to(ratio-third)</a></li>
-                        
-                        <li class="s-anchor-item"><a href="#table-05-break-sm-down" class="js-scrollto">m-table-break-sm-down</a></li>
-                        
-                        <li class="s-anchor-item"><a href="#table-06-responsive" class="js-scrollto">m-table-responsive</a></li>
-                        
-                    </ul>
-                </nav>
-                
+                    <li class="m-list-item"><a href="#table" class="js-scrollto">m-table</a></li>
+                    
+                    <li class="m-list-item"><a href="#table-01-bordered" class="js-scrollto">m-table-bordered</a></li>
+                    
+                    <li class="m-list-item"><a href="#table-02-ruled" class="js-scrollto">m-table-ruled</a></li>
+                    
+                    <li class="m-list-item"><a href="#table-03-justify" class="js-scrollto">m-table-justify</a></li>
+                    
+                    <li class="m-list-item"><a href="#table-04-ratio" class="js-scrollto">m-table-(ratio-first)to(ratio-second)to(ratio-third)</a></li>
+                    
+                    <li class="m-list-item"><a href="#table-05-break-sm-down" class="js-scrollto">m-table-break-sm-down</a></li>
+                    
+                    <li class="m-list-item"><a href="#table-06-responsive" class="js-scrollto">m-table-responsive</a></li>
+                    
+                </ul>
+            </nav>
+            
 
-                <article class="s-post">
-                    <div class="s-post-contents styleguide-contents"><h1 id="table" class="styleguide">m-table</h1>
+            <article class="s-post">
+                <div class="s-post-contents styleguide-contents"><h1 id="table" class="styleguide">m-table</h1>
 
 <p>表組を整形する。このクラス単独では整列のみ行う。<br>
 幅は常に100%、セル内の文字は常に左寄せとなる。寄せ方向を変更したい場合は <code>utility &gt; .u-line-(direction)</code> を使用する。</p>
@@ -591,4 +581,6 @@
         <span class="nt">&lt;/tbody&gt;</span>
     <span class="nt">&lt;/table&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-</pre></div><?php include('../doc_include/footer.inc'); ?>
+</pre></div>
+
+<?php include('../doc_include/footer.inc'); ?>

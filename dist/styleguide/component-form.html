@@ -12,48 +12,38 @@
 <body>
 <div class="l-document" id="document">
 
-    <header class="s-header js-fixnav">
-        <div class="s-header-brand">
-            <p class="s-title s-header-title"><img src="../images/common/logo_white.svg" height="24" alt="echo-css"> <span class="s-label">v1.0.7</span></p>
-        </div><!-- /.s-header-brand -->
+    <?php include('../doc_include/header.inc'); ?>
 
-        <?php include('../doc_include/header_nav.inc'); ?>
-    </header>
+    <main class="p-main" role="main">
+        <div class="l-container l-container-fluid">
 
-    <div class="s-container s-container-fluid">
-        <div class="s-contents s-contents-2col">
-            <main class="s-contents-main" role="main">
+            <div class="p-pagehead">
+                <h1 class="p-pagehead-title">component-form</h1>
+            </div><!-- /.p-pagehead -->
 
-                
-                <div class="s-pageheader">
-                    <h1 class="s-title s-pageheader-title">component-form</h1>
-                </div><!-- /.s-pageheader -->
-                
+            <nav class="p-anchor">
+                <ul class="m-list m-list-horizontal">
+                        
+                    <li class="m-list-item"><a href="#form" class="js-scrollto">c-form</a></li>
+                    
+                    <li class="m-list-item"><a href="#form-01-inline" class="js-scrollto">c-form-inline</a></li>
+                    
+                    <li class="m-list-item"><a href="#form-02-grow" class="js-scrollto">c-form-grow</a></li>
+                    
+                    <li class="m-list-item"><a href="#form-03-append" class="js-scrollto">c-form-append</a></li>
+                    
+                    <li class="m-list-item"><a href="#form-04-error" class="js-scrollto">c-form-error</a></li>
+                    
+                    <li class="m-list-item"><a href="#form-05-submit" class="js-scrollto">c-form-submit</a></li>
+                    
+                    <li class="m-list-item"><a href="#form-06-submit-2col" class="js-scrollto">c-form-submit-2col</a></li>
+                    
+                </ul>
+            </nav>
+            
 
-                
-                <nav class="s-anchor">
-                    <ul class="s-anchor-list">
-                        
-                        <li class="s-anchor-item"><a href="#form" class="js-scrollto">c-form</a></li>
-                        
-                        <li class="s-anchor-item"><a href="#form-01-inline" class="js-scrollto">c-form-inline</a></li>
-                        
-                        <li class="s-anchor-item"><a href="#form-02-grow" class="js-scrollto">c-form-grow</a></li>
-                        
-                        <li class="s-anchor-item"><a href="#form-03-append" class="js-scrollto">c-form-append</a></li>
-                        
-                        <li class="s-anchor-item"><a href="#form-04-error" class="js-scrollto">c-form-error</a></li>
-                        
-                        <li class="s-anchor-item"><a href="#form-05-submit" class="js-scrollto">c-form-submit</a></li>
-                        
-                        <li class="s-anchor-item"><a href="#form-06-submit-2col" class="js-scrollto">c-form-submit-2col</a></li>
-                        
-                    </ul>
-                </nav>
-                
-
-                <article class="s-post">
-                    <div class="s-post-contents styleguide-contents"><h1 id="form" class="styleguide">c-form</h1>
+            <article class="s-post">
+                <div class="s-post-contents styleguide-contents"><h1 id="form" class="styleguide">c-form</h1>
 
 <p>システムで可能な限りフォームの各入力セットを包括する。<br>
 幅の調整が必要な場合は <code>.u-width-(percentage)</code> を併用すること。<br>
@@ -198,4 +188,6 @@
     <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"m-btn m-btn-xl m-btn-first m-btn-bordered"</span><span class="nt">&gt;</span>入力画面にもどる<span class="nt">&lt;/button&gt;</span>
     <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"m-btn m-btn-xl m-btn-first"</span><span class="nt">&gt;</span>この内容で送信<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-</pre></div><?php include('../doc_include/footer.inc'); ?>
+</pre></div>
+
+<?php include('../doc_include/footer.inc'); ?>

@@ -12,40 +12,30 @@
 <body>
 <div class="l-document" id="document">
 
-    <header class="s-header js-fixnav">
-        <div class="s-header-brand">
-            <p class="s-title s-header-title"><img src="../images/common/logo_white.svg" height="24" alt="echo-css"> <span class="s-label">v1.0.7</span></p>
-        </div><!-- /.s-header-brand -->
+    <?php include('../doc_include/header.inc'); ?>
 
-        <?php include('../doc_include/header_nav.inc'); ?>
-    </header>
+    <main class="p-main" role="main">
+        <div class="l-container l-container-fluid">
 
-    <div class="s-container s-container-fluid">
-        <div class="s-contents s-contents-2col">
-            <main class="s-contents-main" role="main">
+            <div class="p-pagehead">
+                <h1 class="p-pagehead-title">component-media</h1>
+            </div><!-- /.p-pagehead -->
 
-                
-                <div class="s-pageheader">
-                    <h1 class="s-title s-pageheader-title">component-media</h1>
-                </div><!-- /.s-pageheader -->
-                
+            <nav class="p-anchor">
+                <ul class="m-list m-list-horizontal">
+                    
+                    <li class="m-list-item"><a href="#media" class="js-scrollto">c-media</a></li>
+                    
+                    <li class="m-list-item"><a href="#media-01-middle" class="js-scrollto">c-media-middle</a></li>
+                    
+                    <li class="m-list-item"><a href="#media-02-reverse" class="js-scrollto">c-media-reverse</a></li>
+                    
+                </ul>
+            </nav>
+            
 
-                
-                <nav class="s-anchor">
-                    <ul class="s-anchor-list">
-                        
-                        <li class="s-anchor-item"><a href="#media" class="js-scrollto">c-media</a></li>
-                        
-                        <li class="s-anchor-item"><a href="#media-01-middle" class="js-scrollto">c-media-middle</a></li>
-                        
-                        <li class="s-anchor-item"><a href="#media-02-reverse" class="js-scrollto">c-media-reverse</a></li>
-                        
-                    </ul>
-                </nav>
-                
-
-                <article class="s-post">
-                    <div class="s-post-contents styleguide-contents"><h1 id="media" class="styleguide">c-media</h1>
+            <article class="s-post">
+                <div class="s-post-contents styleguide-contents"><h1 id="media" class="styleguide">c-media</h1>
 
 <p>サムネイル等のメディアオブジェクトと、テキストオブジェクトが並列しているコンポーネントを表示する。<br>
 <code>.m-title</code>, <code>.m-thumbnail</code>, <code>.m-btn</code>を含む可能性がある。<br>
@@ -376,4 +366,6 @@
         <span class="nt">&lt;p&gt;</span>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。<span class="nt">&lt;/p&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-</pre></div><?php include('../doc_include/footer.inc'); ?>
+</pre></div>
+
+<?php include('../doc_include/footer.inc'); ?>

@@ -12,40 +12,30 @@
 <body>
 <div class="l-document" id="document">
 
-    <header class="s-header js-fixnav">
-        <div class="s-header-brand">
-            <p class="s-title s-header-title"><img src="../images/common/logo_white.svg" height="24" alt="echo-css"> <span class="s-label">v1.0.7</span></p>
-        </div><!-- /.s-header-brand -->
+    <?php include('../doc_include/header.inc'); ?>
 
-        <?php include('../doc_include/header_nav.inc'); ?>
-    </header>
+    <main class="p-main" role="main">
+        <div class="l-container l-container-fluid">
 
-    <div class="s-container s-container-fluid">
-        <div class="s-contents s-contents-2col">
-            <main class="s-contents-main" role="main">
+            <div class="p-pagehead">
+                <h1 class="p-pagehead-title">component-flip</h1>
+            </div><!-- /.p-pagehead -->
 
-                
-                <div class="s-pageheader">
-                    <h1 class="s-title s-pageheader-title">component-flip</h1>
-                </div><!-- /.s-pageheader -->
-                
-
-                
-                <nav class="s-anchor">
-                    <ul class="s-anchor-list">
+            <nav class="p-anchor">
+                <ul class="m-list m-list-horizontal">
                         
-                        <li class="s-anchor-item"><a href="#flip" class="js-scrollto">c-flip</a></li>
-                        
-                        <li class="s-anchor-item"><a href="#flip-01-reverse" class="js-scrollto">c-flip-reverse</a></li>
-                        
-                        <li class="s-anchor-item"><a href="#flip-02-inverse" class="js-scrollto">c-flip-inverse</a></li>
-                        
-                    </ul>
-                </nav>
-                
+                    <li class="m-list-item"><a href="#flip" class="js-scrollto">c-flip</a></li>
+                    
+                    <li class="m-list-item"><a href="#flip-01-reverse" class="js-scrollto">c-flip-reverse</a></li>
+                    
+                    <li class="m-list-item"><a href="#flip-02-inverse" class="js-scrollto">c-flip-inverse</a></li>
+                    
+                </ul>
+            </nav>
+            
 
-                <article class="s-post">
-                    <div class="s-post-contents styleguide-contents"><h1 id="flip" class="styleguide">c-flip</h1>
+            <article class="s-post">
+                <div class="s-post-contents styleguide-contents"><h1 id="flip" class="styleguide">c-flip</h1>
 
 <p>全面背景とボックスを持つ、フリップボードのようなコンポーネントを表示する。<br>
 <code>.c-flip-contents-inner</code> が必須であることに注意する。<br>
@@ -132,4 +122,6 @@
         <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.c-flip-contents --&gt;</span>
     <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.c-flip-container --&gt;</span>
 <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.c-flip --&gt;</span>
-</pre></div><?php include('../doc_include/footer.inc'); ?>
+</pre></div>
+
+<?php include('../doc_include/footer.inc'); ?>

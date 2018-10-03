@@ -12,28 +12,17 @@
 <body>
 <div class="l-document" id="document">
 
-    <header class="s-header js-fixnav">
-        <div class="s-header-brand">
-            <p class="s-title s-header-title"><img src="../images/common/logo_white.svg" height="24" alt="echo-css"> <span class="s-label">v1.0.7</span></p>
-        </div><!-- /.s-header-brand -->
+    <?php include('../doc_include/header.inc'); ?>
 
-        <?php include('../doc_include/header_nav.inc'); ?>
-    </header>
+    <main class="p-main" role="main">
+        <div class="l-container l-container-fluid">
 
-    <div class="s-container s-container-fluid">
-        <div class="s-contents s-contents-2col">
-            <main class="s-contents-main" role="main">
+            <div class="p-pagehead">
+                <h1 class="p-pagehead-title">utility-clear</h1>
+            </div><!-- /.p-pagehead -->
 
-                
-                <div class="s-pageheader">
-                    <h1 class="s-title s-pageheader-title">utility-clear</h1>
-                </div><!-- /.s-pageheader -->
-                
-
-                
-
-                <article class="s-post">
-                    <div class="s-post-contents styleguide-contents"><h1 id="clear" class="styleguide">u-clear</h1>
+            <article class="s-post">
+                <div class="s-post-contents styleguide-contents"><h1 id="clear" class="styleguide">u-clear</h1>
 
 <p>floatを解除する。</p>
 <div class="example"><div class="u-float-left">
@@ -54,4 +43,6 @@
 
 <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"u-clear"</span><span class="nt">&gt;</span>u-clear:掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。<span class="nt">&lt;br&gt;</span>
 第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<span class="nt">&lt;/p&gt;</span>
-</pre></div><?php include('../doc_include/footer.inc'); ?>
+</pre></div>
+
+<?php include('../doc_include/footer.inc'); ?>

@@ -11,39 +11,28 @@
 </head>
 <body>
 <div class="l-document" id="document">
+    <?php include('../doc_include/header.inc'); ?>
 
-    <header class="s-header js-fixnav">
-        <div class="s-header-brand">
-            <p class="s-title s-header-title"><img src="../images/common/logo_white.svg" height="24" alt="echo-css"> <span class="s-label">v1.0.7</span></p>
-        </div><!-- /.s-header-brand -->
+    <main class="p-main" role="main">
+        <div class="l-container l-container-fluid">
 
-        <?php include('../doc_include/header_nav.inc'); ?>
-    </header>
+            <div class="p-pagehead">
+                <h1 class="p-pagehead-title">project-widget</h1>
+            </div><!-- /.p-pagehead -->
 
-    <div class="s-container s-container-fluid">
-        <div class="s-contents s-contents-2col">
-            <main class="s-contents-main" role="main">
+            <nav class="p-anchor">
+                <ul class="m-list m-list-horizontal">
+                    
+                    <li class="m-list-item"><a href="#widget" class="js-scrollto">p-widget</a></li>
+                    
+                    <li class="m-list-item"><a href="#widget-size" class="js-scrollto">p-widget-(size)</a></li>
+                    
+                </ul>
+            </nav>
+            
 
-                
-                <div class="s-pageheader">
-                    <h1 class="s-title s-pageheader-title">project-widget</h1>
-                </div><!-- /.s-pageheader -->
-                
-
-                
-                <nav class="s-anchor">
-                    <ul class="s-anchor-list">
-                        
-                        <li class="s-anchor-item"><a href="#widget" class="js-scrollto">p-widget</a></li>
-                        
-                        <li class="s-anchor-item"><a href="#widget-size" class="js-scrollto">p-widget-(size)</a></li>
-                        
-                    </ul>
-                </nav>
-                
-
-                <article class="s-post">
-                    <div class="s-post-contents styleguide-contents"><h1 id="p-widget" class="styleguide">widget</h1>
+            <article class="s-post">
+                <div class="s-post-contents styleguide-contents"><h1 id="p-widget" class="styleguide">widget</h1>
 
 <p>新着情報など、<strong>サイト内で配置が不定となる可能性があるコンテンツ群</strong>を表示する。<br>
  <code>.p-widget-contents, .p-widget-footer</code> には、必ず他のオブジェクトが含まれる。<br>
@@ -137,4 +126,6 @@
     <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.p-widget-footer --&gt;</span>
 
 <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.p-widget --&gt;</span>
-</pre></div><?php include('../doc_include/footer.inc'); ?>
+</pre></div>
+
+<?php include('../doc_include/footer.inc'); ?>

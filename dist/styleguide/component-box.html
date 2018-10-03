@@ -12,40 +12,30 @@
 <body>
 <div class="l-document" id="document">
 
-    <header class="s-header js-fixnav">
-        <div class="s-header-brand">
-            <p class="s-title s-header-title"><img src="../images/common/logo_white.svg" height="24" alt="echo-css"> <span class="s-label">v1.0.7</span></p>
-        </div><!-- /.s-header-brand -->
+    <?php include('../doc_include/header.inc'); ?>
 
-        <?php include('../doc_include/header_nav.inc'); ?>
-    </header>
+    <main class="p-main" role="main">
+        <div class="l-container l-container-fluid">
 
-    <div class="s-container s-container-fluid">
-        <div class="s-contents s-contents-2col">
-            <main class="s-contents-main" role="main">
+            <div class="p-pagehead">
+                <h1 class="p-pagehead-title">component-box</h1>
+            </div><!-- /.p-pagehead -->
 
-                
-                <div class="s-pageheader">
-                    <h1 class="s-title s-pageheader-title">component-box</h1>
-                </div><!-- /.s-pageheader -->
-                
+            <nav class="p-anchor">
+                <ul class="m-list m-list-horizontal">
+            
+                    <li class="m-list-item"><a href="#box" class="js-scrollto">c-box</a></li>
+                    
+                    <li class="m-list-item"><a href="#box-01-color" class="js-scrollto">c-box-(color)</a></li>
+                    
+                    <li class="m-list-item"><a href="#box-02-outline" class="js-scrollto">c-box-bordered</a></li>
+                    
+                </ul>
+            </nav>
+            
 
-                
-                <nav class="s-anchor">
-                    <ul class="s-anchor-list">
-                        
-                        <li class="s-anchor-item"><a href="#box" class="js-scrollto">c-box</a></li>
-                        
-                        <li class="s-anchor-item"><a href="#box-01-color" class="js-scrollto">c-box-(color)</a></li>
-                        
-                        <li class="s-anchor-item"><a href="#box-02-outline" class="js-scrollto">c-box-bordered</a></li>
-                        
-                    </ul>
-                </nav>
-                
-
-                <article class="s-post">
-                    <div class="s-post-contents styleguide-contents"><h1 id="box" class="styleguide">c-box</h1>
+            <article class="s-post">
+                <div class="s-post-contents styleguide-contents"><h1 id="box" class="styleguide">c-box</h1>
 
 <p>ブロック要素を網掛けで囲んで、箱状に強調する。画面サイズによって余白が変化する。</p>
 <div class="example"><div class="c-box">
@@ -246,4 +236,6 @@
     <span class="nt">&lt;p&gt;</span>この書生というのは時々我々を捕えて煮て食うという話である。
     しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-</pre></div><?php include('../doc_include/footer.inc'); ?>
+</pre></div>
+
+<?php include('../doc_include/footer.inc'); ?>

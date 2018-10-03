@@ -11,45 +11,33 @@
 </head>
 <body>
 <div class="l-document" id="document">
+    <?php include('../doc_include/header.inc'); ?>
 
-    <header class="s-header js-fixnav">
-        <div class="s-header-brand">
-            <p class="s-title s-header-title"><img src="../images/common/logo_white.svg" height="24" alt="echo-css"> <span class="s-label">v1.0.7</span></p>
-        </div><!-- /.s-header-brand -->
+    <main class="p-main" role="main">
+        <div class="l-container l-container-fluid">
 
-        <?php include('../doc_include/header_nav.inc'); ?>
-    </header>
+            <div class="p-pagehead">
+                <h1 class="p-pagehead-title">utility-text</h1>
+            </div><!-- /.p-pagehead -->
 
-    <div class="s-container s-container-fluid">
-        <div class="s-contents s-contents-2col">
-            <main class="s-contents-main" role="main">
+            <nav class="p-anchor">
+                <ul class="m-list m-list-horizontal">
 
+                    <li class="m-list-item"><a href="#text-01-color" class="js-scrollto">u-text-(color)</a></li>
+                    
+                    <li class="m-list-item"><a href="#text-02-root" class="js-scrollto">u-text-root</a></li>
+                    
+                    <li class="m-list-item"><a href="#text-03-inverse" class="js-scrollto">u-text-inverse</a></li>
+                    
+                    <li class="m-list-item"><a href="#text-05-direction" class="js-scrollto">u-text-(direction)(-(breakpont)-(up or down))</a></li>
+                    
+                    <li class="m-list-item"><a href="#text-06-size" class="js-scrollto">u-text-(size)</a></li>
+                    
+                </ul>
+            </nav>
                 
-                <div class="s-pageheader">
-                    <h1 class="s-title s-pageheader-title">utility-text</h1>
-                </div><!-- /.s-pageheader -->
-                
-
-                
-                <nav class="s-anchor">
-                    <ul class="s-anchor-list">
-                        
-                        <li class="s-anchor-item"><a href="#text-01-color" class="js-scrollto">u-text-(color)</a></li>
-                        
-                        <li class="s-anchor-item"><a href="#text-02-root" class="js-scrollto">u-text-root</a></li>
-                        
-                        <li class="s-anchor-item"><a href="#text-03-inverse" class="js-scrollto">u-text-inverse</a></li>
-                        
-                        <li class="s-anchor-item"><a href="#text-05-direction" class="js-scrollto">u-text-(direction)(-(breakpont)-(up or down))</a></li>
-                        
-                        <li class="s-anchor-item"><a href="#text-06-size" class="js-scrollto">u-text-(size)</a></li>
-                        
-                    </ul>
-                </nav>
-                
-
-                <article class="s-post">
-                    <div class="s-post-contents styleguide-contents"><h1 id="text-01-color" class="styleguide">u-text-(color)</h1>
+            <article class="s-post">
+                <div class="s-post-contents styleguide-contents"><h1 id="text-01-color" class="styleguide">u-text-(color)</h1>
 
 <p>文字色を変更する。(color)は<a href="../documentation/design_tokens/color.html">標準のカラーテーブル</a>を参照。</p>
 <div class="example"><p class="u-text-first">u-text-first:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
@@ -151,4 +139,6 @@
 <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"u-text-lg"</span><span class="nt">&gt;</span>u-text-lg:吾輩は猫である。<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"u-text-xxs"</span><span class="nt">&gt;</span>名前はまだ無い。u-text-xxs:どこで生れたか<span class="nt">&lt;/span&gt;</span>とんと見当がつかぬ。<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"u-text-xl"</span><span class="nt">&gt;</span>u-text-xl:吾輩は猫である。<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"u-text-xxs"</span><span class="nt">&gt;</span>名前はまだ無い。u-text-xxs:どこで生れたか<span class="nt">&lt;/span&gt;</span>とんと見当がつかぬ。<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"u-text-xxl"</span><span class="nt">&gt;</span>u-text-xxl:吾輩は猫である。<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"u-text-xxs"</span><span class="nt">&gt;</span>名前はまだ無い。u-text-xxs:どこで生れたか<span class="nt">&lt;/span&gt;</span>とんと見当がつかぬ。<span class="nt">&lt;/p&gt;</span>
-</pre></div><?php include('../doc_include/footer.inc'); ?>
+</pre></div>
+
+<?php include('../doc_include/footer.inc'); ?>

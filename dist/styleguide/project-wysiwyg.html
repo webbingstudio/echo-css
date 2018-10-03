@@ -11,29 +11,17 @@
 </head>
 <body>
 <div class="l-document" id="document">
+    <?php include('../doc_include/header.inc'); ?>
 
-    <header class="s-header js-fixnav">
-        <div class="s-header-brand">
-            <p class="s-title s-header-title"><img src="../images/common/logo_white.svg" height="24" alt="echo-css"> <span class="s-label">v1.0.7</span></p>
-        </div><!-- /.s-header-brand -->
+    <main class="p-main" role="main">
+        <div class="l-container l-container-fluid">
 
-        <?php include('../doc_include/header_nav.inc'); ?>
-    </header>
+            <div class="p-pagehead">
+                <h1 class="p-pagehead-title">project-wysiwyg</h1>
+            </div><!-- /.p-pagehead -->
 
-    <div class="s-container s-container-fluid">
-        <div class="s-contents s-contents-2col">
-            <main class="s-contents-main" role="main">
-
-                
-                <div class="s-pageheader">
-                    <h1 class="s-title s-pageheader-title">project-wysiwyg</h1>
-                </div><!-- /.s-pageheader -->
-                
-
-                
-
-                <article class="s-post">
-                    <div class="s-post-contents styleguide-contents"><h1 id="p-wysiwyg" class="styleguide">WYSIWYG Styles (WordPress)</h1>
+            <article class="s-post">
+                <div class="s-post-contents styleguide-contents"><h1 id="p-wysiwyg" class="styleguide">WYSIWYG Styles (WordPress)</h1>
 
 <p>コンテンツ・マネージメント・システムの仕様上、クラスを指定することができない、自由文エリアの標準スタイル。<br>
 <code>.p-wysiwyg</code> 内の最初の要素は、強制的に上マージンが0となる（!important）。<br>
@@ -65,7 +53,7 @@
 </ul></li>
 </ol>
 <div class="example"><div class="c-box">
-    <p>以下は、<a href="https://ja.wordpress.org/themes/" target="_blank">WordPressテーマディレクトリ</a>のサンプルコードを日本語訳し、より想定外のケースに対応したものです。</p>
+    <p>以下は、<a href="https://ja.wordpress.org/themes/" target="_blank">WordPressテーマディレクトリ</a>のサンプルコードを日本語訳し、<strong>より想定外のケース</strong>に対応したものです。</p>
 </div>
 <div class="p-wysiwyg">
     <p>このHTMLの目的は、CSSを使ってどのようなデフォルト設定を決定し、可能なHTML要素がこのHTMLに含まれているかを確認し、サイトを設計する際に考えられる要素を見落とさないようにすることです。</p>
@@ -76,6 +64,12 @@
     <h4>見出し4</h4>
     <h5>見出し5</h5>
     <h6>見出し6</h6>
+    <h1>見出し1_見出しのテキストに<br>改行が入っていて複数行になります</h1>
+    <h2>見出し2_見出しのテキストに<br>改行が入っていて複数行になります</h2>
+    <h3>見出し3_見出しのテキストに<br>改行が入っていて複数行になります</h3>
+    <h4>見出し4_見出しのテキストに<br>改行が入っていて複数行になります</h4>
+    <h5>見出し5_見出しのテキストに<br>改行が入っていて複数行になります</h5>
+    <h6>見出し6_見出しのテキストに<br>改行が入っていて複数行になります</h6>
     <p><small><a href="#top">[ページ先頭へもどる]</a></small></p>
     <hr>
     <h2 id="paragraph">段落</h2>
@@ -138,14 +132,14 @@
     <p><small><a href="#top">[ページ先頭へもどる]</a></small></p>
     <hr>
     <h2 id="images">画像</h2>
-    <figure style="width: 640px" class="wp-caption alignnone"><img class="wp-image-999" alt="" src="/images/_dummy/image_01_s.jpg" width="640"><figcaption class="wp-caption-text">画像のキャプションです</figcaption></figure>
+    <figure style="width: 640px" class="wp-caption alignnone"><img class="wp-image-999" alt="" src="/images/_dummy/image_01_s.jpg" width="640"><figcaption class="wp-caption-text">alignnone_画像のキャプションです</figcaption></figure>
     <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
-    <figure style="width: 320px" class="wp-caption alignleft"><img class="wp-image-999" alt="" src="/images/_dummy/image_02_s.jpg" width="320"><figcaption class="wp-caption-text">画像のキャプションです</figcaption></figure>
+    <figure style="width: 320px" class="wp-caption alignleft"><img class="wp-image-999" alt="" src="/images/_dummy/image_02_s.jpg" width="320"><figcaption class="wp-caption-text">alignleft_画像のキャプションです</figcaption></figure>
     <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
-    <figure style="width: 320px" class="wp-caption alignright"><img class="wp-image-999" alt="" src="/images/_dummy/image_03_s.jpg" width="320"><figcaption class="wp-caption-text">画像のキャプションです</figcaption></figure>
+    <figure style="width: 320px" class="wp-caption alignright"><img class="wp-image-999" alt="" src="/images/_dummy/image_03_s.jpg" width="320"><figcaption class="wp-caption-text">alignright_画像のキャプションです</figcaption></figure>
     <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
     <p>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
-    <figure style="width: 640px" class="wp-caption aligncenter"><img class="wp-image-999" alt="" src="/images/_dummy/image_04_s.jpg" width="640"><figcaption class="wp-caption-text">画像のキャプションです</figcaption></figure>
+    <figure style="width: 640px" class="wp-caption aligncenter"><img class="wp-image-999" alt="" src="/images/_dummy/image_04_s.jpg" width="640"><figcaption class="wp-caption-text">aligncenter_画像のキャプションです</figcaption></figure>
     <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
     <p><small><a href="#top">[ページ先頭へもどる]</a></small></p>
     <hr>
@@ -243,183 +237,6 @@
     </p></blockquote>
     <p><small><a href="#top">[ページ先頭へもどる]</a></small></p>
 </div>
-</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-box"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;p&gt;</span>以下は、<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://ja.wordpress.org/themes/"</span> <span class="na">target=</span><span class="s">"_blank"</span><span class="nt">&gt;</span>WordPressテーマディレクトリ<span class="nt">&lt;/a&gt;</span>のサンプルコードを日本語訳し、より想定外のケースに対応したものです。<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-wysiwyg"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;p&gt;</span>このHTMLの目的は、CSSを使ってどのようなデフォルト設定を決定し、可能なHTML要素がこのHTMLに含まれているかを確認し、サイトを設計する際に考えられる要素を見落とさないようにすることです。<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;hr&gt;</span>
-    <span class="nt">&lt;h1&gt;</span>見出し1<span class="nt">&lt;/h1&gt;</span>
-    <span class="nt">&lt;h2&gt;</span>見出し2<span class="nt">&lt;/h2&gt;</span>
-    <span class="nt">&lt;h3&gt;</span>見出し3<span class="nt">&lt;/h3&gt;</span>
-    <span class="nt">&lt;h4&gt;</span>見出し4<span class="nt">&lt;/h4&gt;</span>
-    <span class="nt">&lt;h5&gt;</span>見出し5<span class="nt">&lt;/h5&gt;</span>
-    <span class="nt">&lt;h6&gt;</span>見出し6<span class="nt">&lt;/h6&gt;</span>
-    <span class="nt">&lt;p&gt;&lt;small&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#top"</span><span class="nt">&gt;</span>[ページ先頭へもどる]<span class="nt">&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;</span>
-    <span class="nt">&lt;hr&gt;</span>
-    <span class="nt">&lt;h2</span> <span class="na">id=</span><span class="s">"paragraph"</span><span class="nt">&gt;</span>段落<span class="nt">&lt;/h2&gt;</span>
-    <span class="nt">&lt;p&gt;</span>吾輩は猫である。名前はまだ無い。<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">title=</span><span class="s">"テストリンクです"</span><span class="nt">&gt;</span>テストリンクです<span class="nt">&lt;/a&gt;</span>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;br&gt;</span>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;p&gt;</span>吾輩は猫である。名前は<span class="nt">&lt;em&gt;</span>弱い強調です<span class="nt">&lt;/em&gt;</span>まだ無い。どこで生れたかとんと見当がつかぬ。何でも<span class="nt">&lt;strong&gt;</span>強い強調です<span class="nt">&lt;/strong&gt;</span>薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;br&gt;</span>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;p&gt;&lt;small&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#top"</span><span class="nt">&gt;</span>[ページ先頭へもどる]<span class="nt">&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;</span>
-    <span class="nt">&lt;hr&gt;</span>
-    <span class="nt">&lt;h2</span> <span class="na">id=</span><span class="s">"list_types"</span><span class="nt">&gt;</span>リストタイプ<span class="nt">&lt;/h2&gt;</span>
-    <span class="nt">&lt;h3&gt;</span>定義リスト<span class="nt">&lt;/h3&gt;</span>
-    <span class="nt">&lt;dl&gt;</span>
-        <span class="nt">&lt;dt&gt;</span>定義リストのタイトル<span class="nt">&lt;/dt&gt;</span>
-        <span class="nt">&lt;dd&gt;</span>これは定義リストの説明です。<span class="nt">&lt;/dd&gt;</span>
-        <span class="nt">&lt;dt&gt;</span>定義リストのタイトル<span class="nt">&lt;/dt&gt;</span>
-        <span class="nt">&lt;dd&gt;</span>これは定義リストの説明ですが、とても長く複数行になるくらい文字数があります。これは定義リストの説明ですが、とても長く複数行になるくらい文字数があります。これは定義リストの説明ですが、とても長く複数行になるくらい文字数があります。これは定義リストの説明ですが、とても長く複数行になるくらい文字数があります。これは定義リストの説明ですが、とても長く複数行になるくらい文字数があります。<span class="nt">&lt;/dd&gt;</span>
-        <span class="nt">&lt;dt&gt;</span>定義リストのタイトル<span class="nt">&lt;/dt&gt;</span>
-        <span class="nt">&lt;dd&gt;</span>これは定義リストの説明です。<span class="nt">&lt;/dd&gt;</span>
-    <span class="nt">&lt;/dl&gt;</span>
-    <span class="nt">&lt;h3&gt;</span>番号リスト<span class="nt">&lt;/h3&gt;</span>
-    <span class="nt">&lt;ol&gt;</span>
-        <span class="nt">&lt;li&gt;</span>これは1番目の番号リストです。<span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;</span>これは2番目の番号リストですが、とても長く複数行になるくらい文字数があります。これは2番目の番号リストですが、とても長く複数行になるくらい文字数があります。これは2番目の番号リストですが、とても長く複数行になるくらい文字数があります。これは2番目の番号リストですが、とても長く複数行になるくらい文字数があります。<span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;</span>これは3番目の番号リストです。
-            <span class="nt">&lt;ol&gt;</span>
-                <span class="nt">&lt;li&gt;</span>これは1番目の番号リストです。<span class="nt">&lt;/li&gt;</span>
-                <span class="nt">&lt;li&gt;</span>これは2番目の番号リストです。<span class="nt">&lt;/li&gt;</span>
-                <span class="nt">&lt;li&gt;</span>これは3番目の番号リストです。<span class="nt">&lt;/li&gt;</span>
-            <span class="nt">&lt;/ol&gt;</span>
-        <span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;</span>これは4番目の番号リストです。<span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;</span>これは5番目の番号リストです。
-            <span class="nt">&lt;ul&gt;</span>
-                <span class="nt">&lt;li&gt;</span>これは1番目の順序なしリストです。<span class="nt">&lt;/li&gt;</span>
-                <span class="nt">&lt;li&gt;</span>これは2番目の順序なしリストです。<span class="nt">&lt;/li&gt;</span>
-                <span class="nt">&lt;li&gt;</span>これは3番目の順序なしリストです。<span class="nt">&lt;/li&gt;</span>
-            <span class="nt">&lt;/ul&gt;</span>
-        <span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;</span>これは6番目の番号リストです。<span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;/ol&gt;</span>
-    <span class="nt">&lt;h3&gt;</span>順序なしリスト<span class="nt">&lt;/h3&gt;</span>
-    <span class="nt">&lt;ul&gt;</span>
-        <span class="nt">&lt;li&gt;</span>これは1番目の順序なしリストです。<span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;</span>これは2番目の順序なしリストですが、とても長く複数行になるくらい文字数があります。これは2番目の順序なしリストですが、とても長く複数行になるくらい文字数があります。これは2番目の順序なしリストですが、とても長く複数行になるくらい文字数があります。これは2番目の順序なしリストですが、とても長く複数行になるくらい文字数があります。<span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;</span>これは3番目の順序なしリストです。
-            <span class="nt">&lt;ul&gt;</span>
-                <span class="nt">&lt;li&gt;</span>これは1番目の順序なしリストです。<span class="nt">&lt;/li&gt;</span>
-                <span class="nt">&lt;li&gt;</span>これは2番目の順序なしリストです。<span class="nt">&lt;/li&gt;</span>
-                <span class="nt">&lt;li&gt;</span>これは3番目の順序なしリストです。<span class="nt">&lt;/li&gt;</span>
-            <span class="nt">&lt;/ul&gt;</span>
-        <span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;</span>これは4番目の順序なしリストです。<span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;</span>これは5番目の順序なしリストです。
-            <span class="nt">&lt;ol&gt;</span>
-                <span class="nt">&lt;li&gt;</span>これは1番目の番号リストです。<span class="nt">&lt;/li&gt;</span>
-                <span class="nt">&lt;li&gt;</span>これは2番目の番号リストです。<span class="nt">&lt;/li&gt;</span>
-                <span class="nt">&lt;li&gt;</span>これは3番目の番号リストです。<span class="nt">&lt;/li&gt;</span>
-            <span class="nt">&lt;/ol&gt;</span>
-        <span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;</span>これは6番目の順序なしリストです。<span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;/ul&gt;</span>
-    <span class="nt">&lt;p&gt;&lt;small&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#top"</span><span class="nt">&gt;</span>[ページ先頭へもどる]<span class="nt">&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;</span>
-    <span class="nt">&lt;hr&gt;</span>
-    <span class="nt">&lt;h2</span> <span class="na">id=</span><span class="s">"images"</span><span class="nt">&gt;</span>画像<span class="nt">&lt;/h2&gt;</span>
-    <span class="nt">&lt;figure</span> <span class="na">style=</span><span class="s">"width: 640px"</span> <span class="na">class=</span><span class="s">"wp-caption alignnone"</span><span class="nt">&gt;&lt;img</span> <span class="na">class=</span><span class="s">"wp-image-999"</span> <span class="na">alt=</span><span class="s">""</span> <span class="na">src=</span><span class="s">"/images/_dummy/image_01_s.jpg"</span> <span class="na">width=</span><span class="s">"640"</span><span class="nt">&gt;&lt;figcaption</span> <span class="na">class=</span><span class="s">"wp-caption-text"</span><span class="nt">&gt;</span>画像のキャプションです<span class="nt">&lt;/figcaption&gt;&lt;/figure&gt;</span>
-    <span class="nt">&lt;p&gt;</span>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;br&gt;</span>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;figure</span> <span class="na">style=</span><span class="s">"width: 320px"</span> <span class="na">class=</span><span class="s">"wp-caption alignleft"</span><span class="nt">&gt;&lt;img</span> <span class="na">class=</span><span class="s">"wp-image-999"</span> <span class="na">alt=</span><span class="s">""</span> <span class="na">src=</span><span class="s">"/images/_dummy/image_02_s.jpg"</span> <span class="na">width=</span><span class="s">"320"</span><span class="nt">&gt;&lt;figcaption</span> <span class="na">class=</span><span class="s">"wp-caption-text"</span><span class="nt">&gt;</span>画像のキャプションです<span class="nt">&lt;/figcaption&gt;&lt;/figure&gt;</span>
-    <span class="nt">&lt;p&gt;</span>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;br&gt;</span>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;figure</span> <span class="na">style=</span><span class="s">"width: 320px"</span> <span class="na">class=</span><span class="s">"wp-caption alignright"</span><span class="nt">&gt;&lt;img</span> <span class="na">class=</span><span class="s">"wp-image-999"</span> <span class="na">alt=</span><span class="s">""</span> <span class="na">src=</span><span class="s">"/images/_dummy/image_03_s.jpg"</span> <span class="na">width=</span><span class="s">"320"</span><span class="nt">&gt;&lt;figcaption</span> <span class="na">class=</span><span class="s">"wp-caption-text"</span><span class="nt">&gt;</span>画像のキャプションです<span class="nt">&lt;/figcaption&gt;&lt;/figure&gt;</span>
-    <span class="nt">&lt;p&gt;</span>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;br&gt;</span>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;p&gt;</span>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;figure</span> <span class="na">style=</span><span class="s">"width: 640px"</span> <span class="na">class=</span><span class="s">"wp-caption aligncenter"</span><span class="nt">&gt;&lt;img</span> <span class="na">class=</span><span class="s">"wp-image-999"</span> <span class="na">alt=</span><span class="s">""</span> <span class="na">src=</span><span class="s">"/images/_dummy/image_04_s.jpg"</span> <span class="na">width=</span><span class="s">"640"</span><span class="nt">&gt;&lt;figcaption</span> <span class="na">class=</span><span class="s">"wp-caption-text"</span><span class="nt">&gt;</span>画像のキャプションです<span class="nt">&lt;/figcaption&gt;&lt;/figure&gt;</span>
-    <span class="nt">&lt;p&gt;</span>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;br&gt;</span>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;p&gt;&lt;small&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#top"</span><span class="nt">&gt;</span>[ページ先頭へもどる]<span class="nt">&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;</span>
-    <span class="nt">&lt;hr&gt;</span>
-    <span class="nt">&lt;h2</span> <span class="na">id=</span><span class="s">"form_elements"</span><span class="nt">&gt;</span>フォーム<span class="nt">&lt;/h2&gt;</span>
-    <span class="nt">&lt;fieldset&gt;</span>
-        <span class="nt">&lt;legend&gt;</span>legend要素（フィールドセットの表題）<span class="nt">&lt;/legend&gt;</span>
-        <span class="nt">&lt;p&gt;</span>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;form&gt;</span>
-            <span class="nt">&lt;h2&gt;</span>フォーム内要素<span class="nt">&lt;/h2&gt;</span>
-            <span class="nt">&lt;p&gt;</span>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/p&gt;</span>
-            <span class="nt">&lt;p&gt;&lt;label</span> <span class="na">for=</span><span class="s">"text_field"</span><span class="nt">&gt;</span>テキスト入力:<span class="nt">&lt;/label&gt;&lt;br&gt;</span>
-                    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"text_field"</span><span class="nt">&gt;&lt;/p&gt;</span>
-            <span class="nt">&lt;p&gt;&lt;label</span> <span class="na">for=</span><span class="s">"text_area"</span><span class="nt">&gt;</span>複数行テキスト入力:<span class="nt">&lt;/label&gt;&lt;br&gt;</span>
-                    <span class="nt">&lt;textarea</span> <span class="na">id=</span><span class="s">"text_area"</span><span class="nt">&gt;&lt;/textarea&gt;&lt;/p&gt;</span>
-            <span class="nt">&lt;p&gt;&lt;label</span> <span class="na">for=</span><span class="s">"select_element"</span><span class="nt">&gt;</span>プルダウンリスト:<span class="nt">&lt;/label&gt;&lt;br&gt;</span>
-                        <span class="nt">&lt;select</span> <span class="na">name=</span><span class="s">"select_element"</span><span class="nt">&gt;</span>
-                        <span class="nt">&lt;optgroup</span> <span class="na">label=</span><span class="s">"オプショングループ1"</span><span class="nt">&gt;&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span>オプション1<span class="nt">&lt;/option&gt;&lt;option</span> <span class="na">value=</span><span class="s">"2"</span><span class="nt">&gt;</span>オプション2<span class="nt">&lt;/option&gt;&lt;option</span> <span class="na">value=</span><span class="s">"3"</span><span class="nt">&gt;</span>オプション3<span class="nt">&lt;/option&gt;&lt;/optgroup&gt;</span>
-                        <span class="nt">&lt;optgroup</span> <span class="na">label=</span><span class="s">"オプショングループ2"</span><span class="nt">&gt;&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span>オプション1<span class="nt">&lt;/option&gt;&lt;option</span> <span class="na">value=</span><span class="s">"2"</span><span class="nt">&gt;</span>オプション2<span class="nt">&lt;/option&gt;&lt;option</span> <span class="na">value=</span><span class="s">"3"</span><span class="nt">&gt;</span>オプション3<span class="nt">&lt;/option&gt;&lt;/optgroup&gt;</span>
-                    <span class="nt">&lt;/select&gt;&lt;/p&gt;</span>
-            <span class="nt">&lt;p&gt;&lt;label</span> <span class="na">for=</span><span class="s">"radio_buttons"</span><span class="nt">&gt;</span>ラジオボタン:<span class="nt">&lt;/label&gt;&lt;/p&gt;</span>
-            <span class="nt">&lt;p&gt;</span>         <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">class=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"radio_button"</span> <span class="na">value=</span><span class="s">"radio_1"</span><span class="nt">&gt;</span> ラジオボタン1<span class="nt">&lt;br&gt;</span>
-                            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">class=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"radio_button"</span> <span class="na">value=</span><span class="s">"radio_2"</span><span class="nt">&gt;</span> ラジオボタン2<span class="nt">&lt;br&gt;</span>
-                            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">class=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"radio_button"</span> <span class="na">value=</span><span class="s">"radio_3"</span><span class="nt">&gt;</span> ラジオボタン3
-                    <span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;p&gt;&lt;label</span> <span class="na">for=</span><span class="s">"checkboxes"</span><span class="nt">&gt;</span>チェックボックス:<span class="nt">&lt;/label&gt;&lt;/p&gt;</span>
-    <span class="nt">&lt;p&gt;</span>         <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"checkboxes"</span> <span class="na">value=</span><span class="s">"check_1"</span><span class="nt">&gt;</span> チェックボックス1<span class="nt">&lt;br&gt;</span>
-                    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"checkboxes"</span> <span class="na">value=</span><span class="s">"check_2"</span><span class="nt">&gt;</span> チェックボックス2<span class="nt">&lt;br&gt;</span>
-                    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"checkboxes"</span> <span class="na">value=</span><span class="s">"check_3"</span><span class="nt">&gt;</span> チェックボックス3
-            <span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;p&gt;&lt;label</span> <span class="na">for=</span><span class="s">"password"</span><span class="nt">&gt;</span>パスワード:<span class="nt">&lt;/label&gt;&lt;/p&gt;</span>
-    <span class="nt">&lt;p&gt;</span>         <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">class=</span><span class="s">"password"</span> <span class="na">name=</span><span class="s">"password"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;p&gt;&lt;label</span> <span class="na">for=</span><span class="s">"file"</span><span class="nt">&gt;</span>ファイルアップロード:<span class="nt">&lt;/label&gt;&lt;br&gt;</span>
-                <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">class=</span><span class="s">"file"</span> <span class="na">name=</span><span class="s">"file"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;p&gt;&lt;input</span> <span class="na">class=</span><span class="s">"button"</span> <span class="na">type=</span><span class="s">"reset"</span> <span class="na">value=</span><span class="s">"消去"</span><span class="nt">&gt;</span> <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"button"</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"送信"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;p&gt;&lt;/p&gt;&lt;/form&gt;</span>
-    <span class="nt">&lt;/fieldset&gt;</span>
-    <span class="nt">&lt;p&gt;&lt;small&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#top"</span><span class="nt">&gt;</span>[ページ先頭へもどる]<span class="nt">&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;</span>
-    <span class="nt">&lt;hr&gt;</span>
-    <span class="nt">&lt;h2</span> <span class="na">id=</span><span class="s">"tables"</span><span class="nt">&gt;</span>表組<span class="nt">&lt;/h2&gt;</span>
-    <span class="nt">&lt;table</span> <span class="na">cellspacing=</span><span class="s">"0"</span> <span class="na">cellpadding=</span><span class="s">"0"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;tbody&gt;&lt;tr&gt;</span>
-    <span class="nt">&lt;th&gt;</span>表見出し1<span class="nt">&lt;/th&gt;</span>
-    <span class="nt">&lt;th&gt;</span>表見出し2<span class="nt">&lt;/th&gt;</span>
-    <span class="nt">&lt;th&gt;</span>表見出し3<span class="nt">&lt;/th&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-    <span class="nt">&lt;td&gt;</span>表のデータ1<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;td&gt;</span>表のデータ2<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;td&gt;</span>表のデータ3<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"even"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;td&gt;</span>表のデータ1<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;td&gt;</span>表のデータ2<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;td&gt;</span>表のデータ3<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-    <span class="nt">&lt;td&gt;</span>表のデータ1<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;td&gt;</span>表のデータ2<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;td&gt;</span>表のデータ3<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-    <span class="nt">&lt;/tbody&gt;&lt;/table&gt;</span>
-    <span class="nt">&lt;p&gt;&lt;small&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#top"</span><span class="nt">&gt;</span>[ページ先頭へもどる]<span class="nt">&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;</span>
-    <span class="nt">&lt;hr&gt;</span>
-    <span class="nt">&lt;h2</span> <span class="na">id=</span><span class="s">"misc"</span><span class="nt">&gt;</span>その他 - abbr、acronym、pre、code、sub、supなど<span class="nt">&lt;/h2&gt;</span>
-    <span class="nt">&lt;p&gt;</span>Lorem <span class="nt">&lt;sup&gt;</span>superscript<span class="nt">&lt;/sup&gt;</span> dolor <span class="nt">&lt;sub&gt;</span>subscript<span class="nt">&lt;/sub&gt;</span> amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. <span class="nt">&lt;cite&gt;</span>cite<span class="nt">&lt;/cite&gt;</span>. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. <span class="nt">&lt;acronym</span> <span class="na">title=</span><span class="s">"National Basketball Association"</span><span class="nt">&gt;</span>NBA<span class="nt">&lt;/acronym&gt;</span> Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.  <span class="nt">&lt;abbr</span> <span class="na">title=</span><span class="s">"Avenue"</span><span class="nt">&gt;</span>AVE<span class="nt">&lt;/abbr&gt;&lt;/p&gt;</span>
-    <span class="nt">&lt;pre&gt;&lt;p&gt;</span>
-    Lorem ipsum dolor sit amet,
-     consectetuer adipiscing elit.
-     Nullam dignissim convallis est.
-     Quisque aliquam. Donec faucibus. 
-    Nunc iaculis suscipit dui. 
-    Nam sit amet sem. 
-    Aliquam libero nisi, imperdiet at,
-     tincidunt nec, gravida vehicula,
-     nisl. 
-    Praesent mattis, massa quis 
-    luctus fermentum, turpis mi 
-    volutpat justo, eu volutpat 
-    enim diam eget metus. 
-    Maecenas ornare tortor. 
-    Donec sed tellus eget sapien
-     fringilla nonummy. 
-    <span class="nt">&lt;acronym</span> <span class="na">title=</span><span class="s">"National Basketball Association"</span><span class="nt">&gt;</span>NBA<span class="nt">&lt;/acronym&gt;</span> 
-    Mauris a ante. Suspendisse
-     quam sem, consequat at, 
-    commodo vitae, feugiat in, 
-    nunc. Morbi imperdiet augue
-     quis tellus.  
-    <span class="nt">&lt;abbr</span> <span class="na">title=</span><span class="s">"Avenue"</span><span class="nt">&gt;</span>AVE<span class="nt">&lt;/abbr&gt;&lt;/p&gt;&lt;/pre&gt;</span>
-    <span class="nt">&lt;blockquote&gt;&lt;p&gt;</span>
-        "このスタイルシートは<span class="nt">&lt;br&gt;</span>とても驚くほど助けになるだろう" - 引用
-    <span class="nt">&lt;/p&gt;&lt;/blockquote&gt;</span>
-    <span class="nt">&lt;p&gt;&lt;small&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#top"</span><span class="nt">&gt;</span>[ページ先頭へもどる]<span class="nt">&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</pre></div><?php include('../doc_include/footer.inc'); ?>
+</div>
+
+<?php include('../doc_include/footer.inc'); ?>
