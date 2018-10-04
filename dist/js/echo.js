@@ -52,9 +52,9 @@ EchoFixNav.prototype.run = function(element) {
 
     st = $(window).scrollTop();
     if (st > t.et) {
-        $(element).addClass('is-active');
+        $(element).addClass('is-fixnav-on');
     } else {
-        $(element).removeClass('is-active');
+        $(element).removeClass('is-fixnav-on');
     }
 
     return false;

@@ -4,16 +4,234 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="author" content="WebbingStudio">
-    <title>echo.css - CSS framework optimized for CMS theming</title>
-    <link rel="stylesheet" href="./css/echo.min.css">
+    <title>echo.css : CSS framework optimized for CMS theming</title>
+
+    <?php include('./doc_include/html_head.inc'); ?>
+
+<meta name="description" content="echo.cssは、SMACSS, FLOCSSを設計ベースとしたCSSフレームワークです。特に、WordPress等のCMSを組み込んだウェブサイトの制作に最適化しています。MITライセンスで提供しています。">
+<meta property="og:description" content="echo.cssは、SMACSS, FLOCSSを設計ベースとしたCSSフレームワークです。特に、WordPress等のCMSを組み込んだウェブサイトの制作に最適化しています。MITライセンスで提供しています。">
+
 </head>
-<body>
-<div id="document">
+<body class="view-home">
+<div class="l-document" id="document">
+    <?php include('./doc_include/header.inc'); ?>
 
-<h1>echo.css</h1>
-<p>CSS framework optimized for CMS theming</p>
+    <main role="main">
 
-</div><!-- /#document -->
+        <div class="echo-mainvisual">
+            <div class="c-hero c-hero-left">
+                <div class="c-hero-cover" style="background-image: url(/echo-css/images/echo/img_mainvisual_01.jpg);"></div>
+                <div class="c-hero-contents">
+                    <div class="c-hero-contents-inner">
+                        <h1 class="c-hero-title"><img src="/echo-css/images/common/logo.svg" width="300" alt="echo.css" class="echo-mainvisual-logo"></h1>
+                        <p class="c-hero-caption">echo.css <span class="u-margin-left-sm">version 1.0.7</span></p>
+                        <p class="c-hero-body">CSS framework optimized for CMS theming</p>
+
+                        <div class="echo-mainvisual-download">
+                            <div class="l-grid-row">
+                                <div class="l-grid-col-12 l-grid-col-lg-6">
+                                    <a href="https://github.com/webbingstudio/echo-css/archive/master.zip" target="_blank" class="m-btn m-btn-bordered m-btn-gray m-btn-block m-btn-xl"><i class="fas fa-download u-margin-right-sm"></i>Download</a>
+                                </div><!-- /.l-grid-col -->
+                                <div class="l-grid-col-12 l-grid-col-lg-6">
+                                    <a href="https://github.com/webbingstudio/echo-css" target="_blank" class="m-btn m-btn-bordered m-btn-gray m-btn-block m-btn-xl"><i class="fab fa-github u-margin-right-sm"></i>GitHub</a>
+                                </div><!-- /.l-grid-col -->
+                            </div><!-- /.l-grid-row -->
+                        </div><!-- /.echo-mainvisual-download -->
+
+                        <div class="echo-mainvisual-more">
+                            <i class="fas fa-chevron-down echo-mainvisual-more-icon echo-mainvisual-more-icon-01"></i><br>
+                            <i class="fas fa-chevron-down echo-mainvisual-more-icon echo-mainvisual-more-icon-02"></i><br>
+                            <span class="echo-mainvisual-more-label">More</span>
+                        </div><!-- /.echo-mainvisual-more -->
+
+                    </div><!-- /.c-hero-contents-inner -->
+                </div><!-- /.c-hero-contents -->
+            </div><!-- /.c-hero -->
+        </div><!-- /.echo-mainvisual -->
+
+        <div class="echo-presentation echo-presentation-01">
+            <div class="c-flip c-flip-half c-flip-reverse">
+                <div class="c-flip-cover" style="background-image: url(/echo-css/images/echo/img_presentation_01.jpg)"></div>
+                <div class="c-flip-container">
+                    <div class="c-flip-contents">
+                        <div class="c-flip-contents-inner">
+                            <h2 class="c-flip-title">CMSサイト制作に最適化</h2>
+                            <p class="c-flip-body"><span class="u-text-lg">&quot;echo.css&quot;</span>は、SMACSS, FLOCSSを設計ベースとしたCSSフレームワークです。特に、WordPress等の<strong>CMSを組み込んだウェブサイトの制作</strong>に最適化しています。<br>
+                            CMSによく見られる機能を想定したコンポーネント、コンテンツの微調整を行う補助クラスを数多く実装しています。<br>
+                            ぜひ「スタイルガイド」をご覧ください。</p>
+                            <p class="c-flip-body u-padding-top-lg"><a href="/echo-css/styleguide/" class="m-btn m-btn-bordered m-btn-gray m-btn-block m-btn-xl"><i class="fas fa-gem u-margin-right-sm"></i>Style guide</a></p>
+                        </div><!-- /.c-flip-contents-inner -->
+                    </div><!-- /.c-flip-contents -->
+                </div><!-- /.c-flip-container -->
+            </div><!-- /.c-flip -->
+        </div><!-- /.echo-presentation -->
+
+        <div class="echo-presentation echo-presentation-02">
+            <div class="c-flip c-flip-half">
+                <div class="c-flip-cover" style="background-image: url(/echo-css/images/echo/img_presentation_02.jpg)"></div>
+                <div class="c-flip-container">
+                    <div class="c-flip-contents">
+                        <div class="c-flip-contents-inner">
+                            <h2 class="c-flip-title">チーム制作を想定</h2>
+                            <p class="c-flip-body">実務のウェブ制作において、たった一人でサイトのすべてを担当することはまれです。ほとんどの場合、ディレクター、デザイナー、コーダー（もしくはフロントエンドエンジニア）が相互に協力しあって進めていきます。<br>
+                            このときコーダーは、デザイナーの意向やディレクターの変更指示を、コードの整合性を保ちつつ反映できるかが問われます。<br>
+                            echo.cssは、将来的な拡張や想定外対応を意識した、すべての人に理解しやすい設計を心がけています。</p>
+                        </div><!-- /.c-flip-contents-inner -->
+                    </div><!-- /.c-flip-contents -->
+                </div><!-- /.c-flip-container -->
+            </div><!-- /.c-flip -->
+        </div><!-- /.echo-presentation -->
+
+        <div class="echo-presentation echo-presentation-03">
+            <div class="c-flip c-flip-half c-flip-reverse">
+                <div class="c-flip-cover" style="background-image: url(/echo-css/images/echo/img_presentation_03.jpg)"></div>
+                <div class="c-flip-container">
+                    <div class="c-flip-contents">
+                        <div class="c-flip-contents-inner">
+                            <h2 class="c-flip-title">マルチバイト言語への配慮</h2>
+                            <p class="c-flip-body">日本、中国、韓国などの東アジア圏では、英語圏のシングルバイト言語に加え、特殊なマルチバイト言語を使用しています。<br>
+                            文字の種類は数千字におよび、画数が多い、精細な文字も少なくありません。このため、タイポグラフィやウェブフォントサービスにも、特殊なルールが見られます。<br>
+                            echo.cssは、東アジア圏の言語で書かれたウェブサイトを美しく、効率的に制作できるよう配慮しています。
+                            </p>
+                        </div><!-- /.c-flip-contents-inner -->
+                    </div><!-- /.c-flip-contents -->
+                </div><!-- /.c-flip-container -->
+            </div><!-- /.c-flip -->
+        </div><!-- /.echo-presentation -->
+
+        <div class="echo-pickup u-bg-first u-bg-fade">
+            <div class="l-container">
+                <h2 class="echo-pickup-title"><i class="fas fa-code u-text-xl u-text-first"></i><br><span class="u-text-xl u-font-bold">echo.css</span>は<span class="u-hidden-sm-down">&nbsp;</span><br class="u-hidden-md-up">他にもこんなことができます</h2>
+                <div class="l-grid-row">
+
+                    <div class="l-grid-col-12 l-grid-col-md-6">
+                        <div class="c-card">
+                            <span class="c-card-inner">
+                                <div class="c-card-header">
+                                    <h3 class="c-card-title">Atomic Designとの互換</h3>
+                                </div>
+                                <div class="c-card-contents">
+                                    <p>Atomic Designとは、コンポーネント単位でウェブサイト内のUIを制作していくデザインの手法です。Atomic Design自体はコーディングのために作られたものではありませんが、その思想はCSSモジュールに通じるものがあります。<br>
+                                    echo.cssでは主要コンポーネントの構造をAtomic Designにならうことで、デザイナーとの意思疎通を容易にしています。</p>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="l-grid-col-12 l-grid-col-md-6">
+                        <div class="c-card">
+                            <span class="c-card-inner">
+                                <div class="c-card-header">
+                                    <h3 class="c-card-title">精細なカラーパレット</h3>
+                                </div>
+                                <div class="c-card-contents">
+                                    <p>echo.cssは、フレームワーク内で4色までのコーポレートカラーと、2色のシステムカラーを使用できます。<br>
+                                    Sassを使用できる環境では、それぞれの色に対し、背景に使用したときと、テキストに使用したときで色合いを変更できます。さらに、色名そのものも、プロジェクトに合わせて自由に変更可能です。</p>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="l-grid-col-12 l-grid-col-md-6">
+                        <div class="c-card">
+                            <span class="c-card-inner">
+                                <div class="c-card-header">
+                                    <h3 class="c-card-title">Font Awesome対応</h3>
+                                </div>
+                                <div class="c-card-contents">
+                                    <p>Font Awesomeは、最もウェブサイトに採用されているアイコンフォントのひとつです。echo.cssでは、Font Awesomeを同時に使用することを想定し、ボタンやナビゲーション内にアイコンを表示した場合の見た目の最適化を行っています。</p>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="l-grid-col-12 l-grid-col-md-6">
+                        <div class="c-card">
+                            <span class="c-card-inner">
+                                <div class="c-card-header">
+                                    <h3 class="c-card-title">コーディングルール変換</h3>
+                                </div>
+                                <div class="c-card-contents">
+                                    <p>echo.cssは、コードの読みやすさを優先し、コーディングルールにSMACSSを採用しています。<br>
+                                    しかし、Sassを使用できる環境では、簡単な設定でコーディングルールをBEMに変更できます。また、各クラスの接続子、接頭辞も詳細にカスタマイズ可能です。</p>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /.l-container -->
+        </div><!-- /.echo-pickup -->
+
+
+        <div class="echo-license">
+            <div class="l-container l-container-sm">
+                <h2 class="echo-license-title"><i class="fas fa-heart u-text-xl u-text-important"></i><br><span class="u-text-xl u-font-bold">echo.css</span>は<span class="u-hidden-sm-down">&nbsp;</span><br class="u-hidden-md-up">商用利用・再配布OKです</h2>
+
+                <p>echo.cssは、<a href="https://github.com/webbingstudio/echo-css/blob/master/LICENSE" target="_blank">MITライセンス</a>を宣言しています。商用・非商用にかかわらず、自由にお使いください。</p>
+                <p>また、<strong>WordPressのテーマに使用した場合</strong>に限り、<a href="https://www.gnu.org/licenses/gpl-3.0.ja.html" target="_blank">GPLv3ライセンス</a>となります。これは、WordPressはテーマディレクトリへの登録にあたり、コードの100%GPLを求めているためです。</p>
+                <p>このCSSフレームワークをもとに、多くのCMSでより良いテーマが公開されることを望みます。もしも不具合や指摘などありましたら、作者のGitHub、およびSNSへご連絡ください。</p>
+            </div><!-- /.l-container -->
+        </div><!-- /.echo-license -->
+
+
+        <div class="echo-quickstart">
+            <div class="l-container l-container-sm">
+                <h2 class="echo-quickstart-title">Quick start</h2>
+
+                <div class="echo-quickstart-section u-clearfix">
+                    <h3 class="echo-quickstart-number u-float-left u-padding-right-md">1. </h3>
+                    <p class="echo-quickstart-body"><a href="https://github.com/webbingstudio/echo-css/archive/master.zip" target="_blank">Download</a></p>
+                </div><!-- /.echo-quickstart-section -->
+
+                <div class="echo-quickstart-section u-clearfix">
+                    <h3 class="echo-quickstart-number u-float-left u-padding-right-md">2. </h3>
+                    <p class="echo-quickstart-body">Unzip</p>
+                </div><!-- /.echo-quickstart-section -->
+
+                <div class="echo-quickstart-section u-clearfix">
+                    <h3 class="echo-quickstart-number u-float-left u-padding-right-md">3. </h3>
+                    <p class="echo-quickstart-body">Link CSS</p>
+                    <code class="echo-quickstart-code"><pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;/path/to/css/echo.min.css&quot;&gt;</pre></code>
+                </div><!-- /.echo-quickstart-section -->
+
+                <div class="echo-quickstart-section u-clearfix">
+                    <h3 class="echo-quickstart-number u-float-left u-padding-right-md">4. </h3>
+                    <p class="echo-quickstart-body">Read <a href="/echo-css/styleguide/">Styleguide</a></p>
+                </div><!-- /.echo-quickstart-section -->
+
+                <p class="echo-quickstart-last">Enjoy!</p>
+
+            </div><!-- /.l-container -->
+        </div><!-- /.echo-quickstart -->
+
+
+        <div class="echo-download">
+            <div class="l-container l-container-sm">
+
+                <div class="echo-download-lg u-padding-bottom-lg">
+                    <a href="https://github.com/webbingstudio/echo-css/archive/master.zip" target="_blank" class="m-btn m-btn-gray m-btn-xxl m-btn-block u-shadow-lg u-line-sm"><span class="u-text-xl">Download</span><span class="u-hidden-sm-down">&nbsp;&nbsp;</span><br class="u-hidden-md-up"><i class="fas fa-download"></i>&nbsp;&nbsp;Latest version</a>
+                </div><!-- /.echo-download-lg -->
+
+                <div class="l-grid-row">
+                    <div class="l-grid-col-6">
+                        <a href="/echo-css/styleguide/" class="m-btn m-btn-bordered m-btn-gray m-btn-block m-btn-xl"><i class="fas fa-gem u-margin-right-sm"></i>Style guide</a>
+                    </div><!-- /.l-grid-col -->
+                    <div class="l-grid-col-6">
+                        <a href="https://github.com/webbingstudio/echo-css" target="_blank" class="m-btn m-btn-bordered m-btn-gray m-btn-block m-btn-xl"><i class="fab fa-github u-margin-right-sm"></i>GitHub</a>
+                    </div><!-- /.l-grid-col -->
+                </div><!-- /.l-grid-row -->
+
+            </div><!-- /.l-container -->
+        </div><!-- /.echo-download -->
+
+    </main>
+
+    <footer class="echo-footer" role="contentinfo">
+        <p class="echo-footer-notice">echo.css : Code licensed <a href="https://github.com/webbingstudio/echo-css/blob/master/LICENSE" target="_blank" rel="license noopener">MIT</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</p>
+        <p class="echo-footer-copyright"><small>&copy; 2018 <a href="https://webbingstudio.com/" target="_blank">WebbingStudio</a></small></p>
+    </footer>
+
+</div><!-- /.l-document -->
 </body>
 </html>

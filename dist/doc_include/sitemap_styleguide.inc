@@ -1,4 +1,4 @@
-<nav class="p-sitemap m-nav m-nav-vertical">
+<nav class="echo-sitemap m-nav m-nav-vertical">
     <ul class="m-nav-list">
 
         <li class="m-nav-item"><span class="m-nav-label">layout</span>

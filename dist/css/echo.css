@@ -1635,8 +1635,6 @@ m-btn
   display: inline-block;
   color: #333;
   font-size: 0.875rem;
-  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-  font-weight: 300;
   background-color: #fff;
   border: 1px solid transparent;
   padding: 0.5rem 1rem;
@@ -1673,12 +1671,13 @@ a:hover .m-btn, a:focus .m-btn, a:active .m-btn {
 }
 .m-btn img {
   width: auto;
-  height: 1.25em;
+  height: 1.1em;
   vertical-align: middle;
+  transform: translate(0, -5%);
 }
 .m-btn [class*="fa"] {
-  vertical-align: middle;
-  font-size: 1.25em;
+  font-size: 1.1em;
+  transform: translate(0, 5%);
 }
 
 a.m-btn[disabled],
@@ -2152,7 +2151,7 @@ m-btn-block
 .m-btn-block {
   display: block;
   width: 100%;
-  max-width: 320px;
+  max-width: 380px;
   margin: 0 auto;
 }
 .m-btn-block.m-btn {
@@ -3506,7 +3505,7 @@ c-flip
 }
 
 .c-flip-contents-inner {
-  padding: 10px;
+  padding: 30px 10px;
 }
 @media (min-width: 1000px) {
   .c-flip-contents-inner {
@@ -3517,6 +3516,12 @@ c-flip
     transform: translate(0, -50%);
     padding-left: 20px;
     padding-right: 20px;
+  }
+}
+@media (min-width: 1240px) {
+  .c-flip-contents-inner {
+    padding-left: 45px;
+    padding-right: 45px;
   }
 }
 
@@ -3576,21 +3581,21 @@ c-flip
 
 .c-flip-body {
   margin: 0;
-  font-size: .625rem;
+  font-size: .875rem;
   line-height: 2;
-}
-@media (min-width: 425px) {
-  .c-flip-body {
-    font-size: .75rem;
-  }
 }
 @media (min-width: 1000px) {
   .c-flip-body {
     font-size: 1rem;
   }
 }
-.c-flip-title + .c-flip-body, .c-flip-caption + .c-flip-body {
-  padding-top: 2em;
+@media (min-width: 1640px) {
+  .c-flip-body {
+    font-size: 1.125rem;
+  }
+}
+.c-flip-title + .c-flip-body, .c-flip-caption + .c-flip-body, .c-flip-body + .c-flip-body {
+  padding-top: 1em;
 }
 
 /*
@@ -3882,8 +3887,7 @@ c-hero
   position: relative;
   width: 100%;
   height: 100vh;
-  background-color: #000;
-  color: #fff;
+  background-color: #fff;
   line-height: 1;
 }
 
@@ -3895,7 +3899,6 @@ c-hero
   right: 0;
   background: transparent none no-repeat center center;
   background-size: cover;
-  opacity: .5;
   z-index: 11;
 }
 
@@ -3905,18 +3908,28 @@ c-hero
   align-items: center;
   align-content: center;
   justify-content: center;
-  max-width: 960px;
+  max-width: 700px;
   height: 100%;
   margin: 0 auto;
   z-index: 12;
 }
-
-.c-hero-contents-inner {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 0 10px;
+@media (min-width: 1000px) {
+  .c-hero-contents {
+    max-width: 960px;
+  }
 }
 @media (min-width: 1240px) {
+  .c-hero-contents {
+    max-width: 1200px;
+  }
+}
+
+.c-hero-contents-inner {
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media (min-width: 1000px) {
   .c-hero-contents-inner {
     max-width: 700px;
   }
@@ -3959,8 +3972,6 @@ c-hero
 .c-hero-caption {
   margin: 0;
   font-size: 1rem;
-  font-weight: 300;
-  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
   line-height: 1;
   text-align: center;
 }
@@ -4033,9 +4044,6 @@ c-hero-(direction)
   text-align: left;
 }
 
-.c-hero-right {
-  /* 長文は右寄せにしない */
-}
 .c-hero-right .c-hero-contents {
   justify-content: right;
 }
@@ -4044,11 +4052,19 @@ c-hero-(direction)
   margin-right: 0;
 }
 .c-hero-right .c-hero-title,
-.c-hero-right .c-hero-caption {
+.c-hero-right .c-hero-caption,
+.c-hero-right .c-hero-body {
   text-align: right;
 }
-.c-hero-right .c-hero-body {
-  text-align: left;
+
+/*
+--------------------
+c-hero-inverse
+--------------------
+*/
+.c-hero-inverse {
+  background-color: #000;
+  color: #fff;
 }
 
 /*

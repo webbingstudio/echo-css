@@ -68,7 +68,7 @@
 }
 
 .#{$pr}#{$c}flip#{$c1}contents#{$c1}inner {
-    padding: $spacer;
+    padding: ($spacer * 3) (map-get($grid-gutter-widths, md) / 2);
 
     @include media-breakpoint-up(lg) {
         position: absolute;
@@ -78,6 +78,11 @@
         transform: translate(0, -50%);
         padding-left: ($spacer * 2);
         padding-right: ($spacer * 2);
+    }
+
+    @include media-breakpoint-up(xl) {
+        padding-left: ($spacer * 4.5);
+        padding-right: ($spacer * 4.5);
     }
 
 }
@@ -134,20 +139,21 @@
 
 .#{$pr}#{$c}flip#{$c1}body {
     margin: 0;
-    font-size: .625rem;
+    font-size: .875rem;
     line-height: $line-height-lg;
-
-    @include media-breakpoint-up(sm) {
-        font-size: .75rem;
-    }
 
     @include media-breakpoint-up(lg) {
         font-size: 1rem;
     }
 
+    @include media-breakpoint-up(xxl) {
+        font-size: 1.125rem;
+    }
+
     .#{$pr}#{$c}flip#{$c1}title + &,
-    .#{$pr}#{$c}flip#{$c1}caption + & {
-        padding-top: 2em;
+    .#{$pr}#{$c}flip#{$c1}caption + &,
+    .#{$pr}#{$c}flip#{$c1}body + & {
+        padding-top: 1em;
     }
 
 }

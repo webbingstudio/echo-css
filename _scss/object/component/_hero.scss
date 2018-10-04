@@ -8,8 +8,7 @@
     position: relative;
     width: 100%;
     height: 100vh;
-    background-color: $body-inverse-bg;
-    color: $body-inverse-color;
+    background-color: $body-bg;
     line-height: 1;
 }
 
@@ -21,7 +20,6 @@
     right: 0;
     background: transparent none no-repeat center center;
     background-size: cover;
-    opacity: .5;
     z-index: 11;
 }
 
@@ -31,18 +29,27 @@
     align-items: center;
     align-content: center;
     justify-content: center;
-    max-width: map-get($container-max-widths-md, lg);
+    max-width: map-get($container-max-widths-md, md);
     height: 100%;
     margin: 0 auto;
     z-index: 12;
+
+    @include media-breakpoint-up(lg) {
+        max-width: map-get($container-max-widths-md, lg);
+    }
+
+    @include media-breakpoint-up(xl) {
+        max-width: map-get($container-max-widths-md, xl);
+    }
+
 }
 
 .#{$pr}#{$c}hero#{$c1}contents#{$c1}inner {
-    max-width: map-get($container-max-widths-md, md);
     margin: 0 auto;
-    padding: 0 (map-get($grid-gutter-widths, md) / 2);
+    padding-left: map-get($grid-gutter-widths, md);
+    padding-right: map-get($grid-gutter-widths, md);
 
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
         max-width: map-get($container-max-widths-md, md);
     }
 
@@ -81,8 +88,6 @@
 .#{$pr}#{$c}hero#{$c1}caption {
     margin: 0;
     font-size: 1rem;
-    font-weight: $font-weight-third;
-    font-family: $font-family-third;
     line-height: 1;
     text-align: center;
 
@@ -174,13 +179,21 @@
     }
 
     .#{$pr}#{$c}hero#{$c1}title,
-    .#{$pr}#{$c}hero#{$c1}caption {
+    .#{$pr}#{$c}hero#{$c1}caption,
+    .#{$pr}#{$c}hero#{$c1}body {
         text-align: right;
     }
 
-    /* 長文は右寄せにしない */
-    .#{$pr}#{$c}hero#{$c1}body {
-        text-align: left;
-    }
+}
 
+
+/*
+--------------------
+#{$pr}#{$c}hero#{$c3}inverse
+--------------------
+*/
+
+.#{$pr}#{$c}hero#{$c3}inverse {
+    background-color: $body-inverse-bg;
+    color: $body-inverse-color;
 }

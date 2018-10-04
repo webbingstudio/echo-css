@@ -9,8 +9,6 @@
     display: inline-block;
     color: $body-color;
     font-size: $btn-font-size-md;
-    font-family: $font-family-root;
-    font-weight: $font-weight-root;
     background-color: $body-bg;
     border: $border-btn-width solid transparent;
     padding: $btn-padding-y-md $btn-padding-x-md;
@@ -77,13 +75,14 @@
 
     img {
         width: auto;
-        height: 1.25em;
+        height: 1.1em;
         vertical-align: middle;
+        transform: translate(0, -5%);
     }
 
     [class*="fa"] {
-        vertical-align: middle;
-        font-size: 1.25em;
+        font-size: 1.1em;
+        transform: translate(0, 5%);
     }
 
 }
