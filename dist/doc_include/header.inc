@@ -3,7 +3,7 @@
         <div class="echo-header-contents">
 
             <h1 class="echo-header-brand">
-                <img src="/echo-css/images/common/logo.svg" height="24" alt="echo.css" class="echo-header-logo"> <span class="echo-header-version m-label m-label-oval m-label-first">v1.0.7</span>
+                <img src="/echo-css/images/common/logo.svg" height="24" alt="echo.css" class="echo-header-logo"> <span class="echo-header-version m-label m-label-oval m-label-first">v1.1.0</span>
             </h1><!-- /.s-header-brand -->
 
             <div class="echo-header-nav">
