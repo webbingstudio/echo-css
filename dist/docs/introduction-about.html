@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>echo.cssとは？ | はじめに | Documentation | echo-css</title>
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div class="l-document" id="document">
+
+    <?php include('../doc_include/header.inc'); ?>
+
+    <main class="p-main" role="main">
+        <div class="l-container">
+
+            <div class="echo-pagehead">
+                <h1 class="echo-pagehead-title">echo.cssとは？</h1>
+            </div><!-- /.echo-pagehead -->
+
+            <article class="echo-post">
+                <div class="echo-post-contents styleguide-contents">
+
+<h2 class="echo-post-title-01">制作の背景</h2>
+
+<p>echo.cssは、北海道札幌市のフロントエンドエンジニア、<a href="https://webbingstudio.com/" target="_blank">ウェビングスタジオ</a>が個人で制作、公開しています。</p>
+
+<p>ウェビングスタジオでは、CMSの組み込みを前提としたコーポレートサイトの制作を中心に受注しています。<br>
+発注元の大半はウェブ制作会社で、以下の流れで制作を行うことが多くなっていますが、常にいくつかの課題がありました。</p>
+
+<ol>
+    <li>基本要件の確認</li>
+    <li>ワイヤーを元にCMSでプロトタイプサイトを作成</li>
+    <li>正式なデザインカンプの受け取り</li>
+    <li>プロトタイプサイトに正式なデザインを反映</li>
+    <li>制作会社へ引き渡し</li>
+</ol>
+
+<h3 class="echo-post-title-02">課題1: デザイン反映の際の工数</h3>
+
+<p>プロトタイプの段階でコーディングに不備があると、デザイナーの細かい意匠を反映できず、大きな手戻りにつながっていました。<br>
+Bootstrap等の既存フレームワークを利用することで改善できないかと考えたこともありました（実際、Bootstrapを採用したCMSテーマは多数あります）。<br>
+しかし、どのフレームワークも「<strong>スタートアップ等ですぐ使えること</strong>」を優先しており、UIなどの外観デザインがしっかりと作られています。そのため、デザインを変更しなければならないときの工数が、一から作成するときよりも多くなってしまう状況でした。</p>
+
+<h3 class="echo-post-title-02">課題2: 納品後の改修</h3>
+
+<p>CMSはその特性上、納品後にほぼ必ずコンテンツの改修が行われます。その際、まったく想定外（文字数、色、サイズ等）のコンテンツが追加されることがよくあります。CSS側が変更に対応できず、テーマの修正となったりします。</p>
+
+<h3 class="echo-post-title-02">課題3: CMS独自のマークアップ</h3>
+
+<p>CMSによっては、システム側がナビゲーション・ウィジェット等のHTMLを自動的に生成することがあります。<strong>しかも、同じ機能でもシステムごとにマークアップが異なります。</strong>クラス名などはある程度変更可能ですが、CMS側のHTMLをそのまま使用できた方が制作はスムーズです。</p>
+
+<p class="u-margin-top-xl">このような背景から、いかにこれらの課題を改善するかを考えて制作したのが、echo.cssです。</p>
+
+
+<h2 class="echo-post-title-01"><span class="u-text-lg">&quot;echo&quot;</span>プロジェクトについて</h2>
+
+<p>echo.cssは、ウェビングスタジオのCMS関連の個人制作プロジェクトの一環です。<br>
+このプロジェクトで制作したものにはすべて、名前に<strong>&quot;echo&quot;</strong>が付けられています。</p>
+
+<p><a href="https://cms-skill.com/echo/" target="_blank">https://cms-skill.com/echo/</a></p>
+
+<h3 class="echo-post-title-02">命名の由来</h3>
+
+<p>この単語が好きだから、というのが第一の理由ですが（笑）</p>
+
+<ul>
+    <li>多くのCMSは、PHPで動作します。必ず使用されるメソッドが、コードを出力する「echo」です。</li>
+    <li>「echo」は日本語で「響く」という意味があります。日本には「打てば響く」ということわざがあります。打てば響くプロダクトにしたいという意味があります。</li>
+</ul>
+
+<?php include('../doc_include/footer.inc'); ?>
