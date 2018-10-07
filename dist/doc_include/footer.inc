@@ -6,8 +6,15 @@
     <div class="echo-sub" role="complementary">
         <div class="l-container">
 
-            <h2 class="echo-sub-title">Style guide</h2>
-			<?php include('../doc_include/sitemap_styleguide.inc'); ?>
+<?php
+$echo_dir = dirname($_SERVER["SCRIPT_NAME"]);
+
+if( preg_match( '/styleguide/', $echo_dir ) ) {
+    echo '<h2 class="echo-sub-title">Style guide</h2>';
+    include('../doc_include/sitemap_styleguide.inc');
+}
+
+?>
 
 	    </div><!-- /.l-container -->
     </div><!-- /.echo-sub -->

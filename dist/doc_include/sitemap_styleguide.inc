@@ -1,18 +1,18 @@
 <nav class="echo-sitemap m-nav m-nav-vertical">
     <ul class="m-nav-list">
 
-        <li class="m-nav-item"><span class="m-nav-label">layout</span>
-            <ul class="m-nav-list m-nav-children">
+        <li class="m-nav-item"><span class="echo-sitemap-header m-nav-label">layout</span>
+            <ul class="echo-sitemap-list-flat m-nav-list m-nav-children">
                 <li class="m-nav-item"><a href="./layout-container.html" class="m-nav-label">container</a></li>
                 <li class="m-nav-item"><a href="./layout-document.html" class="m-nav-label">document</a></li>
                 <li class="m-nav-item"><a href="./layout-grid.html" class="m-nav-label">grid</a></li>
             </ul>
         </li>
 
-        <li class="m-nav-item"><span class="m-nav-label">object</span>
+        <li class="m-nav-item"><span class="echo-sitemap-header m-nav-label">object</span>
             <ul class="m-nav-list m-nav-children">
                 <li class="m-nav-item"><span class="m-nav-label">module</span>
-                    <ul class="m-nav-list m-nav-children">
+                    <ul class="echo-sitemap-list-flat m-nav-list m-nav-children">
                         <li class="m-nav-item"><a href="./module-btn.html" class="m-nav-label">btn</a></li>
                         <li class="m-nav-item"><a href="./module-checkbox.html" class="m-nav-label">checkbox</a></li>
                         <li class="m-nav-item"><a href="./module-embed.html" class="m-nav-label">embed</a></li>
@@ -27,7 +27,7 @@
                     </ul>
                 </li>
                 <li class="m-nav-item"><span class="m-nav-label">component</span>
-                    <ul class="m-nav-list m-nav-children">
+                    <ul class="echo-sitemap-list-flat m-nav-list m-nav-children">
                         <li class="m-nav-item"><a href="./component-alert.html" class="m-nav-label">alert</a></li>
                         <li class="m-nav-item"><a href="./component-box.html" class="m-nav-label">box</a></li>
                         <li class="m-nav-item"><a href="./component-card.html" class="m-nav-label">card</a></li>
@@ -39,7 +39,7 @@
                     </ul>
                 </li>
                 <li class="m-nav-item"><span class="m-nav-label">utility</span>
-                    <ul class="m-nav-list m-nav-children">
+                    <ul class="echo-sitemap-list-flat m-nav-list m-nav-children">
                         <li class="m-nav-item"><a href="./utility-bg.html" class="m-nav-label">bg</a></li>
                         <li class="m-nav-item"><a href="./utility-clear.html" class="m-nav-label">clear</a></li>
                         <li class="m-nav-item"><a href="./utility-clearfix.html" class="m-nav-label">clearfix</a></li>
@@ -59,7 +59,7 @@
                     </ul>
                 </li>
                 <li class="m-nav-item"><span class="m-nav-label">project</span>
-                    <ul class="m-nav-list m-nav-children">
+                    <ul class="echo-sitemap-list-flat m-nav-list m-nav-children">
                         <li class="m-nav-item"><a href="./project-header.html" class="m-nav-label">header</a></li>
                         <li class="m-nav-item"><a href="./project-main.html" class="m-nav-label">main</a></li>
                         <li class="m-nav-item"><a href="./project-footer.html" class="m-nav-label">footer</a></li>
