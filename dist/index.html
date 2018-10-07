@@ -6,7 +6,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>echo.css : CSS framework optimized for CMS theming</title>
 
-    <?php include('./doc_include/html_head.inc'); ?>
+    <?php
+        $echo_path = './';
+        include('./doc_include/html_head.inc');
+    ?>
 
 <meta name="description" content="echo.cssは、SMACSS, FLOCSSを設計ベースとしたCSSフレームワークです。特に、WordPress等のCMSを組み込んだウェブサイトの制作に最適化しています。MITライセンスで提供しています。">
 <meta property="og:description" content="echo.cssは、SMACSS, FLOCSSを設計ベースとしたCSSフレームワークです。特に、WordPress等のCMSを組み込んだウェブサイトの制作に最適化しています。MITライセンスで提供しています。">
@@ -20,10 +23,10 @@
 
         <div class="echo-mainvisual">
             <div class="c-hero c-hero-left">
-                <div class="c-hero-cover" style="background-image: url(/echo-css/images/echo/img_mainvisual_01.jpg);"></div>
+                <div class="c-hero-cover" style="background-image: url(./images/echo/img_mainvisual_01.jpg);"></div>
                 <div class="c-hero-contents">
                     <div class="c-hero-contents-inner">
-                        <h1 class="c-hero-title"><img src="/echo-css/images/common/logo.svg" width="300" alt="echo.css" class="echo-mainvisual-logo"></h1>
+                        <h1 class="c-hero-title"><img src="./images/common/logo.svg" width="300" alt="echo.css" class="echo-mainvisual-logo"></h1>
                         <p class="c-hero-caption">echo.css <span class="u-margin-left-sm">version 1.1.0</span></p>
                         <p class="c-hero-body">CSS framework optimized for CMS theming</p>
 
@@ -51,7 +54,7 @@
 
         <div class="echo-presentation echo-presentation-01">
             <div class="c-flip c-flip-half c-flip-reverse">
-                <div class="c-flip-cover" style="background-image: url(/echo-css/images/echo/img_presentation_01.jpg)"></div>
+                <div class="c-flip-cover" style="background-image: url(./images/echo/img_presentation_01.jpg)"></div>
                 <div class="c-flip-container">
                     <div class="c-flip-contents">
                         <div class="c-flip-contents-inner">
@@ -59,7 +62,7 @@
                             <p class="c-flip-body"><span class="u-text-lg">&quot;echo.css&quot;</span>は、SMACSS, FLOCSSを設計ベースとしたCSSフレームワークです。特に、WordPress等の<strong>CMSを組み込んだウェブサイトの制作</strong>に最適化しています。<br>
                             CMSによく見られる機能を想定したコンポーネント、コンテンツの微調整を行う補助クラスを数多く実装しています。<br>
                             ぜひ「スタイルガイド」をご覧ください。</p>
-                            <p class="c-flip-body u-padding-top-lg"><a href="/echo-css/styleguide/" class="m-btn m-btn-bordered m-btn-gray m-btn-block m-btn-xl"><i class="fas fa-gem u-margin-right-sm"></i>Style guide</a></p>
+                            <p class="c-flip-body u-padding-top-lg"><a href="./styleguide/" class="m-btn m-btn-bordered m-btn-gray m-btn-block m-btn-xl"><i class="fas fa-gem u-margin-right-sm"></i>Style guide</a></p>
                         </div><!-- /.c-flip-contents-inner -->
                     </div><!-- /.c-flip-contents -->
                 </div><!-- /.c-flip-container -->
@@ -68,7 +71,7 @@
 
         <div class="echo-presentation echo-presentation-02">
             <div class="c-flip c-flip-half">
-                <div class="c-flip-cover" style="background-image: url(/echo-css/images/echo/img_presentation_02.jpg)"></div>
+                <div class="c-flip-cover" style="background-image: url(./images/echo/img_presentation_02.jpg)"></div>
                 <div class="c-flip-container">
                     <div class="c-flip-contents">
                         <div class="c-flip-contents-inner">
@@ -84,7 +87,7 @@
 
         <div class="echo-presentation echo-presentation-03">
             <div class="c-flip c-flip-half c-flip-reverse">
-                <div class="c-flip-cover" style="background-image: url(/echo-css/images/echo/img_presentation_03.jpg)"></div>
+                <div class="c-flip-cover" style="background-image: url(./images/echo/img_presentation_03.jpg)"></div>
                 <div class="c-flip-container">
                     <div class="c-flip-contents">
                         <div class="c-flip-contents-inner">
@@ -197,7 +200,7 @@
 
                 <div class="echo-quickstart-section u-clearfix">
                     <h3 class="echo-quickstart-number u-float-left u-padding-right-md">4. </h3>
-                    <p class="echo-quickstart-body">Read <a href="/echo-css/styleguide/">Styleguide</a></p>
+                    <p class="echo-quickstart-body">Read <a href="./styleguide/">Styleguide</a></p>
                 </div><!-- /.echo-quickstart-section -->
 
                 <p class="echo-quickstart-last">Enjoy!</p>
@@ -215,7 +218,7 @@
 
                 <div class="l-grid-row">
                     <div class="l-grid-col-6">
-                        <a href="/echo-css/styleguide/" class="m-btn m-btn-bordered m-btn-gray m-btn-block m-btn-xl"><i class="fas fa-gem u-margin-right-sm"></i>Style guide</a>
+                        <a href="./styleguide/" class="m-btn m-btn-bordered m-btn-gray m-btn-block m-btn-xl"><i class="fas fa-gem u-margin-right-sm"></i>Style guide</a>
                     </div><!-- /.l-grid-col -->
                     <div class="l-grid-col-6">
                         <a href="https://github.com/webbingstudio/echo-css" target="_blank" class="m-btn m-btn-bordered m-btn-gray m-btn-block m-btn-xl"><i class="fab fa-github u-margin-right-sm"></i>GitHub</a>
