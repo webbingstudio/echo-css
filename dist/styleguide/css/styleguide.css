@@ -97,6 +97,7 @@ img.echo-header-logo {
 
 
 .echo-mainvisual .c-hero-cover {
+    background-image: url(../../images/echo/img_mainvisual_01.jpg);
     opacity: .75;
 }
 @media (min-width: 1240px) {
@@ -215,10 +216,22 @@ img.echo-header-logo {
     font-family: 'Helvetica', 'Roboto', '-apple-system', 'Open Sans', 'Arial', sans-serif;
 }
 
+.echo-presentation-01 .c-flip-cover {
+    background-image: url(../../images/echo/img_presentation_01.jpg);
+}
+
 @media (min-width: 768px) {
     .echo-presentation-01 .c-flip-cover {
         background-position: 25% 50%;
     }
+}
+
+.echo-presentation-02 .c-flip-cover {
+    background-image: url(../../images/echo/img_presentation_02.jpg);
+}
+
+.echo-presentation-03 .c-flip-cover {
+    background-image: url(../../images/echo/img_presentation_03.jpg);
 }
 
 
