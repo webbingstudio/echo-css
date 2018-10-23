@@ -1,10 +1,14 @@
+'use strict';
+
 const gulp = require('gulp');
 
 const plumber = require('gulp-plumber');
-const sass = require('gulp-ruby-sass');
-const concat = require('gulp-concat');
+const sass = require('gulp-sass');
 const uglify = require('gulp-uglify');
+const concat = require('gulp-concat');
 const rename = require('gulp-rename');
+
+sass.compiler = require('node-sass');
 
 // var theme_name = 'echo';
 
@@ -26,17 +30,18 @@ var dist_dir = 'dist/';
 
 
 // sass
-gulp.task('sass', function() {
-  return sass('_scss/*.scss', { style: 'expanded' })
-    .on('error', sass.logError)
+gulp.task('sass', function () {
+  return gulp.src('_scss/*.scss')
+    .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
     .pipe(gulp.dest(dist_dir + 'css/'));
 });
-gulp.task('sassmin', ['sass'], function() {
-  sass('_scss/*.scss', { style: 'compressed' })
-    .on('error', sass.logError)
+gulp.task('sassmin', function () {
+  return gulp.src('_scss/*.scss')
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(rename({extname: '.min.css'}))
     .pipe(gulp.dest(dist_dir + 'css/'));
 });
+
 
 // js
 gulp.task('js', function() {
@@ -64,6 +69,7 @@ gulp.task('jsminecho', function() {
     .pipe(rename({extname: '.min.js'}))
     .pipe(gulp.dest(dist_dir + 'js/'));
 });
+
 
 // watch
 gulp.task('watch', function(){
