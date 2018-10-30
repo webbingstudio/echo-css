@@ -2843,6 +2843,10 @@ m-select
   position: relative;
 }
 
+.m-select::-ms-expand {
+  display: none;
+}
+
 .m-select:before, .m-select:after {
   content: "";
   position: absolute;

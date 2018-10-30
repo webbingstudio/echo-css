@@ -7,6 +7,10 @@
 .#{$pr}#{$m}select {
     display: inline-block;
 
+    &::-ms-expand {
+        display: none;
+    }
+
     @include chevron( 'down', $body-color ) {
         &:before,
         &:after {
