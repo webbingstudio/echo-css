@@ -2691,7 +2691,7 @@ m-nav
 .m-nav-item {
   flex-grow: 1;
   flex-shrink: 1;
-  flex-basis: 0%;
+  flex-basis: auto;
   margin: 0;
   padding: 0;
 }
@@ -2755,6 +2755,10 @@ m-nav-vertical
 }
 
 .m-nav-vertical .m-nav-label {
+  height: auto;
+  min-height: auto;
+  padding-top: .75em;
+  padding-bottom: .75em;
   justify-content: flex-start;
   text-align: left;
 }

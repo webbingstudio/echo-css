@@ -22,7 +22,7 @@
 .#{$pr}#{$m}nav#{$c1}item {
     flex-grow: 1;
     flex-shrink: 1;
-    flex-basis: 0%;
+    flex-basis: auto;
     margin: 0;
     padding: 0;
 }
@@ -96,10 +96,13 @@
 }
 
 .#{$pr}#{$m}nav#{$c3}vertical .#{$pr}#{$m}nav#{$c1}label {
+    height: auto;
+    min-height: auto;
+    padding-top: .75em;
+    padding-bottom: .75em;
     justify-content: flex-start;
     text-align: left;
 }
-
 
 .#{$pr}#{$m}nav#{$c1}children .#{$pr}#{$m}nav#{$c1}label {
     font-size: .875rem;
