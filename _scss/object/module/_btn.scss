@@ -7,11 +7,13 @@
 .#{$pr}#{$m}btn {
     position: relative;
     display: inline-block;
-    color: $body-color;
-    font-size: $btn-font-size-md;
+    padding: $btn-padding-y-md $btn-padding-x-md;
     background-color: $body-bg;
     border: $border-btn-width solid transparent;
-    padding: $btn-padding-y-md $btn-padding-x-md;
+    color: $body-color;
+    font-size: $btn-font-size-md;
+    font-family: $font-family-root;
+    font-weight: $font-weight-root;
     text-align: center;
     line-height: 1;
     border-radius: $border-radius-md;
