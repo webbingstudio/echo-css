@@ -6,20 +6,13 @@
 
 .#{$pr}#{$m}select {
     display: inline-block;
+    font-size: $font-size-md;
 
     @include chevron( 'down', $body-color ) {
-        &:before,
         &:after {
-            font-size: 1.25em;
-        }
-
-        &:before {
-            right: .85em;
-            z-index: 3;
-        }
-
-        &:after {
-            right: .5em;
+            top: 50%;
+            right: .75em;
+            margin-top: -.4em;
             z-index: 4;
         }
 
@@ -29,7 +22,7 @@
         position: relative;
         -webkit-appearance: none;
         appearance: none;
-        font-size: $font-size-md;
+        font-size: 1em;
         color: $body-color;
         width: 100%;
         padding: .5em 3em .5em 1em;
@@ -69,18 +62,18 @@
 */
 
 .#{$pr}#{$m}select#{$c3}sm {
+    font-size: $font-size-sm;
 
     > select {
-        font-size: $font-size-sm;
         padding: .5em 3em .5em 1em;
     }
 
 }
 
 .#{$pr}#{$m}select#{$c3}lg {
+    font-size: $font-size-lg;
 
     > select {
-        font-size: $font-size-lg;
         padding: .75em 3em .75em 1em;
     }
 

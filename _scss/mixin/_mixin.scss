@@ -1,46 +1,32 @@
 @import "./_grid.scss";
 @import "./_text.scss";
 
-@mixin chevron( $rotate: 'right', $color: $body-color ) {
+@mixin chevron( $rotate: 'right', $color: $body-color, $border-width: 1px ) {
     position: relative;
 
-    &:before,
     &:after {
         content: "";
         position: absolute;
-        width: 8px;
-        height: 1px;
-        background-color: $color;
-    }
+        width: .5em;
+        height: .5em;
+        border-top: $border-width solid $color;
+        border-right: $border-width solid $color;
+        transform-origin: center center;
 
-    @if ($rotate == 'right') {
-
-        &:before {
-            top: 55%;
-            margin-left: -1px;
-            transform: rotate(40deg);
-            transform-origin: 100% 100%;
-        }
-        &:after {
-            top: 55%;
-            transform: rotate(-40deg);
-            transform-origin: 100% 100%;
+        @if ($rotate == 'up') {
+            transform: rotate(315deg);
         }
 
-    }
-
-    @if ($rotate == 'down') {
-
-        &:before {
-            top: 55%;
+        @if ($rotate == 'right') {
             transform: rotate(45deg);
-            transform-origin: 100% 100%;
         }
-        &:after {
-            top: 55%;
-            margin-right: -1px;
-            transform: rotate(-45deg);
-            transform-origin: 0% 100%;
+
+        @if ($rotate == 'down') {
+            transform: rotate(135deg);
+        }
+
+        @if ($rotate == 'left') {
+            transform: rotate(225deg);
         }
 
     }
