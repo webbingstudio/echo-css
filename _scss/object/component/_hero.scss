@@ -50,6 +50,7 @@
     padding-right: map-get($grid-gutter-widths, md);
 
     @include media-breakpoint-up(lg) {
+        margin: 0;
         max-width: map-get($container-max-widths-md, md);
     }
 
@@ -148,12 +149,7 @@
 .#{$pr}#{$c}hero#{$c3}left {
 
     .#{$pr}#{$c}hero#{$c1}contents {
-        justify-content: left;
-    }
-
-    .#{$pr}#{$c}hero#{$c1}contents#{$c1}inner {
-        margin-left: 0;
-        margin-right: auto;
+        justify-content: flex-start;
     }
 
     .#{$pr}#{$c}hero#{$c1}title,
@@ -170,12 +166,7 @@
 .#{$pr}#{$c}hero#{$c3}right {
 
     .#{$pr}#{$c}hero#{$c1}contents {
-        justify-content: right;
-    }
-
-    .#{$pr}#{$c}hero#{$c1}contents#{$c1}inner {
-        margin-left: auto;
-        margin-right: 0;
+        justify-content: flex-end;
     }
 
     .#{$pr}#{$c}hero#{$c1}title,

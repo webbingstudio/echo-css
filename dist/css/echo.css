@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * echo.css - version 1.1.0
+ * echo.css - version 1.1.1
  * 
  * "echo" is CSS framework, built with consider CMS theming in East asian countries.
  * 
@@ -4094,6 +4094,7 @@ c-hero
 
 @media (min-width: 1000px) {
   .c-hero-contents-inner {
+    margin: 0;
     max-width: 700px;
   }
 }
@@ -4208,12 +4209,7 @@ c-hero-(direction)
 --------------------
 */
 .c-hero-left .c-hero-contents {
-  justify-content: left;
-}
-
-.c-hero-left .c-hero-contents-inner {
-  margin-left: 0;
-  margin-right: auto;
+  justify-content: flex-start;
 }
 
 .c-hero-left .c-hero-title,
@@ -4226,12 +4222,7 @@ c-hero-(direction)
 }
 
 .c-hero-right .c-hero-contents {
-  justify-content: right;
-}
-
-.c-hero-right .c-hero-contents-inner {
-  margin-left: auto;
-  margin-right: 0;
+  justify-content: flex-end;
 }
 
 .c-hero-right .c-hero-title,
