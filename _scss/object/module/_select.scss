@@ -40,6 +40,10 @@
         outline: none;
         z-index: 2;
 
+        &::-ms-expand {
+            display: none;
+        }
+
         &:focus {
             background-color: $gray-fade;
         }
