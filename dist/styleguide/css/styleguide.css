@@ -475,6 +475,100 @@ echo-quickstart
 
 /*
 --------------------
+echo-browser
+--------------------
+*/
+
+.echo-browser {
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+@media (min-width: 960px) {
+    .echo-browser {
+        padding-top: 45px;
+        padding-bottom: 35px;
+    }
+}
+
+.echo-browser-title {
+    margin: 0;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.25;
+}
+
+@media (min-width: 425px) {
+    .echo-browser-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1000px) {
+    .echo-browser-title {
+        font-size: 1.75rem;
+        padding-bottom: 30px;
+    }
+}
+
+.echo-browser-contents {
+    text-align: center;
+}
+
+.echo-browser-icon {
+    display: inline-block;
+    min-width: 6em;
+    padding: 0 0 20px;
+}
+
+@media (min-width: 768px) {
+    .echo-browser-icon {
+        min-width: 10em;
+    }
+}
+
+.echo-browser-icon [class*="fa-"] {
+    font-size: 48px;
+}
+
+@media (min-width: 1000px) {
+    .echo-browser-icon [class*="fa-"] {
+        font-size: 64px;
+    }
+}
+
+.echo-browser-icon .fa-chrome {
+    color: #da5851;
+}
+
+.echo-browser-icon .fa-safari {
+    color: #758184;
+}
+
+.echo-browser-icon .fa-edge {
+    color: #387dbe;
+}
+
+.echo-browser-icon .fa-internet-explorer {
+    color: #56c7e6;
+}
+
+.echo-browser-icon .fa-firefox {
+    color: #e67128;
+}
+
+.echo-browser-caption {
+    margin: 0;
+    padding-top: .5em;
+    font-size: .875rem;
+}
+
+
+
+/*
+--------------------
 echo-download
 --------------------
 */

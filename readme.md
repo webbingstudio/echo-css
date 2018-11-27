@@ -45,4 +45,15 @@ https://github.com/hiloki/flocss
 - Name of color can be changed (Sass premise)
 - Coding rule can be changed from SMACSS to BEM (Sass premise)
 
+----
+
+## Browser compatible
+
+Windows X and MacOS 10.13+
+
+- Chrome: latest
+- Safari: latest
+- Edge: latest
+- Internet Explorer: 11+
+- Firefox: latest
 
