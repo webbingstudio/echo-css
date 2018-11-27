@@ -1,14 +1,14 @@
 @import "./_grid.scss";
 @import "./_text.scss";
 
-@mixin chevron( $rotate: 'right', $color: $body-color, $border-width: 1px ) {
+@mixin chevron( $rotate: 'right', $color: $body-color, $size: .375em, $border-width: 1px ) {
     position: relative;
 
     &:after {
         content: "";
         position: absolute;
-        width: .5em;
-        height: .5em;
+        width: $size;
+        height: $size;
         border-top: $border-width solid $color;
         border-right: $border-width solid $color;
         transform-origin: center center;

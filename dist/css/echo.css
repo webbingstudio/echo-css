@@ -2850,15 +2850,15 @@ m-select
 */
 .m-select {
   display: inline-block;
-  font-size: 1rem;
+  font-size: 0.875rem;
   position: relative;
 }
 
 .m-select:after {
   content: "";
   position: absolute;
-  width: .5em;
-  height: .5em;
+  width: 0.375em;
+  height: 0.375em;
   border-top: 1px solid #333;
   border-right: 1px solid #333;
   transform-origin: center center;
@@ -2868,18 +2868,21 @@ m-select
 .m-select:after {
   top: 50%;
   right: .75em;
-  margin-top: -.4em;
+  margin-top: -.3em;
   z-index: 4;
 }
 
 .m-select select {
+  overflow: hidden;
   position: relative;
   -webkit-appearance: none;
   appearance: none;
   font-size: 1em;
   color: #333;
   width: 100%;
-  padding: .5em 3em .5em 1em;
+  height: 2.5em;
+  line-height: 2.5em;
+  padding: 0 2em 0 .5em;
   background-color: transparent;
   border: 1px solid #bbb;
   vertical-align: middle;
@@ -2903,6 +2906,7 @@ m-select
 
 .m-select option {
   outline: none;
+  padding: 0;
 }
 
 /*
@@ -2911,19 +2915,23 @@ m-select-(size)
 --------------------
 */
 .m-select-sm {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
 }
 
-.m-select-sm > select {
-  padding: .5em 3em .5em 1em;
+.m-select-sm select {
+  height: 2.25em;
+  line-height: 2.25em;
 }
 
 .m-select-lg {
   font-size: 1.125rem;
 }
 
-.m-select-lg > select {
-  padding: .75em 3em .75em 1em;
+.m-select-lg select {
+  height: 2.25em;
+  line-height: 2.25em;
+  padding-left: 1em;
+  padding-right: 2.5em;
 }
 
 /*

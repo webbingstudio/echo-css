@@ -6,26 +6,32 @@
 
 .#{$pr}#{$m}select {
     display: inline-block;
-    font-size: $font-size-md;
+    font-size: $font-size-sm;
 
     @include chevron( 'down', $body-color ) {
         &:after {
             top: 50%;
             right: .75em;
-            margin-top: -.4em;
+            margin-top: -.3em;
             z-index: 4;
         }
 
     }
 
+    // Firefoxがline-heightの指定を無視するため、高さを固定している
+    // It fixes the height because Firefox ignores line-height designation
+
     select {
+        overflow: hidden;
         position: relative;
         -webkit-appearance: none;
         appearance: none;
         font-size: 1em;
         color: $body-color;
         width: 100%;
-        padding: .5em 3em .5em 1em;
+        height: 2.5em;
+        line-height: 2.5em;
+        padding: 0 2em 0 .5em;
         background-color: transparent;
         border: $border-input-width solid $border-color;
         vertical-align: middle;
@@ -50,6 +56,7 @@
 
     option {
         outline: none;
+        padding: 0;
     }
 
 }
@@ -62,10 +69,11 @@
 */
 
 .#{$pr}#{$m}select#{$c3}sm {
-    font-size: $font-size-sm;
+    font-size: $font-size-xs;
 
-    > select {
-        padding: .5em 3em .5em 1em;
+    select {
+        height: 2.25em;
+        line-height: 2.25em;
     }
 
 }
@@ -73,8 +81,11 @@
 .#{$pr}#{$m}select#{$c3}lg {
     font-size: $font-size-lg;
 
-    > select {
-        padding: .75em 3em .75em 1em;
+    select {
+        height: 2.25em;
+        line-height: 2.25em;
+        padding-left: 1em;
+        padding-right: 2.5em;
     }
 
 }
