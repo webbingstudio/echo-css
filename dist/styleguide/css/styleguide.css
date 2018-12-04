@@ -950,7 +950,7 @@ h2.styleguide:before {
     white-space: pre-wrap;
 }
 
-.styleguide-contents code {
+.styleguide-contents code:not([class]) {
     display: inline-block;
     border: 1px solid #aaa;
     background-color: #eee;

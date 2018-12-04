@@ -24,13 +24,111 @@
                 <div class="s-post-contents styleguide-contents"><h1 id="header" class="styleguide">p-header</h1>
 
 <p>ドキュメント内で、ロゴ等が含まれる、サイトヘッダとして扱うべきコンテンツ群を包括する。<br>
-<strong>プロジェクトごとにスタイルが上書きされる</strong>ことを前提としているため、このフレームワークでは <code>position: relative</code> と最低限の外観のみ定義している。</p>
-<div class="example"><div class="p-header">
-    <div style="background-color: #ffd5d5; padding: 10px; text-align: center;">(contents)</div>
+<strong>プロジェクトごとにスタイルが上書きされる</strong>ことを前提としているため、このフレームワークでは一般に考えられる最低限の要素のみ定義する。<br>
+<code>breakpoint</code> が <code>lg</code> 以上でスマートフォン用メニューボタンが非表示となり、ナビゲーションが表示される。</p>
+<div class="example">
+<header class="p-header" role="banner">
+    <div class="l-container">
+        <div class="p-header-contents">
+
+            <h1 class="p-header-title"><a href="#"><img src="../images/_dummy/logo.svg" width="202" height="40" alt="サイトロゴ"></a></h1>
+
+            <div class="p-header-nav" role="navigation">
+                <nav class="m-nav">
+                    <ul class="m-nav-list">
+                        <li class="m-nav-item">
+                            <a href="#" class="m-nav-label is-current">ホーム</a>
+                        </li>
+                        <li class="m-nav-item">
+                            <a href="#" class="m-nav-label">サービス紹介</a>
+                        </li>
+                        <li class="m-nav-item">
+                            <a href="#" class="m-nav-label">品質へのこだわり</a>
+                        </li>
+                        <li class="m-nav-item">
+                            <a href="#" class="m-nav-label">私たちについて</a>
+                        </li>
+                        <li class="m-nav-item">
+                            <a href="#" class="m-nav-label">ブログ</a>
+                        </li>
+                    </ul><!-- /.m-nav-list -->
+                </nav><!-- /.m-nav -->
+            </div><!-- /.p-header-nav -->
+
+            <div class="p-header-contact">
+                <ul class="m-list m-list-horizontal">
+                    <li class="m-list-item">
+                        <a href="#" class="m-btn m-btn-gray m-btn-round">
+                            <i class="fas fa-envelope u-text-lg"></i><span class="u-sr">お問い合わせ</span>
+                        </a><!-- /.m-btn -->
+                    </li><!-- /.m-list-item -->
+                    <li class="m-list-item">
+                        <a href="#" class="m-btn m-btn-gray m-btn-round">
+                            <span class="m-text">
+                                <i class="fas fa-phone"></i><span class="u-sr">電話をかける</span>
+                            </span>
+                        </a><!-- /.m-btn -->
+                    </li><!-- /.m-list-item -->
+                    <li class="p-header-contact-menu m-list-item">
+                        <button class="m-btn m-btn-gray m-btn-bordered m-btn-square"><i class="fas fa-bars"></i><span class="u-sr">メニュー</span></button>
+                    </li><!-- /.m-list-item -->
+                </ul><!-- /.m-list -->
+            </div><!-- /.p-header-contact -->
+
+        </div><!-- /.p-header-contents -->
+    </div><!-- /.l-container -->
+</header><!-- /.p-header -->
 </div>
-</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-header"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"background-color: #ffd5d5; padding: 10px; text-align: center;"</span><span class="nt">&gt;</span>(contents)<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</pre></div>
+<div class="codeblock"><pre><code class="language-markup">&lt;header class="p-header" role="banner"&gt;
+    &lt;div class="l-container"&gt;
+        &lt;div class="p-header-contents"&gt;
+
+            &lt;h1 class="p-header-title"&gt;&lt;a href="#"&gt;&lt;img src="../images/_dummy/logo.svg" width="202" height="40" alt="サイトロゴ"&gt;&lt;/a&gt;&lt;/h1&gt;
+
+            &lt;div class="p-header-nav" role="navigation"&gt;
+                &lt;nav class="m-nav"&gt;
+                    &lt;ul class="m-nav-list"&gt;
+                        &lt;li class="m-nav-item"&gt;
+                            &lt;a href="#" class="m-nav-label is-current"&gt;ホーム&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="m-nav-item"&gt;
+                            &lt;a href="#" class="m-nav-label"&gt;サービス紹介&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="m-nav-item"&gt;
+                            &lt;a href="#" class="m-nav-label"&gt;品質へのこだわり&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="m-nav-item"&gt;
+                            &lt;a href="#" class="m-nav-label"&gt;私たちについて&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="m-nav-item"&gt;
+                            &lt;a href="#" class="m-nav-label"&gt;ブログ&lt;/a&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;&lt;!-- /.m-nav-list --&gt;
+                &lt;/nav&gt;&lt;!-- /.m-nav --&gt;
+            &lt;/div&gt;&lt;!-- /.p-header-nav --&gt;
+
+            &lt;div class="p-header-contact"&gt;
+                &lt;ul class="m-list m-list-horizontal"&gt;
+                    &lt;li class="m-list-item"&gt;
+                        &lt;a href="#" class="m-btn m-btn-gray m-btn-round"&gt;
+                            &lt;i class="fas fa-envelope u-text-lg"&gt;&lt;/i&gt;&lt;span class="u-sr"&gt;お問い合わせ&lt;/span&gt;
+                        &lt;/a&gt;&lt;!-- /.m-btn --&gt;
+                    &lt;/li&gt;&lt;!-- /.m-list-item --&gt;
+                    &lt;li class="m-list-item"&gt;
+                        &lt;a href="#" class="m-btn m-btn-gray m-btn-round"&gt;
+                            &lt;span class="m-text"&gt;
+                                &lt;i class="fas fa-phone"&gt;&lt;/i&gt;&lt;span class="u-sr"&gt;電話をかける&lt;/span&gt;
+                            &lt;/span&gt;
+                        &lt;/a&gt;&lt;!-- /.m-btn --&gt;
+                    &lt;/li&gt;&lt;!-- /.m-list-item --&gt;
+                    &lt;li class="p-header-contact-menu m-list-item"&gt;
+                        &lt;button class="m-btn m-btn-gray m-btn-bordered m-btn-square"&gt;&lt;i class="fas fa-bars"&gt;&lt;/i&gt;&lt;span class="u-sr"&gt;メニュー&lt;/span&gt;&lt;/button&gt;
+                    &lt;/li><!-- /.m-list-item -->
+                &lt;/ul&gt;&lt;!-- /.m-list --&gt;
+            &lt;/div&gt;&lt;!-- /.p-header-contact --&gt;
+
+        &lt;/div&gt;&lt;!-- /.p-header-contents --&gt;
+    &lt;/div&gt;&lt;!-- /.l-container --&gt;
+&lt;/header&gt;&lt;!-- /.p-header --&gt;</code></pre></div>
 
 <?php include('../doc_include/footer.inc'); ?>

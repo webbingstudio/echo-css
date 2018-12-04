@@ -5,14 +5,89 @@
 */
 
 .#{$pr}#{$p}header {
-    position: relative;
-    padding-top: $spacer;
-    padding-bottom: $spacer;
-    border-bottom: 1px solid $gray-milder;
+    background-color: $body-bg;
+    padding-top: ($spacer * 2);
+    padding-bottom: ($spacer * 2);
+}
 
-    @include media-breakpoint-up(lg) {
-        padding-top: ($spacer * 2);
-        padding-bottom: ($spacer * 2);
+.#{$pr}#{$p}header#{$c1}contents {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.#{$pr}#{$p}header#{$c1}title {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    margin: 0;
+    padding-right: $spacer;
+    line-height: 1;
+
+    img {
+        display: block;
+        max-width: 160px;
+        height: auto;
+
+        @include media-breakpoint-up(sm) {
+            max-width: none;
+        }
+
     }
 
 }
+
+.#{$pr}#{$p}header#{$c1}nav {
+    display: none;
+    text-align: center;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+
+    @include media-breakpoint-up(lg) {
+        display: block;
+        padding-right: $spacer;
+        text-align: right;
+    }
+
+}
+
+.#{$pr}#{$p}header#{$c1}contact {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+
+    ul.#{$pr}#{$m}list-horizontal {
+
+        li.#{$pr}#{$m}list#{$c1}item {
+            padding-left: ($spacer / 2);
+            padding-right: 0;
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+        }
+
+    }
+
+    .#{$pr}#{$p}header#{$c1}contact#{$c1}menu {
+
+        @include media-breakpoint-up(lg) {
+            display: none;
+        }
+
+        .#{$pr}#{$m}btn {
+            line-height: 2.75rem;
+        }
+
+        [class*="fa"] {
+            font-size: 1.75rem;
+        }
+
+    }
+
+}
+
+

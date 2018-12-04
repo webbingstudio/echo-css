@@ -5691,17 +5691,82 @@ p-header
 --------------------
 */
 .p-header {
-  position: relative;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #bbb;
+  background-color: #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.p-header-contents {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.p-header-title {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  margin: 0;
+  padding-right: 10px;
+  line-height: 1;
+}
+
+.p-header-title img {
+  display: block;
+  max-width: 160px;
+  height: auto;
+}
+
+@media (min-width: 425px) {
+  .p-header-title img {
+    max-width: none;
+  }
+}
+
+.p-header-nav {
+  display: none;
+  text-align: center;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
 }
 
 @media (min-width: 1000px) {
-  .p-header {
-    padding-top: 20px;
-    padding-bottom: 20px;
+  .p-header-nav {
+    display: block;
+    padding-right: 10px;
+    text-align: right;
   }
+}
+
+.p-header-contact {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+
+.p-header-contact ul.m-list-horizontal li.m-list-item {
+  padding-left: 5px;
+  padding-right: 0;
+}
+
+.p-header-contact ul.m-list-horizontal li.m-list-item:first-child {
+  padding-left: 0;
+}
+
+@media (min-width: 1000px) {
+  .p-header-contact .p-header-contact-menu {
+    display: none;
+  }
+}
+
+.p-header-contact .p-header-contact-menu .m-btn {
+  line-height: 2.75rem;
+}
+
+.p-header-contact .p-header-contact-menu [class*="fa"] {
+  font-size: 1.75rem;
 }
 
 /*
@@ -5727,11 +5792,37 @@ p-main
 p-footer
 --------------------
 */
-.p-footer {
-  position: relative;
-  padding-top: 30px;
-  padding-bottom: 60px;
-  border-top: 1px solid #bbb;
+.p-footer-nav {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+@media (max-width: 999.9px) {
+  .p-footer-nav .m-nav-list {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 999.9px) {
+  .p-footer-nav .m-nav-item {
+    flex-grow: 0;
+  }
+}
+
+.p-footer-nav .m-nav-label {
+  min-height: 2.5em;
+  font-size: 0.875rem;
+}
+
+.p-footer-copyright {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  text-align: center;
+  font-size: 0.75rem;
+  font-family: "Helvetica", "Roboto", "-apple-system", "Open Sans", "Arial", sans-serif;
+  font-weight: 300;
+  line-height: 1;
 }
 
 /*

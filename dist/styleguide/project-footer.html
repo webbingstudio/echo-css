@@ -24,13 +24,63 @@
                 <div class="s-post-contents styleguide-contents"><h1 id="footer" class="styleguide">p-footer</h1>
 
 <p>ドキュメント内で、コピーライト等が含まれる、サイトフッタとして扱うべきコンテンツ群を包括する。<br>
-<strong>プロジェクトごとにスタイルが上書きされる</strong>ことを前提としているため、このフレームワークでは <code>position: relative</code> と最低限の外観のみ定義している。</p>
-<div class="example"><div class="p-footer">
-    <div style="background-color: #ffd5d5; padding: 10px; text-align: center;">(contents)</div>
+<strong>プロジェクトごとにスタイルが上書きされる</strong>ことを前提としているため、このフレームワークでは最低限の外観のみ定義している。</p>
+<div class="example">
+<footer class="p-footer" role="contentinfo">
+
+    <div class="p-footer-nav" role="navigation">
+        <nav class="m-nav">
+            <ul class="m-nav-list">
+                <li class="m-nav-item">
+                    <a href="#" class="m-nav-label">ホーム</a>
+                </li>
+                <li class="m-nav-item">
+                    <a href="#" class="m-nav-label">サービス紹介</a>
+                </li>
+                <li class="m-nav-item">
+                    <a href="#" class="m-nav-label">品質へのこだわり</a>
+                </li>
+                <li class="m-nav-item">
+                    <a href="#" class="m-nav-label">私たちについて</a>
+                </li>
+                <li class="m-nav-item">
+                    <a href="#" class="m-nav-label">ブログ</a>
+                </li>
+            </ul><!-- /.m-nav-list -->
+        </nav><!-- /.m-nav -->
+    </div><!-- /.p-footer-nav -->
+
+    <p class="p-footer-copyright">Copyright &copy; 2018 YOUR-SITE-NAME All Rights Reserved.</p>
+
+</footer>
 </div>
-</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-footer"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"background-color: #ffd5d5; padding: 10px; text-align: center;"</span><span class="nt">&gt;</span>(contents)<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</pre></div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;footer class="p-footer" role="contentinfo"&gt;
+
+    &lt;div class="p-footer-nav" role="navigation"&gt;
+        &lt;nav class="m-nav"&gt;
+            &lt;ul class="m-nav-list"&gt;
+                &lt;li class="m-nav-item"&gt;
+                    &lt;a href="#" class="m-nav-label"&gt;ホーム&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class="m-nav-item"&gt;
+                    &lt;a href="#" class="m-nav-label"&gt;サービス紹介&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class="m-nav-item"&gt;
+                    &lt;a href="#" class="m-nav-label"&gt;品質へのこだわり&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class="m-nav-item"&gt;
+                    &lt;a href="#" class="m-nav-label"&gt;私たちについて&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class="m-nav-item"&gt;
+                    &lt;a href="#" class="m-nav-label"&gt;ブログ&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;&lt;!-- /.m-nav-list --&gt;
+        &lt;/nav&gt;&lt;!-- /.m-nav --&gt;
+    &lt;/div&gt;&lt;!-- /.p-footer-nav --&gt;
+
+    &lt;p class="p-footer-copyright"&gt;Copyright &amp;copy; 2018 YOUR-SITE-NAME All Rights Reserved.&lt;/p&gt;
+
+&lt;/footer&gt;</code></pre></div>
 
 <?php include('../doc_include/footer.inc'); ?>
