@@ -61,9 +61,11 @@
     flex-shrink: 1;
     flex-basis: auto;
     text-align: right;
+    padding-right: ($spacer / 2);
 
     @include media-breakpoint-up(lg) {
         flex-grow: 0;
+        padding-right: 0;
     }
 
     ul.#{$pr}#{$m}list-horizontal {

@@ -3262,7 +3262,7 @@ m-toggle
 .m-toggle {
   position: relative;
   display: inline-block;
-  width: 2.5rem;
+  width: 3rem;
   height: 2.5rem;
   line-height: 1;
   border-width: 0;
@@ -3279,7 +3279,7 @@ m-toggle
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 1.75rem;
+  width: 2rem;
   height: .1875rem;
   background-color: #333;
   transform: translate(-50%, -50%);
@@ -3301,15 +3301,15 @@ m-toggle
 }
 
 .m-toggle-line:before {
-  top: -.625rem;
+  top: -.6875rem;
 }
 
 .m-toggle-line:after {
-  bottom: -.625rem;
+  bottom: -.6875rem;
 }
 
 .m-toggle[aria-expanded="true"] .m-toggle-line {
-  width: 2rem;
+  width: 2.25rem;
   background-color: transparent;
 }
 
@@ -5817,11 +5817,13 @@ p-header
   flex-shrink: 1;
   flex-basis: auto;
   text-align: right;
+  padding-right: 5px;
 }
 
 @media (min-width: 1000px) {
   .p-header-btn {
     flex-grow: 0;
+    padding-right: 0;
   }
 }
 
