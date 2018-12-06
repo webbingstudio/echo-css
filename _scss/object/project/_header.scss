@@ -40,7 +40,6 @@
 
 .#{$pr}#{$p}header#{$c1}nav {
     display: none;
-    text-align: center;
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: auto;
@@ -51,12 +50,21 @@
         text-align: right;
     }
 
+    .#{$pr}#{$m}nav#{$c1}label {
+        font-size: $font-size-sm;
+    }
+
 }
 
-.#{$pr}#{$p}header#{$c1}contact {
-    flex-grow: 0;
+.#{$pr}#{$p}header#{$c1}btn {
+    flex-grow: 1;
     flex-shrink: 1;
     flex-basis: auto;
+    text-align: right;
+
+    @include media-breakpoint-up(lg) {
+        flex-grow: 0;
+    }
 
     ul.#{$pr}#{$m}list-horizontal {
 
@@ -72,22 +80,16 @@
 
     }
 
-    .#{$pr}#{$p}header#{$c1}contact#{$c1}menu {
+}
 
-        @include media-breakpoint-up(lg) {
-            display: none;
-        }
+.#{$pr}#{$p}header#{$c1}menu {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
 
-        .#{$pr}#{$m}btn {
-            line-height: 2.75rem;
-        }
-
-        [class*="fa"] {
-            font-size: 1.75rem;
-        }
-
+    @include media-breakpoint-up(lg) {
+        display: none;
     }
 
 }
-
 
