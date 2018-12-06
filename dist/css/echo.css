@@ -5757,12 +5757,17 @@ p-header
 }
 
 .p-header-btn ul.m-list-horizontal li.m-list-item {
-  padding-left: 5px;
+  padding-left: 10px;
   padding-right: 0;
+  letter-spacing: -.4em;
 }
 
 .p-header-btn ul.m-list-horizontal li.m-list-item:first-child {
   padding-left: 0;
+}
+
+.p-header-btn ul.m-list-horizontal li.m-list-item .m-btn {
+  letter-spacing: normal;
 }
 
 .p-header-menu {

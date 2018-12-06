@@ -69,11 +69,16 @@
     ul.#{$pr}#{$m}list-horizontal {
 
         li.#{$pr}#{$m}list#{$c1}item {
-            padding-left: ($spacer / 2);
+            padding-left: $spacer;
             padding-right: 0;
+            letter-spacing: -.4em;
 
             &:first-child {
                 padding-left: 0;
+            }
+
+            .#{$pr}#{$m}btn {
+                letter-spacing: normal;
             }
 
         }
