@@ -1,0 +1,73 @@
+/*
+--------------------
+#{$pr}#{$m}toggle
+--------------------
+*/
+
+.#{$pr}#{$m}toggle {
+    position: relative;
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 1;
+    border-width: 0;
+    vertical-align: middle;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.#{$pr}#{$m}toggle#{$c1}line {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1.75rem;
+    height: .1875rem;
+    background-color: $body-color;
+    transform: translate(-50%, -50%);
+    transition: background-color .3s;
+
+    &:before,
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: $body-color;
+        left: 0;
+        right: 0;
+        height: .1875rem;
+        opacity: 1;
+        transform: rotate(0deg);
+        transform-origin: center center;
+        transition: transform .3s;
+    }
+
+    &:before {
+        top: -.625rem;
+    }
+
+    &:after {
+        bottom: -.625rem;
+    }
+
+    .#{$pr}#{$m}toggle[aria-expanded="true"] & {
+        width: 2rem;
+        background-color: transparent;
+
+        &:before {
+            top: 0;
+            transform: rotate(45deg);
+        }
+
+        &:after {
+            top: 0;
+            transform: rotate(-45deg);
+        }
+
+    }
+
+}
+
