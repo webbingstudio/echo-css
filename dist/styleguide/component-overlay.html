@@ -36,7 +36,9 @@
                 <div class="s-post-contents styleguide-contents"><h1 id="overlay" class="styleguide">c-overlay</h1>
 
 <p>特定条件で表示状態となる、画面全体を覆うコンポーネントを表示する。<br>
-使用する際は、JavaScript等で「なんらかのトリガーで表示し、かつbody要素のスクロールを禁止する処理」を行う必要がある。</p>
+画面全体を覆っている <code>.c-overlay-bg</code> と、内容を含む <code>.c-overlay-contents</code> の二重構造となっている。</p>
+
+<p>使用する際は、JavaScript等で「なんらかのトリガーで表示し、かつbody要素のスクロールを禁止する処理」を行う必要がある。</p>
 
 <p><code>z-index</code> は <code>1000</code> となっている。常に表示する要素は、レイヤーを <code>1001</code> 以上にすること。</p>
 

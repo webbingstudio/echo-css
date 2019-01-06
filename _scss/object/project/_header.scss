@@ -6,8 +6,13 @@
 
 .#{$pr}#{$p}header {
     background-color: $body-bg;
-    padding-top: ($spacer * 2);
-    padding-bottom: ($spacer * 2);
+    padding-top: ($spacer * .8);
+    padding-bottom: ($spacer * .8);
+
+    @include media-breakpoint-up(lg) {
+        padding-top: ($spacer * 1.5);
+        padding-bottom: ($spacer * 1.5);
+    }
 }
 
 .#{$pr}#{$p}header#{$c1}contents {
@@ -71,7 +76,15 @@
     ul.#{$pr}#{$m}list-horizontal {
 
         li.#{$pr}#{$m}list#{$c1}item {
-            padding-left: $spacer;
+
+/*
+note: Spacing of the clickable elements
+クリックできる要素間の余白の最低値は、8pxと言われています。
+The minimum value of the margin between clickable elements is said that to be 8px
+--------------------
+*/
+
+            padding-left: 8px;
             padding-right: 0;
             letter-spacing: -.4em;
 

@@ -96,11 +96,16 @@
     }
 
     .#{$widget}#{$c1}header {
-        padding-bottom: ($spacer * 3);
+        @include media-breakpoint-up(lg) {
+            padding-bottom: ($spacer * 3);
+        }
+
     }
 
     .#{$widget}#{$c1}footer {
-        padding-top: ($spacer * 3);
+        @include media-breakpoint-up(lg) {
+            padding-top: ($spacer * 3);
+        }
     }
 
     .#{$widget}#{$c1}title {

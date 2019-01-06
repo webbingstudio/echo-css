@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>コーディングルール | 概要 | Documentation | echo-css</title>
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div class="l-document" id="document">
+
+    <?php include('../doc_include/header.inc'); ?>
+
+    <main class="p-main" role="main">
+        <div class="l-container">
+
+            <div class="echo-pagehead">
+                <h1 class="echo-pagehead-title">コーディングルール</h1>
+            </div><!-- /.echo-pagehead -->
+
+            <article class="echo-post">
+                <div class="echo-post-contents styleguide-contents">
+
+<h2 class="echo-post-title-01">基本的なマークアップ</h2>
+
+<p>HTMLファイルの基本構造は以下の通りです。レイヤー構造がcomponent以上のオブジェクトは、必ずdiv要素でグルーピングされます。<br>
+div要素の閉じタグの後ろには、コメントでクラス名を付与するのが望ましいです。複数ある場合はすべて書くことは酒、識別しやすい代表的なものを書きます。</p>
+
+<div class="codeblock"><pre>&lt;div class="example"&gt;
+    &lt;div class="example-inner"&gt;
+        ...
+    &lt;/div&gt;&lt;!-- /.example-inner --&gt;
+&lt;/div&gt;&lt;!-- /.example --&gt;</pre></div>
+
+<h2 class="echo-post-title-01">クラス命名規則</h2>
+
+<p>echo.cssのCSSクラスの命名規則は、SMACSSを参考にしています。</p>
+
+<p><a href="https://smacss.com/ja" target="_blank">Scalable and Modular Architecture for CSS</a></p>
+
+<p>デフォルトの命名規則は以下の通りです。ハイフン1個で連結します。</p>
+
+<p><strong>prefix-block-element-modifier</strong></p>
+
+
+
+
+
+
+<h3 class="echo-post-title-02">ヘッダ・フッタがlayoutではなくprojectに属する</h3>
+
+<p>プロジェクトごとに変更されるファイルを出来る限り少なくする目的で、ヘッダ・フッタはレイアウト扱いにはしていません。</p>
+
+<h3 class="echo-post-title-02">グリッド（段組）がcomponentではなくlayoutに属する</h3>
+
+<p>後述のlayoutの定義に添って、移動しています。</p>
+
+<h3 class="echo-post-title-02">componentの一部をmoduleに分離</h3>
+
+<p>componentに属するSCSSファイルが多くなりすぎる問題を回避すると同時に、Atomic Designの構造を反映しています。</p>
+
+
+<h2 class="echo-post-title-01">ファイル構造</h2>
+
+<div class="codeblock"><pre>├── foundation
+│   ├── _base.scss
+│   └── _reset.scss
+├── layout
+│   ├── _container.scss
+│   ├── _document.scss
+│   └── _grid.scss
+└── object
+    ├── component
+    │   ├── _alert.scss
+    │   ├── _box.scss
+    │   ├── _card.scss
+    │   └── ...
+    ├── module
+    │   ├── _btn.scss
+    │   ├── _checkbox.scss
+    │   ├── _embed.scss
+    │   └── ...
+    ├── project
+    │   ├── _footer.scss
+    │   ├── _header.scss
+    │   ├── _main.scss
+    │   └── ...
+    └── utility
+        ├── _bg.scss
+        ├── _clear.scss
+        ├── _expand.scss
+        └── ...</pre></div>
+
+<h2 class="echo-post-title-01">各レイヤーの役割</h2>
+
+<h3 class="echo-post-title-02">foundation</h3>
+
+<p>クラスではなく、各要素そのものに対して基本的なスタイルを定義します。<br>
+プロジェクトごとの変更は極力避けます。</p>
+
+<h3 class="echo-post-title-02">layout</h3>
+
+<p>視覚的な機能を持たない、サイトのレイアウトに関するクラス群です。クラスには初期状態で <code>.l-</code> の接頭辞が付けられます。<br>
+プロジェクトごとの変更は極力避けます。</p>
+
+<h3 class="echo-post-title-02">object</h3>
+
+<p>objectは4つの子レイヤーを持ちます。</p>
+
+<div class="u-margin-left-md">
+
+    <h4 class="echo-post-title-03">module</h4>
+
+    <p>サイト内で、最小単位となる機能を持ったパーツのクラス群です。クラスには初期状態で <code>.m-</code> の接頭辞が付けられます。<br>
+    Atomic DesignのAtomsに準じます。</p>
+
+    <h4 class="echo-post-title-03">component</h4>
+
+    <p>サイト内で、<code>module</code> がひとつ以上含まれる可能性があるパーツのクラス群です。クラスには初期状態で <code>.c-</code> の接頭辞が付けられます。<br>
+    Atomic DesignのMoleculesに準じます。</p>
+
+    <h4 class="echo-post-title-03">project</h4>
+
+    <p>そのプロジェクトのデザインや機能に大きく影響するパーツのクラス群です。<code>module</code> と <code>component</code> が含まれる可能性があります。<br>
+    ブログの本文用CSSなど、採用するCMSに直結するCSSがある場合もここに含まれます。クラスには初期状態で <code>.p-</code> の接頭辞が付けられます。<br>
+    Atomic DesignのOrganismsに準じます。</p>
+
+    <h4 class="echo-post-title-03">utility</h4>
+
+    <p>文字サイズ、余白、外観などをその要素のみで調整するための補助クラスです。クラスには初期状態で <code>.u-</code> の接頭辞が付けられます。</p>
+    
+</div>
+
+
+
+
+<?php include('../doc_include/footer.inc'); ?>

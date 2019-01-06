@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * echo.css - version 1.1.3
+ * echo.css - version 1.2.0
  * 
  * "echo" is CSS framework, built with consider CMS theming in East asian countries.
  * 
@@ -2480,9 +2480,9 @@ m-label
   display: inline-block;
   min-width: 3em;
   margin-right: .5em;
-  padding: .3rem .75em;
+  padding: .25rem .5em;
   background-color: #888;
-  font-size: .75em;
+  font-size: .7em;
   font-weight: 300;
   color: #fff;
   text-align: center;
@@ -4074,6 +4074,8 @@ c-headline
 @media (min-width: 768px) {
   .c-headline-date {
     padding-bottom: 0;
+    padding-right: 0;
+    min-width: 8.5em;
   }
 }
 
@@ -5817,8 +5819,15 @@ p-header
 */
 .p-header {
   background-color: #fff;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+@media (min-width: 1000px) {
+  .p-header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
 }
 
 .p-header-contents {
@@ -5884,7 +5893,13 @@ p-header
 }
 
 .p-header-btn ul.m-list-horizontal li.m-list-item {
-  padding-left: 10px;
+  /*
+note: Spacing of the clickable elements
+クリックできる要素間の余白の最低値は、8pxと言われています。
+The minimum value of the margin between clickable elements is said that to be 8px
+--------------------
+*/
+  padding-left: 8px;
   padding-right: 0;
   letter-spacing: -.4em;
 }
@@ -6080,12 +6095,16 @@ p-widget-(size)
   font-size: 1.125rem;
 }
 
-.p-widget-lg .p-widget-header {
-  padding-bottom: 30px;
+@media (min-width: 1000px) {
+  .p-widget-lg .p-widget-header {
+    padding-bottom: 30px;
+  }
 }
 
-.p-widget-lg .p-widget-footer {
-  padding-top: 30px;
+@media (min-width: 1000px) {
+  .p-widget-lg .p-widget-footer {
+    padding-top: 30px;
+  }
 }
 
 .p-widget-lg .p-widget-title {
