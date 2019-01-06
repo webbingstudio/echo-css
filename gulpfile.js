@@ -43,32 +43,22 @@ gulp.task('sassmin', function () {
 });
 
 
-// js
-gulp.task('js', function() {
-    return gulp.src('_js/**/*.js')
+// js_plugins
+gulp.task('js_plugins', function() {
+    return gulp.src('_plugins/**/*.js')
     .pipe(plumber())
-    .pipe(gulp.dest(dist_dir + 'js/'));
+    .pipe(gulp.dest(dist_dir + 'plugins/'));
 });
-gulp.task('jsconcat', ['js'], function() {
-    return gulp.src('_js/**/*.js')
-    .pipe(plumber())
-    .pipe(concat('echo.js'))
-    .pipe(gulp.dest(dist_dir + 'js/'));
-});
-gulp.task('jsmin', ['jsconcat'], function() {
-    return gulp.src('_js/**/*.js')
+gulp.task('jsmin_plugins', function() {
+    gulp.src('_plugins/**/*.js')
     .pipe(plumber())
     .pipe(uglify())
     .pipe(rename({extname: '.min.js'}))
-    .pipe(gulp.dest(dist_dir + 'js/'));
+    .pipe(gulp.dest(dist_dir + 'plugins/'));
 });
-gulp.task('jsminecho', function() {
-    return gulp.src(dist_dir + 'js/echo.js')
-    .pipe(plumber())
-    .pipe(uglify())
-    .pipe(rename({extname: '.min.js'}))
-    .pipe(gulp.dest(dist_dir + 'js/'));
-});
+
+
+// js task here -----------------
 
 
 // watch
@@ -82,18 +72,15 @@ gulp.task('watch', function(){
   });
 
 gulp.watch([
-    '_js/**/*.js'
+    '_plugins/**/*.js'
   ], function(event) {
-  gulp.run('js');
-  gulp.run('jsconcat');
-  gulp.run('jsmin');
+  gulp.run('js_plugins');
+  gulp.run('jsmin_plugins');
 });
 
-gulp.watch([
-    dist_dir + 'js/echo.js'
-  ], function(event) {
-  gulp.run('jsminecho');
-});
+
+// js watch here -----------------
+
 
 });
 
