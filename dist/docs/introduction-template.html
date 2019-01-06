@@ -28,7 +28,7 @@
 
 <p>echo.cssが想定しているHTML構造は、以下の通りです。</p>
 
-<div class="codeblock"><pre>&lt;!DOCTYPE html&gt;
+<div class="codeblock"><pre><code class="language-markup">&lt;!DOCTYPE html&gt;
 &lt;html lang="ja"&gt;
 &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
@@ -38,6 +38,11 @@
     &lt;title&gt;基本のテンプレート | echo.css&lt;/title&gt;
 
     &lt;link rel="stylesheet" href="/css/echo.min.css"&gt;
+    &lt;link rel="stylesheet" href="/plugins/toggle.css"&gt;
+
+    &lt;script src="https://code.jquery.com/jquery-2.2.4.min.js"&gt;&lt;/script&gt;
+    &lt;script src="/plugins/toggle.min.js">&lt;/script&gt;
+
 &lt;/head&gt;
 &lt;body&gt;
 &lt;div class="l-document" id="document"&gt;
@@ -68,7 +73,7 @@
 
 &lt;/div&gt;&lt;!-- /.l-document --&gt;
 &lt;/body&gt;
-&lt;/html&gt;</pre></div>
+&lt;/html&gt;</code></pre></div>
 
 <h2 class="echo-post-title-01">.l-documentの役割</h2>
 
@@ -79,14 +84,18 @@
 <p>.l-containerは名前の通り、コンテンツを適切に画面中央に配置するコンテナタグです。より良いウェブサイトの制作には必須となります。<br>
 echo.cssは、コンテナタグの幅は一種類ではありません。ヘッダとフッタは通常の幅のコンテナタグ、本文はスリムなコンテナタグ、といった、変化のあるページを作成できます。</p>
 
-<div class="codeblock"><pre>&lt;main class="p-main" role="main"&gt;
+<div class="codeblock"><pre><code class="language-markup">&lt;main class="p-main" role="main"&gt;
         &lt;div class="l-container l-container-sm"&gt;
 
             本文の最大幅がスリムになります
 
         &lt;/div&gt;&lt;!-- /.l-container --&gt;
-    &lt;/main&gt;&lt;!-- /.p-main --&gt;</pre></div>
+    &lt;/main&gt;&lt;!-- /.p-main --&gt;</code></pre></div>
 
+<h2 class="echo-post-title-01">プラグイン</h2>
+
+<p><code>/plugins/toggle.css</code>、<code>/plugins/toggle.min.js</code> は、オーバーレイメニューを開閉するためのプラグインです。jQueryに依存しています。<br>
+オーバーレイメニューを使用しない、またはjQueryを使用しない場合は読み込む必要はありません。</p>
 
 <div class="u-padding-top-xxl">
     <a href="./introduction-about.html" class="m-btn m-btn-bordered m-btn-first m-btn-block m-btn-xl"><span class="u-text-xs u-font-second u-padding-left-sm u-position-center-left">Next </span>echo.cssとは？<i class="fas fa-angle-right u-padding-right-sm u-position-center-right"></i></a>
