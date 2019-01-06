@@ -37,6 +37,7 @@
                         <li class="m-nav-item"><a href="./component-headline.html" class="m-nav-label">headline</a></li>
                         <li class="m-nav-item"><a href="./component-hero.html" class="m-nav-label">hero</a></li>
                         <li class="m-nav-item"><a href="./component-media.html" class="m-nav-label">media</a></li>
+                        <li class="m-nav-item"><a href="./component-overlay.html" class="m-nav-label">overlay</a></li>
                     </ul>
                 </li>
                 <li class="m-nav-item"><span class="m-nav-label">utility</span>

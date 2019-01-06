@@ -1,0 +1,58 @@
+/*
+--------------------
+#{$pr}#{$c}overlay
+--------------------
+*/
+
+.#{$pr}#{$c}overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 998;
+}
+
+.#{$pr}#{$c}overlay#{$c1}bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba($body-bg, .9);
+    z-index: 999;
+}
+
+.#{$pr}#{$c}overlay#{$c1}contents {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    color: $body-color;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+
+    @include media-breakpoint-up(md) {
+        min-width: map-get($container-max-widths-md, md);
+    }
+
+    @include media-breakpoint-up(lg) {
+        min-width: map-get($container-max-widths-md, lg);
+    }
+
+}
+
+.#{$pr}#{$c}overlay#{$c3}inverse {
+
+    .#{$pr}#{$c}overlay#{$c1}bg {
+        background-color: rgba($body-inverse-bg, .9);
+    }
+
+    .#{$pr}#{$c}overlay#{$c1}contents {
+        color: $body-inverse-color;
+    }
+
+}
+
+
