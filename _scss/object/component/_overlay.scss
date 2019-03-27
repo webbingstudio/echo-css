@@ -26,12 +26,13 @@
 
 .#{$pr}#{$c}overlay#{$c1}contents {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 100vh;
     color: $body-color;
-    transform: translate(-50%, -50%);
     z-index: 1000;
+    overflow: auto;
 
     @include media-breakpoint-up(md) {
         min-width: map-get($container-max-widths-md, md);
