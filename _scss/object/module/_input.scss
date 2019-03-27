@@ -11,6 +11,11 @@
     color: $body-color;
     border-radius: $border-radius-sm;
     vertical-align: middle;
+    -webkit-appearance: none;
+
+    &::-webkit-search-decoration {
+      display: none;
+    }
 
     &.#{$error},
     .#{$error} & {

@@ -1429,6 +1429,7 @@ m-btn
   vertical-align: middle;
   transition: .3s all;
   cursor: pointer;
+  -webkit-appearance: none;
 }
 
 a.m-btn {
@@ -2414,6 +2415,11 @@ m-input
   color: #333;
   border-radius: 3px;
   vertical-align: middle;
+  -webkit-appearance: none;
+}
+
+.m-input::-webkit-search-decoration {
+  display: none;
 }
 
 .m-input.is-error,
