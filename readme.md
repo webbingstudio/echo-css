@@ -5,7 +5,7 @@ echo.css
 
 CSS framework optimized for CMS theming
 
-version 1.2.1
+version 1.3.0
 
 Copyright 2019 WebbingStudio  
 Released under the MIT license  
