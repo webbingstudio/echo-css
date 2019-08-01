@@ -67,10 +67,6 @@ $icon:      '[class*="#{$pr}#{$p}icon#{$c3}"], [class*="fa-"]' !default;
 // ex. wysiwyg, freetext, richtext...
 $wysiwyg:   $p + "wysiwyg" !default;
 
-// widget-area-name
-// ex. widgetarea, layout, page, region...
-$widgetarea: "widgetarea" !default;
-
 // widget-name
 // ex. widget, module, box, view...
 $widget: $p + "widget" !default;
@@ -84,12 +80,28 @@ $row: $l + 'grid' + $c1 + 'row' !default;
 $col: $l + 'grid' + $c1 + 'col' !default;
 
 // nav-current-name
-// ex. is-active, active, current, stay...
+// ex. is-active, active, current, cur, stay...
 $nav-current: "is-current" !default;
 
 // error-name
 // ex. is-error, error...
 $error: "is-error" !default;
+
+// pager-prev-name
+// ex. prev, previous, pagination-prev...
+$pager-prev: "prev" !default;
+
+// pager-next-name
+// ex. next, pagination-next...
+$pager-next: "next" !default;
+
+// pager-current-name
+// ex. $nav-current, current, pagination-current...
+$pager-current: $nav-current !default;
+
+// pager-ellipsis-name
+// ex. ellipsis, ommition...
+$pager-ellipsis: "ellipsis" !default;
 
 
 // Container
