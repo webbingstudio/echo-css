@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>component-pager | Style guide | echo-css</title>
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div class="l-document" id="document">
+
+    <?php include('../doc_include/header.inc'); ?>
+
+    <main class="p-main" role="main">
+        <div class="l-container l-container-fluid">
+
+            <div class="echo-pagehead">
+                <h1 class="echo-pagehead-title">component-pager</h1>
+            </div><!-- /.echo-pagehead -->
+
+            <nav class="echo-anchor">
+                <ul class="m-list m-list-horizontal">
+
+                    <li class="m-list-item"><a href="#pager" class="js-scrollto">c-pager</a></li>
+
+                    <li class="m-list-item"><a href="#wordpress" class="js-scrollto">nav-links(WordPress)</a></li>
+
+                </ul>
+            </nav>
+            
+
+            <article class="s-post">
+                <div class="s-post-contents styleguide-contents"><h1 id="pager" class="styleguide">c-pager</h1>
+
+<p>ページネーション（ページ分割ナビゲーション）を前提とした外観に変更する。<code>.m-nav</code> を包括する。</p>
+
+<p>コンポーネント内の <code>.m-nav-item.prev</code> , <code>.m-nav-item.next</code> は前後移動リンクとみなされる。<br>
+<code>.m-nav-item.current</code> は現在ページとみなされ、現在ページの <code>a.m-nav-label</code> が削除されるCMSにも対応する。<br>
+<code>.m-nav-item.ellipsis</code> は省略記号とみなされる。<br>
+最初のページ、最後のページへのリンクスタイルには対応していないため、任意で追加すること。</p>
+
+<p><code>.prev, .next, .current, .ellipsis</code> を変更したい場合は、 <code>/_scss/_config_advance.scss</code> の変数<br>
+<code>$pager-prev, $pager-next, $pager-current, $pager-ellipsis</code> を変更すること。</p>
+
+<div class="example">
+<h3 class="u-text-lg">シンプルなページネーション</h3>
+<div class="c-pager">
+    <nav class="m-nav">
+        <ul class="m-nav-list">
+            <li class="m-nav-item prev">
+                <a href="#" class="m-nav-label" aria-label="prev"><i class="fas fa-angle-left" aria-hidden="true"></i></a>
+            </li>
+            <li class="m-nav-item">
+                <a href="#" class="m-nav-label">1</a>
+            </li>
+            <li class="m-nav-item is-current">
+                <a href="#" class="m-nav-label">2</a>
+            </li>
+            <li class="m-nav-item">
+                <a href="#" class="m-nav-label">3</a>
+            </li>
+            <li class="m-nav-item">
+                <a href="#" class="m-nav-label">4</a>
+            </li>
+            <li class="m-nav-item">
+                <a href="#" class="m-nav-label">5</a>
+            </li>
+            <li class="m-nav-item next">
+                <a href="#" class="m-nav-label" aria-label="next"><i class="fas fa-angle-right" aria-hidden="true"></i></a>
+            </li>
+        </ul><!-- /.nav-list -->
+    </nav><!-- /.nav -->
+</div><!-- /.pager -->
+
+<h3 class="u-text-lg u-margin-top-lg">先頭・末尾・省略記号を含む</h3>
+<p>全体の幅が一般的なスマートフォンの画面幅を超えてしまうので、スマートフォンでも使用する場合はこれらを非表示にする必要がある。</p>
+<div class="c-pager">
+    <nav class="m-nav">
+        <ul class="m-nav-list">
+            <li class="m-nav-item prev">
+                <a href="#" class="m-nav-label" aria-label="prev"><i class="fas fa-angle-left" aria-hidden="true"></i></a>
+            </li>
+            <li class="m-nav-item u-hidden-xs-down">
+                <a href="#" class="m-nav-label">1</a>
+            </li>
+            <li class="m-nav-item ellipsis u-hidden-xs-down">…</li>
+            <li class="m-nav-item">
+                <a href="#" class="m-nav-label">6</a>
+            </li>
+            <li class="m-nav-item">
+                <a href="#" class="m-nav-label">7</a>
+            </li>
+            <li class="m-nav-item is-current">
+                <a href="#" class="m-nav-label">8</a>
+            </li>
+            <li class="m-nav-item">
+                <a href="#" class="m-nav-label">9</a>
+            </li>
+            <li class="m-nav-item">
+                <a href="#" class="m-nav-label">10</a>
+            </li>
+            <li class="m-nav-item ellipsis u-hidden-xs-down">…</li>
+            <li class="m-nav-item u-hidden-xs-down">
+                <a href="#" class="m-nav-label">999</a>
+            </li>
+            <li class="m-nav-item next">
+                <a href="#" class="m-nav-label" aria-label="next"><i class="fas fa-angle-right" aria-hidden="true"></i></a>
+            </li>
+        </ul><!-- /.nav-list -->
+    </nav><!-- /.nav -->
+</div><!-- /.pager -->
+
+<h3 class="u-text-lg u-margin-top-lg">現在ページのa要素が除去されるCMSの場合</h3>
+<div class="c-pager">
+    <nav class="m-nav">
+        <ul class="m-nav-list">
+            <li class="m-nav-item prev">
+                <a href="#" class="m-nav-label" aria-label="prev"><i class="fas fa-angle-left" aria-hidden="true"></i></a>
+            </li>
+            <li class="m-nav-item">
+                <a href="#" class="m-nav-label">1</a>
+            </li>
+            <li class="m-nav-item is-current">
+                2
+            </li>
+            <li class="m-nav-item">
+                <a href="#" class="m-nav-label">3</a>
+            </li>
+            <li class="m-nav-item">
+                <a href="#" class="m-nav-label">4</a>
+            </li>
+            <li class="m-nav-item">
+                <a href="#" class="m-nav-label">5</a>
+            </li>
+            <li class="m-nav-item next">
+                <a href="#" class="m-nav-label" aria-label="next"><i class="fas fa-angle-right" aria-hidden="true"></i></a>
+            </li>
+        </ul><!-- /.nav-list -->
+    </nav><!-- /.nav -->
+</div><!-- /.pager -->
+
+<h3 class="u-text-lg u-margin-top-lg">.m-nav-inverseを併用した場合</h3>
+<div class="c-pager">
+    <nav class="m-nav m-nav-inverse">
+        <ul class="m-nav-list">
+            <li class="m-nav-item prev">
+                <a href="#" class="m-nav-label" aria-label="prev"><i class="fas fa-angle-left" aria-hidden="true"></i></a>
+            </li>
+            <li class="m-nav-item">
+                <a href="#" class="m-nav-label">1</a>
+            </li>
+            <li class="m-nav-item ellipsis">…</li>
+            <li class="m-nav-item">
+                <a href="#" class="m-nav-label">6</a>
+            </li>
+            <li class="m-nav-item">
+                <a href="#" class="m-nav-label">7</a>
+            </li>
+            <li class="m-nav-item is-current">
+                <a href="#" class="m-nav-label">8</a>
+            </li>
+            <li class="m-nav-item">
+                <a href="#" class="m-nav-label">9</a>
+            </li>
+            <li class="m-nav-item">
+                <a href="#" class="m-nav-label">10</a>
+            </li>
+            <li class="m-nav-item ellipsis">…</li>
+            <li class="m-nav-item">
+                <a href="#" class="m-nav-label">999</a>
+            </li>
+            <li class="m-nav-item next">
+                <a href="#" class="m-nav-label" aria-label="next"><i class="fas fa-angle-right" aria-hidden="true"></i></a>
+            </li>
+        </ul><!-- /.nav-list -->
+    </nav><!-- /.nav -->
+</div><!-- /.pager -->
+
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;h3 class="u-text-lg"&gt;シンプルなページネーション&lt;/h3&gt;
+&lt;div class="c-pager"&gt;
+    &lt;nav class="m-nav"&gt;
+        &lt;ul class="m-nav-list"&gt;
+            &lt;li class="m-nav-item prev"&gt;
+                &lt;a href="#" class="m-nav-label" aria-label="prev"&gt;&lt;i class="fas fa-angle-left" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="m-nav-item"&gt;
+                &lt;a href="#" class="m-nav-label"&gt;1&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="m-nav-item is-current"&gt;
+                &lt;a href="#" class="m-nav-label"&gt;2&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="m-nav-item"&gt;
+                &lt;a href="#" class="m-nav-label"&gt;3&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="m-nav-item"&gt;
+                &lt;a href="#" class="m-nav-label"&gt;4&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="m-nav-item"&gt;
+                &lt;a href="#" class="m-nav-label"&gt;5&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="m-nav-item next"&gt;
+                &lt;a href="#" class="m-nav-label" aria-label="next"&gt;&lt;i class="fas fa-angle-right" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;&lt;!-- /.nav-list --&gt;
+    &lt;/nav&gt;&lt;!-- /.nav --&gt;
+&lt;/div&gt;&lt;!-- /.pager --&gt;
+
+&lt;h3 class="u-text-lg u-margin-top-lg"&gt;先頭・末尾・省略記号を含む&lt;/h3&gt;
+&lt;p&gt;全体の幅が一般的なスマートフォンの画面幅を超えてしまうので、スマートフォンでも使用する場合はこれらを非表示にする必要がある。&lt;/p&gt;
+&lt;div class="c-pager"&gt;
+    &lt;nav class="m-nav"&gt;
+        &lt;ul class="m-nav-list"&gt;
+            &lt;li class="m-nav-item prev"&gt;
+                &lt;a href="#" class="m-nav-label" aria-label="prev"&gt;&lt;i class="fas fa-angle-left" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="m-nav-item u-hidden-xs-down"&gt;
+                &lt;a href="#" class="m-nav-label"&gt;1&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="m-nav-item ellipsis u-hidden-xs-down"&gt;…&lt;/li&gt;
+            &lt;li class="m-nav-item"&gt;
+                &lt;a href="#" class="m-nav-label"&gt;6&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="m-nav-item"&gt;
+                &lt;a href="#" class="m-nav-label"&gt;7&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="m-nav-item is-current"&gt;
+                &lt;a href="#" class="m-nav-label"&gt;8&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="m-nav-item"&gt;
+                &lt;a href="#" class="m-nav-label"&gt;9&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="m-nav-item"&gt;
+                &lt;a href="#" class="m-nav-label"&gt;10&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="m-nav-item ellipsis u-hidden-xs-down"&gt;…&lt;/li&gt;
+            &lt;li class="m-nav-item u-hidden-xs-down"&gt;
+                &lt;a href="#" class="m-nav-label"&gt;999&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="m-nav-item next"&gt;
+                &lt;a href="#" class="m-nav-label" aria-label="next"&gt;&lt;i class="fas fa-angle-right" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;&lt;!-- /.nav-list --&gt;
+    &lt;/nav&gt;&lt;!-- /.nav --&gt;
+&lt;/div&gt;&lt;!-- /.pager --&gt;
+
+&lt;h3 class="u-text-lg u-margin-top-lg"&gt;現在ページのa要素が除去されるCMSの場合&lt;/h3&gt;
+&lt;div class="c-pager"&gt;
+    &lt;nav class="m-nav"&gt;
+        &lt;ul class="m-nav-list"&gt;
+            &lt;li class="m-nav-item prev"&gt;
+                &lt;a href="#" class="m-nav-label" aria-label="prev"&gt;&lt;i class="fas fa-angle-left" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="m-nav-item"&gt;
+                &lt;a href="#" class="m-nav-label"&gt;1&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="m-nav-item is-current"&gt;
+                2
+            &lt;/li&gt;
+            &lt;li class="m-nav-item"&gt;
+                &lt;a href="#" class="m-nav-label"&gt;3&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="m-nav-item"&gt;
+                &lt;a href="#" class="m-nav-label"&gt;4&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="m-nav-item"&gt;
+                &lt;a href="#" class="m-nav-label"&gt;5&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="m-nav-item next"&gt;
+                &lt;a href="#" class="m-nav-label" aria-label="next"&gt;&lt;i class="fas fa-angle-right" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;&lt;!-- /.nav-list --&gt;
+    &lt;/nav&gt;&lt;!-- /.nav --&gt;
+&lt;/div&gt;&lt;!-- /.pager --&gt;
+
+&lt;h3 class="u-text-lg u-margin-top-lg"&gt;.m-nav-inverseを併用した場合&lt;/h3&gt;
+&lt;div class="c-pager"&gt;
+    &lt;nav class="m-nav m-nav-inverse"&gt;
+        &lt;ul class="m-nav-list"&gt;
+            &lt;li class="m-nav-item prev"&gt;
+                &lt;a href="#" class="m-nav-label" aria-label="prev"&gt;&lt;i class="fas fa-angle-left" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="m-nav-item"&gt;
+                &lt;a href="#" class="m-nav-label"&gt;1&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="m-nav-item ellipsis"&gt;…&lt;/li&gt;
+            &lt;li class="m-nav-item"&gt;
+                &lt;a href="#" class="m-nav-label"&gt;6&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="m-nav-item"&gt;
+                &lt;a href="#" class="m-nav-label"&gt;7&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="m-nav-item is-current"&gt;
+                &lt;a href="#" class="m-nav-label"&gt;8&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="m-nav-item"&gt;
+                &lt;a href="#" class="m-nav-label"&gt;9&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="m-nav-item"&gt;
+                &lt;a href="#" class="m-nav-label"&gt;10&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="m-nav-item ellipsis"&gt;…&lt;/li&gt;
+            &lt;li class="m-nav-item"&gt;
+                &lt;a href="#" class="m-nav-label"&gt;999&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="m-nav-item next"&gt;
+                &lt;a href="#" class="m-nav-label" aria-label="next"&gt;&lt;i class="fas fa-angle-right" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;&lt;!-- /.nav-list --&gt;
+    &lt;/nav&gt;&lt;!-- /.nav --&gt;
+&lt;/div&gt;&lt;!-- /.pager --&gt;</code></pre></div>
+
+
+<h2 id="wordpress" class="styleguide">nav-links(WordPress)</h2>
+
+<p>WordPressのthe_posts_pagination関数が生成するページネーションで、デフォルトと同様の外観を再現する。反転には対応していない。</p>
+
+
+<div class="example">
+
+<div class="nav-links"><a class="prev page-numbers" href="#">前へ</a>
+<a class="page-numbers" href="#">1</a>
+<a class="page-numbers" href="#">2</a>
+<span aria-current="page" class="page-numbers current">3</span>
+<a class="page-numbers" href="#">4</a>
+<a class="next page-numbers" href="#">次へ</a></div>
+
+</div>
+
+
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="nav-links"&gt;&lt;a class="prev page-numbers" href="#"&gt;前へ&lt;/a&gt;
+&lt;a class="page-numbers" href="#"&gt;1&lt;/a&gt;
+&lt;a class="page-numbers" href="#"&gt;2&lt;/a&gt;
+&lt;span aria-current="page" class="page-numbers current"&gt;3&lt;/span&gt;
+&lt;a class="page-numbers" href="#"&gt;4&lt;/a&gt;
+&lt;a class="next page-numbers" href="#"&gt;次へ&lt;/a&gt;&lt;/div&gt;</code></pre></div>
+
+                </div>
+            </article>
+
+<?php include('../doc_include/footer.inc'); ?>
