@@ -11,6 +11,7 @@
     text-align: center;
 
     .#{$pr}#{$m}nav#{$c1}item {
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -19,9 +20,10 @@
         &:not(.#{$pager-ellipsis}) {
             width: 2rem;
             flex-basis: 2rem;
-            margin-left: ( $spacer * .3 );
-            margin-right: ( $spacer * .3 );
-            border: 1px solid $nav-color;
+            margin-left: .25rem;
+            margin-right: .25rem;
+            border-style: solid;
+            border-width: $pager-border-width;
 
             &:first-child {
                 margin-left: 0;
@@ -34,53 +36,56 @@
         }
 
         &.#{$pager-ellipsis} {
-            padding-left: ( $spacer * .3 );
-            padding-right: ( $spacer * .3 );
+            padding-left: .25rem;
+            padding-right: .25rem;
         }
 
     }
 
     .#{$pr}#{$m}nav#{$c1}label {
-        width: 100%;
-        height: 100%;
+        position: absolute;
+        top: ( $pager-border-width * -1 );
+        left: ( $pager-border-width * -1 );
+        bottom: ( $pager-border-width * -1 );
+        right: ( $pager-border-width * -1 );
+        width: auto;
+        height: auto;
         min-height: auto;
-        font-size: $font-size-xs;
+        font-size: inherit;
         padding: 0;
+        border-style: solid;
+        border-width: $pager-border-width;
+    }
 
-        @at-root {
+    .#{$pr}#{$m}nav:not(.#{$pr}#{$m}nav#{$c3}inverse) {
 
-            a.#{$pr}#{$m}nav#{$c1}label {
+        .#{$pr}#{$m}nav#{$c1}item {
 
-                &:hover,
-                &:focus {
-                    color: $nav-color;
-                    background-color: $nav-bg;
+            &.#{$pager-current} {
+                background-color: $pager-current-bg;
+                border-color: $pager-current-border-color;
+                color: $pager-current-color;
+
+                .#{$pr}#{$m}nav#{$c1}label {
+                    background-color: $pager-current-bg;
+                    border-color: $pager-current-border-color;
+                    color: $pager-current-color;
                 }
 
             }
 
         }
 
-    }
+        a.#{$pr}#{$m}nav#{$c1}label {
+            background-color: $pager-bg;
+            border-color: $pager-border-color;
+            color: $pager-color;
 
-    :not(.#{$pr}#{$m}nav#{$c3}inverse) {
-
-        .#{$pr}#{$m}nav#{$c1}item {
-
-            &:not(.#{$pager-ellipsis}) {
-                border: 1px solid $nav-color;
-            }
-
-            &.#{$pager-current} {
-                border-color: $nav-current-color;
-                color: $nav-current-color;
-                background-color: $nav-current-bg;
-
-                .#{$pr}#{$m}nav#{$c1}label {
-                    color: $nav-current-color;
-                    background-color: $nav-current-bg;
-                }
-
+            &:hover,
+            &:focus {
+                background-color: $pager-hover-bg;
+                border-color: $pager-hover-border-color;
+                color: $pager-hover-color;
             }
 
         }
@@ -96,17 +101,36 @@
         .#{$pr}#{$m}nav#{$c1}item {
 
             &:not(.#{$pager-ellipsis}) {
-                background-color: $nav-inverse-bg;
+                background-color: $pager-inverse-bg;
+                border-color: $pager-inverse-border-color;
+                color: $pager-inverse-color;
             }
 
             &.#{$pager-current} {
-                border-color: transparent;
+                background-color: $pager-inverse-current-bg;
+                border-color: $pager-inverse-current-border-color;
+                color: $pager-inverse-current-color;
 
                 .#{$pr}#{$m}nav#{$c1}label {
-                    color: $nav-inverse-current-color;
-                    background-color: $nav-inverse-current-bg;
+                    background-color: $pager-inverse-current-bg;
+                    border-color: $pager-inverse-current-border-color;
+                    color: $pager-inverse-current-color;
                 }
 
+            }
+
+        }
+
+        a.#{$pr}#{$m}nav#{$c1}label {
+            background-color: $pager-inverse-bg;
+            border-color: $pager-inverse-border-color;
+            color: $pager-inverse-color;
+
+            &:hover,
+            &:focus {
+                background-color: $pager-inverse-hover-bg;
+                border-color: $pager-inverse-hover-border-color;
+                color: $pager-inverse-hover-color;
             }
 
         }
@@ -140,14 +164,14 @@ nav-links(WordPress)
         align-items: center;
         min-width: 2rem;
         height: 2rem;
-        margin-left: ( $spacer * .3 );
-        margin-right: ( $spacer * .3 );
+        margin-left: .25rem;
+        margin-right: .25rem;
         padding-left: .5rem;
         padding-right: .5rem;
-        color: $nav-color;
-        background-color: $nav-bg;
-        border: 1px solid $nav-color;
-        font-size: $font-size-xs;
+        background-color: $pager-bg;
+        border: $pager-border-width solid $pager-border-color;
+        color: $pager-color;
+        font-size: inherit;
 
         &:first-child {
             margin-left: 0;
@@ -161,10 +185,12 @@ nav-links(WordPress)
 
             a {
                 text-decoration: none;
+                transition: .3s all;
 
                 &:hover,
                 &:focus {
-                    color: $nav-color;
+                    background-color: $pager-hover-bg;
+                    color: $pager-hover-color;
                 }
 
             }
@@ -177,9 +203,9 @@ nav-links(WordPress)
         }
 
         &.current {
-            border-color: $nav-current-color;
-            color: $nav-current-color;
-            background-color: $nav-current-bg;
+            background-color: $pager-current-bg;
+            border-color: $pager-current-border-color;
+            color: $pager-current-color;
         }
 
     }
