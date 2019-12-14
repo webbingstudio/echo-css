@@ -181,22 +181,6 @@ nav-links(WordPress)
             margin-right: 0;
         }
 
-        @at-root {
-
-            a {
-                text-decoration: none;
-                transition: .3s all;
-
-                &:hover,
-                &:focus {
-                    background-color: $pager-hover-bg;
-                    color: $pager-hover-color;
-                }
-
-            }
-
-        }
-
         &:not(.prev):not(.next) {
             padding-left: 0;
             padding-right: 0;
@@ -206,6 +190,19 @@ nav-links(WordPress)
             background-color: $pager-current-bg;
             border-color: $pager-current-border-color;
             color: $pager-current-color;
+        }
+
+    }
+
+    a {
+        text-decoration: none;
+        transition: .3s all;
+
+        &:hover,
+        &:focus {
+            background-color: $pager-hover-bg;
+            border-color: $pager-hover-border-color;
+            color: $pager-hover-color;
         }
 
     }
