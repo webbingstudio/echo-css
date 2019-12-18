@@ -1427,7 +1427,7 @@ m-btn
   line-height: 1;
   border-radius: 5px;
   vertical-align: middle;
-  transition: .3s all;
+  transition: background-color .3s, border-color .3s, color .3s;
   cursor: pointer;
   -webkit-appearance: none;
 }
@@ -2721,7 +2721,7 @@ m-nav
   padding: .25em 1em;
   font-size: .875rem;
   line-height: 1;
-  transition: .3s all;
+  transition: background-color .3s, border-color .3s, color .3s;
 }
 
 @media (min-width: 425px) {

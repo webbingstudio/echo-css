@@ -41,13 +41,17 @@
     padding: .25em 1em;
     font-size: .875rem;
     line-height: 1;
-    transition: .3s all;
+    transition:
+        background-color .3s,
+        border-color .3s,
+        color .3s;
 
     @include media-breakpoint-up(sm) {
         font-size: 1rem;
     }
 
     @at-root {
+
         a#{&} {
             text-decoration: none;
             cursor: pointer;

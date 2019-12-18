@@ -18,7 +18,10 @@
     line-height: 1;
     border-radius: $border-radius-md;
     vertical-align: middle;
-    transition: .3s all;
+    transition:
+        background-color .3s,
+        border-color .3s,
+        color .3s;
     cursor: pointer;
     -webkit-appearance: none;
 
