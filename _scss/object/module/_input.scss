@@ -6,12 +6,18 @@
 
 .#{$pr}#{$m}input {
     padding: .375rem .5rem;
-    background: $body-bg none;
-    border: $border-input-width solid $border-color;
-    color: $body-color;
+    background: $input-bg none;
+    border: $input-border-width solid $input-border-color;
+    color: $input-color;
     border-radius: $border-radius-sm;
     vertical-align: middle;
     -webkit-appearance: none;
+
+    &:focus {
+        color: $input-focus-color;
+        background-color: $input-focus-bg;
+        border-color: $input-focus-border-color;
+    }
 
     &::-webkit-search-decoration {
       display: none;
@@ -19,9 +25,14 @@
 
     &.#{$error},
     .#{$error} & {
-        background-color: $important-fade;
-        border-color: $important;
+        background-color: $input-bg;
+        border-color: $important-text;
         color: $important-text;
+
+        &:focus {
+            background-color: $important-fade;
+        }
+
     }
 
 }
@@ -43,36 +54,3 @@
     font-size: $font-size-lg;
 }
 
-
-/*
---------------------
-#{$pr}#{$m}input#{$c3}(color)
---------------------
-*/
-
-.#{$pr}#{$m}input#{$c3}#{$__gray} {
-    border-color: $gray;
-}
-
-.#{$pr}#{$m}input#{$c3}#{$__first} {
-    border-color: $first;
-}
-
-.#{$pr}#{$m}input#{$c3}#{$__second} {
-    border-color: $second;
-}
-
-.#{$pr}#{$m}input#{$c3}#{$__third} {
-    border-color: $third;
-}
-
-.#{$pr}#{$m}input#{$c3}#{$__fourth} {
-    border-color: $fourth;
-}
-
-.#{$pr}#{$m}input#{$c3}#{$__info} {
-    border-color: $info;
-}
-.#{$pr}#{$m}input#{$c3}#{$__important} {
-    border-color: $important;
-}
