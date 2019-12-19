@@ -109,7 +109,7 @@ $__important:    "important" !default;
 // $__important:    "danger" !default;
 
 
-// Border
+// Border ( Table, Alert, Thumbnail, Box )
 // -----------------------------------------
 
 $border-width:                   1px !default;
@@ -117,17 +117,48 @@ $border-color:                   $gray-milder !default;
 $border-inverse-color:           $gray-mild !default;
 
 $border-btn-width:               $border-width !default;
-$border-input-width:             $border-width !default;
 $border-table-width:             $border-width !default;
 $border-table-section-width:     ($border-width * 2) !default;
 $border-table-section-color:     $border-color !default;
 $border-thumbnail-width:         0 !default;
-
 $border-alert-width:             $border-width !default;
 $border-box-width:               ($border-width * 2) !default;
 
 
-// Font Mapping
+// UI ( Nav, Pager, Form )
+// -----------------------------------------
+
+$ui-border-width:               1px !default;
+$ui-icon-color:                 $first !default;
+
+$ui-color:                      $body-color !default;
+$ui-bg:                         transparent !default;
+$ui-border-color:               $body-color !default;
+$ui-hover-color:                $body-color !default;
+$ui-hover-bg:                   rgba($body-color, .15) !default;
+$ui-hover-border-color:         $body-color !default;
+$ui-current-color:              $body-inverse-color !default;
+$ui-current-bg:                 $body-color !default;
+$ui-current-border-color:       $body-color !default;
+$ui-current-hover-color:        $ui-current-color !default;
+$ui-current-hover-bg:           $ui-current-bg !default;
+$ui-current-hover-border-color: $ui-current-border-color !default;
+
+$ui-inverse-color:                      $body-inverse-color !default;
+$ui-inverse-bg:                         transparent !default;
+$ui-inverse-border-color:               $body-inverse-color !default;
+$ui-inverse-hover-color:                $body-inverse-color !default;
+$ui-inverse-hover-bg:                   rgba($body-inverse-color, .2) !default;
+$ui-inverse-hover-border-color:         $body-inverse-color !default;
+$ui-inverse-current-color:              $body-color !default;
+$ui-inverse-current-bg:                 rgba($body-inverse-color, .8) !default;
+$ui-inverse-current-border-color:       $body-inverse-color !default;
+$ui-inverse-current-hover-color:        $ui-inverse-current-color !default;
+$ui-inverse-current-hover-bg:           $ui-inverse-current-bg !default;
+$ui-inverse-current-hover-border-color: $ui-inverse-current-border-color !default;
+
+
+// Font mapping
 // -----------------------------------------
 
 @mixin font-face-mapping() {
@@ -184,58 +215,6 @@ $line-height-xs:            1.25 !default;
 $line-height-sm:            1.5 !default;
 $line-height-md:            1.75 !default;
 $line-height-lg:            2 !default;
-
-
-// Navigation
-// -----------------------------------------
-
-$nav-color:                       $body-color !default;
-$nav-bg:                          transparent !default;
-$nav-hover-color:                 $body-color !default;
-$nav-hover-bg:                    rgba($body-inverse-bg, .05) !default;
-$nav-current-color:               $nav-hover-color !default;
-$nav-current-bg:                  $nav-hover-bg !default;
-$nav-current-hover-color:         $nav-hover-color !default;
-$nav-current-hover-bg:            $nav-hover-bg !default;
-
-$nav-inverse-color:               $body-inverse-color !default;
-$nav-inverse-bg:                  $body-inverse-bg !default;
-$nav-inverse-hover-color:         $body-inverse-color !default;
-$nav-inverse-hover-bg:            rgba($body-bg, .15) !default;
-$nav-inverse-current-color:       $nav-inverse-hover-color !default;
-$nav-inverse-current-bg:          $nav-inverse-hover-bg !default;
-$nav-inverse-current-hover-color: $nav-inverse-hover-color !default;
-$nav-inverse-current-hover-bg:    $nav-inverse-hover-bg !default;
-
-
-// Pager
-// -----------------------------------------
-
-$pager-border-width:                 $border-width !default;
-
-$pager-color:                        $body-color !default;
-$pager-bg:                           $body-bg !default;
-$pager-border-color:                 $body-color !default;
-
-$pager-hover-color:                  $body-color !default;
-$pager-hover-bg:                     rgba($body-color, .2) !default;
-$pager-hover-border-color:           $body-color !default;
-
-$pager-current-color:                $body-inverse-color !default;
-$pager-current-bg:                   $body-inverse-bg !default;
-$pager-current-border-color:         $body-inverse-bg !default;
-
-$pager-inverse-color:                $body-inverse-color !default;
-$pager-inverse-bg:                   transparent !default;
-$pager-inverse-border-color:         $body-inverse-color !default;
-
-$pager-inverse-hover-color:          $body-inverse-color !default;
-$pager-inverse-hover-bg:             rgba($body-inverse-color, .2) !default;
-$pager-inverse-hover-border-color:   $body-inverse-color !default;
-
-$pager-inverse-current-color:        $body-color !default;
-$pager-inverse-current-bg:           $body-bg !default;
-$pager-inverse-current-border-color: $body-bg !default;
 
 
 // Radius
