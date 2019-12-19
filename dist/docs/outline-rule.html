@@ -26,114 +26,46 @@
 
 <h2 class="echo-post-title-01">基本的なマークアップ</h2>
 
-<p>HTMLファイルの基本構造は以下の通りです。レイヤー構造がcomponent以上のオブジェクトは、必ずdiv要素でグルーピングされます。<br>
-div要素の閉じタグの後ろには、コメントでクラス名を付与するのが望ましいです。複数ある場合はすべて書くことは酒、識別しやすい代表的なものを書きます。</p>
+<p>オブジェクトの基本構造は以下の通りです。<br>
+<code>object>component, layout</code>に属するオブジェクトは<code>div, section, article</code>等の、<a href="https://developer.mozilla.org/ja/docs/Web/Guide/HTML/Content_categories" target="_blank">フローコンテンツ</a>でグループ化します。これは両者が「複数のオブジェクトを包括する」という特性を持つためです。<br>
+要素の閉じタグの後ろには、コメントでクラス名を付与するのが望ましいです。複数ある場合はすべて書くことは避け、識別しやすい代表的なものを書きます。<br>
+インデントはスペース4個を採用していますが、プロジェクト内で統一されていればこの限りではありません。</p>
 
-<div class="codeblock"><pre>&lt;div class="example"&gt;
-    &lt;div class="example-inner"&gt;
+<div class="codeblock"><pre>&lt;div class="c-example"&gt;
+    &lt;div class="c-example-inner"&gt;
+        &lt;h2 class="c-example-title"&gt;c-exampleオブジェクト&lt;/h2&gt;
         ...
-    &lt;/div&gt;&lt;!-- /.example-inner --&gt;
-&lt;/div&gt;&lt;!-- /.example --&gt;</pre></div>
+    &lt;/div&gt;&lt;!-- /.c-example-inner --&gt;
+&lt;/div&gt;&lt;!-- /.c-example --&gt;</pre></div>
 
 <h2 class="echo-post-title-01">クラス命名規則</h2>
+
+<h3 class="echo-post-title-02">接続子</h3>
 
 <p>echo.cssのCSSクラスの命名規則は、SMACSSを参考にしています。</p>
 
 <p><a href="https://smacss.com/ja" target="_blank">Scalable and Modular Architecture for CSS</a></p>
 
-<p>デフォルトの命名規則は以下の通りです。ハイフン1個で連結します。</p>
+<p>デフォルトの接続子は以下の通りです。常にハイフン1個のみで連結します。</p>
 
 <p><strong>prefix-block-element-modifier</strong></p>
 
+<h3 class="echo-post-title-02">オブジェクト内のクラス名</h3>
 
+<p>オブジェクト内のクラス名は、冗長でないことが望ましいです。<br>
+オブジェクト内のHTMLの、見出し要素までの階層構造が以下だった場合</p>
 
+<p><strong>c-example > c-example-inner > 見出し要素</strong></p>
 
+<p>見出し要素のクラス名は、最上位のオブジェクトの直属とみなし<code>.c-example-title</code>とします。<br>
+（<code>.c-example-inner-title</code>ではない）</p>
 
+<p>Atomic Designの考えに基づけば、<code>.c-example-inner-title</code>は、さらに「見出し」という最小単位（Atom = module）に分割できます。このCSSフレームワークに、新たに<code>.m-title</code>などを追加することも考えられるでしょう。</p>
 
-<h3 class="echo-post-title-02">ヘッダ・フッタがlayoutではなくprojectに属する</h3>
+<h3 class="echo-post-title-02">クラス名の英単語は略さない</h3>
 
-<p>プロジェクトごとに変更されるファイルを出来る限り少なくする目的で、ヘッダ・フッタはレイアウト扱いにはしていません。</p>
-
-<h3 class="echo-post-title-02">グリッド（段組）がcomponentではなくlayoutに属する</h3>
-
-<p>後述のlayoutの定義に添って、移動しています。</p>
-
-<h3 class="echo-post-title-02">componentの一部をmoduleに分離</h3>
-
-<p>componentに属するSCSSファイルが多くなりすぎる問題を回避すると同時に、Atomic Designの構造を反映しています。</p>
-
-
-<h2 class="echo-post-title-01">ファイル構造</h2>
-
-<div class="codeblock"><pre>├── foundation
-│   ├── _base.scss
-│   └── _reset.scss
-├── layout
-│   ├── _container.scss
-│   ├── _document.scss
-│   └── _grid.scss
-└── object
-    ├── component
-    │   ├── _alert.scss
-    │   ├── _box.scss
-    │   ├── _card.scss
-    │   └── ...
-    ├── module
-    │   ├── _btn.scss
-    │   ├── _checkbox.scss
-    │   ├── _embed.scss
-    │   └── ...
-    ├── project
-    │   ├── _footer.scss
-    │   ├── _header.scss
-    │   ├── _main.scss
-    │   └── ...
-    └── utility
-        ├── _bg.scss
-        ├── _clear.scss
-        ├── _expand.scss
-        └── ...</pre></div>
-
-<h2 class="echo-post-title-01">各レイヤーの役割</h2>
-
-<h3 class="echo-post-title-02">foundation</h3>
-
-<p>クラスではなく、各要素そのものに対して基本的なスタイルを定義します。<br>
-プロジェクトごとの変更は極力避けます。</p>
-
-<h3 class="echo-post-title-02">layout</h3>
-
-<p>視覚的な機能を持たない、サイトのレイアウトに関するクラス群です。クラスには初期状態で <code>.l-</code> の接頭辞が付けられます。<br>
-プロジェクトごとの変更は極力避けます。</p>
-
-<h3 class="echo-post-title-02">object</h3>
-
-<p>objectは4つの子レイヤーを持ちます。</p>
-
-<div class="u-margin-left-md">
-
-    <h4 class="echo-post-title-03">module</h4>
-
-    <p>サイト内で、最小単位となる機能を持ったパーツのクラス群です。クラスには初期状態で <code>.m-</code> の接頭辞が付けられます。<br>
-    Atomic DesignのAtomsに準じます。</p>
-
-    <h4 class="echo-post-title-03">component</h4>
-
-    <p>サイト内で、<code>module</code> がひとつ以上含まれる可能性があるパーツのクラス群です。クラスには初期状態で <code>.c-</code> の接頭辞が付けられます。<br>
-    Atomic DesignのMoleculesに準じます。</p>
-
-    <h4 class="echo-post-title-03">project</h4>
-
-    <p>そのプロジェクトのデザインや機能に大きく影響するパーツのクラス群です。<code>module</code> と <code>component</code> が含まれる可能性があります。<br>
-    ブログの本文用CSSなど、採用するCMSに直結するCSSがある場合もここに含まれます。クラスには初期状態で <code>.p-</code> の接頭辞が付けられます。<br>
-    Atomic DesignのOrganismsに準じます。</p>
-
-    <h4 class="echo-post-title-03">utility</h4>
-
-    <p>文字サイズ、余白、外観などをその要素のみで調整するための補助クラスです。クラスには初期状態で <code>.u-</code> の接頭辞が付けられます。</p>
-    
-</div>
-
+<p>原則として、クラス名の英単語は略さず使用します。<br>
+例えば<code>.u-img-resp</code>などではなく<code>.u-image-responsive</code>となります。</p>
 
 
 
