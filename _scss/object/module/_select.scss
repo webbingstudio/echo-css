@@ -32,26 +32,49 @@
         height: 2.5em;
         line-height: 2.5em;
         padding: 0 2em 0 .5em;
-        background-color: transparent;
-        border: $border-input-width solid $border-color;
+        background-color: $input-bg;
+        border: $input-border-width solid $input-border-color;
         vertical-align: middle;
-        border-radius: $border-radius-md;
-        outline: none;
+        border-radius: $border-radius-sm;
         z-index: 2;
 
         &::-ms-expand {
             display: none;
         }
 
+        &:hover,
         &:focus {
-            background-color: $gray-fade;
+            color: $input-focus-color;
+            background-color: $input-focus-bg;
+            border-color: $input-focus-border-color;
         }
 
     }
 
-    &.#{$error},
-    .#{$error} > & {
-        background-color: $important-fade;
+    @at-root {
+
+        &.#{$error},
+        .#{$error} > & {
+
+            &:after {
+                border-top-color: $important-text;
+                border-right-color: $important-text;
+            }
+
+            select {
+                background-color: $input-bg;
+                border-color: $important-text;
+                color: $important-text;
+
+                &:hover,
+                &:focus {
+                    background-color: $important-fade;
+                }
+
+            }
+
+        }
+
     }
 
     option {
