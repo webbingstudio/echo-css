@@ -5,19 +5,78 @@
 */
 
 .#{$pr}#{$m}radio {
-    position: relative;
     display: inline-block;
+    cursor: pointer;
+    line-height: $line-height-xs;
+
+    .#{$pr}#{$m}radio-icon {
+        display: inline-block;
+        width: 1.25em;
+        height: 1.25em;
+        margin-right: .5em;
+        border: $radio-border-width solid $radio-border-color;
+        background-color: $radio-bg;
+        border-radius: 50%;
+        vertical-align: middle;
+        transform: translate( 0, -.05em );
+    }
+
+    input[type="radio"] {
+        position: absolute;
+        opacity: 0;
+        -webkit-appearance: none;
+        appearance: none;
+
+        &:checked + .#{$pr}#{$m}radio-icon {
+            position: relative;
+            background: $radio-checked-bg;
+            border: $radio-border-width solid $radio-checked-border-color;
+
+            &:after {
+                display: block;
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 70%;
+                height: 70%;
+                background-color: $radio-checked-color;
+                border-radius: 50%;
+                transform: translate( -50%, -50% );
+            }
+
+        }
+
+        &:focus + .#{$pr}#{$m}radio-icon {
+            box-shadow: 
+                0 0 .1em $ui-focus-color,
+                0 0 .4em $ui-focus-color;
+        }
+
+    }
 
     &.#{$pr}#{$error},
     .#{$pr}#{$error} > & {
         color: $important-text;
-    }
 
-    input[type="radio"] {
-        display: inline-block;
-        margin: 0;
-        vertical-align: middle;
-        transform: translate(0, -15%);
+        .#{$pr}#{$m}radio-icon {
+            border-color: $important;
+        }
+
+        input[type="radio"] {
+
+            &:checked + .#{$pr}#{$m}radio-icon {
+                background-color: $radio-checked-bg;
+                border-color: $important;
+
+                &:after {
+                    background-color: $important;
+                }
+
+            }
+
+        }
+
     }
 
 }
