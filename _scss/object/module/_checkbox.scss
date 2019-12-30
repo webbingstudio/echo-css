@@ -6,17 +6,74 @@
 
 .#{$pr}#{$m}checkbox {
     display: inline-block;
+    cursor: pointer;
+    line-height: $line-height-xs;
+
+    .#{$pr}#{$m}checkbox-icon {
+        display: inline-block;
+        width: 1.25em;
+        height: 1.25em;
+        margin-right: .5em;
+        border: $checkbox-border-width solid $checkbox-border-color;
+        background-color: $checkbox-bg;
+        border-radius: $border-radius-sm;
+        vertical-align: middle;
+        transform: translate( 0, -.05em );
+    }
+
+    input[type="checkbox"] {
+        position: absolute;
+        opacity: 0;
+        -webkit-appearance: none;
+        appearance: none;
+
+        &:checked + .#{$pr}#{$m}checkbox-icon {
+            position: relative;
+            background: $checkbox-checked-bg;
+            border: $checkbox-border-width solid $checkbox-checked-border-color;
+
+            &:after {
+                display: block;
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 50%;
+                width: 30%;
+                height: 60%;
+                border-bottom: .2em solid $checkbox-checked-color;
+                border-right: .2em solid $checkbox-checked-color;
+                transform:
+                    translate( -50%, 0 )
+                    rotate( 45deg );
+            }
+
+        }
+
+        &:focus + .#{$pr}#{$m}checkbox-icon {
+            box-shadow: 
+                0 0 .1em $ui-focus-color,
+                0 0 .4em $ui-focus-color;
+        }
+
+    }
 
     &.#{$pr}#{$error},
     .#{$pr}#{$error} > & {
         color: $important-text;
-    }
 
-    input[type="checkbox"] {
-        display: inline-block;
-        margin: 0;
-        vertical-align: middle;
-        transform: translate(0, -10%);
+        .#{$pr}#{$m}checkbox-icon {
+            border-color: $important;
+        }
+
+        input[type="checkbox"] {
+
+            &:checked + .#{$pr}#{$m}checkbox-icon {
+                background-color: $important;
+                border-color: $important;
+            }
+
+        }
+
     }
 
 }
