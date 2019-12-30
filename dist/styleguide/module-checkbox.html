@@ -25,18 +25,35 @@
                 <div class="s-post-contents styleguide-contents"><h1 id="checkbox" class="styleguide">m-checkbox</h1>
 
 <p>チェックボックスとラベルをインライン表示する。input要素ではなく、包括している要素にクラスを付与する（ほとんどの場合、label要素となる）。<br>
+本来のUIは<strong>キーボード操作を阻害しない</strong>前提で隠され、代替として<code>.m-checkbox-icon</code>をCSSで装飾したアイコンを表示する。<br>
 余白・レイアウト等は <code>utility &gt; .u-padding</code> や <code>component &gt; .c-form</code> で指定する。<br>
 <code>.is-error</code> を同時に使用するとエラーがあったときの表示となる。 </p>
-<div class="example"><p>
-<label class="m-checkbox u-margin-right-md" for="checkbox1"><input type="checkbox" name="checkbox1" id="checkbox1" class="u-margin-right-sm" value="1">m-checkbox</label>
-<label class="m-checkbox u-margin-right-md" for="checkbox2"><input type="checkbox" name="checkbox2" id="checkbox2" class="u-margin-right-sm" value="2" checked="checked">m-checkbox</label>
-<label class="m-checkbox is-error" for="checkbox3"><input type="checkbox" name="checkbox3" id="checkbox3" class="u-margin-right-sm" value="3">m-checkbox</label>
-</p>
-</div><div class="codeblock"><pre><span class="nt">&lt;p&gt;</span>
-<span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"m-checkbox u-margin-right-md"</span> <span class="na">for=</span><span class="s">"checkbox1"</span><span class="nt">&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"checkbox1"</span> <span class="na">id=</span><span class="s">"checkbox1"</span> <span class="na">class=</span><span class="s">"u-margin-right-sm"</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span>m-checkbox<span class="nt">&lt;/label&gt;</span>
-<span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"m-checkbox u-margin-right-md"</span> <span class="na">for=</span><span class="s">"checkbox2"</span><span class="nt">&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"checkbox2"</span> <span class="na">id=</span><span class="s">"checkbox2"</span> <span class="na">class=</span><span class="s">"u-margin-right-sm"</span> <span class="na">value=</span><span class="s">"2"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>m-checkbox<span class="nt">&lt;/label&gt;</span>
-<span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"m-checkbox is-error"</span> <span class="na">for=</span><span class="s">"checkbox3"</span><span class="nt">&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"checkbox3"</span> <span class="na">id=</span><span class="s">"checkbox3"</span> <span class="na">class=</span><span class="s">"u-margin-right-sm"</span> <span class="na">value=</span><span class="s">"3"</span><span class="nt">&gt;</span>m-checkbox<span class="nt">&lt;/label&gt;</span>
-<span class="nt">&lt;/p&gt;</span>
-</pre></div>
+
+<dl>
+    <dt>参考記事</dt>
+    <dd class="u-margin-left-0"><a href="https://qiita.com/Garyuten/items/b87b7d91279c0bded576" target="_blank">アクセシビリティで気をつけるchecbox,radioのCSS&#64;Garyuten</a></dd>
+</dl>
+
+<div class="example">
+    <span class="u-margin-right-md">
+        <label class="m-checkbox" for="checkbox1"><input type="checkbox" name="checkbox1" id="checkbox1" value="1"><span class="m-checkbox-icon"></span>m-checkbox</label>
+    </span>
+
+    <span class="u-margin-right-md">
+        <label class="m-checkbox u-margin-right-md" for="checkbox2"><input type="checkbox" name="checkbox2" id="checkbox2" value="2" checked="checked"><span class="m-checkbox-icon"></span>m-checkbox</label>
+    </span>
+
+    <label class="m-checkbox is-error" for="checkbox3"><input type="checkbox" name="checkbox3" id="checkbox3" value="3"><span class="m-checkbox-icon"></span>m-checkbox</label>
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;span class="u-margin-right-md"&gt;
+        &lt;label class="m-checkbox" for="checkbox1"&gt;&lt;input type="checkbox" name="checkbox1" id="checkbox1" value="1"&gt;&lt;span class="m-checkbox-icon"&gt;&lt;/span&gt;m-checkbox&lt;/label&gt;
+    &lt;/span&gt;
+
+    &lt;span class="u-margin-right-md"&gt;
+        &lt;label class="m-checkbox u-margin-right-md" for="checkbox2"&gt;&lt;input type="checkbox" name="checkbox2" id="checkbox2" value="2" checked="checked"&gt;&lt;span class="m-checkbox-icon"&gt;&lt;/span&gt;m-checkbox&lt;/label&gt;
+    &lt;/span&gt;
+
+    &lt;label class="m-checkbox is-error" for="checkbox3"&gt;&lt;input type="checkbox" name="checkbox3" id="checkbox3" value="3"&gt;&lt;span class="m-checkbox-icon"&gt;&lt;/span&gt;m-checkbox&lt;/label&gt;</code></pre></div>
 
 <?php include('../doc_include/footer.inc'); ?>
