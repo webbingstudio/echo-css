@@ -1446,11 +1446,15 @@ a.m-btn:hover, a.m-btn:focus {
   text-decoration: none;
 }
 
+.m-btn:focus, .m-btn.focus {
+  outline: none;
+  box-shadow: 0 0 0.2em #4690da, 0 0 0.6em #4690da;
+}
+
 .m-btn[disabled],
 fieldset[disabled] .m-btn {
   cursor: default;
   opacity: .65;
-  cursor: default;
 }
 
 .m-btn[disabled]:hover, .m-btn[disabled].hover, .m-btn[disabled]:focus, .m-btn[disabled].focus, .m-btn[disabled]:active, .m-btn[disabled].active,
@@ -2985,6 +2989,11 @@ m-select
   color: #333;
   background-color: rgba(51, 51, 51, 0.1);
   border-color: #333;
+}
+
+.m-select select:focus {
+  outline: none;
+  box-shadow: 0 0 0.1em #4690da, 0 0 0.4em #4690da;
 }
 
 .m-select.is-error:after,
