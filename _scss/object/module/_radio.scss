@@ -5,20 +5,21 @@
 */
 
 .#{$pr}#{$m}radio {
+    position: relative;
     display: inline-block;
     cursor: pointer;
     line-height: $line-height-xs;
 
     .#{$pr}#{$m}radio-icon {
-        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 1.25em;
         height: 1.25em;
-        margin-right: .5em;
         border: $radio-border-width solid $radio-border-color;
         background-color: $radio-bg;
         border-radius: 50%;
-        vertical-align: middle;
-        transform: translate( 0, -.05em );
+        z-index: 4;
     }
 
     input[type="radio"] {
@@ -26,9 +27,9 @@
         opacity: 0;
         -webkit-appearance: none;
         appearance: none;
+        z-index: 2;
 
         &:checked + .#{$pr}#{$m}radio-icon {
-            position: relative;
             background: $radio-checked-bg;
             border: $radio-border-width solid $radio-checked-border-color;
 
@@ -48,11 +49,19 @@
         }
 
         &:focus + .#{$pr}#{$m}radio-icon {
-            box-shadow: 
-                0 0 .1em $ui-focus-color,
-                0 0 .4em $ui-focus-color;
+            transform: scale( 1.25 );
         }
 
+        &:focus + .#{$pr}#{$m}radio-icon + .#{$pr}#{$m}radio-label {
+            text-decoration: underline;
+        }
+
+    }
+
+    .#{$pr}#{$m}radio-label {
+        position: relative;
+        padding-left: 1.75em;
+        z-index: 3;
     }
 
     &.#{$pr}#{$error},
