@@ -5,20 +5,21 @@
 */
 
 .#{$pr}#{$m}checkbox {
+    position: relative;
     display: inline-block;
     cursor: pointer;
     line-height: $line-height-xs;
 
     .#{$pr}#{$m}checkbox-icon {
-        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 1.25em;
         height: 1.25em;
-        margin-right: .5em;
         border: $checkbox-border-width solid $checkbox-border-color;
         background-color: $checkbox-bg;
         border-radius: $border-radius-sm;
-        vertical-align: middle;
-        transform: translate( 0, -.05em );
+        z-index: 4;
     }
 
     input[type="checkbox"] {
@@ -26,9 +27,9 @@
         opacity: 0;
         -webkit-appearance: none;
         appearance: none;
+        z-index: 2;
 
         &:checked + .#{$pr}#{$m}checkbox-icon {
-            position: relative;
             background: $checkbox-checked-bg;
             border: $checkbox-border-width solid $checkbox-checked-border-color;
 
@@ -50,11 +51,19 @@
         }
 
         &:focus + .#{$pr}#{$m}checkbox-icon {
-            box-shadow: 
-                0 0 .1em $ui-focus-color,
-                0 0 .4em $ui-focus-color;
+            transform: scale( 1.25 );
         }
 
+        &:focus + .#{$pr}#{$m}checkbox-icon + .#{$pr}#{$m}checkbox-label {
+            text-decoration: underline;
+        }
+
+    }
+
+    .#{$pr}#{$m}checkbox-label {
+        position: relative;
+        padding-left: 1.75em;
+        z-index: 3;
     }
 
     &.#{$pr}#{$error},
