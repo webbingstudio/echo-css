@@ -2305,21 +2305,22 @@ m-checkbox
 --------------------
 */
 .m-checkbox {
+  position: relative;
   display: inline-block;
   cursor: pointer;
   line-height: 1.25;
 }
 
 .m-checkbox .m-checkbox-icon {
-  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 1.25em;
   height: 1.25em;
-  margin-right: .5em;
   border: 1px solid #333;
-  background-color: transparent;
+  background-color: #fff;
   border-radius: 3px;
-  vertical-align: middle;
-  transform: translate(0, -0.05em);
+  z-index: 4;
 }
 
 .m-checkbox input[type="checkbox"] {
@@ -2327,10 +2328,10 @@ m-checkbox
   opacity: 0;
   -webkit-appearance: none;
   appearance: none;
+  z-index: 2;
 }
 
 .m-checkbox input[type="checkbox"]:checked + .m-checkbox-icon {
-  position: relative;
   background: #1976d2;
   border: 1px solid #1976d2;
 }
@@ -2349,7 +2350,17 @@ m-checkbox
 }
 
 .m-checkbox input[type="checkbox"]:focus + .m-checkbox-icon {
-  box-shadow: 0 0 0.1em #4690da, 0 0 0.4em #4690da;
+  transform: scale(1.25);
+}
+
+.m-checkbox input[type="checkbox"]:focus + .m-checkbox-icon + .m-checkbox-label {
+  text-decoration: underline;
+}
+
+.m-checkbox .m-checkbox-label {
+  position: relative;
+  padding-left: 1.75em;
+  z-index: 3;
 }
 
 .m-checkbox.is-error,
@@ -2866,21 +2877,22 @@ m-radio
 --------------------
 */
 .m-radio {
+  position: relative;
   display: inline-block;
   cursor: pointer;
   line-height: 1.25;
 }
 
 .m-radio .m-radio-icon {
-  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 1.25em;
   height: 1.25em;
-  margin-right: .5em;
   border: 1px solid #333;
-  background-color: transparent;
+  background-color: #fff;
   border-radius: 50%;
-  vertical-align: middle;
-  transform: translate(0, -0.05em);
+  z-index: 4;
 }
 
 .m-radio input[type="radio"] {
@@ -2888,10 +2900,10 @@ m-radio
   opacity: 0;
   -webkit-appearance: none;
   appearance: none;
+  z-index: 2;
 }
 
 .m-radio input[type="radio"]:checked + .m-radio-icon {
-  position: relative;
   background: transparent;
   border: 1px solid #1976d2;
 }
@@ -2910,7 +2922,17 @@ m-radio
 }
 
 .m-radio input[type="radio"]:focus + .m-radio-icon {
-  box-shadow: 0 0 0.1em #4690da, 0 0 0.4em #4690da;
+  transform: scale(1.25);
+}
+
+.m-radio input[type="radio"]:focus + .m-radio-icon + .m-radio-label {
+  text-decoration: underline;
+}
+
+.m-radio .m-radio-label {
+  position: relative;
+  padding-left: 1.75em;
+  z-index: 3;
 }
 
 .m-radio.is-error,
