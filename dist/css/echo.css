@@ -1446,11 +1446,6 @@ a.m-btn:hover, a.m-btn:focus {
   text-decoration: none;
 }
 
-.m-btn:focus, .m-btn.focus {
-  outline: none;
-  box-shadow: 0 0 0.2em #4690da, 0 0 0.6em #4690da;
-}
-
 .m-btn[disabled],
 fieldset[disabled] .m-btn {
   cursor: default;
@@ -2317,7 +2312,7 @@ m-checkbox
   left: 0;
   width: 1.25em;
   height: 1.25em;
-  border: 1px solid #333;
+  border: 0.0625rem solid #333;
   background-color: #fff;
   border-radius: 3px;
   z-index: 4;
@@ -2326,6 +2321,11 @@ m-checkbox
 .m-checkbox input[type="checkbox"] {
   position: absolute;
   opacity: 0;
+  top: -.125em;
+  left: -.125em;
+  width: 1.5em;
+  height: 1.5em;
+  margin: 0;
   -webkit-appearance: none;
   appearance: none;
   z-index: 2;
@@ -2333,7 +2333,7 @@ m-checkbox
 
 .m-checkbox input[type="checkbox"]:checked + .m-checkbox-icon {
   background: #1976d2;
-  border: 1px solid #1976d2;
+  border: 0.0625rem solid #1976d2;
 }
 
 .m-checkbox input[type="checkbox"]:checked + .m-checkbox-icon:after {
@@ -2349,12 +2349,8 @@ m-checkbox
   transform: translate(-50%, 0) rotate(45deg);
 }
 
-.m-checkbox input[type="checkbox"]:focus + .m-checkbox-icon {
-  transform: scale(1.25);
-}
-
-.m-checkbox input[type="checkbox"]:focus + .m-checkbox-icon + .m-checkbox-label {
-  text-decoration: underline;
+.m-checkbox input[type="checkbox"]:focus {
+  opacity: 1;
 }
 
 .m-checkbox .m-checkbox-label {
@@ -2474,7 +2470,7 @@ m-input
 .m-input {
   padding: .375rem .5rem;
   background: transparent none;
-  border: 1px solid #333;
+  border: 0.0625rem solid #333;
   color: #333;
   border-radius: 3px;
   vertical-align: middle;
@@ -2486,8 +2482,6 @@ m-input
   color: #333;
   background-color: rgba(51, 51, 51, 0.1);
   border-color: #333;
-  outline: none;
-  box-shadow: 0 0 0.1em #4690da, 0 0 0.4em #4690da;
 }
 
 .m-input::-webkit-search-decoration {
@@ -2889,7 +2883,7 @@ m-radio
   left: 0;
   width: 1.25em;
   height: 1.25em;
-  border: 1px solid #333;
+  border: 0.0625rem solid #333;
   background-color: #fff;
   border-radius: 50%;
   z-index: 4;
@@ -2898,6 +2892,11 @@ m-radio
 .m-radio input[type="radio"] {
   position: absolute;
   opacity: 0;
+  top: -.125em;
+  left: -.125em;
+  width: 1.5em;
+  height: 1.5em;
+  margin: 0;
   -webkit-appearance: none;
   appearance: none;
   z-index: 2;
@@ -2905,7 +2904,7 @@ m-radio
 
 .m-radio input[type="radio"]:checked + .m-radio-icon {
   background: transparent;
-  border: 1px solid #1976d2;
+  border: 0.0625rem solid #1976d2;
 }
 
 .m-radio input[type="radio"]:checked + .m-radio-icon:after {
@@ -2914,19 +2913,15 @@ m-radio
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 70%;
-  height: 70%;
+  width: 65%;
+  height: 65%;
   background-color: #1976d2;
   border-radius: 50%;
   transform: translate(-50%, -50%);
 }
 
-.m-radio input[type="radio"]:focus + .m-radio-icon {
-  transform: scale(1.25);
-}
-
-.m-radio input[type="radio"]:focus + .m-radio-icon + .m-radio-label {
-  text-decoration: underline;
+.m-radio input[type="radio"]:focus {
+  opacity: 1;
 }
 
 .m-radio .m-radio-label {
@@ -2997,7 +2992,7 @@ m-select
   line-height: 2.5em;
   padding: 0 2em 0 .5em;
   background-color: transparent;
-  border: 1px solid #333;
+  border: 0.0625rem solid #333;
   vertical-align: middle;
   border-radius: 3px;
   z-index: 2;
@@ -3011,11 +3006,6 @@ m-select
   color: #333;
   background-color: rgba(51, 51, 51, 0.1);
   border-color: #333;
-}
-
-.m-select select:focus {
-  outline: none;
-  box-shadow: 0 0 0.1em #4690da, 0 0 0.4em #4690da;
 }
 
 .m-select.is-error:after,
@@ -4651,7 +4641,7 @@ c-pager
   margin-left: .25rem;
   margin-right: .25rem;
   border-style: solid;
-  border-width: 1px;
+  border-width: 0.0625rem;
 }
 
 .c-pager .m-nav-item:not(.ellipsis):first-child {
@@ -4669,17 +4659,17 @@ c-pager
 
 .c-pager .m-nav-label {
   position: absolute;
-  top: -1px;
-  left: -1px;
-  bottom: -1px;
-  right: -1px;
+  top: -0.0625rem;
+  left: -0.0625rem;
+  bottom: -0.0625rem;
+  right: -0.0625rem;
   width: auto;
   height: auto;
   min-height: auto;
   font-size: inherit;
   padding: 0;
   border-style: solid;
-  border-width: 1px;
+  border-width: 0.0625rem;
 }
 
 .c-pager .m-nav:not(.m-nav-inverse) .m-nav-item.is-current {
@@ -4770,7 +4760,7 @@ nav-links(WordPress)
   padding-left: .5rem;
   padding-right: .5rem;
   background-color: transparent;
-  border: 1px solid #333;
+  border: 0.0625rem solid #333;
   color: #333;
   font-size: inherit;
 }
