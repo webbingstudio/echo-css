@@ -25,6 +25,11 @@
     input[type="checkbox"] {
         position: absolute;
         opacity: 0;
+        top: -.125em;
+        left: -.125em;
+        width: 1.5em;
+        height: 1.5em;
+        margin: 0;
         -webkit-appearance: none;
         appearance: none;
         z-index: 2;
@@ -50,12 +55,8 @@
 
         }
 
-        &:focus + .#{$pr}#{$m}checkbox-icon {
-            transform: scale( 1.25 );
-        }
-
-        &:focus + .#{$pr}#{$m}checkbox-icon + .#{$pr}#{$m}checkbox-label {
-            text-decoration: underline;
+        &:focus {
+            opacity: 1;
         }
 
     }
