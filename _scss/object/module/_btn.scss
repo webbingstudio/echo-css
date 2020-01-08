@@ -50,14 +50,6 @@
         text-decoration: none;
     }
 
-    &:focus,
-    &.focus {
-        outline: none;
-        box-shadow: 
-            0 0 .2em $ui-focus-color,
-            0 0 .6em $ui-focus-color;
-    }
-
     &[disabled],
     fieldset[disabled] & {
         cursor: default;
