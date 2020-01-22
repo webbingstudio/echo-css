@@ -84,12 +84,12 @@
 
     &.#{$pr}#{$m}label#{$c3}#{$__first} {
 
-        color: #{$__first}-text;
+        color: $first-strong;
 
         @at-root {
 
             a#{&} {
-                color: #{$__first}-text;
+                color: $first-strong;
             }
 
         }
@@ -98,12 +98,12 @@
 
     &.#{$pr}#{$m}label#{$c3}#{$__second} {
 
-        color: $second-text;
+        color: $second-strong;
 
         @at-root {
 
             a#{&} {
-                color: $second-text;
+                color: $second-strong;
             }
 
         }
@@ -112,12 +112,12 @@
 
     &.#{$pr}#{$m}label#{$c3}#{$__third} {
 
-        color: $third-text;
+        color: $third-strong;
 
         @at-root {
 
             a#{&} {
-                color: $third-text;
+                color: $third-strong;
             }
 
         }
@@ -125,22 +125,22 @@
     }
 
     &.#{$pr}#{$m}label#{$c3}#{$__fourth} {
-        color: $fourth-text;
+        color: $fourth-strong;
         @at-root {
             a#{&} {
-                color: $fourth-text;
+                color: $fourth-strong;
             }
         }
     }
 
     &.#{$pr}#{$m}label#{$c3}#{$__info} {
 
-        color: $info-text;
+        color: $info-strong;
 
         @at-root {
 
             a#{&} {
-                color: $info-text;
+                color: $info-strong;
             }
 
         }
@@ -149,12 +149,12 @@
 
     &.#{$pr}#{$m}label#{$c3}#{$__important} {
 
-        color: $important-text;
+        color: $important-strong;
 
         @at-root {
 
             a#{&} {
-                color: $important-text;
+                color: $important-strong;
             }
 
         }

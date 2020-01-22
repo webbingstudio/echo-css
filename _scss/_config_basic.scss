@@ -28,37 +28,31 @@ $gray-fade:                 #eee !default;
 // first: primary color
 $first:                     #1976d2 !default;
 $first-strong:              #0360bd !default;
-$first-text:                $first-strong !default;
 $first-fade:                #d7e7f7 !default;
 
 // second: secondary color
 $second:                    #3cade6 !default;
 $second-strong:             #26a9d0 !default;
-$second-text:               $second-strong !default;
 $second-fade:               #d8f0f7 !default;
 
 // third: tertiary color, or success color in system
 $third:                     #49b070 !default;
 $third-strong:              #229644 !default;
-$third-text:                $third-strong !default;
 $third-fade:                #d5f0e1 !default;
 
 // fourth: fourth color, or warning color in system
 $fourth:                    #f38c10 !default;
 $fourth-strong:             #f37910 !default;
-$fourth-text:               $fourth-strong !default;
 $fourth-fade:               #ffeccc !default;
 
-// info: fifth color, or information color in system
+// info: information color in system
 $info:                      #3cade6 !default;
 $info-strong:               #26a9d0 !default;
-$info-text:                 $info-strong !default;
 $info-fade:                 #d8f0f7 !default;
 
-// important: sixth color, or important(danger) color in system
+// important: important(danger, error) color in system
 $important:                 #e33050 !default;
 $important-strong:          #d70022 !default;
-$important-text:            $important-strong !default;
 $important-fade:            #ffe3e9 !default;
 
 $body-bg:                   #fff !default;
@@ -72,7 +66,7 @@ $body-inverse-mild-color:   rgba($body-inverse-color, .5) !default;
 // Links
 // -----------------------------------------
 
-$link-color:                $first-text !default;
+$link-color:                $first-strong !default;
 $link-hover-color:          $link-color !default;
 
 

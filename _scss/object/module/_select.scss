@@ -57,14 +57,14 @@
         .#{$error} > & {
 
             &:after {
-                border-top-color: $important-text;
-                border-right-color: $important-text;
+                border-top-color: $important-strong;
+                border-right-color: $important-strong;
             }
 
             select {
                 background-color: $input-bg;
-                border-color: $important-text;
-                color: $important-text;
+                border-color: $important-strong;
+                color: $important-strong;
 
                 &:hover,
                 &:focus {
