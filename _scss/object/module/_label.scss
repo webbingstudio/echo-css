@@ -51,10 +51,6 @@
     background-color: $third;
 }
 
-.#{$pr}#{$m}label#{$c3}#{$__fourth} {
-    background-color: $fourth;
-}
-
 .#{$pr}#{$m}label#{$c3}#{$__info} {
     background-color: $info;
 }
@@ -122,15 +118,6 @@
 
         }
 
-    }
-
-    &.#{$pr}#{$m}label#{$c3}#{$__fourth} {
-        color: $fourth-strong;
-        @at-root {
-            a#{&} {
-                color: $fourth-strong;
-            }
-        }
     }
 
     &.#{$pr}#{$m}label#{$c3}#{$__info} {

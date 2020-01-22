@@ -83,24 +83,6 @@
 
     }
 
-    .#{$pr}#{$u}bg#{$c3}#{$__fourth} {
-        background-color: $fourth;
-
-        &:not(.#{$pr}#{$u}bg#{$c3}fade) {
-            color: $body-inverse-color;
-
-            & a:not([class]) {
-                color: $body-inverse-color;
-            }
-
-        }
-
-        &.#{$pr}#{$u}bg#{$c3}fade {
-            background-color: $fourth-fade;
-        }
-
-    }
-
     .#{$pr}#{$u}bg#{$c3}#{$__info} {
         background-color: $info;
 
