@@ -8,9 +8,9 @@
     position: relative;
     display: inline-block;
     padding: $btn-padding-y-md $btn-padding-x-md;
-    background-color: $body-bg;
-    border: $border-btn-width solid transparent;
-    color: $body-color;
+    background-color: $ui-bg;
+    border: $border-btn-width solid $ui-border-color;
+    color: $ui-color;
     font-size: $btn-font-size-md;
     font-family: $font-family-root;
     font-weight: $font-weight-root;
@@ -45,8 +45,8 @@
     &.focus,
     &:active,
     &.active {
-        color: $body-color;
-        background-color: $gray-fade;
+        color: $ui-hover-color;
+        background-color: $ui-hover-bg;
         text-decoration: none;
     }
 
@@ -61,7 +61,7 @@
         &.focus,
         &:active,
         &.active {
-            background-color: transparent;
+            background-color: $ui-bg;
         }
 
     }
@@ -71,8 +71,8 @@
         a:hover &,
         a:focus &,
         a:active & {
-            color: $body-color;
-            background-color: $gray-fade;
+            color: $ui-color;
+            background-color: $ui-bg;
             text-decoration: none;
         }
 

@@ -1417,8 +1417,8 @@ m-btn
   position: relative;
   display: inline-block;
   padding: 0.5rem 1rem;
-  background-color: #fff;
-  border: 1px solid transparent;
+  background-color: transparent;
+  border: 1px solid #333;
   color: #333;
   font-size: 0.875rem;
   font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
@@ -1442,7 +1442,7 @@ a.m-btn:hover, a.m-btn:focus {
 
 .m-btn:hover, .m-btn.hover, .m-btn:focus, .m-btn.focus, .m-btn:active, .m-btn.active {
   color: #333;
-  background-color: #eee;
+  background-color: rgba(51, 51, 51, 0.1);
   text-decoration: none;
 }
 
@@ -1466,7 +1466,7 @@ a:hover .m-btn,
 a:focus .m-btn,
 a:active .m-btn {
   color: #333;
-  background-color: #eee;
+  background-color: transparent;
   text-decoration: none;
 }
 
