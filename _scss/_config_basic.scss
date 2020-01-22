@@ -29,42 +29,36 @@ $gray-fade:                 #eee !default;
 $first:                     #1976d2 !default;
 $first-strong:              #0360bd !default;
 $first-text:                $first-strong !default;
-$first-mild:                #4690da !default;
 $first-fade:                #d7e7f7 !default;
 
 // second: secondary color
 $second:                    #3cade6 !default;
 $second-strong:             #26a9d0 !default;
 $second-text:               $second-strong !default;
-$second-mild:               #6bb9ea !default;
 $second-fade:               #d8f0f7 !default;
 
 // third: tertiary color, or success color in system
 $third:                     #49b070 !default;
 $third-strong:              #229644 !default;
 $third-text:                $third-strong !default;
-$third-mild:                #70b98c !default;
 $third-fade:                #d5f0e1 !default;
 
 // fourth: fourth color, or warning color in system
 $fourth:                    #f38c10 !default;
 $fourth-strong:             #f37910 !default;
 $fourth-text:               $fourth-strong !default;
-$fourth-mild:               lighten(desaturate($fourth, 5%), 10%) !default;
 $fourth-fade:               #ffeccc !default;
 
 // info: fifth color, or information color in system
 $info:                      #3cade6 !default;
 $info-strong:               #26a9d0 !default;
 $info-text:                 $info-strong !default;
-$info-mild:                 #6bb9ea !default;
 $info-fade:                 #d8f0f7 !default;
 
 // important: sixth color, or important(danger) color in system
 $important:                 #e33050 !default;
 $important-strong:          #d70022 !default;
 $important-text:            $important-strong !default;
-$important-mild:            lighten(desaturate($important, 2%), 15%) !default;
 $important-fade:            #ffe3e9 !default;
 
 $body-bg:                   #fff !default;
@@ -79,7 +73,7 @@ $body-inverse-mild-color:   rgba($body-inverse-color, .5) !default;
 // -----------------------------------------
 
 $link-color:                $first-text !default;
-$link-hover-color:          $first-mild !default;
+$link-hover-color:          $link-color !default;
 
 
 // Color Table
