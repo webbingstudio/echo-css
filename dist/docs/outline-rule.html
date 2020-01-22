@@ -27,16 +27,18 @@
 <h2 class="echo-post-title-01">基本的なマークアップ</h2>
 
 <p>オブジェクトの基本構造は以下の通りです。<br>
-<code>object>component, layout</code>に属するオブジェクトは<code>div, section, article</code>等の、<a href="https://developer.mozilla.org/ja/docs/Web/Guide/HTML/Content_categories" target="_blank">フローコンテンツ</a>でグループ化します。これは両者が「複数のオブジェクトを包括する」という特性を持つためです。<br>
-要素の閉じタグの後ろには、コメントでクラス名を付与するのが望ましいです。複数ある場合はすべて書くことは避け、識別しやすい代表的なものを書きます。<br>
-インデントはスペース4個を採用していますが、プロジェクト内で統一されていればこの限りではありません。</p>
+<code>object>component, layout</code>に属するオブジェクトは<code>div, section, article</code>等の、<a href="https://developer.mozilla.org/ja/docs/Web/Guide/HTML/Content_categories" target="_blank">フローコンテンツ</a>でグループ化します。これは両者が「複数のオブジェクトを包括する」という特性を持つためです。</p>
 
-<div class="codeblock"><pre>&lt;div class="c-example"&gt;
+<p>要素の閉じタグの後ろには、コメントでクラス名を付与するのが望ましいです。複数ある場合はすべて書くことは避け、識別しやすい代表的なものを書きます。</p>
+
+<p>インデントはHTML・SCSSともに<strong>スペース4個</strong>を採用していますが、プロジェクト内で統一されていればこの限りではありません。</p>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="c-example"&gt;
     &lt;div class="c-example-inner"&gt;
         &lt;h2 class="c-example-title"&gt;c-exampleオブジェクト&lt;/h2&gt;
         ...
     &lt;/div&gt;&lt;!-- /.c-example-inner --&gt;
-&lt;/div&gt;&lt;!-- /.c-example --&gt;</pre></div>
+&lt;/div&gt;&lt;!-- /.c-example --&gt;</code></pre></div>
 
 <h2 class="echo-post-title-01">クラス命名規則</h2>
 
@@ -48,9 +50,23 @@
 
 <p>デフォルトの接続子は以下の通りです。常にハイフン1個のみで連結します。</p>
 
-<p><strong>prefix-block-element-modifier</strong></p>
+<div class="codeblock u-margin-bottom-lg"><pre><code class="language-markup">.prefix-(contentsName-)block-element-modifier</code></pre></div>
 
-<h3 class="echo-post-title-02">オブジェクト内のクラス名</h3>
+<p>echo.cssのカード型オブジェクトの、文章が入る箇所のクラス名は以下のとおりです。カード型オブジェクトは <code>component</code> グループに属しているため、接頭辞は <code>c-</code> となります。</p>
+
+<div class="codeblock"><pre><code class="language-markup">.c-card-contents</code></pre></div>
+
+<h3 class="echo-post-title-02">親オブジェクトのクラス名</h3>
+
+<p>極力、一単語で命名します。 <code>mainvisual</code> など、つなげて記述しても理解しやすいものは、一単語とすることを許容します。<br>
+やむを得ず二単語になる場合は、 <code>eventCalendar</code> のようにキャピタライズで記述します。<br>
+アンダーバーを使用しない理由は、CMS・JavaScript等の変数名にアンダーバーが使用されることが多く、検索の際に支障が出ないようにするためです。</p>
+
+<p>特定のコンテンツのみで使用される場合は、projectに属するものとし、先頭に <code>p-contentsName-</code> を付与します。ニュースコンテンツのトピックスリストであれば、以下の通りとなります。</p>
+
+<div class="codeblock"><pre><code class="language-markup">.p-news-topics</code></pre></div>
+
+<h3 class="echo-post-title-02">子オブジェクトのクラス名</h3>
 
 <p>オブジェクト内のクラス名は、冗長でないことが望ましいです。<br>
 オブジェクト内のHTMLの、見出し要素までの階層構造が以下だった場合</p>
@@ -66,6 +82,30 @@
 
 <p>原則として、クラス名の英単語は略さず使用します。<br>
 例えば<code>.u-img-resp</code>などではなく<code>.u-image-responsive</code>となります。</p>
+
+<h2 class="echo-post-title-01">プロパティの並び順</h2>
+
+<p>「すべての人に理解しやすい設計」という基本方針に基づき、Mozila・W3Cが提唱している「視覚順」で記述しています。詳しい採用の根拠は拙記事を参照ください。</p>
+
+<p><a href="https://webbingstudio.com/weblog/entry-882.html">CSSプロパティの並び順を「視覚順」で書いている件</a></p>
+
+<h2 class="echo-post-title-01">SassとGulp</h2>
+
+<p>多くの人が理解できるよう、必要以上に高度な内容にしないようにしています。このため、mixinやタスクの利用も最低限となっています。<br>
+特に <code>&__</code> による接続は、<strong>クラス名からの検索がしにくくなる</strong>という、CSSフレームワークにおける致命的な問題があるため禁忌としています。</p>
+
+<div class="codeblock"><pre><code class="language-scss">.c-media {
+    &__inner {
+        // properties
+    }
+    &__object {
+        // properties
+    }
+    &__title {
+        // properties
+    }
+}</code></pre></div>
+
 
 
 
