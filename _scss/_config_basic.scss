@@ -28,27 +28,27 @@ $gray-fade:                 #eee !default;
 // first: primary color
 $first:                     #1976d2 !default;
 $first-strong:              #0360bd !default;
-$first-fade:                #d7e7f7 !default;
+$first-fade:                #e3f1ff !default;
 
 // second: secondary color
-$second:                    #3cade6 !default;
-$second-strong:             #26a9d0 !default;
-$second-fade:               #d8f0f7 !default;
+$second:                    #9e6319 !default;
+$second-strong:             #8a5411 !default;
+$second-fade:               #f7f1e6 !default;
 
-// third: tertiary color, or success color in system
-$third:                     #49b070 !default;
-$third-strong:              #229644 !default;
-$third-fade:                #d5f0e1 !default;
+// third: tertiary(accent) color
+$third:                     #138420 !default;
+$third-strong:              #138420 !default;
+$third-fade:                #edfbf3 !default;
 
-// info: information color in system
-$info:                      #3cade6 !default;
-$info-strong:               #26a9d0 !default;
-$info-fade:                 #d8f0f7 !default;
+// info: information(success) color in system
+$info:                      $third !default;
+$info-strong:               $third-strong !default;
+$info-fade:                 $third-fade !default;
 
 // important: important(danger, error) color in system
-$important:                 #e33050 !default;
-$important-strong:          #d70022 !default;
-$important-fade:            #ffe3e9 !default;
+$important:                 #d20b2a !default;
+$important-strong:          #d20b2a !default;
+$important-fade:            #ffe9f0 !default;
 
 $body-bg:                   #fff !default;
 $body-color:                $gray !default;
