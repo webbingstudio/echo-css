@@ -13,10 +13,17 @@
             <ul class="echo-sitemap-list-flat m-nav-list m-nav-children">
                 <li class="m-nav-item"><a href="./outline-layers.html" class="m-nav-label">レイヤー構造</a></li>
                 <li class="m-nav-item"><a href="./outline-rule.html" class="m-nav-label">コーディングルール</a></li>
+                <li class="m-nav-item"><a href="./outline-color.html" class="m-nav-label">カラーテーブル</a></li>
 
 <!--
                 <li class="m-nav-item"><a href="./outline-material-design.html" class="m-nav-label">Material Designとの関係</a></li>
 -->
+            </ul>
+        </li>
+
+        <li class="m-nav-item"><span class="echo-sitemap-header m-nav-label">デザイントークン</span>
+            <ul class="echo-sitemap-list-flat m-nav-list m-nav-children">
+                <li class="m-nav-item"><a href="./design-tokens-color.html" class="m-nav-label">カラーテーブル</a></li>
             </ul>
         </li>
 

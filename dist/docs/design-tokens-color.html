@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>カラーテーブル | デザイントークン | Documentation | echo-css</title>
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div class="l-document" id="document">
+
+    <?php include('../doc_include/header.inc'); ?>
+
+    <main class="p-main" role="main">
+        <div class="l-container">
+
+            <div class="echo-pagehead">
+                <h1 class="echo-pagehead-title">カラーテーブル</h1>
+            </div><!-- /.echo-pagehead -->
+
+            <article class="echo-post">
+                <div class="echo-post-contents styleguide-contents">
+
+<h2 class="echo-post-title-01">標準のカラーテーブル</h2>
+
+<p>echo.cssで使用されている、標準の色名とカラーコードの対応は以下の通りです。<br>
+それぞれの色は3種類（ <code>gray</code> のみ5種類）の<strong>強度</strong>で分類され、適切なモジュールで使用されることを想定しています。<br>
+カラーコードは <code>_scss/_config_basic.scss</code> で変更することができます。</p>
+
+<table class="m-table m-table-bordered m-table-justify">
+    <thead>
+        <tr>
+            <th rowspan="2" class="u-text-center">色名</th>
+            <th colspan="5" class="u-text-center">強度</th>
+        </tr>
+        <tr>
+            <th class="u-text-center">normal</th>
+            <th class="u-text-center">strong</th>
+            <th class="u-text-center">mild</th>
+            <th class="u-text-center">milder</th>
+            <th class="u-text-center">fade</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th class="u-text-center">gray</th>
+            <td><span class="doc-colorchip" style="background-color: #333;"></span>#333</td>
+            <td><span class="doc-colorchip" style="background-color: #000;"></span>#000</td>
+            <td><span class="doc-colorchip" style="background-color: #888;"></span>#888</td>
+            <td><span class="doc-colorchip" style="background-color: #bbb;"></span>#bbb</td>
+            <td><span class="doc-colorchip" style="background-color: #eee;"></span>#eee</td>
+        </tr>
+        <tr>
+            <th class="u-text-center">first</th>
+            <td><span class="doc-colorchip" style="background-color: #1976d2;"></span>#1976d2</td>
+            <td><span class="doc-colorchip" style="background-color: #0360bd;"></span>#0360bd</td>
+            <td class="u-text-center">-</td>
+            <td class="u-text-center">-</td>
+            <td><span class="doc-colorchip" style="background-color: #e3f1ff;"></span>#e3f1ff</td>
+        </tr>
+        <tr>
+            <th class="u-text-center">second</th>
+            <td><span class="doc-colorchip" style="background-color: #9e6319;"></span>#9e6319</td>
+            <td><span class="doc-colorchip" style="background-color: #8a5411;"></span>#8a5411</td>
+            <td class="u-text-center">-</td>
+            <td class="u-text-center">-</td>
+            <td><span class="doc-colorchip" style="background-color: #f7f1e6;"></span>#f7f1e6</td>
+        </tr>
+        <tr>
+            <th class="u-text-center">third</th>
+            <td><span class="doc-colorchip" style="background-color: #138420;"></span>#138420</td>
+            <td><span class="doc-colorchip" style="background-color: #138420;"></span>#138420</td>
+            <td class="u-text-center">-</td>
+            <td class="u-text-center">-</td>
+            <td><span class="doc-colorchip" style="background-color: #edfbf3;"></span>#edfbf3</td>
+        </tr>
+        <tr>
+            <th class="u-text-center">info</th>
+            <td><span class="doc-colorchip" style="background-color: #138420;"></span>#138420</td>
+            <td><span class="doc-colorchip" style="background-color: #138420;"></span>#138420</td>
+            <td class="u-text-center">-</td>
+            <td class="u-text-center">-</td>
+            <td><span class="doc-colorchip" style="background-color: #edfbf3;"></span>#edfbf3</td>
+        </tr>
+        <tr>
+            <th class="u-text-center">important</th>
+            <td><span class="doc-colorchip" style="background-color: #d20b2a;"></span>#d20b2a</td>
+            <td><span class="doc-colorchip" style="background-color: #d20b2a;"></span>#d20b2a</td>
+            <td class="u-text-center">-</td>
+            <td class="u-text-center">-</td>
+            <td><span class="doc-colorchip" style="background-color: #ffe9f0;"></span>#ffe9f0</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<h2 class="echo-post-title-01">色名と役割</h2>
+
+<p>echo.cssではグレースケールの他に、3種類のデザインカラーと、2種類のシステムカラーを定義しています。デザインカラーはすべて使用しなくても構いません。適切なルールに基づいていれば、<code>gray</code> と <code>first</code> のみでもサイトを成立させることができます。</p>
+
+<p>色名を <code>primary, secondary...</code> にせず、単純な番号にしているのは、非英語圏のコーダーや、デザインの知識が少ないプログラマでも矛盾なく利用できるようにするためです。</p>
+
+<h3 class="echo-post-title-02">デザインカラー</h3>
+
+<h4 class="echo-post-title-03">gray</h4>
+
+<p>グレースケール、もしくはグレースケールに限りなく近い彩度の色を指定します。ウェブサイトのルートの文字色や、ユーザーインターフェースの色に使用されています。</p>
+
+<h4 class="echo-post-title-03 u-text-first">first</h4>
+
+<p>ウェブサイトにおけるブランドカラー、もしくは主要な色（プライマリカラー）を指定します。基本のリンク色、チェックボックス、ラジオボタンのアイコン色に使用されています。</p>
+
+<h4 class="echo-post-title-03 u-text-second">second</h4>
+
+<p>ウェブサイトにおける補助色（セカンダリカラー）を指定します。この色はオブジェクトの基本色には含まれておらず、別途サブクラスを指定して有効にします。</p>
+
+<h4 class="echo-post-title-03 u-text-third">third</h4>
+
+<p>ウェブサイトにおける強調色（アクセントカラー）を指定します。ウェブサイト内での使用量は最小限であることが望ましいです。この色はオブジェクトの基本色には含まれておらず、別途サブクラスを指定して有効にします。</p>
+
+<h3 class="echo-post-title-02">システムカラー</h3>
+
+<h4 class="echo-post-title-03 u-text-info">info</h4>
+
+<p>ウェブサイトのフォームなどで、ポジティブな情報を提供する際に使用される色を指定します。デフォルトでは <code>third</code> と同一となっています。</p>
+
+<h4 class="echo-post-title-03 u-text-important">important</h4>
+
+<p>ウェブサイトの特別な強調色に使用される色、もしくはフォームなどで、ネガティブな情報を提供する際に使用される色を指定します。日本語圏では赤（red）が一般に使用されます。</p>
+
+<h2 class="echo-post-title-01">色の強度と役割</h2>
+
+<h3 class="echo-post-title-02">normal</h3>
+
+<p>塗りつぶしとボーダーの基本色です。ボタン、ナビゲーションなどさまざまなモジュールで使用されています。</p>
+
+<h3 class="echo-post-title-02">strong</h3>
+
+<p>小さな文字のテキストカラーなど、<strong>高いコントラスト比を確保すべき箇所</strong>に使用します。 <code>normal</code> が充分なコントラスト比を持っている場合は、同じカラーコードを使用しても構いません。</p>
+
+<h3 class="echo-post-title-02">mild</h3>
+
+<p><code>gray</code> のみに使用されている強度です。 <code>.m-label</code> の基本色や、WordPress用の画像キャプションに使用されています。この色は<strong>充分なコントラスト比を確保していない</strong>ので、後述のアクセシビリティ達成基準を意識する場合は使用しないでください。</p>
+
+<h3 class="echo-post-title-02">milder</h3>
+
+<p><code>gray</code> のみに使用されている強度です。 <code>.m-imput, .m-thumbnail</code> などの、多くのボーダー色に使用されています。</p>
+
+<h3 class="echo-post-title-02">fade</h3>
+
+<p>背景色を前提として使用されている強度です。 <code>.c-alert, .c-box</code> などに使用されています。 ルートの文字色が上に重なっても、充分なコントラスト比を確保できる色である必要があります。</p>
+
+
+<h2 class="echo-post-title-01">アクセシビリティ</h2>
+
+<p>echo.cssのカラーテーブルは、<a href="https://waic.github.io/wcag21/guidelines/#contrast-minimum">WCAG 2.1の達成基準1.4.3「コントラスト (最低限)」</a>と、多くの視覚障害者・色覚障害者の色識別に配慮しています。<br>
+しかしCSSフレームワークの性格上、完全な達成は難しくなっています。達成を意識する場合は、以下の点に注意してください。</p>
+
+<ol>
+    <li>色を変更する際に、水色（シアン）やオレンジを使用しないでください。これらは多くのCSSフレームワークで採用されていますが、充分なコントラスト比を確保できません。</li>
+    <li>ボタン色に <code>gray</code> を使用しないでください。 <code>third, important</code> との識別が難しいことがあります。</li>
+    <li>色変数 <code>$gray-mild</code> を使用することは避けてください。</li>
+    <li><code>.m-label</code> を使用するときは、必ず色を変更するサブクラスを併用してください。</li>
+    <li><a href="https://waic.github.io/wcag21/guidelines/#contrast-enhanced">達成基準1.4.6「コントラスト (高度)」</a>を満たす場合は、 <code>.u-text-(color)</code> を使用する際の文字サイズを大きく（最低18ポイント）してください。</li>
+</ol>
+
+
+
+
+
+
+<?php include('../doc_include/footer.inc'); ?>
