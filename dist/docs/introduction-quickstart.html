@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>さっそく始める | はじめに | Documentation | echo-css</title>
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div class="l-document" id="document">
+
+    <?php include('../doc_include/header.inc'); ?>
+
+    <main class="p-main" role="main">
+        <div class="l-container">
+
+            <div class="echo-pagehead">
+                <h1 class="echo-pagehead-title">さっそく始める</h1>
+            </div><!-- /.echo-pagehead -->
+
+            <article class="echo-post">
+                <div class="echo-post-contents styleguide-contents">
+
+<h2 class="echo-post-title-01">ダウンロード</h2>
+
+<p>GitHubのリポジトリから、最新のパッケージをダウンロードしてください。</p>
+<p><a href="https://github.com/webbingstudio/echo-css/archive/master.zip" target="_blank"><i class="fas fa-download u-margin-right-sm"></i>https://github.com/webbingstudio/echo-css/archive/master.zip</a></p>
+
+<p>パッケージを解凍すると、SCSS、CSS、ドキュメント（これ）、スタイルガイドがすべて含まれているプロジェクトが展開されます。</p>
+
+<h2 class="echo-post-title-01">CSSだけを使用する</h2>
+
+<p>echo.cssはCSSだけを気軽に使用することができます。ただし、色名の変更など、Sassを活用した高度なカスタマイズは利用できないことをご了承ください。</p>
+
+<p>CSSファイル <code>/dist/css/echo.min.css</code> のみを、あなたのウェブサイトに読み込ませてください。</p>
+
+<div class="codeblock"><pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/echo.min.css&quot;&gt;</pre></div>
+
+<h2 class="echo-post-title-01">Sass・Gulpを活用する</h2>
+
+<p>展開したファイル一式を、あなたのプロジェクトのディレクトリに配置してください。<br>
+<code>/dist/</code> が、ドキュメントルートとなります。</p>
+
+<h3 class="echo-post-title-02">不要なファイルについて</h3>
+
+<p>以下のファイル・ディレクトリは削除してください。 <code>/styleguide/</code> を残しておくと、動作チェックの際に便利です。</p>
+
+<ul>
+    <li>/index.html</li>
+    <li>/doc_include/ 以下すべて</li>
+    <li>/docs/ 以下すべて</li>
+    <li>/styleguide/ 以下すべて</li>
+    <li>/share/ 以下すべて</li>
+</ul>
+
+<h3 class="echo-post-title-02">Gulpをインストールする</h3>
+
+<p>以下のコマンドを実行して、 <code>/package.json</code> に記載されたGulpパッケージをインストールしてください。</p>
+
+<div class="codeblock"><pre>npm install</pre></div>
+
+<h3 class="echo-post-title-02">作業を始める</h3>
+
+<p>以降は、作業前に <code>gulp</code> コマンドを実行すると、 <code>/_scss/</code> ディレクトリの変更が、常時 <code>/dist/css/</code> に反映されるようになります。</p>
+
+<div class="codeblock"><pre>npm run gulp</pre></div>
+
+<p><code>/_scss/_config_basic.scss</code> に記載されたカラーコード、フォント名を変更して、動作を確認してみてください。</p>
+
+
+
+<div class="u-padding-top-xxl">
+    <a href="./introduction-template.html" class="m-btn m-btn-bordered m-btn-first m-btn-block m-btn-xl"><span class="u-text-xs u-font-second u-padding-left-sm u-position-center-left">Next </span>基本のテンプレート<i class="fas fa-angle-right u-padding-right-sm u-position-center-right"></i></a>
+</div>
+
+
+<?php include('../doc_include/footer.inc'); ?>
