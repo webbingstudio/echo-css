@@ -641,42 +641,40 @@ echo-post
 
 .echo-post-title-01 {
     margin: 2em 0 1em;
+    padding-bottom: .5em;
+    border-bottom: 2px solid #333;
     font-size: 1.25rem;
     line-height: 1.25;
 }
 
 @media (min-width: 425px) {
     .echo-post-title-01 {
-        font-size: 1.5rem;
+        font-size: 1.375rem;
     }
 }
 
 @media (min-width: 1000px) {
     .echo-post-title-01 {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
     }
 }
 
 .echo-post-title-02 {
-    margin: 1.5em 0 .5em;
+    margin: 2em 0 1em;
+    padding-left: .5em;
+    border-left: .25em solid #333;
     font-size: 1.125rem;
     line-height: 1.25;
 }
 
-@media (min-width: 425px) {
+@media (min-width: 1000px) {
     .echo-post-title-02 {
         font-size: 1.25rem;
     }
 }
 
-@media (min-width: 1000px) {
-    .echo-post-title-02 {
-        font-size: 1.375rem;
-    }
-}
-
 .echo-post-title-03 {
-    margin: 1em 0 .5em;
+    margin: 1.5em 0 .5em;
     font-size: 1rem;
     line-height: 1.25;
 }
@@ -845,7 +843,7 @@ body.view-home .echo-header-nav .m-nav-item:first-child {
     font-size: .9em;
     line-height: 1;
     vertical-align: middle;
-    transform:translate(0, -.1em);
+    transform: translate(0, -1px);
 }
 
 .wysiwyg pre:not([class]) code {
@@ -960,7 +958,7 @@ h2.styleguide:before {
     font-size: .9em;
     line-height: 1;
     vertical-align: middle;
-    transform:translate(0, -.1em);
+    transform: translate(0, -1px);
 }
 
 .styleguide-contents pre:not([class]) code {
