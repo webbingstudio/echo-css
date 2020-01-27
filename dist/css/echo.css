@@ -1598,13 +1598,13 @@ a:active .m-btn-second {
 }
 
 .m-btn-third {
-  color: #fff;
+  color: #333;
   background-color: #ff9c10;
   border-color: transparent;
 }
 
 .m-btn-third:hover, .m-btn-third:focus, .m-btn-third:active, .m-btn-third.active {
-  color: #fff;
+  color: #333;
   background-color: #c05900;
   border-color: transparent;
 }
@@ -1619,7 +1619,7 @@ fieldset[disabled] .m-btn-third:hover,
 fieldset[disabled] .m-btn-third.hover,
 fieldset[disabled] .m-btn-third:focus,
 fieldset[disabled] .m-btn-third.focus {
-  color: #fff;
+  color: #333;
   background-color: #ff9c10;
   border-color: transparent;
 }
@@ -1627,7 +1627,7 @@ fieldset[disabled] .m-btn-third.focus {
 a:hover .m-btn-third,
 a:focus .m-btn-third,
 a:active .m-btn-third {
-  color: #fff;
+  color: #333;
   background-color: #c05900;
   border-color: transparent;
 }
@@ -1823,7 +1823,7 @@ a:active .m-btn-bordered.m-btn-second {
 }
 
 .m-btn-bordered.m-btn-third:hover, .m-btn-bordered.m-btn-third:focus, .m-btn-bordered.m-btn-third:active, .m-btn-bordered.m-btn-third.active {
-  color: #fff;
+  color: inherit;
   background-color: #ff9c10;
   border-color: transparent;
 }
@@ -1846,7 +1846,7 @@ fieldset[disabled] .m-btn-bordered.m-btn-third.focus {
 a:hover .m-btn-bordered.m-btn-third,
 a:focus .m-btn-bordered.m-btn-third,
 a:active .m-btn-bordered.m-btn-third {
-  color: #fff;
+  color: inherit;
   background-color: #ff9c10;
   border-color: transparent;
 }
@@ -2455,17 +2455,17 @@ m-label
   min-width: 3em;
   margin-right: .5em;
   padding: .25rem .5em;
-  background-color: #888;
+  background-color: #eee;
   font-size: .7em;
   font-weight: 300;
-  color: #fff;
+  color: #333;
   text-align: center;
   line-height: 1;
   vertical-align: middle;
 }
 
 a.m-label {
-  color: #fff;
+  color: #333;
   text-decoration: none;
 }
 
@@ -2476,14 +2476,29 @@ m-label-(color)
 */
 .m-label-gray {
   background-color: #333;
+  color: #fff;
+}
+
+a.m-label-gray {
+  color: #fff;
 }
 
 .m-label-first {
   background-color: #1976d2;
+  color: #fff;
+}
+
+a.m-label-first {
+  color: #fff;
 }
 
 .m-label-second {
   background-color: #138420;
+  color: #fff;
+}
+
+a.m-label-second {
+  color: #fff;
 }
 
 .m-label-third {
@@ -2492,10 +2507,20 @@ m-label-(color)
 
 .m-label-info {
   background-color: #138420;
+  color: #fff;
+}
+
+a.m-label-info {
+  color: #fff;
 }
 
 .m-label-important {
   background-color: #d20b2a;
+  color: #fff;
+}
+
+a.m-label-important {
+  color: #fff;
 }
 
 /*
@@ -4762,7 +4787,7 @@ u-bg-fade
 }
 
 #document .u-bg-third:not(.u-bg-fade) {
-  color: #fff;
+  color: #333;
 }
 
 #document .u-bg-third:not(.u-bg-fade) a:not([class]) {
