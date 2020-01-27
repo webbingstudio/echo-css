@@ -4150,62 +4150,62 @@ c-hero
 .c-hero {
   position: relative;
   width: 100%;
-  height: 100vh;
   background-color: #fff;
   line-height: 1;
 }
 
-.c-hero-cover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: transparent none no-repeat center center;
-  background-size: cover;
+.c-hero-image {
+  position: relative;
   z-index: 11;
 }
 
+.c-hero-image img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+}
+
 .c-hero-contents {
-  position: relative;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
   display: flex;
   align-items: center;
   align-content: center;
   justify-content: center;
-  max-width: 700px;
-  height: 100%;
-  margin: 0 auto;
+  width: 100%;
   z-index: 12;
 }
 
 @media (min-width: 1000px) {
   .c-hero-contents {
-    max-width: 960px;
+    max-width: 700px;
   }
 }
 
 @media (min-width: 1280px) {
   .c-hero-contents {
-    max-width: 1200px;
+    max-width: 960px;
   }
 }
 
 .c-hero-contents-inner {
-  margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
 }
 
 @media (min-width: 1000px) {
   .c-hero-contents-inner {
-    margin: 0;
     max-width: 700px;
   }
 }
 
 .c-hero-title {
   margin: 0;
-  font-size: 2.25rem;
+  font-size: 2rem;
   font-weight: 300;
   font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
   line-height: 1;
@@ -4214,13 +4214,13 @@ c-hero
 
 @media (min-width: 425px) {
   .c-hero-title {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
   }
 }
 
 @media (min-width: 768px) {
   .c-hero-title {
-    font-size: 3rem;
+    font-size: 2.75rem;
   }
 }
 
@@ -4244,26 +4244,20 @@ c-hero
 
 .c-hero-caption {
   margin: 0;
-  font-size: 1rem;
+  font-size: .875rem;
   line-height: 1;
   text-align: center;
 }
 
-@media (min-width: 425px) {
-  .c-hero-caption {
-    font-size: 1.125rem;
-  }
-}
-
 @media (min-width: 768px) {
   .c-hero-caption {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width: 1000px) {
   .c-hero-caption {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -4284,7 +4278,7 @@ c-hero
   text-align: center;
 }
 
-@media (min-width: 425px) {
+@media (min-width: 768px) {
   .c-hero-body {
     font-size: .75rem;
   }
@@ -4309,9 +4303,78 @@ c-hero
 
 /*
 --------------------
+c-hero-fit
+--------------------
+*/
+.c-hero-fit .c-hero-image {
+  width: 100%;
+  height: 0;
+  padding-bottom: 66.66667%;
+}
+
+@media (min-width: 768px) {
+  .c-hero-fit .c-hero-image {
+    padding-bottom: 40%;
+  }
+}
+
+.c-hero-fit .c-hero-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*
+--------------------
 c-hero-(direction)
 --------------------
 */
+.c-hero-left .c-hero-contents,
+.c-hero-right .c-hero-contents {
+  max-width: 700px;
+}
+
+@media (min-width: 1000px) {
+  .c-hero-left .c-hero-contents,
+  .c-hero-right .c-hero-contents {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .c-hero-left .c-hero-contents,
+  .c-hero-right .c-hero-contents {
+    max-width: 1200px;
+  }
+}
+
+.c-hero-left .c-hero-contents-inner,
+.c-hero-right .c-hero-contents-inner {
+  max-width: 85%;
+}
+
+@media (min-width: 768px) {
+  .c-hero-left .c-hero-contents-inner,
+  .c-hero-right .c-hero-contents-inner {
+    max-width: 65%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .c-hero-left .c-hero-contents-inner,
+  .c-hero-right .c-hero-contents-inner {
+    max-width: 50%;
+  }
+}
+
+.c-hero-left .c-hero-body,
+.c-hero-right .c-hero-body {
+  text-align: left;
+}
+
 .c-hero-left .c-hero-contents {
   justify-content: flex-start;
 }
@@ -4321,17 +4384,12 @@ c-hero-(direction)
   text-align: left;
 }
 
-.c-hero-left .c-hero-body {
-  text-align: left;
-}
-
 .c-hero-right .c-hero-contents {
   justify-content: flex-end;
 }
 
 .c-hero-right .c-hero-title,
-.c-hero-right .c-hero-caption,
-.c-hero-right .c-hero-body {
+.c-hero-right .c-hero-caption {
   text-align: right;
 }
 

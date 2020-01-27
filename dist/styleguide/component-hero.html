@@ -36,112 +36,222 @@
             <article class="s-post">
                 <div class="s-post-contents styleguide-contents"><h1 id="hero" class="styleguide">c-hero</h1>
 
+<p class="c-alert c-alert-important"><span class="c-alert-header"><i class="fas fa-exclamation-circle"></i><span class="u-sr">注意</span></span>.c-hero は、Version2.0.0で背景画像のマークアップと挙動が変更されました。</p>
+
+<div class="c-box c-box-bordered c-box-important">
+    <dl>
+        <dt>.c-heroの主な変更点</dt>
+
+        <dd>高さが画面に対する相対値ではなくなりました。<br>
+        <code>.c-hero-left, .c-hero-right</code> のコンテンツ幅が小さくなりました。<br>
+        画像をトリミングしない挙動がデフォルトになりました。旧来の挙動にしたい場合は、 <code>.c-hero-fit</code> を併用してください。</dd>
+    </dl>
+</div>
+
 <p>メインビジュアルなどに使用される全面背景を持つコンポーネントを表示する。<br>
 <code>.c-hero-contents-inner</code> が必須であることに注意する。<br>
-<code>.c-hero-cover</code> の背景画像はインラインスタイル、もしくは追加CSSで定義する。<br>
-高さは <code>100vh</code> としているため、適当調整すること。</p>
-<div class="example"><div class="c-hero">
-    <div class="c-hero-cover" style="background-image: url(../images/_dummy/image_06.jpg);"></div>
+<code>.c-hero-image</code> の画像は<strong>トリミングされず、縦横比を保って伸縮する。</strong>レスポンシブイメージを併用することが望ましい。<br>
+<code>.c-hero-contents-inner</code>の内容が多すぎるとはみ出すことがある点に注意。</p>
+
+<div class="example">
+<div class="c-hero">
+    <div class="c-hero-image">
+        <picture>
+            <source
+                media="(max-width:768px)"
+                srcset="/images/_dummy/image_06_m.jpg 768w"
+                sizes="100vw">
+            <source
+                srcset="/images/_dummy/image_06.jpg 1280w"
+                sizes="(max-width:1280px) 100vw">
+            <img src="/images/_dummy/image_06.jpg" alt="">
+        </picture>
+    </div><!-- /.c-hero-image -->
     <div class="c-hero-contents">
         <div class="c-hero-contents-inner">
             <h2 class="c-hero-title">吾輩は猫である</h2>
             <p class="c-hero-caption">名前はまだ無い</p>
-            <p class="c-hero-body">どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
+            <p class="c-hero-body">どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。</p>
         </div><!-- /.c-hero-contents-inner -->
     </div><!-- /.c-hero-contents -->
 </div><!-- /.c-hero -->
+</div>
 
-</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-hero"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-hero-cover"</span> <span class="na">style=</span><span class="s">"background-image: url(../images/_dummy/image_06.jpg);"</span><span class="nt">&gt;&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-hero-contents"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-hero-contents-inner"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"c-hero-title"</span><span class="nt">&gt;</span>吾輩は猫である<span class="nt">&lt;/h2&gt;</span>
-            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"c-hero-caption"</span><span class="nt">&gt;</span>名前はまだ無い<span class="nt">&lt;/p&gt;</span>
-            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"c-hero-body"</span><span class="nt">&gt;</span>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ<span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.c-hero-contents-inner --&gt;</span>
-    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.c-hero-contents --&gt;</span>
-<span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.c-hero --&gt;</span>
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="c-hero"&gt;
+    &lt;div class="c-hero-image"&gt;
+        &lt;picture&gt;
+            &lt;source
+                media="(max-width:768px)"
+                srcset="/images/_dummy/image_06_m.jpg 768w"
+                sizes="100vw"&gt;
+            &lt;source
+                srcset="/images/_dummy/image_06.jpg 1280w"
+                sizes="(max-width:1280px) 100vw"&gt;
+            &lt;img src="/images/_dummy/image_06.jpg" alt=""&gt;
+        &lt;/picture&gt;
+    &lt;/div&gt;&lt;!-- /.c-hero-image --&gt;
+    &lt;div class="c-hero-contents"&gt;
+        &lt;div class="c-hero-contents-inner"&gt;
+            &lt;h2 class="c-hero-title"&gt;吾輩は猫である&lt;/h2&gt;
+            &lt;p class="c-hero-caption"&gt;名前はまだ無い&lt;/p&gt;
+            &lt;p class="c-hero-body"&gt;どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。&lt;/p&gt;
+        &lt;/div&gt;&lt;!-- /.c-hero-contents-inner --&gt;
+    &lt;/div&gt;&lt;!-- /.c-hero-contents --&gt;
+&lt;/div&gt;&lt;!-- /.c-hero --&gt;</code></pre></div>
 
-</pre></div>
-<h2 id="hero-01-direction" class="styleguide">c-hero-(direction)</h2>
+<h2 id="hero-01-direction" class="styleguide">c-hero-fit</h2>
 
-<p>コンテンツブロックを指定した方向に寄せる。</p>
-<div class="example"><h3>.c-hero + .c-hero-left</h3>
-<div class="c-hero c-hero-left" style="margin-bottom: 2rem;">
-    <div class="c-hero-cover" style="background-image: url(../images/_dummy/image_09.jpg);"></div>
+<p>背景画像が縦横比を保ってトリミングされる。<br>
+ブレークポイントが <code>md</code> 以下では <code>3:2</code> 、それ以上では <code>2.5:1</code> となる。 
+画像のトリミングにはobject-fitを使用しているため、Internet Explorer 11には対応していない。<br>
+ライブラリを追加した場合でも、<strong>レスポンシブイメージとの併用ができない</strong>ことに注意（画面サイズに関係なく、img要素のsrc属性に指定した画像が使用される）。</p>
+
+<div class="example">
+<div class="c-hero c-hero-fit">
+    <div class="c-hero-image">
+        <picture>
+            <source
+                media="(max-width:768px)"
+                srcset="/images/_dummy/image_06_m.jpg 768w"
+                sizes="100vw">
+            <source
+                srcset="/images/_dummy/image_06.jpg 1280w"
+                sizes="(max-width:1280px) 100vw">
+            <img src="/images/_dummy/image_06.jpg" alt="">
+        </picture>
+    </div><!-- /.c-hero-image -->
     <div class="c-hero-contents">
         <div class="c-hero-contents-inner">
             <h2 class="c-hero-title">吾輩は猫である</h2>
             <p class="c-hero-caption">名前はまだ無い</p>
-            <p class="c-hero-body">どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
+            <p class="c-hero-body">どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。</p>
+        </div><!-- /.c-hero-contents-inner -->
+    </div><!-- /.c-hero-contents -->
+</div><!-- /.c-hero -->
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="c-hero c-hero-fit"&gt;
+    &lt;div class="c-hero-image"&gt;
+        &lt;picture&gt;
+            &lt;source
+                media="(max-width:768px)"
+                srcset="/images/_dummy/image_06_m.jpg 768w"
+                sizes="100vw"&gt;
+            &lt;source
+                srcset="/images/_dummy/image_06.jpg 1280w"
+                sizes="(max-width:1280px) 100vw"&gt;
+            &lt;img src="/images/_dummy/image_06.jpg" alt=""&gt;
+        &lt;/picture&gt;
+    &lt;/div&gt;&lt;!-- /.c-hero-image --&gt;
+    &lt;div class="c-hero-contents"&gt;
+        &lt;div class="c-hero-contents-inner"&gt;
+            &lt;h2 class="c-hero-title"&gt;吾輩は猫である&lt;/h2&gt;
+            &lt;p class="c-hero-caption"&gt;名前はまだ無い&lt;/p&gt;
+            &lt;p class="c-hero-body"&gt;どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。&lt;/p&gt;
+        &lt;/div&gt;&lt;!-- /.c-hero-contents-inner --&gt;
+    &lt;/div&gt;&lt;!-- /.c-hero-contents --&gt;
+&lt;/div&gt;&lt;!-- /.c-hero --&gt;</code></pre></div>
+
+<h2 id="hero-01-direction" class="styleguide">c-hero-(direction)</h2>
+
+<p>コンテンツブロックを指定した方向に寄せる。</p>
+
+<div class="example">
+
+<h3>.c-hero + .c-hero-left</h3>
+
+<div class="c-hero c-hero-left" style="margin-bottom: 2rem;">
+    <div class="c-hero-image">
+        <picture>
+            <source
+                media="(max-width:768px)"
+                srcset="/images/_dummy/image_09_m.jpg 768w"
+                sizes="100vw">
+            <source
+                srcset="/images/_dummy/image_09.jpg 1280w"
+                sizes="(max-width:1280px) 100vw">
+            <img src="/images/_dummy/image_09.jpg" alt="">
+        </picture>
+    </div><!-- /.c-hero-image -->
+    <div class="c-hero-contents">
+        <div class="c-hero-contents-inner">
+            <h2 class="c-hero-title">吾輩は猫である</h2>
+            <p class="c-hero-caption">名前はまだ無い</p>
+            <p class="c-hero-body">どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。</p>
         </div><!-- /.c-hero-contents-inner -->
     </div><!-- /.c-hero-contents -->
 </div><!-- /.c-hero -->
 
 <h3>.c-hero + .c-hero-right</h3>
-<div class="c-hero c-hero-right" style="margin-bottom: 2rem;">
-    <div class="c-hero-cover" style="background-image: url(../images/_dummy/image_08.jpg);"></div>
+
+<div class="c-hero c-hero-right">
+    <div class="c-hero-image">
+        <picture>
+            <source
+                media="(max-width:768px)"
+                srcset="/images/_dummy/image_08_m.jpg 768w"
+                sizes="100vw">
+            <source
+                srcset="/images/_dummy/image_08.jpg 1280w"
+                sizes="(max-width:1280px) 100vw">
+            <img src="/images/_dummy/image_08.jpg" alt="">
+        </picture>
+    </div><!-- /.c-hero-image -->
     <div class="c-hero-contents">
         <div class="c-hero-contents-inner">
             <h2 class="c-hero-title">吾輩は猫である</h2>
             <p class="c-hero-caption">名前はまだ無い</p>
-            <p class="c-hero-body">どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
+            <p class="c-hero-body">どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。</p>
         </div><!-- /.c-hero-contents-inner -->
     </div><!-- /.c-hero-contents -->
 </div><!-- /.c-hero -->
 
-</div><div class="codeblock"><pre><span class="nt">&lt;h3&gt;</span>.c-hero + .c-hero-left<span class="nt">&lt;/h3&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-hero c-hero-left"</span> <span class="na">style=</span><span class="s">"margin-bottom: 2rem;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-hero-cover"</span> <span class="na">style=</span><span class="s">"background-image: url(../images/_dummy/image_09.jpg);"</span><span class="nt">&gt;&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-hero-contents"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-hero-contents-inner"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"c-hero-title"</span><span class="nt">&gt;</span>吾輩は猫である<span class="nt">&lt;/h2&gt;</span>
-            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"c-hero-caption"</span><span class="nt">&gt;</span>名前はまだ無い<span class="nt">&lt;/p&gt;</span>
-            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"c-hero-body"</span><span class="nt">&gt;</span>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ<span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.c-hero-contents-inner --&gt;</span>
-    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.c-hero-contents --&gt;</span>
-<span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.c-hero --&gt;</span>
+</div>
 
-<span class="nt">&lt;h3&gt;</span>.c-hero + .c-hero-right<span class="nt">&lt;/h3&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-hero c-hero-right"</span> <span class="na">style=</span><span class="s">"margin-bottom: 2rem;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-hero-cover"</span> <span class="na">style=</span><span class="s">"background-image: url(../images/_dummy/image_08.jpg);"</span><span class="nt">&gt;&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-hero-contents"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-hero-contents-inner"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"c-hero-title"</span><span class="nt">&gt;</span>吾輩は猫である<span class="nt">&lt;/h2&gt;</span>
-            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"c-hero-caption"</span><span class="nt">&gt;</span>名前はまだ無い<span class="nt">&lt;/p&gt;</span>
-            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"c-hero-body"</span><span class="nt">&gt;</span>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ<span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.c-hero-contents-inner --&gt;</span>
-    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.c-hero-contents --&gt;</span>
-<span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.c-hero --&gt;</span>
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="c-hero c-hero-left"&gt;
+    &lt;div class="c-hero-image"&gt;
+        &lt;picture&gt;
+            &lt;source
+                media="(max-width:768px)"
+                srcset="/images/_dummy/image_09_m.jpg 768w"
+                sizes="100vw"&gt;
+            &lt;source
+                srcset="/images/_dummy/image_09.jpg 1280w"
+                sizes="(max-width:1280px) 100vw"&gt;
+            &lt;img src="/images/_dummy/image_09.jpg" alt=""&gt;
+        &lt;/picture&gt;
+    &lt;/div&gt;&lt;!-- /.c-hero-image --&gt;
+    &lt;div class="c-hero-contents"&gt;
+        &lt;div class="c-hero-contents-inner"&gt;
+            &lt;h2 class="c-hero-title"&gt;吾輩は猫である&lt;/h2&gt;
+            &lt;p class="c-hero-caption"&gt;名前はまだ無い&lt;/p&gt;
+            &lt;p class="c-hero-body"&gt;どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。&lt;/p&gt;
+        &lt;/div&gt;&lt;!-- /.c-hero-contents-inner --&gt;
+    &lt;/div&gt;&lt;!-- /.c-hero-contents --&gt;
+&lt;/div&gt;&lt;!-- /.c-hero --&gt;
 
-</pre></div>
 
-<h2 id="hero-02-inverse" class="styleguide">c-hero-inverse</h2>
+&lt;div class="c-hero c-hero-right"&gt;
+    &lt;div class="c-hero-image"&gt;
+        &lt;picture&gt;
+            &lt;source
+                media="(max-width:768px)"
+                srcset="/images/_dummy/image_08_m.jpg 768w"
+                sizes="100vw"&gt;
+            &lt;source
+                srcset="/images/_dummy/image_08.jpg 1280w"
+                sizes="(max-width:1280px) 100vw"&gt;
+            &lt;img src="/images/_dummy/image_08.jpg" alt=""&gt;
+        &lt;/picture&gt;
+    &lt;/div&gt;&lt;!-- /.c-hero-image --&gt;
+    &lt;div class="c-hero-contents"&gt;
+        &lt;div class="c-hero-contents-inner"&gt;
+            &lt;h2 class="c-hero-title"&gt;吾輩は猫である&lt;/h2&gt;
+            &lt;p class="c-hero-caption"&gt;名前はまだ無い&lt;/p&gt;
+            &lt;p class="c-hero-body"&gt;どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。&lt;/p&gt;
+        &lt;/div&gt;&lt;!-- /.c-hero-contents-inner --&gt;
+    &lt;/div&gt;&lt;!-- /.c-hero-contents --&gt;
+&lt;/div&gt;&lt;!-- /.c-hero --&gt;</code></pre></div>
 
-<p>コンテンツの色が反転する。<br>
-テキストリンク、ボタン等の色は反転前とは変わらないことに注意。</p>
-<div class="example"><div class="c-hero c-hero-inverse">
-    <div class="c-hero-cover" style="background-image: url(../images/_dummy/image_07.jpg);"></div>
-    <div class="c-hero-contents">
-        <div class="c-hero-contents-inner">
-            <h2 class="c-hero-title">吾輩は猫である</h2>
-            <p class="c-hero-caption">名前はまだ無い</p>
-            <p class="c-hero-body">どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
-        </div><!-- /.c-hero-contents-inner -->
-    </div><!-- /.c-hero-contents -->
-</div><!-- /.c-hero -->
-
-</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-hero c-hero-inverse"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-hero-cover"</span> <span class="na">style=</span><span class="s">"background-image: url(../images/_dummy/image_07.jpg);"</span><span class="nt">&gt;&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-hero-contents"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-hero-contents-inner"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"c-hero-title"</span><span class="nt">&gt;</span>吾輩は猫である<span class="nt">&lt;/h2&gt;</span>
-            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"c-hero-caption"</span><span class="nt">&gt;</span>名前はまだ無い<span class="nt">&lt;/p&gt;</span>
-            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"c-hero-body"</span><span class="nt">&gt;</span>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ<span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.c-hero-contents-inner --&gt;</span>
-    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.c-hero-contents --&gt;</span>
-<span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.c-hero --&gt;</span>
-
-</pre></div>
 
 <?php include('../doc_include/footer.inc'); ?>
