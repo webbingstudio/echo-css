@@ -2005,7 +2005,6 @@ m-btn-(size)
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   font-size: 1rem;
-  border-radius: 5px;
   padding-left: 1rem;
   padding-right: 1rem;
 }
@@ -2014,7 +2013,6 @@ m-btn-(size)
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   font-size: 1rem;
-  border-radius: 5px;
   padding-left: 1rem;
   padding-right: 1rem;
 }
@@ -2025,7 +2023,6 @@ m-btn-(size)
     padding-bottom: 1rem;
     font-size: 1.25rem;
     border-width: 2px;
-    border-radius: 7px;
     padding-left: 2rem;
     padding-right: 2rem;
   }
@@ -2036,7 +2033,6 @@ m-btn-(size)
   padding-bottom: 1rem;
   font-size: 1.25rem;
   border-width: 2px;
-  border-radius: 7px;
   padding-left: 2rem;
   padding-right: 2rem;
 }
@@ -2046,7 +2042,6 @@ m-btn-(size)
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     font-size: 1.5rem;
-    border-radius: 7px;
     padding-left: 3rem;
     padding-right: 3rem;
   }
@@ -3988,7 +3983,7 @@ c-form-append
 }
 
 .c-form-append .m-input + .m-btn {
-  margin-left: 0;
+  margin-left: -1px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
