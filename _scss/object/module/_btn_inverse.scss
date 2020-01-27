@@ -6,12 +6,12 @@
 
 .#{$pr}#{$m}btn#{$c3}inverse {
     @include button-variant(
-        $body-inverse-color,
-        rgba($body-inverse-color, .25),
+        $body-color,
+        rgba($body-inverse-color, .8),
         transparent,
         $body-inverse-color,
-        rgba($body-inverse-color, .4),
-        transparent
+        transparent,
+        rgba($body-inverse-color, .8)
     );
 
     &.#{$pr}#{$m}btn#{$c3}bordered {
@@ -19,9 +19,9 @@
             $body-inverse-color,
             transparent,
             rgba($body-inverse-color, .8),
-            $body-inverse-color,
-            rgba($body-inverse-color, .2),
-            $body-inverse-color
+            $body-color,
+            rgba($body-inverse-color, .8),
+            transparent
         );
 
     }
