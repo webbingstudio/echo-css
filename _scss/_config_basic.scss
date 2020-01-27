@@ -55,7 +55,7 @@ $body-color:                $gray !default;
 $body-mild-color:           $gray-mild !default;
 $body-inverse-bg:           #000 !default;
 $body-inverse-color:        #fff !default;
-$body-inverse-mild-color:   rgba($body-inverse-color, .5) !default;
+$body-inverse-mild-color:   rgba( $body-inverse-color, .5 ) !default;
 
 
 // Links
@@ -72,13 +72,13 @@ $border-width:                   1px !default;
 $border-color:                   $gray-milder !default;
 $border-inverse-color:           $gray-mild !default;
 
-$border-btn-width:               $border-width !default;
+$border-btn-width:               ( $border-width * 2 ) !default;
 $border-table-width:             $border-width !default;
-$border-table-section-width:     ($border-width * 2) !default;
+$border-table-section-width:     ( $border-width * 2 ) !default;
 $border-table-section-color:     $border-color !default;
 $border-thumbnail-width:         0 !default;
 $border-alert-width:             $border-width !default;
-$border-box-width:               ($border-width * 2) !default;
+$border-box-width:               ( $border-width * 2 ) !default;
 
 
 // UI ( Default Button, Nav, Pager, Form )
@@ -91,7 +91,7 @@ $ui-color:                      $body-color !default;
 $ui-bg:                         transparent !default;
 $ui-border-color:               $body-color !default;
 $ui-hover-color:                $body-color !default;
-$ui-hover-bg:                   rgba($body-color, .1) !default;
+$ui-hover-bg:                   rgba( $body-color, .1 ) !default;
 $ui-hover-border-color:         $body-color !default;
 $ui-current-color:              $body-inverse-color !default;
 $ui-current-bg:                 $body-color !default;
@@ -104,10 +104,10 @@ $ui-inverse-color:                      $body-inverse-color !default;
 $ui-inverse-bg:                         transparent !default;
 $ui-inverse-border-color:               $body-inverse-color !default;
 $ui-inverse-hover-color:                $body-inverse-color !default;
-$ui-inverse-hover-bg:                   rgba($body-inverse-color, .2) !default;
+$ui-inverse-hover-bg:                   rgba( $body-inverse-color, .2 ) !default;
 $ui-inverse-hover-border-color:         $body-inverse-color !default;
 $ui-inverse-current-color:              $body-color !default;
-$ui-inverse-current-bg:                 rgba($body-inverse-color, .8) !default;
+$ui-inverse-current-bg:                 rgba( $body-inverse-color, .8 ) !default;
 $ui-inverse-current-border-color:       $body-inverse-color !default;
 $ui-inverse-current-hover-color:        $ui-inverse-current-color !default;
 $ui-inverse-current-hover-bg:           $ui-inverse-current-bg !default;

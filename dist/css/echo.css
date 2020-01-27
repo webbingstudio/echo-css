@@ -1418,7 +1418,7 @@ m-btn
   display: inline-block;
   padding: 0.5rem 1rem;
   background-color: transparent;
-  border: 1px solid #333;
+  border: 2px solid #333;
   color: #333;
   font-size: 0.875rem;
   font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
@@ -2022,7 +2022,6 @@ m-btn-(size)
     padding-top: 1rem;
     padding-bottom: 1rem;
     font-size: 1.25rem;
-    border-width: 2px;
     padding-left: 2rem;
     padding-right: 2rem;
   }
@@ -2032,7 +2031,6 @@ m-btn-(size)
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-size: 1.25rem;
-  border-width: 2px;
   padding-left: 2rem;
   padding-right: 2rem;
 }
@@ -3983,7 +3981,7 @@ c-form-append
 }
 
 .c-form-append .m-input + .m-btn {
-  margin-left: -1px;
+  margin-left: -2px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
