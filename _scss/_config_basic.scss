@@ -20,30 +20,30 @@ $rule: '' !default;
 
 // gray: greyscale color
 $gray:                      #333 !default;
-$gray-strong:               #000 !default;
+$gray-strong:               #333 !default;
 $gray-mild:                 #888 !default;
 $gray-milder:               #bbb !default;
 $gray-fade:                 #eee !default;
 
 // first: primary color
 $first:                     #1976d2 !default;
-$first-strong:              #0360bd !default;
-$first-fade:                #e3f1ff !default;
+$first-strong:              #0060c0 !default;
+$first-fade:                #e3f0ff !default;
 
 // second: secondary color
-$second:                    #9e6319 !default;
-$second-strong:             #8a5411 !default;
-$second-fade:               #f7f1e6 !default;
+$second:                    #138420 !default;
+$second-strong:             #138420 !default;
+$second-fade:               #edfbf3 !default;
 
 // third: tertiary(accent) color
-$third:                     #138420 !default;
-$third-strong:              #138420 !default;
-$third-fade:                #edfbf3 !default;
+$third:                     #ff9c10 !default;
+$third-strong:              #c05900 !default;
+$third-fade:                #fff6e3 !default;
 
 // info: information(success) color in system
-$info:                      $third !default;
-$info-strong:               $third-strong !default;
-$info-fade:                 $third-fade !default;
+$info:                      $second !default;
+$info-strong:               $second-strong !default;
+$info-fade:                 $second-fade !default;
 
 // important: important(danger, error) color in system
 $important:                 #d20b2a !default;
