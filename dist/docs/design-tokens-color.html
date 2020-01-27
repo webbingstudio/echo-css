@@ -48,7 +48,7 @@
         <tr>
             <th class="u-text-center">gray</th>
             <td><span class="doc-colorchip" style="background-color: #333;"></span>#333</td>
-            <td><span class="doc-colorchip" style="background-color: #000;"></span>#000</td>
+            <td><span class="doc-colorchip" style="background-color: #333;"></span>#333</td>
             <td><span class="doc-colorchip" style="background-color: #888;"></span>#888</td>
             <td><span class="doc-colorchip" style="background-color: #bbb;"></span>#bbb</td>
             <td><span class="doc-colorchip" style="background-color: #eee;"></span>#eee</td>
@@ -56,26 +56,26 @@
         <tr>
             <th class="u-text-center">first</th>
             <td><span class="doc-colorchip" style="background-color: #1976d2;"></span>#1976d2</td>
-            <td><span class="doc-colorchip" style="background-color: #0360bd;"></span>#0360bd</td>
+            <td><span class="doc-colorchip" style="background-color: #0060c0;"></span>#0060c0</td>
             <td class="u-text-center">-</td>
             <td class="u-text-center">-</td>
-            <td><span class="doc-colorchip" style="background-color: #e3f1ff;"></span>#e3f1ff</td>
+            <td><span class="doc-colorchip" style="background-color: #e3f0ff;"></span>#e3f0ff</td>
         </tr>
         <tr>
             <th class="u-text-center">second</th>
-            <td><span class="doc-colorchip" style="background-color: #9e6319;"></span>#9e6319</td>
-            <td><span class="doc-colorchip" style="background-color: #8a5411;"></span>#8a5411</td>
-            <td class="u-text-center">-</td>
-            <td class="u-text-center">-</td>
-            <td><span class="doc-colorchip" style="background-color: #f7f1e6;"></span>#f7f1e6</td>
-        </tr>
-        <tr>
-            <th class="u-text-center">third</th>
             <td><span class="doc-colorchip" style="background-color: #138420;"></span>#138420</td>
             <td><span class="doc-colorchip" style="background-color: #138420;"></span>#138420</td>
             <td class="u-text-center">-</td>
             <td class="u-text-center">-</td>
             <td><span class="doc-colorchip" style="background-color: #edfbf3;"></span>#edfbf3</td>
+        </tr>
+        <tr>
+            <th class="u-text-center">third</th>
+            <td><span class="doc-colorchip" style="background-color: #ff9c10;"></span>#ff9c10</td>
+            <td><span class="doc-colorchip" style="background-color: #c05900;"></span>#c05900</td>
+            <td class="u-text-center">-</td>
+            <td class="u-text-center">-</td>
+            <td><span class="doc-colorchip" style="background-color: #fff6e3;"></span>#fff6e3</td>
         </tr>
         <tr>
             <th class="u-text-center">info</th>
@@ -105,29 +105,29 @@
 
 <h3 class="echo-post-title-02">デザインカラー</h3>
 
-<h4 class="echo-post-title-03">gray</h4>
+<h4 class="echo-post-title-03"><span class="doc-colorchip" style="background-color: #333;"></span>gray</h4>
 
 <p>グレースケール、もしくはグレースケールに限りなく近い彩度の色を指定します。ウェブサイトのルートの文字色や、ユーザーインターフェースの色に使用されています。</p>
 
-<h4 class="echo-post-title-03 u-text-first">first</h4>
+<h4 class="echo-post-title-03"><span class="doc-colorchip" style="background-color: #0060c0;"></span>first</h4>
 
 <p>ウェブサイトにおけるブランドカラー、もしくは主要な色（プライマリカラー）を指定します。基本のリンク色、チェックボックス、ラジオボタンのアイコン色に使用されています。</p>
 
-<h4 class="echo-post-title-03 u-text-second">second</h4>
+<h4 class="echo-post-title-03"><span class="doc-colorchip" style="background-color: #138420;"></span>second</h4>
 
 <p>ウェブサイトにおける補助色（セカンダリカラー）を指定します。この色はオブジェクトの基本色には含まれておらず、別途サブクラスを指定して有効にします。</p>
 
-<h4 class="echo-post-title-03 u-text-third">third</h4>
+<h4 class="echo-post-title-03"><span class="doc-colorchip" style="background-color: #ff9c10;"></span>third</h4>
 
-<p>ウェブサイトにおける強調色（アクセントカラー）を指定します。ウェブサイト内での使用量は最小限であることが望ましいです。この色はオブジェクトの基本色には含まれておらず、別途サブクラスを指定して有効にします。</p>
+<p>ウェブサイトにおける強調色（アクセントカラー）を指定します。<strong>明度が高い色</strong>を想定しているため、 <code>.m-btn-third, .u-bg-third</code> などでは、内包する文字の色が <code>gray-strong</code> となります。また、デフォルトのカラーテーブルでは <code>third-strong</code> はかなり濃い色となります。この色はオブジェクトの基本色には含まれておらず、別途サブクラスを指定して有効にします。</p>
 
 <h3 class="echo-post-title-02">システムカラー</h3>
 
-<h4 class="echo-post-title-03 u-text-info">info</h4>
+<h4 class="echo-post-title-03"><span class="doc-colorchip" style="background-color: #138420;"></span>info</h4>
 
-<p>ウェブサイトのフォームなどで、ポジティブな情報を提供する際に使用される色を指定します。デフォルトでは <code>third</code> と同一となっています。</p>
+<p>ウェブサイトのフォームなどで、ポジティブな情報を提供する際に使用される色を指定します。デフォルトでは <code>second</code> と同一となっています。</p>
 
-<h4 class="echo-post-title-03 u-text-important">important</h4>
+<h4 class="echo-post-title-03"><span class="doc-colorchip" style="background-color: #d20b2a;"></span>important</h4>
 
 <p>ウェブサイトの特別な強調色に使用される色、もしくはフォームなどで、ネガティブな情報を提供する際に使用される色を指定します。日本語圏では赤（red）が一般に使用されます。</p>
 
@@ -143,7 +143,7 @@
 
 <h3 class="echo-post-title-02">mild</h3>
 
-<p><code>gray</code> のみに使用されている強度です。 <code>.m-label</code> の基本色や、WordPress用の画像キャプションに使用されています。この色は<strong>充分なコントラスト比を確保していない</strong>ので、後述のアクセシビリティ達成基準を意識する場合は使用しないでください。</p>
+<p><code>gray</code> のみに使用されている強度です。 <code>.m-label</code> の基本色や、WordPress用の画像キャプションに使用されています。<strong>この色は充分なコントラスト比を確保していません。</strong>後述のアクセシビリティ達成基準を意識する場合は注意してください。</p>
 
 <h3 class="echo-post-title-02">milder</h3>
 
@@ -160,9 +160,9 @@
 しかしCSSフレームワークの性格上、完全な達成は難しくなっています。達成を意識する場合は、以下の点に注意してください。</p>
 
 <ol>
-    <li>色を変更する際に、水色（シアン）やオレンジを使用しないでください。これらは多くのCSSフレームワークで採用されていますが、充分なコントラスト比を確保できません。</li>
-    <li>ボタン色に <code>gray</code> を使用しないでください。 <code>third, important</code> との識別が難しいことがあります。</li>
-    <li>色変数 <code>$gray-mild</code> を使用することは避けてください。</li>
+    <li>カラーテーブルの <code>third</code> を、白い文字の背景や小さな文字に使用することは避けてください。オレンジ系は多くのCSSフレームワークで採用されていますが、充分なコントラスト比を確保できません。</li>
+    <li>ボタン色に <code>gray</code> を使用しないでください。 <code>second, important</code> との識別が難しいことがあります。</li>
+    <li>色変数 <code>$gray-mild</code> を文字色に使用することは避けてください。</li>
     <li><code>.m-label</code> を使用するときは、必ず色を変更するサブクラスを併用してください。</li>
     <li><a href="https://waic.github.io/wcag21/guidelines/#contrast-enhanced">達成基準1.4.6「コントラスト (高度)」</a>を満たす場合は、 <code>.u-text-(color)</code> を使用する際の文字サイズを大きく（最低18ポイント）してください。</li>
 </ol>
