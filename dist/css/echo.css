@@ -92,12 +92,12 @@ It is not appropriate to specify color or text-decoration for the link only with
 --------------------
 */
 a {
-  color: #0360bd;
+  color: #0060c0;
   text-decoration: underline;
 }
 
 a:hover, a:focus {
-  color: #0360bd;
+  color: #0060c0;
   text-decoration: none;
 }
 
@@ -1500,7 +1500,7 @@ m-btn-(color)
 
 .m-btn-gray:hover, .m-btn-gray:focus, .m-btn-gray:active, .m-btn-gray.active {
   color: #fff;
-  background-color: #000;
+  background-color: #333;
   border-color: transparent;
 }
 
@@ -1523,7 +1523,7 @@ a:hover .m-btn-gray,
 a:focus .m-btn-gray,
 a:active .m-btn-gray {
   color: #fff;
-  background-color: #000;
+  background-color: #333;
   border-color: transparent;
 }
 
@@ -1535,7 +1535,7 @@ a:active .m-btn-gray {
 
 .m-btn-first:hover, .m-btn-first:focus, .m-btn-first:active, .m-btn-first.active {
   color: #fff;
-  background-color: #0360bd;
+  background-color: #0060c0;
   border-color: transparent;
 }
 
@@ -1558,19 +1558,19 @@ a:hover .m-btn-first,
 a:focus .m-btn-first,
 a:active .m-btn-first {
   color: #fff;
-  background-color: #0360bd;
+  background-color: #0060c0;
   border-color: transparent;
 }
 
 .m-btn-second {
   color: #fff;
-  background-color: #9e6319;
+  background-color: #138420;
   border-color: transparent;
 }
 
 .m-btn-second:hover, .m-btn-second:focus, .m-btn-second:active, .m-btn-second.active {
   color: #fff;
-  background-color: #8a5411;
+  background-color: #138420;
   border-color: transparent;
 }
 
@@ -1585,7 +1585,7 @@ fieldset[disabled] .m-btn-second.hover,
 fieldset[disabled] .m-btn-second:focus,
 fieldset[disabled] .m-btn-second.focus {
   color: #fff;
-  background-color: #9e6319;
+  background-color: #138420;
   border-color: transparent;
 }
 
@@ -1593,19 +1593,19 @@ a:hover .m-btn-second,
 a:focus .m-btn-second,
 a:active .m-btn-second {
   color: #fff;
-  background-color: #8a5411;
+  background-color: #138420;
   border-color: transparent;
 }
 
 .m-btn-third {
   color: #fff;
-  background-color: #138420;
+  background-color: #ff9c10;
   border-color: transparent;
 }
 
 .m-btn-third:hover, .m-btn-third:focus, .m-btn-third:active, .m-btn-third.active {
   color: #fff;
-  background-color: #138420;
+  background-color: #c05900;
   border-color: transparent;
 }
 
@@ -1620,7 +1620,7 @@ fieldset[disabled] .m-btn-third.hover,
 fieldset[disabled] .m-btn-third:focus,
 fieldset[disabled] .m-btn-third.focus {
   color: #fff;
-  background-color: #138420;
+  background-color: #ff9c10;
   border-color: transparent;
 }
 
@@ -1628,7 +1628,7 @@ a:hover .m-btn-third,
 a:focus .m-btn-third,
 a:active .m-btn-third {
   color: #fff;
-  background-color: #138420;
+  background-color: #c05900;
   border-color: transparent;
 }
 
@@ -1784,12 +1784,12 @@ a:active .m-btn-bordered.m-btn-first {
 .m-btn-bordered.m-btn-second {
   color: inherit;
   background-color: transparent;
-  border-color: #9e6319;
+  border-color: #138420;
 }
 
 .m-btn-bordered.m-btn-second:hover, .m-btn-bordered.m-btn-second:focus, .m-btn-bordered.m-btn-second:active, .m-btn-bordered.m-btn-second.active {
   color: #fff;
-  background-color: #9e6319;
+  background-color: #138420;
   border-color: transparent;
 }
 
@@ -1805,26 +1805,26 @@ fieldset[disabled] .m-btn-bordered.m-btn-second:focus,
 fieldset[disabled] .m-btn-bordered.m-btn-second.focus {
   color: inherit;
   background-color: transparent;
-  border-color: #9e6319;
+  border-color: #138420;
 }
 
 a:hover .m-btn-bordered.m-btn-second,
 a:focus .m-btn-bordered.m-btn-second,
 a:active .m-btn-bordered.m-btn-second {
   color: #fff;
-  background-color: #9e6319;
+  background-color: #138420;
   border-color: transparent;
 }
 
 .m-btn-bordered.m-btn-third {
   color: inherit;
   background-color: transparent;
-  border-color: #138420;
+  border-color: #ff9c10;
 }
 
 .m-btn-bordered.m-btn-third:hover, .m-btn-bordered.m-btn-third:focus, .m-btn-bordered.m-btn-third:active, .m-btn-bordered.m-btn-third.active {
   color: #fff;
-  background-color: #138420;
+  background-color: #ff9c10;
   border-color: transparent;
 }
 
@@ -1840,14 +1840,14 @@ fieldset[disabled] .m-btn-bordered.m-btn-third:focus,
 fieldset[disabled] .m-btn-bordered.m-btn-third.focus {
   color: inherit;
   background-color: transparent;
-  border-color: #138420;
+  border-color: #ff9c10;
 }
 
 a:hover .m-btn-bordered.m-btn-third,
 a:focus .m-btn-bordered.m-btn-third,
 a:active .m-btn-bordered.m-btn-third {
   color: #fff;
-  background-color: #138420;
+  background-color: #ff9c10;
   border-color: transparent;
 }
 
@@ -2483,11 +2483,11 @@ m-label-(color)
 }
 
 .m-label-second {
-  background-color: #9e6319;
+  background-color: #138420;
 }
 
 .m-label-third {
-  background-color: #138420;
+  background-color: #ff9c10;
 }
 
 .m-label-info {
@@ -2513,27 +2513,27 @@ a.m-label-inverse {
 }
 
 .m-label-inverse.m-label-first {
-  color: #0360bd;
+  color: #0060c0;
 }
 
 a.m-label-inverse.m-label-first {
-  color: #0360bd;
+  color: #0060c0;
 }
 
 .m-label-inverse.m-label-second {
-  color: #8a5411;
+  color: #138420;
 }
 
 a.m-label-inverse.m-label-second {
-  color: #8a5411;
+  color: #138420;
 }
 
 .m-label-inverse.m-label-third {
-  color: #138420;
+  color: #c05900;
 }
 
 a.m-label-inverse.m-label-third {
-  color: #138420;
+  color: #c05900;
 }
 
 .m-label-inverse.m-label-info {
@@ -3423,21 +3423,21 @@ c-alert-(color)
 --------------------
 */
 .c-alert-first {
-  color: #0360bd;
+  color: #0060c0;
   border-color: #1976d2;
-  background-color: #e3f1ff;
+  background-color: #e3f0ff;
 }
 
 .c-alert-second {
-  color: #8a5411;
-  border-color: #9e6319;
-  background-color: #f7f1e6;
-}
-
-.c-alert-third {
   color: #138420;
   border-color: #138420;
   background-color: #edfbf3;
+}
+
+.c-alert-third {
+  color: #c05900;
+  border-color: #ff9c10;
+  background-color: #fff6e3;
 }
 
 .c-alert-info {
@@ -3500,15 +3500,15 @@ c-box-(color)
 --------------------
 */
 .c-box-first {
-  background-color: #e3f1ff;
+  background-color: #e3f0ff;
 }
 
 .c-box-second {
-  background-color: #f7f1e6;
+  background-color: #edfbf3;
 }
 
 .c-box-third {
-  background-color: #edfbf3;
+  background-color: #fff6e3;
 }
 
 .c-box-info {
@@ -3534,11 +3534,11 @@ c-box-bordered
 }
 
 .c-box-bordered.c-box-second {
-  border-color: #9e6319;
+  border-color: #138420;
 }
 
 .c-box-bordered.c-box-third {
-  border-color: #138420;
+  border-color: #ff9c10;
 }
 
 .c-box-bordered.c-box-info {
@@ -4141,7 +4141,7 @@ c-headline
 }
 
 .c-headline-title a:hover, .c-headline-title a:focus {
-  color: #0360bd;
+  color: #0060c0;
   text-decoration: underline;
 }
 
@@ -4738,11 +4738,11 @@ u-bg-fade
 }
 
 #document .u-bg-first.u-bg-fade {
-  background-color: #e3f1ff;
+  background-color: #e3f0ff;
 }
 
 #document .u-bg-second {
-  background-color: #9e6319;
+  background-color: #138420;
 }
 
 #document .u-bg-second:not(.u-bg-fade) {
@@ -4754,11 +4754,11 @@ u-bg-fade
 }
 
 #document .u-bg-second.u-bg-fade {
-  background-color: #f7f1e6;
+  background-color: #edfbf3;
 }
 
 #document .u-bg-third {
-  background-color: #138420;
+  background-color: #ff9c10;
 }
 
 #document .u-bg-third:not(.u-bg-fade) {
@@ -4770,7 +4770,7 @@ u-bg-fade
 }
 
 #document .u-bg-third.u-bg-fade {
-  background-color: #edfbf3;
+  background-color: #fff6e3;
 }
 
 #document .u-bg-info {
@@ -5691,15 +5691,15 @@ u-text-(color)
 --------------------
 */
 #document .u-text-first {
-  color: #0360bd;
+  color: #0060c0;
 }
 
 #document .u-text-second {
-  color: #8a5411;
+  color: #138420;
 }
 
 #document .u-text-third {
-  color: #138420;
+  color: #c05900;
 }
 
 #document .u-text-info {
@@ -6328,7 +6328,7 @@ WYSIWYG Styles (WordPress)
 }
 
 .p-wysiwyg a:not([class*="link"]):not([class*="btn"]):not([class*="label"]):hover {
-  color: #0360bd;
+  color: #0060c0;
   text-decoration: none;
 }
 
@@ -6508,7 +6508,7 @@ WYSIWYG Styles (WordPress)
   padding: 10px;
   border-width: 0 0 0 5px;
   border-style: none none none solid;
-  border-color: transparent transparent transparent #f7f1e6;
+  border-color: transparent transparent transparent #edfbf3;
   font-style: normal;
 }
 
