@@ -119,7 +119,7 @@
 
 <h4 class="echo-post-title-03"><span class="doc-colorchip" style="background-color: #ff9c10;"></span>third</h4>
 
-<p>ウェブサイトにおける強調色（アクセントカラー）を指定します。<strong>明度が高い色</strong>を想定しているため、 <code>.m-btn-third, .u-bg-third</code> などでは、内包する文字の色が <code>gray-strong</code> となります。また、デフォルトのカラーテーブルでは <code>third-strong</code> はかなり濃い色となります。この色はオブジェクトの基本色には含まれておらず、別途サブクラスを指定して有効にします。</p>
+<p>ウェブサイトにおける強調色（アクセントカラー）を指定します。<strong>明度が高い色</strong>を想定しているため、 <code>.m-btn-third, .u-bg-third</code> などでは、内包する文字の色が <code>$body-color = $gray-strong</code> となります。また、デフォルトのカラーテーブルでは <code>$third-strong</code> はかなり濃い色となります。この色はオブジェクトの基本色には含まれておらず、別途サブクラスを指定して有効にします。</p>
 
 <h3 class="echo-post-title-02">システムカラー</h3>
 
@@ -160,7 +160,7 @@
 しかしCSSフレームワークの性格上、完全な達成は難しくなっています。達成を意識する場合は、以下の点に注意してください。</p>
 
 <ol>
-    <li>カラーテーブルの <code>third</code> を、白い文字の背景や小さな文字に使用することは避けてください。オレンジ系は多くのCSSフレームワークで採用されていますが、充分なコントラスト比を確保できません。</li>
+    <li>カラーテーブルの <code>third</code> を、白い文字の背景に使用することは避けてください。オレンジ系は多くのCSSフレームワークで採用されていますが、充分なコントラスト比を確保できません。</li>
     <li>ボタン色に <code>gray</code> を使用しないでください。 <code>second, important</code> との識別が難しいことがあります。</li>
     <li>色変数 <code>$gray-mild</code> を文字色に使用することは避けてください。</li>
     <li><code>.m-label</code> を使用するときは、必ず色を変更するサブクラスを併用してください。</li>
