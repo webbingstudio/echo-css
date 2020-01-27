@@ -9,10 +9,10 @@
     min-width: 3em;
     margin-right: .5em;
     padding: .25rem .5em;
-    background-color: $gray-mild;
+    background-color: $gray-fade;
     font-size: .7em;
     font-weight: $font-weight-root;
-    color: $body-inverse-color;
+    color: $ui-color;
     text-align: center;
     line-height: 1;
     vertical-align: middle;
@@ -20,7 +20,7 @@
     @at-root {
 
         a#{&} {
-            color: $body-inverse-color;
+            color: $ui-color;
             text-decoration: none;
         }
 
@@ -37,14 +37,44 @@
 
 .#{$pr}#{$m}label#{$c3}gray {
     background-color: $gray;
+    color: $body-inverse-color;
+
+    @at-root {
+
+        a#{&} {
+            color: $body-inverse-color;
+        }
+
+    }
+
 }
 
 .#{$pr}#{$m}label#{$c3}first {
     background-color: $first;
+    color: $body-inverse-color;
+
+    @at-root {
+
+        a#{&} {
+            color: $body-inverse-color;
+        }
+
+    }
+
 }
 
 .#{$pr}#{$m}label#{$c3}second {
     background-color: $second;
+    color: $body-inverse-color;
+
+    @at-root {
+
+        a#{&} {
+            color: $body-inverse-color;
+        }
+
+    }
+
 }
 
 .#{$pr}#{$m}label#{$c3}third {
@@ -53,10 +83,30 @@
 
 .#{$pr}#{$m}label#{$c3}info {
     background-color: $info;
+    color: $body-inverse-color;
+
+    @at-root {
+
+        a#{&} {
+            color: $body-inverse-color;
+        }
+
+    }
+
 }
 
 .#{$pr}#{$m}label#{$c3}important {
     background-color: $important;
+    color: $body-inverse-color;
+
+    @at-root {
+
+        a#{&} {
+            color: $body-inverse-color;
+        }
+
+    }
+
 }
 
 
