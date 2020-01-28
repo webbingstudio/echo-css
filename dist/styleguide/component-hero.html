@@ -6,13 +6,47 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>component-hero | Style guide | echo-css</title>
 
-    <?php include('../doc_include/html_head.inc'); ?>
+    <?php // include('../doc_include/html_head.inc'); ?>
+
+<?php
+if( !isset( $echo_path ) ) {
+    $echo_path = '../';
+}
+?>
+    <link rel="stylesheet" href="<?php echo $echo_path; ?>css/echo.min.css<?php echo '?var=' . date('YmdHis'); ?>">
+
+    <script
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+
+    <script src="<?php echo $echo_path; ?>plugins/scrollto.min.js<?php echo '?var=' . date('YmdHis'); ?>"></script>
+    <link rel="stylesheet" href="<?php echo $echo_path; ?>plugins/toggle.css<?php echo '?var=' . date('YmdHis'); ?>">
+    <script src="<?php echo $echo_path; ?>plugins/toggle.min.js<?php echo '?var=' . date('YmdHis'); ?>"></script>
+
+    <script src="<?php echo $echo_path; ?>styleguide/js/prism.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="<?php echo $echo_path; ?>styleguide/css/styleguide.css<?php echo '?var=' . date('YmdHis'); ?>">
+
+    <link rel="stylesheet" href="<?php echo $echo_path; ?>styleguide/css/prism.css" />
+
+    <meta property="og:image" content="https://cms-skill.com/echo-css/share/ogp.jpg">
+    <link rel="shortcut icon" href="<?php echo $echo_path; ?>share/favicon.ico">
+    <link rel="apple-touch-icon" sizes="72x72" href="<?php echo $echo_path; ?>share/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="<?php echo $echo_path; ?>share/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="<?php echo $echo_path; ?>share/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="<?php echo $echo_path; ?>share/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="<?php echo $echo_path; ?>share/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="<?php echo $echo_path; ?>share/apple-touch-icon-152x152.png">
+
 
 </head>
 <body>
 <div class="l-document" id="document">
 
-    <?php include('../doc_include/header.inc'); ?>
+    <?php // include('../doc_include/header.inc'); ?>
 
     <main class="p-main" role="main">
         <div class="l-container l-container-fluid">
@@ -253,5 +287,55 @@
     &lt;/div&gt;&lt;!-- /.c-hero-contents --&gt;
 &lt;/div&gt;&lt;!-- /.c-hero --&gt;</code></pre></div>
 
+<h2 id="hero-01-direction" class="styleguide">c-hero-inverse</h2>
 
-<?php include('../doc_include/footer.inc'); ?>
+<p>コンテンツの色が反転する。<br>
+テキストリンク、ボタン等の色は反転前とは変わらないことに注意。</p>
+
+<div class="example">
+<div class="c-hero c-hero-inverse">
+    <div class="c-hero-image">
+        <picture>
+            <source
+                media="(max-width:768px)"
+                srcset="../images/_dummy/image_07_m.jpg 768w"
+                sizes="100vw">
+            <source
+                srcset="../images/_dummy/image_07.jpg 1280w"
+                sizes="(max-width:1280px) 100vw">
+            <img src="/images/_dummy/image_07.jpg" alt="">
+        </picture>
+    </div><!-- /.c-hero-image -->
+    <div class="c-hero-contents">
+        <div class="c-hero-contents-inner">
+            <h2 class="c-hero-title">吾輩は猫である</h2>
+            <p class="c-hero-caption">名前はまだ無い</p>
+            <p class="c-hero-body">どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。</p>
+        </div><!-- /.c-hero-contents-inner -->
+    </div><!-- /.c-hero-contents -->
+</div><!-- /.c-hero -->
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="c-hero c-hero-inverse"&gt;
+    &lt;div class="c-hero-image"&gt;
+        &lt;picture&gt;
+            &lt;source
+                media="(max-width:768px)"
+                srcset="../images/_dummy/image_07_m.jpg 768w"
+                sizes="100vw"&gt;
+            &lt;source
+                srcset="../images/_dummy/image_07.jpg 1280w"
+                sizes="(max-width:1280px) 100vw"&gt;
+            &lt;img src="/images/_dummy/image_07.jpg" alt=""&gt;
+        &lt;/picture&gt;
+    &lt;/div&gt;&lt;!-- /.c-hero-image --&gt;
+    &lt;div class="c-hero-contents"&gt;
+        &lt;div class="c-hero-contents-inner"&gt;
+            &lt;h2 class="c-hero-title"&gt;吾輩は猫である&lt;/h2&gt;
+            &lt;p class="c-hero-caption"&gt;名前はまだ無い&lt;/p&gt;
+            &lt;p class="c-hero-body"&gt;どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。&lt;/p&gt;
+        &lt;/div&gt;&lt;!-- /.c-hero-contents-inner --&gt;
+    &lt;/div&gt;&lt;!-- /.c-hero-contents --&gt;
+&lt;/div&gt;&lt;!-- /.c-hero --&gt;</code></pre></div>
+
+<?php // include('../doc_include/footer.inc'); ?>
