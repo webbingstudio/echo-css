@@ -106,23 +106,26 @@ echo-mainvisual
 --------------------
 */
 
-.echo-mainvisual .c-hero-cover {
-    background-image: url(../../images/echo/img_mainvisual_01.jpg);
-    opacity: .75;
+@media (max-width: 767.9px) {
+    .echo-mainvisual .c-hero-image {
+        opacity: .75;
+    }
 }
-@media (min-width: 1240px) {
-    .echo-mainvisual .c-hero-cover {
-        background-position: 100% 65%;
+
+@media (max-width: 767.9px) {
+    .echo-mainvisual .c-hero-contents {
+        bottom: 30px;
+        align-items: flex-end;
     }
 }
 
 .echo-mainvisual .c-hero-contents-inner {
     width: 100%;
-    max-width: 240px;
+    max-width: 400px;
     font-family: 'Helvetica', 'Roboto', '-apple-system', 'Open Sans', 'Arial', sans-serif;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .echo-mainvisual .c-hero-contents-inner {
         max-width: 600px;
     }
@@ -133,14 +136,14 @@ echo-mainvisual
     height: 63px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 415px) {
     .echo-mainvisual-logo {
         width: 240px;
         height: 84px;
     }
 }
 
-@media (min-width: 960px) {
+@media (min-width: 768px) {
     .echo-mainvisual-logo {
         width: 300px;
         height: 105px;
@@ -158,17 +161,16 @@ echo-mainvisual
     padding-top: 30px;
 }
 
-@media (max-width: 959.9px) {
-    .echo-mainvisual-download [class*="l-grid-col"]:first-child {
-        padding-bottom: 10px;
-    }
-}
-
 .echo-mainvisual-more {
-    padding-top: 30px;
+    padding-top: 15px;
     text-align: center;
 }
-@media (min-width: 960px) {
+@media (min-width: 425px) {
+    .echo-mainvisual-more {
+        padding-top: 30px;
+    }
+}
+@media (min-width: 1024px) {
     .echo-mainvisual-more {
         padding-top: 60px;
         font-size: 1.5rem;

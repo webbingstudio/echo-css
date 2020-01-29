@@ -23,7 +23,22 @@
 
         <div class="echo-mainvisual">
             <div class="c-hero c-hero-left">
-                <div class="c-hero-cover"></div>
+                <div class="c-hero-image">
+                    <picture>
+                        <source
+                            media="(max-width:768px)"
+                            srcset="./images/echo/img_mainvisual_01_small.jpg 768w"
+                            sizes="100vw">
+                        <source
+                            media="(max-width:1024px)"
+                            srcset="./images/echo/img_mainvisual_01_medium.jpg 1024w"
+                            sizes="100vw">
+                        <source
+                            srcset="./images/echo/img_mainvisual_01_large.jpg 1280w"
+                            sizes="(max-width:1280px) 100vw">
+                        <img src="./images/echo/img_mainvisual_01_large.jpg" alt="">
+                    </picture>
+                </div><!-- /.c-hero-image -->
                 <div class="c-hero-contents">
                     <div class="c-hero-contents-inner">
                         <h1 class="c-hero-title"><img src="./images/common/logo.svg" width="300" height="105" alt="echo.css" class="echo-mainvisual-logo"></h1>
@@ -32,10 +47,10 @@
 
                         <div class="echo-mainvisual-download">
                             <div class="l-grid-row">
-                                <div class="l-grid-col-12 l-grid-col-lg-6">
+                                <div class="l-grid-col-6">
                                     <a href="https://github.com/webbingstudio/echo-css/archive/master.zip" target="_blank" class="m-btn m-btn-bordered m-btn-gray m-btn-block m-btn-xl"><i class="fas fa-download u-margin-right-sm"></i>Download</a>
                                 </div><!-- /.l-grid-col -->
-                                <div class="l-grid-col-12 l-grid-col-lg-6">
+                                <div class="l-grid-col-6">
                                     <a href="https://github.com/webbingstudio/echo-css" target="_blank" class="m-btn m-btn-bordered m-btn-gray m-btn-block m-btn-xl"><i class="fab fa-github u-margin-right-sm"></i>GitHub</a>
                                 </div><!-- /.l-grid-col -->
                             </div><!-- /.l-grid-row -->
