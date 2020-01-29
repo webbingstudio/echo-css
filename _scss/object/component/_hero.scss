@@ -35,17 +35,7 @@
     align-content: center;
     justify-content: center;
     width: 100%;
-    max-width: map-get($container-max-widths-md, sm);
     z-index: 12;
-
-    @include media-breakpoint-up(lg) {
-        max-width: map-get($container-max-widths-md, md);
-    }
-
-    @include media-breakpoint-up(xl) {
-        max-width: map-get($container-max-widths-md, lg);
-    }
-
 }
 
 .#{$pr}#{$c}hero#{$c1}contents#{$c1}inner {
@@ -53,7 +43,7 @@
     padding-right: map-get($grid-gutter-widths, md);
 
     @include media-breakpoint-up(lg) {
-        max-width: map-get($container-max-widths-md, md);
+        flex-basis: map-get($container-max-widths-md, md);
     }
 
 }
@@ -193,14 +183,13 @@
     }
 
     .#{$pr}#{$c}hero#{$c1}contents#{$c1}inner {
-        max-width: 85%;
 
         @include media-breakpoint-up(md) {
-            max-width: 65%;
+            flex-basis: 66.66666667%;
         }
 
         @include media-breakpoint-up(lg) {
-            max-width: 50%;
+            flex-basis: 50%;
         }
 
     }
