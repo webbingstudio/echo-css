@@ -51,11 +51,6 @@
     .#{$pr}#{$c}card#{$c1}contents {
         @include clearfix();
         word-break: break-word;
-
-        p {
-            margin: 0;
-        }
-
     }
 
     .#{$pr}#{$c}card#{$c1}header {
@@ -64,7 +59,8 @@
 
     .#{$pr}#{$c}card#{$c1}contents {
         font-size: $font-size-sm;
-        padding: ($spacer * 2) (map-get($grid-gutter-widths, md) / 2);
+        padding: $spacer (map-get($grid-gutter-widths, md) / 2);
+        line-height: $line-height-sm;
 
         .#{$pr}#{$m}btn {
             margin: 1em auto .5em;
@@ -75,16 +71,20 @@
 
     .#{$pr}#{$c}card#{$c1}title {
         margin: 0;
-        font-size: 1.125rem;
+        font-size: $font-size-md;
         font-weight: $font-weight-bold-root;
         font-family: $font-family-bold-root;
-        line-height: $line-height-xs;
-        text-align: center;
+    }
 
-        @include media-breakpoint-up(lg) {
-            font-size: 1.25rem;
-        }
+    .#{$pr}#{$c}card#{$c1}body {
+        margin: 0;
+        font-size: inherit;
+        font-weight: inherit;
+        font-family: inherit;
+    }
 
+    .#{$pr}#{$c}card#{$c1}title + .#{$pr}#{$c}card#{$c1}body {
+        margin-top: .5em;
     }
 
 }

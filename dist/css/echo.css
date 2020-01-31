@@ -3609,18 +3609,14 @@ c-card
   clear: both;
 }
 
-.c-card .c-card-header p,
-.c-card .c-card-contents p {
-  margin: 0;
-}
-
 .c-card .c-card-header {
   padding: 10px 10px;
 }
 
 .c-card .c-card-contents {
   font-size: 0.875rem;
-  padding: 20px 10px;
+  padding: 10px 10px;
+  line-height: 1.5;
 }
 
 .c-card .c-card-contents .m-btn {
@@ -3630,17 +3626,20 @@ c-card
 
 .c-card .c-card-title {
   margin: 0;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 700;
   font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
-  line-height: 1.25;
-  text-align: center;
 }
 
-@media (min-width: 1000px) {
-  .c-card .c-card-title {
-    font-size: 1.25rem;
-  }
+.c-card .c-card-body {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+}
+
+.c-card .c-card-title + .c-card-body {
+  margin-top: .5em;
 }
 
 /*
