@@ -32,7 +32,11 @@
         flex-grow: 0;
         flex-shrink: 1;
         flex-basis: auto;
-        max-width: 33.33333333%;
+        max-width: 50%;
+
+        @include media-breakpoint-up(md) {
+            max-width: 33.33333333%;
+        }
 
         > a {
             display: block;
@@ -54,27 +58,24 @@
         flex-shrink: 1;
         flex-basis: 0%;
         padding-left: $spacer;
-
-        @include media-breakpoint-down(md) {
-            font-size: $font-size-sm;
-        }
+        font-size: $font-size-xs;
+        line-height: $line-height-sm;
 
         @include media-breakpoint-up(lg) {
             padding-left: $spacer * 2;
+            font-size: $font-size-sm;
         }
 
     }
 
     .#{$pr}#{$c}media#{$c1}title {
         margin: 0;
-        padding-bottom: $spacer;
-        font-size: 1.125rem;
+        font-size: $font-size-sm;
         font-weight: $font-weight-bold-root;
         font-family: $font-family-bold-root;
-        line-height: $line-height-xs;
 
         @include media-breakpoint-up(lg) {
-            font-size: 1.25rem;
+            font-size: $font-size-md;
         }
 
         > a {
@@ -89,6 +90,27 @@
 
         }
 
+    }
+
+    .#{$pr}#{$c}media#{$c1}meta {
+        margin: 0;
+        font-size: inherit;
+        font-weight: inherit;
+        font-family: inherit;
+        font-style: normal;
+    }
+
+    .#{$pr}#{$c}media#{$c1}body {
+        margin: 0;
+        font-size: inherit;
+        font-weight: inherit;
+        font-family: inherit;
+    }
+
+    [class*="#{$pr}#{$c}media"] + .#{$pr}#{$c}media#{$c1}title,
+    [class*="#{$pr}#{$c}media"] + .#{$pr}#{$c}media#{$c1}meta,
+    [class*="#{$pr}#{$c}media"] + .#{$pr}#{$c}media#{$c1}body {
+        margin-top: .25em;
     }
 
 }

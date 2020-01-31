@@ -3614,9 +3614,15 @@ c-card
 }
 
 .c-card .c-card-contents {
-  font-size: 0.875rem;
   padding: 10px 10px;
+  font-size: 0.75rem;
   line-height: 1.5;
+}
+
+@media (min-width: 1000px) {
+  .c-card .c-card-contents {
+    font-size: 0.875rem;
+  }
 }
 
 .c-card .c-card-contents .m-btn {
@@ -3626,9 +3632,23 @@ c-card
 
 .c-card .c-card-title {
   margin: 0;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 700;
   font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
+}
+
+@media (min-width: 1000px) {
+  .c-card .c-card-title {
+    font-size: 1rem;
+  }
+}
+
+.c-card .c-card-meta {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  font-style: normal;
 }
 
 .c-card .c-card-body {
@@ -3638,8 +3658,10 @@ c-card
   font-family: inherit;
 }
 
-.c-card .c-card-title + .c-card-body {
-  margin-top: .5em;
+.c-card [class*="c-card"] + .c-card-title,
+.c-card [class*="c-card"] + .c-card-meta,
+.c-card [class*="c-card"] + .c-card-body {
+  margin-top: .25em;
 }
 
 /*
@@ -4413,7 +4435,13 @@ a.c-media:hover, a.c-media:focus {
   flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
-  max-width: 33.33333333%;
+  max-width: 50%;
+}
+
+@media (min-width: 768px) {
+  .c-media .c-media-object {
+    max-width: 33.33333333%;
+  }
 }
 
 .c-media .c-media-object > a {
@@ -4432,32 +4460,27 @@ a.c-media:hover, a.c-media:focus {
   flex-shrink: 1;
   flex-basis: 0%;
   padding-left: 10px;
-}
-
-@media (max-width: 999.9px) {
-  .c-media .c-media-contents {
-    font-size: 0.875rem;
-  }
+  font-size: 0.75rem;
+  line-height: 1.5;
 }
 
 @media (min-width: 1000px) {
   .c-media .c-media-contents {
     padding-left: 20px;
+    font-size: 0.875rem;
   }
 }
 
 .c-media .c-media-title {
   margin: 0;
-  padding-bottom: 10px;
-  font-size: 1.125rem;
+  font-size: 0.875rem;
   font-weight: 700;
   font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
-  line-height: 1.25;
 }
 
 @media (min-width: 1000px) {
   .c-media .c-media-title {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 }
 
@@ -4469,6 +4492,27 @@ a.c-media:hover, a.c-media:focus {
 .c-media .c-media-title > a:hover, .c-media .c-media-title > a:focus {
   color: #333;
   text-decoration: none;
+}
+
+.c-media .c-media-meta {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  font-style: normal;
+}
+
+.c-media .c-media-body {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+}
+
+.c-media [class*="c-media"] + .c-media-title,
+.c-media [class*="c-media"] + .c-media-meta,
+.c-media [class*="c-media"] + .c-media-body {
+  margin-top: .25em;
 }
 
 /*

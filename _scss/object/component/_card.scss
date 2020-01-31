@@ -58,9 +58,13 @@
     }
 
     .#{$pr}#{$c}card#{$c1}contents {
-        font-size: $font-size-sm;
         padding: $spacer (map-get($grid-gutter-widths, md) / 2);
+        font-size: $font-size-xs;
         line-height: $line-height-sm;
+
+        @include media-breakpoint-up(lg) {
+            font-size: $font-size-sm;
+        }
 
         .#{$pr}#{$m}btn {
             margin: 1em auto .5em;
@@ -71,9 +75,22 @@
 
     .#{$pr}#{$c}card#{$c1}title {
         margin: 0;
-        font-size: $font-size-md;
+        font-size: $font-size-sm;
         font-weight: $font-weight-bold-root;
         font-family: $font-family-bold-root;
+
+        @include media-breakpoint-up(lg) {
+            font-size: $font-size-md;
+        }
+
+    }
+
+    .#{$pr}#{$c}card#{$c1}meta {
+        margin: 0;
+        font-size: inherit;
+        font-weight: inherit;
+        font-family: inherit;
+        font-style: normal;
     }
 
     .#{$pr}#{$c}card#{$c1}body {
@@ -83,8 +100,10 @@
         font-family: inherit;
     }
 
-    .#{$pr}#{$c}card#{$c1}title + .#{$pr}#{$c}card#{$c1}body {
-        margin-top: .5em;
+    [class*="#{$pr}#{$c}card"] + .#{$pr}#{$c}card#{$c1}title,
+    [class*="#{$pr}#{$c}card"] + .#{$pr}#{$c}card#{$c1}meta,
+    [class*="#{$pr}#{$c}card"] + .#{$pr}#{$c}card#{$c1}body {
+        margin-top: .25em;
     }
 
 }
