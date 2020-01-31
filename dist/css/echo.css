@@ -4573,16 +4573,16 @@ c-pager
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 2rem;
+  height: 2.25rem;
 }
 
 .c-pager .m-nav-item:not(.ellipsis) {
-  width: 2rem;
-  flex-basis: 2rem;
+  width: 2.25rem;
+  flex-basis: 2.25rem;
   margin-left: .25rem;
   margin-right: .25rem;
   border-style: solid;
-  border-width: 0.0625rem;
+  border-width: 2px;
 }
 
 .c-pager .m-nav-item:not(.ellipsis):first-child {
@@ -4600,17 +4600,17 @@ c-pager
 
 .c-pager .m-nav-label {
   position: absolute;
-  top: -0.0625rem;
-  left: -0.0625rem;
-  bottom: -0.0625rem;
-  right: -0.0625rem;
+  top: -2px;
+  left: -2px;
+  bottom: -2px;
+  right: -2px;
   width: auto;
   height: auto;
   min-height: auto;
   font-size: inherit;
   padding: 0;
   border-style: solid;
-  border-width: 0.0625rem;
+  border-width: 2px;
 }
 
 .c-pager .m-nav:not(.m-nav-inverse) .m-nav-item.is-current {
@@ -4701,7 +4701,7 @@ nav-links(WordPress)
   padding-left: .5rem;
   padding-right: .5rem;
   background-color: transparent;
-  border: 0.0625rem solid #333;
+  border: 2px solid #333;
   color: #333;
   font-size: inherit;
 }
