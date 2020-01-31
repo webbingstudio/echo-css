@@ -4436,11 +4436,13 @@ a.c-media:hover, a.c-media:focus {
   flex-shrink: 1;
   flex-basis: auto;
   max-width: 50%;
+  padding-right: 5px;
 }
 
 @media (min-width: 768px) {
   .c-media .c-media-object {
     max-width: 33.33333333%;
+    padding-right: 10px;
   }
 }
 
@@ -4459,14 +4461,14 @@ a.c-media:hover, a.c-media:focus {
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 0%;
-  padding-left: 10px;
+  padding-left: 5px;
   font-size: 0.75rem;
   line-height: 1.5;
 }
 
 @media (min-width: 1000px) {
   .c-media .c-media-contents {
-    padding-left: 20px;
+    padding-left: 10px;
     font-size: 0.875rem;
   }
 }

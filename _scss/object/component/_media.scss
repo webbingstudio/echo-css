@@ -33,9 +33,11 @@
         flex-shrink: 1;
         flex-basis: auto;
         max-width: 50%;
+        padding-right: ( $spacer / 2 );
 
         @include media-breakpoint-up(md) {
             max-width: 33.33333333%;
+            padding-right: $spacer;
         }
 
         > a {
@@ -57,12 +59,12 @@
         flex-grow: 1;
         flex-shrink: 1;
         flex-basis: 0%;
-        padding-left: $spacer;
+        padding-left: ( $spacer / 2 );
         font-size: $font-size-xs;
         line-height: $line-height-sm;
 
         @include media-breakpoint-up(lg) {
-            padding-left: $spacer * 2;
+            padding-left: $spacer;
             font-size: $font-size-sm;
         }
 
