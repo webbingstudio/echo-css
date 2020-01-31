@@ -78,7 +78,22 @@
 
     <div class="p-mainvisual">
         <div class="c-hero c-hero-inverse">
-            <div class="c-hero-cover" style="background-image: url(./images/website_home_01.jpg);"></div>
+            <div class="c-hero-image">
+                <picture>
+                    <source
+                        media="(max-width:768px)"
+                        srcset="./images/website_home_01_small.jpg 768w"
+                        sizes="100vw">
+                    <source
+                        media="(max-width:1024px)"
+                        srcset="./images/website_home_01_medium.jpg 1024w"
+                        sizes="100vw">
+                    <source
+                        srcset="./images/website_home_01_large.jpg 1280w"
+                        sizes="(max-width:1280px) 100vw">
+                    <img src="./images/website_home_01_large.jpg" alt="">
+                </picture>
+            </div><!-- /.c-hero-image -->
             <div class="c-hero-contents">
                 <div class="c-hero-contents-inner">
                     <h2 class="c-hero-title u-font-first">美味しいコーヒー</h2>
