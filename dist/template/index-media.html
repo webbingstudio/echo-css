@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>一覧：カード | Template | echo-css</title>
+    <title>一覧：メディア＋カード複合 | Template | echo-css</title>
 
     <link rel="stylesheet" href="../css/echo.min.css">
     <link rel="stylesheet" href="../plugins/toggle.css">
@@ -13,7 +13,7 @@
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="../plugins/toggle.min.js"></script>
 
-    <link rel="stylesheet" href="./css/index-card.css">
+    <link rel="stylesheet" href="./css/index-media.css">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
@@ -84,21 +84,90 @@
 
     <main class="p-main" role="main">
 
-        <div class="p-widget p-widget-card">
+        <div class="p-widget p-widget-media-card">
             <div class="p-widget-header">
                 <h2 class="p-widget-title">2020年の記事一覧</h2>
             </div><!-- /.p-widget-header -->
 
             <div class="p-widget-contents">
-                <div class="l-container">
+                <div class="l-container l-container-sm">
+
+                    <div class="c-media u-shadow">
+                        <div class="c-media-object">
+                            <div class="m-thumbnail">
+                                <picture>
+                                <source
+                                    media="(max-width:768px)"
+                                    srcset="https://placehold.jp/48/cccccc/ffffff/320x168.jpg?text=ogimage 768w"
+                                    sizes="100vw">
+                                <source
+                                    srcset="https://placehold.jp/64/cccccc/ffffff/640x335.jpg?text=ogimage 1024w"
+                                    sizes="(max-width:1024px) 100vw, 1024px">
+                                <img alt="" src="https://placehold.jp/64/cccccc/ffffff/640x335.jpg?text=ogimage">
+                                </picture>
+                                <div class="m-label m-label-first u-position-bottom-right">Category</div>
+                            </div><!-- /.m-thumbnail -->
+                        </div><!-- /.c-media-object -->
+                        <div class="c-media-contents">
+                            <date class="c-media-meta">2020.12.28</date>
+                            <h3 class="c-media-title"><a href="#">これは.c-mediaです。ニュースのタイトルがここに入ります。</a></h3>
+                            <p class="c-media-body">これはニュースの概要です。吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</p>
+                        </div><!-- /.c-media-contents -->
+                    </div><!-- /.c-media -->
+
+                    <div class="c-media u-shadow">
+                        <div class="c-media-object">
+                            <div class="m-thumbnail">
+                                <picture>
+                                <source
+                                    media="(max-width:768px)"
+                                    srcset="https://placehold.jp/48/cccccc/ffffff/320x168.jpg?text=ogimage 768w"
+                                    sizes="100vw">
+                                <source
+                                    srcset="https://placehold.jp/64/cccccc/ffffff/640x335.jpg?text=ogimage 1024w"
+                                    sizes="(max-width:1024px) 100vw, 1024px">
+                                <img alt="" src="https://placehold.jp/64/cccccc/ffffff/640x335.jpg?text=ogimage">
+                                </picture>
+                                <div class="m-label m-label-second u-position-bottom-right">Category</div>
+                            </div><!-- /.m-thumbnail -->
+                        </div><!-- /.c-media-object -->
+                        <div class="c-media-contents">
+                            <date class="c-media-meta">2020.12.28</date>
+                            <h3 class="c-media-title"><a href="#">これは.c-mediaです。ニュースのタイトルがここに入ります。これは.c-mediaです。ニュースのタイトルが</a></h3>
+                            <p class="c-media-body">これはニュースの概要です。吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</p>
+                        </div><!-- /.c-media-contents -->
+                    </div><!-- /.c-media -->
+
+                    <div class="c-media u-shadow">
+                        <div class="c-media-object">
+                            <div class="m-thumbnail">
+                                <picture>
+                                <source
+                                    media="(max-width:768px)"
+                                    srcset="https://placehold.jp/48/cccccc/ffffff/320x168.jpg?text=ogimage 768w"
+                                    sizes="100vw">
+                                <source
+                                    srcset="https://placehold.jp/64/cccccc/ffffff/640x335.jpg?text=ogimage 1024w"
+                                    sizes="(max-width:1024px) 100vw, 1024px">
+                                <img alt="" src="https://placehold.jp/64/cccccc/ffffff/640x335.jpg?text=ogimage">
+                                </picture>
+                                <div class="m-label m-label-third u-position-bottom-right">Category</div>
+                            </div><!-- /.m-thumbnail -->
+                        </div><!-- /.c-media-object -->
+                        <div class="c-media-contents">
+                            <date class="c-media-meta">2020.12.28</date>
+                            <h3 class="c-media-title"><a href="#">これは.c-mediaです。ニュースのタイトルがここに入ります。</a></h3>
+                            <p class="c-media-body">これはニュースの概要です。吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</p>
+                        </div><!-- /.c-media-contents -->
+                    </div><!-- /.c-media -->
 
                     <div class="l-grid-row">
 
-                        <div class="l-grid-col-6 l-grid-col-md-4 l-grid-col-xl-3">
+                        <div class="l-grid-col-6 l-grid-col-xl-4">
                             <div class="c-card">
                                 <a href="#" class="c-card-inner">
                                     <div class="m-thumbnail m-thumbnail-ogimage">
-                                        <img alt="" src="https://placehold.jp/cccccc/ffffff/480x360.jpg?text=%EF%BC%94%3A%EF%BC%93">
+                                        <img alt="" src="https://placehold.jp/64/cccccc/ffffff/480x360.jpg?text=ogimage">
                                         <div class="m-label m-label-first u-position-bottom-right">Category</div>
                                     </div><!-- /.m-thumbnail -->
                                     <div class="c-card-contents">
@@ -109,11 +178,11 @@
                             </div><!-- /.c-card -->
                         </div><!-- /.l-grid-col -->
 
-                        <div class="l-grid-col-6 l-grid-col-md-4 l-grid-col-xl-3">
+                        <div class="l-grid-col-6 l-grid-col-xl-4">
                             <div class="c-card">
                                 <a href="#" class="c-card-inner">
                                     <div class="m-thumbnail m-thumbnail-ogimage">
-                                        <img alt="" src="https://placehold.jp/cccccc/ffffff/480x360.jpg?text=%EF%BC%94%3A%EF%BC%93">
+                                        <img alt="" src="https://placehold.jp/64/cccccc/ffffff/480x360.jpg?text=ogimage">
                                         <div class="m-label m-label-first u-position-bottom-right">Category</div>
                                     </div><!-- /.m-thumbnail -->
                                     <div class="c-card-contents">
@@ -124,11 +193,11 @@
                             </div><!-- /.c-card -->
                         </div><!-- /.l-grid-col -->
 
-                        <div class="l-grid-col-6 l-grid-col-md-4 l-grid-col-xl-3">
+                        <div class="l-grid-col-6 l-grid-col-xl-4">
                             <div class="c-card">
                                 <a href="#" class="c-card-inner">
                                     <div class="m-thumbnail m-thumbnail-ogimage">
-                                        <img alt="" src="https://placehold.jp/cccccc/ffffff/480x360.jpg?text=%EF%BC%94%3A%EF%BC%93">
+                                        <img alt="" src="https://placehold.jp/64/cccccc/ffffff/480x360.jpg?text=ogimage">
                                         <div class="m-label m-label-second u-position-bottom-right">Category</div>
                                     </div><!-- /.m-thumbnail -->
                                     <div class="c-card-contents">
@@ -139,11 +208,11 @@
                             </div><!-- /.c-card -->
                         </div><!-- /.l-grid-col -->
 
-                        <div class="l-grid-col-6 l-grid-col-md-4 l-grid-col-xl-3">
+                        <div class="l-grid-col-6 l-grid-col-xl-4">
                             <div class="c-card">
                                 <a href="#" class="c-card-inner">
                                     <div class="m-thumbnail m-thumbnail-ogimage">
-                                        <img alt="" src="https://placehold.jp/cccccc/ffffff/480x360.jpg?text=%EF%BC%94%3A%EF%BC%93">
+                                        <img alt="" src="https://placehold.jp/64/cccccc/ffffff/480x360.jpg?text=ogimage">
                                         <div class="m-label m-label-third u-position-bottom-right">Category</div>
                                     </div><!-- /.m-thumbnail -->
                                     <div class="c-card-contents">
@@ -154,11 +223,11 @@
                             </div><!-- /.c-card -->
                         </div><!-- /.l-grid-col -->
 
-                        <div class="l-grid-col-6 l-grid-col-md-4 l-grid-col-xl-3">
+                        <div class="l-grid-col-6 l-grid-col-xl-4">
                             <div class="c-card">
                                 <a href="#" class="c-card-inner">
                                     <div class="m-thumbnail m-thumbnail-ogimage">
-                                        <img alt="" src="https://placehold.jp/cccccc/ffffff/480x360.jpg?text=%EF%BC%94%3A%EF%BC%93">
+                                        <img alt="" src="https://placehold.jp/64/cccccc/ffffff/480x360.jpg?text=ogimage">
                                         <div class="m-label m-label-first u-position-bottom-right">Category</div>
                                     </div><!-- /.m-thumbnail -->
                                     <div class="c-card-contents">
@@ -169,11 +238,11 @@
                             </div><!-- /.c-card -->
                         </div><!-- /.l-grid-col -->
 
-                        <div class="l-grid-col-6 l-grid-col-md-4 l-grid-col-xl-3">
+                        <div class="l-grid-col-6 l-grid-col-xl-4">
                             <div class="c-card">
                                 <a href="#" class="c-card-inner">
                                     <div class="m-thumbnail m-thumbnail-ogimage">
-                                        <img alt="" src="https://placehold.jp/cccccc/ffffff/480x360.jpg?text=%EF%BC%94%3A%EF%BC%93">
+                                        <img alt="" src="https://placehold.jp/64/cccccc/ffffff/480x360.jpg?text=ogimage">
                                         <div class="m-label m-label-second u-position-bottom-right">Category</div>
                                     </div><!-- /.m-thumbnail -->
                                     <div class="c-card-contents">
@@ -184,11 +253,11 @@
                             </div><!-- /.c-card -->
                         </div><!-- /.l-grid-col -->
 
-                        <div class="l-grid-col-6 l-grid-col-md-4 l-grid-col-xl-3">
+                        <div class="l-grid-col-6 l-grid-col-xl-4">
                             <div class="c-card">
                                 <a href="#" class="c-card-inner">
                                     <div class="m-thumbnail m-thumbnail-ogimage">
-                                        <img alt="" src="https://placehold.jp/cccccc/ffffff/480x360.jpg?text=%EF%BC%94%3A%EF%BC%93">
+                                        <img alt="" src="https://placehold.jp/64/cccccc/ffffff/480x360.jpg?text=ogimage">
                                         <div class="m-label m-label-third u-position-bottom-right">Category</div>
                                     </div><!-- /.m-thumbnail -->
                                     <div class="c-card-contents">
@@ -199,11 +268,11 @@
                             </div><!-- /.c-card -->
                         </div><!-- /.l-grid-col -->
 
-                        <div class="l-grid-col-6 l-grid-col-md-4 l-grid-col-xl-3">
+                        <div class="l-grid-col-6 l-grid-col-xl-4">
                             <div class="c-card">
                                 <a href="#" class="c-card-inner">
                                     <div class="m-thumbnail m-thumbnail-ogimage">
-                                        <img alt="" src="https://placehold.jp/cccccc/ffffff/480x360.jpg?text=%EF%BC%94%3A%EF%BC%93">
+                                        <img alt="" src="https://placehold.jp/64/cccccc/ffffff/480x360.jpg?text=ogimage">
                                         <div class="m-label m-label-first u-position-bottom-right">Category</div>
                                     </div><!-- /.m-thumbnail -->
                                     <div class="c-card-contents">
@@ -214,11 +283,11 @@
                             </div><!-- /.c-card -->
                         </div><!-- /.l-grid-col -->
 
-                        <div class="l-grid-col-6 l-grid-col-md-4 l-grid-col-xl-3">
+                        <div class="l-grid-col-6 l-grid-col-xl-4">
                             <div class="c-card">
                                 <a href="#" class="c-card-inner">
                                     <div class="m-thumbnail m-thumbnail-ogimage">
-                                        <img alt="" src="https://placehold.jp/cccccc/ffffff/480x360.jpg?text=%EF%BC%94%3A%EF%BC%93">
+                                        <img alt="" src="https://placehold.jp/64/cccccc/ffffff/480x360.jpg?text=ogimage">
                                         <div class="m-label m-label-second u-position-bottom-right">Category</div>
                                     </div><!-- /.m-thumbnail -->
                                     <div class="c-card-contents">
@@ -229,11 +298,11 @@
                             </div><!-- /.c-card -->
                         </div><!-- /.l-grid-col -->
 
-                        <div class="l-grid-col-6 l-grid-col-md-4 l-grid-col-xl-3">
+                        <div class="l-grid-col-6 l-grid-col-xl-4">
                             <div class="c-card">
                                 <a href="#" class="c-card-inner">
                                     <div class="m-thumbnail m-thumbnail-ogimage">
-                                        <img alt="" src="https://placehold.jp/cccccc/ffffff/480x360.jpg?text=%EF%BC%94%3A%EF%BC%93">
+                                        <img alt="" src="https://placehold.jp/64/cccccc/ffffff/480x360.jpg?text=ogimage">
                                         <div class="m-label m-label-third u-position-bottom-right">Category</div>
                                     </div><!-- /.m-thumbnail -->
                                     <div class="c-card-contents">
@@ -244,11 +313,11 @@
                             </div><!-- /.c-card -->
                         </div><!-- /.l-grid-col -->
 
-                        <div class="l-grid-col-6 l-grid-col-md-4 l-grid-col-xl-3">
+                        <div class="l-grid-col-6 l-grid-col-xl-4">
                             <div class="c-card">
                                 <a href="#" class="c-card-inner">
                                     <div class="m-thumbnail m-thumbnail-ogimage">
-                                        <img alt="" src="https://placehold.jp/cccccc/ffffff/480x360.jpg?text=%EF%BC%94%3A%EF%BC%93">
+                                        <img alt="" src="https://placehold.jp/64/cccccc/ffffff/480x360.jpg?text=ogimage">
                                         <div class="m-label m-label-first u-position-bottom-right">Category</div>
                                     </div><!-- /.m-thumbnail -->
                                     <div class="c-card-contents">
@@ -259,11 +328,11 @@
                             </div><!-- /.c-card -->
                         </div><!-- /.l-grid-col -->
 
-                        <div class="l-grid-col-6 l-grid-col-md-4 l-grid-col-xl-3">
+                        <div class="l-grid-col-6 l-grid-col-xl-4">
                             <div class="c-card">
                                 <a href="#" class="c-card-inner">
                                     <div class="m-thumbnail m-thumbnail-ogimage">
-                                        <img alt="" src="https://placehold.jp/cccccc/ffffff/480x360.jpg?text=%EF%BC%94%3A%EF%BC%93">
+                                        <img alt="" src="https://placehold.jp/64/cccccc/ffffff/480x360.jpg?text=ogimage">
                                         <div class="m-label m-label-second u-position-bottom-right">Category</div>
                                     </div><!-- /.m-thumbnail -->
                                     <div class="c-card-contents">
@@ -274,11 +343,11 @@
                             </div><!-- /.c-card -->
                         </div><!-- /.l-grid-col -->
 
-                        <div class="l-grid-col-6 l-grid-col-md-4 l-grid-col-xl-3">
+                        <div class="l-grid-col-6 l-grid-col-xl-4">
                             <div class="c-card">
                                 <a href="#" class="c-card-inner">
                                     <div class="m-thumbnail m-thumbnail-ogimage">
-                                        <img alt="" src="https://placehold.jp/cccccc/ffffff/480x360.jpg?text=%EF%BC%94%3A%EF%BC%93">
+                                        <img alt="" src="https://placehold.jp/64/cccccc/ffffff/480x360.jpg?text=ogimage">
                                         <div class="m-label m-label-third u-position-bottom-right">Category</div>
                                     </div><!-- /.m-thumbnail -->
                                     <div class="c-card-contents">
@@ -289,11 +358,11 @@
                             </div><!-- /.c-card -->
                         </div><!-- /.l-grid-col -->
 
-                        <div class="l-grid-col-6 l-grid-col-md-4 l-grid-col-xl-3">
+                        <div class="l-grid-col-6 l-grid-col-xl-4">
                             <div class="c-card">
                                 <a href="#" class="c-card-inner">
                                     <div class="m-thumbnail m-thumbnail-ogimage">
-                                        <img alt="" src="https://placehold.jp/cccccc/ffffff/480x360.jpg?text=%EF%BC%94%3A%EF%BC%93">
+                                        <img alt="" src="https://placehold.jp/64/cccccc/ffffff/480x360.jpg?text=ogimage">
                                         <div class="m-label m-label-first u-position-bottom-right">Category</div>
                                     </div><!-- /.m-thumbnail -->
                                     <div class="c-card-contents">
@@ -304,11 +373,11 @@
                             </div><!-- /.c-card -->
                         </div><!-- /.l-grid-col -->
 
-                        <div class="l-grid-col-6 l-grid-col-md-4 l-grid-col-xl-3">
+                        <div class="l-grid-col-6 l-grid-col-xl-4">
                             <div class="c-card">
                                 <a href="#" class="c-card-inner">
                                     <div class="m-thumbnail m-thumbnail-ogimage">
-                                        <img alt="" src="https://placehold.jp/cccccc/ffffff/480x360.jpg?text=%EF%BC%94%3A%EF%BC%93">
+                                        <img alt="" src="https://placehold.jp/64/cccccc/ffffff/480x360.jpg?text=ogimage">
                                         <div class="m-label m-label-second u-position-bottom-right">Category</div>
                                     </div><!-- /.m-thumbnail -->
                                     <div class="c-card-contents">
@@ -367,7 +436,7 @@
                 <div class="l-container l-container-sm">
                     <div class="c-box">
                         <p>このページのすべての要素に、echo.cssに登録されているオブジェクトを使用しています。<br>
-                        ヘッダなどを一部調整しています。詳しくは追加CSS <a href="./css/index-card.css" target="_blank">/template/css/index-card.css</a> を参照ください。</p>
+                        ヘッダなどを一部調整しています。詳しくは追加CSS <a href="./css/index-media.css" target="_blank">/template/css/index-media.css</a> を参照ください。</p>
                     </div><!-- /.c-box -->
                 </div><!-- /.l-container -->
             </div><!-- /.p-widget-footer -->
