@@ -3616,12 +3616,13 @@ c-card
 .c-card .c-card-contents {
   padding: 10px 10px;
   font-size: 0.75rem;
-  line-height: 1.5;
+  line-height: 1.125rem;
 }
 
 @media (min-width: 1000px) {
   .c-card .c-card-contents {
     font-size: 0.875rem;
+    line-height: 1.3125rem;
   }
 }
 
@@ -3661,7 +3662,7 @@ c-card
 .c-card [class*="c-card"] + .c-card-title,
 .c-card [class*="c-card"] + .c-card-meta,
 .c-card [class*="c-card"] + .c-card-body {
-  margin-top: .25em;
+  margin-top: .25rem;
 }
 
 /*
@@ -4463,13 +4464,14 @@ a.c-media:hover, a.c-media:focus {
   flex-basis: 0%;
   padding-left: 5px;
   font-size: 0.75rem;
-  line-height: 1.5;
+  line-height: 1.125rem;
 }
 
 @media (min-width: 1000px) {
   .c-media .c-media-contents {
     padding-left: 10px;
     font-size: 0.875rem;
+    line-height: 1.3125rem;
   }
 }
 
@@ -4514,7 +4516,7 @@ a.c-media:hover, a.c-media:focus {
 .c-media [class*="c-media"] + .c-media-title,
 .c-media [class*="c-media"] + .c-media-meta,
 .c-media [class*="c-media"] + .c-media-body {
-  margin-top: .25em;
+  margin-top: .25rem;
 }
 
 /*

@@ -61,12 +61,16 @@
         flex-basis: 0%;
         padding-left: ( $spacer / 2 );
         font-size: $font-size-xs;
-        line-height: $line-height-sm;
+
+        // 相対値ではなくremで統一する
+        line-height: $font-size-xs * $line-height-sm;
 
         @include media-breakpoint-up(lg) {
             padding-left: $spacer;
             font-size: $font-size-sm;
+            line-height: $font-size-sm * $line-height-sm;
         }
+
 
     }
 
@@ -112,7 +116,7 @@
     [class*="#{$pr}#{$c}media"] + .#{$pr}#{$c}media#{$c1}title,
     [class*="#{$pr}#{$c}media"] + .#{$pr}#{$c}media#{$c1}meta,
     [class*="#{$pr}#{$c}media"] + .#{$pr}#{$c}media#{$c1}body {
-        margin-top: .25em;
+        margin-top: .25rem;
     }
 
 }

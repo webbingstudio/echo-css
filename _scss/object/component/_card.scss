@@ -60,10 +60,13 @@
     .#{$pr}#{$c}card#{$c1}contents {
         padding: $spacer (map-get($grid-gutter-widths, md) / 2);
         font-size: $font-size-xs;
-        line-height: $line-height-sm;
+
+        // 相対値ではなくremで統一する
+        line-height: $font-size-xs * $line-height-sm;
 
         @include media-breakpoint-up(lg) {
             font-size: $font-size-sm;
+            line-height: $font-size-sm * $line-height-sm;
         }
 
         .#{$pr}#{$m}btn {
@@ -103,7 +106,7 @@
     [class*="#{$pr}#{$c}card"] + .#{$pr}#{$c}card#{$c1}title,
     [class*="#{$pr}#{$c}card"] + .#{$pr}#{$c}card#{$c1}meta,
     [class*="#{$pr}#{$c}card"] + .#{$pr}#{$c}card#{$c1}body {
-        margin-top: .25em;
+        margin-top: .25rem;
     }
 
 }
