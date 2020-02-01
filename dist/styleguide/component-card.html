@@ -26,8 +26,8 @@
 
 <p>新着情報のエントリー繰り返し部分などに使用する、カード状のコンポーネントを表示する。<br>
 <code>.m-thumbnail</code> を含む前提となっている。<br>
-リンクが不要な場合であっても <code>.c-card-inner</code> が必須であることに注意する。<br>
-カード背景には、body要素の基本背景色が指定されている。</p>
+リンクを含む場合は <code>.c-card-title</code> に下線が引かれる。リンクが不要な場合であっても <code>.c-card-inner</code> が必須であることに注意する。<br>
+カード背景には、body要素の基本背景色 <code>$body-bg</code> が指定されている。</p>
 <div class="example">
 <div style="margin-bottom: 2rem;">
 
@@ -36,18 +36,20 @@
         <div class="c-card-header">
             <h3 class="c-card-title">これはカードです</h3>
         </div><!-- /.c-card-header -->
-        <div class="m-thumbnail m-thumbnail-ogimage">
-            <picture>
-            <source
-                media="(max-width:640px)"
-                srcset="../images/_dummy/image_01_s.jpg 640w"
-                sizes="100vw">
-            <source
-                srcset="../images/_dummy/image_01.jpg 1280w"
-                sizes="(max-width:1280px) 100vw, 1280px">
-            <img src="../images/_dummy/image_01.jpg" alt="">
-            </picture>
-        </div><!-- /.m-thumbnail -->
+        <div class="c-card-object">
+            <figure class="m-thumbnail m-thumbnail-ogimage">
+                <picture>
+                <source
+                    media="(max-width:640px)"
+                    srcset="../images/_dummy/image_01_s.jpg 640w"
+                    sizes="100vw">
+                <source
+                    srcset="../images/_dummy/image_01.jpg 1280w"
+                    sizes="(max-width:1280px) 100vw, 1280px">
+                <img src="../images/_dummy/image_01.jpg" alt="">
+                </picture>
+            </figure><!-- /.m-thumbnail -->
+        </div><!-- /.c-card-object -->
         <div class="c-card-contents">
             <p class="c-card-body">これはカードの本文です。最大幅は480ピクセルとなり、画面中央に配置されます。カードにはヘッダを付けることができます。</p>
         </div><!-- /.c-card-contents -->
@@ -61,20 +63,22 @@
     <div class="l-grid-col-6 l-grid-col-md-3" style="padding-bottom: 1rem;">
         <div class="c-card">
             <a href="#" class="c-card-inner">
-                <div class="m-thumbnail m-thumbnail-ogimage">
-                    <picture>
-                    <source
-                        media="(max-width:640px)"
-                        srcset="../images/_dummy/image_02_s.jpg 640w"
-                        sizes="100vw">
-                    <source
-                        srcset="../images/_dummy/image_02.jpg 1280w"
-                        sizes="(max-width:1280px) 100vw, 1280px">
-                    <img src="../images/_dummy/image_02.jpg" alt="">
-                    </picture>
-                </div><!-- /.m-thumbnail -->
+                <div class="c-card-object">
+                    <figure class="m-thumbnail m-thumbnail-16to9">
+                        <picture>
+                        <source
+                            media="(max-width:640px)"
+                            srcset="../images/_dummy/image_02_s.jpg 640w"
+                            sizes="100vw">
+                        <source
+                            srcset="../images/_dummy/image_02.jpg 1280w"
+                            sizes="(max-width:1280px) 100vw, 1280px">
+                        <img src="../images/_dummy/image_02.jpg" alt="">
+                        </picture>
+                    </figure><!-- /.m-thumbnail -->
+                </div><!-- /.c-card-object -->
                 <div class="c-card-contents">
-                    <date class="c-card-meta">2020.12.28</date>
+                    <time class="c-card-meta" datetime="2020-12-28T09:00:00+09:00">2020.12.28</time>
                     <h3 class="c-card-title">よくあるカラムレイアウトの例です</h3>
                     <p class="c-card-body">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
                 </div><!-- /.c-card-contents -->
@@ -84,20 +88,22 @@
     <div class="l-grid-col-6 l-grid-col-md-3" style="padding-bottom: 1rem;">
         <div class="c-card">
             <a href="#" class="c-card-inner">
-                <div class="m-thumbnail m-thumbnail-ogimage">
-                    <picture>
-                    <source
-                        media="(max-width:640px)"
-                        srcset="../images/_dummy/image_02_s.jpg 640w"
-                        sizes="100vw">
-                    <source
-                        srcset="../images/_dummy/image_02.jpg 1280w"
-                        sizes="(max-width:1280px) 100vw, 1280px">
-                    <img src="../images/_dummy/image_02.jpg" alt="">
-                    </picture>
-                </div><!-- /.m-thumbnail -->
+                <div class="c-card-object">
+                    <figure class="m-thumbnail m-thumbnail-16to9">
+                        <picture>
+                        <source
+                            media="(max-width:640px)"
+                            srcset="../images/_dummy/image_02_s.jpg 640w"
+                            sizes="100vw">
+                        <source
+                            srcset="../images/_dummy/image_02.jpg 1280w"
+                            sizes="(max-width:1280px) 100vw, 1280px">
+                        <img src="../images/_dummy/image_02.jpg" alt="">
+                        </picture>
+                    </figure><!-- /.m-thumbnail -->
+                </div><!-- /.c-card-object -->
                 <div class="c-card-contents">
-                    <date class="c-card-meta">2020.12.28</date>
+                    <time class="c-card-meta" datetime="2020-12-28T09:00:00+09:00">2020.12.28</time>
                     <h3 class="c-card-title">カード全体をリンク範囲にする場合</h3>
                     <p class="c-card-body">このカードは、全体がリンク範囲になっています。c-card-innner をa要素に書き換えてください。</p>
                 </div><!-- /.c-card-contents -->
@@ -107,20 +113,22 @@
     <div class="l-grid-col-6 l-grid-col-md-3" style="padding-bottom: 1rem;">
         <div class="c-card">
             <a href="#" class="c-card-inner">
-                <div class="m-thumbnail m-thumbnail-ogimage">
-                    <picture>
-                    <source
-                        media="(max-width:640px)"
-                        srcset="../images/_dummy/image_02_s.jpg 640w"
-                        sizes="100vw">
-                    <source
-                        srcset="../images/_dummy/image_02.jpg 1280w"
-                        sizes="(max-width:1280px) 100vw, 1280px">
-                    <img alt="" src="../images/_dummy/image_02.jpg">
-                    </picture>
-                </div><!-- /.m-thumbnail -->
+                <div class="c-card-object">
+                    <figure class="m-thumbnail m-thumbnail-16to9">
+                        <picture>
+                        <source
+                            media="(max-width:640px)"
+                            srcset="../images/_dummy/image_02_s.jpg 640w"
+                            sizes="100vw">
+                        <source
+                            srcset="../images/_dummy/image_02.jpg 1280w"
+                            sizes="(max-width:1280px) 100vw, 1280px">
+                        <img src="../images/_dummy/image_02.jpg" alt="">
+                        </picture>
+                    </figure><!-- /.m-thumbnail -->
+                </div><!-- /.c-card-object -->
                 <div class="c-card-contents">
-                    <date class="c-card-meta">2020.12.28</date>
+                    <time class="c-card-meta" datetime="2020-12-28T09:00:00+09:00">2020.12.28</time>
                     <h3 class="c-card-title">グリッドレイアウト</h3>
                     <p class="c-card-body">l-grid-row, l-grid-col を使用して4カラムに並べました。グリッド内に配置した場合は最大幅が解除され、常にカラムの幅いっぱいに広がります。</p>
                 </div><!-- /.c-card-contents -->
@@ -130,20 +138,22 @@
     <div class="l-grid-col-6 l-grid-col-md-3" style="padding-bottom: 1rem;">
         <div class="c-card">
             <a href="#" class="c-card-inner">
-                <div class="m-thumbnail m-thumbnail-ogimage">
-                    <picture>
-                    <source
-                        media="(max-width:640px)"
-                        srcset="../images/_dummy/image_02_s.jpg 640w"
-                        sizes="100vw">
-                    <source
-                        srcset="../images/_dummy/image_02.jpg 1280w"
-                        sizes="(max-width:1280px) 100vw, 1280px">
-                    <img alt="" src="../images/_dummy/image_02.jpg">
-                    </picture>
-                </div><!-- /.m-thumbnail -->
+                <div class="c-card-object">
+                    <figure class="m-thumbnail m-thumbnail-16to9">
+                        <picture>
+                        <source
+                            media="(max-width:640px)"
+                            srcset="../images/_dummy/image_02_s.jpg 640w"
+                            sizes="100vw">
+                        <source
+                            srcset="../images/_dummy/image_02.jpg 1280w"
+                            sizes="(max-width:1280px) 100vw, 1280px">
+                        <img src="../images/_dummy/image_02.jpg" alt="">
+                        </picture>
+                    </figure><!-- /.m-thumbnail -->
+                </div><!-- /.c-card-object -->
                 <div class="c-card-contents">
-                    <date class="c-card-meta">2020.12.28</date>
+                    <time class="c-card-meta" datetime="2020-12-28T09:00:00+09:00">2020.12.28</time>
                     <h3 class="c-card-title">コンテンツが長すぎる_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</h3>
                     <p class="c-card-body">何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</p>
                 </div><!-- /.c-card-contents -->
@@ -158,18 +168,20 @@
     <div class="l-grid-col">
         <div class="c-card u-bg-first">
             <div class="c-card-inner">
-                <div class="m-thumbnail m-thumbnail-ogimage">
-                    <picture>
-                    <source
-                        media="(max-width:640px)"
-                        srcset="../images/_dummy/image_03_s.jpg 640w"
-                        sizes="100vw">
-                    <source
-                        srcset="../images/_dummy/image_03.jpg 1280w"
-                        sizes="(max-width:1280px) 100vw, 1280px">
-                    <img alt="" src="../images/_dummy/image_03.jpg">
-                    </picture>
-                </div><!-- /.m-thumbnail -->
+                <div class="c-card-object">
+                    <figure class="m-thumbnail m-thumbnail-ogimage">
+                        <picture>
+                        <source
+                            media="(max-width:640px)"
+                            srcset="../images/_dummy/image_03_s.jpg 640w"
+                            sizes="100vw">
+                        <source
+                            srcset="../images/_dummy/image_03.jpg 1280w"
+                            sizes="(max-width:1280px) 100vw, 1280px">
+                        <img src="../images/_dummy/image_03.jpg" alt="">
+                        </picture>
+                    </figure><!-- /.m-thumbnail -->
+                </div><!-- /.c-card-object -->
                 <div class="c-card-contents">
                     <h3 class="c-card-title">背景に色がついているカードの例です</h3>  
                     <p class="c-card-body">カードの背景に u-bg-first クラスを指定して色を付けています<br>
@@ -181,18 +193,20 @@
     <div class="l-grid-col">
         <div class="c-card u-bg-gray">
             <div class="c-card-inner">
-                <a href="#" class="m-thumbnail m-thumbnail-ogimage">
-                    <picture>
-                    <source
-                        media="(max-width:640px)"
-                        srcset="../images/_dummy/image_03_s.jpg 640w"
-                        sizes="100vw">
-                    <source
-                        srcset="../images/_dummy/image_03.jpg 1280w"
-                        sizes="(max-width:1280px) 100vw, 1280px">
-                    <img alt="" src="../images/_dummy/image_03.jpg">
-                    </picture>
-                </a><!-- /.m-thumbnail -->
+                <a href="#" class="c-card-object">
+                    <figure class="m-thumbnail m-thumbnail-ogimage">
+                        <picture>
+                        <source
+                            media="(max-width:640px)"
+                            srcset="../images/_dummy/image_03_s.jpg 640w"
+                            sizes="100vw">
+                        <source
+                            srcset="../images/_dummy/image_03.jpg 1280w"
+                            sizes="(max-width:1280px) 100vw, 1280px">
+                        <img src="../images/_dummy/image_03.jpg" alt="">
+                        </picture>
+                    </figure><!-- /.m-thumbnail -->
+                </a><!-- /.c-card-object -->
                 <div class="c-card-contents">
                     <p class="c-card-body">カードの背景に u-bg-gray クラスを指定して色を付けています<br>
                     カード全体ではなく、カードの画像とボタンだけがリンク範囲となっています</p>
@@ -210,45 +224,46 @@
         &lt;div class="c-card-header"&gt;
             &lt;h3 class="c-card-title"&gt;これはカードです&lt;/h3&gt;
         &lt;/div&gt;&lt;!-- /.c-card-header --&gt;
-        &lt;div class="m-thumbnail m-thumbnail-ogimage"&gt;
-            &lt;picture&gt;
-            &lt;source
-                media="(max-width:640px)"
-                srcset="../images/_dummy/image_01_s.jpg 640w"
-                sizes="100vw"&gt;
-            &lt;source
-                srcset="../images/_dummy/image_01.jpg 1280w"
-                sizes="(max-width:1280px) 100vw, 1280px"&gt;
-            &lt;img src="../images/_dummy/image_01.jpg" alt=""&gt;
-            &lt;/picture&gt;
-        &lt;/div&gt;&lt;!-- /.m-thumbnail --&gt;
+        &lt;div class="c-card-object"&gt;
+            &lt;figure class="m-thumbnail m-thumbnail-ogimage"&gt;
+                &lt;picture&gt;
+                &lt;source
+                    media="(max-width:640px)"
+                    srcset="../images/_dummy/image_01_s.jpg 640w"
+                    sizes="100vw"&gt;
+                &lt;source
+                    srcset="../images/_dummy/image_01.jpg 1280w"
+                    sizes="(max-width:1280px) 100vw, 1280px"&gt;
+                &lt;img src="../images/_dummy/image_01.jpg" alt=""&gt;
+                &lt;/picture&gt;
+            &lt;/figure&gt;&lt;!-- /.m-thumbnail --&gt;
+        &lt;/div&gt;&lt;!-- /.c-card-object --&gt;
         &lt;div class="c-card-contents"&gt;
             &lt;p class="c-card-body"&gt;これはカードの本文です。最大幅は480ピクセルとなり、画面中央に配置されます。カードにはヘッダを付けることができます。&lt;/p&gt;
         &lt;/div&gt;&lt;!-- /.c-card-contents --&gt;
     &lt;/div&gt;&lt;!-- /.c-card-inner --&gt;
 &lt;/div&gt;&lt;!-- /.c-card --&gt;
 
-&lt;/div&gt;
-&lt;div style="margin-bottom: 2rem;"&gt;
-
 &lt;div class="l-grid-row"&gt;
     &lt;div class="l-grid-col-6 l-grid-col-md-3" style="padding-bottom: 1rem;"&gt;
         &lt;div class="c-card"&gt;
             &lt;a href="#" class="c-card-inner"&gt;
-                &lt;div class="m-thumbnail m-thumbnail-ogimage"&gt;
-                    &lt;picture&gt;
-                    &lt;source
-                        media="(max-width:640px)"
-                        srcset="../images/_dummy/image_02_s.jpg 640w"
-                        sizes="100vw"&gt;
-                    &lt;source
-                        srcset="../images/_dummy/image_02.jpg 1280w"
-                        sizes="(max-width:1280px) 100vw, 1280px"&gt;
-                    &lt;img src="../images/_dummy/image_02.jpg" alt=""&gt;
-                    &lt;/picture&gt;
-                &lt;/div&gt;&lt;!-- /.m-thumbnail --&gt;
+                &lt;div class="c-card-object"&gt;
+                    &lt;figure class="m-thumbnail m-thumbnail-16to9"&gt;
+                        &lt;picture&gt;
+                        &lt;source
+                            media="(max-width:640px)"
+                            srcset="../images/_dummy/image_02_s.jpg 640w"
+                            sizes="100vw"&gt;
+                        &lt;source
+                            srcset="../images/_dummy/image_02.jpg 1280w"
+                            sizes="(max-width:1280px) 100vw, 1280px"&gt;
+                        &lt;img src="../images/_dummy/image_02.jpg" alt=""&gt;
+                        &lt;/picture&gt;
+                    &lt;/figure&gt;&lt;!-- /.m-thumbnail --&gt;
+                &lt;/div&gt;&lt;!-- /.c-card-object --&gt;
                 &lt;div class="c-card-contents"&gt;
-                    &lt;date class="c-card-meta"&gt;2020.12.28&lt;/date&gt;
+                    &lt;time class="c-card-meta" datetime="2020-12-28T09:00:00+09:00"&gt;2020.12.28&lt;/time&gt;
                     &lt;h3 class="c-card-title"&gt;よくあるカラムレイアウトの例です&lt;/h3&gt;
                     &lt;p class="c-card-body"&gt;吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
                 &lt;/div&gt;&lt;!-- /.c-card-contents --&gt;
@@ -258,20 +273,22 @@
     &lt;div class="l-grid-col-6 l-grid-col-md-3" style="padding-bottom: 1rem;"&gt;
         &lt;div class="c-card"&gt;
             &lt;a href="#" class="c-card-inner"&gt;
-                &lt;div class="m-thumbnail m-thumbnail-ogimage"&gt;
-                    &lt;picture&gt;
-                    &lt;source
-                        media="(max-width:640px)"
-                        srcset="../images/_dummy/image_02_s.jpg 640w"
-                        sizes="100vw"&gt;
-                    &lt;source
-                        srcset="../images/_dummy/image_02.jpg 1280w"
-                        sizes="(max-width:1280px) 100vw, 1280px"&gt;
-                    &lt;img src="../images/_dummy/image_02.jpg" alt=""&gt;
-                    &lt;/picture&gt;
-                &lt;/div&gt;&lt;!-- /.m-thumbnail --&gt;
+                &lt;div class="c-card-object"&gt;
+                    &lt;figure class="m-thumbnail m-thumbnail-16to9"&gt;
+                        &lt;picture&gt;
+                        &lt;source
+                            media="(max-width:640px)"
+                            srcset="../images/_dummy/image_02_s.jpg 640w"
+                            sizes="100vw"&gt;
+                        &lt;source
+                            srcset="../images/_dummy/image_02.jpg 1280w"
+                            sizes="(max-width:1280px) 100vw, 1280px"&gt;
+                        &lt;img src="../images/_dummy/image_02.jpg" alt=""&gt;
+                        &lt;/picture&gt;
+                    &lt;/figure&gt;&lt;!-- /.m-thumbnail --&gt;
+                &lt;/div&gt;&lt;!-- /.c-card-object --&gt;
                 &lt;div class="c-card-contents"&gt;
-                    &lt;date class="c-card-meta"&gt;2020.12.28&lt;/date&gt;
+                    &lt;time class="c-card-meta" datetime="2020-12-28T09:00:00+09:00"&gt;2020.12.28&lt;/time&gt;
                     &lt;h3 class="c-card-title"&gt;カード全体をリンク範囲にする場合&lt;/h3&gt;
                     &lt;p class="c-card-body"&gt;このカードは、全体がリンク範囲になっています。c-card-innner をa要素に書き換えてください。&lt;/p&gt;
                 &lt;/div&gt;&lt;!-- /.c-card-contents --&gt;
@@ -281,20 +298,22 @@
     &lt;div class="l-grid-col-6 l-grid-col-md-3" style="padding-bottom: 1rem;"&gt;
         &lt;div class="c-card"&gt;
             &lt;a href="#" class="c-card-inner"&gt;
-                &lt;div class="m-thumbnail m-thumbnail-ogimage"&gt;
-                    &lt;picture&gt;
-                    &lt;source
-                        media="(max-width:640px)"
-                        srcset="../images/_dummy/image_02_s.jpg 640w"
-                        sizes="100vw"&gt;
-                    &lt;source
-                        srcset="../images/_dummy/image_02.jpg 1280w"
-                        sizes="(max-width:1280px) 100vw, 1280px"&gt;
-                    &lt;img alt="" src="../images/_dummy/image_02.jpg"&gt;
-                    &lt;/picture&gt;
-                &lt;/div&gt;&lt;!-- /.m-thumbnail --&gt;
+                &lt;div class="c-card-object"&gt;
+                    &lt;figure class="m-thumbnail m-thumbnail-16to9"&gt;
+                        &lt;picture&gt;
+                        &lt;source
+                            media="(max-width:640px)"
+                            srcset="../images/_dummy/image_02_s.jpg 640w"
+                            sizes="100vw"&gt;
+                        &lt;source
+                            srcset="../images/_dummy/image_02.jpg 1280w"
+                            sizes="(max-width:1280px) 100vw, 1280px"&gt;
+                        &lt;img src="../images/_dummy/image_02.jpg" alt=""&gt;
+                        &lt;/picture&gt;
+                    &lt;/figure&gt;&lt;!-- /.m-thumbnail --&gt;
+                &lt;/div&gt;&lt;!-- /.c-card-object --&gt;
                 &lt;div class="c-card-contents"&gt;
-                    &lt;date class="c-card-meta"&gt;2020.12.28&lt;/date&gt;
+                    &lt;time class="c-card-meta" datetime="2020-12-28T09:00:00+09:00"&gt;2020.12.28&lt;/time&gt;
                     &lt;h3 class="c-card-title"&gt;グリッドレイアウト&lt;/h3&gt;
                     &lt;p class="c-card-body"&gt;l-grid-row, l-grid-col を使用して4カラムに並べました。グリッド内に配置した場合は最大幅が解除され、常にカラムの幅いっぱいに広がります。&lt;/p&gt;
                 &lt;/div&gt;&lt;!-- /.c-card-contents --&gt;
@@ -304,20 +323,22 @@
     &lt;div class="l-grid-col-6 l-grid-col-md-3" style="padding-bottom: 1rem;"&gt;
         &lt;div class="c-card"&gt;
             &lt;a href="#" class="c-card-inner"&gt;
-                &lt;div class="m-thumbnail m-thumbnail-ogimage"&gt;
-                    &lt;picture&gt;
-                    &lt;source
-                        media="(max-width:640px)"
-                        srcset="../images/_dummy/image_02_s.jpg 640w"
-                        sizes="100vw"&gt;
-                    &lt;source
-                        srcset="../images/_dummy/image_02.jpg 1280w"
-                        sizes="(max-width:1280px) 100vw, 1280px"&gt;
-                    &lt;img alt="" src="../images/_dummy/image_02.jpg"&gt;
-                    &lt;/picture&gt;
-                &lt;/div&gt;&lt;!-- /.m-thumbnail --&gt;
+                &lt;div class="c-card-object"&gt;
+                    &lt;figure class="m-thumbnail m-thumbnail-16to9"&gt;
+                        &lt;picture&gt;
+                        &lt;source
+                            media="(max-width:640px)"
+                            srcset="../images/_dummy/image_02_s.jpg 640w"
+                            sizes="100vw"&gt;
+                        &lt;source
+                            srcset="../images/_dummy/image_02.jpg 1280w"
+                            sizes="(max-width:1280px) 100vw, 1280px"&gt;
+                        &lt;img src="../images/_dummy/image_02.jpg" alt=""&gt;
+                        &lt;/picture&gt;
+                    &lt;/figure&gt;&lt;!-- /.m-thumbnail --&gt;
+                &lt;/div&gt;&lt;!-- /.c-card-object --&gt;
                 &lt;div class="c-card-contents"&gt;
-                    &lt;date class="c-card-meta"&gt;2020.12.28&lt;/date&gt;
+                    &lt;time class="c-card-meta" datetime="2020-12-28T09:00:00+09:00"&gt;2020.12.28&lt;/time&gt;
                     &lt;h3 class="c-card-title"&gt;コンテンツが長すぎる_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。&lt;/h3&gt;
                     &lt;p class="c-card-body"&gt;何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。&lt;/p&gt;
                 &lt;/div&gt;&lt;!-- /.c-card-contents --&gt;
@@ -326,24 +347,24 @@
     &lt;/div&gt;&lt;!-- /.l-grid-col --&gt;
 &lt;/div&gt;&lt;!-- .l-grid-row --&gt;
 
-&lt;/div&gt;
-
 &lt;div class="l-grid-row"&gt;
     &lt;div class="l-grid-col"&gt;
         &lt;div class="c-card u-bg-first"&gt;
             &lt;div class="c-card-inner"&gt;
-                &lt;div class="m-thumbnail m-thumbnail-ogimage"&gt;
-                    &lt;picture&gt;
-                    &lt;source
-                        media="(max-width:640px)"
-                        srcset="../images/_dummy/image_03_s.jpg 640w"
-                        sizes="100vw"&gt;
-                    &lt;source
-                        srcset="../images/_dummy/image_03.jpg 1280w"
-                        sizes="(max-width:1280px) 100vw, 1280px"&gt;
-                    &lt;img alt="" src="../images/_dummy/image_03.jpg"&gt;
-                    &lt;/picture&gt;
-                &lt;/div&gt;&lt;!-- /.m-thumbnail --&gt;
+                &lt;div class="c-card-object"&gt;
+                    &lt;figure class="m-thumbnail m-thumbnail-ogimage"&gt;
+                        &lt;picture&gt;
+                        &lt;source
+                            media="(max-width:640px)"
+                            srcset="../images/_dummy/image_03_s.jpg 640w"
+                            sizes="100vw"&gt;
+                        &lt;source
+                            srcset="../images/_dummy/image_03.jpg 1280w"
+                            sizes="(max-width:1280px) 100vw, 1280px"&gt;
+                        &lt;img src="../images/_dummy/image_03.jpg" alt=""&gt;
+                        &lt;/picture&gt;
+                    &lt;/figure&gt;&lt;!-- /.m-thumbnail --&gt;
+                &lt;/div&gt;&lt;!-- /.c-card-object --&gt;
                 &lt;div class="c-card-contents"&gt;
                     &lt;h3 class="c-card-title"&gt;背景に色がついているカードの例です&lt;/h3&gt;  
                     &lt;p class="c-card-body"&gt;カードの背景に u-bg-first クラスを指定して色を付けています&lt;br&gt;
@@ -355,18 +376,20 @@
     &lt;div class="l-grid-col"&gt;
         &lt;div class="c-card u-bg-gray"&gt;
             &lt;div class="c-card-inner"&gt;
-                &lt;a href="#" class="m-thumbnail m-thumbnail-ogimage"&gt;
-                    &lt;picture&gt;
-                    &lt;source
-                        media="(max-width:640px)"
-                        srcset="../images/_dummy/image_03_s.jpg 640w"
-                        sizes="100vw"&gt;
-                    &lt;source
-                        srcset="../images/_dummy/image_03.jpg 1280w"
-                        sizes="(max-width:1280px) 100vw, 1280px"&gt;
-                    &lt;img alt="" src="../images/_dummy/image_03.jpg"&gt;
-                    &lt;/picture&gt;
-                &lt;/a&gt;&lt;!-- /.m-thumbnail --&gt;
+                &lt;a href="#" class="c-card-object"&gt;
+                    &lt;figure class="m-thumbnail m-thumbnail-ogimage"&gt;
+                        &lt;picture&gt;
+                        &lt;source
+                            media="(max-width:640px)"
+                            srcset="../images/_dummy/image_03_s.jpg 640w"
+                            sizes="100vw"&gt;
+                        &lt;source
+                            srcset="../images/_dummy/image_03.jpg 1280w"
+                            sizes="(max-width:1280px) 100vw, 1280px"&gt;
+                        &lt;img src="../images/_dummy/image_03.jpg" alt=""&gt;
+                        &lt;/picture&gt;
+                    &lt;/figure&gt;&lt;!-- /.m-thumbnail --&gt;
+                &lt;/a&gt;&lt;!-- /.c-card-object --&gt;
                 &lt;div class="c-card-contents"&gt;
                     &lt;p class="c-card-body"&gt;カードの背景に u-bg-gray クラスを指定して色を付けています&lt;br&gt;
                     カード全体ではなく、カードの画像とボタンだけがリンク範囲となっています&lt;/p&gt;

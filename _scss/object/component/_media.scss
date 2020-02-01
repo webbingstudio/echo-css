@@ -15,13 +15,28 @@
         a#{&} {
             color: $body-color;
             text-decoration: none;
-            transition: .3s all;
+
+            .#{$pr}#{$c}media#{$c1}title {
+                text-decoration: underline;
+            }
 
             &:hover,
             &:focus {
                 color: $body-color;
                 text-decoration: none;
-                opacity: .8;
+
+                .#{$pr}#{$m}thumbnail {
+
+                    img {
+                        opacity: .75;
+                    }
+
+                }
+
+                .#{$pr}#{$c}media#{$c1}title {
+                    text-decoration: none;
+                }
+
             }
 
         }
@@ -40,15 +55,12 @@
             padding-right: $spacer;
         }
 
-        > a {
-            display: block;
-            text-decoration: none;
-            transition: .3s all;
+        .#{$pr}#{$m}thumbnail {
+            background-color: $body-inverse-bg;
+            border: 0 none;
 
-            &:hover,
-            &:focus {
-                text-decoration: none;
-                opacity: .8;
+            img {
+                transition: .6s opacity;
             }
 
         }

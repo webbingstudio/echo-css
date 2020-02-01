@@ -21,15 +21,26 @@
     a {
         color: $body-color;
         text-decoration: none;
-        transition: .3s all;
+
+        .#{$pr}#{$c}card#{$c1}title {
+            text-decoration: underline;
+        }
 
         &:hover,
         &:focus {
             color: $body-color;
             text-decoration: none;
 
-            img {
-                opacity: .8;
+            .#{$pr}#{$m}thumbnail {
+
+                img {
+                    opacity: .75;
+                }
+
+            }
+
+            .#{$pr}#{$c}card#{$c1}title {
+                text-decoration: none;
             }
 
         }
@@ -43,8 +54,20 @@
     }
 
     .#{$pr}#{$c}card#{$c1}object {
+        display: block;
         position: relative;
         z-index: 11;
+
+        .#{$pr}#{$m}thumbnail {
+            background-color: $body-inverse-bg;
+            border: 0 none;
+
+            img {
+                transition: .6s opacity;
+            }
+
+        }
+
     }
 
     .#{$pr}#{$c}card#{$c1}header,
