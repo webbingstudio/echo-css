@@ -5,6 +5,8 @@
             <ul class="echo-sitemap-list-flat m-nav-list m-nav-children">
                 <li class="m-nav-item"><a href="./introduction-quickstart.html" class="m-nav-label">さっそく始める</a></li>
                 <li class="m-nav-item"><a href="./introduction-template.html" class="m-nav-label">基本のテンプレート</a></li>
+                <li class="m-nav-item"><a href="./introduction-ie11.html" class="m-nav-label">Internet Explorer 11への対応</a></li>
+                <li class="m-nav-item"><a href="./introduction-bem.html" class="m-nav-label">BEM記法で使用する</a></li>
                 <li class="m-nav-item"><a href="./introduction-about.html" class="m-nav-label">echo.cssとは？</a></li>
             </ul>
         </li>
@@ -13,10 +15,6 @@
             <ul class="echo-sitemap-list-flat m-nav-list m-nav-children">
                 <li class="m-nav-item"><a href="./outline-layers.html" class="m-nav-label">レイヤー構造</a></li>
                 <li class="m-nav-item"><a href="./outline-rule.html" class="m-nav-label">コーディングルール</a></li>
-
-<!--
-                <li class="m-nav-item"><a href="./outline-material-design.html" class="m-nav-label">Material Designとの関係</a></li>
--->
             </ul>
         </li>
 

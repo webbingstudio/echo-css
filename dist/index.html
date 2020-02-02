@@ -126,11 +126,11 @@
                         <div class="c-card">
                             <span class="c-card-inner">
                                 <div class="c-card-header">
-                                    <h3 class="c-card-title">Atomic Designとの互換</h3>
+                                    <h3 class="c-card-title">コーディングルール変換</h3>
                                 </div>
                                 <div class="c-card-contents">
-                                    <p>Atomic Designとは、コンポーネント単位でウェブサイト内のUIを制作していくデザインの手法です。Atomic Design自体はコーディングのために作られたものではありませんが、その思想はCSSモジュールに通じるものがあります。<br>
-                                    echo.cssでは主要コンポーネントの構造をAtomic Designにならうことで、デザイナーとの意思疎通を容易にしています。</p>
+                                    <p class="c-card-body">echo.cssは、コードの読みやすさを優先し、コーディングルールにSMACSSを採用しています。<br>
+                                    しかし、Sassを使用できる環境では、<a href="./docs/introduction-bem.html">簡単な設定でコーディングルールをBEMに変更できます。</a>また、各クラスの接続子、接頭辞も詳細にカスタマイズ可能です。</p>
                                 </div>
                             </span>
                         </div>
@@ -143,8 +143,8 @@
                                     <h3 class="c-card-title">精細なカラーテーブル</h3>
                                 </div>
                                 <div class="c-card-contents">
-                                    <p>echo.cssは、3色までのデザインカラーと、2色のシステムカラーを使用できます。アクセシビリティに配慮し、<abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1の最低限レベルの達成基準を満たしています。<br>
-                                    Sassを使用できる環境では、それぞれの色に対し、背景に使用したときと、テキストに使用したときで異なる色を設定できます。</p>
+                                    <p class="c-card-body">echo.cssは、3色までのデザインカラーと、2色のシステムカラーを使用できます。アクセシビリティに配慮し、<abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1の最低限レベルの達成基準を満たしています。<br>
+                                    Sassを使用できる環境では、<a href="./docs/design-tokens-color.html">それぞれの色に対し、背景に使用したときと、テキストに使用したときで異なる色を設定できます。</a></p>
                                 </div>
                             </span>
                         </div>
@@ -157,7 +157,7 @@
                                     <h3 class="c-card-title">Font Awesome対応</h3>
                                 </div>
                                 <div class="c-card-contents">
-                                    <p>Font Awesomeは、最もウェブサイトに採用されているアイコンフォントのひとつです。echo.cssでは、Font Awesomeを同時に使用することを想定し、ボタンやナビゲーション内にアイコンを表示した場合の見た目の最適化を行っています。</p>
+                                    <p class="c-card-body">Font Awesomeは、最もウェブサイトに採用されているアイコンフォントのひとつです。echo.cssでは、Font Awesomeを同時に使用することを想定し、<a href="./styleguide/module-nav.html">ボタンやナビゲーション内にアイコンを表示した場合の見た目の最適化</a>を行っています。</p>
                                 </div>
                             </span>
                         </div>
@@ -167,15 +167,16 @@
                         <div class="c-card">
                             <span class="c-card-inner">
                                 <div class="c-card-header">
-                                    <h3 class="c-card-title">コーディングルール変換</h3>
+                                    <h3 class="c-card-title">Atomic Designとの互換</h3>
                                 </div>
                                 <div class="c-card-contents">
-                                    <p>echo.cssは、コードの読みやすさを優先し、コーディングルールにSMACSSを採用しています。<br>
-                                    しかし、Sassを使用できる環境では、簡単な設定でコーディングルールをBEMに変更できます。また、各クラスの接続子、接頭辞も詳細にカスタマイズ可能です。</p>
+                                    <p class="c-card-body"><a href="https://app.codegrid.net/entry/2017-atomic-design-1" target="_blank">Atomic Design</a>とは、コンポーネント単位でウェブサイト内のUIを制作していくデザインの手法です。Atomic Design自体はコーディングのために作られたものではありませんが、その思想はCSSモジュールに通じるものがあります。<br>
+                                    echo.cssでは主要コンポーネントの構造をAtomic Designにならうことで、デザイナーとの意思疎通を容易にしています。</p>
                                 </div>
                             </span>
                         </div>
                     </div>
+
                 </div>
 
             </div><!-- /.l-container -->
@@ -244,11 +245,6 @@
                     </div><!-- /.echo-browser-icon -->
 
                     <div class="echo-browser-icon">
-                        <i class="fab fa-internet-explorer"></i>
-                        <p class="echo-browser-caption"><strong><abbr title="Internet Explorer">IE</abbr></strong><br>11+</p>
-                    </div><!-- /.echo-browser-icon -->
-
-                    <div class="echo-browser-icon">
                         <i class="fab fa-firefox"></i>
                         <p class="echo-browser-caption"><strong>Firefox</strong><br>latest</p>
                     </div><!-- /.echo-browser-icon -->
@@ -256,6 +252,8 @@
                 </div><!-- /.echo-browser-contents -->
 
                 <p class="u-text-center">Windows X and MacOS 10.15+</p>
+
+                <p class="echo-browser-ie"><a href="./docs/introduction-ie11.html"><i class="fab fa-internet-explorer"></i>Internet Explorer 11の対応状況はこちら</a></p>
 
             </div><!-- /.l-container -->
         </div><!-- /.echo-browser -->

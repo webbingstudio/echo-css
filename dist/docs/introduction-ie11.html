@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Internet Explorer 11への対応 | はじめに | Documentation | echo-css</title>
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div class="l-document" id="document">
+
+    <?php include('../doc_include/header.inc'); ?>
+
+    <main class="p-main" role="main">
+        <div class="l-container">
+
+            <div class="echo-pagehead">
+                <h1 class="echo-pagehead-title">Internet Explorer 11への対応</h1>
+            </div><!-- /.echo-pagehead -->
+
+            <article class="echo-post">
+                <div class="echo-post-contents styleguide-contents">
+
+<h2 class="echo-post-title-01">基本方針</h2>
+
+<p>かつてのWindowsの主要ブラウザであったInternet Explorer 11は、多くの新しい技術を使用することができず、開発元のMicrosoftも使用を推薦していません。</p>
+
+<p>しかし、サポートが最長で2025年まで続く現状では、想定されるウェブサイトの利用者層によっては、対応を必要とされる場面もあります。</p>
+
+<p>echo.cssでは、Version2.0.0から、以下の方針に基づいて対応・非対応を決定しています。</p>
+
+<div class="c-box c-box-first">
+    <ol>
+        <li>順次、対応を終了する</li>
+        <li>対応することによって、他のブラウザに明確な機能の悪化が生じる場合は対応しない</li>
+        <li>対応することによって、フレームワークの使い勝手が大幅に悪化する場合は対応しない</li>
+        <li>重要ではない、オプション機能の場合は対応しない</li>
+        <li>ライブラリの導入で代替できる場合は対応しない</li>
+        <li>対応していないコードが業界内の最良手段となった場合は対応しない</li>
+    </ol>
+</div>
+
+<h2 class="echo-post-title-01">非対応の機能</h2>
+
+<h3 class="echo-post-title-02">img要素のトリミング</h3>
+
+<p>以下の状況で、<a href="https://developer.mozilla.org/ja/docs/Web/CSS/object-fit" target="_blank">object-fit</a>によるトリミングを行うようになりました。<br>
+Internet Explorer11でトリミングに対応する場合は、別途ライブラリを追加してください。</p>
+
+<h4 class="echo-post-title-03"><a href="../styleguide/module-thumbnail.html">.m-thumbnail</a></h4>
+
+<p><code>.m-thumbnail-square, .m-thumbnail-round, .m-thumbnail-(ratio-x)to(ratio-y)</code> を使用した場合</p>
+
+<h4 class="echo-post-title-03"><a href="../styleguide/component-hero.html">.c-hero</a></h4>
+
+<p><code>.c-hero-fit</code> を使用した場合</p>
+
+
+<div class="u-padding-top-xxl">
+    <a href="./introduction-bem.html" class="m-btn m-btn-bordered m-btn-first m-btn-block m-btn-xl"><span class="u-text-xs u-font-second u-padding-left-sm u-position-center-left">Next </span>BEM記法で使用する<i class="fas fa-angle-right u-padding-right-sm u-position-center-right"></i></a>
+</div>
+
+
+<?php include('../doc_include/footer.inc'); ?>
