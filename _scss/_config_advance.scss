@@ -178,30 +178,33 @@ $pager-current: $nav-current !default;
 $pager-ellipsis: "ellipsis" !default;
 
 
-// Container
+// Container, Grid
 // -----------------------------------------
 
+$grid-gutter-widths: (
+    none:   0,
+    sm:     $spacer,
+    md:     ($spacer * 2),
+    lg:     ($spacer * 4)
+) !default;
+
 $container-max-widths-sm: (
-    md: 700px,
-    lg: 960px
+    md: 740px + map-get( $grid-gutter-widths, 'md' ),
+    lg: 960px + map-get( $grid-gutter-widths, 'md' )
 ) !default;
 
 $container-max-widths-md: (
-    md: 700px,
-    lg: 960px,
-    xl: 1200px
+    md: 740px + map-get( $grid-gutter-widths, 'md' ),
+    lg: 960px + map-get( $grid-gutter-widths, 'md' ),
+    xl: 1200px + map-get( $grid-gutter-widths, 'md' )
 ) !default;
 
 $container-max-widths-lg: (
-    md:  700px,
-    lg:  960px,
-    xl:  1200px,
-    xxl: 1400px,
+    md:  740px + map-get( $grid-gutter-widths, 'md' ),
+    lg:  960px + map-get( $grid-gutter-widths, 'md' ),
+    xl:  1200px + map-get( $grid-gutter-widths, 'md' ),
+    xxl: 1400px + map-get( $grid-gutter-widths, 'md' ),
 ) !default;
-
-
-// Grid
-// -----------------------------------------
 
 $grid-breakpoints: (
     default: 0,
@@ -216,12 +219,5 @@ $grid-breakpoints: (
 
 $grid-columns:        12 !default;
 $grid-columns-max:    $grid-columns - 1 !default;
-
-$grid-gutter-widths: (
-    none:   0,
-    sm:     $spacer,
-    md:     ($spacer * 2),
-    lg:     ($spacer * 4)
-) !default;
 
 
