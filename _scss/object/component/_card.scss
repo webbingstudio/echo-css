@@ -47,89 +47,89 @@
 
     }
 
-    .#{$pr}#{$c}card#{$c1}inner {
-        display: block;
-        position: relative;
-        height: 100%;
-    }
+}
 
-    .#{$pr}#{$c}card#{$c1}object {
-        display: block;
-        position: relative;
-        z-index: 11;
+.#{$pr}#{$c}card#{$c1}inner {
+    display: block;
+    position: relative;
+    height: 100%;
+}
 
-        .#{$pr}#{$m}thumbnail {
-            background-color: $body-inverse-bg;
-            border: 0 none;
+.#{$pr}#{$c}card#{$c1}object {
+    display: block;
+    position: relative;
+    z-index: 11;
 
-            img {
-                transition: .6s opacity;
-            }
+    .#{$pr}#{$m}thumbnail {
+        background-color: $body-inverse-bg;
+        border: 0 none;
 
+        img {
+            transition: .6s opacity;
         }
 
     }
 
-    .#{$pr}#{$c}card#{$c1}header,
-    .#{$pr}#{$c}card#{$c1}contents {
-        @include clearfix();
-        word-break: break-word;
-    }
+}
 
-    .#{$pr}#{$c}card#{$c1}header {
-        padding: $spacer (map-get($grid-gutter-widths, md) / 2);
-    }
+.#{$pr}#{$c}card#{$c1}header,
+.#{$pr}#{$c}card#{$c1}contents {
+    @include clearfix();
+    word-break: break-word;
+}
 
-    .#{$pr}#{$c}card#{$c1}contents {
-        padding: $spacer (map-get($grid-gutter-widths, md) / 2);
-        font-size: $font-size-xs;
+.#{$pr}#{$c}card#{$c1}header {
+    padding: $spacer (map-get($grid-gutter-widths, md) / 2);
+}
 
-        // 相対値ではなくremで統一する
-        line-height: $font-size-xs * $line-height-sm;
+.#{$pr}#{$c}card#{$c1}contents {
+    padding: $spacer (map-get($grid-gutter-widths, md) / 2);
+    font-size: $font-size-xs;
 
-        @include media-breakpoint-up(lg) {
-            font-size: $font-size-sm;
-            line-height: $font-size-sm * $line-height-sm;
-        }
+    // 相対値ではなくremで統一する
+    line-height: $font-size-xs * $line-height-sm;
 
-        .#{$pr}#{$m}btn {
-            margin: 1em auto .5em;
-            max-width: 12em;
-        }
-
-    }
-
-    .#{$pr}#{$c}card#{$c1}title {
-        margin: 0;
+    @include media-breakpoint-up(lg) {
         font-size: $font-size-sm;
-        font-weight: $font-weight-bold-root;
-        font-family: $font-family-bold-root;
-
-        @include media-breakpoint-up(lg) {
-            font-size: $font-size-md;
-        }
-
+        line-height: $font-size-sm * $line-height-sm;
     }
 
-    .#{$pr}#{$c}card#{$c1}meta {
-        margin: 0;
-        font-size: inherit;
-        font-weight: inherit;
-        font-family: inherit;
-        font-style: normal;
+    .#{$pr}#{$m}btn {
+        margin: 1em auto .5em;
+        max-width: 12em;
     }
 
-    .#{$pr}#{$c}card#{$c1}body {
-        margin: 0;
-        font-size: inherit;
-        font-weight: inherit;
-        font-family: inherit;
+}
+
+.#{$pr}#{$c}card#{$c1}title {
+    margin: 0;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold-root;
+    font-family: $font-family-bold-root;
+
+    @include media-breakpoint-up(lg) {
+        font-size: $font-size-md;
     }
 
-    [class*="#{$pr}#{$c}card"] + .#{$pr}#{$c}card#{$c1}title,
-    [class*="#{$pr}#{$c}card"] + .#{$pr}#{$c}card#{$c1}meta,
-    [class*="#{$pr}#{$c}card"] + .#{$pr}#{$c}card#{$c1}body {
-        margin-top: .25rem;
-    }
+}
 
+.#{$pr}#{$c}card#{$c1}meta {
+    margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+    font-style: normal;
+}
+
+.#{$pr}#{$c}card#{$c1}body {
+    margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+}
+
+[class*="#{$pr}#{$c}card"] + .#{$pr}#{$c}card#{$c1}title,
+[class*="#{$pr}#{$c}card"] + .#{$pr}#{$c}card#{$c1}meta,
+[class*="#{$pr}#{$c}card"] + .#{$pr}#{$c}card#{$c1}body {
+    margin-top: .25rem;
 }

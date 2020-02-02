@@ -43,94 +43,94 @@
 
     }
 
-    .#{$pr}#{$c}media#{$c1}object {
-        flex-grow: 0;
-        flex-shrink: 1;
-        flex-basis: auto;
-        max-width: 50%;
-        padding-right: ( $spacer / 2 );
+}
 
-        @include media-breakpoint-up(md) {
-            max-width: 33.33333333%;
-            padding-right: $spacer;
-        }
+.#{$pr}#{$c}media#{$c1}object {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    max-width: 50%;
+    padding-right: ( $spacer / 2 );
 
-        .#{$pr}#{$m}thumbnail {
-            background-color: $body-inverse-bg;
-            border: 0 none;
+    @include media-breakpoint-up(md) {
+        max-width: 33.33333333%;
+        padding-right: $spacer;
+    }
 
-            img {
-                transition: .6s opacity;
-            }
+    .#{$pr}#{$m}thumbnail {
+        background-color: $body-inverse-bg;
+        border: 0 none;
 
+        img {
+            transition: .6s opacity;
         }
 
     }
 
-    .#{$pr}#{$c}media#{$c1}contents {
-        flex-grow: 1;
-        flex-shrink: 1;
-        flex-basis: 0%;
-        padding-left: ( $spacer / 2 );
-        font-size: $font-size-xs;
+}
 
-        // 相対値ではなくremで統一する
-        line-height: $font-size-xs * $line-height-sm;
+.#{$pr}#{$c}media#{$c1}contents {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+    padding-left: ( $spacer / 2 );
+    font-size: $font-size-xs;
 
-        @include media-breakpoint-up(lg) {
-            padding-left: $spacer;
-            font-size: $font-size-sm;
-            line-height: $font-size-sm * $line-height-sm;
-        }
+    // 相対値ではなくremで統一する
+    line-height: $font-size-xs * $line-height-sm;
 
-
-    }
-
-    .#{$pr}#{$c}media#{$c1}title {
-        margin: 0;
+    @include media-breakpoint-up(lg) {
+        padding-left: $spacer;
         font-size: $font-size-sm;
-        font-weight: $font-weight-bold-root;
-        font-family: $font-family-bold-root;
+        line-height: $font-size-sm * $line-height-sm;
+    }
 
-        @include media-breakpoint-up(lg) {
-            font-size: $font-size-md;
-        }
 
-        > a {
+}
+
+.#{$pr}#{$c}media#{$c1}title {
+    margin: 0;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold-root;
+    font-family: $font-family-bold-root;
+
+    @include media-breakpoint-up(lg) {
+        font-size: $font-size-md;
+    }
+
+    > a {
+        color: $body-color;
+        text-decoration: underline;
+
+        &:hover,
+        &:focus {
             color: $body-color;
-            text-decoration: underline;
-
-            &:hover,
-            &:focus {
-                color: $body-color;
-                text-decoration: none;
-            }
-
+            text-decoration: none;
         }
 
     }
 
-    .#{$pr}#{$c}media#{$c1}meta {
-        margin: 0;
-        font-size: inherit;
-        font-weight: inherit;
-        font-family: inherit;
-        font-style: normal;
-    }
+}
 
-    .#{$pr}#{$c}media#{$c1}body {
-        margin: 0;
-        font-size: inherit;
-        font-weight: inherit;
-        font-family: inherit;
-    }
+.#{$pr}#{$c}media#{$c1}meta {
+    margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+    font-style: normal;
+}
 
-    [class*="#{$pr}#{$c}media"] + .#{$pr}#{$c}media#{$c1}title,
-    [class*="#{$pr}#{$c}media"] + .#{$pr}#{$c}media#{$c1}meta,
-    [class*="#{$pr}#{$c}media"] + .#{$pr}#{$c}media#{$c1}body {
-        margin-top: .25rem;
-    }
+.#{$pr}#{$c}media#{$c1}body {
+    margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+}
 
+[class*="#{$pr}#{$c}media"] + .#{$pr}#{$c}media#{$c1}title,
+[class*="#{$pr}#{$c}media"] + .#{$pr}#{$c}media#{$c1}meta,
+[class*="#{$pr}#{$c}media"] + .#{$pr}#{$c}media#{$c1}body {
+    margin-top: .25rem;
 }
 
 
