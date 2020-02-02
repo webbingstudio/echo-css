@@ -4900,15 +4900,6 @@ u-bg-fade
 
 /*
 --------------------
-u-clear
---------------------
-*/
-#document .u-clear {
-  clear: both;
-}
-
-/*
---------------------
 u-clearfix
 --------------------
 */
@@ -4942,47 +4933,6 @@ u-expand-sm-down
   #document .u-expand-sm-down {
     margin-left: -10px;
     margin-right: -10px;
-  }
-}
-
-/*
---------------------
-u-float-(direction)
---------------------
-*/
-#document .u-float-left {
-  float: left;
-  margin-right: 15px;
-  margin-bottom: 10px;
-}
-
-@media (min-width: 425px) {
-  #document .u-float-left {
-    margin-right: 20px;
-  }
-}
-
-@media (min-width: 1000px) {
-  #document .u-float-left {
-    margin-right: 30px;
-  }
-}
-
-#document .u-float-right {
-  float: right;
-  margin-left: 15px;
-  margin-bottom: 10px;
-}
-
-@media (min-width: 425px) {
-  #document .u-float-right {
-    margin-left: 20px;
-  }
-}
-
-@media (min-width: 1000px) {
-  #document .u-float-right {
-    margin-left: 30px;
   }
 }
 

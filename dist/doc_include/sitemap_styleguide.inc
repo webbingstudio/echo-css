@@ -44,10 +44,8 @@
                 <li class="m-nav-item"><span class="m-nav-label">utility</span>
                     <ul class="echo-sitemap-list-flat m-nav-list m-nav-children">
                         <li class="m-nav-item"><a href="./utility-bg.html" class="m-nav-label">bg</a></li>
-                        <li class="m-nav-item"><a href="./utility-clear.html" class="m-nav-label">clear</a></li>
                         <li class="m-nav-item"><a href="./utility-clearfix.html" class="m-nav-label">clearfix</a></li>
                         <li class="m-nav-item"><a href="./utility-expand.html" class="m-nav-label">expand</a></li>
-                        <li class="m-nav-item"><a href="./utility-float.html" class="m-nav-label">float</a></li>
                         <li class="m-nav-item"><a href="./utility-font.html" class="m-nav-label">font</a></li>
                         <li class="m-nav-item"><a href="./utility-hidden.html" class="m-nav-label">hidden</a></li>
                         <li class="m-nav-item"><a href="./utility-image.html" class="m-nav-label">image</a></li>
