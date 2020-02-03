@@ -90,16 +90,16 @@
 <h2 class="echo-post-title-01">SassとGulp</h2>
 
 <p>多くの人が理解できるよう、必要以上に高度な内容にしないようにしています。このため、mixinやタスクの利用も最低限となっています。<br>
-特に <code>&__</code> による接続は、<strong>クラス名からの検索がしにくくなる</strong>という、CSSフレームワークにおける致命的な問題があるため禁忌としています。</p>
+特に <code>&</code> による接続は、<strong>クラス名からの検索がしにくくなる</strong>という、CSSフレームワークにおける致命的な問題があるため禁忌としています。</p>
 
 <div class="codeblock"><pre><code class="language-scss">.c-media {
-    &__inner {
+    &-inner {
         // properties
     }
-    &__object {
+    &-object {
         // properties
     }
-    &__title {
+    &-title {
         // properties
     }
 }</code></pre></div>
