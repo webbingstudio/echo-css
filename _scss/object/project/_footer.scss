@@ -42,7 +42,6 @@
     padding-bottom: ($spacer * 4);
     text-align: center;
     font-size: $font-size-xs;
-    font-family: $font-family-second;
-    font-weight: $font-weight-second;
+    @include font-family-weight( 'second', 'normal' );
     line-height: 1;
 }

@@ -11,7 +11,7 @@
     padding: .25rem .5em;
     background-color: $gray-fade;
     font-size: .7em;
-    font-weight: $font-weight-root;
+    @include font-family-weight( 'root', 'normal' );
     color: $ui-color;
     text-align: center;
     line-height: 1;

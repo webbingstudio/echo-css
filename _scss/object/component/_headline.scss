@@ -63,7 +63,7 @@
     min-width: 8.5em;
     margin: 0;
     white-space: nowrap;
-    font-weight: $font-weight-root;
+    @include font-family-weight( 'root', 'normal' );
 }
 
 .#{$pr}#{$c}headline#{$c1}category {
@@ -85,7 +85,7 @@
 
 .#{$pr}#{$c}headline#{$c1}title {
     margin: .25rem 0 0;
-    font-weight: $font-weight-root;
+    @include font-family-weight( 'root', 'normal' );
 
     @include media-breakpoint-up(md) {
         margin-top: 0;

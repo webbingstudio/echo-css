@@ -6,8 +6,7 @@ typography
 
 html {
     font-size: $font-size-md;
-    font-family: $font-family-root;
-    font-weight: $font-weight-root;
+    @include font-family-weight( 'root', 'normal' );
 }
 
 body {
@@ -129,8 +128,7 @@ In Japan, there is a tendency to specify sans-serif fonts in the form input fiel
 textarea,
 input {
     font-size: 1em;
-    font-family: '-apple-system', 'BlinkMacSystemFont', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
-    font-weight: 300;
+    @include font-family-weight( 'root', 'normal' );
 }
 
 input[type="text"],

@@ -8,49 +8,41 @@
 #{$u-wrap} {
 
     .#{$pr}#{$u}font#{$c3}root {
-        font-family: $font-family-root;
-        font-family: $font-weight-root;
+        @include font-family-weight( 'root', 'normal' );
 
         &.#{$pr}#{$u}font#{$c3}bold {
-            font-family: $font-family-bold-root;
-            font-weight: $font-weight-bold-root;
+            @include font-family-weight( 'root', 'bold' );
         }
 
     }
 
     .#{$pr}#{$u}font#{$c3}mono {
-        font-family: $font-family-mono;
+        @include font-family-weight( 'mono' );
     }
 
     .#{$pr}#{$u}font#{$c3}first {
-        font-family: $font-family-first;
-        font-weight: $font-weight-first;
+        @include font-family-weight( 'first', 'normal' );
 
         &.#{$pr}#{$u}font#{$c3}bold {
-            font-family: $font-family-bold-first;
-            font-weight: $font-weight-bold-first;
+            @include font-family-weight( 'first', 'bold' );
         }
 
     }
 
     .#{$pr}#{$u}font#{$c3}second {
-        font-family: $font-family-second;
-        font-weight: $font-weight-second;
+        @include font-family-weight( 'second', 'normal' );
 
         &.#{$pr}#{$u}font#{$c3}bold {
-            font-family: $font-family-bold-second;
-            font-weight: $font-weight-bold-second;
+            @include font-family-weight( 'second', 'bold' );
         }
 
     }
 
     .#{$pr}#{$u}font#{$c3}third {
-        font-family: $font-family-third;
-        font-weight: $font-weight-third;
+        @include font-family-weight( 'third', 'normal' );
 
         &.#{$pr}#{$u}font#{$c3}bold {
-            font-family: $font-family-bold-third;
-            font-weight: $font-weight-bold-third;
+            @include font-family-weight( 'third', 'bold' );
         }
 
     }

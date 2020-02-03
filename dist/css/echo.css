@@ -19,6 +19,7 @@ reset
 }
 
 html {
+  font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
@@ -46,17 +47,17 @@ th {
   text-align: left;
 }
 
-b, th, dt, optgroup, strong {
-  font-weight: 700;
-}
-
+b,
+th,
+dt,
+optgroup,
+strong,
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
-dt {
+h6 {
   font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
   font-weight: 700;
 }
@@ -192,7 +193,7 @@ In Japan, there is a tendency to specify sans-serif fonts in the form input fiel
 textarea,
 input {
   font-size: 1em;
-  font-family: '-apple-system', 'BlinkMacSystemFont', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
   font-weight: 300;
 }
 
@@ -2429,6 +2430,7 @@ m-label
   padding: .25rem .5em;
   background-color: #eee;
   font-size: .7em;
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
   font-weight: 300;
   color: #333;
   text-align: center;
@@ -3626,8 +3628,8 @@ c-card
 .c-card-title {
   margin: 0;
   font-size: 0.875rem;
-  font-weight: 700;
   font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
+  font-weight: 700;
 }
 
 @media (min-width: 1000px) {
@@ -3759,8 +3761,8 @@ c-flip
 .c-flip-title {
   margin: 0;
   font-size: 2rem;
-  font-weight: 300;
   font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
+  font-weight: 300;
   line-height: 1.25;
 }
 
@@ -3907,6 +3909,7 @@ c-form
 .c-form-label {
   display: block;
   padding-bottom: 10px;
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
   font-weight: 700;
   line-height: 1;
 }
@@ -4121,6 +4124,7 @@ a.c-headline-inner:not(:hover):not(:focus) .c-headline-title {
   min-width: 8.5em;
   margin: 0;
   white-space: nowrap;
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
   font-weight: 300;
 }
 
@@ -4144,6 +4148,7 @@ a.c-headline-inner:not(:hover):not(:focus) .c-headline-title {
 
 .c-headline-title {
   margin: .25rem 0 0;
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
   font-weight: 300;
 }
 
@@ -4214,8 +4219,8 @@ c-hero
 .c-hero-title {
   margin: 0;
   font-size: 1.75rem;
-  font-weight: 300;
   font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
+  font-weight: 300;
   line-height: 1;
   text-align: center;
 }
@@ -4484,8 +4489,8 @@ a.c-media:hover .c-media-title, a.c-media:focus .c-media-title {
 .c-media-title {
   margin: 0;
   font-size: 0.875rem;
-  font-weight: 700;
   font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
+  font-weight: 700;
 }
 
 @media (min-width: 1000px) {
@@ -4942,7 +4947,7 @@ u-font-bold
 */
 #document .u-font-root {
   font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
-  font-family: 300;
+  font-weight: 300;
 }
 
 #document .u-font-root.u-font-bold {
@@ -6260,8 +6265,8 @@ p-widget
 .p-widget-title {
   margin: 0;
   font-size: 1.125rem;
-  font-weight: 700;
   font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
+  font-weight: 700;
   line-height: 1.5;
   text-align: center;
 }
@@ -6409,8 +6414,8 @@ WYSIWYG Styles (WordPress)
   font-size: 1.25rem;
   margin-top: 2em;
   margin-bottom: .75em;
-  font-weight: 300;
   font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
+  font-weight: 300;
 }
 
 @media (min-width: 1000px) {

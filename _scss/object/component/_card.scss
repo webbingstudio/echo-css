@@ -99,8 +99,7 @@
 .#{$pr}#{$c}card#{$c1}title {
     margin: 0;
     font-size: $font-size-sm;
-    font-weight: $font-weight-bold-first;
-    font-family: $font-family-bold-first;
+    @include font-family-weight( 'first', 'bold' );
 
     @include media-breakpoint-up(lg) {
         font-size: $font-size-md;

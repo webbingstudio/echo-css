@@ -11,6 +11,7 @@ reset
 }
 
 html {
+    font-family: sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
@@ -39,19 +40,18 @@ th {
 }
 
 
-b, th, dt, optgroup, strong {
-    font-weight: $font-weight-bold-root;
-}
-
+b,
+th,
+dt,
+optgroup,
+strong,
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
-dt {
-    font-family: $font-family-bold-root;
-    font-weight: $font-weight-bold-root;
+h6 {
+    @include font-family-weight( 'root', 'bold' );
 }
 
 button,

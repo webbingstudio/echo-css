@@ -31,8 +31,7 @@
 .#{$widget}#{$c1}title {
     margin: 0;
     font-size: 1.125rem;
-    font-weight: $font-weight-bold-root;
-    font-family: $font-family-bold-root;
+    @include font-family-weight( 'first', 'bold' );
     line-height: $line-height-sm;
     text-align: center;
 

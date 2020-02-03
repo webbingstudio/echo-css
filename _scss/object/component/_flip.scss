@@ -90,8 +90,7 @@
 .#{$pr}#{$c}flip#{$c1}title {
     margin: 0;
     font-size: 2rem;
-    font-weight: $font-weight-third;
-    font-family: $font-family-third;
+    @include font-family-weight( 'third', 'normal' );
     line-height: $line-height-xs;
 
     @include media-breakpoint-up(sm) {

@@ -12,8 +12,7 @@
     border: $ui-btn-border-width solid $ui-border-color;
     color: $ui-color;
     font-size: $btn-font-size-md;
-    font-family: $font-family-root;
-    font-weight: $font-weight-root;
+    @include font-family-weight( 'root', 'normal' );
     text-align: center;
     line-height: 1;
     border-radius: $btn-border-radius;

@@ -50,8 +50,7 @@ WYSIWYG Styles (WordPress)
         font-size: 1.25rem;
         margin-top: 2em;
         margin-bottom: .75em;
-        font-weight: $font-weight-first;
-        font-family: $font-family-first;
+        @include font-family-weight( 'first', 'normal' );
 
         @include media-breakpoint-up(lg) {
             font-size: 1.75rem;
