@@ -56,7 +56,6 @@
                         <li class="m-nav-item"><a href="./utility-shadow.html" class="m-nav-label">shadow</a></li>
                         <li class="m-nav-item"><a href="./utility-sr.html" class="m-nav-label">screen reader</a></li>
                         <li class="m-nav-item"><a href="./utility-text.html" class="m-nav-label">text</a></li>
-                        <li class="m-nav-item"><a href="./utility-width.html" class="m-nav-label">width</a></li>
                     </ul>
                 </li>
                 <li class="m-nav-item"><span class="m-nav-label">project</span>
