@@ -7,7 +7,7 @@ CSS framework optimized for CMS theming
 
 version 1.3.0
 
-Copyright 2019 WebbingStudio  
+Copyright 2020 WebbingStudio  
 Released under the MIT license  
 http://opensource.org/licenses/MIT
 
@@ -17,9 +17,7 @@ http://opensource.org/licenses/MIT
 
 "echo.css"は、SMACSS, FLOCSSを設計ベースとしたCSSフレームワークです。
 
-https://smacss.com/ja
-
-https://github.com/hiloki/flocss
+https://cms-skill.com/echo-css/
 
 - CMSを組み込んだウェブサイトの制作に最適化
 - 東アジア諸国の言語に配慮したタイポグラフィ
@@ -34,9 +32,7 @@ https://github.com/hiloki/flocss
 
 "echo" is a CSS framework based on the design of SMACSS and FLOCSS.
 
-https://smacss.com
-
-https://github.com/hiloki/flocss
+https://cms-skill.com/echo-css/
 
 - Optimized for the creation of website incorporating CMS
 - Language-friendly typography in East Asian countries
@@ -49,11 +45,12 @@ https://github.com/hiloki/flocss
 
 ## Browser compatible
 
-Windows X and MacOS 10.13+
+Windows X and MacOS 10.15+
 
 - Chrome: latest
 - Safari: latest
 - Edge: latest
-- Internet Explorer: 11+
 - Firefox: latest
 
+Support status of Internet Explorer 11  
+https://cms-skill.com/echo-css/docs/introduction-ie11.html
