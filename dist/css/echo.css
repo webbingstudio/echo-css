@@ -4098,7 +4098,15 @@ c-headline
 
 .c-headline-inner > [class*="c-headline-"] {
   flex-shrink: 1;
-  line-height: 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.3125rem;
+}
+
+@media (min-width: 1000px) {
+  .c-headline-inner > [class*="c-headline-"] {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }
 
 .c-headline-inner > :not(.c-headline-title) {

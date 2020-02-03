@@ -23,9 +23,15 @@
 
     & > [class*="#{$pr}#{$c}headline#{$c1}"] {
         flex-shrink: 1;
+        font-size: $font-size-sm;
 
         // 相対値ではなくremで統一する
-        line-height: $font-size-md * $line-height-sm;
+        line-height: $font-size-sm * $line-height-sm;
+
+        @include media-breakpoint-up(lg) {
+            font-size: $font-size-md;
+            line-height: $font-size-md * $line-height-sm;
+        }
 
     }
 
