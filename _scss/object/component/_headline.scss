@@ -12,14 +12,10 @@
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
     width: 100%;
-
-    @include media-breakpoint-up(md) {
-        flex-direction: row;
-    }
 
     & > [class*="#{$pr}#{$c}headline#{$c1}"] {
         flex-shrink: 1;
@@ -41,7 +37,12 @@
 
     & > .#{$pr}#{$c}headline#{$c1}title {
         flex-grow: 1;
-        flex-basis: 0;
+        flex-basis: 100%;
+
+        @include media-breakpoint-up(md) {
+            flex-basis: 0;
+        }
+
     }
 
     @at-root {
@@ -72,18 +73,14 @@
 }
 
 .#{$pr}#{$c}headline#{$c1}category {
-    margin: .25rem 0 0;
-
-    @include media-breakpoint-up(md) {
-        margin-top: 0;
-        margin-left: $spacer;
-    }
+    margin: 0 0 0 $spacer;
 
     .#{$pr}#{$m}label {
         min-width: 8em;
         padding-left: 0;
         padding-right: 0;
         margin-right: 0;
+        vertical-align: baseline;
     }
 
 }
