@@ -633,6 +633,57 @@ echo-download
     font-family: 'Helvetica', 'Roboto', '-apple-system', 'Open Sans', 'Arial', sans-serif;
 }
 
+.echo-download-lg {
+    padding-bottom: 30px;
+}
+
+
+
+/*
+--------------------
+echo-past
+--------------------
+*/
+
+.echo-past {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    padding-top: 45px;
+}
+
+.echo-past-title {
+    margin: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 100%;
+    font-size: 1.25em;
+}
+
+@media (min-width: 768px) {
+    .echo-past-title {
+        flex-grow: 0;
+        flex-basis: 10em;
+    }
+}
+
+.echo-past-contents {
+    margin: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 100%;
+    padding-top: .25rem;
+}
+
+@media (min-width: 768px) {
+    .echo-past-contents {
+        flex-basis: 0;
+    }
+}
+
 
 /*
 --------------------
