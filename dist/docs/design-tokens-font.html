@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>フォントファミリー | デザイントークン | Documentation | echo-css</title>
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div class="l-document" id="document">
+
+    <?php include('../doc_include/header.inc'); ?>
+
+    <main class="p-main" role="main">
+        <div class="l-container">
+
+            <div class="echo-pagehead">
+                <h1 class="echo-pagehead-title">フォントファミリー</h1>
+            </div><!-- /.echo-pagehead -->
+
+            <article class="echo-post">
+                <div class="echo-post-contents styleguide-contents">
+
+<h2 class="echo-post-title-01">標準のフォント</h2>
+
+<p>世界でも類を見ない文字種（ひらがな・カタカナ・漢字・全角英数・半角英数）を使用する日本語圏では、商業ウェブサイトでのフォントファミリーの指定が、非常に精細になっています。<br>
+echo.cssでは、要素の役割に応じて、最大で4種類のフォントを使用することができます。</p>
+
+<p>標準の、CSS・Sass内のフォント名称とフォントの対応は以下の通りです。<br>
+フォントは <code>_scss/_config_basic.scss</code> で変更することができます。</p>
+
+<div class="m-table-responsive">
+    <table class="m-table m-table-bordered">
+        <thead>
+            <tr>
+                <th rowspan="2" class="u-text-center" style="width: 15%;">フォント名称</th>
+                <th class="u-text-center" style="width: 50%;">役割</th>
+                <th class="u-text-center" style="width: 35%;">使用されているモジュール</th>
+            </tr>
+            <tr>
+                <th colspan="2" class="u-text-center">適用されるフォント</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="2" class="u-text-center">root</th>
+                <td>body要素に指定する、ウェブサイト内のベースフォント。</td>
+                <td><code>.u-font-root</code></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="u-font-mono u-text-first">'Hiragino Sans', 'Hiragino Kaku Gothic ProN', '-apple-system', 'BlinkMacSystemFont', 'Meiryo', sans-serif</td>
+            </tr>
+            <tr>
+                <th rowspan="2" class="u-text-center u-font-first u-font-bold">first</th>
+                <td>コンポーネントの小見出し等に指定する、汎用の見出し用フォント。</td>
+                <td><code>.c-card-title</code> <code>.c-media-title</code> <code>.u-font-first</code> <code>.wysiwyg > h1,h2</code></td>
+            </tr>
+            <tr>
+                <td colspan="2">rootと同じフォント</td>
+            </tr>
+            <tr>
+                <th rowspan="2" class="u-text-center u-font-second u-font-bold">second</th>
+                <td>日付や英文を表示する箇所に指定する、英字用フォント。</td>
+                <td><code>.u-font-second</code> <code>.p-footer-copyright</code></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="u-font-mono u-text-first">'Helvetica', 'Roboto', '-apple-system', 'Open Sans', 'Arial', sans-serif</td>
+            </tr>
+            <tr>
+                <th rowspan="2" class="u-text-center u-font-third u-font-bold">third</th>
+                <td>コンポーネントの大見出し等に指定する、デザインフォント。echo.cssでは明朝体(serif)を指定しているが、ゴシック体でも構わない。</td>
+                <td><code>.c-hero-title</code> <code>.c-flip-title</code> <code>.m-font-third</code></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="u-font-mono u-text-first">'游明朝', 'Yu Mincho', '游明朝体', 'YuMincho', 'Hiragino Mincho Pro', 'ＭＳ Ｐ明朝', 'MS PMincho', 'Bookman Old Style', 'Times New Roman', '-apple-system', 'BlinkMacSystemFont', serif</td>
+            </tr>
+            <tr>
+                <th rowspan="2" class="u-text-center u-font-mono">mono</th>
+                <td>ソースコード等に使用される、等幅フォント。</td>
+                <td><code>.m-font-mono</code></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="u-font-mono u-text-first">'Consolas', 'Liberation Mono', 'Menlo', 'Courier', monospace</td>
+            </tr>
+        </tbody>
+    </table>
+</div><!-- /.m-table-responsive -->
+
+<h2 class="echo-post-title-01">日本語ウェブフォントサービスにおける、font-weight問題について</h2>
+
+<p>著名な日本語ウェブフォントサービスでは、CSSプロパティの <code>font-weight</code> だけでは、文字の太さを変更できない問題があります。<br>
+特定ブラウザでの不具合の回避、見た目の問題など、サービスごとに理由は異なり、今のところ解消される様子はありません。</p>
+
+<ul>
+    <li><a href="https://webfont.fontplus.jp/faq/4125">太字指定が反映されません。 | FONTPLUS</a></li>
+    <li><a href="https://support.typesquare.com/hc/ja/articles/223237868-%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88%E3%82%A6%E3%82%A8%E3%82%A4%E3%83%88%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%E3%81%8C-bold%E8%A8%AD%E5%AE%9A%E3%81%8C%E5%8F%8D%E6%98%A0%E3%81%95%E3%82%8C%E3%81%BE%E3%81%9B%E3%82%93-" target="_blank">フォントウエイトを変更したいが、bold設定が反映されません。 &ndash; TypeSquare</a></li>
+</ul>
+
+<p>echo.cssでは、これらのサービスを使用したときに不都合が出ないよう、以下の対応を行っています。</p>
+
+<div class="c-box c-box-first">
+    <ul>
+        <li>フォント関連の変数を、normalとboldの二種類に分けて指定する</li>
+        <li>文字の太さが変更されるクラスのスタイル指定では、 <code>font-family</code> を併記する</li>
+    </ul>
+</div>
+
+<h3 class="echo-post-title-02">font-familyを都度指定する必要がない場合</h3>
+
+<p>ウェブフォントサービスを利用しない等の理由で、font-familyを都度指定する必要がない場合は、echo.cssのコードが冗長になります。<br>
+フォント関連の変数をコメントアウトすると、不要なスタイルを削除し、ファイルサイズを軽減できます。</p>
+
+<p>下記の例では <code>third</code> のフォントが <code>root</code> と同じとなります。</p>
+
+<div class="codeblock"><pre><code class="language-scss">// third: display
+// $font-family-third:            '游明朝', 'Yu Mincho', '游明朝体', 'YuMincho', 'Hiragino Mincho Pro', 'ＭＳ Ｐ明朝', 'MS PMincho', 'Bookman Old Style', 'Times New Roman', '-apple-system', 'BlinkMacSystemFont', serif !default;
+// $font-weight-third:            300 !default;
+// $font-family-bold-third:       $font-family-third;
+// $font-weight-bold-third:       700 !default;</code></pre></div>
+
+<?php include('../doc_include/footer.inc'); ?>

@@ -316,7 +316,7 @@ echo-pickup
 
 .echo-pickup .c-card-header {
     text-align: center;
-    border-bottom: 2px solid #0060c0;
+    border-bottom: 2px solid #333;
 }
 
 .echo-pickup .c-card-title {
@@ -441,7 +441,8 @@ echo-quickstart
 }
 
 .echo-quickstart-number {
-    margin: 0;
+    display: inline-block;
+    margin: 0 .5em 0 0;
     font-size: 1.5rem;
     line-height: 1;
     color: #ecd44f;
@@ -454,6 +455,7 @@ echo-quickstart
 }
 
 .echo-quickstart-body {
+    display: inline-block;
     margin: 0;
     font-size: 1.5rem;
     line-height: 1;

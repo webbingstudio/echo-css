@@ -21,6 +21,7 @@
         <li class="m-nav-item"><span class="echo-sitemap-header m-nav-label">デザイントークン</span>
             <ul class="echo-sitemap-list-flat m-nav-list m-nav-children">
                 <li class="m-nav-item"><a href="./design-tokens-color.html" class="m-nav-label">カラーテーブル</a></li>
+                <li class="m-nav-item"><a href="./design-tokens-font.html" class="m-nav-label">フォントファミリー</a></li>
             </ul>
         </li>
 

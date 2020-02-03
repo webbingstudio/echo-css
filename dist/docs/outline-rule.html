@@ -62,10 +62,6 @@
 やむを得ず二単語になる場合は、 <code>eventCalendar</code> のようにキャピタライズで記述します。<br>
 アンダーバーを使用しない理由は、CMS・JavaScript等の変数名にアンダーバーが使用されることが多く、検索の際に支障が出ないようにするためです。</p>
 
-<p>特定のコンテンツのみで使用される場合は、projectに属するものとし、先頭に <code>p-contentsName-</code> を付与します。ニュースコンテンツのトピックスリストであれば、以下の通りとなります。</p>
-
-<div class="codeblock"><pre><code class="language-markup">.p-news-topics</code></pre></div>
-
 <h3 class="echo-post-title-02">子オブジェクトのクラス名</h3>
 
 <p>オブジェクト内のクラス名は、冗長でないことが望ましいです。<br>
@@ -73,15 +69,17 @@
 
 <p><strong>c-example > c-example-inner > 見出し要素</strong></p>
 
-<p>見出し要素のクラス名は、最上位のオブジェクトの直属とみなし<code>.c-example-title</code>とします。<br>
-（<code>.c-example-inner-title</code>ではない）</p>
+<p>見出し要素のクラス名は、最上位のオブジェクトの直属とみなし <code>.c-example-title</code> とします。<br>
+（<code>.c-example-inner-title</code> ではない）</p>
 
-<p>Atomic Designの考えに基づけば、<code>.c-example-inner-title</code>は、さらに「見出し」という最小単位（Atom = module）に分割できます。このCSSフレームワークに、新たに<code>.m-title</code>などを追加することも考えられるでしょう。</p>
+<p>Atomic Designの考えに基づけば、 <code>.c-example-title</code> は、さらに「見出し」という最小単位（Atom = module）に分割できます。このCSSフレームワークに、新たに <code>.m-title</code> などの追加が考えられるでしょう。</p>
 
 <h3 class="echo-post-title-02">クラス名の英単語は略さない</h3>
 
 <p>原則として、クラス名の英単語は略さず使用します。<br>
-例えば<code>.u-img-resp</code>などではなく<code>.u-image-responsive</code>となります。</p>
+例えば <code>.u-img-rsp</code> などではなく <code>.u-image-responsive</code> となります。</p>
+
+<p>例外として、サイズ表記（<code>xxs, xs, sm, md, lg, xl, xxl</code>）については、略記を使用しています。これはサイズ表記が国際的に認識されており、かつ、非常に多くのサブクラスで使用されているための措置です。</p>
 
 <h2 class="echo-post-title-01">プロパティの並び順</h2>
 
