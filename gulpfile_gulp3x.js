@@ -50,7 +50,7 @@ gulp.task('js_plugins', function() {
     .pipe(gulp.dest(dist_dir + 'plugins/'));
 });
 gulp.task('jsmin_plugins', function() {
-    return gulp.src('_plugins/**/*.js')
+    gulp.src('_plugins/**/*.js')
     .pipe(plumber())
     .pipe(uglify())
     .pipe(rename({extname: '.min.js'}))
@@ -61,8 +61,29 @@ gulp.task('jsmin_plugins', function() {
 // js task here -----------------
 
 
-gulp.task('default', function() {
-  gulp.watch( '_scss/**/*.scss', gulp.series( 'sass', 'sassmin' ) );
-  gulp.watch( '_plugins/**/*.js', gulp.series( 'js_plugins', 'jsmin_plugins' ) );
+// watch
+gulp.task('watch', function(){
+
+  gulp.watch([
+      '_scss/**/*.scss'
+    ], function(event) {
+    gulp.run('sass');
+    gulp.run('sassmin');
+  });
+
+gulp.watch([
+    '_plugins/**/*.js'
+  ], function(event) {
+  gulp.run('js_plugins');
+  gulp.run('jsmin_plugins');
 });
 
+
+// js watch here -----------------
+
+
+});
+
+gulp.task('default', function(){
+  gulp.run('watch');
+});
