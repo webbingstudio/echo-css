@@ -1,0 +1,60 @@
+/*
+--------------------
+#{$pr}#{$m}title#{$c3}level#{$c3}(level)
+--------------------
+*/
+
+.#{$pr}#{$m}title#{$c3}level#{$c3}1 {
+    font-size: ( 24/16 ) + rem;
+
+    @include media-breakpoint-up(lg) {
+        font-size: ( 32/16 ) + rem;
+    }
+
+}
+
+.#{$pr}#{$m}title#{$c3}level#{$c3}2 {
+    font-size: ( 22/16 ) + rem;
+
+    @include media-breakpoint-up(lg) {
+        font-size: ( 28/16 ) + rem;
+    }
+
+}
+
+.#{$pr}#{$m}title#{$c3}level#{$c3}3 {
+    font-size: ( 20/16 ) + rem;
+
+    @include media-breakpoint-up(lg) {
+        font-size: ( 24/16 ) + rem;
+    }
+
+}
+
+.#{$pr}#{$m}title#{$c3}level#{$c3}4 {
+    font-size: ( 18/16 ) + rem;
+
+    @include media-breakpoint-up(lg) {
+        font-size: ( 20/16 ) + rem;
+    }
+
+}
+
+.#{$pr}#{$m}title#{$c3}level#{$c3}5 {
+    font-size: ( 16/16 ) + rem;
+
+    @include media-breakpoint-up(lg) {
+        font-size: ( 18/16 ) + rem;
+    }
+
+}
+
+.#{$pr}#{$m}title#{$c3}level#{$c3}6 {
+    font-size: ( 15/16 ) + rem;
+
+    @include media-breakpoint-up(lg) {
+        font-size: ( 16/16 ) + rem;
+    }
+
+}
+
