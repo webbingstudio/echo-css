@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>module-title | Style guide | echo-css</title>
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div class="l-document" id="document">
+
+    <?php include('../doc_include/header.inc'); ?>
+
+    <main class="p-main" role="main">
+        <div class="l-container l-container-fluid">
+
+            <div class="echo-pagehead">
+                <h1 class="echo-pagehead-title">module-title</h1>
+            </div><!-- /.echo-pagehead -->
+
+            <nav class="echo-anchor">
+                <ul class="m-list m-list-horizontal">
+
+                    <li class="m-list-item"><a href="#title" class="js-scrollto">m-title</a></li>
+                    
+                    <li class="m-list-item"><a href="#title-01-level" class="js-scrollto">m-title-level-(level)</a></li>
+                    
+                    <li class="m-list-item"><a href="#title-02-style" class="js-scrollto">m-title-style-(style)</a></li>
+                    
+                    <li class="m-list-item"><a href="#title-03-color" class="js-scrollto">m-title-(color)</a></li>
+                    
+                </ul>
+            </nav>
+                
+
+            <article class="s-post">
+                <div class="s-post-contents styleguide-contents"><h1 id="btn" class="styleguide">m-title</h1>
+
+<p>hx要素、もしくはp要素を見出しへの利用を前提にリセットする。<br>
+サブクラス等の詳細は<a href="/docs/design-tokens-title.html">見出しの仕様</a>を参照。</p>
+<ul>
+  <li><code>position:relative</code>が付与される</li>
+  <li><code>font-size, color</code>は要素本来のサイズを引き継ぐ</li>
+  <li><code>margin</code>は0となる</li>
+  <li><code>line-height</code>は標準よりも少なく(1.25)なる</li>
+</ul>
+
+<div class="example">
+<h1 class="m-title">これはh1要素です</h1>
+<h1 class="m-title"><a href="#">リンクを付与したh1要素です</a></h1>
+<h2 class="m-title">これはh2要素です</h2>
+<h2 class="m-title"><a href="#">リンクを付与したh2要素です</a></h2>
+<h3 class="m-title">これはh3要素です</h3>
+<h3 class="m-title"><a href="#">リンクを付与したh3要素です</a></h3>
+<h4 class="m-title">これはh4要素です</h4>
+<h4 class="m-title"><a href="#">リンクを付与したh4要素です</a></h4>
+<h5 class="m-title">これはh5要素です</h5>
+<h5 class="m-title"><a href="#">リンクを付与したh5要素です</a></h5>
+<h6 class="m-title">これはh6要素です</h6>
+<h6 class="m-title"><a href="#">リンクを付与したh6要素です</a></h6>
+<p class="m-title">これはp要素です</p>
+<p class="m-title"><a href="#">リンクを付与したp要素です</a></p>
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;h1 class="m-title"&gt;これはh1要素です&lt;/h1&gt;
+&lt;h1 class="m-title"&gt;&lt;a href="#"&gt;リンクを付与したh1要素です&lt;/a&gt;&lt;/h1&gt;
+&lt;h2 class="m-title"&gt;これはh2要素です&lt;/h2&gt;
+&lt;h2 class="m-title"&gt;&lt;a href="#"&gt;リンクを付与したh2要素です&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 class="m-title"&gt;これはh3要素です&lt;/h3&gt;
+&lt;h3 class="m-title"&gt;&lt;a href="#"&gt;リンクを付与したh3要素です&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 class="m-title"&gt;これはh4要素です&lt;/h4&gt;
+&lt;h4 class="m-title"&gt;&lt;a href="#"&gt;リンクを付与したh4要素です&lt;/a&gt;&lt;/h4&gt;
+&lt;h5 class="m-title"&gt;これはh5要素です&lt;/h5&gt;
+&lt;h5 class="m-title"&gt;&lt;a href="#"&gt;リンクを付与したh5要素です&lt;/a&gt;&lt;/h5&gt;
+&lt;h6 class="m-title"&gt;これはh6要素です&lt;/h6&gt;
+&lt;h6 class="m-title"&gt;&lt;a href="#"&gt;リンクを付与したh6要素です&lt;/a&gt;&lt;/h6&gt;
+&lt;p class="m-title"&gt;これはp要素です&lt;/p&gt;
+&lt;p class="m-title"&gt;&lt;a href="#"&gt;リンクを付与したp要素です&lt;/a&gt;&lt;/p&gt;</code></pre>
+
+<h2 id="title-01-level" class="styleguide">m-title-level-(level)</h2>
+
+<p>見出しレベルをマークアップとは無関係に変更する。(level)は<code>1-6</code>の6段階となる（hx要素と同じ）。<br>
+</p>
+
+<div class="example">
+<h1 class="m-title m-title-level-2">これはh1要素ですが見た目がレベル2です</h1>
+<h1 class="m-title m-title-level-3">これはh1要素ですが見た目がレベル3です</h1>
+<h1 class="m-title m-title-level-4">これはh1要素ですが見た目がレベル4です</h1>
+<h1 class="m-title m-title-level-5">これはh1要素ですが見た目がレベル5です</h1>
+<h1 class="m-title m-title-level-6">これはh1要素ですが見た目がレベル6です</h1>
+<h2 class="m-title m-title-level-1">これはh2要素ですが見た目がレベル1です</h2>
+<h2 class="m-title m-title-level-3">これはh2要素ですが見た目がレベル3です</h2>
+<h2 class="m-title m-title-level-4">これはh2要素ですが見た目がレベル4です</h2>
+<h2 class="m-title m-title-level-5">これはh2要素ですが見た目がレベル5です</h2>
+<h2 class="m-title m-title-level-6">これはh2要素ですが見た目がレベル6です</h2>
+<h3 class="m-title m-title-level-1">これはh3要素ですが見た目がレベル1です</h3>
+<h3 class="m-title m-title-level-2">これはh3要素ですが見た目がレベル2です</h3>
+<h3 class="m-title m-title-level-4">これはh3要素ですが見た目がレベル4です</h3>
+<h3 class="m-title m-title-level-5">これはh3要素ですが見た目がレベル5です</h3>
+<h3 class="m-title m-title-level-6">これはh3要素ですが見た目がレベル6です</h3>
+<h4 class="m-title m-title-level-1">これはh4要素ですが見た目がレベル1です</h4>
+<h4 class="m-title m-title-level-2">これはh4要素ですが見た目がレベル2です</h4>
+<h4 class="m-title m-title-level-3">これはh4要素ですが見た目がレベル3です</h4>
+<h4 class="m-title m-title-level-5">これはh4要素ですが見た目がレベル5です</h4>
+<h4 class="m-title m-title-level-6">これはh4要素ですが見た目がレベル6です</h4>
+<h5 class="m-title m-title-level-1">これはh5要素ですが見た目がレベル1です</h5>
+<h5 class="m-title m-title-level-2">これはh5要素ですが見た目がレベル2です</h5>
+<h5 class="m-title m-title-level-3">これはh5要素ですが見た目がレベル3です</h5>
+<h5 class="m-title m-title-level-4">これはh5要素ですが見た目がレベル4です</h5>
+<h5 class="m-title m-title-level-6">これはh5要素ですが見た目がレベル6です</h5>
+<h6 class="m-title m-title-level-1">これはh6要素ですが見た目がレベル1です</h6>
+<h6 class="m-title m-title-level-2">これはh6要素ですが見た目がレベル2です</h6>
+<h6 class="m-title m-title-level-3">これはh6要素ですが見た目がレベル3です</h6>
+<h6 class="m-title m-title-level-4">これはh6要素ですが見た目がレベル4です</h6>
+<h6 class="m-title m-title-level-5">これはh6要素ですが見た目がレベル5です</h6>
+<p class="m-title m-title-level-1">これはp要素ですが見た目がレベル1です</p>
+<p class="m-title m-title-level-2">これはp要素ですが見た目がレベル2です</p>
+<p class="m-title m-title-level-3">これはp要素ですが見た目がレベル3です</p>
+<p class="m-title m-title-level-4">これはp要素ですが見た目がレベル4です</p>
+<p class="m-title m-title-level-5">これはp要素ですが見た目がレベル5です</p>
+<p class="m-title m-title-level-6">これはp要素ですが見た目がレベル6です</p>
+</div>
+
+
+<div class="codeblock"><pre><code class="language-markup">&lt;h1 class="m-title m-title-level-2"&gt;これはh1要素ですが見た目がレベル2です&lt;/h1&gt;
+&lt;h1 class="m-title m-title-level-3"&gt;これはh1要素ですが見た目がレベル3です&lt;/h1&gt;
+&lt;h1 class="m-title m-title-level-4"&gt;これはh1要素ですが見た目がレベル4です&lt;/h1&gt;
+&lt;h1 class="m-title m-title-level-5"&gt;これはh1要素ですが見た目がレベル5です&lt;/h1&gt;
+&lt;h1 class="m-title m-title-level-6"&gt;これはh1要素ですが見た目がレベル6です&lt;/h1&gt;
+&lt;h2 class="m-title m-title-level-1"&gt;これはh2要素ですが見た目がレベル1です&lt;/h2&gt;
+&lt;h2 class="m-title m-title-level-3"&gt;これはh2要素ですが見た目がレベル3です&lt;/h2&gt;
+&lt;h2 class="m-title m-title-level-4"&gt;これはh2要素ですが見た目がレベル4です&lt;/h2&gt;
+&lt;h2 class="m-title m-title-level-5"&gt;これはh2要素ですが見た目がレベル5です&lt;/h2&gt;
+&lt;h2 class="m-title m-title-level-6"&gt;これはh2要素ですが見た目がレベル6です&lt;/h2&gt;
+&lt;h3 class="m-title m-title-level-1"&gt;これはh3要素ですが見た目がレベル1です&lt;/h3&gt;
+&lt;h3 class="m-title m-title-level-2"&gt;これはh3要素ですが見た目がレベル2です&lt;/h3&gt;
+&lt;h3 class="m-title m-title-level-4"&gt;これはh3要素ですが見た目がレベル4です&lt;/h3&gt;
+&lt;h3 class="m-title m-title-level-5"&gt;これはh3要素ですが見た目がレベル5です&lt;/h3&gt;
+&lt;h3 class="m-title m-title-level-6"&gt;これはh3要素ですが見た目がレベル6です&lt;/h3&gt;
+&lt;h4 class="m-title m-title-level-1"&gt;これはh4要素ですが見た目がレベル1です&lt;/h4&gt;
+&lt;h4 class="m-title m-title-level-2"&gt;これはh4要素ですが見た目がレベル2です&lt;/h4&gt;
+&lt;h4 class="m-title m-title-level-3"&gt;これはh4要素ですが見た目がレベル3です&lt;/h4&gt;
+&lt;h4 class="m-title m-title-level-5"&gt;これはh4要素ですが見た目がレベル5です&lt;/h4&gt;
+&lt;h4 class="m-title m-title-level-6"&gt;これはh4要素ですが見た目がレベル6です&lt;/h4&gt;
+&lt;h5 class="m-title m-title-level-1"&gt;これはh5要素ですが見た目がレベル1です&lt;/h5&gt;
+&lt;h5 class="m-title m-title-level-2"&gt;これはh5要素ですが見た目がレベル2です&lt;/h5&gt;
+&lt;h5 class="m-title m-title-level-3"&gt;これはh5要素ですが見た目がレベル3です&lt;/h5&gt;
+&lt;h5 class="m-title m-title-level-4"&gt;これはh5要素ですが見た目がレベル4です&lt;/h5&gt;
+&lt;h5 class="m-title m-title-level-6"&gt;これはh5要素ですが見た目がレベル6です&lt;/h5&gt;
+&lt;h6 class="m-title m-title-level-1"&gt;これはh6要素ですが見た目がレベル1です&lt;/h6&gt;
+&lt;h6 class="m-title m-title-level-2"&gt;これはh6要素ですが見た目がレベル2です&lt;/h6&gt;
+&lt;h6 class="m-title m-title-level-3"&gt;これはh6要素ですが見た目がレベル3です&lt;/h6&gt;
+&lt;h6 class="m-title m-title-level-4"&gt;これはh6要素ですが見た目がレベル4です&lt;/h6&gt;
+&lt;h6 class="m-title m-title-level-5"&gt;これはh6要素ですが見た目がレベル5です&lt;/h6&gt;
+&lt;p class="m-title m-title-level-1"&gt;これはp要素ですが見た目がレベル1です&lt;/p&gt;
+&lt;p class="m-title m-title-level-2"&gt;これはp要素ですが見た目がレベル2です&lt;/p&gt;
+&lt;p class="m-title m-title-level-3"&gt;これはp要素ですが見た目がレベル3です&lt;/p&gt;
+&lt;p class="m-title m-title-level-4"&gt;これはp要素ですが見た目がレベル4です&lt;/p&gt;
+&lt;p class="m-title m-title-level-5"&gt;これはp要素ですが見た目がレベル5です&lt;/p&gt;
+&lt;p class="m-title m-title-level-6"&gt;これはp要素ですが見た目がレベル6です&lt;/p&gt;</code></pre>
+
+<h2 id="title-02-style" class="styleguide">m-title-style-(style)</h2>
+
+<p>見出しの外観を変更する。(style)は<code>a-f</code>の6種類となるが、破綻しない程度に追加しても構わない。<br>
+線の太さやビュレットの大きさは(level)の影響を受け変化する。</p>
+
+<div class="example">
+<p class="m-title m-title-level-1 m-title-style-a">見出しレベル1スタイルaです</p>
+<p class="m-title m-title-level-2 m-title-style-a">見出しレベル2スタイルaです</p>
+<p class="m-title m-title-level-3 m-title-style-a">見出しレベル3スタイルaです</p>
+<p class="m-title m-title-level-4 m-title-style-a">見出しレベル4スタイルaです</p>
+<p class="m-title m-title-level-5 m-title-style-a">見出しレベル5スタイルaです</p>
+<p class="m-title m-title-level-6 m-title-style-a">見出しレベル6スタイルaです</p>
+<p class="m-title m-title-level-1 m-title-style-b">見出しレベル1スタイルbです</p>
+<p class="m-title m-title-level-2 m-title-style-b">見出しレベル2スタイルbです</p>
+<p class="m-title m-title-level-3 m-title-style-b">見出しレベル3スタイルbです</p>
+<p class="m-title m-title-level-4 m-title-style-b">見出しレベル4スタイルbです</p>
+<p class="m-title m-title-level-5 m-title-style-b">見出しレベル5スタイルbです</p>
+<p class="m-title m-title-level-6 m-title-style-b">見出しレベル6スタイルbです</p>
+<p class="m-title m-title-level-1 m-title-style-c">見出しレベル1スタイルcです</p>
+<p class="m-title m-title-level-2 m-title-style-c">見出しレベル2スタイルcです</p>
+<p class="m-title m-title-level-3 m-title-style-c">見出しレベル3スタイルcです</p>
+<p class="m-title m-title-level-4 m-title-style-c">見出しレベル4スタイルcです</p>
+<p class="m-title m-title-level-5 m-title-style-c">見出しレベル5スタイルcです</p>
+<p class="m-title m-title-level-6 m-title-style-c">見出しレベル6スタイルcです</p>
+<p class="m-title m-title-level-1 m-title-style-d">見出しレベル1スタイルdです</p>
+<p class="m-title m-title-level-2 m-title-style-d">見出しレベル2スタイルdです</p>
+<p class="m-title m-title-level-3 m-title-style-d">見出しレベル3スタイルdです</p>
+<p class="m-title m-title-level-4 m-title-style-d">見出しレベル4スタイルdです</p>
+<p class="m-title m-title-level-5 m-title-style-d">見出しレベル5スタイルdです</p>
+<p class="m-title m-title-level-6 m-title-style-d">見出しレベル6スタイルdです</p>
+<p class="m-title m-title-level-1 m-title-style-e">見出しレベル1スタイルeです</p>
+<p class="m-title m-title-level-2 m-title-style-e">見出しレベル2スタイルeです</p>
+<p class="m-title m-title-level-3 m-title-style-e">見出しレベル3スタイルeです</p>
+<p class="m-title m-title-level-4 m-title-style-e">見出しレベル4スタイルeです</p>
+<p class="m-title m-title-level-5 m-title-style-e">見出しレベル5スタイルeです</p>
+<p class="m-title m-title-level-6 m-title-style-e">見出しレベル6スタイルeです</p>
+<p class="m-title m-title-level-1 m-title-style-f">見出しレベル1スタイルfです</p>
+<p class="m-title m-title-level-2 m-title-style-f">見出しレベル2スタイルfです</p>
+<p class="m-title m-title-level-3 m-title-style-f">見出しレベル3スタイルfです</p>
+<p class="m-title m-title-level-4 m-title-style-f">見出しレベル4スタイルfです</p>
+<p class="m-title m-title-level-5 m-title-style-f">見出しレベル5スタイルfです</p>
+<p class="m-title m-title-level-6 m-title-style-f">見出しレベル6スタイルfです</p>
+</div>
+
+
+<div class="codeblock"><pre><code class="language-markup">&lt;p class="m-title m-title-level-1 m-title-style-a"&gt;見出しレベル1スタイルaです&lt;/p&gt;
+&lt;p class="m-title m-title-level-2 m-title-style-a"&gt;見出しレベル2スタイルaです&lt;/p&gt;
+&lt;p class="m-title m-title-level-3 m-title-style-a"&gt;見出しレベル3スタイルaです&lt;/p&gt;
+&lt;p class="m-title m-title-level-4 m-title-style-a"&gt;見出しレベル4スタイルaです&lt;/p&gt;
+&lt;p class="m-title m-title-level-5 m-title-style-a"&gt;見出しレベル5スタイルaです&lt;/p&gt;
+&lt;p class="m-title m-title-level-6 m-title-style-a"&gt;見出しレベル6スタイルaです&lt;/p&gt;
+&lt;p class="m-title m-title-level-1 m-title-style-b"&gt;見出しレベル1スタイルbです&lt;/p&gt;
+&lt;p class="m-title m-title-level-2 m-title-style-b"&gt;見出しレベル2スタイルbです&lt;/p&gt;
+&lt;p class="m-title m-title-level-3 m-title-style-b"&gt;見出しレベル3スタイルbです&lt;/p&gt;
+&lt;p class="m-title m-title-level-4 m-title-style-b"&gt;見出しレベル4スタイルbです&lt;/p&gt;
+&lt;p class="m-title m-title-level-5 m-title-style-b"&gt;見出しレベル5スタイルbです&lt;/p&gt;
+&lt;p class="m-title m-title-level-6 m-title-style-b"&gt;見出しレベル6スタイルbです&lt;/p&gt;
+&lt;p class="m-title m-title-level-1 m-title-style-c"&gt;見出しレベル1スタイルcです&lt;/p&gt;
+&lt;p class="m-title m-title-level-2 m-title-style-c"&gt;見出しレベル2スタイルcです&lt;/p&gt;
+&lt;p class="m-title m-title-level-3 m-title-style-c"&gt;見出しレベル3スタイルcです&lt;/p&gt;
+&lt;p class="m-title m-title-level-4 m-title-style-c"&gt;見出しレベル4スタイルcです&lt;/p&gt;
+&lt;p class="m-title m-title-level-5 m-title-style-c"&gt;見出しレベル5スタイルcです&lt;/p&gt;
+&lt;p class="m-title m-title-level-6 m-title-style-c"&gt;見出しレベル6スタイルcです&lt;/p&gt;
+&lt;p class="m-title m-title-level-1 m-title-style-d"&gt;見出しレベル1スタイルdです&lt;/p&gt;
+&lt;p class="m-title m-title-level-2 m-title-style-d"&gt;見出しレベル2スタイルdです&lt;/p&gt;
+&lt;p class="m-title m-title-level-3 m-title-style-d"&gt;見出しレベル3スタイルdです&lt;/p&gt;
+&lt;p class="m-title m-title-level-4 m-title-style-d"&gt;見出しレベル4スタイルdです&lt;/p&gt;
+&lt;p class="m-title m-title-level-5 m-title-style-d"&gt;見出しレベル5スタイルdです&lt;/p&gt;
+&lt;p class="m-title m-title-level-6 m-title-style-d"&gt;見出しレベル6スタイルdです&lt;/p&gt;
+&lt;p class="m-title m-title-level-1 m-title-style-e"&gt;見出しレベル1スタイルeです&lt;/p&gt;
+&lt;p class="m-title m-title-level-2 m-title-style-e"&gt;見出しレベル2スタイルeです&lt;/p&gt;
+&lt;p class="m-title m-title-level-3 m-title-style-e"&gt;見出しレベル3スタイルeです&lt;/p&gt;
+&lt;p class="m-title m-title-level-4 m-title-style-e"&gt;見出しレベル4スタイルeです&lt;/p&gt;
+&lt;p class="m-title m-title-level-5 m-title-style-e"&gt;見出しレベル5スタイルeです&lt;/p&gt;
+&lt;p class="m-title m-title-level-6 m-title-style-e"&gt;見出しレベル6スタイルeです&lt;/p&gt;
+&lt;p class="m-title m-title-level-1 m-title-style-f"&gt;見出しレベル1スタイルfです&lt;/p&gt;
+&lt;p class="m-title m-title-level-2 m-title-style-f"&gt;見出しレベル2スタイルfです&lt;/p&gt;
+&lt;p class="m-title m-title-level-3 m-title-style-f"&gt;見出しレベル3スタイルfです&lt;/p&gt;
+&lt;p class="m-title m-title-level-4 m-title-style-f"&gt;見出しレベル4スタイルfです&lt;/p&gt;
+&lt;p class="m-title m-title-level-5 m-title-style-f"&gt;見出しレベル5スタイルfです&lt;/p&gt;
+&lt;p class="m-title m-title-level-6 m-title-style-f"&gt;見出しレベル6スタイルfです&lt;/p&gt;</code></pre>
+
+<h2 id="title-03-color" class="styleguide">m-title-(color)</h2>
+
+<p>見出しの色を変更する。(color)は<a href="../docs/design-tokens-color.html">標準のカラーテーブル</a>を参照。<br>
+文字色のみが変わるのではなく、(style)の影響を受けて線やビュレットも含め変化する。<br>
+<code>gray</code>はない（初期値）ことに注意。</p>
+
+<div class="example">
+<p class="m-title m-title-level-3 m-title-style-a m-title-first">見出しレベル3スタイルaカラーfirstです</p>
+<p class="m-title m-title-level-3 m-title-style-b m-title-first">見出しレベル3スタイルbカラーfirstです</p>
+<p class="m-title m-title-level-3 m-title-style-c m-title-first">見出しレベル3スタイルcカラーfirstです</p>
+<p class="m-title m-title-level-3 m-title-style-d m-title-first">見出しレベル3スタイルdカラーfirstです</p>
+<p class="m-title m-title-level-3 m-title-style-e m-title-first">見出しレベル3スタイルeカラーfirstです</p>
+<p class="m-title m-title-level-3 m-title-style-f m-title-first">見出しレベル3スタイルfカラーfirstです</p>
+<p class="m-title m-title-level-3 m-title-style-a m-title-second">見出しレベル3スタイルaカラーsecondです</p>
+<p class="m-title m-title-level-3 m-title-style-b m-title-second">見出しレベル3スタイルbカラーsecondです</p>
+<p class="m-title m-title-level-3 m-title-style-c m-title-second">見出しレベル3スタイルcカラーsecondです</p>
+<p class="m-title m-title-level-3 m-title-style-d m-title-second">見出しレベル3スタイルdカラーsecondです</p>
+<p class="m-title m-title-level-3 m-title-style-e m-title-second">見出しレベル3スタイルeカラーsecondです</p>
+<p class="m-title m-title-level-3 m-title-style-f m-title-third">見出しレベル3スタイルfカラーthirdです</p>
+<p class="m-title m-title-level-3 m-title-style-a m-title-third">見出しレベル3スタイルaカラーthirdです</p>
+<p class="m-title m-title-level-3 m-title-style-b m-title-third">見出しレベル3スタイルbカラーthirdです</p>
+<p class="m-title m-title-level-3 m-title-style-c m-title-third">見出しレベル3スタイルcカラーthirdです</p>
+<p class="m-title m-title-level-3 m-title-style-d m-title-third">見出しレベル3スタイルdカラーthirdです</p>
+<p class="m-title m-title-level-3 m-title-style-e m-title-third">見出しレベル3スタイルeカラーthirdです</p>
+<p class="m-title m-title-level-3 m-title-style-f m-title-third">見出しレベル3スタイルfカラーthirdです</p>
+<p class="m-title m-title-level-3 m-title-style-f m-title-third">見出しレベル3スタイルfカラーthirdです</p>
+<p class="m-title m-title-level-3 m-title-style-a m-title-info">見出しレベル3スタイルaカラーinfoです</p>
+<p class="m-title m-title-level-3 m-title-style-b m-title-info">見出しレベル3スタイルbカラーinfoです</p>
+<p class="m-title m-title-level-3 m-title-style-c m-title-info">見出しレベル3スタイルcカラーinfoです</p>
+<p class="m-title m-title-level-3 m-title-style-d m-title-info">見出しレベル3スタイルdカラーinfoです</p>
+<p class="m-title m-title-level-3 m-title-style-e m-title-info">見出しレベル3スタイルeカラーinfoです</p>
+<p class="m-title m-title-level-3 m-title-style-f m-title-info">見出しレベル3スタイルfカラーinfoです</p>
+<p class="m-title m-title-level-3 m-title-style-a m-title-important">見出しレベル3スタイルaカラーimportantです</p>
+<p class="m-title m-title-level-3 m-title-style-b m-title-important">見出しレベル3スタイルbカラーimportantです</p>
+<p class="m-title m-title-level-3 m-title-style-c m-title-important">見出しレベル3スタイルcカラーimportantです</p>
+<p class="m-title m-title-level-3 m-title-style-d m-title-important">見出しレベル3スタイルdカラーimportantです</p>
+<p class="m-title m-title-level-3 m-title-style-e m-title-important">見出しレベル3スタイルeカラーimportantです</p>
+<p class="m-title m-title-level-3 m-title-style-f m-title-important">見出しレベル3スタイルfカラーimportantです</p>
+</div>
+
+
+<?php include('../doc_include/footer.inc'); ?>

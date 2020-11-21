@@ -23,6 +23,7 @@
                         <li class="m-nav-item"><a href="./module-radio.html" class="m-nav-label">radio</a></li>
                         <li class="m-nav-item"><a href="./module-select.html" class="m-nav-label">select</a></li>
                         <li class="m-nav-item"><a href="./module-table.html" class="m-nav-label">table</a></li>
+                        <li class="m-nav-item"><a href="./module-title.html" class="m-nav-label">title</a></li>
                         <li class="m-nav-item"><a href="./module-thumbnail.html" class="m-nav-label">thumbnail</a></li>
                         <li class="m-nav-item"><a href="./module-toggle.html" class="m-nav-label">toggle</a></li>
                     </ul>
