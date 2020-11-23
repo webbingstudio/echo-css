@@ -20,8 +20,10 @@ if( !isset( $echo_path ) ) {
 
     <link rel="stylesheet" href="<?php echo $echo_path; ?>styleguide/css/styleguide.css<?php echo '?var=' . date('YmdHis'); ?>">
 
-    <link rel="stylesheet" href="<?php echo $echo_path; ?>styleguide/css/prism.css" />
+    <link rel="stylesheet" href="<?php echo $echo_path; ?>styleguide/css/prism.css">
 
+    <meta name="twitter:site" content="@webbingstudio">
+    <meta name="twitter:card" content="summary_large_image">
     <meta property="og:image" content="https://cms-skill.com/echo-css/share/ogp.jpg">
     <link rel="shortcut icon" href="<?php echo $echo_path; ?>share/favicon.ico">
     <link rel="apple-touch-icon" sizes="72x72" href="<?php echo $echo_path; ?>share/apple-touch-icon-72x72.png">
