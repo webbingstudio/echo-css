@@ -26,8 +26,8 @@
                 <div class="s-post-contents styleguide-contents"><h1 id="card" class="styleguide">c-card</h1>
 
 <p>新着情報のエントリー繰り返し部分などに使用する、カード状のコンポーネントを表示する。<br>
-<code>.m-thumbnail</code> を含む前提となっている。<br>
-リンクを含む場合は <code>.c-card-title</code> に下線が引かれる。リンクが不要な場合であっても <code>.c-card-inner</code> が必須であることに注意する。<br>
+<code>.m-title, .m-thumbnail</code> を含む前提となっている。<br>
+リンクを含む場合は <code>.c-card-title.m-title</code> に下線が引かれる。リンクが不要な場合であっても <code>.c-card-inner</code> が必須であることに注意する。<br>
 カード背景には、body要素の基本背景色 <code>$body-bg</code> が指定されている。</p>
 <div class="example">
 <div style="margin-bottom: 2rem;">
@@ -35,7 +35,7 @@
 <div class="c-card">
     <div class="c-card-inner">
         <div class="c-card-header">
-            <h3 class="c-card-title">これはカードです</h3>
+            <h3 class="c-card-title m-title m-title-level-3 m-title-style-b">これはカードです</h3>
         </div><!-- /.c-card-header -->
         <div class="c-card-object">
             <figure class="m-thumbnail m-thumbnail-ogimage">
@@ -80,7 +80,7 @@
                 </div><!-- /.c-card-object -->
                 <div class="c-card-contents">
                     <time class="c-card-meta" datetime="2020-12-28T09:00:00+09:00">2020.12.28</time>
-                    <h3 class="c-card-title">よくあるカラムレイアウトの例です</h3>
+                    <h3 class="c-card-title m-title m-title-level-4 m-title-style-a">よくあるカラムレイアウトの例です</h3>
                     <p class="c-card-body">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
                 </div><!-- /.c-card-contents -->
             </a><!-- /.c-card-innner -->
@@ -105,7 +105,7 @@
                 </div><!-- /.c-card-object -->
                 <div class="c-card-contents">
                     <time class="c-card-meta" datetime="2020-12-28T09:00:00+09:00">2020.12.28</time>
-                    <h3 class="c-card-title">カード全体をリンク範囲にする場合</h3>
+                    <h3 class="c-card-title m-title m-title-level-4 m-title-style-a">カード全体をリンク範囲にする場合</h3>
                     <p class="c-card-body">このカードは、全体がリンク範囲になっています。c-card-innner をa要素に書き換えてください。</p>
                 </div><!-- /.c-card-contents -->
             </a><!-- /.c-card-innner -->
@@ -130,7 +130,7 @@
                 </div><!-- /.c-card-object -->
                 <div class="c-card-contents">
                     <time class="c-card-meta" datetime="2020-12-28T09:00:00+09:00">2020.12.28</time>
-                    <h3 class="c-card-title">グリッドレイアウト</h3>
+                    <h3 class="c-card-title m-title m-title-level-4 m-title-style-a">グリッドレイアウト</h3>
                     <p class="c-card-body">l-grid-row, l-grid-col を使用して4カラムに並べました。グリッド内に配置した場合は最大幅が解除され、常にカラムの幅いっぱいに広がります。</p>
                 </div><!-- /.c-card-contents -->
             </a><!-- /.c-card-innner -->
@@ -155,7 +155,7 @@
                 </div><!-- /.c-card-object -->
                 <div class="c-card-contents">
                     <time class="c-card-meta" datetime="2020-12-28T09:00:00+09:00">2020.12.28</time>
-                    <h3 class="c-card-title">コンテンツが長すぎる_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</h3>
+                    <h3 class="c-card-title m-title m-title-level-4 m-title-style-a">コンテンツが長すぎる_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</h3>
                     <p class="c-card-body">何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</p>
                 </div><!-- /.c-card-contents -->
             </a><!-- /.c-card-innner -->
@@ -184,7 +184,7 @@
                     </figure><!-- /.m-thumbnail -->
                 </div><!-- /.c-card-object -->
                 <div class="c-card-contents">
-                    <h3 class="c-card-title">背景に色がついているカードの例です</h3>  
+                    <h3 class="c-card-title m-title m-title-level-4 m-title-style-a">背景に色がついているカードの例です</h3>  
                     <p class="c-card-body">カードの背景に u-bg-first クラスを指定して色を付けています<br>
                     リンクは指定していません</p>
                 </div><!-- /.c-card-contents -->
@@ -223,7 +223,7 @@
 <div class="codeblock"><pre><code class="language-markup">&lt;div class="c-card"&gt;
     &lt;div class="c-card-inner"&gt;
         &lt;div class="c-card-header"&gt;
-            &lt;h3 class="c-card-title"&gt;これはカードです&lt;/h3&gt;
+            &lt;h3 class="c-card-title m-title m-title-level-3 m-title-style-b"&gt;これはカードです&lt;/h3&gt;
         &lt;/div&gt;&lt;!-- /.c-card-header --&gt;
         &lt;div class="c-card-object"&gt;
             &lt;figure class="m-thumbnail m-thumbnail-ogimage"&gt;
@@ -265,7 +265,7 @@
                 &lt;/div&gt;&lt;!-- /.c-card-object --&gt;
                 &lt;div class="c-card-contents"&gt;
                     &lt;time class="c-card-meta" datetime="2020-12-28T09:00:00+09:00"&gt;2020.12.28&lt;/time&gt;
-                    &lt;h3 class="c-card-title"&gt;よくあるカラムレイアウトの例です&lt;/h3&gt;
+                    &lt;h3 class="c-card-title m-title m-title-level-4 m-title-style-a"&gt;よくあるカラムレイアウトの例です&lt;/h3&gt;
                     &lt;p class="c-card-body"&gt;吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
                 &lt;/div&gt;&lt;!-- /.c-card-contents --&gt;
             &lt;/a&gt;&lt;!-- /.c-card-innner --&gt;
@@ -290,7 +290,7 @@
                 &lt;/div&gt;&lt;!-- /.c-card-object --&gt;
                 &lt;div class="c-card-contents"&gt;
                     &lt;time class="c-card-meta" datetime="2020-12-28T09:00:00+09:00"&gt;2020.12.28&lt;/time&gt;
-                    &lt;h3 class="c-card-title"&gt;カード全体をリンク範囲にする場合&lt;/h3&gt;
+                    &lt;h3 class="c-card-title m-title m-title-level-4 m-title-style-a"&gt;カード全体をリンク範囲にする場合&lt;/h3&gt;
                     &lt;p class="c-card-body"&gt;このカードは、全体がリンク範囲になっています。c-card-innner をa要素に書き換えてください。&lt;/p&gt;
                 &lt;/div&gt;&lt;!-- /.c-card-contents --&gt;
             &lt;/a&gt;&lt;!-- /.c-card-innner --&gt;
@@ -315,7 +315,7 @@
                 &lt;/div&gt;&lt;!-- /.c-card-object --&gt;
                 &lt;div class="c-card-contents"&gt;
                     &lt;time class="c-card-meta" datetime="2020-12-28T09:00:00+09:00"&gt;2020.12.28&lt;/time&gt;
-                    &lt;h3 class="c-card-title"&gt;グリッドレイアウト&lt;/h3&gt;
+                    &lt;h3 class="c-card-title m-title m-title-level-4 m-title-style-a"&gt;グリッドレイアウト&lt;/h3&gt;
                     &lt;p class="c-card-body"&gt;l-grid-row, l-grid-col を使用して4カラムに並べました。グリッド内に配置した場合は最大幅が解除され、常にカラムの幅いっぱいに広がります。&lt;/p&gt;
                 &lt;/div&gt;&lt;!-- /.c-card-contents --&gt;
             &lt;/a&gt;&lt;!-- /.c-card-innner --&gt;
@@ -340,7 +340,7 @@
                 &lt;/div&gt;&lt;!-- /.c-card-object --&gt;
                 &lt;div class="c-card-contents"&gt;
                     &lt;time class="c-card-meta" datetime="2020-12-28T09:00:00+09:00"&gt;2020.12.28&lt;/time&gt;
-                    &lt;h3 class="c-card-title"&gt;コンテンツが長すぎる_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。&lt;/h3&gt;
+                    &lt;h3 class="c-card-title m-title m-title-level-4 m-title-style-a"&gt;コンテンツが長すぎる_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。&lt;/h3&gt;
                     &lt;p class="c-card-body"&gt;何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。&lt;/p&gt;
                 &lt;/div&gt;&lt;!-- /.c-card-contents --&gt;
             &lt;/a&gt;&lt;!-- /.c-card-innner --&gt;
@@ -367,7 +367,7 @@
                     &lt;/figure&gt;&lt;!-- /.m-thumbnail --&gt;
                 &lt;/div&gt;&lt;!-- /.c-card-object --&gt;
                 &lt;div class="c-card-contents"&gt;
-                    &lt;h3 class="c-card-title"&gt;背景に色がついているカードの例です&lt;/h3&gt;  
+                    &lt;h3 class="c-card-title m-title m-title-level-4 m-title-style-a"&gt;背景に色がついているカードの例です&lt;/h3&gt;  
                     &lt;p class="c-card-body"&gt;カードの背景に u-bg-first クラスを指定して色を付けています&lt;br&gt;
                     リンクは指定していません&lt;/p&gt;
                 &lt;/div&gt;&lt;!-- /.c-card-contents --&gt;

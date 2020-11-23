@@ -3834,25 +3834,25 @@ c-card
   height: 100%;
 }
 
-.c-card a {
+.c-card > a:not(:hover), .c-card > a:not(:focus) {
   color: #333;
   text-decoration: none;
 }
 
-.c-card a .c-card-title {
+.c-card > a:not(:hover) .c-card-title.m-title, .c-card > a:not(:focus) .c-card-title.m-title {
   text-decoration: underline;
 }
 
-.c-card a:hover, .c-card a:focus {
+.c-card > a:hover, .c-card > a:focus {
   color: #333;
   text-decoration: none;
 }
 
-.c-card a:hover .m-thumbnail img, .c-card a:focus .m-thumbnail img {
+.c-card > a:hover .m-thumbnail img, .c-card > a:focus .m-thumbnail img {
   opacity: .75;
 }
 
-.c-card a:hover .c-card-title, .c-card a:focus .c-card-title {
+.c-card > a:hover .c-card-title.m-title, .c-card > a:focus .c-card-title.m-title {
   text-decoration: none;
 }
 
@@ -3882,67 +3882,32 @@ c-card
   word-break: break-word;
 }
 
-.c-card-header:before, .c-card-header:after,
-.c-card-contents:before,
-.c-card-contents:after {
-  content: "";
-  display: table;
-}
-
-.c-card-header:after,
-.c-card-contents:after {
-  clear: both;
-}
-
 .c-card-header {
   padding: 10px 10px;
 }
 
 .c-card-contents {
   padding: 10px 10px;
-  font-size: 0.75rem;
-  line-height: 1.125rem;
-}
-
-@media (min-width: 1000px) {
-  .c-card-contents {
-    font-size: 0.875rem;
-    line-height: 1.3125rem;
-  }
-}
-
-.c-card-title {
-  margin: 0;
   font-size: 0.875rem;
-  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
-  font-weight: 700;
+  line-height: 1.5;
 }
 
-@media (min-width: 1000px) {
-  .c-card-title {
-    font-size: 1rem;
-  }
+.c-card-title.m-title[class*="m-title-style"] {
+  margin: 0;
 }
 
 .c-card-meta {
   margin: 0;
-  font-size: inherit;
-  font-weight: inherit;
-  font-family: inherit;
-  font-style: normal;
 }
 
 .c-card-body {
   margin: 0;
-  font-size: inherit;
-  font-weight: inherit;
-  font-family: inherit;
 }
 
 [class*="c-card"] + .c-card-title,
 [class*="c-card"] + .c-card-meta,
 [class*="c-card"] + .c-card-body {
-  margin-top: .25rem;
+  margin-top: .5rem;
 }
 
 /*
