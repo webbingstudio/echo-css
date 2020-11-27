@@ -42,13 +42,14 @@
 
 <p>全面背景とボックスを持つ、フリップボードのようなコンポーネントを表示する。<br>
 <code>.c-flip-contents-inner</code> が必須であることに注意する。<br>
-<code>.c-flip-cover</code> の背景画像はインラインスタイル、もしくは追加CSSで定義する。</p>
+<code>.c-flip-cover</code> の背景画像はインラインスタイル、もしくは追加CSSで定義する。<br>
+<code>.c-flip-title</code> はマルチクラス <code>.m-title .u-font-third</code> が付与されているが、フォントサイズはこのコンポーネント独自の変化をする。</p>
 <div class="example"><div class="c-flip">
     <div class="c-flip-cover" style="background-image: url(../images/_dummy/image_03.jpg)"></div>
     <div class="c-flip-container">
         <div class="c-flip-contents">
             <div class="c-flip-contents-inner">
-                <h2 class="c-flip-title">吾輩は猫である</h2>
+                <h2 class="c-flip-title m-title u-font-third">吾輩は猫である</h2>
                 <p class="c-flip-caption">名前はまだ無い</p>
                 <p class="c-flip-body">どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
             </div><!-- /.c-flip-contents-inner -->
@@ -60,7 +61,7 @@
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-flip-container"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-flip-contents"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-flip-contents-inner"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"c-flip-title"</span><span class="nt">&gt;</span>吾輩は猫である<span class="nt">&lt;/h2&gt;</span>
+                <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"c-flip-title m-title u-font-third"</span><span class="nt">&gt;</span>吾輩は猫である<span class="nt">&lt;/h2&gt;</span>
                 <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"c-flip-caption"</span><span class="nt">&gt;</span>名前はまだ無い<span class="nt">&lt;/p&gt;</span>
                 <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"c-flip-body"</span><span class="nt">&gt;</span>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ<span class="nt">&lt;/p&gt;</span>
             <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.c-flip-contents-inner --&gt;</span>
@@ -78,7 +79,7 @@
     <div class="c-flip-container">
         <div class="c-flip-contents">
             <div class="c-flip-contents-inner">
-                <h2 class="c-flip-title">吾輩は猫である</h2>
+                <h2 class="c-flip-title m-title u-font-third m-title">吾輩は猫である</h2>
                 <p class="c-flip-caption">名前はまだ無い</p>
                 <p class="c-flip-body">どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
             </div><!-- /.c-flip-contents-inner -->
@@ -90,7 +91,7 @@
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-flip-container"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-flip-contents"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-flip-contents-inner"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"c-flip-title"</span><span class="nt">&gt;</span>吾輩は猫である<span class="nt">&lt;/h2&gt;</span>
+                <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"c-flip-title m-title u-font-third"</span><span class="nt">&gt;</span>吾輩は猫である<span class="nt">&lt;/h2&gt;</span>
                 <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"c-flip-caption"</span><span class="nt">&gt;</span>名前はまだ無い<span class="nt">&lt;/p&gt;</span>
                 <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"c-flip-body"</span><span class="nt">&gt;</span>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ<span class="nt">&lt;/p&gt;</span>
             <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.c-flip-contents-inner --&gt;</span>
@@ -108,7 +109,7 @@
     <div class="c-flip-container">
         <div class="c-flip-contents">
             <div class="c-flip-contents-inner">
-                <h2 class="c-flip-title">吾輩は猫である</h2>
+                <h2 class="c-flip-title m-title u-font-third">吾輩は猫である</h2>
                 <p class="c-flip-caption">名前はまだ無い</p>
                 <p class="c-flip-body">どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
             </div><!-- /.c-flip-contents-inner -->
@@ -120,7 +121,7 @@
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-flip-container"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-flip-contents"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-flip-contents-inner"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"c-flip-title"</span><span class="nt">&gt;</span>吾輩は猫である<span class="nt">&lt;/h2&gt;</span>
+                <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"c-flip-title m-title u-font-third"</span><span class="nt">&gt;</span>吾輩は猫である<span class="nt">&lt;/h2&gt;</span>
                 <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"c-flip-caption"</span><span class="nt">&gt;</span>名前はまだ無い<span class="nt">&lt;/p&gt;</span>
                 <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"c-flip-body"</span><span class="nt">&gt;</span>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ<span class="nt">&lt;/p&gt;</span>
             <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.c-flip-contents-inner --&gt;</span>
@@ -141,7 +142,7 @@
     <div class="c-flip-container">
         <div class="c-flip-contents">
             <div class="c-flip-contents-inner">
-                <h2 class="c-flip-title">吾輩は猫である</h2>
+                <h2 class="c-flip-title m-title u-font-third">吾輩は猫である</h2>
                 <p class="c-flip-caption">名前はまだ無い</p>
                 <p class="c-flip-body">どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
             </div><!-- /.c-flip-contents-inner -->
@@ -153,7 +154,7 @@
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-flip-container"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-flip-contents"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"c-flip-contents-inner"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"c-flip-title"</span><span class="nt">&gt;</span>吾輩は猫である<span class="nt">&lt;/h2&gt;</span>
+                <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"c-flip-title m-title u-font-third"</span><span class="nt">&gt;</span>吾輩は猫である<span class="nt">&lt;/h2&gt;</span>
                 <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"c-flip-caption"</span><span class="nt">&gt;</span>名前はまだ無い<span class="nt">&lt;/p&gt;</span>
                 <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"c-flip-body"</span><span class="nt">&gt;</span>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ<span class="nt">&lt;/p&gt;</span>
             <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.c-flip-contents-inner --&gt;</span>

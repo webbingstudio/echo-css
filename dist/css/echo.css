@@ -4009,40 +4009,36 @@ c-flip
   }
 }
 
-.c-flip-title {
-  margin: 0;
+.c-flip-title.m-title {
   font-size: 2rem;
-  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
-  font-weight: 300;
-  line-height: 1.25;
 }
 
 @media (min-width: 425px) {
-  .c-flip-title {
+  .c-flip-title.m-title {
     font-size: 2.25rem;
   }
 }
 
 @media (min-width: 768px) {
-  .c-flip-title {
+  .c-flip-title.m-title {
     font-size: 2.5rem;
   }
 }
 
 @media (min-width: 1000px) {
-  .c-flip-title {
+  .c-flip-title.m-title {
     font-size: 2.75rem;
   }
 }
 
 @media (min-width: 1280px) {
-  .c-flip-title {
+  .c-flip-title.m-title {
     font-size: 3rem;
   }
 }
 
 @media (min-width: 1440px) {
-  .c-flip-title {
+  .c-flip-title.m-title {
     font-size: 3.25rem;
   }
 }
@@ -4066,31 +4062,31 @@ c-flip
 }
 
 .c-flip-title + .c-flip-caption {
-  padding-top: .5em;
+  margin-top: .5em;
 }
 
 .c-flip-body {
   margin: 0;
-  font-size: .875rem;
+  font-size: 0.75rem;
   line-height: 2;
 }
 
 @media (min-width: 1000px) {
   .c-flip-body {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 }
 
 @media (min-width: 1440px) {
   .c-flip-body {
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
 }
 
 .c-flip-title + .c-flip-body,
 .c-flip-caption + .c-flip-body,
 .c-flip-body + .c-flip-body {
-  padding-top: 1em;
+  margin-top: 1.5em;
 }
 
 /*

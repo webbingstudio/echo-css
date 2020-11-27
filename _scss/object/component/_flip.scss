@@ -88,69 +88,70 @@
 }
 
 .#{$pr}#{$c}flip#{$c1}title {
-    margin: 0;
-    font-size: 2rem;
-    @include font-family-weight( 'third', 'normal' );
-    line-height: $line-height-xs;
 
-    @include media-breakpoint-up(sm) {
-        font-size: 2.25rem;
-    }
+    &.#{$pr}#{$m}title {
+        font-size: 2rem;
 
-    @include media-breakpoint-up(md) {
-        font-size: 2.5rem;
-    }
+        @include media-breakpoint-up(sm) {
+            font-size: 2.25rem;
+        }
 
-    @include media-breakpoint-up(lg) {
-        font-size: 2.75rem;
-    }
+        @include media-breakpoint-up(md) {
+            font-size: 2.5rem;
+        }
 
-    @include media-breakpoint-up(xl) {
-        font-size: 3rem;
-    }
+        @include media-breakpoint-up(lg) {
+            font-size: 2.75rem;
+        }
 
-    @include media-breakpoint-up(xxl) {
-        font-size: 3.25rem;
+        @include media-breakpoint-up(xl) {
+            font-size: 3rem;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            font-size: 3.25rem;
+        }
+
     }
 
 }
 
 .#{$pr}#{$c}flip#{$c1}caption {
     margin: 0;
-    font-size: 1rem;
+    font-size: $font-size-md;
     line-height: $line-height-xs;
 
     @include media-breakpoint-up(sm) {
-        font-size: 1.25rem;
+        font-size: $font-size-xl;
     }
 
     @include media-breakpoint-up(lg) {
-        font-size: 1.5rem;
+        font-size: $font-size-xxl;
     }
 
     .#{$pr}#{$c}flip#{$c1}title + & {
-        padding-top: .5em;
+        margin-top: .5em;
     }
 
 }
 
 .#{$pr}#{$c}flip#{$c1}body {
     margin: 0;
-    font-size: .875rem;
+    font-size: $font-size-xs;
     line-height: $line-height-lg;
 
     @include media-breakpoint-up(lg) {
-        font-size: 1rem;
+        font-size: $font-size-sm;
     }
 
     @include media-breakpoint-up(xxl) {
-        font-size: 1.125rem;
+        font-size: $font-size-md;
     }
 
     .#{$pr}#{$c}flip#{$c1}title + &,
     .#{$pr}#{$c}flip#{$c1}caption + &,
     .#{$pr}#{$c}flip#{$c1}body + & {
-        padding-top: 1em;
+        margin-top: 1.5em;
     }
 
 }
