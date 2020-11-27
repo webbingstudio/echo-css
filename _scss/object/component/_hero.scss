@@ -49,54 +49,51 @@
 }
 
 .#{$pr}#{$c}hero#{$c1}title {
-    margin: 0;
-    font-size: 1.75rem;
-    @include font-family-weight( 'third', 'normal' );
-    line-height: 1;
     text-align: center;
 
-    @include media-breakpoint-up(sm) {
-        font-size: 2.5rem;
-    }
+    &.#{$pr}#{$m}title {
+        font-size: 1.75rem;
 
-    @include media-breakpoint-up(md) {
-        font-size: 2.75rem;
-    }
+        @include media-breakpoint-up(sm) {
+            font-size: 2.5rem;
+        }
 
-    @include media-breakpoint-up(lg) {
-        font-size: 3.5rem;
-    }
+        @include media-breakpoint-up(md) {
+            font-size: 2.75rem;
+        }
 
-    @include media-breakpoint-up(xl) {
-        font-size: 4rem;
-    }
+        @include media-breakpoint-up(lg) {
+            font-size: 3.5rem;
+        }
 
-    @include media-breakpoint-up(xxl) {
-        font-size: 4.5rem;
+        @include media-breakpoint-up(xl) {
+            font-size: 4rem;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            font-size: 4.5rem;
+        }
+
     }
 
 }
 
 .#{$pr}#{$c}hero#{$c1}caption {
     margin: 0;
-    font-size: .875rem;
-    line-height: 1;
+    font-size: $font-size-md;
+    line-height: $line-height-xs;
     text-align: center;
 
-    @include media-breakpoint-up(md) {
-        font-size: 1rem;
+    @include media-breakpoint-up(sm) {
+        font-size: $font-size-xl;
     }
 
     @include media-breakpoint-up(lg) {
-        font-size: 1.25rem;
-    }
-
-    @include media-breakpoint-up(xl) {
-        font-size: 1.75rem;
+        font-size: $font-size-xxl;
     }
 
     .#{$pr}#{$c}hero#{$c1}title + & {
-        padding-top: 1em;
+        margin-top: .5em;
     }
 
 }
@@ -121,7 +118,7 @@
 
     .#{$pr}#{$c}hero#{$c1}title + &,
     .#{$pr}#{$c}hero#{$c1}caption + & {
-        padding-top: 2em;
+        margin-top: 2em;
     }
 
 }

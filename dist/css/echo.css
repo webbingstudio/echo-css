@@ -4465,71 +4465,64 @@ c-hero
 }
 
 .c-hero-title {
-  margin: 0;
-  font-size: 1.75rem;
-  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
-  font-weight: 300;
-  line-height: 1;
   text-align: center;
 }
 
+.c-hero-title.m-title {
+  font-size: 1.75rem;
+}
+
 @media (min-width: 425px) {
-  .c-hero-title {
+  .c-hero-title.m-title {
     font-size: 2.5rem;
   }
 }
 
 @media (min-width: 768px) {
-  .c-hero-title {
+  .c-hero-title.m-title {
     font-size: 2.75rem;
   }
 }
 
 @media (min-width: 1000px) {
-  .c-hero-title {
+  .c-hero-title.m-title {
     font-size: 3.5rem;
   }
 }
 
 @media (min-width: 1280px) {
-  .c-hero-title {
+  .c-hero-title.m-title {
     font-size: 4rem;
   }
 }
 
 @media (min-width: 1440px) {
-  .c-hero-title {
+  .c-hero-title.m-title {
     font-size: 4.5rem;
   }
 }
 
 .c-hero-caption {
   margin: 0;
-  font-size: .875rem;
-  line-height: 1;
+  font-size: 1rem;
+  line-height: 1.25;
   text-align: center;
 }
 
-@media (min-width: 768px) {
-  .c-hero-caption {
-    font-size: 1rem;
-  }
-}
-
-@media (min-width: 1000px) {
+@media (min-width: 425px) {
   .c-hero-caption {
     font-size: 1.25rem;
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1000px) {
   .c-hero-caption {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 }
 
 .c-hero-title + .c-hero-caption {
-  padding-top: 1em;
+  margin-top: .5em;
 }
 
 .c-hero-body {
@@ -4559,7 +4552,7 @@ c-hero
 
 .c-hero-title + .c-hero-body,
 .c-hero-caption + .c-hero-body {
-  padding-top: 2em;
+  margin-top: 2em;
 }
 
 /*
