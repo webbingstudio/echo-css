@@ -4664,12 +4664,12 @@ c-media
   align-items: flex-start;
 }
 
-a.c-media {
+a.c-media:not(:hover), a.c-media:not(:focus) {
   color: #333;
   text-decoration: none;
 }
 
-a.c-media .c-media-title {
+a.c-media:not(:hover) .c-media-title.m-title, a.c-media:not(:focus) .c-media-title.m-title {
   text-decoration: underline;
 }
 
@@ -4682,7 +4682,7 @@ a.c-media:hover .m-thumbnail img, a.c-media:focus .m-thumbnail img {
   opacity: .75;
 }
 
-a.c-media:hover .c-media-title, a.c-media:focus .c-media-title {
+a.c-media:hover .c-media-title.m-title, a.c-media:focus .c-media-title.m-title {
   text-decoration: none;
 }
 
@@ -4715,60 +4715,32 @@ a.c-media:hover .c-media-title, a.c-media:focus .c-media-title {
   flex-shrink: 1;
   flex-basis: 0%;
   padding-left: 5px;
-  font-size: 0.75rem;
-  line-height: 1.125rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
 }
 
 @media (min-width: 1000px) {
   .c-media-contents {
     padding-left: 10px;
-    font-size: 0.875rem;
-    line-height: 1.3125rem;
   }
 }
 
-.c-media-title {
+.c-media-title.m-title[class*="m-title-style"] {
   margin: 0;
-  font-size: 0.875rem;
-  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
-  font-weight: 700;
-}
-
-@media (min-width: 1000px) {
-  .c-media-title {
-    font-size: 1rem;
-  }
-}
-
-.c-media-title > a {
-  color: #333;
-  text-decoration: underline;
-}
-
-.c-media-title > a:hover, .c-media-title > a:focus {
-  color: #333;
-  text-decoration: none;
 }
 
 .c-media-meta {
   margin: 0;
-  font-size: inherit;
-  font-weight: inherit;
-  font-family: inherit;
-  font-style: normal;
 }
 
 .c-media-body {
   margin: 0;
-  font-size: inherit;
-  font-weight: inherit;
-  font-family: inherit;
 }
 
 [class*="c-media"] + .c-media-title,
 [class*="c-media"] + .c-media-meta,
 [class*="c-media"] + .c-media-body {
-  margin-top: .25rem;
+  margin-top: .5em;
 }
 
 /*

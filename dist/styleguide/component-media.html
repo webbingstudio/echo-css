@@ -39,8 +39,8 @@
                 <div class="s-post-contents styleguide-contents"><h1 id="media" class="styleguide">c-media</h1>
 
 <p>サムネイル等のメディアオブジェクトと、テキストオブジェクトが並列しているコンポーネントを表示する。<br>
-<code>.m-thumbnail</code> を含む前提となっている。<br>
-リンクを含む場合は <code>.c-media-title</code> に下線が引かれる。<br>
+<code>.m-title, .m-thumbnail</code> を含む前提となっている。<br>
+リンクを含む場合は <code>.c-media-title.m-title</code> に下線が引かれる。<br>
 <code>.c-media-object</code> の最大幅は、ブレークポイントが <code>sm</code> 以下で <code>50%</code> 、 <code>md</code> 以上で <code>33.33333333%</code> となっているため、比率を変更したい場合は任意調整すること。</p>
 <div class="example"><div style="margin-bottom: 2rem;">
 <div class="c-media">
@@ -60,7 +60,7 @@
     </div>
     <div class="c-media-contents">
         <time class="c-media-meta" datetime="2020-12-28T09:00:00+09:00">2020.12.28</time>
-        <h3 class="c-media-title"><a href="#">これはメディアです</a></h3>
+        <h3 class="c-media-title m-title m-title-level-4 m-title-style-a"><a href="#">これはメディアです</a></h3>
         <p class="c-media-body">これはメディアの本文です。吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</p>
     </div>
 </div>
@@ -87,7 +87,7 @@
             </div>
             <div class="c-media-contents">
                 <time class="c-media-meta" datetime="2020-12-28T09:00:00+09:00">2020.12.28</time>
-                <h3 class="c-media-title"><a href="#">よくあるカラムレイアウトの例</a></h3>
+                <h3 class="c-media-title m-title m-title-level-6 m-title-style-a"><a href="#">よくあるカラムレイアウトの例</a></h3>
                 <p class="c-media-body">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</p>
             </div>
         </div>
@@ -110,7 +110,7 @@
             </div>
             <div class="c-media-contents">
                 <time class="c-media-meta" datetime="2020-12-28T09:00:00+09:00">2020.12.28</time>
-                <h3 class="c-media-title">メディア全体がリンク範囲</h3>
+                <h3 class="c-media-title m-title m-title-level-6 m-title-style-a">メディア全体がリンク範囲</h3>
                 <p class="c-media-body">吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
             </div>
         </a>
@@ -133,7 +133,7 @@
             </div>
             <div class="c-media-contents">
                 <time class="c-media-meta" datetime="2020-12-28T09:00:00+09:00">2020.12.28</time>
-                <h3 class="c-media-title"><a href="#">コンテンツが長すぎる_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</a></h3>
+                <h3 class="c-media-title m-title m-title-level-6 m-title-style-a"><a href="#">コンテンツが長すぎる_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</a></h3>
                 <p class="c-media-body">何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</p>
             </div>
         </div>
@@ -144,7 +144,8 @@
 </div>
 
 
-<div class="codeblock"><pre><code class="language-markup">&lt;div class="c-media"&gt;
+<div class="codeblock"><pre><code class="language-markup">&lt;div style="margin-bottom: 2rem;"&gt;
+&lt;div class="c-media"&gt;
     &lt;div class="c-media-object"&gt;
         &lt;div class="m-thumbnail"&gt;
             &lt;picture&gt;
@@ -161,12 +162,14 @@
     &lt;/div&gt;
     &lt;div class="c-media-contents"&gt;
         &lt;time class="c-media-meta" datetime="2020-12-28T09:00:00+09:00"&gt;2020.12.28&lt;/time&gt;
-        &lt;h3 class="c-media-title"&gt;&lt;a href="#"&gt;これはメディアです&lt;/a&gt;&lt;/h3&gt;
+        &lt;h3 class="c-media-title m-title m-title-level-4 m-title-style-a"&gt;&lt;a href="#"&gt;これはメディアです&lt;/a&gt;&lt;/h3&gt;
         &lt;p class="c-media-body"&gt;これはメディアの本文です。吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
 
 
+&lt;div style="margin-bottom: 2rem;"&gt;
 &lt;div class="l-grid-row"&gt;
     &lt;div class="l-grid-col-12 l-grid-col-lg-6 l-grid-col-xl-4" style="padding-bottom: 1rem;"&gt;
         &lt;div class="c-media"&gt;
@@ -186,30 +189,8 @@
             &lt;/div&gt;
             &lt;div class="c-media-contents"&gt;
                 &lt;time class="c-media-meta" datetime="2020-12-28T09:00:00+09:00"&gt;2020.12.28&lt;/time&gt;
-                &lt;p class="c-media-body"&gt;よくあるカラムレイアウトの例です&lt;/p&gt;
-                &lt;p class="c-media-body"&gt;&lt;a href="#" class="m-btn m-btn-first m-btn-bordered"&gt;ボタン&lt;/a&gt;&lt;/p&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="l-grid-col-12 l-grid-col-lg-6 l-grid-col-xl-4" style="padding-bottom: 1rem;"&gt;
-        &lt;div class="c-media"&gt;
-            &lt;div class="c-media-object"&gt;
-                &lt;div class="m-thumbnail"&gt;
-                    &lt;picture&gt;
-                    &lt;source
-                        media="(max-width:640px)"
-                        srcset="../images/_dummy/image_04_s.jpg 640w"
-                        sizes="100vw"&gt;
-                    &lt;source
-                        srcset="../images/_dummy/image_04.jpg 1280w"
-                        sizes="(max-width:1280px) 100vw, 1280px"&gt;
-                    &lt;img alt="" src="../images/_dummy/image_04.jpg"&gt;
-                    &lt;/picture&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class="c-media-contents"&gt;
-                &lt;time class="c-media-meta" datetime="2020-12-28T09:00:00+09:00"&gt;2020.12.28&lt;/time&gt;
-                &lt;p class="c-media-body"&gt;l-grid-row, l-grid-col を使用して3カラムに並べました&lt;/p&gt;
+                &lt;h3 class="c-media-title m-title m-title-level-6 m-title-style-a"&gt;&lt;a href="#"&gt;よくあるカラムレイアウトの例&lt;/a&gt;&lt;/h3&gt;
+                &lt;p class="c-media-body"&gt;吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
@@ -231,11 +212,35 @@
             &lt;/div&gt;
             &lt;div class="c-media-contents"&gt;
                 &lt;time class="c-media-meta" datetime="2020-12-28T09:00:00+09:00"&gt;2020.12.28&lt;/time&gt;
-                &lt;p class="c-media-body"&gt;メディア全体がリンク範囲となっています&lt;/p&gt;
-                &lt;p class="c-media-body"&gt;&lt;span class="m-btn m-btn-first m-btn-bordered"&gt;ボタン&lt;/span&gt;&lt;/p&gt;
+                &lt;h3 class="c-media-title m-title m-title-level-6 m-title-style-a"&gt;メディア全体がリンク範囲&lt;/h3&gt;
+                &lt;p class="c-media-body"&gt;吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。&lt;/p&gt;
             &lt;/div&gt;
         &lt;/a&gt;
     &lt;/div&gt;
+    &lt;div class="l-grid-col-12 l-grid-col-lg-6 l-grid-col-xl-4" style="padding-bottom: 1rem;"&gt;
+        &lt;div class="c-media"&gt;
+            &lt;div class="c-media-object"&gt;
+                &lt;div class="m-thumbnail"&gt;
+                    &lt;picture&gt;
+                    &lt;source
+                        media="(max-width:640px)"
+                        srcset="../images/_dummy/image_04_s.jpg 640w"
+                        sizes="100vw"&gt;
+                    &lt;source
+                        srcset="../images/_dummy/image_04.jpg 1280w"
+                        sizes="(max-width:1280px) 100vw, 1280px"&gt;
+                    &lt;img alt="" src="../images/_dummy/image_04.jpg"&gt;
+                    &lt;/picture&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="c-media-contents"&gt;
+                &lt;time class="c-media-meta" datetime="2020-12-28T09:00:00+09:00"&gt;2020.12.28&lt;/time&gt;
+                &lt;h3 class="c-media-title m-title m-title-level-6 m-title-style-a"&gt;&lt;a href="#"&gt;コンテンツが長すぎる_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。&lt;/a&gt;&lt;/h3&gt;
+                &lt;p class="c-media-body"&gt;何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;</code></pre></div>
 
 <h2 id="media-01-middle" class="styleguide">c-media-middle</h2>

@@ -13,11 +13,20 @@
     @at-root {
 
         a#{&} {
-            color: $body-color;
-            text-decoration: none;
 
-            .#{$pr}#{$c}media#{$c1}title {
-                text-decoration: underline;
+            &:not(:hover),
+            &:not(:focus) {
+                color: $body-color;
+                text-decoration: none;
+
+                .#{$pr}#{$c}media#{$c1}title {
+
+                    &.#{$pr}#{$m}title {
+                        text-decoration: underline;
+                    }
+
+                }
+
             }
 
             &:hover,
@@ -34,7 +43,11 @@
                 }
 
                 .#{$pr}#{$c}media#{$c1}title {
-                    text-decoration: none;
+
+                    &.#{$pr}#{$m}title {
+                        text-decoration: none;
+                    }
+
                 }
 
             }
@@ -74,37 +87,21 @@
     flex-shrink: 1;
     flex-basis: 0%;
     padding-left: ( $spacer / 2 );
-    font-size: $font-size-xs;
-
-    // 相対値ではなくremで統一する
-    line-height: $font-size-xs * $line-height-sm;
+    font-size: $font-size-sm;
+    line-height: $line-height-sm;
 
     @include media-breakpoint-up(lg) {
         padding-left: $spacer;
-        font-size: $font-size-sm;
-        line-height: $font-size-sm * $line-height-sm;
     }
-
 
 }
 
 .#{$pr}#{$c}media#{$c1}title {
-    margin: 0;
-    font-size: $font-size-sm;
-    @include font-family-weight( 'first', 'bold' );
 
-    @include media-breakpoint-up(lg) {
-        font-size: $font-size-md;
-    }
+    &.#{$pr}#{$m}title {
 
-    > a {
-        color: $body-color;
-        text-decoration: underline;
-
-        &:hover,
-        &:focus {
-            color: $body-color;
-            text-decoration: none;
+        &[class*="#{$pr}#{$m}title#{$c1}style"] {
+            margin: 0;
         }
 
     }
@@ -113,23 +110,16 @@
 
 .#{$pr}#{$c}media#{$c1}meta {
     margin: 0;
-    font-size: inherit;
-    font-weight: inherit;
-    font-family: inherit;
-    font-style: normal;
 }
 
 .#{$pr}#{$c}media#{$c1}body {
     margin: 0;
-    font-size: inherit;
-    font-weight: inherit;
-    font-family: inherit;
 }
 
 [class*="#{$pr}#{$c}media"] + .#{$pr}#{$c}media#{$c1}title,
 [class*="#{$pr}#{$c}media"] + .#{$pr}#{$c}media#{$c1}meta,
 [class*="#{$pr}#{$c}media"] + .#{$pr}#{$c}media#{$c1}body {
-    margin-top: .25rem;
+    margin-top: .5em;
 }
 
 
