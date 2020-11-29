@@ -128,7 +128,7 @@ $p: "p-" !default;
 // utillity-wrap-selector
 // ユーティリティクラスの優先順位を上昇させるために、点数が30（0.0.3.0）以上になるようなセレクタを指定する
 // In order to raise the priority of the utility class, specify a selector whose score is 30 (0.0.3.0) or more
-$u-wrap:    "#document" !default;
+$u-wrap:    "#" + $pr + "document" !default;
 
 // icon-selector
 $icon:      '[class*="fa-"]' !default;
@@ -139,7 +139,7 @@ $icon:      '[class*="fa-"]' !default;
 
 // widget-name
 // ex. widget, module, box, view...
-$widget: $p + "widget" !default;
+$widget: $pr + $p + "widget" !default;
 
 // grid-row-name
 // ex. row(bootstrap compatible), wrap...
