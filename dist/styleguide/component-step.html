@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>component-panel | Style guide | echo-css</title>
+    <meta property="og:title" content="component-panel | Style guide | echo-css">
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div class="l-document" id="document">
+
+    <?php include('../doc_include/header.inc'); ?>
+
+    <main class="p-main" role="main">
+        <div class="l-container l-container-fluid">
+
+            <div class="echo-pagehead">
+                <h1 class="echo-pagehead-title">component-step</h1>
+            </div><!-- /.echo-pagehead -->
+
+            <nav class="echo-anchor">
+                <ul class="m-list m-list-horizontal">
+
+                    <li class="m-list-item"><a href="#step" class="js-scrollto">c-step</a></li>
+
+                </ul>
+            </nav>
+            
+
+            <article class="s-post">
+                <div class="s-post-contents styleguide-contents"><h1 id="step" class="styleguide">c-step</h1>
+
+<p>順番に訪問させることを目的としたナビゲーションを表示する。<code>.m-nav.m-nav-vertical</code> を包括する。<br>
+ナビゲーションの性格上、いずれかのリンクに <code>.is-current</code> を付与することが前提となっている。<br>
+<code>ol</code> でマークアップするとリストの連番が付与される。</p>
+
+<div class="example">
+
+<h3 class="u-text-lg">olでマークアップした場合</h3>
+
+<div class="c-step">
+    <nav class="m-nav m-nav-vertical">
+        <ol class="m-nav-list">
+            <li class="m-nav-item">
+                <a href="#" class="m-nav-label">これは最初のページです</a>
+            </li>
+            <li class="m-nav-item">
+                <a href="#" class="m-nav-label is-current">現在のページです</a>
+            </li>
+            <li class="m-nav-item">
+                <a href="#" class="m-nav-label">タイトルの文字数がとてもすごくびっくりするほど衝撃的に多いページです。ナビゲーションとしてどうかと思います</a>
+            </li>
+            <li class="m-nav-item">
+                <a href="#" class="m-nav-label">吾輩は猫である名前はまだ無い</a>
+            </li>
+            <li class="m-nav-item">
+                <a href="#" class="m-nav-label">どこで生れたかとんと検討がつかぬ</a>
+            </li>
+        </ol>
+    </nav><!-- /.nav -->
+</div><!-- /.c-step -->
+
+<h3 class="u-text-lg u-margin-top-lg">ulでマークアップした場合</h3>
+
+<div class="c-step">
+    <nav class="m-nav m-nav-vertical">
+        <ul class="m-nav-list">
+            <li class="m-nav-item">
+                <a href="#" class="m-nav-label">これは最初のページです</a>
+            </li>
+            <li class="m-nav-item">
+                <a href="#" class="m-nav-label is-current">現在のページです</a>
+            </li>
+            <li class="m-nav-item">
+                <a href="#" class="m-nav-label">タイトルの文字数がとてもすごくびっくりするほど衝撃的に多いページです。ナビゲーションとしてどうかと思います</a>
+            </li>
+            <li class="m-nav-item">
+                <a href="#" class="m-nav-label">吾輩は猫である名前はまだ無い</a>
+            </li>
+            <li class="m-nav-item">
+                <a href="#" class="m-nav-label">どこで生れたかとんと検討がつかぬ</a>
+            </li>
+        </ul>
+    </nav><!-- /.nav -->
+</div><!-- /.c-step -->
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;h3 class="u-text-lg"&gt;olでマークアップした場合&lt;/h3&gt;
+
+&lt;div class="c-step"&gt;
+    &lt;nav class="m-nav m-nav-vertical"&gt;
+        &lt;ol class="m-nav-list"&gt;
+            &lt;li class="m-nav-item"&gt;
+                &lt;a href="#" class="m-nav-label"&gt;これは最初のページです&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="m-nav-item"&gt;
+                &lt;a href="#" class="m-nav-label is-current"&gt;現在のページです&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="m-nav-item"&gt;
+                &lt;a href="#" class="m-nav-label"&gt;タイトルの文字数がとてもすごくびっくりするほど衝撃的に多いページです。ナビゲーションとしてどうかと思います&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="m-nav-item"&gt;
+                &lt;a href="#" class="m-nav-label"&gt;吾輩は猫である名前はまだ無い&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="m-nav-item"&gt;
+                &lt;a href="#" class="m-nav-label"&gt;どこで生れたかとんと検討がつかぬ&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/nav&gt;&lt;!-- /.nav --&gt;
+&lt;/div&gt;&lt;!-- /.c-step --&gt;
+
+&lt;h3 class="u-text-lg u-margin-top-lg"&gt;ulでマークアップした場合&lt;/h3&gt;
+
+&lt;div class="c-step"&gt;
+    &lt;nav class="m-nav m-nav-vertical"&gt;
+        &lt;ul class="m-nav-list"&gt;
+            &lt;li class="m-nav-item"&gt;
+                &lt;a href="#" class="m-nav-label"&gt;これは最初のページです&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="m-nav-item"&gt;
+                &lt;a href="#" class="m-nav-label is-current"&gt;現在のページです&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="m-nav-item"&gt;
+                &lt;a href="#" class="m-nav-label"&gt;タイトルの文字数がとてもすごくびっくりするほど衝撃的に多いページです。ナビゲーションとしてどうかと思います&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="m-nav-item"&gt;
+                &lt;a href="#" class="m-nav-label"&gt;吾輩は猫である名前はまだ無い&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="m-nav-item"&gt;
+                &lt;a href="#" class="m-nav-label"&gt;どこで生れたかとんと検討がつかぬ&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;&lt;!-- /.nav --&gt;
+&lt;/div&gt;&lt;!-- /.c-step --&gt;</code></pre></div>
+
+                </div>
+            </article>
+
+<?php include('../doc_include/footer.inc'); ?>
