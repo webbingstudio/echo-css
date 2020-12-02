@@ -1,0 +1,75 @@
+/*
+--------------------
+#{$pr}#{$c}step
+--------------------
+*/
+
+.#{$pr}#{$c}step {
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: ( $spacer * 3 );
+    padding-bottom: ( $spacer * 3 );
+
+    .#{$pr}#{$m}nav.#{$pr}#{$m}nav#{$c3}vertical {
+
+        .#{$pr}#{$m}nav#{$c1}list {
+        }
+
+        .#{$pr}#{$m}nav#{$c1}item {
+            margin-bottom: .5em;
+        }
+
+        .#{$pr}#{$m}nav#{$c1}label {
+            justify-content: center;
+            text-align: center;
+            height: ( 44 / 16 ) + em;
+            padding-top: 0;
+            padding-bottom: 0;
+            border: $ui-border-width solid transparent;
+
+            &:not(.#{$nav-current}) {
+
+                &:hover,
+                &:focus,
+                &:active {
+                    background-color: transparent;
+                    border-color: $ui-border-color;
+                }
+
+            }
+
+        }
+
+        ol.#{$pr}#{$m}nav#{$c1}list {
+            counter-reset: item;
+
+            .#{$pr}#{$m}nav#{$c1}label {
+                position: relative;
+                padding-left: ( 44 / 16 ) + ( 8 / 16 ) + em;
+
+                &:before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    counter-increment: item;
+                    content: counter( item );
+                    min-width: ( 44 / 16 ) + em;
+                    height: 100%;
+                    @include font-family-weight( 'first', 'bold' );
+                    background-color: $nav-hover-bg;
+                    transition:
+                        background-color .3s,
+                        color .3s;
+                }
+
+            }
+
+        }
+
+    }
+
+}
