@@ -39,6 +39,11 @@
 
             }
 
+            &.#{$nav-current} {
+                color: $ui-color;
+                background-color: $nav-hover-bg;
+            }
+
         }
 
         ol.#{$pr}#{$m}nav#{$c1}list {
@@ -64,6 +69,15 @@
                     transition:
                         background-color .3s,
                         color .3s;
+                }
+
+                &.#{$nav-current} {
+
+                    &:before {
+                        color: $ui-current-color;
+                        background-color: $ui-current-bg;
+                    }
+
                 }
 
             }

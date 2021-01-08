@@ -5318,6 +5318,11 @@ c-step
   border-color: #333;
 }
 
+.c-step .m-nav.m-nav-vertical .m-nav-label.is-current {
+  color: #333;
+  background-color: rgba(51, 51, 51, 0.1);
+}
+
 .c-step .m-nav.m-nav-vertical ol.m-nav-list {
   counter-reset: item;
 }
@@ -5342,6 +5347,11 @@ c-step
   font-weight: 700;
   background-color: rgba(51, 51, 51, 0.1);
   transition: background-color .3s, color .3s;
+}
+
+.c-step .m-nav.m-nav-vertical ol.m-nav-list .m-nav-label.is-current:before {
+  color: #fff;
+  background-color: #333;
 }
 
 /*
