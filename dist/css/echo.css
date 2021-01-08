@@ -4083,10 +4083,46 @@ c-flip
   }
 }
 
+.c-flip-body > p:last-child {
+  margin-bottom: 0;
+}
+
 .c-flip-title + .c-flip-body,
 .c-flip-caption + .c-flip-body,
 .c-flip-body + .c-flip-body {
   margin-top: 1.5em;
+}
+
+.c-flip-link {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1;
+}
+
+@media (min-width: 1000px) {
+  .c-flip-link {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .c-flip-link {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .c-flip-link > .m-btn {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    font-size: 1rem;
+  }
+}
+
+.c-flip-title + .c-flip-link,
+.c-flip-caption + .c-flip-link,
+.c-flip-body + .c-flip-link {
+  margin-top: 2em;
 }
 
 /*
