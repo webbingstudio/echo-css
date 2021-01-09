@@ -42,9 +42,11 @@
 
 <p>全面背景とボックスを持つ、フリップボードのようなコンポーネントを表示する。<br>
 <code>.c-flip-contents-inner</code> が必須であることに注意する。<br>
-<code>.c-flip-cover</code> の背景画像はインラインスタイル、もしくは追加CSSで定義する。<br>
-<code>.c-flip-title</code> は <code>.m-title.u-font-third</code> が付与されているが、フォントサイズはこのコンポーネント独自の変化をする。<br>
-<code>.c-flip-link > .m-btn</code> のサイズはこのコンポーネント独自の変化をする。</p>
+<code>.c-flip-cover</code> の背景画像はインラインスタイル、もしくは追加CSSで定義する。</p>
+
+<p><code>.c-flip-title > .m-title</code> のフォントサイズはこのコンポーネント独自の変化をする。<br>
+なお <code>.c-flip-title > .m-title</code> に付与されている <code>.u-font-third</code> は<strong>必須ではない</strong>（削除すると本文と同じフォントとなる）。詳細は <a href="./utility-font.html">utility > font</a> を参照。<br>
+<code>.c-flip-link > .m-btn</code> のfont-size、paddingはこのコンポーネント独自の変化をする。</p>
 <div class="example"><div class="c-flip">
     <div class="c-flip-cover" style="background-image: url(../images/_dummy/image_03.jpg)"></div>
     <div class="c-flip-container">
@@ -91,7 +93,7 @@
     <div class="c-flip-container">
         <div class="c-flip-contents">
             <div class="c-flip-contents-inner">
-                <h2 class="c-flip-title m-title u-font-third m-title">吾輩は猫である</h2>
+                <h2 class="c-flip-title m-title u-font-third">吾輩は猫である</h2>
                 <p class="c-flip-caption">名前はまだ無い</p>
                 <p class="c-flip-body">どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
             </div><!-- /.c-flip-contents-inner -->
