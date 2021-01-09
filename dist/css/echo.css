@@ -4111,6 +4111,13 @@ c-flip
   }
 }
 
+@media (max-width: 767.9px) {
+  .c-flip-link > .m-btn {
+    max-width: 200px;
+    font-size: 0.75rem;
+  }
+}
+
 @media (min-width: 1000px) {
   .c-flip-link > .m-btn {
     padding-top: 0.75rem;
@@ -4122,7 +4129,15 @@ c-flip
 .c-flip-title + .c-flip-link,
 .c-flip-caption + .c-flip-link,
 .c-flip-body + .c-flip-link {
-  margin-top: 2em;
+  margin-top: 1.5em;
+}
+
+@media (min-width: 1000px) {
+  .c-flip-title + .c-flip-link,
+  .c-flip-caption + .c-flip-link,
+  .c-flip-body + .c-flip-link {
+    margin-top: 2em;
+  }
 }
 
 /*
@@ -4510,7 +4525,7 @@ c-hero
 
 @media (min-width: 425px) {
   .c-hero-title.m-title {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
   }
 }
 
@@ -4522,19 +4537,19 @@ c-hero
 
 @media (min-width: 1000px) {
   .c-hero-title.m-title {
-    font-size: 3.5rem;
+    font-size: 3.25rem;
   }
 }
 
 @media (min-width: 1280px) {
   .c-hero-title.m-title {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 }
 
 @media (min-width: 1440px) {
   .c-hero-title.m-title {
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
 }
 
@@ -4614,6 +4629,13 @@ c-hero
   }
 }
 
+@media (max-width: 767.9px) {
+  .c-hero-link > .m-btn {
+    max-width: 200px;
+    font-size: 0.75rem;
+  }
+}
+
 @media (min-width: 1000px) {
   .c-hero-link > .m-btn {
     padding-top: 0.75rem;
@@ -4625,7 +4647,15 @@ c-hero
 .c-hero-title + .c-hero-link,
 .c-hero-caption + .c-hero-link,
 .c-hero-body + .c-hero-link {
-  margin-top: 2em;
+  margin-top: 1.5em;
+}
+
+@media (min-width: 1000px) {
+  .c-hero-title + .c-hero-link,
+  .c-hero-caption + .c-hero-link,
+  .c-hero-body + .c-hero-link {
+    margin-top: 2em;
+  }
 }
 
 /*

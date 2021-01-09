@@ -55,7 +55,7 @@
         font-size: 1.75rem;
 
         @include media-breakpoint-up(sm) {
-            font-size: 2.5rem;
+            font-size: 2.25rem;
         }
 
         @include media-breakpoint-up(md) {
@@ -63,15 +63,15 @@
         }
 
         @include media-breakpoint-up(lg) {
-            font-size: 3.5rem;
+            font-size: 3.25rem;
         }
 
         @include media-breakpoint-up(xl) {
-            font-size: 4rem;
+            font-size: 3.5rem;
         }
 
         @include media-breakpoint-up(xxl) {
-            font-size: 4.5rem;
+            font-size: 4rem;
         }
 
     }
@@ -147,6 +147,11 @@
 
     > .#{$pr}#{$m}btn {
 
+        @include media-breakpoint-down(sm) {
+            max-width: 200px;
+            font-size: $btn-font-size-sm;
+        }
+
         @include media-breakpoint-up(lg) {
             padding-top: $btn-padding-y-lg;
             padding-bottom: $btn-padding-y-lg;
@@ -158,7 +163,12 @@
     .#{$pr}#{$c}hero#{$c1}title + &,
     .#{$pr}#{$c}hero#{$c1}caption + &,
     .#{$pr}#{$c}hero#{$c1}body + & {
-        margin-top: 2em;
+        margin-top: 1.5em;
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 2em;
+        }
+
     }
 
 }
