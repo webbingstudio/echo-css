@@ -185,9 +185,13 @@
     .#{$pr}#{$c}hero#{$c1}image {
         width: 100%;
         height: 0;
-        padding-bottom: percentage( 2 / 3 );
+        padding-bottom: percentage( 1 / 1 );
 
-        @include media-breakpoint-up(md) {
+        @include media-breakpoint-up(sm) {
+            padding-bottom: percentage( 9 / 16 );
+        }
+
+        @include media-breakpoint-up(xl) {
             padding-bottom: percentage( 10 / 25 );
         }
 

@@ -4666,10 +4666,16 @@ c-hero-fit
 .c-hero-fit .c-hero-image {
   width: 100%;
   height: 0;
-  padding-bottom: 66.66667%;
+  padding-bottom: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 425px) {
+  .c-hero-fit .c-hero-image {
+    padding-bottom: 56.25%;
+  }
+}
+
+@media (min-width: 1280px) {
   .c-hero-fit .c-hero-image {
     padding-bottom: 40%;
   }
