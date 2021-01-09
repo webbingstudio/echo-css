@@ -4586,8 +4586,45 @@ c-hero
   }
 }
 
+.c-hero-body > p:last-child {
+  margin-bottom: 0;
+}
+
 .c-hero-title + .c-hero-body,
-.c-hero-caption + .c-hero-body {
+.c-hero-caption + .c-hero-body,
+.c-hero-body + .c-hero-body {
+  margin-top: 1.5em;
+}
+
+.c-hero-link {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1;
+}
+
+@media (min-width: 1000px) {
+  .c-hero-link {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .c-hero-link {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .c-hero-link > .m-btn {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    font-size: 1rem;
+  }
+}
+
+.c-hero-title + .c-hero-link,
+.c-hero-caption + .c-hero-link,
+.c-hero-body + .c-hero-link {
   margin-top: 2em;
 }
 
@@ -4675,7 +4712,7 @@ c-hero-(direction)
 
 .c-hero-right .c-hero-title,
 .c-hero-right .c-hero-caption {
-  text-align: right;
+  text-align: left;
 }
 
 /*

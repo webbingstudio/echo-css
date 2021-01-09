@@ -116,8 +116,48 @@
         font-size: 1rem;
     }
 
+    > p {
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+    }
+
     .#{$pr}#{$c}hero#{$c1}title + &,
-    .#{$pr}#{$c}hero#{$c1}caption + & {
+    .#{$pr}#{$c}hero#{$c1}caption + &,
+    .#{$pr}#{$c}hero#{$c1}body + & {
+        margin-top: 1.5em;
+    }
+
+}
+
+.#{$pr}#{$c}hero#{$c1}link {
+    margin: 0;
+    font-size: $font-size-xs;
+    line-height: 1;
+
+    @include media-breakpoint-up(lg) {
+        font-size: $font-size-sm;
+    }
+
+    @include media-breakpoint-up(xxl) {
+        font-size: $font-size-md;
+    }
+
+    > .#{$pr}#{$m}btn {
+
+        @include media-breakpoint-up(lg) {
+            padding-top: $btn-padding-y-lg;
+            padding-bottom: $btn-padding-y-lg;
+            font-size: $btn-font-size-lg;
+        }
+
+    }
+
+    .#{$pr}#{$c}hero#{$c1}title + &,
+    .#{$pr}#{$c}hero#{$c1}caption + &,
+    .#{$pr}#{$c}hero#{$c1}body + & {
         margin-top: 2em;
     }
 
@@ -217,7 +257,7 @@
 
     .#{$pr}#{$c}hero#{$c1}title,
     .#{$pr}#{$c}hero#{$c1}caption {
-        text-align: right;
+        text-align: left;
     }
 
 }
