@@ -9,6 +9,24 @@
 
     <?php include('../doc_include/html_head.inc'); ?>
 
+<style>
+.l-document { overflow: hidden; max-width: 100%; }
+
+#document .u-expand {
+  margin-left: -100vw;
+  margin-right: -100vw;
+  padding-left: 100vw;
+  padding-right: 100vw;
+}
+
+@media (max-width: 767.9px) {
+  #document .u-expand-sm-down {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+}
+</style>
+
 </head>
 <body>
 <div class="l-document" id="document">
@@ -35,6 +53,8 @@
 
             <article class="s-post">
                 <div class="s-post-contents styleguide-contents"><h1 id="expand" class="styleguide">u-expand</h1>
+
+<p class="c-alert c-alert-important"><span class="c-alert-header"><i class="fas fa-exclamation-circle"></i><span class="u-sr">注意</span></span>.u-expand は、Version2.6.0で廃止されました。このページはアーカイブです。（<code>position: sticky</code> との干渉を防ぐため）</p>
 
 <p><strong>コンテナブロックの最大幅を無視</strong>して、要素のアウトラインのみをウィンドウ幅全体に拡張する。<br>
 <code>.l-document</code> の <code>max-width</code> を解除していると、横スクロールバーが表示されてしまう。</p>
