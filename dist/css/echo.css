@@ -220,11 +220,6 @@ select {
 l-document
 --------------------
 */
-.l-document {
-  overflow: hidden;
-  max-width: 100%;
-}
-
 /*
 --------------------
 l-container
@@ -5577,30 +5572,6 @@ u-clearfix
 
 #document .u-clearfix:after {
   clear: both;
-}
-
-/*
---------------------
-u-expand
---------------------
-*/
-#document .u-expand {
-  margin-left: -100vw;
-  margin-right: -100vw;
-  padding-left: 100vw;
-  padding-right: 100vw;
-}
-
-/*
---------------------
-u-expand-sm-down
---------------------
-*/
-@media (max-width: 767.9px) {
-  #document .u-expand-sm-down {
-    margin-left: -10px;
-    margin-right: -10px;
-  }
 }
 
 /*

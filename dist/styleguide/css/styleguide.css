@@ -7,11 +7,15 @@ echo-header
 */
 
 .echo-header {
+    position: sticky;
+    top: 0;
     padding: 10px 0 0;
     font-size: .875rem;
     line-height: 1;
+    background-color: rgba( 255,255,255,.75 );
     transition: .5s background-color;
     border-bottom: 1px solid #ccc;
+    z-index: 101;
 }
 
 @media (min-width: 768px) {
