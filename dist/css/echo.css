@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * echo.css - version 2.6.0
+ * echo.css - version 2.6.1
  * 
  * "echo" is CSS framework, built with consider CMS theming in East asian countries.
  * 
@@ -3563,17 +3563,40 @@ m-toggle
 .m-toggle {
   position: relative;
   display: inline-block;
-  width: 3rem;
-  height: 2.5rem;
+  width: 44px;
+  height: 44px;
+  padding: 0;
   line-height: 1;
   border-width: 0;
+  color: #333;
   background-color: transparent;
   vertical-align: middle;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  outline: none;
+  transition: background-color .3s, border-color .3s, color .3s;
+}
+
+.m-toggle .m-toggle-line:before, .m-toggle .m-toggle-line:after {
+  background-color: #333;
+}
+
+.m-toggle:hover, .m-toggle.hover, .m-toggle:focus, .m-toggle.focus {
+  color: #333;
+  background-color: rgba(51, 51, 51, 0.1);
+}
+
+.m-toggle:hover .m-toggle-line:before, .m-toggle:hover .m-toggle-line:after, .m-toggle.hover .m-toggle-line:before, .m-toggle.hover .m-toggle-line:after, .m-toggle:focus .m-toggle-line:before, .m-toggle:focus .m-toggle-line:after, .m-toggle.focus .m-toggle-line:before, .m-toggle.focus .m-toggle-line:after {
+  background-color: #333;
+}
+
+.m-toggle[aria-expanded="false"] .m-toggle-line {
+  background-color: #333;
+}
+
+.m-toggle[aria-expanded="false"]:hover .m-toggle-line, .m-toggle[aria-expanded="false"].hover .m-toggle-line, .m-toggle[aria-expanded="false"]:focus .m-toggle-line, .m-toggle[aria-expanded="false"].focus .m-toggle-line {
+  background-color: #333;
 }
 
 .m-toggle-line {
@@ -3581,9 +3604,8 @@ m-toggle
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 2rem;
-  height: .1875rem;
-  background-color: #333;
+  width: 20px;
+  height: 3px;
   transform: translate(-50%, -50%);
   transition: background-color .3s;
 }
@@ -3592,27 +3614,24 @@ m-toggle
   content: "";
   display: block;
   position: absolute;
-  background-color: #333;
   left: 0;
   right: 0;
-  height: .1875rem;
-  opacity: 1;
+  height: 3px;
   transform: rotate(0deg);
   transform-origin: center center;
-  transition: transform .3s;
+  transition: background-color .3s, transform .3s;
 }
 
 .m-toggle-line:before {
-  top: -.6875rem;
+  top: -9px;
 }
 
 .m-toggle-line:after {
-  bottom: -.6875rem;
+  bottom: -9px;
 }
 
 .m-toggle[aria-expanded="true"] .m-toggle-line {
-  width: 2.25rem;
-  background-color: transparent;
+  width: 26px;
 }
 
 .m-toggle[aria-expanded="true"] .m-toggle-line:before {
@@ -3623,6 +3642,37 @@ m-toggle
 .m-toggle[aria-expanded="true"] .m-toggle-line:after {
   top: 0;
   transform: rotate(-45deg);
+}
+
+/*
+--------------------
+m-toggle-inverse
+--------------------
+*/
+.m-toggle-inverse {
+  color: #fff;
+  background-color: transparent;
+}
+
+.m-toggle-inverse .m-toggle-line:before, .m-toggle-inverse .m-toggle-line:after {
+  background-color: #fff;
+}
+
+.m-toggle-inverse:hover, .m-toggle-inverse.hover, .m-toggle-inverse:focus, .m-toggle-inverse.focus {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.m-toggle-inverse:hover .m-toggle-line:before, .m-toggle-inverse:hover .m-toggle-line:after, .m-toggle-inverse.hover .m-toggle-line:before, .m-toggle-inverse.hover .m-toggle-line:after, .m-toggle-inverse:focus .m-toggle-line:before, .m-toggle-inverse:focus .m-toggle-line:after, .m-toggle-inverse.focus .m-toggle-line:before, .m-toggle-inverse.focus .m-toggle-line:after {
+  background-color: #fff;
+}
+
+.m-toggle-inverse[aria-expanded="false"] .m-toggle-line {
+  background-color: #fff;
+}
+
+.m-toggle-inverse[aria-expanded="false"]:hover .m-toggle-line, .m-toggle-inverse[aria-expanded="false"].hover .m-toggle-line, .m-toggle-inverse[aria-expanded="false"]:focus .m-toggle-line, .m-toggle-inverse[aria-expanded="false"].focus .m-toggle-line {
+  background-color: #fff;
 }
 
 /*

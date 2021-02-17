@@ -1,0 +1,57 @@
+/*
+--------------------
+#{$pr}#{$m}toggle#{$c3}inverse
+--------------------
+*/
+
+.#{$pr}#{$m}toggle#{$c3}inverse {
+    color: $ui-inverse-color;
+    background-color: $ui-inverse-bg;
+
+    .#{$pr}#{$m}toggle#{$c1}line {
+
+        &:before,
+        &:after {
+            background-color: $ui-inverse-color;
+        }
+
+    }
+
+    &:hover,
+    &.hover,
+    &:focus,
+    &.focus {
+        color: $ui-inverse-hover-color;
+        background-color: $ui-inverse-hover-bg;
+
+        .#{$pr}#{$m}toggle#{$c1}line {
+
+            &:before,
+            &:after {
+                background-color: $ui-inverse-hover-color;
+            }
+
+        }
+
+    }
+
+    &[aria-expanded="false"] {
+
+        .#{$pr}#{$m}toggle#{$c1}line {
+            background-color: $ui-inverse-color;
+        }
+
+        &:hover,
+        &.hover,
+        &:focus,
+        &.focus {
+
+            .#{$pr}#{$m}toggle#{$c1}line {
+                background-color: $ui-inverse-hover-color;
+            }
+
+        }
+
+    }
+
+}

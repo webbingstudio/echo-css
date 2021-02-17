@@ -7,17 +7,69 @@
 .#{$pr}#{$m}toggle {
     position: relative;
     display: inline-block;
-    width: 3rem;
-    height: 2.5rem;
+    width: 44px;
+    height: 44px;
+    padding: 0;
     line-height: 1;
     border-width: 0;
-    background-color: transparent;
+    color: $ui-color;
+    background-color: $ui-bg;
     vertical-align: middle;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     cursor: pointer;
-    outline: none;
+    transition:
+        background-color .3s,
+        border-color .3s,
+        color .3s;
+
+    .#{$pr}#{$m}toggle#{$c1}line {
+
+        &:before,
+        &:after {
+            background-color: $ui-color;
+        }
+
+    }
+
+    &:hover,
+    &.hover,
+    &:focus,
+    &.focus {
+        color: $ui-hover-color;
+        background-color: $ui-hover-bg;
+
+        .#{$pr}#{$m}toggle#{$c1}line {
+
+            &:before,
+            &:after {
+                background-color: $ui-hover-color;
+            }
+
+        }
+
+    }
+
+    &[aria-expanded="false"] {
+
+        .#{$pr}#{$m}toggle#{$c1}line {
+            background-color: $ui-color;
+        }
+
+        &:hover,
+        &.hover,
+        &:focus,
+        &.focus {
+
+            .#{$pr}#{$m}toggle#{$c1}line {
+                background-color: $ui-hover-color;
+            }
+
+        }
+
+    }
+
 }
 
 .#{$pr}#{$m}toggle#{$c1}line {
@@ -25,10 +77,9 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 2rem;
-    height: .1875rem;
-    background-color: $body-color;
-    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 3px;
+    transform: translate( -50%, -50% );
     transition: background-color .3s;
 
     &:before,
@@ -36,36 +87,35 @@
         content: "";
         display: block;
         position: absolute;
-        background-color: $body-color;
         left: 0;
         right: 0;
-        height: .1875rem;
-        opacity: 1;
-        transform: rotate(0deg);
+        height: 3px;
+        transform: rotate( 0deg );
         transform-origin: center center;
-        transition: transform .3s;
+        transition:
+            background-color .3s,
+            transform .3s;
     }
 
     &:before {
-        top: -.6875rem;
+        top: -9px;
     }
 
     &:after {
-        bottom: -.6875rem;
+        bottom: -9px;
     }
 
     .#{$pr}#{$m}toggle[aria-expanded="true"] & {
-        width: 2.25rem;
-        background-color: transparent;
+        width: 26px;
 
         &:before {
             top: 0;
-            transform: rotate(45deg);
+            transform: rotate( 45deg );
         }
 
         &:after {
             top: 0;
-            transform: rotate(-45deg);
+            transform: rotate( -45deg );
         }
 
     }
