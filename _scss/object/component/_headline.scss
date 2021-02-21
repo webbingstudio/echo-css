@@ -6,6 +6,15 @@
 
 .#{$pr}#{$c}headline {
     margin-bottom: ($spacer * 2);
+
+    // 相対値ではなくremで統一する
+    line-height: $font-size-md * $line-height-sm;
+
+    @include media-breakpoint-down(md) {
+        font-size: $font-size-sm;
+        line-height: $font-size-sm * $line-height-sm;
+    }
+
 }
 
 .#{$pr}#{$c}headline#{$c1}inner {
@@ -19,15 +28,6 @@
 
     & > [class*="#{$pr}#{$c}headline#{$c1}"] {
         flex-shrink: 1;
-
-        // 相対値ではなくremで統一する
-        line-height: $font-size-md * $line-height-sm;
-
-        @include media-breakpoint-down(md) {
-            font-size: $font-size-sm;
-            line-height: $font-size-sm * $line-height-sm;
-        }
-
     }
 
     & > :not(.#{$pr}#{$c}headline#{$c1}title) {
@@ -38,6 +38,8 @@
     & > .#{$pr}#{$c}headline#{$c1}title {
         flex-grow: 1;
         flex-basis: 100%;
+        font-size: 1em;
+        @include font-family-weight( 'root', 'normal' );
 
         @include media-breakpoint-up(md) {
             flex-basis: 0;
@@ -66,10 +68,14 @@
 }
 
 .#{$pr}#{$c}headline#{$c1}header {
-    min-width: 8.5em;
     margin: 0;
     white-space: nowrap;
     @include font-family-weight( 'root', 'normal' );
+
+    @include media-breakpoint-up(md) {
+        min-width: 8.5em;
+    }
+
 }
 
 .#{$pr}#{$c}headline#{$c1}category {
@@ -77,8 +83,7 @@
 
     .#{$pr}#{$m}label {
         min-width: 8em;
-        padding-left: 0;
-        padding-right: 0;
+        padding: .25em 0;
         margin-right: 0;
         vertical-align: baseline;
     }
@@ -86,7 +91,7 @@
 }
 
 .#{$pr}#{$c}headline#{$c1}title {
-    margin: .25rem 0 0;
+    margin: .25em 0 0;
     @include font-family-weight( 'root', 'normal' );
 
     @include media-breakpoint-up(md) {
