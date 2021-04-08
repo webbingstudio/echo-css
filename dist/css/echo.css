@@ -1488,36 +1488,36 @@ fieldset[disabled] a.m-btn {
 m-btn-(color)
 --------------------
 */
-.m-btn-gray {
+.m-btn-default {
   color: #fff;
   background-color: #333;
   border-color: transparent;
 }
 
-.m-btn-gray:hover, .m-btn-gray:focus, .m-btn-gray:active, .m-btn-gray.active {
+.m-btn-default:hover, .m-btn-default:focus, .m-btn-default:active, .m-btn-default.active {
   color: #333;
   background-color: transparent;
   border-color: #333;
 }
 
-.m-btn-gray.disabled, .m-btn-gray:disabled,
-fieldset[disabled] .m-btn-gray {
+.m-btn-default.disabled, .m-btn-default:disabled,
+fieldset[disabled] .m-btn-default {
   opacity: .65;
 }
 
-.m-btn-gray.disabled:hover, .m-btn-gray.disabled.hover, .m-btn-gray.disabled:focus, .m-btn-gray.disabled.focus, .m-btn-gray:disabled:hover, .m-btn-gray:disabled.hover, .m-btn-gray:disabled:focus, .m-btn-gray:disabled.focus,
-fieldset[disabled] .m-btn-gray:hover,
-fieldset[disabled] .m-btn-gray.hover,
-fieldset[disabled] .m-btn-gray:focus,
-fieldset[disabled] .m-btn-gray.focus {
+.m-btn-default.disabled:hover, .m-btn-default.disabled.hover, .m-btn-default.disabled:focus, .m-btn-default.disabled.focus, .m-btn-default:disabled:hover, .m-btn-default:disabled.hover, .m-btn-default:disabled:focus, .m-btn-default:disabled.focus,
+fieldset[disabled] .m-btn-default:hover,
+fieldset[disabled] .m-btn-default.hover,
+fieldset[disabled] .m-btn-default:focus,
+fieldset[disabled] .m-btn-default.focus {
   color: #fff;
   background-color: #333;
   border-color: transparent;
 }
 
-a:hover .m-btn-gray,
-a:focus .m-btn-gray,
-a:active .m-btn-gray {
+a:hover .m-btn-default,
+a:focus .m-btn-default,
+a:active .m-btn-default {
   color: #333;
   background-color: transparent;
   border-color: #333;
@@ -1707,36 +1707,36 @@ m-btn-bordered
   box-shadow: none;
 }
 
-.m-btn-bordered.m-btn-gray {
+.m-btn-bordered.m-btn-default {
   color: inherit;
   background-color: transparent;
   border-color: #333;
 }
 
-.m-btn-bordered.m-btn-gray:hover, .m-btn-bordered.m-btn-gray:focus, .m-btn-bordered.m-btn-gray:active, .m-btn-bordered.m-btn-gray.active {
+.m-btn-bordered.m-btn-default:hover, .m-btn-bordered.m-btn-default:focus, .m-btn-bordered.m-btn-default:active, .m-btn-bordered.m-btn-default.active {
   color: #fff;
   background-color: #333;
   border-color: transparent;
 }
 
-.m-btn-bordered.m-btn-gray.disabled, .m-btn-bordered.m-btn-gray:disabled,
-fieldset[disabled] .m-btn-bordered.m-btn-gray {
+.m-btn-bordered.m-btn-default.disabled, .m-btn-bordered.m-btn-default:disabled,
+fieldset[disabled] .m-btn-bordered.m-btn-default {
   opacity: .65;
 }
 
-.m-btn-bordered.m-btn-gray.disabled:hover, .m-btn-bordered.m-btn-gray.disabled.hover, .m-btn-bordered.m-btn-gray.disabled:focus, .m-btn-bordered.m-btn-gray.disabled.focus, .m-btn-bordered.m-btn-gray:disabled:hover, .m-btn-bordered.m-btn-gray:disabled.hover, .m-btn-bordered.m-btn-gray:disabled:focus, .m-btn-bordered.m-btn-gray:disabled.focus,
-fieldset[disabled] .m-btn-bordered.m-btn-gray:hover,
-fieldset[disabled] .m-btn-bordered.m-btn-gray.hover,
-fieldset[disabled] .m-btn-bordered.m-btn-gray:focus,
-fieldset[disabled] .m-btn-bordered.m-btn-gray.focus {
+.m-btn-bordered.m-btn-default.disabled:hover, .m-btn-bordered.m-btn-default.disabled.hover, .m-btn-bordered.m-btn-default.disabled:focus, .m-btn-bordered.m-btn-default.disabled.focus, .m-btn-bordered.m-btn-default:disabled:hover, .m-btn-bordered.m-btn-default:disabled.hover, .m-btn-bordered.m-btn-default:disabled:focus, .m-btn-bordered.m-btn-default:disabled.focus,
+fieldset[disabled] .m-btn-bordered.m-btn-default:hover,
+fieldset[disabled] .m-btn-bordered.m-btn-default.hover,
+fieldset[disabled] .m-btn-bordered.m-btn-default:focus,
+fieldset[disabled] .m-btn-bordered.m-btn-default.focus {
   color: inherit;
   background-color: transparent;
   border-color: #333;
 }
 
-a:hover .m-btn-bordered.m-btn-gray,
-a:focus .m-btn-bordered.m-btn-gray,
-a:active .m-btn-bordered.m-btn-gray {
+a:hover .m-btn-bordered.m-btn-default,
+a:focus .m-btn-bordered.m-btn-default,
+a:active .m-btn-bordered.m-btn-default {
   color: #fff;
   background-color: #333;
   border-color: transparent;
@@ -2443,12 +2443,12 @@ a.m-label {
 m-label-(color)
 --------------------
 */
-.m-label-gray {
+.m-label-default {
   background-color: #333;
   color: #fff;
 }
 
-a.m-label-gray {
+a.m-label-default {
   color: #fff;
 }
 
@@ -5177,19 +5177,19 @@ u-bg-(color)
 u-bg-fade
 --------------------
 */
-#document .u-bg-gray {
+#document .u-bg-default {
   background-color: #333;
 }
 
-#document .u-bg-gray:not(.u-bg-fade) {
+#document .u-bg-default:not(.u-bg-fade) {
   color: #fff;
 }
 
-#document .u-bg-gray:not(.u-bg-fade) a:not([class]) {
+#document .u-bg-default:not(.u-bg-fade) a:not([class]) {
   color: #fff;
 }
 
-#document .u-bg-gray.u-bg-fade {
+#document .u-bg-default.u-bg-fade {
   background-color: #eee;
 }
 
