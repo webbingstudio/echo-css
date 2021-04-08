@@ -35,13 +35,11 @@
         <thead>
             <tr>
                 <th rowspan="2" class="u-text-center">色名</th>
-                <th colspan="5" class="u-text-center">強度</th>
+                <th colspan="3" class="u-text-center">強度</th>
             </tr>
             <tr>
                 <th class="u-text-center">normal</th>
                 <th class="u-text-center">strong</th>
-                <th class="u-text-center">mild</th>
-                <th class="u-text-center">milder</th>
                 <th class="u-text-center">fade</th>
             </tr>
         </thead>
@@ -50,48 +48,36 @@
                 <th class="u-text-center">default</th>
                 <td><span class="doc-colorchip" style="background-color: #333;"></span>#333</td>
                 <td><span class="doc-colorchip" style="background-color: #333;"></span>#333</td>
-                <td><span class="doc-colorchip" style="background-color: #888;"></span>#888</td>
-                <td><span class="doc-colorchip" style="background-color: #bbb;"></span>#bbb</td>
                 <td><span class="doc-colorchip" style="background-color: #eee;"></span>#eee</td>
             </tr>
             <tr>
                 <th class="u-text-center">first</th>
                 <td><span class="doc-colorchip" style="background-color: #1976d2;"></span>#1976d2</td>
                 <td><span class="doc-colorchip" style="background-color: #0060c0;"></span>#0060c0</td>
-                <td class="u-text-center">-</td>
-                <td class="u-text-center">-</td>
                 <td><span class="doc-colorchip" style="background-color: #e3f0ff;"></span>#e3f0ff</td>
             </tr>
             <tr>
                 <th class="u-text-center">second</th>
                 <td><span class="doc-colorchip" style="background-color: #138420;"></span>#138420</td>
                 <td><span class="doc-colorchip" style="background-color: #138420;"></span>#138420</td>
-                <td class="u-text-center">-</td>
-                <td class="u-text-center">-</td>
                 <td><span class="doc-colorchip" style="background-color: #edfbf3;"></span>#edfbf3</td>
             </tr>
             <tr>
                 <th class="u-text-center">third</th>
                 <td><span class="doc-colorchip" style="background-color: #ffb510;"></span>#ffb510</td>
                 <td><span class="doc-colorchip" style="background-color: #c05900;"></span>#c05900</td>
-                <td class="u-text-center">-</td>
-                <td class="u-text-center">-</td>
                 <td><span class="doc-colorchip" style="background-color: #fff6e3;"></span>#fff6e3</td>
             </tr>
             <tr>
                 <th class="u-text-center">info</th>
                 <td><span class="doc-colorchip" style="background-color: #138420;"></span>#138420</td>
                 <td><span class="doc-colorchip" style="background-color: #138420;"></span>#138420</td>
-                <td class="u-text-center">-</td>
-                <td class="u-text-center">-</td>
                 <td><span class="doc-colorchip" style="background-color: #edfbf3;"></span>#edfbf3</td>
             </tr>
             <tr>
                 <th class="u-text-center">important</th>
                 <td><span class="doc-colorchip" style="background-color: #d20b2a;"></span>#d20b2a</td>
                 <td><span class="doc-colorchip" style="background-color: #d20b2a;"></span>#d20b2a</td>
-                <td class="u-text-center">-</td>
-                <td class="u-text-center">-</td>
                 <td><span class="doc-colorchip" style="background-color: #ffe9f0;"></span>#ffe9f0</td>
             </tr>
         </tbody>
@@ -141,7 +127,7 @@
 
 <p>それぞれの色は、強度で分類され、適切なモジュールで使用されることを想定しています。<br>
 <code>light, dark</code> などの明度を表す単語を使用していないのは、暗色背景のウェブサイトに使用した場合に矛盾が生じるのを防ぐためです。<br>
-<code>default</code> のみ5段階となっていますが、 <code>first, second ...</code> の色段階を増やすために <code>mild, milder</code> を追加しても構いません。</p>
+コントラスト比を確保できない問題があるため、中間の強度（ライトグレー）は使用していません。</p>
 
 <h3 class="echo-post-title-02">normal</h3>
 
@@ -150,14 +136,6 @@
 <h3 class="echo-post-title-02">strong</h3>
 
 <p>小さな文字のテキストカラーなど、<strong>高いコントラスト比を確保すべき箇所</strong>に使用します。 <code>normal</code> が充分なコントラスト比を持っている場合は、同じカラーコードを使用しても構いません。</p>
-
-<h3 class="echo-post-title-02">mild</h3>
-
-<p><code>default</code> に使用されている強度です。この色は<strong>充分なコントラスト比を確保するのが困難</strong>なため、echo.cssではごく一部の使用にとどめています。後述のアクセシビリティ達成基準を意識する場合は注意してください。</p>
-
-<h3 class="echo-post-title-02">milder</h3>
-
-<p><code>default</code> に使用されている強度です。 <code>.m-imput, .m-table-bordered</code> などの、多くのボーダー色に使用されています。ボーダーを見やすくしたい場合は、変数 <code>$border-color</code> を <code>$default</code> に変更してください。</p>
 
 <h3 class="echo-post-title-02">fade</h3>
 
