@@ -18,12 +18,12 @@ $rule: '' !default;
 // Colors
 // -----------------------------------------
 
-// gray: greyscale color
-$gray:                      #333 !default;
-$gray-strong:               #333 !default;
-$gray-mild:                 #888 !default;
-$gray-milder:               #bbb !default;
-$gray-fade:                 #eee !default;
+// default: base color
+$default:                      #333 !default;
+$default-strong:               #333 !default;
+$default-mild:                 #888 !default;
+$default-milder:               #bbb !default;
+$default-fade:                 #eee !default;
 
 // first: primary color
 $first:                     #1976d2 !default;
@@ -51,8 +51,8 @@ $important-strong:          #d20b2a !default;
 $important-fade:            #ffe9f0 !default;
 
 $body-bg:                   #fff !default;
-$body-color:                $gray !default;
-$body-mild-color:           $gray-mild !default;
+$body-color:                $default !default;
+$body-mild-color:           $default-mild !default;
 $body-inverse-bg:           #000 !default;
 $body-inverse-color:        #fff !default;
 $body-inverse-mild-color:   rgba( $body-inverse-color, .5 ) !default;
@@ -69,8 +69,8 @@ $link-hover-color:          $link-color !default;
 // -----------------------------------------
 
 $border-width:                   1px !default;
-$border-color:                   $gray-milder !default;
-$border-inverse-color:           $gray-mild !default;
+$border-color:                   $default-milder !default;
+$border-inverse-color:           $default-mild !default;
 
 $border-table-width:             $border-width !default;
 $border-table-section-width:     ( $border-width * 2 ) !default;

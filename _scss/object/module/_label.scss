@@ -9,7 +9,7 @@
     min-width: 3em;
     margin-right: .5em;
     padding: .25rem .5em;
-    background-color: $gray-fade;
+    background-color: $default-fade;
     font-size: .7em;
     @include font-family-weight( 'root', 'normal' );
     color: $ui-color;
@@ -36,7 +36,7 @@
 */
 
 .#{$pr}#{$m}label#{$c3}gray {
-    background-color: $gray;
+    background-color: $default;
     color: $body-inverse-color;
 
     @at-root {

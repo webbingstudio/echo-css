@@ -10,7 +10,7 @@
     margin-bottom: ($spacer * 2);
     padding: ($spacer * 2);
     border: $border-box-width solid transparent;
-    background-color: $gray-fade;
+    background-color: $default-fade;
     border-radius: $border-radius-lg;
 
     @include media-breakpoint-up(md) {
@@ -68,7 +68,7 @@
 
 .#{$pr}#{$c}box#{$c3}bordered {
     background-color: $body-bg;
-    border-color: $gray;
+    border-color: $default;
 
     &.#{$pr}#{$c}box-first {
         border-color: $first;
