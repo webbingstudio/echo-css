@@ -2230,8 +2230,8 @@ m-checkbox
 }
 
 .m-checkbox input[type="checkbox"]:checked + .m-checkbox-icon {
-  background: #1976d2;
-  border: 0.0625rem solid #1976d2;
+  background: #333;
+  border: 0.0625rem solid #333;
 }
 
 .m-checkbox input[type="checkbox"]:checked + .m-checkbox-icon:after {
@@ -2816,7 +2816,7 @@ m-radio
 
 .m-radio input[type="radio"]:checked + .m-radio-icon {
   background: transparent;
-  border: 0.0625rem solid #1976d2;
+  border: 0.0625rem solid #333;
 }
 
 .m-radio input[type="radio"]:checked + .m-radio-icon:after {
@@ -2827,7 +2827,7 @@ m-radio
   left: 50%;
   width: 65%;
   height: 65%;
-  background-color: #1976d2;
+  background-color: #333;
   border-radius: 50%;
   transform: translate(-50%, -50%);
 }
