@@ -31,10 +31,10 @@
 カラーコードは <code>_scss/_config_basic.scss</code> で変更することができます。</p>
 
 <div class="m-table-responsive">
-    <table class="m-table m-table-bordered m-table-justify">
+    <table class="m-table m-table-bordered">
         <thead>
             <tr>
-                <th rowspan="2" class="u-text-center">色名</th>
+                <th rowspan="2" colspan="2">&nbsp;</th>
                 <th colspan="3" class="u-text-center">強度</th>
             </tr>
             <tr>
@@ -45,40 +45,41 @@
         </thead>
         <tbody>
             <tr>
+                <th rowspan="6" class="u-text-center" style="width: 10%; vertical-align: middle;">色名</th>
                 <th class="u-text-center">default</th>
-                <td><span class="doc-colorchip" style="background-color: #333;"></span>#333</td>
-                <td><span class="doc-colorchip" style="background-color: #333;"></span>#333</td>
-                <td><span class="doc-colorchip" style="background-color: #eee;"></span>#eee</td>
+                <td><span class="doc-colorchip u-bg-default"></span>#333</td>
+                <td><span class="doc-colorchip" style="background-color: #000;"></span>#000</td>
+                <td><span class="doc-colorchip u-bg-default u-bg-fade"></span>#eee</td>
             </tr>
             <tr>
                 <th class="u-text-center">first</th>
-                <td><span class="doc-colorchip" style="background-color: #1976d2;"></span>#1976d2</td>
+                <td><span class="doc-colorchip u-bg-first"></span>#1976d2</td>
                 <td><span class="doc-colorchip" style="background-color: #0060c0;"></span>#0060c0</td>
-                <td><span class="doc-colorchip" style="background-color: #e3f0ff;"></span>#e3f0ff</td>
+                <td><span class="doc-colorchip u-bg-first u-bg-fade"></span>#e3f0ff</td>
             </tr>
             <tr>
                 <th class="u-text-center">second</th>
+                <td><span class="doc-colorchip u-bg-second"></span>#138420</td>
                 <td><span class="doc-colorchip" style="background-color: #138420;"></span>#138420</td>
-                <td><span class="doc-colorchip" style="background-color: #138420;"></span>#138420</td>
-                <td><span class="doc-colorchip" style="background-color: #edfbf3;"></span>#edfbf3</td>
+                <td><span class="doc-colorchip u-bg-second u-bg-fade"></span>#edfbf3</td>
             </tr>
             <tr>
                 <th class="u-text-center">third</th>
-                <td><span class="doc-colorchip" style="background-color: #ffb510;"></span>#ffb510</td>
+                <td><span class="doc-colorchip u-bg-third"></span>#ffb510</td>
                 <td><span class="doc-colorchip" style="background-color: #c05900;"></span>#c05900</td>
-                <td><span class="doc-colorchip" style="background-color: #fff6e3;"></span>#fff6e3</td>
+                <td><span class="doc-colorchip u-bg-third u-bg-fade"></span>#fff6e3</td>
             </tr>
             <tr>
                 <th class="u-text-center">info</th>
-                <td><span class="doc-colorchip" style="background-color: #138420;"></span>#138420</td>
-                <td><span class="doc-colorchip" style="background-color: #138420;"></span>#138420</td>
-                <td><span class="doc-colorchip" style="background-color: #edfbf3;"></span>#edfbf3</td>
+                <td><span class="doc-colorchip u-bg-info"></span>#138420</td>
+                <td><span class="doc-colorchip" style="background-color: #0060c0;"></span>#0060c0</td>
+                <td><span class="doc-colorchip u-bg-info u-bg-fade"></span>#edfbf3</td>
             </tr>
             <tr>
                 <th class="u-text-center">important</th>
+                <td><span class="doc-colorchip u-bg-important"></span>#d20b2a</td>
                 <td><span class="doc-colorchip" style="background-color: #d20b2a;"></span>#d20b2a</td>
-                <td><span class="doc-colorchip" style="background-color: #d20b2a;"></span>#d20b2a</td>
-                <td><span class="doc-colorchip" style="background-color: #ffe9f0;"></span>#ffe9f0</td>
+                <td><span class="doc-colorchip u-bg-important u-bg-fade"></span>#ffe9f0</td>
             </tr>
         </tbody>
     </table>
@@ -97,49 +98,49 @@
 
 <h3 class="echo-post-title-02">デザインカラー</h3>
 
-<h4 class="echo-post-title-03"><span class="doc-colorchip" style="background-color: #333;"></span>default</h4>
+<h4 class="echo-post-title-03"><span class="doc-colorchip u-bg-default"></span>default</h4>
 
-<p>グレースケール、もしくはグレースケールに限りなく近い彩度の色を指定します。ウェブサイトのルートの文字色や、ユーザーインターフェースの色に使用されています。</p>
+<p>ウェブサイトの基本となる色を指定します。<strong>グレースケール、もしくは彩度が低い色</strong>を想定しています。ナビゲーション、フォームなどのユーザーインターフェースにも使用されています。</p>
 
-<h4 class="echo-post-title-03"><span class="doc-colorchip" style="background-color: #0060c0;"></span>first</h4>
+<h4 class="echo-post-title-03"><span class="doc-colorchip u-bg-first"></span>first</h4>
 
-<p>ウェブサイトにおけるブランドカラー、もしくは強調色を指定します。基本のリンク色、チェックボックス、ラジオボタンのアイコン色に使用されています。</p>
+<p>ウェブサイトにおけるブランドカラー、もしくは強調色を指定します。<a href="#" onclick="return false;">通常のテキストリンク</a>に使用されています。それ以外のオブジェクトに使用する場合は、別途サブクラスを指定して有効にします。</p>
 
-<h4 class="echo-post-title-03"><span class="doc-colorchip" style="background-color: #138420;"></span>second</h4>
+<h4 class="echo-post-title-03"><span class="doc-colorchip u-bg-second"></span>second</h4>
 
-<p>ウェブサイトにおける補助色を指定します。この色名はオブジェクトには使用されておらず、別途サブクラスを指定して有効にします。</p>
+<p>ウェブサイトにおける補助色を指定します。<strong>firstの近似色</strong>を想定しています。この色はオブジェクトには使用されておらず、別途サブクラスを指定して有効にします。</p>
 
-<h4 class="echo-post-title-03"><span class="doc-colorchip" style="background-color: #ffb510;"></span>third</h4>
+<h4 class="echo-post-title-03"><span class="doc-colorchip u-bg-third"></span>third</h4>
 
-<p>ウェブサイトにおける警戒色、もしくはアクセントカラーを指定します。<strong>明度が高い色</strong>を想定しているため、 <code>.m-btn-third, .u-bg-third</code> などでは、内包する文字の色が <code>$body-color = $default-strong</code> となります。また、デフォルトのカラーテーブルでは <code>$third-strong</code> はかなり濃い色となります。この色はオブジェクトの基本色には含まれておらず、別途サブクラスを指定して有効にします。</p>
+<p>ウェブサイトにおけるアクセントカラーを指定します。<strong>firstの類似色か対照色であり、かつ高い明度</strong>を想定しているため、 <code>.m-btn-third, .m-label-third, .u-bg-third</code> では、内包する文字の色が <code>$body-color</code> となります。また <code>$third-strong</code> は、<strong>thirdと同じ色調で明度が低い色</strong>を想定しています。この色はオブジェクトには含まれておらず、別途サブクラスを指定して有効にします。</p>
 
 <h3 class="echo-post-title-02">システムカラー</h3>
 
-<h4 class="echo-post-title-03"><span class="doc-colorchip" style="background-color: #138420;"></span>info</h4>
+<h4 class="echo-post-title-03"><span class="doc-colorchip u-bg-info"></span>info</h4>
 
-<p>ウェブサイトのフォームなどで、ポジティブな情報を提供する際に使用される色を指定します。デフォルトでは <code>second</code> と同じ色コードとなっています。</p>
+<p>ウェブサイトのフォームなどで、ポジティブな情報を提供する際に使用される色を指定します。デフォルトでは <code>first</code> と同じ色コードとなっています。</p>
 
-<h4 class="echo-post-title-03"><span class="doc-colorchip" style="background-color: #d20b2a;"></span>important</h4>
+<h4 class="echo-post-title-03"><span class="doc-colorchip u-bg-important"></span>important</h4>
 
-<p>ウェブサイトの特別な強調色に使用される色、もしくはフォームなどで、ネガティブな情報を提供する際に使用される色を指定します。日本語圏では赤（red）が一般に使用されます。</p>
+<p>ウェブサイトの特別な強調色に使用される色、もしくはフォームなどで、ネガティブな情報を提供する際に使用される色を指定します。日本語圏では赤が一般に使用されます。</p>
 
 <h2 class="echo-post-title-01">色の強度と役割</h2>
 
-<p>それぞれの色は、強度で分類され、適切なモジュールで使用されることを想定しています。<br>
+<p>それぞれの色は、強度で分類され、適切なオブジェクトで使用されることを想定しています。<br>
 <code>light, dark</code> などの明度を表す単語を使用していないのは、暗色背景のウェブサイトに使用した場合に矛盾が生じるのを防ぐためです。<br>
 コントラスト比を確保できない問題があるため、中間の強度（ライトグレー）は使用していません。</p>
 
 <h3 class="echo-post-title-02">normal</h3>
 
-<p>塗りつぶしとボーダーの基本色です。ボタン、ナビゲーションなどさまざまなモジュールで使用されています。</p>
+<p>塗りつぶしやアウトラインの基本色です。ボタンやラベルなど、大半のオブジェクトで使用されています。</p>
 
 <h3 class="echo-post-title-02">strong</h3>
 
-<p>小さな文字のテキストカラーなど、<strong>高いコントラスト比を確保すべき箇所</strong>に使用します。 <code>normal</code> が充分なコントラスト比を持っている場合は、同じカラーコードを使用しても構いません。</p>
+<p>小さな文字の色など、<strong>高いコントラスト比を確保すべき箇所</strong>に指定します。normalが充分なコントラスト比を持っている場合は、同じカラーコードを使用しても構いません。</p>
 
 <h3 class="echo-post-title-02">fade</h3>
 
-<p>背景色を前提として使用されている強度です。 <code>.c-alert, .c-box</code> などに使用されています。 ルートの文字色が上に重なっても、充分なコントラスト比を確保できる色である必要があります。</p>
+<p>弱い背景色を前提として使用されている強度です。 <code>.c-alert, .c-box</code> などに使用されています。基本の文字色（default + normal）に対して、充分なコントラスト比を確保している必要があります。</p>
 
 
 <h2 class="echo-post-title-01">アクセシビリティ</h2>
