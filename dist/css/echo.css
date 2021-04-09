@@ -1414,14 +1414,14 @@ m-btn
   display: inline-block;
   padding: 0.5rem 1rem;
   background-color: transparent;
-  border: 2px solid #333;
+  border: 0.125rem solid #333;
   color: #333;
   font-size: 0.875rem;
   font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
   font-weight: 300;
   text-align: center;
   line-height: 1;
-  border-radius: 3px;
+  border-radius: 0.25rem;
   vertical-align: middle;
   transition: background-color .3s, border-color .3s, color .3s;
   cursor: pointer;
@@ -2212,7 +2212,7 @@ m-checkbox
   height: 1.25em;
   border: 0.0625rem solid #333;
   background-color: #fff;
-  border-radius: 3px;
+  border-radius: 0.1875rem;
   z-index: 4;
 }
 
@@ -2370,7 +2370,7 @@ m-input
   background: transparent none;
   border: 0.0625rem solid #333;
   color: #333;
-  border-radius: 3px;
+  border-radius: 0.25rem;
   vertical-align: middle;
   -webkit-appearance: none;
   appearance: none;
@@ -2906,7 +2906,7 @@ m-select
   background-color: transparent;
   border: 0.0625rem solid #333;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 0.25rem;
   z-index: 2;
 }
 
@@ -3010,22 +3010,22 @@ m-table-bordered
 */
 .m-table-bordered {
   width: 100%;
-  border-top: 1px solid #bbb;
-  border-left: 1px solid #bbb;
+  border-top: 0.0625rem solid #333;
+  border-left: 0.0625rem solid #333;
 }
 
 .m-table-bordered thead {
-  border-bottom: 2px solid #bbb;
+  border-bottom: 0.125rem solid #333;
 }
 
 .m-table-bordered tfoot {
-  border-top: 2px solid #bbb;
+  border-top: 0.125rem solid #333;
 }
 
 .m-table-bordered th,
 .m-table-bordered td {
-  border-bottom: 1px solid #bbb;
-  border-right: 1px solid #bbb;
+  border-bottom: 0.0625rem solid #333;
+  border-right: 0.0625rem solid #333;
   padding: .5rem;
 }
 
@@ -3049,12 +3049,12 @@ m-table-ruled
 }
 
 .m-table-ruled thead {
-  border-bottom: 2px solid #bbb;
+  border-bottom: 0.125rem solid #333;
 }
 
 .m-table-ruled th,
 .m-table-ruled td {
-  border-bottom: 1px solid #bbb;
+  border-bottom: 0.0625rem solid #333;
   padding-top: 1rem;
   padding-bottom: .5rem;
 }
@@ -3149,15 +3149,15 @@ m-table-break-sm-down
 }
 
 .m-table-break-sm-down.m-table-bordered thead {
-  border-bottom-width: 1px;
+  border-bottom-width: 0.0625rem;
 }
 
 .m-table-break-sm-down.m-table-bordered tfoot {
-  border-top-width: 1px;
+  border-top-width: 0.0625rem;
 }
 
 .m-table-break-sm-down.m-table-ruled thead {
-  border-bottom-width: 1px;
+  border-bottom-width: 0.0625rem;
 }
 
 /*
@@ -3188,7 +3188,7 @@ m-thumbnail
   position: relative;
   display: inline-block;
   background: #fff;
-  border: 0 solid #bbb;
+  border: 0 solid #333;
   vertical-align: bottom;
 }
 
@@ -3686,7 +3686,7 @@ c-alert
   margin: 0 0 30px;
   padding: 10px;
   background-color: #eee;
-  border: 1px solid #bbb;
+  border: 0.0625rem solid #333;
   line-height: 1.5;
 }
 
@@ -3771,9 +3771,9 @@ c-box
   position: relative;
   margin-bottom: 20px;
   padding: 20px;
-  border: 1px solid transparent;
+  border: 0.0625rem solid transparent;
   background-color: #eee;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
 }
 
 .c-box:before, .c-box:after {
@@ -4339,7 +4339,7 @@ c-form-append
 }
 
 .c-form-append .m-input + .m-btn {
-  margin-left: -2px;
+  margin-left: -0.125rem;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -5015,7 +5015,7 @@ c-pager
   margin-left: .25rem;
   margin-right: .25rem;
   border-style: solid;
-  border-width: 2px;
+  border-width: 0.125rem;
 }
 
 .c-pager .m-nav-item:not(.ellipsis):first-child {
@@ -5033,17 +5033,17 @@ c-pager
 
 .c-pager .m-nav-label {
   position: absolute;
-  top: -2px;
-  left: -2px;
-  bottom: -2px;
-  right: -2px;
+  top: -0.125rem;
+  left: -0.125rem;
+  bottom: -0.125rem;
+  right: -0.125rem;
   width: auto;
   height: auto;
   min-height: auto;
   font-size: inherit;
   padding: 0;
   border-style: solid;
-  border-width: 2px;
+  border-width: 0.125rem;
 }
 
 .c-pager .m-nav:not(.m-nav-inverse) .m-nav-item.is-current {
