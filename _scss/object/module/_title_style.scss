@@ -69,7 +69,7 @@
         left: 50%;
         transform: translate( -50%, 0 );
         width: 3em;
-        height: 3px;
+        height: .1875rem;
         background-color: $body-color;
     }
 
@@ -78,7 +78,7 @@
     &.#{$pr}#{$m}title#{$c3}level#{$c3}6 {
 
         &:after {
-            height: 2px;
+            height: .125rem;
         }
 
     }
@@ -95,7 +95,7 @@
         bottom: 0;
         left: 0;
         width: 100%;
-        height: 1px;
+        height: .0625rem;
         background-color: $body-color;
         z-index: 11;
     }
@@ -103,10 +103,10 @@
     &:after {
         position: absolute;
         content: "";
-        bottom: -2px;
+        bottom: -.125rem;
         left: 0;
         width: 3em;
-        height: 3px;
+        height: .1875rem;
         background-color: $body-color;
         z-index: 12;
     }
@@ -117,7 +117,7 @@
         margin-bottom: .5em;
 
         &:after {
-            height: 2px;
+            height: .125rem;
         }
 
     }
@@ -148,7 +148,7 @@
         left: 0;
         transform: translate( 0, -50% );
         width: .75em;
-        height: 3px;
+        height: .1875rem;
         background-color: $body-color;
     }
 

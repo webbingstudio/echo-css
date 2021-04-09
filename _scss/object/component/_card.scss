@@ -6,7 +6,7 @@
 
 .#{$pr}#{$c}card {
     position: relative;
-    max-width: 480px;
+    max-width: map-get( $object-max-widths, 'md' );
     margin-left: auto;
     margin-right: auto;
     background-color: $body-bg;

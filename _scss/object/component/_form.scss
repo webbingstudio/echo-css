@@ -159,10 +159,10 @@
     .#{$pr}#{$m}btn {
         padding-left: 0;
         padding-right: 0;
-        width: 320px;
+        width: map-get( $object-max-widths, 'sm' );
 
         @include media-breakpoint-up(lg) {
-            width: 400px;
+            width: map-get( $object-max-widths, 'md' );
         }
 
     }
@@ -185,7 +185,7 @@
         &:not(:last-child) {
 
             @include media-breakpoint-up(lg) {
-                width: 280px;
+                width: map-get( $object-max-widths, 'xs' );
             }
 
         }

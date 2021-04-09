@@ -7,7 +7,7 @@
 .#{$pr}#{$m}btn#{$c3}block {
     display: block;
     width: 100%;
-    max-width: 380px;
+    max-width: map-get( $object-max-widths, 'sm' );
     margin: 0 auto;
 
     &.#{$pr}#{$m}btn {
@@ -15,22 +15,31 @@
         padding-right: .5rem;
     }
 
+    &.#{$pr}#{$m}btn#{$c3}lg {
+
+        @include media-breakpoint-up(sm) {
+            max-width: map-get( $object-max-widths, 'md' );
+        }
+
+    }
+
     &.#{$pr}#{$m}btn#{$c3}xl {
 
         @include media-breakpoint-up(sm) {
-            max-width: 480px;
+            max-width: map-get( $object-max-widths, 'lg' );
         }
 
     }
 
     &.#{$pr}#{$m}btn#{$c3}xxl {
+        max-width: none;
 
         @include media-breakpoint-up(sm) {
-            max-width: 480px;
+            max-width: map-get( $object-max-widths, 'lg' );
         }
 
         @include media-breakpoint-up(lg) {
-            max-width: map-get($container-max-widths-md, lg); 
+            max-width: map-get( $object-max-widths, 'xl' ); 
         }
 
     }

@@ -32,7 +32,7 @@
 
     img {
         display: block;
-        max-width: 160px;
+        max-width: map-get( $object-max-widths, 'xs' );
         height: auto;
 
         @include media-breakpoint-up(sm) {
@@ -84,7 +84,7 @@ The minimum value of the margin between clickable elements is said that to be 8p
 --------------------
 */
 
-            padding-left: 8px;
+            padding-left: .5rem;
             padding-right: 0;
             letter-spacing: -.4em;
 

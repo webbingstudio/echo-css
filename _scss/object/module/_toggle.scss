@@ -7,8 +7,8 @@
 .#{$pr}#{$m}toggle {
     position: relative;
     display: inline-block;
-    width: 44px;
-    height: 44px;
+    width: $nav-min-size;
+    height: $nav-min-size;
     padding: 0;
     line-height: 1;
     border-width: 0;
@@ -77,8 +77,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 20px;
-    height: 3px;
+    width: 50%;
+    height: .1875rem;
     transform: translate( -50%, -50% );
     transition: background-color .3s;
 
@@ -89,7 +89,7 @@
         position: absolute;
         left: 0;
         right: 0;
-        height: 3px;
+        height: .1875rem;
         transform: rotate( 0deg );
         transform-origin: center center;
         transition:
@@ -98,15 +98,15 @@
     }
 
     &:before {
-        top: -9px;
+        top: -.5625rem;
     }
 
     &:after {
-        bottom: -9px;
+        bottom: -.5625rem;
     }
 
     .#{$pr}#{$m}toggle[aria-expanded="true"] & {
-        width: 26px;
+        width: 60%;
 
         &:before {
             top: 0;

@@ -5,7 +5,7 @@
 */
 
 .#{$pr}#{$c}step {
-    max-width: 480px;
+    max-width: map-get( $object-max-widths, 'md' );
     margin-left: auto;
     margin-right: auto;
     padding-top: ( $spacer * 3 );

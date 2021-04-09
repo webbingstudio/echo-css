@@ -148,7 +148,7 @@
     > .#{$pr}#{$m}btn {
 
         @include media-breakpoint-down(sm) {
-            max-width: 200px;
+            max-width: map-get( $object-max-widths, 'xs' );
             font-size: $btn-font-size-sm;
         }
 
