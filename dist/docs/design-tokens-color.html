@@ -34,46 +34,28 @@
     <table class="m-table m-table-bordered">
         <thead>
             <tr>
-                <th rowspan="2" colspan="2">&nbsp;</th>
+                <th rowspan="2" colspan="2" style="width: 22%;">&nbsp;</th>
                 <th colspan="3" class="u-text-center">強度</th>
             </tr>
             <tr>
-                <th class="u-text-center">normal</th>
-                <th class="u-text-center">strong</th>
-                <th class="u-text-center">fade</th>
+                <th class="u-text-center" style="width: 26%;">normal</th>
+                <th class="u-text-center" style="width: 26%;">strong</th>
+                <th class="u-text-center" style="width: 26%;">fade</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <th rowspan="6" class="u-text-center" style="width: 10%; vertical-align: middle;">色名</th>
+                <th rowspan="4" class="u-text-center" style="width: 1%; white-space: nowrap; vertical-align: middle;">システムカラー</th>
                 <th class="u-text-center">default</th>
                 <td><span class="doc-colorchip u-bg-default"></span>#333</td>
                 <td><span class="doc-colorchip" style="background-color: #000;"></span>#000</td>
                 <td><span class="doc-colorchip u-bg-default u-bg-fade"></span>#eee</td>
             </tr>
             <tr>
-                <th class="u-text-center">first</th>
-                <td><span class="doc-colorchip u-bg-first"></span>#1976d2</td>
-                <td><span class="doc-colorchip" style="background-color: #0057af;"></span>#0057af</td>
-                <td><span class="doc-colorchip u-bg-first u-bg-fade"></span>#e3f0ff</td>
-            </tr>
-            <tr>
-                <th class="u-text-center">second</th>
-                <td><span class="doc-colorchip u-bg-second"></span>#00ad95</td>
-                <td><span class="doc-colorchip" style="background-color: #008471;"></span>#008471</td>
-                <td><span class="doc-colorchip u-bg-second u-bg-fade"></span>#e5f7f4</td>
-            </tr>
-            <tr>
-                <th class="u-text-center">third</th>
-                <td><span class="doc-colorchip u-bg-third"></span>#ffb510</td>
-                <td><span class="doc-colorchip" style="background-color: #c05900;"></span>#c05900</td>
-                <td><span class="doc-colorchip u-bg-third u-bg-fade"></span>#fff6e3</td>
-            </tr>
-            <tr>
                 <th class="u-text-center">info</th>
-                <td><span class="doc-colorchip u-bg-info"></span>#138420</td>
-                <td><span class="doc-colorchip" style="background-color: #0060c0;"></span>#0060c0</td>
-                <td><span class="doc-colorchip u-bg-info u-bg-fade"></span>#edfbf3</td>
+                <td><span class="doc-colorchip u-bg-info"></span>#1976d2</td>
+                <td><span class="doc-colorchip" style="background-color: #0057af;"></span>#0057af</td>
+                <td><span class="doc-colorchip u-bg-info u-bg-fade"></span>#e3f0ff</td>
             </tr>
             <tr>
                 <th class="u-text-center">important</th>
@@ -81,54 +63,76 @@
                 <td><span class="doc-colorchip" style="background-color: #d20b2a;"></span>#d20b2a</td>
                 <td><span class="doc-colorchip u-bg-important u-bg-fade"></span>#ffe9f0</td>
             </tr>
+            <tr>
+                <th class="u-text-center">inverse</th>
+                <td class="u-bg-default"><span class="doc-colorchip u-bg-inverse"></span>#fff</td>
+                <td class="u-bg-default"><span class="doc-colorchip" style="background-color: #fff;"></span>#fff</td>
+                <td class="u-bg-default"><span class="doc-colorchip u-bg-inverse u-bg-fade"></span>rgba( 255,255,255,.15 )</td>
+            </tr>
+            <tr>
+                <th rowspan="3" class="u-text-center" style="width: 1%; white-space: nowrap; vertical-align: middle;">デザインカラー</th>
+                <th class="u-text-center">first</th>
+                <td><span class="doc-colorchip u-bg-first"></span>#1a9ea5</td>
+                <td><span class="doc-colorchip" style="background-color: #0f8d94;"></span>#0f8d94</td>
+                <td><span class="doc-colorchip u-bg-first u-bg-fade"></span>#e1f8f9</td>
+            </tr>
+            <tr>
+                <th class="u-text-center">second</th>
+                <td><span class="doc-colorchip u-bg-second"></span>#191</td>
+                <td><span class="doc-colorchip" style="background-color: #080;"></span>#080</td>
+                <td><span class="doc-colorchip u-bg-second u-bg-fade"></span>#e9f7dd</td>
+            </tr>
+            <tr>
+                <th class="u-text-center">third</th>
+                <td><span class="doc-colorchip u-bg-third"></span>#d2a219</td>
+                <td><span class="doc-colorchip" style="background-color: #a07700;"></span>#a07700</td>
+                <td><span class="doc-colorchip u-bg-third u-bg-fade"></span>#fdf9eb</td>
+            </tr>
         </tbody>
     </table>
 </div><!-- /.m-table-responsive -->
 
 <h2 class="echo-post-title-01">色名と役割</h2>
 
-<p>echo.cssではグレースケールの他に、3種類のデザインカラーと、2種類のシステムカラーを定義しています。デザインカラーは使用しなくても構いません。適切なルールに基づいていれば、<code>default</code> のみでウェブサイトを成立させることができます。</p>
-
-<p>色名を <code>primary, secondary...</code> にせず、単純な番号にしているのは、以下の理由からです。</p>
-
-<ul>
-    <li>オブジェクトの重要度は、色のみで表現されるとは限らないため</li>
-    <li>非英語圏のコーダーや、デザインの知識が少ないプログラマでも矛盾なく利用できるようにするため</li>
-</ul>
-
-<h3 class="echo-post-title-02">デザインカラー</h3>
-
-<h4 class="echo-post-title-03"><span class="doc-colorchip u-bg-default"></span>default</h4>
-
-<p>ウェブサイトの基本となる色を指定します。<strong>グレースケール、もしくは彩度が低い色</strong>を想定しています。ナビゲーション、フォームなどのユーザーインターフェースにも使用されています。</p>
-
-<h4 class="echo-post-title-03"><span class="doc-colorchip u-bg-first"></span>first</h4>
-
-<p>ウェブサイトにおけるブランドカラー、もしくは強調色を指定します。<a href="#" onclick="return false;">通常のテキストリンク</a>に使用されています。それ以外のオブジェクトに使用する場合は、別途サブクラスを指定して有効にします。</p>
-
-<h4 class="echo-post-title-03"><span class="doc-colorchip u-bg-second"></span>second</h4>
-
-<p>ウェブサイトにおける補助色を指定します。<strong>firstの近似色</strong>を想定しています。この色はオブジェクトには使用されておらず、別途サブクラスを指定して有効にします。<br>
-<span class="u-text-important">この色はアクセシビリティ面に課題があります。後述の「アクセシビリティ」を参照してください。</span></p>
-
-<h4 class="echo-post-title-03"><span class="doc-colorchip u-bg-third"></span>third</h4>
-
-<p>ウェブサイトにおけるアクセントカラーを指定します。<strong>firstの類似色か対照色であり、かつ高い明度</strong>を想定しているため、 <code>.m-btn-third, .m-label-third, .u-bg-third</code> では、内包する文字の色が <code>$body-color</code> となります。また <code>$third-strong</code> は、<strong>thirdと同じ色調で明度が低い色</strong>を想定しています。この色はオブジェクトには含まれておらず、別途サブクラスを指定して有効にします。</p>
+<p>echo.cssではグレースケールの他に、4種類のシステムカラーと、3種類のデザインカラーを定義しています。</p>
 
 <h3 class="echo-post-title-02">システムカラー</h3>
 
+<p>ウェブサイトを構成するうえで必須となる色です。適切なルールに基づいていれば、システムカラーのみでウェブサイトを成立させることができます。</p>
+
+<h4 class="echo-post-title-03"><span class="doc-colorchip u-bg-default"></span>default</h4>
+
+<p>ウェブサイトの文字色を指定します。<strong>グレースケール、もしくは彩度が低い色</strong>を想定しています。ナビゲーション、フォームなどのユーザーインターフェースにも使用されています。</p>
+
 <h4 class="echo-post-title-03"><span class="doc-colorchip u-bg-info"></span>info</h4>
 
-<p>ウェブサイトのフォームなどで、ポジティブな情報を提供する際に使用される色を指定します。デフォルトでは <code>first</code> と同じ色コードとなっています。</p>
+<p>弱い注目色を指定します。<a href="#" onclick="return false;">通常のテキストリンク</a>に使用されています。ウェブサイトのフォームなどで、ポジティブな情報を提供する際にも使用されます。ウェブサイトにおけるブランドカラーが望ましく、echo.cssでは青を使用しています。</p>
 
 <h4 class="echo-post-title-03"><span class="doc-colorchip u-bg-important"></span>important</h4>
 
-<p>ウェブサイトの特別な強調色に使用される色、もしくはフォームなどで、ネガティブな情報を提供する際に使用される色を指定します。日本語圏では赤が一般に使用されます。</p>
+<p>ウェブサイトの強い注目色に使用される色を指定します。フォームなどで、ネガティブな情報を提供する際にも使用されます。日本語圏では赤が一般に使用されます。</p>
+
+<h4 class="echo-post-title-03"><span class="doc-colorchip u-bg-inverse"></span>inverse</h4>
+
+<p>背景が暗色だったときの色を指定します。一般に、defaultの反転色が使用されます。</p>
+
+<h3 class="echo-post-title-02">デザインカラー</h3>
+
+<p>ユーティリティクラス <code>.u-border, .u-bg, .u-text</code> のみで使用できる色です。<br>
+あくまで装飾用の色群であり、優先度、役割等に関連付けることは推薦されません。破綻しなければ、forth, fifth... と追加しても構いません。<br>
+echo.cssではdefaultの近似色、類似色、反対色を定義しています。<br>
+<strong>デザインカラーは、アクセシビリティ面に課題があります。</strong>後述の「アクセシビリティ」を参照してください。</p>
+
+<h4 class="echo-post-title-03 u-margin-right-xl" style="display: inline-block;"><span class="doc-colorchip u-bg-first"></span>first</h4>
+
+<h4 class="echo-post-title-03 u-margin-right-xl" style="display: inline-block;"><span class="doc-colorchip u-bg-second"></span>second</h4>
+
+<h4 class="echo-post-title-03" style="display: inline-block;"><span class="doc-colorchip u-bg-third"></span>third</h4>
 
 <h2 class="echo-post-title-01">色の強度と役割</h2>
 
 <p>それぞれの色は、強度で分類され、適切なオブジェクトで使用されることを想定しています。<br>
-<code>light, dark</code> などの明度を表す単語を使用していないのは、暗色背景のウェブサイトに使用した場合に矛盾が生じるのを防ぐためです。<br>
+<code>light, dark</code> などの明度を表す単語を使用していないのは、暗色背景のウェブサイトに使用した場合の矛盾を防ぐためです。<br>
 コントラスト比を確保できない問題があるため、中間の強度（ライトグレー）は使用していません。</p>
 
 <h3 class="echo-post-title-02">normal</h3>
@@ -151,18 +155,18 @@
 
 <h3 class="echo-post-title-02"><a href="https://waic.github.io/wcag21/guidelines/#contrast-enhanced">達成基準1.4.6「コントラスト (高度)」</a>を満たす場合</h3>
 <ol>
-    <li>カラーテーブルの <code>$second, $third</code> の使用を避けてください。やむを得ず使用する場合は以下に注意してください。
+    <li>カラーテーブルの <code>$first, $second, $third</code> の使用を避けてください。やむを得ず使用する場合は以下に注意してください。
         <ol>
-            <li>カラーテーブルの <code>$second, $third, $info, $important</code> は、文字色に求められるコントラスト比(7.1)を確保できていません。<br>
-            Sass等でカラーを変更するか、文字サイズを大きく（最低18ポイント）してください。</li>
-            <li>カラーテーブルの <code>$third-strong</code> は、一部の色覚障害を持つ閲覧者には <code>$important-strong</code> との区別が困難になります。</li>
+            <li>カラーテーブルの <code>$first, $second, $third</code> は、本文テキストに求められるコントラスト比(7.1)を確保できていません。<br>
+            Sass等でカラーを変更してください。</li>
+            <li>一部の色覚障害を持つ閲覧者には、カラーテーブルの <code>$first</code> と <code>$info</code> 、および <code>$third</code> と <code>$important</code> の区別が困難になります。</li>
         </ol>
     </li>
 </ol>
 
 <h3 class="echo-post-title-02"><a href="https://waic.github.io/wcag21/guidelines/#contrast-minimum">達成基準1.4.3「コントラスト (最低限)」</a>を満たす場合</h3>
 <ol>
-    <li>カラーテーブルの <code>$second</code> は、文字色が白(#fff)だった場合、求められるコントラスト比(4.5)を確保できていません。Sass等でカラーを変更するか、塗りつぶしには使用しないでください。</li>
+    <li>カラーテーブルの <code>$first, $second, $third</code> は、本文テキストに求められるコントラスト比(4.5)を確保できていません。Sass等でカラーを変更するか、文字サイズを大きく（最低18ポイント）してください。</li>
 </ol>
 
 
