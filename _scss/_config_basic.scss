@@ -18,37 +18,42 @@ $rule: '' !default;
 // Colors
 // -----------------------------------------
 
-$default:                      #333 !default;
-$default-strong:               #333 !default;
-$default-fade:                 #eee !default;
+$default:                   #333 !default;
+$default-strong:            #333 !default;
+$default-fade:              #eee !default;
 
-$first:                     #1976d2 !default;
-$first-strong:              #0057af !default;
-$first-fade:                #e3f0ff !default;
-
-$second:                    #00ad95 !default;
-$second-strong:             #008471 !default;
-$second-fade:               #e5f7f4 !default;
-
-$third:                     #ffb510 !default;
-$third-strong:              #a76500 !default;
-$third-fade:                #fff6e3 !default;
-
-$info:                      $first !default;
-$info-strong:               $first-strong !default;
-$info-fade:                 $first-fade !default;
+$info:                      #1976d2 !default;
+$info-strong:               #0057af !default;
+$info-fade:                 #e3f0ff !default;
 
 $important:                 #d20b2a !default;
 $important-strong:          #d20b2a !default;
 $important-fade:            #ffe9f0 !default;
 
-$body-bg:                   #fff !default;
+$first:                     #1a9ea5 !default;
+$first-strong:              #0f8d94 !default;
+$first-fade:                #e1f8f9 !default;
+
+$second:                    #191 !default;
+$second-strong:             #080 !default;
+$second-fade:               #e9f7dd !default;
+
+$third:                     #d2a219 !default;
+$third-strong:              #a07700 !default;
+$third-fade:                #fdf9eb !default;
+
+$inverse:                   #fff !default;
+$inverse-strong:            #fff !default;
+$inverse-fade:              rgba( 255,255,255,.15 ) !default;
+
+
+$body-bg:                   $inverse-strong !default;
 $body-color:                $default !default;
 
-$body-inverse-bg:           #000 !default;
-$body-inverse-color:        #fff !default;
+$body-inverse-bg:           $default-strong !default;
+$body-inverse-color:        $inverse !default;
 
-$link-color:                $first-strong !default;
+$link-color:                $info-strong !default;
 $link-hover-color:          $link-color !default;
 
 
@@ -76,28 +81,28 @@ $ui-icon-color:                 $default !default;
 
 $ui-color:                      $body-color !default;
 $ui-bg:                         transparent !default;
-$ui-border-color:               $body-color !default;
+$ui-border-color:               $ui-color !default;
 $ui-hover-color:                $ui-color !default;
-$ui-hover-bg:                   rgba( $ui-color, .1 ) !default;
-$ui-hover-border-color:         $ui-border-color !default;
+$ui-hover-bg:                   $default-fade !default;
+$ui-hover-border-color:         $ui-color !default;
 
 $ui-current-color:              $body-inverse-color !default;
-$ui-current-bg:                 $body-color !default;
-$ui-current-border-color:       $body-color !default;
+$ui-current-bg:                 $ui-color !default;
+$ui-current-border-color:       $ui-color !default;
 $ui-current-hover-color:        $ui-current-color !default;
 $ui-current-hover-bg:           $ui-current-bg !default;
 $ui-current-hover-border-color: $ui-current-border-color !default;
 
 $ui-inverse-color:                      $body-inverse-color !default;
 $ui-inverse-bg:                         transparent !default;
-$ui-inverse-border-color:               $body-inverse-color !default;
-$ui-inverse-hover-color:                $body-inverse-color !default;
-$ui-inverse-hover-bg:                   rgba( $body-inverse-color, .2 ) !default;
+$ui-inverse-border-color:               $ui-inverse-color !default;
+$ui-inverse-hover-color:                $ui-inverse-color !default;
+$ui-inverse-hover-bg:                   $inverse-fade !default;
 $ui-inverse-hover-border-color:         $body-inverse-color !default;
 
 $ui-inverse-current-color:              $body-color !default;
-$ui-inverse-current-bg:                 rgba( $body-inverse-color, .8 ) !default;
-$ui-inverse-current-border-color:       $body-inverse-color !default;
+$ui-inverse-current-bg:                 $inverse !default;
+$ui-inverse-current-border-color:       $inverse !default;
 $ui-inverse-current-hover-color:        $ui-inverse-current-color !default;
 $ui-inverse-current-hover-bg:           $ui-inverse-current-bg !default;
 $ui-inverse-current-hover-border-color: $ui-inverse-current-border-color !default;
