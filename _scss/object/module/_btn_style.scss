@@ -5,8 +5,35 @@
 */
 
 .#{$pr}#{$m}btn#{$c3}style#{$c3}a {
+    @include button-variant(
+        $body-inverse-color,
+        $default,
+        $default,
+        $body-color,
+        transparent,
+        $default
+    );
+
+    transition:
+        background-color .3s,
+        border-color .3s,
+        color .3s;
+
 }
 
 .#{$pr}#{$m}btn#{$c3}style#{$c3}b {
+    @include button-variant(
+        $body-color,
+        transparent,
+        $default,
+        $body-inverse-color,
+        $default,
+        $default
+    );
+
+    transition:
+        background-color .3s,
+        border-color .3s,
+        color .3s;
 }
 

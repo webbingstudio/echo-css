@@ -6,17 +6,6 @@
 
 .#{$pr}#{$m}btn#{$c3}style#{$c3}a {
 
-    &.#{$pr}#{$m}btn#{$c3}default {
-        @include button-variant(
-            $body-inverse-color,
-            $default,
-            $default,
-            $body-color,
-            transparent,
-            $default
-        );
-    }
-
     &.#{$pr}#{$m}btn#{$c3}info {
         @include button-variant(
             $body-inverse-color,
@@ -41,7 +30,7 @@
 
     &.#{$pr}#{$m}btn#{$c3}inverse {
         @include button-variant(
-            $body-inverse-color,
+            $body-color,
             $inverse,
             $inverse,
             $body-inverse-color,

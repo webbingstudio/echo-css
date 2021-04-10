@@ -1413,8 +1413,8 @@ m-btn
   position: relative;
   display: inline-block;
   padding: 0.8125rem 1rem;
-  background-color: transparent;
-  border: 0.125rem solid #333;
+  background-color: #eee;
+  border: 0.125rem solid #eee;
   color: #333;
   font-size: 0.875rem;
   font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
@@ -1423,7 +1423,6 @@ m-btn
   line-height: 1;
   border-radius: 0.25rem;
   vertical-align: middle;
-  transition: background-color .3s, border-color .3s, color .3s;
   cursor: pointer;
   -webkit-appearance: none;
 }
@@ -1436,50 +1435,15 @@ a.m-btn:hover, a.m-btn:focus {
   text-decoration: none;
 }
 
-.m-btn:hover, .m-btn.hover, .m-btn:focus, .m-btn.focus, .m-btn:active, .m-btn.active {
+.m-btn:hover, .m-btn:focus, .m-btn:active {
   color: #333;
-  background-color: #eee;
   text-decoration: none;
 }
 
-.m-btn[disabled],
+.m-btn.disabled, .m-btn[disabled],
 fieldset[disabled] .m-btn {
   cursor: default;
   opacity: .65;
-}
-
-.m-btn[disabled]:hover, .m-btn[disabled].hover, .m-btn[disabled]:focus, .m-btn[disabled].focus, .m-btn[disabled]:active, .m-btn[disabled].active,
-fieldset[disabled] .m-btn:hover,
-fieldset[disabled] .m-btn.hover,
-fieldset[disabled] .m-btn:focus,
-fieldset[disabled] .m-btn.focus,
-fieldset[disabled] .m-btn:active,
-fieldset[disabled] .m-btn.active {
-  background-color: transparent;
-}
-
-a:hover .m-btn,
-a:focus .m-btn,
-a:active .m-btn {
-  color: #333;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-.m-btn img {
-  width: auto;
-  height: 1.1em;
-  vertical-align: middle;
-  transform: translate(0, -5%);
-}
-
-.m-btn [class*="fa"] {
-  font-size: 1.1em;
-  transform: translate(0, 5%);
-}
-
-a.m-btn[disabled],
-fieldset[disabled] a.m-btn {
   pointer-events: none;
 }
 
@@ -1698,6 +1662,78 @@ m-btn-square
 m-btn-style-(style)
 --------------------
 */
+.m-btn-style-a {
+  color: #fff;
+  background-color: #333;
+  border-color: #333;
+  transition: background-color .3s, border-color .3s, color .3s;
+}
+
+.m-btn-style-a:hover, .m-btn-style-a:focus, .m-btn-style-a:active, .m-btn-style-a.active {
+  color: #333;
+  background-color: transparent;
+  border-color: #333;
+}
+
+.m-btn-style-a.disabled, .m-btn-style-a:disabled,
+fieldset[disabled] .m-btn-style-a {
+  opacity: .65;
+}
+
+.m-btn-style-a.disabled:hover, .m-btn-style-a.disabled.hover, .m-btn-style-a.disabled:focus, .m-btn-style-a.disabled.focus, .m-btn-style-a:disabled:hover, .m-btn-style-a:disabled.hover, .m-btn-style-a:disabled:focus, .m-btn-style-a:disabled.focus,
+fieldset[disabled] .m-btn-style-a:hover,
+fieldset[disabled] .m-btn-style-a.hover,
+fieldset[disabled] .m-btn-style-a:focus,
+fieldset[disabled] .m-btn-style-a.focus {
+  color: #fff;
+  background-color: #333;
+  border-color: #333;
+}
+
+a:hover .m-btn-style-a,
+a:focus .m-btn-style-a,
+a:active .m-btn-style-a {
+  color: #333;
+  background-color: transparent;
+  border-color: #333;
+}
+
+.m-btn-style-b {
+  color: #333;
+  background-color: transparent;
+  border-color: #333;
+  transition: background-color .3s, border-color .3s, color .3s;
+}
+
+.m-btn-style-b:hover, .m-btn-style-b:focus, .m-btn-style-b:active, .m-btn-style-b.active {
+  color: #fff;
+  background-color: #333;
+  border-color: #333;
+}
+
+.m-btn-style-b.disabled, .m-btn-style-b:disabled,
+fieldset[disabled] .m-btn-style-b {
+  opacity: .65;
+}
+
+.m-btn-style-b.disabled:hover, .m-btn-style-b.disabled.hover, .m-btn-style-b.disabled:focus, .m-btn-style-b.disabled.focus, .m-btn-style-b:disabled:hover, .m-btn-style-b:disabled.hover, .m-btn-style-b:disabled:focus, .m-btn-style-b:disabled.focus,
+fieldset[disabled] .m-btn-style-b:hover,
+fieldset[disabled] .m-btn-style-b.hover,
+fieldset[disabled] .m-btn-style-b:focus,
+fieldset[disabled] .m-btn-style-b.focus {
+  color: #333;
+  background-color: transparent;
+  border-color: #333;
+}
+
+a:hover .m-btn-style-b,
+a:focus .m-btn-style-b,
+a:active .m-btn-style-b {
+  color: #fff;
+  background-color: #333;
+  border-color: #333;
+}
+
 /*
 --------------------
 m-checkbox

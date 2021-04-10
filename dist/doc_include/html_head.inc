@@ -3,7 +3,10 @@ if( !isset( $echo_path ) ) {
     $echo_path = '../';
 }
 ?>
-    <link rel="stylesheet" href="<?php echo $echo_path; ?>css/echo.min.css<?php echo '?var=' . date('YmdHis'); ?>">
+    <link rel="stylesheet" href="<?php echo $echo_path; ?>css/echo-core.min.css<?php echo '?var=' . date('YmdHis'); ?>">
+    <link rel="stylesheet" href="<?php echo $echo_path; ?>css/echo-color.min.css<?php echo '?var=' . date('YmdHis'); ?>">
+    <link rel="stylesheet" href="<?php echo $echo_path; ?>css/echo-font.min.css<?php echo '?var=' . date('YmdHis'); ?>">
+
 
     <script
         src="https://code.jquery.com/jquery-2.2.4.min.js"

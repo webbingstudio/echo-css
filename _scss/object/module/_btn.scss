@@ -8,19 +8,15 @@
     position: relative;
     display: inline-block;
     padding: $btn-padding-y-md $btn-padding-x-md;
-    background-color: $ui-bg;
-    border: $ui-btn-border-width solid $ui-border-color;
-    color: $ui-color;
+    background-color: $default-fade;
+    border: $ui-btn-border-width solid $default-fade;
+    color: $body-color;
     font-size: $btn-font-size-md;
     @include font-family-weight( 'root', 'normal' );
     text-align: center;
     line-height: 1;
     border-radius: $btn-border-radius;
     vertical-align: middle;
-    transition:
-        background-color .3s,
-        border-color .3s,
-        color .3s;
     cursor: pointer;
     -webkit-appearance: none;
 
@@ -39,59 +35,18 @@
     }
 
     &:hover,
-    &.hover,
     &:focus,
-    &.focus,
-    &:active,
-    &.active {
-        color: $ui-hover-color;
-        background-color: $ui-hover-bg;
+    &:active {
+        color: $body-color;
         text-decoration: none;
     }
 
+    &.disabled,
     &[disabled],
     fieldset[disabled] & {
         cursor: default;
         opacity: .65;
-
-        &:hover,
-        &.hover,
-        &:focus,
-        &.focus,
-        &:active,
-        &.active {
-            background-color: $ui-bg;
-        }
-
+        pointer-events: none;
     }
 
-    @at-root {
-
-        a:hover &,
-        a:focus &,
-        a:active & {
-            color: $ui-color;
-            background-color: $ui-bg;
-            text-decoration: none;
-        }
-
-    }
-
-    img {
-        width: auto;
-        height: 1.1em;
-        vertical-align: middle;
-        transform: translate(0, -5%);
-    }
-
-    [class*="fa"] {
-        font-size: 1.1em;
-        transform: translate(0, 5%);
-    }
-
-}
-
-a.#{$pr}#{$m}btn[disabled],
-fieldset[disabled] a.#{$pr}#{$m}btn {
-    pointer-events: none;
 }

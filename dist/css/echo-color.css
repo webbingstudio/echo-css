@@ -13,41 +13,6 @@
 m-btn-(color)
 --------------------
 */
-.m-btn-style-a.m-btn-default {
-  color: #fff;
-  background-color: #333;
-  border-color: #333;
-}
-
-.m-btn-style-a.m-btn-default:hover, .m-btn-style-a.m-btn-default:focus, .m-btn-style-a.m-btn-default:active, .m-btn-style-a.m-btn-default.active {
-  color: #333;
-  background-color: transparent;
-  border-color: #333;
-}
-
-.m-btn-style-a.m-btn-default.disabled, .m-btn-style-a.m-btn-default:disabled,
-fieldset[disabled] .m-btn-style-a.m-btn-default {
-  opacity: .65;
-}
-
-.m-btn-style-a.m-btn-default.disabled:hover, .m-btn-style-a.m-btn-default.disabled.hover, .m-btn-style-a.m-btn-default.disabled:focus, .m-btn-style-a.m-btn-default.disabled.focus, .m-btn-style-a.m-btn-default:disabled:hover, .m-btn-style-a.m-btn-default:disabled.hover, .m-btn-style-a.m-btn-default:disabled:focus, .m-btn-style-a.m-btn-default:disabled.focus,
-fieldset[disabled] .m-btn-style-a.m-btn-default:hover,
-fieldset[disabled] .m-btn-style-a.m-btn-default.hover,
-fieldset[disabled] .m-btn-style-a.m-btn-default:focus,
-fieldset[disabled] .m-btn-style-a.m-btn-default.focus {
-  color: #fff;
-  background-color: #333;
-  border-color: #333;
-}
-
-a:hover .m-btn-style-a.m-btn-default,
-a:focus .m-btn-style-a.m-btn-default,
-a:active .m-btn-style-a.m-btn-default {
-  color: #333;
-  background-color: transparent;
-  border-color: #333;
-}
-
 .m-btn-style-a.m-btn-info {
   color: #fff;
   background-color: #1976d2;
@@ -119,7 +84,7 @@ a:active .m-btn-style-a.m-btn-important {
 }
 
 .m-btn-style-a.m-btn-inverse {
-  color: #fff;
+  color: #333;
   background-color: #fff;
   border-color: #fff;
 }
@@ -140,7 +105,7 @@ fieldset[disabled] .m-btn-style-a.m-btn-inverse:hover,
 fieldset[disabled] .m-btn-style-a.m-btn-inverse.hover,
 fieldset[disabled] .m-btn-style-a.m-btn-inverse:focus,
 fieldset[disabled] .m-btn-style-a.m-btn-inverse.focus {
-  color: #fff;
+  color: #333;
   background-color: #fff;
   border-color: #fff;
 }
