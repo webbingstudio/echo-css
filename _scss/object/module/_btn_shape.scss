@@ -1,5 +1,155 @@
 /*
 --------------------
+#{$pr}#{$m}btn#{$c3}arrowed
+--------------------
+*/
+
+[class*="#{$pr}#{$m}btn#{$c3}arrowed"] {
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: .4375rem;
+        height: .4375rem;
+        border-top: .1875rem solid $body-color;
+        border-left: .1875rem solid $body-color;
+        border-radius: .125rem;
+    }
+
+    &.#{$pr}#{$m}btn#{$c3}xl {
+
+        &:after {
+            width: .5625rem;
+            height: .5625rem;
+        }
+
+    }
+
+    &.#{$pr}#{$m}btn#{$c3}xxl {
+
+        &:after {
+            width: .6875rem;
+            height: .6875rem;
+        }
+
+    }
+
+    &.#{$pr}#{$m}btn#{$c3}style#{$c3}a {
+
+        &:after {
+            border-top-color: $body-inverse-color;
+            border-left-color: $body-inverse-color;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+
+            &:after {
+                border-top-color: $body-color;
+                border-left-color: $body-color;
+            }
+
+        }
+
+        &.#{$pr}#{$m}btn#{$c3}inverse {
+
+            &:after {
+                border-top-color: $body-color;
+                border-left-color: $body-color;
+            }
+
+            &:hover,
+            &:focus,
+            &:active {
+
+                &:after {
+                    border-top-color: $body-inverse-color;
+                    border-left-color: $body-inverse-color;
+                }
+
+            }
+
+        }
+
+    }
+
+    &.#{$pr}#{$m}btn#{$c3}style#{$c3}b {
+
+        &:after {
+            border-top-color: $body-color;
+            border-left-color: $body-color;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+
+            &:after {
+                border-top-color: $body-inverse-color;
+                border-left-color: $body-inverse-color;
+            }
+
+        }
+
+        &.#{$pr}#{$m}btn#{$c3}inverse {
+
+            &:after {
+                border-top-color: $body-inverse-color;
+                border-left-color: $body-inverse-color;
+            }
+
+            &:hover,
+            &:focus,
+            &:active {
+
+                &:after {
+                    border-top-color: $body-color;
+                    border-left-color: $body-color;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+.#{$pr}#{$m}btn#{$c3}arrowed#{$c3}left {
+
+    &:not(.#{$pr}#{$m}btn#{$c3}block) {
+        padding-left: 2em;
+    }
+
+    &:after {
+        left: .5em;
+        transform:
+            translateY( -50% )
+            rotate( -45deg );
+    }
+
+}
+
+.#{$pr}#{$m}btn#{$c3}arrowed#{$c3}right {
+
+    &:not(.#{$pr}#{$m}btn#{$c3}block) {
+        padding-right: 2em;
+    }
+
+    &:after {
+        right: .5em;
+        transform:
+            translateY( -50% )
+            rotate( 135deg );
+    }
+
+}
+
+
+/*
+--------------------
 #{$pr}#{$m}btn#{$c3}block
 --------------------
 */
@@ -11,8 +161,8 @@
     margin: 0 auto;
 
     &.#{$pr}#{$m}btn {
-        padding-left: .5rem;
-        padding-right: .5rem;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     &.#{$pr}#{$m}btn#{$c3}lg {

@@ -1748,6 +1748,90 @@ m-btn-(size)
 
 /*
 --------------------
+m-btn-arrowed
+--------------------
+*/
+[class*="m-btn-arrowed"]:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: .4375rem;
+  height: .4375rem;
+  border-top: 0.1875rem solid #333;
+  border-left: 0.1875rem solid #333;
+  border-radius: .125rem;
+}
+
+[class*="m-btn-arrowed"].m-btn-xl:after {
+  width: .5625rem;
+  height: .5625rem;
+}
+
+[class*="m-btn-arrowed"].m-btn-xxl:after {
+  width: .6875rem;
+  height: .6875rem;
+}
+
+[class*="m-btn-arrowed"].m-btn-style-a:after {
+  border-top-color: #fff;
+  border-left-color: #fff;
+}
+
+[class*="m-btn-arrowed"].m-btn-style-a:hover:after, [class*="m-btn-arrowed"].m-btn-style-a:focus:after, [class*="m-btn-arrowed"].m-btn-style-a:active:after {
+  border-top-color: #333;
+  border-left-color: #333;
+}
+
+[class*="m-btn-arrowed"].m-btn-style-a.m-btn-inverse:after {
+  border-top-color: #333;
+  border-left-color: #333;
+}
+
+[class*="m-btn-arrowed"].m-btn-style-a.m-btn-inverse:hover:after, [class*="m-btn-arrowed"].m-btn-style-a.m-btn-inverse:focus:after, [class*="m-btn-arrowed"].m-btn-style-a.m-btn-inverse:active:after {
+  border-top-color: #fff;
+  border-left-color: #fff;
+}
+
+[class*="m-btn-arrowed"].m-btn-style-b:after {
+  border-top-color: #333;
+  border-left-color: #333;
+}
+
+[class*="m-btn-arrowed"].m-btn-style-b:hover:after, [class*="m-btn-arrowed"].m-btn-style-b:focus:after, [class*="m-btn-arrowed"].m-btn-style-b:active:after {
+  border-top-color: #fff;
+  border-left-color: #fff;
+}
+
+[class*="m-btn-arrowed"].m-btn-style-b.m-btn-inverse:after {
+  border-top-color: #fff;
+  border-left-color: #fff;
+}
+
+[class*="m-btn-arrowed"].m-btn-style-b.m-btn-inverse:hover:after, [class*="m-btn-arrowed"].m-btn-style-b.m-btn-inverse:focus:after, [class*="m-btn-arrowed"].m-btn-style-b.m-btn-inverse:active:after {
+  border-top-color: #333;
+  border-left-color: #333;
+}
+
+.m-btn-arrowed-left:not(.m-btn-block) {
+  padding-left: 2em;
+}
+
+.m-btn-arrowed-left:after {
+  left: .5em;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.m-btn-arrowed-right:not(.m-btn-block) {
+  padding-right: 2em;
+}
+
+.m-btn-arrowed-right:after {
+  right: .5em;
+  transform: translateY(-50%) rotate(135deg);
+}
+
+/*
+--------------------
 m-btn-block
 --------------------
 */
@@ -1759,8 +1843,8 @@ m-btn-block
 }
 
 .m-btn-block.m-btn {
-  padding-left: .5rem;
-  padding-right: .5rem;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 @media (min-width: 26.75rem) {
