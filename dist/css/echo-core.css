@@ -1485,225 +1485,6 @@ fieldset[disabled] a.m-btn {
 
 /*
 --------------------
-m-btn-bordered
---------------------
-*/
-.m-btn-bordered {
-  box-shadow: none;
-}
-
-.m-btn-bordered.m-btn-default {
-  color: inherit;
-  background-color: transparent;
-  border-color: #333;
-}
-
-.m-btn-bordered.m-btn-default:hover, .m-btn-bordered.m-btn-default:focus, .m-btn-bordered.m-btn-default:active, .m-btn-bordered.m-btn-default.active {
-  color: #fff;
-  background-color: #333;
-  border-color: transparent;
-}
-
-.m-btn-bordered.m-btn-default.disabled, .m-btn-bordered.m-btn-default:disabled,
-fieldset[disabled] .m-btn-bordered.m-btn-default {
-  opacity: .65;
-}
-
-.m-btn-bordered.m-btn-default.disabled:hover, .m-btn-bordered.m-btn-default.disabled.hover, .m-btn-bordered.m-btn-default.disabled:focus, .m-btn-bordered.m-btn-default.disabled.focus, .m-btn-bordered.m-btn-default:disabled:hover, .m-btn-bordered.m-btn-default:disabled.hover, .m-btn-bordered.m-btn-default:disabled:focus, .m-btn-bordered.m-btn-default:disabled.focus,
-fieldset[disabled] .m-btn-bordered.m-btn-default:hover,
-fieldset[disabled] .m-btn-bordered.m-btn-default.hover,
-fieldset[disabled] .m-btn-bordered.m-btn-default:focus,
-fieldset[disabled] .m-btn-bordered.m-btn-default.focus {
-  color: inherit;
-  background-color: transparent;
-  border-color: #333;
-}
-
-a:hover .m-btn-bordered.m-btn-default,
-a:focus .m-btn-bordered.m-btn-default,
-a:active .m-btn-bordered.m-btn-default {
-  color: #fff;
-  background-color: #333;
-  border-color: transparent;
-}
-
-.m-btn-bordered.m-btn-first {
-  color: inherit;
-  background-color: transparent;
-  border-color: #1a9ea5;
-}
-
-.m-btn-bordered.m-btn-first:hover, .m-btn-bordered.m-btn-first:focus, .m-btn-bordered.m-btn-first:active, .m-btn-bordered.m-btn-first.active {
-  color: #fff;
-  background-color: #1a9ea5;
-  border-color: transparent;
-}
-
-.m-btn-bordered.m-btn-first.disabled, .m-btn-bordered.m-btn-first:disabled,
-fieldset[disabled] .m-btn-bordered.m-btn-first {
-  opacity: .65;
-}
-
-.m-btn-bordered.m-btn-first.disabled:hover, .m-btn-bordered.m-btn-first.disabled.hover, .m-btn-bordered.m-btn-first.disabled:focus, .m-btn-bordered.m-btn-first.disabled.focus, .m-btn-bordered.m-btn-first:disabled:hover, .m-btn-bordered.m-btn-first:disabled.hover, .m-btn-bordered.m-btn-first:disabled:focus, .m-btn-bordered.m-btn-first:disabled.focus,
-fieldset[disabled] .m-btn-bordered.m-btn-first:hover,
-fieldset[disabled] .m-btn-bordered.m-btn-first.hover,
-fieldset[disabled] .m-btn-bordered.m-btn-first:focus,
-fieldset[disabled] .m-btn-bordered.m-btn-first.focus {
-  color: inherit;
-  background-color: transparent;
-  border-color: #1a9ea5;
-}
-
-a:hover .m-btn-bordered.m-btn-first,
-a:focus .m-btn-bordered.m-btn-first,
-a:active .m-btn-bordered.m-btn-first {
-  color: #fff;
-  background-color: #1a9ea5;
-  border-color: transparent;
-}
-
-.m-btn-bordered.m-btn-second {
-  color: inherit;
-  background-color: transparent;
-  border-color: #191;
-}
-
-.m-btn-bordered.m-btn-second:hover, .m-btn-bordered.m-btn-second:focus, .m-btn-bordered.m-btn-second:active, .m-btn-bordered.m-btn-second.active {
-  color: #fff;
-  background-color: #191;
-  border-color: transparent;
-}
-
-.m-btn-bordered.m-btn-second.disabled, .m-btn-bordered.m-btn-second:disabled,
-fieldset[disabled] .m-btn-bordered.m-btn-second {
-  opacity: .65;
-}
-
-.m-btn-bordered.m-btn-second.disabled:hover, .m-btn-bordered.m-btn-second.disabled.hover, .m-btn-bordered.m-btn-second.disabled:focus, .m-btn-bordered.m-btn-second.disabled.focus, .m-btn-bordered.m-btn-second:disabled:hover, .m-btn-bordered.m-btn-second:disabled.hover, .m-btn-bordered.m-btn-second:disabled:focus, .m-btn-bordered.m-btn-second:disabled.focus,
-fieldset[disabled] .m-btn-bordered.m-btn-second:hover,
-fieldset[disabled] .m-btn-bordered.m-btn-second.hover,
-fieldset[disabled] .m-btn-bordered.m-btn-second:focus,
-fieldset[disabled] .m-btn-bordered.m-btn-second.focus {
-  color: inherit;
-  background-color: transparent;
-  border-color: #191;
-}
-
-a:hover .m-btn-bordered.m-btn-second,
-a:focus .m-btn-bordered.m-btn-second,
-a:active .m-btn-bordered.m-btn-second {
-  color: #fff;
-  background-color: #191;
-  border-color: transparent;
-}
-
-.m-btn-bordered.m-btn-third {
-  color: inherit;
-  background-color: transparent;
-  border-color: #d2a219;
-}
-
-.m-btn-bordered.m-btn-third:hover, .m-btn-bordered.m-btn-third:focus, .m-btn-bordered.m-btn-third:active, .m-btn-bordered.m-btn-third.active {
-  color: inherit;
-  background-color: #d2a219;
-  border-color: transparent;
-}
-
-.m-btn-bordered.m-btn-third.disabled, .m-btn-bordered.m-btn-third:disabled,
-fieldset[disabled] .m-btn-bordered.m-btn-third {
-  opacity: .65;
-}
-
-.m-btn-bordered.m-btn-third.disabled:hover, .m-btn-bordered.m-btn-third.disabled.hover, .m-btn-bordered.m-btn-third.disabled:focus, .m-btn-bordered.m-btn-third.disabled.focus, .m-btn-bordered.m-btn-third:disabled:hover, .m-btn-bordered.m-btn-third:disabled.hover, .m-btn-bordered.m-btn-third:disabled:focus, .m-btn-bordered.m-btn-third:disabled.focus,
-fieldset[disabled] .m-btn-bordered.m-btn-third:hover,
-fieldset[disabled] .m-btn-bordered.m-btn-third.hover,
-fieldset[disabled] .m-btn-bordered.m-btn-third:focus,
-fieldset[disabled] .m-btn-bordered.m-btn-third.focus {
-  color: inherit;
-  background-color: transparent;
-  border-color: #d2a219;
-}
-
-a:hover .m-btn-bordered.m-btn-third,
-a:focus .m-btn-bordered.m-btn-third,
-a:active .m-btn-bordered.m-btn-third {
-  color: inherit;
-  background-color: #d2a219;
-  border-color: transparent;
-}
-
-.m-btn-bordered.m-btn-info {
-  color: inherit;
-  background-color: transparent;
-  border-color: #1976d2;
-}
-
-.m-btn-bordered.m-btn-info:hover, .m-btn-bordered.m-btn-info:focus, .m-btn-bordered.m-btn-info:active, .m-btn-bordered.m-btn-info.active {
-  color: #fff;
-  background-color: #1976d2;
-  border-color: transparent;
-}
-
-.m-btn-bordered.m-btn-info.disabled, .m-btn-bordered.m-btn-info:disabled,
-fieldset[disabled] .m-btn-bordered.m-btn-info {
-  opacity: .65;
-}
-
-.m-btn-bordered.m-btn-info.disabled:hover, .m-btn-bordered.m-btn-info.disabled.hover, .m-btn-bordered.m-btn-info.disabled:focus, .m-btn-bordered.m-btn-info.disabled.focus, .m-btn-bordered.m-btn-info:disabled:hover, .m-btn-bordered.m-btn-info:disabled.hover, .m-btn-bordered.m-btn-info:disabled:focus, .m-btn-bordered.m-btn-info:disabled.focus,
-fieldset[disabled] .m-btn-bordered.m-btn-info:hover,
-fieldset[disabled] .m-btn-bordered.m-btn-info.hover,
-fieldset[disabled] .m-btn-bordered.m-btn-info:focus,
-fieldset[disabled] .m-btn-bordered.m-btn-info.focus {
-  color: inherit;
-  background-color: transparent;
-  border-color: #1976d2;
-}
-
-a:hover .m-btn-bordered.m-btn-info,
-a:focus .m-btn-bordered.m-btn-info,
-a:active .m-btn-bordered.m-btn-info {
-  color: #fff;
-  background-color: #1976d2;
-  border-color: transparent;
-}
-
-.m-btn-bordered.m-btn-important {
-  color: inherit;
-  background-color: transparent;
-  border-color: #d20b2a;
-}
-
-.m-btn-bordered.m-btn-important:hover, .m-btn-bordered.m-btn-important:focus, .m-btn-bordered.m-btn-important:active, .m-btn-bordered.m-btn-important.active {
-  color: #fff;
-  background-color: #d20b2a;
-  border-color: transparent;
-}
-
-.m-btn-bordered.m-btn-important.disabled, .m-btn-bordered.m-btn-important:disabled,
-fieldset[disabled] .m-btn-bordered.m-btn-important {
-  opacity: .65;
-}
-
-.m-btn-bordered.m-btn-important.disabled:hover, .m-btn-bordered.m-btn-important.disabled.hover, .m-btn-bordered.m-btn-important.disabled:focus, .m-btn-bordered.m-btn-important.disabled.focus, .m-btn-bordered.m-btn-important:disabled:hover, .m-btn-bordered.m-btn-important:disabled.hover, .m-btn-bordered.m-btn-important:disabled:focus, .m-btn-bordered.m-btn-important:disabled.focus,
-fieldset[disabled] .m-btn-bordered.m-btn-important:hover,
-fieldset[disabled] .m-btn-bordered.m-btn-important.hover,
-fieldset[disabled] .m-btn-bordered.m-btn-important:focus,
-fieldset[disabled] .m-btn-bordered.m-btn-important.focus {
-  color: inherit;
-  background-color: transparent;
-  border-color: #d20b2a;
-}
-
-a:hover .m-btn-bordered.m-btn-important,
-a:focus .m-btn-bordered.m-btn-important,
-a:active .m-btn-bordered.m-btn-important {
-  color: #fff;
-  background-color: #d20b2a;
-  border-color: transparent;
-}
-
-/*
---------------------
 m-btn-(size)
 --------------------
 */
@@ -1813,10 +1594,10 @@ Specify a large value for "em", the button becomes an oval type
 
 /*
 --------------------
-m-btn-round
+m-btn-circle
 --------------------
 */
-.m-btn-round {
+.m-btn-circle {
   overflow: hidden;
   width: 2.75rem;
   height: 2.75rem;
@@ -1824,38 +1605,38 @@ m-btn-round
   border-radius: 50%;
 }
 
-.m-btn-round.m-btn {
+.m-btn-circle.m-btn {
   padding: 0;
 }
 
-.m-btn-round.m-btn-lg {
+.m-btn-circle.m-btn-lg {
   width: 3.5rem;
   height: 3.5rem;
   line-height: 3.5rem;
 }
 
-.m-btn-round.m-btn-xl {
+.m-btn-circle.m-btn-xl {
   width: 3.5rem;
   height: 3.5rem;
   line-height: 3.5rem;
 }
 
 @media (min-width: 48rem) {
-  .m-btn-round.m-btn-xl {
+  .m-btn-circle.m-btn-xl {
     width: 4.5rem;
     height: 4.5rem;
     line-height: 4.5rem;
   }
 }
 
-.m-btn-round.m-btn-xxl {
+.m-btn-circle.m-btn-xxl {
   width: 4.5rem;
   height: 4.5rem;
   line-height: 4.5rem;
 }
 
 @media (min-width: 48rem) {
-  .m-btn-round.m-btn-xxl {
+  .m-btn-circle.m-btn-xxl {
     width: 6rem;
     height: 6rem;
     line-height: 6rem;
@@ -1912,6 +1693,11 @@ m-btn-square
   }
 }
 
+/*
+--------------------
+m-btn-style-(style)
+--------------------
+*/
 /*
 --------------------
 m-checkbox

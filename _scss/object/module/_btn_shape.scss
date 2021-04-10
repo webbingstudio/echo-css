@@ -67,15 +67,15 @@ Specify a large value for "em", the button becomes an oval type
 
 /*
 --------------------
-#{$pr}#{$m}btn#{$c3}round
+#{$pr}#{$m}btn#{$c3}circle
 --------------------
 */
 
-.#{$pr}#{$m}btn#{$c3}round {
+.#{$pr}#{$m}btn#{$c3}circle {
     overflow: hidden;
-    width: $btn-round-width-md;
-    height: $btn-round-width-md;
-    line-height: $btn-round-width-md;
+    width: $btn-circle-width-md;
+    height: $btn-circle-width-md;
+    line-height: $btn-circle-width-md;
     border-radius: 50%;
 
     &.#{$pr}#{$m}btn {
@@ -83,32 +83,32 @@ Specify a large value for "em", the button becomes an oval type
     }
 
     &.#{$pr}#{$m}btn#{$c3}lg {
-        width: $btn-round-width-lg;
-        height: $btn-round-width-lg;
-        line-height: $btn-round-width-lg;
+        width: $btn-circle-width-lg;
+        height: $btn-circle-width-lg;
+        line-height: $btn-circle-width-lg;
     }
 
     &.#{$pr}#{$m}btn#{$c3}xl {
-        width: $btn-round-width-lg;
-        height: $btn-round-width-lg;
-        line-height: $btn-round-width-lg;
+        width: $btn-circle-width-lg;
+        height: $btn-circle-width-lg;
+        line-height: $btn-circle-width-lg;
 
         @include media-breakpoint-up(md) {
-            width: $btn-round-width-xl;
-            height: $btn-round-width-xl;
-            line-height: $btn-round-width-xl;
+            width: $btn-circle-width-xl;
+            height: $btn-circle-width-xl;
+            line-height: $btn-circle-width-xl;
         }
     }
 
     &.#{$pr}#{$m}btn#{$c3}xxl {
-        width: $btn-round-width-xl;
-        height: $btn-round-width-xl;
-        line-height: $btn-round-width-xl;
+        width: $btn-circle-width-xl;
+        height: $btn-circle-width-xl;
+        line-height: $btn-circle-width-xl;
 
         @include media-breakpoint-up(md) {
-            width: $btn-round-width-xxl;
-            height: $btn-round-width-xxl;
-            line-height: $btn-round-width-xxl;
+            width: $btn-circle-width-xxl;
+            height: $btn-circle-width-xxl;
+            line-height: $btn-circle-width-xxl;
         }
 
     }

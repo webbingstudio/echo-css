@@ -4,69 +4,100 @@
 --------------------
 */
 
-.#{$pr}#{$m}btn#{$c3}default {
-  @include button-variant(
-    $body-inverse-color,
-    $default,
-    transparent,
-    $body-color,
-    transparent,
-    $default
-  );
+.#{$pr}#{$m}btn#{$c3}style#{$c3}a {
+
+    &.#{$pr}#{$m}btn#{$c3}default {
+        @include button-variant(
+            $body-inverse-color,
+            $default,
+            $default,
+            $body-color,
+            transparent,
+            $default
+        );
+    }
+
+    &.#{$pr}#{$m}btn#{$c3}info {
+        @include button-variant(
+            $body-inverse-color,
+            $info,
+            $info,
+            $body-color,
+            transparent,
+            $info
+        );
+    }
+
+    &.#{$pr}#{$m}btn#{$c3}important {
+        @include button-variant(
+            $body-inverse-color,
+            $important,
+            $important,
+            $body-color,
+            transparent,
+            $important
+        );
+    }
+
+    &.#{$pr}#{$m}btn#{$c3}inverse {
+        @include button-variant(
+            $body-inverse-color,
+            $inverse,
+            $inverse,
+            $body-inverse-color,
+            transparent,
+            $inverse
+        );
+    }
+
 }
 
-.#{$pr}#{$m}btn#{$c3}first {
-  @include button-variant(
-    $body-inverse-color,
-    $first,
-    transparent,
-    $body-color,
-    transparent,
-    $first
-  );
-}
 
-.#{$pr}#{$m}btn#{$c3}second {
-  @include button-variant(
-    $body-inverse-color,
-    $second,
-    transparent,
-    $body-color,
-    transparent,
-    $second
-  );
-}
+.#{$pr}#{$m}btn#{$c3}style#{$c3}b {
 
-.#{$pr}#{$m}btn#{$c3}third {
-  @include button-variant(
-    $body-color,
-    $third,
-    transparent,
-    $body-color,
-    transparent,
-    $third
-  );
-}
+    &.#{$pr}#{$m}btn#{$c3}default {
+        @include button-variant(
+            $body-color,
+            transparent,
+            $default,
+            $body-inverse-color,
+            $default,
+            transparent
+        );
+    }
 
-.#{$pr}#{$m}btn#{$c3}info {
-  @include button-variant(
-    $body-inverse-color,
-    $info,
-    transparent,
-    $body-color,
-    transparent,
-    $info
-  );
-}
+    &.#{$pr}#{$m}btn#{$c3}info {
+        @include button-variant(
+            $body-color,
+            transparent,
+            $info,
+            $body-inverse-color,
+            $info,
+            transparent
+        );
+    }
 
-.#{$pr}#{$m}btn#{$c3}important {
-  @include button-variant(
-    $body-inverse-color,
-    $important,
-    transparent,
-    $body-color,
-    transparent,
-    $important
-  );
+    &.#{$pr}#{$m}btn#{$c3}important {
+        @include button-variant(
+            $body-color,
+            transparent,
+            $important,
+            $body-inverse-color,
+            $important,
+            transparent
+        );
+    }
+
+    &.#{$pr}#{$m}btn#{$c3}inverse {
+        @include button-variant(
+            $body-inverse-color,
+            transparent,
+            $inverse,
+            $body-color,
+            $inverse,
+            transparent
+        );
+    }
+
 }
 
