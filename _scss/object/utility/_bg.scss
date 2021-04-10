@@ -19,12 +19,62 @@
 
         }
 
-    }
-
-    .#{$pr}#{$u}bg#{$c3}default {
-
         &.#{$pr}#{$u}bg#{$c3}fade {
             background-color: $default-fade;
+        }
+
+    }
+
+    .#{$pr}#{$u}bg#{$c3}info {
+        background-color: $info;
+
+        &:not(.#{$pr}#{$u}bg#{$c3}fade) {
+            color: $body-inverse-color;
+
+            & a:not([class]) {
+                color: $body-inverse-color;
+            }
+
+        }
+
+        &.#{$pr}#{$u}bg#{$c3}fade {
+            background-color: $info-fade;
+        }
+
+    }
+
+    .#{$pr}#{$u}bg#{$c3}important {
+        background-color: $important;
+
+        &:not(.#{$pr}#{$u}bg#{$c3}fade) {
+            color: $body-inverse-color;
+
+            & a:not([class]) {
+                color: $body-inverse-color;
+            }
+
+        }
+
+        &.#{$pr}#{$u}bg#{$c3}fade {
+            background-color: $important-fade;
+        }
+
+    }
+
+    .#{$pr}#{$u}bg#{$c3}inverse {
+        background-color: $inverse;
+
+        &:not(.#{$pr}#{$u}bg#{$c3}fade) {
+            color: $body-color;
+
+            & a:not([class]) {
+                color: $body-color;
+            }
+
+        }
+
+        &.#{$pr}#{$u}bg#{$c3}fade {
+            background-color: $inverse-fade;
         }
 
     }
@@ -69,7 +119,7 @@
         background-color: $third;
 
         &:not(.#{$pr}#{$u}bg#{$c3}fade) {
-            color: $body-color;
+            color: $body-inverse-color;
 
             & a:not([class]) {
                 color: $body-inverse-color;
@@ -79,42 +129,6 @@
 
         &.#{$pr}#{$u}bg#{$c3}fade {
             background-color: $third-fade;
-        }
-
-    }
-
-    .#{$pr}#{$u}bg#{$c3}info {
-        background-color: $info;
-
-        &:not(.#{$pr}#{$u}bg#{$c3}fade) {
-            color: $body-inverse-color;
-
-            & a:not([class]) {
-                color: $body-inverse-color;
-            }
-
-        }
-
-        &.#{$pr}#{$u}bg#{$c3}fade {
-            background-color: $info-fade;
-        }
-
-    }
-
-    .#{$pr}#{$u}bg#{$c3}important {
-        background-color: $important;
-
-        &:not(.#{$pr}#{$u}bg#{$c3}fade) {
-            color: $body-inverse-color;
-
-            & a:not([class]) {
-                color: $body-inverse-color;
-            }
-
-        }
-
-        &.#{$pr}#{$u}bg#{$c3}fade {
-            background-color: $important-fade;
         }
 
     }

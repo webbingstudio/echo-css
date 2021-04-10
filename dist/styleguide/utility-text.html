@@ -26,13 +26,9 @@
 
                     <li class="m-list-item"><a href="#text-01-color" class="js-scrollto">u-text-(color)</a></li>
                     
-                    <li class="m-list-item"><a href="#text-02-root" class="js-scrollto">u-text-root</a></li>
+                    <li class="m-list-item"><a href="#text-02-direction" class="js-scrollto">u-text-(direction)(-(breakpont)-(up or down))</a></li>
                     
-                    <li class="m-list-item"><a href="#text-03-inverse" class="js-scrollto">u-text-inverse</a></li>
-                    
-                    <li class="m-list-item"><a href="#text-05-direction" class="js-scrollto">u-text-(direction)(-(breakpont)-(up or down))</a></li>
-                    
-                    <li class="m-list-item"><a href="#text-06-size" class="js-scrollto">u-text-(size)</a></li>
+                    <li class="m-list-item"><a href="#text-03-size" class="js-scrollto">u-text-(size)</a></li>
                     
                 </ul>
             </nav>
@@ -40,35 +36,26 @@
             <article class="s-post">
                 <div class="s-post-contents styleguide-contents"><h1 id="text-01-color" class="styleguide">u-text-(color)</h1>
 
-<p>文字色を変更する。(color)は<a href="../docs/design-tokens-color.html">標準のカラーテーブル</a>を参照。</p>
-<div class="example"><p class="u-text-first">u-text-first:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="u-text-second">u-text-second:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-<p class="u-text-third">u-text-third:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p>文字色を変更する。<br>
+オブジェクト・コンポーネントを可能な限り上書きするが、 <code>:hover, :focus</code> 等のステートがあるオブジェクトには対応していない。<br>
+(color)は<a href="../docs/design-tokens-color.html">標準のカラーテーブル</a>を参照。</p>
+<div class="example"><p class="u-text-default">u-text-default:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
 <p class="u-text-info">u-text-info:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
 <p class="u-text-important">u-text-important:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-</div><div class="codeblock"><pre><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"u-text-first"</span><span class="nt">&gt;</span>u-text-first:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"u-text-second"</span><span class="nt">&gt;</span>u-text-second:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"u-text-third"</span><span class="nt">&gt;</span>u-text-third:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<span class="nt">&lt;/p&gt;</span>
+<p class="u-bg-default u-padding-sm"><span class="u-text-inverse">u-text-inverse:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</span></p>
+<p class="u-text-first">u-text-first:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="u-text-second">u-text-second:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="u-text-third">u-text-third:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+</div><div class="codeblock"><pre><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"u-text-default"</span><span class="nt">&gt;</span>u-text-default:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"u-text-info"</span><span class="nt">&gt;</span>u-text-info:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"u-text-important"</span><span class="nt">&gt;</span>u-text-important:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"u-bg-default u-padding-sm"</span><span class="nt">&gt;</span><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"u-text-inverse"</span><span class="nt">&gt;</span>u-text-inverse:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<span class="nt">&lt;/span&gt;</span><span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"u-text-first"</span><span class="nt">&gt;</span>u-text-first:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"u-text-second"</span><span class="nt">&gt;</span>u-text-second:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"u-text-third"</span><span class="nt">&gt;</span>u-text-third:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<span class="nt">&lt;/p&gt;</span>
 </pre></div>
-<h1 id="text-02-root" class="styleguide">u-text-root</h1>
 
-<p>文字色をbody要素の文字色に戻す。</p>
-<div class="example"><p class="u-text-first">ここは文字色が first ですが、<span class="u-text-root">ここからbody要素の文字色に変更しました</span></p>
-</div><div class="codeblock"><pre><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"u-text-first"</span><span class="nt">&gt;</span>ここは文字色が first ですが、<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"u-text-root"</span><span class="nt">&gt;</span>ここからbody要素の文字色に変更しました<span class="nt">&lt;/span&gt;&lt;/p&gt;</span>
-</pre></div>
-<h1 id="text-03-inverse" class="styleguide">u-text-inverse</h1>
-
-<p>文字色を反転する（背景色を文字色とする）。</p>
-<div class="example"><div style="background-color: #000; padding: 1rem 0;">
-    <p class="u-text-inverse">u-text-inverse:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
-</div>
-</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"background-color: #000; padding: 1rem 0;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"u-text-inverse"</span><span class="nt">&gt;</span>u-text-inverse:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</pre></div>
-<h1 id="text-05-direction" class="styleguide">u-text-(direction)(-(breakpont)-(up or down))</h1>
+<h1 id="text-02-direction" class="styleguide">u-text-(direction)(-(breakpont)-(up or down))</h1>
 
 <p>ブロック要素内の文章を指定した方向へ寄せる。<br>
 (breakpoint)の指定がない場合は、常にその方向となる。<br>
@@ -112,7 +99,7 @@
 
 <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"u-text-right u-text-center-lg-up"</span><span class="nt">&gt;</span>u-text-right:u-text-center-lg-up:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<span class="nt">&lt;br&gt;</span>何でも薄暗いじめじめした所で<span class="nt">&lt;br&gt;</span>ニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/p&gt;</span>
 </pre></div>
-<h1 id="text-06-size" class="styleguide">u-text-(size)</h1>
+<h1 id="text-03-size" class="styleguide">u-text-(size)</h1>
 
 <p>文字サイズを、<strong>現在の文字サイズの相対値</strong>（ <code>em</code> ）で変更する。<br>
 ただし、 <code>.u-text-md</code> のみ、単位が <code>rem</code> （html要素の文字サイズ）となる。</p>
