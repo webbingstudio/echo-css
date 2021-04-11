@@ -1,0 +1,18 @@
+/*
+--------------------
+#{$pr}#{$m}label#{$c3}oval
+--------------------
+*/
+
+/*
+note: Meaning of "10em"
+「em」で大きな値を指定すると、ボタンが小判型になります。
+Specify a large value for "em", the button becomes an oval type
+--------------------
+*/
+
+.#{$pr}#{$m}label#{$c3}oval {
+    border-radius: 10em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
