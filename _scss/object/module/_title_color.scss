@@ -3,3 +3,17 @@
 #{$pr}#{$m}title#{$c3}(color)
 --------------------
 */
+
+.#{$pr}#{$m}title#{$c3}style#{$c3}c,
+.#{$pr}#{$m}title#{$c3}style#{$c3}d,
+.#{$pr}#{$m}title#{$c3}style#{$c3}f {
+
+    &:after {
+        background-color: $title-key-color;
+    }
+
+}
+
+.#{$pr}#{$m}title#{$c3}style#{$c3}e {
+    background-color: $title-key-bg;
+}
