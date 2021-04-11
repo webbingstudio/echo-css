@@ -1,0 +1,79 @@
+/*
+--------------------
+#{$pr}#{$u}border#{$c3}(color)
+--------------------
+*/
+
+#{$u-wrap} {
+
+    .#{$pr}#{$u}border#{$c3}default {
+        border-color: $default;
+
+        th,
+        td {
+            border-color: $default;
+        }
+
+    }
+
+    .#{$pr}#{$u}border#{$c3}info {
+        border-color: $info;
+
+        th,
+        td {
+            border-color: $info;
+        }
+
+    }
+
+    .#{$pr}#{$u}border#{$c3}important {
+        border-color: $important;
+
+        th,
+        td {
+            border-color: $important;
+        }
+
+    }
+
+    .#{$pr}#{$u}border#{$c3}inverse {
+        border-color: $inverse;
+
+        th,
+        td {
+            border-color: $inverse;
+        }
+
+    }
+
+    .#{$pr}#{$u}border#{$c3}first {
+        border-color: $first;
+
+        th,
+        td {
+            border-color: $first;
+        }
+
+    }
+
+    .#{$pr}#{$u}border#{$c3}second {
+        border-color: $second;
+
+        th,
+        td {
+            border-color: $second;
+        }
+
+    }
+
+    .#{$pr}#{$u}border#{$c3}third {
+        border-color: $third;
+
+        th,
+        td {
+            border-color: $third;
+        }
+
+    }
+
+}

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>utility-border | Style guide | echo-css</title>
+    <meta property="og:title" content="utility-border | Style guide | echo-css">
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div class="l-document" id="document">
+
+    <?php include('../doc_include/header.inc'); ?>
+
+    <main class="p-main" role="main">
+        <div class="l-container l-container-fluid">
+
+            <div class="echo-pagehead">
+                <h1 class="echo-pagehead-title">utility-border</h1>
+            </div><!-- /.echo-pagehead -->
+
+            <nav class="echo-anchor">
+                <ul class="m-list m-list-horizontal">
+                    
+                    <li class="m-list-item"><a href="#border-01-color" class="js-scrollto">u-border-(color)</a></li>
+                    
+                </ul>
+            </nav>
+            
+
+            <article class="s-post">
+                <div class="s-post-contents styleguide-contents"><h1 id="border-01-color" class="styleguide">u-border-(color)</h1>
+
+<p><strong>border関連のプロパティが可視状態となっている要素</strong>の罫線に色をつける。<br>
+<code>.m-btn</code> のような、ステートを持つ要素には対応していない。</p>
+
+<p>オブジェクト・コンポーネントを可能な限り上書きし、table要素の場合は内包する <code>th, td</code> の色も変更する。<br>
+(color)は<a href="../docs/design-tokens-color.html">標準のカラーテーブル</a>を参照。</p>
+
+<div class="example">
+
+<p class="m-title m-title-level-4 m-title-style-a">.c-box + .c-box-style-b</p>
+<div class="c-box c-box-style-b u-border-default"><p>u-border-default</p></div>
+<div class="c-box c-box-style-b u-border-info"><p>u-border-info</p></div>
+<div class="c-box c-box-style-b u-border-important"><p>u-border-important</p></div>
+<div class="u-bg-default u-padding-sm u-margin-bottom-lg"><div class="c-box c-box-style-b u-border-inverse u-text-inverse u-margin-bottom-0"><p>u-border-inverse +  u-text-inverse</p></div></div>
+<div class="c-box c-box-style-b u-border-first"><p>u-border-first</p></div>
+<div class="c-box c-box-style-b u-border-second"><p>u-border-second</p></div>
+<div class="c-box c-box-style-b u-border-third"><p>u-border-third</p></div>
+
+<p class="m-title m-title-level-4 m-title-style-a">.m-table + .m-table-bordered</p>
+<table class="m-table m-table-bordered u-border-default u-margin-bottom-lg">
+    <caption>u-border-default</caption>
+    <tbody>
+        <tr>
+            <th>吾輩は猫である</th>
+            <td>名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+        <tr>
+            <th>吾輩は猫である名前はまだ無い。</th>
+            <td>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+        <tr>
+            <th>吾輩は猫</th>
+            <td>である名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="m-table m-table-bordered u-border-info u-margin-bottom-lg">
+    <caption>u-border-info</caption>
+    <tbody>
+        <tr>
+            <th>吾輩は猫である</th>
+            <td>名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+        <tr>
+            <th>吾輩は猫である名前はまだ無い。</th>
+            <td>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+        <tr>
+            <th>吾輩は猫</th>
+            <td>である名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="m-table m-table-bordered u-border-important u-margin-bottom-lg">
+    <caption>u-border-important</caption>
+    <tbody>
+        <tr>
+            <th>吾輩は猫である</th>
+            <td>名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+        <tr>
+            <th>吾輩は猫である名前はまだ無い。</th>
+            <td>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+        <tr>
+            <th>吾輩は猫</th>
+            <td>である名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="u-bg-default u-padding-sm u-margin-bottom-lg">
+<table class="m-table m-table-bordered u-border-inverse u-text-inverse">
+    <caption>u-border-inverse + u-text-inverse</caption>
+    <tbody>
+        <tr>
+            <th>吾輩は猫である</th>
+            <td>名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+        <tr>
+            <th>吾輩は猫である名前はまだ無い。</th>
+            <td>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+        <tr>
+            <th>吾輩は猫</th>
+            <td>である名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<table class="m-table m-table-bordered u-border-first u-margin-bottom-lg">
+    <caption>u-border-first</caption>
+    <tbody>
+        <tr>
+            <th>吾輩は猫である</th>
+            <td>名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+        <tr>
+            <th>吾輩は猫である名前はまだ無い。</th>
+            <td>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+        <tr>
+            <th>吾輩は猫</th>
+            <td>である名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="m-table m-table-bordered u-border-second u-margin-bottom-lg">
+    <caption>u-border-second</caption>
+    <tbody>
+        <tr>
+            <th>吾輩は猫である</th>
+            <td>名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+        <tr>
+            <th>吾輩は猫である名前はまだ無い。</th>
+            <td>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+        <tr>
+            <th>吾輩は猫</th>
+            <td>である名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="m-table m-table-bordered u-border-third u-margin-bottom-lg">
+    <caption>u-border-third</caption>
+    <tbody>
+        <tr>
+            <th>吾輩は猫である</th>
+            <td>名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+        <tr>
+            <th>吾輩は猫である名前はまだ無い。</th>
+            <td>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+        <tr>
+            <th>吾輩は猫</th>
+            <td>である名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</td>
+        </tr>
+    </tbody>
+</table>
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;p class="m-title m-title-level-4 m-title-style-a"&gt;.c-box + .c-box-style-b&lt;/p&gt;
+&lt;div class="c-box c-box-style-b u-border-default"&gt;&lt;p&gt;u-border-default&lt;/p&gt;&lt;/div&gt;
+&lt;div class="c-box c-box-style-b u-border-info"&gt;&lt;p&gt;u-border-info&lt;/p&gt;&lt;/div&gt;
+&lt;div class="c-box c-box-style-b u-border-important"&gt;&lt;p&gt;u-border-important&lt;/p&gt;&lt;/div&gt;
+&lt;div class="u-bg-default u-padding-sm u-margin-bottom-lg"&gt;&lt;div class="c-box c-box-style-b u-border-inverse u-text-inverse u-margin-bottom-0"&gt;&lt;p&gt;u-border-inverse +  u-text-inverse&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class="c-box c-box-style-b u-border-first"&gt;&lt;p&gt;u-border-first&lt;/p&gt;&lt;/div&gt;
+&lt;div class="c-box c-box-style-b u-border-second"&gt;&lt;p&gt;u-border-second&lt;/p&gt;&lt;/div&gt;
+&lt;div class="c-box c-box-style-b u-border-third"&gt;&lt;p&gt;u-border-third&lt;/p&gt;&lt;/div&gt;
+
+&lt;p class="m-title m-title-level-4 m-title-style-a"&gt;.m-table + .m-table-bordered&lt;/p&gt;
+&lt;table class="m-table m-table-bordered u-border-default u-margin-bottom-lg"&gt;
+    &lt;caption&gt;u-border-default&lt;/caption&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th&gt;吾輩は猫である&lt;/th&gt;
+            &lt;td&gt;名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;吾輩は猫である名前はまだ無い。&lt;/th&gt;
+            &lt;td&gt;どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;吾輩は猫&lt;/th&gt;
+            &lt;td&gt;である名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table class="m-table m-table-bordered u-border-info u-margin-bottom-lg"&gt;
+    &lt;caption&gt;u-border-info&lt;/caption&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th&gt;吾輩は猫である&lt;/th&gt;
+            &lt;td&gt;名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;吾輩は猫である名前はまだ無い。&lt;/th&gt;
+            &lt;td&gt;どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;吾輩は猫&lt;/th&gt;
+            &lt;td&gt;である名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table class="m-table m-table-bordered u-border-important u-margin-bottom-lg"&gt;
+    &lt;caption&gt;u-border-important&lt;/caption&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th&gt;吾輩は猫である&lt;/th&gt;
+            &lt;td&gt;名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;吾輩は猫である名前はまだ無い。&lt;/th&gt;
+            &lt;td&gt;どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;吾輩は猫&lt;/th&gt;
+            &lt;td&gt;である名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;div class="u-bg-default u-padding-sm u-margin-bottom-lg"&gt;
+&lt;table class="m-table m-table-bordered u-border-inverse u-text-inverse"&gt;
+    &lt;caption&gt;u-border-inverse + u-text-inverse&lt;/caption&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th&gt;吾輩は猫である&lt;/th&gt;
+            &lt;td&gt;名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;吾輩は猫である名前はまだ無い。&lt;/th&gt;
+            &lt;td&gt;どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;吾輩は猫&lt;/th&gt;
+            &lt;td&gt;である名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;table class="m-table m-table-bordered u-border-first u-margin-bottom-lg"&gt;
+    &lt;caption&gt;u-border-first&lt;/caption&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th&gt;吾輩は猫である&lt;/th&gt;
+            &lt;td&gt;名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;吾輩は猫である名前はまだ無い。&lt;/th&gt;
+            &lt;td&gt;どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;吾輩は猫&lt;/th&gt;
+            &lt;td&gt;である名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table class="m-table m-table-bordered u-border-second u-margin-bottom-lg"&gt;
+    &lt;caption&gt;u-border-second&lt;/caption&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th&gt;吾輩は猫である&lt;/th&gt;
+            &lt;td&gt;名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;吾輩は猫である名前はまだ無い。&lt;/th&gt;
+            &lt;td&gt;どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;吾輩は猫&lt;/th&gt;
+            &lt;td&gt;である名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table class="m-table m-table-bordered u-border-third u-margin-bottom-lg"&gt;
+    &lt;caption&gt;u-border-third&lt;/caption&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th&gt;吾輩は猫である&lt;/th&gt;
+            &lt;td&gt;名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;吾輩は猫である名前はまだ無い。&lt;/th&gt;
+            &lt;td&gt;どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;吾輩は猫&lt;/th&gt;
+            &lt;td&gt;である名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre></div>
+
+<?php include('../doc_include/footer.inc'); ?>
