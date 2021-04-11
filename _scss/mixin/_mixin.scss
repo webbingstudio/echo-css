@@ -267,6 +267,14 @@
         border-color: $hover-border;
     }
 
+    a:hover &,
+    a:focus &,
+    a:active & {
+        color: $hover-color;
+        background-color: $hover-background;
+        border-color: $hover-border;
+    }
+
     &.disabled,
     &:disabled,
     fieldset[disabled] & {

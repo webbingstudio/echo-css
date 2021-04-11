@@ -20,6 +20,28 @@
     cursor: pointer;
     -webkit-appearance: none;
 
+    &:hover,
+    &:focus,
+    &:active {
+        color: $body-color;
+        text-decoration: none;
+    }
+
+    a:hover &,
+    a:focus &,
+    a:active & {
+        color: $body-color;
+        text-decoration: none;
+    }
+
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        cursor: default;
+        opacity: .65;
+        pointer-events: none;
+    }
+
     @at-root {
 
         a#{&} {
@@ -32,21 +54,6 @@
 
         }
 
-    }
-
-    &:hover,
-    &:focus,
-    &:active {
-        color: $body-color;
-        text-decoration: none;
-    }
-
-    &.disabled,
-    &[disabled],
-    fieldset[disabled] & {
-        cursor: default;
-        opacity: .65;
-        pointer-events: none;
     }
 
 }

@@ -25,14 +25,14 @@
             <article class="s-post">
                 <div class="s-post-contents styleguide-contents"><h1 id="card" class="styleguide">c-card</h1>
 
-<p>新着情報のエントリー繰り返し部分などに使用する、カード状のコンポーネントを表示する。<br>
-<code>.m-title, .m-thumbnail</code> を含む前提となっている。<br>
-リンクを含む場合は <code>.c-card-title.m-title</code> に下線が引かれる。リンクが不要な場合であっても <code>.c-card-inner</code> が必須であることに注意する。<br>
+<p>投稿の繰り返し部分などに使用する、カード状のコンポーネントを表示する。<br>
+<code>.m-btn, .m-title, .m-thumbnail</code> を含めることができる。<br>
+リンクを含む場合は <code>.c-card-title</code> に下線が引かれる。リンクが不要な場合であっても <code>.c-card-inner</code> が必須であることに注意する。<br>
 カード背景には、body要素の基本背景色 <code>$body-bg</code> が指定されている。</p>
-<div class="example">
-<div style="margin-bottom: 2rem;">
 
-<div class="c-card">
+<div class="example">
+
+<div class="c-card u-margin-bottom-lg">
     <div class="c-card-inner">
         <div class="c-card-header">
             <h3 class="c-card-title m-title m-title-level-3 m-title-style-b">これはカードです</h3>
@@ -57,11 +57,9 @@
     </div><!-- /.c-card-inner -->
 </div><!-- /.c-card -->
 
-</div>
-<div style="margin-bottom: 2rem;">
 
-<div class="l-grid-row">
-    <div class="l-grid-col-6 l-grid-col-md-3" style="padding-bottom: 1rem;">
+<div class="l-grid-row u-margin-bottom-lg">
+    <div class="l-grid-col-6 l-grid-col-md-3">
         <div class="c-card">
             <a href="#" class="c-card-inner">
                 <div class="c-card-object">
@@ -86,7 +84,7 @@
             </a><!-- /.c-card-innner -->
         </div><!-- /.c-card -->
     </div><!-- /.l-grid-col -->
-    <div class="l-grid-col-6 l-grid-col-md-3" style="padding-bottom: 1rem;">
+    <div class="l-grid-col-6 l-grid-col-md-3">
         <div class="c-card">
             <a href="#" class="c-card-inner">
                 <div class="c-card-object">
@@ -107,11 +105,12 @@
                     <time class="c-card-meta" datetime="2020-12-28T09:00:00+09:00">2020.12.28</time>
                     <h3 class="c-card-title m-title m-title-level-4 m-title-style-a">カード全体をリンク範囲にする場合</h3>
                     <p class="c-card-body">このカードは、全体がリンク範囲になっています。c-card-innner をa要素に書き換えてください。</p>
+                    <p class="c-card-body"><span class="m-btn m-btn-block m-btn-style-b m-btn-info m-btn-arrowed-right">ボタン</span></p>
                 </div><!-- /.c-card-contents -->
             </a><!-- /.c-card-innner -->
         </div><!-- /.c-card -->
     </div><!-- /.l-grid-col -->
-    <div class="l-grid-col-6 l-grid-col-md-3" style="padding-bottom: 1rem;">
+    <div class="l-grid-col-6 l-grid-col-md-3">
         <div class="c-card">
             <a href="#" class="c-card-inner">
                 <div class="c-card-object">
@@ -136,7 +135,7 @@
             </a><!-- /.c-card-innner -->
         </div><!-- /.c-card -->
     </div><!-- /.l-grid-col -->
-    <div class="l-grid-col-6 l-grid-col-md-3" style="padding-bottom: 1rem;">
+    <div class="l-grid-col-6 l-grid-col-md-3">
         <div class="c-card">
             <a href="#" class="c-card-inner">
                 <div class="c-card-object">
@@ -163,60 +162,54 @@
     </div><!-- /.l-grid-col -->
 </div><!-- .l-grid-row -->
 
-</div>
+<div class="c-card u-bg-first u-margin-bottom-lg">
+    <div class="c-card-inner">
+        <div class="c-card-object">
+            <figure class="m-thumbnail m-thumbnail-ogimage">
+                <picture>
+                <source
+                    media="(max-width:640px)"
+                    srcset="../images/_dummy/image_03_s.jpg 640w"
+                    sizes="100vw">
+                <source
+                    srcset="../images/_dummy/image_03.jpg 1280w"
+                    sizes="(max-width:1280px) 100vw, 1280px">
+                <img src="../images/_dummy/image_03.jpg" alt="">
+                </picture>
+            </figure><!-- /.m-thumbnail -->
+        </div><!-- /.c-card-object -->
+        <div class="c-card-contents">
+            <h3 class="c-card-title m-title m-title-level-4 m-title-style-a">背景に色がついているカードの例です</h3>  
+            <p class="c-card-body">カードの背景に u-bg-first クラスを指定して色を付けています<br>
+            リンクは指定していません</p>
+        </div><!-- /.c-card-contents -->
+    </div><!-- /.c-card-innner -->
+</div><!-- /.c-card -->
 
-<div class="l-grid-row">
-    <div class="l-grid-col">
-        <div class="c-card u-bg-first">
-            <div class="c-card-inner">
-                <div class="c-card-object">
-                    <figure class="m-thumbnail m-thumbnail-ogimage">
-                        <picture>
-                        <source
-                            media="(max-width:640px)"
-                            srcset="../images/_dummy/image_03_s.jpg 640w"
-                            sizes="100vw">
-                        <source
-                            srcset="../images/_dummy/image_03.jpg 1280w"
-                            sizes="(max-width:1280px) 100vw, 1280px">
-                        <img src="../images/_dummy/image_03.jpg" alt="">
-                        </picture>
-                    </figure><!-- /.m-thumbnail -->
-                </div><!-- /.c-card-object -->
-                <div class="c-card-contents">
-                    <h3 class="c-card-title m-title m-title-level-4 m-title-style-a">背景に色がついているカードの例です</h3>  
-                    <p class="c-card-body">カードの背景に u-bg-first クラスを指定して色を付けています<br>
-                    リンクは指定していません</p>
-                </div><!-- /.c-card-contents -->
-            </div><!-- /.c-card-innner -->
-        </div><!-- /.c-card -->
-    </div><!-- /.l-grid-col -->
-    <div class="l-grid-col">
-        <div class="c-card u-bg-default">
-            <div class="c-card-inner">
-                <a href="#" class="c-card-object">
-                    <figure class="m-thumbnail m-thumbnail-ogimage">
-                        <picture>
-                        <source
-                            media="(max-width:640px)"
-                            srcset="../images/_dummy/image_03_s.jpg 640w"
-                            sizes="100vw">
-                        <source
-                            srcset="../images/_dummy/image_03.jpg 1280w"
-                            sizes="(max-width:1280px) 100vw, 1280px">
-                        <img src="../images/_dummy/image_03.jpg" alt="">
-                        </picture>
-                    </figure><!-- /.m-thumbnail -->
-                </a><!-- /.c-card-object -->
-                <div class="c-card-contents">
-                    <p class="c-card-body">カードの背景に u-bg-default クラスを指定して色を付けています<br>
-                    カード全体ではなく、カードの画像とボタンだけがリンク範囲となっています</p>
-                    <p class="c-card-body"><a href="#" class="m-btn m-btn-inverse m-btn-bordered m-btn-block">ボタン</a></p>
-                </div><!-- /.c-card-contents -->
-            </div><!-- /.c-card-innner -->
-        </div><!-- /.c-card -->
-    </div><!-- /.l-grid-col -->
-</div><!-- .l-grid-row -->
+<div class="c-card u-bg-default">
+    <div class="c-card-inner">
+        <a href="#" class="c-card-object">
+            <figure class="m-thumbnail m-thumbnail-ogimage">
+                <picture>
+                <source
+                    media="(max-width:640px)"
+                    srcset="../images/_dummy/image_03_s.jpg 640w"
+                    sizes="100vw">
+                <source
+                    srcset="../images/_dummy/image_03.jpg 1280w"
+                    sizes="(max-width:1280px) 100vw, 1280px">
+                <img src="../images/_dummy/image_03.jpg" alt="">
+                </picture>
+            </figure><!-- /.m-thumbnail -->
+        </a><!-- /.c-card-object -->
+        <div class="c-card-contents">
+            <h3 class="c-card-title m-title m-title-level-4 m-title-style-a">背景に色がついているカードの例です</h3>  
+            <p class="c-card-body">カードの背景に u-bg-default クラスを指定して色を付けています<br>
+            カード全体ではなく、カードの画像とボタンだけがリンク範囲となっています</p>
+            <p class="c-card-body"><a href="#" class="m-btn m-btn-block m-btn-style-b m-btn-inverse m-btn-arrowed-right">ボタン</a></p>
+        </div><!-- /.c-card-contents -->
+    </div><!-- /.c-card-innner -->
+</div><!-- /.c-card -->
 
 </div>
 

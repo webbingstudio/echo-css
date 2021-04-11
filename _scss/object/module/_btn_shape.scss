@@ -36,6 +36,17 @@
 
         }
 
+        a:hover &,
+        a:focus &,
+        a:active & {
+
+            &:after {
+                border-top-color: $body-color;
+                border-left-color: $body-color;
+            }
+
+        }
+
         &.#{$pr}#{$m}btn#{$c3}inverse {
 
             &:after {
@@ -46,6 +57,17 @@
             &:hover,
             &:focus,
             &:active {
+
+                &:after {
+                    border-top-color: $body-inverse-color;
+                    border-left-color: $body-inverse-color;
+                }
+
+            }
+
+            a:hover &,
+            a:focus &,
+            a:active & {
 
                 &:after {
                     border-top-color: $body-inverse-color;
@@ -76,6 +98,17 @@
 
         }
 
+        a:hover &,
+        a:focus &,
+        a:active & {
+
+            &:after {
+                border-top-color: $body-inverse-color;
+                border-left-color: $body-inverse-color;
+            }
+
+        }
+
         &.#{$pr}#{$m}btn#{$c3}inverse {
 
             &:after {
@@ -86,6 +119,17 @@
             &:hover,
             &:focus,
             &:active {
+
+                &:after {
+                    border-top-color: $body-color;
+                    border-left-color: $body-color;
+                }
+
+            }
+
+            a:hover &,
+            a:focus &,
+            a:active & {
 
                 &:after {
                     border-top-color: $body-color;
