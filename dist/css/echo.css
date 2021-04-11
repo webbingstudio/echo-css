@@ -3591,12 +3591,22 @@ c-box-(color)
   background-color: #ffe9f0;
 }
 
+.c-box-style-a.c-box-inverse {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
 .c-box-style-b.c-box-info {
   border-color: #1976d2;
 }
 
 .c-box-style-b.c-box-important {
   border-color: #d20b2a;
+}
+
+.c-box-style-b.c-box-inverse {
+  color: #fff;
+  border-color: #fff;
 }
 
 /*

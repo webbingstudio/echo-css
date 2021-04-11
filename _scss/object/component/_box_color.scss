@@ -14,6 +14,11 @@
         background-color: $important-fade;
     }
 
+    &.#{$pr}#{$c}box#{$c3}inverse {
+        color: $inverse;
+        background-color: $inverse-fade;
+    }
+
 }
 
 .#{$pr}#{$c}box#{$c3}style#{$c3}b {
@@ -24,6 +29,11 @@
 
     &.#{$pr}#{$c}box#{$c3}important {
         border-color: $important;
+    }
+
+    &.#{$pr}#{$c}box#{$c3}inverse {
+        color: $inverse;
+        border-color: $inverse;
     }
 
 }
