@@ -3479,7 +3479,7 @@ c-alert
 .c-alert {
   display: flex;
   align-items: stretch;
-  margin: 0 0 3em;
+  margin: 0 0 2rem;
   padding: 0.5em 0.625rem;
   background-color: #eee;
   border: 0.0625rem solid #333;
@@ -3494,7 +3494,7 @@ c-alert
 }
 
 .c-alert + .c-alert {
-  margin-top: -2em;
+  margin-top: -1rem;
 }
 
 .c-alert p {
@@ -3538,32 +3538,23 @@ c-box
 --------------------
 */
 .c-box {
-  position: relative;
-  margin-bottom: 1.25rem;
-  padding: 1.25rem;
+  margin: 0 0 2rem;
+  padding: 0.625rem;
   border: 0.0625rem solid transparent;
+  color: #333;
   background-color: #eee;
   border-radius: 0.3125rem;
 }
 
-.c-box:before, .c-box:after {
-  content: "";
-  display: table;
-}
-
-.c-box:after {
-  clear: both;
-}
-
 @media (min-width: 48rem) {
   .c-box {
-    padding: 1.875rem;
+    padding: 1.25rem;
   }
 }
 
 @media (min-width: 75rem) {
   .c-box {
-    margin-bottom: 1.875rem;
+    padding: 1.875rem;
   }
 }
 
@@ -3576,56 +3567,36 @@ c-box
 
 /*
 --------------------
-c-box-(color)
+c-box-style-(style)
 --------------------
 */
-.c-box-first {
-  background-color: #e1f8f9;
+.c-box-style-a {
+  background-color: #eee;
 }
 
-.c-box-second {
-  background-color: #e9f7dd;
-}
-
-.c-box-third {
-  background-color: #fdf9eb;
-}
-
-.c-box-info {
-  background-color: #e3f0ff;
-}
-
-.c-box-important {
-  background-color: #ffe9f0;
+.c-box-style-b {
+  background-color: transparent;
+  border-color: #333;
 }
 
 /*
 --------------------
-c-box-bordered
+c-box-(color)
 --------------------
 */
-.c-box-bordered {
-  background-color: #fff;
-  border-color: #333;
+.c-box-style-a.c-box-info {
+  background-color: #e3f0ff;
 }
 
-.c-box-bordered.c-box-first {
-  border-color: #1a9ea5;
+.c-box-style-a.c-box-important {
+  background-color: #ffe9f0;
 }
 
-.c-box-bordered.c-box-second {
-  border-color: #191;
-}
-
-.c-box-bordered.c-box-third {
-  border-color: #d2a219;
-}
-
-.c-box-bordered.c-box-info {
+.c-box-style-b.c-box-info {
   border-color: #1976d2;
 }
 
-.c-box-bordered.c-box-important {
+.c-box-style-b.c-box-important {
   border-color: #d20b2a;
 }
 

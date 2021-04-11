@@ -1,0 +1,29 @@
+/*
+--------------------
+#{$pr}#{$c}box#{$c3}(color)
+--------------------
+*/
+
+.#{$pr}#{$c}box#{$c3}style#{$c3}a {
+
+    &.#{$pr}#{$c}box#{$c3}info {
+        background-color: $info-fade;
+    }
+
+    &.#{$pr}#{$c}box#{$c3}important {
+        background-color: $important-fade;
+    }
+
+}
+
+.#{$pr}#{$c}box#{$c3}style#{$c3}b {
+
+    &.#{$pr}#{$c}box#{$c3}info {
+        border-color: $info;
+    }
+
+    &.#{$pr}#{$c}box#{$c3}important {
+        border-color: $important;
+    }
+
+}
