@@ -5,7 +5,36 @@
 */
 
 .#{$pr}#{$m}label#{$c3}style#{$c3}a {
+    @include label-variant(
+        $body-inverse-color,
+        $default,
+        $default,
+        $body-color,
+        transparent,
+        $default
+    );
+
+    transition:
+        background-color .3s,
+        border-color .3s,
+        color .3s;
+
 }
 
+
 .#{$pr}#{$m}label#{$c3}style#{$c3}b {
+    @include label-variant(
+        $body-color,
+        $default-fade,
+        transparent,
+        $body-inverse-color,
+        $default,
+        $default
+    );
+
+    transition:
+        background-color .3s,
+        border-color .3s,
+        color .3s;
 }
+

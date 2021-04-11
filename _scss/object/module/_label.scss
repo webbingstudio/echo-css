@@ -5,23 +5,38 @@
 */
 
 .#{$pr}#{$m}label {
-    display: inline-block;
-    min-width: 3em;
-    margin-right: .5em;
-    padding: .25rem .5em;
+    position: relative;
+    top: -.1em;
+    display: inline-flex;
+    min-width: 8em;
+    min-height: 2em;
+    align-items: center;
+    justify-content: center;
+    padding: 0 .5em;
     background-color: $default-fade;
+    border: $ui-border-width solid $default-fade;
+    color: $body-color;
     font-size: .7em;
     @include font-family-weight( 'root', 'normal' );
-    color: $ui-color;
-    text-align: center;
     line-height: 1;
     vertical-align: middle;
+    white-space: nowrap;
+
+    & + & {
+        margin-left: .5em;
+    }
 
     @at-root {
 
         a#{&} {
-            color: $ui-color;
             text-decoration: none;
+
+            &:hover,
+            &:focus {
+                color: $body-color;
+                text-decoration: none;
+            }
+
         }
 
     }

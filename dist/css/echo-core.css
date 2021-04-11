@@ -1449,6 +1449,57 @@ fieldset[disabled] .m-btn {
 
 /*
 --------------------
+m-btn-style-(style)
+--------------------
+*/
+.m-btn-style-a {
+  color: #fff;
+  background-color: #333;
+  border-color: #333;
+  transition: background-color .3s, border-color .3s, color .3s;
+}
+
+.m-btn-style-a:hover, .m-btn-style-a:focus, .m-btn-style-a:active {
+  color: #333;
+  background-color: transparent;
+  border-color: #333;
+}
+
+.m-btn-style-a.disabled:hover, .m-btn-style-a.disabled.hover, .m-btn-style-a.disabled:focus, .m-btn-style-a.disabled.focus, .m-btn-style-a:disabled:hover, .m-btn-style-a:disabled.hover, .m-btn-style-a:disabled:focus, .m-btn-style-a:disabled.focus,
+fieldset[disabled] .m-btn-style-a:hover,
+fieldset[disabled] .m-btn-style-a.hover,
+fieldset[disabled] .m-btn-style-a:focus,
+fieldset[disabled] .m-btn-style-a.focus {
+  color: #fff;
+  background-color: #333;
+  border-color: #333;
+}
+
+.m-btn-style-b {
+  color: #333;
+  background-color: transparent;
+  border-color: #333;
+  transition: background-color .3s, border-color .3s, color .3s;
+}
+
+.m-btn-style-b:hover, .m-btn-style-b:focus, .m-btn-style-b:active {
+  color: #fff;
+  background-color: #333;
+  border-color: #333;
+}
+
+.m-btn-style-b.disabled:hover, .m-btn-style-b.disabled.hover, .m-btn-style-b.disabled:focus, .m-btn-style-b.disabled.focus, .m-btn-style-b:disabled:hover, .m-btn-style-b:disabled.hover, .m-btn-style-b:disabled:focus, .m-btn-style-b:disabled.focus,
+fieldset[disabled] .m-btn-style-b:hover,
+fieldset[disabled] .m-btn-style-b.hover,
+fieldset[disabled] .m-btn-style-b:focus,
+fieldset[disabled] .m-btn-style-b.focus {
+  color: #333;
+  background-color: transparent;
+  border-color: #333;
+}
+
+/*
+--------------------
 m-btn-(size)
 --------------------
 */
@@ -1734,83 +1785,6 @@ m-btn-square
 
 /*
 --------------------
-m-btn-style-(style)
---------------------
-*/
-.m-btn-style-a {
-  color: #fff;
-  background-color: #333;
-  border-color: #333;
-  transition: background-color .3s, border-color .3s, color .3s;
-}
-
-.m-btn-style-a:hover, .m-btn-style-a:focus, .m-btn-style-a:active, .m-btn-style-a.active {
-  color: #333;
-  background-color: transparent;
-  border-color: #333;
-}
-
-.m-btn-style-a.disabled, .m-btn-style-a:disabled,
-fieldset[disabled] .m-btn-style-a {
-  opacity: .65;
-}
-
-.m-btn-style-a.disabled:hover, .m-btn-style-a.disabled.hover, .m-btn-style-a.disabled:focus, .m-btn-style-a.disabled.focus, .m-btn-style-a:disabled:hover, .m-btn-style-a:disabled.hover, .m-btn-style-a:disabled:focus, .m-btn-style-a:disabled.focus,
-fieldset[disabled] .m-btn-style-a:hover,
-fieldset[disabled] .m-btn-style-a.hover,
-fieldset[disabled] .m-btn-style-a:focus,
-fieldset[disabled] .m-btn-style-a.focus {
-  color: #fff;
-  background-color: #333;
-  border-color: #333;
-}
-
-a:hover .m-btn-style-a,
-a:focus .m-btn-style-a,
-a:active .m-btn-style-a {
-  color: #333;
-  background-color: transparent;
-  border-color: #333;
-}
-
-.m-btn-style-b {
-  color: #333;
-  background-color: transparent;
-  border-color: #333;
-  transition: background-color .3s, border-color .3s, color .3s;
-}
-
-.m-btn-style-b:hover, .m-btn-style-b:focus, .m-btn-style-b:active, .m-btn-style-b.active {
-  color: #fff;
-  background-color: #333;
-  border-color: #333;
-}
-
-.m-btn-style-b.disabled, .m-btn-style-b:disabled,
-fieldset[disabled] .m-btn-style-b {
-  opacity: .65;
-}
-
-.m-btn-style-b.disabled:hover, .m-btn-style-b.disabled.hover, .m-btn-style-b.disabled:focus, .m-btn-style-b.disabled.focus, .m-btn-style-b:disabled:hover, .m-btn-style-b:disabled.hover, .m-btn-style-b:disabled:focus, .m-btn-style-b:disabled.focus,
-fieldset[disabled] .m-btn-style-b:hover,
-fieldset[disabled] .m-btn-style-b.hover,
-fieldset[disabled] .m-btn-style-b:focus,
-fieldset[disabled] .m-btn-style-b.focus {
-  color: #333;
-  background-color: transparent;
-  border-color: #333;
-}
-
-a:hover .m-btn-style-b,
-a:focus .m-btn-style-b,
-a:active .m-btn-style-b {
-  color: #fff;
-  background-color: #333;
-  border-color: #333;
-}
-
-/*
---------------------
 m-checkbox
 --------------------
 */
@@ -2036,132 +2010,71 @@ m-label
 --------------------
 */
 .m-label {
-  display: inline-block;
-  min-width: 3em;
-  margin-right: .5em;
-  padding: .25rem .5em;
+  position: relative;
+  top: -.1em;
+  display: inline-flex;
+  min-width: 8em;
+  min-height: 2em;
+  align-items: center;
+  justify-content: center;
+  padding: 0 .5em;
   background-color: #eee;
+  border: 0.0625rem solid #eee;
+  color: #333;
   font-size: .7em;
   font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
   font-weight: 300;
-  color: #333;
-  text-align: center;
   line-height: 1;
   vertical-align: middle;
+  white-space: nowrap;
+}
+
+.m-label + .m-label {
+  margin-left: .5em;
 }
 
 a.m-label {
+  text-decoration: none;
+}
+
+a.m-label:hover, a.m-label:focus {
   color: #333;
   text-decoration: none;
 }
 
 /*
 --------------------
-m-label-(color)
+m-label-style-(style)
 --------------------
 */
-.m-label-default {
+.m-label-style-a {
+  color: #fff;
   background-color: #333;
-  color: #fff;
+  border-color: #333;
+  transition: background-color .3s, border-color .3s, color .3s;
 }
 
-a.m-label-default {
-  color: #fff;
-}
-
-.m-label-first {
-  background-color: #1a9ea5;
-  color: #fff;
-}
-
-a.m-label-first {
-  color: #fff;
-}
-
-.m-label-second {
-  background-color: #191;
-  color: #fff;
-}
-
-a.m-label-second {
-  color: #fff;
-}
-
-.m-label-third {
-  background-color: #d2a219;
+a.m-label-style-a:hover,
+a.m-label-style-a:focus,
+a.m-label-style-a:active {
   color: #333;
+  background-color: transparent;
+  border-color: #333;
 }
 
-.m-label-info {
-  background-color: #1976d2;
-  color: #fff;
-}
-
-a.m-label-info {
-  color: #fff;
-}
-
-.m-label-important {
-  background-color: #d20b2a;
-  color: #fff;
-}
-
-a.m-label-important {
-  color: #fff;
-}
-
-/*
---------------------
-m-label-inverse
---------------------
-*/
-.m-label-inverse {
+.m-label-style-b {
   color: #333;
-  background-color: #fff;
+  background-color: #eee;
+  border-color: transparent;
+  transition: background-color .3s, border-color .3s, color .3s;
 }
 
-a.m-label-inverse {
-  color: #333;
-}
-
-.m-label-inverse.m-label-first {
-  color: #0f8d94;
-}
-
-a.m-label-inverse.m-label-first {
-  color: #0f8d94;
-}
-
-.m-label-inverse.m-label-second {
-  color: #080;
-}
-
-a.m-label-inverse.m-label-second {
-  color: #080;
-}
-
-.m-label-inverse.m-label-third {
-  color: #a07700;
-}
-
-a.m-label-inverse.m-label-third {
-  color: #a07700;
-}
-
-.m-label-inverse.m-label-info {
-  color: #0057af;
-}
-
-a.m-label-inverse.m-label-info {
-  color: #0057af;
-}
-
-.m-label-inverse.m-label-important {
-  color: #d20b2a;
-}
-
-a.m-label-inverse.m-label-important {
-  color: #d20b2a;
+a.m-label-style-b:hover,
+a.m-label-style-b:focus,
+a.m-label-style-b:active {
+  color: #fff;
+  background-color: #333;
+  border-color: #333;
 }
 
 /*
@@ -2169,8 +2082,14 @@ a.m-label-inverse.m-label-important {
 m-label-oval
 --------------------
 */
+/*
+note: Meaning of "10em"
+「em」で大きな値を指定すると、ボタンが小判型になります。
+Specify a large value for "em", the button becomes an oval type
+--------------------
+*/
 .m-label-oval {
-  border-radius: 5em;
+  border-radius: 10em;
   padding-left: 1em;
   padding-right: 1em;
 }

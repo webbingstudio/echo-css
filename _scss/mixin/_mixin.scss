@@ -284,3 +284,31 @@
 
 }
 
+
+@mixin label-variant(
+    $color,
+    $background,
+    $border,
+    $hover-color,
+    $hover-background,
+    $hover-border
+) {
+
+    color: $color;
+    background-color: $background;
+    border-color: $border;
+
+    @at-root {
+
+        a#{&}:hover,
+        a#{&}:focus,
+        a#{&}:active {
+            color: $hover-color;
+            background-color: $hover-background;
+            border-color: $hover-border;
+        }
+
+    }
+
+}
+

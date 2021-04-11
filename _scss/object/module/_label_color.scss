@@ -4,161 +4,143 @@
 --------------------
 */
 
-.#{$pr}#{$m}label#{$c3}default {
-    background-color: $default;
-    color: $body-inverse-color;
-
-    @at-root {
-
-        a#{&} {
-            color: $body-inverse-color;
-        }
-
-    }
-
-}
-
-.#{$pr}#{$m}label#{$c3}first {
-    background-color: $first;
-    color: $body-inverse-color;
-
-    @at-root {
-
-        a#{&} {
-            color: $body-inverse-color;
-        }
-
-    }
-
-}
-
-.#{$pr}#{$m}label#{$c3}second {
-    background-color: $second;
-    color: $body-inverse-color;
-
-    @at-root {
-
-        a#{&} {
-            color: $body-inverse-color;
-        }
-
-    }
-
-}
-
-.#{$pr}#{$m}label#{$c3}third {
-    background-color: $third;
-    color: $body-color;
-}
-
-.#{$pr}#{$m}label#{$c3}info {
-    background-color: $info;
-    color: $body-inverse-color;
-
-    @at-root {
-
-        a#{&} {
-            color: $body-inverse-color;
-        }
-
-    }
-
-}
-
-.#{$pr}#{$m}label#{$c3}important {
-    background-color: $important;
-    color: $body-inverse-color;
-
-    @at-root {
-
-        a#{&} {
-            color: $body-inverse-color;
-        }
-
-    }
-
-}
-
-.#{$pr}#{$m}label#{$c3}inverse {
-    color: $body-color;
-    background-color: $body-bg;
-
-    @at-root {
-
-        a#{&} {
-            color: $body-color;
-        }
-
-    }
-
-    &.#{$pr}#{$m}label#{$c3}first {
-
-        color: $first-strong;
-
-        @at-root {
-
-            a#{&} {
-                color: $first-strong;
-            }
-
-        }
-
-    }
-
-    &.#{$pr}#{$m}label#{$c3}second {
-
-        color: $second-strong;
-
-        @at-root {
-
-            a#{&} {
-                color: $second-strong;
-            }
-
-        }
-
-    }
-
-    &.#{$pr}#{$m}label#{$c3}third {
-
-        color: $third-strong;
-
-        @at-root {
-
-            a#{&} {
-                color: $third-strong;
-            }
-
-        }
-
-    }
+.#{$pr}#{$m}label#{$c3}style#{$c3}a {
 
     &.#{$pr}#{$m}label#{$c3}info {
-
-        color: $info-strong;
-
-        @at-root {
-
-            a#{&} {
-                color: $info-strong;
-            }
-
-        }
-
+        @include label-variant(
+            $body-inverse-color,
+            $info,
+            $info,
+            $body-color,
+            transparent,
+            $info
+        );
     }
 
     &.#{$pr}#{$m}label#{$c3}important {
+        @include label-variant(
+            $body-inverse-color,
+            $important,
+            $important,
+            $body-color,
+            transparent,
+            $important
+        );
+    }
 
-        color: $important-strong;
+    &.#{$pr}#{$m}label#{$c3}inverse {
+        @include label-variant(
+            $body-color,
+            $inverse,
+            $inverse,
+            $body-inverse-color,
+            transparent,
+            $inverse
+        );
+    }
 
-        @at-root {
+    &.#{$pr}#{$m}label#{$c3}first {
+        @include label-variant(
+            $body-inverse-color,
+            $first,
+            $first,
+            $body-color,
+            transparent,
+            $first
+        );
+    }
 
-            a#{&} {
-                color: $important-strong;
-            }
+    &.#{$pr}#{$m}label#{$c3}second {
+        @include label-variant(
+            $body-inverse-color,
+            $second,
+            $second,
+            $body-color,
+            transparent,
+            $second
+        );
+    }
 
-        }
+    &.#{$pr}#{$m}label#{$c3}third {
+        @include label-variant(
+            $body-inverse-color,
+            $third,
+            $third,
+            $body-color,
+            transparent,
+            $third
+        );
+    }
 
+}
+
+
+.#{$pr}#{$m}label#{$c3}style#{$c3}b {
+
+    &.#{$pr}#{$m}label#{$c3}info {
+        @include label-variant(
+            $body-color,
+            $info-fade,
+            transparent,
+            $body-inverse-color,
+            $info,
+            transparent
+        );
+    }
+
+    &.#{$pr}#{$m}label#{$c3}important {
+        @include label-variant(
+            $body-color,
+            $important-fade,
+            transparent,
+            $body-inverse-color,
+            $important,
+            transparent
+        );
+    }
+
+    &.#{$pr}#{$m}label#{$c3}inverse {
+        @include label-variant(
+            $body-inverse-color,
+            $inverse-fade,
+            transparent,
+            $body-color,
+            $inverse,
+            transparent
+        );
+    }
+
+    &.#{$pr}#{$m}label#{$c3}first {
+        @include label-variant(
+            $body-color,
+            $first-fade,
+            transparent,
+            $body-inverse-color,
+            $first,
+            transparent
+        );
+    }
+
+    &.#{$pr}#{$m}label#{$c3}second {
+        @include label-variant(
+            $body-color,
+            $second-fade,
+            transparent,
+            $body-inverse-color,
+            $second,
+            transparent
+        );
+    }
+
+    &.#{$pr}#{$m}label#{$c3}third {
+        @include label-variant(
+            $body-color,
+            $third-fade,
+            transparent,
+            $body-inverse-color,
+            $third,
+            transparent
+        );
     }
 
 }

@@ -3,7 +3,7 @@
         <div class="echo-header-contents">
 
             <p class="echo-header-brand">
-                <a href="<?php echo $echo_path; ?>"><img src="<?php echo $echo_path; ?>images/common/logo.svg" height="24" alt="echo.css" class="echo-header-logo"></a> <span class="echo-header-version m-label m-label-oval m-label-info">v3.0.0</span>
+                <a href="<?php echo $echo_path; ?>"><img src="<?php echo $echo_path; ?>images/common/logo.svg" height="24" alt="echo.css" class="echo-header-logo"></a> <span class="echo-header-version m-label m-label-oval m-label-style-a m-label-info">v3.0.0</span>
             </p><!-- /.s-header-brand -->
 
             <div class="echo-header-nav">

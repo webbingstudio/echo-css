@@ -44,17 +44,6 @@
 
 .#{$pr}#{$m}btn#{$c3}style#{$c3}b {
 
-    &.#{$pr}#{$m}btn#{$c3}default {
-        @include button-variant(
-            $body-color,
-            transparent,
-            $default,
-            $body-inverse-color,
-            $default,
-            transparent
-        );
-    }
-
     &.#{$pr}#{$m}btn#{$c3}info {
         @include button-variant(
             $body-color,
