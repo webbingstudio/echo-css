@@ -3442,6 +3442,37 @@ m-toggle
 
 /*
 --------------------
+m-toggle-(color)
+--------------------
+*/
+.m-toggle-inverse {
+  color: #fff;
+  background-color: transparent;
+}
+
+.m-toggle-inverse .m-toggle-line:before, .m-toggle-inverse .m-toggle-line:after {
+  background-color: #fff;
+}
+
+.m-toggle-inverse:hover, .m-toggle-inverse.hover, .m-toggle-inverse:focus, .m-toggle-inverse.focus {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.m-toggle-inverse:hover .m-toggle-line:before, .m-toggle-inverse:hover .m-toggle-line:after, .m-toggle-inverse.hover .m-toggle-line:before, .m-toggle-inverse.hover .m-toggle-line:after, .m-toggle-inverse:focus .m-toggle-line:before, .m-toggle-inverse:focus .m-toggle-line:after, .m-toggle-inverse.focus .m-toggle-line:before, .m-toggle-inverse.focus .m-toggle-line:after {
+  background-color: #fff;
+}
+
+.m-toggle-inverse[aria-expanded="false"] .m-toggle-line {
+  background-color: #fff;
+}
+
+.m-toggle-inverse[aria-expanded="false"]:hover .m-toggle-line, .m-toggle-inverse[aria-expanded="false"].hover .m-toggle-line, .m-toggle-inverse[aria-expanded="false"]:focus .m-toggle-line, .m-toggle-inverse[aria-expanded="false"].focus .m-toggle-line {
+  background-color: #fff;
+}
+
+/*
+--------------------
 c-alert
 --------------------
 */
