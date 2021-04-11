@@ -7,22 +7,22 @@
 .#{$pr}#{$c}alert {
     display: flex;
     align-items: stretch;
-    margin: 0 0 ($spacer * 3);
-    padding: $spacer;
+    margin: 0 0 3em;
+    padding: .5em ( map-get( $grid-gutter-widths, md ) / 2 );
     background-color: $default-fade;
     border: $border-alert-width solid $border-color;
+    font-size: $font-size-sm;
     line-height: $line-height-sm;
 
-    @include media-breakpoint-up(md) {
-        padding: $spacer ($spacer * 2);
+    @include media-breakpoint-up(lg) {
+        font-size: $font-size-md;
     }
 
     + #{&} {
-        margin-top: $spacer * -1.5;
+        margin-top: -2em;
     }
 
-    p,
-    ul {
+    p {
         margin-bottom: 0;
     }
 
@@ -31,51 +31,13 @@
 .#{$pr}#{$c}alert#{$c1}header {
     flex: 0 0 auto;
     align-self: center;
-    margin-right: $spacer;
+    margin-right: ( map-get( $grid-gutter-widths, md ) / 2 );
     text-align: left;
 }
 
 .#{$pr}#{$c}alert#{$c1}footer {
     flex: 1 0 auto;
     align-self: center;
-    margin-left: $spacer;
+    margin-left: ( map-get( $grid-gutter-widths, md ) / 2 );
     text-align: right;
 }
-
-
-/*
---------------------
-#{$pr}#{$c}alert#{$c3}(color)
---------------------
-*/
-
-.#{$pr}#{$c}alert#{$c3}first {
-    color: $first-strong;
-    border-color: $first;
-    background-color: $first-fade;
-}
-
-.#{$pr}#{$c}alert#{$c3}second {
-    color: $second-strong;
-    border-color: $second;
-    background-color: $second-fade;
-}
-
-.#{$pr}#{$c}alert#{$c3}third {
-    color: $third-strong;
-    border-color: $third;
-    background-color: $third-fade;
-}
-
-.#{$pr}#{$c}alert#{$c3}info {
-    color: $info-strong;
-    border-color: $info;
-    background-color: $info-fade;
-}
-
-.#{$pr}#{$c}alert#{$c3}important {
-    color: $important-strong;
-    border-color: $important;
-    background-color: $important-fade;
-}
-

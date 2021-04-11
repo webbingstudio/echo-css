@@ -3113,25 +3113,25 @@ c-alert
 .c-alert {
   display: flex;
   align-items: stretch;
-  margin: 0 0 1.875rem;
-  padding: 0.625rem;
+  margin: 0 0 3em;
+  padding: 0.5em 0.625rem;
   background-color: #eee;
   border: 0.0625rem solid #333;
+  font-size: 0.875rem;
   line-height: 1.5;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 62.5rem) {
   .c-alert {
-    padding: 0.625rem 1.25rem;
+    font-size: 1rem;
   }
 }
 
 .c-alert + .c-alert {
-  margin-top: -0.9375rem;
+  margin-top: -2em;
 }
 
-.c-alert p,
-.c-alert ul {
+.c-alert p {
   margin-bottom: 0;
 }
 
@@ -3147,41 +3147,6 @@ c-alert
   align-self: center;
   margin-left: 0.625rem;
   text-align: right;
-}
-
-/*
---------------------
-c-alert-(color)
---------------------
-*/
-.c-alert-first {
-  color: #0f8d94;
-  border-color: #1a9ea5;
-  background-color: #e1f8f9;
-}
-
-.c-alert-second {
-  color: #080;
-  border-color: #191;
-  background-color: #e9f7dd;
-}
-
-.c-alert-third {
-  color: #a07700;
-  border-color: #d2a219;
-  background-color: #fdf9eb;
-}
-
-.c-alert-info {
-  color: #0057af;
-  border-color: #1976d2;
-  background-color: #e3f0ff;
-}
-
-.c-alert-important {
-  color: #d20b2a;
-  border-color: #d20b2a;
-  background-color: #ffe9f0;
 }
 
 /*
