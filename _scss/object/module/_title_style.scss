@@ -67,10 +67,10 @@
         content: "";
         bottom: 0;
         left: 50%;
-        transform: translate( -50%, 0 );
+        transform: translateX( -50% );
         width: 3em;
-        height: .1875rem;
-        background-color: $body-color;
+        height: .25rem;
+        background-color: $default-fade;
     }
 
     &.#{$pr}#{$m}title#{$c3}level#{$c3}4,
@@ -78,7 +78,7 @@
     &.#{$pr}#{$m}title#{$c3}level#{$c3}6 {
 
         &:after {
-            height: .125rem;
+            height: .1875rem;
         }
 
     }
@@ -95,8 +95,8 @@
         bottom: 0;
         left: 0;
         width: 100%;
-        height: .0625rem;
-        background-color: $body-color;
+        height: .125rem;
+        background-color: $default;
         z-index: 11;
     }
 
@@ -106,8 +106,8 @@
         bottom: -.125rem;
         left: 0;
         width: 3em;
-        height: .1875rem;
-        background-color: $body-color;
+        height: .25rem;
+        background-color: $default-fade;
         z-index: 12;
     }
 
@@ -116,8 +116,13 @@
     &.#{$pr}#{$m}title#{$c3}level#{$c3}6 {
         margin-bottom: .5em;
 
+        &:before {
+            height: .0625rem;
+        }
+
         &:after {
-            height: .125rem;
+            bottom: -.125rem;
+            height: .1875rem;
         }
 
     }
@@ -146,16 +151,21 @@
         content: "";
         top: 50%;
         left: 0;
-        transform: translate( 0, -50% );
+        transform: translateY( -50% );
         width: .75em;
-        height: .1875rem;
-        background-color: $body-color;
+        height: .25rem;
+        background-color: $default-fade;
     }
 
     &.#{$pr}#{$m}title#{$c3}level#{$c3}4,
     &.#{$pr}#{$m}title#{$c3}level#{$c3}5,
     &.#{$pr}#{$m}title#{$c3}level#{$c3}6 {
         margin-bottom: .5em;
+
+        &:after {
+            height: .1875rem;
+        }
+
     }
 
 }
