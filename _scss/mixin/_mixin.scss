@@ -261,8 +261,7 @@
 
     &:hover,
     &:focus,
-    &:active,
-    &.active {
+    &:active {
         color: $hover-color;
         background-color: $hover-background;
         border-color: $hover-border;
@@ -271,7 +270,6 @@
     &.disabled,
     &:disabled,
     fieldset[disabled] & {
-        opacity: .65;
 
         &:hover,
         &.hover,
@@ -280,18 +278,6 @@
             color: $color;
             background-color: $background;
             border-color: $border;
-        }
-
-    }
-
-    @at-root {
-
-        a:hover &,
-        a:focus &,
-        a:active & {
-            color: $hover-color;
-            background-color: $hover-background;
-            border-color: $hover-border;
         }
 
     }

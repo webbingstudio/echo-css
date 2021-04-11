@@ -10,29 +10,12 @@
         content: "";
         position: absolute;
         top: 50%;
-        width: .4375rem;
-        height: .4375rem;
-        border-top: .1875rem solid $body-color;
-        border-left: .1875rem solid $body-color;
-        border-radius: .125rem;
-    }
-
-    &.#{$pr}#{$m}btn#{$c3}xl {
-
-        &:after {
-            width: .5625rem;
-            height: .5625rem;
-        }
-
-    }
-
-    &.#{$pr}#{$m}btn#{$c3}xxl {
-
-        &:after {
-            width: .6875rem;
-            height: .6875rem;
-        }
-
+        width: .5em;
+        height: .5em;
+        transform-origin: center center;
+        border-top: .2em solid $body-color;
+        border-left: .2em solid $body-color;
+        border-radius: .1em;
     }
 
     &.#{$pr}#{$m}btn#{$c3}style#{$c3}a {
@@ -124,7 +107,7 @@
     }
 
     &:after {
-        left: .5em;
+        left: .65em;
         transform:
             translateY( -50% )
             rotate( -45deg );
@@ -139,7 +122,7 @@
     }
 
     &:after {
-        right: .5em;
+        right: .65em;
         transform:
             translateY( -50% )
             rotate( 135deg );

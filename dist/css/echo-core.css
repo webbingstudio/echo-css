@@ -1505,21 +1505,12 @@ m-btn-arrowed
   content: "";
   position: absolute;
   top: 50%;
-  width: .4375rem;
-  height: .4375rem;
-  border-top: 0.1875rem solid #333;
-  border-left: 0.1875rem solid #333;
-  border-radius: .125rem;
-}
-
-[class*="m-btn-arrowed"].m-btn-xl:after {
-  width: .5625rem;
-  height: .5625rem;
-}
-
-[class*="m-btn-arrowed"].m-btn-xxl:after {
-  width: .6875rem;
-  height: .6875rem;
+  width: .5em;
+  height: .5em;
+  transform-origin: center center;
+  border-top: 0.2em solid #333;
+  border-left: 0.2em solid #333;
+  border-radius: .1em;
 }
 
 [class*="m-btn-arrowed"].m-btn-style-a:after {
@@ -1567,7 +1558,7 @@ m-btn-arrowed
 }
 
 .m-btn-arrowed-left:after {
-  left: .5em;
+  left: .65em;
   transform: translateY(-50%) rotate(-45deg);
 }
 
@@ -1576,7 +1567,7 @@ m-btn-arrowed
 }
 
 .m-btn-arrowed-right:after {
-  right: .5em;
+  right: .65em;
   transform: translateY(-50%) rotate(135deg);
 }
 
