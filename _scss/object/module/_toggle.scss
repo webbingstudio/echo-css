@@ -34,9 +34,7 @@
     }
 
     &:hover,
-    &.hover,
-    &:focus,
-    &.focus {
+    &:focus {
         color: $ui-hover-color;
         background-color: $ui-hover-bg;
 
@@ -58,9 +56,7 @@
         }
 
         &:hover,
-        &.hover,
-        &:focus,
-        &.focus {
+        &:focus {
 
             .#{$pr}#{$m}toggle#{$c1}line {
                 background-color: $ui-hover-color;

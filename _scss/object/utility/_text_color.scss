@@ -6,16 +6,8 @@
 
 #{$u-wrap} {
 
-    .#{$pr}#{$u}text#{$c3}first {
-        color: $first-strong;
-    }
-
-    .#{$pr}#{$u}text#{$c3}second {
-        color: $second-strong;
-    }
-
-    .#{$pr}#{$u}text#{$c3}third {
-        color: $third-strong;
+    .#{$pr}#{$u}text#{$c3}default {
+        color: $body-color;
     }
 
     .#{$pr}#{$u}text#{$c3}info {
@@ -25,32 +17,6 @@
     .#{$pr}#{$u}text#{$c3}important {
         color: $important-strong;
     }
-
-}
-
-
-/*
---------------------
-#{$pr}#{$u}text#{$c3}root
---------------------
-*/
-
-#{$u-wrap} {
-
-    .#{$pr}#{$u}text#{$c3}root {
-        color: $body-color;
-    }
-
-}
-
-
-/*
---------------------
-#{$pr}#{$u}text#{$c3}inverse
---------------------
-*/
-
-#{$u-wrap} {
 
     .#{$pr}#{$u}text#{$c3}inverse {
         color: $body-inverse-color;

@@ -3157,12 +3157,12 @@ m-toggle
   background-color: #333;
 }
 
-.m-toggle:hover, .m-toggle.hover, .m-toggle:focus, .m-toggle.focus {
+.m-toggle:hover, .m-toggle:focus {
   color: #333;
   background-color: #eee;
 }
 
-.m-toggle:hover .m-toggle-line:before, .m-toggle:hover .m-toggle-line:after, .m-toggle.hover .m-toggle-line:before, .m-toggle.hover .m-toggle-line:after, .m-toggle:focus .m-toggle-line:before, .m-toggle:focus .m-toggle-line:after, .m-toggle.focus .m-toggle-line:before, .m-toggle.focus .m-toggle-line:after {
+.m-toggle:hover .m-toggle-line:before, .m-toggle:hover .m-toggle-line:after, .m-toggle:focus .m-toggle-line:before, .m-toggle:focus .m-toggle-line:after {
   background-color: #333;
 }
 
@@ -3170,7 +3170,7 @@ m-toggle
   background-color: #333;
 }
 
-.m-toggle[aria-expanded="false"]:hover .m-toggle-line, .m-toggle[aria-expanded="false"].hover .m-toggle-line, .m-toggle[aria-expanded="false"]:focus .m-toggle-line, .m-toggle[aria-expanded="false"].focus .m-toggle-line {
+.m-toggle[aria-expanded="false"]:hover .m-toggle-line, .m-toggle[aria-expanded="false"]:focus .m-toggle-line {
   background-color: #333;
 }
 

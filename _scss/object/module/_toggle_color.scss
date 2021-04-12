@@ -18,9 +18,7 @@
     }
 
     &:hover,
-    &.hover,
-    &:focus,
-    &.focus {
+    &:focus {
         color: $ui-inverse-hover-color;
         background-color: $ui-inverse-hover-bg;
 
@@ -42,9 +40,7 @@
         }
 
         &:hover,
-        &.hover,
-        &:focus,
-        &.focus {
+        &:focus {
 
             .#{$pr}#{$m}toggle#{$c1}line {
                 background-color: $ui-inverse-hover-color;

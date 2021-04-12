@@ -39,39 +39,6 @@
         );
     }
 
-    &.#{$pr}#{$m}label#{$c3}first {
-        @include label-variant(
-            $body-inverse-color,
-            $first,
-            $first,
-            $body-color,
-            transparent,
-            $first
-        );
-    }
-
-    &.#{$pr}#{$m}label#{$c3}second {
-        @include label-variant(
-            $body-inverse-color,
-            $second,
-            $second,
-            $body-color,
-            transparent,
-            $second
-        );
-    }
-
-    &.#{$pr}#{$m}label#{$c3}third {
-        @include label-variant(
-            $body-inverse-color,
-            $third,
-            $third,
-            $body-color,
-            transparent,
-            $third
-        );
-    }
-
 }
 
 
@@ -106,39 +73,6 @@
             transparent,
             $body-color,
             $inverse,
-            transparent
-        );
-    }
-
-    &.#{$pr}#{$m}label#{$c3}first {
-        @include label-variant(
-            $body-color,
-            $first-fade,
-            transparent,
-            $body-inverse-color,
-            $first,
-            transparent
-        );
-    }
-
-    &.#{$pr}#{$m}label#{$c3}second {
-        @include label-variant(
-            $body-color,
-            $second-fade,
-            transparent,
-            $body-inverse-color,
-            $second,
-            transparent
-        );
-    }
-
-    &.#{$pr}#{$m}label#{$c3}third {
-        @include label-variant(
-            $body-color,
-            $third-fade,
-            transparent,
-            $body-inverse-color,
-            $third,
             transparent
         );
     }
