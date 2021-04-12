@@ -65,7 +65,6 @@
                         <li class="m-nav-item"><a href="./project-header.html" class="m-nav-label">header</a></li>
                         <li class="m-nav-item"><a href="./project-main.html" class="m-nav-label">main</a></li>
                         <li class="m-nav-item"><a href="./project-footer.html" class="m-nav-label">footer</a></li>
-                        <li class="m-nav-item"><a href="./project-widget.html" class="m-nav-label">widget</a></li>
                     </ul>
                 </li>
             </ul>

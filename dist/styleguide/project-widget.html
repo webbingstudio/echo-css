@@ -23,114 +23,120 @@
 
             <nav class="echo-anchor">
                 <ul class="m-list m-list-horizontal">
-                    
-                    <li class="m-list-item"><a href="#widget" class="js-scrollto">p-widget</a></li>
-                    
-                    <li class="m-list-item"><a href="#widget-size" class="js-scrollto">p-widget-(size)</a></li>
-                    
+
+                    <li class="m-list-item"><a href="#widget" class="js-scrollto">widget</a></li>
+
                 </ul>
             </nav>
             
 
             <article class="s-post">
-                <div class="s-post-contents styleguide-contents"><h1 id="p-widget" class="styleguide">widget</h1>
+                <div class="s-post-contents styleguide-contents"><h1 id="widget" class="styleguide">widget</h1>
 
 <p>新着情報など、<strong>サイト内で配置が不定となる可能性があるコンテンツ群</strong>を表示する。<br>
- <code>.p-widget-contents, .p-widget-footer</code> には、必ず他のオブジェクトが含まれる。<br>
-このクラス単独では、見出し、余白、 <code>position: relative</code> の指定のみを行う。</p>
+このクラスはprojectに属しているが、WordPressのウィジェット機能への対応を前提としているため、接頭辞を設けていない。</p>
 
-<p><code>.p-widget</code> を <code>.widget, .section, .block ...</code> 等に変更することができる。 <code>/_scss/_config_advance.scss</code> の変数<br>
-<code>$widget</code> を変更すること。</p>
+<p>Sassを使用できる場合は、クラス名を変更することができる。（Drupalの場合は <code>.view</code>）<br>
+<code>/_scss/_config_basic.scss</code> の変数 <code>$widget</code> を編集すること。</p>
 
-<div class="example"><div class="p-widget">
-    <div class="p-widget-header">
-        <h2 class="p-widget-title">ウィジェットの見出しです</h2>
-    </div><!-- /.p-widget-header -->
+<h3>WordPressのウィジェットをecho.cssに対応させるには</h3>
 
-    <div class="p-widget-contents">
+<p>関数 <code>register_sidebar()</code> の引数を以下の通りにすると、echo.cssのスタイルが反映される。</p>
+
+<div class="codeblock"><pre><code class="language-markup">register_sidebar( array(
+    'name' => 'サンプルウィジェット',
+    'id' => 'widgetarea-sample',
+    'before_widget' => '&lt;section class="widget %2$s" id="%1$s">',
+    'after_widget' => '&lt;/div>&lt;/section>',
+    'before_title' => '&lt;div class="widget-header">&lt;p class="widget-title">',
+    'after_title' => '&lt;/p>&lt;/div>&lt;div class="widget-contents">',
+) );
+</code></pre></div>
+
+
+<div class="example">
+
+<section class="widget">
+    <div class="widget-header">
+        <h2 class="widget-title">ウィジェットの見出しです</h2>
+    </div><!-- /.widget-header -->
+
+    <div class="widget-contents">
         <div style="padding: 1rem; text-align:center; background-color: #e4fcd0;">(widget-contents)</div>
-    </div><!-- /.p-widget-contents -->
+    </div><!-- /.widget-contents -->
 
-    <div class="p-widget-footer">
+    <div class="widget-footer">
         <div style="padding: 1rem; text-align:center; background-color: #ffe6f3;">(widget-footer)</div>
-    </div><!-- /.p-widget-footer -->
+    </div><!-- /.widget-footer -->
 
-</div><!-- /.p-widget -->
-</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-widget"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-widget-header"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"p-widget-title"</span><span class="nt">&gt;</span>ウィジェットの見出しです<span class="nt">&lt;/h2&gt;</span>
-    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.p-widget-header --&gt;</span>
+</section><!-- /.widget -->
 
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-widget-contents"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; text-align:center; background-color: #e4fcd0;"</span><span class="nt">&gt;</span>(widget-contents)<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.p-widget-contents --&gt;</span>
+</div>
 
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-widget-footer"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; text-align:center; background-color: #ffe6f3;"</span><span class="nt">&gt;</span>(widget-footer)<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.p-widget-footer --&gt;</span>
 
-<span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.p-widget --&gt;</span></pre></div>
-<h1 id="p-widget-size" class="styleguide">widget-(size)</h1>
+
+<h1 id="widget-size" class="styleguide">widget-(size)</h1>
 
 <p>ウィジェットのサイズを変える。(size)は、 <code>sm, lg</code> に対応している。</p>
-<div class="example"><div class="p-widget p-widget-sm">
-    <div class="p-widget-header">
-        <h2 class="p-widget-title">ウィジェットの見出しです</h2>
-    </div><!-- /.p-widget-header -->
 
-    <div class="p-widget-contents">
+<div class="example"><div class="widget widget-sm">
+    <div class="widget-header">
+        <h2 class="widget-title">ウィジェットの見出しです</h2>
+    </div><!-- /.widget-header -->
+
+    <div class="widget-contents">
         <div style="padding: 1rem; text-align:center; background-color: #e4fcd0;">(widget-contents)</div>
-    </div><!-- /.p-widget-contents -->
+    </div><!-- /.widget-contents -->
 
-    <div class="p-widget-footer">
+    <div class="widget-footer">
         <div style="padding: 1rem; text-align:center; background-color: #ffe6f3;">(widget-footer)</div>
-    </div><!-- /.p-widget-footer -->
+    </div><!-- /.widget-footer -->
 
-</div><!-- /.p-widget -->
+</div><!-- /.widget -->
 
-<div class="p-widget p-widget-lg">
-    <div class="p-widget-header">
-        <h2 class="p-widget-title">ウィジェットの見出しです</h2>
-    </div><!-- /.p-widget-header -->
+<div class="widget widget-lg">
+    <div class="widget-header">
+        <h2 class="widget-title">ウィジェットの見出しです</h2>
+    </div><!-- /.widget-header -->
 
-    <div class="p-widget-contents">
+    <div class="widget-contents">
         <div style="padding: 1rem; text-align:center; background-color: #e4fcd0;">(widget-contents)</div>
-    </div><!-- /.p-widget-contents -->
+    </div><!-- /.widget-contents -->
 
-    <div class="p-widget-footer">
+    <div class="widget-footer">
         <div style="padding: 1rem; text-align:center; background-color: #ffe6f3;">(widget-footer)</div>
-    </div><!-- /.p-widget-footer -->
+    </div><!-- /.widget-footer -->
 
-</div><!-- /.p-widget -->
-</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-widget p-widget-sm"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-widget-header"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"p-widget-title"</span><span class="nt">&gt;</span>ウィジェットの見出しです<span class="nt">&lt;/h2&gt;</span>
-    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.p-widget-header --&gt;</span>
+</div><!-- /.widget -->
+</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"widget widget-sm"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"widget-header"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"widget-title"</span><span class="nt">&gt;</span>ウィジェットの見出しです<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.widget-header --&gt;</span>
 
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-widget-contents"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"widget-contents"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; text-align:center; background-color: #e4fcd0;"</span><span class="nt">&gt;</span>(widget-contents)<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.p-widget-contents --&gt;</span>
+    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.widget-contents --&gt;</span>
 
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-widget-footer"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"widget-footer"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; text-align:center; background-color: #ffe6f3;"</span><span class="nt">&gt;</span>(widget-footer)<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.p-widget-footer --&gt;</span>
+    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.widget-footer --&gt;</span>
 
-<span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.p-widget --&gt;</span>
+<span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.widget --&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-widget p-widget-lg"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-widget-header"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"p-widget-title"</span><span class="nt">&gt;</span>ウィジェットの見出しです<span class="nt">&lt;/h2&gt;</span>
-    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.p-widget-header --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"widget widget-lg"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"widget-header"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"widget-title"</span><span class="nt">&gt;</span>ウィジェットの見出しです<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.widget-header --&gt;</span>
 
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-widget-contents"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"widget-contents"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; text-align:center; background-color: #e4fcd0;"</span><span class="nt">&gt;</span>(widget-contents)<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.p-widget-contents --&gt;</span>
+    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.widget-contents --&gt;</span>
 
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-widget-footer"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"widget-footer"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; text-align:center; background-color: #ffe6f3;"</span><span class="nt">&gt;</span>(widget-footer)<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.p-widget-footer --&gt;</span>
+    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.widget-footer --&gt;</span>
 
-<span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.p-widget --&gt;</span>
+<span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.widget --&gt;</span>
 </pre></div>
 
 <?php include('../doc_include/footer.inc'); ?>
