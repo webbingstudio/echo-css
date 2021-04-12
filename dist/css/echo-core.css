@@ -3331,7 +3331,7 @@ c-card
   opacity: .75;
 }
 
-.c-card a.c-card-inner:hover .c-card-title.m-title, .c-card a.c-card-inner:focus .c-card-title.m-title, .c-card a.c-card-inner:active .c-card-title.m-title {
+.c-card a.c-card-inner:hover .c-card-title, .c-card a.c-card-inner:focus .c-card-title, .c-card a.c-card-inner:active .c-card-title {
   text-decoration: none;
 }
 
@@ -3380,7 +3380,7 @@ c-card
   margin-top: .5em;
 }
 
-.c-card-title.m-title[class*="m-title-style"] {
+.c-card-title[class*="m-title-style"] {
   margin: 0;
 }
 
@@ -3690,8 +3690,6 @@ c-form
 .c-form-label {
   display: block;
   padding-bottom: 0.625rem;
-  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
-  font-weight: 600;
   line-height: 1;
 }
 
@@ -3892,8 +3890,6 @@ c-headline
   flex-grow: 1;
   flex-basis: 100%;
   font-size: 1em;
-  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
-  font-weight: 300;
 }
 
 @media (min-width: 48rem) {
@@ -3914,8 +3910,6 @@ a.c-headline-inner:not(:hover):not(:focus) .c-headline-title {
 .c-headline-header {
   margin: 0;
   white-space: nowrap;
-  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
-  font-weight: 300;
 }
 
 @media (min-width: 48rem) {
@@ -3937,8 +3931,6 @@ a.c-headline-inner:not(:hover):not(:focus) .c-headline-title {
 
 .c-headline-title {
   margin: .25em 0 0;
-  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
-  font-weight: 300;
 }
 
 @media (min-width: 48rem) {
@@ -4321,7 +4313,7 @@ a.c-media:hover .c-media-title, a.c-media:focus .c-media-title, a.c-media:active
   }
 }
 
-.c-media-title.m-title[class*="m-title-style"] {
+.c-media-title[class*="m-title-style"] {
   margin: 0;
 }
 
@@ -5766,7 +5758,5 @@ p-footer
   padding-bottom: 2.5rem;
   text-align: center;
   font-size: 0.75rem;
-  font-family: "Helvetica", "Roboto", "-apple-system", "Open Sans", "Arial", sans-serif;
-  font-weight: 300;
   line-height: 1;
 }

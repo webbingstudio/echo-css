@@ -56,16 +56,17 @@ echo.cssでは、要素の役割に応じて、最大で4種類のフォント�
             </tr>
             <tr>
                 <th rowspan="2" class="u-text-center u-font-first u-font-bold">first</th>
-                <td>コンポーネントの小見出し等に指定する、汎用の見出し用フォント。</td>
-                <td><code>.c-card-title</code> <code>.c-media-title</code> <code>.u-font-first</code> <code>.wysiwyg > h1,h2</code></td>
+                <td>汎用の見出し用フォント。</td>
+                <td><code>.m-title</code> <code>.u-font-first</code></td>
             </tr>
             <tr>
                 <td colspan="2">rootと同じフォント</td>
             </tr>
             <tr>
                 <th rowspan="2" class="u-text-center u-font-second u-font-bold">second</th>
-                <td>日付や英文を表示する箇所に指定する、英字用フォント。</td>
-                <td><code>.u-font-second</code> <code>.p-footer-copyright</code></td>
+                <td>日付や英文を表示する箇所に指定する、英字用フォント。<br>
+                echo.cssでは <code>object > utility</code> のみ使用している。</td>
+                <td><code>.u-font-second</code></td>
             </tr>
             <tr>
                 <td colspan="2" class="u-font-mono u-text-first">'Helvetica', 'Roboto', '-apple-system', 'Open Sans', 'Arial', sans-serif</td>
@@ -73,20 +74,11 @@ echo.cssでは、要素の役割に応じて、最大で4種類のフォント�
             <tr>
                 <th rowspan="2" class="u-text-center u-font-third u-font-bold">third</th>
                 <td>特別な見出し等に指定する、デザインフォント。<br>
-                echo.cssのサンプルサイトでは <code>object > utility</code> のみ使用しており <code>object > module, component, project</code> には組み込んでいない。</td>
+                echo.cssでは <code>object > utility</code> のみ使用している。</td>
                 <td><code>.u-font-third</code></td>
             </tr>
             <tr>
                 <td colspan="2" class="u-font-mono u-text-first">'游明朝', 'Yu Mincho', '游明朝体', 'YuMincho', 'Hiragino Mincho Pro', 'ＭＳ Ｐ明朝', 'MS PMincho', 'Bookman Old Style', 'Times New Roman', '-apple-system', 'BlinkMacSystemFont', serif</td>
-            </tr>
-            <tr>
-                <th rowspan="2" class="u-text-center u-font-mono">mono</th>
-                <td>ソースコード等に使用される、等幅フォント。<br>
-                echo.cssのサンプルサイトでは <code>object > utility</code> のみ使用しており <code>object > module, component, project</code> には組み込んでいない。</td>
-                <td><code>.u-font-mono</code></td>
-            </tr>
-            <tr>
-                <td colspan="2" class="u-font-mono u-text-first">'Consolas', 'Liberation Mono', 'Menlo', 'Courier', monospace</td>
             </tr>
         </tbody>
     </table>
@@ -104,7 +96,7 @@ echo.cssでは、要素の役割に応じて、最大で4種類のフォント�
 
 <p>echo.cssでは、これらのサービスを使用したときに不都合が出ないよう、SCSSファイルに以下の対策をしています。</p>
 
-<div class="c-box c-box-first">
+<div class="c-box c-box-style-a c-box-info">
     <ul>
         <li>フォント関連の変数を、normalとboldの二種類に分けて指定する</li>
         <li>文字の太さが変更されるクラスのスタイル指定では、 <code>font-family</code> を併記する</li>
@@ -113,7 +105,7 @@ echo.cssでは、要素の役割に応じて、最大で4種類のフォント�
 
 <h2 class="echo-post-title-01">フォントを変更する</h2>
 
-<p>Sassを使用する場合は、echo.cssのフォントを変更することができます。</p>
+<h3 class="echo-post-title-02">Sassを使用する場合</h3>
 
 <p>プロジェクト内の <code>_scss/_config_basic.scss</code> の変数 <code>$font-family-***</code> を変更したうえでビルドしてください。<br>
 下記の例では <code>third</code> のフォントが「<a href="https://fontplus.jp/font-list/tsukugopr5-r-between2-light" target="_blank">筑紫ゴシックPrとBetween Pro2の混植</a>」となります。</p>
@@ -123,5 +115,18 @@ $font-family-third:            'TsukuGoPr5-R-Between2-Light', '-apple-system', '
 $font-weight-third:            300 !default;
 $font-family-bold-third:       'TsukuGoPro-B-Between2-Medium', '-apple-system', 'BlinkMacSystemFont', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif !default;
 $font-weight-bold-third:       700 !default;</code></pre></div>
+
+<h3 class="echo-post-title-02">Sassを使用しない場合</h3>
+
+<p><code>css/echo-font.css</code> は、フォント指定のみをまとめたCSSファイルです。<br>
+このファイルを直接編集（置換）することで、フォントを変更できます。</p>
+
+<p>以下のとおり <code>echo-core.css, echo-color.css</code> と同時に読み込んで使用してください。</p>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;link rel="stylesheet" href="/css/echo-core.min.css"&gt;
+&lt;link rel="stylesheet" href="/css/echo-color.css"&gt;
+&lt;link rel="stylesheet" href="/css/echo-font.css"&gt;
+</code></pre></div>
+
 
 <?php include('../doc_include/footer.inc'); ?>

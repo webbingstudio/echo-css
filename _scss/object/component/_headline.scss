@@ -39,7 +39,6 @@
         flex-grow: 1;
         flex-basis: 100%;
         font-size: 1em;
-        @include font-family-weight( 'root', 'normal' );
 
         @include media-breakpoint-up(md) {
             flex-basis: 0;
@@ -70,7 +69,6 @@
 .#{$pr}#{$c}headline#{$c1}header {
     margin: 0;
     white-space: nowrap;
-    @include font-family-weight( 'root', 'normal' );
 
     @include media-breakpoint-up(md) {
         min-width: 8.5em;
@@ -92,7 +90,6 @@
 
 .#{$pr}#{$c}headline#{$c1}title {
     margin: .25em 0 0;
-    @include font-family-weight( 'root', 'normal' );
 
     @include media-breakpoint-up(md) {
         margin-top: 0;

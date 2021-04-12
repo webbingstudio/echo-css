@@ -48,11 +48,7 @@
             }
 
             .#{$pr}#{$c}card#{$c1}title {
-
-                &.#{$pr}#{$m}title {
-                    text-decoration: none;
-                }
-
+                text-decoration: none;
             }
 
         }
@@ -112,12 +108,8 @@
 
 .#{$pr}#{$c}card#{$c1}title {
 
-    &.#{$pr}#{$m}title {
-
-        &[class*="#{$pr}#{$m}title#{$c1}style"] {
-            margin: 0;
-        }
-
+    &[class*="#{$pr}#{$m}title#{$c1}style"] {
+        margin: 0;
     }
 
 }

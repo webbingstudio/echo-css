@@ -68,11 +68,25 @@ m-title(font)
 
 /*
 --------------------
-c-step(font)
+c-form(font)
 --------------------
 */
-.c-step .m-nav.m-nav-vertical ol.m-nav-list .m-nav-label:before {
-  min-width: 2.75em;
+.c-form-label {
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
+  font-weight: 600;
+}
+
+/*
+--------------------
+c-headline(font)
+--------------------
+*/
+.c-headline-header {
+  font-weight: normal;
+}
+
+.c-headline-title {
+  font-weight: normal;
 }
 
 /*
@@ -89,10 +103,6 @@ u-font-bold
 #document .u-font-root.u-font-bold {
   font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
   font-weight: 600;
-}
-
-#document .u-font-mono {
-  font-family: "Consolas", "Liberation Mono", "Menlo", "Courier", monospace;
 }
 
 #document .u-font-first {
