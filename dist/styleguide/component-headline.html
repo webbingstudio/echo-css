@@ -25,19 +25,6 @@
             <article class="s-post">
                 <div class="s-post-contents styleguide-contents"><h1 id="headline" class="styleguide">c-headline</h1>
 
-<p class="c-alert c-alert-important"><span class="c-alert-header"><i class="fas fa-exclamation-circle"></i><span class="u-sr">注意</span></span>.c-headline は、Version2.0.0でマークアップとレイアウトの方式が変更されました。</p>
-
-<div class="c-box c-box-bordered c-box-important">
-    <dl>
-        <dt>.c-headlineの主な変更点</dt>
-
-        <dd>CSSのflexboxによる整列を行うようになりました。<br>
-        <code>.c-headline-date</code> が <code>.c-headline-header</code> に変更されました。<br>
-        <code>.c-headline-inner</code> が追加され、全体をリンクとしてマークアップできるようになりました。<br>
-        クラス指定がないリンクに下線が引かれるようになりました。</dd>
-    </dl>
-</div>
-
 <p>新着情報のエントリー繰り返し部分などに使用する、ヘッダとタイトルを併記したコンポーネントを表示する。<br>
 (breakpoint)が <code>md</code> 以上でインライン表示となる。</p>
 
@@ -58,7 +45,7 @@ If you use a different notation, adjust the <code>min-width</code>.</p>
     <div class="c-headline-inner">
         <time class="c-headline-header" datetime="2020-12-28T09:00:00+09:00">2020年12月28日</time>
         <p class="c-headline-category">
-            <a href="#" class="m-label m-label-first">カテゴリー</a>
+            <a href="#" class="m-label m-label-style-a">カテゴリー</a>
         </p>
         <h2 class="c-headline-title"><a href="#">ラベルとタイトルが個別のリンクになっています。吾輩は猫である。名前はまだ無い。</a></h2>
     </div><!-- /.c-headline-inner -->
@@ -68,7 +55,7 @@ If you use a different notation, adjust the <code>min-width</code>.</p>
     <div class="c-headline-inner">
         <time class="c-headline-header" datetime="2020-01-01T09:00:00+09:00">2020年1月1日</time>
         <p class="c-headline-category">
-            <a href="#" class="m-label m-label-second">カテゴリー</a>
+            <a href="#" class="m-label m-label-style-a">カテゴリー</a>
         </p>
         <h2 class="c-headline-title"><a href="#">どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</a></h2>
     </div><!-- /.c-headline-inner -->
@@ -78,7 +65,7 @@ If you use a different notation, adjust the <code>min-width</code>.</p>
     <div class="c-headline-inner">
         <time class="c-headline-header" datetime="2020-12-28T09:00:00+09:00">2020年12月28日</time>
         <p class="c-headline-category">
-            <a href="#" class="m-label m-label-third">カテゴリー</a>
+            <a href="#" class="m-label m-label-style-a">カテゴリー</a>
         </p>
         <h2 class="c-headline-title"><a href="#">掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突起している。</a></h2>
     </div><!-- /.c-headline-inner -->
@@ -89,7 +76,7 @@ If you use a different notation, adjust the <code>min-width</code>.</p>
     <a href="#" class="c-headline-inner">
         <time class="c-headline-header" datetime="2020-12-28T09:00:00+09:00">2020年12月28日</time>
         <p class="c-headline-category">
-            <span class="m-label m-label-first">カテゴリー</span>
+            <span class="m-label m-label-style-a">カテゴリー</span>
         </p>
         <h2 class="c-headline-title">全体がリンク範囲になっています。吾輩は猫である。名前はまだ無い。</h2>
     </a><!-- /.c-headline-inner -->
@@ -99,7 +86,7 @@ If you use a different notation, adjust the <code>min-width</code>.</p>
     <a href="#" class="c-headline-inner">
         <time class="c-headline-header" datetime="2020-12-28T09:00:00+09:00">2020年12月28日</time>
         <p class="c-headline-category">
-            <span class="m-label m-label-second">カテゴリー</span>
+            <span class="m-label m-label-style-a">カテゴリー</span>
         </p>
         <h2 class="c-headline-title">どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</h2>
     </a><!-- /.c-headline-inner -->
@@ -109,7 +96,7 @@ If you use a different notation, adjust the <code>min-width</code>.</p>
     <a href="#" class="c-headline-inner">
         <time class="c-headline-header" datetime="2020-12-28T09:00:00+09:00">2020年12月28日</time>
         <p class="c-headline-category">
-            <span class="m-label m-label-third">カテゴリー</span>
+            <span class="m-label m-label-style-a">カテゴリー</span>
         </p>
         <h2 class="c-headline-title">掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突起している。</h2>
     </a><!-- /.c-headline-inner -->
@@ -146,7 +133,7 @@ If you use a different notation, adjust the <code>min-width</code>.</p>
     &lt;div class="c-headline-inner"&gt;
         &lt;time class="c-headline-header" datetime="2020-12-28T09:00:00+09:00"&gt;2020年12月28日&lt;/time&gt;
         &lt;p class="c-headline-category"&gt;
-            &lt;a href="#" class="m-label m-label-first"&gt;カテゴリー&lt;/a&gt;
+            &lt;a href="#" class="m-label m-label-style-a"&gt;カテゴリー&lt;/a&gt;
         &lt;/p&gt;
         &lt;p class="c-headline-title"&gt;&lt;a href="#"&gt;ラベルとタイトルが個別のリンクになっています。吾輩は猫である。名前はまだ無い。&lt;/a&gt;&lt;/p&gt;
     &lt;/div&gt;&lt;!-- /.c-headline-inner --&gt;
@@ -156,7 +143,7 @@ If you use a different notation, adjust the <code>min-width</code>.</p>
     &lt;div class="c-headline-inner"&gt;
         &lt;time class="c-headline-header" datetime="2020-01-01T09:00:00+09:00"&gt;2020年1月1日&lt;/time&gt;
         &lt;p class="c-headline-category"&gt;
-            &lt;a href="#" class="m-label m-label-second"&gt;カテゴリー&lt;/a&gt;
+            &lt;a href="#" class="m-label m-label-style-a"&gt;カテゴリー&lt;/a&gt;
         &lt;/p&gt;
         &lt;p class="c-headline-title"&gt;&lt;a href="#"&gt;どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/a&gt;&lt;/p&gt;
     &lt;/div&gt;&lt;!-- /.c-headline-inner --&gt;
@@ -166,7 +153,7 @@ If you use a different notation, adjust the <code>min-width</code>.</p>
     &lt;div class="c-headline-inner"&gt;
         &lt;time class="c-headline-header" datetime="2020-12-28T09:00:00+09:00"&gt;2020年12月28日&lt;/time&gt;
         &lt;p class="c-headline-category"&gt;
-            &lt;a href="#" class="m-label m-label-third"&gt;カテゴリー&lt;/a&gt;
+            &lt;a href="#" class="m-label m-label-style-a"&gt;カテゴリー&lt;/a&gt;
         &lt;/p&gt;
         &lt;p class="c-headline-title"&gt;&lt;a href="#"&gt;掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突起している。&lt;/a&gt;&lt;/p&gt;
     &lt;/div&gt;&lt;!-- /.c-headline-inner --&gt;
@@ -177,7 +164,7 @@ If you use a different notation, adjust the <code>min-width</code>.</p>
     &lt;a href="#" class="c-headline-inner"&gt;
         &lt;time class="c-headline-header" datetime="2020-12-28T09:00:00+09:00"&gt;2020年12月28日&lt;/time&gt;
         &lt;p class="c-headline-category"&gt;
-            &lt;span class="m-label m-label-first"&gt;カテゴリー&lt;/span&gt;
+            &lt;span class="m-label m-label-style-a"&gt;カテゴリー&lt;/span&gt;
         &lt;/p&gt;
         &lt;p class="c-headline-title"&gt;全体がリンク範囲になっています。吾輩は猫である。名前はまだ無い。&lt;/p&gt;
     &lt;/a&gt;&lt;!-- /.c-headline-inner --&gt;
@@ -187,7 +174,7 @@ If you use a different notation, adjust the <code>min-width</code>.</p>
     &lt;a href="#" class="c-headline-inner"&gt;
         &lt;time class="c-headline-header" datetime="2020-12-28T09:00:00+09:00"&gt;2020年12月28日&lt;/time&gt;
         &lt;p class="c-headline-category"&gt;
-            &lt;span class="m-label m-label-second"&gt;カテゴリー&lt;/span&gt;
+            &lt;span class="m-label m-label-style-a"&gt;カテゴリー&lt;/span&gt;
         &lt;/p&gt;
         &lt;p class="c-headline-title"&gt;どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
     &lt;/a&gt;&lt;!-- /.c-headline-inner --&gt;
@@ -197,7 +184,7 @@ If you use a different notation, adjust the <code>min-width</code>.</p>
     &lt;a href="#" class="c-headline-inner"&gt;
         &lt;time class="c-headline-header" datetime="2020-12-28T09:00:00+09:00"&gt;2020年12月28日&lt;/time&gt;
         &lt;p class="c-headline-category"&gt;
-            &lt;span class="m-label m-label-third"&gt;カテゴリー&lt;/span&gt;
+            &lt;span class="m-label m-label-style-a"&gt;カテゴリー&lt;/span&gt;
         &lt;/p&gt;
         &lt;p class="c-headline-title"&gt;掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突起している。&lt;/p&gt;
     &lt;/a&gt;&lt;!-- /.c-headline-inner --&gt;

@@ -15,39 +15,34 @@
         a#{&} {
 
             &:not(:hover),
-            &:not(:focus) {
+            &:not(:focus),
+            &:not(:active) {
                 color: $body-color;
                 text-decoration: none;
 
                 .#{$pr}#{$c}media#{$c1}title {
-
-                    &.#{$pr}#{$m}title {
-                        text-decoration: underline;
-                    }
-
+                    text-decoration: underline;
                 }
 
             }
 
             &:hover,
-            &:focus {
+            &:focus,
+            &:active {
                 color: $body-color;
                 text-decoration: none;
 
                 .#{$pr}#{$m}thumbnail {
 
                     img {
+                        transform: scale(1.05);
                         opacity: .75;
                     }
 
                 }
 
                 .#{$pr}#{$c}media#{$c1}title {
-
-                    &.#{$pr}#{$m}title {
-                        text-decoration: none;
-                    }
-
+                    text-decoration: none;
                 }
 
             }
@@ -73,11 +68,6 @@
     .#{$pr}#{$m}thumbnail {
         background-color: $body-inverse-bg;
         border: 0 none;
-
-        img {
-            transition: .6s opacity;
-        }
-
     }
 
 }

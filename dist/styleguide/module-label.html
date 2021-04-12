@@ -89,17 +89,6 @@ Since echo.css is intended for use in multibyte languages, the label has been mo
 
 <p>ラベルの色を変更する。(color)は<a href="../docs/design-tokens-color.html">標準のカラーテーブル</a>を参照。</p>
 
-
-<h3>補足：ラベルの色に関する例外</h3>
-
-<p><code>.m-label</code> のみ、デザインカラー(first, second, third)を指定することができる。<br>
-ラベルはその性質上、ユーザーインターフェースで定義されているよりも多数の色を必要とするため、例外的な対応をしている。</p>
-
-<h3>Note: Exception relating to the color of the label</h3>
-
-<p>Only <code>.m-label</code> can specify the design color(first, second, third).<br>
-Labels, by their very nature, require more colors than are defined in the user interface, so they take exceptional steps.</p>
-
 <div class="example">
 
 <p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-style-a m-label-info">m-label-info</span><a href="#" class="m-label m-label-style-a m-label-info">m-label-info(link)</a>どこで生れたかとんと見当がつかぬ。</p>
@@ -114,18 +103,6 @@ Labels, by their very nature, require more colors than are defined in the user i
 
 <p class="u-bg-default u-padding-sm">吾輩は猫である。名前はまだ無い。<span class="m-label m-label-style-b m-label-inverse">m-label-inverse</span><a href="#" class="m-label m-label-style-b m-label-inverse">m-label-inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
 
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-style-a m-label-first">m-label-first</span><a href="#" class="m-label m-label-style-a m-label-first">m-label-first(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-style-b m-label-first">m-label-first</span><a href="#" class="m-label m-label-style-b m-label-first">m-label-first(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-style-a m-label-second">m-label-second</span><a href="#" class="m-label m-label-style-a m-label-second">m-label-second(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-style-b m-label-second">m-label-second</span><a href="#" class="m-label m-label-style-b m-label-second">m-label-second(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-style-a m-label-third">m-label-third</span><a href="#" class="m-label m-label-style-a m-label-third">m-label-third(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-style-b m-label-third">m-label-third</span><a href="#" class="m-label m-label-style-b m-label-third">m-label-third(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-
 </div>
 
 <div class="codeblock"><pre><code class="language-markup">&lt;p&gt;吾輩は猫である。名前はまだ無い。&lt;span class="m-label m-label-style-a m-label-info"&gt;m-label-info&lt;/span&gt;&lt;a href="#" class="m-label m-label-style-a m-label-info"&gt;m-label-info(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
@@ -139,18 +116,6 @@ Labels, by their very nature, require more colors than are defined in the user i
 &lt;p class="u-bg-default u-padding-sm"&gt;吾輩は猫である。名前はまだ無い。&lt;span class="m-label m-label-style-a m-label-inverse"&gt;m-label-inverse&lt;/span&gt;&lt;a href="#" class="m-label m-label-style-a m-label-inverse"&gt;m-label-inverse(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
 
 &lt;p class="u-bg-default u-padding-sm"&gt;吾輩は猫である。名前はまだ無い。&lt;span class="m-label m-label-style-b m-label-inverse"&gt;m-label-inverse&lt;/span&gt;&lt;a href="#" class="m-label m-label-style-b m-label-inverse"&gt;m-label-inverse(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
-
-&lt;p&gt;吾輩は猫である。名前はまだ無い。&lt;span class="m-label m-label-style-a m-label-first"&gt;m-label-first&lt;/span&gt;&lt;a href="#" class="m-label m-label-style-a m-label-first"&gt;m-label-first(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
-
-&lt;p&gt;吾輩は猫である。名前はまだ無い。&lt;span class="m-label m-label-style-b m-label-first"&gt;m-label-first&lt;/span&gt;&lt;a href="#" class="m-label m-label-style-b m-label-first"&gt;m-label-first(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
-
-&lt;p&gt;吾輩は猫である。名前はまだ無い。&lt;span class="m-label m-label-style-a m-label-second"&gt;m-label-second&lt;/span&gt;&lt;a href="#" class="m-label m-label-style-a m-label-second"&gt;m-label-second(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
-
-&lt;p&gt;吾輩は猫である。名前はまだ無い。&lt;span class="m-label m-label-style-b m-label-second"&gt;m-label-second&lt;/span&gt;&lt;a href="#" class="m-label m-label-style-b m-label-second"&gt;m-label-second(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
-
-&lt;p&gt;吾輩は猫である。名前はまだ無い。&lt;span class="m-label m-label-style-a m-label-third"&gt;m-label-third&lt;/span&gt;&lt;a href="#" class="m-label m-label-style-a m-label-third"&gt;m-label-third(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
-
-&lt;p&gt;吾輩は猫である。名前はまだ無い。&lt;span class="m-label m-label-style-b m-label-third"&gt;m-label-third&lt;/span&gt;&lt;a href="#" class="m-label m-label-style-b m-label-third"&gt;m-label-third(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
 </code></pre></div>
 
 
@@ -170,18 +135,6 @@ Labels, by their very nature, require more colors than are defined in the user i
 <p class="u-bg-default u-padding-sm">吾輩は猫である。名前はまだ無い。<span class="m-label m-label-oval m-label-style-a m-label-inverse">m-label-oval</span><a href="#" class="m-label m-label-oval m-label-style-a m-label-inverse">m-label-oval(link)</a>どこで生れたかとんと見当がつかぬ。</p>
 
 <p class="u-bg-default u-padding-sm">吾輩は猫である。名前はまだ無い。<span class="m-label m-label-oval m-label-style-b m-label-inverse">m-label-oval</span><a href="#" class="m-label m-label-oval m-label-style-b m-label-inverse">m-label-oval(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-oval m-label-style-a m-label-first">m-label-oval</span><a href="#" class="m-label m-label-oval m-label-style-a m-label-first">m-label-oval(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-oval m-label-style-b m-label-first">m-label-oval</span><a href="#" class="m-label m-label-oval m-label-style-b m-label-first">m-label-oval(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-oval m-label-style-a m-label-second">m-label-oval</span><a href="#" class="m-label m-label-oval m-label-style-a m-label-second">m-label-oval(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-oval m-label-style-b m-label-second">m-label-oval</span><a href="#" class="m-label m-label-oval m-label-style-b m-label-second">m-label-oval(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-oval m-label-style-a m-label-third">m-label-oval</span><a href="#" class="m-label m-label-oval m-label-style-a m-label-third">m-label-oval(link)</a>どこで生れたかとんと見当がつかぬ。</p>
-
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-oval m-label-style-b m-label-third">m-label-oval</span><a href="#" class="m-label m-label-oval m-label-style-b m-label-third">m-label-oval(link)</a>どこで生れたかとんと見当がつかぬ。</p>
 </div>
 
 
@@ -196,18 +149,6 @@ Labels, by their very nature, require more colors than are defined in the user i
 &lt;p class="u-bg-default u-padding-sm"&gt;吾輩は猫である。名前はまだ無い。&lt;span class="m-label m-label-oval m-label-style-a m-label-inverse"&gt;m-label-oval&lt;/span&gt;&lt;a href="#" class="m-label m-label-oval m-label-style-a m-label-inverse"&gt;m-label-oval(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
 
 &lt;p class="u-bg-default u-padding-sm"&gt;吾輩は猫である。名前はまだ無い。&lt;span class="m-label m-label-oval m-label-style-b m-label-inverse"&gt;m-label-oval&lt;/span&gt;&lt;a href="#" class="m-label m-label-oval m-label-style-b m-label-inverse"&gt;m-label-oval(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
-
-&lt;p&gt;吾輩は猫である。名前はまだ無い。&lt;span class="m-label m-label-oval m-label-style-a m-label-first"&gt;m-label-oval&lt;/span&gt;&lt;a href="#" class="m-label m-label-oval m-label-style-a m-label-first"&gt;m-label-oval(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
-
-&lt;p&gt;吾輩は猫である。名前はまだ無い。&lt;span class="m-label m-label-oval m-label-style-b m-label-first"&gt;m-label-oval&lt;/span&gt;&lt;a href="#" class="m-label m-label-oval m-label-style-b m-label-first"&gt;m-label-oval(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
-
-&lt;p&gt;吾輩は猫である。名前はまだ無い。&lt;span class="m-label m-label-oval m-label-style-a m-label-second"&gt;m-label-oval&lt;/span&gt;&lt;a href="#" class="m-label m-label-oval m-label-style-a m-label-second"&gt;m-label-oval(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
-
-&lt;p&gt;吾輩は猫である。名前はまだ無い。&lt;span class="m-label m-label-oval m-label-style-b m-label-second"&gt;m-label-oval&lt;/span&gt;&lt;a href="#" class="m-label m-label-oval m-label-style-b m-label-second"&gt;m-label-oval(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
-
-&lt;p&gt;吾輩は猫である。名前はまだ無い。&lt;span class="m-label m-label-oval m-label-style-a m-label-third"&gt;m-label-oval&lt;/span&gt;&lt;a href="#" class="m-label m-label-oval m-label-style-a m-label-third"&gt;m-label-oval(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
-
-&lt;p&gt;吾輩は猫である。名前はまだ無い。&lt;span class="m-label m-label-oval m-label-style-b m-label-third"&gt;m-label-oval&lt;/span&gt;&lt;a href="#" class="m-label m-label-oval m-label-style-b m-label-third"&gt;m-label-oval(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
 </code></pre></div>
 
 <?php include('../doc_include/footer.inc'); ?>

@@ -4281,25 +4281,26 @@ c-media
   align-items: flex-start;
 }
 
-a.c-media:not(:hover), a.c-media:not(:focus) {
+a.c-media:not(:hover), a.c-media:not(:focus), a.c-media:not(:active) {
   color: #333;
   text-decoration: none;
 }
 
-a.c-media:not(:hover) .c-media-title.m-title, a.c-media:not(:focus) .c-media-title.m-title {
+a.c-media:not(:hover) .c-media-title, a.c-media:not(:focus) .c-media-title, a.c-media:not(:active) .c-media-title {
   text-decoration: underline;
 }
 
-a.c-media:hover, a.c-media:focus {
+a.c-media:hover, a.c-media:focus, a.c-media:active {
   color: #333;
   text-decoration: none;
 }
 
-a.c-media:hover .m-thumbnail img, a.c-media:focus .m-thumbnail img {
+a.c-media:hover .m-thumbnail img, a.c-media:focus .m-thumbnail img, a.c-media:active .m-thumbnail img {
+  transform: scale(1.05);
   opacity: .75;
 }
 
-a.c-media:hover .c-media-title.m-title, a.c-media:focus .c-media-title.m-title {
+a.c-media:hover .c-media-title, a.c-media:focus .c-media-title, a.c-media:active .c-media-title {
   text-decoration: none;
 }
 
@@ -4321,10 +4322,6 @@ a.c-media:hover .c-media-title.m-title, a.c-media:focus .c-media-title.m-title {
 .c-media-object .m-thumbnail {
   background-color: #333;
   border: 0 none;
-}
-
-.c-media-object .m-thumbnail img {
-  transition: .6s opacity;
 }
 
 .c-media-contents {
