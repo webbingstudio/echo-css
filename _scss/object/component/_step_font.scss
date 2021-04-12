@@ -1,0 +1,25 @@
+/*
+--------------------
+#{$pr}#{$c}step(font)
+--------------------
+*/
+
+.#{$pr}#{$c}step {
+
+    .#{$pr}#{$m}nav.#{$pr}#{$m}nav#{$c3}vertical {
+
+        ol.#{$pr}#{$m}nav#{$c1}list {
+
+            .#{$pr}#{$m}nav#{$c1}label {
+
+                &:before {
+                    min-width: ( 44 / 16 ) + em;
+                }
+
+            }
+
+        }
+
+    }
+
+}

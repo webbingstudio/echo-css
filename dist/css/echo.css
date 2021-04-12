@@ -75,13 +75,31 @@ input[type="reset"] {
 
 /*
 --------------------
+reset(font)
+--------------------
+*/
+b,
+th,
+dt,
+optgroup,
+strong,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
+  font-weight: 600;
+}
+
+/*
+--------------------
 typography
 --------------------
 */
 html {
   font-size: 1rem;
-  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
-  font-weight: 300;
 }
 
 body {
@@ -188,17 +206,9 @@ img {
   border: 0 none;
 }
 
-/*
-note: Font Families in Form
-日本では、フォームの入力フィールドにサンセリフフォントを指定する傾向があります。 これは、入力フォームに適用される標準フォントが、OSによって大きく異なるためです。
-In Japan, there is a tendency to specify sans-serif fonts in the form input fields. This is because standard fonts applied to input fields vary greatly depending on the OS.
---------------------
-*/
 textarea,
 input {
   font-size: 1em;
-  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
-  font-weight: 300;
 }
 
 input[type="text"],
@@ -214,9 +224,34 @@ textarea {
 }
 
 select {
+  line-height: 1;
+}
+
+/*
+--------------------
+typography(font)
+--------------------
+*/
+html {
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
+  font-weight: 300;
+}
+
+/*
+note: Font Families in Form
+日本では、フォームの入力フィールドにサンセリフフォントを指定する傾向があります。 これは、入力フォームに適用される標準フォントが、OSによって大きく異なるためです。
+In Japan, there is a tendency to specify sans-serif fonts in the form input fields. This is because standard fonts applied to input fields vary greatly depending on the OS.
+--------------------
+*/
+textarea,
+input {
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
+  font-weight: 300;
+}
+
+select {
   font-family: '-apple-system', 'BlinkMacSystemFont', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
   font-weight: 300;
-  line-height: 1;
 }
 
 /*
@@ -4997,8 +5032,6 @@ c-step
   content: counter(item);
   min-width: 2.75em;
   height: 100%;
-  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
-  font-weight: 600;
   background-color: #eee;
   transition: background-color .3s, color .3s;
 }

@@ -64,7 +64,6 @@
                     content: counter( item );
                     min-width: ( 44 / 16 ) + em;
                     height: 100%;
-                    @include font-family-weight( 'first', 'bold' );
                     background-color: $nav-hover-bg;
                     transition:
                         background-color .3s,

@@ -11,12 +11,68 @@
  */
 /*
 --------------------
+reset(font)
+--------------------
+*/
+b,
+th,
+dt,
+optgroup,
+strong,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
+  font-weight: 600;
+}
+
+/*
+--------------------
+typography(font)
+--------------------
+*/
+html {
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
+  font-weight: 300;
+}
+
+/*
+note: Font Families in Form
+日本では、フォームの入力フィールドにサンセリフフォントを指定する傾向があります。 これは、入力フォームに適用される標準フォントが、OSによって大きく異なるためです。
+In Japan, there is a tendency to specify sans-serif fonts in the form input fields. This is because standard fonts applied to input fields vary greatly depending on the OS.
+--------------------
+*/
+textarea,
+input {
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
+  font-weight: 300;
+}
+
+select {
+  font-family: '-apple-system', 'BlinkMacSystemFont', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+  font-weight: 300;
+}
+
+/*
+--------------------
 m-title(font)
 --------------------
 */
 .m-title {
   font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
   font-weight: 600;
+}
+
+/*
+--------------------
+c-step(font)
+--------------------
+*/
+.c-step .m-nav.m-nav-vertical ol.m-nav-list .m-nav-label:before {
+  min-width: 2.75em;
 }
 
 /*
