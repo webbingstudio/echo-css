@@ -27,7 +27,7 @@
 
                     <li class="m-list-item"><a href="#thumbnail" class="js-scrollto">m-thumbnail</a></li>
                     
-                    <li class="m-list-item"><a href="#thumbnail-01-round" class="js-scrollto">m-thumbnail-round</a></li>
+                    <li class="m-list-item"><a href="#thumbnail-01-circle" class="js-scrollto">m-thumbnail-circle</a></li>
                     
                     <li class="m-list-item"><a href="#thumbnail-02-square" class="js-scrollto">m-thumbnail-square</a></li>
                     
@@ -39,351 +39,353 @@
             <article class="s-post">
                 <div class="s-post-contents styleguide-contents"><h1 id="thumbnail" class="styleguide">m-thumbnail</h1>
 
-<p class="c-alert c-alert-important"><span class="c-alert-header"><i class="fas fa-exclamation-circle"></i><span class="u-sr">注意</span></span>.m-thumbnail は、Version2.0.0で画像トリミングの方式が変更されました。</p>
+<p>一覧ページ、記事中で縮小された画像を表示する。要素自体ではなく、包括している要素にクラスを付与する。</p>
 
-<div class="c-box c-box-bordered c-box-important">
-    <dl>
-        <dt>.m-thumbnailの主な変更点</dt>
-
-        <dd><code>.m-thumbnail-square, .m-thumbnail-round, .m-thumbnail-(ratio-x)to(ratio-y)</code> を使用した場合、CSSのobject-fitによるトリミングを行うようになりました。<br>
-        object-fitの導入により不要となったため、 <code>.m-thumbnail-horizontal</code> が廃止されました。<br>
-        Internet Explorer11でトリミングに対応する場合は、別途ライブラリを追加してください。<br>
-        </dd>
-    </dl>
-</div>
-
-<p>一覧ページ、記事中で縮小された画像を表示する。要素自体ではなく、包括している要素にクラスを付与する。<br>
+<p><code>span, div, a, figure</code> 要素に対応している。<br>
 このクラス単独ではそのままのサイズと縦横比で表示する。幅が制限されていると、そのサイズを超えないよう画像が縮小される。</p>
-<div class="example"><div class="u-clearfix">
 
-<div class="u-margin-r-md">
-    <div style="float: left; margin-right: 15px;">
-        <img src="https://placehold.jp/150x150.jpg" alt="">
-    </div>
+<p>a要素でマークアップすると、hover時に画像の透明度が上がる。</p>
+
+<div class="example">
+
+<div class="m-thumbnail u-margin-right-lg">
+    <img src="https://placehold.jp/150x150.jpg" alt="">
 </div>
 
-<div class="u-margin-r-md">
-    <div style="float: left; margin-right: 15px;">
-        <img src="https://placehold.jp/240x320.jpg" alt="">
-    </div>
-</div>
-
-<div style="float: left; margin-right: 15px; width: 200px;">
+<div class="u-margin-top-lg" style="width: 200px;">
+    <dfn>画像よりも小さい幅を指定した場合</dfn>
     <div class="m-thumbnail">
         <img src="https://placehold.jp/480x360.jpg" alt="">
     </div>
-    <p class="u-m-y-0">↑width: 200px</p>
+</div>
+
+<div class="u-margin-top-lg">
+    <dfn>figure要素でマークアップした場合</dfn>
+    <figure class="m-thumbnail">
+        <img src="https://placehold.jp/150x150.jpg" alt="">
+        <figcaption>figcaption要素です</figcaption>
+    </figure>
+</div>
+
+<div class="u-margin-top-lg">
+    <dfn>a要素でマークアップした場合</dfn>
+    <a href="#" class="m-thumbnail">
+        <img src="https://placehold.jp/150x150.jpg" alt="">
+    </a>
+    <dfn>a要素 > figure要素でマークアップした場合</dfn>
+    <a href="#" class="m-thumbnail">
+        <figure>
+            <img src="https://placehold.jp/150x150.jpg" alt="">
+            <figcaption>figcaption要素です</figcaption>
+        </figure>
+    </a>
 </div>
 
 </div>
-</div>
 
-<div class="codeblock"><pre><code class="language-markup">&lt;div class="u-margin-r-md"&gt;
-    &lt;div style="float: left; margin-right: 15px;"&gt;
-        &lt;img src="https://placehold.jp/150x150.jpg" alt=""&gt;
-    &lt;/div&gt;
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="m-thumbnail u-margin-right-lg"&gt;
+    &lt;img src="https://placehold.jp/150x150.jpg" alt=""&gt;
 &lt;/div&gt;
 
-&lt;div class="u-margin-r-md"&gt;
-    &lt;div style="float: left; margin-right: 15px;"&gt;
-        &lt;img src="https://placehold.jp/240x320.jpg" alt=""&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div style="float: left; margin-right: 15px; width: 200px;"&gt;
+&lt;div class="u-margin-top-lg" style="width: 200px;"&gt;
+    &lt;dfn&gt;画像よりも小さい幅を指定した場合&lt;/dfn&gt;
     &lt;div class="m-thumbnail"&gt;
         &lt;img src="https://placehold.jp/480x360.jpg" alt=""&gt;
     &lt;/div&gt;
-    &lt;p class="u-m-y-0"&gt;↑width: 200px&lt;/p&gt;
-&lt;/div&gt;</code></pre></div>
+&lt;/div&gt;
 
-<h2 id="thumbnail-01-round" class="styleguide">m-thumbnail-round</h2>
+&lt;div class="u-margin-top-lg"&gt;
+    &lt;dfn&gt;figure要素でマークアップした場合&lt;/dfn&gt;
+    &lt;figure class="m-thumbnail"&gt;
+        &lt;img src="https://placehold.jp/150x150.jpg" alt=""&gt;
+        &lt;figcaption&gt;figcaption要素です&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/div&gt;
 
-<p>画像を正円にトリミングして表示する。別途、幅を指定する必要がある。<br>
-img要素のサイズが <code>.m-thumbnail</code> よりも小さい場合は、引き伸ばして表示される。</p>
-<div class="example"><div class="u-clearfix">
+&lt;div class="u-margin-top-lg"&gt;
+    &lt;dfn&gt;a要素でマークアップした場合&lt;/dfn&gt;
+    &lt;a href="#" class="m-thumbnail"&gt;
+        &lt;img src="https://placehold.jp/150x150.jpg" alt=""&gt;
+    &lt;/a&gt;
+    &lt;dfn&gt;a要素 &gt; figure要素でマークアップした場合&lt;/dfn&gt;
+    &lt;a href="#" class="m-thumbnail"&gt;
+        &lt;figure&gt;
+            &lt;img src="https://placehold.jp/150x150.jpg" alt=""&gt;
+            &lt;figcaption&gt;figcaption要素です&lt;/figcaption&gt;
+        &lt;/figure&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+</code></pre></div>
 
-<div style="float: left; margin-right: 15px; width: 200px;">
-    <div class="m-thumbnail m-thumbnail-round">
-        <img src="https://placehold.jp/200x200.jpg" alt="">
+<h2 id="thumbnail-01-circle" class="styleguide">m-thumbnail-circle</h2>
+
+<p>画像を正円にトリミングして表示する。幅を指定する必要がある。<br>
+img要素のサイズが <code>.m-thumbnail</code> よりも小さい場合は、引き伸ばして表示される。<br>
+<code>figcaption</code> 要素は使用できない。</p>
+
+<p>a要素でマークアップすると、hover時に画像が拡大する。</p>
+
+<p>画像のトリミング、および引き伸ばしは <code>object-fit</code> プロパティを使用している。Internet Explorer11以前では画像が正方形ではなかった場合、画像の縦横比が歪んで表示される。<br>
+Internet Explorer11以前に対応する場合は、別途ライブラリを追加すること。</p>
+
+<div class="example">
+
+<div style="width: 200px;">
+    <div class="m-thumbnail m-thumbnail-circle">
+        <img src="https://placehold.jp/480x360.jpg" alt="">
     </div>
 </div>
 
-<div style="float: left; margin-right: 15px; width: 200px;">
-    <div class="m-thumbnail m-thumbnail-round">
-        <img src="https://placehold.jp/200x100.jpg" alt="">
-    </div>
+<div class="u-margin-top-lg" style="width: 200px;">
+    <dfn>figure要素でマークアップした場合</dfn>
+    <figure class="m-thumbnail m-thumbnail-circle">
+        <img src="https://placehold.jp/150x150.jpg" alt="">
+    </figure>
 </div>
 
-<div style="float: left; margin-right: 15px; width: 200px;">
-    <div class="m-thumbnail m-thumbnail-round">
-        <img src="https://placehold.jp/375x667.jpg" alt="">
-    </div>
+<div class="u-margin-top-lg" style="width: 200px;">
+    <dfn>a要素でマークアップした場合</dfn>
+    <a href="#" class="m-thumbnail m-thumbnail-circle">
+        <img src="https://placehold.jp/150x150.jpg" alt="">
+    </a>
+    <dfn>a要素 > figure要素でマークアップした場合</dfn>
+    <a href="#" class="m-thumbnail m-thumbnail-circle">
+        <figure>
+            <img src="https://placehold.jp/150x150.jpg" alt="">
+        </figure>
+    </a>
 </div>
 
-</div></div>
+</div>
 
-<div class="codeblock"><pre><code class="language-markup">&lt;div style="float: left; margin-right: 15px; width: 200px;"&gt;
-    &lt;div class="m-thumbnail m-thumbnail-round"&gt;
-        &lt;img src="https://placehold.jp/200x200.jpg" alt=""&gt;
+<div class="codeblock"><pre><code class="language-markup">&lt;div style="width: 200px;"&gt;
+    &lt;div class="m-thumbnail m-thumbnail-circle"&gt;
+        &lt;img src="https://placehold.jp/480x360.jpg" alt=""&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div style="float: left; margin-right: 15px; width: 200px;"&gt;
-    &lt;div class="m-thumbnail m-thumbnail-round"&gt;
-        &lt;img src="https://placehold.jp/200x100.jpg" alt=""&gt;
-    &lt;/div&gt;
+&lt;div class="u-margin-top-lg" style="width: 200px;"&gt;
+    &lt;dfn&gt;figure要素でマークアップした場合&lt;/dfn&gt;
+    &lt;figure class="m-thumbnail m-thumbnail-circle"&gt;
+        &lt;img src="https://placehold.jp/150x150.jpg" alt=""&gt;
+    &lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;div style="float: left; margin-right: 15px; width: 200px;"&gt;
-    &lt;div class="m-thumbnail m-thumbnail-round"&gt;
-        &lt;img src="https://placehold.jp/375x667.jpg" alt=""&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre></div>
+&lt;div class="u-margin-top-lg" style="width: 200px;"&gt;
+    &lt;dfn&gt;a要素でマークアップした場合&lt;/dfn&gt;
+    &lt;a href="#" class="m-thumbnail m-thumbnail-circle"&gt;
+        &lt;img src="https://placehold.jp/150x150.jpg" alt=""&gt;
+    &lt;/a&gt;
+    &lt;dfn&gt;a要素 &gt; figure要素でマークアップした場合&lt;/dfn&gt;
+    &lt;a href="#" class="m-thumbnail m-thumbnail-circle"&gt;
+        &lt;figure&gt;
+            &lt;img src="https://placehold.jp/150x150.jpg" alt=""&gt;
+        &lt;/figure&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+</code></pre></div>
 
 
 <h2 id="thumbnail-02-square" class="styleguide">m-thumbnail-square</h2>
 
-<p>画像を正方形にトリミングして表示する。別途、幅を指定する必要がある。<br>
-img要素のサイズが <code>.m-thumbnail</code> よりも小さい場合は、引き伸ばして表示される。</p>
-<div class="example"><div class="u-clearfix">
+<p>画像を正方形にトリミングして表示する。幅を指定する必要がある。<br>
+<code>figcaption</code> 要素は使用できない。</p>
 
-<div style="float: left; margin-right: 15px; width: 200px;">
+<p>img要素のサイズが <code>.m-thumbnail</code> よりも小さい場合は、引き伸ばして表示される。</p>
+
+<div class="example">
+
+<div style="width: 200px;">
     <div class="m-thumbnail m-thumbnail-square">
-        <img src="https://placehold.jp/200x200.jpg" alt="">
+        <img src="https://placehold.jp/480x360.jpg" alt="">
     </div>
 </div>
 
-<div style="float: left; margin-right: 15px; width: 200px;">
-    <div class="m-thumbnail m-thumbnail-square">
-        <img src="https://placehold.jp/200x100.jpg" alt="">
-    </div>
+<div class="u-margin-top-lg" style="width: 200px;">
+    <dfn>figure要素でマークアップした場合</dfn>
+    <figure class="m-thumbnail m-thumbnail-square">
+        <img src="https://placehold.jp/150x150.jpg" alt="">
+    </figure>
 </div>
 
-<div style="float: left; margin-right: 15px; width: 200px;">
-    <div class="m-thumbnail m-thumbnail-square">
-        <img src="https://placehold.jp/375x667.jpg" alt="">
-    </div>
+<div class="u-margin-top-lg" style="width: 200px;">
+    <dfn>a要素でマークアップした場合</dfn>
+    <a href="#" class="m-thumbnail m-thumbnail-square">
+        <img src="https://placehold.jp/150x150.jpg" alt="">
+    </a>
+    <dfn>a要素 > figure要素でマークアップした場合</dfn>
+    <a href="#" class="m-thumbnail m-thumbnail-square">
+        <figure>
+            <img src="https://placehold.jp/150x150.jpg" alt="">
+        </figure>
+    </a>
 </div>
 
-</div></div>
+</div>
 
-<div class="codeblock"><pre><code class="language-markup">&lt;div style="float: left; margin-right: 15px; width: 200px;"&gt;
+<div class="codeblock"><pre><code class="language-markup">&lt;div style="width: 200px;"&gt;
     &lt;div class="m-thumbnail m-thumbnail-square"&gt;
-        &lt;img src="https://placehold.jp/200x200.jpg" alt=""&gt;
+        &lt;img src="https://placehold.jp/480x360.jpg" alt=""&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div style="float: left; margin-right: 15px; width: 200px;"&gt;
-    &lt;div class="m-thumbnail m-thumbnail-square"&gt;
-        &lt;img src="https://placehold.jp/200x100.jpg" alt=""&gt;
-    &lt;/div&gt;
+&lt;div class="u-margin-top-lg" style="width: 200px;"&gt;
+    &lt;dfn&gt;figure要素でマークアップした場合&lt;/dfn&gt;
+    &lt;figure class="m-thumbnail m-thumbnail-square"&gt;
+        &lt;img src="https://placehold.jp/150x150.jpg" alt=""&gt;
+    &lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;div style="float: left; margin-right: 15px; width: 200px;"&gt;
-    &lt;div class="m-thumbnail m-thumbnail-square"&gt;
-        &lt;img src="https://placehold.jp/375x667.jpg" alt=""&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre></div>
+&lt;div class="u-margin-top-lg" style="width: 200px;"&gt;
+    &lt;dfn&gt;a要素でマークアップした場合&lt;/dfn&gt;
+    &lt;a href="#" class="m-thumbnail m-thumbnail-square"&gt;
+        &lt;img src="https://placehold.jp/150x150.jpg" alt=""&gt;
+    &lt;/a&gt;
+    &lt;dfn&gt;a要素 &gt; figure要素でマークアップした場合&lt;/dfn&gt;
+    &lt;a href="#" class="m-thumbnail m-thumbnail-square"&gt;
+        &lt;figure&gt;
+            &lt;img src="https://placehold.jp/150x150.jpg" alt=""&gt;
+        &lt;/figure&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+</code></pre></div>
 
 
 <h2 id="thumbnail-03-ratio" class="styleguide">m-thumbnail-(ratio-x)to(ratio-y)</h2>
 
 <p>画像を指定した縦横比で、かつトリミングして表示する。別途、幅を指定する必要がある。<br>
-(ratio-x)to(ratio-y)は <code>3to2, 4to3, 16to9, ogimage(1.91:1), 21to9</code> に対応している。<br>
+<code>figcaption</code> 要素は使用できない。</p>
+
+<p>(ratio-x)to(ratio-y)は <code>3to2, 4to3, 16to9, ogimage(1.91:1), 21to9</code> に対応している。<br>
 img要素のサイズが <code>.m-thumbnail</code> よりも小さい場合は、引き伸ばして表示される。</p>
-<div class="example"><div class="u-clearfix">
 
-<div style="float: left; margin-right: 15px; width: 200px;">
+<div class="example">
+
+<div style="width: 200px;">
     <div class="m-thumbnail m-thumbnail-3to2">
-        <img src="https://placehold.jp/480x360.jpg" alt="">
+        <img src="https://placehold.jp/360x360.jpg" alt="">
     </div>
 </div>
 
-<div style="float: left; margin-right: 15px; width: 200px;">
+<div class="u-margin-top-lg" style="width: 200px;">
     <div class="m-thumbnail m-thumbnail-4to3">
-        <img src="https://placehold.jp/480x360.jpg" alt="">
+        <img src="https://placehold.jp/360x360.jpg" alt="">
     </div>
 </div>
 
-<div style="float: left; margin-right: 15px; width: 200px;">
+<div class="u-margin-top-lg" style="width: 200px;">
     <div class="m-thumbnail m-thumbnail-16to9">
-        <img src="https://placehold.jp/480x360.jpg" alt="">
+        <img src="https://placehold.jp/360x360.jpg" alt="">
     </div>
 </div>
 
-<div style="float: left; margin-right: 15px; width: 200px;">
+<div class="u-margin-top-lg" style="width: 200px;">
     <div class="m-thumbnail m-thumbnail-ogimage">
-        <img src="https://placehold.jp/480x360.jpg" alt="">
+        <img src="https://placehold.jp/360x360.jpg" alt="">
     </div>
 </div>
 
-<div style="float: left; margin-right: 15px; width: 200px;">
+<div class="u-margin-top-lg" style="width: 200px;">
     <div class="m-thumbnail m-thumbnail-21to9">
-        <img src="https://placehold.jp/480x360.jpg" alt="">
+        <img src="https://placehold.jp/360x360.jpg" alt="">
     </div>
 </div>
 
+<p class="m-title m-title-style-a m-title-level-4">a要素でマークアップした場合</p>
+
+<div class="u-margin-top-lg" style="width: 200px;">
+    <a href="#" class="m-thumbnail m-thumbnail-3to2">
+        <img src="https://placehold.jp/360x360.jpg" alt="">
+    </a>
 </div>
 
-<div class="u-clearfix">
-
-<div style="float: left; margin-right: 15px; width: 200px;">
-    <div class="m-thumbnail m-thumbnail-3to2">
-        <img src="https://placehold.jp/120x600.jpg" alt="">
-    </div>
+<div class="u-margin-top-lg" style="width: 200px;">
+    <a href="#" class="m-thumbnail m-thumbnail-4to3">
+        <img src="https://placehold.jp/360x360.jpg" alt="">
+    </a>
 </div>
 
-<div style="float: left; margin-right: 15px; width: 200px;">
-    <div class="m-thumbnail m-thumbnail-4to3">
-        <img src="https://placehold.jp/120x600.jpg" alt="">
-    </div>
+<div class="u-margin-top-lg" style="width: 200px;">
+    <a href="#" class="m-thumbnail m-thumbnail-16to9">
+        <img src="https://placehold.jp/360x360.jpg" alt="">
+    </a>
 </div>
 
-<div style="float: left; margin-right: 15px; width: 200px;">
-    <div class="m-thumbnail m-thumbnail-16to9">
-        <img src="https://placehold.jp/120x600.jpg" alt="">
-    </div>
+<div class="u-margin-top-lg" style="width: 200px;">
+    <a href="#" class="m-thumbnail m-thumbnail-ogimage">
+        <img src="https://placehold.jp/360x360.jpg" alt="">
+    </a>
 </div>
 
-<div style="float: left; margin-right: 15px; width: 200px;">
-    <div class="m-thumbnail m-thumbnail-ogimage">
-        <img src="https://placehold.jp/120x600.jpg" alt="">
-    </div>
-</div>
-
-<div style="float: left; margin-right: 15px; width: 200px;">
-    <div class="m-thumbnail m-thumbnail-21to9">
-        <img src="https://placehold.jp/120x600.jpg" alt="">
-    </div>
+<div class="u-margin-top-lg" style="width: 200px;">
+    <a href="#" class="m-thumbnail m-thumbnail-21to9">
+        <img src="https://placehold.jp/360x360.jpg" alt="">
+    </a>
 </div>
 
 </div>
 
-<div class="u-clearfix">
-
-<div style="float: left; margin-right: 15px; width: 200px;">
-    <div class="m-thumbnail m-thumbnail-3to2">
-        <img src="https://placehold.jp/600x200.jpg" alt="">
-    </div>
-</div>
-
-<div style="float: left; margin-right: 15px; width: 200px;">
-    <div class="m-thumbnail m-thumbnail-4to3">
-        <img src="https://placehold.jp/600x200.jpg" alt="">
-    </div>
-</div>
-
-<div style="float: left; margin-right: 15px; width: 200px;">
-    <div class="m-thumbnail m-thumbnail-16to9">
-        <img src="https://placehold.jp/600x200.jpg" alt="">
-    </div>
-</div>
-
-<div style="float: left; margin-right: 15px; width: 200px;">
-    <div class="m-thumbnail m-thumbnail-ogimage">
-        <img src="https://placehold.jp/600x200.jpg" alt="">
-    </div>
-</div>
-
-<div style="float: left; margin-right: 15px; width: 200px;">
-    <div class="m-thumbnail m-thumbnail-21to9">
-        <img src="https://placehold.jp/600x200.jpg" alt="">
-    </div>
-</div>
-
-</div></div>
-
-<div class="codeblock"><pre><code class="language-markup">&lt;div style="float: left; margin-right: 15px; width: 200px;"&gt;
+<div class="codeblock"><pre><code class="language-markup">&lt;div style="width: 200px;"&gt;
     &lt;div class="m-thumbnail m-thumbnail-3to2"&gt;
-        &lt;img src="https://placehold.jp/480x360.jpg" alt=""&gt;
+        &lt;img src="https://placehold.jp/360x360.jpg" alt=""&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div style="float: left; margin-right: 15px; width: 200px;"&gt;
+&lt;div class="u-margin-top-lg" style="width: 200px;"&gt;
     &lt;div class="m-thumbnail m-thumbnail-4to3"&gt;
-        &lt;img src="https://placehold.jp/480x360.jpg" alt=""&gt;
+        &lt;img src="https://placehold.jp/360x360.jpg" alt=""&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div style="float: left; margin-right: 15px; width: 200px;"&gt;
+&lt;div class="u-margin-top-lg" style="width: 200px;"&gt;
     &lt;div class="m-thumbnail m-thumbnail-16to9"&gt;
-        &lt;img src="https://placehold.jp/480x360.jpg" alt=""&gt;
+        &lt;img src="https://placehold.jp/360x360.jpg" alt=""&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div style="float: left; margin-right: 15px; width: 200px;"&gt;
+&lt;div class="u-margin-top-lg" style="width: 200px;"&gt;
     &lt;div class="m-thumbnail m-thumbnail-ogimage"&gt;
-        &lt;img src="https://placehold.jp/480x360.jpg" alt=""&gt;
+        &lt;img src="https://placehold.jp/360x360.jpg" alt=""&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div style="float: left; margin-right: 15px; width: 200px;"&gt;
+&lt;div class="u-margin-top-lg" style="width: 200px;"&gt;
     &lt;div class="m-thumbnail m-thumbnail-21to9"&gt;
-        &lt;img src="https://placehold.jp/480x360.jpg" alt=""&gt;
+        &lt;img src="https://placehold.jp/360x360.jpg" alt=""&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 
+&lt;p class="m-title m-title-style-a m-title-level-4"&gt;a要素でマークアップした場合&lt;/p&gt;
 
-&lt;div style="float: left; margin-right: 15px; width: 200px;"&gt;
-    &lt;div class="m-thumbnail m-thumbnail-3to2"&gt;
-        &lt;img src="https://placehold.jp/120x600.jpg" alt=""&gt;
-    &lt;/div&gt;
+&lt;div class="u-margin-top-lg" style="width: 200px;"&gt;
+    &lt;a href="#" class="m-thumbnail m-thumbnail-3to2"&gt;
+        &lt;img src="https://placehold.jp/360x360.jpg" alt=""&gt;
+    &lt;/a&gt;
 &lt;/div&gt;
 
-&lt;div style="float: left; margin-right: 15px; width: 200px;"&gt;
-    &lt;div class="m-thumbnail m-thumbnail-4to3"&gt;
-        &lt;img src="https://placehold.jp/120x600.jpg" alt=""&gt;
-    &lt;/div&gt;
+&lt;div class="u-margin-top-lg" style="width: 200px;"&gt;
+    &lt;a href="#" class="m-thumbnail m-thumbnail-4to3"&gt;
+        &lt;img src="https://placehold.jp/360x360.jpg" alt=""&gt;
+    &lt;/a&gt;
 &lt;/div&gt;
 
-&lt;div style="float: left; margin-right: 15px; width: 200px;"&gt;
-    &lt;div class="m-thumbnail m-thumbnail-16to9"&gt;
-        &lt;img src="https://placehold.jp/120x600.jpg" alt=""&gt;
-    &lt;/div&gt;
+&lt;div class="u-margin-top-lg" style="width: 200px;"&gt;
+    &lt;a href="#" class="m-thumbnail m-thumbnail-16to9"&gt;
+        &lt;img src="https://placehold.jp/360x360.jpg" alt=""&gt;
+    &lt;/a&gt;
 &lt;/div&gt;
 
-&lt;div style="float: left; margin-right: 15px; width: 200px;"&gt;
-    &lt;div class="m-thumbnail m-thumbnail-ogimage"&gt;
-        &lt;img src="https://placehold.jp/120x600.jpg" alt=""&gt;
-    &lt;/div&gt;
+&lt;div class="u-margin-top-lg" style="width: 200px;"&gt;
+    &lt;a href="#" class="m-thumbnail m-thumbnail-ogimage"&gt;
+        &lt;img src="https://placehold.jp/360x360.jpg" alt=""&gt;
+    &lt;/a&gt;
 &lt;/div&gt;
 
-&lt;div style="float: left; margin-right: 15px; width: 200px;"&gt;
-    &lt;div class="m-thumbnail m-thumbnail-21to9"&gt;
-        &lt;img src="https://placehold.jp/120x600.jpg" alt=""&gt;
-    &lt;/div&gt;
+&lt;div class="u-margin-top-lg" style="width: 200px;"&gt;
+    &lt;a href="#" class="m-thumbnail m-thumbnail-21to9"&gt;
+        &lt;img src="https://placehold.jp/360x360.jpg" alt=""&gt;
+    &lt;/a&gt;
 &lt;/div&gt;
-
-
-&lt;div style="float: left; margin-right: 15px; width: 200px;"&gt;
-    &lt;div class="m-thumbnail m-thumbnail-3to2"&gt;
-        &lt;img src="https://placehold.jp/600x200.jpg" alt=""&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div style="float: left; margin-right: 15px; width: 200px;"&gt;
-    &lt;div class="m-thumbnail m-thumbnail-4to3"&gt;
-        &lt;img src="https://placehold.jp/600x200.jpg" alt=""&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div style="float: left; margin-right: 15px; width: 200px;"&gt;
-    &lt;div class="m-thumbnail m-thumbnail-16to9"&gt;
-        &lt;img src="https://placehold.jp/600x200.jpg" alt=""&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div style="float: left; margin-right: 15px; width: 200px;"&gt;
-    &lt;div class="m-thumbnail m-thumbnail-ogimage"&gt;
-        &lt;img src="https://placehold.jp/600x200.jpg" alt=""&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div style="float: left; margin-right: 15px; width: 200px;"&gt;
-    &lt;div class="m-thumbnail m-thumbnail-21to9"&gt;
-        &lt;img src="https://placehold.jp/600x200.jpg" alt=""&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre></div>
+</code></pre></div>
 
 <?php include('../doc_include/footer.inc'); ?>

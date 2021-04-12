@@ -33,6 +33,10 @@ main {
   display: block;
 }
 
+figure {
+  margin: 0;
+}
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -2774,9 +2778,17 @@ m-thumbnail
   overflow: hidden;
   position: relative;
   display: inline-block;
-  background: #fff;
+  background: transparent;
   border: 0 solid #333;
   vertical-align: bottom;
+}
+
+.m-thumbnail figcaption {
+  display: block;
+  margin-top: .5em;
+  font-size: 0.875rem;
+  line-height: 1.25;
+  text-align: center;
 }
 
 .m-thumbnail img {
@@ -2785,9 +2797,18 @@ m-thumbnail
   width: 100%;
   max-width: 100%;
   height: auto;
+  transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+  transform-origin: center center;
 }
 
-.m-thumbnail-round img,
+a.m-thumbnail:hover img, a.m-thumbnail:focus img, a.m-thumbnail:active img,
+.m-thumbnail a:hover img,
+.m-thumbnail a:focus img,
+.m-thumbnail a:active img {
+  opacity: .75;
+}
+
+.m-thumbnail-circle img,
 .m-thumbnail-square img,
 .m-thumbnail-3to2 img,
 .m-thumbnail-4to3 img,
@@ -2802,20 +2823,63 @@ m-thumbnail
   object-fit: cover;
 }
 
+a.m-thumbnail-circle:hover img, a.m-thumbnail-circle:focus img, a.m-thumbnail-circle:active img,
+a.m-thumbnail-square:hover img,
+a.m-thumbnail-square:focus img,
+a.m-thumbnail-square:active img,
+a.m-thumbnail-3to2:hover img,
+a.m-thumbnail-3to2:focus img,
+a.m-thumbnail-3to2:active img,
+a.m-thumbnail-4to3:hover img,
+a.m-thumbnail-4to3:focus img,
+a.m-thumbnail-4to3:active img,
+a.m-thumbnail-16to9:hover img,
+a.m-thumbnail-16to9:focus img,
+a.m-thumbnail-16to9:active img,
+a.m-thumbnail-ogimage:hover img,
+a.m-thumbnail-ogimage:focus img,
+a.m-thumbnail-ogimage:active img,
+a.m-thumbnail-21to9:hover img,
+a.m-thumbnail-21to9:focus img,
+a.m-thumbnail-21to9:active img,
+.m-thumbnail-circle a:hover img,
+.m-thumbnail-circle a:focus img,
+.m-thumbnail-circle a:active img,
+.m-thumbnail-square a:hover img,
+.m-thumbnail-square a:focus img,
+.m-thumbnail-square a:active img,
+.m-thumbnail-3to2 a:hover img,
+.m-thumbnail-3to2 a:focus img,
+.m-thumbnail-3to2 a:active img,
+.m-thumbnail-4to3 a:hover img,
+.m-thumbnail-4to3 a:focus img,
+.m-thumbnail-4to3 a:active img,
+.m-thumbnail-16to9 a:hover img,
+.m-thumbnail-16to9 a:focus img,
+.m-thumbnail-16to9 a:active img,
+.m-thumbnail-ogimage a:hover img,
+.m-thumbnail-ogimage a:focus img,
+.m-thumbnail-ogimage a:active img,
+.m-thumbnail-21to9 a:hover img,
+.m-thumbnail-21to9 a:focus img,
+.m-thumbnail-21to9 a:active img {
+  transform: scale(1.05);
+}
+
 /*
 --------------------
-m-thumbnail-round
+m-thumbnail-circle
 m-thumbnail-square
 --------------------
 */
-.m-thumbnail-round,
+.m-thumbnail-circle,
 .m-thumbnail-square {
   width: 100%;
   height: 0;
   padding-bottom: 100%;
 }
 
-.m-thumbnail-round {
+.m-thumbnail-circle {
   width: 100%;
   height: 0;
   padding-bottom: 100%;
@@ -3254,8 +3318,7 @@ c-card
 .c-card {
   position: relative;
   max-width: 30rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   background-color: #fff;
   color: #333;
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
@@ -3266,25 +3329,26 @@ c-card
   height: 100%;
 }
 
-.c-card > a:not(:hover), .c-card > a:not(:focus) {
+.c-card a.c-card-inner:not(:hover), .c-card a.c-card-inner:not(:focus), .c-card a.c-card-inner:not(:active) {
   color: #333;
   text-decoration: none;
 }
 
-.c-card > a:not(:hover) .c-card-title.m-title, .c-card > a:not(:focus) .c-card-title.m-title {
+.c-card a.c-card-inner:not(:hover) .c-card-title, .c-card a.c-card-inner:not(:focus) .c-card-title, .c-card a.c-card-inner:not(:active) .c-card-title {
   text-decoration: underline;
 }
 
-.c-card > a:hover, .c-card > a:focus {
+.c-card a.c-card-inner:hover, .c-card a.c-card-inner:focus, .c-card a.c-card-inner:active {
   color: #333;
   text-decoration: none;
 }
 
-.c-card > a:hover .m-thumbnail img, .c-card > a:focus .m-thumbnail img {
+.c-card a.c-card-inner:hover .m-thumbnail img, .c-card a.c-card-inner:focus .m-thumbnail img, .c-card a.c-card-inner:active .m-thumbnail img {
+  transform: scale(1.05);
   opacity: .75;
 }
 
-.c-card > a:hover .c-card-title.m-title, .c-card > a:focus .c-card-title.m-title {
+.c-card a.c-card-inner:hover .c-card-title.m-title, .c-card a.c-card-inner:focus .c-card-title.m-title, .c-card a.c-card-inner:active .c-card-title.m-title {
   text-decoration: none;
 }
 
@@ -3303,10 +3367,6 @@ c-card
 .c-card-object .m-thumbnail {
   background-color: #333;
   border: 0 none;
-}
-
-.c-card-object .m-thumbnail img {
-  transition: .6s opacity;
 }
 
 .c-card-header,

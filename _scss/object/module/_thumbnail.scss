@@ -9,9 +9,17 @@
     overflow: hidden;
     position: relative;
     display: inline-block;
-    background: $body-bg;
+    background: transparent;
     border: $border-thumbnail-width solid $border-color;
     vertical-align: bottom;
+
+    figcaption {
+        display: block;
+        margin-top: .5em;
+        font-size: $font-size-sm;
+        line-height: $line-height-xs;
+        text-align: center;
+    }
 
     img {
         display: block;
@@ -19,11 +27,30 @@
         width: 100%;
         max-width: 100%;
         height: auto;
+        transition:
+            opacity .3s ease-in-out,
+            transform .3s ease-in-out;
+        transform-origin: center center;
     }
 
 }
 
-.#{$pr}#{$m}thumbnail#{$c3}round,
+a.#{$pr}#{$m}thumbnail,
+.#{$pr}#{$m}thumbnail a {
+
+    &:hover,
+    &:focus,
+    &:active {
+
+        img {
+            opacity: .75;
+        }
+
+    }
+
+}
+
+.#{$pr}#{$m}thumbnail#{$c3}circle,
 .#{$pr}#{$m}thumbnail#{$c3}square,
 .#{$pr}#{$m}thumbnail#{$c3}3to2,
 .#{$pr}#{$m}thumbnail#{$c3}4to3,
@@ -42,22 +69,49 @@
 
 }
 
+a.#{$pr}#{$m}thumbnail#{$c3}circle,
+a.#{$pr}#{$m}thumbnail#{$c3}square,
+a.#{$pr}#{$m}thumbnail#{$c3}3to2,
+a.#{$pr}#{$m}thumbnail#{$c3}4to3,
+a.#{$pr}#{$m}thumbnail#{$c3}16to9,
+a.#{$pr}#{$m}thumbnail#{$c3}ogimage,
+a.#{$pr}#{$m}thumbnail#{$c3}21to9,
+.#{$pr}#{$m}thumbnail#{$c3}circle a,
+.#{$pr}#{$m}thumbnail#{$c3}square a,
+.#{$pr}#{$m}thumbnail#{$c3}3to2 a,
+.#{$pr}#{$m}thumbnail#{$c3}4to3 a,
+.#{$pr}#{$m}thumbnail#{$c3}16to9 a,
+.#{$pr}#{$m}thumbnail#{$c3}ogimage a,
+.#{$pr}#{$m}thumbnail#{$c3}21to9 a {
+
+    &:hover,
+    &:focus,
+    &:active {
+
+        img {
+            transform: scale(1.05);
+        }
+
+    }
+
+}
+
 
 /*
 --------------------
-#{$pr}#{$m}thumbnail#{$c3}round
+#{$pr}#{$m}thumbnail#{$c3}circle
 #{$pr}#{$m}thumbnail#{$c3}square
 --------------------
 */
 
-.#{$pr}#{$m}thumbnail#{$c3}round,
+.#{$pr}#{$m}thumbnail#{$c3}circle,
 .#{$pr}#{$m}thumbnail#{$c3}square {
     width: 100%;
     height: 0;
     padding-bottom: percentage(1 / 1);
 }
 
-.#{$pr}#{$m}thumbnail#{$c3}round {
+.#{$pr}#{$m}thumbnail#{$c3}circle {
     width: 100%;
     height: 0;
     padding-bottom: percentage(1 / 1);

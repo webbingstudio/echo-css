@@ -7,8 +7,7 @@
 .#{$pr}#{$c}card {
     position: relative;
     max-width: map-get( $object-max-widths, 'md' );
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     background-color: $body-bg;
     color: $body-color;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
@@ -18,31 +17,30 @@
         height: 100%;
     }
 
-    > a {
+    a.#{$pr}#{$c}card#{$c1}inner {
 
         &:not(:hover),
-        &:not(:focus) {
+        &:not(:focus),
+        &:not(:active) {
             color: $body-color;
             text-decoration: none;
 
             .#{$pr}#{$c}card#{$c1}title {
-
-                &.#{$pr}#{$m}title {
-                    text-decoration: underline;
-                }
-
+                text-decoration: underline;
             }
 
         }
 
         &:hover,
-        &:focus {
+        &:focus,
+        &:active {
             color: $body-color;
             text-decoration: none;
 
             .#{$pr}#{$m}thumbnail {
 
                 img {
+                    transform: scale(1.05);
                     opacity: .75;
                 }
 
@@ -76,11 +74,6 @@
     .#{$pr}#{$m}thumbnail {
         background-color: $body-inverse-bg;
         border: 0 none;
-
-        img {
-            transition: .6s opacity;
-        }
-
     }
 
 }
