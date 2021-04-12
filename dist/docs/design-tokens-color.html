@@ -27,7 +27,7 @@
 
 <h2 class="echo-post-title-01">標準のカラーテーブル</h2>
 
-<p>echo.cssで使用されている、標準の色名とカラーコードの対応は以下の通りです。<br>
+<p>echo.cssで使用されている、色名とカラーコードの対応は以下の通りです。<br>
 カラーコードは <code>_scss/_config_basic.scss</code> で変更することができます。</p>
 
 <div class="m-table-responsive">
@@ -45,7 +45,7 @@
         </thead>
         <tbody>
             <tr>
-                <th rowspan="4" class="u-text-center" style="width: 1%; white-space: nowrap; vertical-align: middle;">システムカラー</th>
+                <th rowspan="4" class="u-text-center" style="width: 1%; white-space: nowrap; vertical-align: middle;">色名</th>
                 <th class="u-text-center">default</th>
                 <td><span class="doc-colorchip u-bg-default"></span>#333</td>
                 <td><span class="doc-colorchip" style="background-color: #000;"></span>#000</td>
@@ -69,36 +69,13 @@
                 <td class="u-bg-default"><span class="doc-colorchip" style="background-color: #fff;"></span>#fff</td>
                 <td class="u-bg-default"><span class="doc-colorchip u-bg-inverse u-bg-fade"></span>rgba( 255,255,255,.15 )</td>
             </tr>
-            <tr>
-                <th rowspan="3" class="u-text-center" style="width: 1%; white-space: nowrap; vertical-align: middle;">デザインカラー</th>
-                <th class="u-text-center">first</th>
-                <td><span class="doc-colorchip u-bg-first"></span>#1a9ea5</td>
-                <td><span class="doc-colorchip" style="background-color: #0f8d94;"></span>#0f8d94</td>
-                <td><span class="doc-colorchip u-bg-first u-bg-fade"></span>#e1f8f9</td>
-            </tr>
-            <tr>
-                <th class="u-text-center">second</th>
-                <td><span class="doc-colorchip u-bg-second"></span>#191</td>
-                <td><span class="doc-colorchip" style="background-color: #080;"></span>#080</td>
-                <td><span class="doc-colorchip u-bg-second u-bg-fade"></span>#e9f7dd</td>
-            </tr>
-            <tr>
-                <th class="u-text-center">third</th>
-                <td><span class="doc-colorchip u-bg-third"></span>#d2a219</td>
-                <td><span class="doc-colorchip" style="background-color: #a07700;"></span>#a07700</td>
-                <td><span class="doc-colorchip u-bg-third u-bg-fade"></span>#fdf9eb</td>
-            </tr>
         </tbody>
     </table>
 </div><!-- /.m-table-responsive -->
 
 <h2 class="echo-post-title-01">色名と役割</h2>
 
-<p>echo.cssでは、4種類のシステムカラーと、3種類のデザインカラーを定義しています。</p>
-
-<h3 class="echo-post-title-02">システムカラー</h3>
-
-<p>ウェブサイトを構成するうえで必須となる色です。適切なルールに基づいていれば、システムカラーのみでウェブサイトを成立させることができます。</p>
+<p>echo.cssでは、4種類のシステムカラーを定義しています。</p>
 
 <h4 class="echo-post-title-03"><span class="doc-colorchip u-bg-default"></span>default</h4>
 
@@ -116,18 +93,17 @@
 
 <p>背景が暗色だったときの色を指定します。一般に、defaultの反転色が使用されます。</p>
 
-<h3 class="echo-post-title-02">デザインカラー</h3>
+<h2 class="echo-post-title-01">デザインカラーの廃止について</h2>
 
-<p><code>.m-label-(color)</code> と、ユーティリティクラス <code>.u-border, .u-bg, .u-text</code> のみで使用できる色です。<br>
-あくまで装飾用の色群であり、優先度や構造に関連付けることは推薦されません。破綻しなければ、forth, fifth... と追加しても構いません。<br>
-echo.cssではdefaultの近似色、類似色、反対色を定義しています。<br>
-<strong>デザインカラーは、アクセシビリティ面に課題があります。</strong>後述の「アクセシビリティ」を参照してください。</p>
+<p>Version 2.x までのecho.cssには、装飾目的のデザインカラー <code>$first, $second, $third</code> が定義されていましたが、以下の理由から廃止し、システムカラーのみとなりました。</p>
 
-<h4 class="echo-post-title-03 u-margin-right-xl" style="display: inline-block;"><span class="doc-colorchip u-bg-first"></span>first</h4>
+<ul>
+    <li>アクセシビリティ達成基準（コントラスト比、色覚障害者への対応など）を満たすことが難しいため</li>
+    <li>装飾目的の色名はデザイナーの方針により決定され、エンジニアが定義するものではないため</li>
+    <li>CMSで構築されたウェブサイトの場合、装飾用のクラス名はシステム側で決められているため（WordPressのGutenberg等）</li>
+    <li>ラベルのサブクラスは色名ではなく、ラベルを生成するシステムのカテゴリー名が反映されることが多いため</li>
+</ul>
 
-<h4 class="echo-post-title-03 u-margin-right-xl" style="display: inline-block;"><span class="doc-colorchip u-bg-second"></span>second</h4>
-
-<h4 class="echo-post-title-03" style="display: inline-block;"><span class="doc-colorchip u-bg-third"></span>third</h4>
 
 <h2 class="echo-post-title-01">色の強度と役割</h2>
 
