@@ -6,6 +6,7 @@
 
 .#{$pr}#{$c}card {
     position: relative;
+    width: 100%;
     max-width: map-get( $object-max-widths, 'md' );
     margin: 0 auto;
     background-color: $body-bg;
@@ -61,14 +62,22 @@
 }
 
 .#{$pr}#{$c}card#{$c1}inner {
-    display: block;
-    position: relative;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
     height: 100%;
+
+    > * {
+        flex-grow: 0;
+    }
+
 }
 
 .#{$pr}#{$c}card#{$c1}object {
-    display: block;
     position: relative;
+    flex-grow: 0;
     z-index: 11;
 
     .#{$pr}#{$m}thumbnail {
@@ -78,19 +87,27 @@
 
 }
 
-.#{$pr}#{$c}card#{$c1}header,
-.#{$pr}#{$c}card#{$c1}contents {
+.#{$pr}#{$c}card#{$c1}header {
+    padding: $spacer (map-get($grid-gutter-widths, md) / 2);
     word-break: break-word;
 }
 
-.#{$pr}#{$c}card#{$c1}header {
-    padding: $spacer (map-get($grid-gutter-widths, md) / 2);
-}
-
 .#{$pr}#{$c}card#{$c1}contents {
+    flex-grow: 1;
     padding: $spacer (map-get($grid-gutter-widths, md) / 2);
     font-size: $font-size-sm;
     line-height: $line-height-sm;
+    word-break: break-word;
+
+    [class*="#{$pr}#{$c}card"] {
+        margin: 0;
+
+        + [class*="#{$pr}#{$c}card"] {
+            margin-top: .5em;
+        }
+
+    }
+
 }
 
 .#{$pr}#{$c}card#{$c1}title {
@@ -106,15 +123,16 @@
 }
 
 .#{$pr}#{$c}card#{$c1}meta {
-    margin: 0;
 }
 
 .#{$pr}#{$c}card#{$c1}body {
-    margin: 0;
 }
 
-[class*="#{$pr}#{$c}card"] + .#{$pr}#{$c}card#{$c1}title,
-[class*="#{$pr}#{$c}card"] + .#{$pr}#{$c}card#{$c1}meta,
-[class*="#{$pr}#{$c}card"] + .#{$pr}#{$c}card#{$c1}body {
-    margin-top: .5rem;
+.#{$pr}#{$c}card#{$c1}footer {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: $spacer (map-get($grid-gutter-widths, md) / 2);
 }

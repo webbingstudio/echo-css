@@ -3317,6 +3317,7 @@ c-card
 */
 .c-card {
   position: relative;
+  width: 100%;
   max-width: 30rem;
   margin: 0 auto;
   background-color: #fff;
@@ -3353,14 +3354,21 @@ c-card
 }
 
 .c-card-inner {
-  display: block;
-  position: relative;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
   height: 100%;
 }
 
+.c-card-inner > * {
+  flex-grow: 0;
+}
+
 .c-card-object {
-  display: block;
   position: relative;
+  flex-grow: 0;
   z-index: 11;
 }
 
@@ -3369,37 +3377,38 @@ c-card
   border: 0 none;
 }
 
-.c-card-header,
-.c-card-contents {
+.c-card-header {
+  padding: 0.625rem 0.625rem;
   word-break: break-word;
 }
 
-.c-card-header {
-  padding: 0.625rem 0.625rem;
-}
-
 .c-card-contents {
+  flex-grow: 1;
   padding: 0.625rem 0.625rem;
   font-size: 0.875rem;
   line-height: 1.5;
+  word-break: break-word;
+}
+
+.c-card-contents [class*="c-card"] {
+  margin: 0;
+}
+
+.c-card-contents [class*="c-card"] + [class*="c-card"] {
+  margin-top: .5em;
 }
 
 .c-card-title.m-title[class*="m-title-style"] {
   margin: 0;
 }
 
-.c-card-meta {
-  margin: 0;
-}
-
-.c-card-body {
-  margin: 0;
-}
-
-[class*="c-card"] + .c-card-title,
-[class*="c-card"] + .c-card-meta,
-[class*="c-card"] + .c-card-body {
-  margin-top: .5rem;
+.c-card-footer {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0.625rem 0.625rem;
 }
 
 /*
