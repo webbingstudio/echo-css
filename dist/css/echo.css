@@ -4115,12 +4115,15 @@ c-form
 */
 .c-form {
   width: 100%;
-  margin-bottom: 1.875rem;
+}
+
+.c-form + .c-form {
+  margin-top: 2rem;
 }
 
 .c-form-label {
   display: block;
-  padding-bottom: 0.625rem;
+  margin-bottom: .5em;
   line-height: 1;
 }
 
@@ -4218,7 +4221,7 @@ c-form-error
 */
 .c-form-error {
   width: 100%;
-  margin: .5rem 0 0;
+  margin: 1em 0 0;
   color: #d20b2a;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -4230,24 +4233,9 @@ c-form-submit
 --------------------
 */
 .c-form-submit {
-  padding-top: 1.875rem;
+  margin-top: 3rem;
   line-height: 1;
   text-align: center;
-}
-
-.c-form-submit:before, .c-form-submit:after {
-  content: "";
-  display: table;
-}
-
-.c-form-submit:after {
-  clear: both;
-}
-
-@media (min-width: 62.5rem) {
-  .c-form-submit {
-    padding-top: 2.8125rem;
-  }
 }
 
 .c-form-submit form {

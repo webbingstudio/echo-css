@@ -6,12 +6,16 @@
 
 .#{$pr}#{$c}form {
     width: 100%;
-    margin-bottom: ($spacer * 3);
+
+    & + & {
+        margin-top: 2rem;
+    }
+
 }
 
 .#{$pr}#{$c}form#{$c1}label {
     display: block;
-    padding-bottom: $spacer;
+    margin-bottom: .5em;
     line-height: 1;
 }
 
@@ -128,7 +132,7 @@
 
 .#{$pr}#{$c}form#{$c1}error {
     width: 100%;
-    margin: .5rem 0 0;
+    margin: 1em 0 0;
     color: $important;
     font-size: $font-size-sm;
     line-height: $line-height-sm;
@@ -142,14 +146,9 @@
 */
 
 .#{$pr}#{$c}form#{$c1}submit {
-    @include clearfix();
-    padding-top: ($spacer * 3);
+    margin-top: 3rem;
     line-height: 1;
     text-align: center;
-
-    @include media-breakpoint-up(lg) {
-        padding-top: ($spacer * 4.5);
-    }
 
     form {
         display: inline-block;
