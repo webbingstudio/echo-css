@@ -5,9 +5,9 @@
 */
 
 .#{$pr}#{$c}headline#{$c1}header {
-    font-weight: normal;
+    @include font-family-weight( 'root', 'normal' );
 }
 
 .#{$pr}#{$c}headline#{$c1}title {
-    font-weight: normal;
+    @include font-family-weight( 'root', 'normal' );
 }
