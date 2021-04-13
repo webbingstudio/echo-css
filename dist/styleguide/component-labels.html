@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>component-labels | Style guide | css</title>
+    <meta property="og:title" content="component-labels | Style guide | css">
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div class="l-document" id="document">
+
+    <?php include('../doc_include/header.inc'); ?>
+
+    <main class="p-main" role="main">
+        <div class="echo-container echo-container-fluid">
+
+            <div class="echo-pagehead">
+                <h1 class="echo-pagehead-title">component-labels</h1>
+            </div><!-- /.echo-pagehead -->
+
+            <nav class="echo-anchor">
+                <ul class="m-list m-list-horizontal">
+
+                    <li class="m-list-item"><a href="#labels" class="js-scrollto">c-labels</a></li>
+
+                </ul>
+            </nav>
+            
+
+            <article class="s-post">
+                <div class="s-post-contents styleguide-contents"><h1 id="labels" class="styleguide">c-labels</h1>
+
+<p>タグリストなど、ラベルの並列表示を前提とした外観に変更する。<code>.m-label</code> を包括する。ヘッダ <code>dfn.c-labels-header</code> は必須ではない。</p>
+
+<div class="example">
+
+<p class="m-title m-title-level-4 m-title-style-a">見出しがある場合</p>
+
+<nav class="c-labels">
+    <dfn class="c-labels-header">カテゴリー</dfn>
+    <a href="#" class="m-label m-label-style-a">ラベル</a>
+    <a href="#" class="m-label m-label-style-a">ラベル</a>
+    <a href="#" class="m-label m-label-style-a">ラベル</a>
+    <a href="#" class="m-label m-label-style-a">ラベル</a>
+    <a href="#" class="m-label m-label-style-a">ラベル</a>
+    <a href="#" class="m-label m-label-style-a">ラベル</a>
+</nav>
+
+<p class="m-title m-title-level-4 m-title-style-a">見出しがない場合</p>
+
+<nav class="c-labels">
+    <a href="#" class="m-label m-label-oval m-label-style-a">ラベル</a>
+    <a href="#" class="m-label m-label-oval m-label-style-a">ラベル</a>
+    <a href="#" class="m-label m-label-oval m-label-style-a">ラベル</a>
+    <a href="#" class="m-label m-label-oval m-label-style-a">ラベル</a>
+    <a href="#" class="m-label m-label-oval m-label-style-a">ラベル</a>
+    <a href="#" class="m-label m-label-oval m-label-style-a">ラベル</a>
+</nav>
+
+</div>
+
+
+<div class="codeblock"><pre><code class="language-markup">&lt;p class="m-title m-title-level-4 m-title-style-a"&gt;見出しがある場合&lt;/p&gt;
+
+&lt;nav class="c-labels"&gt;
+    &lt;dfn class="c-labels-header"&gt;カテゴリー&lt;/dfn&gt;
+    &lt;a href="#" class="m-label m-label-style-a"&gt;ラベル&lt;/a&gt;
+    &lt;a href="#" class="m-label m-label-style-a"&gt;ラベル&lt;/a&gt;
+    &lt;a href="#" class="m-label m-label-style-a"&gt;ラベル&lt;/a&gt;
+    &lt;a href="#" class="m-label m-label-style-a"&gt;ラベル&lt;/a&gt;
+&lt;/nav&gt;
+
+&lt;p class="m-title m-title-level-4 m-title-style-a"&gt;見出しがない場合&lt;/p&gt;
+
+&lt;nav class="c-labels"&gt;
+    &lt;a href="#" class="m-label m-label-style-a"&gt;ラベル&lt;/a&gt;
+    &lt;a href="#" class="m-label m-label-style-a"&gt;ラベル&lt;/a&gt;
+    &lt;a href="#" class="m-label m-label-style-a"&gt;ラベル&lt;/a&gt;
+    &lt;a href="#" class="m-label m-label-style-a"&gt;ラベル&lt;/a&gt;
+&lt;/nav&gt;
+</code></pre></div>
+
+                </div>
+            </article>
+
+<?php include('../doc_include/footer.inc'); ?>

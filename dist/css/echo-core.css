@@ -2069,7 +2069,7 @@ m-label
 }
 
 .m-label + .m-label {
-  margin-left: .5em;
+  margin-left: .5rem;
 }
 
 a.m-label {
@@ -4357,6 +4357,46 @@ c-media-reverse
 @media (min-width: 48rem) {
   .c-media-reverse .c-media-object {
     padding-left: 1.25rem;
+  }
+}
+
+/*
+--------------------
+c-labels
+--------------------
+*/
+.c-labels {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 1.5rem 0 2rem;
+  font-size: 0.875rem;
+  line-height: 1;
+}
+
+.c-labels .m-label {
+  margin-top: .5rem;
+  margin-left: 0;
+  margin-right: .5rem;
+}
+
+.c-labels-header {
+  font-size: 1em;
+  font-style: normal;
+  margin-top: .5rem;
+}
+
+@media (max-width: 47.9rem) {
+  .c-labels-header {
+    flex-grow: 1;
+    width: 100%;
+  }
+}
+
+@media (min-width: 48rem) {
+  .c-labels-header {
+    flex-grow: 0;
+    margin-right: .5rem;
   }
 }
 

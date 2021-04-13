@@ -1,0 +1,38 @@
+/*
+--------------------
+#{$pr}#{$c}labels
+--------------------
+*/
+
+.#{$pr}#{$c}labels {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: #{ ( 2 - 0.5 ) + 'rem' } 0 2rem;
+    font-size: $font-size-sm;
+    line-height: 1;
+
+    .#{$pr}#{$m}label {
+        margin-top: .5rem;
+        margin-left: 0;
+        margin-right: .5rem;
+    }
+
+}
+
+.#{$pr}#{$c}labels#{$c1}header {
+    font-size: 1em;
+    font-style: normal;
+    margin-top: .5rem;
+
+    @include media-breakpoint-down(sm) {
+        flex-grow: 1;
+        width: 100%;
+    }
+
+    @include media-breakpoint-up(md) {
+        flex-grow: 0;
+        margin-right: .5rem;
+    }
+
+}
