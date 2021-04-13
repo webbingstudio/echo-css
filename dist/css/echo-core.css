@@ -2446,31 +2446,26 @@ m-select
 */
 .m-select {
   display: inline-block;
-  font-size: 0.875rem;
   position: relative;
+  font-size: 0.875rem;
 }
 
 .m-select:after {
   content: "";
   position: absolute;
-  width: 0.375em;
-  height: 0.375em;
-  border-top: 0.0625rem solid #333;
-  border-right: 0.0625rem solid #333;
-  transform-origin: center center;
-  transform: rotate(135deg);
-}
-
-.m-select:after {
   top: 50%;
   right: .75em;
-  margin-top: -.3em;
-  z-index: 4;
+  width: 0.428571429em;
+  height: 0.428571429em;
+  transform-origin: center center;
+  border-top: 1px solid #333;
+  border-left: 1px solid #333;
+  transform: translateY(-50%) rotate(-135deg);
+  z-index: 3;
 }
 
 .m-select select {
   overflow: hidden;
-  position: relative;
   -webkit-appearance: none;
   appearance: none;
   font-size: 1em;
@@ -2490,7 +2485,7 @@ m-select
   display: none;
 }
 
-.m-select select:hover, .m-select select:focus {
+.m-select select:focus {
   color: #333;
   background-color: #eee;
   border-color: #333;
@@ -2499,7 +2494,7 @@ m-select
 .m-select.is-error:after,
 .is-error > .m-select:after {
   border-top-color: #d20b2a;
-  border-right-color: #d20b2a;
+  border-left-color: #d20b2a;
 }
 
 .m-select.is-error select,
@@ -2509,8 +2504,7 @@ m-select
   color: #d20b2a;
 }
 
-.m-select.is-error select:hover, .m-select.is-error select:focus,
-.is-error > .m-select select:hover,
+.m-select.is-error select:focus,
 .is-error > .m-select select:focus {
   background-color: #ffe9f0;
 }

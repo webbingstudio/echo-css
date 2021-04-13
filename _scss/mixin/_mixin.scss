@@ -131,40 +131,6 @@
 
 }
 
-@mixin chevron( $rotate: 'right', $color: $body-color, $size: .375em, $border-width: .0625rem ) {
-    position: relative;
-
-    &:after {
-        content: "";
-        position: absolute;
-        width: $size;
-        height: $size;
-        border-top: $border-width solid $color;
-        border-right: $border-width solid $color;
-        transform-origin: center center;
-
-        @if ($rotate == 'up') {
-            transform: rotate(315deg);
-        }
-
-        @if ($rotate == 'right') {
-            transform: rotate(45deg);
-        }
-
-        @if ($rotate == 'down') {
-            transform: rotate(135deg);
-        }
-
-        @if ($rotate == 'left') {
-            transform: rotate(225deg);
-        }
-
-    }
-
-    @content;
-
-}
-
 
 @mixin clearfix() {
 

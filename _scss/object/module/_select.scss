@@ -6,16 +6,23 @@
 
 .#{$pr}#{$m}select {
     display: inline-block;
+    position: relative;
     font-size: $font-size-sm;
 
-    @include chevron( 'down', $body-color ) {
-        &:after {
-            top: 50%;
-            right: .75em;
-            margin-top: -.3em;
-            z-index: 4;
-        }
-
+    &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: .75em;
+        width: 0.428571429em;
+        height: 0.428571429em;
+        transform-origin: center center;
+        border-top: 1px solid $ui-color;
+        border-left: 1px solid $ui-color;
+        transform:
+            translateY( -50% )
+            rotate( -135deg );
+        z-index: 3;
     }
 
     // Firefoxがline-heightの指定を無視するため、高さを固定している
@@ -23,7 +30,6 @@
 
     select {
         overflow: hidden;
-        position: relative;
         -webkit-appearance: none;
         appearance: none;
         font-size: 1em;
@@ -42,7 +48,6 @@
             display: none;
         }
 
-        &:hover,
         &:focus {
             color: $input-focus-color;
             background-color: $input-focus-bg;
@@ -58,7 +63,7 @@
 
             &:after {
                 border-top-color: $important-strong;
-                border-right-color: $important-strong;
+                border-left-color: $important-strong;
             }
 
             select {
@@ -66,7 +71,6 @@
                 border-color: $important-strong;
                 color: $important-strong;
 
-                &:hover,
                 &:focus {
                     background-color: $important-fade;
                 }
