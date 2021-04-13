@@ -1,10 +1,10 @@
                     </div><!-- /.post-contents -->
                 </article><!-- /.post -->
 
-	    </div><!-- /.l-container -->
+	    </div><!-- /.echo-container -->
     </main>
     <div class="echo-sub" role="complementary">
-        <div class="l-container">
+        <div class="echo-container">
 
             <?php
                 $echo_dir = dirname($_SERVER["SCRIPT_NAME"]);
@@ -19,7 +19,7 @@
                 }
             ?>
 
-	    </div><!-- /.l-container -->
+	    </div><!-- /.echo-container -->
     </div><!-- /.echo-sub -->
 
     <?php include('../doc_include/footer_copyright.inc'); ?>

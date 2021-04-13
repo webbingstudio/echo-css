@@ -2,6 +2,65 @@
 
 /*
 --------------------
+echo-container
+--------------------
+*/
+.echo-container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+}
+
+.echo-container:before, .echo-container:after {
+  content: "";
+  display: table;
+}
+
+.echo-container:after {
+  clear: both;
+}
+
+@media (min-width: 48rem) {
+  .echo-container {
+    max-width: 49.25rem;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-container {
+    max-width: 61.25rem;
+  }
+}
+
+@media (min-width: 75rem) {
+  .echo-container {
+    max-width: 76.25rem;
+  }
+}
+
+/*
+.echo-containerが二重になった場合の対策
+--------------------
+*/
+@media (min-width: 26.75rem) {
+  .echo-container .echo-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/*
+--------------------
+echo-container-fluid
+--------------------
+*/
+.echo-container-fluid {
+  max-width: none;
+}
+
+/*
+--------------------
 echo-header
 --------------------
 */
@@ -9,12 +68,12 @@ echo-header
 .echo-header {
     position: sticky;
     top: 0;
-    padding: 10px 0 0;
+    padding: 0.625rem 0 0;
     font-size: .875rem;
     line-height: 1;
     background-color: rgba( 255,255,255,.75 );
     transition: .5s background-color;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 0.0625rem solid #ccc;
     z-index: 101;
 }
 
@@ -118,20 +177,20 @@ echo-mainvisual
 
 @media (max-width: 767.9px) {
     .echo-mainvisual .c-hero-contents {
-        bottom: 30px;
+        bottom: 1.875rem;
         align-items: flex-end;
     }
 }
 
 .echo-mainvisual .c-hero-contents-inner {
     width: 100%;
-    max-width: 400px;
+    max-width: 25rem;
     font-family: 'Helvetica', 'Roboto', '-apple-system', 'Open Sans', 'Arial', sans-serif;
 }
 
 @media (min-width: 1024px) {
     .echo-mainvisual .c-hero-contents-inner {
-        max-width: 600px;
+        max-width: 37.5rem;
     }
 }
 
@@ -162,21 +221,21 @@ echo-mainvisual
 }
 
 .echo-mainvisual-download {
-    padding-top: 30px;
+    padding-top: 1.875rem;
 }
 
 .echo-mainvisual-more {
-    padding-top: 15px;
+    padding-top: 0.9375rem;
     text-align: center;
 }
 @media (min-width: 425px) {
     .echo-mainvisual-more {
-        padding-top: 30px;
+        padding-top: 1.875rem;
     }
 }
 @media (min-width: 1024px) {
     .echo-mainvisual-more {
-        padding-top: 60px;
+        padding-top: 3.75rem;
         font-size: 1.5rem;
     }
 }
@@ -267,14 +326,14 @@ echo-pickup
 */
 
 .echo-pickup {
-    padding-top: 45px;
-    padding-bottom: 20px;
+    padding-top: 2.8125rem;
+    padding-bottom: 1.25rem;
 }
 
 @media (min-width: 960px) {
     .echo-pickup {
-        padding-top: 60px;
-        padding-bottom: 30px;
+        padding-top: 3.75rem;
+        padding-bottom: 1.875rem;
     }
 }
 
@@ -289,7 +348,7 @@ echo-pickup
 
 .echo-pickup-title {
     margin: 0;
-    padding-bottom: 20px;
+    padding-bottom: 1.25rem;
     text-align: center;
     font-size: 1.25rem;
     line-height: 1.25;
@@ -304,23 +363,18 @@ echo-pickup
 @media (min-width: 1000px) {
     .echo-pickup-title {
         font-size: 1.75rem;
-        padding-bottom: 45px;
+        padding-bottom: 2.8125rem;
     }
 }
 
 .echo-pickup [class*="l-grid-col"] {
-    padding-bottom: 20px;
+    padding-bottom: 1.25rem;
 }
 
 @media (min-width: 1000px) {
     .echo-pickup [class*="l-grid-col"] {
-        padding-bottom: 20px;
+        padding-bottom: 1.25rem;
     }
-}
-
-.echo-pickup .c-card-header {
-    text-align: center;
-    border-bottom: 2px solid #333;
 }
 
 .echo-pickup .c-card-title {
@@ -340,7 +394,7 @@ echo-pickup
 
 @media (min-width: 425px) {
     .echo-pickup .c-card-contents {
-        padding: 15px;
+        padding: 0.9375rem;
         font-size: inherit;
     }
 }
@@ -353,14 +407,14 @@ echo-license
 */
 
 .echo-license {
-    padding-top: 45px;
-    padding-bottom: 20px;
+    padding-top: 2.8125rem;
+    padding-bottom: 1.25rem;
 }
 
 @media (min-width: 960px) {
     .echo-license {
-        padding-top: 60px;
-        padding-bottom: 30px;
+        padding-top: 3.75rem;
+        padding-bottom: 1.875rem;
     }
 }
 
@@ -370,7 +424,7 @@ echo-license
 
 .echo-license-title {
     margin: 0;
-    padding-bottom: 20px;
+    padding-bottom: 1.25rem;
     text-align: center;
     font-size: 1.25rem;
     line-height: 1.25;
@@ -385,7 +439,7 @@ echo-license
 @media (min-width: 1000px) {
     .echo-license-title {
         font-size: 1.75rem;
-        padding-bottom: 45px;
+        padding-bottom: 2.8125rem;
     }
 }
 
@@ -397,8 +451,8 @@ echo-quickstart
 */
 
 .echo-quickstart {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
     background-color: #333;
     color: #eee;
     font-family: 'Helvetica', 'Roboto', '-apple-system', 'Open Sans', 'Arial', sans-serif;
@@ -406,8 +460,8 @@ echo-quickstart
 
 @media (min-width: 960px) {
     .echo-quickstart {
-        padding-top: 40px;
-        padding-bottom: 40px;
+        padding-top: 2.8125rem;
+        padding-bottom: 2.8125rem;
     }
 }
 
@@ -417,7 +471,7 @@ echo-quickstart
 
 .echo-quickstart-title {
     margin: 0;
-    padding-bottom: 10px;
+    padding-bottom: 0.625rem;
     text-align: center;
     font-size: 1.25rem;
     line-height: 1.25;
@@ -432,16 +486,16 @@ echo-quickstart
 @media (min-width: 1000px) {
     .echo-quickstart-title {
         font-size: 1.75rem;
-        padding-bottom: 20px;
+        padding-bottom: 1.25rem;
     }
 }
 
 .echo-quickstart-section {
     max-width: 700px;
-    margin: 0 auto 10px;
-    padding: 20px;
+    margin: 0 auto 0.625rem;
+    padding: 1.25rem;
     background-color: #222;
-    border-radius: 10px;
+    border-radius: 0.625rem;
 }
 
 .echo-quickstart-number {
@@ -477,7 +531,7 @@ echo-quickstart
     clear: both;
     display: block;
     margin: 0;
-    padding: 10px;
+    padding: 0.625rem;
 }
 
 @media (min-width: 1000px) {
@@ -494,7 +548,7 @@ echo-quickstart
 
 .echo-quickstart-last {
     margin: 0;
-    padding-top: 20px;
+    padding-top: 1.25rem;
     font-size: 1rem;
     line-height: 1;
     text-align: center;
@@ -514,20 +568,20 @@ echo-browser
 */
 
 .echo-browser {
-    padding-top: 30px;
-    padding-bottom: 20px;
+    padding-top: 1.875rem;
+    padding-bottom: 1.25rem;
 }
 
 @media (min-width: 960px) {
     .echo-browser {
-        padding-top: 45px;
+        padding-top: 2.8125rem;
         padding-bottom: 35px;
     }
 }
 
 .echo-browser-title {
     margin: 0;
-    padding-bottom: 20px;
+    padding-bottom: 1.25rem;
     text-align: center;
     font-size: 1.25rem;
     font-weight: 300;
@@ -543,7 +597,7 @@ echo-browser
 @media (min-width: 1000px) {
     .echo-browser-title {
         font-size: 1.75rem;
-        padding-bottom: 30px;
+        padding-bottom: 1.875rem;
     }
 }
 
@@ -554,7 +608,7 @@ echo-browser
 .echo-browser-icon {
     display: inline-block;
     min-width: 6em;
-    padding: 0 0 20px;
+    padding: 0 0 1.25rem;
 }
 
 @media (min-width: 768px) {
@@ -621,15 +675,15 @@ echo-download
 */
 
 .echo-download {
-    padding-top: 45px;
-    padding-bottom: 45px;
+    padding-top: 2.8125rem;
+    padding-bottom: 2.8125rem;
     border-top: 2px solid #333333;
 }
 
 @media (min-width: 960px) {
     .echo-download {
-        padding-top: 60px;
-        padding-bottom: 60px;
+        padding-top: 3.75rem;
+        padding-bottom: 3.75rem;
     }
 }
 
@@ -638,7 +692,7 @@ echo-download
 }
 
 .echo-download-lg {
-    padding-bottom: 30px;
+    padding-bottom: 1.875rem;
 }
 
 
@@ -656,7 +710,7 @@ echo-past
     align-items: flex-start;
     justify-content: flex-start;
     width: 100%;
-    padding-top: 45px;
+    padding-top: 2.8125rem;
 }
 
 .echo-past-title {
@@ -793,9 +847,9 @@ echo-sub
 
 .echo-sub {
     position: relative;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    border-top: 1px solid #ccc;
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
+    border-top: 0.0625rem solid #ccc;
 }
 
 .echo-sub-title {
@@ -857,9 +911,9 @@ echo-footer
 
 .echo-footer {
     font-size: .875rem;
-    padding-top: 30px;
-    padding-bottom: 60px;
-    border-top: 1px solid #ccc;
+    padding-top: 1.875rem;
+    padding-bottom: 3.75rem;
+    border-top: 0.0625rem solid #ccc;
 }
 
 .echo-footer-notice {
@@ -923,17 +977,17 @@ body.view-home .echo-header-nav .m-nav-item:first-child {
     padding: 1em;
     overflow: auto;
     font-family: Consolas, 'Liberation Mono', Courier, monospace;
-    border: 1px solid #bbb;
+    border: 0.0625rem solid #bbb;
     color: #08a;
     background-color: #eee;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 1.5;
     white-space: pre-wrap;
 }
 
 .wysiwyg code {
     display: inline-block;
-    border: 1px solid #aaa;
+    border: 0.0625rem solid #aaa;
     background-color: #eee;
     padding: .25em;
     font-family: Consolas, 'Liberation Mono', Courier, monospace;
@@ -941,7 +995,7 @@ body.view-home .echo-header-nav .m-nav-item:first-child {
     font-size: .9em;
     line-height: 1;
     vertical-align: middle;
-    transform: translate(0, -1px);
+    transform: translate(0, -0.0625rem);
 }
 
 .wysiwyg pre:not([class]) code {
@@ -964,7 +1018,7 @@ hologram styleguide
 h1.styleguide {
     margin: 3rem 0 1rem;
     padding-top: .5rem;
-    border-top: 1px solid #ccc;
+    border-top: 0.0625rem solid #ccc;
     font-size: 2rem;
     line-height: 1.25;
 }
@@ -1005,7 +1059,7 @@ h2.styleguide:before {
 
 .styleguide-contents > ul:not([class]) li,
 .styleguide-contents > ol:not([class]) li {
-    margin: 0 0 0 20px;
+    margin: 0 0 0 1.25rem;
 }
 .styleguide-contents > ul:not([class]) li ul,
 .styleguide-contents > ul:not([class]) li ol,
@@ -1017,7 +1071,7 @@ h2.styleguide:before {
 .styleguide-contents > ul:not([class]) li ol li,
 .styleguide-contents > ol:not([class]) li ul li,
 .styleguide-contents > ol:not([class]) li ol li {
-    margin-left: 10px;
+    margin-left: 0.625rem;
 }
 .styleguide-contents > ul:not([class]) li {
     list-style-type: disc;
@@ -1041,23 +1095,23 @@ h2.styleguide:before {
     height: 0;
     margin: 2em 0;
     border: none;
-    border-top: 1px dashed #eee;
+    border-top: 0.0625rem dashed #eee;
 }
 .styleguide-contents pre:not([class]) {
     padding: 1em;
     overflow: auto;
     font-family: Consolas, 'Liberation Mono', Courier, monospace;
-    border: 1px solid #bbb;
+    border: 0.0625rem solid #bbb;
     color: #08a;
     background-color: #eee;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 1.5;
     white-space: pre-wrap;
 }
 
 .styleguide-contents code:not([class]) {
     display: inline-block;
-    border: 1px solid #aaa;
+    border: 0.0625rem solid #aaa;
     background-color: #eee;
     padding: .25em;
     font-family: Consolas, 'Liberation Mono', Courier, monospace;
@@ -1065,7 +1119,7 @@ h2.styleguide:before {
     font-size: .9em;
     line-height: 1;
     vertical-align: middle;
-    transform: translate(0, -1px);
+    transform: translate(0, -0.0625rem);
 }
 
 .styleguide-contents pre:not([class]) code {
@@ -1082,11 +1136,11 @@ h2.styleguide:before {
     padding: 0 0 0 4em;
     margin: 0 0 0 2em;
     color: #ccc;
-    border-left: 3px solid #eee;
+    border-left: 0.1875rem solid #eee;
 }
 
 .styleguide-contents .example {
-    border: 1px solid #bbb;
+    border: 0.0625rem solid #bbb;
     margin: 2em 0;
     padding: 1em 0;
 }
@@ -1176,6 +1230,6 @@ hll { background-color: #ffffcc }
     width: 1.5em;
     height: 1.5em;
     margin-right: .5em;
-    border: 1px solid #000;
+    border: 0.0625rem solid #000;
     vertical-align: middle;
 }
