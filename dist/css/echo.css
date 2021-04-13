@@ -4297,7 +4297,6 @@ c-headline
 --------------------
 */
 .c-headline {
-  margin-bottom: 1.25rem;
   line-height: 1.5rem;
 }
 
@@ -4306,6 +4305,10 @@ c-headline
     font-size: 0.875rem;
     line-height: 1.3125rem;
   }
+}
+
+.c-headline + .c-headline {
+  margin-top: 1.25rem;
 }
 
 .c-headline-inner {
