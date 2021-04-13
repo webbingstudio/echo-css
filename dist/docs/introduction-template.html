@@ -83,15 +83,19 @@
 <h2 class="echo-post-title-01">.l-containerの役割</h2>
 
 <p>.l-containerは名前の通り、コンテンツを適切に画面中央に配置するコンテナタグです。より良いウェブサイトの制作には必須となります。<br>
-echo.cssは、コンテナタグの幅は一種類ではありません。ヘッダとフッタは通常の幅のコンテナタグ、本文はスリムなコンテナタグ、といった、変化のあるページを作成できます。</p>
+echo.cssは、コンテナタグの幅は一種類ではありません。ヘッダとフッタは通常の幅のコンテナタグ、サブカラムはスリムなコンテナタグ、といった、変化のあるページを作成できます。</p>
 
-<div class="codeblock"><pre><code class="language-markup">&lt;main class="p-main" role="main"&gt;
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="example"&gt;
     &lt;div class="l-container l-container-sm"&gt;
 
-        本文の最大幅がスリムになります
+        最大幅がスリムになります
 
     &lt;/div&gt;&lt;!-- /.l-container --&gt;
-&lt;/main&gt;&lt;!-- /.p-main --&gt;</code></pre></div>
+&lt;/div&gt;&lt;!-- /.example --&gt;</code></pre></div>
+
+<h2 class="echo-post-title-01">ブロックエディタとコンテナタグの干渉</h2>
+
+<p>WordPressのGutenbergなど、CMSの「ブロックエディタ」で編集可能にする場合は、本文エリアで <code>.l-container</code> での幅制限を行わないよう注意してください。画像ブロック・グループブロック等に設定されている「幅広」「全幅」オプションを使用できなくなります。</p>
 
 <h2 class="echo-post-title-01">プラグイン</h2>
 

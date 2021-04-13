@@ -27,8 +27,7 @@
 
 <h2 class="echo-post-title-01">標準のカラーテーブル</h2>
 
-<p>echo.cssで使用されている、色名とカラーコードの対応は以下の通りです。<br>
-カラーコードは <code>_scss/_config_basic.scss</code> で変更することができます。</p>
+<p>echo.cssで使用されている、色名とカラーコードの対応は以下の通りです。</p>
 
 <div class="m-table-responsive">
     <table class="m-table m-table-bordered">
@@ -93,7 +92,7 @@
 
 <p>背景が暗色だったときの色を指定します。一般に、defaultの反転色が使用されます。</p>
 
-<h2 class="echo-post-title-01">デザインカラーの廃止について</h2>
+<h3 class="echo-post-title-02">デザインカラーの廃止について</h3>
 
 <p>Version 2.x までのecho.cssには、装飾目的のデザインカラー <code>$first, $second, $third</code> が定義されていましたが、以下の理由から廃止し、システムカラーのみとなりました。</p>
 
@@ -122,6 +121,33 @@
 <h3 class="echo-post-title-02">fade</h3>
 
 <p>弱い背景色を前提として使用されている強度です。 <code>.c-alert, .c-box</code> などに使用されています。基本の文字色（default + normal）に対して、充分なコントラスト比を確保している必要があります。</p>
+
+<h2 class="echo-post-title-01">色を変更する</h2>
+
+<h3 class="echo-post-title-02">Sassを使用する場合</h3>
+
+<p>プロジェクト内の <code>_scss/_config_basic.scss</code> の <code>$default</code> 以降の任意の色変数を変更したうえでビルドしてください。<br>
+下記の例では <code>info</code> が緑系、 <code>important</code> がオレンジ系になります。</p>
+
+<div class="codeblock"><pre><code class="language-scss">$info:                      #182 !default;
+$info-strong:               #182 !default;
+$info-fade:                 #e9f6f3 !default;
+
+$important:                 #ec7e00 !default;
+$important-strong:          #dc6300 !default;
+$important-fade:            #fff6e6 !default;</code></pre></div>
+
+<h3 class="echo-post-title-02">Sassを使用しない場合</h3>
+
+<p><code>css/echo-color.css</code> は、色指定のみをまとめたCSSファイルです。<br>
+このファイルを直接編集（置換）することで、カラーテーブルを変更したり、 <code>.bg-first</code> 等の独自のクラスを追加できます。</p>
+
+<p>以下のとおり <code>echo-core.css, echo-font.css</code> と同時に読み込んで使用してください。</p>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;link rel="stylesheet" href="/css/echo-core.min.css"&gt;
+&lt;link rel="stylesheet" href="/css/echo-color.css"&gt;
+&lt;link rel="stylesheet" href="/css/echo-font.css"&gt;
+</code></pre></div>
 
 
 <h2 class="echo-post-title-01">アクセシビリティ</h2>
