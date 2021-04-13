@@ -39,9 +39,14 @@
 
                 &:before {
                     flex-grow: 0;
-                    content: ">";
+                    content: "";
+                    width: .4em;
+                    height: .4em;
+                    transform-origin: center center;
+                    border-top: 1px solid $ui-color;
+                    border-left: 1px solid $ui-color;
                     margin-right: 1em;
-                    color: $nav-color;
+                    transform: rotate( 135deg );
                 }
 
             }
