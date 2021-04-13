@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>component-topicpath | Style guide | echo-css</title>
+    <meta property="og:title" content="component-topicpath | Style guide | echo-css">
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div class="l-document" id="document">
+
+    <?php include('../doc_include/header.inc'); ?>
+
+    <main class="p-main" role="main">
+        <div class="echo-container echo-container-fluid">
+
+            <div class="echo-pagehead">
+                <h1 class="echo-pagehead-title">component-topicpath</h1>
+            </div><!-- /.echo-pagehead -->
+
+            <nav class="echo-anchor">
+                <ul class="m-list m-list-horizontal">
+
+                    <li class="m-list-item"><a href="#topicpath" class="js-scrollto">c-topicpath</a></li>
+
+                </ul>
+            </nav>
+            
+
+            <article class="s-post">
+                <div class="s-post-contents styleguide-contents"><h1 id="topicpath" class="styleguide">c-topicpath</h1>
+
+<p>トピックパス（パンくずリスト、ページ階層ナビゲーション）を前提とした外観に変更する。<br>
+テキストリンクの色は <code>$ui-color = $default-strong</code> となる。<br>
+クリックをしやすくするために、リンクの上下には <code>0.5em</code> の余白を設けている。</p>
+
+<p><code>.m-list</code> を包括し、モバイル端末等でリストが画面の幅よりも長くなった場合は、右側にスクロール（スワイプ）を促すフェードアウトが表示される。</p>
+
+<p>schema.orgの構造化データに対応したマークアップをする場合は、リンク内のテキストにも要素が必要となる。例では <code>.c-topicpath-name</code> を付与している。</p>
+
+<div class="example">
+<p class="m-title m-title-level-4 m-style-a">一般的なトピックパス</p>
+
+<nav class="c-topicpath u-margin-bottom-lg">
+    <div class="c-topicpath-inner">
+        <ol class="m-list" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li class="m-list-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a href="/" class="c-topicpath-label" itemprop="item"><span class="c-topicpath-name" itemprop="name">ホーム</span></a>
+                <meta itemprop="position" content="1">
+            </li>
+
+            <li class="m-list-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a href="/styleguide/" class="c-topicpath-label" itemprop="item"><span class="c-topicpath-name" itemprop="name">Styleguide</span></a>
+                <meta itemprop="position" content="2">
+            </li>
+
+            <li class="m-list-item is-current" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <span class="c-topicpath-label"><span class="c-topicpath-name" itemprop="name">topicpath</span></span>
+                <meta itemprop="position" content="3">
+            </li>
+        </ol>
+    </div><!-- /.c-topicpath-inner -->
+</nav><!-- /.c-topicpath -->
+
+<p class="m-title m-title-level-4 m-style-a u-margin-bottom-sm">画面幅を超えるほど長いトピックパス</p>
+
+<p class="u-margin-bottom-lg">ウィンドウ幅を縮めて、スクロールを促すインターフェースが表示されることを確認してください。</p>
+
+<nav class="c-topicpath">
+    <div class="c-topicpath-inner">
+        <ol class="m-list" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li class="m-list-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a href="#" class="c-topicpath-label" itemprop="item"><span class="c-topicpath-name" itemprop="name">リストの一番目</span></a>
+                <meta itemprop="position" content="1">
+            </li>
+            <li class="m-list-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a href="#" class="c-topicpath-label" itemprop="item"><span class="c-topicpath-name" itemprop="name">リストの二番目です</span></a>
+                <meta itemprop="position" content="2">
+            </li>
+            <li class="m-list-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a href="#" class="c-topicpath-label" itemprop="item"><span class="c-topicpath-name" itemprop="name">リストの三番目はタイトルが長いです</span></a>
+                <meta itemprop="position" content="3">
+            </li>
+            <li class="m-list-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a href="#" class="c-topicpath-label" itemprop="item"><span class="c-topicpath-name" itemprop="name">リストの四番目</span></a>
+                <meta itemprop="position" content="4">
+            </li>
+            <li class="m-list-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a href="#" class="c-topicpath-label" itemprop="item"><span class="c-topicpath-name" itemprop="name">リストの五番目もタイトルが長いです</span></a>
+                <meta itemprop="position" content="5">
+            </li>
+        </ol>
+    </div><!-- /.c-topicpath-inner -->
+</nav><!-- /.c-topicpath -->
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;p class="m-title m-title-level-4 m-style-a"&gt;一般的なトピックパス&lt;/p&gt;
+
+&lt;nav class="c-topicpath u-margin-bottom-lg"&gt;
+    &lt;div class="c-topicpath-inner"&gt;
+        &lt;ol class="m-list" itemscope itemtype="http://schema.org/BreadcrumbList"&gt;
+            &lt;li class="m-list-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"&gt;
+                &lt;a href="/" class="c-topicpath-label" itemprop="item"&gt;&lt;span class="c-topicpath-name" itemprop="name"&gt;ホーム&lt;/span&gt;&lt;/a&gt;
+                &lt;meta itemprop="position" content="1"&gt;
+            &lt;/li&gt;
+
+            &lt;li class="m-list-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"&gt;
+                &lt;a href="/styleguide/" class="c-topicpath-label" itemprop="item"&gt;&lt;span class="c-topicpath-name" itemprop="name"&gt;Styleguide&lt;/span&gt;&lt;/a&gt;
+                &lt;meta itemprop="position" content="2"&gt;
+            &lt;/li&gt;
+
+            &lt;li class="m-list-item is-current" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"&gt;
+                &lt;span class="c-topicpath-label"&gt;&lt;span class="c-topicpath-name" itemprop="name"&gt;topicpath&lt;/span&gt;&lt;/span&gt;
+                &lt;meta itemprop="position" content="3"&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/div&gt;&lt;!-- /.c-topicpath-inner --&gt;
+&lt;/nav&gt;&lt;!-- /.c-topicpath --&gt;
+
+&lt;p class="m-title m-title-level-4 m-style-a u-margin-bottom-sm"&gt;画面幅を超えるほど長いトピックパス&lt;/p&gt;
+
+&lt;p class="u-margin-bottom-lg"&gt;ウィンドウ幅を縮めて、スクロールを促すインターフェースが表示されることを確認してください。&lt;/p&gt;
+
+&lt;nav class="c-topicpath"&gt;
+    &lt;div class="c-topicpath-inner"&gt;
+        &lt;ol class="m-list" itemscope itemtype="http://schema.org/BreadcrumbList"&gt;
+            &lt;li class="m-list-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"&gt;
+                &lt;a href="#" class="c-topicpath-label" itemprop="item"&gt;&lt;span class="c-topicpath-name" itemprop="name"&gt;リストの一番目&lt;/span&gt;&lt;/a&gt;
+                &lt;meta itemprop="position" content="1"&gt;
+            &lt;/li&gt;
+            &lt;li class="m-list-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"&gt;
+                &lt;a href="#" class="c-topicpath-label" itemprop="item"&gt;&lt;span class="c-topicpath-name" itemprop="name"&gt;リストの二番目です&lt;/span&gt;&lt;/a&gt;
+                &lt;meta itemprop="position" content="2"&gt;
+            &lt;/li&gt;
+            &lt;li class="m-list-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"&gt;
+                &lt;a href="#" class="c-topicpath-label" itemprop="item"&gt;&lt;span class="c-topicpath-name" itemprop="name"&gt;リストの三番目はタイトルが長いです&lt;/span&gt;&lt;/a&gt;
+                &lt;meta itemprop="position" content="3"&gt;
+            &lt;/li&gt;
+            &lt;li class="m-list-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"&gt;
+                &lt;a href="#" class="c-topicpath-label" itemprop="item"&gt;&lt;span class="c-topicpath-name" itemprop="name"&gt;リストの四番目&lt;/span&gt;&lt;/a&gt;
+                &lt;meta itemprop="position" content="4"&gt;
+            &lt;/li&gt;
+            &lt;li class="m-list-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"&gt;
+                &lt;a href="#" class="c-topicpath-label" itemprop="item"&gt;&lt;span class="c-topicpath-name" itemprop="name"&gt;リストの五番目もタイトルが長いです&lt;/span&gt;&lt;/a&gt;
+                &lt;meta itemprop="position" content="5"&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/div&gt;&lt;!-- /.c-topicpath-inner --&gt;
+&lt;/nav&gt;&lt;!-- /.c-topicpath --&gt;
+</code></pre></div>
+
+                </div>
+            </article>
+
+<?php include('../doc_include/footer.inc'); ?>

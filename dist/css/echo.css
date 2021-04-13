@@ -5054,6 +5054,84 @@ c-step
 
 /*
 --------------------
+c-topicpath
+--------------------
+*/
+.c-topicpath {
+  position: relative;
+  font-size: 0.625rem;
+  line-height: 1;
+}
+
+@media (min-width: 62.5rem) {
+  .c-topicpath {
+    font-size: 0.75rem;
+  }
+}
+
+.c-topicpath:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3em;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, white 100%);
+  z-index: 12;
+}
+
+.c-topicpath .m-list {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.c-topicpath .m-list .m-list-item {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-right: 1em;
+}
+
+.c-topicpath .m-list .m-list-item:not(:first-child):before {
+  flex-grow: 0;
+  content: ">";
+  margin-right: 1em;
+  color: #333;
+}
+
+.c-topicpath .m-list .m-list-item:last-child {
+  padding-right: 3em;
+}
+
+.c-topicpath-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  overflow: auto;
+  white-space: nowrap;
+  z-index: 11;
+}
+
+.c-topicpath-label {
+  flex-grow: 0;
+  padding: .5em 0;
+}
+
+a.c-topicpath-label {
+  color: #333;
+}
+
+a.c-topicpath-label:hover, a.c-topicpath-label:focus {
+  color: #333;
+}
+
+/*
+--------------------
 u-bg-(color)
 u-bg-fade
 --------------------

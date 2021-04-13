@@ -41,6 +41,7 @@
                         <li class="m-nav-item"><a href="./component-overlay.html" class="m-nav-label">overlay</a></li>
                         <li class="m-nav-item"><a href="./component-pager.html" class="m-nav-label">pager</a></li>
                         <li class="m-nav-item"><a href="./component-step.html" class="m-nav-label">step</a></li>
+                        <li class="m-nav-item"><a href="./component-topicpath.html" class="m-nav-label">topicpath</a></li>
                     </ul>
                 </li>
                 <li class="m-nav-item"><span class="m-nav-label">utility</span>
