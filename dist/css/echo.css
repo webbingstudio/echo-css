@@ -4874,17 +4874,17 @@ c-overlay
 
 /*
 --------------------
-c-pager
+c-paginate
 --------------------
 */
-.c-pager {
+.c-paginate {
   padding-top: 1.875rem;
   padding-bottom: 1.875rem;
   font-size: 0.75rem;
   text-align: center;
 }
 
-.c-pager .m-nav-item {
+.c-paginate .m-nav-item {
   position: relative;
   display: flex;
   justify-content: center;
@@ -4892,7 +4892,7 @@ c-pager
   height: 2.25rem;
 }
 
-.c-pager .m-nav-item:not(.ellipsis) {
+.c-paginate .m-nav-item:not(.ellipsis) {
   width: 2.25rem;
   flex-basis: 2.25rem;
   margin-left: .25rem;
@@ -4901,20 +4901,20 @@ c-pager
   border-width: 0.125rem;
 }
 
-.c-pager .m-nav-item:not(.ellipsis):first-child {
+.c-paginate .m-nav-item:not(.ellipsis):first-child {
   margin-left: 0;
 }
 
-.c-pager .m-nav-item:not(.ellipsis):last-child {
+.c-paginate .m-nav-item:not(.ellipsis):last-child {
   margin-right: 0;
 }
 
-.c-pager .m-nav-item.ellipsis {
+.c-paginate .m-nav-item.ellipsis {
   padding-left: .25rem;
   padding-right: .25rem;
 }
 
-.c-pager .m-nav-label {
+.c-paginate .m-nav-label {
   position: absolute;
   top: -0.125rem;
   left: -0.125rem;
@@ -4929,59 +4929,59 @@ c-pager
   border-width: 0.125rem;
 }
 
-.c-pager .m-nav:not(.m-nav-inverse) .m-nav-item.is-current {
+.c-paginate .m-nav:not(.m-nav-inverse) .m-nav-item.is-current {
   background-color: #333;
   border-color: #333;
   color: #fff;
 }
 
-.c-pager .m-nav:not(.m-nav-inverse) .m-nav-item.is-current .m-nav-label {
+.c-paginate .m-nav:not(.m-nav-inverse) .m-nav-item.is-current .m-nav-label {
   background-color: #333;
   border-color: #333;
   color: #fff;
 }
 
-.c-pager .m-nav:not(.m-nav-inverse) a.m-nav-label {
+.c-paginate .m-nav:not(.m-nav-inverse) a.m-nav-label {
   background-color: transparent;
   border-color: #333;
   color: #333;
 }
 
-.c-pager .m-nav:not(.m-nav-inverse) a.m-nav-label:hover, .c-pager .m-nav:not(.m-nav-inverse) a.m-nav-label:focus {
+.c-paginate .m-nav:not(.m-nav-inverse) a.m-nav-label:hover, .c-paginate .m-nav:not(.m-nav-inverse) a.m-nav-label:focus {
   background-color: #eee;
   border-color: #333;
   color: #333;
 }
 
-.c-pager .m-nav-inverse {
+.c-paginate .m-nav-inverse {
   background-color: transparent;
 }
 
-.c-pager .m-nav-inverse .m-nav-item:not(.ellipsis) {
-  background-color: transparent;
-  border-color: #fff;
-  color: #fff;
-}
-
-.c-pager .m-nav-inverse .m-nav-item.is-current {
-  background-color: #fff;
-  border-color: #fff;
-  color: #333;
-}
-
-.c-pager .m-nav-inverse .m-nav-item.is-current .m-nav-label {
-  background-color: #fff;
-  border-color: #fff;
-  color: #333;
-}
-
-.c-pager .m-nav-inverse a.m-nav-label {
+.c-paginate .m-nav-inverse .m-nav-item:not(.ellipsis) {
   background-color: transparent;
   border-color: #fff;
   color: #fff;
 }
 
-.c-pager .m-nav-inverse a.m-nav-label:hover, .c-pager .m-nav-inverse a.m-nav-label:focus {
+.c-paginate .m-nav-inverse .m-nav-item.is-current {
+  background-color: #fff;
+  border-color: #fff;
+  color: #333;
+}
+
+.c-paginate .m-nav-inverse .m-nav-item.is-current .m-nav-label {
+  background-color: #fff;
+  border-color: #fff;
+  color: #333;
+}
+
+.c-paginate .m-nav-inverse a.m-nav-label {
+  background-color: transparent;
+  border-color: #fff;
+  color: #fff;
+}
+
+.c-paginate .m-nav-inverse a.m-nav-label:hover, .c-paginate .m-nav-inverse a.m-nav-label:focus {
   background-color: rgba(255, 255, 255, 0.15);
   border-color: #fff;
   color: #fff;

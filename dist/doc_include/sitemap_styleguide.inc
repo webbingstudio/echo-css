@@ -39,7 +39,7 @@
                         <li class="m-nav-item"><a href="./component-hero.html" class="m-nav-label">hero</a></li>
                         <li class="m-nav-item"><a href="./component-media.html" class="m-nav-label">media</a></li>
                         <li class="m-nav-item"><a href="./component-overlay.html" class="m-nav-label">overlay</a></li>
-                        <li class="m-nav-item"><a href="./component-pager.html" class="m-nav-label">pager</a></li>
+                        <li class="m-nav-item"><a href="./component-paginate.html" class="m-nav-label">paginate</a></li>
                         <li class="m-nav-item"><a href="./component-step.html" class="m-nav-label">step</a></li>
                         <li class="m-nav-item"><a href="./component-topicpath.html" class="m-nav-label">topicpath</a></li>
                     </ul>

@@ -1,0 +1,140 @@
+/*
+--------------------
+#{$pr}#{$c}paginate
+--------------------
+*/
+
+.#{$pr}#{$c}paginate {
+    padding-top: ( $spacer * 3 );
+    padding-bottom: ( $spacer * 3 );
+    font-size: $font-size-xs;
+    text-align: center;
+
+    .#{$pr}#{$m}nav#{$c1}item {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 2.25rem;
+
+        &:not(.#{$paginate-ellipsis}) {
+            width: 2.25rem;
+            flex-basis: 2.25rem;
+            margin-left: .25rem;
+            margin-right: .25rem;
+            border-style: solid;
+            border-width: $paginate-border-width;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+        }
+
+        &.#{$paginate-ellipsis} {
+            padding-left: .25rem;
+            padding-right: .25rem;
+        }
+
+    }
+
+    .#{$pr}#{$m}nav#{$c1}label {
+        position: absolute;
+        top: ( $paginate-border-width * -1 );
+        left: ( $paginate-border-width * -1 );
+        bottom: ( $paginate-border-width * -1 );
+        right: ( $paginate-border-width * -1 );
+        width: auto;
+        height: auto;
+        min-height: auto;
+        font-size: inherit;
+        padding: 0;
+        border-style: solid;
+        border-width: $paginate-border-width;
+    }
+
+    .#{$pr}#{$m}nav:not(.#{$pr}#{$m}nav#{$c3}inverse) {
+
+        .#{$pr}#{$m}nav#{$c1}item {
+
+            &.#{$paginate-current} {
+                background-color: $paginate-current-bg;
+                border-color: $paginate-current-border-color;
+                color: $paginate-current-color;
+
+                .#{$pr}#{$m}nav#{$c1}label {
+                    background-color: $paginate-current-bg;
+                    border-color: $paginate-current-border-color;
+                    color: $paginate-current-color;
+                }
+
+            }
+
+        }
+
+        a.#{$pr}#{$m}nav#{$c1}label {
+            background-color: $paginate-bg;
+            border-color: $paginate-border-color;
+            color: $paginate-color;
+
+            &:hover,
+            &:focus {
+                background-color: $paginate-hover-bg;
+                border-color: $paginate-hover-border-color;
+                color: $paginate-hover-color;
+            }
+
+        }
+
+    }
+
+
+    // inverse ================================
+
+    .#{$pr}#{$m}nav#{$c3}inverse {
+        background-color: transparent;
+
+        .#{$pr}#{$m}nav#{$c1}item {
+
+            &:not(.#{$paginate-ellipsis}) {
+                background-color: $paginate-inverse-bg;
+                border-color: $paginate-inverse-border-color;
+                color: $paginate-inverse-color;
+            }
+
+            &.#{$paginate-current} {
+                background-color: $paginate-inverse-current-bg;
+                border-color: $paginate-inverse-current-border-color;
+                color: $paginate-inverse-current-color;
+
+                .#{$pr}#{$m}nav#{$c1}label {
+                    background-color: $paginate-inverse-current-bg;
+                    border-color: $paginate-inverse-current-border-color;
+                    color: $paginate-inverse-current-color;
+                }
+
+            }
+
+        }
+
+        a.#{$pr}#{$m}nav#{$c1}label {
+            background-color: $paginate-inverse-bg;
+            border-color: $paginate-inverse-border-color;
+            color: $paginate-inverse-color;
+
+            &:hover,
+            &:focus {
+                background-color: $paginate-inverse-hover-bg;
+                border-color: $paginate-inverse-hover-border-color;
+                color: $paginate-inverse-hover-color;
+            }
+
+        }
+
+    }
+
+}

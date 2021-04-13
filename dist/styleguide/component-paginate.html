@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>component-pager | Style guide | echo-css</title>
-    <meta property="og:title" content="component-pager | Style guide | echo-css">
+    <title>component-paginate | Style guide | echo-css</title>
+    <meta property="og:title" content="component-paginate | Style guide | echo-css">
 
     <?php include('../doc_include/html_head.inc'); ?>
 
@@ -19,20 +19,20 @@
         <div class="echo-container echo-container-fluid">
 
             <div class="echo-pagehead">
-                <h1 class="echo-pagehead-title">component-pager</h1>
+                <h1 class="echo-pagehead-title">component-paginate</h1>
             </div><!-- /.echo-pagehead -->
 
             <nav class="echo-anchor">
                 <ul class="m-list m-list-horizontal">
 
-                    <li class="m-list-item"><a href="#pager" class="js-scrollto">c-pager</a></li>
+                    <li class="m-list-item"><a href="#paginate" class="js-scrollto">c-paginate</a></li>
 
                 </ul>
             </nav>
             
 
             <article class="s-post">
-                <div class="s-post-contents styleguide-contents"><h1 id="pager" class="styleguide">c-pager</h1>
+                <div class="s-post-contents styleguide-contents"><h1 id="paginate" class="styleguide">c-paginate</h1>
 
 <p>ページネーション（ページ分割ナビゲーション）を前提とした外観に変更する。<code>.m-nav</code> を包括する。</p>
 
@@ -42,11 +42,11 @@
 最初のページ、最後のページへのリンクスタイルには対応していないため、任意で追加すること。</p>
 
 <p><code>.prev, .next, .current, .ellipsis</code> を変更したい場合は、 <code>/_scss/_config_advance.scss</code> の変数<br>
-<code>$pager-prev, $pager-next, $pager-current, $pager-ellipsis</code> を変更すること。</p>
+<code>$paginate-prev, $paginate-next, $paginate-current, $paginate-ellipsis</code> を変更すること。</p>
 
 <div class="example">
 <h3 class="u-text-lg">シンプルなページネーション</h3>
-<div class="c-pager">
+<div class="c-paginate">
     <nav class="m-nav">
         <ul class="m-nav-list">
             <li class="m-nav-item prev">
@@ -78,11 +78,11 @@
             </li>
         </ul><!-- /.nav-list -->
     </nav><!-- /.nav -->
-</div><!-- /.pager -->
+</div><!-- /.paginate -->
 
 <h3 class="u-text-lg u-margin-top-lg">先頭・末尾・省略記号を含む</h3>
 <p>全体の幅が一般的なスマートフォンの画面幅を超えてしまうので、スマートフォンでも使用する場合はこれらを非表示にする必要がある。</p>
-<div class="c-pager">
+<div class="c-paginate">
     <nav class="m-nav">
         <ul class="m-nav-list">
             <li class="m-nav-item prev">
@@ -119,10 +119,10 @@
             </li>
         </ul><!-- /.nav-list -->
     </nav><!-- /.nav -->
-</div><!-- /.pager -->
+</div><!-- /.paginate -->
 
 <h3 class="u-text-lg u-margin-top-lg">現在ページのa要素が除去されるCMSの場合</h3>
-<div class="c-pager">
+<div class="c-paginate">
     <nav class="m-nav">
         <ul class="m-nav-list">
             <li class="m-nav-item prev">
@@ -151,11 +151,11 @@
             </li>
         </ul><!-- /.nav-list -->
     </nav><!-- /.nav -->
-</div><!-- /.pager -->
+</div><!-- /.paginate -->
 
 <h3 class="u-text-lg u-margin-top-lg">.m-nav-inverseを併用した場合</h3>
 <div class="u-bg-default">
-    <div class="c-pager">
+    <div class="c-paginate">
         <nav class="m-nav m-nav-inverse">
             <ul class="m-nav-list">
                 <li class="m-nav-item prev">
@@ -192,14 +192,14 @@
                 </li>
             </ul><!-- /.nav-list -->
         </nav><!-- /.nav -->
-    </div><!-- /.pager -->
+    </div><!-- /.paginate -->
 </div>
 
 
 </div>
 
 <div class="codeblock"><pre><code class="language-markup">&lt;h3 class="u-text-lg"&gt;シンプルなページネーション&lt;/h3&gt;
-&lt;div class="c-pager"&gt;
+&lt;div class="c-paginate"&gt;
     &lt;nav class="m-nav"&gt;
         &lt;ul class="m-nav-list"&gt;
             &lt;li class="m-nav-item prev"&gt;
@@ -231,11 +231,11 @@
             &lt;/li&gt;
         &lt;/ul&gt;&lt;!-- /.nav-list --&gt;
     &lt;/nav&gt;&lt;!-- /.nav --&gt;
-&lt;/div&gt;&lt;!-- /.pager --&gt;
+&lt;/div&gt;&lt;!-- /.paginate --&gt;
 
 &lt;h3 class="u-text-lg u-margin-top-lg"&gt;先頭・末尾・省略記号を含む&lt;/h3&gt;
 &lt;p&gt;全体の幅が一般的なスマートフォンの画面幅を超えてしまうので、スマートフォンでも使用する場合はこれらを非表示にする必要がある。&lt;/p&gt;
-&lt;div class="c-pager"&gt;
+&lt;div class="c-paginate"&gt;
     &lt;nav class="m-nav"&gt;
         &lt;ul class="m-nav-list"&gt;
             &lt;li class="m-nav-item prev"&gt;
@@ -275,10 +275,10 @@
             &lt;/li&gt;
         &lt;/ul&gt;&lt;!-- /.nav-list --&gt;
     &lt;/nav&gt;&lt;!-- /.nav --&gt;
-&lt;/div&gt;&lt;!-- /.pager --&gt;
+&lt;/div&gt;&lt;!-- /.paginate --&gt;
 
 &lt;h3 class="u-text-lg u-margin-top-lg"&gt;現在ページのa要素が除去されるCMSの場合&lt;/h3&gt;
-&lt;div class="c-pager"&gt;
+&lt;div class="c-paginate"&gt;
     &lt;nav class="m-nav"&gt;
         &lt;ul class="m-nav-list"&gt;
             &lt;li class="m-nav-item prev"&gt;
@@ -310,11 +310,11 @@
             &lt;/li&gt;
         &lt;/ul&gt;&lt;!-- /.nav-list --&gt;
     &lt;/nav&gt;&lt;!-- /.nav --&gt;
-&lt;/div&gt;&lt;!-- /.pager --&gt;
+&lt;/div&gt;&lt;!-- /.paginate --&gt;
 
 &lt;h3 class="u-text-lg u-margin-top-lg"&gt;.m-nav-inverseを併用した場合&lt;/h3&gt;
 &lt;div class="u-bg-default"&gt;
-    &lt;div class="c-pager"&gt;
+    &lt;div class="c-paginate"&gt;
         &lt;nav class="m-nav m-nav-inverse"&gt;
             &lt;ul class="m-nav-list"&gt;
                 &lt;li class="m-nav-item prev"&gt;
@@ -354,7 +354,7 @@
                 &lt;/li&gt;
             &lt;/ul&gt;&lt;!-- /.nav-list --&gt;
         &lt;/nav&gt;&lt;!-- /.nav --&gt;
-    &lt;/div&gt;&lt;!-- /.pager --&gt;
+    &lt;/div&gt;&lt;!-- /.paginate --&gt;
 &lt;/div&gt;
 </code></pre></div>
 
