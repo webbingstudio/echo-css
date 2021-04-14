@@ -6,14 +6,12 @@
 
 .#{$pr}#{$c}step {
     max-width: map-get( $object-max-widths, 'md' );
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: ( $spacer * 3 );
-    padding-bottom: ( $spacer * 3 );
+    margin: 0 auto;
 
     .#{$pr}#{$m}nav.#{$pr}#{$m}nav#{$c3}vertical {
 
         .#{$pr}#{$m}nav#{$c1}list {
+            margin-bottom: -.5em;
         }
 
         .#{$pr}#{$m}nav#{$c1}item {
@@ -33,15 +31,15 @@
                 &:hover,
                 &:focus,
                 &:active {
-                    background-color: transparent;
-                    border-color: $ui-border-color;
+                    background-color: $nav-hover-bg;
                 }
 
             }
 
             &.#{$nav-current} {
-                color: $ui-color;
-                background-color: $nav-hover-bg;
+                color: $nav-color;
+                background-color: $nav-bg;
+                border-color: $nav-color;
             }
 
         }
