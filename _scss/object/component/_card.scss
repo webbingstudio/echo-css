@@ -18,43 +18,6 @@
         height: 100%;
     }
 
-    a.#{$pr}#{$c}card#{$c1}inner {
-
-        &:not(:hover),
-        &:not(:focus),
-        &:not(:active) {
-            color: $body-color;
-            text-decoration: none;
-
-            .#{$pr}#{$c}card#{$c1}title {
-                text-decoration: underline;
-            }
-
-        }
-
-        &:hover,
-        &:focus,
-        &:active {
-            color: $body-color;
-            text-decoration: none;
-
-            .#{$pr}#{$m}thumbnail {
-
-                img {
-                    transform: scale(1.05);
-                    opacity: .75;
-                }
-
-            }
-
-            .#{$pr}#{$c}card#{$c1}title {
-                text-decoration: none;
-            }
-
-        }
-
-    }
-
 }
 
 time[class*="#{$pr}#{$c}card"] {
@@ -71,6 +34,43 @@ time[class*="#{$pr}#{$c}card"] {
 
     > * {
         flex-grow: 0;
+    }
+
+}
+
+a.#{$pr}#{$c}card#{$c1}inner {
+
+    &:not(:hover),
+    &:not(:focus),
+    &:not(:active) {
+        color: $body-color;
+        text-decoration: none;
+
+        .#{$pr}#{$c}card#{$c1}title {
+            text-decoration: underline;
+        }
+
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $body-color;
+        text-decoration: none;
+
+        .#{$pr}#{$m}thumbnail {
+
+            img {
+                transform: scale(1.05);
+                opacity: .75;
+            }
+
+        }
+
+        .#{$pr}#{$c}card#{$c1}title {
+            text-decoration: none;
+        }
+
     }
 
 }

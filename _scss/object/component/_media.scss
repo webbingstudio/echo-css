@@ -5,48 +5,56 @@
 */
 
 .#{$pr}#{$c}media {
+    position: relative;
+}
+
+time[class*="#{$pr}#{$c}media"] {
+    display: block;
+}
+
+.#{$pr}#{$c}media#{$c1}inner {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
     align-items: flex-start;
+    width: 100%;
+    height: 100%;
 
-    @at-root {
+    > * {
+        flex-grow: 0;
+    }
 
-        a#{&} {
+}
 
-            &:not(:hover),
-            &:not(:focus),
-            &:not(:active) {
-                color: $body-color;
-                text-decoration: none;
+a.#{$pr}#{$c}media#{$c1}inner {
 
-                .#{$pr}#{$c}media#{$c1}title {
-                    text-decoration: underline;
-                }
+    &:not(:hover),
+    &:not(:focus),
+    &:not(:active) {
+        color: $body-color;
+        text-decoration: none;
 
+        .#{$pr}#{$c}media#{$c1}title {
+            text-decoration: underline;
+        }
+
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $body-color;
+        text-decoration: none;
+
+        .#{$pr}#{$m}thumbnail {
+
+            img {
+                transform: scale(1.05);
+                opacity: .75;
             }
 
-            &:hover,
-            &:focus,
-            &:active {
-                color: $body-color;
-                text-decoration: none;
+        }
 
-                .#{$pr}#{$m}thumbnail {
-
-                    img {
-                        transform: scale(1.05);
-                        opacity: .75;
-                    }
-
-                }
-
-                .#{$pr}#{$c}media#{$c1}title {
-                    text-decoration: none;
-                }
-
-            }
-
+        .#{$pr}#{$c}media#{$c1}title {
+            text-decoration: none;
         }
 
     }
@@ -57,13 +65,8 @@
     flex-grow: 0;
     flex-shrink: 1;
     flex-basis: auto;
-    max-width: 50%;
-    padding-right: ( $spacer / 2 );
-
-    @include media-breakpoint-up(md) {
-        max-width: 33.33333333%;
-        padding-right: $spacer;
-    }
+    width: 33.33333333%;
+    min-width: 100px;
 
     .#{$pr}#{$m}thumbnail {
         background-color: $body-inverse-bg;
@@ -76,12 +79,17 @@
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 0%;
-    padding-left: ( $spacer / 2 );
+    padding-left: ( $spacer * 2 );
     font-size: $font-size-sm;
     line-height: $line-height-sm;
 
-    @include media-breakpoint-up(lg) {
-        padding-left: $spacer;
+    [class*="#{$pr}#{$c}media"] {
+        margin: 0;
+
+        + [class*="#{$pr}#{$c}media"] {
+            margin-top: .5rem;
+        }
+
     }
 
 }
@@ -102,12 +110,6 @@
     margin: 0;
 }
 
-[class*="#{$pr}#{$c}media"] + .#{$pr}#{$c}media#{$c1}title,
-[class*="#{$pr}#{$c}media"] + .#{$pr}#{$c}media#{$c1}meta,
-[class*="#{$pr}#{$c}media"] + .#{$pr}#{$c}media#{$c1}body {
-    margin-top: .5em;
-}
-
 
 /*
 --------------------
@@ -116,7 +118,11 @@
 */
 
 .#{$pr}#{$c}media#{$c1}middle {
-    align-items: center;
+
+    .#{$pr}#{$c}media#{$c1}inner {
+        align-items: center;
+    }
+
 }
 
 
@@ -127,16 +133,14 @@
 */
 
 .#{$pr}#{$c}media#{$c3}reverse {
-    flex-direction: row-reverse;
 
-    .#{$pr}#{$c}media#{$c1}object {
-        padding-right: 0;
-        padding-left: $spacer;
+    .#{$pr}#{$c}media#{$c1}inner {
+        flex-direction: row-reverse;
+    }
 
-        @include media-breakpoint-up(md) {
-            padding-left: ($spacer * 2);
-        }
-
+    .#{$pr}#{$c}media#{$c1}contents {
+        padding-left: 0;
+        padding-right: ( $spacer * 2 );
     }
 
 }
