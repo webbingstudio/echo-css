@@ -53,8 +53,12 @@
 <p>リンク、インライン要素、フォームのボタン要素をボタン状に表示する。<br>
 最低 <code>2.75rem = 44px</code> の高さがあることが望ましい。<br>
 サブクラス <code>.m-btn-style-(style)</code> が必須であり、付与していない場合は最低限の装飾となる。</p>
+
 <p><code>.disabled</code> もしくは <code>disabled="disabled"</code> が付与されていると、反応しない見た目となる。<br>
 （他のフレームワークとの互換のため <code>.disabled</code> に接頭辞は設けていない）</p>
+
+<p>ボタンのdisplayプロパティは <code>inline-block</code> を指定している。このため、連続して配置すると右に改行コード分の余白が生じる。<br>
+余白を詰めたい場合は <code>.m-btn-block</code> を使用するか、包括するコンポーネントで調整すること。</p>
 
 <div class="example">
 
