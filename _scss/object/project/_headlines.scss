@@ -1,0 +1,26 @@
+/*
+--------------------
+#{$pr}#{$p}headlines
+--------------------
+*/
+
+.#{$pr}#{$p}headlines {
+    margin: 0 0 ( $spacer * -2 );
+
+    @include media-breakpoint-up(lg) {
+        margin-bottom: ( $spacer * -3 );
+    }
+
+}
+
+.#{$pr}#{$p}headlines#{$c1}item {
+    margin: 0 0 ( $spacer * 2 );
+
+    @include media-breakpoint-up(lg) {
+        margin-bottom: ( $spacer * 2 );
+    }
+
+    .#{$pr}#{$c}headline {
+    }
+
+}

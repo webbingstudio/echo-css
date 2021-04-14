@@ -9,33 +9,25 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: stretch;
-    margin: 0 ( map-get( $grid-gutter-widths, sm ) / -2 ) -1.25rem;
-
-    @include media-breakpoint-up(md) {
-        margin-left: ( map-get( $grid-gutter-widths, md ) / -2 );
-        margin-right: ( map-get( $grid-gutter-widths, md ) / -2 );
-    }
-
+    margin: 0 ( map-get( $grid-gutter-widths, md ) / -2 ) ( map-get( $grid-gutter-widths, md ) / -1 );
 }
 
 .#{$pr}#{$p}cards#{$c1}item {
     display: flex;
     align-items: stretch;
+    justify-content: center;
     width: 100%;
     flex-grow: 1;
     flex-basis: auto;
-    margin: 0 0 map-get( $grid-gutter-widths, sm );
-    padding: 0 ( map-get( $grid-gutter-widths, sm ) / 2 );
+    margin: 0 0 map-get( $grid-gutter-widths, md );
+    padding: 0 ( map-get( $grid-gutter-widths, md ) / 2 );
 
-    @include media-breakpoint-up(xs) {
+    @include media-breakpoint-up(sm) {
         max-width: 50%;
     }
 
     @include media-breakpoint-up(md) {
         max-width: 33.33333333%;
-        margin-bottom: map-get( $grid-gutter-widths, md );
-        padding-left: ( map-get( $grid-gutter-widths, md ) / 2 );
-        padding-right: ( map-get( $grid-gutter-widths, md ) / 2 );
     }
 
     @include media-breakpoint-up(xl) {
@@ -44,6 +36,11 @@
 
     .#{$pr}#{$c}card {
         max-width: none;
+
+        @include media-breakpoint-down(sm) {
+            max-width: map-get( $object-max-widths, 'sm' );
+        }
+
     }
 
 }
