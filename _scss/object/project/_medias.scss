@@ -5,12 +5,13 @@
 */
 
 .#{$pr}#{$p}medias {
-    overflow: hidden;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: stretch;
-    margin: 0 ( map-get( $grid-gutter-widths, lg ) / -2 ) ( map-get( $grid-gutter-widths, lg ) / -1 );
+    display: grid;
+    gap: map-get( $grid-gutter-widths, lg );
+
+    @include media-breakpoint-up(lg) {
+        grid-template-columns: 1fr 1fr;
+    }
+
 }
 
 .#{$pr}#{$p}medias#{$c1}item {
@@ -18,14 +19,9 @@
     align-items: stretch;
     justify-content: center;
     width: 100%;
-    flex-grow: 1;
-    flex-basis: auto;
-    margin: 0 0 map-get( $grid-gutter-widths, lg );
-    padding: 0 ( map-get( $grid-gutter-widths, lg ) / 2 );
-
-    @include media-breakpoint-up(lg) {
-        max-width: 50%;
-    }
+//    flex-grow: 1;
+//    flex-basis: auto;
+//    padding: 0 ( map-get( $grid-gutter-widths, lg ) / 2 );
 
     .#{$pr}#{$c}media {
     }

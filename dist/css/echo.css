@@ -6667,12 +6667,14 @@ p-medias
 --------------------
 */
 .p-medias {
-  overflow: hidden;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  margin: 0 -1.25rem -2.5rem;
+  display: grid;
+  gap: 2.5rem;
+}
+
+@media (min-width: 62.5rem) {
+  .p-medias {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .p-medias-item {
@@ -6680,14 +6682,4 @@ p-medias
   align-items: stretch;
   justify-content: center;
   width: 100%;
-  flex-grow: 1;
-  flex-basis: auto;
-  margin: 0 0 2.5rem;
-  padding: 0 1.25rem;
-}
-
-@media (min-width: 62.5rem) {
-  .p-medias-item {
-    max-width: 50%;
-  }
 }
