@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>project-cards | Style guide | echo-css</title>
+    <meta property="og:title" content="project-cards | Style guide | echo-css">
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div class="l-document" id="document">
+    <?php include('../doc_include/header.inc'); ?>
+
+    <main class="p-main" role="main">
+        <div class="echo-container echo-container-fluid">
+
+            <div class="echo-pagehead">
+                <h1 class="echo-pagehead-title">project-cards</h1>
+            </div><!-- /.echo-pagehead -->
+
+            <article class="s-post">
+                <div class="s-post-contents styleguide-contents"><h1 id="cards" class="styleguide">p-cards</h1>
+
+<p><code>.c-card</code> をグリッド状に繰り返すための領域を作成する。サブクラスの指定がない場合、(breakpoint)が <code>xs</code> 以上で2列、 <code>md</code> 以上で3列、 <code>xl</code> 以上で4列となる。グリッド間の余白も適切に変化する。</p>
+
+<div class="example">
+
+<div class="p-cards">
+    <div class="p-cards-item">
+        <div class="c-card">
+            <a href="#" class="c-card-inner">
+                <div class="c-card-object">
+                    <figure class="m-thumbnail m-thumbnail-16to9">
+                        <picture>
+                        <source
+                            media="(max-width:640px)"
+                            srcset="../images/_dummy/image_02_s.jpg 640w"
+                            sizes="100vw">
+                        <source
+                            srcset="../images/_dummy/image_02.jpg 1280w"
+                            sizes="(max-width:1280px) 100vw, 1280px">
+                        <img src="../images/_dummy/image_02.jpg" alt="">
+                        </picture>
+                    </figure><!-- /.m-thumbnail -->
+                </div><!-- /.c-card-object -->
+                <div class="c-card-contents">
+                    <time class="c-card-meta" datetime="2020-12-28T09:00:00+09:00">2020.12.28</time>
+                    <h3 class="c-card-title m-title m-title-level-4 m-title-style-a">よくあるカラムレイアウトの例です</h3>
+                    <p class="c-card-body">このカードにはフッタがあります。フッタ内のボタンは、カードがどのような高さであっても、カードの下端に配置されます。</p>
+                </div><!-- /.c-card-contents -->
+                <div class="c-card-footer">
+                    <span class="m-btn m-btn-block m-btn-style-b m-btn-arrowed-right">ボタン</span>
+                </div><!-- /.c-card-footer -->
+            </a><!-- /.c-card-innner -->
+        </div><!-- /.c-card -->
+    </div><!-- /.p-cards-item -->
+    <div class="p-cards-item">
+        <div class="c-card">
+            <a href="#" class="c-card-inner">
+                <div class="c-card-object">
+                    <figure class="m-thumbnail m-thumbnail-16to9">
+                        <picture>
+                        <source
+                            media="(max-width:640px)"
+                            srcset="../images/_dummy/image_02_s.jpg 640w"
+                            sizes="100vw">
+                        <source
+                            srcset="../images/_dummy/image_02.jpg 1280w"
+                            sizes="(max-width:1280px) 100vw, 1280px">
+                        <img src="../images/_dummy/image_02.jpg" alt="">
+                        </picture>
+                    </figure><!-- /.m-thumbnail -->
+                </div><!-- /.c-card-object -->
+                <div class="c-card-contents">
+                    <time class="c-card-meta" datetime="2020-12-28T09:00:00+09:00">2020.12.28</time>
+                    <h3 class="c-card-title m-title m-title-level-4 m-title-style-a">カード全体をリンク範囲にする場合</h3>
+                    <p class="c-card-body">.c-card-innner をa要素でマークアップすると、カード全体がリンク範囲になります。カードのどこかにカーソルを置くと、内包しているサムネイルとボタンの外観も変わります。</p>
+                </div><!-- /.c-card-contents -->
+                <div class="c-card-footer">
+                    <span class="m-btn m-btn-block m-btn-style-b m-btn-arrowed-right">ボタン</span>
+                </div><!-- /.c-card-footer -->
+            </a><!-- /.c-card-innner -->
+        </div><!-- /.c-card -->
+    </div><!-- /.p-cards-item -->
+    <div class="p-cards-item">
+        <div class="c-card">
+            <a href="#" class="c-card-inner">
+                <div class="c-card-object">
+                    <figure class="m-thumbnail m-thumbnail-16to9">
+                        <picture>
+                        <source
+                            media="(max-width:640px)"
+                            srcset="../images/_dummy/image_02_s.jpg 640w"
+                            sizes="100vw">
+                        <source
+                            srcset="../images/_dummy/image_02.jpg 1280w"
+                            sizes="(max-width:1280px) 100vw, 1280px">
+                        <img src="../images/_dummy/image_02.jpg" alt="">
+                        </picture>
+                    </figure><!-- /.m-thumbnail -->
+                </div><!-- /.c-card-object -->
+                <div class="c-card-contents">
+                    <time class="c-card-meta" datetime="2020-12-28T09:00:00+09:00">2020.12.28</time>
+                    <h3 class="c-card-title m-title m-title-level-4 m-title-style-a">グリッドレイアウト</h3>
+                    <p class="c-card-body">p-cards, p-cards-item を使用して並べました。画面幅によってカラム数が変化します。</p>
+                </div><!-- /.c-card-contents -->
+                <div class="c-card-footer">
+                    <span class="m-btn m-btn-block m-btn-style-b m-btn-arrowed-right">ボタン</span>
+                </div><!-- /.c-card-footer -->
+            </a><!-- /.c-card-innner -->
+        </div><!-- /.c-card -->
+    </div><!-- /.p-cards-item -->
+    <div class="p-cards-item">
+        <div class="c-card">
+            <a href="#" class="c-card-inner">
+                <div class="c-card-object">
+                    <figure class="m-thumbnail m-thumbnail-16to9">
+                        <picture>
+                        <source
+                            media="(max-width:640px)"
+                            srcset="../images/_dummy/image_02_s.jpg 640w"
+                            sizes="100vw">
+                        <source
+                            srcset="../images/_dummy/image_02.jpg 1280w"
+                            sizes="(max-width:1280px) 100vw, 1280px">
+                        <img src="../images/_dummy/image_02.jpg" alt="">
+                        </picture>
+                    </figure><!-- /.m-thumbnail -->
+                </div><!-- /.c-card-object -->
+                <div class="c-card-contents">
+                    <time class="c-card-meta" datetime="2020-12-28T09:00:00+09:00">2020.12.28</time>
+                    <h3 class="c-card-title m-title m-title-level-4 m-title-style-a">コンテンツが長すぎる_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</h3>
+                    <p class="c-card-body">何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</p>
+                </div><!-- /.c-card-contents -->
+                <div class="c-card-footer">
+                    <span class="m-btn m-btn-block m-btn-style-b m-btn-arrowed-right">ボタン</span>
+                </div><!-- /.c-card-footer -->
+            </a><!-- /.c-card-innner -->
+        </div><!-- /.c-card -->
+    </div><!-- /.p-cards-item -->
+    <div class="p-cards-item">
+        <div class="c-card">
+            <a href="#" class="c-card-inner">
+                <div class="c-card-object">
+                    <figure class="m-thumbnail m-thumbnail-16to9">
+                        <picture>
+                        <source
+                            media="(max-width:640px)"
+                            srcset="../images/_dummy/image_02_s.jpg 640w"
+                            sizes="100vw">
+                        <source
+                            srcset="../images/_dummy/image_02.jpg 1280w"
+                            sizes="(max-width:1280px) 100vw, 1280px">
+                        <img src="../images/_dummy/image_02.jpg" alt="">
+                        </picture>
+                    </figure><!-- /.m-thumbnail -->
+                </div><!-- /.c-card-object -->
+                <div class="c-card-contents">
+                    <time class="c-card-meta" datetime="2020-12-28T09:00:00+09:00">2020.12.28</time>
+                    <h3 class="c-card-title m-title m-title-level-4 m-title-style-a">吾輩は猫である。名前はまだ無い</h3>
+                    <p class="c-card-body">何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</p>
+                </div><!-- /.c-card-contents -->
+                <div class="c-card-footer">
+                    <span class="m-btn m-btn-block m-btn-style-b m-btn-arrowed-right">ボタン</span>
+                </div><!-- /.c-card-footer -->
+            </a><!-- /.c-card-innner -->
+        </div><!-- /.c-card -->
+    </div><!-- /.p-cards-item -->
+    <div class="p-cards-item">
+        <div class="c-card">
+            <a href="#" class="c-card-inner">
+                <div class="c-card-object">
+                    <figure class="m-thumbnail m-thumbnail-16to9">
+                        <picture>
+                        <source
+                            media="(max-width:640px)"
+                            srcset="../images/_dummy/image_02_s.jpg 640w"
+                            sizes="100vw">
+                        <source
+                            srcset="../images/_dummy/image_02.jpg 1280w"
+                            sizes="(max-width:1280px) 100vw, 1280px">
+                        <img src="../images/_dummy/image_02.jpg" alt="">
+                        </picture>
+                    </figure><!-- /.m-thumbnail -->
+                </div><!-- /.c-card-object -->
+                <div class="c-card-contents">
+                    <time class="c-card-meta" datetime="2020-12-28T09:00:00+09:00">2020.12.28</time>
+                    <h3 class="c-card-title m-title m-title-level-4 m-title-style-a">吾輩は猫である。名前はまだ無い</h3>
+                    <p class="c-card-body">何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</p>
+                </div><!-- /.c-card-contents -->
+                <div class="c-card-footer">
+                    <span class="m-btn m-btn-block m-btn-style-b m-btn-arrowed-right">ボタン</span>
+                </div><!-- /.c-card-footer -->
+            </a><!-- /.c-card-innner -->
+        </div><!-- /.c-card -->
+    </div><!-- /.p-cards-item -->
+    <div class="p-cards-item">
+        <div class="c-card">
+            <a href="#" class="c-card-inner">
+                <div class="c-card-object">
+                    <figure class="m-thumbnail m-thumbnail-16to9">
+                        <picture>
+                        <source
+                            media="(max-width:640px)"
+                            srcset="../images/_dummy/image_02_s.jpg 640w"
+                            sizes="100vw">
+                        <source
+                            srcset="../images/_dummy/image_02.jpg 1280w"
+                            sizes="(max-width:1280px) 100vw, 1280px">
+                        <img src="../images/_dummy/image_02.jpg" alt="">
+                        </picture>
+                    </figure><!-- /.m-thumbnail -->
+                </div><!-- /.c-card-object -->
+                <div class="c-card-contents">
+                    <time class="c-card-meta" datetime="2020-12-28T09:00:00+09:00">2020.12.28</time>
+                    <h3 class="c-card-title m-title m-title-level-4 m-title-style-a">吾輩は猫である。名前はまだ無い</h3>
+                    <p class="c-card-body">何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</p>
+                </div><!-- /.c-card-contents -->
+                <div class="c-card-footer">
+                    <span class="m-btn m-btn-block m-btn-style-b m-btn-arrowed-right">ボタン</span>
+                </div><!-- /.c-card-footer -->
+            </a><!-- /.c-card-innner -->
+        </div><!-- /.c-card -->
+    </div><!-- /.p-cards-item -->
+    <div class="p-cards-item">
+        <div class="c-card">
+            <a href="#" class="c-card-inner">
+                <div class="c-card-object">
+                    <figure class="m-thumbnail m-thumbnail-16to9">
+                        <picture>
+                        <source
+                            media="(max-width:640px)"
+                            srcset="../images/_dummy/image_02_s.jpg 640w"
+                            sizes="100vw">
+                        <source
+                            srcset="../images/_dummy/image_02.jpg 1280w"
+                            sizes="(max-width:1280px) 100vw, 1280px">
+                        <img src="../images/_dummy/image_02.jpg" alt="">
+                        </picture>
+                    </figure><!-- /.m-thumbnail -->
+                </div><!-- /.c-card-object -->
+                <div class="c-card-contents">
+                    <time class="c-card-meta" datetime="2020-12-28T09:00:00+09:00">2020.12.28</time>
+                    <h3 class="c-card-title m-title m-title-level-4 m-title-style-a">吾輩は猫である。名前はまだ無い</h3>
+                    <p class="c-card-body">何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</p>
+                </div><!-- /.c-card-contents -->
+                <div class="c-card-footer">
+                    <span class="m-btn m-btn-block m-btn-style-b m-btn-arrowed-right">ボタン</span>
+                </div><!-- /.c-card-footer -->
+            </a><!-- /.c-card-innner -->
+        </div><!-- /.c-card -->
+    </div><!-- /.p-cards-item -->
+    <div class="p-cards-item">
+        <div class="c-card">
+            <a href="#" class="c-card-inner">
+                <div class="c-card-object">
+                    <figure class="m-thumbnail m-thumbnail-16to9">
+                        <picture>
+                        <source
+                            media="(max-width:640px)"
+                            srcset="../images/_dummy/image_02_s.jpg 640w"
+                            sizes="100vw">
+                        <source
+                            srcset="../images/_dummy/image_02.jpg 1280w"
+                            sizes="(max-width:1280px) 100vw, 1280px">
+                        <img src="../images/_dummy/image_02.jpg" alt="">
+                        </picture>
+                    </figure><!-- /.m-thumbnail -->
+                </div><!-- /.c-card-object -->
+                <div class="c-card-contents">
+                    <time class="c-card-meta" datetime="2020-12-28T09:00:00+09:00">2020.12.28</time>
+                    <h3 class="c-card-title m-title m-title-level-4 m-title-style-a">吾輩は猫である。名前はまだ無い</h3>
+                    <p class="c-card-body">何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</p>
+                </div><!-- /.c-card-contents -->
+                <div class="c-card-footer">
+                    <span class="m-btn m-btn-block m-btn-style-b m-btn-arrowed-right">ボタン</span>
+                </div><!-- /.c-card-footer -->
+            </a><!-- /.c-card-innner -->
+        </div><!-- /.c-card -->
+    </div><!-- /.p-cards-item -->
+    <div class="p-cards-item">
+        <div class="c-card">
+            <a href="#" class="c-card-inner">
+                <div class="c-card-object">
+                    <figure class="m-thumbnail m-thumbnail-16to9">
+                        <picture>
+                        <source
+                            media="(max-width:640px)"
+                            srcset="../images/_dummy/image_02_s.jpg 640w"
+                            sizes="100vw">
+                        <source
+                            srcset="../images/_dummy/image_02.jpg 1280w"
+                            sizes="(max-width:1280px) 100vw, 1280px">
+                        <img src="../images/_dummy/image_02.jpg" alt="">
+                        </picture>
+                    </figure><!-- /.m-thumbnail -->
+                </div><!-- /.c-card-object -->
+                <div class="c-card-contents">
+                    <time class="c-card-meta" datetime="2020-12-28T09:00:00+09:00">2020.12.28</time>
+                    <h3 class="c-card-title m-title m-title-level-4 m-title-style-a">吾輩は猫である。名前はまだ無い</h3>
+                    <p class="c-card-body">何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</p>
+                </div><!-- /.c-card-contents -->
+                <div class="c-card-footer">
+                    <span class="m-btn m-btn-block m-btn-style-b m-btn-arrowed-right">ボタン</span>
+                </div><!-- /.c-card-footer -->
+            </a><!-- /.c-card-innner -->
+        </div><!-- /.c-card -->
+    </div><!-- /.p-cards-item -->
+</div><!-- .p-cards -->
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="p-cards"&gt;
+    &lt;div class="p-cards-item"&gt;
+        &lt;div class="c-card"&gt;
+            &lt;a href="#" class="c-card-inner"&gt;
+                &lt;div class="c-card-object"&gt;
+                    &lt;figure class="m-thumbnail m-thumbnail-16to9"&gt;
+                        &lt;picture&gt;
+                        &lt;source
+                            media="(max-width:640px)"
+                            srcset="../images/_dummy/image_02_s.jpg 640w"
+                            sizes="100vw"&gt;
+                        &lt;source
+                            srcset="../images/_dummy/image_02.jpg 1280w"
+                            sizes="(max-width:1280px) 100vw, 1280px"&gt;
+                        &lt;img src="../images/_dummy/image_02.jpg" alt=""&gt;
+                        &lt;/picture&gt;
+                    &lt;/figure&gt;&lt;!-- /.m-thumbnail --&gt;
+                &lt;/div&gt;&lt;!-- /.c-card-object --&gt;
+                &lt;div class="c-card-contents"&gt;
+                    &lt;time class="c-card-meta" datetime="2020-12-28T09:00:00+09:00"&gt;2020.12.28&lt;/time&gt;
+                    &lt;h3 class="c-card-title m-title m-title-level-4 m-title-style-a"&gt;よくあるカラムレイアウトの例です&lt;/h3&gt;
+                    &lt;p class="c-card-body"&gt;このカードにはフッタがあります。フッタ内のボタンは、カードがどのような高さであっても、カードの下端に配置されます。&lt;/p&gt;
+                &lt;/div&gt;&lt;!-- /.c-card-contents --&gt;
+                &lt;div class="c-card-footer"&gt;
+                    &lt;span class="m-btn m-btn-block m-btn-style-b m-btn-arrowed-right"&gt;ボタン&lt;/span&gt;
+                &lt;/div&gt;&lt;!-- /.c-card-footer --&gt;
+            &lt;/a&gt;&lt;!-- /.c-card-innner --&gt;
+        &lt;/div&gt;&lt;!-- /.c-card --&gt;
+    &lt;/div&gt;&lt;!-- /.p-cards-item --&gt;
+    &lt;div class="p-cards-item"&gt;
+        &lt;div class="c-card"&gt;
+            &lt;a href="#" class="c-card-inner"&gt;
+                &lt;div class="c-card-object"&gt;
+                    &lt;figure class="m-thumbnail m-thumbnail-16to9"&gt;
+                        &lt;picture&gt;
+                        &lt;source
+                            media="(max-width:640px)"
+                            srcset="../images/_dummy/image_02_s.jpg 640w"
+                            sizes="100vw"&gt;
+                        &lt;source
+                            srcset="../images/_dummy/image_02.jpg 1280w"
+                            sizes="(max-width:1280px) 100vw, 1280px"&gt;
+                        &lt;img src="../images/_dummy/image_02.jpg" alt=""&gt;
+                        &lt;/picture&gt;
+                    &lt;/figure&gt;&lt;!-- /.m-thumbnail --&gt;
+                &lt;/div&gt;&lt;!-- /.c-card-object --&gt;
+                &lt;div class="c-card-contents"&gt;
+                    &lt;time class="c-card-meta" datetime="2020-12-28T09:00:00+09:00"&gt;2020.12.28&lt;/time&gt;
+                    &lt;h3 class="c-card-title m-title m-title-level-4 m-title-style-a"&gt;カード全体をリンク範囲にする場合&lt;/h3&gt;
+                    &lt;p class="c-card-body"&gt;.c-card-innner をa要素でマークアップすると、カード全体がリンク範囲になります。カードのどこかにカーソルを置くと、内包しているサムネイルとボタンの外観も変わります。&lt;/p&gt;
+                &lt;/div&gt;&lt;!-- /.c-card-contents --&gt;
+                &lt;div class="c-card-footer"&gt;
+                    &lt;span class="m-btn m-btn-block m-btn-style-b m-btn-arrowed-right"&gt;ボタン&lt;/span&gt;
+                &lt;/div&gt;&lt;!-- /.c-card-footer --&gt;
+            &lt;/a&gt;&lt;!-- /.c-card-innner --&gt;
+        &lt;/div&gt;&lt;!-- /.c-card --&gt;
+    &lt;/div&gt;&lt;!-- /.p-cards-item --&gt;
+    &lt;div class="p-cards-item"&gt;
+        &lt;div class="c-card"&gt;
+            &lt;a href="#" class="c-card-inner"&gt;
+                &lt;div class="c-card-object"&gt;
+                    &lt;figure class="m-thumbnail m-thumbnail-16to9"&gt;
+                        &lt;picture&gt;
+                        &lt;source
+                            media="(max-width:640px)"
+                            srcset="../images/_dummy/image_02_s.jpg 640w"
+                            sizes="100vw"&gt;
+                        &lt;source
+                            srcset="../images/_dummy/image_02.jpg 1280w"
+                            sizes="(max-width:1280px) 100vw, 1280px"&gt;
+                        &lt;img src="../images/_dummy/image_02.jpg" alt=""&gt;
+                        &lt;/picture&gt;
+                    &lt;/figure&gt;&lt;!-- /.m-thumbnail --&gt;
+                &lt;/div&gt;&lt;!-- /.c-card-object --&gt;
+                &lt;div class="c-card-contents"&gt;
+                    &lt;time class="c-card-meta" datetime="2020-12-28T09:00:00+09:00"&gt;2020.12.28&lt;/time&gt;
+                    &lt;h3 class="c-card-title m-title m-title-level-4 m-title-style-a"&gt;グリッドレイアウト&lt;/h3&gt;
+                    &lt;p class="c-card-body"&gt;p-cards, p-cards-item を使用して並べました。画面幅によってカラム数が変化します。&lt;/p&gt;
+                &lt;/div&gt;&lt;!-- /.c-card-contents --&gt;
+                &lt;div class="c-card-footer"&gt;
+                    &lt;span class="m-btn m-btn-block m-btn-style-b m-btn-arrowed-right"&gt;ボタン&lt;/span&gt;
+                &lt;/div&gt;&lt;!-- /.c-card-footer --&gt;
+            &lt;/a&gt;&lt;!-- /.c-card-innner --&gt;
+        &lt;/div&gt;&lt;!-- /.c-card --&gt;
+    &lt;/div&gt;&lt;!-- /.p-cards-item --&gt;
+    &lt;div class="p-cards-item"&gt;
+        &lt;div class="c-card"&gt;
+            &lt;a href="#" class="c-card-inner"&gt;
+                &lt;div class="c-card-object"&gt;
+                    &lt;figure class="m-thumbnail m-thumbnail-16to9"&gt;
+                        &lt;picture&gt;
+                        &lt;source
+                            media="(max-width:640px)"
+                            srcset="../images/_dummy/image_02_s.jpg 640w"
+                            sizes="100vw"&gt;
+                        &lt;source
+                            srcset="../images/_dummy/image_02.jpg 1280w"
+                            sizes="(max-width:1280px) 100vw, 1280px"&gt;
+                        &lt;img src="../images/_dummy/image_02.jpg" alt=""&gt;
+                        &lt;/picture&gt;
+                    &lt;/figure&gt;&lt;!-- /.m-thumbnail --&gt;
+                &lt;/div&gt;&lt;!-- /.c-card-object --&gt;
+                &lt;div class="c-card-contents"&gt;
+                    &lt;time class="c-card-meta" datetime="2020-12-28T09:00:00+09:00"&gt;2020.12.28&lt;/time&gt;
+                    &lt;h3 class="c-card-title m-title m-title-level-4 m-title-style-a"&gt;コンテンツが長すぎる_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。&lt;/h3&gt;
+                    &lt;p class="c-card-body"&gt;何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。&lt;/p&gt;
+                &lt;/div&gt;&lt;!-- /.c-card-contents --&gt;
+                &lt;div class="c-card-footer"&gt;
+                    &lt;span class="m-btn m-btn-block m-btn-style-b m-btn-arrowed-right"&gt;ボタン&lt;/span&gt;
+                &lt;/div&gt;&lt;!-- /.c-card-footer --&gt;
+            &lt;/a&gt;&lt;!-- /.c-card-innner --&gt;
+        &lt;/div&gt;&lt;!-- /.c-card --&gt;
+    &lt;/div&gt;&lt;!-- /.p-cards-item --&gt;
+    &lt;div class="p-cards-item"&gt;
+        &lt;div class="c-card"&gt;
+            &lt;a href="#" class="c-card-inner"&gt;
+                &lt;div class="c-card-object"&gt;
+                    &lt;figure class="m-thumbnail m-thumbnail-16to9"&gt;
+                        &lt;picture&gt;
+                        &lt;source
+                            media="(max-width:640px)"
+                            srcset="../images/_dummy/image_02_s.jpg 640w"
+                            sizes="100vw"&gt;
+                        &lt;source
+                            srcset="../images/_dummy/image_02.jpg 1280w"
+                            sizes="(max-width:1280px) 100vw, 1280px"&gt;
+                        &lt;img src="../images/_dummy/image_02.jpg" alt=""&gt;
+                        &lt;/picture&gt;
+                    &lt;/figure&gt;&lt;!-- /.m-thumbnail --&gt;
+                &lt;/div&gt;&lt;!-- /.c-card-object --&gt;
+                &lt;div class="c-card-contents"&gt;
+                    &lt;time class="c-card-meta" datetime="2020-12-28T09:00:00+09:00"&gt;2020.12.28&lt;/time&gt;
+                    &lt;h3 class="c-card-title m-title m-title-level-4 m-title-style-a"&gt;吾輩は猫である。名前はまだ無い&lt;/h3&gt;
+                    &lt;p class="c-card-body"&gt;何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
+                &lt;/div&gt;&lt;!-- /.c-card-contents --&gt;
+                &lt;div class="c-card-footer"&gt;
+                    &lt;span class="m-btn m-btn-block m-btn-style-b m-btn-arrowed-right"&gt;ボタン&lt;/span&gt;
+                &lt;/div&gt;&lt;!-- /.c-card-footer --&gt;
+            &lt;/a&gt;&lt;!-- /.c-card-innner --&gt;
+        &lt;/div&gt;&lt;!-- /.c-card --&gt;
+    &lt;/div&gt;&lt;!-- /.p-cards-item --&gt;
+    &lt;div class="p-cards-item"&gt;
+        &lt;div class="c-card"&gt;
+            &lt;a href="#" class="c-card-inner"&gt;
+                &lt;div class="c-card-object"&gt;
+                    &lt;figure class="m-thumbnail m-thumbnail-16to9"&gt;
+                        &lt;picture&gt;
+                        &lt;source
+                            media="(max-width:640px)"
+                            srcset="../images/_dummy/image_02_s.jpg 640w"
+                            sizes="100vw"&gt;
+                        &lt;source
+                            srcset="../images/_dummy/image_02.jpg 1280w"
+                            sizes="(max-width:1280px) 100vw, 1280px"&gt;
+                        &lt;img src="../images/_dummy/image_02.jpg" alt=""&gt;
+                        &lt;/picture&gt;
+                    &lt;/figure&gt;&lt;!-- /.m-thumbnail --&gt;
+                &lt;/div&gt;&lt;!-- /.c-card-object --&gt;
+                &lt;div class="c-card-contents"&gt;
+                    &lt;time class="c-card-meta" datetime="2020-12-28T09:00:00+09:00"&gt;2020.12.28&lt;/time&gt;
+                    &lt;h3 class="c-card-title m-title m-title-level-4 m-title-style-a"&gt;吾輩は猫である。名前はまだ無い&lt;/h3&gt;
+                    &lt;p class="c-card-body"&gt;何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
+                &lt;/div&gt;&lt;!-- /.c-card-contents --&gt;
+                &lt;div class="c-card-footer"&gt;
+                    &lt;span class="m-btn m-btn-block m-btn-style-b m-btn-arrowed-right"&gt;ボタン&lt;/span&gt;
+                &lt;/div&gt;&lt;!-- /.c-card-footer --&gt;
+            &lt;/a&gt;&lt;!-- /.c-card-innner --&gt;
+        &lt;/div&gt;&lt;!-- /.c-card --&gt;
+    &lt;/div&gt;&lt;!-- /.p-cards-item --&gt;
+    &lt;div class="p-cards-item"&gt;
+        &lt;div class="c-card"&gt;
+            &lt;a href="#" class="c-card-inner"&gt;
+                &lt;div class="c-card-object"&gt;
+                    &lt;figure class="m-thumbnail m-thumbnail-16to9"&gt;
+                        &lt;picture&gt;
+                        &lt;source
+                            media="(max-width:640px)"
+                            srcset="../images/_dummy/image_02_s.jpg 640w"
+                            sizes="100vw"&gt;
+                        &lt;source
+                            srcset="../images/_dummy/image_02.jpg 1280w"
+                            sizes="(max-width:1280px) 100vw, 1280px"&gt;
+                        &lt;img src="../images/_dummy/image_02.jpg" alt=""&gt;
+                        &lt;/picture&gt;
+                    &lt;/figure&gt;&lt;!-- /.m-thumbnail --&gt;
+                &lt;/div&gt;&lt;!-- /.c-card-object --&gt;
+                &lt;div class="c-card-contents"&gt;
+                    &lt;time class="c-card-meta" datetime="2020-12-28T09:00:00+09:00"&gt;2020.12.28&lt;/time&gt;
+                    &lt;h3 class="c-card-title m-title m-title-level-4 m-title-style-a"&gt;吾輩は猫である。名前はまだ無い&lt;/h3&gt;
+                    &lt;p class="c-card-body"&gt;何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
+                &lt;/div&gt;&lt;!-- /.c-card-contents --&gt;
+                &lt;div class="c-card-footer"&gt;
+                    &lt;span class="m-btn m-btn-block m-btn-style-b m-btn-arrowed-right"&gt;ボタン&lt;/span&gt;
+                &lt;/div&gt;&lt;!-- /.c-card-footer --&gt;
+            &lt;/a&gt;&lt;!-- /.c-card-innner --&gt;
+        &lt;/div&gt;&lt;!-- /.c-card --&gt;
+    &lt;/div&gt;&lt;!-- /.p-cards-item --&gt;
+    &lt;div class="p-cards-item"&gt;
+        &lt;div class="c-card"&gt;
+            &lt;a href="#" class="c-card-inner"&gt;
+                &lt;div class="c-card-object"&gt;
+                    &lt;figure class="m-thumbnail m-thumbnail-16to9"&gt;
+                        &lt;picture&gt;
+                        &lt;source
+                            media="(max-width:640px)"
+                            srcset="../images/_dummy/image_02_s.jpg 640w"
+                            sizes="100vw"&gt;
+                        &lt;source
+                            srcset="../images/_dummy/image_02.jpg 1280w"
+                            sizes="(max-width:1280px) 100vw, 1280px"&gt;
+                        &lt;img src="../images/_dummy/image_02.jpg" alt=""&gt;
+                        &lt;/picture&gt;
+                    &lt;/figure&gt;&lt;!-- /.m-thumbnail --&gt;
+                &lt;/div&gt;&lt;!-- /.c-card-object --&gt;
+                &lt;div class="c-card-contents"&gt;
+                    &lt;time class="c-card-meta" datetime="2020-12-28T09:00:00+09:00"&gt;2020.12.28&lt;/time&gt;
+                    &lt;h3 class="c-card-title m-title m-title-level-4 m-title-style-a"&gt;吾輩は猫である。名前はまだ無い&lt;/h3&gt;
+                    &lt;p class="c-card-body"&gt;何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
+                &lt;/div&gt;&lt;!-- /.c-card-contents --&gt;
+                &lt;div class="c-card-footer"&gt;
+                    &lt;span class="m-btn m-btn-block m-btn-style-b m-btn-arrowed-right"&gt;ボタン&lt;/span&gt;
+                &lt;/div&gt;&lt;!-- /.c-card-footer --&gt;
+            &lt;/a&gt;&lt;!-- /.c-card-innner --&gt;
+        &lt;/div&gt;&lt;!-- /.c-card --&gt;
+    &lt;/div&gt;&lt;!-- /.p-cards-item --&gt;
+    &lt;div class="p-cards-item"&gt;
+        &lt;div class="c-card"&gt;
+            &lt;a href="#" class="c-card-inner"&gt;
+                &lt;div class="c-card-object"&gt;
+                    &lt;figure class="m-thumbnail m-thumbnail-16to9"&gt;
+                        &lt;picture&gt;
+                        &lt;source
+                            media="(max-width:640px)"
+                            srcset="../images/_dummy/image_02_s.jpg 640w"
+                            sizes="100vw"&gt;
+                        &lt;source
+                            srcset="../images/_dummy/image_02.jpg 1280w"
+                            sizes="(max-width:1280px) 100vw, 1280px"&gt;
+                        &lt;img src="../images/_dummy/image_02.jpg" alt=""&gt;
+                        &lt;/picture&gt;
+                    &lt;/figure&gt;&lt;!-- /.m-thumbnail --&gt;
+                &lt;/div&gt;&lt;!-- /.c-card-object --&gt;
+                &lt;div class="c-card-contents"&gt;
+                    &lt;time class="c-card-meta" datetime="2020-12-28T09:00:00+09:00"&gt;2020.12.28&lt;/time&gt;
+                    &lt;h3 class="c-card-title m-title m-title-level-4 m-title-style-a"&gt;吾輩は猫である。名前はまだ無い&lt;/h3&gt;
+                    &lt;p class="c-card-body"&gt;何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
+                &lt;/div&gt;&lt;!-- /.c-card-contents --&gt;
+                &lt;div class="c-card-footer"&gt;
+                    &lt;span class="m-btn m-btn-block m-btn-style-b m-btn-arrowed-right"&gt;ボタン&lt;/span&gt;
+                &lt;/div&gt;&lt;!-- /.c-card-footer --&gt;
+            &lt;/a&gt;&lt;!-- /.c-card-innner --&gt;
+        &lt;/div&gt;&lt;!-- /.c-card --&gt;
+    &lt;/div&gt;&lt;!-- /.p-cards-item --&gt;
+    &lt;div class="p-cards-item"&gt;
+        &lt;div class="c-card"&gt;
+            &lt;a href="#" class="c-card-inner"&gt;
+                &lt;div class="c-card-object"&gt;
+                    &lt;figure class="m-thumbnail m-thumbnail-16to9"&gt;
+                        &lt;picture&gt;
+                        &lt;source
+                            media="(max-width:640px)"
+                            srcset="../images/_dummy/image_02_s.jpg 640w"
+                            sizes="100vw"&gt;
+                        &lt;source
+                            srcset="../images/_dummy/image_02.jpg 1280w"
+                            sizes="(max-width:1280px) 100vw, 1280px"&gt;
+                        &lt;img src="../images/_dummy/image_02.jpg" alt=""&gt;
+                        &lt;/picture&gt;
+                    &lt;/figure&gt;&lt;!-- /.m-thumbnail --&gt;
+                &lt;/div&gt;&lt;!-- /.c-card-object --&gt;
+                &lt;div class="c-card-contents"&gt;
+                    &lt;time class="c-card-meta" datetime="2020-12-28T09:00:00+09:00"&gt;2020.12.28&lt;/time&gt;
+                    &lt;h3 class="c-card-title m-title m-title-level-4 m-title-style-a"&gt;吾輩は猫である。名前はまだ無い&lt;/h3&gt;
+                    &lt;p class="c-card-body"&gt;何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
+                &lt;/div&gt;&lt;!-- /.c-card-contents --&gt;
+                &lt;div class="c-card-footer"&gt;
+                    &lt;span class="m-btn m-btn-block m-btn-style-b m-btn-arrowed-right"&gt;ボタン&lt;/span&gt;
+                &lt;/div&gt;&lt;!-- /.c-card-footer --&gt;
+            &lt;/a&gt;&lt;!-- /.c-card-innner --&gt;
+        &lt;/div&gt;&lt;!-- /.c-card --&gt;
+    &lt;/div&gt;&lt;!-- /.p-cards-item --&gt;
+&lt;/div&gt;&lt;!-- .p-cards --&gt;
+</code></pre></div>
+
+<?php include('../doc_include/footer.inc'); ?>
