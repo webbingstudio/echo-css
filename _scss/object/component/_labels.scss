@@ -5,25 +5,20 @@
 */
 
 .#{$pr}#{$c}labels {
+}
+
+.#{$pr}#{$c}labels#{$c1}list {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin: #{ ( 2 - 0.5 ) + 'rem' } 0 2rem;
-    font-size: $font-size-sm;
-    line-height: 1;
-
-    .#{$pr}#{$m}label {
-        margin-top: .5rem;
-        margin-left: 0;
-        margin-right: .5rem;
-    }
-
+    margin: 0 -.5rem -.5rem 0;
+    padding: 0;
+    list-style-type: none;
 }
 
 .#{$pr}#{$c}labels#{$c1}header {
-    font-size: 1em;
-    font-style: normal;
-    margin-top: .5rem;
+    margin-bottom: .5rem;
+    line-height: 1;
 
     @include media-breakpoint-down(sm) {
         flex-grow: 1;
@@ -32,7 +27,20 @@
 
     @include media-breakpoint-up(md) {
         flex-grow: 0;
-        margin-right: .5rem;
+        margin-right: 1rem;
+    }
+
+}
+
+.#{$pr}#{$c}labels#{$c1}item {
+    flex-grow: 0;
+    margin-bottom: .5rem;
+    margin-left: 0;
+    margin-right: .5rem;
+    line-height: 1;
+
+    .#{$pr}#{$m}label {
+        display: flex;
     }
 
 }

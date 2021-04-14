@@ -198,10 +198,6 @@ dd {
   margin: 0 0 1em 2em;
 }
 
-dd:last-child {
-  margin-bottom: 0;
-}
-
 img {
   border: 0 none;
 }
@@ -4806,25 +4802,18 @@ c-media-reverse
 c-labels
 --------------------
 */
-.c-labels {
+.c-labels-list {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin: 1.5rem 0 2rem;
-  font-size: 0.875rem;
-  line-height: 1;
-}
-
-.c-labels .m-label {
-  margin-top: .5rem;
-  margin-left: 0;
-  margin-right: .5rem;
+  margin: 0 -.5rem -.5rem 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .c-labels-header {
-  font-size: 1em;
-  font-style: normal;
-  margin-top: .5rem;
+  margin-bottom: .5rem;
+  line-height: 1;
 }
 
 @media (max-width: 47.9rem) {
@@ -4837,8 +4826,20 @@ c-labels
 @media (min-width: 48rem) {
   .c-labels-header {
     flex-grow: 0;
-    margin-right: .5rem;
+    margin-right: 1rem;
   }
+}
+
+.c-labels-item {
+  flex-grow: 0;
+  margin-bottom: .5rem;
+  margin-left: 0;
+  margin-right: .5rem;
+  line-height: 1;
+}
+
+.c-labels-item .m-label {
+  display: flex;
 }
 
 /*
