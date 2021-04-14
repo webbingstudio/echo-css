@@ -34,54 +34,68 @@
             <article class="s-post">
                 <div class="s-post-contents styleguide-contents"><h1 id="labels" class="styleguide">c-labels</h1>
 
-<p>タグリストなど、ラベルの並列表示を前提とした外観に変更する。<code>.m-label</code> を包括する。ヘッダ <code>dfn.c-labels-header</code> は必須ではない。</p>
+<p>タグリストなど、ラベルの並列表示を前提とした外観に変更する。<code>.m-label</code> を包括する。</p>
+
+<p>ヘッダを含む場合は定義リスト <code>dl > dt, dd</code> を使用する。含まない場合はリスト <code>ul > li</code> でマークアップすること。</p>
 
 <div class="example">
 
-<p class="m-title m-title-level-4 m-title-style-a">見出しがある場合</p>
+<p class="m-title m-title-level-4 m-title-style-a">ヘッダがある場合</p>
 
 <nav class="c-labels">
-    <dfn class="c-labels-header">カテゴリー</dfn>
-    <a href="#" class="m-label m-label-style-a">ラベル</a>
-    <a href="#" class="m-label m-label-style-a">ラベル</a>
-    <a href="#" class="m-label m-label-style-a">ラベル</a>
-    <a href="#" class="m-label m-label-style-a">ラベル</a>
-    <a href="#" class="m-label m-label-style-a">ラベル</a>
-    <a href="#" class="m-label m-label-style-a">ラベル</a>
-</nav>
+    <dl class="c-labels-list">
+        <dt class="c-labels-header">カテゴリー</dt>
+        <dd class="c-labels-item"><a href="#" class="m-label m-label-style-a">ラベル</a></dd>
+        <dd class="c-labels-item"><a href="#" class="m-label m-label-style-a">ラベル</a></dd>
+        <dd class="c-labels-item"><a href="#" class="m-label m-label-style-a">ラベル</a></dd>
+        <dd class="c-labels-item"><a href="#" class="m-label m-label-style-a">ラベル</a></dd>
+        <dd class="c-labels-item"><a href="#" class="m-label m-label-style-a">ラベル</a></dd>
+        <dd class="c-labels-item"><a href="#" class="m-label m-label-style-a">ラベル</a></dd>
+    </dl><!-- /.c-labels-list -->
+</nav><!-- /.c-labels -->
 
-<p class="m-title m-title-level-4 m-title-style-a">見出しがない場合</p>
+<p class="m-title m-title-level-4 m-title-style-a">ヘッダがない場合</p>
 
 <nav class="c-labels">
-    <a href="#" class="m-label m-label-oval m-label-style-a">ラベル</a>
-    <a href="#" class="m-label m-label-oval m-label-style-a">ラベル</a>
-    <a href="#" class="m-label m-label-oval m-label-style-a">ラベル</a>
-    <a href="#" class="m-label m-label-oval m-label-style-a">ラベル</a>
-    <a href="#" class="m-label m-label-oval m-label-style-a">ラベル</a>
-    <a href="#" class="m-label m-label-oval m-label-style-a">ラベル</a>
-</nav>
+    <ul class="c-labels-list">
+        <li class="c-labels-item"><a href="#" class="m-label m-label-oval m-label-style-a">ラベル</a></li>
+        <li class="c-labels-item"><a href="#" class="m-label m-label-oval m-label-style-a">ラベル</a></li>
+        <li class="c-labels-item"><a href="#" class="m-label m-label-oval m-label-style-a">ラベル</a></li>
+        <li class="c-labels-item"><a href="#" class="m-label m-label-oval m-label-style-a">ラベル</a></li>
+        <li class="c-labels-item"><a href="#" class="m-label m-label-oval m-label-style-a">ラベル</a></li>
+        <li class="c-labels-item"><a href="#" class="m-label m-label-oval m-label-style-a">ラベル</a></li>
+    </dl><!-- /.c-labels-list -->
+</nav><!-- /.c-labels -->
 
 </div>
 
 
-<div class="codeblock"><pre><code class="language-markup">&lt;p class="m-title m-title-level-4 m-title-style-a"&gt;見出しがある場合&lt;/p&gt;
+<div class="codeblock"><pre><code class="language-markup">&lt;p class="m-title m-title-level-4 m-title-style-a"&gt;ヘッダがある場合&lt;/p&gt;
 
 &lt;nav class="c-labels"&gt;
-    &lt;dfn class="c-labels-header"&gt;カテゴリー&lt;/dfn&gt;
-    &lt;a href="#" class="m-label m-label-style-a"&gt;ラベル&lt;/a&gt;
-    &lt;a href="#" class="m-label m-label-style-a"&gt;ラベル&lt;/a&gt;
-    &lt;a href="#" class="m-label m-label-style-a"&gt;ラベル&lt;/a&gt;
-    &lt;a href="#" class="m-label m-label-style-a"&gt;ラベル&lt;/a&gt;
-&lt;/nav&gt;
+    &lt;dl class="c-labels-list"&gt;
+        &lt;dt class="c-labels-header"&gt;カテゴリー&lt;/dt&gt;
+        &lt;dd class="c-labels-item"&gt;&lt;a href="#" class="m-label m-label-style-a"&gt;ラベル&lt;/a&gt;&lt;/dd&gt;
+        &lt;dd class="c-labels-item"&gt;&lt;a href="#" class="m-label m-label-style-a"&gt;ラベル&lt;/a&gt;&lt;/dd&gt;
+        &lt;dd class="c-labels-item"&gt;&lt;a href="#" class="m-label m-label-style-a"&gt;ラベル&lt;/a&gt;&lt;/dd&gt;
+        &lt;dd class="c-labels-item"&gt;&lt;a href="#" class="m-label m-label-style-a"&gt;ラベル&lt;/a&gt;&lt;/dd&gt;
+        &lt;dd class="c-labels-item"&gt;&lt;a href="#" class="m-label m-label-style-a"&gt;ラベル&lt;/a&gt;&lt;/dd&gt;
+        &lt;dd class="c-labels-item"&gt;&lt;a href="#" class="m-label m-label-style-a"&gt;ラベル&lt;/a&gt;&lt;/dd&gt;
+    &lt;/dl&gt;&lt;!-- /.c-labels-list --&gt;
+&lt;/nav&gt;&lt;!-- /.c-labels --&gt;
 
-&lt;p class="m-title m-title-level-4 m-title-style-a"&gt;見出しがない場合&lt;/p&gt;
+&lt;p class="m-title m-title-level-4 m-title-style-a"&gt;ヘッダがない場合&lt;/p&gt;
 
 &lt;nav class="c-labels"&gt;
-    &lt;a href="#" class="m-label m-label-style-a"&gt;ラベル&lt;/a&gt;
-    &lt;a href="#" class="m-label m-label-style-a"&gt;ラベル&lt;/a&gt;
-    &lt;a href="#" class="m-label m-label-style-a"&gt;ラベル&lt;/a&gt;
-    &lt;a href="#" class="m-label m-label-style-a"&gt;ラベル&lt;/a&gt;
-&lt;/nav&gt;
+    &lt;ul class="c-labels-list"&gt;
+        &lt;li class="c-labels-item"&gt;&lt;a href="#" class="m-label m-label-oval m-label-style-a"&gt;ラベル&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="c-labels-item"&gt;&lt;a href="#" class="m-label m-label-oval m-label-style-a"&gt;ラベル&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="c-labels-item"&gt;&lt;a href="#" class="m-label m-label-oval m-label-style-a"&gt;ラベル&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="c-labels-item"&gt;&lt;a href="#" class="m-label m-label-oval m-label-style-a"&gt;ラベル&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="c-labels-item"&gt;&lt;a href="#" class="m-label m-label-oval m-label-style-a"&gt;ラベル&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="c-labels-item"&gt;&lt;a href="#" class="m-label m-label-oval m-label-style-a"&gt;ラベル&lt;/a&gt;&lt;/li&gt;
+    &lt;/dl&gt;&lt;!-- /.c-labels-list --&gt;
+&lt;/nav&gt;&lt;!-- /.c-labels --&gt;
 </code></pre></div>
 
                 </div>
