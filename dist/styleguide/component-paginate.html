@@ -37,31 +37,29 @@
 <p>ページネーション（ページ分割ナビゲーション）を前提とした外観に変更する。<code>.m-nav</code> を包括する。</p>
 
 <p>コンポーネント内の <code>.m-nav-item.prev</code> , <code>.m-nav-item.next</code> は前後移動リンクとみなされる。<br>
-<code>.m-nav-item.current</code> は現在ページとみなされ、現在ページの <code>a.m-nav-label</code> が削除されるCMSにも対応する。<br>
+<code>.m-nav-item.is-current</code> は現在ページとみなされる。<br>
 <code>.m-nav-item.ellipsis</code> は省略記号とみなされる。<br>
 最初のページ、最後のページへのリンクスタイルには対応していないため、任意で追加すること。</p>
 
-<p><code>.prev, .next, .current, .ellipsis</code> を変更したい場合は、 <code>/_scss/_config_advance.scss</code> の変数<br>
+<p><code>.prev, .next, .is-current, .ellipsis</code> を変更したい場合は、 <code>/_scss/_config_advance.scss</code> の変数<br>
 <code>$paginate-prev, $paginate-next, $paginate-current, $paginate-ellipsis</code> を変更すること。</p>
 
 <div class="example">
-<h3 class="u-text-lg">シンプルなページネーション</h3>
+<p class="m-title m-title-style-a">シンプルなページネーション</p>
+
 <div class="c-paginate">
     <nav class="m-nav">
         <ul class="m-nav-list">
             <li class="m-nav-item prev">
-                <a href="#" class="m-nav-label" aria-label="prev">
-                    <i class="fas fa-angle-left" aria-hidden="true"></i>
-                    <span class="u-sr">Previous</span>
-                </a>
+                <a href="#" class="m-nav-label" aria-label="prev"><span class="u-sr">前のページ</span></a>
             </li>
             <li class="m-nav-item">
                 <a href="#" class="m-nav-label">1</a>
             </li>
-            <li class="m-nav-item is-current">
+            <li class="m-nav-item">
                 <a href="#" class="m-nav-label">2</a>
             </li>
-            <li class="m-nav-item">
+            <li class="m-nav-item is-current">
                 <a href="#" class="m-nav-label">3</a>
             </li>
             <li class="m-nav-item">
@@ -71,22 +69,21 @@
                 <a href="#" class="m-nav-label">5</a>
             </li>
             <li class="m-nav-item next">
-                <a href="#" class="m-nav-label" aria-label="next">
-                    <i class="fas fa-angle-right" aria-hidden="true"></i>
-                    <span class="u-sr">Next</span>
-                </a>
+                <a href="#" class="m-nav-label" aria-label="next"><span class="u-sr">次のページ</span></a>
             </li>
         </ul><!-- /.nav-list -->
     </nav><!-- /.nav -->
 </div><!-- /.paginate -->
 
-<h3 class="u-text-lg u-margin-top-lg">先頭・末尾・省略記号を含む</h3>
-<p>全体の幅が一般的なスマートフォンの画面幅を超えてしまうので、スマートフォンでも使用する場合はこれらを非表示にする必要がある。</p>
+<p class="m-title m-title-style-a u-margin-top-lg">先頭・末尾・省略記号を含む</p>
+
+<p>全体の幅が一般的なスマートフォンの画面領域を超えてしまうので、スマートフォンでも使用する場合は、ボタンの幅を詰めるか、先頭・末尾・省略記号を非表示にする必要がある。</p>
+
 <div class="c-paginate">
     <nav class="m-nav">
         <ul class="m-nav-list">
             <li class="m-nav-item prev">
-                <a href="#" class="m-nav-label" aria-label="prev"><i class="fas fa-angle-left" aria-hidden="true"></i></a>
+                <a href="#" class="m-nav-label" aria-label="prev"><span class="u-sr">前のページ</span></a>
             </li>
             <li class="m-nav-item u-hidden-xs-down">
                 <a href="#" class="m-nav-label">1</a>
@@ -112,54 +109,20 @@
                 <a href="#" class="m-nav-label">999</a>
             </li>
             <li class="m-nav-item next">
-                <a href="#" class="m-nav-label" aria-label="next">
-                    <i class="fas fa-angle-right" aria-hidden="true"></i>
-                    <span class="u-sr">Next</span>
-                </a>
+                <a href="#" class="m-nav-label" aria-label="next"><span class="u-sr">次のページ</span></a>
             </li>
         </ul><!-- /.nav-list -->
     </nav><!-- /.nav -->
 </div><!-- /.paginate -->
 
-<h3 class="u-text-lg u-margin-top-lg">現在ページのa要素が除去されるCMSの場合</h3>
-<div class="c-paginate">
-    <nav class="m-nav">
-        <ul class="m-nav-list">
-            <li class="m-nav-item prev">
-                <a href="#" class="m-nav-label" aria-label="prev"><i class="fas fa-angle-left" aria-hidden="true"></i></a>
-            </li>
-            <li class="m-nav-item">
-                <a href="#" class="m-nav-label">1</a>
-            </li>
-            <li class="m-nav-item is-current">
-                2
-            </li>
-            <li class="m-nav-item">
-                <a href="#" class="m-nav-label">3</a>
-            </li>
-            <li class="m-nav-item">
-                <a href="#" class="m-nav-label">4</a>
-            </li>
-            <li class="m-nav-item">
-                <a href="#" class="m-nav-label">5</a>
-            </li>
-            <li class="m-nav-item next">
-                <a href="#" class="m-nav-label" aria-label="next">
-                    <i class="fas fa-angle-right" aria-hidden="true"></i>
-                    <span class="u-sr">Next</span>
-                </a>
-            </li>
-        </ul><!-- /.nav-list -->
-    </nav><!-- /.nav -->
-</div><!-- /.paginate -->
+<p class="m-title m-title-style-a u-margin-top-lg">.m-nav-inverseを併用した場合</p>
 
-<h3 class="u-text-lg u-margin-top-lg">.m-nav-inverseを併用した場合</h3>
-<div class="u-bg-default">
+<div class="u-bg-default u-padding-sm">
     <div class="c-paginate">
         <nav class="m-nav m-nav-inverse">
             <ul class="m-nav-list">
                 <li class="m-nav-item prev">
-                    <a href="#" class="m-nav-label" aria-label="prev"><i class="fas fa-angle-left" aria-hidden="true"></i></a>
+                    <a href="#" class="m-nav-label" aria-label="prev"><span class="u-sr">前のページ</span></a>
                 </li>
                 <li class="m-nav-item">
                     <a href="#" class="m-nav-label">1</a>
@@ -185,36 +148,30 @@
                     <a href="#" class="m-nav-label">999</a>
                 </li>
                 <li class="m-nav-item next">
-                    <a href="#" class="m-nav-label" aria-label="next">
-                        <i class="fas fa-angle-right" aria-hidden="true"></i>
-                        <span class="u-sr">Next</span>
-                    </a>
+                    <a href="#" class="m-nav-label" aria-label="next"><span class="u-sr">次のページ</span></a>
                 </li>
             </ul><!-- /.nav-list -->
         </nav><!-- /.nav -->
     </div><!-- /.paginate -->
 </div>
 
-
 </div>
 
-<div class="codeblock"><pre><code class="language-markup">&lt;h3 class="u-text-lg"&gt;シンプルなページネーション&lt;/h3&gt;
+<div class="codeblock"><pre><code class="language-markup">&lt;p class="m-title m-title-style-a"&gt;シンプルなページネーション&lt;/p&gt;
+
 &lt;div class="c-paginate"&gt;
     &lt;nav class="m-nav"&gt;
         &lt;ul class="m-nav-list"&gt;
             &lt;li class="m-nav-item prev"&gt;
-                &lt;a href="#" class="m-nav-label" aria-label="prev"&gt;
-                    &lt;i class="fas fa-angle-left" aria-hidden="true"&gt;&lt;/i&gt;
-                    &lt;span class="u-sr"&gt;Previous&lt;/span&gt;
-                &lt;/a&gt;
+                &lt;a href="#" class="m-nav-label" aria-label="prev"&gt;&lt;span class="u-sr"&gt;前のページ&lt;/span&gt;&lt;/a&gt;
             &lt;/li&gt;
             &lt;li class="m-nav-item"&gt;
                 &lt;a href="#" class="m-nav-label"&gt;1&lt;/a&gt;
             &lt;/li&gt;
-            &lt;li class="m-nav-item is-current"&gt;
+            &lt;li class="m-nav-item"&gt;
                 &lt;a href="#" class="m-nav-label"&gt;2&lt;/a&gt;
             &lt;/li&gt;
-            &lt;li class="m-nav-item"&gt;
+            &lt;li class="m-nav-item is-current"&gt;
                 &lt;a href="#" class="m-nav-label"&gt;3&lt;/a&gt;
             &lt;/li&gt;
             &lt;li class="m-nav-item"&gt;
@@ -224,25 +181,21 @@
                 &lt;a href="#" class="m-nav-label"&gt;5&lt;/a&gt;
             &lt;/li&gt;
             &lt;li class="m-nav-item next"&gt;
-                &lt;a href="#" class="m-nav-label" aria-label="next"&gt;
-                    &lt;i class="fas fa-angle-right" aria-hidden="true"&gt;&lt;/i&gt;
-                    &lt;span class="u-sr"&gt;Next&lt;/span&gt;
-                &lt;/a&gt;
+                &lt;a href="#" class="m-nav-label" aria-label="next"&gt;&lt;span class="u-sr"&gt;次のページ&lt;/span&gt;&lt;/a&gt;
             &lt;/li&gt;
         &lt;/ul&gt;&lt;!-- /.nav-list --&gt;
     &lt;/nav&gt;&lt;!-- /.nav --&gt;
 &lt;/div&gt;&lt;!-- /.paginate --&gt;
 
-&lt;h3 class="u-text-lg u-margin-top-lg"&gt;先頭・末尾・省略記号を含む&lt;/h3&gt;
-&lt;p&gt;全体の幅が一般的なスマートフォンの画面幅を超えてしまうので、スマートフォンでも使用する場合はこれらを非表示にする必要がある。&lt;/p&gt;
+&lt;p class="m-title m-title-style-a u-margin-top-lg"&gt;先頭・末尾・省略記号を含む&lt;/p&gt;
+
+&lt;p&gt;全体の幅が一般的なスマートフォンの画面領域を超えてしまうので、スマートフォンでも使用する場合は、ボタンの幅を詰めるか、先頭・末尾・省略記号を非表示にする必要がある。&lt;/p&gt;
+
 &lt;div class="c-paginate"&gt;
     &lt;nav class="m-nav"&gt;
         &lt;ul class="m-nav-list"&gt;
             &lt;li class="m-nav-item prev"&gt;
-                &lt;a href="#" class="m-nav-label" aria-label="prev"&gt;
-                    &lt;i class="fas fa-angle-left" aria-hidden="true"&gt;&lt;/i&gt;
-                    &lt;span class="u-sr"&gt;Previous&lt;/span&gt;
-                &lt;/a&gt;
+                &lt;a href="#" class="m-nav-label" aria-label="prev"&gt;&lt;span class="u-sr"&gt;前のページ&lt;/span&gt;&lt;/a&gt;
             &lt;/li&gt;
             &lt;li class="m-nav-item u-hidden-xs-down"&gt;
                 &lt;a href="#" class="m-nav-label"&gt;1&lt;/a&gt;
@@ -268,60 +221,20 @@
                 &lt;a href="#" class="m-nav-label"&gt;999&lt;/a&gt;
             &lt;/li&gt;
             &lt;li class="m-nav-item next"&gt;
-                &lt;a href="#" class="m-nav-label" aria-label="next"&gt;
-                    &lt;i class="fas fa-angle-right" aria-hidden="true"&gt;&lt;/i&gt;
-                    &lt;span class="u-sr"&gt;Next&lt;/span&gt;
-                &lt;/a&gt;
+                &lt;a href="#" class="m-nav-label" aria-label="next"&gt;&lt;span class="u-sr"&gt;次のページ&lt;/span&gt;&lt;/a&gt;
             &lt;/li&gt;
         &lt;/ul&gt;&lt;!-- /.nav-list --&gt;
     &lt;/nav&gt;&lt;!-- /.nav --&gt;
 &lt;/div&gt;&lt;!-- /.paginate --&gt;
 
-&lt;h3 class="u-text-lg u-margin-top-lg"&gt;現在ページのa要素が除去されるCMSの場合&lt;/h3&gt;
-&lt;div class="c-paginate"&gt;
-    &lt;nav class="m-nav"&gt;
-        &lt;ul class="m-nav-list"&gt;
-            &lt;li class="m-nav-item prev"&gt;
-                &lt;a href="#" class="m-nav-label" aria-label="prev"&gt;
-                    &lt;i class="fas fa-angle-left" aria-hidden="true"&gt;&lt;/i&gt;
-                    &lt;span class="u-sr"&gt;Previous&lt;/span&gt;
-                &lt;/a&gt;
-            &lt;/li&gt;
-            &lt;li class="m-nav-item"&gt;
-                &lt;a href="#" class="m-nav-label"&gt;1&lt;/a&gt;
-            &lt;/li&gt;
-            &lt;li class="m-nav-item is-current"&gt;
-                2
-            &lt;/li&gt;
-            &lt;li class="m-nav-item"&gt;
-                &lt;a href="#" class="m-nav-label"&gt;3&lt;/a&gt;
-            &lt;/li&gt;
-            &lt;li class="m-nav-item"&gt;
-                &lt;a href="#" class="m-nav-label"&gt;4&lt;/a&gt;
-            &lt;/li&gt;
-            &lt;li class="m-nav-item"&gt;
-                &lt;a href="#" class="m-nav-label"&gt;5&lt;/a&gt;
-            &lt;/li&gt;
-            &lt;li class="m-nav-item next"&gt;
-                &lt;a href="#" class="m-nav-label" aria-label="next"&gt;
-                    &lt;i class="fas fa-angle-right" aria-hidden="true"&gt;&lt;/i&gt;
-                    &lt;span class="u-sr"&gt;Next&lt;/span&gt;
-                &lt;/a&gt;
-            &lt;/li&gt;
-        &lt;/ul&gt;&lt;!-- /.nav-list --&gt;
-    &lt;/nav&gt;&lt;!-- /.nav --&gt;
-&lt;/div&gt;&lt;!-- /.paginate --&gt;
+&lt;p class="m-title m-title-style-a u-margin-top-lg"&gt;.m-nav-inverseを併用した場合&lt;/p&gt;
 
-&lt;h3 class="u-text-lg u-margin-top-lg"&gt;.m-nav-inverseを併用した場合&lt;/h3&gt;
-&lt;div class="u-bg-default"&gt;
+&lt;div class="u-bg-default u-padding-sm"&gt;
     &lt;div class="c-paginate"&gt;
         &lt;nav class="m-nav m-nav-inverse"&gt;
             &lt;ul class="m-nav-list"&gt;
                 &lt;li class="m-nav-item prev"&gt;
-                    &lt;a href="#" class="m-nav-label" aria-label="prev"&gt;
-                        &lt;i class="fas fa-angle-left" aria-hidden="true"&gt;&lt;/i&gt;
-                        &lt;span class="u-sr"&gt;Previous&lt;/span&gt;
-                    &lt;/a&gt;
+                    &lt;a href="#" class="m-nav-label" aria-label="prev"&gt;&lt;span class="u-sr"&gt;前のページ&lt;/span&gt;&lt;/a&gt;
                 &lt;/li&gt;
                 &lt;li class="m-nav-item"&gt;
                     &lt;a href="#" class="m-nav-label"&gt;1&lt;/a&gt;
@@ -347,10 +260,7 @@
                     &lt;a href="#" class="m-nav-label"&gt;999&lt;/a&gt;
                 &lt;/li&gt;
                 &lt;li class="m-nav-item next"&gt;
-                    &lt;a href="#" class="m-nav-label" aria-label="next"&gt;
-                        &lt;i class="fas fa-angle-right" aria-hidden="true"&gt;&lt;/i&gt;
-                        &lt;span class="u-sr"&gt;Next&lt;/span&gt;
-                    &lt;/a&gt;
+                    &lt;a href="#" class="m-nav-label" aria-label="next"&gt;&lt;span class="u-sr"&gt;次のページ&lt;/span&gt;&lt;/a&gt;
                 &lt;/li&gt;
             &lt;/ul&gt;&lt;!-- /.nav-list --&gt;
         &lt;/nav&gt;&lt;!-- /.nav --&gt;
