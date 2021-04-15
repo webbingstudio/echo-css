@@ -16,7 +16,7 @@
             <ul class="m-nav-list m-nav-children">
                 <li class="m-nav-item"><span class="m-nav-label">module</span>
                     <ul class="echo-sitemap-list-flat m-nav-list m-nav-children">
-                        <li class="m-nav-item"><a href="./module-btn.html" class="m-nav-label">btn</a></li>
+                        <li class="m-nav-item"><a href="./module-button.html" class="m-nav-label">button</a></li>
                         <li class="m-nav-item"><a href="./module-checkbox.html" class="m-nav-label">checkbox</a></li>
                         <li class="m-nav-item"><a href="./module-embed.html" class="m-nav-label">embed</a></li>
                         <li class="m-nav-item"><a href="./module-input.html" class="m-nav-label">input</a></li>

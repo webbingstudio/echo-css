@@ -1,10 +1,10 @@
 /*
 --------------------
-#{$pr}#{$m}btn#{$c3}arrowed
+#{$pr}#{$m}button#{$c3}arrowed
 --------------------
 */
 
-[class*="#{$pr}#{$m}btn#{$c3}arrowed"] {
+[class*="#{$pr}#{$m}button#{$c3}arrowed"] {
 
     &:after {
         content: "";
@@ -18,7 +18,7 @@
         border-radius: .1em;
     }
 
-    &.#{$pr}#{$m}btn#{$c3}style#{$c3}a {
+    &.#{$pr}#{$m}button#{$c3}style#{$c3}a {
 
         &:after {
             border-top-color: $body-inverse-color;
@@ -47,7 +47,7 @@
 
         }
 
-        &.#{$pr}#{$m}btn#{$c3}inverse {
+        &.#{$pr}#{$m}button#{$c3}inverse {
 
             &:after {
                 border-top-color: $body-color;
@@ -80,7 +80,7 @@
 
     }
 
-    &.#{$pr}#{$m}btn#{$c3}style#{$c3}b {
+    &.#{$pr}#{$m}button#{$c3}style#{$c3}b {
 
         &:after {
             border-top-color: $body-color;
@@ -109,7 +109,7 @@
 
         }
 
-        &.#{$pr}#{$m}btn#{$c3}inverse {
+        &.#{$pr}#{$m}button#{$c3}inverse {
 
             &:after {
                 border-top-color: $body-inverse-color;
@@ -144,9 +144,9 @@
 
 }
 
-.#{$pr}#{$m}btn#{$c3}arrowed#{$c3}left {
+.#{$pr}#{$m}button#{$c3}arrowed#{$c3}left {
 
-    &:not(.#{$pr}#{$m}btn#{$c3}block) {
+    &:not(.#{$pr}#{$m}button#{$c3}block) {
         padding-left: 2em;
     }
 
@@ -159,9 +159,9 @@
 
 }
 
-.#{$pr}#{$m}btn#{$c3}arrowed#{$c3}right {
+.#{$pr}#{$m}button#{$c3}arrowed#{$c3}right {
 
-    &:not(.#{$pr}#{$m}btn#{$c3}block) {
+    &:not(.#{$pr}#{$m}button#{$c3}block) {
         padding-right: 2em;
     }
 
@@ -177,22 +177,22 @@
 
 /*
 --------------------
-#{$pr}#{$m}btn#{$c3}block
+#{$pr}#{$m}button#{$c3}block
 --------------------
 */
 
-.#{$pr}#{$m}btn#{$c3}block {
+.#{$pr}#{$m}button#{$c3}block {
     display: block;
     width: 100%;
     max-width: map-get( $object-max-widths, 'sm' );
     margin: 0 auto;
 
-    &.#{$pr}#{$m}btn {
+    &.#{$pr}#{$m}button {
         padding-left: 0;
         padding-right: 0;
     }
 
-    &.#{$pr}#{$m}btn#{$c3}lg {
+    &.#{$pr}#{$m}button#{$c3}lg {
 
         @include media-breakpoint-up(sm) {
             max-width: map-get( $object-max-widths, 'md' );
@@ -200,7 +200,7 @@
 
     }
 
-    &.#{$pr}#{$m}btn#{$c3}xl {
+    &.#{$pr}#{$m}button#{$c3}xl {
 
         @include media-breakpoint-up(sm) {
             max-width: map-get( $object-max-widths, 'lg' );
@@ -208,7 +208,7 @@
 
     }
 
-    &.#{$pr}#{$m}btn#{$c3}xxl {
+    &.#{$pr}#{$m}button#{$c3}xxl {
         max-width: none;
 
         @include media-breakpoint-up(sm) {
@@ -226,7 +226,7 @@
 
 /*
 --------------------
-#{$pr}#{$m}btn#{$c3}oval
+#{$pr}#{$m}button#{$c3}oval
 --------------------
 */
 
@@ -237,35 +237,35 @@ Specify a large value for "em", the button becomes an oval type
 --------------------
 */
 
-.#{$pr}#{$m}btn#{$c3}oval {
+.#{$pr}#{$m}button#{$c3}oval {
     border-radius: 10em;
 }
 
 
 /*
 --------------------
-#{$pr}#{$m}btn#{$c3}circle
+#{$pr}#{$m}button#{$c3}circle
 --------------------
 */
 
-.#{$pr}#{$m}btn#{$c3}circle {
+.#{$pr}#{$m}button#{$c3}circle {
     overflow: hidden;
     width: $btn-circle-width-md;
     height: $btn-circle-width-md;
     line-height: $btn-circle-width-md;
     border-radius: 50%;
 
-    &.#{$pr}#{$m}btn {
+    &.#{$pr}#{$m}button {
         padding: 0;
     }
 
-    &.#{$pr}#{$m}btn#{$c3}lg {
+    &.#{$pr}#{$m}button#{$c3}lg {
         width: $btn-circle-width-lg;
         height: $btn-circle-width-lg;
         line-height: $btn-circle-width-lg;
     }
 
-    &.#{$pr}#{$m}btn#{$c3}xl {
+    &.#{$pr}#{$m}button#{$c3}xl {
         width: $btn-circle-width-lg;
         height: $btn-circle-width-lg;
         line-height: $btn-circle-width-lg;
@@ -277,7 +277,7 @@ Specify a large value for "em", the button becomes an oval type
         }
     }
 
-    &.#{$pr}#{$m}btn#{$c3}xxl {
+    &.#{$pr}#{$m}button#{$c3}xxl {
         width: $btn-circle-width-xl;
         height: $btn-circle-width-xl;
         line-height: $btn-circle-width-xl;
@@ -295,27 +295,27 @@ Specify a large value for "em", the button becomes an oval type
 
 /*
 --------------------
-#{$pr}#{$m}btn#{$c3}square
+#{$pr}#{$m}button#{$c3}square
 --------------------
 */
 
-.#{$pr}#{$m}btn#{$c3}square {
+.#{$pr}#{$m}button#{$c3}square {
     overflow: hidden;
     width: $btn-square-width-md;
     height: $btn-square-width-md;
     line-height: $btn-square-width-md;
 
-    &.#{$pr}#{$m}btn {
+    &.#{$pr}#{$m}button {
         padding: 0;
     }
 
-    &.#{$pr}#{$m}btn#{$c3}lg {
+    &.#{$pr}#{$m}button#{$c3}lg {
         width: $btn-square-width-lg;
         height: $btn-square-width-lg;
         line-height: $btn-square-width-lg;
     }
 
-    &.#{$pr}#{$m}btn#{$c3}xl {
+    &.#{$pr}#{$m}button#{$c3}xl {
         width: $btn-square-width-lg;
         height: $btn-square-width-lg;
         line-height: $btn-square-width-lg;
@@ -328,7 +328,7 @@ Specify a large value for "em", the button becomes an oval type
 
     }
 
-    &.#{$pr}#{$m}btn#{$c3}xxl {
+    &.#{$pr}#{$m}button#{$c3}xxl {
         width: $btn-square-width-xl;
         height: $btn-square-width-xl;
         line-height: $btn-square-width-xl;

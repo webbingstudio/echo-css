@@ -1,12 +1,12 @@
 /*
 --------------------
-#{$pr}#{$m}btn#{$c3}(color)
+#{$pr}#{$m}button#{$c3}(color)
 --------------------
 */
 
-.#{$pr}#{$m}btn#{$c3}style#{$c3}a {
+.#{$pr}#{$m}button#{$c3}style#{$c3}a {
 
-    &.#{$pr}#{$m}btn#{$c3}info {
+    &.#{$pr}#{$m}button#{$c3}info {
         @include button-variant(
             $body-inverse-color,
             $info,
@@ -17,7 +17,7 @@
         );
     }
 
-    &.#{$pr}#{$m}btn#{$c3}important {
+    &.#{$pr}#{$m}button#{$c3}important {
         @include button-variant(
             $body-inverse-color,
             $important,
@@ -28,7 +28,7 @@
         );
     }
 
-    &.#{$pr}#{$m}btn#{$c3}inverse {
+    &.#{$pr}#{$m}button#{$c3}inverse {
         @include button-variant(
             $body-color,
             $inverse,
@@ -42,9 +42,9 @@
 }
 
 
-.#{$pr}#{$m}btn#{$c3}style#{$c3}b {
+.#{$pr}#{$m}button#{$c3}style#{$c3}b {
 
-    &.#{$pr}#{$m}btn#{$c3}info {
+    &.#{$pr}#{$m}button#{$c3}info {
         @include button-variant(
             $body-color,
             transparent,
@@ -55,7 +55,7 @@
         );
     }
 
-    &.#{$pr}#{$m}btn#{$c3}important {
+    &.#{$pr}#{$m}button#{$c3}important {
         @include button-variant(
             $body-color,
             transparent,
@@ -66,7 +66,7 @@
         );
     }
 
-    &.#{$pr}#{$m}btn#{$c3}inverse {
+    &.#{$pr}#{$m}button#{$c3}inverse {
         @include button-variant(
             $body-inverse-color,
             transparent,

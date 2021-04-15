@@ -1529,10 +1529,10 @@ l-medias
 
 /*
 --------------------
-m-btn
+m-button
 --------------------
 */
-.m-btn {
+.m-button {
   position: relative;
   display: inline-block;
   padding: 0.8125rem 1rem;
@@ -1548,95 +1548,95 @@ m-btn
   -webkit-appearance: none;
 }
 
-.m-btn:hover, .m-btn:focus, .m-btn:active {
+.m-button:hover, .m-button:focus, .m-button:active {
   color: #333;
   text-decoration: none;
 }
 
-a:hover .m-btn,
-a:focus .m-btn,
-a:active .m-btn {
+a:hover .m-button,
+a:focus .m-button,
+a:active .m-button {
   color: #333;
   text-decoration: none;
 }
 
-.m-btn.disabled, .m-btn[disabled],
-fieldset[disabled] .m-btn {
+.m-button.disabled, .m-button[disabled],
+fieldset[disabled] .m-button {
   cursor: default;
   opacity: .65;
   pointer-events: none;
 }
 
-a.m-btn {
+a.m-button {
   text-decoration: none;
 }
 
-a.m-btn:hover, a.m-btn:focus {
+a.m-button:hover, a.m-button:focus {
   text-decoration: none;
 }
 
 /*
 --------------------
-m-btn-style-(style)
+m-button-style-(style)
 --------------------
 */
-.m-btn-style-a {
+.m-button-style-a {
   color: #fff;
   background-color: #333;
   border-color: #333;
   transition: background-color .3s, border-color .3s, color .3s;
 }
 
-.m-btn-style-a:hover, .m-btn-style-a:focus, .m-btn-style-a:active {
+.m-button-style-a:hover, .m-button-style-a:focus, .m-button-style-a:active {
   color: #333;
   background-color: transparent;
   border-color: #333;
 }
 
-a:hover .m-btn-style-a,
-a:focus .m-btn-style-a,
-a:active .m-btn-style-a {
+a:hover .m-button-style-a,
+a:focus .m-button-style-a,
+a:active .m-button-style-a {
   color: #333;
   background-color: transparent;
   border-color: #333;
 }
 
-.m-btn-style-a.disabled:hover, .m-btn-style-a.disabled.hover, .m-btn-style-a.disabled:focus, .m-btn-style-a.disabled.focus, .m-btn-style-a:disabled:hover, .m-btn-style-a:disabled.hover, .m-btn-style-a:disabled:focus, .m-btn-style-a:disabled.focus,
-fieldset[disabled] .m-btn-style-a:hover,
-fieldset[disabled] .m-btn-style-a.hover,
-fieldset[disabled] .m-btn-style-a:focus,
-fieldset[disabled] .m-btn-style-a.focus {
+.m-button-style-a.disabled:hover, .m-button-style-a.disabled.hover, .m-button-style-a.disabled:focus, .m-button-style-a.disabled.focus, .m-button-style-a:disabled:hover, .m-button-style-a:disabled.hover, .m-button-style-a:disabled:focus, .m-button-style-a:disabled.focus,
+fieldset[disabled] .m-button-style-a:hover,
+fieldset[disabled] .m-button-style-a.hover,
+fieldset[disabled] .m-button-style-a:focus,
+fieldset[disabled] .m-button-style-a.focus {
   color: #fff;
   background-color: #333;
   border-color: #333;
 }
 
-.m-btn-style-b {
+.m-button-style-b {
   color: #333;
   background-color: transparent;
   border-color: #333;
   transition: background-color .3s, border-color .3s, color .3s;
 }
 
-.m-btn-style-b:hover, .m-btn-style-b:focus, .m-btn-style-b:active {
+.m-button-style-b:hover, .m-button-style-b:focus, .m-button-style-b:active {
   color: #fff;
   background-color: #333;
   border-color: #333;
 }
 
-a:hover .m-btn-style-b,
-a:focus .m-btn-style-b,
-a:active .m-btn-style-b {
+a:hover .m-button-style-b,
+a:focus .m-button-style-b,
+a:active .m-button-style-b {
   color: #fff;
   background-color: #333;
   border-color: #333;
 }
 
-.m-btn-style-b.disabled:hover, .m-btn-style-b.disabled.hover, .m-btn-style-b.disabled:focus, .m-btn-style-b.disabled.focus, .m-btn-style-b:disabled:hover, .m-btn-style-b:disabled.hover, .m-btn-style-b:disabled:focus, .m-btn-style-b:disabled.focus,
-fieldset[disabled] .m-btn-style-b:hover,
-fieldset[disabled] .m-btn-style-b.hover,
-fieldset[disabled] .m-btn-style-b:focus,
-fieldset[disabled] .m-btn-style-b.focus {
+.m-button-style-b.disabled:hover, .m-button-style-b.disabled.hover, .m-button-style-b.disabled:focus, .m-button-style-b.disabled.focus, .m-button-style-b:disabled:hover, .m-button-style-b:disabled.hover, .m-button-style-b:disabled:focus, .m-button-style-b:disabled.focus,
+fieldset[disabled] .m-button-style-b:hover,
+fieldset[disabled] .m-button-style-b.hover,
+fieldset[disabled] .m-button-style-b:focus,
+fieldset[disabled] .m-button-style-b.focus {
   color: #333;
   background-color: transparent;
   border-color: #333;
@@ -1644,184 +1644,184 @@ fieldset[disabled] .m-btn-style-b.focus {
 
 /*
 --------------------
-m-btn-(color)
+m-button-(color)
 --------------------
 */
-.m-btn-style-a.m-btn-info {
+.m-button-style-a.m-button-info {
   color: #fff;
   background-color: #1976d2;
   border-color: #1976d2;
 }
 
-.m-btn-style-a.m-btn-info:hover, .m-btn-style-a.m-btn-info:focus, .m-btn-style-a.m-btn-info:active {
+.m-button-style-a.m-button-info:hover, .m-button-style-a.m-button-info:focus, .m-button-style-a.m-button-info:active {
   color: #333;
   background-color: transparent;
   border-color: #1976d2;
 }
 
-a:hover .m-btn-style-a.m-btn-info,
-a:focus .m-btn-style-a.m-btn-info,
-a:active .m-btn-style-a.m-btn-info {
+a:hover .m-button-style-a.m-button-info,
+a:focus .m-button-style-a.m-button-info,
+a:active .m-button-style-a.m-button-info {
   color: #333;
   background-color: transparent;
   border-color: #1976d2;
 }
 
-.m-btn-style-a.m-btn-info.disabled:hover, .m-btn-style-a.m-btn-info.disabled.hover, .m-btn-style-a.m-btn-info.disabled:focus, .m-btn-style-a.m-btn-info.disabled.focus, .m-btn-style-a.m-btn-info:disabled:hover, .m-btn-style-a.m-btn-info:disabled.hover, .m-btn-style-a.m-btn-info:disabled:focus, .m-btn-style-a.m-btn-info:disabled.focus,
-fieldset[disabled] .m-btn-style-a.m-btn-info:hover,
-fieldset[disabled] .m-btn-style-a.m-btn-info.hover,
-fieldset[disabled] .m-btn-style-a.m-btn-info:focus,
-fieldset[disabled] .m-btn-style-a.m-btn-info.focus {
+.m-button-style-a.m-button-info.disabled:hover, .m-button-style-a.m-button-info.disabled.hover, .m-button-style-a.m-button-info.disabled:focus, .m-button-style-a.m-button-info.disabled.focus, .m-button-style-a.m-button-info:disabled:hover, .m-button-style-a.m-button-info:disabled.hover, .m-button-style-a.m-button-info:disabled:focus, .m-button-style-a.m-button-info:disabled.focus,
+fieldset[disabled] .m-button-style-a.m-button-info:hover,
+fieldset[disabled] .m-button-style-a.m-button-info.hover,
+fieldset[disabled] .m-button-style-a.m-button-info:focus,
+fieldset[disabled] .m-button-style-a.m-button-info.focus {
   color: #fff;
   background-color: #1976d2;
   border-color: #1976d2;
 }
 
-.m-btn-style-a.m-btn-important {
+.m-button-style-a.m-button-important {
   color: #fff;
   background-color: #d20b2a;
   border-color: #d20b2a;
 }
 
-.m-btn-style-a.m-btn-important:hover, .m-btn-style-a.m-btn-important:focus, .m-btn-style-a.m-btn-important:active {
+.m-button-style-a.m-button-important:hover, .m-button-style-a.m-button-important:focus, .m-button-style-a.m-button-important:active {
   color: #333;
   background-color: transparent;
   border-color: #d20b2a;
 }
 
-a:hover .m-btn-style-a.m-btn-important,
-a:focus .m-btn-style-a.m-btn-important,
-a:active .m-btn-style-a.m-btn-important {
+a:hover .m-button-style-a.m-button-important,
+a:focus .m-button-style-a.m-button-important,
+a:active .m-button-style-a.m-button-important {
   color: #333;
   background-color: transparent;
   border-color: #d20b2a;
 }
 
-.m-btn-style-a.m-btn-important.disabled:hover, .m-btn-style-a.m-btn-important.disabled.hover, .m-btn-style-a.m-btn-important.disabled:focus, .m-btn-style-a.m-btn-important.disabled.focus, .m-btn-style-a.m-btn-important:disabled:hover, .m-btn-style-a.m-btn-important:disabled.hover, .m-btn-style-a.m-btn-important:disabled:focus, .m-btn-style-a.m-btn-important:disabled.focus,
-fieldset[disabled] .m-btn-style-a.m-btn-important:hover,
-fieldset[disabled] .m-btn-style-a.m-btn-important.hover,
-fieldset[disabled] .m-btn-style-a.m-btn-important:focus,
-fieldset[disabled] .m-btn-style-a.m-btn-important.focus {
+.m-button-style-a.m-button-important.disabled:hover, .m-button-style-a.m-button-important.disabled.hover, .m-button-style-a.m-button-important.disabled:focus, .m-button-style-a.m-button-important.disabled.focus, .m-button-style-a.m-button-important:disabled:hover, .m-button-style-a.m-button-important:disabled.hover, .m-button-style-a.m-button-important:disabled:focus, .m-button-style-a.m-button-important:disabled.focus,
+fieldset[disabled] .m-button-style-a.m-button-important:hover,
+fieldset[disabled] .m-button-style-a.m-button-important.hover,
+fieldset[disabled] .m-button-style-a.m-button-important:focus,
+fieldset[disabled] .m-button-style-a.m-button-important.focus {
   color: #fff;
   background-color: #d20b2a;
   border-color: #d20b2a;
 }
 
-.m-btn-style-a.m-btn-inverse {
+.m-button-style-a.m-button-inverse {
   color: #333;
   background-color: #fff;
   border-color: #fff;
 }
 
-.m-btn-style-a.m-btn-inverse:hover, .m-btn-style-a.m-btn-inverse:focus, .m-btn-style-a.m-btn-inverse:active {
+.m-button-style-a.m-button-inverse:hover, .m-button-style-a.m-button-inverse:focus, .m-button-style-a.m-button-inverse:active {
   color: #fff;
   background-color: transparent;
   border-color: #fff;
 }
 
-a:hover .m-btn-style-a.m-btn-inverse,
-a:focus .m-btn-style-a.m-btn-inverse,
-a:active .m-btn-style-a.m-btn-inverse {
+a:hover .m-button-style-a.m-button-inverse,
+a:focus .m-button-style-a.m-button-inverse,
+a:active .m-button-style-a.m-button-inverse {
   color: #fff;
   background-color: transparent;
   border-color: #fff;
 }
 
-.m-btn-style-a.m-btn-inverse.disabled:hover, .m-btn-style-a.m-btn-inverse.disabled.hover, .m-btn-style-a.m-btn-inverse.disabled:focus, .m-btn-style-a.m-btn-inverse.disabled.focus, .m-btn-style-a.m-btn-inverse:disabled:hover, .m-btn-style-a.m-btn-inverse:disabled.hover, .m-btn-style-a.m-btn-inverse:disabled:focus, .m-btn-style-a.m-btn-inverse:disabled.focus,
-fieldset[disabled] .m-btn-style-a.m-btn-inverse:hover,
-fieldset[disabled] .m-btn-style-a.m-btn-inverse.hover,
-fieldset[disabled] .m-btn-style-a.m-btn-inverse:focus,
-fieldset[disabled] .m-btn-style-a.m-btn-inverse.focus {
+.m-button-style-a.m-button-inverse.disabled:hover, .m-button-style-a.m-button-inverse.disabled.hover, .m-button-style-a.m-button-inverse.disabled:focus, .m-button-style-a.m-button-inverse.disabled.focus, .m-button-style-a.m-button-inverse:disabled:hover, .m-button-style-a.m-button-inverse:disabled.hover, .m-button-style-a.m-button-inverse:disabled:focus, .m-button-style-a.m-button-inverse:disabled.focus,
+fieldset[disabled] .m-button-style-a.m-button-inverse:hover,
+fieldset[disabled] .m-button-style-a.m-button-inverse.hover,
+fieldset[disabled] .m-button-style-a.m-button-inverse:focus,
+fieldset[disabled] .m-button-style-a.m-button-inverse.focus {
   color: #333;
   background-color: #fff;
   border-color: #fff;
 }
 
-.m-btn-style-b.m-btn-info {
+.m-button-style-b.m-button-info {
   color: #333;
   background-color: transparent;
   border-color: #1976d2;
 }
 
-.m-btn-style-b.m-btn-info:hover, .m-btn-style-b.m-btn-info:focus, .m-btn-style-b.m-btn-info:active {
+.m-button-style-b.m-button-info:hover, .m-button-style-b.m-button-info:focus, .m-button-style-b.m-button-info:active {
   color: #fff;
   background-color: #1976d2;
   border-color: transparent;
 }
 
-a:hover .m-btn-style-b.m-btn-info,
-a:focus .m-btn-style-b.m-btn-info,
-a:active .m-btn-style-b.m-btn-info {
+a:hover .m-button-style-b.m-button-info,
+a:focus .m-button-style-b.m-button-info,
+a:active .m-button-style-b.m-button-info {
   color: #fff;
   background-color: #1976d2;
   border-color: transparent;
 }
 
-.m-btn-style-b.m-btn-info.disabled:hover, .m-btn-style-b.m-btn-info.disabled.hover, .m-btn-style-b.m-btn-info.disabled:focus, .m-btn-style-b.m-btn-info.disabled.focus, .m-btn-style-b.m-btn-info:disabled:hover, .m-btn-style-b.m-btn-info:disabled.hover, .m-btn-style-b.m-btn-info:disabled:focus, .m-btn-style-b.m-btn-info:disabled.focus,
-fieldset[disabled] .m-btn-style-b.m-btn-info:hover,
-fieldset[disabled] .m-btn-style-b.m-btn-info.hover,
-fieldset[disabled] .m-btn-style-b.m-btn-info:focus,
-fieldset[disabled] .m-btn-style-b.m-btn-info.focus {
+.m-button-style-b.m-button-info.disabled:hover, .m-button-style-b.m-button-info.disabled.hover, .m-button-style-b.m-button-info.disabled:focus, .m-button-style-b.m-button-info.disabled.focus, .m-button-style-b.m-button-info:disabled:hover, .m-button-style-b.m-button-info:disabled.hover, .m-button-style-b.m-button-info:disabled:focus, .m-button-style-b.m-button-info:disabled.focus,
+fieldset[disabled] .m-button-style-b.m-button-info:hover,
+fieldset[disabled] .m-button-style-b.m-button-info.hover,
+fieldset[disabled] .m-button-style-b.m-button-info:focus,
+fieldset[disabled] .m-button-style-b.m-button-info.focus {
   color: #333;
   background-color: transparent;
   border-color: #1976d2;
 }
 
-.m-btn-style-b.m-btn-important {
+.m-button-style-b.m-button-important {
   color: #333;
   background-color: transparent;
   border-color: #d20b2a;
 }
 
-.m-btn-style-b.m-btn-important:hover, .m-btn-style-b.m-btn-important:focus, .m-btn-style-b.m-btn-important:active {
+.m-button-style-b.m-button-important:hover, .m-button-style-b.m-button-important:focus, .m-button-style-b.m-button-important:active {
   color: #fff;
   background-color: #d20b2a;
   border-color: transparent;
 }
 
-a:hover .m-btn-style-b.m-btn-important,
-a:focus .m-btn-style-b.m-btn-important,
-a:active .m-btn-style-b.m-btn-important {
+a:hover .m-button-style-b.m-button-important,
+a:focus .m-button-style-b.m-button-important,
+a:active .m-button-style-b.m-button-important {
   color: #fff;
   background-color: #d20b2a;
   border-color: transparent;
 }
 
-.m-btn-style-b.m-btn-important.disabled:hover, .m-btn-style-b.m-btn-important.disabled.hover, .m-btn-style-b.m-btn-important.disabled:focus, .m-btn-style-b.m-btn-important.disabled.focus, .m-btn-style-b.m-btn-important:disabled:hover, .m-btn-style-b.m-btn-important:disabled.hover, .m-btn-style-b.m-btn-important:disabled:focus, .m-btn-style-b.m-btn-important:disabled.focus,
-fieldset[disabled] .m-btn-style-b.m-btn-important:hover,
-fieldset[disabled] .m-btn-style-b.m-btn-important.hover,
-fieldset[disabled] .m-btn-style-b.m-btn-important:focus,
-fieldset[disabled] .m-btn-style-b.m-btn-important.focus {
+.m-button-style-b.m-button-important.disabled:hover, .m-button-style-b.m-button-important.disabled.hover, .m-button-style-b.m-button-important.disabled:focus, .m-button-style-b.m-button-important.disabled.focus, .m-button-style-b.m-button-important:disabled:hover, .m-button-style-b.m-button-important:disabled.hover, .m-button-style-b.m-button-important:disabled:focus, .m-button-style-b.m-button-important:disabled.focus,
+fieldset[disabled] .m-button-style-b.m-button-important:hover,
+fieldset[disabled] .m-button-style-b.m-button-important.hover,
+fieldset[disabled] .m-button-style-b.m-button-important:focus,
+fieldset[disabled] .m-button-style-b.m-button-important.focus {
   color: #333;
   background-color: transparent;
   border-color: #d20b2a;
 }
 
-.m-btn-style-b.m-btn-inverse {
+.m-button-style-b.m-button-inverse {
   color: #fff;
   background-color: transparent;
   border-color: #fff;
 }
 
-.m-btn-style-b.m-btn-inverse:hover, .m-btn-style-b.m-btn-inverse:focus, .m-btn-style-b.m-btn-inverse:active {
+.m-button-style-b.m-button-inverse:hover, .m-button-style-b.m-button-inverse:focus, .m-button-style-b.m-button-inverse:active {
   color: #333;
   background-color: #fff;
   border-color: transparent;
 }
 
-a:hover .m-btn-style-b.m-btn-inverse,
-a:focus .m-btn-style-b.m-btn-inverse,
-a:active .m-btn-style-b.m-btn-inverse {
+a:hover .m-button-style-b.m-button-inverse,
+a:focus .m-button-style-b.m-button-inverse,
+a:active .m-button-style-b.m-button-inverse {
   color: #333;
   background-color: #fff;
   border-color: transparent;
 }
 
-.m-btn-style-b.m-btn-inverse.disabled:hover, .m-btn-style-b.m-btn-inverse.disabled.hover, .m-btn-style-b.m-btn-inverse.disabled:focus, .m-btn-style-b.m-btn-inverse.disabled.focus, .m-btn-style-b.m-btn-inverse:disabled:hover, .m-btn-style-b.m-btn-inverse:disabled.hover, .m-btn-style-b.m-btn-inverse:disabled:focus, .m-btn-style-b.m-btn-inverse:disabled.focus,
-fieldset[disabled] .m-btn-style-b.m-btn-inverse:hover,
-fieldset[disabled] .m-btn-style-b.m-btn-inverse.hover,
-fieldset[disabled] .m-btn-style-b.m-btn-inverse:focus,
-fieldset[disabled] .m-btn-style-b.m-btn-inverse.focus {
+.m-button-style-b.m-button-inverse.disabled:hover, .m-button-style-b.m-button-inverse.disabled.hover, .m-button-style-b.m-button-inverse.disabled:focus, .m-button-style-b.m-button-inverse.disabled.focus, .m-button-style-b.m-button-inverse:disabled:hover, .m-button-style-b.m-button-inverse:disabled.hover, .m-button-style-b.m-button-inverse:disabled:focus, .m-button-style-b.m-button-inverse:disabled.focus,
+fieldset[disabled] .m-button-style-b.m-button-inverse:hover,
+fieldset[disabled] .m-button-style-b.m-button-inverse.hover,
+fieldset[disabled] .m-button-style-b.m-button-inverse:focus,
+fieldset[disabled] .m-button-style-b.m-button-inverse.focus {
   color: #fff;
   background-color: transparent;
   border-color: #fff;
@@ -1829,10 +1829,10 @@ fieldset[disabled] .m-btn-style-b.m-btn-inverse.focus {
 
 /*
 --------------------
-m-btn-(size)
+m-button-(size)
 --------------------
 */
-.m-btn-lg {
+.m-button-lg {
   padding-top: 0.875rem;
   padding-bottom: 0.875rem;
   font-size: 1rem;
@@ -1840,7 +1840,7 @@ m-btn-(size)
   padding-right: 1rem;
 }
 
-.m-btn-xl {
+.m-button-xl {
   padding-top: 0.875rem;
   padding-bottom: 0.875rem;
   font-size: 1rem;
@@ -1849,7 +1849,7 @@ m-btn-(size)
 }
 
 @media (min-width: 48rem) {
-  .m-btn-xl {
+  .m-button-xl {
     padding-top: 1rem;
     padding-bottom: 1rem;
     font-size: 1.25rem;
@@ -1858,7 +1858,7 @@ m-btn-(size)
   }
 }
 
-.m-btn-xxl {
+.m-button-xxl {
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-size: 1.25rem;
@@ -1867,7 +1867,7 @@ m-btn-(size)
 }
 
 @media (min-width: 48rem) {
-  .m-btn-xxl {
+  .m-button-xxl {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     font-size: 1.5rem;
@@ -1878,10 +1878,10 @@ m-btn-(size)
 
 /*
 --------------------
-m-btn-arrowed
+m-button-arrowed
 --------------------
 */
-[class*="m-btn-arrowed"]:after {
+[class*="m-button-arrowed"]:after {
   content: "";
   position: absolute;
   top: 50%;
@@ -1893,140 +1893,140 @@ m-btn-arrowed
   border-radius: .1em;
 }
 
-[class*="m-btn-arrowed"].m-btn-style-a:after {
+[class*="m-button-arrowed"].m-button-style-a:after {
   border-top-color: #fff;
   border-left-color: #fff;
 }
 
-[class*="m-btn-arrowed"].m-btn-style-a:hover:after, [class*="m-btn-arrowed"].m-btn-style-a:focus:after, [class*="m-btn-arrowed"].m-btn-style-a:active:after {
+[class*="m-button-arrowed"].m-button-style-a:hover:after, [class*="m-button-arrowed"].m-button-style-a:focus:after, [class*="m-button-arrowed"].m-button-style-a:active:after {
   border-top-color: #333;
   border-left-color: #333;
 }
 
-a:hover [class*="m-btn-arrowed"].m-btn-style-a:after,
-a:focus [class*="m-btn-arrowed"].m-btn-style-a:after,
-a:active [class*="m-btn-arrowed"].m-btn-style-a:after {
+a:hover [class*="m-button-arrowed"].m-button-style-a:after,
+a:focus [class*="m-button-arrowed"].m-button-style-a:after,
+a:active [class*="m-button-arrowed"].m-button-style-a:after {
   border-top-color: #333;
   border-left-color: #333;
 }
 
-[class*="m-btn-arrowed"].m-btn-style-a.m-btn-inverse:after {
+[class*="m-button-arrowed"].m-button-style-a.m-button-inverse:after {
   border-top-color: #333;
   border-left-color: #333;
 }
 
-[class*="m-btn-arrowed"].m-btn-style-a.m-btn-inverse:hover:after, [class*="m-btn-arrowed"].m-btn-style-a.m-btn-inverse:focus:after, [class*="m-btn-arrowed"].m-btn-style-a.m-btn-inverse:active:after {
+[class*="m-button-arrowed"].m-button-style-a.m-button-inverse:hover:after, [class*="m-button-arrowed"].m-button-style-a.m-button-inverse:focus:after, [class*="m-button-arrowed"].m-button-style-a.m-button-inverse:active:after {
   border-top-color: #fff;
   border-left-color: #fff;
 }
 
-a:hover [class*="m-btn-arrowed"].m-btn-style-a.m-btn-inverse:after,
-a:focus [class*="m-btn-arrowed"].m-btn-style-a.m-btn-inverse:after,
-a:active [class*="m-btn-arrowed"].m-btn-style-a.m-btn-inverse:after {
+a:hover [class*="m-button-arrowed"].m-button-style-a.m-button-inverse:after,
+a:focus [class*="m-button-arrowed"].m-button-style-a.m-button-inverse:after,
+a:active [class*="m-button-arrowed"].m-button-style-a.m-button-inverse:after {
   border-top-color: #fff;
   border-left-color: #fff;
 }
 
-[class*="m-btn-arrowed"].m-btn-style-b:after {
+[class*="m-button-arrowed"].m-button-style-b:after {
   border-top-color: #333;
   border-left-color: #333;
 }
 
-[class*="m-btn-arrowed"].m-btn-style-b:hover:after, [class*="m-btn-arrowed"].m-btn-style-b:focus:after, [class*="m-btn-arrowed"].m-btn-style-b:active:after {
+[class*="m-button-arrowed"].m-button-style-b:hover:after, [class*="m-button-arrowed"].m-button-style-b:focus:after, [class*="m-button-arrowed"].m-button-style-b:active:after {
   border-top-color: #fff;
   border-left-color: #fff;
 }
 
-a:hover [class*="m-btn-arrowed"].m-btn-style-b:after,
-a:focus [class*="m-btn-arrowed"].m-btn-style-b:after,
-a:active [class*="m-btn-arrowed"].m-btn-style-b:after {
+a:hover [class*="m-button-arrowed"].m-button-style-b:after,
+a:focus [class*="m-button-arrowed"].m-button-style-b:after,
+a:active [class*="m-button-arrowed"].m-button-style-b:after {
   border-top-color: #fff;
   border-left-color: #fff;
 }
 
-[class*="m-btn-arrowed"].m-btn-style-b.m-btn-inverse:after {
+[class*="m-button-arrowed"].m-button-style-b.m-button-inverse:after {
   border-top-color: #fff;
   border-left-color: #fff;
 }
 
-[class*="m-btn-arrowed"].m-btn-style-b.m-btn-inverse:hover:after, [class*="m-btn-arrowed"].m-btn-style-b.m-btn-inverse:focus:after, [class*="m-btn-arrowed"].m-btn-style-b.m-btn-inverse:active:after {
+[class*="m-button-arrowed"].m-button-style-b.m-button-inverse:hover:after, [class*="m-button-arrowed"].m-button-style-b.m-button-inverse:focus:after, [class*="m-button-arrowed"].m-button-style-b.m-button-inverse:active:after {
   border-top-color: #333;
   border-left-color: #333;
 }
 
-a:hover [class*="m-btn-arrowed"].m-btn-style-b.m-btn-inverse:after,
-a:focus [class*="m-btn-arrowed"].m-btn-style-b.m-btn-inverse:after,
-a:active [class*="m-btn-arrowed"].m-btn-style-b.m-btn-inverse:after {
+a:hover [class*="m-button-arrowed"].m-button-style-b.m-button-inverse:after,
+a:focus [class*="m-button-arrowed"].m-button-style-b.m-button-inverse:after,
+a:active [class*="m-button-arrowed"].m-button-style-b.m-button-inverse:after {
   border-top-color: #333;
   border-left-color: #333;
 }
 
-.m-btn-arrowed-left:not(.m-btn-block) {
+.m-button-arrowed-left:not(.m-button-block) {
   padding-left: 2em;
 }
 
-.m-btn-arrowed-left:after {
+.m-button-arrowed-left:after {
   left: .65em;
   transform: translateY(-50%) rotate(-45deg);
 }
 
-.m-btn-arrowed-right:not(.m-btn-block) {
+.m-button-arrowed-right:not(.m-button-block) {
   padding-right: 2em;
 }
 
-.m-btn-arrowed-right:after {
+.m-button-arrowed-right:after {
   right: .65em;
   transform: translateY(-50%) rotate(135deg);
 }
 
 /*
 --------------------
-m-btn-block
+m-button-block
 --------------------
 */
-.m-btn-block {
+.m-button-block {
   display: block;
   width: 100%;
   max-width: 22.5rem;
   margin: 0 auto;
 }
 
-.m-btn-block.m-btn {
+.m-button-block.m-button {
   padding-left: 0;
   padding-right: 0;
 }
 
 @media (min-width: 26.75rem) {
-  .m-btn-block.m-btn-lg {
+  .m-button-block.m-button-lg {
     max-width: 30rem;
   }
 }
 
 @media (min-width: 26.75rem) {
-  .m-btn-block.m-btn-xl {
+  .m-button-block.m-button-xl {
     max-width: 36rem;
   }
 }
 
-.m-btn-block.m-btn-xxl {
+.m-button-block.m-button-xxl {
   max-width: none;
 }
 
 @media (min-width: 26.75rem) {
-  .m-btn-block.m-btn-xxl {
+  .m-button-block.m-button-xxl {
     max-width: 36rem;
   }
 }
 
 @media (min-width: 62.5rem) {
-  .m-btn-block.m-btn-xxl {
+  .m-button-block.m-button-xxl {
     max-width: 48rem;
   }
 }
 
 /*
 --------------------
-m-btn-oval
+m-button-oval
 --------------------
 */
 /*
@@ -2035,16 +2035,16 @@ note: Meaning of "10em"
 Specify a large value for "em", the button becomes an oval type
 --------------------
 */
-.m-btn-oval {
+.m-button-oval {
   border-radius: 10em;
 }
 
 /*
 --------------------
-m-btn-circle
+m-button-circle
 --------------------
 */
-.m-btn-circle {
+.m-button-circle {
   overflow: hidden;
   width: 2.75rem;
   height: 2.75rem;
@@ -2052,38 +2052,38 @@ m-btn-circle
   border-radius: 50%;
 }
 
-.m-btn-circle.m-btn {
+.m-button-circle.m-button {
   padding: 0;
 }
 
-.m-btn-circle.m-btn-lg {
+.m-button-circle.m-button-lg {
   width: 3.5rem;
   height: 3.5rem;
   line-height: 3.5rem;
 }
 
-.m-btn-circle.m-btn-xl {
+.m-button-circle.m-button-xl {
   width: 3.5rem;
   height: 3.5rem;
   line-height: 3.5rem;
 }
 
 @media (min-width: 48rem) {
-  .m-btn-circle.m-btn-xl {
+  .m-button-circle.m-button-xl {
     width: 4.5rem;
     height: 4.5rem;
     line-height: 4.5rem;
   }
 }
 
-.m-btn-circle.m-btn-xxl {
+.m-button-circle.m-button-xxl {
   width: 4.5rem;
   height: 4.5rem;
   line-height: 4.5rem;
 }
 
 @media (min-width: 48rem) {
-  .m-btn-circle.m-btn-xxl {
+  .m-button-circle.m-button-xxl {
     width: 6rem;
     height: 6rem;
     line-height: 6rem;
@@ -2092,48 +2092,48 @@ m-btn-circle
 
 /*
 --------------------
-m-btn-square
+m-button-square
 --------------------
 */
-.m-btn-square {
+.m-button-square {
   overflow: hidden;
   width: 2.75rem;
   height: 2.75rem;
   line-height: 2.75rem;
 }
 
-.m-btn-square.m-btn {
+.m-button-square.m-button {
   padding: 0;
 }
 
-.m-btn-square.m-btn-lg {
+.m-button-square.m-button-lg {
   width: 3.5rem;
   height: 3.5rem;
   line-height: 3.5rem;
 }
 
-.m-btn-square.m-btn-xl {
+.m-button-square.m-button-xl {
   width: 3.5rem;
   height: 3.5rem;
   line-height: 3.5rem;
 }
 
 @media (min-width: 48rem) {
-  .m-btn-square.m-btn-xl {
+  .m-button-square.m-button-xl {
     width: 4.5rem;
     height: 4.5rem;
     line-height: 4.5rem;
   }
 }
 
-.m-btn-square.m-btn-xxl {
+.m-button-square.m-button-xxl {
   width: 4.5rem;
   height: 4.5rem;
   line-height: 4.5rem;
 }
 
 @media (min-width: 48rem) {
-  .m-btn-square.m-btn-xxl {
+  .m-button-square.m-button-xxl {
     width: 6rem;
     height: 6rem;
     line-height: 6rem;
@@ -4108,14 +4108,14 @@ c-flip
 }
 
 @media (max-width: 47.9rem) {
-  .c-flip-link > .m-btn {
+  .c-flip-link > .m-button {
     max-width: 16rem;
     font-size: 0.75rem;
   }
 }
 
 @media (min-width: 62.5rem) {
-  .c-flip-link > .m-btn {
+  .c-flip-link > .m-button {
     padding-top: 0.875rem;
     padding-bottom: 0.875rem;
     font-size: 1rem;
@@ -4241,15 +4241,15 @@ c-form-inline
   margin-right: 0;
 }
 
-.c-form-inline .m-btn {
+.c-form-inline .m-button {
   margin: 0 .25rem;
 }
 
-.c-form-inline .m-btn:first-child {
+.c-form-inline .m-button:first-child {
   margin-left: 0;
 }
 
-.c-form-inline .m-btn:last-child {
+.c-form-inline .m-button:last-child {
   margin-right: 0;
 }
 
@@ -4290,7 +4290,7 @@ c-form-append
   border-bottom-right-radius: 0;
 }
 
-.c-form-append .m-input + .m-btn {
+.c-form-append .m-input + .m-button {
   margin-left: -0.125rem;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -4324,14 +4324,14 @@ c-form-submit
   display: inline-block;
 }
 
-.c-form-submit .m-btn {
+.c-form-submit .m-button {
   padding-left: 0;
   padding-right: 0;
   width: 22.5rem;
 }
 
 @media (min-width: 62.5rem) {
-  .c-form-submit .m-btn {
+  .c-form-submit .m-button {
     width: 30rem;
   }
 }
@@ -4341,12 +4341,12 @@ c-form-submit
 c-form-submit-2col
 --------------------
 */
-.c-form-submit-2col .m-btn {
+.c-form-submit-2col .m-button {
   margin: 0 0.625rem 0.625rem;
 }
 
 @media (min-width: 62.5rem) {
-  .c-form-submit-2col .m-btn:not(:last-child) {
+  .c-form-submit-2col .m-button:not(:last-child) {
     width: 16rem;
   }
 }
@@ -4637,14 +4637,14 @@ c-hero
 }
 
 @media (max-width: 47.9rem) {
-  .c-hero-link > .m-btn {
+  .c-hero-link > .m-button {
     max-width: 16rem;
     font-size: 0.75rem;
   }
 }
 
 @media (min-width: 62.5rem) {
-  .c-hero-link > .m-btn {
+  .c-hero-link > .m-button {
     padding-top: 0.875rem;
     padding-bottom: 0.875rem;
     font-size: 1rem;
@@ -6569,7 +6569,7 @@ p-header
   font-size: 0.875rem;
 }
 
-.p-header-btn {
+.p-header-button {
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: auto;
@@ -6578,13 +6578,13 @@ p-header
 }
 
 @media (min-width: 62.5rem) {
-  .p-header-btn {
+  .p-header-button {
     flex-grow: 0;
     padding-right: 0;
   }
 }
 
-.p-header-btn ul.m-list-horizontal li.m-list-item {
+.p-header-button ul.m-list-horizontal li.m-list-item {
   /*
 note: Spacing of the clickable elements
 クリックできる要素間の余白の最低値は、8pxと言われています。
@@ -6596,11 +6596,11 @@ The minimum value of the margin between clickable elements is said that to be 8p
   letter-spacing: -.4em;
 }
 
-.p-header-btn ul.m-list-horizontal li.m-list-item:first-child {
+.p-header-button ul.m-list-horizontal li.m-list-item:first-child {
   padding-left: 0;
 }
 
-.p-header-btn ul.m-list-horizontal li.m-list-item .m-btn {
+.p-header-button ul.m-list-horizontal li.m-list-item .m-button {
   letter-spacing: normal;
 }
 

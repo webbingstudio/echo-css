@@ -49,10 +49,10 @@
                         <div class="echo-mainvisual-download">
                             <div class="l-grid-row">
                                 <div class="l-grid-col-6">
-                                    <a href="https://github.com/webbingstudio/echo-css/archive/master.zip" target="_blank" class="m-btn m-btn-style-b m-btn-block m-btn-xl"><i class="fas fa-download u-margin-right-sm"></i>Download</a>
+                                    <a href="https://github.com/webbingstudio/echo-css/archive/master.zip" target="_blank" class="m-button m-button-style-b m-button-block m-button-xl"><i class="fas fa-download u-margin-right-sm"></i>Download</a>
                                 </div><!-- /.l-grid-col -->
                                 <div class="l-grid-col-6">
-                                    <a href="https://github.com/webbingstudio/echo-css" target="_blank" class="m-btn m-btn-style-b m-btn-block m-btn-xl"><i class="fab fa-github u-margin-right-sm"></i>GitHub</a>
+                                    <a href="https://github.com/webbingstudio/echo-css" target="_blank" class="m-button m-button-style-b m-button-block m-button-xl"><i class="fab fa-github u-margin-right-sm"></i>GitHub</a>
                                 </div><!-- /.l-grid-col -->
                             </div><!-- /.l-grid-row -->
                         </div><!-- /.echo-mainvisual-download -->
@@ -78,7 +78,7 @@
                             <p class="c-flip-body"><span class="u-text-lg">&quot;echo.css&quot;</span>は、SMACSS, FLOCSSを設計ベースとしたCSSフレームワークです。特に、WordPress等の<strong>CMSを組み込んだウェブサイトの制作</strong>に最適化しています。<br>
                             CMSによく見られる機能を想定したコンポーネント、コンテンツの微調整を行う補助クラスを数多く実装しています。<br>
                             ぜひ「スタイルガイド」をご覧ください。</p>
-                            <p class="c-flip-body u-padding-top-lg"><a href="./styleguide/" class="m-btn m-btn-style-b m-btn-block m-btn-xl"><i class="fas fa-gem u-margin-right-sm"></i>Style guide</a></p>
+                            <p class="c-flip-body u-padding-top-lg"><a href="./styleguide/" class="m-button m-button-style-b m-button-block m-button-xl"><i class="fas fa-gem u-margin-right-sm"></i>Style guide</a></p>
                         </div><!-- /.c-flip-contents-inner -->
                     </div><!-- /.c-flip-contents -->
                 </div><!-- /.c-flip-container -->
@@ -130,8 +130,8 @@
                                     <h3 class="c-card-title m-title m-title-level-4 m-title-style-b">コーディングルール変換</h3>
                                 </div>
                                 <div class="c-card-contents">
-                                    <p class="c-card-body">echo.cssは、コードの読みやすさを優先し、コーディングルールにSMACSSを採用しています。<br>
-                                    しかし、Sassを使用できる環境では、<a href="./docs/introduction-bem.html">簡単な設定でコーディングルールをBEMに変更できます。</a>また、各クラスの接続子、接頭辞も詳細にカスタマイズ可能です。</p>
+                                    <p class="c-card-body">echo.cssは、コードの読みやすさ・扱いやすさを優先し、コーディングルールにSMACSSを採用しています。<br>
+                                    しかし、Sassを使用できる環境では、<a href="./docs/introduction-bem.html">簡単な設定でコーディングルールをBEMに変更できます。</a>また、各クラスの接続子、接頭辞もカスタマイズ可能です。</p>
                                 </div>
                             </span>
                         </div>
@@ -141,11 +141,12 @@
                         <div class="c-card">
                             <span class="c-card-inner">
                                 <div class="c-card-header u-bg-info u-bg-fade">
-                                    <h3 class="c-card-title m-title m-title-level-4 m-title-style-b">精細なカラーテーブル</h3>
+                                    <h3 class="c-card-title m-title m-title-level-4 m-title-style-b">色のカスタマイズ</h3>
                                 </div>
                                 <div class="c-card-contents">
-                                    <p class="c-card-body">echo.cssは、3色までのデザインカラーと、2色のシステムカラーを使用できます。アクセシビリティに配慮し、<abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1の最低限レベルの達成基準を満たしています。<br>
-                                    Sassを使用できる環境では、<a href="./docs/design-tokens-color.html">それぞれの色に対し、背景に使用したときと、テキストに使用したときで異なる色を設定できます。</a></p>
+                                    <p class="c-card-body">echo.cssは、4つのシステムカラーでシンプルに構成されています。<br>
+                                    カラーテーブルのCSSはファイルが分割されているため、Sassの知識がなくても色のカスタマイズが可能です。<br>
+                                    Sassを使用すると、<a href="./docs/design-tokens-color.html">色関連の変数を調整することで、カラーテーブルを簡単に変更できます。</a></p>
                                 </div>
                             </span>
                         </div>
@@ -155,10 +156,11 @@
                         <div class="c-card">
                             <span class="c-card-inner">
                                 <div class="c-card-header u-bg-info u-bg-fade">
-                                    <h3 class="c-card-title m-title m-title-level-4 m-title-style-b">Font Awesome対応</h3>
+                                    <h3 class="c-card-title m-title m-title-level-4 m-title-style-b">高いアクセシビリティ</h3>
                                 </div>
                                 <div class="c-card-contents">
-                                    <p class="c-card-body">Font Awesomeは、最もウェブサイトに採用されているアイコンフォントのひとつです。echo.cssでは、Font Awesomeを同時に使用することを想定し、<a href="./styleguide/module-nav.html">ボタンやナビゲーション内にアイコンを表示した場合の見た目の最適化</a>を行っています。</p>
+                                    <p class="c-card-body">echo.cssで使用できるすべてのオブジェクトは、様々なハンディキャップを持つ訪問者の利用に配慮しています。<br>
+                                    テキスト・ユーザーインターフェースはWCAG 2.1の達成基準を維持し、「色や環境に頼らない識別」を徹底しています。</p>
                                 </div>
                             </span>
                         </div>
@@ -263,15 +265,15 @@
             <div class="l-container l-container-sm">
 
                 <div class="echo-download-lg">
-                    <a href="https://github.com/webbingstudio/echo-css/archive/master.zip" target="_blank" class="m-btn m-btn-style-a m-btn-info m-btn-xxl m-btn-block u-shadow-lg u-line-sm"><span class="u-text-xl">Download</span><span class="u-hidden-sm-down">&nbsp;&nbsp;</span><br class="u-hidden-md-up"><i class="fas fa-download"></i>&nbsp;&nbsp;Latest version</a>
+                    <a href="https://github.com/webbingstudio/echo-css/archive/master.zip" target="_blank" class="m-button m-button-style-a m-button-info m-button-xxl m-button-block u-shadow-lg u-line-sm"><span class="u-text-xl">Download</span><span class="u-hidden-sm-down">&nbsp;&nbsp;</span><br class="u-hidden-md-up"><i class="fas fa-download"></i>&nbsp;&nbsp;Latest version</a>
                 </div><!-- /.echo-download-lg -->
 
                 <div class="l-grid-row">
                     <div class="l-grid-col-6">
-                        <a href="./styleguide/" class="m-btn m-btn-style-b m-btn-block m-btn-xl"><i class="fas fa-gem u-margin-right-sm"></i>Style guide</a>
+                        <a href="./styleguide/" class="m-button m-button-style-b m-button-block m-button-xl"><i class="fas fa-gem u-margin-right-sm"></i>Style guide</a>
                     </div><!-- /.l-grid-col -->
                     <div class="l-grid-col-6">
-                        <a href="https://github.com/webbingstudio/echo-css" target="_blank" class="m-btn m-btn-style-b m-btn-block m-btn-xl"><i class="fab fa-github u-margin-right-sm"></i>GitHub</a>
+                        <a href="https://github.com/webbingstudio/echo-css" target="_blank" class="m-button m-button-style-b m-button-block m-button-xl"><i class="fab fa-github u-margin-right-sm"></i>GitHub</a>
                     </div><!-- /.l-grid-col -->
                 </div><!-- /.l-grid-row -->
 
