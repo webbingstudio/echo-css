@@ -1,10 +1,10 @@
 /*
 --------------------
-#{$pr}#{$p}cards
+#{$pr}#{$l}cards
 --------------------
 */
 
-.#{$pr}#{$p}cards {
+.#{$pr}#{$l}cards {
     display: grid;
     gap: map-get( $grid-gutter-widths, sm );
 
@@ -26,7 +26,7 @@
 
 }
 
-.#{$pr}#{$p}cards#{$c1}item {
+.#{$pr}#{$l}cards#{$c1}item {
     display: flex;
     align-items: stretch;
     justify-content: center;

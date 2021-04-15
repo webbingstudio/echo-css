@@ -54,7 +54,8 @@
 ├── layout
 │   ├── _container.scss
 │   ├── _document.scss
-│   └── _grid.scss
+│   ├── _cards.scss
+│   └── ...
 └── object
     ├── component
     │   ├── _alert.scss
@@ -62,7 +63,7 @@
     │   ├── _card.scss
     │   └── ...
     ├── module
-    │   ├── _btn.scss
+    │   ├── _button.scss
     │   ├── _checkbox.scss
     │   ├── _embed.scss
     │   └── ...
@@ -73,8 +74,8 @@
     │   └── ...
     └── utility
         ├── _bg.scss
-        ├── _clear.scss
-        ├── _expand.scss
+        ├── _text.scss
+        ├── _margin.scss
         └── ...</pre></div>
 
 <h2 class="echo-post-title-01">各レイヤーの役割</h2>
@@ -86,34 +87,34 @@
 
 <h3 class="echo-post-title-02">layout</h3>
 
-<p>視覚的な機能を持たない、サイトのレイアウトに関するクラス群です。クラスには初期状態で <code>.l-</code> の接頭辞が付けられます。<br>
+<p>オブジェクトのグリッド配置など、レイアウトに関するクラス群です。クラスには初期状態で <code>.l-</code> の接頭辞が付けられます。<br>
 プロジェクトごとの変更は極力避けます。</p>
 
 <h3 class="echo-post-title-02">object</h3>
 
-<p>objectは4つの子レイヤーを持ちます。</p>
+<p>オブジェクトは4つの子レイヤーを持ちます。</p>
 
 <div class="u-margin-left-md">
 
     <h4 class="echo-post-title-03">module</h4>
 
-    <p>サイト内で、最小単位となる機能を持ったパーツのクラス群です。クラスには初期状態で <code>.m-</code> の接頭辞が付けられます。<br>
+    <p>サイト内で、最小単位となる機能を持ったオブジェクトのクラス群です。クラスには初期状態で <code>.m-</code> の接頭辞が付けられます。<br>
     Atomic DesignのAtomsに準じます。</p>
 
     <h4 class="echo-post-title-03">component</h4>
 
-    <p>サイト内で、<code>module</code> がひとつ以上含まれる可能性があるパーツのクラス群です。クラスには初期状態で <code>.c-</code> の接頭辞が付けられます。<br>
+    <p>サイト内で、<code>module</code> がひとつ以上含まれる可能性があるオブジェクトのクラス群です。クラスには初期状態で <code>.c-</code> の接頭辞が付けられます。<br>
     Atomic DesignのMoleculesに準じます。</p>
 
     <h4 class="echo-post-title-03">project</h4>
 
-    <p>そのプロジェクトのデザインや機能に大きく影響するパーツのクラス群です。<code>module</code> と <code>component</code> が含まれる可能性があります。<br>
+    <p>そのプロジェクトのデザインや機能に大きく影響するオブジェクトのクラス群です。<code>module</code> と <code>component</code> が含まれる可能性があります。<br>
     ブログの本文用CSSなど、採用するCMSに直結するCSSがある場合もここに含まれます。クラスには初期状態で <code>.p-</code> の接頭辞が付けられます。<br>
     Atomic DesignのOrganismsに準じます。</p>
 
     <h4 class="echo-post-title-03">utility</h4>
 
-    <p>文字サイズ、余白、外観などをその要素のみで調整するための補助クラスです。クラスには初期状態で <code>.u-</code> の接頭辞が付けられます。</p>
+    <p>色・文字サイズ・余白等を、その要素のみ上書き変更するためのヘルパークラスです。クラスには初期状態で <code>.u-</code> の接頭辞が付けられます。</p>
     
 </div>
 

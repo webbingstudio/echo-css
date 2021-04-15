@@ -1,10 +1,10 @@
 /*
 --------------------
-#{$pr}#{$p}medias
+#{$pr}#{$l}medias
 --------------------
 */
 
-.#{$pr}#{$p}medias {
+.#{$pr}#{$l}medias {
     display: grid;
     gap: map-get( $grid-gutter-widths, lg );
 
@@ -14,7 +14,7 @@
 
 }
 
-.#{$pr}#{$p}medias#{$c1}item {
+.#{$pr}#{$l}medias#{$c1}item {
     display: flex;
     align-items: stretch;
     justify-content: center;
