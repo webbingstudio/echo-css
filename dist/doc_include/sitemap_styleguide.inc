@@ -6,6 +6,9 @@
                 <li class="m-nav-item"><a href="./layout-container.html" class="m-nav-label">container</a></li>
                 <li class="m-nav-item"><a href="./layout-document.html" class="m-nav-label">document</a></li>
                 <li class="m-nav-item"><a href="./layout-grid.html" class="m-nav-label">grid</a></li>
+                <li class="m-nav-item"><a href="./layout-cards.html" class="m-nav-label">cards</a></li>
+                <li class="m-nav-item"><a href="./layout-headlines.html" class="m-nav-label">headlines</a></li>
+                <li class="m-nav-item"><a href="./layout-medias.html" class="m-nav-label">medias</a></li>
             </ul>
         </li>
 
@@ -68,9 +71,6 @@
                         <li class="m-nav-item"><a href="./project-header.html" class="m-nav-label">header</a></li>
                         <li class="m-nav-item"><a href="./project-main.html" class="m-nav-label">main</a></li>
                         <li class="m-nav-item"><a href="./project-footer.html" class="m-nav-label">footer</a></li>
-                        <li class="m-nav-item"><a href="./project-cards.html" class="m-nav-label">cards</a></li>
-                        <li class="m-nav-item"><a href="./project-headlines.html" class="m-nav-label">headlines</a></li>
-                        <li class="m-nav-item"><a href="./project-medias.html" class="m-nav-label">medias</a></li>
                     </ul>
                 </li>
             </ul>
