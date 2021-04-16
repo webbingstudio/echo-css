@@ -24,6 +24,6 @@
 
     <?php include('../doc_include/footer_copyright.inc'); ?>
 
-</div><!-- /.echo-document -->
+</div><!-- /#echo-document -->
 </body>
 </html>

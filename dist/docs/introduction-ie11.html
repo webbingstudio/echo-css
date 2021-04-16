@@ -11,21 +11,21 @@
 
 </head>
 <body>
-<div class="l-document" id="document">
+<div id="echo-document">
 
     <?php include('../doc_include/header.inc'); ?>
 
-    <main class="p-main" role="main">
-        <div class="echo-container">
+    <main class="echo-p-main" role="main">
+        <div class="echo-doc-container">
 
-            <div class="echo-pagehead">
-                <h1 class="echo-pagehead-title">Internet Explorer 11への対応</h1>
-            </div><!-- /.echo-pagehead -->
+            <div class="echo-doc-pagehead">
+                <h1 class="echo-doc-pagehead-title">Internet Explorer 11への対応</h1>
+            </div><!-- /.echo-doc-pagehead -->
 
-            <article class="echo-post">
-                <div class="echo-post-contents styleguide-contents">
+            <article class="echo-doc-post">
+                <div class="echo-doc-post-contents styleguide-contents">
 
-<h2 class="echo-post-title-01">基本方針</h2>
+<h2 class="echo-doc-post-title-01">基本方針</h2>
 
 <p>かつてのWindowsの主要ブラウザであったInternet Explorer 11は、多くの新しい技術を使用することができず、開発元のMicrosoftも使用を推薦していません。</p>
 
@@ -44,24 +44,24 @@
     </ol>
 </div>
 
-<h2 class="echo-post-title-01">非対応の機能</h2>
+<h2 class="echo-doc-post-title-01">非対応の機能</h2>
 
-<h3 class="echo-post-title-02">img要素のトリミング</h3>
+<h3 class="echo-doc-post-title-02">img要素のトリミング</h3>
 
 <p>以下の状況で、<a href="https://developer.mozilla.org/ja/docs/Web/CSS/object-fit" target="_blank">object-fit</a>によるトリミングを行うようになりました。<br>
 Internet Explorer11でトリミングに対応する場合は、別途ライブラリを追加してください。</p>
 
-<h4 class="echo-post-title-03"><a href="../styleguide/module-thumbnail.html">.m-thumbnail</a></h4>
+<h4 class="echo-doc-post-title-03"><a href="../styleguide/module-thumbnail.html">.m-thumbnail</a></h4>
 
 <p><code>.m-thumbnail-square, .m-thumbnail-round, .m-thumbnail-(ratio-x)to(ratio-y)</code> を使用した場合</p>
 
-<h4 class="echo-post-title-03"><a href="../styleguide/component-hero.html">.c-hero</a></h4>
+<h4 class="echo-doc-post-title-03"><a href="../styleguide/component-hero.html">.c-hero</a></h4>
 
 <p><code>.c-hero-fit</code> を使用した場合</p>
 
 
-<div class="u-padding-top-xxl">
-    <a href="./introduction-bem.html" class="m-button m-button-style-b m-button-block m-button-xl"><span class="u-text-xs u-font-second u-padding-left-sm u-position-center-left">Next </span>BEM記法で使用する<i class="fas fa-angle-right u-padding-right-sm u-position-center-right"></i></a>
+<div class="echo-padding-top-xxl">
+    <a href="./introduction-bem.html" class="echo-button echo-button-block echo-button-xl echo-button-style-b echo-button-arrowed-right"><span class="echo-text-xs echo-font-second echo-padding-left-sm echo-position-center-left">Next </span>BEM記法で使用する</a>
 </div>
 
 

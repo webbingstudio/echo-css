@@ -11,28 +11,28 @@
 
 </head>
 <body>
-<div class="l-document" id="document">
+<div id="echo-document">
 
     <?php include('../doc_include/header.inc'); ?>
 
-    <main class="p-main" role="main">
-        <div class="echo-container">
+    <main class="echo-p-main" role="main">
+        <div class="echo-doc-container">
 
-            <div class="echo-pagehead">
-                <h1 class="echo-pagehead-title">さっそく始める</h1>
-            </div><!-- /.echo-pagehead -->
+            <div class="echo-doc-pagehead">
+                <h1 class="echo-doc-pagehead-title">さっそく始める</h1>
+            </div><!-- /.echo-doc-pagehead -->
 
-            <article class="echo-post">
-                <div class="echo-post-contents styleguide-contents">
+            <article class="echo-doc-post">
+                <div class="echo-doc-post-contents styleguide-contents">
 
-<h2 class="echo-post-title-01">ダウンロード</h2>
+<h2 class="echo-doc-post-title-01">ダウンロード</h2>
 
 <p>GitHubのリポジトリから、最新のパッケージをダウンロードしてください。</p>
 <p><a href="https://github.com/webbingstudio/echo-css/archive/master.zip" target="_blank"><i class="fas fa-download u-margin-right-sm"></i>https://github.com/webbingstudio/echo-css/archive/master.zip</a></p>
 
 <p>パッケージを解凍すると、SCSS、CSS、ドキュメント（これ）、スタイルガイドがすべて含まれているプロジェクトが展開されます。</p>
 
-<h2 class="echo-post-title-01">CSSだけを使用する</h2>
+<h2 class="echo-doc-post-title-01">CSSだけを使用する</h2>
 
 <p>echo.cssはCSSだけを気軽に使用することができます。</p>
 
@@ -41,7 +41,7 @@
 <div class="codeblock"><pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/echo.min.css&quot;&gt;</pre></div>
 
 
-<h2 class="echo-post-title-01">色・フォントを自由に変更する</h2>
+<h2 class="echo-doc-post-title-01">色・フォントを自由に変更する</h2>
 
 <p>echo.cssでは、コア・色・フォントのスタイルが分かれているCSSファイルも用意しています。</p>
 
@@ -52,14 +52,14 @@
 &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/echo-font.css&quot;&gt;</pre></div>
 
 
-<h2 class="echo-post-title-01">Sassを活用する</h2>
+<h2 class="echo-doc-post-title-01">Sassを活用する</h2>
 
 <p>色の一括変更、利用予定のないクラスの削除を行いたい場合は、Sassの活用をお勧めします。</p>
 
 <p>展開したファイル一式を、あなたのプロジェクトのディレクトリに配置してください。<br>
 <code>/dist/</code> が、ドキュメントルートとなります。</p>
 
-<h3 class="echo-post-title-02">不要なファイルについて</h3>
+<h3 class="echo-doc-post-title-02">不要なファイルについて</h3>
 
 <p>以下のファイル・ディレクトリは、デモサイト用なので、削除してください。 <code>/styleguide/</code> を残しておくと、動作チェックの際に便利です。</p>
 
@@ -71,13 +71,13 @@
     <li>/share/ 以下すべて</li>
 </ul>
 
-<h3 class="echo-post-title-02">Gulpをインストールする</h3>
+<h3 class="echo-doc-post-title-02">Gulpをインストールする</h3>
 
 <p>以下のコマンドを実行して、 <code>/package.json</code> に記載されたGulpパッケージをインストールしてください。</p>
 
 <div class="codeblock"><pre>npm install</pre></div>
 
-<h3 class="echo-post-title-02">作業を始める</h3>
+<h3 class="echo-doc-post-title-02">作業を始める</h3>
 
 <p>以降は、作業前に <code>gulp</code> コマンドを実行すると、 <code>/_scss/</code> ディレクトリの変更が、常時 <code>/dist/css/</code> に反映されるようになります。</p>
 
@@ -87,8 +87,8 @@
 
 
 
-<div class="u-padding-top-xxl">
-    <a href="./introduction-template.html" class="m-button m-button-style-b m-button-block m-button-xl"><span class="u-text-xs u-font-second u-padding-left-sm u-position-center-left">Next </span>基本のテンプレート<i class="fas fa-angle-right u-padding-right-sm u-position-center-right"></i></a>
+<div class="echo-padding-top-xxl">
+    <a href="./introduction-template.html" class="echo-button echo-button-block echo-button-xl echo-button-style-b echo-button-arrowed-right"><span class="echo-text-xs echo-font-second echo-padding-left-sm echo-position-center-left">Next </span>基本のテンプレート</a>
 </div>
 
 

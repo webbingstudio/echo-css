@@ -11,21 +11,21 @@
 
 </head>
 <body>
-<div class="l-document" id="document">
+<div id="echo-document">
 
     <?php include('../doc_include/header.inc'); ?>
 
-    <main class="p-main" role="main">
-        <div class="echo-container">
+    <main class="echo-p-main" role="main">
+        <div class="echo-doc-container">
 
-            <div class="echo-pagehead">
-                <h1 class="echo-pagehead-title">BEM記法で使用する</h1>
-            </div><!-- /.echo-pagehead -->
+            <div class="echo-doc-pagehead">
+                <h1 class="echo-doc-pagehead-title">BEM記法で使用する</h1>
+            </div><!-- /.echo-doc-pagehead -->
 
-            <article class="echo-post">
-                <div class="echo-post-contents styleguide-contents">
+            <article class="echo-doc-post">
+                <div class="echo-doc-post-contents styleguide-contents">
 
-<h2 class="echo-post-title-01">SMACSS採用の理由</h2>
+<h2 class="echo-doc-post-title-01">SMACSS採用の理由</h2>
 
 <p>CSSのクラス命名記法は、ハイフンで接続する「SMACSS」と、アンダースコアで接続する「BEM」に大きく分けられます。</p>
 
@@ -41,7 +41,7 @@
     </ul>
 </div>
 
-<h2 class="echo-post-title-01">BEM記法に変更する手順</h2>
+<h2 class="echo-doc-post-title-01">BEM記法に変更する手順</h2>
 
 <p>Sassを使用できる環境では、BEM記法に変更することができます。</p>
 
@@ -49,7 +49,7 @@
 
 <div class="codeblock"><pre><code class="language-scss">$rule: 'bem' !default;</code></pre></div>
 
-<h2 class="echo-post-title-01">BEM記法の場合の基本ルール</h2>
+<h2 class="echo-doc-post-title-01">BEM記法の場合の基本ルール</h2>
 
 <p>種別を表す接頭辞 <code>l, m, c, u, p</code> はハイフンで接続されます。</p>
 
@@ -74,7 +74,7 @@
 
 <p>「色」「大きさ」などを示すモディファーはハイフン2つで接続されます。</p>
 
-<div class="codeblock u-margin-bottom-xl"><pre><code class="language-scss">.m-button--first {
+<div class="codeblock u-margin-bottom-xl"><pre><code class="language-scss">.echo-button--first {
   color: #fff;
   background-color: #1976d2;
   border-color: transparent;
@@ -88,8 +88,8 @@
 
 <p>これらのルールを変更したい場合は、 <code>_scss/_config_advance.scss</code> を参照ください。</p>
 
-<div class="u-padding-top-xxl">
-    <a href="./introduction-about.html" class="m-button m-button-style-b m-button-block m-button-xl"><span class="u-text-xs u-font-second u-padding-left-sm u-position-center-left">Next </span>echo.cssとは？<i class="fas fa-angle-right u-padding-right-sm u-position-center-right"></i></a>
+<div class="echo-padding-top-xxl">
+    <a href="./introduction-about.html" class="echo-button echo-button-block echo-button-xl echo-button-style-b echo-button-arrowed-right"><span class="echo-text-xs echo-font-second echo-padding-left-sm echo-position-center-left">Next </span>echo.cssとは？</a>
 </div>
 
 

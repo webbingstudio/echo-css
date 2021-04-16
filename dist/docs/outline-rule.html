@@ -11,21 +11,21 @@
 
 </head>
 <body>
-<div class="l-document" id="document">
+<div id="echo-document">
 
     <?php include('../doc_include/header.inc'); ?>
 
-    <main class="p-main" role="main">
-        <div class="echo-container">
+    <main class="echo-p-main" role="main">
+        <div class="echo-doc-container">
 
-            <div class="echo-pagehead">
-                <h1 class="echo-pagehead-title">コーディングルール</h1>
-            </div><!-- /.echo-pagehead -->
+            <div class="echo-doc-pagehead">
+                <h1 class="echo-doc-pagehead-title">コーディングルール</h1>
+            </div><!-- /.echo-doc-pagehead -->
 
-            <article class="echo-post">
-                <div class="echo-post-contents styleguide-contents">
+            <article class="echo-doc-post">
+                <div class="echo-doc-post-contents styleguide-contents">
 
-<h2 class="echo-post-title-01">基本的なマークアップ</h2>
+<h2 class="echo-doc-post-title-01">基本的なマークアップ</h2>
 
 <p>オブジェクトの基本構造は以下の通りです。<br>
 <code>object>component, layout</code>に属するオブジェクトは<code>div, section, article</code>等の、<a href="https://developer.mozilla.org/ja/docs/Web/Guide/HTML/Content_categories" target="_blank">フローコンテンツ</a>でグループ化します。これは両者が「複数のオブジェクトを包括する」という特性を持つためです。</p>
@@ -41,9 +41,9 @@
     &lt;/div&gt;&lt;!-- /.c-example-inner --&gt;
 &lt;/div&gt;&lt;!-- /.c-example --&gt;</code></pre></div>
 
-<h2 class="echo-post-title-01">クラス命名規則</h2>
+<h2 class="echo-doc-post-title-01">クラス命名規則</h2>
 
-<h3 class="echo-post-title-02">接続子</h3>
+<h3 class="echo-doc-post-title-02">接続子</h3>
 
 <p>echo.cssのCSSクラスの命名規則は、SMACSSを参考にしています。</p>
 
@@ -57,13 +57,13 @@
 
 <div class="codeblock"><pre><code class="language-markup">.c-card-contents</code></pre></div>
 
-<h3 class="echo-post-title-02">親オブジェクトのクラス名</h3>
+<h3 class="echo-doc-post-title-02">親オブジェクトのクラス名</h3>
 
 <p>極力、一単語で命名します。 <code>mainvisual</code> など、つなげて記述しても理解しやすいものは、一単語とすることを許容します。<br>
 やむを得ず二単語になる場合は、 <code>eventCalendar</code> のようにキャピタライズで記述します。<br>
 アンダーバーを使用しない理由は、CMS・JavaScript等の変数名にアンダーバーが使用されることが多く、検索の際に支障が出ないようにするためです。</p>
 
-<h3 class="echo-post-title-02">子オブジェクトのクラス名</h3>
+<h3 class="echo-doc-post-title-02">子オブジェクトのクラス名</h3>
 
 <p>オブジェクト内のクラス名は、冗長でないことが望ましいです。<br>
 オブジェクト内のHTMLの、見出し要素までの階層構造が以下だった場合</p>
@@ -75,20 +75,20 @@
 
 <p>Atomic Designの考えに基づけば、 <code>.c-example-title</code> は、さらに「見出し」という最小単位（Atom = module）に分割できます。このCSSフレームワークでは <code>.m-title</code> がこれにあたります。</p>
 
-<h3 class="echo-post-title-02">クラス名の英単語は略さない</h3>
+<h3 class="echo-doc-post-title-02">クラス名の英単語は略さない</h3>
 
 <p>原則として、クラス名の英単語は略さず使用します。<br>
 例えば <code>.u-img-rsp</code> などではなく <code>.u-image-responsive</code> となります。</p>
 
 <p>例外として、サイズ表記（<code>xxs, xs, sm, md, lg, xl, xxl</code>）については、略記を使用しています。これはサイズ表記が国際的に認識されており、かつ、非常に多くのサブクラスで使用されているための措置です。</p>
 
-<h2 class="echo-post-title-01">プロパティの並び順</h2>
+<h2 class="echo-doc-post-title-01">プロパティの並び順</h2>
 
 <p>「すべての人に理解しやすい設計」という基本方針に基づき、Mozila・W3Cが提唱している「視覚順」で記述しています。詳しい採用の根拠は拙記事を参照ください。</p>
 
 <p><a href="https://webbingstudio.com/weblog/entry-882.html">CSSプロパティの並び順を「視覚順」で書いている件</a></p>
 
-<h2 class="echo-post-title-01">SassとGulp</h2>
+<h2 class="echo-doc-post-title-01">SassとGulp</h2>
 
 <p>多くの人が理解できるよう、必要以上に高度な内容にしないようにしています。このため、mixinやタスクの利用も最低限となっています。<br>
 特に <code>&</code> による接続は、<strong>クラス名からの検索がしにくくなる</strong>という、CSSフレームワークにおける致命的な問題があるため禁忌としています。</p>
@@ -107,8 +107,8 @@
 
 
 
-<div class="u-padding-top-xxl">
-    <a href="./design-tokens-color.html" class="m-button m-button-style-b m-button-block m-button-xl"><span class="u-text-xs u-font-second u-padding-left-sm u-position-center-left">Next </span>カラーテーブル<i class="fas fa-angle-right u-padding-right-sm u-position-center-right"></i></a>
+<div class="echo-padding-top-xxl">
+    <a href="./design-tokens-color.html" class="echo-button echo-button-block echo-button-xl echo-button-style-b echo-button-arrowed-right"><span class="echo-text-xs echo-font-second echo-padding-left-sm echo-position-center-left">Next </span>カラーテーブル</a>
 </div>
 
 

@@ -11,21 +11,21 @@
 
 </head>
 <body>
-<div class="l-document" id="document">
+<div id="echo-document">
 
     <?php include('../doc_include/header.inc'); ?>
 
-    <main class="p-main" role="main">
-        <div class="echo-container">
+    <main class="echo-p-main" role="main">
+        <div class="echo-doc-container">
 
-            <div class="echo-pagehead">
-                <h1 class="echo-pagehead-title">基本のテンプレート</h1>
-            </div><!-- /.echo-pagehead -->
+            <div class="echo-doc-pagehead">
+                <h1 class="echo-doc-pagehead-title">基本のテンプレート</h1>
+            </div><!-- /.echo-doc-pagehead -->
 
-            <article class="echo-post">
-                <div class="echo-post-contents styleguide-contents">
+            <article class="echo-doc-post">
+                <div class="echo-doc-post-contents styleguide-contents">
 
-<h2 class="echo-post-title-01">基本構造</h2>
+<h2 class="echo-doc-post-title-01">基本構造</h2>
 
 <p>echo.cssが想定しているHTML構造は、以下の通りです。</p>
 
@@ -56,13 +56,13 @@
         &lt;/div&gt;&lt;!-- /.l-container --&gt;
     &lt;/header&gt;&lt;!-- /.p-header --&gt;
 
-    &lt;main class="p-main" role="main"&gt;
+    &lt;main class="echo-p-main" role="main"&gt;
         &lt;div class="l-container"&gt;
 
             こんにちは世界！
 
         &lt;/div&gt;&lt;!-- /.l-container --&gt;
-    &lt;/main&gt;&lt;!-- /.p-main --&gt;
+    &lt;/main&gt;&lt;!-- /.echo-p-main --&gt;
 
     &lt;footer class="p-footer" role="contentinfo"&gt;
         &lt;div class="l-container"&gt;
@@ -76,11 +76,11 @@
 &lt;/body&gt;
 &lt;/html&gt;</code></pre></div>
 
-<h2 class="echo-post-title-01">.l-documentの役割</h2>
+<h2 class="echo-doc-post-title-01">.l-documentの役割</h2>
 
 <p>コンテンツ全体を包括している <code>.l-document #document</code> は、文字サイズ変更などのユーティリティクラスの優先度を上げる役割を持っています。</p>
 
-<h2 class="echo-post-title-01">.l-containerの役割</h2>
+<h2 class="echo-doc-post-title-01">.l-containerの役割</h2>
 
 <p>.l-containerは名前の通り、コンテンツを適切に画面中央に配置するコンテナタグです。より良いウェブサイトの制作には必須となります。<br>
 echo.cssは、コンテナタグの幅は一種類ではありません。ヘッダとフッタは通常の幅のコンテナタグ、サブカラムはスリムなコンテナタグ、といった、変化のあるページを作成できます。</p>
@@ -93,17 +93,17 @@ echo.cssは、コンテナタグの幅は一種類ではありません。ヘッ
     &lt;/div&gt;&lt;!-- /.l-container --&gt;
 &lt;/div&gt;&lt;!-- /.example --&gt;</code></pre></div>
 
-<h2 class="echo-post-title-01">ブロックエディタとコンテナタグの干渉</h2>
+<h2 class="echo-doc-post-title-01">ブロックエディタとコンテナタグの干渉</h2>
 
 <p>WordPressのGutenbergなど、CMSの「ブロックエディタ」で編集可能にする場合は、本文エリアで <code>.l-container</code> での幅制限を行わないよう注意してください。画像ブロック・グループブロック等に設定されている「幅広」「全幅」オプションを使用できなくなります。</p>
 
-<h2 class="echo-post-title-01">プラグイン</h2>
+<h2 class="echo-doc-post-title-01">プラグイン</h2>
 
 <p><code>/plugins/toggle.css</code>、<code>/plugins/toggle.min.js</code> は、オーバーレイメニューを開閉するためのプラグインです。jQueryに依存しています。<br>
 オーバーレイメニューを使用しない、またはjQueryを使用しない場合は読み込む必要はありません。</p>
 
-<div class="u-padding-top-xxl">
-    <a href="./introduction-ie11.html" class="m-button m-button-style-b m-button-block m-button-xl"><span class="u-text-xs u-font-second u-padding-left-sm u-position-center-left">Next </span>Internet Explorer 11への対応<i class="fas fa-angle-right u-padding-right-sm u-position-center-right"></i></a>
+<div class="echo-padding-top-xxl">
+    <a href="./introduction-ie11.html" class="echo-button echo-button-block echo-button-xl echo-button-style-b echo-button-arrowed-right"><span class="echo-text-xs echo-font-second echo-padding-left-sm echo-position-center-left">Next </span>Internet Explorer 11への対応</a>
 </div>
 
 
