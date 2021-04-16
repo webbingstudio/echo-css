@@ -46,15 +46,15 @@
 
 &lt;/head&gt;
 &lt;body&gt;
-&lt;div class="echo-document" id="document"&gt;
+&lt;div id="echo-document"&gt;
 
-    &lt;header class="p-header" role="banner"&gt;
+    &lt;header class="echo-p-header" role="banner"&gt;
         &lt;div class="echo-container"&gt;
 
             ここはサイトのヘッダです
 
         &lt;/div&gt;&lt;!-- /.echo-container --&gt;
-    &lt;/header&gt;&lt;!-- /.p-header --&gt;
+    &lt;/header&gt;&lt;!-- /.echo-p-header --&gt;
 
     &lt;main class="echo-p-main" role="main"&gt;
         &lt;div class="echo-container"&gt;
@@ -64,13 +64,13 @@
         &lt;/div&gt;&lt;!-- /.echo-container --&gt;
     &lt;/main&gt;&lt;!-- /.echo-p-main --&gt;
 
-    &lt;footer class="p-footer" role="contentinfo"&gt;
+    &lt;footer class="echo-p-footer" role="contentinfo"&gt;
         &lt;div class="echo-container"&gt;
 
             ここはサイトのフッタです
 
         &lt;/div&gt;&lt;!-- /.echo-container --&gt;
-    &lt;/footer&gt;&lt;!-- /.p-footer --&gt;
+    &lt;/footer&gt;&lt;!-- /.echo-p-footer --&gt;
 
 &lt;/div&gt;&lt;!-- /.echo-document --&gt;
 &lt;/body&gt;
@@ -92,6 +92,13 @@ echo.cssは、コンテナタグの幅は一種類ではありません。ヘッ
 
     &lt;/div&gt;&lt;!-- /.echo-container --&gt;
 &lt;/div&gt;&lt;!-- /.example --&gt;</code></pre></div>
+
+<h2 class="echo-doc-post-title-01">接頭辞が echo-p- になっているクラス</h2>
+
+<p><code>.echo-p-header, .echo-p-footer, .echo-p-main</code> の3つのクラスのみ、接頭辞に <code>p-</code> が含まれます。<br>
+echo.cssでは、ウェブサイトによって大きくデザインが異なるオブジェクトを<strong>projectレイヤー</strong>として扱っています。projectレイヤーは使用しないか、もしくはスタイルを上書きさせることを前提としているため、ウェブサイトが成立する最低限のスタイルのみ定義しています。</p>
+
+<p>レイヤーについては「<a href="./outline-layers.html">レイヤー構造</a>」の解説を参照ください。</p>
 
 <h2 class="echo-doc-post-title-01">ブロックエディタとコンテナタグの干渉</h2>
 

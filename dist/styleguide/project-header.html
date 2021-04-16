@@ -22,19 +22,19 @@
             </div><!-- /.echo-doc-pagehead -->
 
             <article class="echo-doc-post">
-                <div class="echo-doc-post-contents styleguide-contents"><h1 id="header" class="styleguide">p-header</h1>
+                <div class="echo-doc-post-contents styleguide-contents"><h1 id="header" class="styleguide">echo-p-header</h1>
 
 <p>ドキュメント内で、ロゴ等が含まれる、サイトヘッダとして扱うべきコンテンツ群を包括する。<br>
-<strong>プロジェクトごとにスタイルが上書きされる</strong>ことを前提としているため、このフレームワークでは一般に考えられる最低限の要素のみ定義する。<br>
+<strong>プロジェクトごとにスタイルが上書きされる</strong>ことを前提としているため、echo.cssでは最低限の要素とスタイルにとどめている。<br>
 <code>breakpoint</code> が <code>lg</code> 以上でスマートフォン用メニューボタンが非表示となり、ナビゲーションが表示される。</p>
 <div class="example">
-<header class="p-header" role="banner">
+<header class="echo-p-header" role="banner">
     <div class="echo-container">
-        <div class="p-header-contents">
+        <div class="echo-p-header-contents">
 
-            <h1 class="p-header-title"><a href="#"><img src="../images/_dummy/logo.svg" width="182" height="36" alt="サイトロゴ"></a></h1>
+            <h1 class="echo-p-header-title"><a href="#"><img src="../images/_dummy/logo.svg" width="182" height="36" alt="サイトロゴ"></a></h1>
 
-            <div class="p-header-nav" role="navigation">
+            <div class="echo-p-header-nav" role="navigation">
                 <nav class="echo-nav">
                     <ul class="echo-nav-list">
                         <li class="echo-nav-item">
@@ -54,9 +54,9 @@
                         </li>
                     </ul><!-- /.echo-nav-list -->
                 </nav><!-- /.echo-nav -->
-            </div><!-- /.p-header-nav -->
+            </div><!-- /.echo-p-header-nav -->
 
-            <div class="p-header-button">
+            <div class="echo-p-header-button">
                 <ul class="echo-list echo-list-horizontal">
                     <li class="echo-list-item">
                         <a href="#" class="echo-button echo-button-style-a echo-button-circle">
@@ -71,23 +71,23 @@
                         </a><!-- /.echo-button -->
                     </li><!-- /.echo-list-item -->
                 </ul><!-- /.echo-list -->
-            </div><!-- /.p-header-button -->
+            </div><!-- /.echo-p-header-button -->
 
-            <div class="p-header-menu">
+            <div class="echo-p-header-menu">
                 <button class="echo-toggle" aria-expanded="false" aria-label="Menu"><span class="echo-toggle-line"></span><span class="echo-sr">メニュー</span></button>
-            </div><!-- /.p-header-menu -->
+            </div><!-- /.echo-p-header-menu -->
 
-        </div><!-- /.p-header-contents -->
+        </div><!-- /.echo-p-header-contents -->
     </div><!-- /.echo-container -->
-</header><!-- /.p-header -->
+</header><!-- /.echo-p-header -->
 </div>
-<div class="codeblock"><pre><code class="language-markup">&lt;header class="p-header" role="banner"&gt;
+<div class="codeblock"><pre><code class="language-markup">&lt;header class="echo-p-header" role="banner"&gt;
     &lt;div class="echo-container"&gt;
-        &lt;div class="p-header-contents"&gt;
+        &lt;div class="echo-p-header-contents"&gt;
 
-            &lt;h1 class="p-header-title"&gt;&lt;a href="#"&gt;&lt;img src="../images/_dummy/logo.svg" width="182" height="36" alt="サイトロゴ"&gt;&lt;/a&gt;&lt;/h1&gt;
+            &lt;h1 class="echo-p-header-title"&gt;&lt;a href="#"&gt;&lt;img src="../images/_dummy/logo.svg" width="182" height="36" alt="サイトロゴ"&gt;&lt;/a&gt;&lt;/h1&gt;
 
-            &lt;div class="p-header-nav" role="navigation"&gt;
+            &lt;div class="echo-p-header-nav" role="navigation"&gt;
                 &lt;nav class="echo-nav"&gt;
                     &lt;ul class="echo-nav-list"&gt;
                         &lt;li class="echo-nav-item"&gt;
@@ -107,9 +107,9 @@
                         &lt;/li&gt;
                     &lt;/ul&gt;&lt;!-- /.echo-nav-list --&gt;
                 &lt;/nav&gt;&lt;!-- /.echo-nav --&gt;
-            &lt;/div&gt;&lt;!-- /.p-header-nav --&gt;
+            &lt;/div&gt;&lt;!-- /.echo-p-header-nav --&gt;
 
-            &lt;div class="p-header-button"&gt;
+            &lt;div class="echo-p-header-button"&gt;
                 &lt;ul class="echo-list echo-list-horizontal"&gt;
                     &lt;li class="echo-list-item"&gt;
                         &lt;a href="#" class="echo-button echo-button-style-a echo-button-circle"&gt;
@@ -124,14 +124,14 @@
                         &lt;/a&gt;&lt;!-- /.echo-button --&gt;
                     &lt;/li&gt;&lt;!-- /.echo-list-item --&gt;
                 &lt;/ul&gt;&lt;!-- /.echo-list --&gt;
-            &lt;/div&gt;&lt;!-- /.p-header-button --&gt;
+            &lt;/div&gt;&lt;!-- /.echo-p-header-button --&gt;
 
-            &lt;div class="p-header-menu"&gt;
+            &lt;div class="echo-p-header-menu"&gt;
                 &lt;button class="echo-toggle" aria-expanded="false" aria-label="Menu"&gt;&lt;span class="echo-toggle-line"&gt;&lt;/span&gt;&lt;span class="echo-sr"&gt;メニュー&lt;/span&gt;&lt;/button&gt;
-            &lt;/div&gt;&lt;!-- /.p-header-menu --&gt;
+            &lt;/div&gt;&lt;!-- /.echo-p-header-menu --&gt;
 
-        &lt;/div&gt;&lt;!-- /.p-header-contents --&gt;
+        &lt;/div&gt;&lt;!-- /.echo-p-header-contents --&gt;
     &lt;/div&gt;&lt;!-- /.echo-container --&gt;
-&lt;/header&gt;&lt;!-- /.p-header --&gt;</code></pre></div>
+&lt;/header&gt;&lt;!-- /.echo-p-header --&gt;</code></pre></div>
 
 <?php include('../doc_include/footer.inc'); ?>
