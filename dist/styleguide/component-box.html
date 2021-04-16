@@ -25,25 +25,25 @@
             <nav class="echo-doc-anchor">
                 <ul class="echo-list echo-list-horizontal">
             
-                    <li class="echo-list-item"><a href="#box" class="js-scrollto">c-box</a></li>
+                    <li class="echo-list-item"><a href="#box" class="js-scrollto">echo-box</a></li>
 
-                    <li class="echo-list-item"><a href="#box-01-style" class="js-scrollto">c-box-style-(style)</a></li>
+                    <li class="echo-list-item"><a href="#box-01-style" class="js-scrollto">echo-box-style-(style)</a></li>
 
-                    <li class="echo-list-item"><a href="#box-02-color" class="js-scrollto">c-box-(color)</a></li>
+                    <li class="echo-list-item"><a href="#box-02-color" class="js-scrollto">echo-box-(color)</a></li>
                     
                 </ul>
             </nav>
             
 
             <article class="echo-doc-post">
-                <div class="echo-doc-post-contents styleguide-contents"><h1 id="box" class="styleguide">c-box</h1>
+                <div class="echo-doc-post-contents styleguide-contents"><h1 id="box" class="styleguide">echo-box</h1>
 
 <p>複数の要素をグループ化して、箱状に強調する。画面サイズによって余白が変化する。</p>
 
-<p>サブクラス <code>.c-box-style-(style)</code> が必須であり、付与していない場合は最低限の装飾となる。</p>
+<p>サブクラス <code>.echo-box-style-(style)</code> が必須であり、付与していない場合は最低限の装飾となる。</p>
 
 <div class="example">
-<div class="c-box">
+<div class="echo-box">
     <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
     吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
     <p>この書生というのは時々我々を捕えて煮て食うという話である。
@@ -51,7 +51,7 @@
 </div>
 </div>
 
-<div class="codeblock"><pre><code class="language-markup">&lt;div class="c-box"&gt;
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-box"&gt;
     &lt;p&gt;吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;br&gt;
     吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。&lt;/p&gt;
     &lt;p&gt;この書生というのは時々我々を捕えて煮て食うという話である。
@@ -60,85 +60,85 @@
 </code></pre></div>
 
 
-<h2 id="box-01-style" class="styleguide">c-box-style-(style)</h2>
+<h2 id="box-01-style" class="styleguide">echo-box-style-(style)</h2>
 
 <p>箱の外観を変更する。<br>
-<code>.c-box-(color)</code> が付与されていない場合は背景の色が <code>$default-fade</code> 、罫線の色が <code>$default</code> となる。</p>
+<code>.echo-box-(color)</code> が付与されていない場合は背景の色が <code>$default-fade</code> 、罫線の色が <code>$default</code> となる。</p>
 
 <div class="example">
-<div class="c-box c-box-style-a">
-    <p>c-box-style-a:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+<div class="echo-box echo-box-style-a">
+    <p>echo-box-style-a:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
     吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
     <p>この書生というのは時々我々を捕えて煮て食うという話である。
     しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
 </div>
 
-<div class="c-box c-box-style-b">
-    <p>c-box-style-b:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+<div class="echo-box echo-box-style-b">
+    <p>echo-box-style-b:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
     吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
     <p>この書生というのは時々我々を捕えて煮て食うという話である。
     しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
 </div>
 </div>
 
-<div class="codeblock"><pre><code class="language-markup">&lt;div class="c-box c-box-style-a"&gt;
-    &lt;p&gt;c-box-style-a:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;br&gt;
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-box echo-box-style-a"&gt;
+    &lt;p&gt;echo-box-style-a:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;br&gt;
     吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。&lt;/p&gt;
     &lt;p&gt;この書生というのは時々我々を捕えて煮て食うという話である。
     しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div class="c-box c-box-style-b"&gt;
-    &lt;p&gt;c-box-style-b:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;br&gt;
+&lt;div class="echo-box echo-box-style-b"&gt;
+    &lt;p&gt;echo-box-style-b:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;br&gt;
     吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。&lt;/p&gt;
     &lt;p&gt;この書生というのは時々我々を捕えて煮て食うという話である。
     しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。&lt;/p&gt;
 &lt;/div&gt;</code></pre></div>
 
 
-<h2 id="box-02-color" class="styleguide">c-box-(color)</h2>
+<h2 id="box-02-color" class="styleguide">echo-box-(color)</h2>
 
 <p>箱の色を変更する。(color)は<a href="../docs/design-tokens-color.html">標準のカラーテーブル</a>を参照。</p>
 
 <div class="example">
 
-<div class="c-box c-box-style-a c-box-info">
-    <p>c-box-info:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+<div class="echo-box echo-box-style-a echo-box-info">
+    <p>echo-box-info:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
     吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
     <p>この書生というのは時々我々を捕えて煮て食うという話である。
     しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
 </div>
 
-<div class="c-box c-box-style-b c-box-info">
-    <p>c-box-info:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+<div class="echo-box echo-box-style-b echo-box-info">
+    <p>echo-box-info:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
     吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
     <p>この書生というのは時々我々を捕えて煮て食うという話である。
     しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
 </div>
 
-<div class="c-box c-box-style-a c-box-important">
-    <p>c-box-important:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+<div class="echo-box echo-box-style-a echo-box-important">
+    <p>echo-box-important:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
     吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
     <p>この書生というのは時々我々を捕えて煮て食うという話である。
     しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
 </div>
 
-<div class="c-box c-box-style-b c-box-important">
-    <p>c-box-important:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+<div class="echo-box echo-box-style-b echo-box-important">
+    <p>echo-box-important:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
     吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
     <p>この書生というのは時々我々を捕えて煮て食うという話である。
     しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
 </div>
 
 <div class="u-bg-default u-padding-sm u-margin-bottom-lg">
-<div class="c-box c-box-style-a c-box-inverse">
-    <p>c-box-inverse:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+<div class="echo-box echo-box-style-a echo-box-inverse">
+    <p>echo-box-inverse:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
     吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
     <p>この書生というのは時々我々を捕えて煮て食うという話である。
     しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
 </div>
-<div class="c-box c-box-style-b c-box-inverse u-margin-bottom-0">
-    <p>c-box-inverse:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+<div class="echo-box echo-box-style-b echo-box-inverse u-margin-bottom-0">
+    <p>echo-box-inverse:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
     吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
     <p>この書生というのは時々我々を捕えて煮て食うという話である。
     しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
@@ -147,43 +147,43 @@
 
 </div>
 
-<div class="codeblock"><pre><code class="language-markup">&lt;div class="c-box c-box-style-a c-box-info"&gt;
-    &lt;p&gt;c-box-info:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;br&gt;
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-box echo-box-style-a echo-box-info"&gt;
+    &lt;p&gt;echo-box-info:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;br&gt;
     吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。&lt;/p&gt;
     &lt;p&gt;この書生というのは時々我々を捕えて煮て食うという話である。
     しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div class="c-box c-box-style-b c-box-info"&gt;
-    &lt;p&gt;c-box-info:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;br&gt;
+&lt;div class="echo-box echo-box-style-b echo-box-info"&gt;
+    &lt;p&gt;echo-box-info:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;br&gt;
     吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。&lt;/p&gt;
     &lt;p&gt;この書生というのは時々我々を捕えて煮て食うという話である。
     しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div class="c-box c-box-style-a c-box-important"&gt;
-    &lt;p&gt;c-box-important:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;br&gt;
+&lt;div class="echo-box echo-box-style-a echo-box-important"&gt;
+    &lt;p&gt;echo-box-important:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;br&gt;
     吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。&lt;/p&gt;
     &lt;p&gt;この書生というのは時々我々を捕えて煮て食うという話である。
     しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div class="c-box c-box-style-b c-box-important"&gt;
-    &lt;p&gt;c-box-important:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;br&gt;
+&lt;div class="echo-box echo-box-style-b echo-box-important"&gt;
+    &lt;p&gt;echo-box-important:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;br&gt;
     吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。&lt;/p&gt;
     &lt;p&gt;この書生というのは時々我々を捕えて煮て食うという話である。
     しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class="u-bg-default u-padding-sm u-margin-bottom-lg"&gt;
-&lt;div class="c-box c-box-style-a c-box-inverse"&gt;
-    &lt;p&gt;c-box-inverse:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;br&gt;
+&lt;div class="echo-box echo-box-style-a echo-box-inverse"&gt;
+    &lt;p&gt;echo-box-inverse:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;br&gt;
     吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。&lt;/p&gt;
     &lt;p&gt;この書生というのは時々我々を捕えて煮て食うという話である。
     しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="c-box c-box-style-b c-box-inverse u-margin-bottom-0"&gt;
-    &lt;p&gt;c-box-inverse:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;br&gt;
+&lt;div class="echo-box echo-box-style-b echo-box-inverse u-margin-bottom-0"&gt;
+    &lt;p&gt;echo-box-inverse:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;br&gt;
     吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。&lt;/p&gt;
     &lt;p&gt;この書生というのは時々我々を捕えて煮て食うという話である。
     しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。&lt;/p&gt;

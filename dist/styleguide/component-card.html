@@ -23,31 +23,31 @@
             </div><!-- /.echo-doc-pagehead -->
 
             <article class="echo-doc-post">
-                <div class="echo-doc-post-contents styleguide-contents"><h1 id="card" class="styleguide">c-card</h1>
+                <div class="echo-doc-post-contents styleguide-contents"><h1 id="card" class="styleguide">echo-card</h1>
 
 <p>投稿の繰り返し部分などに使用する、カード状のコンポーネントを表示する。<br>
 <code>.echo-button, .echo-title, .echo-thumbnail</code> を含めることができる。<br>
-リンクを含む場合は <code>.c-card-title</code> に下線が引かれる。リンクが不要な場合であっても <code>.c-card-inner</code> が必須であることに注意する。<br>
+リンクを含む場合は <code>.echo-card-title</code> に下線が引かれる。リンクが不要な場合であっても <code>.echo-card-inner</code> が必須であることに注意する。<br>
 カード背景には、body要素の基本背景色 <code>$body-bg</code> が指定されている。</p>
 
 <h3>補足: カードのフッタ</h3>
 
-<p>カードのフッタ <code>.c-card-inner > .c-card-footer</code> は任意の要素である。<br>
-<code>.c-card-inner</code> の最後の子要素として配置すると、カードがどのような高さであっても内包するコンテンツがカードの下端に接する。</p>
+<p>カードのフッタ <code>.echo-card-inner > .echo-card-footer</code> は任意の要素である。<br>
+<code>.echo-card-inner</code> の最後の子要素として配置すると、カードがどのような高さであっても内包するコンテンツがカードの下端に接する。</p>
 
 <h3>Note: Card footer</h3>
 
-<p>Card footer = <code>.c-card-inner> .c-card-footer</code> is an arbitrary element.<br>
-When placed as the last child element of <code>.c-card-inner</code>, the contained content touches the bottom edge of the card, regardless of the height of the card.</p>
+<p>Card footer = <code>.echo-card-inner> .echo-card-footer</code> is an arbitrary element.<br>
+When placed as the last child element of <code>.echo-card-inner</code>, the contained content touches the bottom edge of the card, regardless of the height of the card.</p>
 
 <div class="example">
 
-<div class="c-card u-margin-bottom-lg">
-    <div class="c-card-inner">
-        <div class="c-card-header">
-            <h3 class="c-card-title echo-title echo-title-level-3 echo-title-style-b">これはカードです</h3>
-        </div><!-- /.c-card-header -->
-        <div class="c-card-object">
+<div class="echo-card u-margin-bottom-lg">
+    <div class="echo-card-inner">
+        <div class="echo-card-header">
+            <h3 class="echo-card-title echo-title echo-title-level-3 echo-title-style-b">これはカードです</h3>
+        </div><!-- /.echo-card-header -->
+        <div class="echo-card-object">
             <figure class="echo-thumbnail echo-thumbnail-ogimage">
                 <picture>
                 <source
@@ -60,17 +60,17 @@ When placed as the last child element of <code>.c-card-inner</code>, the contain
                 <img src="../images/_dummy/image_01.jpg" alt="">
                 </picture>
             </figure><!-- /.echo-thumbnail -->
-        </div><!-- /.c-card-object -->
-        <div class="c-card-contents">
-            <p class="c-card-body">これはカードの本文です。最大幅は480ピクセルとなり、画面中央に配置されます。カードにはヘッダを付けることができます。</p>
-        </div><!-- /.c-card-contents -->
-    </div><!-- /.c-card-inner -->
-</div><!-- /.c-card -->
+        </div><!-- /.echo-card-object -->
+        <div class="echo-card-contents">
+            <p class="echo-card-body">これはカードの本文です。最大幅は480ピクセルとなり、画面中央に配置されます。カードにはヘッダを付けることができます。</p>
+        </div><!-- /.echo-card-contents -->
+    </div><!-- /.echo-card-inner -->
+</div><!-- /.echo-card -->
 
 
-<div class="c-card u-bg-info u-bg-fade u-margin-bottom-lg">
-    <div class="c-card-inner">
-        <div class="c-card-object">
+<div class="echo-card u-bg-info u-bg-fade u-margin-bottom-lg">
+    <div class="echo-card-inner">
+        <div class="echo-card-object">
             <figure class="echo-thumbnail echo-thumbnail-ogimage">
                 <picture>
                 <source
@@ -83,17 +83,17 @@ When placed as the last child element of <code>.c-card-inner</code>, the contain
                 <img src="../images/_dummy/image_03.jpg" alt="">
                 </picture>
             </figure><!-- /.echo-thumbnail -->
-        </div><!-- /.c-card-object -->
-        <div class="c-card-contents">
-            <h3 class="c-card-title echo-title echo-title-level-4 echo-title-style-a">背景に色がついているカードの例です</h3>  
-            <p class="c-card-body">カードの背景に .u-bg-info. u-bg-fade クラスを指定して色を付けています。リンクは指定していません</p>
-        </div><!-- /.c-card-contents -->
-    </div><!-- /.c-card-innner -->
-</div><!-- /.c-card -->
+        </div><!-- /.echo-card-object -->
+        <div class="echo-card-contents">
+            <h3 class="echo-card-title echo-title echo-title-level-4 echo-title-style-a">背景に色がついているカードの例です</h3>  
+            <p class="echo-card-body">カードの背景に .u-bg-info. u-bg-fade クラスを指定して色を付けています。リンクは指定していません</p>
+        </div><!-- /.echo-card-contents -->
+    </div><!-- /.echo-card-innner -->
+</div><!-- /.echo-card -->
 
-<div class="c-card u-bg-default">
-    <div class="c-card-inner">
-        <figure class="c-card-object">
+<div class="echo-card u-bg-default">
+    <div class="echo-card-inner">
+        <figure class="echo-card-object">
             <a href="#" class="echo-thumbnail echo-thumbnail-ogimage">
                 <picture>
                 <source
@@ -106,26 +106,26 @@ When placed as the last child element of <code>.c-card-inner</code>, the contain
                 <img src="../images/_dummy/image_03.jpg" alt="">
                 </picture>
             </a><!-- /.echo-thumbnail -->
-        </figure><!-- /.c-card-object -->
-        <div class="c-card-contents">
-            <h3 class="c-card-title echo-title echo-title-level-4 echo-title-style-a">背景に色がついているカードの例です</h3>  
-            <p class="c-card-body">カードの背景に u-bg-default クラスを指定して色を付けています。<br>
+        </figure><!-- /.echo-card-object -->
+        <div class="echo-card-contents">
+            <h3 class="echo-card-title echo-title echo-title-level-4 echo-title-style-a">背景に色がついているカードの例です</h3>  
+            <p class="echo-card-body">カードの背景に u-bg-default クラスを指定して色を付けています。<br>
             カード全体ではなく、カードの画像とボタンだけがリンク範囲となっています</p>
-        </div><!-- /.c-card-contents -->
-        <div class="c-card-footer">
+        </div><!-- /.echo-card-contents -->
+        <div class="echo-card-footer">
             <a href="#" class="echo-button echo-button-block echo-button-style-b echo-button-inverse echo-button-arrowed-right">ボタン</a>
-        </div><!-- /.c-card-footer -->
-    </div><!-- /.c-card-innner -->
-</div><!-- /.c-card -->
+        </div><!-- /.echo-card-footer -->
+    </div><!-- /.echo-card-innner -->
+</div><!-- /.echo-card -->
 
 </div>
 
-<div class="codeblock"><pre><code class="language-markup">&lt;div class="c-card u-margin-bottom-lg"&gt;
-    &lt;div class="c-card-inner"&gt;
-        &lt;div class="c-card-header"&gt;
-            &lt;h3 class="c-card-title echo-title echo-title-level-3 echo-title-style-b"&gt;これはカードです&lt;/h3&gt;
-        &lt;/div&gt;&lt;!-- /.c-card-header --&gt;
-        &lt;div class="c-card-object"&gt;
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-card u-margin-bottom-lg"&gt;
+    &lt;div class="echo-card-inner"&gt;
+        &lt;div class="echo-card-header"&gt;
+            &lt;h3 class="echo-card-title echo-title echo-title-level-3 echo-title-style-b"&gt;これはカードです&lt;/h3&gt;
+        &lt;/div&gt;&lt;!-- /.echo-card-header --&gt;
+        &lt;div class="echo-card-object"&gt;
             &lt;figure class="echo-thumbnail echo-thumbnail-ogimage"&gt;
                 &lt;picture&gt;
                 &lt;source
@@ -138,19 +138,19 @@ When placed as the last child element of <code>.c-card-inner</code>, the contain
                 &lt;img src="../images/_dummy/image_01.jpg" alt=""&gt;
                 &lt;/picture&gt;
             &lt;/figure&gt;&lt;!-- /.echo-thumbnail --&gt;
-        &lt;/div&gt;&lt;!-- /.c-card-object --&gt;
-        &lt;div class="c-card-contents"&gt;
-            &lt;p class="c-card-body"&gt;これはカードの本文です。最大幅は480ピクセルとなり、画面中央に配置されます。カードにはヘッダを付けることができます。&lt;/p&gt;
-        &lt;/div&gt;&lt;!-- /.c-card-contents --&gt;
-    &lt;/div&gt;&lt;!-- /.c-card-inner --&gt;
-&lt;/div&gt;&lt;!-- /.c-card --&gt;
+        &lt;/div&gt;&lt;!-- /.echo-card-object --&gt;
+        &lt;div class="echo-card-contents"&gt;
+            &lt;p class="echo-card-body"&gt;これはカードの本文です。最大幅は480ピクセルとなり、画面中央に配置されます。カードにはヘッダを付けることができます。&lt;/p&gt;
+        &lt;/div&gt;&lt;!-- /.echo-card-contents --&gt;
+    &lt;/div&gt;&lt;!-- /.echo-card-inner --&gt;
+&lt;/div&gt;&lt;!-- /.echo-card --&gt;
 
 
 &lt;div class="echo-grid-row u-margin-bottom-lg"&gt;
     &lt;div class="echo-grid-col-6 echo-grid-col-md-3"&gt;
-        &lt;div class="c-card"&gt;
-            &lt;a href="#" class="c-card-inner"&gt;
-                &lt;div class="c-card-object"&gt;
+        &lt;div class="echo-card"&gt;
+            &lt;a href="#" class="echo-card-inner"&gt;
+                &lt;div class="echo-card-object"&gt;
                     &lt;figure class="echo-thumbnail echo-thumbnail-16to9"&gt;
                         &lt;picture&gt;
                         &lt;source
@@ -163,22 +163,22 @@ When placed as the last child element of <code>.c-card-inner</code>, the contain
                         &lt;img src="../images/_dummy/image_02.jpg" alt=""&gt;
                         &lt;/picture&gt;
                     &lt;/figure&gt;&lt;!-- /.echo-thumbnail --&gt;
-                &lt;/div&gt;&lt;!-- /.c-card-object --&gt;
-                &lt;div class="c-card-contents"&gt;
-                    &lt;time class="c-card-meta" datetime="2020-12-28T09:00:00+09:00"&gt;2020.12.28&lt;/time&gt;
-                    &lt;h3 class="c-card-title echo-title echo-title-level-4 echo-title-style-a"&gt;よくあるカラムレイアウトの例です&lt;/h3&gt;
-                    &lt;p class="c-card-body"&gt;このカードにはフッタがあります。フッタ内のボタンは、カードがどのような高さであっても、カードの下端に配置されます。&lt;/p&gt;
-                &lt;/div&gt;&lt;!-- /.c-card-contents --&gt;
-                &lt;div class="c-card-footer"&gt;
+                &lt;/div&gt;&lt;!-- /.echo-card-object --&gt;
+                &lt;div class="echo-card-contents"&gt;
+                    &lt;time class="echo-card-meta" datetime="2020-12-28T09:00:00+09:00"&gt;2020.12.28&lt;/time&gt;
+                    &lt;h3 class="echo-card-title echo-title echo-title-level-4 echo-title-style-a"&gt;よくあるカラムレイアウトの例です&lt;/h3&gt;
+                    &lt;p class="echo-card-body"&gt;このカードにはフッタがあります。フッタ内のボタンは、カードがどのような高さであっても、カードの下端に配置されます。&lt;/p&gt;
+                &lt;/div&gt;&lt;!-- /.echo-card-contents --&gt;
+                &lt;div class="echo-card-footer"&gt;
                     &lt;span class="echo-button echo-button-block echo-button-style-b echo-button-arrowed-right"&gt;ボタン&lt;/span&gt;
-                &lt;/div&gt;&lt;!-- /.c-card-footer --&gt;
-            &lt;/a&gt;&lt;!-- /.c-card-innner --&gt;
-        &lt;/div&gt;&lt;!-- /.c-card --&gt;
+                &lt;/div&gt;&lt;!-- /.echo-card-footer --&gt;
+            &lt;/a&gt;&lt;!-- /.echo-card-innner --&gt;
+        &lt;/div&gt;&lt;!-- /.echo-card --&gt;
     &lt;/div&gt;&lt;!-- /.echo-grid-col --&gt;
     &lt;div class="echo-grid-col-6 echo-grid-col-md-3"&gt;
-        &lt;div class="c-card"&gt;
-            &lt;a href="#" class="c-card-inner"&gt;
-                &lt;div class="c-card-object"&gt;
+        &lt;div class="echo-card"&gt;
+            &lt;a href="#" class="echo-card-inner"&gt;
+                &lt;div class="echo-card-object"&gt;
                     &lt;figure class="echo-thumbnail echo-thumbnail-16to9"&gt;
                         &lt;picture&gt;
                         &lt;source
@@ -191,22 +191,22 @@ When placed as the last child element of <code>.c-card-inner</code>, the contain
                         &lt;img src="../images/_dummy/image_02.jpg" alt=""&gt;
                         &lt;/picture&gt;
                     &lt;/figure&gt;&lt;!-- /.echo-thumbnail --&gt;
-                &lt;/div&gt;&lt;!-- /.c-card-object --&gt;
-                &lt;div class="c-card-contents"&gt;
-                    &lt;time class="c-card-meta" datetime="2020-12-28T09:00:00+09:00"&gt;2020.12.28&lt;/time&gt;
-                    &lt;h3 class="c-card-title echo-title echo-title-level-4 echo-title-style-a"&gt;カード全体をリンク範囲にする場合&lt;/h3&gt;
-                    &lt;p class="c-card-body"&gt;.c-card-innner をa要素でマークアップすると、カード全体がリンク範囲になります。カードのどこかにカーソルを置くと、内包しているサムネイルとボタンの外観も変わります。&lt;/p&gt;
-                &lt;/div&gt;&lt;!-- /.c-card-contents --&gt;
-                &lt;div class="c-card-footer"&gt;
+                &lt;/div&gt;&lt;!-- /.echo-card-object --&gt;
+                &lt;div class="echo-card-contents"&gt;
+                    &lt;time class="echo-card-meta" datetime="2020-12-28T09:00:00+09:00"&gt;2020.12.28&lt;/time&gt;
+                    &lt;h3 class="echo-card-title echo-title echo-title-level-4 echo-title-style-a"&gt;カード全体をリンク範囲にする場合&lt;/h3&gt;
+                    &lt;p class="echo-card-body"&gt;.echo-card-innner をa要素でマークアップすると、カード全体がリンク範囲になります。カードのどこかにカーソルを置くと、内包しているサムネイルとボタンの外観も変わります。&lt;/p&gt;
+                &lt;/div&gt;&lt;!-- /.echo-card-contents --&gt;
+                &lt;div class="echo-card-footer"&gt;
                     &lt;span class="echo-button echo-button-block echo-button-style-b echo-button-arrowed-right"&gt;ボタン&lt;/span&gt;
-                &lt;/div&gt;&lt;!-- /.c-card-footer --&gt;
-            &lt;/a&gt;&lt;!-- /.c-card-innner --&gt;
-        &lt;/div&gt;&lt;!-- /.c-card --&gt;
+                &lt;/div&gt;&lt;!-- /.echo-card-footer --&gt;
+            &lt;/a&gt;&lt;!-- /.echo-card-innner --&gt;
+        &lt;/div&gt;&lt;!-- /.echo-card --&gt;
     &lt;/div&gt;&lt;!-- /.echo-grid-col --&gt;
     &lt;div class="echo-grid-col-6 echo-grid-col-md-3"&gt;
-        &lt;div class="c-card"&gt;
-            &lt;a href="#" class="c-card-inner"&gt;
-                &lt;div class="c-card-object"&gt;
+        &lt;div class="echo-card"&gt;
+            &lt;a href="#" class="echo-card-inner"&gt;
+                &lt;div class="echo-card-object"&gt;
                     &lt;figure class="echo-thumbnail echo-thumbnail-16to9"&gt;
                         &lt;picture&gt;
                         &lt;source
@@ -219,22 +219,22 @@ When placed as the last child element of <code>.c-card-inner</code>, the contain
                         &lt;img src="../images/_dummy/image_02.jpg" alt=""&gt;
                         &lt;/picture&gt;
                     &lt;/figure&gt;&lt;!-- /.echo-thumbnail --&gt;
-                &lt;/div&gt;&lt;!-- /.c-card-object --&gt;
-                &lt;div class="c-card-contents"&gt;
-                    &lt;time class="c-card-meta" datetime="2020-12-28T09:00:00+09:00"&gt;2020.12.28&lt;/time&gt;
-                    &lt;h3 class="c-card-title echo-title echo-title-level-4 echo-title-style-a"&gt;グリッドレイアウト&lt;/h3&gt;
-                    &lt;p class="c-card-body"&gt;echo-grid-row, echo-grid-col を使用して4カラムに並べました。グリッド内に配置した場合は最大幅が解除され、常にカラムの幅いっぱいに広がります。&lt;/p&gt;
-                &lt;/div&gt;&lt;!-- /.c-card-contents --&gt;
-                &lt;div class="c-card-footer"&gt;
+                &lt;/div&gt;&lt;!-- /.echo-card-object --&gt;
+                &lt;div class="echo-card-contents"&gt;
+                    &lt;time class="echo-card-meta" datetime="2020-12-28T09:00:00+09:00"&gt;2020.12.28&lt;/time&gt;
+                    &lt;h3 class="echo-card-title echo-title echo-title-level-4 echo-title-style-a"&gt;グリッドレイアウト&lt;/h3&gt;
+                    &lt;p class="echo-card-body"&gt;echo-grid-row, echo-grid-col を使用して4カラムに並べました。グリッド内に配置した場合は最大幅が解除され、常にカラムの幅いっぱいに広がります。&lt;/p&gt;
+                &lt;/div&gt;&lt;!-- /.echo-card-contents --&gt;
+                &lt;div class="echo-card-footer"&gt;
                     &lt;span class="echo-button echo-button-block echo-button-style-b echo-button-arrowed-right"&gt;ボタン&lt;/span&gt;
-                &lt;/div&gt;&lt;!-- /.c-card-footer --&gt;
-            &lt;/a&gt;&lt;!-- /.c-card-innner --&gt;
-        &lt;/div&gt;&lt;!-- /.c-card --&gt;
+                &lt;/div&gt;&lt;!-- /.echo-card-footer --&gt;
+            &lt;/a&gt;&lt;!-- /.echo-card-innner --&gt;
+        &lt;/div&gt;&lt;!-- /.echo-card --&gt;
     &lt;/div&gt;&lt;!-- /.echo-grid-col --&gt;
     &lt;div class="echo-grid-col-6 echo-grid-col-md-3"&gt;
-        &lt;div class="c-card"&gt;
-            &lt;a href="#" class="c-card-inner"&gt;
-                &lt;div class="c-card-object"&gt;
+        &lt;div class="echo-card"&gt;
+            &lt;a href="#" class="echo-card-inner"&gt;
+                &lt;div class="echo-card-object"&gt;
                     &lt;figure class="echo-thumbnail echo-thumbnail-16to9"&gt;
                         &lt;picture&gt;
                         &lt;source
@@ -247,23 +247,23 @@ When placed as the last child element of <code>.c-card-inner</code>, the contain
                         &lt;img src="../images/_dummy/image_02.jpg" alt=""&gt;
                         &lt;/picture&gt;
                     &lt;/figure&gt;&lt;!-- /.echo-thumbnail --&gt;
-                &lt;/div&gt;&lt;!-- /.c-card-object --&gt;
-                &lt;div class="c-card-contents"&gt;
-                    &lt;time class="c-card-meta" datetime="2020-12-28T09:00:00+09:00"&gt;2020.12.28&lt;/time&gt;
-                    &lt;h3 class="c-card-title echo-title echo-title-level-4 echo-title-style-a"&gt;コンテンツが長すぎる_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。&lt;/h3&gt;
-                    &lt;p class="c-card-body"&gt;何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。&lt;/p&gt;
-                &lt;/div&gt;&lt;!-- /.c-card-contents --&gt;
-                &lt;div class="c-card-footer"&gt;
+                &lt;/div&gt;&lt;!-- /.echo-card-object --&gt;
+                &lt;div class="echo-card-contents"&gt;
+                    &lt;time class="echo-card-meta" datetime="2020-12-28T09:00:00+09:00"&gt;2020.12.28&lt;/time&gt;
+                    &lt;h3 class="echo-card-title echo-title echo-title-level-4 echo-title-style-a"&gt;コンテンツが長すぎる_吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。&lt;/h3&gt;
+                    &lt;p class="echo-card-body"&gt;何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。&lt;/p&gt;
+                &lt;/div&gt;&lt;!-- /.echo-card-contents --&gt;
+                &lt;div class="echo-card-footer"&gt;
                     &lt;span class="echo-button echo-button-block echo-button-style-b echo-button-arrowed-right"&gt;ボタン&lt;/span&gt;
-                &lt;/div&gt;&lt;!-- /.c-card-footer --&gt;
-            &lt;/a&gt;&lt;!-- /.c-card-innner --&gt;
-        &lt;/div&gt;&lt;!-- /.c-card --&gt;
+                &lt;/div&gt;&lt;!-- /.echo-card-footer --&gt;
+            &lt;/a&gt;&lt;!-- /.echo-card-innner --&gt;
+        &lt;/div&gt;&lt;!-- /.echo-card --&gt;
     &lt;/div&gt;&lt;!-- /.echo-grid-col --&gt;
 &lt;/div&gt;&lt;!-- .echo-grid-row --&gt;
 
-&lt;div class="c-card u-bg-info u-bg-fade u-margin-bottom-lg"&gt;
-    &lt;div class="c-card-inner"&gt;
-        &lt;div class="c-card-object"&gt;
+&lt;div class="echo-card u-bg-info u-bg-fade u-margin-bottom-lg"&gt;
+    &lt;div class="echo-card-inner"&gt;
+        &lt;div class="echo-card-object"&gt;
             &lt;figure class="echo-thumbnail echo-thumbnail-ogimage"&gt;
                 &lt;picture&gt;
                 &lt;source
@@ -276,17 +276,17 @@ When placed as the last child element of <code>.c-card-inner</code>, the contain
                 &lt;img src="../images/_dummy/image_03.jpg" alt=""&gt;
                 &lt;/picture&gt;
             &lt;/figure&gt;&lt;!-- /.echo-thumbnail --&gt;
-        &lt;/div&gt;&lt;!-- /.c-card-object --&gt;
-        &lt;div class="c-card-contents"&gt;
-            &lt;h3 class="c-card-title echo-title echo-title-level-4 echo-title-style-a"&gt;背景に色がついているカードの例です&lt;/h3&gt;  
-            &lt;p class="c-card-body"&gt;カードの背景に .u-bg-info.u-bg-fade クラスを指定して色を付けています。リンクは指定していません&lt;/p&gt;
-        &lt;/div&gt;&lt;!-- /.c-card-contents --&gt;
-    &lt;/div&gt;&lt;!-- /.c-card-innner --&gt;
-&lt;/div&gt;&lt;!-- /.c-card --&gt;
+        &lt;/div&gt;&lt;!-- /.echo-card-object --&gt;
+        &lt;div class="echo-card-contents"&gt;
+            &lt;h3 class="echo-card-title echo-title echo-title-level-4 echo-title-style-a"&gt;背景に色がついているカードの例です&lt;/h3&gt;  
+            &lt;p class="echo-card-body"&gt;カードの背景に .u-bg-info.u-bg-fade クラスを指定して色を付けています。リンクは指定していません&lt;/p&gt;
+        &lt;/div&gt;&lt;!-- /.echo-card-contents --&gt;
+    &lt;/div&gt;&lt;!-- /.echo-card-innner --&gt;
+&lt;/div&gt;&lt;!-- /.echo-card --&gt;
 
-&lt;div class="c-card u-bg-default"&gt;
-    &lt;div class="c-card-inner"&gt;
-        &lt;figure class="c-card-object"&gt;
+&lt;div class="echo-card u-bg-default"&gt;
+    &lt;div class="echo-card-inner"&gt;
+        &lt;figure class="echo-card-object"&gt;
             &lt;a href="#" class="echo-thumbnail echo-thumbnail-ogimage"&gt;
                 &lt;picture&gt;
                 &lt;source
@@ -299,17 +299,17 @@ When placed as the last child element of <code>.c-card-inner</code>, the contain
                 &lt;img src="../images/_dummy/image_03.jpg" alt=""&gt;
                 &lt;/picture&gt;
             &lt;/a&gt;&lt;!-- /.echo-thumbnail --&gt;
-        &lt;/figure&gt;&lt;!-- /.c-card-object --&gt;
-        &lt;div class="c-card-contents"&gt;
-            &lt;h3 class="c-card-title echo-title echo-title-level-4 echo-title-style-a"&gt;背景に色がついているカードの例です&lt;/h3&gt;  
-            &lt;p class="c-card-body"&gt;カードの背景に u-bg-default クラスを指定して色を付けています。&lt;br&gt;
+        &lt;/figure&gt;&lt;!-- /.echo-card-object --&gt;
+        &lt;div class="echo-card-contents"&gt;
+            &lt;h3 class="echo-card-title echo-title echo-title-level-4 echo-title-style-a"&gt;背景に色がついているカードの例です&lt;/h3&gt;  
+            &lt;p class="echo-card-body"&gt;カードの背景に u-bg-default クラスを指定して色を付けています。&lt;br&gt;
             カード全体ではなく、カードの画像とボタンだけがリンク範囲となっています&lt;/p&gt;
-        &lt;/div&gt;&lt;!-- /.c-card-contents --&gt;
-        &lt;div class="c-card-footer"&gt;
+        &lt;/div&gt;&lt;!-- /.echo-card-contents --&gt;
+        &lt;div class="echo-card-footer"&gt;
             &lt;a href="#" class="echo-button echo-button-block echo-button-style-b echo-button-inverse echo-button-arrowed-right"&gt;ボタン&lt;/a&gt;
-        &lt;/div&gt;&lt;!-- /.c-card-footer --&gt;
-    &lt;/div&gt;&lt;!-- /.c-card-innner --&gt;
-&lt;/div&gt;&lt;!-- /.c-card --&gt;
+        &lt;/div&gt;&lt;!-- /.echo-card-footer --&gt;
+    &lt;/div&gt;&lt;!-- /.echo-card-innner --&gt;
+&lt;/div&gt;&lt;!-- /.echo-card --&gt;
 </code></pre></div>
 
 

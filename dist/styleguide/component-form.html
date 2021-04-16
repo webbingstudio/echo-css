@@ -25,40 +25,40 @@
             <nav class="echo-doc-anchor">
                 <ul class="echo-list echo-list-horizontal">
                         
-                    <li class="echo-list-item"><a href="#form" class="js-scrollto">c-form</a></li>
+                    <li class="echo-list-item"><a href="#form" class="js-scrollto">echo-form</a></li>
                     
-                    <li class="echo-list-item"><a href="#form-01-inline" class="js-scrollto">c-form-inline</a></li>
+                    <li class="echo-list-item"><a href="#form-01-inline" class="js-scrollto">echo-form-inline</a></li>
                     
-                    <li class="echo-list-item"><a href="#form-02-grow" class="js-scrollto">c-form-grow</a></li>
+                    <li class="echo-list-item"><a href="#form-02-grow" class="js-scrollto">echo-form-grow</a></li>
                     
-                    <li class="echo-list-item"><a href="#form-03-append" class="js-scrollto">c-form-append</a></li>
+                    <li class="echo-list-item"><a href="#form-03-append" class="js-scrollto">echo-form-append</a></li>
                     
-                    <li class="echo-list-item"><a href="#form-04-error" class="js-scrollto">c-form-error</a></li>
+                    <li class="echo-list-item"><a href="#form-04-error" class="js-scrollto">echo-form-error</a></li>
                     
-                    <li class="echo-list-item"><a href="#form-05-submit" class="js-scrollto">c-form-submit</a></li>
+                    <li class="echo-list-item"><a href="#form-05-submit" class="js-scrollto">echo-form-submit</a></li>
                     
-                    <li class="echo-list-item"><a href="#form-06-submit-2col" class="js-scrollto">c-form-submit-2col</a></li>
+                    <li class="echo-list-item"><a href="#form-06-submit-2col" class="js-scrollto">echo-form-submit-2col</a></li>
                     
                 </ul>
             </nav>
             
 
             <article class="echo-doc-post">
-                <div class="echo-doc-post-contents styleguide-contents"><h1 id="form" class="styleguide">c-form</h1>
+                <div class="echo-doc-post-contents styleguide-contents"><h1 id="form" class="styleguide">echo-form</h1>
 
 <p>システムで可能な限りフォームの各入力セットを包括し、下余白を確保する。<br>
 フォーム内のパーツは <code>.echo-input, .echo-radio, .echo-select, .echo-checkbox, .echo-button</code> を参照。</p>
 
-<p>テキストボックスなどの幅は固定していない。幅を伸ばす場合は、別途スタイルを追加するか、後述の<code>.c-form-inline, .c-form-grow</code>を併用すること。</p>
+<p>テキストボックスなどの幅は固定していない。幅を伸ばす場合は、別途スタイルを追加するか、後述の<code>.echo-form-inline, .echo-form-grow</code>を併用すること。</p>
 
 <div class="example">
 
-<div class="c-form">
+<div class="echo-form">
     <label for="demo01-01" class="c-forecho-label">氏名</label>
     <input type="text" class="echo-input" id="demo01-01" name="demo00" size="30" value="" placeholder="山田一郎">
-</div><!-- /.c-form -->
+</div><!-- /.echo-form -->
 
-<div class="c-form">
+<div class="echo-form">
     <span class="c-forecho-label">好きな食べ物（いくつでも選択できます）</span>
     <label class="echo-checkbox u-margin-right-md" for="checkbox1"><input type="checkbox" name="checkbox[]" id="checkbox1" value="りんご"><span class="echo-checkbox-icon"></span><span class="echo-checkbox-label">りんご</span></label>
     <label class="echo-checkbox u-margin-right-md" for="checkbox2"><input type="checkbox" name="checkbox[]" id="checkbox2" value="バナナ"><span class="echo-checkbox-icon"></span><span class="echo-checkbox-label">バナナ</span></label>
@@ -67,9 +67,9 @@
     <label class="echo-checkbox u-margin-right-md" for="checkbox5"><input type="checkbox" name="checkbox[]" id="checkbox5" value="キウイ"><span class="echo-checkbox-icon"></span><span class="echo-checkbox-label">キウイ</span></label>
     <label class="echo-checkbox u-margin-right-md" for="checkbox6"><input type="checkbox" name="checkbox[]" id="checkbox6" value="かき"><span class="echo-checkbox-icon"></span><span class="echo-checkbox-label">かき</span></label>
     <label class="echo-checkbox" for="checkbox7"><input type="checkbox" name="checkbox[]" id="checkbox7" value="メロン"><span class="echo-checkbox-icon"></span><span class="echo-checkbox-label">メロン</span></label>
-</div><!-- /.c-form -->
+</div><!-- /.echo-form -->
 
-<div class="c-form">
+<div class="echo-form">
     <span class="c-forecho-label">好きな映画</span>
     <div class="echo-select">
         <select>
@@ -79,21 +79,21 @@
             <option value="schindler">シンドラーのリスト</option>
         </select>
     </div><!-- /.echo-select -->
-</div><!-- /.c-form -->
+</div><!-- /.echo-form -->
 
-<div class="c-form">
+<div class="echo-form">
     <label for="demo01-02" class="c-forecho-label">メッセージ</label>
     <textarea id="demo01-02" class="echo-input" name="demo02" rows="5" cols="50" placeholder="メッセージをどうぞ"></textarea>
-</div><!-- /.c-form -->
+</div><!-- /.echo-form -->
 
 </div>
 
-<div class="codeblock"><pre><code class="language-markup">&lt;div class="c-form"&gt;
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-form"&gt;
     &lt;label for="demo01-01" class="c-forecho-label"&gt;氏名&lt;/label&gt;
     &lt;input type="text" class="echo-input" id="demo01-01" name="demo00" size="30" value="" placeholder="山田一郎"&gt;
-&lt;/div&gt;&lt;!-- /.c-form --&gt;
+&lt;/div&gt;&lt;!-- /.echo-form --&gt;
 
-&lt;div class="c-form"&gt;
+&lt;div class="echo-form"&gt;
     &lt;span class="c-forecho-label"&gt;好きな食べ物（いくつでも選択できます）&lt;/span&gt;
     &lt;label class="echo-checkbox u-margin-right-md" for="checkbox1"&gt;&lt;input type="checkbox" name="checkbox[]" id="checkbox1" value="りんご"&gt;&lt;span class="echo-checkbox-icon"&gt;&lt;/span&gt;&lt;span class="echo-checkbox-label"&gt;りんご&lt;/span&gt;&lt;/label&gt;
     &lt;label class="echo-checkbox u-margin-right-md" for="checkbox2"&gt;&lt;input type="checkbox" name="checkbox[]" id="checkbox2" value="バナナ"&gt;&lt;span class="echo-checkbox-icon"&gt;&lt;/span&gt;&lt;span class="echo-checkbox-label"&gt;バナナ&lt;/span&gt;&lt;/label&gt;
@@ -102,9 +102,9 @@
     &lt;label class="echo-checkbox u-margin-right-md" for="checkbox5"&gt;&lt;input type="checkbox" name="checkbox[]" id="checkbox5" value="キウイ"&gt;&lt;span class="echo-checkbox-icon"&gt;&lt;/span&gt;&lt;span class="echo-checkbox-label"&gt;キウイ&lt;/span&gt;&lt;/label&gt;
     &lt;label class="echo-checkbox u-margin-right-md" for="checkbox6"&gt;&lt;input type="checkbox" name="checkbox[]" id="checkbox6" value="かき"&gt;&lt;span class="echo-checkbox-icon"&gt;&lt;/span&gt;&lt;span class="echo-checkbox-label"&gt;かき&lt;/span&gt;&lt;/label&gt;
     &lt;label class="echo-checkbox" for="checkbox7"&gt;&lt;input type="checkbox" name="checkbox[]" id="checkbox7" value="メロン"&gt;&lt;span class="echo-checkbox-icon"&gt;&lt;/span&gt;&lt;span class="echo-checkbox-label"&gt;メロン&lt;/span&gt;&lt;/label&gt;
-&lt;/div&gt;&lt;!-- /.c-form --&gt;
+&lt;/div&gt;&lt;!-- /.echo-form --&gt;
 
-&lt;div class="c-form"&gt;
+&lt;div class="echo-form"&gt;
     &lt;span class="c-forecho-label"&gt;好きな映画&lt;/span&gt;
     &lt;div class="echo-select"&gt;
         &lt;select&gt;
@@ -114,22 +114,22 @@
             &lt;option value="schindler"&gt;シンドラーのリスト&lt;/option&gt;
         &lt;/select&gt;
     &lt;/div&gt;&lt;!-- /.echo-select --&gt;
-&lt;/div&gt;&lt;!-- /.c-form --&gt;
+&lt;/div&gt;&lt;!-- /.echo-form --&gt;
 
-&lt;div class="c-form"&gt;
+&lt;div class="echo-form"&gt;
     &lt;label for="demo01-02" class="c-forecho-label"&gt;メッセージ&lt;/label&gt;
     &lt;textarea id="demo01-02" class="echo-input" name="demo02" rows="5" cols="50" placeholder="メッセージをどうぞ"&gt;&lt;/textarea&gt;
-&lt;/div&gt;&lt;!-- /.c-form --&gt;</code></pre></div>
+&lt;/div&gt;&lt;!-- /.echo-form --&gt;</code></pre></div>
 
 
-<h2 id="form-01-inline" class="styleguide">c-form-inline</h2>
+<h2 id="form-01-inline" class="styleguide">echo-form-inline</h2>
 
 <p>フォームの入力欄とボタン、またはラベルをインラインで表示する。<br>
 <strong>複数並べた場合の、モバイル環境でのオーバーフローを想定していない</strong>ことに注意。</p>
 
 <div class="example">
 
-<div class="c-form c-form-inline">
+<div class="echo-form echo-form-inline">
     <label for="demo02-01" class="c-forecho-label">姓</label>
     <input type="text" class="echo-input" id="demo02-01" name="demo02_01" size="20" value="" placeholder="山田">
     <label for="demo02-02" class="c-forecho-label">名</label>
@@ -143,20 +143,20 @@
             <option value="schindler">シンドラーのリスト</option>
         </select>
     </div><!-- /.echo-select -->
-</div><!-- /.c-form -->
+</div><!-- /.echo-form -->
 
-<div class="c-form c-form-inline">
+<div class="echo-form echo-form-inline">
     <label for="demo02-03" class="c-forecho-label">アカウント名</label>
     <input type="text" class="echo-input" id="demo02-03" name="demo02_03" size="20" value="" placeholder="山田">
     <label for="demo02-04" class="c-forecho-label">パスワード</label>
     <input type="text" class="echo-input" id="demo02-04" name="demo02_04" size="20" value="" placeholder="一郎">
     <button class="echo-button echo-button-style-a echo-button-info">ログイン</button>
-</div><!-- /.c-form -->
+</div><!-- /.echo-form -->
 
 
 </div>
 
-<div class="codeblock"><pre><code class="language-markup">&lt;div class="c-form c-form-inline"&gt;
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-form echo-form-inline"&gt;
     &lt;label for="demo02-01" class="c-forecho-label"&gt;姓&lt;/label&gt;
     &lt;input type="text" class="echo-input" id="demo02-01" name="demo02_01" size="20" value="" placeholder="山田"&gt;
     &lt;label for="demo02-02" class="c-forecho-label"&gt;名&lt;/label&gt;
@@ -170,25 +170,25 @@
             &lt;option value="schindler"&gt;シンドラーのリスト&lt;/option&gt;
         &lt;/select&gt;
     &lt;/div&gt;&lt;!-- /.echo-select --&gt;
-&lt;/div&gt;&lt;!-- /.c-form --&gt;
+&lt;/div&gt;&lt;!-- /.echo-form --&gt;
 
-&lt;div class="c-form c-form-inline"&gt;
+&lt;div class="echo-form echo-form-inline"&gt;
     &lt;label for="demo02-03" class="c-forecho-label"&gt;アカウント名&lt;/label&gt;
     &lt;input type="text" class="echo-input" id="demo02-03" name="demo02_03" size="20" value="" placeholder="山田"&gt;
     &lt;label for="demo02-04" class="c-forecho-label"&gt;パスワード&lt;/label&gt;
     &lt;input type="text" class="echo-input" id="demo02-04" name="demo02_04" size="20" value="" placeholder="一郎"&gt;
     &lt;button class="echo-button echo-button-style-a echo-button-info"&gt;ログイン&lt;/button&gt;
-&lt;/div&gt;&lt;!-- /.c-form --&gt;</code></pre></div>
+&lt;/div&gt;&lt;!-- /.echo-form --&gt;</code></pre></div>
 
 
-<h2 id="form-02-grow" class="styleguide">c-form-grow</h2>
+<h2 id="form-02-grow" class="styleguide">echo-form-grow</h2>
 
-<p><code>.c-form-inline</code>と併用する。<br>
-フォームの入力欄が <code>.c-form</code> 全体を埋めるように伸びる。</p>
+<p><code>.echo-form-inline</code>と併用する。<br>
+フォームの入力欄が <code>.echo-form</code> 全体を埋めるように伸びる。</p>
 
 <div class="example">
 
-<div class="c-form c-form-inline c-form-grow">
+<div class="echo-form echo-form-inline echo-form-grow">
     <label for="demo02-01" class="c-forecho-label">姓</label>
     <input type="text" class="echo-input" id="demo02-01" name="demo02_01" size="20" value="" placeholder="山田">
     <label for="demo02-02" class="c-forecho-label">名</label>
@@ -202,20 +202,20 @@
             <option value="schindler">シンドラーのリスト</option>
         </select>
     </div><!-- /.echo-select -->
-</div><!-- /.c-form -->
+</div><!-- /.echo-form -->
 
-<div class="c-form c-form-inline c-form-grow">
+<div class="echo-form echo-form-inline echo-form-grow">
     <label for="demo02-03" class="c-forecho-label">アカウント名</label>
     <input type="text" class="echo-input" id="demo02-03" name="demo02_03" size="20" value="" placeholder="山田">
     <label for="demo02-04" class="c-forecho-label">パスワード</label>
     <input type="text" class="echo-input" id="demo02-04" name="demo02_04" size="20" value="" placeholder="一郎">
     <button class="echo-button echo-button-style-a echo-button-info">ログイン</button>
-</div><!-- /.c-form -->
+</div><!-- /.echo-form -->
 
 </div>
 
 
-<div class="codeblock"><pre><code class="language-markup">&lt;div class="c-form c-form-inline c-form-grow"&gt;
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-form echo-form-inline echo-form-grow"&gt;
     &lt;label for="demo02-01" class="c-forecho-label"&gt;姓&lt;/label&gt;
     &lt;input type="text" class="echo-input" id="demo02-01" name="demo02_01" size="20" value="" placeholder="山田"&gt;
     &lt;label for="demo02-02" class="c-forecho-label"&gt;名&lt;/label&gt;
@@ -229,93 +229,93 @@
             &lt;option value="schindler"&gt;シンドラーのリスト&lt;/option&gt;
         &lt;/select&gt;
     &lt;/div&gt;&lt;!-- /.echo-select --&gt;
-&lt;/div&gt;&lt;!-- /.c-form --&gt;
+&lt;/div&gt;&lt;!-- /.echo-form --&gt;
 
-&lt;div class="c-form c-form-inline c-form-grow"&gt;
+&lt;div class="echo-form echo-form-inline echo-form-grow"&gt;
     &lt;label for="demo02-03" class="c-forecho-label"&gt;アカウント名&lt;/label&gt;
     &lt;input type="text" class="echo-input" id="demo02-03" name="demo02_03" size="20" value="" placeholder="山田"&gt;
     &lt;label for="demo02-04" class="c-forecho-label"&gt;パスワード&lt;/label&gt;
     &lt;input type="text" class="echo-input" id="demo02-04" name="demo02_04" size="20" value="" placeholder="一郎"&gt;
     &lt;button class="echo-button echo-button-style-a echo-button-info"&gt;ログイン&lt;/button&gt;
-&lt;/div&gt;&lt;!-- /.c-form --&gt;</code></pre></div>
+&lt;/div&gt;&lt;!-- /.echo-form --&gt;</code></pre></div>
 
-<h2 id="form-03-append" class="styleguide">c-form-append</h2>
+<h2 id="form-03-append" class="styleguide">echo-form-append</h2>
 
-<p><code>.c-form-inline</code>と併用する。<br>
+<p><code>.echo-form-inline</code>と併用する。<br>
 <code>.echo-input</code> に <code>.echo-button</code> が接していた場合は角丸を解除する。</p>
 
 <div class="example">
 
-<div class="c-form c-form-inline c-form-append">
+<div class="echo-form echo-form-inline echo-form-append">
     <input type="text" class="echo-input" name="search" size="30" placeholder="Keyword">
     <button class="echo-button echo-button-style-a">検索</button>
-</div><!-- /.c-form -->
+</div><!-- /.echo-form -->
 
 </div>
 
-<div class="codeblock"><pre><code class="language-markup">&lt;div class="c-form c-form-inline c-form-append"&gt;
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-form echo-form-inline echo-form-append"&gt;
     &lt;input type="text" class="echo-input" name="search" size="30" placeholder="Keyword"&gt;
     &lt;button class="echo-button echo-button-style-a"&gt;検索&lt;/button&gt;
-&lt;/div&gt;&lt;!-- /.c-form --&gt;</code></pre></div>
+&lt;/div&gt;&lt;!-- /.echo-form --&gt;</code></pre></div>
 
 
-<h1 id="form-04-error" class="styleguide">c-form-error</h1>
+<h1 id="form-04-error" class="styleguide">echo-form-error</h1>
 
 <p>フォームの入力を間違えたときの補助テキストを表示する。文字色は <code>$important</code> となる。</p>
 
 <div class="example">
 
-<div class="c-form c-form-inline">
+<div class="echo-form echo-form-inline">
     <label for="demo01-01" class="c-forecho-label">フリガナ</label>
     <input type="text" class="echo-input is-error" id="demo01-01" name="demo00" size="30" value="山田一郎">
-    <p class="c-form-error">フリガナはカタカナで入力してください。</p>
-</div><!-- /.c-form -->
+    <p class="echo-form-error">フリガナはカタカナで入力してください。</p>
+</div><!-- /.echo-form -->
 
 </div>
 
-<div class="codeblock"><pre><code class="language-markup">&lt;div class="c-form c-form-inline"&gt;
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-form echo-form-inline"&gt;
     &lt;label for="demo01-01" class="c-forecho-label"&gt;フリガナ&lt;/label&gt;
     &lt;input type="text" class="echo-input is-error" id="demo01-01" name="demo00" size="30" value="山田一郎"&gt;
-    &lt;p class="c-form-error"&gt;フリガナはカタカナで入力してください。&lt;/p&gt;
-&lt;/div&gt;&lt;!-- /.c-form --&gt;</code></pre></div>
+    &lt;p class="echo-form-error"&gt;フリガナはカタカナで入力してください。&lt;/p&gt;
+&lt;/div&gt;&lt;!-- /.echo-form --&gt;</code></pre></div>
 
 
-<h1 id="form-05-submit" class="styleguide">c-form-submit</h1>
+<h1 id="form-05-submit" class="styleguide">echo-form-submit</h1>
 
 <p>フォームの送信ボタンを、上余白を確保しつつ表示する。 <code>.echo-button-xl</code> の使用が望ましい。</p>
 
 <div class="example">
 
-<div class="c-form-submit">
+<div class="echo-form-submit">
     <input type="submit" class="echo-button echo-button-style-a echo-button-xl" value="入力内容の確認">
-</div><!-- /.c-form-submit -->
+</div><!-- /.echo-form-submit -->
 
 </div>
 
-<div class="codeblock"><pre><code class="language-markup">&lt;div class="c-form-submit"&gt;
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-form-submit"&gt;
     &lt;input type="submit" class="echo-button echo-button-style-a echo-button-xl" value="入力内容の確認"&gt;
-&lt;/div&gt;&lt;!-- /.c-form-submit --&gt;</code></pre></div>
+&lt;/div&gt;&lt;!-- /.echo-form-submit --&gt;</code></pre></div>
 
 
-<h1 id="form-06-submit-2col" class="styleguide">c-form-submit-2col</h1>
+<h1 id="form-06-submit-2col" class="styleguide">echo-form-submit-2col</h1>
 
-<p>ボタンを複数個表示する場合に、<code>.c-form-submit</code> と併用する。<br>
+<p>ボタンを複数個表示する場合に、<code>.echo-form-submit</code> と併用する。<br>
 ブレークポイントが <code>md</code> 以上のときにボタンが横並びとなり、かつ <code>lg</code> 以上のときに、<strong>最後のボタン以外</strong>の幅を詰め、最後のボタンを強調して表示する。</p>
 
 
 <div class="example">
 
-<div class="c-form-submit c-form-submit-2col">
+<div class="echo-form-submit echo-form-submit-2col">
     <input type="submit" class="echo-button echo-button-xl echo-button-style-b" value="入力画面にもどる">
     <input type="submit" class="echo-button echo-button-xl echo-button-style-a" value="この内容で送信">
-</div><!-- /.c-form-submit --> 
+</div><!-- /.echo-form-submit --> 
 
 </div>
 
-<div class="codeblock"><pre><code class="language-markup">&lt;div class="c-form-submit c-form-submit-2col"&gt;
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-form-submit echo-form-submit-2col"&gt;
     &lt;input type="submit" class="echo-button echo-button-xl echo-button-style-b" value="入力画面にもどる"&gt;
     &lt;input type="submit" class="echo-button echo-button-xl echo-button-style-a" value="この内容で送信"&gt;
-&lt;/div&gt;&lt;!-- /.c-form-submit --&gt; </code></pre></div>
+&lt;/div&gt;&lt;!-- /.echo-form-submit --&gt; </code></pre></div>
 
 
 <?php include('../doc_include/footer.inc'); ?>

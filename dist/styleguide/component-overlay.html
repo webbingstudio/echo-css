@@ -25,19 +25,19 @@
             <nav class="echo-doc-anchor">
                 <ul class="echo-list echo-list-horizontal">
                     
-                    <li class="echo-list-item"><a href="#overlay" class="js-scrollto">c-overlay</a></li>
+                    <li class="echo-list-item"><a href="#overlay" class="js-scrollto">echo-overlay</a></li>
                     
-                    <li class="echo-list-item"><a href="#overlay-01-inverse" class="js-scrollto">c-overlay-inverse</a></li>
+                    <li class="echo-list-item"><a href="#overlay-01-inverse" class="js-scrollto">echo-overlay-inverse</a></li>
                     
                 </ul>
             </nav>
             
 
             <article class="echo-doc-post">
-                <div class="echo-doc-post-contents styleguide-contents"><h1 id="overlay" class="styleguide">c-overlay</h1>
+                <div class="echo-doc-post-contents styleguide-contents"><h1 id="overlay" class="styleguide">echo-overlay</h1>
 
 <p>特定条件で表示状態となる、画面全体を覆うコンポーネントを表示する。<br>
-画面全体を覆っている <code>.c-overlay-bg</code> と、内容を含む <code>.c-overlay-contents</code> の二重構造となっている。</p>
+画面全体を覆っている <code>.echo-overlay-bg</code> と、内容を含む <code>.echo-overlay-contents</code> の二重構造となっている。</p>
 
 <p>使用する際は、JavaScript等で「なんらかのトリガーで表示し、かつbody要素のスクロールを禁止する処理」を行う必要がある。</p>
 
@@ -48,9 +48,9 @@
         <button class="echo-button echo-button-style-a echo-button-lg js-toggle" data-toggle-target="#menu-01" data-toggle-sync=".js-toggle-sync-01" aria-expanded="false" aria-label="Menu">オーバーレイを表示</button>
     </div>
 
-    <div class="c-overlay" id="menu-01">
-        <div class="c-overlay-bg"></div>
-        <div class="c-overlay-contents">
+    <div class="echo-overlay" id="menu-01">
+        <div class="echo-overlay-bg"></div>
+        <div class="echo-overlay-contents">
 
             <nav class="echo-nav echo-nav-vertical">
                 <ul class="echo-nav-list">
@@ -99,19 +99,19 @@
 
             <p class="u-text-center u-margin-0 u-padding-y-lg"><input type="button" class="echo-button echo-button-style-a echo-button-lg js-toggle-sync-01" data-toggle-target="#menu-01" aria-expanded="false" value="オーバーレイを閉じる" /></p>
 
-        </div><!-- /.c-overlay-contents -->
-    </div><!-- /.c-overlay -->
+        </div><!-- /.echo-overlay-contents -->
+    </div><!-- /.echo-overlay -->
 </div>
 
-<div class="codeblock"><pre><code class="language-markup">&lt;div class="c-overlay"&gt;
-    &lt;div class="c-overlay-bg"&gt;&lt;/div&gt;
-    &lt;div class="c-overlay-contents"&gt;
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-overlay"&gt;
+    &lt;div class="echo-overlay-bg"&gt;&lt;/div&gt;
+    &lt;div class="echo-overlay-contents"&gt;
         (contents)
-    &lt;/div&gt;&lt;!-- /.c-overlay-contents --&gt;
-&lt;/div&gt;&lt;!-- /.c-overlay --&gt;</code></pre></div>
+    &lt;/div&gt;&lt;!-- /.echo-overlay-contents --&gt;
+&lt;/div&gt;&lt;!-- /.echo-overlay --&gt;</code></pre></div>
 
 
-<h2 id="media-01-inverse" class="styleguide">c-overlay-inverse</h2>
+<h2 id="media-01-inverse" class="styleguide">echo-overlay-inverse</h2>
 
 <p>文字色と背景色が反転する。</p>
 
@@ -120,9 +120,9 @@
         <button class="echo-button echo-button-style-a echo-button-lg js-toggle" data-toggle-target="#menu-02" data-toggle-sync=".js-toggle-sync-02" aria-expanded="false" aria-label="Menu">オーバーレイを表示</button>
     </div>
 
-    <div class="c-overlay c-overlay-inverse" id="menu-02">
-        <div class="c-overlay-bg"></div>
-        <div class="c-overlay-contents">
+    <div class="echo-overlay echo-overlay-inverse" id="menu-02">
+        <div class="echo-overlay-bg"></div>
+        <div class="echo-overlay-contents">
 
 
             <nav class="echo-nav echo-nav-vertical echo-nav-inverse">
@@ -172,15 +172,15 @@
 
             <p class="u-text-center u-margin-0 u-padding-y-lg u-margin-0 u-padding-y-lg"><input type="button" class="echo-button echo-button-style-a echo-button-inverse echo-button-lg js-toggle-sync-02" data-toggle-target="#menu-02" aria-expanded="false" value="オーバーレイを閉じる" /></p>
 
-        </div><!-- /.c-overlay-contents -->
-    </div><!-- /.c-overlay -->
+        </div><!-- /.echo-overlay-contents -->
+    </div><!-- /.echo-overlay -->
 </div>
 
-<div class="codeblock"><pre><code class="language-markup">&lt;div class="c-overlay c-overlay-inverse"&gt;
-    &lt;div class="c-overlay-bg"&gt;&lt;/div&gt;
-    &lt;div class="c-overlay-contents"&gt;
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-overlay echo-overlay-inverse"&gt;
+    &lt;div class="echo-overlay-bg"&gt;&lt;/div&gt;
+    &lt;div class="echo-overlay-contents"&gt;
         (contents)
-    &lt;/div&gt;&lt;!-- /.c-overlay-contents --&gt;
-&lt;/div&gt;&lt;!-- /.c-overlay --&gt;</code></pre></div>
+    &lt;/div&gt;&lt;!-- /.echo-overlay-contents --&gt;
+&lt;/div&gt;&lt;!-- /.echo-overlay --&gt;</code></pre></div>
 
 <?php include('../doc_include/footer.inc'); ?>
