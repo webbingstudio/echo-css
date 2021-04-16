@@ -27,23 +27,22 @@
 
 <h2 class="echo-doc-post-title-01">FLOCSSとの関係</h2>
 
-<p>echo.cssのCSS構成は、FLOCSSを参考にしています。</p>
+<p>echo.cssは、CSS設計思想のひとつである「FLOCSS」を参考にしています。<br>
+FLOCSSは、CSSクラスが役割ごとに「レイヤー構造」を持っています。echo.cssも、SCSSファイル、および接頭辞の変数が適切なレイヤー構造を持つように設計しています。</p>
 
 <p><a href="https://github.com/hiloki/flocss" target="_blank">https://github.com/hiloki/flocss</a></p>
 
-<p>基本的にはFLOCSSと同様のレイヤー構造と命名規則を持っていますが、以下の点が異なります。</p>
+<p>echo.cssは<strong>理解しやすく、融通が効く設計</strong>を優先しています。公開されている状態では、project以外のレイヤーに接頭辞を付与していません。しかし、Sassを使用できる環境ではすべてのレイヤーの接頭辞を変更できます。</p>
 
-<h3 class="echo-doc-post-title-02">ヘッダ・フッタがlayoutではなくprojectに属する</h3>
+<p><code>_scss/_config_advance.scss</code> の変数 <code>$l, $m, $c, $u, $p</code> が、後述する各レイヤーの接頭辞となっています。</p>
 
-<p>プロジェクトごとに変更されるファイルを出来る限り少なくする目的で、ヘッダ・フッタはレイアウト扱いにはしていません。</p>
+<h2 class="echo-doc-post-title-01">Atomic Designとの関係</h2>
 
-<h3 class="echo-doc-post-title-02">グリッド（段組）がcomponentではなくlayoutに属する</h3>
+<p><a href="https://app.codegrid.net/entry/2017-atomic-design-1" target="_blank">Atomic Design</a>とは、コンポーネント単位でウェブサイト内のUIを制作していくデザイン設計思想です。<br>
+テキスト・ボタン・ラベル等を最小単位として、それらが含まれるカードやページテンプレートを構築していきます。</p>
 
-<p>後述のlayoutの定義に添って、移動しています。</p>
-
-<h3 class="echo-doc-post-title-02">componentの一部をmoduleに分離</h3>
-
-<p>componentに属するSCSSファイルが多くなりすぎる問題を回避すると同時に、Atomic Designの構造を反映しています。</p>
+<p>Atomic Design自体はコーディングのために作られたものではありませんが、その思想はCSSモジュールに通じるものがあります。<br>
+echo.cssはオブジェクトの構造をAtomic Designにならうことで、デザイナーとの意思疎通を容易にしています。</p>
 
 
 <h2 class="echo-doc-post-title-01">ファイル構造</h2>
@@ -56,67 +55,67 @@
 │   ├── _document.scss
 │   ├── _cards.scss
 │   └── ...
-└── object
-    ├── component
-    │   ├── _alert.scss
-    │   ├── _box.scss
-    │   ├── _card.scss
-    │   └── ...
-    ├── module
-    │   ├── _button.scss
-    │   ├── _checkbox.scss
-    │   ├── _embed.scss
-    │   └── ...
-    ├── project
-    │   ├── _footer.scss
-    │   ├── _header.scss
-    │   ├── _main.scss
-    │   └── ...
-    └── utility
-        ├── _bg.scss
-        ├── _text.scss
-        ├── _margin.scss
-        └── ...</pre></div>
+├── object
+│  ├── component
+│  │   ├── _alert.scss
+│  │   ├── _box.scss
+│  │   ├── _card.scss
+│  │   └── ...
+│  ├── module
+│  │   ├── _button.scss
+│  │   ├── _checkbox.scss
+│  │   ├── _embed.scss
+│  │   └── ...
+│  └── project
+│       ├── _footer.scss
+│       ├── _header.scss
+│       ├── _main.scss
+│       └── ...
+└── utility
+    ├── _bg.scss
+    ├── _text.scss
+    ├── _margin.scss
+    └── ...</pre></div>
 
 <h2 class="echo-doc-post-title-01">各レイヤーの役割</h2>
 
 <h3 class="echo-doc-post-title-02">foundation</h3>
 
-<p>クラスではなく、各要素そのものに対して基本的なスタイルを定義します。<br>
-プロジェクトごとの変更は極力避けます。</p>
-
-<h3 class="echo-doc-post-title-02">layout</h3>
-
-<p>オブジェクトのグリッド配置など、レイアウトに関するクラス群です。クラスには初期状態で <code>.l-</code> の接頭辞が付けられます。<br>
-プロジェクトごとの変更は極力避けます。</p>
+<p>クラス群ではなく、HTMLの各要素に対してブラウザのスタイルの初期化と、基本的なスタイルの定義を行います。</p>
 
 <h3 class="echo-doc-post-title-02">object</h3>
 
-<p>オブジェクトは4つの子レイヤーを持ちます。</p>
+<p>いわゆる「サイト内パーツ」のクラス群です。 <code>object</code> は、3つの子レイヤーを持ちます。</p>
 
 <div class="echo-margin-left-md">
 
     <h4 class="echo-doc-post-title-03">module</h4>
 
-    <p>サイト内で、最小単位となる機能を持ったオブジェクトのクラス群です。クラスには初期状態で <code>.m-</code> の接頭辞が付けられます。<br>
-    Atomic DesignのAtomsに準じます。</p>
+    <p>サイト内で、最小単位となる機能を持ったレイヤーです。接頭辞を付与する場合は <code>.m-</code> が望ましいです。<br>
+    Atomic Designの<strong>Atoms</strong>に準じます。</p>
 
     <h4 class="echo-doc-post-title-03">component</h4>
 
-    <p>サイト内で、<code>module</code> がひとつ以上含まれる可能性があるオブジェクトのクラス群です。クラスには初期状態で <code>.c-</code> の接頭辞が付けられます。<br>
-    Atomic DesignのMoleculesに準じます。</p>
+    <p>サイト内で、<code>module</code> がひとつ以上含まれる可能性があるオブジェクトのクラス群です。接頭辞を付与する場合は <code>.c-</code> が望ましいです。<br>
+    Atomic Designの<strong>Molecules</strong>に準じます。</p>
 
     <h4 class="echo-doc-post-title-03">project</h4>
 
-    <p>そのプロジェクトのデザインや機能に大きく影響するオブジェクトのクラス群です。<code>module</code> と <code>component</code> が含まれる可能性があります。<br>
-    ブログの本文用CSSなど、採用するCMSに直結するCSSがある場合もここに含まれます。クラスには初期状態で <code>.p-</code> の接頭辞が付けられます。<br>
-    Atomic DesignのOrganismsに準じます。</p>
+    <p>そのプロジェクトのデザインや機能に大きく影響するレイヤーです。<code>module</code> と <code>component</code> が含まれる可能性があります。ブログの本文用CSSなど、採用するCMSに直結するCSSがある場合もここに含まれます。</p>
 
-    <h4 class="echo-doc-post-title-03">utility</h4>
-
-    <p>色・文字サイズ・余白等を、その要素のみ上書き変更するためのヘルパークラスです。クラスには初期状態で <code>.u-</code> の接頭辞が付けられます。</p>
+    <p>このクラス群のみ、レイヤー接頭辞 <code>.p-</code> が付与されていますが、使用せずに独自のクラスを追加したり、別途プロジェクト用のCSSを作成しても問題ありません。<br>
+    Atomic Designの<strong>Organisms</strong>に準じます。</p>
     
 </div>
+
+<h3 class="echo-doc-post-title-02">layout</h3>
+
+<p>オブジェクトのグリッド配置など、レイアウトに関するレイヤーです。接頭辞を付与する場合は <code>.l-</code> が望ましいです。<br>
+プロジェクトごとの変更は極力避けます。</p>
+
+<h3 class="echo-doc-post-title-02">utility</h3>
+
+<p>色・文字サイズ・余白等を、上書き変更するためのヘルパークラスです。<strong>常に高い優先度を持っています。</strong>接頭辞を付与する場合は <code>.u-</code> や <code>.hp-</code> 等が望ましいです。</p>
 
 
 <div class="echo-padding-top-xxl">
