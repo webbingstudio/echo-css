@@ -170,26 +170,26 @@ echo-doc-mainvisual
 */
 
 @media (max-width: 767.9px) {
-    .echo-doc-mainvisual .c-hero-image {
+    .echo-doc-mainvisual .echo-hero-image {
         opacity: .75;
     }
 }
 
 @media (max-width: 767.9px) {
-    .echo-doc-mainvisual .c-hero-contents {
+    .echo-doc-mainvisual .echo-hero-contents {
         bottom: 1.875rem;
         align-items: flex-end;
     }
 }
 
-.echo-doc-mainvisual .c-hero-contents-inner {
+.echo-doc-mainvisual .echo-hero-contents-inner {
     width: 100%;
     max-width: 25rem;
     font-family: 'Helvetica', 'Roboto', '-apple-system', 'Open Sans', 'Arial', sans-serif;
 }
 
 @media (min-width: 1024px) {
-    .echo-doc-mainvisual .c-hero-contents-inner {
+    .echo-doc-mainvisual .echo-hero-contents-inner {
         max-width: 37.5rem;
     }
 }
@@ -271,50 +271,50 @@ echo-doc-presentation
 --------------------
 */
 
-.echo-doc-presentation .c-flip-title {
+.echo-doc-presentation .echo-flip-title {
     font-family: inherit;
     font-size: 1.5rem;
 }
 @media (min-width: 768px) {
-    .echo-doc-presentation .c-flip-title {
+    .echo-doc-presentation .echo-flip-title {
         font-size: 1.75rem;
     }
 }
 @media (min-width: 1000px) {
-    .echo-doc-presentation .c-flip-title {
+    .echo-doc-presentation .echo-flip-title {
         font-size: 2rem;
     }
 }
 @media (min-width: 1240px) {
-    .echo-doc-presentation .c-flip-title {
+    .echo-doc-presentation .echo-flip-title {
         font-size: 2.25rem;
     }
 }
 @media (min-width: 1640px) {
-    .echo-doc-presentation .c-flip-title {
+    .echo-doc-presentation .echo-flip-title {
         font-size: 2.5rem;
     }
 }
 
-.echo-doc-presentation .c-flip .echo-button {
+.echo-doc-presentation .echo-flip .echo-button {
     font-family: 'Helvetica', 'Roboto', '-apple-system', 'Open Sans', 'Arial', sans-serif;
 }
 
-.echo-doc-presentation-01 .c-flip-cover {
+.echo-doc-presentation-01 .echo-flip-cover {
     background-image: url(../../images/echo/img_presentation_01.jpg);
 }
 
 @media (min-width: 768px) {
-    .echo-doc-presentation-01 .c-flip-cover {
+    .echo-doc-presentation-01 .echo-flip-cover {
         background-position: 25% 50%;
     }
 }
 
-.echo-doc-presentation-02 .c-flip-cover {
+.echo-doc-presentation-02 .echo-flip-cover {
     background-image: url(../../images/echo/img_presentation_02.jpg);
 }
 
-.echo-doc-presentation-03 .c-flip-cover {
+.echo-doc-presentation-03 .echo-flip-cover {
     background-image: url(../../images/echo/img_presentation_03.jpg);
 }
 
@@ -404,10 +404,6 @@ echo-doc-license
         padding-top: 3.75rem;
         padding-bottom: 1.875rem;
     }
-}
-
-.echo-doc-license a {
-    color: #333;
 }
 
 .echo-doc-license-title {
