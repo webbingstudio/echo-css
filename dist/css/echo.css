@@ -6506,30 +6506,30 @@ echo-text-(size)
 
 /*
 --------------------
-echo-header
+echo-p-header
 --------------------
 */
-.echo-header {
+.echo-p-header {
   background-color: #fff;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
 
 @media (min-width: 62.5rem) {
-  .echo-header {
+  .echo-p-header {
     padding-top: 0.9375rem;
     padding-bottom: 0.9375rem;
   }
 }
 
-.echo-header-contents {
+.echo-p-header-contents {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
 }
 
-.echo-header-title {
+.echo-p-header-title {
   flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
@@ -6538,19 +6538,19 @@ echo-header
   line-height: 1;
 }
 
-.echo-header-title img {
+.echo-p-header-title img {
   display: block;
   max-width: 16rem;
   height: auto;
 }
 
 @media (min-width: 26.75rem) {
-  .echo-header-title img {
+  .echo-p-header-title img {
     max-width: none;
   }
 }
 
-.echo-header-nav {
+.echo-p-header-nav {
   display: none;
   flex-grow: 1;
   flex-shrink: 1;
@@ -6558,18 +6558,18 @@ echo-header
 }
 
 @media (min-width: 62.5rem) {
-  .echo-header-nav {
+  .echo-p-header-nav {
     display: block;
     padding-right: 0.625rem;
     text-align: right;
   }
 }
 
-.echo-header-nav .echo-nav-label {
+.echo-p-header-nav .echo-nav-label {
   font-size: 0.875rem;
 }
 
-.echo-header-button {
+.echo-p-header-button {
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: auto;
@@ -6578,13 +6578,13 @@ echo-header
 }
 
 @media (min-width: 62.5rem) {
-  .echo-header-button {
+  .echo-p-header-button {
     flex-grow: 0;
     padding-right: 0;
   }
 }
 
-.echo-header-button ul.echo-list-horizontal li.echo-list-item {
+.echo-p-header-button ul.echo-list-horizontal li.echo-list-item {
   /*
 note: Spacing of the clickable elements
 クリックできる要素間の余白の最低値は、8pxと言われています。
@@ -6596,39 +6596,39 @@ The minimum value of the margin between clickable elements is said that to be 8p
   letter-spacing: -.4em;
 }
 
-.echo-header-button ul.echo-list-horizontal li.echo-list-item:first-child {
+.echo-p-header-button ul.echo-list-horizontal li.echo-list-item:first-child {
   padding-left: 0;
 }
 
-.echo-header-button ul.echo-list-horizontal li.echo-list-item .echo-button {
+.echo-p-header-button ul.echo-list-horizontal li.echo-list-item .echo-button {
   letter-spacing: normal;
 }
 
-.echo-header-menu {
+.echo-p-header-menu {
   flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
 }
 
 @media (min-width: 62.5rem) {
-  .echo-header-menu {
+  .echo-p-header-menu {
     display: none;
   }
 }
 
 /*
 --------------------
-echo-main
+echo-p-main
 --------------------
 */
-.echo-main {
+.echo-p-main {
   position: relative;
   padding-top: 1.875rem;
   padding-bottom: 1.875rem;
 }
 
 @media (min-width: 62.5rem) {
-  .echo-main {
+  .echo-p-main {
     padding-top: 2.8125rem;
     padding-bottom: 2.8125rem;
   }
@@ -6636,33 +6636,33 @@ echo-main
 
 /*
 --------------------
-echo-footer
+echo-p-footer
 --------------------
 */
-.echo-footer-nav {
+.echo-p-footer-nav {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
   text-align: center;
 }
 
 @media (max-width: 62.4rem) {
-  .echo-footer-nav .echo-nav-list {
+  .echo-p-footer-nav .echo-nav-list {
     flex-wrap: wrap;
   }
 }
 
 @media (max-width: 62.4rem) {
-  .echo-footer-nav .echo-nav-item {
+  .echo-p-footer-nav .echo-nav-item {
     flex-grow: 0;
   }
 }
 
-.echo-footer-nav .echo-nav-label {
+.echo-p-footer-nav .echo-nav-label {
   min-height: 2.5em;
   font-size: 0.875rem;
 }
 
-.echo-footer-copyright {
+.echo-p-footer-copyright {
   padding-top: 1.25rem;
   padding-bottom: 2.5rem;
   text-align: center;
