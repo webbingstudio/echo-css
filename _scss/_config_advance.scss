@@ -106,20 +106,25 @@ $optimize: true !default;
 // Prefix
 // -----------------------------------------
 
-// layout-group-prefix
-$l: "l-" !default;
+// layout group prefix
+// ex. l-, bl_ ...
+$l: "" !default;
 
-// module-group-prefix
-$m: "m-" !default;
+// module group prefix
+// ex. m-, bl_ ...
+$m: "" !default;
 
-// component-group-prefix
-$c: "c-" !default;
+// component group prefix
+// ex. c-, bl_ ...
+$c: "" !default;
 
-// utility-group-prefix
-$u: "u-" !default;
+// utility(helper) group prefix
+// ex. u-, hp_, is- ...
+$u: "" !default;
 
-// project-group-prefix
-$p: "p-" !default;
+// project group prefix
+// ex. p-, bl_ ...
+$p: "" !default;
 
 
 // Selector
