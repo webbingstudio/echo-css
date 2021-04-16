@@ -46,56 +46,56 @@
 
 &lt;/head&gt;
 &lt;body&gt;
-&lt;div class="l-document" id="document"&gt;
+&lt;div class="echo-document" id="document"&gt;
 
     &lt;header class="p-header" role="banner"&gt;
-        &lt;div class="l-container"&gt;
+        &lt;div class="echo-container"&gt;
 
             ここはサイトのヘッダです
 
-        &lt;/div&gt;&lt;!-- /.l-container --&gt;
+        &lt;/div&gt;&lt;!-- /.echo-container --&gt;
     &lt;/header&gt;&lt;!-- /.p-header --&gt;
 
     &lt;main class="echo-p-main" role="main"&gt;
-        &lt;div class="l-container"&gt;
+        &lt;div class="echo-container"&gt;
 
             こんにちは世界！
 
-        &lt;/div&gt;&lt;!-- /.l-container --&gt;
+        &lt;/div&gt;&lt;!-- /.echo-container --&gt;
     &lt;/main&gt;&lt;!-- /.echo-p-main --&gt;
 
     &lt;footer class="p-footer" role="contentinfo"&gt;
-        &lt;div class="l-container"&gt;
+        &lt;div class="echo-container"&gt;
 
             ここはサイトのフッタです
 
-        &lt;/div&gt;&lt;!-- /.l-container --&gt;
+        &lt;/div&gt;&lt;!-- /.echo-container --&gt;
     &lt;/footer&gt;&lt;!-- /.p-footer --&gt;
 
-&lt;/div&gt;&lt;!-- /.l-document --&gt;
+&lt;/div&gt;&lt;!-- /.echo-document --&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre></div>
 
-<h2 class="echo-doc-post-title-01">.l-documentの役割</h2>
+<h2 class="echo-doc-post-title-01">.echo-documentの役割</h2>
 
-<p>コンテンツ全体を包括している <code>.l-document #document</code> は、文字サイズ変更などのユーティリティクラスの優先度を上げる役割を持っています。</p>
+<p>コンテンツ全体を包括している <code>.echo-document #document</code> は、文字サイズ変更などのユーティリティクラスの優先度を上げる役割を持っています。</p>
 
-<h2 class="echo-doc-post-title-01">.l-containerの役割</h2>
+<h2 class="echo-doc-post-title-01">.echo-containerの役割</h2>
 
-<p>.l-containerは名前の通り、コンテンツを適切に画面中央に配置するコンテナタグです。より良いウェブサイトの制作には必須となります。<br>
+<p>.echo-containerは名前の通り、コンテンツを適切に画面中央に配置するコンテナタグです。より良いウェブサイトの制作には必須となります。<br>
 echo.cssは、コンテナタグの幅は一種類ではありません。ヘッダとフッタは通常の幅のコンテナタグ、サブカラムはスリムなコンテナタグ、といった、変化のあるページを作成できます。</p>
 
 <div class="codeblock"><pre><code class="language-markup">&lt;div class="example"&gt;
-    &lt;div class="l-container l-container-sm"&gt;
+    &lt;div class="echo-container echo-container-sm"&gt;
 
         最大幅がスリムになります
 
-    &lt;/div&gt;&lt;!-- /.l-container --&gt;
+    &lt;/div&gt;&lt;!-- /.echo-container --&gt;
 &lt;/div&gt;&lt;!-- /.example --&gt;</code></pre></div>
 
 <h2 class="echo-doc-post-title-01">ブロックエディタとコンテナタグの干渉</h2>
 
-<p>WordPressのGutenbergなど、CMSの「ブロックエディタ」で編集可能にする場合は、本文エリアで <code>.l-container</code> での幅制限を行わないよう注意してください。画像ブロック・グループブロック等に設定されている「幅広」「全幅」オプションを使用できなくなります。</p>
+<p>WordPressのGutenbergなど、CMSの「ブロックエディタ」で編集可能にする場合は、本文エリアで <code>.echo-container</code> での幅制限を行わないよう注意してください。画像ブロック・グループブロック等に設定されている「幅広」「全幅」オプションを使用できなくなります。</p>
 
 <h2 class="echo-doc-post-title-01">プラグイン</h2>
 
