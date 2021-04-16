@@ -59,7 +59,6 @@
                         <li class="echo-nav-item"><a href="./utility-line.html" class="echo-nav-label">line</a></li>
                         <li class="echo-nav-item"><a href="./utility-margin.html" class="echo-nav-label">margin</a></li>
                         <li class="echo-nav-item"><a href="./utility-padding.html" class="echo-nav-label">padding</a></li>
-                        <li class="echo-nav-item"><a href="./utility-position.html" class="echo-nav-label">position</a></li>
                         <li class="echo-nav-item"><a href="./utility-shadow.html" class="echo-nav-label">shadow</a></li>
                         <li class="echo-nav-item"><a href="./utility-sr.html" class="echo-nav-label">screen reader</a></li>
                         <li class="echo-nav-item"><a href="./utility-text.html" class="echo-nav-label">text</a></li>
