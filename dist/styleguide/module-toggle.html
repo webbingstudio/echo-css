@@ -23,51 +23,51 @@
             </div><!-- /.echo-doc-pagehead -->
 
             <nav class="echo-anchor">
-                <ul class="m-list m-list-horizontal">
+                <ul class="echo-list echo-list-horizontal">
 
-                    <li class="m-list-item"><a href="#toggle" class="js-scrollto">m-toggle</a></li>
+                    <li class="echo-list-item"><a href="#toggle" class="js-scrollto">echo-toggle</a></li>
 
-                    <li class="m-list-item"><a href="#toggle-01-inverse" class="js-scrollto">m-toggle-inverse</a></li>
+                    <li class="echo-list-item"><a href="#toggle-01-inverse" class="js-scrollto">echo-toggle-inverse</a></li>
 
                 </ul>
             </nav>
 
             <article class="echo-doc-post">
-                <div class="echo-doc-post-contents styleguide-contents"><h1 id="toggle" class="styleguide">m-toggle</h1>
+                <div class="echo-doc-post-contents styleguide-contents"><h1 id="toggle" class="styleguide">echo-toggle</h1>
 
 <p>メニューを展開するためのトグルボタンを表示する。<br>
 <code>aria-expanded</code> 属性を付与する前提となっており、値が <code>true</code> のときにアイコンが変化する。</p>
 <div class="example">
     <div class="u-text-center u-padding-bottom-md">
         <p>aria-expanded = &quot;false&quot;</p>
-        <button class="m-toggle" aria-expanded="false" aria-label="Menu"><span class="m-toggle-line"></span><span class="u-sr">メニュー</span></button>
+        <button class="echo-toggle" aria-expanded="false" aria-label="Menu"><span class="echo-toggle-line"></span><span class="u-sr">メニュー</span></button>
     </div>
     <div class="u-text-center">
         <p>aria-expanded = &quot;true&quot;</p>
-        <button class="m-toggle" aria-expanded="true" aria-label="Menu"><span class="m-toggle-line"></span><span class="u-sr">メニュー</span></button>
+        <button class="echo-toggle" aria-expanded="true" aria-label="Menu"><span class="echo-toggle-line"></span><span class="u-sr">メニュー</span></button>
     </div>
 </div>
-<div class="codeblock"><pre><code class="language-markup">&lt;button class="m-toggle" aria-expanded="false" aria-label="Menu"&gt;&lt;span class="m-toggle-line"&gt;&lt;/span&gt;&lt;span class="u-sr"&gt;メニュー&lt;/span&gt;&lt;/button&gt;
+<div class="codeblock"><pre><code class="language-markup">&lt;button class="echo-toggle" aria-expanded="false" aria-label="Menu"&gt;&lt;span class="echo-toggle-line"&gt;&lt;/span&gt;&lt;span class="u-sr"&gt;メニュー&lt;/span&gt;&lt;/button&gt;
 
-&lt;button class="m-toggle" aria-expanded="true" aria-label="Menu"&gt;&lt;span class="m-toggle-line"&gt;&lt;/span&gt;&lt;span class="u-sr"&gt;メニュー&lt;/span&gt;&lt;/button&gt;</code></pre></div>
+&lt;button class="echo-toggle" aria-expanded="true" aria-label="Menu"&gt;&lt;span class="echo-toggle-line"&gt;&lt;/span&gt;&lt;span class="u-sr"&gt;メニュー&lt;/span&gt;&lt;/button&gt;</code></pre></div>
 
 
-<h2 id="toggle-01-inverse" class="styleguide">m-toggle-inverse</h2>
+<h2 id="toggle-01-inverse" class="styleguide">echo-toggle-inverse</h2>
 
 <p>トグルボタンの色を反転する。包括要素に濃い背景色を指定する必要がある。</p>
 
 <div class="example">
     <div class="u-text-center u-bg-default u-padding-bottom-md">
         <p>aria-expanded = &quot;false&quot;</p>
-        <button class="m-toggle m-toggle-inverse" aria-expanded="false" aria-label="Menu"><span class="m-toggle-line"></span><span class="u-sr">メニュー</span></button>
+        <button class="echo-toggle echo-toggle-inverse" aria-expanded="false" aria-label="Menu"><span class="echo-toggle-line"></span><span class="u-sr">メニュー</span></button>
     </div>
     <div class="u-text-center u-bg-default">
         <p>aria-expanded = &quot;true&quot;</p>
-        <button class="m-toggle m-toggle-inverse" aria-expanded="true" aria-label="Menu"><span class="m-toggle-line"></span><span class="u-sr">メニュー</span></button>
+        <button class="echo-toggle echo-toggle-inverse" aria-expanded="true" aria-label="Menu"><span class="echo-toggle-line"></span><span class="u-sr">メニュー</span></button>
     </div>
 </div>
-<div class="codeblock"><pre><code class="language-markup">&lt;button class="m-toggle m-toggle-inverse" aria-expanded="false" aria-label="Menu"&gt;&lt;span class="m-toggle-line"&gt;&lt;/span&gt;&lt;span class="u-sr"&gt;メニュー&lt;/span&gt;&lt;/button&gt;
+<div class="codeblock"><pre><code class="language-markup">&lt;button class="echo-toggle echo-toggle-inverse" aria-expanded="false" aria-label="Menu"&gt;&lt;span class="echo-toggle-line"&gt;&lt;/span&gt;&lt;span class="u-sr"&gt;メニュー&lt;/span&gt;&lt;/button&gt;
 
-&lt;button class="m-toggle m-toggle-inverse" aria-expanded="true" aria-label="Menu"&gt;&lt;span class="m-toggle-line"&gt;&lt;/span&gt;&lt;span class="u-sr"&gt;メニュー&lt;/span&gt;&lt;/button&gt;</code></pre></div>
+&lt;button class="echo-toggle echo-toggle-inverse" aria-expanded="true" aria-label="Menu"&gt;&lt;span class="echo-toggle-line"&gt;&lt;/span&gt;&lt;span class="u-sr"&gt;メニュー&lt;/span&gt;&lt;/button&gt;</code></pre></div>
 
 <?php include('../doc_include/footer.inc'); ?>

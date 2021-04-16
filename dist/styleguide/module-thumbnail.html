@@ -23,21 +23,21 @@
             </div><!-- /.echo-doc-pagehead -->
 
             <nav class="echo-anchor">
-                <ul class="m-list m-list-horizontal">
+                <ul class="echo-list echo-list-horizontal">
 
-                    <li class="m-list-item"><a href="#thumbnail" class="js-scrollto">m-thumbnail</a></li>
+                    <li class="echo-list-item"><a href="#thumbnail" class="js-scrollto">echo-thumbnail</a></li>
                     
-                    <li class="m-list-item"><a href="#thumbnail-01-circle" class="js-scrollto">m-thumbnail-circle</a></li>
+                    <li class="echo-list-item"><a href="#thumbnail-01-circle" class="js-scrollto">echo-thumbnail-circle</a></li>
                     
-                    <li class="m-list-item"><a href="#thumbnail-02-square" class="js-scrollto">m-thumbnail-square</a></li>
+                    <li class="echo-list-item"><a href="#thumbnail-02-square" class="js-scrollto">echo-thumbnail-square</a></li>
                     
-                    <li class="m-list-item"><a href="#thumbnail-03-ratio" class="js-scrollto">m-thumbnail-(ratio-x)to(ratio-y)</a></li>
+                    <li class="echo-list-item"><a href="#thumbnail-03-ratio" class="js-scrollto">echo-thumbnail-(ratio-x)to(ratio-y)</a></li>
                     
                 </ul>
             </nav>
 
             <article class="echo-doc-post">
-                <div class="echo-doc-post-contents styleguide-contents"><h1 id="thumbnail" class="styleguide">m-thumbnail</h1>
+                <div class="echo-doc-post-contents styleguide-contents"><h1 id="thumbnail" class="styleguide">echo-thumbnail</h1>
 
 <p>一覧ページ、記事中で縮小された画像を表示する。要素自体ではなく、包括している要素にクラスを付与する。</p>
 
@@ -48,20 +48,20 @@
 
 <div class="example">
 
-<div class="m-thumbnail u-margin-right-lg">
+<div class="echo-thumbnail u-margin-right-lg">
     <img src="https://placehold.jp/150x150.jpg" alt="">
 </div>
 
 <div class="u-margin-top-lg" style="width: 200px;">
     <dfn>画像よりも小さい幅を指定した場合</dfn>
-    <div class="m-thumbnail">
+    <div class="echo-thumbnail">
         <img src="https://placehold.jp/480x360.jpg" alt="">
     </div>
 </div>
 
 <div class="u-margin-top-lg">
     <dfn>figure要素でマークアップした場合</dfn>
-    <figure class="m-thumbnail">
+    <figure class="echo-thumbnail">
         <img src="https://placehold.jp/150x150.jpg" alt="">
         <figcaption>figcaption要素です</figcaption>
     </figure>
@@ -69,11 +69,11 @@
 
 <div class="u-margin-top-lg">
     <dfn>a要素でマークアップした場合</dfn>
-    <a href="#" class="m-thumbnail">
+    <a href="#" class="echo-thumbnail">
         <img src="https://placehold.jp/150x150.jpg" alt="">
     </a>
     <dfn>a要素 > figure要素でマークアップした場合</dfn>
-    <a href="#" class="m-thumbnail">
+    <a href="#" class="echo-thumbnail">
         <figure>
             <img src="https://placehold.jp/150x150.jpg" alt="">
             <figcaption>figcaption要素です</figcaption>
@@ -83,20 +83,20 @@
 
 </div>
 
-<div class="codeblock"><pre><code class="language-markup">&lt;div class="m-thumbnail u-margin-right-lg"&gt;
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-thumbnail u-margin-right-lg"&gt;
     &lt;img src="https://placehold.jp/150x150.jpg" alt=""&gt;
 &lt;/div&gt;
 
 &lt;div class="u-margin-top-lg" style="width: 200px;"&gt;
     &lt;dfn&gt;画像よりも小さい幅を指定した場合&lt;/dfn&gt;
-    &lt;div class="m-thumbnail"&gt;
+    &lt;div class="echo-thumbnail"&gt;
         &lt;img src="https://placehold.jp/480x360.jpg" alt=""&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class="u-margin-top-lg"&gt;
     &lt;dfn&gt;figure要素でマークアップした場合&lt;/dfn&gt;
-    &lt;figure class="m-thumbnail"&gt;
+    &lt;figure class="echo-thumbnail"&gt;
         &lt;img src="https://placehold.jp/150x150.jpg" alt=""&gt;
         &lt;figcaption&gt;figcaption要素です&lt;/figcaption&gt;
     &lt;/figure&gt;
@@ -104,11 +104,11 @@
 
 &lt;div class="u-margin-top-lg"&gt;
     &lt;dfn&gt;a要素でマークアップした場合&lt;/dfn&gt;
-    &lt;a href="#" class="m-thumbnail"&gt;
+    &lt;a href="#" class="echo-thumbnail"&gt;
         &lt;img src="https://placehold.jp/150x150.jpg" alt=""&gt;
     &lt;/a&gt;
     &lt;dfn&gt;a要素 &gt; figure要素でマークアップした場合&lt;/dfn&gt;
-    &lt;a href="#" class="m-thumbnail"&gt;
+    &lt;a href="#" class="echo-thumbnail"&gt;
         &lt;figure&gt;
             &lt;img src="https://placehold.jp/150x150.jpg" alt=""&gt;
             &lt;figcaption&gt;figcaption要素です&lt;/figcaption&gt;
@@ -117,10 +117,10 @@
 &lt;/div&gt;
 </code></pre></div>
 
-<h2 id="thumbnail-01-circle" class="styleguide">m-thumbnail-circle</h2>
+<h2 id="thumbnail-01-circle" class="styleguide">echo-thumbnail-circle</h2>
 
 <p>画像を正円にトリミングして表示する。幅を指定する必要がある。<br>
-img要素のサイズが <code>.m-thumbnail</code> よりも小さい場合は、引き伸ばして表示される。<br>
+img要素のサイズが <code>.echo-thumbnail</code> よりも小さい場合は、引き伸ばして表示される。<br>
 <code>figcaption</code> 要素は使用できない。</p>
 
 <p>a要素でマークアップすると、hover時に画像が拡大する。</p>
@@ -131,25 +131,25 @@ Internet Explorer11以前に対応する場合は、別途ライブラリを追�
 <div class="example">
 
 <div style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-circle">
+    <div class="echo-thumbnail echo-thumbnail-circle">
         <img src="https://placehold.jp/480x360.jpg" alt="">
     </div>
 </div>
 
 <div class="u-margin-top-lg" style="width: 200px;">
     <dfn>figure要素でマークアップした場合</dfn>
-    <figure class="m-thumbnail m-thumbnail-circle">
+    <figure class="echo-thumbnail echo-thumbnail-circle">
         <img src="https://placehold.jp/150x150.jpg" alt="">
     </figure>
 </div>
 
 <div class="u-margin-top-lg" style="width: 200px;">
     <dfn>a要素でマークアップした場合</dfn>
-    <a href="#" class="m-thumbnail m-thumbnail-circle">
+    <a href="#" class="echo-thumbnail echo-thumbnail-circle">
         <img src="https://placehold.jp/150x150.jpg" alt="">
     </a>
     <dfn>a要素 > figure要素でマークアップした場合</dfn>
-    <a href="#" class="m-thumbnail m-thumbnail-circle">
+    <a href="#" class="echo-thumbnail echo-thumbnail-circle">
         <figure>
             <img src="https://placehold.jp/150x150.jpg" alt="">
         </figure>
@@ -159,25 +159,25 @@ Internet Explorer11以前に対応する場合は、別途ライブラリを追�
 </div>
 
 <div class="codeblock"><pre><code class="language-markup">&lt;div style="width: 200px;"&gt;
-    &lt;div class="m-thumbnail m-thumbnail-circle"&gt;
+    &lt;div class="echo-thumbnail echo-thumbnail-circle"&gt;
         &lt;img src="https://placehold.jp/480x360.jpg" alt=""&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class="u-margin-top-lg" style="width: 200px;"&gt;
     &lt;dfn&gt;figure要素でマークアップした場合&lt;/dfn&gt;
-    &lt;figure class="m-thumbnail m-thumbnail-circle"&gt;
+    &lt;figure class="echo-thumbnail echo-thumbnail-circle"&gt;
         &lt;img src="https://placehold.jp/150x150.jpg" alt=""&gt;
     &lt;/figure&gt;
 &lt;/div&gt;
 
 &lt;div class="u-margin-top-lg" style="width: 200px;"&gt;
     &lt;dfn&gt;a要素でマークアップした場合&lt;/dfn&gt;
-    &lt;a href="#" class="m-thumbnail m-thumbnail-circle"&gt;
+    &lt;a href="#" class="echo-thumbnail echo-thumbnail-circle"&gt;
         &lt;img src="https://placehold.jp/150x150.jpg" alt=""&gt;
     &lt;/a&gt;
     &lt;dfn&gt;a要素 &gt; figure要素でマークアップした場合&lt;/dfn&gt;
-    &lt;a href="#" class="m-thumbnail m-thumbnail-circle"&gt;
+    &lt;a href="#" class="echo-thumbnail echo-thumbnail-circle"&gt;
         &lt;figure&gt;
             &lt;img src="https://placehold.jp/150x150.jpg" alt=""&gt;
         &lt;/figure&gt;
@@ -186,35 +186,35 @@ Internet Explorer11以前に対応する場合は、別途ライブラリを追�
 </code></pre></div>
 
 
-<h2 id="thumbnail-02-square" class="styleguide">m-thumbnail-square</h2>
+<h2 id="thumbnail-02-square" class="styleguide">echo-thumbnail-square</h2>
 
 <p>画像を正方形にトリミングして表示する。幅を指定する必要がある。<br>
 <code>figcaption</code> 要素は使用できない。</p>
 
-<p>img要素のサイズが <code>.m-thumbnail</code> よりも小さい場合は、引き伸ばして表示される。</p>
+<p>img要素のサイズが <code>.echo-thumbnail</code> よりも小さい場合は、引き伸ばして表示される。</p>
 
 <div class="example">
 
 <div style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-square">
+    <div class="echo-thumbnail echo-thumbnail-square">
         <img src="https://placehold.jp/480x360.jpg" alt="">
     </div>
 </div>
 
 <div class="u-margin-top-lg" style="width: 200px;">
     <dfn>figure要素でマークアップした場合</dfn>
-    <figure class="m-thumbnail m-thumbnail-square">
+    <figure class="echo-thumbnail echo-thumbnail-square">
         <img src="https://placehold.jp/150x150.jpg" alt="">
     </figure>
 </div>
 
 <div class="u-margin-top-lg" style="width: 200px;">
     <dfn>a要素でマークアップした場合</dfn>
-    <a href="#" class="m-thumbnail m-thumbnail-square">
+    <a href="#" class="echo-thumbnail echo-thumbnail-square">
         <img src="https://placehold.jp/150x150.jpg" alt="">
     </a>
     <dfn>a要素 > figure要素でマークアップした場合</dfn>
-    <a href="#" class="m-thumbnail m-thumbnail-square">
+    <a href="#" class="echo-thumbnail echo-thumbnail-square">
         <figure>
             <img src="https://placehold.jp/150x150.jpg" alt="">
         </figure>
@@ -224,25 +224,25 @@ Internet Explorer11以前に対応する場合は、別途ライブラリを追�
 </div>
 
 <div class="codeblock"><pre><code class="language-markup">&lt;div style="width: 200px;"&gt;
-    &lt;div class="m-thumbnail m-thumbnail-square"&gt;
+    &lt;div class="echo-thumbnail echo-thumbnail-square"&gt;
         &lt;img src="https://placehold.jp/480x360.jpg" alt=""&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class="u-margin-top-lg" style="width: 200px;"&gt;
     &lt;dfn&gt;figure要素でマークアップした場合&lt;/dfn&gt;
-    &lt;figure class="m-thumbnail m-thumbnail-square"&gt;
+    &lt;figure class="echo-thumbnail echo-thumbnail-square"&gt;
         &lt;img src="https://placehold.jp/150x150.jpg" alt=""&gt;
     &lt;/figure&gt;
 &lt;/div&gt;
 
 &lt;div class="u-margin-top-lg" style="width: 200px;"&gt;
     &lt;dfn&gt;a要素でマークアップした場合&lt;/dfn&gt;
-    &lt;a href="#" class="m-thumbnail m-thumbnail-square"&gt;
+    &lt;a href="#" class="echo-thumbnail echo-thumbnail-square"&gt;
         &lt;img src="https://placehold.jp/150x150.jpg" alt=""&gt;
     &lt;/a&gt;
     &lt;dfn&gt;a要素 &gt; figure要素でマークアップした場合&lt;/dfn&gt;
-    &lt;a href="#" class="m-thumbnail m-thumbnail-square"&gt;
+    &lt;a href="#" class="echo-thumbnail echo-thumbnail-square"&gt;
         &lt;figure&gt;
             &lt;img src="https://placehold.jp/150x150.jpg" alt=""&gt;
         &lt;/figure&gt;
@@ -251,74 +251,74 @@ Internet Explorer11以前に対応する場合は、別途ライブラリを追�
 </code></pre></div>
 
 
-<h2 id="thumbnail-03-ratio" class="styleguide">m-thumbnail-(ratio-x)to(ratio-y)</h2>
+<h2 id="thumbnail-03-ratio" class="styleguide">echo-thumbnail-(ratio-x)to(ratio-y)</h2>
 
 <p>画像を指定した縦横比で、かつトリミングして表示する。別途、幅を指定する必要がある。<br>
 <code>figcaption</code> 要素は使用できない。</p>
 
 <p>(ratio-x)to(ratio-y)は <code>3to2, 4to3, 16to9, ogimage(1.91:1), 21to9</code> に対応している。<br>
-img要素のサイズが <code>.m-thumbnail</code> よりも小さい場合は、引き伸ばして表示される。</p>
+img要素のサイズが <code>.echo-thumbnail</code> よりも小さい場合は、引き伸ばして表示される。</p>
 
 <div class="example">
 
 <div style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-3to2">
+    <div class="echo-thumbnail echo-thumbnail-3to2">
         <img src="https://placehold.jp/360x360.jpg" alt="">
     </div>
 </div>
 
 <div class="u-margin-top-lg" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-4to3">
+    <div class="echo-thumbnail echo-thumbnail-4to3">
         <img src="https://placehold.jp/360x360.jpg" alt="">
     </div>
 </div>
 
 <div class="u-margin-top-lg" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-16to9">
+    <div class="echo-thumbnail echo-thumbnail-16to9">
         <img src="https://placehold.jp/360x360.jpg" alt="">
     </div>
 </div>
 
 <div class="u-margin-top-lg" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-ogimage">
+    <div class="echo-thumbnail echo-thumbnail-ogimage">
         <img src="https://placehold.jp/360x360.jpg" alt="">
     </div>
 </div>
 
 <div class="u-margin-top-lg" style="width: 200px;">
-    <div class="m-thumbnail m-thumbnail-21to9">
+    <div class="echo-thumbnail echo-thumbnail-21to9">
         <img src="https://placehold.jp/360x360.jpg" alt="">
     </div>
 </div>
 
-<p class="m-title m-title-style-a m-title-level-4">a要素でマークアップした場合</p>
+<p class="echo-title echo-title-style-a echo-title-level-4">a要素でマークアップした場合</p>
 
 <div class="u-margin-top-lg" style="width: 200px;">
-    <a href="#" class="m-thumbnail m-thumbnail-3to2">
+    <a href="#" class="echo-thumbnail echo-thumbnail-3to2">
         <img src="https://placehold.jp/360x360.jpg" alt="">
     </a>
 </div>
 
 <div class="u-margin-top-lg" style="width: 200px;">
-    <a href="#" class="m-thumbnail m-thumbnail-4to3">
+    <a href="#" class="echo-thumbnail echo-thumbnail-4to3">
         <img src="https://placehold.jp/360x360.jpg" alt="">
     </a>
 </div>
 
 <div class="u-margin-top-lg" style="width: 200px;">
-    <a href="#" class="m-thumbnail m-thumbnail-16to9">
+    <a href="#" class="echo-thumbnail echo-thumbnail-16to9">
         <img src="https://placehold.jp/360x360.jpg" alt="">
     </a>
 </div>
 
 <div class="u-margin-top-lg" style="width: 200px;">
-    <a href="#" class="m-thumbnail m-thumbnail-ogimage">
+    <a href="#" class="echo-thumbnail echo-thumbnail-ogimage">
         <img src="https://placehold.jp/360x360.jpg" alt="">
     </a>
 </div>
 
 <div class="u-margin-top-lg" style="width: 200px;">
-    <a href="#" class="m-thumbnail m-thumbnail-21to9">
+    <a href="#" class="echo-thumbnail echo-thumbnail-21to9">
         <img src="https://placehold.jp/360x360.jpg" alt="">
     </a>
 </div>
@@ -326,63 +326,63 @@ img要素のサイズが <code>.m-thumbnail</code> よりも小さい場合は�
 </div>
 
 <div class="codeblock"><pre><code class="language-markup">&lt;div style="width: 200px;"&gt;
-    &lt;div class="m-thumbnail m-thumbnail-3to2"&gt;
+    &lt;div class="echo-thumbnail echo-thumbnail-3to2"&gt;
         &lt;img src="https://placehold.jp/360x360.jpg" alt=""&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class="u-margin-top-lg" style="width: 200px;"&gt;
-    &lt;div class="m-thumbnail m-thumbnail-4to3"&gt;
+    &lt;div class="echo-thumbnail echo-thumbnail-4to3"&gt;
         &lt;img src="https://placehold.jp/360x360.jpg" alt=""&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class="u-margin-top-lg" style="width: 200px;"&gt;
-    &lt;div class="m-thumbnail m-thumbnail-16to9"&gt;
+    &lt;div class="echo-thumbnail echo-thumbnail-16to9"&gt;
         &lt;img src="https://placehold.jp/360x360.jpg" alt=""&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class="u-margin-top-lg" style="width: 200px;"&gt;
-    &lt;div class="m-thumbnail m-thumbnail-ogimage"&gt;
+    &lt;div class="echo-thumbnail echo-thumbnail-ogimage"&gt;
         &lt;img src="https://placehold.jp/360x360.jpg" alt=""&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class="u-margin-top-lg" style="width: 200px;"&gt;
-    &lt;div class="m-thumbnail m-thumbnail-21to9"&gt;
+    &lt;div class="echo-thumbnail echo-thumbnail-21to9"&gt;
         &lt;img src="https://placehold.jp/360x360.jpg" alt=""&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;p class="m-title m-title-style-a m-title-level-4"&gt;a要素でマークアップした場合&lt;/p&gt;
+&lt;p class="echo-title echo-title-style-a echo-title-level-4"&gt;a要素でマークアップした場合&lt;/p&gt;
 
 &lt;div class="u-margin-top-lg" style="width: 200px;"&gt;
-    &lt;a href="#" class="m-thumbnail m-thumbnail-3to2"&gt;
+    &lt;a href="#" class="echo-thumbnail echo-thumbnail-3to2"&gt;
         &lt;img src="https://placehold.jp/360x360.jpg" alt=""&gt;
     &lt;/a&gt;
 &lt;/div&gt;
 
 &lt;div class="u-margin-top-lg" style="width: 200px;"&gt;
-    &lt;a href="#" class="m-thumbnail m-thumbnail-4to3"&gt;
+    &lt;a href="#" class="echo-thumbnail echo-thumbnail-4to3"&gt;
         &lt;img src="https://placehold.jp/360x360.jpg" alt=""&gt;
     &lt;/a&gt;
 &lt;/div&gt;
 
 &lt;div class="u-margin-top-lg" style="width: 200px;"&gt;
-    &lt;a href="#" class="m-thumbnail m-thumbnail-16to9"&gt;
+    &lt;a href="#" class="echo-thumbnail echo-thumbnail-16to9"&gt;
         &lt;img src="https://placehold.jp/360x360.jpg" alt=""&gt;
     &lt;/a&gt;
 &lt;/div&gt;
 
 &lt;div class="u-margin-top-lg" style="width: 200px;"&gt;
-    &lt;a href="#" class="m-thumbnail m-thumbnail-ogimage"&gt;
+    &lt;a href="#" class="echo-thumbnail echo-thumbnail-ogimage"&gt;
         &lt;img src="https://placehold.jp/360x360.jpg" alt=""&gt;
     &lt;/a&gt;
 &lt;/div&gt;
 
 &lt;div class="u-margin-top-lg" style="width: 200px;"&gt;
-    &lt;a href="#" class="m-thumbnail m-thumbnail-21to9"&gt;
+    &lt;a href="#" class="echo-thumbnail echo-thumbnail-21to9"&gt;
         &lt;img src="https://placehold.jp/360x360.jpg" alt=""&gt;
     &lt;/a&gt;
 &lt;/div&gt;

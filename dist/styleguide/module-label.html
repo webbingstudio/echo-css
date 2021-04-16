@@ -23,28 +23,28 @@
             </div><!-- /.echo-doc-pagehead -->
 
             <nav class="echo-anchor">
-                <ul class="m-list m-list-horizontal">
+                <ul class="echo-list echo-list-horizontal">
 
-                    <li class="m-list-item"><a href="#label" class="js-scrollto">m-label</a></li>
+                    <li class="echo-list-item"><a href="#label" class="js-scrollto">echo-label</a></li>
 
-                    <li class="m-list-item"><a href="#label-01-style" class="js-scrollto">m-label-style-(style)</a></li>
+                    <li class="echo-list-item"><a href="#label-01-style" class="js-scrollto">echo-label-style-(style)</a></li>
 
-                    <li class="m-list-item"><a href="#label-02-color" class="js-scrollto">m-label-(color)</a></li>
+                    <li class="echo-list-item"><a href="#label-02-color" class="js-scrollto">echo-label-(color)</a></li>
 
-                    <li class="m-list-item"><a href="#label-03-oval" class="js-scrollto">m-label-oval</a></li>
+                    <li class="echo-list-item"><a href="#label-03-oval" class="js-scrollto">echo-label-oval</a></li>
                     
                 </ul>
             </nav>
             
 
             <article class="echo-doc-post">
-                <div class="echo-doc-post-contents styleguide-contents"><h1 id="label" class="styleguide">m-label</h1>
+                <div class="echo-doc-post-contents styleguide-contents"><h1 id="label" class="styleguide">echo-label</h1>
 
 <p>カテゴリー名などに使用する、小さなラベルを表示する。span要素、a要素に指定できる。<br>
 連続で配置した場合、左に適切な余白を確保する。</p>
 
 <p>内包するテキストに改行を含めることはできない。<br>
-サブクラス <code>.m-label-style-(style)</code> が必須であり、付与していない場合は最低限の装飾となる。</p>
+サブクラス <code>.echo-label-style-(style)</code> が必須であり、付与していない場合は最低限の装飾となる。</p>
 
 <p>ボタンのdisplayプロパティは <code>inline-flex</code> を指定している。このため、連続して配置すると右に改行コード分の余白が生じる。<br>
 余白を詰めたい場合は、包括するコンポーネントで調整すること。</p>
@@ -61,97 +61,97 @@ Since echo.css is intended for use in multibyte languages, the label has been mo
 
 <div class="example">
 
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label">m-label</span><a href="#" class="m-label">m-label(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="echo-label">echo-label</span><a href="#" class="echo-label">echo-label(link)</a>どこで生れたかとんと見当がつかぬ。</p>
 
 </div>
 
-<div class="codeblock"><pre><code class="language-markup">&lt;p&gt;吾輩は猫である。名前はまだ無い。&lt;span class="m-label"&gt;m-label&lt;/span&gt;&lt;a href="#" class="m-label"&gt;m-label(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
+<div class="codeblock"><pre><code class="language-markup">&lt;p&gt;吾輩は猫である。名前はまだ無い。&lt;span class="echo-label"&gt;echo-label&lt;/span&gt;&lt;a href="#" class="echo-label"&gt;echo-label(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
 </code></pre></div>
 
 
-<h2 id="label-01-style" class="styleguide">m-label-style-(style)</h2>
+<h2 id="label-01-style" class="styleguide">echo-label-style-(style)</h2>
 
 <p>ラベルの外観を変更する。<br>
-<code>.m-label-(color)</code> が付与されていない場合はラベルの色が <code>$default</code> となる。</p>
+<code>.echo-label-(color)</code> が付与されていない場合はラベルの色が <code>$default</code> となる。</p>
 
 <div class="example">
 
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-style-a">m-label-style-a</span><a href="#" class="m-label m-label-style-a">m-label-style-a(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="echo-label echo-label-style-a">echo-label-style-a</span><a href="#" class="echo-label echo-label-style-a">echo-label-style-a(link)</a>どこで生れたかとんと見当がつかぬ。</p>
 
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-style-b">m-label-style-b</span><a href="#" class="m-label m-label-style-b">m-label-style-b(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="echo-label echo-label-style-b">echo-label-style-b</span><a href="#" class="echo-label echo-label-style-b">echo-label-style-b(link)</a>どこで生れたかとんと見当がつかぬ。</p>
 
 </div>
 
-<div class="codeblock"><pre><code class="language-markup">&lt;p&gt;吾輩は猫である。名前はまだ無い。&lt;span class="m-label m-label-style-a"&gt;m-label-style-a&lt;/span&gt;&lt;a href="#" class="m-label m-label-style-a"&gt;m-label-style-a(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
+<div class="codeblock"><pre><code class="language-markup">&lt;p&gt;吾輩は猫である。名前はまだ無い。&lt;span class="echo-label echo-label-style-a"&gt;echo-label-style-a&lt;/span&gt;&lt;a href="#" class="echo-label echo-label-style-a"&gt;echo-label-style-a(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
 
-&lt;p&gt;吾輩は猫である。名前はまだ無い。&lt;span class="m-label m-label-style-b"&gt;m-label-style-b&lt;/span&gt;&lt;a href="#" class="m-label m-label-style-b"&gt;m-label-style-b(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
+&lt;p&gt;吾輩は猫である。名前はまだ無い。&lt;span class="echo-label echo-label-style-b"&gt;echo-label-style-b&lt;/span&gt;&lt;a href="#" class="echo-label echo-label-style-b"&gt;echo-label-style-b(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
 </code></pre></div>
 
 
-<h2 id="label-02-color" class="styleguide">m-label-(color)</h2>
+<h2 id="label-02-color" class="styleguide">echo-label-(color)</h2>
 
 <p>ラベルの色を変更する。(color)は<a href="../docs/design-tokens-color.html">標準のカラーテーブル</a>を参照。</p>
 
 <div class="example">
 
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-style-a m-label-info">m-label-info</span><a href="#" class="m-label m-label-style-a m-label-info">m-label-info(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="echo-label echo-label-style-a echo-label-info">echo-label-info</span><a href="#" class="echo-label echo-label-style-a echo-label-info">echo-label-info(link)</a>どこで生れたかとんと見当がつかぬ。</p>
 
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-style-b m-label-info">m-label-info</span><a href="#" class="m-label m-label-style-b m-label-info">m-label-info(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="echo-label echo-label-style-b echo-label-info">echo-label-info</span><a href="#" class="echo-label echo-label-style-b echo-label-info">echo-label-info(link)</a>どこで生れたかとんと見当がつかぬ。</p>
 
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-style-a m-label-important">m-label-important</span><a href="#" class="m-label m-label-style-a m-label-important">m-label-important(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="echo-label echo-label-style-a echo-label-important">echo-label-important</span><a href="#" class="echo-label echo-label-style-a echo-label-important">echo-label-important(link)</a>どこで生れたかとんと見当がつかぬ。</p>
 
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-style-b m-label-important">m-label-important</span><a href="#" class="m-label m-label-style-b m-label-important">m-label-important(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="echo-label echo-label-style-b echo-label-important">echo-label-important</span><a href="#" class="echo-label echo-label-style-b echo-label-important">echo-label-important(link)</a>どこで生れたかとんと見当がつかぬ。</p>
 
-<p class="u-bg-default u-padding-sm">吾輩は猫である。名前はまだ無い。<span class="m-label m-label-style-a m-label-inverse">m-label-inverse</span><a href="#" class="m-label m-label-style-a m-label-inverse">m-label-inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p class="u-bg-default u-padding-sm">吾輩は猫である。名前はまだ無い。<span class="echo-label echo-label-style-a echo-label-inverse">echo-label-inverse</span><a href="#" class="echo-label echo-label-style-a echo-label-inverse">echo-label-inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
 
-<p class="u-bg-default u-padding-sm">吾輩は猫である。名前はまだ無い。<span class="m-label m-label-style-b m-label-inverse">m-label-inverse</span><a href="#" class="m-label m-label-style-b m-label-inverse">m-label-inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p class="u-bg-default u-padding-sm">吾輩は猫である。名前はまだ無い。<span class="echo-label echo-label-style-b echo-label-inverse">echo-label-inverse</span><a href="#" class="echo-label echo-label-style-b echo-label-inverse">echo-label-inverse(link)</a>どこで生れたかとんと見当がつかぬ。</p>
 
 </div>
 
-<div class="codeblock"><pre><code class="language-markup">&lt;p&gt;吾輩は猫である。名前はまだ無い。&lt;span class="m-label m-label-style-a m-label-info"&gt;m-label-info&lt;/span&gt;&lt;a href="#" class="m-label m-label-style-a m-label-info"&gt;m-label-info(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
+<div class="codeblock"><pre><code class="language-markup">&lt;p&gt;吾輩は猫である。名前はまだ無い。&lt;span class="echo-label echo-label-style-a echo-label-info"&gt;echo-label-info&lt;/span&gt;&lt;a href="#" class="echo-label echo-label-style-a echo-label-info"&gt;echo-label-info(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
 
-&lt;p&gt;吾輩は猫である。名前はまだ無い。&lt;span class="m-label m-label-style-b m-label-info"&gt;m-label-info&lt;/span&gt;&lt;a href="#" class="m-label m-label-style-b m-label-info"&gt;m-label-info(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
+&lt;p&gt;吾輩は猫である。名前はまだ無い。&lt;span class="echo-label echo-label-style-b echo-label-info"&gt;echo-label-info&lt;/span&gt;&lt;a href="#" class="echo-label echo-label-style-b echo-label-info"&gt;echo-label-info(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
 
-&lt;p&gt;吾輩は猫である。名前はまだ無い。&lt;span class="m-label m-label-style-a m-label-important"&gt;m-label-important&lt;/span&gt;&lt;a href="#" class="m-label m-label-style-a m-label-important"&gt;m-label-important(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
+&lt;p&gt;吾輩は猫である。名前はまだ無い。&lt;span class="echo-label echo-label-style-a echo-label-important"&gt;echo-label-important&lt;/span&gt;&lt;a href="#" class="echo-label echo-label-style-a echo-label-important"&gt;echo-label-important(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
 
-&lt;p&gt;吾輩は猫である。名前はまだ無い。&lt;span class="m-label m-label-style-b m-label-important"&gt;m-label-important&lt;/span&gt;&lt;a href="#" class="m-label m-label-style-b m-label-important"&gt;m-label-important(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
+&lt;p&gt;吾輩は猫である。名前はまだ無い。&lt;span class="echo-label echo-label-style-b echo-label-important"&gt;echo-label-important&lt;/span&gt;&lt;a href="#" class="echo-label echo-label-style-b echo-label-important"&gt;echo-label-important(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
 
-&lt;p class="u-bg-default u-padding-sm"&gt;吾輩は猫である。名前はまだ無い。&lt;span class="m-label m-label-style-a m-label-inverse"&gt;m-label-inverse&lt;/span&gt;&lt;a href="#" class="m-label m-label-style-a m-label-inverse"&gt;m-label-inverse(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
+&lt;p class="u-bg-default u-padding-sm"&gt;吾輩は猫である。名前はまだ無い。&lt;span class="echo-label echo-label-style-a echo-label-inverse"&gt;echo-label-inverse&lt;/span&gt;&lt;a href="#" class="echo-label echo-label-style-a echo-label-inverse"&gt;echo-label-inverse(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
 
-&lt;p class="u-bg-default u-padding-sm"&gt;吾輩は猫である。名前はまだ無い。&lt;span class="m-label m-label-style-b m-label-inverse"&gt;m-label-inverse&lt;/span&gt;&lt;a href="#" class="m-label m-label-style-b m-label-inverse"&gt;m-label-inverse(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
+&lt;p class="u-bg-default u-padding-sm"&gt;吾輩は猫である。名前はまだ無い。&lt;span class="echo-label echo-label-style-b echo-label-inverse"&gt;echo-label-inverse&lt;/span&gt;&lt;a href="#" class="echo-label echo-label-style-b echo-label-inverse"&gt;echo-label-inverse(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
 </code></pre></div>
 
 
-<h2 id="label-03-oval" class="styleguide">m-label-oval</h2>
+<h2 id="label-03-oval" class="styleguide">echo-label-oval</h2>
 
 <p>ラベルが小判型になる。</p>
 
 <div class="example">
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-oval m-label-style-a m-label-info">m-label-oval</span><a href="#" class="m-label m-label-oval m-label-style-a m-label-info">m-label-oval(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="echo-label echo-label-oval echo-label-style-a echo-label-info">echo-label-oval</span><a href="#" class="echo-label echo-label-oval echo-label-style-a echo-label-info">echo-label-oval(link)</a>どこで生れたかとんと見当がつかぬ。</p>
 
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-oval m-label-style-b m-label-info">m-label-oval</span><a href="#" class="m-label m-label-oval m-label-style-b m-label-info">m-label-oval(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="echo-label echo-label-oval echo-label-style-b echo-label-info">echo-label-oval</span><a href="#" class="echo-label echo-label-oval echo-label-style-b echo-label-info">echo-label-oval(link)</a>どこで生れたかとんと見当がつかぬ。</p>
 
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-oval m-label-style-a m-label-important">m-label-oval</span><a href="#" class="m-label m-label-oval m-label-style-a m-label-important">m-label-oval(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="echo-label echo-label-oval echo-label-style-a echo-label-important">echo-label-oval</span><a href="#" class="echo-label echo-label-oval echo-label-style-a echo-label-important">echo-label-oval(link)</a>どこで生れたかとんと見当がつかぬ。</p>
 
-<p>吾輩は猫である。名前はまだ無い。<span class="m-label m-label-oval m-label-style-b m-label-important">m-label-oval</span><a href="#" class="m-label m-label-oval m-label-style-b m-label-important">m-label-oval(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p>吾輩は猫である。名前はまだ無い。<span class="echo-label echo-label-oval echo-label-style-b echo-label-important">echo-label-oval</span><a href="#" class="echo-label echo-label-oval echo-label-style-b echo-label-important">echo-label-oval(link)</a>どこで生れたかとんと見当がつかぬ。</p>
 
-<p class="u-bg-default u-padding-sm">吾輩は猫である。名前はまだ無い。<span class="m-label m-label-oval m-label-style-a m-label-inverse">m-label-oval</span><a href="#" class="m-label m-label-oval m-label-style-a m-label-inverse">m-label-oval(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p class="u-bg-default u-padding-sm">吾輩は猫である。名前はまだ無い。<span class="echo-label echo-label-oval echo-label-style-a echo-label-inverse">echo-label-oval</span><a href="#" class="echo-label echo-label-oval echo-label-style-a echo-label-inverse">echo-label-oval(link)</a>どこで生れたかとんと見当がつかぬ。</p>
 
-<p class="u-bg-default u-padding-sm">吾輩は猫である。名前はまだ無い。<span class="m-label m-label-oval m-label-style-b m-label-inverse">m-label-oval</span><a href="#" class="m-label m-label-oval m-label-style-b m-label-inverse">m-label-oval(link)</a>どこで生れたかとんと見当がつかぬ。</p>
+<p class="u-bg-default u-padding-sm">吾輩は猫である。名前はまだ無い。<span class="echo-label echo-label-oval echo-label-style-b echo-label-inverse">echo-label-oval</span><a href="#" class="echo-label echo-label-oval echo-label-style-b echo-label-inverse">echo-label-oval(link)</a>どこで生れたかとんと見当がつかぬ。</p>
 </div>
 
 
-<div class="codeblock"><pre><code class="language-markup">&lt;p&gt;吾輩は猫である。名前はまだ無い。&lt;span class="m-label m-label-oval m-label-style-a m-label-info"&gt;m-label-oval&lt;/span&gt;&lt;a href="#" class="m-label m-label-oval m-label-style-a m-label-info"&gt;m-label-oval(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
+<div class="codeblock"><pre><code class="language-markup">&lt;p&gt;吾輩は猫である。名前はまだ無い。&lt;span class="echo-label echo-label-oval echo-label-style-a echo-label-info"&gt;echo-label-oval&lt;/span&gt;&lt;a href="#" class="echo-label echo-label-oval echo-label-style-a echo-label-info"&gt;echo-label-oval(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
 
-&lt;p&gt;吾輩は猫である。名前はまだ無い。&lt;span class="m-label m-label-oval m-label-style-b m-label-info"&gt;m-label-oval&lt;/span&gt;&lt;a href="#" class="m-label m-label-oval m-label-style-b m-label-info"&gt;m-label-oval(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
+&lt;p&gt;吾輩は猫である。名前はまだ無い。&lt;span class="echo-label echo-label-oval echo-label-style-b echo-label-info"&gt;echo-label-oval&lt;/span&gt;&lt;a href="#" class="echo-label echo-label-oval echo-label-style-b echo-label-info"&gt;echo-label-oval(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
 
-&lt;p&gt;吾輩は猫である。名前はまだ無い。&lt;span class="m-label m-label-oval m-label-style-a m-label-important"&gt;m-label-oval&lt;/span&gt;&lt;a href="#" class="m-label m-label-oval m-label-style-a m-label-important"&gt;m-label-oval(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
+&lt;p&gt;吾輩は猫である。名前はまだ無い。&lt;span class="echo-label echo-label-oval echo-label-style-a echo-label-important"&gt;echo-label-oval&lt;/span&gt;&lt;a href="#" class="echo-label echo-label-oval echo-label-style-a echo-label-important"&gt;echo-label-oval(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
 
-&lt;p&gt;吾輩は猫である。名前はまだ無い。&lt;span class="m-label m-label-oval m-label-style-b m-label-important"&gt;m-label-oval&lt;/span&gt;&lt;a href="#" class="m-label m-label-oval m-label-style-b m-label-important"&gt;m-label-oval(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
+&lt;p&gt;吾輩は猫である。名前はまだ無い。&lt;span class="echo-label echo-label-oval echo-label-style-b echo-label-important"&gt;echo-label-oval&lt;/span&gt;&lt;a href="#" class="echo-label echo-label-oval echo-label-style-b echo-label-important"&gt;echo-label-oval(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
 
-&lt;p class="u-bg-default u-padding-sm"&gt;吾輩は猫である。名前はまだ無い。&lt;span class="m-label m-label-oval m-label-style-a m-label-inverse"&gt;m-label-oval&lt;/span&gt;&lt;a href="#" class="m-label m-label-oval m-label-style-a m-label-inverse"&gt;m-label-oval(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
+&lt;p class="u-bg-default u-padding-sm"&gt;吾輩は猫である。名前はまだ無い。&lt;span class="echo-label echo-label-oval echo-label-style-a echo-label-inverse"&gt;echo-label-oval&lt;/span&gt;&lt;a href="#" class="echo-label echo-label-oval echo-label-style-a echo-label-inverse"&gt;echo-label-oval(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
 
-&lt;p class="u-bg-default u-padding-sm"&gt;吾輩は猫である。名前はまだ無い。&lt;span class="m-label m-label-oval m-label-style-b m-label-inverse"&gt;m-label-oval&lt;/span&gt;&lt;a href="#" class="m-label m-label-oval m-label-style-b m-label-inverse"&gt;m-label-oval(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
+&lt;p class="u-bg-default u-padding-sm"&gt;吾輩は猫である。名前はまだ無い。&lt;span class="echo-label echo-label-oval echo-label-style-b echo-label-inverse"&gt;echo-label-oval&lt;/span&gt;&lt;a href="#" class="echo-label echo-label-oval echo-label-style-b echo-label-inverse"&gt;echo-label-oval(link)&lt;/a&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
 </code></pre></div>
 
 <?php include('../doc_include/footer.inc'); ?>

@@ -23,9 +23,9 @@
             </div><!-- /.echo-doc-pagehead -->
 
             <nav class="echo-anchor">
-                <ul class="m-list m-list-horizontal">
+                <ul class="echo-list echo-list-horizontal">
                     
-                    <li class="m-list-item"><a href="#border-01-color" class="js-scrollto">u-border-(color)</a></li>
+                    <li class="echo-list-item"><a href="#border-01-color" class="js-scrollto">u-border-(color)</a></li>
                     
                 </ul>
             </nav>
@@ -35,16 +35,16 @@
                 <div class="echo-doc-post-contents styleguide-contents"><h1 id="border-01-color" class="styleguide">u-border-(color)</h1>
 
 <p><strong>border関連のプロパティが可視状態となっている要素</strong>の罫線に色をつける。<br>
-<code>.m-button</code> のような、ステートを持つ要素には対応していない。</p>
+<code>.echo-button</code> のような、ステートを持つ要素には対応していない。</p>
 
 <p>オブジェクト・コンポーネントを可能な限り上書きし、table要素の場合は内包する <code>th, td</code> の色も変更する。<br>
 (color)は<a href="../docs/design-tokens-color.html">標準のカラーテーブル</a>を参照。</p>
 
 <div class="example">
 
-<p class="m-title m-title-level-4 m-title-style-a">.m-table + .m-table-bordered</p>
+<p class="echo-title echo-title-level-4 echo-title-style-a">.echo-table + .echo-table-bordered</p>
 
-<table class="m-table m-table-bordered u-border-info u-margin-bottom-lg">
+<table class="echo-table echo-table-bordered u-border-info u-margin-bottom-lg">
     <caption>u-border-info</caption>
     <tbody>
         <tr>
@@ -62,7 +62,7 @@
     </tbody>
 </table>
 
-<table class="m-table m-table-bordered u-border-important u-margin-bottom-lg">
+<table class="echo-table echo-table-bordered u-border-important u-margin-bottom-lg">
     <caption>u-border-important</caption>
     <tbody>
         <tr>
@@ -81,7 +81,7 @@
 </table>
 
 <div class="u-bg-default u-padding-sm u-margin-bottom-lg">
-<table class="m-table m-table-bordered u-border-inverse u-text-inverse">
+<table class="echo-table echo-table-bordered u-border-inverse u-text-inverse">
     <caption>u-border-inverse + u-text-inverse</caption>
     <tbody>
         <tr>
@@ -102,8 +102,8 @@
 
 </div>
 
-<div class="codeblock"><pre><code class="language-markup">&lt;p class="m-title m-title-level-4 m-title-style-a"&gt;.m-table + .m-table-bordered&lt;/p&gt;
-&lt;table class="m-table m-table-bordered u-border-info u-margin-bottom-lg"&gt;
+<div class="codeblock"><pre><code class="language-markup">&lt;p class="echo-title echo-title-level-4 echo-title-style-a"&gt;.echo-table + .echo-table-bordered&lt;/p&gt;
+&lt;table class="echo-table echo-table-bordered u-border-info u-margin-bottom-lg"&gt;
     &lt;caption&gt;u-border-info&lt;/caption&gt;
     &lt;tbody&gt;
         &lt;tr&gt;
@@ -121,7 +121,7 @@
     &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;table class="m-table m-table-bordered u-border-important u-margin-bottom-lg"&gt;
+&lt;table class="echo-table echo-table-bordered u-border-important u-margin-bottom-lg"&gt;
     &lt;caption&gt;u-border-important&lt;/caption&gt;
     &lt;tbody&gt;
         &lt;tr&gt;
@@ -140,7 +140,7 @@
 &lt;/table&gt;
 
 &lt;div class="u-bg-default u-padding-sm u-margin-bottom-lg"&gt;
-&lt;table class="m-table m-table-bordered u-border-inverse u-text-inverse"&gt;
+&lt;table class="echo-table echo-table-bordered u-border-inverse u-text-inverse"&gt;
     &lt;caption&gt;u-border-inverse + u-text-inverse&lt;/caption&gt;
     &lt;tbody&gt;
         &lt;tr&gt;

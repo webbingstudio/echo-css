@@ -23,287 +23,287 @@
             </div><!-- /.echo-doc-pagehead -->
 
             <nav class="echo-anchor">
-                <ul class="m-list m-list-horizontal">
+                <ul class="echo-list echo-list-horizontal">
 
-                    <li class="m-list-item"><a href="#btn" class="js-scrollto">m-button</a></li>
+                    <li class="echo-list-item"><a href="#btn" class="js-scrollto">echo-button</a></li>
 
-                    <li class="m-list-item"><a href="#btn-01-style" class="js-scrollto">m-button-style-(style)</a></li>
+                    <li class="echo-list-item"><a href="#btn-01-style" class="js-scrollto">echo-button-style-(style)</a></li>
 
-                    <li class="m-list-item"><a href="#btn-02-color" class="js-scrollto">m-button-(color)</a></li>
+                    <li class="echo-list-item"><a href="#btn-02-color" class="js-scrollto">echo-button-(color)</a></li>
                     
-                    <li class="m-list-item"><a href="#btn-03-size" class="js-scrollto">m-button-(size)</a></li>
+                    <li class="echo-list-item"><a href="#btn-03-size" class="js-scrollto">echo-button-(size)</a></li>
 
-                    <li class="m-list-item"><a href="#btn-04-arrowed" class="js-scrollto">m-button-arrowed</a></li>
+                    <li class="echo-list-item"><a href="#btn-04-arrowed" class="js-scrollto">echo-button-arrowed</a></li>
 
-                    <li class="m-list-item"><a href="#btn-05-block" class="js-scrollto">m-button-block</a></li>
+                    <li class="echo-list-item"><a href="#btn-05-block" class="js-scrollto">echo-button-block</a></li>
                     
-                    <li class="m-list-item"><a href="#btn-06-oval" class="js-scrollto">m-button-oval</a></li>
+                    <li class="echo-list-item"><a href="#btn-06-oval" class="js-scrollto">echo-button-oval</a></li>
                     
-                    <li class="m-list-item"><a href="#btn-07-circle" class="js-scrollto">m-button-circle</a></li>
+                    <li class="echo-list-item"><a href="#btn-07-circle" class="js-scrollto">echo-button-circle</a></li>
                     
-                    <li class="m-list-item"><a href="#btn-08-square" class="js-scrollto">m-button-square</a></li>
+                    <li class="echo-list-item"><a href="#btn-08-square" class="js-scrollto">echo-button-square</a></li>
                     
                 </ul>
             </nav>
                 
 
             <article class="echo-doc-post">
-                <div class="echo-doc-post-contents styleguide-contents"><h1 id="btn" class="styleguide">m-button</h1>
+                <div class="echo-doc-post-contents styleguide-contents"><h1 id="btn" class="styleguide">echo-button</h1>
 
 <p>リンク、インライン要素、フォームのボタン要素をボタン状に表示する。<br>
 最低 <code>2.75rem = 44px</code> の高さがあることが望ましい。<br>
-サブクラス <code>.m-button-style-(style)</code> が必須であり、付与していない場合は最低限の装飾となる。</p>
+サブクラス <code>.echo-button-style-(style)</code> が必須であり、付与していない場合は最低限の装飾となる。</p>
 
 <p><code>.disabled</code> もしくは <code>disabled="disabled"</code> が付与されていると、反応しない見た目となる。<br>
 （他のフレームワークとの互換のため <code>.disabled</code> に接頭辞は設けていない）</p>
 
 <p>ボタンのdisplayプロパティは <code>inline-block</code> を指定している。このため、連続して配置すると右に改行コード分の余白が生じる。<br>
-余白を詰めたい場合は <code>.m-button-block</code> を使用するか、包括するコンポーネントで調整すること。</p>
+余白を詰めたい場合は <code>.echo-button-block</code> を使用するか、包括するコンポーネントで調整すること。</p>
 
 <div class="example">
 
 <p>
   <dfn>a要素</dfn>
-  <a href="#" class="m-button">m-button</a>
-  <a href="#" class="m-button disabled">m-button</a>
+  <a href="#" class="echo-button">echo-button</a>
+  <a href="#" class="echo-button disabled">echo-button</a>
 </p>
 
 <p>
   <dfn>span要素</dfn>
-  <span class="m-button">m-button</span>
-  <span class="m-button disabled">m-button</span>
+  <span class="echo-button">echo-button</span>
+  <span class="echo-button disabled">echo-button</span>
 </p>
 
 <p>
   <dfn>input要素のbutton</dfn>
-  <input type="button" class="m-button" value="m-button" />
-  <input type="button" class="m-button" value="m-button" disabled="disabled" />
+  <input type="button" class="echo-button" value="echo-button" />
+  <input type="button" class="echo-button" value="echo-button" disabled="disabled" />
 </p>
 
 <p>
   <dfn>button要素</dfn>
-  <button class="m-button">m-button</button>
-  <button class="m-button" disabled="disabled">m-button</button>
+  <button class="echo-button">echo-button</button>
+  <button class="echo-button" disabled="disabled">echo-button</button>
 </p>
 </div>
 
 <div class="codeblock"><pre><code class="language-markup">&lt;p&gt;
   &lt;dfn&gt;a要素&lt;/dfn&gt;
-  &lt;a href="#" class="m-button"&gt;m-button&lt;/a&gt;
-  &lt;a href="#" class="m-button disabled"&gt;m-button&lt;/a&gt;
+  &lt;a href="#" class="echo-button"&gt;echo-button&lt;/a&gt;
+  &lt;a href="#" class="echo-button disabled"&gt;echo-button&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
   &lt;dfn&gt;span要素&lt;/dfn&gt;
-  &lt;span class="m-button"&gt;m-button&lt;/span&gt;
-  &lt;span class="m-button disabled"&gt;m-button&lt;/span&gt;
+  &lt;span class="echo-button"&gt;echo-button&lt;/span&gt;
+  &lt;span class="echo-button disabled"&gt;echo-button&lt;/span&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
   &lt;dfn&gt;input要素のbutton&lt;/dfn&gt;
-  &lt;input type="button" class="m-button" value="m-button" /&gt;
-  &lt;input type="button" class="m-button" value="m-button" disabled="disabled" /&gt;
+  &lt;input type="button" class="echo-button" value="echo-button" /&gt;
+  &lt;input type="button" class="echo-button" value="echo-button" disabled="disabled" /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
   &lt;dfn&gt;button要素&lt;/dfn&gt;
-  &lt;button class="m-button"&gt;m-button&lt;/button&gt;
-  &lt;button class="m-button" disabled="disabled"&gt;m-button&lt;/button&gt;
+  &lt;button class="echo-button"&gt;echo-button&lt;/button&gt;
+  &lt;button class="echo-button" disabled="disabled"&gt;echo-button&lt;/button&gt;
 &lt;/p&gt;
 </code></pre></div>
 
 
-<h2 id="btn-01-style" class="styleguide">m-button-style-(style)</h2>
+<h2 id="btn-01-style" class="styleguide">echo-button-style-(style)</h2>
 
 <p>ボタンの外観を変更する。<br>
-<code>.m-button-(color)</code> が付与されていない場合はボタンの色が <code>$default</code> となる。</p>
+<code>.echo-button-(color)</code> が付与されていない場合はボタンの色が <code>$default</code> となる。</p>
 
 <div class="example">
 
 <p>
   <dfn>a要素 + style-a</dfn>
-  <a href="#" class="m-button m-button-style-a">m-button-style-a</a>
-  <a href="#" class="m-button m-button-style-a disabled">m-button-style-a</a>
+  <a href="#" class="echo-button echo-button-style-a">echo-button-style-a</a>
+  <a href="#" class="echo-button echo-button-style-a disabled">echo-button-style-a</a>
 </p>
 
 <p>
   <dfn>input要素のbutton + style-a</dfn>
-  <input type="button" class="m-button m-button-style-a" value=" m-button-style-a" />
-  <input type="button" class="m-button m-button-style-a" value=" m-button-style-a" disabled="disabled" />
+  <input type="button" class="echo-button echo-button-style-a" value=" echo-button-style-a" />
+  <input type="button" class="echo-button echo-button-style-a" value=" echo-button-style-a" disabled="disabled" />
 </p>
 
 <p>
   <dfn>a要素 + style-b</dfn>
-  <a href="#" class="m-button m-button-style-b">m-button-style-b</a>
-  <a href="#" class="m-button m-button-style-b disabled">m-button-style-b</a>
+  <a href="#" class="echo-button echo-button-style-b">echo-button-style-b</a>
+  <a href="#" class="echo-button echo-button-style-b disabled">echo-button-style-b</a>
 </p>
 
 <p>
   <dfn>input要素のbutton + style-a</dfn>
-  <input type="button" class="m-button m-button-style-b" value=" m-button-style-b" />
-  <input type="button" class="m-button m-button-style-b" value=" m-button-style-b" disabled="disabled" />
+  <input type="button" class="echo-button echo-button-style-b" value=" echo-button-style-b" />
+  <input type="button" class="echo-button echo-button-style-b" value=" echo-button-style-b" disabled="disabled" />
 </p>
 
 </div>
 
 <div class="codeblock"><pre><code class="language-markup">&lt;p&gt;
   &lt;dfn&gt;a要素 + style-a&lt;/dfn&gt;
-  &lt;a href="#" class="m-button m-button-style-a"&gt;m-button-style-a&lt;/a&gt;
-  &lt;a href="#" class="m-button m-button-style-a disabled"&gt;m-button-style-a&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-style-a"&gt;echo-button-style-a&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-style-a disabled"&gt;echo-button-style-a&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
   &lt;dfn&gt;input要素のbutton + style-a&lt;/dfn&gt;
-  &lt;input type="button" class="m-button m-button-style-a" value=" m-button-style-a" /&gt;
-  &lt;input type="button" class="m-button m-button-style-a" value=" m-button-style-a" disabled="disabled" /&gt;
+  &lt;input type="button" class="echo-button echo-button-style-a" value=" echo-button-style-a" /&gt;
+  &lt;input type="button" class="echo-button echo-button-style-a" value=" echo-button-style-a" disabled="disabled" /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
   &lt;dfn&gt;a要素 + style-b&lt;/dfn&gt;
-  &lt;a href="#" class="m-button m-button-style-b"&gt;m-button-style-b&lt;/a&gt;
-  &lt;a href="#" class="m-button m-button-style-b disabled"&gt;m-button-style-b&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-style-b"&gt;echo-button-style-b&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-style-b disabled"&gt;echo-button-style-b&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
   &lt;dfn&gt;input要素のbutton + style-a&lt;/dfn&gt;
-  &lt;input type="button" class="m-button m-button-style-b" value=" m-button-style-b" /&gt;
-  &lt;input type="button" class="m-button m-button-style-b" value=" m-button-style-b" disabled="disabled" /&gt;
+  &lt;input type="button" class="echo-button echo-button-style-b" value=" echo-button-style-b" /&gt;
+  &lt;input type="button" class="echo-button echo-button-style-b" value=" echo-button-style-b" disabled="disabled" /&gt;
 &lt;/p&gt;
 </code></pre></div>
 
 
-<h2 id="btn-02-color" class="styleguide">m-button-(color)</h2>
+<h2 id="btn-02-color" class="styleguide">echo-button-(color)</h2>
 
-<p><code>.m-button-style-(style)</code> と同時に使用することを前提に、ボタンの色を変更する。<br>
+<p><code>.echo-button-style-(style)</code> と同時に使用することを前提に、ボタンの色を変更する。<br>
 (color)は<a href="../docs/design-tokens-color.html">標準のカラーテーブル</a>を参照。</p>
 
 <div class="example">
 
 <p>
   <dfn>info + style-a</dfn>
-  <a href="#" class="m-button m-button-style-a m-button-info">m-button-info</a>
-  <a href="#" class="m-button m-button-style-a m-button-info disabled">m-button-info</a>
+  <a href="#" class="echo-button echo-button-style-a echo-button-info">echo-button-info</a>
+  <a href="#" class="echo-button echo-button-style-a echo-button-info disabled">echo-button-info</a>
 </p>
 
 <p>
   <dfn>info + style-b</dfn>
-  <a href="#" class="m-button m-button-style-b m-button-info">m-button-info</a>
-  <a href="#" class="m-button m-button-style-b m-button-info disabled">m-button-info</a>
+  <a href="#" class="echo-button echo-button-style-b echo-button-info">echo-button-info</a>
+  <a href="#" class="echo-button echo-button-style-b echo-button-info disabled">echo-button-info</a>
 </p>
 
 <p>
   <dfn>important + style-a</dfn>
-  <a href="#" class="m-button m-button-style-a m-button-important">m-button-important</a>
-  <a href="#" class="m-button m-button-style-a m-button-important disabled">m-button-important</a>
+  <a href="#" class="echo-button echo-button-style-a echo-button-important">echo-button-important</a>
+  <a href="#" class="echo-button echo-button-style-a echo-button-important disabled">echo-button-important</a>
 </p>
 
 <p>
   <dfn>important + style-b</dfn>
-  <a href="#" class="m-button m-button-style-b m-button-important">m-button-important</a>
-  <a href="#" class="m-button m-button-style-b m-button-important disabled">m-button-important</a>
+  <a href="#" class="echo-button echo-button-style-b echo-button-important">echo-button-important</a>
+  <a href="#" class="echo-button echo-button-style-b echo-button-important disabled">echo-button-important</a>
 </p>
 
 <p class="u-bg-default u-padding-md">
   <dfn>inverse + style-a</dfn>
-  <a href="#" class="m-button m-button-style-a m-button-inverse">m-button-inverse</a>
-  <a href="#" class="m-button m-button-style-a m-button-inverse disabled">m-button-inverse</a>
+  <a href="#" class="echo-button echo-button-style-a echo-button-inverse">echo-button-inverse</a>
+  <a href="#" class="echo-button echo-button-style-a echo-button-inverse disabled">echo-button-inverse</a>
 </p>
 
 <p class="u-bg-default u-padding-md">
   <dfn>inverse + style-b</dfn>
-  <a href="#" class="m-button m-button-style-b m-button-inverse">m-button-inverse</a>
-  <a href="#" class="m-button m-button-style-b m-button-inverse disabled">m-button-inverse</a>
+  <a href="#" class="echo-button echo-button-style-b echo-button-inverse">echo-button-inverse</a>
+  <a href="#" class="echo-button echo-button-style-b echo-button-inverse disabled">echo-button-inverse</a>
 </p>
 
 </div>
 
 <div class="codeblock"><pre><code class="language-markup">&lt;p&gt;
   &lt;dfn&gt;info + style-a&lt;/dfn&gt;
-  &lt;a href="#" class="m-button m-button-style-a m-button-info"&gt;m-button-info&lt;/a&gt;
-  &lt;a href="#" class="m-button m-button-style-a m-button-info disabled"&gt;m-button-info&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-style-a echo-button-info"&gt;echo-button-info&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-style-a echo-button-info disabled"&gt;echo-button-info&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
   &lt;dfn&gt;info + style-b&lt;/dfn&gt;
-  &lt;a href="#" class="m-button m-button-style-b m-button-info"&gt;m-button-info&lt;/a&gt;
-  &lt;a href="#" class="m-button m-button-style-b m-button-info disabled"&gt;m-button-info&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-style-b echo-button-info"&gt;echo-button-info&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-style-b echo-button-info disabled"&gt;echo-button-info&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
   &lt;dfn&gt;important + style-a&lt;/dfn&gt;
-  &lt;a href="#" class="m-button m-button-style-a m-button-important"&gt;m-button-important&lt;/a&gt;
-  &lt;a href="#" class="m-button m-button-style-a m-button-important disabled"&gt;m-button-important&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-style-a echo-button-important"&gt;echo-button-important&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-style-a echo-button-important disabled"&gt;echo-button-important&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
   &lt;dfn&gt;important + style-b&lt;/dfn&gt;
-  &lt;a href="#" class="m-button m-button-style-b m-button-important"&gt;m-button-important&lt;/a&gt;
-  &lt;a href="#" class="m-button m-button-style-b m-button-important disabled"&gt;m-button-important&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-style-b echo-button-important"&gt;echo-button-important&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-style-b echo-button-important disabled"&gt;echo-button-important&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p class="u-bg-default u-padding-md"&gt;
   &lt;dfn&gt;inverse + style-a&lt;/dfn&gt;
-  &lt;a href="#" class="m-button m-button-style-a m-button-inverse"&gt;m-button-inverse&lt;/a&gt;
-  &lt;a href="#" class="m-button m-button-style-a m-button-inverse disabled"&gt;m-button-inverse&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-style-a echo-button-inverse"&gt;echo-button-inverse&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-style-a echo-button-inverse disabled"&gt;echo-button-inverse&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p class="u-bg-default u-padding-md"&gt;
   &lt;dfn&gt;inverse + style-b&lt;/dfn&gt;
-  &lt;a href="#" class="m-button m-button-style-b m-button-inverse"&gt;m-button-inverse&lt;/a&gt;
-  &lt;a href="#" class="m-button m-button-style-b m-button-inverse disabled"&gt;m-button-inverse&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-style-b echo-button-inverse"&gt;echo-button-inverse&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-style-b echo-button-inverse disabled"&gt;echo-button-inverse&lt;/a&gt;
 &lt;/p&gt;
 </code></pre></div>
 
 
-<h2 id="btn-03-size" class="styleguide">m-button-(size)</h2>
+<h2 id="btn-03-size" class="styleguide">echo-button-(size)</h2>
 
 <p>ボタンのサイズを変える。(size)は、 <code>lg, xl, xxl</code> に対応している。</p>
 
 <h3>補足：xl, xxlの挙動</h3>
 
-<p><code>.m-button-xl, .m-button-xxl</code> は、(breakpoint)が <code>sm</code> 以下では一段階小さくなる。（モバイル端末では、lgとxlが同じ大きさとなる）</p>
+<p><code>.echo-button-xl, .echo-button-xxl</code> は、(breakpoint)が <code>sm</code> 以下では一段階小さくなる。（モバイル端末では、lgとxlが同じ大きさとなる）</p>
 
 <h3>note: Behavior of xl, xxl</h3>
 
-<p><code>.m-button-xl, .m-button-xxl</code> decreases by one level when (breakpoint) is less than <code>sm</code>. (On mobile devices, lg and xl are same size)</p>
+<p><code>.echo-button-xl, .echo-button-xxl</code> decreases by one level when (breakpoint) is less than <code>sm</code>. (On mobile devices, lg and xl are same size)</p>
 
 <div class="example">
 <p>
-  <a href="#" class="m-button m-button-style-a">m-button</a>
+  <a href="#" class="echo-button echo-button-style-a">echo-button</a>
 </p>
 
 <p>
-  <a href="#" class="m-button m-button-lg m-button-style-a">m-button-lg</a>
+  <a href="#" class="echo-button echo-button-lg echo-button-style-a">echo-button-lg</a>
 </p>
 
 <p>
-  <a href="#" class="m-button m-button-xl m-button-style-a">m-button-xl</a>
+  <a href="#" class="echo-button echo-button-xl echo-button-style-a">echo-button-xl</a>
 </p>
 
 <p>
-  <a href="#" class="m-button m-button-xxl m-button-style-a">m-button-xxl</a>
+  <a href="#" class="echo-button echo-button-xxl echo-button-style-a">echo-button-xxl</a>
 </p>
 </div>
 
 <div class="codeblock"><pre><code class="language-markup">&lt;p&gt;
-  &lt;a href="#" class="m-button m-button-style-a"&gt;m-button&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-style-a"&gt;echo-button&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
-  &lt;a href="#" class="m-button m-button-lg m-button-style-a"&gt;m-button-lg&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-lg echo-button-style-a"&gt;echo-button-lg&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
-  &lt;a href="#" class="m-button m-button-xl m-button-style-a"&gt;m-button-xl&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-xl echo-button-style-a"&gt;echo-button-xl&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
-  &lt;a href="#" class="m-button m-button-xxl m-button-style-a"&gt;m-button-xxl&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-xxl echo-button-style-a"&gt;echo-button-xxl&lt;/a&gt;
 &lt;/p&gt;
 </code></pre></div>
 
 
-<h2 id="btn-04-arrowed" class="styleguide">m-button-arrowed-(direction)</h2>
+<h2 id="btn-04-arrowed" class="styleguide">echo-button-arrowed-(direction)</h2>
 
 <p>ボタンの左端、もしくは右端に移動を促す矢印を表示する。</p>
 
@@ -311,443 +311,443 @@
 
 <p>
   <dfn>arrowed-left + style-a</dfn>
-  <a href="#" class="m-button m-button-style-a m-button-info m-button-arrowed-left">m-button-arrowed-left</a>
+  <a href="#" class="echo-button echo-button-style-a echo-button-info echo-button-arrowed-left">echo-button-arrowed-left</a>
 </p>
 
 <p>
   <dfn>arrowed-right + style-a</dfn>
-  <a href="#" class="m-button m-button-style-a m-button-important m-button-arrowed-right">m-button-arrowed-right</a>
+  <a href="#" class="echo-button echo-button-style-a echo-button-important echo-button-arrowed-right">echo-button-arrowed-right</a>
 </p>
 
 <p>
   <dfn>arrowed-left + style-b</dfn>
-  <a href="#" class="m-button m-button-style-b m-button-info m-button-arrowed-left">m-button-arrowed-left</a>
+  <a href="#" class="echo-button echo-button-style-b echo-button-info echo-button-arrowed-left">echo-button-arrowed-left</a>
 </p>
 
 <p>
   <dfn>arrowed-right + style-b</dfn>
-  <a href="#" class="m-button m-button-style-b m-button-important m-button-arrowed-right">m-button-arrowed-right</a>
+  <a href="#" class="echo-button echo-button-style-b echo-button-important echo-button-arrowed-right">echo-button-arrowed-right</a>
 </p>
 
 
 <p class="u-bg-default u-padding-md">
   <dfn>inverse + arrowed-left + style-a</dfn>
-  <a href="#" class="m-button m-button-style-a m-button-inverse m-button-arrowed-left">m-button-arrowed-left</a>
+  <a href="#" class="echo-button echo-button-style-a echo-button-inverse echo-button-arrowed-left">echo-button-arrowed-left</a>
 </p>
 
 <p class="u-bg-default u-padding-md">
   <dfn>inverse + arrowed-right + style-a</dfn>
-  <a href="#" class="m-button m-button-style-a m-button-inverse m-button-arrowed-right">m-button-arrowed-right</a>
+  <a href="#" class="echo-button echo-button-style-a echo-button-inverse echo-button-arrowed-right">echo-button-arrowed-right</a>
 </p>
 
 <p class="u-bg-default u-padding-md">
   <dfn>inverse + arrowed-left + style-b</dfn>
-  <a href="#" class="m-button m-button-style-b m-button-inverse m-button-arrowed-left">m-button-arrowed-left</a>
+  <a href="#" class="echo-button echo-button-style-b echo-button-inverse echo-button-arrowed-left">echo-button-arrowed-left</a>
 </p>
 
 <p class="u-bg-default u-padding-md">
   <dfn>inverse + arrowed-right + style-b</dfn>
-  <a href="#" class="m-button m-button-style-b m-button-inverse m-button-arrowed-right">m-button-arrowed-right</a>
+  <a href="#" class="echo-button echo-button-style-b echo-button-inverse echo-button-arrowed-right">echo-button-arrowed-right</a>
 </p>
 
 </div>
 
 <div class="codeblock"><pre><code class="language-markup">&lt;p&gt;
   &lt;dfn&gt;arrowed-left + style-a&lt;/dfn&gt;
-  &lt;a href="#" class="m-button m-button-style-a m-button-info m-button-arrowed-left"&gt;m-button-arrowed-left&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-style-a echo-button-info echo-button-arrowed-left"&gt;echo-button-arrowed-left&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
   &lt;dfn&gt;arrowed-right + style-a&lt;/dfn&gt;
-  &lt;a href="#" class="m-button m-button-style-a m-button-important m-button-arrowed-right"&gt;m-button-arrowed-right&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-style-a echo-button-important echo-button-arrowed-right"&gt;echo-button-arrowed-right&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
   &lt;dfn&gt;arrowed-left + style-b&lt;/dfn&gt;
-  &lt;a href="#" class="m-button m-button-style-b m-button-info m-button-arrowed-left"&gt;m-button-arrowed-left&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-style-b echo-button-info echo-button-arrowed-left"&gt;echo-button-arrowed-left&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
   &lt;dfn&gt;arrowed-right + style-b&lt;/dfn&gt;
-  &lt;a href="#" class="m-button m-button-style-b m-button-important m-button-arrowed-right"&gt;m-button-arrowed-right&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-style-b echo-button-important echo-button-arrowed-right"&gt;echo-button-arrowed-right&lt;/a&gt;
 &lt;/p&gt;
 
 
 &lt;p class="u-bg-default u-padding-md"&gt;
   &lt;dfn&gt;inverse + arrowed-left + style-a&lt;/dfn&gt;
-  &lt;a href="#" class="m-button m-button-style-a m-button-inverse m-button-arrowed-left"&gt;m-button-arrowed-left&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-style-a echo-button-inverse echo-button-arrowed-left"&gt;echo-button-arrowed-left&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p class="u-bg-default u-padding-md"&gt;
   &lt;dfn&gt;inverse + arrowed-right + style-a&lt;/dfn&gt;
-  &lt;a href="#" class="m-button m-button-style-a m-button-inverse m-button-arrowed-right"&gt;m-button-arrowed-right&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-style-a echo-button-inverse echo-button-arrowed-right"&gt;echo-button-arrowed-right&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p class="u-bg-default u-padding-md"&gt;
   &lt;dfn&gt;inverse + arrowed-left + style-b&lt;/dfn&gt;
-  &lt;a href="#" class="m-button m-button-style-b m-button-inverse m-button-arrowed-left"&gt;m-button-arrowed-left&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-style-b echo-button-inverse echo-button-arrowed-left"&gt;echo-button-arrowed-left&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p class="u-bg-default u-padding-md"&gt;
   &lt;dfn&gt;inverse + arrowed-right + style-b&lt;/dfn&gt;
-  &lt;a href="#" class="m-button m-button-style-b m-button-inverse m-button-arrowed-right"&gt;m-button-arrowed-right&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-style-b echo-button-inverse echo-button-arrowed-right"&gt;echo-button-arrowed-right&lt;/a&gt;
 &lt;/p&gt;
 </code></pre></div>
 
 
-<h2 id="btn-05-block" class="styleguide">m-button-block</h2>
+<h2 id="btn-05-block" class="styleguide">echo-button-block</h2>
 
 <p>ボタンを中央に寄せたブロック要素として表示する。幅は100%ではなく、一般的に考えられる幅を最大値とする。</p>
 
 <h3>補足：ボタンの余白</h3>
 
-<p><code>.m-button-block, .m-button-circle, .m-button-square</code> では、<code>.m-button</code> のpaddingの初期値を上書きする必要があるため、意図的にクラスを追加して優先度を上げている。</p>
+<p><code>.echo-button-block, .echo-button-circle, .echo-button-square</code> では、<code>.echo-button</code> のpaddingの初期値を上書きする必要があるため、意図的にクラスを追加して優先度を上げている。</p>
 
 <h3>note: Padding in button</h3>
 
-<p>In <code>.m-button-block, .m-button-circle, .m-button-square</code>, need to override the default padding of <code>.m-button</code>. For this reason, intentionally add classes to increase priority.</p>
+<p>In <code>.echo-button-block, .echo-button-circle, .echo-button-square</code>, need to override the default padding of <code>.echo-button</code>. For this reason, intentionally add classes to increase priority.</p>
 
 <div class="example">
 
 <p>
-  <a href="#" class="m-button m-button-block m-button-style-a m-button-arrowed-right">m-button-block</a>
+  <a href="#" class="echo-button echo-button-block echo-button-style-a echo-button-arrowed-right">echo-button-block</a>
 </p>
 
 <p>
-  <a href="#" class="m-button m-button-lg m-button-block m-button-style-a m-button-arrowed-right">m-button-block</a>
+  <a href="#" class="echo-button echo-button-lg echo-button-block echo-button-style-a echo-button-arrowed-right">echo-button-block</a>
 </p>
 
 <p>
-  <a href="#" class="m-button m-button-xl m-button-block m-button-style-a m-button-arrowed-right">m-button-block</a>
+  <a href="#" class="echo-button echo-button-xl echo-button-block echo-button-style-a echo-button-arrowed-right">echo-button-block</a>
 </p>
 
 <p>
-  <a href="#" class="m-button m-button-xxl m-button-block m-button-style-a m-button-arrowed-right">m-button-block</a>
+  <a href="#" class="echo-button echo-button-xxl echo-button-block echo-button-style-a echo-button-arrowed-right">echo-button-block</a>
 </p>
 
 <p>
-  <a href="#" class="m-button m-button-block m-button-style-b m-button-arrowed-right">m-button-block</a>
+  <a href="#" class="echo-button echo-button-block echo-button-style-b echo-button-arrowed-right">echo-button-block</a>
 </p>
 <p>
-  <a href="#" class="m-button m-button-lg m-button-block m-button-style-b m-button-arrowed-right">m-button-block</a>
+  <a href="#" class="echo-button echo-button-lg echo-button-block echo-button-style-b echo-button-arrowed-right">echo-button-block</a>
 </p>
 <p>
-  <a href="#" class="m-button m-button-xl m-button-block m-button-style-b m-button-arrowed-right">m-button-block</a>
+  <a href="#" class="echo-button echo-button-xl echo-button-block echo-button-style-b echo-button-arrowed-right">echo-button-block</a>
 </p>
 <p>
-  <a href="#" class="m-button m-button-xxl m-button-block m-button-style-b m-button-arrowed-right">m-button-block</a>
+  <a href="#" class="echo-button echo-button-xxl echo-button-block echo-button-style-b echo-button-arrowed-right">echo-button-block</a>
 </p>
 </div>
 
 <div class="codeblock"><pre><code class="language-markup">&lt;p&gt;
-  &lt;a href="#" class="m-button m-button-info m-button-block m-button-style-a"&gt;m-button-block&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-info echo-button-block echo-button-style-a"&gt;echo-button-block&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
-  &lt;a href="#" class="m-button m-button-lg m-button-block m-button-style-a m-button-info"&gt;m-button-block&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-lg echo-button-block echo-button-style-a echo-button-info"&gt;echo-button-block&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
-  &lt;a href="#" class="m-button m-button-xl m-button-block m-button-style-a m-button-info"&gt;m-button-block&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-xl echo-button-block echo-button-style-a echo-button-info"&gt;echo-button-block&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
-  &lt;a href="#" class="m-button m-button-xxl m-button-block m-button-style-a m-button-info"&gt;m-button-block&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-xxl echo-button-block echo-button-style-a echo-button-info"&gt;echo-button-block&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
-  &lt;a href="#" class="m-button m-button-block m-button-style-b"&gt;m-button-block&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-block echo-button-style-b"&gt;echo-button-block&lt;/a&gt;
 &lt;/p&gt;
 &lt;p&gt;
-  &lt;a href="#" class="m-button m-button-lg m-button-block m-button-style-b"&gt;m-button-block&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-lg echo-button-block echo-button-style-b"&gt;echo-button-block&lt;/a&gt;
 &lt;/p&gt;
 &lt;p&gt;
-  &lt;a href="#" class="m-button m-button-xl m-button-block m-button-style-b"&gt;m-button-block&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-xl echo-button-block echo-button-style-b"&gt;echo-button-block&lt;/a&gt;
 &lt;/p&gt;
 &lt;p&gt;
-  &lt;a href="#" class="m-button m-button-xxl m-button-block m-button-style-b"&gt;m-button-block&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-xxl echo-button-block echo-button-style-b"&gt;echo-button-block&lt;/a&gt;
 &lt;/p&gt;
 </code></pre></div>
 
-<h2 id="btn-06-oval" class="styleguide">m-button-oval</h2>
+<h2 id="btn-06-oval" class="styleguide">echo-button-oval</h2>
 
 <p>ボタンを小判型にする。</p>
 <div class="example">
 
 <p>
-  <a href="#" class="m-button m-button-oval">m-button-oval</a>
+  <a href="#" class="echo-button echo-button-oval">echo-button-oval</a>
 </p>
 
 <p>
-  <a href="#" class="m-button m-button-oval m-button-style-a">m-button-oval</a>
-  <a href="#" class="m-button m-button-oval m-button-style-b">m-button-oval</a>
+  <a href="#" class="echo-button echo-button-oval echo-button-style-a">echo-button-oval</a>
+  <a href="#" class="echo-button echo-button-oval echo-button-style-b">echo-button-oval</a>
 </p>
 
 <p>
-  <a href="#" class="m-button m-button-oval m-button-style-a m-button-info">m-button-oval</a>
-  <a href="#" class="m-button m-button-oval m-button-style-b m-button-info">m-button-oval</a>
+  <a href="#" class="echo-button echo-button-oval echo-button-style-a echo-button-info">echo-button-oval</a>
+  <a href="#" class="echo-button echo-button-oval echo-button-style-b echo-button-info">echo-button-oval</a>
 </p>
 
 <p>
-  <a href="#" class="m-button m-button-oval m-button-style-a m-button-important">m-button-oval</a>
-  <a href="#" class="m-button m-button-oval m-button-style-b m-button-important">m-button-oval</a>
+  <a href="#" class="echo-button echo-button-oval echo-button-style-a echo-button-important">echo-button-oval</a>
+  <a href="#" class="echo-button echo-button-oval echo-button-style-b echo-button-important">echo-button-oval</a>
 </p>
 
 <p class="u-bg-default u-padding-md">
-  <a href="#" class="m-button m-button-oval m-button-style-a m-button-inverse">m-button-oval</a>
-  <a href="#" class="m-button m-button-oval m-button-style-b m-button-inverse">m-button-oval</a>
+  <a href="#" class="echo-button echo-button-oval echo-button-style-a echo-button-inverse">echo-button-oval</a>
+  <a href="#" class="echo-button echo-button-oval echo-button-style-b echo-button-inverse">echo-button-oval</a>
 </p>
 
 <p>
-  <a href="#" class="m-button m-button-oval m-button-style-a m-button-arrowed-left">m-button-oval</a>
-  <a href="#" class="m-button m-button-oval m-button-style-a m-button-arrowed-right">m-button-oval</a>
+  <a href="#" class="echo-button echo-button-oval echo-button-style-a echo-button-arrowed-left">echo-button-oval</a>
+  <a href="#" class="echo-button echo-button-oval echo-button-style-a echo-button-arrowed-right">echo-button-oval</a>
 </p>
 
 <p>
-  <a href="#" class="m-button m-button-block m-button-oval m-button-style-a m-button-arrowed-right">m-button-oval</a>
+  <a href="#" class="echo-button echo-button-block echo-button-oval echo-button-style-a echo-button-arrowed-right">echo-button-oval</a>
 </p>
 
 <p>
-  <a href="#" class="m-button m-button-lg m-button-block m-button-oval m-button-style-a m-button-arrowed-right">m-button-oval</a>
+  <a href="#" class="echo-button echo-button-lg echo-button-block echo-button-oval echo-button-style-a echo-button-arrowed-right">echo-button-oval</a>
 </p>
 
 <p>
-  <a href="#" class="m-button m-button-xl m-button-block m-button-oval m-button-style-a m-button-arrowed-right">m-button-oval</a>
+  <a href="#" class="echo-button echo-button-xl echo-button-block echo-button-oval echo-button-style-a echo-button-arrowed-right">echo-button-oval</a>
 </p>
 
 <p>
-  <a href="#" class="m-button m-button-xxl m-button-block m-button-oval m-button-style-a m-button-arrowed-right">m-button-oval</a>
+  <a href="#" class="echo-button echo-button-xxl echo-button-block echo-button-oval echo-button-style-a echo-button-arrowed-right">echo-button-oval</a>
 </p>
 
 </div>
 
 
 <div class="codeblock"><pre><code class="language-markup">&lt;p>
-  &lt;a href="#" class="m-button m-button-oval">m-button-oval&lt;/a>
+  &lt;a href="#" class="echo-button echo-button-oval">echo-button-oval&lt;/a>
 &lt;/p>
 
 &lt;p>
-  &lt;a href="#" class="m-button m-button-oval m-button-style-a">m-button-oval&lt;/a>
-  &lt;a href="#" class="m-button m-button-oval m-button-style-b">m-button-oval&lt;/a>
+  &lt;a href="#" class="echo-button echo-button-oval echo-button-style-a">echo-button-oval&lt;/a>
+  &lt;a href="#" class="echo-button echo-button-oval echo-button-style-b">echo-button-oval&lt;/a>
 &lt;/p>
 
 &lt;p>
-  &lt;a href="#" class="m-button m-button-oval m-button-style-a m-button-info">m-button-oval&lt;/a>
-  &lt;a href="#" class="m-button m-button-oval m-button-style-b m-button-info">m-button-oval&lt;/a>
+  &lt;a href="#" class="echo-button echo-button-oval echo-button-style-a echo-button-info">echo-button-oval&lt;/a>
+  &lt;a href="#" class="echo-button echo-button-oval echo-button-style-b echo-button-info">echo-button-oval&lt;/a>
 &lt;/p>
 
 &lt;p>
-  &lt;a href="#" class="m-button m-button-oval m-button-style-a m-button-important">m-button-oval&lt;/a>
-  &lt;a href="#" class="m-button m-button-oval m-button-style-b m-button-important">m-button-oval&lt;/a>
+  &lt;a href="#" class="echo-button echo-button-oval echo-button-style-a echo-button-important">echo-button-oval&lt;/a>
+  &lt;a href="#" class="echo-button echo-button-oval echo-button-style-b echo-button-important">echo-button-oval&lt;/a>
 &lt;/p>
 
 &lt;p class="u-bg-default u-padding-md">
-  &lt;a href="#" class="m-button m-button-oval m-button-style-a m-button-inverse">m-button-oval&lt;/a>
-  &lt;a href="#" class="m-button m-button-oval m-button-style-b m-button-inverse">m-button-oval&lt;/a>
+  &lt;a href="#" class="echo-button echo-button-oval echo-button-style-a echo-button-inverse">echo-button-oval&lt;/a>
+  &lt;a href="#" class="echo-button echo-button-oval echo-button-style-b echo-button-inverse">echo-button-oval&lt;/a>
 &lt;/p>
 
 &lt;p>
-  &lt;a href="#" class="m-button m-button-oval m-button-style-a m-button-arrowed-left">m-button-oval&lt;/a>
-  &lt;a href="#" class="m-button m-button-oval m-button-style-a m-button-arrowed-right">m-button-oval&lt;/a>
+  &lt;a href="#" class="echo-button echo-button-oval echo-button-style-a echo-button-arrowed-left">echo-button-oval&lt;/a>
+  &lt;a href="#" class="echo-button echo-button-oval echo-button-style-a echo-button-arrowed-right">echo-button-oval&lt;/a>
 &lt;/p>
 
 &lt;p>
-  &lt;a href="#" class="m-button m-button-block m-button-oval m-button-style-a m-button-arrowed-right">m-button-oval&lt;/a>
+  &lt;a href="#" class="echo-button echo-button-block echo-button-oval echo-button-style-a echo-button-arrowed-right">echo-button-oval&lt;/a>
 &lt;/p>
 
 &lt;p>
-  &lt;a href="#" class="m-button m-button-lg m-button-block m-button-oval m-button-style-a m-button-arrowed-right">m-button-oval&lt;/a>
+  &lt;a href="#" class="echo-button echo-button-lg echo-button-block echo-button-oval echo-button-style-a echo-button-arrowed-right">echo-button-oval&lt;/a>
 &lt;/p>
 
 &lt;p>
-  &lt;a href="#" class="m-button m-button-xl m-button-block m-button-oval m-button-style-a m-button-arrowed-right">m-button-oval&lt;/a>
+  &lt;a href="#" class="echo-button echo-button-xl echo-button-block echo-button-oval echo-button-style-a echo-button-arrowed-right">echo-button-oval&lt;/a>
 &lt;/p>
 
 &lt;p>
-  &lt;a href="#" class="m-button m-button-xxl m-button-block m-button-oval m-button-style-a m-button-arrowed-right">m-button-oval&lt;/a>
+  &lt;a href="#" class="echo-button echo-button-xxl echo-button-block echo-button-oval echo-button-style-a echo-button-arrowed-right">echo-button-oval&lt;/a>
 &lt;/p>
 </code></pre></div>
 
 
-<h2 id="btn-07-circle" class="styleguide">m-button-circle</h2>
+<h2 id="btn-07-circle" class="styleguide">echo-button-circle</h2>
 
 <p>ボタンを正円で表示する。<br>
-<code>.m-button-arrowed-(direction)</code> は使用できない。<br>
+<code>.echo-button-arrowed-(direction)</code> は使用できない。<br>
 幅を超える文字数のテキストを表示することはできない。</p>
 
 <div class="example">
 
 <p>
-  <a href="#" class="m-button m-button-circle">C</a>
+  <a href="#" class="echo-button echo-button-circle">C</a>
 </p>
 
 <p>
-  <a href="#" class="m-button m-button-circle m-button-style-a">C</a>
-  <a href="#" class="m-button m-button-circle m-button-style-b">C</a>
+  <a href="#" class="echo-button echo-button-circle echo-button-style-a">C</a>
+  <a href="#" class="echo-button echo-button-circle echo-button-style-b">C</a>
 </p>
 
 <p>
-  <a href="#" class="m-button m-button-circle m-button-style-a m-button-info">C</a>
-  <a href="#" class="m-button m-button-circle m-button-style-b m-button-info">C</a>
+  <a href="#" class="echo-button echo-button-circle echo-button-style-a echo-button-info">C</a>
+  <a href="#" class="echo-button echo-button-circle echo-button-style-b echo-button-info">C</a>
 </p>
 
 <p>
-  <a href="#" class="m-button m-button-circle m-button-style-a m-button-important">C</a>
-  <a href="#" class="m-button m-button-circle m-button-style-b m-button-important">C</a>
+  <a href="#" class="echo-button echo-button-circle echo-button-style-a echo-button-important">C</a>
+  <a href="#" class="echo-button echo-button-circle echo-button-style-b echo-button-important">C</a>
 </p>
 
 <p class="u-bg-default u-padding-md">
-  <a href="#" class="m-button m-button-circle m-button-style-a m-button-inverse">C</a>
-  <a href="#" class="m-button m-button-circle m-button-style-b m-button-inverse">C</a>
+  <a href="#" class="echo-button echo-button-circle echo-button-style-a echo-button-inverse">C</a>
+  <a href="#" class="echo-button echo-button-circle echo-button-style-b echo-button-inverse">C</a>
 </p>
 
 <p>
-  <a href="#" class="m-button m-button-block m-button-circle m-button-style-a">C</a>
+  <a href="#" class="echo-button echo-button-block echo-button-circle echo-button-style-a">C</a>
 </p>
 
 <p>
-  <a href="#" class="m-button m-button-block m-button-lg m-button-circle m-button-style-a">C</a>
+  <a href="#" class="echo-button echo-button-block echo-button-lg echo-button-circle echo-button-style-a">C</a>
 </p>
 
 <p>
-  <a href="#" class="m-button m-button-block m-button-xl m-button-circle m-button-style-a">C</a>
+  <a href="#" class="echo-button echo-button-block echo-button-xl echo-button-circle echo-button-style-a">C</a>
 </p>
 
 <p>
-  <a href="#" class="m-button m-button-block m-button-xxl m-button-circle m-button-style-a">C</a>
+  <a href="#" class="echo-button echo-button-block echo-button-xxl echo-button-circle echo-button-style-a">C</a>
 </p>
 
 </div>
 
 <div class="codeblock"><pre><code class="language-markup">&lt;p&gt;
-  &lt;a href="#" class="m-button m-button-circle"&gt;C&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-circle"&gt;C&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
-  &lt;a href="#" class="m-button m-button-circle m-button-style-a"&gt;C&lt;/a&gt;
-  &lt;a href="#" class="m-button m-button-circle m-button-style-b"&gt;C&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-circle echo-button-style-a"&gt;C&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-circle echo-button-style-b"&gt;C&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
-  &lt;a href="#" class="m-button m-button-circle m-button-style-a m-button-info"&gt;C&lt;/a&gt;
-  &lt;a href="#" class="m-button m-button-circle m-button-style-b m-button-info"&gt;C&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-circle echo-button-style-a echo-button-info"&gt;C&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-circle echo-button-style-b echo-button-info"&gt;C&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
-  &lt;a href="#" class="m-button m-button-circle m-button-style-a m-button-important"&gt;C&lt;/a&gt;
-  &lt;a href="#" class="m-button m-button-circle m-button-style-b m-button-important"&gt;C&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-circle echo-button-style-a echo-button-important"&gt;C&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-circle echo-button-style-b echo-button-important"&gt;C&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p class="u-bg-default u-padding-md"&gt;
-  &lt;a href="#" class="m-button m-button-circle m-button-style-a m-button-inverse"&gt;C&lt;/a&gt;
-  &lt;a href="#" class="m-button m-button-circle m-button-style-b m-button-inverse"&gt;C&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-circle echo-button-style-a echo-button-inverse"&gt;C&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-circle echo-button-style-b echo-button-inverse"&gt;C&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
-  &lt;a href="#" class="m-button m-button-block m-button-circle m-button-style-a"&gt;C&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-block echo-button-circle echo-button-style-a"&gt;C&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
-  &lt;a href="#" class="m-button m-button-block m-button-lg m-button-circle m-button-style-a"&gt;C&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-block echo-button-lg echo-button-circle echo-button-style-a"&gt;C&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
-  &lt;a href="#" class="m-button m-button-block m-button-xl m-button-circle m-button-style-a"&gt;C&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-block echo-button-xl echo-button-circle echo-button-style-a"&gt;C&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
-  &lt;a href="#" class="m-button m-button-block m-button-xxl m-button-circle m-button-style-a"&gt;C&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-block echo-button-xxl echo-button-circle echo-button-style-a"&gt;C&lt;/a&gt;
 &lt;/p&gt;
 </code></pre></div>
 
 
-<h2 id="btn-08-square" class="styleguide">m-button-square</h2>
+<h2 id="btn-08-square" class="styleguide">echo-button-square</h2>
 
 <p>ボタンを正方形で表示する。<br>
-<code>.m-button-arrowed-(direction)</code> は使用できない。<br>
+<code>.echo-button-arrowed-(direction)</code> は使用できない。<br>
 幅を超える文字数のテキストを表示することはできない。</p>
 
 <div class="example">
 <p>
-  <a href="#" class="m-button m-button-square">S</a>
+  <a href="#" class="echo-button echo-button-square">S</a>
 </p>
 
 <p>
-  <a href="#" class="m-button m-button-square m-button-style-a">S</a>
-  <a href="#" class="m-button m-button-square m-button-style-b">S</a>
+  <a href="#" class="echo-button echo-button-square echo-button-style-a">S</a>
+  <a href="#" class="echo-button echo-button-square echo-button-style-b">S</a>
 </p>
 
 <p>
-  <a href="#" class="m-button m-button-square m-button-style-a m-button-info">S</a>
-  <a href="#" class="m-button m-button-square m-button-style-b m-button-info">S</a>
+  <a href="#" class="echo-button echo-button-square echo-button-style-a echo-button-info">S</a>
+  <a href="#" class="echo-button echo-button-square echo-button-style-b echo-button-info">S</a>
 </p>
 
 <p>
-  <a href="#" class="m-button m-button-square m-button-style-a m-button-important">S</a>
-  <a href="#" class="m-button m-button-square m-button-style-b m-button-important">S</a>
+  <a href="#" class="echo-button echo-button-square echo-button-style-a echo-button-important">S</a>
+  <a href="#" class="echo-button echo-button-square echo-button-style-b echo-button-important">S</a>
 </p>
 
 <p class="u-bg-default u-padding-md">
-  <a href="#" class="m-button m-button-square m-button-style-a m-button-inverse">S</a>
-  <a href="#" class="m-button m-button-square m-button-style-b m-button-inverse">S</a>
+  <a href="#" class="echo-button echo-button-square echo-button-style-a echo-button-inverse">S</a>
+  <a href="#" class="echo-button echo-button-square echo-button-style-b echo-button-inverse">S</a>
 </p>
 
 <p>
-  <a href="#" class="m-button m-button-block m-button-square m-button-style-a">S</a>
+  <a href="#" class="echo-button echo-button-block echo-button-square echo-button-style-a">S</a>
 </p>
 
 <p>
-  <a href="#" class="m-button m-button-block m-button-lg m-button-square m-button-style-a">S</a>
+  <a href="#" class="echo-button echo-button-block echo-button-lg echo-button-square echo-button-style-a">S</a>
 </p>
 
 <p>
-  <a href="#" class="m-button m-button-block m-button-xl m-button-square m-button-style-a">S</a>
+  <a href="#" class="echo-button echo-button-block echo-button-xl echo-button-square echo-button-style-a">S</a>
 </p>
 
 <p>
-  <a href="#" class="m-button m-button-block m-button-xxl m-button-square m-button-style-a">S</a>
+  <a href="#" class="echo-button echo-button-block echo-button-xxl echo-button-square echo-button-style-a">S</a>
 </p>
 </div>
 
 
 <div class="codeblock"><pre><code class="language-markup">&lt;p&gt;
-  &lt;a href="#" class="m-button m-button-square"&gt;S&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-square"&gt;S&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
-  &lt;a href="#" class="m-button m-button-square m-button-style-a"&gt;S&lt;/a&gt;
-  &lt;a href="#" class="m-button m-button-square m-button-style-b"&gt;S&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-square echo-button-style-a"&gt;S&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-square echo-button-style-b"&gt;S&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
-  &lt;a href="#" class="m-button m-button-square m-button-style-a m-button-info"&gt;S&lt;/a&gt;
-  &lt;a href="#" class="m-button m-button-square m-button-style-b m-button-info"&gt;S&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-square echo-button-style-a echo-button-info"&gt;S&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-square echo-button-style-b echo-button-info"&gt;S&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
-  &lt;a href="#" class="m-button m-button-square m-button-style-a m-button-important"&gt;S&lt;/a&gt;
-  &lt;a href="#" class="m-button m-button-square m-button-style-b m-button-important"&gt;S&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-square echo-button-style-a echo-button-important"&gt;S&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-square echo-button-style-b echo-button-important"&gt;S&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p class="u-bg-default u-padding-md"&gt;
-  &lt;a href="#" class="m-button m-button-square m-button-style-a m-button-inverse"&gt;S&lt;/a&gt;
-  &lt;a href="#" class="m-button m-button-square m-button-style-b m-button-inverse"&gt;S&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-square echo-button-style-a echo-button-inverse"&gt;S&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-square echo-button-style-b echo-button-inverse"&gt;S&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
-  &lt;a href="#" class="m-button m-button-block m-button-square m-button-style-a"&gt;S&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-block echo-button-square echo-button-style-a"&gt;S&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
-  &lt;a href="#" class="m-button m-button-block m-button-lg m-button-square m-button-style-a"&gt;S&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-block echo-button-lg echo-button-square echo-button-style-a"&gt;S&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
-  &lt;a href="#" class="m-button m-button-block m-button-xl m-button-square m-button-style-a"&gt;S&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-block echo-button-xl echo-button-square echo-button-style-a"&gt;S&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
-  &lt;a href="#" class="m-button m-button-block m-button-xxl m-button-square m-button-style-a"&gt;S&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-block echo-button-xxl echo-button-square echo-button-style-a"&gt;S&lt;/a&gt;
 &lt;/p&gt;
 </code></pre></div>
 

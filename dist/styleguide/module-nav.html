@@ -23,374 +23,374 @@
             </div><!-- /.echo-doc-pagehead -->
 
             <nav class="echo-anchor">
-                <ul class="m-list m-list-horizontal">
+                <ul class="echo-list echo-list-horizontal">
 
-                    <li class="m-list-item"><a href="#nav" class="js-scrollto">m-nav</a></li>
+                    <li class="echo-list-item"><a href="#nav" class="js-scrollto">echo-nav</a></li>
                     
-                    <li class="m-list-item"><a href="#nav-01-vertical" class="js-scrollto">m-nav-vertical</a></li>
+                    <li class="echo-list-item"><a href="#nav-01-vertical" class="js-scrollto">echo-nav-vertical</a></li>
 
-                    <li class="m-list-item"><a href="#nav-02-inverse" class="js-scrollto">m-nav-inverse</a></li>
+                    <li class="echo-list-item"><a href="#nav-02-inverse" class="js-scrollto">echo-nav-inverse</a></li>
                     
                 </ul>
             </nav>
             
 
             <article class="echo-doc-post">
-                <div class="echo-doc-post-contents styleguide-contents"><h1 id="nav" class="styleguide">m-nav</h1>
+                <div class="echo-doc-post-contents styleguide-contents"><h1 id="nav" class="styleguide">echo-nav</h1>
 
 <p>クリック範囲が広いナビゲーションを表示する。包括要素、もしくは<code>.nav</code>自体に薄い背景色を指定する必要がある。<br>
 テキストが複数行になった場合でも、ナビゲーションのすべてのテキストが縦中央に整列する。<br>
-<code>.m-nav-label</code> 内で装飾用の要素を使用すると崩れるため、その場合はダミーのインライン要素を加える。ここでは <code>span.m-nav-text</code> としている。  </p>
+<code>.echo-nav-label</code> 内で装飾用の要素を使用すると崩れるため、その場合はダミーのインライン要素を加える。ここでは <code>span.echo-nav-text</code> としている。  </p>
 <div class="example">
-<nav class="m-nav">
-    <div class="m-nav-list">
-        <p class="m-nav-item">
-            <a href="#" class="m-nav-label">ボタン</a>
+<nav class="echo-nav">
+    <div class="echo-nav-list">
+        <p class="echo-nav-item">
+            <a href="#" class="echo-nav-label">ボタン</a>
         </p>
-        <p class="m-nav-item">
-            <a href="#" class="m-nav-label is-current">現在のページ</a>
+        <p class="echo-nav-item">
+            <a href="#" class="echo-nav-label is-current">現在のページ</a>
         </p>
-        <p class="m-nav-item">
-            <a href="#" class="m-nav-label">文字数が多いボタンです</a>
+        <p class="echo-nav-item">
+            <a href="#" class="echo-nav-label">文字数が多いボタンです</a>
         </p>
-        <p class="m-nav-item">
-            <a href="#" class="m-nav-label"><span class="m-nav-text"><span class="u-text-xs">複数行の</span><br>ボタン</span></a>
+        <p class="echo-nav-item">
+            <a href="#" class="echo-nav-label"><span class="echo-nav-text"><span class="u-text-xs">複数行の</span><br>ボタン</span></a>
         </p>
-        <p class="m-nav-item">
-            <a href="#" class="m-nav-label">ボタン</a>
+        <p class="echo-nav-item">
+            <a href="#" class="echo-nav-label">ボタン</a>
         </p>
-        <p class="m-nav-item">
-            <a href="#" class="m-nav-label">ボタン</a>
+        <p class="echo-nav-item">
+            <a href="#" class="echo-nav-label">ボタン</a>
         </p>
     </div><!-- /.nav-list -->
 </nav><!-- /.nav -->
 
-<h3 class="u-text-lg u-margin-top-lg">m-nav-label のみ使用し、ナビゲーションの分割はグリッドにした場合</h3>
+<h3 class="u-text-lg u-margin-top-lg">echo-nav-label のみ使用し、ナビゲーションの分割はグリッドにした場合</h3>
 <ul class="echo-grid-row echo-grid-row-0">
     <li class="echo-grid-col-4 echo-grid-col-md-2">
-        <a href="#" class="m-nav-label">ボタン</a>
+        <a href="#" class="echo-nav-label">ボタン</a>
     </li>
     <li class="echo-grid-col-4 echo-grid-col-md-3">
-        <a href="#" class="m-nav-label is-current">現在のページ</a>
+        <a href="#" class="echo-nav-label is-current">現在のページ</a>
     </li>
     <li class="echo-grid-col-4 echo-grid-col-md-3">
-        <a href="#" class="m-nav-label">ボタン</a>
+        <a href="#" class="echo-nav-label">ボタン</a>
     </li>
     <li class="echo-grid-col-6 echo-grid-col-md-2">
-        <a href="#" class="m-nav-label">ボタン</a>
+        <a href="#" class="echo-nav-label">ボタン</a>
     </li>
     <li class="echo-grid-col-6 echo-grid-col-md-2">
-        <a href="#" class="m-nav-label">ボタン</a>
+        <a href="#" class="echo-nav-label">ボタン</a>
     </li>
 </ul>
 
 <h3 class="u-text-lg u-margin-top-lg">アイコンを併用した例（幅を100%にすると自動的に均等幅となる）</h3>
-<nav class="m-nav" style="width: 100%;">
-    <ul class="m-nav-list">
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label"><span class="m-nav-text"><i class="fas fa-home" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"></i>吾輩は</span></a>
+<nav class="echo-nav" style="width: 100%;">
+    <ul class="echo-nav-list">
+        <li class="echo-nav-item">
+            <a href="#" class="echo-nav-label"><span class="echo-nav-text"><i class="fas fa-home" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"></i>吾輩は</span></a>
         </li>
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label"><span class="m-nav-text"><i class="fas fa-user" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"></i>猫である</span></a>
+        <li class="echo-nav-item">
+            <a href="#" class="echo-nav-label"><span class="echo-nav-text"><i class="fas fa-user" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"></i>猫である</span></a>
         </li>
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label is-current"><span class="m-nav-text"><i class="fas fa-taxi" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"></i>名前はまだ無い</span></a>
+        <li class="echo-nav-item">
+            <a href="#" class="echo-nav-label is-current"><span class="echo-nav-text"><i class="fas fa-taxi" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"></i>名前はまだ無い</span></a>
         </li>
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label"><span class="m-nav-text"><i class="fas fa-map" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"></i>どこで</span></a>
+        <li class="echo-nav-item">
+            <a href="#" class="echo-nav-label"><span class="echo-nav-text"><i class="fas fa-map" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"></i>どこで</span></a>
         </li>
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label"><span class="m-nav-text"><i class="fas fa-envelope" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"></i>生れたか</span></a>
+        <li class="echo-nav-item">
+            <a href="#" class="echo-nav-label"><span class="echo-nav-text"><i class="fas fa-envelope" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"></i>生れたか</span></a>
         </li>
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label"><span class="m-nav-text"><i class="fas fa-shopping-cart" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"></i>とんと</span></a>
+        <li class="echo-nav-item">
+            <a href="#" class="echo-nav-label"><span class="echo-nav-text"><i class="fas fa-shopping-cart" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"></i>とんと</span></a>
         </li>
     </ul>
 </nav><!-- /.nav -->
 
 </div>
 
-<div class="codeblock"><pre><code class="language-markup">&lt;nav class="m-nav"&gt;
-    &lt;div class="m-nav-list"&gt;
-        &lt;p class="m-nav-item"&gt;
-            &lt;a href="#" class="m-nav-label"&gt;ボタン&lt;/a&gt;
+<div class="codeblock"><pre><code class="language-markup">&lt;nav class="echo-nav"&gt;
+    &lt;div class="echo-nav-list"&gt;
+        &lt;p class="echo-nav-item"&gt;
+            &lt;a href="#" class="echo-nav-label"&gt;ボタン&lt;/a&gt;
         &lt;/p&gt;
-        &lt;p class="m-nav-item"&gt;
-            &lt;a href="#" class="m-nav-label is-current"&gt;現在のページ&lt;/a&gt;
+        &lt;p class="echo-nav-item"&gt;
+            &lt;a href="#" class="echo-nav-label is-current"&gt;現在のページ&lt;/a&gt;
         &lt;/p&gt;
-        &lt;p class="m-nav-item"&gt;
-            &lt;a href="#" class="m-nav-label"&gt;文字数が多いボタンです&lt;/a&gt;
+        &lt;p class="echo-nav-item"&gt;
+            &lt;a href="#" class="echo-nav-label"&gt;文字数が多いボタンです&lt;/a&gt;
         &lt;/p&gt;
-        &lt;p class="m-nav-item"&gt;
-            &lt;a href="#" class="m-nav-label"&gt;&lt;span class="m-nav-text"&gt;&lt;span class="u-text-xs"&gt;複数行の&lt;/span&gt;&lt;br&gt;ボタン&lt;/span&gt;&lt;/a&gt;
+        &lt;p class="echo-nav-item"&gt;
+            &lt;a href="#" class="echo-nav-label"&gt;&lt;span class="echo-nav-text"&gt;&lt;span class="u-text-xs"&gt;複数行の&lt;/span&gt;&lt;br&gt;ボタン&lt;/span&gt;&lt;/a&gt;
         &lt;/p&gt;
-        &lt;p class="m-nav-item"&gt;
-            &lt;a href="#" class="m-nav-label"&gt;ボタン&lt;/a&gt;
+        &lt;p class="echo-nav-item"&gt;
+            &lt;a href="#" class="echo-nav-label"&gt;ボタン&lt;/a&gt;
         &lt;/p&gt;
-        &lt;p class="m-nav-item"&gt;
-            &lt;a href="#" class="m-nav-label"&gt;ボタン&lt;/a&gt;
+        &lt;p class="echo-nav-item"&gt;
+            &lt;a href="#" class="echo-nav-label"&gt;ボタン&lt;/a&gt;
         &lt;/p&gt;
     &lt;/div&gt;&lt;!-- /.nav-list --&gt;
 &lt;/nav&gt;&lt;!-- /.nav --&gt;
 
-&lt;h3 class="u-text-lg u-margin-top-lg"&gt;m-nav-label のみ使用し、ナビゲーションの分割はグリッドにした場合&lt;/h3&gt;
+&lt;h3 class="u-text-lg u-margin-top-lg"&gt;echo-nav-label のみ使用し、ナビゲーションの分割はグリッドにした場合&lt;/h3&gt;
 &lt;ul class="echo-grid-row echo-grid-row-0"&gt;
     &lt;li class="echo-grid-col-4 echo-grid-col-md-2"&gt;
-        &lt;a href="#" class="m-nav-label"&gt;ボタン&lt;/a&gt;
+        &lt;a href="#" class="echo-nav-label"&gt;ボタン&lt;/a&gt;
     &lt;/li&gt;
     &lt;li class="echo-grid-col-4 echo-grid-col-md-3"&gt;
-        &lt;a href="#" class="m-nav-label is-current"&gt;現在のページ&lt;/a&gt;
+        &lt;a href="#" class="echo-nav-label is-current"&gt;現在のページ&lt;/a&gt;
     &lt;/li&gt;
     &lt;li class="echo-grid-col-4 echo-grid-col-md-3"&gt;
-        &lt;a href="#" class="m-nav-label"&gt;ボタン&lt;/a&gt;
+        &lt;a href="#" class="echo-nav-label"&gt;ボタン&lt;/a&gt;
     &lt;/li&gt;
     &lt;li class="echo-grid-col-6 echo-grid-col-md-2"&gt;
-        &lt;a href="#" class="m-nav-label"&gt;ボタン&lt;/a&gt;
+        &lt;a href="#" class="echo-nav-label"&gt;ボタン&lt;/a&gt;
     &lt;/li&gt;
     &lt;li class="echo-grid-col-6 echo-grid-col-md-2"&gt;
-        &lt;a href="#" class="m-nav-label"&gt;ボタン&lt;/a&gt;
+        &lt;a href="#" class="echo-nav-label"&gt;ボタン&lt;/a&gt;
     &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 class="u-text-lg u-margin-top-lg"&gt;アイコンを併用した例（幅を100%にすると自動的に均等幅となる）&lt;/h3&gt;
-&lt;nav class="m-nav" style="width: 100%;"&gt;
-    &lt;ul class="m-nav-list"&gt;
-        &lt;li class="m-nav-item"&gt;
-            &lt;a href="#" class="m-nav-label"&gt;&lt;span class="m-nav-text"&gt;&lt;i class="fas fa-home" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"&gt;&lt;/i&gt;吾輩は&lt;/span&gt;&lt;/a&gt;
+&lt;nav class="echo-nav" style="width: 100%;"&gt;
+    &lt;ul class="echo-nav-list"&gt;
+        &lt;li class="echo-nav-item"&gt;
+            &lt;a href="#" class="echo-nav-label"&gt;&lt;span class="echo-nav-text"&gt;&lt;i class="fas fa-home" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"&gt;&lt;/i&gt;吾輩は&lt;/span&gt;&lt;/a&gt;
         &lt;/li&gt;
-        &lt;li class="m-nav-item"&gt;
-            &lt;a href="#" class="m-nav-label"&gt;&lt;span class="m-nav-text"&gt;&lt;i class="fas fa-user" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"&gt;&lt;/i&gt;猫である&lt;/span&gt;&lt;/a&gt;
+        &lt;li class="echo-nav-item"&gt;
+            &lt;a href="#" class="echo-nav-label"&gt;&lt;span class="echo-nav-text"&gt;&lt;i class="fas fa-user" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"&gt;&lt;/i&gt;猫である&lt;/span&gt;&lt;/a&gt;
         &lt;/li&gt;
-        &lt;li class="m-nav-item"&gt;
-            &lt;a href="#" class="m-nav-label is-current"&gt;&lt;span class="m-nav-text"&gt;&lt;i class="fas fa-taxi" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"&gt;&lt;/i&gt;名前はまだ無い&lt;/span&gt;&lt;/a&gt;
+        &lt;li class="echo-nav-item"&gt;
+            &lt;a href="#" class="echo-nav-label is-current"&gt;&lt;span class="echo-nav-text"&gt;&lt;i class="fas fa-taxi" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"&gt;&lt;/i&gt;名前はまだ無い&lt;/span&gt;&lt;/a&gt;
         &lt;/li&gt;
-        &lt;li class="m-nav-item"&gt;
-            &lt;a href="#" class="m-nav-label"&gt;&lt;span class="m-nav-text"&gt;&lt;i class="fas fa-map" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"&gt;&lt;/i&gt;どこで&lt;/span&gt;&lt;/a&gt;
+        &lt;li class="echo-nav-item"&gt;
+            &lt;a href="#" class="echo-nav-label"&gt;&lt;span class="echo-nav-text"&gt;&lt;i class="fas fa-map" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"&gt;&lt;/i&gt;どこで&lt;/span&gt;&lt;/a&gt;
         &lt;/li&gt;
-        &lt;li class="m-nav-item"&gt;
-            &lt;a href="#" class="m-nav-label"&gt;&lt;span class="m-nav-text"&gt;&lt;i class="fas fa-envelope" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"&gt;&lt;/i&gt;生れたか&lt;/span&gt;&lt;/a&gt;
+        &lt;li class="echo-nav-item"&gt;
+            &lt;a href="#" class="echo-nav-label"&gt;&lt;span class="echo-nav-text"&gt;&lt;i class="fas fa-envelope" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"&gt;&lt;/i&gt;生れたか&lt;/span&gt;&lt;/a&gt;
         &lt;/li&gt;
-        &lt;li class="m-nav-item"&gt;
-            &lt;a href="#" class="m-nav-label"&gt;&lt;span class="m-nav-text"&gt;&lt;i class="fas fa-shopping-cart" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"&gt;&lt;/i&gt;とんと&lt;/span&gt;&lt;/a&gt;
+        &lt;li class="echo-nav-item"&gt;
+            &lt;a href="#" class="echo-nav-label"&gt;&lt;span class="echo-nav-text"&gt;&lt;i class="fas fa-shopping-cart" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"&gt;&lt;/i&gt;とんと&lt;/span&gt;&lt;/a&gt;
         &lt;/li&gt;
     &lt;/ul&gt;
 &lt;/nav&gt;&lt;!-- /.nav --&gt;</code></pre></div>
 
-<h2 id="nav-01-vertical" class="styleguide">m-nav-vertical</h2>
+<h2 id="nav-01-vertical" class="styleguide">echo-nav-vertical</h2>
 
 <p>幅100%の垂直ナビゲーションとして表示する。3階層まで表示できる。</p>
 <div class="example">
-<nav class="m-nav m-nav-vertical">
-    <ul class="m-nav-list">
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label">ボタン</a>
+<nav class="echo-nav echo-nav-vertical">
+    <ul class="echo-nav-list">
+        <li class="echo-nav-item">
+            <a href="#" class="echo-nav-label">ボタン</a>
         </li>
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label is-current">現在のページ</a>
-            <ul class="m-nav-list m-nav-children">
-                <li class="m-nav-item">
-                    <a href="#" class="m-nav-label">2階層目ボタン</a>
-                    <ul class="m-nav-list m-nav-children">
-                        <li class="m-nav-item">
-                            <a href="#" class="m-nav-label">3階層目ボタン</a>
+        <li class="echo-nav-item">
+            <a href="#" class="echo-nav-label is-current">現在のページ</a>
+            <ul class="echo-nav-list echo-nav-children">
+                <li class="echo-nav-item">
+                    <a href="#" class="echo-nav-label">2階層目ボタン</a>
+                    <ul class="echo-nav-list echo-nav-children">
+                        <li class="echo-nav-item">
+                            <a href="#" class="echo-nav-label">3階層目ボタン</a>
                         </li>
-                        <li class="m-nav-item">
-                            <a href="#" class="m-nav-label">3階層目ボタン</a>
+                        <li class="echo-nav-item">
+                            <a href="#" class="echo-nav-label">3階層目ボタン</a>
                         </li>
-                        <li class="m-nav-item">
-                            <a href="#" class="m-nav-label">3階層目ボタン</a>
+                        <li class="echo-nav-item">
+                            <a href="#" class="echo-nav-label">3階層目ボタン</a>
                         </li>
                     </ul>
                 </li>
-                <li class="m-nav-item">
-                    <a href="#" class="m-nav-label">2階層目ボタン</a>
+                <li class="echo-nav-item">
+                    <a href="#" class="echo-nav-label">2階層目ボタン</a>
                 </li>
-                <li class="m-nav-item">
-                    <a href="#" class="m-nav-label">2階層目ボタン</a>
+                <li class="echo-nav-item">
+                    <a href="#" class="echo-nav-label">2階層目ボタン</a>
                 </li>
             </ul>
         </li>
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label">文字数がとてもすごくびっくりするほど衝撃的に多いボタンです。ナビゲーションとしてどうかと思います</a>
+        <li class="echo-nav-item">
+            <a href="#" class="echo-nav-label">文字数がとてもすごくびっくりするほど衝撃的に多いボタンです。ナビゲーションとしてどうかと思います</a>
         </li>
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label"><span class="m-nav-text"><span class="u-text-xs">複数行の</span><br>ボタン</span></a>
+        <li class="echo-nav-item">
+            <a href="#" class="echo-nav-label"><span class="echo-nav-text"><span class="u-text-xs">複数行の</span><br>ボタン</span></a>
         </li>
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label">ボタン</a>
+        <li class="echo-nav-item">
+            <a href="#" class="echo-nav-label">ボタン</a>
         </li>
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label">ボタン</a>
+        <li class="echo-nav-item">
+            <a href="#" class="echo-nav-label">ボタン</a>
         </li>
     </ul>
 </nav><!-- /.nav -->
 
 <h3 class="u-text-lg u-margin-top-lg">アイコンを併用した例</h3>
-<nav class="m-nav m-nav-vertical">
-    <ul class="m-nav-list">
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label"><span class="m-nav-text"><i class="fas fa-home" style="font-size: 1.25em; width: 1.5em; text-align: center; margin-right: .5em;"></i>吾輩は</span></a>
+<nav class="echo-nav echo-nav-vertical">
+    <ul class="echo-nav-list">
+        <li class="echo-nav-item">
+            <a href="#" class="echo-nav-label"><span class="echo-nav-text"><i class="fas fa-home" style="font-size: 1.25em; width: 1.5em; text-align: center; margin-right: .5em;"></i>吾輩は</span></a>
         </li>
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label"><span class="m-nav-text"><i class="fas fa-user" style="font-size: 1.25em; width: 1.5em; text-align: center; margin-right: .5em;"></i>猫である</span></a>
+        <li class="echo-nav-item">
+            <a href="#" class="echo-nav-label"><span class="echo-nav-text"><i class="fas fa-user" style="font-size: 1.25em; width: 1.5em; text-align: center; margin-right: .5em;"></i>猫である</span></a>
         </li>
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label is-current"><span class="m-nav-text"><i class="fas fa-taxi" style="font-size: 1.25em; width: 1.5em; text-align: center; margin-right: .5em;"></i>名前はまだ無い</span></a>
+        <li class="echo-nav-item">
+            <a href="#" class="echo-nav-label is-current"><span class="echo-nav-text"><i class="fas fa-taxi" style="font-size: 1.25em; width: 1.5em; text-align: center; margin-right: .5em;"></i>名前はまだ無い</span></a>
         </li>
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label"><span class="m-nav-text"><i class="fas fa-map" style="font-size: 1.25em; width: 1.5em; text-align: center; margin-right: .5em;"></i>どこで</span></a>
+        <li class="echo-nav-item">
+            <a href="#" class="echo-nav-label"><span class="echo-nav-text"><i class="fas fa-map" style="font-size: 1.25em; width: 1.5em; text-align: center; margin-right: .5em;"></i>どこで</span></a>
         </li>
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label"><span class="m-nav-text"><i class="fas fa-envelope" style="font-size: 1.25em; width: 1.5em; text-align: center; margin-right: .5em;"></i>生れたか</span></a>
+        <li class="echo-nav-item">
+            <a href="#" class="echo-nav-label"><span class="echo-nav-text"><i class="fas fa-envelope" style="font-size: 1.25em; width: 1.5em; text-align: center; margin-right: .5em;"></i>生れたか</span></a>
         </li>
-        <li class="m-nav-item">
-            <a href="#" class="m-nav-label"><span class="m-nav-text"><i class="fas fa-shopping-cart" style="font-size: 1.25em; width: 1.5em; text-align: center; margin-right: .5em;"></i>とんと</span></a>
+        <li class="echo-nav-item">
+            <a href="#" class="echo-nav-label"><span class="echo-nav-text"><i class="fas fa-shopping-cart" style="font-size: 1.25em; width: 1.5em; text-align: center; margin-right: .5em;"></i>とんと</span></a>
         </li>
     </ul>
 </nav><!-- /.nav -->
 
 </div>
 
-<div class="codeblock"><pre><code class="language-markup">&lt;nav class="m-nav m-nav-vertical"&gt;
-    &lt;ul class="m-nav-list"&gt;
-        &lt;li class="m-nav-item"&gt;
-            &lt;a href="#" class="m-nav-label"&gt;ボタン&lt;/a&gt;
+<div class="codeblock"><pre><code class="language-markup">&lt;nav class="echo-nav echo-nav-vertical"&gt;
+    &lt;ul class="echo-nav-list"&gt;
+        &lt;li class="echo-nav-item"&gt;
+            &lt;a href="#" class="echo-nav-label"&gt;ボタン&lt;/a&gt;
         &lt;/li&gt;
-        &lt;li class="m-nav-item"&gt;
-            &lt;a href="#" class="m-nav-label is-current"&gt;現在のページ&lt;/a&gt;
-            &lt;ul class="m-nav-list m-nav-children"&gt;
-                &lt;li class="m-nav-item"&gt;
-                    &lt;a href="#" class="m-nav-label"&gt;2階層目ボタン&lt;/a&gt;
-                    &lt;ul class="m-nav-list m-nav-children"&gt;
-                        &lt;li class="m-nav-item"&gt;
-                            &lt;a href="#" class="m-nav-label"&gt;3階層目ボタン&lt;/a&gt;
+        &lt;li class="echo-nav-item"&gt;
+            &lt;a href="#" class="echo-nav-label is-current"&gt;現在のページ&lt;/a&gt;
+            &lt;ul class="echo-nav-list echo-nav-children"&gt;
+                &lt;li class="echo-nav-item"&gt;
+                    &lt;a href="#" class="echo-nav-label"&gt;2階層目ボタン&lt;/a&gt;
+                    &lt;ul class="echo-nav-list echo-nav-children"&gt;
+                        &lt;li class="echo-nav-item"&gt;
+                            &lt;a href="#" class="echo-nav-label"&gt;3階層目ボタン&lt;/a&gt;
                         &lt;/li&gt;
-                        &lt;li class="m-nav-item"&gt;
-                            &lt;a href="#" class="m-nav-label"&gt;3階層目ボタン&lt;/a&gt;
+                        &lt;li class="echo-nav-item"&gt;
+                            &lt;a href="#" class="echo-nav-label"&gt;3階層目ボタン&lt;/a&gt;
                         &lt;/li&gt;
-                        &lt;li class="m-nav-item"&gt;
-                            &lt;a href="#" class="m-nav-label"&gt;3階層目ボタン&lt;/a&gt;
+                        &lt;li class="echo-nav-item"&gt;
+                            &lt;a href="#" class="echo-nav-label"&gt;3階層目ボタン&lt;/a&gt;
                         &lt;/li&gt;
                     &lt;/ul&gt;
                 &lt;/li&gt;
-                &lt;li class="m-nav-item"&gt;
-                    &lt;a href="#" class="m-nav-label"&gt;2階層目ボタン&lt;/a&gt;
+                &lt;li class="echo-nav-item"&gt;
+                    &lt;a href="#" class="echo-nav-label"&gt;2階層目ボタン&lt;/a&gt;
                 &lt;/li&gt;
-                &lt;li class="m-nav-item"&gt;
-                    &lt;a href="#" class="m-nav-label"&gt;2階層目ボタン&lt;/a&gt;
+                &lt;li class="echo-nav-item"&gt;
+                    &lt;a href="#" class="echo-nav-label"&gt;2階層目ボタン&lt;/a&gt;
                 &lt;/li&gt;
             &lt;/ul&gt;
         &lt;/li&gt;
-        &lt;li class="m-nav-item"&gt;
-            &lt;a href="#" class="m-nav-label"&gt;文字数がとてもすごくびっくりするほど衝撃的に多いボタンです。ナビゲーションとしてどうかと思います&lt;/a&gt;
+        &lt;li class="echo-nav-item"&gt;
+            &lt;a href="#" class="echo-nav-label"&gt;文字数がとてもすごくびっくりするほど衝撃的に多いボタンです。ナビゲーションとしてどうかと思います&lt;/a&gt;
         &lt;/li&gt;
-        &lt;li class="m-nav-item"&gt;
-            &lt;a href="#" class="m-nav-label"&gt;&lt;span class="m-nav-text"&gt;&lt;span class="u-text-xs"&gt;複数行の&lt;/span&gt;&lt;br&gt;ボタン&lt;/span&gt;&lt;/a&gt;
+        &lt;li class="echo-nav-item"&gt;
+            &lt;a href="#" class="echo-nav-label"&gt;&lt;span class="echo-nav-text"&gt;&lt;span class="u-text-xs"&gt;複数行の&lt;/span&gt;&lt;br&gt;ボタン&lt;/span&gt;&lt;/a&gt;
         &lt;/li&gt;
-        &lt;li class="m-nav-item"&gt;
-            &lt;a href="#" class="m-nav-label"&gt;ボタン&lt;/a&gt;
+        &lt;li class="echo-nav-item"&gt;
+            &lt;a href="#" class="echo-nav-label"&gt;ボタン&lt;/a&gt;
         &lt;/li&gt;
-        &lt;li class="m-nav-item"&gt;
-            &lt;a href="#" class="m-nav-label"&gt;ボタン&lt;/a&gt;
+        &lt;li class="echo-nav-item"&gt;
+            &lt;a href="#" class="echo-nav-label"&gt;ボタン&lt;/a&gt;
         &lt;/li&gt;
     &lt;/ul&gt;
 &lt;/nav&gt;&lt;!-- /.nav --&gt;
 
 &lt;h3 class="u-text-lg u-margin-top-lg"&gt;アイコンを併用した例&lt;/h3&gt;
-&lt;nav class="m-nav m-nav-vertical"&gt;
-    &lt;ul class="m-nav-list"&gt;
-        &lt;li class="m-nav-item"&gt;
-            &lt;a href="#" class="m-nav-label"&gt;&lt;span class="m-nav-text"&gt;&lt;i class="fas fa-home" style="font-size: 1.25em; width: 1.5em; text-align: center; margin-right: .5em;"&gt;&lt;/i&gt;吾輩は&lt;/span&gt;&lt;/a&gt;
+&lt;nav class="echo-nav echo-nav-vertical"&gt;
+    &lt;ul class="echo-nav-list"&gt;
+        &lt;li class="echo-nav-item"&gt;
+            &lt;a href="#" class="echo-nav-label"&gt;&lt;span class="echo-nav-text"&gt;&lt;i class="fas fa-home" style="font-size: 1.25em; width: 1.5em; text-align: center; margin-right: .5em;"&gt;&lt;/i&gt;吾輩は&lt;/span&gt;&lt;/a&gt;
         &lt;/li&gt;
-        &lt;li class="m-nav-item"&gt;
-            &lt;a href="#" class="m-nav-label"&gt;&lt;span class="m-nav-text"&gt;&lt;i class="fas fa-user" style="font-size: 1.25em; width: 1.5em; text-align: center; margin-right: .5em;"&gt;&lt;/i&gt;猫である&lt;/span&gt;&lt;/a&gt;
+        &lt;li class="echo-nav-item"&gt;
+            &lt;a href="#" class="echo-nav-label"&gt;&lt;span class="echo-nav-text"&gt;&lt;i class="fas fa-user" style="font-size: 1.25em; width: 1.5em; text-align: center; margin-right: .5em;"&gt;&lt;/i&gt;猫である&lt;/span&gt;&lt;/a&gt;
         &lt;/li&gt;
-        &lt;li class="m-nav-item"&gt;
-            &lt;a href="#" class="m-nav-label is-current"&gt;&lt;span class="m-nav-text"&gt;&lt;i class="fas fa-taxi" style="font-size: 1.25em; width: 1.5em; text-align: center; margin-right: .5em;"&gt;&lt;/i&gt;名前はまだ無い&lt;/span&gt;&lt;/a&gt;
+        &lt;li class="echo-nav-item"&gt;
+            &lt;a href="#" class="echo-nav-label is-current"&gt;&lt;span class="echo-nav-text"&gt;&lt;i class="fas fa-taxi" style="font-size: 1.25em; width: 1.5em; text-align: center; margin-right: .5em;"&gt;&lt;/i&gt;名前はまだ無い&lt;/span&gt;&lt;/a&gt;
         &lt;/li&gt;
-        &lt;li class="m-nav-item"&gt;
-            &lt;a href="#" class="m-nav-label"&gt;&lt;span class="m-nav-text"&gt;&lt;i class="fas fa-map" style="font-size: 1.25em; width: 1.5em; text-align: center; margin-right: .5em;"&gt;&lt;/i&gt;どこで&lt;/span&gt;&lt;/a&gt;
+        &lt;li class="echo-nav-item"&gt;
+            &lt;a href="#" class="echo-nav-label"&gt;&lt;span class="echo-nav-text"&gt;&lt;i class="fas fa-map" style="font-size: 1.25em; width: 1.5em; text-align: center; margin-right: .5em;"&gt;&lt;/i&gt;どこで&lt;/span&gt;&lt;/a&gt;
         &lt;/li&gt;
-        &lt;li class="m-nav-item"&gt;
-            &lt;a href="#" class="m-nav-label"&gt;&lt;span class="m-nav-text"&gt;&lt;i class="fas fa-envelope" style="font-size: 1.25em; width: 1.5em; text-align: center; margin-right: .5em;"&gt;&lt;/i&gt;生れたか&lt;/span&gt;&lt;/a&gt;
+        &lt;li class="echo-nav-item"&gt;
+            &lt;a href="#" class="echo-nav-label"&gt;&lt;span class="echo-nav-text"&gt;&lt;i class="fas fa-envelope" style="font-size: 1.25em; width: 1.5em; text-align: center; margin-right: .5em;"&gt;&lt;/i&gt;生れたか&lt;/span&gt;&lt;/a&gt;
         &lt;/li&gt;
-        &lt;li class="m-nav-item"&gt;
-            &lt;a href="#" class="m-nav-label"&gt;&lt;span class="m-nav-text"&gt;&lt;i class="fas fa-shopping-cart" style="font-size: 1.25em; width: 1.5em; text-align: center; margin-right: .5em;"&gt;&lt;/i&gt;とんと&lt;/span&gt;&lt;/a&gt;
+        &lt;li class="echo-nav-item"&gt;
+            &lt;a href="#" class="echo-nav-label"&gt;&lt;span class="echo-nav-text"&gt;&lt;i class="fas fa-shopping-cart" style="font-size: 1.25em; width: 1.5em; text-align: center; margin-right: .5em;"&gt;&lt;/i&gt;とんと&lt;/span&gt;&lt;/a&gt;
         &lt;/li&gt;
     &lt;/ul&gt;
 &lt;/nav&gt;&lt;!-- /.nav --&gt;</code></pre></div>
 
-<h2 id="nav-02-inverse" class="styleguide">m-nav-inverse</h2>
+<h2 id="nav-02-inverse" class="styleguide">echo-nav-inverse</h2>
 
 <p>ナビゲーションのボタンの色を反転する。包括要素、もしくは<code>.nav</code>自体に濃い背景色を指定する必要がある。</p>
 <div class="example">
 <div class="u-padding-sm" style="background-color: #39c;">
-    <nav class="m-nav m-nav-inverse">
-        <div class="m-nav-list">
-            <p class="m-nav-item">
-                <a href="#" class="m-nav-label">ボタン</a>
+    <nav class="echo-nav echo-nav-inverse">
+        <div class="echo-nav-list">
+            <p class="echo-nav-item">
+                <a href="#" class="echo-nav-label">ボタン</a>
             </p>
-            <p class="m-nav-item">
-                <a href="#" class="m-nav-label is-current">現在のページ</a>
+            <p class="echo-nav-item">
+                <a href="#" class="echo-nav-label is-current">現在のページ</a>
             </p>
-            <p class="m-nav-item">
-                <a href="#" class="m-nav-label">文字数が多いボタンです</a>
+            <p class="echo-nav-item">
+                <a href="#" class="echo-nav-label">文字数が多いボタンです</a>
             </p>
-            <p class="m-nav-item">
-                <a href="#" class="m-nav-label"><span class="m-nav-text"><span class="u-text-xs">複数行の</span><br>ボタン</span></a>
+            <p class="echo-nav-item">
+                <a href="#" class="echo-nav-label"><span class="echo-nav-text"><span class="u-text-xs">複数行の</span><br>ボタン</span></a>
             </p>
-            <p class="m-nav-item">
-                <a href="#" class="m-nav-label">ボタン</a>
+            <p class="echo-nav-item">
+                <a href="#" class="echo-nav-label">ボタン</a>
             </p>
-            <p class="m-nav-item">
-                <a href="#" class="m-nav-label">ボタン</a>
+            <p class="echo-nav-item">
+                <a href="#" class="echo-nav-label">ボタン</a>
             </p>
         </div><!-- /.nav-list -->
     </nav><!-- /.nav -->
 </div>
 
-<h3 class="u-text-lg u-margin-top-lg">m-nav-label のみ使用し、ナビゲーションの分割はグリッドにした場合</h3>
+<h3 class="u-text-lg u-margin-top-lg">echo-nav-label のみ使用し、ナビゲーションの分割はグリッドにした場合</h3>
 <div class="u-padding-sm u-bg-default">
-    <ul class="echo-grid-row echo-grid-row-0 m-nav-inverse">
+    <ul class="echo-grid-row echo-grid-row-0 echo-nav-inverse">
         <li class="echo-grid-col-6 echo-grid-col-md-2">
-            <a href="#" class="m-nav-label">ボタン</a>
+            <a href="#" class="echo-nav-label">ボタン</a>
         </li>
         <li class="echo-grid-col-6 echo-grid-col-md-3">
-            <a href="#" class="m-nav-label is-current">現在のページ</a>
+            <a href="#" class="echo-nav-label is-current">現在のページ</a>
         </li>
         <li class="echo-grid-col-4 echo-grid-col-md-3">
-            <a href="#" class="m-nav-label">ボタン</a>
+            <a href="#" class="echo-nav-label">ボタン</a>
         </li>
         <li class="echo-grid-col-4 echo-grid-col-md-2">
-            <a href="#" class="m-nav-label">ボタン</a>
+            <a href="#" class="echo-nav-label">ボタン</a>
         </li>
         <li class="echo-grid-col-4 echo-grid-col-md-2">
-            <a href="#" class="m-nav-label">ボタン</a>
+            <a href="#" class="echo-nav-label">ボタン</a>
         </li>
     </ul>
 </div>
 
 <h3 class="u-text-lg u-margin-top-lg">アイコンを併用した例（幅を100%にすると自動的に均等幅となる）</h3>
 <div class="u-padding-sm u-bg-default">
-    <nav class="m-nav m-nav-inverse" style="width: 100%;">
-        <ul class="m-nav-list">
-            <li class="m-nav-item">
-                <a href="#" class="m-nav-label"><span class="m-nav-text"><i class="fas fa-home" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"></i>吾輩は</span></a>
+    <nav class="echo-nav echo-nav-inverse" style="width: 100%;">
+        <ul class="echo-nav-list">
+            <li class="echo-nav-item">
+                <a href="#" class="echo-nav-label"><span class="echo-nav-text"><i class="fas fa-home" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"></i>吾輩は</span></a>
             </li>
-            <li class="m-nav-item">
-                <a href="#" class="m-nav-label"><span class="m-nav-text"><i class="fas fa-user" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"></i>猫である</span></a>
+            <li class="echo-nav-item">
+                <a href="#" class="echo-nav-label"><span class="echo-nav-text"><i class="fas fa-user" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"></i>猫である</span></a>
             </li>
-            <li class="m-nav-item">
-                <a href="#" class="m-nav-label is-current"><span class="m-nav-text"><i class="fas fa-taxi" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"></i>名前はまだ無い</span></a>
+            <li class="echo-nav-item">
+                <a href="#" class="echo-nav-label is-current"><span class="echo-nav-text"><i class="fas fa-taxi" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"></i>名前はまだ無い</span></a>
             </li>
-            <li class="m-nav-item">
-                <a href="#" class="m-nav-label"><span class="m-nav-text"><i class="fas fa-map" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"></i>どこで</span></a>
+            <li class="echo-nav-item">
+                <a href="#" class="echo-nav-label"><span class="echo-nav-text"><i class="fas fa-map" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"></i>どこで</span></a>
             </li>
-            <li class="m-nav-item">
-                <a href="#" class="m-nav-label"><span class="m-nav-text"><i class="fas fa-envelope" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"></i>生れたか</span></a>
+            <li class="echo-nav-item">
+                <a href="#" class="echo-nav-label"><span class="echo-nav-text"><i class="fas fa-envelope" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"></i>生れたか</span></a>
             </li>
-            <li class="m-nav-item">
-                <a href="#" class="m-nav-label"><span class="m-nav-text"><i class="fas fa-shopping-cart" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"></i>とんと</span></a>
+            <li class="echo-nav-item">
+                <a href="#" class="echo-nav-label"><span class="echo-nav-text"><i class="fas fa-shopping-cart" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"></i>とんと</span></a>
             </li>
         </ul>
     </nav><!-- /.nav -->
@@ -399,72 +399,72 @@
 </div>
 
 <div class="codeblock"><pre><code class="language-markup">&lt;div class="u-padding-sm" style="background-color: #39c;"&gt;
-    &lt;nav class="m-nav m-nav-inverse"&gt;
-        &lt;div class="m-nav-list"&gt;
-            &lt;p class="m-nav-item"&gt;
-                &lt;a href="#" class="m-nav-label"&gt;ボタン&lt;/a&gt;
+    &lt;nav class="echo-nav echo-nav-inverse"&gt;
+        &lt;div class="echo-nav-list"&gt;
+            &lt;p class="echo-nav-item"&gt;
+                &lt;a href="#" class="echo-nav-label"&gt;ボタン&lt;/a&gt;
             &lt;/p&gt;
-            &lt;p class="m-nav-item"&gt;
-                &lt;a href="#" class="m-nav-label is-current"&gt;現在のページ&lt;/a&gt;
+            &lt;p class="echo-nav-item"&gt;
+                &lt;a href="#" class="echo-nav-label is-current"&gt;現在のページ&lt;/a&gt;
             &lt;/p&gt;
-            &lt;p class="m-nav-item"&gt;
-                &lt;a href="#" class="m-nav-label"&gt;文字数が多いボタンです&lt;/a&gt;
+            &lt;p class="echo-nav-item"&gt;
+                &lt;a href="#" class="echo-nav-label"&gt;文字数が多いボタンです&lt;/a&gt;
             &lt;/p&gt;
-            &lt;p class="m-nav-item"&gt;
-                &lt;a href="#" class="m-nav-label"&gt;&lt;span class="m-nav-text"&gt;&lt;span class="u-text-xs"&gt;複数行の&lt;/span&gt;&lt;br&gt;ボタン&lt;/span&gt;&lt;/a&gt;
+            &lt;p class="echo-nav-item"&gt;
+                &lt;a href="#" class="echo-nav-label"&gt;&lt;span class="echo-nav-text"&gt;&lt;span class="u-text-xs"&gt;複数行の&lt;/span&gt;&lt;br&gt;ボタン&lt;/span&gt;&lt;/a&gt;
             &lt;/p&gt;
-            &lt;p class="m-nav-item"&gt;
-                &lt;a href="#" class="m-nav-label"&gt;ボタン&lt;/a&gt;
+            &lt;p class="echo-nav-item"&gt;
+                &lt;a href="#" class="echo-nav-label"&gt;ボタン&lt;/a&gt;
             &lt;/p&gt;
-            &lt;p class="m-nav-item"&gt;
-                &lt;a href="#" class="m-nav-label"&gt;ボタン&lt;/a&gt;
+            &lt;p class="echo-nav-item"&gt;
+                &lt;a href="#" class="echo-nav-label"&gt;ボタン&lt;/a&gt;
             &lt;/p&gt;
         &lt;/div&gt;&lt;!-- /.nav-list --&gt;
     &lt;/nav&gt;&lt;!-- /.nav --&gt;
 &lt;/div&gt;
 
-&lt;h3 class="u-text-lg u-margin-top-lg"&gt;m-nav-label のみ使用し、ナビゲーションの分割はグリッドにした場合&lt;/h3&gt;
+&lt;h3 class="u-text-lg u-margin-top-lg"&gt;echo-nav-label のみ使用し、ナビゲーションの分割はグリッドにした場合&lt;/h3&gt;
 &lt;div class="u-padding-sm u-bg-default"&gt;
-    &lt;ul class="echo-grid-row echo-grid-row-0 m-nav-inverse"&gt;
+    &lt;ul class="echo-grid-row echo-grid-row-0 echo-nav-inverse"&gt;
         &lt;li class="echo-grid-col-6 echo-grid-col-md-2"&gt;
-            &lt;a href="#" class="m-nav-label"&gt;ボタン&lt;/a&gt;
+            &lt;a href="#" class="echo-nav-label"&gt;ボタン&lt;/a&gt;
         &lt;/li&gt;
         &lt;li class="echo-grid-col-6 echo-grid-col-md-3"&gt;
-            &lt;a href="#" class="m-nav-label is-current"&gt;現在のページ&lt;/a&gt;
+            &lt;a href="#" class="echo-nav-label is-current"&gt;現在のページ&lt;/a&gt;
         &lt;/li&gt;
         &lt;li class="echo-grid-col-4 echo-grid-col-md-3"&gt;
-            &lt;a href="#" class="m-nav-label"&gt;ボタン&lt;/a&gt;
+            &lt;a href="#" class="echo-nav-label"&gt;ボタン&lt;/a&gt;
         &lt;/li&gt;
         &lt;li class="echo-grid-col-4 echo-grid-col-md-2"&gt;
-            &lt;a href="#" class="m-nav-label"&gt;ボタン&lt;/a&gt;
+            &lt;a href="#" class="echo-nav-label"&gt;ボタン&lt;/a&gt;
         &lt;/li&gt;
         &lt;li class="echo-grid-col-4 echo-grid-col-md-2"&gt;
-            &lt;a href="#" class="m-nav-label"&gt;ボタン&lt;/a&gt;
+            &lt;a href="#" class="echo-nav-label"&gt;ボタン&lt;/a&gt;
         &lt;/li&gt;
     &lt;/ul&gt;
 &lt;/div&gt;
 
 &lt;h3 class="u-text-lg u-margin-top-lg"&gt;アイコンを併用した例（幅を100%にすると自動的に均等幅となる）&lt;/h3&gt;
 &lt;div class="u-padding-sm u-bg-default"&gt;
-    &lt;nav class="m-nav m-nav-inverse" style="width: 100%;"&gt;
-        &lt;ul class="m-nav-list"&gt;
-            &lt;li class="m-nav-item"&gt;
-                &lt;a href="#" class="m-nav-label"&gt;&lt;span class="m-nav-text"&gt;&lt;i class="fas fa-home" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"&gt;&lt;/i&gt;吾輩は&lt;/span&gt;&lt;/a&gt;
+    &lt;nav class="echo-nav echo-nav-inverse" style="width: 100%;"&gt;
+        &lt;ul class="echo-nav-list"&gt;
+            &lt;li class="echo-nav-item"&gt;
+                &lt;a href="#" class="echo-nav-label"&gt;&lt;span class="echo-nav-text"&gt;&lt;i class="fas fa-home" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"&gt;&lt;/i&gt;吾輩は&lt;/span&gt;&lt;/a&gt;
             &lt;/li&gt;
-            &lt;li class="m-nav-item"&gt;
-                &lt;a href="#" class="m-nav-label"&gt;&lt;span class="m-nav-text"&gt;&lt;i class="fas fa-user" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"&gt;&lt;/i&gt;猫である&lt;/span&gt;&lt;/a&gt;
+            &lt;li class="echo-nav-item"&gt;
+                &lt;a href="#" class="echo-nav-label"&gt;&lt;span class="echo-nav-text"&gt;&lt;i class="fas fa-user" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"&gt;&lt;/i&gt;猫である&lt;/span&gt;&lt;/a&gt;
             &lt;/li&gt;
-            &lt;li class="m-nav-item"&gt;
-                &lt;a href="#" class="m-nav-label is-current"&gt;&lt;span class="m-nav-text"&gt;&lt;i class="fas fa-taxi" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"&gt;&lt;/i&gt;名前はまだ無い&lt;/span&gt;&lt;/a&gt;
+            &lt;li class="echo-nav-item"&gt;
+                &lt;a href="#" class="echo-nav-label is-current"&gt;&lt;span class="echo-nav-text"&gt;&lt;i class="fas fa-taxi" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"&gt;&lt;/i&gt;名前はまだ無い&lt;/span&gt;&lt;/a&gt;
             &lt;/li&gt;
-            &lt;li class="m-nav-item"&gt;
-                &lt;a href="#" class="m-nav-label"&gt;&lt;span class="m-nav-text"&gt;&lt;i class="fas fa-map" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"&gt;&lt;/i&gt;どこで&lt;/span&gt;&lt;/a&gt;
+            &lt;li class="echo-nav-item"&gt;
+                &lt;a href="#" class="echo-nav-label"&gt;&lt;span class="echo-nav-text"&gt;&lt;i class="fas fa-map" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"&gt;&lt;/i&gt;どこで&lt;/span&gt;&lt;/a&gt;
             &lt;/li&gt;
-            &lt;li class="m-nav-item"&gt;
-                &lt;a href="#" class="m-nav-label"&gt;&lt;span class="m-nav-text"&gt;&lt;i class="fas fa-envelope" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"&gt;&lt;/i&gt;生れたか&lt;/span&gt;&lt;/a&gt;
+            &lt;li class="echo-nav-item"&gt;
+                &lt;a href="#" class="echo-nav-label"&gt;&lt;span class="echo-nav-text"&gt;&lt;i class="fas fa-envelope" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"&gt;&lt;/i&gt;生れたか&lt;/span&gt;&lt;/a&gt;
             &lt;/li&gt;
-            &lt;li class="m-nav-item"&gt;
-                &lt;a href="#" class="m-nav-label"&gt;&lt;span class="m-nav-text"&gt;&lt;i class="fas fa-shopping-cart" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"&gt;&lt;/i&gt;とんと&lt;/span&gt;&lt;/a&gt;
+            &lt;li class="echo-nav-item"&gt;
+                &lt;a href="#" class="echo-nav-label"&gt;&lt;span class="echo-nav-text"&gt;&lt;i class="fas fa-shopping-cart" style="font-size: 1.5em; display: block; text-align: center; padding-bottom: .2em;"&gt;&lt;/i&gt;とんと&lt;/span&gt;&lt;/a&gt;
             &lt;/li&gt;
         &lt;/ul&gt;
     &lt;/nav&gt;&lt;!-- /.nav --&gt;

@@ -29,8 +29,8 @@
 
 <p>echo.cssで使用されている、色名とカラーコードの対応は以下の通りです。</p>
 
-<div class="m-table-responsive">
-    <table class="m-table m-table-bordered">
+<div class="echo-table-responsive">
+    <table class="echo-table echo-table-bordered">
         <thead>
             <tr>
                 <th rowspan="2" colspan="2" style="width: 22%;">&nbsp;</th>
@@ -70,7 +70,7 @@
             </tr>
         </tbody>
     </table>
-</div><!-- /.m-table-responsive -->
+</div><!-- /.echo-table-responsive -->
 
 <h2 class="echo-doc-post-title-01">色名と役割</h2>
 
@@ -156,15 +156,15 @@ $important-fade:            #fff6e6 !default;</code></pre></div>
 しかしCSSフレームワークの性格上、<a href="https://waic.github.io/wcag21/guidelines/#contrast-enhanced">達成基準1.4.6「コントラスト (高度)」</a>を満たすことは難しくなっています。達成を意識する場合は、以下の点に注意してください。</p>
 
 <ul>
-    <li><code>.c-alert-info, .c-alert-important</code> はコントラストが不足しています。以下のいずれかの修正を行ってください。
+    <li><code>.echo-alert-info, .echo-alert-important</code> はコントラストが不足しています。以下のいずれかの修正を行ってください。
         <ol>
             <li>文字色を <code>$body-color</code> にする</li>
             <li>背景色を <code>$body-bg</code> にする</li>
             <li>テキストを太字にする</li>
         </ol>
     </li>
-    <li><code>.m-nav, .c-pager</code> のhover時のスタイルは、コントラストが不足しています。サイトデザインに応じて、色に依存しないスタイルに変更してください。</li>
-    <li><code>.m-label</code> を重要なリンクに使用しないでください。</li>
+    <li><code>.echo-nav, .echo-pager</code> のhover時のスタイルは、コントラストが不足しています。サイトデザインに応じて、色に依存しないスタイルに変更してください。</li>
+    <li><code>.echo-label</code> を重要なリンクに使用しないでください。</li>
     <li><code>.echo-bg-info, .echo-bg-important</code> を広い範囲に使用することは避けてください。</li>
 </ul>
 

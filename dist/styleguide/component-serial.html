@@ -23,9 +23,9 @@
             </div><!-- /.echo-doc-pagehead -->
 
             <nav class="echo-anchor">
-                <ul class="m-list m-list-horizontal">
+                <ul class="echo-list echo-list-horizontal">
 
-                    <li class="m-list-item"><a href="#serial" class="js-scrollto">c-serial</a></li>
+                    <li class="echo-list-item"><a href="#serial" class="js-scrollto">c-serial</a></li>
 
                 </ul>
             </nav>
@@ -34,9 +34,9 @@
             <article class="echo-doc-post">
                 <div class="echo-doc-post-contents styleguide-contents"><h1 id="serial" class="styleguide">c-serial</h1>
 
-<p>前後リンク（ページ移動ナビゲーション）を前提とした外観に変更する。<code>.m-nav</code> を包括する。</p>
+<p>前後リンク（ページ移動ナビゲーション）を前提とした外観に変更する。<code>.echo-nav</code> を包括する。</p>
 
-<p>コンポーネント内の <code>.m-nav-item.prev</code> , <code>.m-nav-item.next</code> は前後移動リンクとみなされる。</p>
+<p>コンポーネント内の <code>.echo-nav-item.prev</code> , <code>.echo-nav-item.next</code> は前後移動リンクとみなされる。</p>
 
 <p><code>.prev, .next,</code> を変更したい場合は、 <code>/_scss/_config_advance.scss</code> の変数<br>
 <code>$paginate-prev, $paginate-next</code> を変更すること。</p>
@@ -45,32 +45,32 @@
 <div class="example">
 
 <div class="c-serial">
-    <nav class="m-nav">
-        <ul class="m-nav-list">
-            <li class="m-nav-item prev">
-            <a href="#" class="m-nav-label" aria-label="prev">ひとつ前、時系列の新着順で表現すると未来のエントリーです</a>
+    <nav class="echo-nav">
+        <ul class="echo-nav-list">
+            <li class="echo-nav-item prev">
+            <a href="#" class="echo-nav-label" aria-label="prev">ひとつ前、時系列の新着順で表現すると未来のエントリーです</a>
             </li>
-            <li class="m-nav-item next">
-            <a href="#" class="m-nav-label" aria-label="next">ひとつ後、時系列の新着順で表現すると過去のエントリーです</a>
+            <li class="echo-nav-item next">
+            <a href="#" class="echo-nav-label" aria-label="next">ひとつ後、時系列の新着順で表現すると過去のエントリーです</a>
             </li>
-        </ul><!-- /.m-nav-list -->
-    </nav><!-- /.m-nav -->
+        </ul><!-- /.echo-nav-list -->
+    </nav><!-- /.echo-nav -->
 </div><!-- /.c-serial -->
 
 </div>
 
 
 <div class="codeblock"><pre><code class="language-markup">&lt;div class="c-serial"&gt;
-    &lt;nav class="m-nav"&gt;
-        &lt;ul class="m-nav-list"&gt;
-            &lt;li class="m-nav-item prev"&gt;
-            &lt;a href="#" class="m-nav-label" aria-label="prev"&gt;ひとつ前、時系列の新着順で表現すると未来のエントリーです&lt;/a&gt;
+    &lt;nav class="echo-nav"&gt;
+        &lt;ul class="echo-nav-list"&gt;
+            &lt;li class="echo-nav-item prev"&gt;
+            &lt;a href="#" class="echo-nav-label" aria-label="prev"&gt;ひとつ前、時系列の新着順で表現すると未来のエントリーです&lt;/a&gt;
             &lt;/li&gt;
-            &lt;li class="m-nav-item next"&gt;
-            &lt;a href="#" class="m-nav-label" aria-label="next"&gt;ひとつ後、時系列の新着順で表現すると過去のエントリーです&lt;/a&gt;
+            &lt;li class="echo-nav-item next"&gt;
+            &lt;a href="#" class="echo-nav-label" aria-label="next"&gt;ひとつ後、時系列の新着順で表現すると過去のエントリーです&lt;/a&gt;
             &lt;/li&gt;
-        &lt;/ul&gt;&lt;!-- /.m-nav-list --&gt;
-    &lt;/nav&gt;&lt;!-- /.m-nav --&gt;
+        &lt;/ul&gt;&lt;!-- /.echo-nav-list --&gt;
+    &lt;/nav&gt;&lt;!-- /.echo-nav --&gt;
 &lt;/div&gt;&lt;!-- /.c-serial --&gt;</code></pre></div>
 
                 </div>

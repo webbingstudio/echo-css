@@ -34,12 +34,18 @@
 
 <p>インデントはHTML・SCSSともに<strong>スペース4個</strong>を採用していますが、プロジェクト内で統一されていればこの限りではありません。</p>
 
-<div class="codeblock"><pre><code class="language-markup">&lt;div class="c-example"&gt;
-    &lt;div class="c-example-inner"&gt;
-        &lt;h2 class="c-example-title"&gt;c-exampleオブジェクト&lt;/h2&gt;
-        ...
-    &lt;/div&gt;&lt;!-- /.c-example-inner --&gt;
-&lt;/div&gt;&lt;!-- /.c-example --&gt;</code></pre></div>
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-example"&gt;
+    &lt;div class="echo-example-inner"&gt;
+        &lt;div class="echo-example-header"&gt;
+            &lt;h2 class="echo-example-title echo-title echo-title-style-a echo-title-level-4"&gt;echo-exampleオブジェクト&lt;/h2&gt;
+            ...
+        &lt;/div&gt;&lt;!-- /.echo-example-header --&gt;
+        &lt;div class="echo-example-contents"&gt;
+            &lt;p class="echo-example-body"&gt;これは echo-example オブジェクトのマークアップ例です。&lt;/p&gt;
+            ...
+        &lt;/div&gt;&lt;!-- /.echo-example-contents --&gt;
+    &lt;/div&gt;&lt;!-- /.echo-example-inner --&gt;
+&lt;/div&gt;&lt;!-- /.echo-example --&gt;</code></pre></div>
 
 <h2 class="echo-doc-post-title-01">クラス命名規則</h2>
 
@@ -51,11 +57,15 @@
 
 <p>デフォルトの接続子は以下の通りです。常にハイフン1個のみで連結します。</p>
 
-<div class="codeblock u-margin-bottom-lg"><pre><code class="language-markup">.prefix-(contentsName-)block-element-modifier</code></pre></div>
+<div class="codeblock echo-margin-bottom-lg"><pre><code class="language-markup">.prefix-(contentsName-)block-element-modifier</code></pre></div>
 
-<p>echo.cssのカード型オブジェクトの、文章が入る箇所のクラス名は以下のとおりです。カード型オブジェクトは <code>component</code> グループに属しているため、接頭辞は <code>c-</code> となります。</p>
+<p>echo.cssのカード型オブジェクトの、画像以外のコンテンツが入る要素のクラス名は以下のとおりです。</p>
 
-<div class="codeblock"><pre><code class="language-markup">.c-card-contents</code></pre></div>
+<div class="codeblock echo-margin-bottom-lg"><pre><code class="language-markup">.echo-card-contents</code></pre></div>
+
+<p><code>.echo-card</code> は componentレイヤーに属しています。もしも<a href="https://github.com/hiloki/flocss" target="_blank">FLOCSS</a>等のようにレイヤー接頭辞を付与したい場合は、さらに <code>c-</code> が付与されます。</p>
+
+<div class="codeblock echo-margin-bottom-lg"><pre><code class="language-markup">.echo-c-card-contents</code></pre></div>
 
 <h3 class="echo-doc-post-title-02">親オブジェクトのクラス名</h3>
 
@@ -68,17 +78,33 @@
 <p>オブジェクト内のクラス名は、冗長でないことが望ましいです。<br>
 オブジェクト内のHTMLの、見出し要素までの階層構造が以下だった場合</p>
 
-<p><strong>c-example > c-example-inner > 見出し要素</strong></p>
+<p><strong>echo-example > echo-example-inner > 見出し要素</strong></p>
 
-<p>見出し要素のクラス名は、最上位のオブジェクトの直属とみなし <code>.c-example-title</code> とします。<br>
-（<code>.c-example-inner-title</code> ではない）</p>
+<p>見出し要素のクラス名は、最上位のオブジェクトの直属とみなし <code>.echo-example-title</code> とします。<br>
+（<code>.echo-example-inner-title</code> ではない）</p>
 
-<p>Atomic Designの考えに基づけば、 <code>.c-example-title</code> は、さらに「見出し」という最小単位（Atom = module）に分割できます。このCSSフレームワークでは <code>.m-title</code> がこれにあたります。</p>
+<p>Atomic Designの考えに基づけば、 <code>.echo-example-title</code> は、さらに「見出し」という最小単位（Atom = module）に分割できます。このCSSフレームワークでは <code>.echo-title</code> がこれにあたります。</p>
+
+<h4 class="echo-doc-post-title-03">***-inner</h4>
+
+<p>オブジェクトの内容を幅を制限して中央寄せにする必要がある場合や、オブジェクト全体がクリック範囲となる可能性がある場合、直下のラッパー要素に付与します。</p>
+
+<h4 class="echo-doc-post-title-03">***-content</h4>
+
+<p>オブジェクトにヘッダとフッタ、もしくは画像とコンテンツの関係があるときに、メインコンテンツを包括する要素に付与します。</p>
+
+<h4 class="echo-doc-post-title-03">***-body</h4>
+
+<p>内容がほぼテキストであることが予想されるが、テキスト以外も含まれる可能性がある要素に付与します。</p>
+
+<h4 class="echo-doc-post-title-03">***-label</h4>
+
+<p>内容が短いテキストであることが確定している要素に付与します。</p>
 
 <h3 class="echo-doc-post-title-02">クラス名の英単語は略さない</h3>
 
 <p>原則として、クラス名の英単語は略さず使用します。<br>
-例えば <code>.u-img-rsp</code> などではなく <code>.u-image-responsive</code> となります。</p>
+例えば <code>.echo-img-rsp</code> などではなく <code>.echo-image-responsive</code> となります。</p>
 
 <p>例外として、サイズ表記（<code>xxs, xs, sm, md, lg, xl, xxl</code>）については、略記を使用しています。これはサイズ表記が国際的に認識されており、かつ、非常に多くのサブクラスで使用されているための措置です。</p>
 
@@ -87,23 +113,6 @@
 <p>「すべての人に理解しやすい設計」という基本方針に基づき、Mozila・W3Cが提唱している「視覚順」で記述しています。詳しい採用の根拠は拙記事を参照ください。</p>
 
 <p><a href="https://webbingstudio.com/weblog/entry-882.html">CSSプロパティの並び順を「視覚順」で書いている件</a></p>
-
-<h2 class="echo-doc-post-title-01">SassとGulp</h2>
-
-<p>多くの人が理解できるよう、必要以上に高度な内容にしないようにしています。このため、mixinやタスクの利用も最低限となっています。<br>
-特に <code>&</code> による接続は、<strong>クラス名からの検索がしにくくなる</strong>という、CSSフレームワークにおける致命的な問題があるため禁忌としています。</p>
-
-<div class="codeblock"><pre><code class="language-scss">.c-media {
-    &-inner {
-        // properties
-    }
-    &-object {
-        // properties
-    }
-    &-title {
-        // properties
-    }
-}</code></pre></div>
 
 
 

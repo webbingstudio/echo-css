@@ -29,15 +29,13 @@
 
 <p>CSSのクラス命名記法は、ハイフンで接続する「SMACSS」と、アンダースコアで接続する「BEM」に大きく分けられます。</p>
 
-<p>echo.cssは主に「わかりやすさ」を重視する理由から、コーディングルールにSMACSSを採用しています。</p>
+<p>echo.cssは、コーディングルールにSMACSSを採用しています。理由は以下のとおりです。</p>
 
-<div class="c-box c-box-first">
+<div class="echo-box echo-box-first">
     <ul>
         <li>クラス名が短く簡潔</li>
-        <li>コーディングスキルが高くない制作者にも読みやすい</li>
-        <li>PHPやJavaScriptの変数名と重複しにくい（キャメルケースやアンダースコアが使用されることが多いため）</li>
-        <li>主要CMSの公式テーマのCSSはSMACSSが多い</li>
-        <li>BEMに強いポリシーを持つコーダーは、社内のフレームワークを使用しているか、CSSフレームワークを自作している</li>
+        <li>コーディングスキルが高くない制作者にも理解しやすい</li>
+        <li>PHPやJavaScriptの変数名と重複しにくい（変数名にはキャメルケースやアンダースコアが使用されることが多いため）</li>
     </ul>
 </div>
 
@@ -53,7 +51,7 @@
 
 <p>種別を表す接頭辞 <code>l, m, c, u, p</code> はハイフンで接続されます。</p>
 
-<div class="codeblock u-margin-bottom-xl"><pre><code class="language-scss">.echo-container {
+<div class="codeblock echo-margin-bottom-xl"><pre><code class="language-scss">.echo-container {
   margin-left: auto;
   margin-right: auto;
   padding-left: 10px;
@@ -62,11 +60,11 @@
 
 <p>要素同士はアンダースコア2つで接続されます。親子関係は2階層以内となるようにしています。</p>
 
-<div class="codeblock u-margin-bottom-xl"><pre><code class="language-scss">.c-card__header {
+<div class="codeblock echo-margin-bottom-xl"><pre><code class="language-scss">.echo-card__header {
   padding: 10px 10px;
 }
 
-.c-card__contents {
+.echo-card__contents {
   padding: 10px 10px;
   font-size: 0.75rem;
   line-height: 1.125rem;
@@ -74,7 +72,7 @@
 
 <p>「色」「大きさ」などを示すモディファーはハイフン2つで接続されます。</p>
 
-<div class="codeblock u-margin-bottom-xl"><pre><code class="language-scss">.echo-button--first {
+<div class="codeblock echo-margin-bottom-xl"><pre><code class="language-scss">.echo-button--first {
   color: #fff;
   background-color: #1976d2;
   border-color: transparent;
@@ -82,7 +80,7 @@
 
 <p>「AがB」といった挙動を表す key, value はハイフン2つで接続されます。</p>
 
-<div class="codeblock u-margin-bottom-xl"><pre><code class="language-scss">.echo-grid__col--order--lg--first {
+<div class="codeblock echo-margin-bottom-xl"><pre><code class="language-scss">.echo-grid__col--order--lg--first {
   order: -1;
 }</code></pre></div>
 

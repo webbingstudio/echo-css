@@ -23,9 +23,9 @@
             </div><!-- /.echo-doc-pagehead -->
 
             <nav class="echo-anchor">
-                <ul class="m-list m-list-horizontal">
+                <ul class="echo-list echo-list-horizontal">
 
-                    <li class="m-list-item"><a href="#paginate" class="js-scrollto">c-paginate</a></li>
+                    <li class="echo-list-item"><a href="#paginate" class="js-scrollto">c-paginate</a></li>
 
                 </ul>
             </nav>
@@ -34,121 +34,121 @@
             <article class="echo-doc-post">
                 <div class="echo-doc-post-contents styleguide-contents"><h1 id="paginate" class="styleguide">c-paginate</h1>
 
-<p>ページネーション（ページ分割ナビゲーション）を前提とした外観に変更する。<code>.m-nav</code> を包括する。</p>
+<p>ページネーション（ページ分割ナビゲーション）を前提とした外観に変更する。<code>.echo-nav</code> を包括する。</p>
 
-<p>コンポーネント内の <code>.m-nav-item.prev</code> , <code>.m-nav-item.next</code> は前後移動リンクとみなされる。<br>
-<code>.m-nav-item.is-current</code> は現在ページとみなされる。<br>
-<code>.m-nav-item.ellipsis</code> は省略記号とみなされる。<br>
+<p>コンポーネント内の <code>.echo-nav-item.prev</code> , <code>.echo-nav-item.next</code> は前後移動リンクとみなされる。<br>
+<code>.echo-nav-item.is-current</code> は現在ページとみなされる。<br>
+<code>.echo-nav-item.ellipsis</code> は省略記号とみなされる。<br>
 最初のページ、最後のページへのリンクスタイルには対応していないため、任意で追加すること。</p>
 
 <p><code>.prev, .next, .is-current, .ellipsis</code> を変更したい場合は、 <code>/_scss/_config_advance.scss</code> の変数<br>
 <code>$paginate-prev, $paginate-next, $paginate-current, $paginate-ellipsis</code> を変更すること。</p>
 
 <div class="example">
-<p class="m-title m-title-style-a">シンプルなページネーション</p>
+<p class="echo-title echo-title-style-a">シンプルなページネーション</p>
 
 <div class="c-paginate">
-    <nav class="m-nav">
-        <ul class="m-nav-list">
-            <li class="m-nav-item prev">
-                <a href="#" class="m-nav-label" aria-label="prev"><span class="u-sr">前のページ</span></a>
+    <nav class="echo-nav">
+        <ul class="echo-nav-list">
+            <li class="echo-nav-item prev">
+                <a href="#" class="echo-nav-label" aria-label="prev"><span class="u-sr">前のページ</span></a>
             </li>
-            <li class="m-nav-item">
-                <a href="#" class="m-nav-label">1</a>
+            <li class="echo-nav-item">
+                <a href="#" class="echo-nav-label">1</a>
             </li>
-            <li class="m-nav-item">
-                <a href="#" class="m-nav-label">2</a>
+            <li class="echo-nav-item">
+                <a href="#" class="echo-nav-label">2</a>
             </li>
-            <li class="m-nav-item is-current">
-                <a href="#" class="m-nav-label">3</a>
+            <li class="echo-nav-item is-current">
+                <a href="#" class="echo-nav-label">3</a>
             </li>
-            <li class="m-nav-item">
-                <a href="#" class="m-nav-label">4</a>
+            <li class="echo-nav-item">
+                <a href="#" class="echo-nav-label">4</a>
             </li>
-            <li class="m-nav-item">
-                <a href="#" class="m-nav-label">5</a>
+            <li class="echo-nav-item">
+                <a href="#" class="echo-nav-label">5</a>
             </li>
-            <li class="m-nav-item next">
-                <a href="#" class="m-nav-label" aria-label="next"><span class="u-sr">次のページ</span></a>
+            <li class="echo-nav-item next">
+                <a href="#" class="echo-nav-label" aria-label="next"><span class="u-sr">次のページ</span></a>
             </li>
         </ul><!-- /.nav-list -->
     </nav><!-- /.nav -->
 </div><!-- /.paginate -->
 
-<p class="m-title m-title-style-a u-margin-top-lg">先頭・末尾・省略記号を含む</p>
+<p class="echo-title echo-title-style-a u-margin-top-lg">先頭・末尾・省略記号を含む</p>
 
 <p>全体の幅が一般的なスマートフォンの画面領域を超えてしまうので、スマートフォンでも使用する場合は、ボタンの幅を詰めるか、先頭・末尾・省略記号を非表示にする必要がある。</p>
 
 <div class="c-paginate">
-    <nav class="m-nav">
-        <ul class="m-nav-list">
-            <li class="m-nav-item prev">
-                <a href="#" class="m-nav-label" aria-label="prev"><span class="u-sr">前のページ</span></a>
+    <nav class="echo-nav">
+        <ul class="echo-nav-list">
+            <li class="echo-nav-item prev">
+                <a href="#" class="echo-nav-label" aria-label="prev"><span class="u-sr">前のページ</span></a>
             </li>
-            <li class="m-nav-item u-hidden-xs-down">
-                <a href="#" class="m-nav-label">1</a>
+            <li class="echo-nav-item u-hidden-xs-down">
+                <a href="#" class="echo-nav-label">1</a>
             </li>
-            <li class="m-nav-item ellipsis u-hidden-xxs-down">…</li>
-            <li class="m-nav-item">
-                <a href="#" class="m-nav-label">6</a>
+            <li class="echo-nav-item ellipsis u-hidden-xxs-down">…</li>
+            <li class="echo-nav-item">
+                <a href="#" class="echo-nav-label">6</a>
             </li>
-            <li class="m-nav-item">
-                <a href="#" class="m-nav-label">7</a>
+            <li class="echo-nav-item">
+                <a href="#" class="echo-nav-label">7</a>
             </li>
-            <li class="m-nav-item is-current">
-                <a href="#" class="m-nav-label">8</a>
+            <li class="echo-nav-item is-current">
+                <a href="#" class="echo-nav-label">8</a>
             </li>
-            <li class="m-nav-item">
-                <a href="#" class="m-nav-label">9</a>
+            <li class="echo-nav-item">
+                <a href="#" class="echo-nav-label">9</a>
             </li>
-            <li class="m-nav-item">
-                <a href="#" class="m-nav-label">10</a>
+            <li class="echo-nav-item">
+                <a href="#" class="echo-nav-label">10</a>
             </li>
-            <li class="m-nav-item ellipsis u-hidden-xxs-down">…</li>
-            <li class="m-nav-item u-hidden-xs-down">
-                <a href="#" class="m-nav-label">999</a>
+            <li class="echo-nav-item ellipsis u-hidden-xxs-down">…</li>
+            <li class="echo-nav-item u-hidden-xs-down">
+                <a href="#" class="echo-nav-label">999</a>
             </li>
-            <li class="m-nav-item next">
-                <a href="#" class="m-nav-label" aria-label="next"><span class="u-sr">次のページ</span></a>
+            <li class="echo-nav-item next">
+                <a href="#" class="echo-nav-label" aria-label="next"><span class="u-sr">次のページ</span></a>
             </li>
         </ul><!-- /.nav-list -->
     </nav><!-- /.nav -->
 </div><!-- /.paginate -->
 
-<p class="m-title m-title-style-a u-margin-top-lg">.m-nav-inverseを併用した場合</p>
+<p class="echo-title echo-title-style-a u-margin-top-lg">.echo-nav-inverseを併用した場合</p>
 
 <div class="u-bg-default u-padding-sm">
     <div class="c-paginate">
-        <nav class="m-nav m-nav-inverse">
-            <ul class="m-nav-list">
-                <li class="m-nav-item prev">
-                    <a href="#" class="m-nav-label" aria-label="prev"><span class="u-sr">前のページ</span></a>
+        <nav class="echo-nav echo-nav-inverse">
+            <ul class="echo-nav-list">
+                <li class="echo-nav-item prev">
+                    <a href="#" class="echo-nav-label" aria-label="prev"><span class="u-sr">前のページ</span></a>
                 </li>
-                <li class="m-nav-item">
-                    <a href="#" class="m-nav-label">1</a>
+                <li class="echo-nav-item">
+                    <a href="#" class="echo-nav-label">1</a>
                 </li>
-                <li class="m-nav-item ellipsis">…</li>
-                <li class="m-nav-item">
-                    <a href="#" class="m-nav-label">6</a>
+                <li class="echo-nav-item ellipsis">…</li>
+                <li class="echo-nav-item">
+                    <a href="#" class="echo-nav-label">6</a>
                 </li>
-                <li class="m-nav-item">
-                    <a href="#" class="m-nav-label">7</a>
+                <li class="echo-nav-item">
+                    <a href="#" class="echo-nav-label">7</a>
                 </li>
-                <li class="m-nav-item is-current">
-                    <a href="#" class="m-nav-label">8</a>
+                <li class="echo-nav-item is-current">
+                    <a href="#" class="echo-nav-label">8</a>
                 </li>
-                <li class="m-nav-item">
-                    <a href="#" class="m-nav-label">9</a>
+                <li class="echo-nav-item">
+                    <a href="#" class="echo-nav-label">9</a>
                 </li>
-                <li class="m-nav-item">
-                    <a href="#" class="m-nav-label">10</a>
+                <li class="echo-nav-item">
+                    <a href="#" class="echo-nav-label">10</a>
                 </li>
-                <li class="m-nav-item ellipsis">…</li>
-                <li class="m-nav-item">
-                    <a href="#" class="m-nav-label">999</a>
+                <li class="echo-nav-item ellipsis">…</li>
+                <li class="echo-nav-item">
+                    <a href="#" class="echo-nav-label">999</a>
                 </li>
-                <li class="m-nav-item next">
-                    <a href="#" class="m-nav-label" aria-label="next"><span class="u-sr">次のページ</span></a>
+                <li class="echo-nav-item next">
+                    <a href="#" class="echo-nav-label" aria-label="next"><span class="u-sr">次のページ</span></a>
                 </li>
             </ul><!-- /.nav-list -->
         </nav><!-- /.nav -->
@@ -157,110 +157,110 @@
 
 </div>
 
-<div class="codeblock"><pre><code class="language-markup">&lt;p class="m-title m-title-style-a"&gt;シンプルなページネーション&lt;/p&gt;
+<div class="codeblock"><pre><code class="language-markup">&lt;p class="echo-title echo-title-style-a"&gt;シンプルなページネーション&lt;/p&gt;
 
 &lt;div class="c-paginate"&gt;
-    &lt;nav class="m-nav"&gt;
-        &lt;ul class="m-nav-list"&gt;
-            &lt;li class="m-nav-item prev"&gt;
-                &lt;a href="#" class="m-nav-label" aria-label="prev"&gt;&lt;span class="u-sr"&gt;前のページ&lt;/span&gt;&lt;/a&gt;
+    &lt;nav class="echo-nav"&gt;
+        &lt;ul class="echo-nav-list"&gt;
+            &lt;li class="echo-nav-item prev"&gt;
+                &lt;a href="#" class="echo-nav-label" aria-label="prev"&gt;&lt;span class="u-sr"&gt;前のページ&lt;/span&gt;&lt;/a&gt;
             &lt;/li&gt;
-            &lt;li class="m-nav-item"&gt;
-                &lt;a href="#" class="m-nav-label"&gt;1&lt;/a&gt;
+            &lt;li class="echo-nav-item"&gt;
+                &lt;a href="#" class="echo-nav-label"&gt;1&lt;/a&gt;
             &lt;/li&gt;
-            &lt;li class="m-nav-item"&gt;
-                &lt;a href="#" class="m-nav-label"&gt;2&lt;/a&gt;
+            &lt;li class="echo-nav-item"&gt;
+                &lt;a href="#" class="echo-nav-label"&gt;2&lt;/a&gt;
             &lt;/li&gt;
-            &lt;li class="m-nav-item is-current"&gt;
-                &lt;a href="#" class="m-nav-label"&gt;3&lt;/a&gt;
+            &lt;li class="echo-nav-item is-current"&gt;
+                &lt;a href="#" class="echo-nav-label"&gt;3&lt;/a&gt;
             &lt;/li&gt;
-            &lt;li class="m-nav-item"&gt;
-                &lt;a href="#" class="m-nav-label"&gt;4&lt;/a&gt;
+            &lt;li class="echo-nav-item"&gt;
+                &lt;a href="#" class="echo-nav-label"&gt;4&lt;/a&gt;
             &lt;/li&gt;
-            &lt;li class="m-nav-item"&gt;
-                &lt;a href="#" class="m-nav-label"&gt;5&lt;/a&gt;
+            &lt;li class="echo-nav-item"&gt;
+                &lt;a href="#" class="echo-nav-label"&gt;5&lt;/a&gt;
             &lt;/li&gt;
-            &lt;li class="m-nav-item next"&gt;
-                &lt;a href="#" class="m-nav-label" aria-label="next"&gt;&lt;span class="u-sr"&gt;次のページ&lt;/span&gt;&lt;/a&gt;
+            &lt;li class="echo-nav-item next"&gt;
+                &lt;a href="#" class="echo-nav-label" aria-label="next"&gt;&lt;span class="u-sr"&gt;次のページ&lt;/span&gt;&lt;/a&gt;
             &lt;/li&gt;
         &lt;/ul&gt;&lt;!-- /.nav-list --&gt;
     &lt;/nav&gt;&lt;!-- /.nav --&gt;
 &lt;/div&gt;&lt;!-- /.paginate --&gt;
 
-&lt;p class="m-title m-title-style-a u-margin-top-lg"&gt;先頭・末尾・省略記号を含む&lt;/p&gt;
+&lt;p class="echo-title echo-title-style-a u-margin-top-lg"&gt;先頭・末尾・省略記号を含む&lt;/p&gt;
 
 &lt;p&gt;全体の幅が一般的なスマートフォンの画面領域を超えてしまうので、スマートフォンでも使用する場合は、ボタンの幅を詰めるか、先頭・末尾・省略記号を非表示にする必要がある。&lt;/p&gt;
 
 &lt;div class="c-paginate"&gt;
-    &lt;nav class="m-nav"&gt;
-        &lt;ul class="m-nav-list"&gt;
-            &lt;li class="m-nav-item prev"&gt;
-                &lt;a href="#" class="m-nav-label" aria-label="prev"&gt;&lt;span class="u-sr"&gt;前のページ&lt;/span&gt;&lt;/a&gt;
+    &lt;nav class="echo-nav"&gt;
+        &lt;ul class="echo-nav-list"&gt;
+            &lt;li class="echo-nav-item prev"&gt;
+                &lt;a href="#" class="echo-nav-label" aria-label="prev"&gt;&lt;span class="u-sr"&gt;前のページ&lt;/span&gt;&lt;/a&gt;
             &lt;/li&gt;
-            &lt;li class="m-nav-item u-hidden-xs-down"&gt;
-                &lt;a href="#" class="m-nav-label"&gt;1&lt;/a&gt;
+            &lt;li class="echo-nav-item u-hidden-xs-down"&gt;
+                &lt;a href="#" class="echo-nav-label"&gt;1&lt;/a&gt;
             &lt;/li&gt;
-            &lt;li class="m-nav-item ellipsis u-hidden-xxs-down"&gt;…&lt;/li&gt;
-            &lt;li class="m-nav-item"&gt;
-                &lt;a href="#" class="m-nav-label"&gt;6&lt;/a&gt;
+            &lt;li class="echo-nav-item ellipsis u-hidden-xxs-down"&gt;…&lt;/li&gt;
+            &lt;li class="echo-nav-item"&gt;
+                &lt;a href="#" class="echo-nav-label"&gt;6&lt;/a&gt;
             &lt;/li&gt;
-            &lt;li class="m-nav-item"&gt;
-                &lt;a href="#" class="m-nav-label"&gt;7&lt;/a&gt;
+            &lt;li class="echo-nav-item"&gt;
+                &lt;a href="#" class="echo-nav-label"&gt;7&lt;/a&gt;
             &lt;/li&gt;
-            &lt;li class="m-nav-item is-current"&gt;
-                &lt;a href="#" class="m-nav-label"&gt;8&lt;/a&gt;
+            &lt;li class="echo-nav-item is-current"&gt;
+                &lt;a href="#" class="echo-nav-label"&gt;8&lt;/a&gt;
             &lt;/li&gt;
-            &lt;li class="m-nav-item"&gt;
-                &lt;a href="#" class="m-nav-label"&gt;9&lt;/a&gt;
+            &lt;li class="echo-nav-item"&gt;
+                &lt;a href="#" class="echo-nav-label"&gt;9&lt;/a&gt;
             &lt;/li&gt;
-            &lt;li class="m-nav-item"&gt;
-                &lt;a href="#" class="m-nav-label"&gt;10&lt;/a&gt;
+            &lt;li class="echo-nav-item"&gt;
+                &lt;a href="#" class="echo-nav-label"&gt;10&lt;/a&gt;
             &lt;/li&gt;
-            &lt;li class="m-nav-item ellipsis u-hidden-xxs-down"&gt;…&lt;/li&gt;
-            &lt;li class="m-nav-item u-hidden-xs-down"&gt;
-                &lt;a href="#" class="m-nav-label"&gt;999&lt;/a&gt;
+            &lt;li class="echo-nav-item ellipsis u-hidden-xxs-down"&gt;…&lt;/li&gt;
+            &lt;li class="echo-nav-item u-hidden-xs-down"&gt;
+                &lt;a href="#" class="echo-nav-label"&gt;999&lt;/a&gt;
             &lt;/li&gt;
-            &lt;li class="m-nav-item next"&gt;
-                &lt;a href="#" class="m-nav-label" aria-label="next"&gt;&lt;span class="u-sr"&gt;次のページ&lt;/span&gt;&lt;/a&gt;
+            &lt;li class="echo-nav-item next"&gt;
+                &lt;a href="#" class="echo-nav-label" aria-label="next"&gt;&lt;span class="u-sr"&gt;次のページ&lt;/span&gt;&lt;/a&gt;
             &lt;/li&gt;
         &lt;/ul&gt;&lt;!-- /.nav-list --&gt;
     &lt;/nav&gt;&lt;!-- /.nav --&gt;
 &lt;/div&gt;&lt;!-- /.paginate --&gt;
 
-&lt;p class="m-title m-title-style-a u-margin-top-lg"&gt;.m-nav-inverseを併用した場合&lt;/p&gt;
+&lt;p class="echo-title echo-title-style-a u-margin-top-lg"&gt;.echo-nav-inverseを併用した場合&lt;/p&gt;
 
 &lt;div class="u-bg-default u-padding-sm"&gt;
     &lt;div class="c-paginate"&gt;
-        &lt;nav class="m-nav m-nav-inverse"&gt;
-            &lt;ul class="m-nav-list"&gt;
-                &lt;li class="m-nav-item prev"&gt;
-                    &lt;a href="#" class="m-nav-label" aria-label="prev"&gt;&lt;span class="u-sr"&gt;前のページ&lt;/span&gt;&lt;/a&gt;
+        &lt;nav class="echo-nav echo-nav-inverse"&gt;
+            &lt;ul class="echo-nav-list"&gt;
+                &lt;li class="echo-nav-item prev"&gt;
+                    &lt;a href="#" class="echo-nav-label" aria-label="prev"&gt;&lt;span class="u-sr"&gt;前のページ&lt;/span&gt;&lt;/a&gt;
                 &lt;/li&gt;
-                &lt;li class="m-nav-item"&gt;
-                    &lt;a href="#" class="m-nav-label"&gt;1&lt;/a&gt;
+                &lt;li class="echo-nav-item"&gt;
+                    &lt;a href="#" class="echo-nav-label"&gt;1&lt;/a&gt;
                 &lt;/li&gt;
-                &lt;li class="m-nav-item ellipsis"&gt;…&lt;/li&gt;
-                &lt;li class="m-nav-item"&gt;
-                    &lt;a href="#" class="m-nav-label"&gt;6&lt;/a&gt;
+                &lt;li class="echo-nav-item ellipsis"&gt;…&lt;/li&gt;
+                &lt;li class="echo-nav-item"&gt;
+                    &lt;a href="#" class="echo-nav-label"&gt;6&lt;/a&gt;
                 &lt;/li&gt;
-                &lt;li class="m-nav-item"&gt;
-                    &lt;a href="#" class="m-nav-label"&gt;7&lt;/a&gt;
+                &lt;li class="echo-nav-item"&gt;
+                    &lt;a href="#" class="echo-nav-label"&gt;7&lt;/a&gt;
                 &lt;/li&gt;
-                &lt;li class="m-nav-item is-current"&gt;
-                    &lt;a href="#" class="m-nav-label"&gt;8&lt;/a&gt;
+                &lt;li class="echo-nav-item is-current"&gt;
+                    &lt;a href="#" class="echo-nav-label"&gt;8&lt;/a&gt;
                 &lt;/li&gt;
-                &lt;li class="m-nav-item"&gt;
-                    &lt;a href="#" class="m-nav-label"&gt;9&lt;/a&gt;
+                &lt;li class="echo-nav-item"&gt;
+                    &lt;a href="#" class="echo-nav-label"&gt;9&lt;/a&gt;
                 &lt;/li&gt;
-                &lt;li class="m-nav-item"&gt;
-                    &lt;a href="#" class="m-nav-label"&gt;10&lt;/a&gt;
+                &lt;li class="echo-nav-item"&gt;
+                    &lt;a href="#" class="echo-nav-label"&gt;10&lt;/a&gt;
                 &lt;/li&gt;
-                &lt;li class="m-nav-item ellipsis"&gt;…&lt;/li&gt;
-                &lt;li class="m-nav-item"&gt;
-                    &lt;a href="#" class="m-nav-label"&gt;999&lt;/a&gt;
+                &lt;li class="echo-nav-item ellipsis"&gt;…&lt;/li&gt;
+                &lt;li class="echo-nav-item"&gt;
+                    &lt;a href="#" class="echo-nav-label"&gt;999&lt;/a&gt;
                 &lt;/li&gt;
-                &lt;li class="m-nav-item next"&gt;
-                    &lt;a href="#" class="m-nav-label" aria-label="next"&gt;&lt;span class="u-sr"&gt;次のページ&lt;/span&gt;&lt;/a&gt;
+                &lt;li class="echo-nav-item next"&gt;
+                    &lt;a href="#" class="echo-nav-label" aria-label="next"&gt;&lt;span class="u-sr"&gt;次のページ&lt;/span&gt;&lt;/a&gt;
                 &lt;/li&gt;
             &lt;/ul&gt;&lt;!-- /.nav-list --&gt;
         &lt;/nav&gt;&lt;!-- /.nav --&gt;

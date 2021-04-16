@@ -23,23 +23,23 @@
             </div><!-- /.echo-doc-pagehead -->
 
             <nav class="echo-anchor">
-                <ul class="m-list m-list-horizontal">
+                <ul class="echo-list echo-list-horizontal">
                     
-                    <li class="m-list-item"><a href="#select" class="js-scrollto">m-select</a></li>
+                    <li class="echo-list-item"><a href="#select" class="js-scrollto">echo-select</a></li>
                     
-                    <li class="m-list-item"><a href="#select-01-size" class="js-scrollto">m-select-(size)</a></li>
+                    <li class="echo-list-item"><a href="#select-01-size" class="js-scrollto">echo-select-(size)</a></li>
                     
                 </ul>
             </nav>
                 
             <article class="echo-doc-post">
-                <div class="echo-doc-post-contents styleguide-contents"><h1 id="select" class="styleguide">m-select</h1>
+                <div class="echo-doc-post-contents styleguide-contents"><h1 id="select" class="styleguide">echo-select</h1>
 
 <p>セレクトボックスをインライン表示する。select要素ではなく、包括している要素にクラスを付与する。<br>
 余白・レイアウト等は <code>utility &gt; .u-margin-(size)</code> や <code>component &gt; .c-form</code> で指定する。<br>
 <code>.is-error</code> を付与するとエラー表示となり、色が <code>$important</code> に変わる。</p>
 <div class="example"><div style="margin-bottom: 1rem;">
-    <div class="m-select">
+    <div class="echo-select">
         <select>
             <option>月を選択...</option>
             <option value="">2017年</option>
@@ -49,7 +49,7 @@
     </div>
 </div>
 
-<div class="m-select is-error">
+<div class="echo-select is-error">
     <select>
         <option>月を選択...</option>
         <option value="">2017年</option>
@@ -58,7 +58,7 @@
     </select>
 </div>
 </div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-select"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-select"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;select&gt;</span>
             <span class="nt">&lt;option&gt;</span>月を選択...<span class="nt">&lt;/option&gt;</span>
             <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>2017年<span class="nt">&lt;/option&gt;</span>
@@ -68,7 +68,7 @@
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-select is-error"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-select is-error"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;select&gt;</span>
         <span class="nt">&lt;option&gt;</span>月を選択...<span class="nt">&lt;/option&gt;</span>
         <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>2017年<span class="nt">&lt;/option&gt;</span>
@@ -77,11 +77,11 @@
     <span class="nt">&lt;/select&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </pre></div>
-<h2 id="select-01-size" class="styleguide">m-select-(size)</h2>
+<h2 id="select-01-size" class="styleguide">echo-select-(size)</h2>
 
 <p>セレクトボックスの全体のサイズを変更する。(size)は <code>sm, lg</code> に対応している。</p>
 <div class="example"><div style="margin-bottom: 1rem;">
-    <div class="m-select m-select-sm">
+    <div class="echo-select echo-select-sm">
         <select>
             <option>月を選択...</option>
             <option value="">2017年</option>
@@ -91,7 +91,7 @@
     </div>
 </div>
 <div>
-    <div class="m-select m-select-lg">
+    <div class="echo-select echo-select-lg">
         <select>
             <option>月を選択...</option>
             <option value="">2017年</option>
@@ -101,7 +101,7 @@
     </div>
 </div>
 </div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-select m-select-sm"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-select echo-select-sm"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;select&gt;</span>
             <span class="nt">&lt;option&gt;</span>月を選択...<span class="nt">&lt;/option&gt;</span>
             <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>2017年<span class="nt">&lt;/option&gt;</span>
@@ -111,7 +111,7 @@
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-select m-select-lg"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-select echo-select-lg"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;select&gt;</span>
             <span class="nt">&lt;option&gt;</span>月を選択...<span class="nt">&lt;/option&gt;</span>
             <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>2017年<span class="nt">&lt;/option&gt;</span>
