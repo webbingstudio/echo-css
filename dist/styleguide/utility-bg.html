@@ -25,48 +25,48 @@
             <nav class="echo-doc-anchor">
                 <ul class="echo-list echo-list-horizontal">
                     
-                    <li class="echo-list-item"><a href="#bg-01-color" class="js-scrollto">u-bg-(color)</a></li>
+                    <li class="echo-list-item"><a href="#bg-01-color" class="js-scrollto">echo-bg-(color)</a></li>
                     
-                    <li class="echo-list-item"><a href="#bg-02-fade" class="js-scrollto">u-bg-fade</a></li>
+                    <li class="echo-list-item"><a href="#bg-02-fade" class="js-scrollto">echo-bg-fade</a></li>
                     
                 </ul>
             </nav>
             
 
             <article class="echo-doc-post">
-                <div class="echo-doc-post-contents styleguide-contents"><h1 id="bg-01-color" class="styleguide">u-bg-(color)</h1>
+                <div class="echo-doc-post-contents styleguide-contents"><h1 id="bg-01-color" class="styleguide">echo-bg-(color)</h1>
 
 <p>背景に色をつける。<br>
 オブジェクト・コンポーネントを可能な限り上書きし、内包するテキストリンクの文字色も変更するが、 <code>:hover, :focus</code> 等のステートがあるオブジェクトには対応していない。<br>
 (color)は<a href="../docs/design-tokens-color.html">標準のカラーテーブル</a>を参照。</p>
 
 <div class="example">
-<div class="u-bg-default">bg-default</div>
-<div class="u-bg-info">bg-info</div>
-<div class="u-bg-important">bg-important</div>
-<div class="u-bg-default u-padding-sm"><div class="u-bg-inverse">bg-inverse</div></div>
+<div class="echo-bg-default">bg-default</div>
+<div class="echo-bg-info">bg-info</div>
+<div class="echo-bg-important">bg-important</div>
+<div class="echo-bg-default echo-padding-sm"><div class="echo-bg-inverse">bg-inverse</div></div>
 </div>
 
-<div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-bg-default"</span><span class="nt">&gt;</span>bg-default<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-bg-info"</span><span class="nt">&gt;</span>bg-info<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-bg-important"</span><span class="nt">&gt;</span>bg-important<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-bg-default u-padding-sm"</span><span class="nt">&gt;</span><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-bg-inverse"</span><span class="nt">&gt;</span>bg-inverse<span class="nt">&lt;/div&gt;</span><span class="nt">&lt;/div&gt;</span>
+<div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-bg-default"</span><span class="nt">&gt;</span>bg-default<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-bg-info"</span><span class="nt">&gt;</span>bg-info<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-bg-important"</span><span class="nt">&gt;</span>bg-important<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-bg-default echo-padding-sm"</span><span class="nt">&gt;</span><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-bg-inverse"</span><span class="nt">&gt;</span>bg-inverse<span class="nt">&lt;/div&gt;</span><span class="nt">&lt;/div&gt;</span>
 </pre></div>
 
-<h2 id="bg-02-fade" class="styleguide">u-bg-fade</h2>
+<h2 id="bg-02-fade" class="styleguide">echo-bg-fade</h2>
 
-<p><code>.u-bg-(color)</code> と併用すると背景色を薄くする。</p>
+<p><code>.echo-bg-(color)</code> と併用すると背景色を薄くする。</p>
 <div class="example">
-<div class="u-bg-default u-bg-fade">bg-default</div>
-<div class="u-bg-info u-bg-fade">bg-info</div>
-<div class="u-bg-important u-bg-fade">bg-important</div>
-<div class="u-bg-default u-padding-sm"><div class="u-bg-inverse u-bg-fade">bg-inverse</div></div>
+<div class="echo-bg-default echo-bg-fade">bg-default</div>
+<div class="echo-bg-info echo-bg-fade">bg-info</div>
+<div class="echo-bg-important echo-bg-fade">bg-important</div>
+<div class="echo-bg-default echo-padding-sm"><div class="echo-bg-inverse echo-bg-fade">bg-inverse</div></div>
 </div>
 
-<div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-bg-default u-bg-fade"</span><span class="nt">&gt;</span>bg-default<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-bg-info u-bg-fade"</span><span class="nt">&gt;</span>bg-info<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-bg-important u-bg-fade"</span><span class="nt">&gt;</span>bg-important<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-bg-default u-padding-sm"</span><span class="nt">&gt;</span><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"u-bg-inverse u-bg-fade"</span><span class="nt">&gt;</span>bg-inverse<span class="nt">&lt;/div&gt;</span><span class="nt">&lt;/div&gt;</span>
+<div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-bg-default echo-bg-fade"</span><span class="nt">&gt;</span>bg-default<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-bg-info echo-bg-fade"</span><span class="nt">&gt;</span>bg-info<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-bg-important echo-bg-fade"</span><span class="nt">&gt;</span>bg-important<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-bg-default echo-padding-sm"</span><span class="nt">&gt;</span><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-bg-inverse echo-bg-fade"</span><span class="nt">&gt;</span>bg-inverse<span class="nt">&lt;/div&gt;</span><span class="nt">&lt;/div&gt;</span>
 </pre></div>
 
 <?php include('../doc_include/footer.inc'); ?>
