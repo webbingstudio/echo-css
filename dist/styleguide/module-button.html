@@ -35,7 +35,7 @@
 
                     <li class="echo-list-item"><a href="#btn-04-icon" class="js-scrollto">echo-button-icon-(direction)</a></li>
 
-                    <li class="echo-list-item"><a href="#btn-04-icon-arrow" class="js-scrollto">echo-button-icon-arrow</a></li>
+                    <li class="echo-list-item"><a href="#btn-04-icon-name" class="js-scrollto">echo-button-icon-(name)</a></li>
                     
                 </ul>
                 <ul class="echo-list echo-list-horizontal">
@@ -341,44 +341,7 @@
 
 </div>
 
-
-<h2 id="btn-04-icon-arrow" class="styleguide">echo-button-icon-arrow</h2>
-
-<p><code>.echo-button-icon-(direction)</code> と同時に付与すると、ボタンに移動を促す矢印を表示する。</p>
-
-<div class="example">
-
-<p>
-  <dfn>right</dfn>
-  <a href="#" class="echo-button echo-button-style-a echo-button-icon echo-button-icon-arrow">echo-button-icon-arrow</a>
-  <a href="#" class="echo-button echo-button-style-b echo-button-icon echo-button-icon-arrow">echo-button-icon-arrow</a>
-</p>
-
-<p>
-  <dfn>left</dfn>
-  <a href="#" class="echo-button echo-button-style-a echo-button-icon-left echo-button-icon-arrow">echo-button-icon-arrow</a>
-  <a href="#" class="echo-button echo-button-style-b echo-button-icon-left echo-button-icon-arrow">echo-button-icon-arrow</a>
-</p>
-
-<div class="echo-padding-sm echo-bg-default">
-<p>
-  <dfn>left + inverse</dfn>
-  <a href="#" class="echo-button echo-button-inverse echo-button-style-a echo-button-icon echo-button-icon-arrow">echo-button-icon-arrow</a>
-  <a href="#" class="echo-button echo-button-inverse echo-button-style-b echo-button-icon-right echo-button-icon-arrow">echo-button-icon-arrow</a>
-</p>
-
-<p>
-  <dfn>right + inverse</dfn>
-  <a href="#" class="echo-button echo-button-inverse echo-button-style-a echo-button-icon echo-button-icon-arrow">echo-button-icon-arrow</a>
-  <a href="#" class="echo-button echo-button-inverse echo-button-style-b echo-button-icon-right echo-button-icon-arrow">echo-button-icon-arrow</a>
-</p>
-</div>
-
-</div>
-
-<div class="codeblock"><pre><code class="language-markup">&lt;p&gt;この例では .echo-doc-button-icon クラスを付与して、アイコン領域を仮表示している。&lt;/p&gt;
-
-&lt;style&gt;
+<div class="codeblock"><pre><code class="language-markup">&lt;style&gt;
 .echo-doc-button-icon:after {
   border: 1px solid #3a0;
   background-color: #fc8;
@@ -396,20 +359,49 @@
   &lt;a href="#" class="echo-button echo-button-style-a echo-button-icon-left echo-doc-button-icon"&gt;echo-button-icon-left&lt;/a&gt;
   &lt;a href="#" class="echo-button echo-button-style-b echo-button-icon-left echo-doc-button-icon"&gt;echo-button-icon-left&lt;/a&gt;
 &lt;/p&gt;
+</code></pre></div>
 
-&lt;/div&gt;
+<h2 id="btn-04-icon-name" class="styleguide">echo-button-icon-(name)</h2>
 
+<p>ボタンに実際にアイコンを表示する。右端に表示する場合は <code>.echo-button-icon-(direction)</code> は必要ない。</p>
 
-&lt;h2 id="btn-04-icon-arrow" class="styleguide"&gt;echo-button-icon-arrow&lt;/h2&gt;
+<p>echo.cssでは(name)は <code>arrow</code> のみ対応しており、CSSのボーダーで生成したシェブロンを表示する。<br>
+(name)には仕様上 <code>left, right</code> が予約語となり使用できないことに注意。</p>
 
-&lt;p&gt;&lt;code&gt;.echo-button-icon-(direction)&lt;/code&gt; と同時に付与すると、ボタンに移動を促す矢印を表示する。&lt;/p&gt;
+<div class="example">
 
-&lt;div class="example"&gt;
+<p>
+  <dfn>right</dfn>
+  <a href="#" class="echo-button echo-button-style-a echo-button-icon-arrow">echo-button-icon-arrow</a>
+  <a href="#" class="echo-button echo-button-style-b echo-button-icon-arrow">echo-button-icon-arrow</a>
+</p>
 
-&lt;p&gt;
+<p>
+  <dfn>left</dfn>
+  <a href="#" class="echo-button echo-button-style-a echo-button-icon-left echo-button-icon-arrow">echo-button-icon-arrow</a>
+  <a href="#" class="echo-button echo-button-style-b echo-button-icon-left echo-button-icon-arrow">echo-button-icon-arrow</a>
+</p>
+
+<div class="echo-padding-sm echo-bg-default">
+<p>
+  <dfn>left + inverse</dfn>
+  <a href="#" class="echo-button echo-button-inverse echo-button-style-a echo-button-icon-arrow">echo-button-icon-arrow</a>
+  <a href="#" class="echo-button echo-button-inverse echo-button-style-b echo-button-icon-right echo-button-icon-arrow">echo-button-icon-arrow</a>
+</p>
+
+<p>
+  <dfn>right + inverse</dfn>
+  <a href="#" class="echo-button echo-button-inverse echo-button-style-a echo-button-icon-arrow">echo-button-icon-arrow</a>
+  <a href="#" class="echo-button echo-button-inverse echo-button-style-b echo-button-icon-right echo-button-icon-arrow">echo-button-icon-arrow</a>
+</p>
+</div>
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;p&gt;
   &lt;dfn&gt;right&lt;/dfn&gt;
-  &lt;a href="#" class="echo-button echo-button-style-a echo-button-icon echo-button-icon-arrow"&gt;echo-button-icon-arrow&lt;/a&gt;
-  &lt;a href="#" class="echo-button echo-button-style-b echo-button-icon echo-button-icon-arrow"&gt;echo-button-icon-arrow&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-style-a echo-button-icon-arrow"&gt;echo-button-icon-arrow&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-style-b echo-button-icon-arrow"&gt;echo-button-icon-arrow&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -421,13 +413,13 @@
 &lt;div class="echo-padding-sm echo-bg-default"&gt;
 &lt;p&gt;
   &lt;dfn&gt;left + inverse&lt;/dfn&gt;
-  &lt;a href="#" class="echo-button echo-button-inverse echo-button-style-a echo-button-icon echo-button-icon-arrow"&gt;echo-button-icon-arrow&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-inverse echo-button-style-a echo-button-icon-arrow"&gt;echo-button-icon-arrow&lt;/a&gt;
   &lt;a href="#" class="echo-button echo-button-inverse echo-button-style-b echo-button-icon-right echo-button-icon-arrow"&gt;echo-button-icon-arrow&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
   &lt;dfn&gt;right + inverse&lt;/dfn&gt;
-  &lt;a href="#" class="echo-button echo-button-inverse echo-button-style-a echo-button-icon echo-button-icon-arrow"&gt;echo-button-icon-arrow&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-inverse echo-button-style-a echo-button-icon-arrow"&gt;echo-button-icon-arrow&lt;/a&gt;
   &lt;a href="#" class="echo-button echo-button-inverse echo-button-style-b echo-button-icon-right echo-button-icon-arrow"&gt;echo-button-icon-arrow&lt;/a&gt;
 &lt;/p&gt;
 &lt;/div&gt;
@@ -465,16 +457,16 @@
 </p>
 
 <p>
-  <a href="#" class="echo-button echo-button-block echo-button-style-b echo-button-icon echo-button-icon-arrow">echo-button-block</a>
+  <a href="#" class="echo-button echo-button-block echo-button-style-b echo-button-icon-arrow">echo-button-block</a>
 </p>
 <p>
-  <a href="#" class="echo-button echo-button-lg echo-button-block echo-button-style-b echo-button-icon echo-button-icon-arrow">echo-button-block</a>
+  <a href="#" class="echo-button echo-button-lg echo-button-block echo-button-style-b echo-button-icon-arrow">echo-button-block</a>
 </p>
 <p>
-  <a href="#" class="echo-button echo-button-xl echo-button-block echo-button-style-b echo-button-icon echo-button-icon-arrow">echo-button-block</a>
+  <a href="#" class="echo-button echo-button-xl echo-button-block echo-button-style-b echo-button-icon-arrow">echo-button-block</a>
 </p>
 <p>
-  <a href="#" class="echo-button echo-button-xxl echo-button-block echo-button-style-b echo-button-icon echo-button-icon-arrow">echo-button-block</a>
+  <a href="#" class="echo-button echo-button-xxl echo-button-block echo-button-style-b echo-button-icon-arrow">echo-button-block</a>
 </p>
 </div>
 
@@ -495,16 +487,16 @@
 &lt;/p&gt;
 
 &lt;p&gt;
-  &lt;a href="#" class="echo-button echo-button-block echo-button-style-b echo-button-icon echo-button-icon-arrow"&gt;echo-button-block&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-block echo-button-style-b echo-button-icon-arrow"&gt;echo-button-block&lt;/a&gt;
 &lt;/p&gt;
 &lt;p&gt;
-  &lt;a href="#" class="echo-button echo-button-lg echo-button-block echo-button-style-b echo-button-icon echo-button-icon-arrow"&gt;echo-button-block&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-lg echo-button-block echo-button-style-b echo-button-icon-arrow"&gt;echo-button-block&lt;/a&gt;
 &lt;/p&gt;
 &lt;p&gt;
-  &lt;a href="#" class="echo-button echo-button-xl echo-button-block echo-button-style-b echo-button-icon echo-button-icon-arrow"&gt;echo-button-block&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-xl echo-button-block echo-button-style-b echo-button-icon-arrow"&gt;echo-button-block&lt;/a&gt;
 &lt;/p&gt;
 &lt;p&gt;
-  &lt;a href="#" class="echo-button echo-button-xxl echo-button-block echo-button-style-b echo-button-icon echo-button-icon-arrow"&gt;echo-button-block&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-xxl echo-button-block echo-button-style-b echo-button-icon-arrow"&gt;echo-button-block&lt;/a&gt;
 &lt;/p&gt;
 </code></pre></div>
 
@@ -539,7 +531,7 @@
 
 <p>
   <a href="#" class="echo-button echo-button-oval echo-button-style-a echo-button-icon-left echo-button-icon-arrow">echo-button-oval</a>
-  <a href="#" class="echo-button echo-button-oval echo-button-style-a echo-button-icon echo-button-icon-arrow">echo-button-oval</a>
+  <a href="#" class="echo-button echo-button-oval echo-button-style-a echo-button-icon-arrow">echo-button-oval</a>
 </p>
 
 <p>
@@ -587,7 +579,7 @@
 
 &lt;p>
   &lt;a href="#" class="echo-button echo-button-oval echo-button-style-a echo-button-icon-left echo-button-icon-arrow">echo-button-oval&lt;/a>
-  &lt;a href="#" class="echo-button echo-button-oval echo-button-style-a echo-button-icon echo-button-icon-arrow">echo-button-oval&lt;/a>
+  &lt;a href="#" class="echo-button echo-button-oval echo-button-style-a echo-button-icon-arrow">echo-button-oval&lt;/a>
 &lt;/p>
 
 &lt;p>
@@ -703,7 +695,7 @@
 <h2 id="btn-08-square" class="styleguide">echo-button-square</h2>
 
 <p>ボタンを正方形で表示する。<br>
-<code>.echo-button-arrowed-(direction)</code> は使用できない。<br>
+<code>.echo-button-icon-(direction)</code> は使用できない。<br>
 幅を超える文字数のテキストを表示することはできない。</p>
 
 <div class="example">
