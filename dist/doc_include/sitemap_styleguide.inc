@@ -52,7 +52,6 @@
                 <li class="echo-nav-item"><span class="echo-nav-label">utility</span>
                     <ul class="echo-doc-sitemap-list-flat echo-nav-list echo-nav-children">
                         <li class="echo-nav-item"><a href="./utility-bg.html" class="echo-nav-label">bg</a></li>
-                        <li class="echo-nav-item"><a href="./utility-border.html" class="echo-nav-label">border</a></li>
                         <li class="echo-nav-item"><a href="./utility-font.html" class="echo-nav-label">font</a></li>
                         <li class="echo-nav-item"><a href="./utility-hidden.html" class="echo-nav-label">hidden</a></li>
                         <li class="echo-nav-item"><a href="./utility-image.html" class="echo-nav-label">image</a></li>
