@@ -10,6 +10,19 @@
  */
 /*
 --------------------
+typography(color)
+--------------------
+*/
+a {
+  color: #0057af;
+}
+
+a:hover, a:focus {
+  color: #0057af;
+}
+
+/*
+--------------------
 echo-button-(color)
 --------------------
 */
@@ -280,6 +293,55 @@ a.echo-label-style-b.echo-label-inverse:active {
   color: #333;
   background-color: #fff;
   border-color: transparent;
+}
+
+/*
+--------------------
+echo-nav(color)
+--------------------
+*/
+.echo-nav-label {
+  color: #333;
+  background-color: transparent;
+}
+
+a.echo-nav-label:hover, a.echo-nav-label:focus {
+  color: #333;
+  background-color: #eee;
+}
+
+.echo-nav-label.is-current {
+  color: #fff;
+  background-color: #333;
+}
+
+.echo-nav-label.is-current:hover, .echo-nav-label.is-current:focus, .echo-nav-label.is-current:active {
+  color: #fff;
+  background-color: #333;
+}
+
+.echo-nav-inverse {
+  background-color: transparent;
+}
+
+.echo-nav-inverse .echo-nav-label {
+  color: #fff;
+  background-color: transparent;
+}
+
+.echo-nav-inverse a.echo-nav-label:hover, .echo-nav-inverse a.echo-nav-label:focus {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.echo-nav-inverse .echo-nav-label.is-current {
+  color: #333;
+  background-color: #fff;
+}
+
+.echo-nav-inverse .echo-nav-label.is-current:hover, .echo-nav-inverse .echo-nav-label.is-current:focus, .echo-nav-inverse .echo-nav-label.is-current:active {
+  color: #333;
+  background-color: #fff;
 }
 
 /*

@@ -1,0 +1,72 @@
+/*
+--------------------
+#{$pr}#{$m}nav(color)
+--------------------
+*/
+
+.#{$pr}#{$m}nav#{$c1}label {
+    color: $nav-color;
+    background-color: $nav-bg;
+
+    @at-root {
+
+        a#{&} {
+
+            &:hover,
+            &:focus {
+                color: $nav-hover-color;
+                background-color: $nav-hover-bg;
+            }
+
+        }
+
+    }
+
+}
+
+.#{$pr}#{$m}nav#{$c1}label.#{$nav-current} {
+    color: $nav-current-color;
+    background-color: $nav-current-bg;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $nav-current-hover-color;
+        background-color: $nav-current-hover-bg;
+    }
+
+}
+
+.#{$pr}#{$m}nav#{$c3}inverse {
+    background-color: $nav-inverse-bg;
+
+    .#{$pr}#{$m}nav#{$c1}label {
+        color: $nav-inverse-color;
+        background-color: $nav-inverse-bg;
+    }
+
+    a.#{$pr}#{$m}nav#{$c1}label {
+
+        &:hover,
+        &:focus {
+            color: $nav-inverse-hover-color;
+            background-color: $nav-inverse-hover-bg;
+        }
+
+    }
+
+    .#{$pr}#{$m}nav#{$c1}label.#{$nav-current} {
+        color: $nav-inverse-current-color;
+        background-color: $nav-inverse-current-bg;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $nav-inverse-current-hover-color;
+            background-color: $nav-inverse-current-hover-bg;
+        }
+
+    }
+
+}
+

@@ -22,12 +22,10 @@ It is not appropriate to specify color or text-decoration for the link only with
 */
 
 a {
-    color: $link-color;
     text-decoration: underline;
 
     &:hover,
     &:focus {
-        color: $link-hover-color;
         text-decoration: none;
     }
 

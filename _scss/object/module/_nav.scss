@@ -44,8 +44,6 @@
     width: 100%;
     height: 100%;
     min-height: $nav-min-size;
-    color: $nav-color;
-    background-color: $nav-bg;
     padding: .25em 1em;
     font-size: .875rem;
     line-height: 1;
@@ -66,26 +64,11 @@
 
             &:hover,
             &:focus {
-                color: $nav-hover-color;
-                background-color: $nav-hover-bg;
                 text-decoration: none;
             }
 
         }
 
-    }
-
-}
-
-.#{$pr}#{$m}nav#{$c1}label.#{$nav-current} {
-    color: $nav-current-color;
-    background-color: $nav-current-bg;
-
-    &:hover,
-    &:focus,
-    &:active {
-        color: $nav-current-hover-color;
-        background-color: $nav-current-hover-bg;
     }
 
 }
@@ -133,47 +116,6 @@
 
     @include media-breakpoint-up(sm) {
         font-size: .875rem;
-    }
-
-}
-
-
-/*
---------------------
-#{$pr}#{$m}nav#{$c3}inverse
---------------------
-*/
-
-.#{$pr}#{$m}nav#{$c3}inverse {
-    background-color: $nav-inverse-bg;
-
-    .#{$pr}#{$m}nav#{$c1}label {
-        color: $nav-inverse-color;
-        background-color: $nav-inverse-bg;
-    }
-
-    a.#{$pr}#{$m}nav#{$c1}label {
-
-        &:hover,
-        &:focus {
-            color: $nav-inverse-hover-color;
-            background-color: $nav-inverse-hover-bg;
-            text-decoration: none;
-        }
-
-    }
-
-    .#{$pr}#{$m}nav#{$c1}label.#{$nav-current} {
-        color: $nav-inverse-current-color;
-        background-color: $nav-inverse-current-bg;
-
-        &:hover,
-        &:focus,
-        &:active {
-            color: $nav-inverse-current-hover-color;
-            background-color: $nav-inverse-current-hover-bg;
-        }
-
     }
 
 }
