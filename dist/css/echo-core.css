@@ -1646,109 +1646,6 @@ echo-button-(size)
 
 /*
 --------------------
-echo-button-arrowed
---------------------
-*/
-[class*="echo-button-arrowed"]:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  width: .5em;
-  height: .5em;
-  transform-origin: center center;
-  border-top: 0.2em solid #333;
-  border-left: 0.2em solid #333;
-  border-radius: .1em;
-}
-
-[class*="echo-button-arrowed"].echo-button-style-a:after {
-  border-top-color: #fff;
-  border-left-color: #fff;
-}
-
-[class*="echo-button-arrowed"].echo-button-style-a:hover:after, [class*="echo-button-arrowed"].echo-button-style-a:focus:after, [class*="echo-button-arrowed"].echo-button-style-a:active:after {
-  border-top-color: #333;
-  border-left-color: #333;
-}
-
-a:hover [class*="echo-button-arrowed"].echo-button-style-a:after,
-a:focus [class*="echo-button-arrowed"].echo-button-style-a:after,
-a:active [class*="echo-button-arrowed"].echo-button-style-a:after {
-  border-top-color: #333;
-  border-left-color: #333;
-}
-
-[class*="echo-button-arrowed"].echo-button-style-a.echo-button-inverse:after {
-  border-top-color: #333;
-  border-left-color: #333;
-}
-
-[class*="echo-button-arrowed"].echo-button-style-a.echo-button-inverse:hover:after, [class*="echo-button-arrowed"].echo-button-style-a.echo-button-inverse:focus:after, [class*="echo-button-arrowed"].echo-button-style-a.echo-button-inverse:active:after {
-  border-top-color: #fff;
-  border-left-color: #fff;
-}
-
-a:hover [class*="echo-button-arrowed"].echo-button-style-a.echo-button-inverse:after,
-a:focus [class*="echo-button-arrowed"].echo-button-style-a.echo-button-inverse:after,
-a:active [class*="echo-button-arrowed"].echo-button-style-a.echo-button-inverse:after {
-  border-top-color: #fff;
-  border-left-color: #fff;
-}
-
-[class*="echo-button-arrowed"].echo-button-style-b:after {
-  border-top-color: #333;
-  border-left-color: #333;
-}
-
-[class*="echo-button-arrowed"].echo-button-style-b:hover:after, [class*="echo-button-arrowed"].echo-button-style-b:focus:after, [class*="echo-button-arrowed"].echo-button-style-b:active:after {
-  border-top-color: #fff;
-  border-left-color: #fff;
-}
-
-a:hover [class*="echo-button-arrowed"].echo-button-style-b:after,
-a:focus [class*="echo-button-arrowed"].echo-button-style-b:after,
-a:active [class*="echo-button-arrowed"].echo-button-style-b:after {
-  border-top-color: #fff;
-  border-left-color: #fff;
-}
-
-[class*="echo-button-arrowed"].echo-button-style-b.echo-button-inverse:after {
-  border-top-color: #fff;
-  border-left-color: #fff;
-}
-
-[class*="echo-button-arrowed"].echo-button-style-b.echo-button-inverse:hover:after, [class*="echo-button-arrowed"].echo-button-style-b.echo-button-inverse:focus:after, [class*="echo-button-arrowed"].echo-button-style-b.echo-button-inverse:active:after {
-  border-top-color: #333;
-  border-left-color: #333;
-}
-
-a:hover [class*="echo-button-arrowed"].echo-button-style-b.echo-button-inverse:after,
-a:focus [class*="echo-button-arrowed"].echo-button-style-b.echo-button-inverse:after,
-a:active [class*="echo-button-arrowed"].echo-button-style-b.echo-button-inverse:after {
-  border-top-color: #333;
-  border-left-color: #333;
-}
-
-.echo-button-arrowed-left:not(.echo-button-block) {
-  padding-left: 2em;
-}
-
-.echo-button-arrowed-left:after {
-  left: .65em;
-  transform: translateY(-50%) rotate(-45deg);
-}
-
-.echo-button-arrowed-right:not(.echo-button-block) {
-  padding-right: 2em;
-}
-
-.echo-button-arrowed-right:after {
-  right: .65em;
-  transform: translateY(-50%) rotate(135deg);
-}
-
-/*
---------------------
 echo-button-block
 --------------------
 */
@@ -1906,6 +1803,49 @@ echo-button-square
     height: 6rem;
     line-height: 6rem;
   }
+}
+
+/*
+--------------------
+echo-button-icon
+--------------------
+*/
+[class*="echo-button-icon"]:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: .65em;
+  transform: translateY(-50%);
+  width: 1em;
+  height: 1em;
+  font-size: 1em;
+  transform-origin: center center;
+}
+
+[class*="echo-button-icon"]:not(.echo-button-block) {
+  padding-right: 2.65em;
+}
+
+.echo-button-icon-left:after {
+  right: auto;
+  left: .65em;
+}
+
+.echo-button-icon-left:not(.echo-button-block) {
+  padding-left: 2.65em;
+}
+
+.echo-button-icon-arrow:after {
+  width: .5em;
+  height: .5em;
+  border-top: .2em solid currentcolor;
+  border-left: .2em solid currentcolor;
+  border-radius: .1em;
+  transform: translateY(-50%) rotate(135deg);
+}
+
+.echo-button-icon-arrow.echo-button-icon-left:after {
+  transform: translateY(-50%) rotate(-45deg);
 }
 
 /*

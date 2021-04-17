@@ -1,0 +1,63 @@
+/*
+--------------------
+#{$pr}#{$m}button#{$c2}icon
+--------------------
+*/
+
+[class*="#{$pr}#{$m}button#{$c2}icon"] {
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: .65em;
+        transform: translateY( -50% );
+        width: 1em;
+        height: 1em;
+        font-size: 1em;
+        transform-origin: center center;
+    }
+
+    &:not(.#{$pr}#{$m}button#{$c3}block) {
+        padding-right: 2.65em;
+    }
+
+}
+
+.#{$pr}#{$m}button#{$c2}icon#{$c3}left {
+
+    &:after {
+        right: auto;
+        left: .65em;
+    }
+
+    &:not(.#{$pr}#{$m}button#{$c3}block) {
+        padding-left: 2.65em;
+    }
+
+}
+
+.#{$pr}#{$m}button#{$c2}icon#{$c3}arrow {
+
+    &:after {
+        width: .5em;
+        height: .5em;
+        border-top: .2em solid currentcolor;
+        border-left: .2em solid currentcolor;
+        border-radius: .1em;
+        transform:
+            translateY( -50% )
+            rotate( 135deg );
+    }
+
+    &.#{$pr}#{$m}button#{$c2}icon#{$c3}left {
+
+        &:after {
+            transform:
+                translateY( -50% )
+                rotate( -45deg );
+        }
+
+    }
+
+}
