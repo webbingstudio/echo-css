@@ -2300,6 +2300,10 @@ echo-nav
   vertical-align: middle;
 }
 
+.echo-nav:not(.echo-nav-vertical) .echo-nav-label {
+  white-space: nowrap;
+}
+
 .echo-nav-list {
   display: flex;
   flex-wrap: nowrap;
@@ -2313,7 +2317,7 @@ echo-nav
 .echo-nav-item {
   flex-grow: 1;
   flex-shrink: 1;
-  flex-basis: auto;
+  flex-basis: 0%;
   margin: 0;
   padding: 0;
 }
