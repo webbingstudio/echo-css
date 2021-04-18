@@ -25,7 +25,7 @@ if( !isset( $echo_path ) ) {
 
     <meta name="twitter:site" content="@webbingstudio">
     <meta name="twitter:card" content="summary_large_image">
-    <meta property="og:image" content="https://cms-skill.com/echo-css/share/ogp.jpg">
+    <meta property="og:image" content="https://echocss.webbingstudio.com/share/ogp.jpg">
     <link rel="shortcut icon" href="<?php echo $echo_path; ?>share/favicon.ico">
     <link rel="apple-touch-icon" sizes="72x72" href="<?php echo $echo_path; ?>share/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="76x76" href="<?php echo $echo_path; ?>share/apple-touch-icon-76x76.png">
