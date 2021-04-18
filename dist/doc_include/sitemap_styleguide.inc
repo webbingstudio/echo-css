@@ -4,7 +4,6 @@
         <li class="echo-nav-item"><span class="echo-doc-sitemap-header echo-nav-label">layout</span>
             <ul class="echo-doc-sitemap-list-flat echo-nav-list echo-nav-children">
                 <li class="echo-nav-item"><a href="./layout-container.html" class="echo-nav-label">container</a></li>
-                <li class="echo-nav-item"><a href="./layout-document.html" class="echo-nav-label">document</a></li>
                 <li class="echo-nav-item"><a href="./layout-grid.html" class="echo-nav-label">grid</a></li>
                 <li class="echo-nav-item"><a href="./layout-cards.html" class="echo-nav-label">cards</a></li>
                 <li class="echo-nav-item"><a href="./layout-headlines.html" class="echo-nav-label">headlines</a></li>
