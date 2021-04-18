@@ -661,6 +661,34 @@ echo-serial(color)
 
 /*
 --------------------
+echo-step(color)
+--------------------
+*/
+.echo-step .echo-nav.echo-nav-vertical .echo-nav-label {
+  border-color: transparent;
+}
+
+.echo-step .echo-nav.echo-nav-vertical .echo-nav-label:not(.is-current):hover, .echo-step .echo-nav.echo-nav-vertical .echo-nav-label:not(.is-current):focus, .echo-step .echo-nav.echo-nav-vertical .echo-nav-label:not(.is-current):active {
+  background-color: #eee;
+}
+
+.echo-step .echo-nav.echo-nav-vertical .echo-nav-label.is-current {
+  color: #333;
+  background-color: transparent;
+  border-color: #333;
+}
+
+.echo-step .echo-nav.echo-nav-vertical ol.echo-nav-list .echo-nav-label:before {
+  background-color: #eee;
+}
+
+.echo-step .echo-nav.echo-nav-vertical ol.echo-nav-list .echo-nav-label.is-current:before {
+  color: #fff;
+  background-color: #333;
+}
+
+/*
+--------------------
 echo-bg-(color)
 echo-bg-fade
 --------------------

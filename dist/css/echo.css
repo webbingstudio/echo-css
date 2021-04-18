@@ -5175,72 +5175,6 @@ echo-paginate(color)
 
 /*
 --------------------
-echo-step
---------------------
-*/
-.echo-step {
-  max-width: 30rem;
-  margin: 0 auto;
-}
-
-.echo-step .echo-nav.echo-nav-vertical .echo-nav-list {
-  margin-bottom: -.5em;
-}
-
-.echo-step .echo-nav.echo-nav-vertical .echo-nav-item {
-  margin-bottom: .5em;
-}
-
-.echo-step .echo-nav.echo-nav-vertical .echo-nav-label {
-  justify-content: center;
-  text-align: center;
-  height: 2.75em;
-  padding-top: 0;
-  padding-bottom: 0;
-  border: 0.0625rem solid transparent;
-}
-
-.echo-step .echo-nav.echo-nav-vertical .echo-nav-label:not(.is-current):hover, .echo-step .echo-nav.echo-nav-vertical .echo-nav-label:not(.is-current):focus, .echo-step .echo-nav.echo-nav-vertical .echo-nav-label:not(.is-current):active {
-  background-color: #eee;
-}
-
-.echo-step .echo-nav.echo-nav-vertical .echo-nav-label.is-current {
-  color: #333;
-  background-color: transparent;
-  border-color: #333;
-}
-
-.echo-step .echo-nav.echo-nav-vertical ol.echo-nav-list {
-  counter-reset: item;
-}
-
-.echo-step .echo-nav.echo-nav-vertical ol.echo-nav-list .echo-nav-label {
-  position: relative;
-  padding-left: 3.25em;
-}
-
-.echo-step .echo-nav.echo-nav-vertical ol.echo-nav-list .echo-nav-label:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  counter-increment: item;
-  content: counter(item);
-  min-width: 2.75em;
-  height: 100%;
-  background-color: #eee;
-  transition: background-color .3s, color .3s;
-}
-
-.echo-step .echo-nav.echo-nav-vertical ol.echo-nav-list .echo-nav-label.is-current:before {
-  color: #fff;
-  background-color: #333;
-}
-
-/*
---------------------
 echo-serial
 --------------------
 */
@@ -5315,6 +5249,100 @@ echo-serial(color)
 .echo-serial .echo-nav-item.prev .echo-nav-label:after, .echo-serial .echo-nav-item.next .echo-nav-label:after {
   border-top-color: currentcolor;
   border-left-color: currentcolor;
+}
+
+/*
+--------------------
+echo-step
+--------------------
+*/
+.echo-step {
+  max-width: 30rem;
+  margin: 0 auto;
+}
+
+.echo-step .echo-nav.echo-nav-vertical .echo-nav-list {
+  margin-bottom: -.5em;
+}
+
+.echo-step .echo-nav.echo-nav-vertical .echo-nav-item {
+  margin-bottom: .5em;
+}
+
+.echo-step .echo-nav.echo-nav-vertical .echo-nav-label {
+  justify-content: center;
+  text-align: center;
+  height: 2.75em;
+  padding-top: 0;
+  padding-bottom: 0;
+  border: 0.0625rem solid transparent;
+}
+
+.echo-step .echo-nav.echo-nav-vertical .echo-nav-label:not(.is-current):hover, .echo-step .echo-nav.echo-nav-vertical .echo-nav-label:not(.is-current):focus, .echo-step .echo-nav.echo-nav-vertical .echo-nav-label:not(.is-current):active {
+  background-color: #eee;
+}
+
+.echo-step .echo-nav.echo-nav-vertical .echo-nav-label.is-current {
+  color: #333;
+  background-color: transparent;
+  border-color: #333;
+}
+
+.echo-step .echo-nav.echo-nav-vertical ol.echo-nav-list {
+  counter-reset: item;
+}
+
+.echo-step .echo-nav.echo-nav-vertical ol.echo-nav-list .echo-nav-label {
+  position: relative;
+  padding-left: 3.25em;
+}
+
+.echo-step .echo-nav.echo-nav-vertical ol.echo-nav-list .echo-nav-label:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  counter-increment: item;
+  content: counter(item);
+  min-width: 2.75em;
+  height: 100%;
+  background-color: #eee;
+  transition: background-color .3s, color .3s;
+}
+
+.echo-step .echo-nav.echo-nav-vertical ol.echo-nav-list .echo-nav-label.is-current:before {
+  color: #fff;
+  background-color: #333;
+}
+
+/*
+--------------------
+echo-step(color)
+--------------------
+*/
+.echo-step .echo-nav.echo-nav-vertical .echo-nav-label {
+  border-color: transparent;
+}
+
+.echo-step .echo-nav.echo-nav-vertical .echo-nav-label:not(.is-current):hover, .echo-step .echo-nav.echo-nav-vertical .echo-nav-label:not(.is-current):focus, .echo-step .echo-nav.echo-nav-vertical .echo-nav-label:not(.is-current):active {
+  background-color: #eee;
+}
+
+.echo-step .echo-nav.echo-nav-vertical .echo-nav-label.is-current {
+  color: #333;
+  background-color: transparent;
+  border-color: #333;
+}
+
+.echo-step .echo-nav.echo-nav-vertical ol.echo-nav-list .echo-nav-label:before {
+  background-color: #eee;
+}
+
+.echo-step .echo-nav.echo-nav-vertical ol.echo-nav-list .echo-nav-label.is-current:before {
+  color: #fff;
+  background-color: #333;
 }
 
 /*

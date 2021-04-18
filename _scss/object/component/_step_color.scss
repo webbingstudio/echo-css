@@ -1,0 +1,55 @@
+/*
+--------------------
+#{$pr}#{$c}step(color)
+--------------------
+*/
+
+.#{$pr}#{$c}step {
+
+    .#{$pr}#{$m}nav.#{$pr}#{$m}nav#{$c3}vertical {
+
+        .#{$pr}#{$m}nav#{$c1}label {
+            border-color: transparent;
+
+            &:not(.#{$nav-current}) {
+
+                &:hover,
+                &:focus,
+                &:active {
+                    background-color: $nav-hover-bg;
+                }
+
+            }
+
+            &.#{$nav-current} {
+                color: $nav-color;
+                background-color: $nav-bg;
+                border-color: $nav-color;
+            }
+
+        }
+
+        ol.#{$pr}#{$m}nav#{$c1}list {
+
+            .#{$pr}#{$m}nav#{$c1}label {
+
+                &:before {
+                    background-color: $nav-hover-bg;
+                }
+
+                &.#{$nav-current} {
+
+                    &:before {
+                        color: $ui-current-color;
+                        background-color: $ui-current-bg;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
