@@ -1,0 +1,28 @@
+/*
+--------------------
+#{$pr}#{$m}radio(color)
+--------------------
+*/
+
+.#{$pr}#{$m}radio:not(.#{$error}) {
+
+    .#{$pr}#{$m}radio-icon {
+        background-color: $radio-bg;
+        border-color: $radio-border-color;
+    }
+
+    input[type="radio"] {
+
+        &:checked + .#{$pr}#{$m}radio-icon {
+            background-color: $radio-checked-bg;
+            border-color: $radio-checked-border-color;
+
+            &:after {
+                background-color: $radio-checked-color;
+            }
+
+        }
+
+    }
+
+}

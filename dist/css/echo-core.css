@@ -1911,20 +1911,37 @@ echo-checkbox
   z-index: 3;
 }
 
-.echo-checkbox.echo-is-error,
-.echo-is-error > .echo-checkbox {
+.echo-checkbox.is-error {
   color: #d20b2a;
 }
 
-.echo-checkbox.echo-is-error .echo-checkbox-icon,
-.echo-is-error > .echo-checkbox .echo-checkbox-icon {
+.echo-checkbox.is-error .echo-checkbox-icon {
   border-color: #d20b2a;
 }
 
-.echo-checkbox.echo-is-error input[type="checkbox"]:checked + .echo-checkbox-icon,
-.echo-is-error > .echo-checkbox input[type="checkbox"]:checked + .echo-checkbox-icon {
+.echo-checkbox.is-error input[type="checkbox"]:checked + .echo-checkbox-icon {
   background-color: #d20b2a;
   border-color: #d20b2a;
+}
+
+/*
+--------------------
+echo-checkbox(color)
+--------------------
+*/
+.echo-checkbox:not(.is-error) .echo-checkbox-icon {
+  background-color: #fff;
+  border-color: #333;
+}
+
+.echo-checkbox:not(.is-error) input[type="checkbox"]:checked + .echo-checkbox-icon {
+  background-color: #333;
+  border-color: #333;
+}
+
+.echo-checkbox:not(.is-error) input[type="checkbox"]:checked + .echo-checkbox-icon:after {
+  border-bottom-color: #fff;
+  border-right-color: #fff;
 }
 
 /*
@@ -2400,25 +2417,40 @@ echo-radio
   z-index: 3;
 }
 
-.echo-radio.echo-is-error,
-.echo-is-error > .echo-radio {
+.echo-radio.is-error {
   color: #d20b2a;
 }
 
-.echo-radio.echo-is-error .echo-radio-icon,
-.echo-is-error > .echo-radio .echo-radio-icon {
+.echo-radio.is-error .echo-radio-icon {
   border-color: #d20b2a;
 }
 
-.echo-radio.echo-is-error input[type="radio"]:checked + .echo-radio-icon,
-.echo-is-error > .echo-radio input[type="radio"]:checked + .echo-radio-icon {
+.echo-radio.is-error input[type="radio"]:checked + .echo-radio-icon {
   background-color: transparent;
   border-color: #d20b2a;
 }
 
-.echo-radio.echo-is-error input[type="radio"]:checked + .echo-radio-icon:after,
-.echo-is-error > .echo-radio input[type="radio"]:checked + .echo-radio-icon:after {
+.echo-radio.is-error input[type="radio"]:checked + .echo-radio-icon:after {
   background-color: #d20b2a;
+}
+
+/*
+--------------------
+echo-radio(color)
+--------------------
+*/
+.echo-radio:not(.is-error) .echo-radio-icon {
+  background-color: #fff;
+  border-color: #333;
+}
+
+.echo-radio:not(.is-error) input[type="radio"]:checked + .echo-radio-icon {
+  background-color: transparent;
+  border-color: #333;
+}
+
+.echo-radio:not(.is-error) input[type="radio"]:checked + .echo-radio-icon:after {
+  background-color: #333;
 }
 
 /*

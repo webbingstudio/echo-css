@@ -23,6 +23,26 @@ a:hover, a:focus {
 
 /*
 --------------------
+echo-checkbox(color)
+--------------------
+*/
+.echo-checkbox:not(.is-error) .echo-checkbox-icon {
+  background-color: #fff;
+  border-color: #333;
+}
+
+.echo-checkbox:not(.is-error) input[type="checkbox"]:checked + .echo-checkbox-icon {
+  background-color: #333;
+  border-color: #333;
+}
+
+.echo-checkbox:not(.is-error) input[type="checkbox"]:checked + .echo-checkbox-icon:after {
+  border-bottom-color: #fff;
+  border-right-color: #fff;
+}
+
+/*
+--------------------
 echo-button-(color)
 --------------------
 */
@@ -342,6 +362,25 @@ a.echo-nav-label:hover, a.echo-nav-label:focus {
 .echo-nav-inverse .echo-nav-label.is-current:hover, .echo-nav-inverse .echo-nav-label.is-current:focus, .echo-nav-inverse .echo-nav-label.is-current:active {
   color: #333;
   background-color: #fff;
+}
+
+/*
+--------------------
+echo-radio(color)
+--------------------
+*/
+.echo-radio:not(.is-error) .echo-radio-icon {
+  background-color: #fff;
+  border-color: #333;
+}
+
+.echo-radio:not(.is-error) input[type="radio"]:checked + .echo-radio-icon {
+  background-color: transparent;
+  border-color: #333;
+}
+
+.echo-radio:not(.is-error) input[type="radio"]:checked + .echo-radio-icon:after {
+  background-color: #333;
 }
 
 /*

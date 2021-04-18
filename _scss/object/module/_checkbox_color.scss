@@ -1,0 +1,29 @@
+/*
+--------------------
+#{$pr}#{$m}checkbox(color)
+--------------------
+*/
+
+.#{$pr}#{$m}checkbox:not(.#{$error}) {
+
+    .#{$pr}#{$m}checkbox-icon {
+        background-color: $checkbox-bg;
+        border-color: $checkbox-border-color;
+    }
+
+    input[type="checkbox"] {
+
+        &:checked + .#{$pr}#{$m}checkbox-icon {
+            background-color: $checkbox-checked-bg;
+            border-color: $checkbox-checked-border-color;
+
+            &:after {
+                border-bottom-color: $checkbox-checked-color;
+                border-right-color: $checkbox-checked-color;
+            }
+
+        }
+
+    }
+
+}

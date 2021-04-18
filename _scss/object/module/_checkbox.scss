@@ -67,8 +67,7 @@
         z-index: 3;
     }
 
-    &.#{$pr}#{$error},
-    .#{$pr}#{$error} > & {
+    &.#{$error} {
         color: $important-strong;
 
         .#{$pr}#{$m}checkbox-icon {
