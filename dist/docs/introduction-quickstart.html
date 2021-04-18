@@ -32,22 +32,18 @@
 
 <p>パッケージを解凍すると、SCSS、CSS、ドキュメント（これ）、スタイルガイドがすべて含まれているプロジェクトが展開されます。</p>
 
-<h2 class="echo-doc-post-title-01">CSSだけを使用する</h2>
-
-<p>echo.cssはCSSだけを気軽に使用することができます。</p>
-
-<p>CSSファイル <code>/dist/css/echo.min.css</code> のみを、あなたのウェブサイトに読み込ませてください。</p>
+<p>CSSファイル <code>dist/css/echo.min.css</code> を、あなたのウェブサイトに読み込ませてください。</p>
 
 <div class="codeblock"><pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/echo.min.css&quot;&gt;</pre></div>
 
 
 <h2 class="echo-doc-post-title-01">色・フォントを自由に変更する</h2>
 
-<p>echo.cssでは、コア・色・フォントのスタイルが分かれているCSSファイルも用意しています。</p>
+<p>echo.cssでは、色・フォントのスタイルが分かれているCSSファイルも用意しています。</p>
 
-<p>自分で色の追加や変更を行いたい場合は、3つのCSSファイルを、あなたのウェブサイトに読み込ませてください。</p>
+<p>自分で色の追加や変更を行いたい場合は <code>dist/css/echo-color.css, dist/css/echo-font.css</code> を、<code>dist/css/echo.min.css</code> よりも後に読み込ませてください。</p>
 
-<div class="codeblock"><pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/echo-core.min.css&quot;&gt;
+<div class="codeblock"><pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/echo.min.css&quot;&gt;
 &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/echo-color.css&quot;&gt;
 &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/echo-font.css&quot;&gt;</pre></div>
 

@@ -5,6 +5,14 @@
 */
 
 .#{$pr}#{$m}button#{$c3}style#{$c3}a {
+    @include button-variant(
+        $body-inverse-color,
+        $default,
+        $default,
+        $body-color,
+        transparent,
+        $default
+    );
 
     &.#{$pr}#{$m}button#{$c3}info {
         @include button-variant(
@@ -43,6 +51,14 @@
 
 
 .#{$pr}#{$m}button#{$c3}style#{$c3}b {
+    @include button-variant(
+        $body-color,
+        transparent,
+        $default,
+        $body-inverse-color,
+        $default,
+        $default
+    );
 
     &.#{$pr}#{$m}button#{$c3}info {
         @include button-variant(
