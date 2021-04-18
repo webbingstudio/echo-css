@@ -651,6 +651,16 @@ echo-paginate(color)
 
 /*
 --------------------
+echo-serial(color)
+--------------------
+*/
+.echo-serial .echo-nav-item.prev .echo-nav-label:after, .echo-serial .echo-nav-item.next .echo-nav-label:after {
+  border-top-color: currentcolor;
+  border-left-color: currentcolor;
+}
+
+/*
+--------------------
 echo-bg-(color)
 echo-bg-fade
 --------------------

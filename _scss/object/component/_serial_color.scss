@@ -1,0 +1,27 @@
+/*
+--------------------
+#{$pr}#{$c}serial(color)
+--------------------
+*/
+
+.#{$pr}#{$c}serial {
+
+    .#{$pr}#{$m}nav#{$c1}item {
+
+        &.#{$paginate-prev},
+        &.#{$paginate-next} {
+
+            .#{$pr}#{$m}nav#{$c1}label {
+
+                &:after {
+                    border-top-color: currentcolor;
+                    border-left-color: currentcolor;
+                }
+
+            }
+
+        }
+
+    }
+
+}

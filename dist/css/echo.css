@@ -5280,8 +5280,8 @@ echo-serial
   width: .5em;
   height: .5em;
   transform-origin: center center;
-  border-top: 0.2em solid #333;
-  border-left: 0.2em solid #333;
+  border-top: .2em solid currentcolor;
+  border-left: .2em solid currentcolor;
   border-radius: .1em;
 }
 
@@ -5305,6 +5305,16 @@ echo-serial
 .echo-serial .echo-nav-item.next .echo-nav-label:after {
   right: .65em;
   transform: translateY(-50%) rotate(135deg);
+}
+
+/*
+--------------------
+echo-serial(color)
+--------------------
+*/
+.echo-serial .echo-nav-item.prev .echo-nav-label:after, .echo-serial .echo-nav-item.next .echo-nav-label:after {
+  border-top-color: currentcolor;
+  border-left-color: currentcolor;
 }
 
 /*
