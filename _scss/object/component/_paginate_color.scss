@@ -1,102 +1,30 @@
 /*
 --------------------
-#{$pr}#{$c}paginate
+#{$pr}#{$c}paginate(color)
 --------------------
 */
 
 .#{$pr}#{$c}paginate {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: $font-size-sm;
-
-    .#{$pr}#{$m}nav {
-        flex-grow: 0;
-    }
-
-    .#{$pr}#{$m}nav#{$c1}list {
-        margin-left: -.5rem;
-    }
 
     .#{$pr}#{$m}nav#{$c1}item {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: stretch;
-        margin-left: .5rem;
-        flex-grow: 1;
-
-        &:not(.#{$paginate-prev}):not(.#{$paginate-next}):not(.#{$paginate-ellipsis}) {
-            flex-grow: 0;
-        }
 
         &.#{$paginate-prev},
         &.#{$paginate-next} {
 
             .#{$pr}#{$m}nav#{$c1}label {
-                position: relative;
 
                 &:after {
-                    content: "";
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    width: .5em;
-                    height: .5em;
-                    transform-origin: center center;
-                    border-top: .2em solid currentcolor;
-                    border-left: .2em solid currentcolor;
-                    border-radius: .1em;
+                    border-top-color: currentcolor;
+                    border-left-color: currentcolor;
                 }
 
             }
 
-        }
-
-        &.#{$paginate-prev} {
-
-            .#{$pr}#{$m}nav#{$c1}label {
-
-                &:after {
-                    transform:
-                        translateX( -.25em )
-                        translateY( -50% )
-                        rotate( -45deg );
-                }
-
-            }
-
-        }
-
-        &.#{$paginate-next} {
-
-            .#{$pr}#{$m}nav#{$c1}label {
-
-                &:after {
-                    transform:
-                        translateX( -.5em )
-                        translateY( -50% )
-                        rotate( 135deg );
-                }
-
-            }
-
-        }
-
-        &.#{$paginate-ellipsis} {
-            align-items: center;
         }
 
     }
 
-    .#{$pr}#{$m}nav#{$c1}label {
-        flex-wrap: nowrap;
-        min-width: 2.75rem;
-        min-height: 2.75rem;
-        padding: 0;
-        border-style: solid;
-        border-width: $paginate-border-width;
-    }
+    // not inverse ================================
 
     .#{$pr}#{$m}nav:not(.#{$pr}#{$m}nav#{$c3}inverse) {
 
@@ -129,7 +57,6 @@
         }
 
     }
-
 
     // inverse ================================
 
