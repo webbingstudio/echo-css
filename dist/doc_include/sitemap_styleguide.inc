@@ -1,16 +1,6 @@
 <nav class="echo-doc-sitemap echo-nav echo-nav-vertical">
     <ul class="echo-nav-list">
 
-        <li class="echo-nav-item"><span class="echo-doc-sitemap-header echo-nav-label">layout</span>
-            <ul class="echo-doc-sitemap-list-flat echo-nav-list echo-nav-children">
-                <li class="echo-nav-item"><a href="./layout-container.html" class="echo-nav-label">container</a></li>
-                <li class="echo-nav-item"><a href="./layout-grid.html" class="echo-nav-label">grid</a></li>
-                <li class="echo-nav-item"><a href="./layout-cards.html" class="echo-nav-label">cards</a></li>
-                <li class="echo-nav-item"><a href="./layout-headlines.html" class="echo-nav-label">headlines</a></li>
-                <li class="echo-nav-item"><a href="./layout-medias.html" class="echo-nav-label">medias</a></li>
-            </ul>
-        </li>
-
         <li class="echo-nav-item"><span class="echo-doc-sitemap-header echo-nav-label">object</span>
             <ul class="echo-nav-list echo-nav-children">
                 <li class="echo-nav-item"><span class="echo-nav-label">module</span>
@@ -48,20 +38,6 @@
                         <li class="echo-nav-item"><a href="./component-topicpath.html" class="echo-nav-label">topicpath</a></li>
                     </ul>
                 </li>
-                <li class="echo-nav-item"><span class="echo-nav-label">utility</span>
-                    <ul class="echo-doc-sitemap-list-flat echo-nav-list echo-nav-children">
-                        <li class="echo-nav-item"><a href="./utility-bg.html" class="echo-nav-label">bg</a></li>
-                        <li class="echo-nav-item"><a href="./utility-font.html" class="echo-nav-label">font</a></li>
-                        <li class="echo-nav-item"><a href="./utility-hidden.html" class="echo-nav-label">hidden</a></li>
-                        <li class="echo-nav-item"><a href="./utility-image.html" class="echo-nav-label">image</a></li>
-                        <li class="echo-nav-item"><a href="./utility-line.html" class="echo-nav-label">line</a></li>
-                        <li class="echo-nav-item"><a href="./utility-margin.html" class="echo-nav-label">margin</a></li>
-                        <li class="echo-nav-item"><a href="./utility-padding.html" class="echo-nav-label">padding</a></li>
-                        <li class="echo-nav-item"><a href="./utility-shadow.html" class="echo-nav-label">shadow</a></li>
-                        <li class="echo-nav-item"><a href="./utility-sr.html" class="echo-nav-label">screen reader</a></li>
-                        <li class="echo-nav-item"><a href="./utility-text.html" class="echo-nav-label">text</a></li>
-                    </ul>
-                </li>
                 <li class="echo-nav-item"><span class="echo-nav-label">project</span>
                     <ul class="echo-doc-sitemap-list-flat echo-nav-list echo-nav-children">
                         <li class="echo-nav-item"><a href="./project-header.html" class="echo-nav-label">header</a></li>
@@ -69,6 +45,31 @@
                         <li class="echo-nav-item"><a href="./project-footer.html" class="echo-nav-label">footer</a></li>
                     </ul>
                 </li>
+            </ul>
+        </li>
+
+        <li class="echo-nav-item"><span class="echo-doc-sitemap-header echo-nav-label">layout</span>
+            <ul class="echo-doc-sitemap-list-flat echo-nav-list echo-nav-children">
+                <li class="echo-nav-item"><a href="./layout-container.html" class="echo-nav-label">container</a></li>
+                <li class="echo-nav-item"><a href="./layout-grid.html" class="echo-nav-label">grid</a></li>
+                <li class="echo-nav-item"><a href="./layout-cards.html" class="echo-nav-label">cards</a></li>
+                <li class="echo-nav-item"><a href="./layout-headlines.html" class="echo-nav-label">headlines</a></li>
+                <li class="echo-nav-item"><a href="./layout-medias.html" class="echo-nav-label">medias</a></li>
+            </ul>
+        </li>
+
+        <li class="echo-nav-item"><span class="echo-doc-sitemap-header echo-nav-label">utility</span>
+            <ul class="echo-doc-sitemap-list-flat echo-nav-list echo-nav-children">
+                <li class="echo-nav-item"><a href="./utility-bg.html" class="echo-nav-label">bg</a></li>
+                <li class="echo-nav-item"><a href="./utility-font.html" class="echo-nav-label">font</a></li>
+                <li class="echo-nav-item"><a href="./utility-hidden.html" class="echo-nav-label">hidden</a></li>
+                <li class="echo-nav-item"><a href="./utility-image.html" class="echo-nav-label">image</a></li>
+                <li class="echo-nav-item"><a href="./utility-line.html" class="echo-nav-label">line</a></li>
+                <li class="echo-nav-item"><a href="./utility-margin.html" class="echo-nav-label">margin</a></li>
+                <li class="echo-nav-item"><a href="./utility-padding.html" class="echo-nav-label">padding</a></li>
+                <li class="echo-nav-item"><a href="./utility-shadow.html" class="echo-nav-label">shadow</a></li>
+                <li class="echo-nav-item"><a href="./utility-sr.html" class="echo-nav-label">screen reader</a></li>
+                <li class="echo-nav-item"><a href="./utility-text.html" class="echo-nav-label">text</a></li>
             </ul>
         </li>
 
