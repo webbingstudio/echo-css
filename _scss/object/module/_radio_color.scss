@@ -26,3 +26,27 @@
     }
 
 }
+
+.#{$pr}#{$m}radio.#{$error} {
+
+    .#{$pr}#{$m}radio-icon {
+        color: $important-strong;
+        background-color: $body-inverse-color;
+        border-color: $important;
+    }
+
+    input[type="radio"] {
+
+        &:checked + .#{$pr}#{$m}radio-icon {
+            background-color: $body-inverse-color;
+            border-color: $important;
+
+            &:after {
+                background-color: $important;
+            }
+
+        }
+
+    }
+
+}

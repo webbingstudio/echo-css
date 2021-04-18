@@ -3583,6 +3583,32 @@ echo-toggle
 echo-toggle-(color)
 --------------------
 */
+.echo-toggle:not(.echo-toggle-inverse) {
+  color: #333;
+  background-color: transparent;
+}
+
+.echo-toggle:not(.echo-toggle-inverse) .echo-toggle-line:before, .echo-toggle:not(.echo-toggle-inverse) .echo-toggle-line:after {
+  background-color: #333;
+}
+
+.echo-toggle:not(.echo-toggle-inverse):hover, .echo-toggle:not(.echo-toggle-inverse):focus {
+  color: #333;
+  background-color: #eee;
+}
+
+.echo-toggle:not(.echo-toggle-inverse):hover .echo-toggle-line:before, .echo-toggle:not(.echo-toggle-inverse):hover .echo-toggle-line:after, .echo-toggle:not(.echo-toggle-inverse):focus .echo-toggle-line:before, .echo-toggle:not(.echo-toggle-inverse):focus .echo-toggle-line:after {
+  background-color: #333;
+}
+
+.echo-toggle:not(.echo-toggle-inverse)[aria-expanded="false"] .echo-toggle-line {
+  background-color: #333;
+}
+
+.echo-toggle:not(.echo-toggle-inverse)[aria-expanded="false"]:hover .echo-toggle-line, .echo-toggle:not(.echo-toggle-inverse)[aria-expanded="false"]:focus .echo-toggle-line {
+  background-color: #333;
+}
+
 .echo-toggle-inverse {
   color: #fff;
   background-color: transparent;

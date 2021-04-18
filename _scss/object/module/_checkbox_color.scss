@@ -27,3 +27,28 @@
     }
 
 }
+
+.#{$pr}#{$m}checkbox.#{$error} {
+    color: $important-strong;
+
+    .#{$pr}#{$m}checkbox-icon {
+        background-color: $body-inverse-color;
+        border-color: $important;
+    }
+
+    input[type="checkbox"] {
+
+        &:checked + .#{$pr}#{$m}checkbox-icon {
+            background-color: $important;
+            border-color: $important;
+
+            &:after {
+                border-bottom-color: $body-inverse-color;
+                border-right-color: $body-inverse-color;
+            }
+
+        }
+
+    }
+
+}

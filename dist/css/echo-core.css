@@ -1944,6 +1944,25 @@ echo-checkbox(color)
   border-right-color: #fff;
 }
 
+.echo-checkbox.is-error {
+  color: #d20b2a;
+}
+
+.echo-checkbox.is-error .echo-checkbox-icon {
+  background-color: #fff;
+  border-color: #d20b2a;
+}
+
+.echo-checkbox.is-error input[type="checkbox"]:checked + .echo-checkbox-icon {
+  background-color: #d20b2a;
+  border-color: #d20b2a;
+}
+
+.echo-checkbox.is-error input[type="checkbox"]:checked + .echo-checkbox-icon:after {
+  border-bottom-color: #fff;
+  border-right-color: #fff;
+}
+
 /*
 --------------------
 echo-embed
@@ -2451,6 +2470,21 @@ echo-radio(color)
 
 .echo-radio:not(.is-error) input[type="radio"]:checked + .echo-radio-icon:after {
   background-color: #333;
+}
+
+.echo-radio.is-error .echo-radio-icon {
+  color: #d20b2a;
+  background-color: #fff;
+  border-color: #d20b2a;
+}
+
+.echo-radio.is-error input[type="radio"]:checked + .echo-radio-icon {
+  background-color: #fff;
+  border-color: #d20b2a;
+}
+
+.echo-radio.is-error input[type="radio"]:checked + .echo-radio-icon:after {
+  background-color: #d20b2a;
 }
 
 /*

@@ -41,6 +41,25 @@ echo-checkbox(color)
   border-right-color: #fff;
 }
 
+.echo-checkbox.is-error {
+  color: #d20b2a;
+}
+
+.echo-checkbox.is-error .echo-checkbox-icon {
+  background-color: #fff;
+  border-color: #d20b2a;
+}
+
+.echo-checkbox.is-error input[type="checkbox"]:checked + .echo-checkbox-icon {
+  background-color: #d20b2a;
+  border-color: #d20b2a;
+}
+
+.echo-checkbox.is-error input[type="checkbox"]:checked + .echo-checkbox-icon:after {
+  border-bottom-color: #fff;
+  border-right-color: #fff;
+}
+
 /*
 --------------------
 echo-button-(color)
@@ -383,6 +402,21 @@ echo-radio(color)
   background-color: #333;
 }
 
+.echo-radio.is-error .echo-radio-icon {
+  color: #d20b2a;
+  background-color: #fff;
+  border-color: #d20b2a;
+}
+
+.echo-radio.is-error input[type="radio"]:checked + .echo-radio-icon {
+  background-color: #fff;
+  border-color: #d20b2a;
+}
+
+.echo-radio.is-error input[type="radio"]:checked + .echo-radio-icon:after {
+  background-color: #d20b2a;
+}
+
 /*
 --------------------
 echo-title-(color)
@@ -403,6 +437,32 @@ echo-title-(color)
 echo-toggle-(color)
 --------------------
 */
+.echo-toggle:not(.echo-toggle-inverse) {
+  color: #333;
+  background-color: transparent;
+}
+
+.echo-toggle:not(.echo-toggle-inverse) .echo-toggle-line:before, .echo-toggle:not(.echo-toggle-inverse) .echo-toggle-line:after {
+  background-color: #333;
+}
+
+.echo-toggle:not(.echo-toggle-inverse):hover, .echo-toggle:not(.echo-toggle-inverse):focus {
+  color: #333;
+  background-color: #eee;
+}
+
+.echo-toggle:not(.echo-toggle-inverse):hover .echo-toggle-line:before, .echo-toggle:not(.echo-toggle-inverse):hover .echo-toggle-line:after, .echo-toggle:not(.echo-toggle-inverse):focus .echo-toggle-line:before, .echo-toggle:not(.echo-toggle-inverse):focus .echo-toggle-line:after {
+  background-color: #333;
+}
+
+.echo-toggle:not(.echo-toggle-inverse)[aria-expanded="false"] .echo-toggle-line {
+  background-color: #333;
+}
+
+.echo-toggle:not(.echo-toggle-inverse)[aria-expanded="false"]:hover .echo-toggle-line, .echo-toggle:not(.echo-toggle-inverse)[aria-expanded="false"]:focus .echo-toggle-line {
+  background-color: #333;
+}
+
 .echo-toggle-inverse {
   color: #fff;
   background-color: transparent;

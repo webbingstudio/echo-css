@@ -4,6 +4,54 @@
 --------------------
 */
 
+.#{$pr}#{$m}toggle:not(.#{$pr}#{$m}toggle#{$c3}inverse) {
+    color: $ui-color;
+    background-color: $ui-bg;
+
+    .#{$pr}#{$m}toggle#{$c1}line {
+
+        &:before,
+        &:after {
+            background-color: $ui-color;
+        }
+
+    }
+
+    &:hover,
+    &:focus {
+        color: $ui-hover-color;
+        background-color: $ui-hover-bg;
+
+        .#{$pr}#{$m}toggle#{$c1}line {
+
+            &:before,
+            &:after {
+                background-color: $ui-hover-color;
+            }
+
+        }
+
+    }
+
+    &[aria-expanded="false"] {
+
+        .#{$pr}#{$m}toggle#{$c1}line {
+            background-color: $ui-color;
+        }
+
+        &:hover,
+        &:focus {
+
+            .#{$pr}#{$m}toggle#{$c1}line {
+                background-color: $ui-hover-color;
+            }
+
+        }
+
+    }
+
+}
+
 .#{$pr}#{$m}toggle#{$c3}inverse {
     color: $ui-inverse-color;
     background-color: $ui-inverse-bg;
