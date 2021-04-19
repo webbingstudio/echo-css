@@ -21,13 +21,143 @@
                 <h1 class="echo-doc-pagehead-title">utility-margin</h1>
             </div><!-- /.echo-doc-pagehead -->
 
+            <nav class="echo-doc-anchor">
+                <ul class="echo-list echo-list-horizontal">
+                        
+                        <li class="echo-list-item"><a href="#margin-0" class="js-scrollto">echo-margin-(direction)-0</a></li>
+
+                        <li class="echo-list-item"><a href="#margin-pixel" class="js-scrollto">echo-margin-(direction)-(pixel)</a></li>
+
+                        <li class="echo-list-item"><a href="#margin-size" class="js-scrollto">echo-margin-(direction)-(size)</a></li>
+                        
+                    </ul>
+                </nav>
+
             <article class="echo-doc-post">
-                <div class="echo-doc-post-contents styleguide-contents"><h1 id="margin" class="styleguide">echo-margin-(direction)-(size)</h1>
+                <div class="echo-doc-post-contents styleguide-contents">
 
-<p>ブロック要素の外部余白を変更する。</p>
-<div class="example"><div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-x-auto" style="background-color: rgba(255,255,255,.35); width: 50%;">echo-margin-x-auto</div></div>
+<h1 id="margin-0" class="styleguide">echo-margin-(direction)-0</h1>
 
-<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-xs" style="background-color: rgba(255,255,255,.35);">echo-margin-xs</div></div>
+<p>ブロック要素の外部余白を強制的に消す。</p>
+
+<div class="example"><div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-0" style="background-color: rgba(255,255,255,.35);">echo-margin-0</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-top-0" style="background-color: rgba(255,255,255,.35);">echo-margin-top-0</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-left-0" style="background-color: rgba(255,255,255,.35);">echo-margin-left-0</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-bottom-0" style="background-color: rgba(255,255,255,.35);">echo-margin-bottom-0</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-right-0" style="background-color: rgba(255,255,255,.35);">echo-margin-right-0</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-x-0" style="background-color: rgba(255,255,255,.35);">echo-margin-x-0</div></div>
+<div style="padding: 1px; background-color: #7de;"><div class="echo-margin-y-0" style="background-color: rgba(255,255,255,.35);">echo-margin-y-0</div></div>
+</div>
+
+<h1 id="margin-pixel" class="styleguide">echo-margin-(direction)-(pixel)</h1>
+
+<p>ブロック要素の外部余白を変更する。余白は常に数値のピクセル数となる。</p>
+
+<p>デフォルトの、対応している余白のピクセル数は以下の通り。</p>
+
+
+<p>Sassを使用できる場合、ピクセル数は <code>_scss/config_advance.scss</code> の配列 <code>$spacing-fixed</code> で変更できる。</p>
+
+<table class="echo-table echo-table-bordered" style="width: auto;">
+    <thead>
+        <tr><th>(pixel)</th><th>実際の値</th></tr>
+    </thead>
+    <tbody>
+        <tr><th>5</th><td>5px</td></tr>
+        <tr><th>10</th><td>10px</td></tr>
+        <tr><th>15</th><td>15px</td></tr>
+        <tr><th>20</th><td>20px</td></tr>
+        <tr><th>30</th><td>30px</td></tr>
+        <tr><th>45</th><td>45px</td></tr>
+        <tr><th>60</th><td>60px</td></tr>
+    </tbody>
+</table>
+
+<div class="example">
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-5" style="background-color: rgba(255,255,255,.35);">echo-margin-5</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-top-5" style="background-color: rgba(255,255,255,.35);">echo-margin-top-5</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-left-5" style="background-color: rgba(255,255,255,.35);">echo-margin-left-5</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-bottom-5" style="background-color: rgba(255,255,255,.35);">echo-margin-bottom-5</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-right-5" style="background-color: rgba(255,255,255,.35);">echo-margin-right-5</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-x-5" style="background-color: rgba(255,255,255,.35);">echo-margin-x-5</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-y-5" style="background-color: rgba(255,255,255,.35);">echo-margin-y-5</div></div>
+
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-10" style="background-color: rgba(255,255,255,.35);">echo-margin-10</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-top-10" style="background-color: rgba(255,255,255,.35);">echo-margin-top-10</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-left-10" style="background-color: rgba(255,255,255,.35);">echo-margin-left-10</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-bottom-10" style="background-color: rgba(255,255,255,.35);">echo-margin-bottom-10</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-right-10" style="background-color: rgba(255,255,255,.35);">echo-margin-right-10</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-x-10" style="background-color: rgba(255,255,255,.35);">echo-margin-x-10</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-y-10" style="background-color: rgba(255,255,255,.35);">echo-margin-y-10</div></div>
+
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-15" style="background-color: rgba(255,255,255,.35);">echo-margin-15</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-top-15" style="background-color: rgba(255,255,255,.35);">echo-margin-top-15</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-left-15" style="background-color: rgba(255,255,255,.35);">echo-margin-left-15</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-bottom-15" style="background-color: rgba(255,255,255,.35);">echo-margin-bottom-15</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-right-15" style="background-color: rgba(255,255,255,.35);">echo-margin-right-15</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-x-15" style="background-color: rgba(255,255,255,.35);">echo-margin-x-15</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-y-15" style="background-color: rgba(255,255,255,.35);">echo-margin-y-15</div></div>
+
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-20" style="background-color: rgba(255,255,255,.35);">echo-margin-20</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-top-20" style="background-color: rgba(255,255,255,.35);">echo-margin-top-20</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-left-20" style="background-color: rgba(255,255,255,.35);">echo-margin-left-20</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-bottom-20" style="background-color: rgba(255,255,255,.35);">echo-margin-bottom-20</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-right-20" style="background-color: rgba(255,255,255,.35);">echo-margin-right-20</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-x-20" style="background-color: rgba(255,255,255,.35);">echo-margin-x-20</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-y-20" style="background-color: rgba(255,255,255,.35);">echo-margin-y-20</div></div>
+
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-30" style="background-color: rgba(255,255,255,.35);">echo-margin-30</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-top-30" style="background-color: rgba(255,255,255,.35);">echo-margin-top-30</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-left-30" style="background-color: rgba(255,255,255,.35);">echo-margin-left-30</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-bottom-30" style="background-color: rgba(255,255,255,.35);">echo-margin-bottom-30</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-right-30" style="background-color: rgba(255,255,255,.35);">echo-margin-right-30</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-x-30" style="background-color: rgba(255,255,255,.35);">echo-margin-x-30</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-y-30" style="background-color: rgba(255,255,255,.35);">echo-margin-y-30</div></div>
+
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-45" style="background-color: rgba(255,255,255,.35);">echo-margin-45</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-top-45" style="background-color: rgba(255,255,255,.35);">echo-margin-top-45</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-left-45" style="background-color: rgba(255,255,255,.35);">echo-margin-left-45</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-bottom-45" style="background-color: rgba(255,255,255,.35);">echo-margin-bottom-45</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-right-45" style="background-color: rgba(255,255,255,.35);">echo-margin-right-45</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-x-45" style="background-color: rgba(255,255,255,.35);">echo-margin-x-45</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-y-45" style="background-color: rgba(255,255,255,.35);">echo-margin-y-45</div></div>
+
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-60" style="background-color: rgba(255,255,255,.35);">echo-margin-60</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-top-60" style="background-color: rgba(255,255,255,.35);">echo-margin-top-60</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-left-60" style="background-color: rgba(255,255,255,.35);">echo-margin-left-60</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-bottom-60" style="background-color: rgba(255,255,255,.35);">echo-margin-bottom-60</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-right-60" style="background-color: rgba(255,255,255,.35);">echo-margin-right-60</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-x-60" style="background-color: rgba(255,255,255,.35);">echo-margin-x-60</div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-y-60" style="background-color: rgba(255,255,255,.35);">echo-margin-y-60</div></div>
+
+</div>
+
+
+
+<h1 id="margin-size" class="styleguide">echo-margin-(direction)-(size)</h1>
+
+<p>ブロック要素の外部余白を変更する。余白は固定値ではなく、<strong>画面サイズに対する相対</strong>で変動する。</p>
+
+<p>デフォルトの、サイズの名称に対する余白のピクセル数は以下の通り。最大値が最小値の150%となる。<br>
+Internet Explorerは変動に対応していないため、常に最大値となる。</p>
+
+<p>Sassを使用できる場合、ピクセル数は <code>_scss/config_advance.scss</code> の配列 <code>$spacing-min, $spacing-max</code> で変更できる。</p>
+
+<table class="echo-table echo-table-bordered" style="width: auto;">
+    <thead>
+        <tr><th>(size)</th><th>最小値<br><span class="echo-text-sm">360pxのとき</span></th><th>最大値<br><span class="echo-text-sm">1200pxのとき</span></th></tr>
+    </thead>
+    <tbody>
+        <tr><th>xs</th><td>5px</td><td>8px</td></tr>
+        <tr><th>sm</th><td>10px</td><td>15px</td></tr>
+        <tr><th>md</th><td>20px</td><td>30px</td></tr>
+        <tr><th>lg</th><td>30px</td><td>45px</td></tr>
+        <tr><th>xl</th><td>45px</td><td>60px</td></tr>
+        <tr><th>xxl</th><td>60px</td><td>90px</td></tr>
+    </tbody>
+</table>
+
+<div class="example"><div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-xs" style="background-color: rgba(255,255,255,.35);">echo-margin-xs</div></div>
 <div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-top-xs" style="background-color: rgba(255,255,255,.35);">echo-margin-top-xs</div></div>
 <div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-right-xs" style="background-color: rgba(255,255,255,.35);">echo-margin-right-xs</div></div>
 <div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-bottom-xs" style="background-color: rgba(255,255,255,.35);">echo-margin-bottom-xs</div></div>
@@ -74,55 +204,6 @@
 <div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-left-xxl" style="background-color: rgba(255,255,255,.35);">echo-margin-left-xxl</div></div>
 <div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-x-xxl" style="background-color: rgba(255,255,255,.35);">echo-margin-x-xxl</div></div>
 <div style="margin-bottom: 1rem; padding: 1px; background-color: #7de;"><div class="echo-margin-y-xxl" style="background-color: rgba(255,255,255,.35);">echo-margin-y-xxl</div></div>
-</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-x-auto"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35); width: 50%;"</span><span class="nt">&gt;</span>echo-margin-x-auto<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-xs"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-xs<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-top-xs"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-top-xs<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-right-xs"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-right-xs<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-bottom-xs"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-bottom-xs<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-left-xs"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-left-xs<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-x-xs"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-x-xs<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-y-xs"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-y-xs<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-sm"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-sm<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-top-sm"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-top-sm<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-right-sm"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-right-sm<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-bottom-sm"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-bottom-sm<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-left-sm"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-left-sm<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-x-sm"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-x-sm<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-y-sm"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-y-sm<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"u-m-md"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-md<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-top-md"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-top-md<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-right-md"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-right-md<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-bottom-md"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-bottom-md<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-left-md"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-left-md<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-x-md"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-x-md<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-y-md"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-y-md<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-lg"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-lg<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-top-lg"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-top-lg<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-right-lg"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-right-lg<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-bottom-lg"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-bottom-lg<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-left-lg"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-left-lg<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-x-lg"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-x-lg<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-y-lg"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-y-lg<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-xl"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-xl<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-top-xl"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-top-xl<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-right-xl"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-right-xl<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-bottom-xl"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-bottom-xl<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-left-xl"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-left-xl<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-x-xl"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-x-xl<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-y-xl"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-y-xl<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-xxl"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-xxl<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-top-xxl"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-top-xxl<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-right-xxl"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-right-xxl<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-bottom-xxl"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-bottom-xxl<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-left-xxl"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-left-xxl<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-x-xxl"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-x-xxl<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem; padding: 1px; background-color: #7de;"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-y-xxl"</span> <span class="na">style=</span><span class="s">"background-color: rgba(255,255,255,.35);"</span><span class="nt">&gt;</span>echo-margin-y-xxl<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
-</pre></div>
+</div>
 
 <?php include('../doc_include/footer.inc'); ?>
