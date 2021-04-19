@@ -1,65 +1,459 @@
 /*
 --------------------
-#{$pr}#{$u}padding#{$c2}(direction)#{$c3}(size)
+#{$pr}#{$u}padding
 --------------------
 */
 
 #{$u-wrap} {
 
-	.#{$pr}#{$u}padding#{$c3}0               { padding:        0 }
-	.#{$pr}#{$u}padding#{$c2}top#{$c3}0      { padding-top:    0 }
-	.#{$pr}#{$u}padding#{$c2}right#{$c3}0    { padding-right:  0 }
-	.#{$pr}#{$u}padding#{$c2}bottom#{$c3}0   { padding-bottom: 0 }
-	.#{$pr}#{$u}padding#{$c2}left#{$c3}0     { padding-left:   0 }
-	.#{$pr}#{$u}padding#{$c2}x#{$c3}0        { padding-right:  0; padding-left:   0 }
-	.#{$pr}#{$u}padding#{$c2}y#{$c3}0        { padding-top:    0; padding-bottom: 0 }
+    @each $spacing in map-keys($spacing-fixed) {
 
-	.#{$pr}#{$u}padding#{$c3}xs              { padding:        ($spacer * .5) }
-	.#{$pr}#{$u}padding#{$c2}top#{$c3}xs     { padding-top:    ($spacer * .5) }
-	.#{$pr}#{$u}padding#{$c2}right#{$c3}xs   { padding-right:  ($spacer * .5) }
-	.#{$pr}#{$u}padding#{$c2}bottom#{$c3}xs  { padding-bottom: ($spacer * .5) }
-	.#{$pr}#{$u}padding#{$c2}left#{$c3}xs    { padding-left:   ($spacer * .5) }
-	.#{$pr}#{$u}padding#{$c2}x#{$c3}xs       { padding-right:  ($spacer * .5); padding-left:   ($spacer * .5) }
-	.#{$pr}#{$u}padding#{$c2}y#{$c3}xs       { padding-top:    ($spacer * .5); padding-bottom: ($spacer * .5) }
+        .#{$pr}#{$u}padding#{$c3}#{$spacing} {
+            padding: #{$spacing}px;
+        }
 
-	.#{$pr}#{$u}padding#{$c3}sm              { padding:        $spacer }
-	.#{$pr}#{$u}padding#{$c2}top#{$c3}sm     { padding-top:    $spacer }
-	.#{$pr}#{$u}padding#{$c2}right#{$c3}sm   { padding-right:  $spacer }
-	.#{$pr}#{$u}padding#{$c2}bottom#{$c3}sm  { padding-bottom: $spacer }
-	.#{$pr}#{$u}padding#{$c2}left#{$c3}sm    { padding-left:   $spacer }
-	.#{$pr}#{$u}padding#{$c2}x#{$c3}sm       { padding-right:  $spacer; padding-left:   $spacer }
-	.#{$pr}#{$u}padding#{$c2}y#{$c3}sm       { padding-top:    $spacer; padding-bottom: $spacer }
+        .#{$pr}#{$u}padding#{$c2}top#{$c3}#{$spacing} {
+            padding-top: #{$spacing}px;
+        }
 
-	.#{$pr}#{$u}padding#{$c3}md              { padding:        ($spacer * 1.5) }
-	.#{$pr}#{$u}padding#{$c2}top#{$c3}md     { padding-top:    ($spacer * 1.5) }
-	.#{$pr}#{$u}padding#{$c2}right#{$c3}md   { padding-right:  ($spacer * 1.5) }
-	.#{$pr}#{$u}padding#{$c2}bottom#{$c3}md  { padding-bottom: ($spacer * 1.5) }
-	.#{$pr}#{$u}padding#{$c2}left#{$c3}md    { padding-left:   ($spacer * 1.5) }
-	.#{$pr}#{$u}padding#{$c2}x#{$c3}md       { padding-right:  ($spacer * 1.5); padding-left:   ($spacer * 1.5) }
-	.#{$pr}#{$u}padding#{$c2}y#{$c3}md       { padding-top:    ($spacer * 1.5); padding-bottom: ($spacer * 1.5) }
+        .#{$pr}#{$u}padding#{$c2}left#{$c3}#{$spacing} {
+            padding-left: #{$spacing}px;
+        }
 
-	.#{$pr}#{$u}padding#{$c3}lg              { padding:        ($spacer * 3) }
-	.#{$pr}#{$u}padding#{$c2}top#{$c3}lg     { padding-top:    ($spacer * 3) }
-	.#{$pr}#{$u}padding#{$c2}right#{$c3}lg   { padding-right:  ($spacer * 3) }
-	.#{$pr}#{$u}padding#{$c2}bottom#{$c3}lg  { padding-bottom: ($spacer * 3) }
-	.#{$pr}#{$u}padding#{$c2}left#{$c3}lg    { padding-left:   ($spacer * 3) }
-	.#{$pr}#{$u}padding#{$c2}x#{$c3}lg       { padding-right:  ($spacer * 3); padding-left:   ($spacer * 3) }
-	.#{$pr}#{$u}padding#{$c2}y#{$c3}lg       { padding-top:    ($spacer * 3); padding-bottom: ($spacer * 3) }
+        .#{$pr}#{$u}padding#{$c2}bottom#{$c3}#{$spacing} {
+            padding-bottom: #{$spacing}px;
+        }
 
-	.#{$pr}#{$u}padding#{$c3}xl              { padding:        ($spacer * 4.5) }
-	.#{$pr}#{$u}padding#{$c2}top#{$c3}xl     { padding-top:    ($spacer * 4.5) }
-	.#{$pr}#{$u}padding#{$c2}right#{$c3}xl   { padding-right:  ($spacer * 4.5) }
-	.#{$pr}#{$u}padding#{$c2}bottom#{$c3}xl  { padding-bottom: ($spacer * 4.5) }
-	.#{$pr}#{$u}padding#{$c2}left#{$c3}xl    { padding-left:   ($spacer * 4.5) }
-	.#{$pr}#{$u}padding#{$c2}x#{$c3}xl       { padding-right:  ($spacer * 4.5); padding-left:   ($spacer * 4.5) }
-	.#{$pr}#{$u}padding#{$c2}y#{$c3}xl       { padding-top:    ($spacer * 4.5); padding-bottom: ($spacer * 4.5) }
+        .#{$pr}#{$u}padding#{$c2}right#{$c3}#{$spacing} {
+            padding-right: #{$spacing}px;
+        }
 
-	.#{$pr}#{$u}padding#{$c3}xxl             { padding:        ($spacer * 6) }
-	.#{$pr}#{$u}padding#{$c2}top#{$c3}xxl    { padding-top:    ($spacer * 6) }
-	.#{$pr}#{$u}padding#{$c2}right#{$c3}xxl  { padding-right:  ($spacer * 6) }
-	.#{$pr}#{$u}padding#{$c2}bottom#{$c3}xxl { padding-bottom: ($spacer * 6) }
-	.#{$pr}#{$u}padding#{$c2}left#{$c3}xxl   { padding-left:   ($spacer * 6) }
-	.#{$pr}#{$u}padding#{$c2}x#{$c3}xxl      { padding-right:  ($spacer * 6); padding-left:   ($spacer * 6) }
-	.#{$pr}#{$u}padding#{$c2}y#{$c3}xxl      { padding-top:    ($spacer * 6); padding-bottom: ($spacer * 6) }
+        .#{$pr}#{$u}padding#{$c2}x#{$c3}#{$spacing} {
+            padding-left: #{$spacing}px;
+            padding-right: #{$spacing}px;
+        }
+
+        .#{$pr}#{$u}padding#{$c2}y#{$c3}#{$spacing} {
+            padding-top: #{$spacing}px;
+            padding-bottom: #{$spacing}px;
+        }
+
+    }
+
+
+
+    .#{$pr}#{$u}padding#{$c3}xs {
+        @include responsive-spacing(
+            'padding',
+            map-get( $spacing-min, 'xs' ),
+            map-get( $spacing-max, 'xs' )
+        );
+    }
+
+    .#{$pr}#{$u}padding#{$c2}top#{$c3}xs {
+        @include responsive-spacing(
+            'padding-top',
+            map-get( $spacing-min, 'xs' ),
+            map-get( $spacing-max, 'xs' )
+        );
+    }
+
+    .#{$pr}#{$u}padding#{$c2}left#{$c3}xs {
+        @include responsive-spacing(
+            'padding-left',
+            map-get( $spacing-min, 'xs' ),
+            map-get( $spacing-max, 'xs' )
+        );
+    }
+
+    .#{$pr}#{$u}padding#{$c2}bottom#{$c3}xs {
+        @include responsive-spacing(
+            'padding-bottom',
+            map-get( $spacing-min, 'xs' ),
+            map-get( $spacing-max, 'xs' )
+        );
+    }
+
+    .#{$pr}#{$u}padding#{$c2}right#{$c3}xs {
+        @include responsive-spacing(
+            'padding-right',
+            map-get( $spacing-min, 'xs' ),
+            map-get( $spacing-max, 'xs' )
+        );
+    }
+
+    .#{$pr}#{$u}padding#{$c2}x#{$c3}xs {
+        @include responsive-spacing(
+            'padding-left',
+            map-get( $spacing-min, 'xs' ),
+            map-get( $spacing-max, 'xs' )
+        );
+        @include responsive-spacing(
+            'padding-right',
+            map-get( $spacing-min, 'xs' ),
+            map-get( $spacing-max, 'xs' )
+        );
+    }
+
+    .#{$pr}#{$u}padding#{$c2}y#{$c3}xs {
+        @include responsive-spacing(
+            'padding-top',
+            map-get( $spacing-min, 'xs' ),
+            map-get( $spacing-max, 'xs' )
+        );
+        @include responsive-spacing(
+            'padding-bottom',
+            map-get( $spacing-min, 'xs' ),
+            map-get( $spacing-max, 'xs' )
+        );
+    }
+
+
+
+    .#{$pr}#{$u}padding#{$c3}sm {
+        @include responsive-spacing(
+            'padding',
+            map-get( $spacing-min, 'sm' ),
+            map-get( $spacing-max, 'sm' )
+        );
+    }
+
+    .#{$pr}#{$u}padding#{$c2}top#{$c3}sm {
+        @include responsive-spacing(
+            'padding-top',
+            map-get( $spacing-min, 'sm' ),
+            map-get( $spacing-max, 'sm' )
+        );
+    }
+
+    .#{$pr}#{$u}padding#{$c2}left#{$c3}sm {
+        @include responsive-spacing(
+            'padding-left',
+            map-get( $spacing-min, 'sm' ),
+            map-get( $spacing-max, 'sm' )
+        );
+    }
+
+    .#{$pr}#{$u}padding#{$c2}bottom#{$c3}sm {
+        @include responsive-spacing(
+            'padding-bottom',
+            map-get( $spacing-min, 'sm' ),
+            map-get( $spacing-max, 'sm' )
+        );
+    }
+
+    .#{$pr}#{$u}padding#{$c2}right#{$c3}sm {
+        @include responsive-spacing(
+            'padding-right',
+            map-get( $spacing-min, 'sm' ),
+            map-get( $spacing-max, 'sm' )
+        );
+    }
+
+    .#{$pr}#{$u}padding#{$c2}x#{$c3}sm {
+        @include responsive-spacing(
+            'padding-left',
+            map-get( $spacing-min, 'sm' ),
+            map-get( $spacing-max, 'sm' )
+        );
+        @include responsive-spacing(
+            'padding-right',
+            map-get( $spacing-min, 'sm' ),
+            map-get( $spacing-max, 'sm' )
+        );
+    }
+
+    .#{$pr}#{$u}padding#{$c2}y#{$c3}sm {
+        @include responsive-spacing(
+            'padding-top',
+            map-get( $spacing-min, 'sm' ),
+            map-get( $spacing-max, 'sm' )
+        );
+        @include responsive-spacing(
+            'padding-bottom',
+            map-get( $spacing-min, 'sm' ),
+            map-get( $spacing-max, 'sm' )
+        );
+    }
+
+
+
+    .#{$pr}#{$u}padding#{$c3}md {
+        @include responsive-spacing(
+            'padding',
+            map-get( $spacing-min, 'md' ),
+            map-get( $spacing-max, 'md' )
+        );
+    }
+
+    .#{$pr}#{$u}padding#{$c2}top#{$c3}md {
+        @include responsive-spacing(
+            'padding-top',
+            map-get( $spacing-min, 'md' ),
+            map-get( $spacing-max, 'md' )
+        );
+    }
+
+    .#{$pr}#{$u}padding#{$c2}left#{$c3}md {
+        @include responsive-spacing(
+            'padding-left',
+            map-get( $spacing-min, 'md' ),
+            map-get( $spacing-max, 'md' )
+        );
+    }
+
+    .#{$pr}#{$u}padding#{$c2}bottom#{$c3}md {
+        @include responsive-spacing(
+            'padding-bottom',
+            map-get( $spacing-min, 'md' ),
+            map-get( $spacing-max, 'md' )
+        );
+    }
+
+    .#{$pr}#{$u}padding#{$c2}right#{$c3}md {
+        @include responsive-spacing(
+            'padding-right',
+            map-get( $spacing-min, 'md' ),
+            map-get( $spacing-max, 'md' )
+        );
+    }
+
+    .#{$pr}#{$u}padding#{$c2}x#{$c3}md {
+        @include responsive-spacing(
+            'padding-left',
+            map-get( $spacing-min, 'md' ),
+            map-get( $spacing-max, 'md' )
+        );
+        @include responsive-spacing(
+            'padding-right',
+            map-get( $spacing-min, 'md' ),
+            map-get( $spacing-max, 'md' )
+        );
+    }
+
+    .#{$pr}#{$u}padding#{$c2}y#{$c3}md {
+        @include responsive-spacing(
+            'padding-top',
+            map-get( $spacing-min, 'md' ),
+            map-get( $spacing-max, 'md' )
+        );
+        @include responsive-spacing(
+            'padding-bottom',
+            map-get( $spacing-min, 'md' ),
+            map-get( $spacing-max, 'md' )
+        );
+    }
+
+
+
+    .#{$pr}#{$u}padding#{$c3}lg {
+        @include responsive-spacing(
+            'padding',
+            map-get( $spacing-min, 'lg' ),
+            map-get( $spacing-max, 'lg' )
+        );
+    }
+
+    .#{$pr}#{$u}padding#{$c2}top#{$c3}lg {
+        @include responsive-spacing(
+            'padding-top',
+            map-get( $spacing-min, 'lg' ),
+            map-get( $spacing-max, 'lg' )
+        );
+    }
+
+    .#{$pr}#{$u}padding#{$c2}left#{$c3}lg {
+        @include responsive-spacing(
+            'padding-left',
+            map-get( $spacing-min, 'lg' ),
+            map-get( $spacing-max, 'lg' )
+        );
+    }
+
+    .#{$pr}#{$u}padding#{$c2}bottom#{$c3}lg {
+        @include responsive-spacing(
+            'padding-bottom',
+            map-get( $spacing-min, 'lg' ),
+            map-get( $spacing-max, 'lg' )
+        );
+    }
+
+    .#{$pr}#{$u}padding#{$c2}right#{$c3}lg {
+        @include responsive-spacing(
+            'padding-right',
+            map-get( $spacing-min, 'lg' ),
+            map-get( $spacing-max, 'lg' )
+        );
+    }
+
+    .#{$pr}#{$u}padding#{$c2}x#{$c3}lg {
+        @include responsive-spacing(
+            'padding-left',
+            map-get( $spacing-min, 'lg' ),
+            map-get( $spacing-max, 'lg' )
+        );
+        @include responsive-spacing(
+            'padding-right',
+            map-get( $spacing-min, 'lg' ),
+            map-get( $spacing-max, 'lg' )
+        );
+    }
+
+    .#{$pr}#{$u}padding#{$c2}y#{$c3}lg {
+        @include responsive-spacing(
+            'padding-top',
+            map-get( $spacing-min, 'lg' ),
+            map-get( $spacing-max, 'lg' )
+        );
+        @include responsive-spacing(
+            'padding-bottom',
+            map-get( $spacing-min, 'lg' ),
+            map-get( $spacing-max, 'lg' )
+        );
+    }
+
+
+
+    .#{$pr}#{$u}padding#{$c3}xl {
+        @include responsive-spacing(
+            'padding',
+            map-get( $spacing-min, 'xl' ),
+            map-get( $spacing-max, 'xl' )
+        );
+    }
+
+    .#{$pr}#{$u}padding#{$c2}top#{$c3}xl {
+        @include responsive-spacing(
+            'padding-top',
+            map-get( $spacing-min, 'xl' ),
+            map-get( $spacing-max, 'xl' )
+        );
+    }
+
+    .#{$pr}#{$u}padding#{$c2}left#{$c3}xl {
+        @include responsive-spacing(
+            'padding-left',
+            map-get( $spacing-min, 'xl' ),
+            map-get( $spacing-max, 'xl' )
+        );
+    }
+
+    .#{$pr}#{$u}padding#{$c2}bottom#{$c3}xl {
+        @include responsive-spacing(
+            'padding-bottom',
+            map-get( $spacing-min, 'xl' ),
+            map-get( $spacing-max, 'xl' )
+        );
+    }
+
+    .#{$pr}#{$u}padding#{$c2}right#{$c3}xl {
+        @include responsive-spacing(
+            'padding-right',
+            map-get( $spacing-min, 'xl' ),
+            map-get( $spacing-max, 'xl' )
+        );
+    }
+
+    .#{$pr}#{$u}padding#{$c2}x#{$c3}xl {
+        @include responsive-spacing(
+            'padding-left',
+            map-get( $spacing-min, 'xl' ),
+            map-get( $spacing-max, 'xl' )
+        );
+        @include responsive-spacing(
+            'padding-right',
+            map-get( $spacing-min, 'xl' ),
+            map-get( $spacing-max, 'xl' )
+        );
+    }
+
+    .#{$pr}#{$u}padding#{$c2}y#{$c3}xl {
+        @include responsive-spacing(
+            'padding-top',
+            map-get( $spacing-min, 'xl' ),
+            map-get( $spacing-max, 'xl' )
+        );
+        @include responsive-spacing(
+            'padding-bottom',
+            map-get( $spacing-min, 'xl' ),
+            map-get( $spacing-max, 'xl' )
+        );
+    }
+
+
+
+    .#{$pr}#{$u}padding#{$c3}xxl {
+        @include responsive-spacing(
+            'padding',
+            map-get( $spacing-min, 'xxl' ),
+            map-get( $spacing-max, 'xxl' )
+        );
+    }
+
+    .#{$pr}#{$u}padding#{$c2}top#{$c3}xxl {
+        @include responsive-spacing(
+            'padding-top',
+            map-get( $spacing-min, 'xxl' ),
+            map-get( $spacing-max, 'xxl' )
+        );
+    }
+
+    .#{$pr}#{$u}padding#{$c2}left#{$c3}xxl {
+        @include responsive-spacing(
+            'padding-left',
+            map-get( $spacing-min, 'xxl' ),
+            map-get( $spacing-max, 'xxl' )
+        );
+    }
+
+    .#{$pr}#{$u}padding#{$c2}bottom#{$c3}xxl {
+        @include responsive-spacing(
+            'padding-bottom',
+            map-get( $spacing-min, 'xxl' ),
+            map-get( $spacing-max, 'xxl' )
+        );
+    }
+
+    .#{$pr}#{$u}padding#{$c2}right#{$c3}xxl {
+        @include responsive-spacing(
+            'padding-right',
+            map-get( $spacing-min, 'xxl' ),
+            map-get( $spacing-max, 'xxl' )
+        );
+    }
+
+    .#{$pr}#{$u}padding#{$c2}x#{$c3}xxl {
+        @include responsive-spacing(
+            'padding-left',
+            map-get( $spacing-min, 'xxl' ),
+            map-get( $spacing-max, 'xxl' )
+        );
+        @include responsive-spacing(
+            'padding-right',
+            map-get( $spacing-min, 'xxl' ),
+            map-get( $spacing-max, 'xxl' )
+        );
+    }
+
+    .#{$pr}#{$u}padding#{$c2}y#{$c3}xxl {
+        @include responsive-spacing(
+            'padding-top',
+            map-get( $spacing-min, 'xxl' ),
+            map-get( $spacing-max, 'xxl' )
+        );
+        @include responsive-spacing(
+            'padding-bottom',
+            map-get( $spacing-min, 'xxl' ),
+            map-get( $spacing-max, 'xxl' )
+        );
+    }
+
+    .#{$pr}#{$u}padding#{$c3}0               { padding:        0 }
+    .#{$pr}#{$u}padding#{$c2}top#{$c3}0      { padding-top:    0 }
+    .#{$pr}#{$u}padding#{$c2}right#{$c3}0    { padding-right:  0 }
+    .#{$pr}#{$u}padding#{$c2}bottom#{$c3}0   { padding-bottom: 0 }
+    .#{$pr}#{$u}padding#{$c2}left#{$c3}0     { padding-left:   0 }
+    .#{$pr}#{$u}padding#{$c2}x#{$c3}0        { padding-right:  0; padding-left:   0 }
+    .#{$pr}#{$u}padding#{$c2}y#{$c3}0        { padding-top:    0; padding-bottom: 0 }
 
 }
