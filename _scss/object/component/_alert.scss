@@ -7,7 +7,7 @@
 .#{$pr}#{$c}alert {
     display: flex;
     align-items: stretch;
-    margin: 0 0 2rem;
+    margin: 0;
     padding: .5em ( map-get( $grid-gutter-widths, md ) / 2 );
     background-color: $default-fade;
     border: $border-alert-width solid $border-color;
@@ -18,11 +18,7 @@
         font-size: $font-size-md;
     }
 
-    + #{&} {
-        margin-top: -1rem;
-    }
-
-    p {
+    > p {
         margin-bottom: 0;
     }
 

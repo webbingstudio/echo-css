@@ -5,61 +5,15 @@
 */
 
 .#{$pr}#{$m}title#{$c3}style#{$c3}a {
-    margin-bottom: 1em;
-
-    &.#{$pr}#{$m}title#{$c3}level#{$c3}1 {
-    }
-
-    &.#{$pr}#{$m}title#{$c3}level#{$c3}2 {
-    }
-
-    &.#{$pr}#{$m}title#{$c3}level#{$c3}3 {
-    }
-
-    &.#{$pr}#{$m}title#{$c3}level#{$c3}4 {
-        margin-bottom: .5em;
-    }
-
-    &.#{$pr}#{$m}title#{$c3}level#{$c3}5 {
-        margin-bottom: .5em;
-    }
-
-    &.#{$pr}#{$m}title#{$c3}level#{$c3}6 {
-        margin-bottom: .5em;
-    }
 
 }
 
 .#{$pr}#{$m}title#{$c3}style#{$c3}b {
-    margin-bottom: 1em;
     text-align: center;
-
-    .#{$pr}#{$m}title#{$c3}level#{$c3}1 {
-    }
-
-    .#{$pr}#{$m}title#{$c3}level#{$c3}2 {
-    }
-
-    .#{$pr}#{$m}title#{$c3}level#{$c3}3 {
-    }
-
-    .#{$pr}#{$m}title#{$c3}level#{$c3}4 {
-        margin-bottom: .5em;
-    }
-
-    .#{$pr}#{$m}title#{$c3}level#{$c3}5 {
-        margin-bottom: .5em;
-    }
-
-    .#{$pr}#{$m}title#{$c3}level#{$c3}6 {
-        margin-bottom: .5em;
-    }
-
 }
 
 .#{$pr}#{$m}title#{$c3}style#{$c3}c {
     text-align: center;
-    margin-bottom: 2em;
     padding-bottom: 1em;
 
     &:after {
@@ -86,7 +40,6 @@
 }
 
 .#{$pr}#{$m}title#{$c3}style#{$c3}d {
-    margin-bottom: 1em;
     padding-bottom: .5em;
 
     &:before {
@@ -114,7 +67,6 @@
     &.#{$pr}#{$m}title#{$c3}level#{$c3}4,
     &.#{$pr}#{$m}title#{$c3}level#{$c3}5,
     &.#{$pr}#{$m}title#{$c3}level#{$c3}6 {
-        margin-bottom: .5em;
 
         &:before {
             height: .0625rem;
@@ -130,21 +82,12 @@
 }
 
 .#{$pr}#{$m}title#{$c3}style#{$c3}e {
-    margin-bottom: 1em;
     padding: .1em .25em;
     background-color: $default-fade;
-
-    &.#{$pr}#{$m}title#{$c3}level#{$c3}4,
-    &.#{$pr}#{$m}title#{$c3}level#{$c3}5,
-    &.#{$pr}#{$m}title#{$c3}level#{$c3}6 {
-        margin-bottom: .5em;
-    }
-
 }
 
 .#{$pr}#{$m}title#{$c3}style#{$c3}f {
     padding-left: 1em;
-    margin-bottom: 1em;
 
     &:after {
         position: absolute;
@@ -160,7 +103,6 @@
     &.#{$pr}#{$m}title#{$c3}level#{$c3}4,
     &.#{$pr}#{$m}title#{$c3}level#{$c3}5,
     &.#{$pr}#{$m}title#{$c3}level#{$c3}6 {
-        margin-bottom: .5em;
 
         &:after {
             height: .1875rem;

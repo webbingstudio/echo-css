@@ -3392,42 +3392,12 @@ echo-title-level-(level)
 echo-title-style-(style)
 --------------------
 */
-.echo-title-style-a {
-  margin-bottom: 1em;
-}
-
-.echo-title-style-a.echo-title-level-4 {
-  margin-bottom: .5em;
-}
-
-.echo-title-style-a.echo-title-level-5 {
-  margin-bottom: .5em;
-}
-
-.echo-title-style-a.echo-title-level-6 {
-  margin-bottom: .5em;
-}
-
 .echo-title-style-b {
-  margin-bottom: 1em;
   text-align: center;
-}
-
-.echo-title-style-b .echo-title-level-4 {
-  margin-bottom: .5em;
-}
-
-.echo-title-style-b .echo-title-level-5 {
-  margin-bottom: .5em;
-}
-
-.echo-title-style-b .echo-title-level-6 {
-  margin-bottom: .5em;
 }
 
 .echo-title-style-c {
   text-align: center;
-  margin-bottom: 2em;
   padding-bottom: 1em;
 }
 
@@ -3447,7 +3417,6 @@ echo-title-style-(style)
 }
 
 .echo-title-style-d {
-  margin-bottom: 1em;
   padding-bottom: .5em;
 }
 
@@ -3473,10 +3442,6 @@ echo-title-style-(style)
   z-index: 12;
 }
 
-.echo-title-style-d.echo-title-level-4, .echo-title-style-d.echo-title-level-5, .echo-title-style-d.echo-title-level-6 {
-  margin-bottom: .5em;
-}
-
 .echo-title-style-d.echo-title-level-4:before, .echo-title-style-d.echo-title-level-5:before, .echo-title-style-d.echo-title-level-6:before {
   height: .0625rem;
 }
@@ -3487,18 +3452,12 @@ echo-title-style-(style)
 }
 
 .echo-title-style-e {
-  margin-bottom: 1em;
   padding: .1em .25em;
   background-color: #eee;
 }
 
-.echo-title-style-e.echo-title-level-4, .echo-title-style-e.echo-title-level-5, .echo-title-style-e.echo-title-level-6 {
-  margin-bottom: .5em;
-}
-
 .echo-title-style-f {
   padding-left: 1em;
-  margin-bottom: 1em;
 }
 
 .echo-title-style-f:after {
@@ -3510,10 +3469,6 @@ echo-title-style-(style)
   width: .75em;
   height: .25rem;
   background-color: #eee;
-}
-
-.echo-title-style-f.echo-title-level-4, .echo-title-style-f.echo-title-level-5, .echo-title-style-f.echo-title-level-6 {
-  margin-bottom: .5em;
 }
 
 .echo-title-style-f.echo-title-level-4:after, .echo-title-style-f.echo-title-level-5:after, .echo-title-style-f.echo-title-level-6:after {
@@ -3699,7 +3654,7 @@ echo-alert
 .echo-alert {
   display: flex;
   align-items: stretch;
-  margin: 0 0 2rem;
+  margin: 0;
   padding: 0.5em 0.625rem;
   background-color: #eee;
   border: 0.0625rem solid #333;
@@ -3713,11 +3668,7 @@ echo-alert
   }
 }
 
-.echo-alert + .echo-alert {
-  margin-top: -1rem;
-}
-
-.echo-alert p {
+.echo-alert > p {
   margin-bottom: 0;
 }
 
