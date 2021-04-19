@@ -92,7 +92,7 @@ $c3: '-' !default;   // to value
 // Spacer
 // -----------------------------------------
 
-$spacer: 0.625rem !default;
+$spacer: 10px !default;
 
 
 // Code Optimize
@@ -229,9 +229,9 @@ $spacing-max: (
 
 $grid-gutter-widths: (
     none:   0,
-    sm:     $spacer,
-    md:     ($spacer * 2),
-    lg:     ($spacer * 4)
+    sm:     0.625rem,
+    md:     1.25rem,
+    lg:     2.5rem
 ) !default;
 
 $nav-min-size: 2.75rem !default;

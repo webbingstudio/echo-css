@@ -1504,11 +1504,11 @@ echo-headlines
 --------------------
 */
 .echo-headlines {
-  margin: 0 0 -1.25rem;
+  margin: 0 0 -20px;
 }
 
 .echo-headlines-item {
-  margin: 0 0 1.25rem;
+  margin: 0 0 20px;
 }
 
 /*
@@ -3908,13 +3908,13 @@ a.echo-card-inner:hover .echo-card-title, a.echo-card-inner:focus .echo-card-tit
 }
 
 .echo-card-header {
-  padding: 0.625rem 0.625rem;
+  padding: 10px 0.625rem;
   word-break: break-word;
 }
 
 .echo-card-contents {
   flex-grow: 1;
-  padding: 0.625rem 0.625rem;
+  padding: 10px 0.625rem;
   font-size: 0.875rem;
   line-height: 1.5;
   word-break: break-word;
@@ -3925,7 +3925,7 @@ a.echo-card-inner:hover .echo-card-title, a.echo-card-inner:focus .echo-card-tit
 }
 
 .echo-card-contents [class*="echo-card"] + [class*="echo-card"] {
-  margin-top: 0.625rem;
+  margin-top: 10px;
 }
 
 .echo-card-title[class*="echo-title-style"] {
@@ -3938,7 +3938,7 @@ a.echo-card-inner:hover .echo-card-title, a.echo-card-inner:focus .echo-card-tit
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  padding: 0.625rem 0.625rem;
+  padding: 10px 0.625rem;
 }
 
 /*
@@ -4018,7 +4018,7 @@ echo-flip
 }
 
 .echo-flip-contents-inner {
-  padding: 1.875rem 0.625rem;
+  padding: 30px 0.625rem;
 }
 
 @media (min-width: 62.5rem) {
@@ -4028,15 +4028,15 @@ echo-flip
     left: 0;
     width: 100%;
     transform: translate(0, -50%);
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
 @media (min-width: 75rem) {
   .echo-flip-contents-inner {
-    padding-left: 2.8125rem;
-    padding-right: 2.8125rem;
+    padding-left: 45px;
+    padding-right: 45px;
   }
 }
 
@@ -4377,7 +4377,7 @@ echo-form-submit-2col
 --------------------
 */
 .echo-form-submit-2col .echo-button {
-  margin: 0 0.625rem 0.625rem;
+  margin: 0 10px 10px;
 }
 
 @media (min-width: 62.5rem) {
@@ -4464,7 +4464,7 @@ a.echo-headline-inner:not(:hover):not(:focus) .echo-headline-title {
 }
 
 .echo-headline-category {
-  margin: 0 0 0 0.625rem;
+  margin: 0 0 0 10px;
 }
 
 .echo-headline-category .echo-label {
@@ -4481,7 +4481,7 @@ a.echo-headline-inner:not(:hover):not(:focus) .echo-headline-title {
 @media (min-width: 48rem) {
   .echo-headline-title {
     margin-top: 0;
-    margin-left: 0.625rem;
+    margin-left: 10px;
   }
 }
 
@@ -4867,7 +4867,7 @@ a.echo-media-inner:hover .echo-media-title, a.echo-media-inner:focus .echo-media
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 0%;
-  padding-left: 1.25rem;
+  padding-left: 20px;
   font-size: 0.875rem;
   line-height: 1.5;
 }
@@ -4912,7 +4912,7 @@ echo-media-reverse
 
 .echo-media-reverse .echo-media-contents {
   padding-left: 0;
-  padding-right: 1.25rem;
+  padding-right: 20px;
 }
 
 /*
@@ -7030,14 +7030,14 @@ echo-p-header
 */
 .echo-p-header {
   background-color: #fff;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 @media (min-width: 62.5rem) {
   .echo-p-header {
-    padding-top: 0.9375rem;
-    padding-bottom: 0.9375rem;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 }
 
@@ -7053,7 +7053,7 @@ echo-p-header
   flex-shrink: 1;
   flex-basis: auto;
   margin: 0;
-  padding-right: 0.625rem;
+  padding-right: 10px;
   line-height: 1;
 }
 
@@ -7079,7 +7079,7 @@ echo-p-header
 @media (min-width: 62.5rem) {
   .echo-p-header-nav {
     display: block;
-    padding-right: 0.625rem;
+    padding-right: 10px;
     text-align: right;
   }
 }
@@ -7093,7 +7093,7 @@ echo-p-header
   flex-shrink: 1;
   flex-basis: auto;
   text-align: right;
-  padding-right: 0.3125rem;
+  padding-right: 5px;
 }
 
 @media (min-width: 62.5rem) {
@@ -7142,14 +7142,14 @@ echo-p-main
 */
 .echo-p-main {
   position: relative;
-  padding-top: 1.875rem;
-  padding-bottom: 1.875rem;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 @media (min-width: 62.5rem) {
   .echo-p-main {
-    padding-top: 2.8125rem;
-    padding-bottom: 2.8125rem;
+    padding-top: 45px;
+    padding-bottom: 45px;
   }
 }
 
@@ -7159,8 +7159,8 @@ echo-p-footer
 --------------------
 */
 .echo-p-footer-nav {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
+  padding-top: 20px;
+  padding-bottom: 20px;
   text-align: center;
 }
 
@@ -7182,8 +7182,8 @@ echo-p-footer
 }
 
 .echo-p-footer-copyright {
-  padding-top: 1.25rem;
-  padding-bottom: 2.5rem;
+  padding-top: 20px;
+  padding-bottom: 40px;
   text-align: center;
   font-size: 0.75rem;
   line-height: 1;
