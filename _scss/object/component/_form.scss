@@ -6,12 +6,13 @@
 
 .#{$pr}#{$c}form {
     display: block;
+    margin: 0;
+    line-height: 1;
 }
 
 .#{$pr}#{$c}form#{$c1}label {
     display: block;
-    margin-bottom: .5em;
-    line-height: 1;
+    margin-bottom: $spacer;
 }
 
 
@@ -23,7 +24,7 @@
 
 .#{$pr}#{$c}form#{$c3}inline {
     display: flex;
-    align-items: stretch;
+    align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
 
@@ -31,43 +32,8 @@
         flex-grow: 0;
         flex-shrink: 1;
         flex-basis: auto;
-    }
-
-    .#{$pr}#{$c}form#{$c1}label {
-        margin: 0 .25rem 0 1.5rem;
-        padding-bottom: 0;
-        align-self: center;
-
-        &:first-child {
-            margin-left: 0;
-        }
-
-        &:last-child {
-            margin-right: 0;
-        }
-
-    }
-
-    .#{$pr}#{$m}button {
-        margin: 0 .25rem;
-
-        &:first-child {
-            margin-left: 0;
-        }
-
-        &:last-child {
-            margin-right: 0;
-        }
-
-    }
-
-    .#{$pr}#{$m}input,
-    .#{$pr}#{$m}select {
-        margin: 0 .25rem;
-
-        &:first-child {
-            margin-left: 0;
-        }
+        margin: 0 $spacer 0 0;
+        white-space: nowrap;
 
         &:last-child {
             margin-right: 0;
@@ -131,58 +97,4 @@
     color: $important;
     font-size: $font-size-sm;
     line-height: $line-height-sm;
-}
-
-
-/*
---------------------
-#{$pr}#{$c}form#{$c1}submit
---------------------
-*/
-
-.#{$pr}#{$c}form#{$c1}submit {
-    margin-top: 3rem;
-    line-height: 1;
-    text-align: center;
-
-    form {
-        display: inline-block;
-    }
-
-    .#{$pr}#{$m}button {
-        padding-left: 0;
-        padding-right: 0;
-        width: map-get( $object-max-widths, 'sm' );
-
-        @include media-breakpoint-up(lg) {
-            width: map-get( $object-max-widths, 'md' );
-        }
-
-    }
-
-}
-
-
-/*
---------------------
-#{$pr}#{$c}form#{$c1}submit#{$c3}2col
---------------------
-*/
-
-
-.#{$pr}#{$c}form#{$c1}submit#{$c3}2col {
-
-    .#{$pr}#{$m}button {
-        margin: 0 $spacer $spacer;
-
-        &:not(:last-child) {
-
-            @include media-breakpoint-up(lg) {
-                width: map-get( $object-max-widths, 'xs' );
-            }
-
-        }
-
-    }
-
 }

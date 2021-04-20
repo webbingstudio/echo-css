@@ -45,7 +45,11 @@
 <p>システムで可能な限りフォームの各入力セットを包括する。<br>
 フォーム内のパーツは <code>.echo-input, .echo-radio, .echo-select, .echo-checkbox, .echo-button</code> を参照。</p>
 
-<p>テキストボックスなどの幅は固定していない。幅を伸ばす場合は、別途スタイルを追加するか、後述の<code>.echo-form-inline, .echo-form-grow</code>を併用すること。</p>
+<p><code>.echo-form</code> は <code>div, form, p</code> を想定している。<br>
+<code>.echo-form-label</code> は <code>span, label</code> を想定している。</p>
+
+<p>ラベル、入力欄の幅は固定していない。
+フォーム全体の体裁を揃える場合は、後述の <code>.echo-form-inline.echo-form-grow</code> や <code>layout > .echo-forms</code>を使用すること。</p>
 
 <div class="example">
 
@@ -132,20 +136,30 @@
 
 <h2 id="form-01-inline" class="styleguide">echo-form-inline</h2>
 
-<p>フォームの入力欄とボタン、またはラベルをインラインで表示する。<br>
-<strong>複数並べた場合の、モバイル環境でのオーバーフローを想定していない</strong>ことに注意。</p>
+<p><code>.echo-form</code> のすべての直下要素をインライン表示する。<br>
+あくまでインライン表示にするだけで、モバイル環境でのオーバーフローは想定していない。複雑なレイアウトは <code>layout > .echo-forms</code> を併用すること。</p>
 
 <div class="example">
 
 <div class="echo-form echo-form-inline">
     <label for="demo02-01" class="echo-form-label">姓</label>
     <input type="text" class="echo-input" id="demo02-01" name="demo02_01" size="20" value="" placeholder="山田">
+</div><!-- /.echo-form -->
+
+<hr class="echo-margin-y-lg">
+
+<div class="echo-form echo-form-inline">
     <label for="demo02-02" class="echo-form-label">名</label>
     <input type="text" class="echo-input" id="demo02-02" name="demo02_02" size="20" value="" placeholder="一郎">
-    <span class="echo-form-label">好きな映画</span>
+</div><!-- /.echo-form -->
+
+<hr class="echo-margin-y-lg">
+
+<div class="echo-form echo-form-inline">
+    <label class="echo-form-label" for="demo02-03">好きな映画</label>
     <div class="echo-select">
-        <select>
-            <option>選択してください</option>
+        <select id="demo02-03" name="demo02_03">
+            <option value="">選択してください</option>
             <option value="raputa">天空の城ラピュタ</option>
             <option value="charlie">チャーリーとチョコレート工場</option>
             <option value="schindler">シンドラーのリスト</option>
@@ -153,26 +167,39 @@
     </div><!-- /.echo-select -->
 </div><!-- /.echo-form -->
 
+<hr class="echo-margin-y-lg">
+
+<p>この例は、モバイル環境でフォームが画面幅を超える。</p>
+
 <div class="echo-form echo-form-inline">
-    <label for="demo02-03" class="echo-form-label">アカウント名</label>
-    <input type="text" class="echo-input" id="demo02-03" name="demo02_03" size="20" value="" placeholder="山田">
-    <label for="demo02-04" class="echo-form-label">パスワード</label>
-    <input type="text" class="echo-input" id="demo02-04" name="demo02_04" size="20" value="" placeholder="一郎">
+    <label for="demo02-04" class="echo-form-label">アカウント名</label>
+    <input type="text" class="echo-input" id="demo02-04" name="demo02_04" size="20" value="" placeholder="山田">
+    <label for="demo02-05" class="echo-form-label">パスワード</label>
+    <input type="text" class="echo-input" id="demo02-05" name="demo02_05" size="20" value="" placeholder="一郎">
     <button class="echo-button echo-button-style-a echo-button-info">ログイン</button>
 </div><!-- /.echo-form -->
-
 
 </div>
 
 <div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-form echo-form-inline"&gt;
     &lt;label for="demo02-01" class="echo-form-label"&gt;姓&lt;/label&gt;
     &lt;input type="text" class="echo-input" id="demo02-01" name="demo02_01" size="20" value="" placeholder="山田"&gt;
+&lt;/div&gt;&lt;!-- /.echo-form --&gt;
+
+&lt;hr class="echo-margin-y-lg"&gt;
+
+&lt;div class="echo-form echo-form-inline"&gt;
     &lt;label for="demo02-02" class="echo-form-label"&gt;名&lt;/label&gt;
     &lt;input type="text" class="echo-input" id="demo02-02" name="demo02_02" size="20" value="" placeholder="一郎"&gt;
-    &lt;span class="echo-form-label"&gt;好きな映画&lt;/span&gt;
+&lt;/div&gt;&lt;!-- /.echo-form --&gt;
+
+&lt;hr class="echo-margin-y-lg"&gt;
+
+&lt;div class="echo-form echo-form-inline"&gt;
+    &lt;label class="echo-form-label" for="demo02-03"&gt;好きな映画&lt;/label&gt;
     &lt;div class="echo-select"&gt;
-        &lt;select&gt;
-            &lt;option&gt;選択してください&lt;/option&gt;
+        &lt;select id="demo02-03" name="demo02_03"&gt;
+            &lt;option value=""&gt;選択してください&lt;/option&gt;
             &lt;option value="raputa"&gt;天空の城ラピュタ&lt;/option&gt;
             &lt;option value="charlie"&gt;チャーリーとチョコレート工場&lt;/option&gt;
             &lt;option value="schindler"&gt;シンドラーのリスト&lt;/option&gt;
@@ -180,31 +207,46 @@
     &lt;/div&gt;&lt;!-- /.echo-select --&gt;
 &lt;/div&gt;&lt;!-- /.echo-form --&gt;
 
+&lt;hr class="echo-margin-y-lg"&gt;
+
+&lt;p&gt;この例は、モバイル環境でフォームが画面幅を超える。&lt;/p&gt;
+
 &lt;div class="echo-form echo-form-inline"&gt;
-    &lt;label for="demo02-03" class="echo-form-label"&gt;アカウント名&lt;/label&gt;
-    &lt;input type="text" class="echo-input" id="demo02-03" name="demo02_03" size="20" value="" placeholder="山田"&gt;
-    &lt;label for="demo02-04" class="echo-form-label"&gt;パスワード&lt;/label&gt;
-    &lt;input type="text" class="echo-input" id="demo02-04" name="demo02_04" size="20" value="" placeholder="一郎"&gt;
+    &lt;label for="demo02-04" class="echo-form-label"&gt;アカウント名&lt;/label&gt;
+    &lt;input type="text" class="echo-input" id="demo02-04" name="demo02_04" size="20" value="" placeholder="山田"&gt;
+    &lt;label for="demo02-05" class="echo-form-label"&gt;パスワード&lt;/label&gt;
+    &lt;input type="text" class="echo-input" id="demo02-05" name="demo02_05" size="20" value="" placeholder="一郎"&gt;
     &lt;button class="echo-button echo-button-style-a echo-button-info"&gt;ログイン&lt;/button&gt;
-&lt;/div&gt;&lt;!-- /.echo-form --&gt;</code></pre></div>
+&lt;/div&gt;&lt;!-- /.echo-form --&gt;
+</code></pre></div>
 
 
 <h2 id="form-02-grow" class="styleguide">echo-form-grow</h2>
 
 <p><code>.echo-form-inline</code>と併用する。<br>
-フォームの入力欄が <code>.echo-form</code> 全体を埋めるように伸びる。</p>
+<code>.echo-input, .echo-select</code> が <code>.echo-form</code> 全体を埋めるように伸びる。</p>
 
 <div class="example">
 
 <div class="echo-form echo-form-inline echo-form-grow">
-    <label for="demo02-01" class="echo-form-label">姓</label>
-    <input type="text" class="echo-input" id="demo02-01" name="demo02_01" size="20" value="" placeholder="山田">
-    <label for="demo02-02" class="echo-form-label">名</label>
-    <input type="text" class="echo-input" id="demo02-02" name="demo02_02" size="20" value="" placeholder="一郎">
-    <span class="echo-form-label">好きな映画</span>
+    <label for="demo03-01" class="echo-form-label">姓</label>
+    <input type="text" class="echo-input" id="demo03-01" name="demo03_01" size="20" value="" placeholder="山田">
+</div><!-- /.echo-form -->
+
+<hr class="echo-margin-y-lg">
+
+<div class="echo-form echo-form-inline echo-form-grow">
+    <label for="demo03-02" class="echo-form-label">名</label>
+    <input type="text" class="echo-input" id="demo03-02" name="demo03_02" size="20" value="" placeholder="一郎">
+</div><!-- /.echo-form -->
+
+<hr class="echo-margin-y-lg">
+
+<div class="echo-form echo-form-inline echo-form-grow">
+    <label class="echo-form-label" for="demo03-03">好きな映画</label>
     <div class="echo-select">
-        <select>
-            <option>選択してください</option>
+        <select id="demo03-03" name="demo03_03">
+            <option value="">選択してください</option>
             <option value="raputa">天空の城ラピュタ</option>
             <option value="charlie">チャーリーとチョコレート工場</option>
             <option value="schindler">シンドラーのリスト</option>
@@ -212,11 +254,15 @@
     </div><!-- /.echo-select -->
 </div><!-- /.echo-form -->
 
+<hr class="echo-margin-y-lg">
+
+<p>この例は、モバイル環境でフォームが画面幅を超える。</p>
+
 <div class="echo-form echo-form-inline echo-form-grow">
-    <label for="demo02-03" class="echo-form-label">アカウント名</label>
-    <input type="text" class="echo-input" id="demo02-03" name="demo02_03" size="20" value="" placeholder="山田">
-    <label for="demo02-04" class="echo-form-label">パスワード</label>
-    <input type="text" class="echo-input" id="demo02-04" name="demo02_04" size="20" value="" placeholder="一郎">
+    <label for="demo03-04" class="echo-form-label">アカウント名</label>
+    <input type="text" class="echo-input" id="demo03-04" name="demo03_04" size="20" value="" placeholder="山田">
+    <label for="demo03-05" class="echo-form-label">パスワード</label>
+    <input type="text" class="echo-input" id="demo03-05" name="demo02_05" size="20" value="" placeholder="一郎">
     <button class="echo-button echo-button-style-a echo-button-info">ログイン</button>
 </div><!-- /.echo-form -->
 
@@ -224,14 +270,24 @@
 
 
 <div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-form echo-form-inline echo-form-grow"&gt;
-    &lt;label for="demo02-01" class="echo-form-label"&gt;姓&lt;/label&gt;
-    &lt;input type="text" class="echo-input" id="demo02-01" name="demo02_01" size="20" value="" placeholder="山田"&gt;
-    &lt;label for="demo02-02" class="echo-form-label"&gt;名&lt;/label&gt;
-    &lt;input type="text" class="echo-input" id="demo02-02" name="demo02_02" size="20" value="" placeholder="一郎"&gt;
-    &lt;span class="echo-form-label"&gt;好きな映画&lt;/span&gt;
+    &lt;label for="demo03-01" class="echo-form-label"&gt;姓&lt;/label&gt;
+    &lt;input type="text" class="echo-input" id="demo03-01" name="demo03_01" size="20" value="" placeholder="山田"&gt;
+&lt;/div&gt;&lt;!-- /.echo-form --&gt;
+
+&lt;hr class="echo-margin-y-lg"&gt;
+
+&lt;div class="echo-form echo-form-inline echo-form-grow"&gt;
+    &lt;label for="demo03-02" class="echo-form-label"&gt;名&lt;/label&gt;
+    &lt;input type="text" class="echo-input" id="demo03-02" name="demo03_02" size="20" value="" placeholder="一郎"&gt;
+&lt;/div&gt;&lt;!-- /.echo-form --&gt;
+
+&lt;hr class="echo-margin-y-lg"&gt;
+
+&lt;div class="echo-form echo-form-inline echo-form-grow"&gt;
+    &lt;label class="echo-form-label" for="demo03-03"&gt;好きな映画&lt;/label&gt;
     &lt;div class="echo-select"&gt;
-        &lt;select&gt;
-            &lt;option&gt;選択してください&lt;/option&gt;
+        &lt;select id="demo03-03" name="demo03_03"&gt;
+            &lt;option value=""&gt;選択してください&lt;/option&gt;
             &lt;option value="raputa"&gt;天空の城ラピュタ&lt;/option&gt;
             &lt;option value="charlie"&gt;チャーリーとチョコレート工場&lt;/option&gt;
             &lt;option value="schindler"&gt;シンドラーのリスト&lt;/option&gt;
@@ -239,13 +295,18 @@
     &lt;/div&gt;&lt;!-- /.echo-select --&gt;
 &lt;/div&gt;&lt;!-- /.echo-form --&gt;
 
+&lt;hr class="echo-margin-y-lg"&gt;
+
+&lt;p&gt;この例は、モバイル環境でフォームが画面幅を超える。&lt;/p&gt;
+
 &lt;div class="echo-form echo-form-inline echo-form-grow"&gt;
-    &lt;label for="demo02-03" class="echo-form-label"&gt;アカウント名&lt;/label&gt;
-    &lt;input type="text" class="echo-input" id="demo02-03" name="demo02_03" size="20" value="" placeholder="山田"&gt;
-    &lt;label for="demo02-04" class="echo-form-label"&gt;パスワード&lt;/label&gt;
-    &lt;input type="text" class="echo-input" id="demo02-04" name="demo02_04" size="20" value="" placeholder="一郎"&gt;
+    &lt;label for="demo03-04" class="echo-form-label"&gt;アカウント名&lt;/label&gt;
+    &lt;input type="text" class="echo-input" id="demo03-04" name="demo03_04" size="20" value="" placeholder="山田"&gt;
+    &lt;label for="demo03-05" class="echo-form-label"&gt;パスワード&lt;/label&gt;
+    &lt;input type="text" class="echo-input" id="demo03-05" name="demo02_05" size="20" value="" placeholder="一郎"&gt;
     &lt;button class="echo-button echo-button-style-a echo-button-info"&gt;ログイン&lt;/button&gt;
-&lt;/div&gt;&lt;!-- /.echo-form --&gt;</code></pre></div>
+&lt;/div&gt;&lt;!-- /.echo-form --&gt;
+</code></pre></div>
 
 <h2 id="form-03-append" class="styleguide">echo-form-append</h2>
 
@@ -259,12 +320,27 @@
     <button class="echo-button echo-button-style-a">検索</button>
 </div><!-- /.echo-form -->
 
+<hr class="echo-margin-y-lg">
+
+<div class="echo-form echo-form-inline echo-form-grow echo-form-append">
+    <input type="text" class="echo-input" name="search" size="30" placeholder="Keyword">
+    <button class="echo-button echo-button-style-a">検索</button>
+</div><!-- /.echo-form -->
+
 </div>
 
 <div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-form echo-form-inline echo-form-append"&gt;
     &lt;input type="text" class="echo-input" name="search" size="30" placeholder="Keyword"&gt;
     &lt;button class="echo-button echo-button-style-a"&gt;検索&lt;/button&gt;
-&lt;/div&gt;&lt;!-- /.echo-form --&gt;</code></pre></div>
+&lt;/div&gt;&lt;!-- /.echo-form --&gt;
+
+&lt;hr class="echo-margin-y-lg"&gt;
+
+&lt;div class="echo-form echo-form-inline echo-form-grow echo-form-append"&gt;
+    &lt;input type="text" class="echo-input" name="search" size="30" placeholder="Keyword"&gt;
+    &lt;button class="echo-button echo-button-style-a"&gt;検索&lt;/button&gt;
+&lt;/div&gt;&lt;!-- /.echo-form --&gt;
+</code></pre></div>
 
 
 <h1 id="form-04-error" class="styleguide">echo-form-error</h1>
@@ -274,16 +350,16 @@
 <div class="example">
 
 <div class="echo-form echo-form-inline">
-    <label for="demo01-01" class="echo-form-label">フリガナ</label>
-    <input type="text" class="echo-input is-error" id="demo01-01" name="demo00" size="30" value="山田一郎">
+    <label for="demo05-01" class="echo-form-label">フリガナ</label>
+    <input type="text" class="echo-input is-error" id="demo05-01" name="demo00" size="30" value="山田一郎">
     <p class="echo-form-error">フリガナはカタカナで入力してください。</p>
 </div><!-- /.echo-form -->
 
 </div>
 
 <div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-form echo-form-inline"&gt;
-    &lt;label for="demo01-01" class="echo-form-label"&gt;フリガナ&lt;/label&gt;
-    &lt;input type="text" class="echo-input is-error" id="demo01-01" name="demo00" size="30" value="山田一郎"&gt;
+    &lt;label for="demo05-01" class="echo-form-label"&gt;フリガナ&lt;/label&gt;
+    &lt;input type="text" class="echo-input is-error" id="demo05-01" name="demo00" size="30" value="山田一郎"&gt;
     &lt;p class="echo-form-error"&gt;フリガナはカタカナで入力してください。&lt;/p&gt;
 &lt;/div&gt;&lt;!-- /.echo-form --&gt;</code></pre></div>
 

@@ -2319,14 +2319,21 @@ echo-input
 */
 .echo-input {
   max-width: 100%;
-  padding: .375rem .5rem;
+  padding: .75em;
   background: transparent none;
   border: 0.0625rem solid #333;
   color: #333;
+  font-size: 0.875rem;
   border-radius: 0.25rem;
   vertical-align: middle;
   -webkit-appearance: none;
   appearance: none;
+}
+
+.echo-input:not(textarea) {
+  padding-top: 0;
+  padding-bottom: 0;
+  min-height: 2.75rem;
 }
 
 .echo-input:focus {
@@ -2357,13 +2364,23 @@ echo-input-(size)
 --------------------
 */
 .echo-input-sm {
-  padding: .25rem;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
+}
+
+.echo-input-sm:not(textarea) {
+  padding-top: 0;
+  padding-bottom: 0;
+  min-height: 2.25rem;
 }
 
 .echo-input-lg {
-  padding: .5rem .5rem;
   font-size: 1.125rem;
+}
+
+.echo-input-lg:not(textarea) {
+  padding-top: 0;
+  padding-bottom: 0;
+  min-height: 3.5rem;
 }
 
 /*
@@ -2886,9 +2903,8 @@ echo-select
   font-size: 1em;
   color: #333;
   width: 100%;
-  height: 2.5em;
-  line-height: 2.5em;
-  padding: 0 2em 0 .5em;
+  padding: 0 2.5em 0 .75em;
+  min-height: 2.75rem;
   background-color: transparent;
   border: 0.0625rem solid #333;
   vertical-align: middle;
@@ -2939,8 +2955,7 @@ echo-select-(size)
 }
 
 .echo-select-sm select {
-  height: 2.25em;
-  line-height: 2.25em;
+  min-height: 2.25rem;
 }
 
 .echo-select-lg {
@@ -2948,10 +2963,7 @@ echo-select-(size)
 }
 
 .echo-select-lg select {
-  height: 2.25em;
-  line-height: 2.25em;
-  padding-left: 1em;
-  padding-right: 2.5em;
+  min-height: 3.5rem;
 }
 
 /*
@@ -4181,12 +4193,13 @@ echo-form
 */
 .echo-form {
   display: block;
+  margin: 0;
+  line-height: 1;
 }
 
 .echo-form-label {
   display: block;
-  margin-bottom: .5em;
-  line-height: 1;
+  margin-bottom: 10px;
 }
 
 /*
@@ -4196,7 +4209,7 @@ echo-form-inline
 */
 .echo-form-inline {
   display: flex;
-  align-items: stretch;
+  align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
 }
@@ -4205,46 +4218,11 @@ echo-form-inline
   flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
+  margin: 0 10px 0 0;
+  white-space: nowrap;
 }
 
-.echo-form-inline .echo-form-label {
-  margin: 0 .25rem 0 1.5rem;
-  padding-bottom: 0;
-  align-self: center;
-}
-
-.echo-form-inline .echo-form-label:first-child {
-  margin-left: 0;
-}
-
-.echo-form-inline .echo-form-label:last-child {
-  margin-right: 0;
-}
-
-.echo-form-inline .echo-button {
-  margin: 0 .25rem;
-}
-
-.echo-form-inline .echo-button:first-child {
-  margin-left: 0;
-}
-
-.echo-form-inline .echo-button:last-child {
-  margin-right: 0;
-}
-
-.echo-form-inline .echo-input,
-.echo-form-inline .echo-select {
-  margin: 0 .25rem;
-}
-
-.echo-form-inline .echo-input:first-child,
-.echo-form-inline .echo-select:first-child {
-  margin-left: 0;
-}
-
-.echo-form-inline .echo-input:last-child,
-.echo-form-inline .echo-select:last-child {
+.echo-form-inline > *:last-child {
   margin-right: 0;
 }
 
@@ -4287,48 +4265,6 @@ echo-form-error
   color: #d20b2a;
   font-size: 0.875rem;
   line-height: 1.5;
-}
-
-/*
---------------------
-echo-form-submit
---------------------
-*/
-.echo-form-submit {
-  margin-top: 3rem;
-  line-height: 1;
-  text-align: center;
-}
-
-.echo-form-submit form {
-  display: inline-block;
-}
-
-.echo-form-submit .echo-button {
-  padding-left: 0;
-  padding-right: 0;
-  width: 22.5rem;
-}
-
-@media (min-width: 62.5rem) {
-  .echo-form-submit .echo-button {
-    width: 30rem;
-  }
-}
-
-/*
---------------------
-echo-form-submit-2col
---------------------
-*/
-.echo-form-submit-2col .echo-button {
-  margin: 0 10px 10px;
-}
-
-@media (min-width: 62.5rem) {
-  .echo-form-submit-2col .echo-button:not(:last-child) {
-    width: 16rem;
-  }
 }
 
 /*
