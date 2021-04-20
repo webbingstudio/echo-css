@@ -37,16 +37,16 @@
     margin-right: auto;
 
     @include media-breakpoint-up(lg) {
-        max-width: map-get($container-max-widths-lg, lg);
+        max-width: map-get( $container-max-widths-lg, lg ) - map-get( $grid-gutter-widths, 'md' );
         height: 100%;
     }
 
     @include media-breakpoint-up(xl) {
-        max-width: map-get($container-max-widths-lg, xl);
+        max-width: map-get( $container-max-widths-lg, xl ) - map-get( $grid-gutter-widths, 'md' );
     }
 
     @include media-breakpoint-up(xxl) {
-        max-width: map-get($container-max-widths-lg, xxl);
+        max-width: map-get( $container-max-widths-lg, xxl ) - map-get( $grid-gutter-widths, 'md' );
     }
 
 }
@@ -68,50 +68,51 @@
 }
 
 .#{$pr}#{$c}flip#{$c1}contents#{$c1}inner {
-    padding: ($spacer * 3) (map-get($grid-gutter-widths, md) / 2);
+    padding-top: ( $spacer * 3 );
+    padding-bottom: ( $spacer * 3 );
+    @include responsive-spacing(
+        'padding-left',
+        map-get( $component-spacing-min, 'xl' ),
+        map-get( $component-spacing-max, 'xl' )
+    );
+
+    @include responsive-spacing(
+        'padding-right',
+        map-get( $component-spacing-min, 'xl' ),
+        map-get( $component-spacing-max, 'xl' )
+    );
 
     @include media-breakpoint-up(lg) {
         position: absolute;
         top: 50%;
         left: 0;
         width: 100%;
-        transform: translate(0, -50%);
-        padding-left: ($spacer * 2);
-        padding-right: ($spacer * 2);
-    }
-
-    @include media-breakpoint-up(xl) {
-        padding-left: ($spacer * 4.5);
-        padding-right: ($spacer * 4.5);
+        transform: translateY( -50% );
     }
 
 }
 
 .#{$pr}#{$c}flip#{$c1}title {
+    font-size: 2rem;
 
-    &.#{$pr}#{$m}title {
-        font-size: 2rem;
+    @include media-breakpoint-up(sm) {
+        font-size: 2.25rem;
+    }
 
-        @include media-breakpoint-up(sm) {
-            font-size: 2.25rem;
-        }
+    @include media-breakpoint-up(md) {
+        font-size: 2.5rem;
+    }
 
-        @include media-breakpoint-up(md) {
-            font-size: 2.5rem;
-        }
+    @include media-breakpoint-up(lg) {
+        font-size: 2.75rem;
+    }
 
-        @include media-breakpoint-up(lg) {
-            font-size: 2.75rem;
-        }
+    @include media-breakpoint-up(xl) {
+        font-size: 3rem;
+    }
 
-        @include media-breakpoint-up(xl) {
-            font-size: 3rem;
-        }
-
-        @include media-breakpoint-up(xxl) {
-            font-size: 3.25rem;
-        }
-
+    @include media-breakpoint-up(xxl) {
+        font-size: 3.25rem;
     }
 
 }
