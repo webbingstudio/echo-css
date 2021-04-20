@@ -6,10 +6,11 @@
 
 .#{$pr}#{$m}input {
     max-width: 100%;
-    padding: .375rem .5rem;
+    padding: .75em;
     background: $input-bg none;
     border: $input-border-width solid $input-border-color;
     color: $input-color;
+    font-size: $font-size-sm;
     border-radius: $border-radius-md;
     vertical-align: middle;
     -webkit-appearance: none;
@@ -47,12 +48,10 @@
 */
 
 .#{$pr}#{$m}input#{$c3}sm {
-    padding: .25rem;
-    font-size: $font-size-sm;
+    font-size: $font-size-xs;
 }
 
 .#{$pr}#{$m}input#{$c3}lg {
-    padding: .5rem .5rem;
     font-size: $font-size-lg;
 }
 
