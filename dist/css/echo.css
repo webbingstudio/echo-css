@@ -2920,37 +2920,27 @@ echo-form
 --------------------
 */
 .echo-form {
-  display: block;
-  margin: 0;
-  line-height: 1;
-}
-
-.echo-form-label {
-  display: block;
-  margin-bottom: 10px;
-}
-
-/*
---------------------
-echo-form-inline
---------------------
-*/
-.echo-form-inline {
   display: flex;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
+  margin: -1em 0 0;
+  line-height: 1;
 }
 
-.echo-form-inline > * {
+.echo-form > * {
   flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
-  margin: 0 10px 0 0;
+  margin: 1em 10px 0 0;
   white-space: nowrap;
 }
 
-.echo-form-inline > *:last-child {
+.echo-form > *.echo-checkbox, .echo-form > *.echo-radio {
+  margin-right: 2em;
+}
+
+.echo-form > *:last-child {
   margin-right: 0;
 }
 

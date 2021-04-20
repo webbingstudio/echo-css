@@ -5,35 +5,24 @@
 */
 
 .#{$pr}#{$c}form {
-    display: block;
-    margin: 0;
-    line-height: 1;
-}
-
-.#{$pr}#{$c}form#{$c1}label {
-    display: block;
-    margin-bottom: $spacer;
-}
-
-
-/*
---------------------
-#{$pr}#{$c}form#{$c3}inline
---------------------
-*/
-
-.#{$pr}#{$c}form#{$c3}inline {
     display: flex;
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
+    margin: -1em 0 0;
+    line-height: 1;
 
     > * {
         flex-grow: 0;
         flex-shrink: 1;
         flex-basis: auto;
-        margin: 0 $spacer 0 0;
+        margin: 1em $spacer 0 0;
         white-space: nowrap;
+
+        &.#{$pr}#{$m}checkbox,
+        &.#{$pr}#{$m}radio {
+            margin-right: 2em;
+        }
 
         &:last-child {
             margin-right: 0;
