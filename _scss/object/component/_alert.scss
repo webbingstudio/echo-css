@@ -8,7 +8,7 @@
     display: flex;
     align-items: stretch;
     margin: 0;
-    padding: .5em ( map-get( $grid-gutter-widths, md ) / 2 );
+    padding: .5em;
     background-color: $default-fade;
     border: $border-alert-width solid $border-color;
     font-size: $font-size-sm;
@@ -27,13 +27,13 @@
 .#{$pr}#{$c}alert#{$c1}header {
     flex: 0 0 auto;
     align-self: center;
-    margin-right: ( map-get( $grid-gutter-widths, md ) / 2 );
+    margin-right: .5em;
     text-align: left;
 }
 
 .#{$pr}#{$c}alert#{$c1}footer {
     flex: 1 0 auto;
     align-self: center;
-    margin-left: ( map-get( $grid-gutter-widths, md ) / 2 );
+    margin-left: .5em;
     text-align: right;
 }
