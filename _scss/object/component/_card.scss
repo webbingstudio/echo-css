@@ -87,19 +87,35 @@ a.#{$pr}#{$c}card#{$c1}inner {
 
 }
 
-.#{$pr}#{$c}card#{$c1}header {
-    padding: $spacer (map-get($grid-gutter-widths, md) / 2);
+.#{$pr}#{$c}card#{$c1}header,
+.#{$pr}#{$c}card#{$c1}contents,
+.#{$pr}#{$c}card#{$c1}footer {
+    @include responsive-spacing(
+        'padding-left',
+        map-get( $component-spacing-min, 'md' ),
+        map-get( $component-spacing-max, 'md' )
+    );
+
+    @include responsive-spacing(
+        'padding-right',
+        map-get( $component-spacing-min, 'md' ),
+        map-get( $component-spacing-max, 'md' )
+    );
+
+    padding-top: $spacer;
+    padding-bottom: $spacer;
     word-break: break-word;
+}
+
+.#{$pr}#{$c}card#{$c1}header {
 }
 
 .#{$pr}#{$c}card#{$c1}contents {
     flex-grow: 1;
-    padding: $spacer (map-get($grid-gutter-widths, md) / 2);
     font-size: $font-size-sm;
     line-height: $line-height-sm;
-    word-break: break-word;
 
-    [class*="#{$pr}#{$c}card"] {
+    > [class*="#{$pr}#{$c}card"] {
         margin: 0;
 
         + [class*="#{$pr}#{$c}card"] {
@@ -111,17 +127,15 @@ a.#{$pr}#{$c}card#{$c1}inner {
 }
 
 .#{$pr}#{$c}card#{$c1}title {
-
-    &[class*="#{$pr}#{$m}title#{$c1}style"] {
-        margin: 0;
-    }
-
+    margin: 0;
 }
 
 .#{$pr}#{$c}card#{$c1}meta {
+    margin: 0;
 }
 
 .#{$pr}#{$c}card#{$c1}body {
+    margin: 0;
 }
 
 .#{$pr}#{$c}card#{$c1}footer {
@@ -130,5 +144,4 @@ a.#{$pr}#{$c}card#{$c1}inner {
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    padding: $spacer (map-get($grid-gutter-widths, md) / 2);
 }
