@@ -2318,6 +2318,7 @@ echo-input
 --------------------
 */
 .echo-input {
+  max-width: 100%;
   padding: .375rem .5rem;
   background: transparent none;
   border: 0.0625rem solid #333;
@@ -4179,11 +4180,7 @@ echo-form
 --------------------
 */
 .echo-form {
-  width: 100%;
-}
-
-.echo-form + .echo-form {
-  margin-top: 2rem;
+  display: block;
 }
 
 .echo-form-label {

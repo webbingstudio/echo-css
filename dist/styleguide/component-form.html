@@ -46,7 +46,7 @@
             <article class="echo-doc-post">
                 <div class="echo-doc-post-contents styleguide-contents"><h1 id="form" class="styleguide">echo-form</h1>
 
-<p>システムで可能な限りフォームの各入力セットを包括し、下余白を確保する。<br>
+<p>システムで可能な限りフォームの各入力セットを包括する。<br>
 フォーム内のパーツは <code>.echo-input, .echo-radio, .echo-select, .echo-checkbox, .echo-button</code> を参照。</p>
 
 <p>テキストボックスなどの幅は固定していない。幅を伸ばす場合は、別途スタイルを追加するか、後述の<code>.echo-form-inline, .echo-form-grow</code>を併用すること。</p>
@@ -58,6 +58,8 @@
     <input type="text" class="echo-input" id="demo01-01" name="demo00" size="30" value="" placeholder="山田一郎">
 </div><!-- /.echo-form -->
 
+<hr class="echo-margin-y-lg">
+
 <div class="echo-form">
     <span class="echo-form-label">好きな食べ物（いくつでも選択できます）</span>
     <label class="echo-checkbox echo-margin-right-md" for="checkbox1"><input type="checkbox" name="checkbox[]" id="checkbox1" value="りんご"><span class="echo-checkbox-icon"></span><span class="echo-checkbox-label">りんご</span></label>
@@ -68,6 +70,8 @@
     <label class="echo-checkbox echo-margin-right-md" for="checkbox6"><input type="checkbox" name="checkbox[]" id="checkbox6" value="かき"><span class="echo-checkbox-icon"></span><span class="echo-checkbox-label">かき</span></label>
     <label class="echo-checkbox" for="checkbox7"><input type="checkbox" name="checkbox[]" id="checkbox7" value="メロン"><span class="echo-checkbox-icon"></span><span class="echo-checkbox-label">メロン</span></label>
 </div><!-- /.echo-form -->
+
+<hr class="echo-margin-y-lg">
 
 <div class="echo-form">
     <span class="echo-form-label">好きな映画</span>
@@ -81,6 +85,8 @@
     </div><!-- /.echo-select -->
 </div><!-- /.echo-form -->
 
+<hr class="echo-margin-y-lg">
+
 <div class="echo-form">
     <label for="demo01-02" class="echo-form-label">メッセージ</label>
     <textarea id="demo01-02" class="echo-input" name="demo02" rows="5" cols="50" placeholder="メッセージをどうぞ"></textarea>
@@ -93,6 +99,8 @@
     &lt;input type="text" class="echo-input" id="demo01-01" name="demo00" size="30" value="" placeholder="山田一郎"&gt;
 &lt;/div&gt;&lt;!-- /.echo-form --&gt;
 
+&lt;hr class="echo-margin-y-lg"&gt;
+
 &lt;div class="echo-form"&gt;
     &lt;span class="echo-form-label"&gt;好きな食べ物（いくつでも選択できます）&lt;/span&gt;
     &lt;label class="echo-checkbox echo-margin-right-md" for="checkbox1"&gt;&lt;input type="checkbox" name="checkbox[]" id="checkbox1" value="りんご"&gt;&lt;span class="echo-checkbox-icon"&gt;&lt;/span&gt;&lt;span class="echo-checkbox-label"&gt;りんご&lt;/span&gt;&lt;/label&gt;
@@ -103,6 +111,8 @@
     &lt;label class="echo-checkbox echo-margin-right-md" for="checkbox6"&gt;&lt;input type="checkbox" name="checkbox[]" id="checkbox6" value="かき"&gt;&lt;span class="echo-checkbox-icon"&gt;&lt;/span&gt;&lt;span class="echo-checkbox-label"&gt;かき&lt;/span&gt;&lt;/label&gt;
     &lt;label class="echo-checkbox" for="checkbox7"&gt;&lt;input type="checkbox" name="checkbox[]" id="checkbox7" value="メロン"&gt;&lt;span class="echo-checkbox-icon"&gt;&lt;/span&gt;&lt;span class="echo-checkbox-label"&gt;メロン&lt;/span&gt;&lt;/label&gt;
 &lt;/div&gt;&lt;!-- /.echo-form --&gt;
+
+&lt;hr class="echo-margin-y-lg"&gt;
 
 &lt;div class="echo-form"&gt;
     &lt;span class="echo-form-label"&gt;好きな映画&lt;/span&gt;
@@ -115,6 +125,8 @@
         &lt;/select&gt;
     &lt;/div&gt;&lt;!-- /.echo-select --&gt;
 &lt;/div&gt;&lt;!-- /.echo-form --&gt;
+
+&lt;hr class="echo-margin-y-lg"&gt;
 
 &lt;div class="echo-form"&gt;
     &lt;label for="demo01-02" class="echo-form-label"&gt;メッセージ&lt;/label&gt;
