@@ -182,7 +182,7 @@ $grid-breakpoints: (
     sm:      26.75rem,
     md:      48rem,
     lg:      62.5rem,
-    xl:      75rem,
+    xl:      80rem,
     xxl:     90rem
 ) !default;
 
@@ -223,6 +223,18 @@ $spacing-max: (
     xxl:    90
 ) !default;
 
+$component-spacing-min: (
+    md:     10,
+    lg:     10,
+    xl:     10,
+) !default;
+
+$component-spacing-max: (
+    md:     20,
+    lg:     30,
+    xl:     45,
+) !default;
+
 
 // Container, Grid
 // -----------------------------------------
@@ -259,7 +271,7 @@ $container-max-widths-lg: (
     md:  48rem + map-get( $grid-gutter-widths, 'md' ),
     lg:  60rem + map-get( $grid-gutter-widths, 'md' ),
     xl:  75rem + map-get( $grid-gutter-widths, 'md' ),
-    xxl: 90rem + map-get( $grid-gutter-widths, 'md' ),
+    xxl: 87.5rem + map-get( $grid-gutter-widths, 'md' ),
 ) !default;
 
 $grid-columns:        12 !default;
