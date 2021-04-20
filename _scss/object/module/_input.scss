@@ -16,6 +16,16 @@
     -webkit-appearance: none;
     appearance: none;
 
+    @at-root {
+
+        #{&}:not(textarea) {
+            padding-top: 0;
+            padding-bottom: 0;
+            min-height: 2.75rem;
+        }
+
+    }
+
     &:focus {
         color: $input-focus-color;
         background-color: $input-focus-bg;
@@ -49,9 +59,31 @@
 
 .#{$pr}#{$m}input#{$c3}sm {
     font-size: $font-size-xs;
+
+    @at-root {
+
+        #{&}:not(textarea) {
+            padding-top: 0;
+            padding-bottom: 0;
+            min-height: 2.25rem;
+        }
+
+    }
+
 }
 
 .#{$pr}#{$m}input#{$c3}lg {
     font-size: $font-size-lg;
+
+    @at-root {
+
+        #{&}:not(textarea) {
+            padding-top: 0;
+            padding-bottom: 0;
+            min-height: 3.5rem;
+        }
+
+    }
+
 }
 
