@@ -79,7 +79,11 @@ a.#{$pr}#{$c}media#{$c1}inner {
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 0%;
-    padding-left: ( $spacer * 2 );
+    @include responsive-spacing(
+        'padding-left',
+        map-get( $component-spacing-min, 'md' ),
+        map-get( $component-spacing-max, 'md' )
+    );
     font-size: $font-size-sm;
     line-height: $line-height-sm;
 
@@ -95,11 +99,7 @@ a.#{$pr}#{$c}media#{$c1}inner {
 }
 
 .#{$pr}#{$c}media#{$c1}title {
-
-    &[class*="#{$pr}#{$m}title#{$c1}style"] {
-        margin: 0;
-    }
-
+    margin: 0;
 }
 
 .#{$pr}#{$c}media#{$c1}meta {
@@ -140,7 +140,11 @@ a.#{$pr}#{$c}media#{$c1}inner {
 
     .#{$pr}#{$c}media#{$c1}contents {
         padding-left: 0;
-        padding-right: ( $spacer * 2 );
+        @include responsive-spacing(
+            'padding-right',
+            map-get( $component-spacing-min, 'md' ),
+            map-get( $component-spacing-max, 'md' )
+        );
     }
 
 }
