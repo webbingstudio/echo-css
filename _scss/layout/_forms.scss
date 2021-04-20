@@ -1,0 +1,26 @@
+/*
+--------------------
+#{$pr}#{$l}forms
+--------------------
+*/
+
+.#{$pr}#{$l}forms {
+    display: grid;
+    gap: map-get( $grid-gutter-widths, lg );
+
+    @include media-breakpoint-up(lg) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+.#{$pr}#{$l}forms#{$c1}item {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    width: 100%;
+
+    .#{$pr}#{$c}form {
+    }
+
+}

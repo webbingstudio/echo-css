@@ -6917,6 +6917,52 @@ echo-medias
 
 /*
 --------------------
+echo-buttons
+--------------------
+*/
+.echo-buttons {
+  display: grid;
+  gap: 2.5rem;
+}
+
+@media (min-width: 62.5rem) {
+  .echo-buttons {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.echo-buttons-item {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+/*
+--------------------
+echo-forms
+--------------------
+*/
+.echo-forms {
+  display: grid;
+  gap: 2.5rem;
+}
+
+@media (min-width: 62.5rem) {
+  .echo-forms {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.echo-forms-item {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+/*
+--------------------
 echo-p-header
 --------------------
 */
