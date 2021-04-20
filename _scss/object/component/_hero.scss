@@ -39,8 +39,8 @@
 }
 
 .#{$pr}#{$c}hero#{$c1}contents#{$c1}inner {
-    padding-left: map-get($grid-gutter-widths, md);
-    padding-right: map-get($grid-gutter-widths, md);
+    padding-left: ( $spacer * 1.5 );
+    padding-right: ( $spacer * 1.5 );
 
     @include media-breakpoint-up(lg) {
         flex-basis: map-get($container-max-widths-md, md);
@@ -49,31 +49,27 @@
 }
 
 .#{$pr}#{$c}hero#{$c1}title {
+    font-size: 1.75rem;
     text-align: center;
 
-    &.#{$pr}#{$m}title {
-        font-size: 1.75rem;
+    @include media-breakpoint-up(sm) {
+        font-size: 2.25rem;
+    }
 
-        @include media-breakpoint-up(sm) {
-            font-size: 2.25rem;
-        }
+    @include media-breakpoint-up(md) {
+        font-size: 2.75rem;
+    }
 
-        @include media-breakpoint-up(md) {
-            font-size: 2.75rem;
-        }
+    @include media-breakpoint-up(lg) {
+        font-size: 3.25rem;
+    }
 
-        @include media-breakpoint-up(lg) {
-            font-size: 3.25rem;
-        }
+    @include media-breakpoint-up(xl) {
+        font-size: 3.5rem;
+    }
 
-        @include media-breakpoint-up(xl) {
-            font-size: 3.5rem;
-        }
-
-        @include media-breakpoint-up(xxl) {
-            font-size: 4rem;
-        }
-
+    @include media-breakpoint-up(xxl) {
+        font-size: 4rem;
     }
 
 }
@@ -146,16 +142,24 @@
     }
 
     > .#{$pr}#{$m}button {
+        max-width: map-get( $object-max-widths, 'sm' );
 
         @include media-breakpoint-down(sm) {
             max-width: map-get( $object-max-widths, 'xs' );
+            padding-top: .5rem;
+            padding-bottom: .5rem;
             font-size: $btn-font-size-sm;
         }
 
         @include media-breakpoint-up(lg) {
+            max-width: map-get( $object-max-widths, 'md' );
             padding-top: $btn-padding-y-lg;
             padding-bottom: $btn-padding-y-lg;
             font-size: $btn-font-size-lg;
+        }
+
+        @include media-breakpoint-up(xl) {
+            font-size: $btn-font-size-xl;
         }
 
     }
