@@ -38,12 +38,16 @@
                 <div class="echo-doc-post-contents styleguide-contents"><h1 id="hero" class="styleguide">echo-hero</h1>
 
 <p>メインビジュアルなどに使用される全面背景を持つコンポーネントを表示する。<br>
-<code>.echo-hero-contents-inner</code> が必須であることに注意する。<br>
-<code>.echo-hero-image</code> の画像は<strong>トリミングされず、縦横比を保って伸縮する。</strong>レスポンシブイメージを併用することが望ましい。<br>
-<code>.echo-hero-contents-inner</code>の内容が多すぎるとはみ出すことがある点に注意。</p>
-<p><code>.echo-hero-title > .echo-title</code> のフォントサイズはこのコンポーネント独自の変化をする。<br>
-なお、<code>.echo-hero-title > .echo-title</code> に付与されている <code>.echo-font-first</code> は<strong>必須ではない</strong>。詳細は <a href="./utility-font.html">utility > font</a> を参照。<br>
-<code>.echo-hero-link > .echo-button</code> のfont-size、paddingはこのコンポーネント独自の変化をする。</p>
+<code>.echo-hero-contents-inner</code> が必須であることと、内容が多すぎると領域をはみ出すことがある点に注意。</p>
+
+<p><code>.echo-hero-image</code> の画像は<strong>トリミングされず、縦横比を保って伸縮する。</strong>レスポンシブイメージを併用することが望ましい。<br>
+</p>
+
+<p><code>.echo-hero-title > .echo-title</code> のフォントサイズはこのコンポーネント独自の変化をする。</p>
+
+<p><code>.echo-hero-link > .echo-button</code> のフォントサイズ、内部余白はこのコンポーネント独自の変化をする。</p>
+
+<p><code>.echo-hero-title > .echo-title</code> に付与されている <code>.echo-font-first</code> は<strong>必須ではない</strong>。詳細は <a href="./utility-font.html">utility > font</a> を参照。</p>
 
 <div class="example">
 <div class="echo-hero">
@@ -289,7 +293,7 @@
 <h2 id="hero-01-direction" class="styleguide">echo-hero-inverse</h2>
 
 <p>コンテンツの色が反転する。<br>
-テキストリンク、ボタン等の色は反転前とは変わらないことに注意。</p>
+ボタンの色は <code>.echo-button-inverse</code> を付与しなければ変わらないことに注意。</p>
 
 <div class="example">
 <div class="echo-hero echo-hero-inverse">

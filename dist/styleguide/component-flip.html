@@ -42,11 +42,14 @@
 
 <p>全面背景とボックスを持つ、フリップボードのようなコンポーネントを表示する。<br>
 <code>.echo-flip-contents-inner</code> が必須であることに注意する。<br>
-<code>.echo-flip-cover</code> の背景画像はインラインスタイル、もしくは追加CSSで定義する。</p>
+画面サイズによって <code>.echo-flip-contents-inner</code> の左右余白が大きく変化する。</p>
 
-<p><code>.echo-flip-title > .echo-title</code> のフォントサイズはこのコンポーネント独自の変化をする。<br>
-なお、<code>.echo-flip-title > .echo-title</code> に付与されている <code>.echo-font-first</code> は<strong>必須ではない</strong>。詳細は <a href="./utility-font.html">utility > font</a> を参照。<br>
+<p><code>.echo-flip-cover</code> の背景画像はインラインスタイル、もしくは追加CSSで定義する。<br>
+<code>.echo-flip-title > .echo-title</code> のフォントサイズはこのコンポーネント独自の変化をする。</p>
+
+<p><code>.echo-flip-title > .echo-title</code> に付与されている <code>.echo-font-first</code> は<strong>必須ではない</strong>。詳細は <a href="./utility-font.html">utility > font</a> を参照。<br>
 <code>.echo-flip-link > .echo-button</code> のfont-size、paddingはこのコンポーネント独自の変化をする。</p>
+
 <div class="example"><div class="echo-flip">
     <div class="echo-flip-cover" style="background-image: url(../images/_dummy/image_03.jpg)"></div>
     <div class="echo-flip-container">
@@ -170,7 +173,7 @@
 <h2 id="flip-03-inverse" class="styleguide">echo-flip-inverse</h2>
 
 <p>コンテンツの色が反転する。<br>
-ボタンの色は <code>.**-inverse</code> クラスを付与しなければ変わらないことに注意。</p>
+ボタンの色は <code>.echo-button-inverse</code> を付与しなければ変わらないことに注意。</p>
 <div class="example"><div class="echo-flip echo-flip-inverse">
     <div class="echo-flip-cover" style="background-image: url(../images/_dummy/image_03.jpg)"></div>
     <div class="echo-flip-container">
