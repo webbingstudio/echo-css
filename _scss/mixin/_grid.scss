@@ -18,6 +18,7 @@
         margin: 0;
         padding-left: (map-get($grid-gutter-widths, md) / 2);
         padding-right: (map-get($grid-gutter-widths, md) / 2);
+        padding-bottom: map-get($grid-gutter-widths, md);
     }
 
     @each $breakpoint in map-keys($breakpoints) {

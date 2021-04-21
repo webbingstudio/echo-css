@@ -23,7 +23,7 @@
     justify-content: flex-start;
     align-items: stretch;
     list-style-type: none;
-    margin: 0 (map-get($grid-gutter-widths, md) / -2);
+    margin: 0 (map-get($grid-gutter-widths, md) / -2) (map-get($grid-gutter-widths, md) / -1);
     padding: 0;
 }
 
@@ -35,12 +35,10 @@
 */
 
 .#{$pr}#{$row}#{$c3}0 {
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0;
 
     [class*="#{$pr}#{$col}"] {
-        padding-left: 0;
-        padding-right: 0;
+        padding: 0;
     }
 
 }
@@ -48,21 +46,31 @@
 .#{$pr}#{$row}#{$c3}sm {
     margin-left: (map-get($grid-gutter-widths, sm) / -2);
     margin-right: (map-get($grid-gutter-widths, sm) / -2);
+    margin-bottom: (map-get($grid-gutter-widths, sm) / -1);
 
     [class*="#{$pr}#{$col}"] {
         padding-left: (map-get($grid-gutter-widths, sm) / 2);
         padding-right: (map-get($grid-gutter-widths, sm) / 2);
+        padding-bottom: map-get($grid-gutter-widths, sm);
     }
 
 }
 
 .#{$pr}#{$row}#{$c3}lg {
-    margin-left: (map-get($grid-gutter-widths, lg) / -2);
-    margin-right: (map-get($grid-gutter-widths, lg) / -2);
+
+    @include media-breakpoint-up(lg) {
+        margin-left: (map-get($grid-gutter-widths, lg) / -2);
+        margin-right: (map-get($grid-gutter-widths, lg) / -2);
+        margin-bottom: (map-get($grid-gutter-widths, lg) / -1);
+    }
 
     [class*="#{$pr}#{$col}"] {
-        padding-left: (map-get($grid-gutter-widths, lg) / 2);
-        padding-right: (map-get($grid-gutter-widths, lg) / 2);
+        @include media-breakpoint-up(lg) {
+            padding-left: (map-get($grid-gutter-widths, lg) / 2);
+            padding-right: (map-get($grid-gutter-widths, lg) / 2);
+            padding-bottom: map-get($grid-gutter-widths, lg);
+        }
+
     }
 
 }

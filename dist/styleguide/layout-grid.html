@@ -157,8 +157,8 @@
 
 <h2 id="grid-01-row-size" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-grid-row-(size)</h2>
 
-<p><code>.echo-grid-row</code> に付与すると、グリッド余白が増減する。<br>
-(size)は<code>0, sm, lg</code> に対応している。<br>
+<p><code>.echo-grid-row</code> に付与すると、グリッド余白（gutter）が変更される。<br>
+(size)は <code>0, sm, lg</code> に対応しており、 <code>lg</code> は (breakpoint) が <code>lg</code> 以上のときのみ、余白が増える。<br>
 命名規則をbootstrapと同様にしたい場合は、 <code>/_scss/_\config_advance.scss</code> の変数 <code>$row</code> を変更すること。</p>
 
 <p class="echo-title echo-title-level-4 m-style-a echo-margin-top-xl echo-margin-bottom-sm">.echo-grid-row-0</p>
@@ -277,11 +277,11 @@
 </code></pre></div>
 
 
-<h2 id="grid-03-col-column" class="echo-doc-post-title-01">echo-grid-col-(breakpoint)-(column)</h2>
+<h2 id="grid-03-col-column" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-grid-col-(breakpoint)-(column)</h2>
 
 <p>グリッドのセルの幅を、(breakpoint) <strong>以上</strong>のときに <code>(column) / 12</code>の割合に変更する。<br>
 (breakpoint) が <code>xxs</code> であれば、常にその幅となる。<br>
-<strong>シングルクラス</strong>となっている（ <code>.echo-grid-col</code> を付与しなくてもよい）。</p>
+<code>.echo-grid-col</code> を付与しなくても挙動には問題ない。</p>
 
 
 
