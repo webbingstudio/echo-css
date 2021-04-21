@@ -30,7 +30,6 @@
                         <li class="echo-nav-item"><a href="./component-headline.html" class="echo-nav-label">headline</a></li>
                         <li class="echo-nav-item"><a href="./component-hero.html" class="echo-nav-label">hero</a></li>
                         <li class="echo-nav-item"><a href="./component-media.html" class="echo-nav-label">media</a></li>
-                        <li class="echo-nav-item"><a href="./component-labels.html" class="echo-nav-label">labels</a></li>
                         <li class="echo-nav-item"><a href="./component-overlay.html" class="echo-nav-label">overlay</a></li>
                         <li class="echo-nav-item"><a href="./component-paginate.html" class="echo-nav-label">paginate</a></li>
                         <li class="echo-nav-item"><a href="./component-serial.html" class="echo-nav-label">serial</a></li>
@@ -52,10 +51,11 @@
             <ul class="echo-doc-sitemap-list-flat echo-nav-list echo-nav-children">
                 <li class="echo-nav-item"><a href="./layout-container.html" class="echo-nav-label">container</a></li>
                 <li class="echo-nav-item"><a href="./layout-grid.html" class="echo-nav-label">grid</a></li>
+                <li class="echo-nav-item"><a href="./layout-buttons.html" class="echo-nav-label">buttons</a></li>
+                <li class="echo-nav-item"><a href="./layout-labels.html" class="echo-nav-label">labels</a></li>
                 <li class="echo-nav-item"><a href="./layout-cards.html" class="echo-nav-label">cards</a></li>
                 <li class="echo-nav-item"><a href="./layout-headlines.html" class="echo-nav-label">headlines</a></li>
                 <li class="echo-nav-item"><a href="./layout-medias.html" class="echo-nav-label">medias</a></li>
-                <li class="echo-nav-item"><a href="./layout-buttons.html" class="echo-nav-label">buttons</a></li>
                 <li class="echo-nav-item"><a href="./layout-forms.html" class="echo-nav-label">forms</a></li>
             </ul>
         </li>

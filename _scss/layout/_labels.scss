@@ -1,13 +1,13 @@
 /*
 --------------------
-#{$pr}#{$c}labels
+#{$pr}#{$l}labels
 --------------------
 */
 
-.#{$pr}#{$c}labels {
+.#{$pr}#{$l}labels {
 }
 
-.#{$pr}#{$c}labels#{$c1}list {
+.#{$pr}#{$l}labels#{$c1}list {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -16,7 +16,7 @@
     list-style-type: none;
 }
 
-.#{$pr}#{$c}labels#{$c1}header {
+.#{$pr}#{$l}labels#{$c1}header {
     margin-bottom: .5rem;
     line-height: 1;
 
@@ -32,7 +32,7 @@
 
 }
 
-.#{$pr}#{$c}labels#{$c1}item {
+.#{$pr}#{$l}labels#{$c1}item {
     flex-grow: 0;
     margin-bottom: .5rem;
     margin-left: 0;
