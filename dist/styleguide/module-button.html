@@ -53,7 +53,7 @@
                 
 
             <article class="echo-doc-post">
-                <div class="echo-doc-post-contents styleguide-contents"><h1 id="btn" class="styleguide">echo-button</h1>
+                <div class="echo-doc-post-contents styleguide-contents"><h2 id="btn" class="echo-doc-post-title-01">echo-button</h2>
 
 <p>リンク、インライン要素、フォームのボタン要素をボタン状に表示する。<br>
 最低 <code>2.75rem = 44px</code> の高さがあることが望ましい。<br>
@@ -118,7 +118,7 @@
 </code></pre></div>
 
 
-<h2 id="btn-01-style" class="styleguide">echo-button-style-(style)</h2>
+<h2 id="btn-01-style" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-button-style-(style)</h2>
 
 <p>ボタンの外観を変更する。<br>
 <code>.echo-button-(color)</code> が付与されていない場合はボタンの色が <code>$default</code> となる。</p>
@@ -177,7 +177,7 @@
 </code></pre></div>
 
 
-<h2 id="btn-02-color" class="styleguide">echo-button-(color)</h2>
+<h2 id="btn-02-color" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-button-(color)</h2>
 
 <p><code>.echo-button-style-(style)</code> と同時に使用することを前提に、ボタンの色を変更する。<br>
 (color)は<a href="../docs/design-tokens-color.html">標準のカラーテーブル</a>を参照。</p>
@@ -260,15 +260,15 @@
 </code></pre></div>
 
 
-<h2 id="btn-03-size" class="styleguide">echo-button-(size)</h2>
+<h2 id="btn-03-size" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-button-(size)</h2>
 
 <p>ボタンのサイズを変える。(size)は、 <code>lg, xl, xxl</code> に対応している。</p>
 
-<h3>補足：xl, xxlの挙動</h3>
+<h3 class="echo-doc-post-title-02">補足：xl, xxlの挙動</h3>
 
 <p><code>.echo-button-xl, .echo-button-xxl</code> は、(breakpoint)が <code>sm</code> 以下では一段階小さくなる。（モバイル端末では、lgとxlが同じ大きさとなる）</p>
 
-<h3>note: Behavior of xl, xxl</h3>
+<h3 class="echo-doc-post-title-02">note: Behavior of xl, xxl</h3>
 
 <p><code>.echo-button-xl, .echo-button-xxl</code> decreases by one level when (breakpoint) is less than <code>sm</code>. (On mobile devices, lg and xl are same size)</p>
 
@@ -308,7 +308,7 @@
 </code></pre></div>
 
 
-<h2 id="btn-04-icon" class="styleguide">echo-button-icon-(direction)</h2>
+<h2 id="btn-04-icon" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-button-icon-(direction)</h2>
 
 <p>ボタンの右端、もしくは左端に<strong>アイコンを表示すべき領域のみを確保する。<br>
 </strong>(direction)の指定がない（ <code>.echo-button-icon</code> ）場合は右、 <code>left</code> であれば左となる。</p>
@@ -361,7 +361,7 @@
 &lt;/p&gt;
 </code></pre></div>
 
-<h2 id="btn-04-icon-name" class="styleguide">echo-button-icon-(name)</h2>
+<h2 id="btn-04-icon-name" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-button-icon-(name)</h2>
 
 <p>ボタンに実際にアイコンを表示する。右端に表示する場合は <code>.echo-button-icon-(direction)</code> は必要ない。</p>
 
@@ -426,15 +426,15 @@
 </code></pre></div>
 
 
-<h2 id="btn-05-block" class="styleguide">echo-button-block</h2>
+<h2 id="btn-05-block" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-button-block</h2>
 
 <p>ボタンを中央に寄せたブロック要素として表示する。幅は100%ではなく、一般的に考えられる幅を最大値とする。</p>
 
-<h3>補足：ボタンの余白</h3>
+<h3 class="echo-doc-post-title-02">補足：ボタンの余白</h3>
 
 <p><code>.echo-button-block, .echo-button-circle, .echo-button-square</code> では、<code>.echo-button</code> のpaddingの初期値を上書きする必要があるため、意図的にクラスを追加して優先度を上げている。</p>
 
-<h3>note: Padding in button</h3>
+<h3 class="echo-doc-post-title-02">note: Padding in button</h3>
 
 <p>In <code>.echo-button-block, .echo-button-circle, .echo-button-square</code>, need to override the default padding of <code>.echo-button</code>. For this reason, intentionally add classes to increase priority.</p>
 
@@ -500,7 +500,7 @@
 &lt;/p&gt;
 </code></pre></div>
 
-<h2 id="btn-06-oval" class="styleguide">echo-button-oval</h2>
+<h2 id="btn-06-oval" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-button-oval</h2>
 
 <p>ボタンを小判型にする。</p>
 <div class="example">
@@ -600,7 +600,7 @@
 </code></pre></div>
 
 
-<h2 id="btn-07-circle" class="styleguide">echo-button-circle</h2>
+<h2 id="btn-07-circle" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-button-circle</h2>
 
 <p>ボタンを正円で表示する。<br>
 <code>.echo-button-icon-(direction)</code> は使用できない。<br>
@@ -692,7 +692,7 @@
 </code></pre></div>
 
 
-<h2 id="btn-08-square" class="styleguide">echo-button-square</h2>
+<h2 id="btn-08-square" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-button-square</h2>
 
 <p>ボタンを正方形で表示する。<br>
 <code>.echo-button-icon-(direction)</code> は使用できない。<br>

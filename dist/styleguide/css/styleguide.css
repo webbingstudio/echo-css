@@ -784,6 +784,34 @@ echo-doc-anchor
 
 /*
 --------------------
+echo-doc-label
+--------------------
+*/
+
+.echo-doc-label {
+  position: relative;
+  top: -.1em;
+  display: inline-flex;
+  min-height: 1.5em;
+  align-items: center;
+  justify-content: center;
+  padding: 0 .5em;
+  background-color: #1976d2;
+  color: #fff;
+  font-size: .6em;
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: .05em;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.echo-doc-label.echo-doc-label-sub {
+}
+
+
+/*
+--------------------
 echo-doc-post
 --------------------
 */
@@ -954,41 +982,6 @@ body.view-home .echo-doc-header-brand {
 body.view-home .echo-doc-header-nav .echo-nav-item:first-child {
     position: absolute;
     top: -999px;
-}
-
-
-
-/*
-hologram styleguide
-*/
-
-h1.styleguide {
-    margin: 3rem 0 1rem;
-    padding-top: .5rem;
-    border-top: 0.0625rem solid #ccc;
-    font-size: 2rem;
-    line-height: 1.25;
-}
-
-h2.styleguide {
-    margin: 2rem 0 1rem;
-    font-size: 1.5rem;
-    line-height: 1.25;
-}
-
-h2.styleguide:before {
-    content: "sub class";
-    font-size: .5em;
-    display: inline-block;
-    margin-right: 1em;
-    padding: .25em .5em;
-    background-color: #59aa6c;
-    color: #fff;
-    font-weight: 300;
-    line-height: 1;
-    border-radius: .1em;
-    vertical-align: middle;
-    transform:translate(0, -.1em);
 }
 
 .styleguide-contents dfn:not([class]) {

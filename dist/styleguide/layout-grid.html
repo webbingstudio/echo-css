@@ -41,12 +41,12 @@
             </nav><!-- /.p-anchor -->
                 
             <article class="echo-doc-post">
-                <div class="echo-doc-post-contents styleguide-contents"><h1 id="grid" class="styleguide">echo-grid-row</h1>
+                <div class="echo-doc-post-contents styleguide-contents"><h2 id="grid" class="echo-doc-post-title-01">echo-grid-row</h2>
 
 <p>flexboxによるグリッドのグループを作成する。 <code>ul ,ol</code> にも使用できる。<br>
 命名規則をbootstrapと同様にしたい場合は、 <code>/_scss/_config_advance.scss</code> の変数 <code>$row</code> を変更すること。</p>
 
-<h3>補足：使用頻度が低いクラスの除外</h3>
+<h3 class="echo-doc-post-title-02">補足：使用頻度が低いクラスの除外</h3>
 
 <p>以下のクラスは、使用頻度が非常に低いため、このフレームワークでは除外されている。<br>
 <code>/_scss/_config_advance.scss</code> の変数 <code>$optimize</code> を <code>false</code> に変更すると、すべてのクラスに対応する。</p>
@@ -57,7 +57,7 @@
 <li>.echo-grid-col-offset-(breakpoint)-11</li>
 </ul>
 
-<h3>note: Exclusion of less frequently used classes</h3>
+<h3 class="echo-doc-post-title-02">note: Exclusion of less frequently used classes</h3>
 
 <p>The following classes are excluded in this framework because they are used very infrequently.<br>
 Variable in <code>/_scss/_config_advance.scss</code> Changing <code>$optimize</code> to <code>false</code> corresponds to all classes.</p>
@@ -90,7 +90,7 @@ Variable in <code>/_scss/_config_advance.scss</code> Changing <code>$optimize</c
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </pre></div>
-<h2 id="grid-01-row-size" class="styleguide">echo-grid-row-(size)</h2>
+<h2 id="grid-01-row-size" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-grid-row-(size)</h2>
 
 <p>flexboxによるグリッドで余白が異なるグループを作成する。<br>
 (size)は<code>0, sm, lg</code> に対応している。<br>
@@ -167,7 +167,7 @@ Bootstrap4の <code>.no-gutters</code> を <code>.echo-grid-row-0</code> のエ�
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </pre></div>
-<h1 id="grid-02-col" class="styleguide">echo-grid-col</h1>
+<h2 id="grid-02-col" class="echo-doc-post-title-01">echo-grid-col</h2>
 
 <p>flexboxによるグリッドのセルを作成する。<br>
 このクラス単独では均等幅となり、(breakpoint)が <code>sm</code> 以下でグリッドが解除される。  </p>
@@ -224,7 +224,7 @@ Bootstrap4の <code>.no-gutters</code> を <code>.echo-grid-row-0</code> のエ�
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </pre></div>
-<h2 id="grid-04-order" class="styleguide">echo-grid-col-order-(breakpoint)-(first or last or number)</h2>
+<h2 id="grid-04-order" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-grid-col-order-(breakpoint)-(first or last or number)</h2>
 
 <p>flexboxによるグリッドのセルを、指定した順番にする。<br>
 (breakpoint)の指定がない場合は、常にその順番となる。<br>
@@ -318,7 +318,7 @@ Bootstrap4の <code>.no-gutters</code> を <code>.echo-grid-row-0</code> のエ�
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </pre></div>
-<h2 id="grid-05-offset" class="styleguide">echo-grid-col-offset-(breakpoint)-(column)</h2>
+<h2 id="grid-05-offset" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-grid-col-offset-(breakpoint)-(column)</h2>
 
 <p>flexboxによるグリッドのセルの開始位置を、<code>(column) / 12</code>の割合だけ右にずらす。<br>
 <code>echo-grid-col-(column)</code> と、<code>echo-grid-col-offset-(column)</code> の合計値が<code>12</code>を超えた場合は、offsetの値が優先される。<br>
@@ -355,7 +355,7 @@ Bootstrap4の <code>.no-gutters</code> を <code>.echo-grid-row-0</code> のエ�
 <span class="nt">&lt;/div&gt;</span>
 
 </pre></div>
-<h1 id="grid-03-col-column" class="styleguide">echo-grid-col-(breakpoint)-(column)</h1>
+<h2 id="grid-03-col-column" class="echo-doc-post-title-01">echo-grid-col-(breakpoint)-(column)</h2>
 
 <p>flexboxによるグリッドのセルの幅を、<code>(column) / 12</code>の割合にする。<br>
 <strong>シングルクラス</strong>となっている（echo-grid-colを常に付与する必要はない）。<br>
