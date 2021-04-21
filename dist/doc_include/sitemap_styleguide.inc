@@ -55,6 +55,8 @@
                 <li class="echo-nav-item"><a href="./layout-cards.html" class="echo-nav-label">cards</a></li>
                 <li class="echo-nav-item"><a href="./layout-headlines.html" class="echo-nav-label">headlines</a></li>
                 <li class="echo-nav-item"><a href="./layout-medias.html" class="echo-nav-label">medias</a></li>
+                <li class="echo-nav-item"><a href="./layout-buttons.html" class="echo-nav-label">buttons</a></li>
+                <li class="echo-nav-item"><a href="./layout-forms.html" class="echo-nav-label">forms</a></li>
             </ul>
         </li>
 
