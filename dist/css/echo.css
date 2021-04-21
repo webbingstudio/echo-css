@@ -5671,11 +5671,22 @@ echo-container-lg
 
 /*
 --------------------
+echo-grid
+--------------------
+*/
+.echo-grid {
+  overflow: hidden;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+--------------------
 echo-grid-row
 --------------------
 */
 .echo-grid-row {
-  overflow: hidden;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;

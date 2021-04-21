@@ -139,13 +139,16 @@ $u-wrap:    "#" + $pr + "document" !default;
 // Name
 // -----------------------------------------
 
+// grid-wrap-name
+$grid: 'grid' !default;
+
 // grid-row-name
-// ex. row(bootstrap compatible), wrap...
-$row: $l + 'grid' + $c1 + 'row' !default;
+// ex. row(bootstrap compatible)
+$row: $l + $grid + $c1 + 'row' !default;
 
 // grid-col-name
-// ex. col(bootstrap compatible), cel...
-$col: $l + 'grid' + $c1 + 'col' !default;
+// ex. col(bootstrap compatible)
+$col: $l + $grid + $c1 + 'col' !default;
 
 // nav-current-name
 // ex. is-active, active, current, cur, stay...

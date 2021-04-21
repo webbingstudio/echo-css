@@ -1,11 +1,23 @@
 /*
 --------------------
+#{$pr}#{$grid}
+--------------------
+*/
+
+.#{$pr}#{$grid} {
+    overflow: hidden;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+--------------------
 #{$pr}#{$row}
 --------------------
 */
 
 .#{$pr}#{$row} {
-    overflow: hidden;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;

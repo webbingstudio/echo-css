@@ -25,12 +25,14 @@
             <nav class="echo-doc-anchor">
                 <ul class="echo-list echo-list-horizontal">
 
-                    <li class="echo-list-item"><a href="#grid" class="js-scrollto">echo-grid-row</a></li>
-                    
-                    <li class="echo-list-item"><a href="#grid-01-row-size" class="js-scrollto">echo-grid-row-(size)</a></li>
-                    
+                    <li class="echo-list-item"><a href="#grid" class="js-scrollto">echo-grid</a></li>
+
+                    <li class="echo-list-item"><a href="#grid-00-row" class="js-scrollto">echo-grid-row</a></li>
+
                     <li class="echo-list-item"><a href="#grid-02-col" class="js-scrollto">echo-grid-col</a></li>
                     
+                    <li class="echo-list-item"><a href="#grid-01-row-size" class="js-scrollto">echo-grid-row-(size)</a></li>
+
                     <li class="echo-list-item"><a href="#grid-04-order" class="js-scrollto">echo-grid-col-order-(breakpoint)-(first or last or number)</a></li>
                     
                     <li class="s-anchor-item"><a href="#grid-05-offset" class="js-scrollto">echo-grid-col-offset-(breakpoint)-(column)</a></li>
@@ -39,12 +41,26 @@
 
                 </ul>
             </nav><!-- /.p-anchor -->
-                
-            <article class="echo-doc-post">
-                <div class="echo-doc-post-contents styleguide-contents"><h2 id="grid" class="echo-doc-post-title-01">echo-grid-row</h2>
 
-<p>flexboxによるグリッドのグループを作成する。 <code>ul ,ol</code> にも使用できる。<br>
+            <article class="echo-doc-post">
+                <div class="echo-doc-post-contents styleguide-contents">
+
+<h2 id="grid" class="echo-doc-post-title-01">echo-grid</h2>
+
+<p>flexboxによる、柔軟なグリッドのグループを包括する。<br>
+グリッドの仕様上、 <code>overflow: hidden</code> プロパティを付与した、この要素で包括することが望ましい。<br>
+（ <code>echo-grid-row</code> だけでは、 <code>echo-grid-row-lg</code> でグリッド余白を広げたときに水平スクロールバーが出てしまう）</p>
+
+<h2 id="grid-00-row" class="echo-doc-post-title-01">echo-grid-row</h2>
+
+<p>グリッドのグループを作成する。 <code>ul ,ol</code> にも使用できる。<br>
 命名規則をbootstrapと同様にしたい場合は、 <code>/_scss/_config_advance.scss</code> の変数 <code>$row</code> を変更すること。</p>
+
+<h2 id="grid-02-col" class="echo-doc-post-title-01">echo-grid-col</h2>
+
+<p>グリッドのセルを作成する。<br>
+このクラス単独では均等幅となり、(breakpoint)が <code>sm</code> 以下でグリッドが解除される。  </p>
+
 
 <h3 class="echo-doc-post-title-02">補足：使用頻度が低いクラスの除外</h3>
 
@@ -54,7 +70,6 @@
 <ul>
 <li>.echo-grid-col-(breakpoint)-1</li>
 <li>.echo-grid-col-(breakpoint)-11</li>
-<li>.echo-grid-col-offset-(breakpoint)-11</li>
 </ul>
 
 <h3 class="echo-doc-post-title-02">note: Exclusion of less frequently used classes</h3>
@@ -65,423 +80,116 @@ Variable in <code>/_scss/_config_advance.scss</code> Changing <code>$optimize</c
 <ul>
 <li>.echo-grid-col-(breakpoint)-1</li>
 <li>.echo-grid-col-(breakpoint)-11</li>
-<li>.echo-grid-col-offset-(breakpoint)-11</li>
 </ul>
-<div class="example"><div class="echo-grid-row">
-    <div class="echo-grid-col">
-        <div style="padding: 1rem; background-color: #ddf6bb; height: 100%;">echo-grid-col<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="echo-grid-col">
-        <div style="padding: 1rem; background-color: #ddf6bb; height: 100%;">echo-grid-col<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。</div>
-    </div>
-    <div class="echo-grid-col">
-        <div style="padding: 1rem; background-color: #ddf6bb; height: 100%;">echo-grid-col<br>ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。</div>
-    </div>
-</div>
-</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-row"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #ddf6bb; height: 100%;"</span><span class="nt">&gt;</span>echo-grid-col<span class="nt">&lt;br&gt;</span>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #ddf6bb; height: 100%;"</span><span class="nt">&gt;</span>echo-grid-col<span class="nt">&lt;br&gt;</span>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #ddf6bb; height: 100%;"</span><span class="nt">&gt;</span>echo-grid-col<span class="nt">&lt;br&gt;</span>ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</pre></div>
-<h2 id="grid-01-row-size" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-grid-row-(size)</h2>
 
-<p>flexboxによるグリッドで余白が異なるグループを作成する。<br>
-(size)は<code>0, sm, lg</code> に対応している。<br>
-Bootstrap4の <code>.no-gutters</code> を <code>.echo-grid-row-0</code> のエイリアスとしている。<br>
-命名規則をbootstrapと同様にしたい場合は、 <code>/_scss/_\config_advance.scss</code> の変数 <code>$row</code> を変更すること。</p>
-<div class="example"><div class="echo-grid-row echo-grid-row-0" style="margin-bottom: 2rem;">
-    <div class="echo-grid-col">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">echo-grid-row-0<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="echo-grid-col">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%; opacity: 0.8;">echo-grid-row-0<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="echo-grid-col">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">echo-grid-row-0<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-</div>
 
-<div class="echo-grid-row echo-grid-row-sm" style="margin-bottom: 2rem;">
-    <div class="echo-grid-col">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">echo-grid-row-sm<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="echo-grid-col">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%; opacity: 0.8;">echo-grid-row-sm<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="echo-grid-col">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">echo-grid-row-sm<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-</div>
+<p class="echo-title echo-title-level-4 m-style-a echo-margin-top-xl echo-margin-bottom-sm">一般的な均等幅のグリッド</p>
 
-<div class="echo-grid-row echo-grid-row-lg">
-    <div class="echo-grid-col">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">echo-grid-row-lg<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="echo-grid-col">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%; opacity: 0.8;">echo-grid-row-lg<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="echo-grid-col">
-        <div style="padding: 1rem; background-color: #ffdd99; height: 100%;">echo-grid-row-lg<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-</div>
-</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-row echo-grid-row-0"</span> <span class="na">style=</span><span class="s">"margin-bottom: 2rem;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #ffdd99; height: 100%;"</span><span class="nt">&gt;</span>echo-grid-row-0<span class="nt">&lt;br&gt;</span>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #ffdd99; height: 100%; opacity: 0.8;"</span><span class="nt">&gt;</span>echo-grid-row-0<span class="nt">&lt;br&gt;</span>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #ffdd99; height: 100%;"</span><span class="nt">&gt;</span>echo-grid-row-0<span class="nt">&lt;br&gt;</span>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
+<div class="echo-grid">
+    <div class="echo-grid-row">
+        <div class="echo-grid-col">
+            <div class="echo-bg-info echo-bg-fade echo-padding-sm" style="height: 100%;">echo-grid-col<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+        </div><!-- /.echo-grid-col -->
+        <div class="echo-grid-col">
+            <div class="echo-bg-info echo-bg-fade echo-padding-sm" style="height: 100%;">echo-grid-col<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+        </div><!-- /.echo-grid-col -->
+    </div><!-- /.echo-grid-row -->
+</div><!-- /.echo-grid -->
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-row echo-grid-row-sm"</span> <span class="na">style=</span><span class="s">"margin-bottom: 2rem;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #ffdd99; height: 100%;"</span><span class="nt">&gt;</span>echo-grid-row-sm<span class="nt">&lt;br&gt;</span>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #ffdd99; height: 100%; opacity: 0.8;"</span><span class="nt">&gt;</span>echo-grid-row-sm<span class="nt">&lt;br&gt;</span>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #ffdd99; height: 100%;"</span><span class="nt">&gt;</span>echo-grid-row-sm<span class="nt">&lt;br&gt;</span>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
+<hr class="echo-margin-y-lg">
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-row echo-grid-row-lg"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #ffdd99; height: 100%;"</span><span class="nt">&gt;</span>echo-grid-row-lg<span class="nt">&lt;br&gt;</span>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #ffdd99; height: 100%; opacity: 0.8;"</span><span class="nt">&gt;</span>echo-grid-row-lg<span class="nt">&lt;br&gt;</span>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #ffdd99; height: 100%;"</span><span class="nt">&gt;</span>echo-grid-row-lg<span class="nt">&lt;br&gt;</span>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</pre></div>
-<h2 id="grid-02-col" class="echo-doc-post-title-01">echo-grid-col</h2>
+<div class="echo-grid">
+    <div class="echo-grid-row">
+        <div class="echo-grid-col">
+            <div class="echo-bg-info echo-bg-fade echo-padding-sm" style="height: 100%;">echo-grid-col<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+        </div><!-- /.echo-grid-col -->
+        <div class="echo-grid-col">
+            <div class="echo-bg-info echo-bg-fade echo-padding-sm" style="height: 100%;">echo-grid-col<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+        </div><!-- /.echo-grid-col -->
+        <div class="echo-grid-col">
+            <div class="echo-bg-info echo-bg-fade echo-padding-sm" style="height: 100%;">echo-grid-col<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+        </div><!-- /.echo-grid-col -->
+    </div><!-- /.echo-grid-row -->
+</div><!-- /.echo-grid -->
 
-<p>flexboxによるグリッドのセルを作成する。<br>
-このクラス単独では均等幅となり、(breakpoint)が <code>sm</code> 以下でグリッドが解除される。  </p>
-<div class="example"><div class="echo-grid-row" style="margin-bottom: 2rem;">
-    <div class="echo-grid-col">
-        <div style="padding: 1rem; background-color: #ddbbf6; height: 100%;">echo-grid-col<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-</div>
+<hr class="echo-margin-y-lg">
 
-<div class="echo-grid-row" style="margin-bottom: 2rem;">
-    <div class="echo-grid-col">
-        <div style="padding: 1rem; background-color: #ddbbf6; height: 100%;">echo-grid-col<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="echo-grid-col">
-        <div style="padding: 1rem; background-color: #ddbbf6; height: 100%;">echo-grid-col<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-</div>
+<div class="echo-grid">
+    <div class="echo-grid-row">
+        <div class="echo-grid-col">
+            <div class="echo-bg-info echo-bg-fade echo-padding-sm" style="height: 100%;">echo-grid-col<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
+        </div><!-- /.echo-grid-col -->
+        <div class="echo-grid-col">
+            <div class="echo-bg-info echo-bg-fade echo-padding-sm" style="height: 100%;">echo-grid-col<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
+        </div><!-- /.echo-grid-col -->
+        <div class="echo-grid-col">
+            <div class="echo-bg-info echo-bg-fade echo-padding-sm" style="height: 100%;">echo-grid-col<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
+        </div><!-- /.echo-grid-col -->
+        <div class="echo-grid-col">
+            <div class="echo-bg-info echo-bg-fade echo-padding-sm" style="height: 100%;">echo-grid-col<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。</div>
+        </div><!-- /.echo-grid-col -->
+    </div><!-- /.echo-grid-row -->
+</div><!-- /.echo-grid -->
 
-<div class="echo-grid-row">
-    <div class="echo-grid-col">
-        <div style="padding: 1rem; background-color: #ddbbf6; height: 100%;">echo-grid-col<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="echo-grid-col">
-        <div style="padding: 1rem; background-color: #ddbbf6; height: 100%;">echo-grid-col<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="echo-grid-col">
-        <div style="padding: 1rem; background-color: #ddbbf6; height: 100%;">echo-grid-col<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-</div>
-</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-row"</span> <span class="na">style=</span><span class="s">"margin-bottom: 2rem;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #ddbbf6; height: 100%;"</span><span class="nt">&gt;</span>echo-grid-col<span class="nt">&lt;br&gt;</span>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-grid"&gt;
+    &lt;div class="echo-grid-row"&gt;
+        &lt;div class="echo-grid-col"&gt;
+            &lt;div class="echo-bg-info echo-bg-fade echo-padding-sm" style="height: 100%;"&gt;echo-grid-col&lt;br&gt;吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/div&gt;
+        &lt;/div&gt;&lt;!-- /.echo-grid-col --&gt;
+        &lt;div class="echo-grid-col"&gt;
+            &lt;div class="echo-bg-info echo-bg-fade echo-padding-sm" style="height: 100%;"&gt;echo-grid-col&lt;br&gt;吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。&lt;/div&gt;
+        &lt;/div&gt;&lt;!-- /.echo-grid-col --&gt;
+    &lt;/div&gt;&lt;!-- /.echo-grid-row --&gt;
+&lt;/div&gt;&lt;!-- /.echo-grid --&gt;
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-row"</span> <span class="na">style=</span><span class="s">"margin-bottom: 2rem;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #ddbbf6; height: 100%;"</span><span class="nt">&gt;</span>echo-grid-col<span class="nt">&lt;br&gt;</span>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #ddbbf6; height: 100%;"</span><span class="nt">&gt;</span>echo-grid-col<span class="nt">&lt;br&gt;</span>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
+&lt;hr class="echo-margin-y-lg"&gt;
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-row"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #ddbbf6; height: 100%;"</span><span class="nt">&gt;</span>echo-grid-col<span class="nt">&lt;br&gt;</span>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #ddbbf6; height: 100%;"</span><span class="nt">&gt;</span>echo-grid-col<span class="nt">&lt;br&gt;</span>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #ddbbf6; height: 100%;"</span><span class="nt">&gt;</span>echo-grid-col<span class="nt">&lt;br&gt;</span>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</pre></div>
-<h2 id="grid-04-order" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-grid-col-order-(breakpoint)-(first or last or number)</h2>
+&lt;div class="echo-grid"&gt;
+    &lt;div class="echo-grid-row"&gt;
+        &lt;div class="echo-grid-col"&gt;
+            &lt;div class="echo-bg-info echo-bg-fade echo-padding-sm" style="height: 100%;"&gt;echo-grid-col&lt;br&gt;吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/div&gt;
+        &lt;/div&gt;&lt;!-- /.echo-grid-col --&gt;
+        &lt;div class="echo-grid-col"&gt;
+            &lt;div class="echo-bg-info echo-bg-fade echo-padding-sm" style="height: 100%;"&gt;echo-grid-col&lt;br&gt;吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。&lt;/div&gt;
+        &lt;/div&gt;&lt;!-- /.echo-grid-col --&gt;
+        &lt;div class="echo-grid-col"&gt;
+            &lt;div class="echo-bg-info echo-bg-fade echo-padding-sm" style="height: 100%;"&gt;echo-grid-col&lt;br&gt;しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。&lt;/div&gt;
+        &lt;/div&gt;&lt;!-- /.echo-grid-col --&gt;
+    &lt;/div&gt;&lt;!-- /.echo-grid-row --&gt;
+&lt;/div&gt;&lt;!-- /.echo-grid --&gt;
 
-<p>flexboxによるグリッドのセルを、指定した順番にする。<br>
-(breakpoint)の指定がない場合は、常にその順番となる。<br>
-(breakpoint)の指定がある場合は、(breakpoint)<strong>以上</strong>のときに、指定した順番となる。</p>
-<div class="example"><div class="echo-grid-row" style="margin-bottom: 2rem;">
-    <div class="echo-grid-col-order-last echo-grid-col-3">
-        <div style="padding: 1rem; background-color: #f8ccdd; height: 100%;">1:<br>echo-grid-col-order-last<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="echo-grid-col-3">
-        <div style="padding: 1rem; background-color: #f8ccdd; height: 100%;">2:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="echo-grid-col-order-first echo-grid-col-3">
-        <div style="padding: 1rem; background-color: #f8ccdd; height: 100%;">3:<br>echo-grid-col-order-first<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="echo-grid-col-3">
-        <div style="padding: 1rem; background-color: #f8ccdd; height: 100%;">4:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-</div>
+&lt;hr class="echo-margin-y-lg"&gt;
 
-<div class="echo-grid-row" style="margin-bottom: 2rem;">
-    <div class="echo-grid-col-order-3 echo-grid-col-3">
-        <div style="padding: 1rem; background-color: #bbd3ff; height: 100%;">1:<br>echo-grid-col-order-3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="echo-grid-col-order-1 echo-grid-col-3">
-        <div style="padding: 1rem; background-color: #bbd3ff; height: 100%;">2:<br>echo-grid-col-order-1<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="echo-grid-col-order-4 echo-grid-col-3">
-        <div style="padding: 1rem; background-color: #bbd3ff; height: 100%;">3:<br>echo-grid-col-order-4<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="echo-grid-col-order-2 echo-grid-col-3">
-        <div style="padding: 1rem; background-color: #bbd3ff; height: 100%;">4:<br>echo-grid-col-order-2<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-</div>
+&lt;div class="echo-grid"&gt;
+    &lt;div class="echo-grid-row"&gt;
+        &lt;div class="echo-grid-col"&gt;
+            &lt;div class="echo-bg-info echo-bg-fade echo-padding-sm" style="height: 100%;"&gt;echo-grid-col&lt;br&gt;吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/div&gt;
+        &lt;/div&gt;&lt;!-- /.echo-grid-col --&gt;
+        &lt;div class="echo-grid-col"&gt;
+            &lt;div class="echo-bg-info echo-bg-fade echo-padding-sm" style="height: 100%;"&gt;echo-grid-col&lt;br&gt;吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。&lt;/div&gt;
+        &lt;/div&gt;&lt;!-- /.echo-grid-col --&gt;
+        &lt;div class="echo-grid-col"&gt;
+            &lt;div class="echo-bg-info echo-bg-fade echo-padding-sm" style="height: 100%;"&gt;echo-grid-col&lt;br&gt;しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。&lt;/div&gt;
+        &lt;/div&gt;&lt;!-- /.echo-grid-col --&gt;
+        &lt;div class="echo-grid-col"&gt;
+            &lt;div class="echo-bg-info echo-bg-fade echo-padding-sm" style="height: 100%;"&gt;echo-grid-col&lt;br&gt;掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。&lt;/div&gt;
+        &lt;/div&gt;&lt;!-- /.echo-grid-col --&gt;
+    &lt;/div&gt;&lt;!-- /.echo-grid-row --&gt;
+&lt;/div&gt;&lt;!-- /.echo-grid --&gt;
+</code></pre></div>
 
-<div class="echo-grid-row">
-    <div class="echo-grid-col-order-sm-last echo-grid-col-3">
-        <div style="padding: 1rem; background-color: #e6d6aa; height: 100%;">1:<br>echo-grid-col-order-sm-last<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="echo-grid-col-3">
-        <div style="padding: 1rem; background-color: #e6d6aa; height: 100%;">2:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="echo-grid-col-order-xl-first echo-grid-col-3">
-        <div style="padding: 1rem; background-color: #e6d6aa; height: 100%;">3:<br>echo-grid-col-order-xl-first<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="echo-grid-col-3">
-        <div style="padding: 1rem; background-color: #e6d6aa; height: 100%;">4:<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-</div>
-</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-row"</span> <span class="na">style=</span><span class="s">"margin-bottom: 2rem;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col-order-last echo-grid-col-3"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #f8ccdd; height: 100%;"</span><span class="nt">&gt;</span>1:<span class="nt">&lt;br&gt;</span>echo-grid-col-order-last<span class="nt">&lt;br&gt;</span>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col-3"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #f8ccdd; height: 100%;"</span><span class="nt">&gt;</span>2:<span class="nt">&lt;br&gt;</span>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col-order-first echo-grid-col-3"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #f8ccdd; height: 100%;"</span><span class="nt">&gt;</span>3:<span class="nt">&lt;br&gt;</span>echo-grid-col-order-first<span class="nt">&lt;br&gt;</span>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col-3"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #f8ccdd; height: 100%;"</span><span class="nt">&gt;</span>4:<span class="nt">&lt;br&gt;</span>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-row"</span> <span class="na">style=</span><span class="s">"margin-bottom: 2rem;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col-order-3 echo-grid-col-3"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #bbd3ff; height: 100%;"</span><span class="nt">&gt;</span>1:<span class="nt">&lt;br&gt;</span>echo-grid-col-order-3<span class="nt">&lt;br&gt;</span>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col-order-1 echo-grid-col-3"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #bbd3ff; height: 100%;"</span><span class="nt">&gt;</span>2:<span class="nt">&lt;br&gt;</span>echo-grid-col-order-1<span class="nt">&lt;br&gt;</span>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col-order-4 echo-grid-col-3"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #bbd3ff; height: 100%;"</span><span class="nt">&gt;</span>3:<span class="nt">&lt;br&gt;</span>echo-grid-col-order-4<span class="nt">&lt;br&gt;</span>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col-order-2 echo-grid-col-3"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #bbd3ff; height: 100%;"</span><span class="nt">&gt;</span>4:<span class="nt">&lt;br&gt;</span>echo-grid-col-order-2<span class="nt">&lt;br&gt;</span>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-row"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col-order-sm-last echo-grid-col-3"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #e6d6aa; height: 100%;"</span><span class="nt">&gt;</span>1:<span class="nt">&lt;br&gt;</span>echo-grid-col-order-sm-last<span class="nt">&lt;br&gt;</span>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col-3"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #e6d6aa; height: 100%;"</span><span class="nt">&gt;</span>2:<span class="nt">&lt;br&gt;</span>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col-order-xl-first echo-grid-col-3"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #e6d6aa; height: 100%;"</span><span class="nt">&gt;</span>3:<span class="nt">&lt;br&gt;</span>echo-grid-col-order-xl-first<span class="nt">&lt;br&gt;</span>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col-3"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #e6d6aa; height: 100%;"</span><span class="nt">&gt;</span>4:<span class="nt">&lt;br&gt;</span>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</pre></div>
-<h2 id="grid-05-offset" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-grid-col-offset-(breakpoint)-(column)</h2>
 
-<p>flexboxによるグリッドのセルの開始位置を、<code>(column) / 12</code>の割合だけ右にずらす。<br>
-<code>echo-grid-col-(column)</code> と、<code>echo-grid-col-offset-(column)</code> の合計値が<code>12</code>を超えた場合は、offsetの値が優先される。<br>
-(breakpoint)の指定がない場合は、常にその位置となる。<br>
-(breakpoint)の指定がある場合は、(breakpoint)<strong>以上</strong>のときに、指定した位置となる。</p>
-<div class="example"><div class="echo-grid-row" style="margin-bottom: 2rem;">
-    <div class="echo-grid-col-offset-1 echo-grid-col-10">
-        <div style="padding: 1rem; background-color: #aaeccc; height: 100%;">echo-grid-col-offset-3<br>echo-grid-col-10<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-</div>
 
-<div class="echo-grid-row" style="margin-bottom: 2rem;">
-    <div class="echo-grid-col-offset-lg-8 echo-grid-col-6">
-        <div style="padding: 1rem; background-color: #aaeccc; height: 100%;">echo-grid-col-offset-lg-8<br>echo-grid-col-6<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="echo-grid-col-offset-lg-4 echo-grid-col-offset-md-8 echo-grid-col-3">
-        <div style="padding: 1rem; background-color: #aaeccc; height: 100%;">echo-grid-col-offset-lg-4<br>echo-grid-col-offset-md-8<br>echo-grid-col-3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-</div>
+<div class="codeblock"><pre><code class="language-markup"></code></pre></div>
 
-</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-row"</span> <span class="na">style=</span><span class="s">"margin-bottom: 2rem;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col-offset-1 echo-grid-col-10"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #aaeccc; height: 100%;"</span><span class="nt">&gt;</span>echo-grid-col-offset-3<span class="nt">&lt;br&gt;</span>echo-grid-col-10<span class="nt">&lt;br&gt;</span>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
+<div class="codeblock"><pre><code class="language-markup"></code></pre></div>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-row"</span> <span class="na">style=</span><span class="s">"margin-bottom: 2rem;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col-offset-lg-8 echo-grid-col-6"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #aaeccc; height: 100%;"</span><span class="nt">&gt;</span>echo-grid-col-offset-lg-8<span class="nt">&lt;br&gt;</span>echo-grid-col-6<span class="nt">&lt;br&gt;</span>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col-offset-lg-4 echo-grid-col-offset-md-8 echo-grid-col-3"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #aaeccc; height: 100%;"</span><span class="nt">&gt;</span>echo-grid-col-offset-lg-4<span class="nt">&lt;br&gt;</span>echo-grid-col-offset-md-8<span class="nt">&lt;br&gt;</span>echo-grid-col-3<span class="nt">&lt;br&gt;</span>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
+<div class="codeblock"><pre><code class="language-markup"></code></pre></div>
 
-</pre></div>
-<h2 id="grid-03-col-column" class="echo-doc-post-title-01">echo-grid-col-(breakpoint)-(column)</h2>
 
-<p>flexboxによるグリッドのセルの幅を、<code>(column) / 12</code>の割合にする。<br>
-<strong>シングルクラス</strong>となっている（echo-grid-colを常に付与する必要はない）。<br>
-(breakpoint)の指定がない場合は、常にその幅となる。<br>
-(breakpoint)の指定がある場合は、(breakpoint)<strong>以上</strong>のときに、指定した幅となる。</p>
-<div class="example"><h3 class="echo-text-lg">(column)のみ指定している場合</h3>
-<div class="echo-grid-row" style="margin-bottom: 2rem;">
-    <div class="echo-grid-col-3">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">echo-grid-col-3<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="echo-grid-col-3">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">echo-grid-col-3<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="echo-grid-col-3">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">echo-grid-col-3<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-</div>
 
-<h3 class="echo-text-lg echo-margin-top-lg">(column)と(breakpoint)の両方を指定している場合</h3>
-<p>(column)が <code>12</code> の場合は、指定した(breakpoint)以上で幅100%となる。</p>
-<div class="echo-grid-row" style="margin-bottom: 2rem;">
-    <div class="echo-grid-col-lg-2 echo-grid-col-xl-12">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">echo-grid-col-lg-2 echo-grid-col-xl-12<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="echo-grid-col-lg-6 echo-grid-col-xl-12">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">echo-grid-col-lg-6 echo-grid-col-xl-12<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="echo-grid-col-lg-4 echo-grid-col-xl-12">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">echo-grid-col-12 echo-grid-col-lg-4<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-</div>
-
-<h3 class="echo-text-lg echo-margin-top-lg">(column)の指定があるセルと、ないセルが同列に混在している場合</h3>
-<p>(column)の指定がないセルは、常に空間を埋めるように伸縮しようとする。</p>
-<div class="echo-grid-row" style="margin-bottom: 2rem;">
-    <div class="echo-grid-col-sm-4">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">echo-grid-col-sm-4<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="echo-grid-col">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">echo-grid-col<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-</div>
-
-<h3 class="echo-text-lg echo-margin-top-lg">複雑な指定の例</h3>
-<p>ウィンドウ幅が狭くなるに従って、段組が変化する。セルが複数行になる場合は、echo-grid-colにはmarginではなくpaddingを付与する。</p>
-<div class="echo-grid-row">
-    <div class="echo-grid-col-6 echo-grid-col-sm-4 echo-grid-col-lg-3 echo-grid-col-xxl-2" style="padding-bottom: 1rem;">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">echo-grid-col-6 echo-grid-col-sm-4 echo-grid-col-lg-3 echo-grid-col-xxl-2<br>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</div>
-    </div>
-    <div class="echo-grid-col-6 echo-grid-col-sm-4 echo-grid-col-lg-3 echo-grid-col-xxl-2" style="padding-bottom: 1rem;">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">echo-grid-col-6 echo-grid-col-sm-4 echo-grid-col-lg-3 echo-grid-col-xxl-2<br>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</div>
-    </div>
-    <div class="echo-grid-col-6 echo-grid-col-sm-4 echo-grid-col-lg-3 echo-grid-col-xxl-2" style="padding-bottom: 1rem;">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">echo-grid-col-6 echo-grid-col-sm-4 echo-grid-col-lg-3 echo-grid-col-xxl-2<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-    <div class="echo-grid-col-6 echo-grid-col-sm-4 echo-grid-col-lg-3 echo-grid-col-xxl-2" style="padding-bottom: 1rem;">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">echo-grid-col-6 echo-grid-col-sm-4 echo-grid-col-lg-3 echo-grid-col-xxl-2<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
-    </div>
-    <div class="echo-grid-col-6 echo-grid-col-sm-4 echo-grid-col-lg-3 echo-grid-col-xxl-2" style="padding-bottom: 1rem;">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">echo-grid-col-6 echo-grid-col-sm-4 echo-grid-col-lg-3 echo-grid-col-xxl-2<br>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</div>
-    </div>
-    <div class="echo-grid-col-6 echo-grid-col-sm-4 echo-grid-col-lg-3 echo-grid-col-xxl-2" style="padding-bottom: 1rem;">
-        <div style="padding: 1rem; background-color: #ccddff; height: 100%;">echo-grid-col-6 echo-grid-col-sm-4 echo-grid-col-lg-3 echo-grid-col-xxl-2<br>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</div>
-    </div>
-</div>
-</div><div class="codeblock"><pre><span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"echo-text-lg"</span><span class="nt">&gt;</span>(column)のみ指定している場合<span class="nt">&lt;/h3&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-row"</span> <span class="na">style=</span><span class="s">"margin-bottom: 2rem;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col-3"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #ccddff; height: 100%;"</span><span class="nt">&gt;</span>echo-grid-col-3<span class="nt">&lt;br&gt;</span>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col-3"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #ccddff; height: 100%;"</span><span class="nt">&gt;</span>echo-grid-col-3<span class="nt">&lt;br&gt;</span>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col-3"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #ccddff; height: 100%;"</span><span class="nt">&gt;</span>echo-grid-col-3<span class="nt">&lt;br&gt;</span>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-
-<span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"echo-text-lg echo-margin-top-lg"</span><span class="nt">&gt;</span>(column)と(breakpoint)の両方を指定している場合<span class="nt">&lt;/h3&gt;</span>
-<span class="nt">&lt;p&gt;</span>(column)が <span class="nt">&lt;code&gt;</span>12<span class="nt">&lt;/code&gt;</span> の場合は、指定した(breakpoint)以上で幅100%となる。<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-row"</span> <span class="na">style=</span><span class="s">"margin-bottom: 2rem;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col-lg-2 echo-grid-col-xl-12"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #ccddff; height: 100%;"</span><span class="nt">&gt;</span>echo-grid-col-lg-2 echo-grid-col-xl-12<span class="nt">&lt;br&gt;</span>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col-lg-6 echo-grid-col-xl-12"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #ccddff; height: 100%;"</span><span class="nt">&gt;</span>echo-grid-col-lg-6 echo-grid-col-xl-12<span class="nt">&lt;br&gt;</span>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col-lg-4 echo-grid-col-xl-12"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #ccddff; height: 100%;"</span><span class="nt">&gt;</span>echo-grid-col-12 echo-grid-col-lg-4<span class="nt">&lt;br&gt;</span>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-
-<span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"echo-text-lg echo-margin-top-lg"</span><span class="nt">&gt;</span>(column)の指定があるセルと、ないセルが同列に混在している場合<span class="nt">&lt;/h3&gt;</span>
-<span class="nt">&lt;p&gt;</span>(column)の指定がないセルは、常に空間を埋めるように伸縮しようとする。<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-row"</span> <span class="na">style=</span><span class="s">"margin-bottom: 2rem;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col-sm-4"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #ccddff; height: 100%;"</span><span class="nt">&gt;</span>echo-grid-col-sm-4<span class="nt">&lt;br&gt;</span>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #ccddff; height: 100%;"</span><span class="nt">&gt;</span>echo-grid-col<span class="nt">&lt;br&gt;</span>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-
-<span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"echo-text-lg echo-margin-top-lg"</span><span class="nt">&gt;</span>複雑な指定の例<span class="nt">&lt;/h3&gt;</span>
-<span class="nt">&lt;p&gt;</span>ウィンドウ幅が狭くなるに従って、段組が変化する。セルが複数行になる場合は、echo-grid-colにはmarginではなくpaddingを付与する。<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-row"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col-6 echo-grid-col-sm-4 echo-grid-col-lg-3 echo-grid-col-xxl-2"</span> <span class="na">style=</span><span class="s">"padding-bottom: 1rem;"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #ccddff; height: 100%;"</span><span class="nt">&gt;</span>echo-grid-col-6 echo-grid-col-sm-4 echo-grid-col-lg-3 echo-grid-col-xxl-2<span class="nt">&lt;br&gt;</span>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col-6 echo-grid-col-sm-4 echo-grid-col-lg-3 echo-grid-col-xxl-2"</span> <span class="na">style=</span><span class="s">"padding-bottom: 1rem;"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #ccddff; height: 100%;"</span><span class="nt">&gt;</span>echo-grid-col-6 echo-grid-col-sm-4 echo-grid-col-lg-3 echo-grid-col-xxl-2<span class="nt">&lt;br&gt;</span>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col-6 echo-grid-col-sm-4 echo-grid-col-lg-3 echo-grid-col-xxl-2"</span> <span class="na">style=</span><span class="s">"padding-bottom: 1rem;"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #ccddff; height: 100%;"</span><span class="nt">&gt;</span>echo-grid-col-6 echo-grid-col-sm-4 echo-grid-col-lg-3 echo-grid-col-xxl-2<span class="nt">&lt;br&gt;</span>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col-6 echo-grid-col-sm-4 echo-grid-col-lg-3 echo-grid-col-xxl-2"</span> <span class="na">style=</span><span class="s">"padding-bottom: 1rem;"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #ccddff; height: 100%;"</span><span class="nt">&gt;</span>echo-grid-col-6 echo-grid-col-sm-4 echo-grid-col-lg-3 echo-grid-col-xxl-2<span class="nt">&lt;br&gt;</span>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col-6 echo-grid-col-sm-4 echo-grid-col-lg-3 echo-grid-col-xxl-2"</span> <span class="na">style=</span><span class="s">"padding-bottom: 1rem;"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #ccddff; height: 100%;"</span><span class="nt">&gt;</span>echo-grid-col-6 echo-grid-col-sm-4 echo-grid-col-lg-3 echo-grid-col-xxl-2<span class="nt">&lt;br&gt;</span>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-grid-col-6 echo-grid-col-sm-4 echo-grid-col-lg-3 echo-grid-col-xxl-2"</span> <span class="na">style=</span><span class="s">"padding-bottom: 1rem;"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 1rem; background-color: #ccddff; height: 100%;"</span><span class="nt">&gt;</span>echo-grid-col-6 echo-grid-col-sm-4 echo-grid-col-lg-3 echo-grid-col-xxl-2<span class="nt">&lt;br&gt;</span>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</pre></div>
 
 
 <?php include('../doc_include/footer.inc'); ?>
