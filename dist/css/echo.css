@@ -5738,7 +5738,6 @@ echo-grid-row-(size)
 echo-grid-col
 echo-grid-col-(breakpoint)-(column)
 echo-grid-col-order-(breakpoint)-(first or last or number)
-echo-grid-col-offset-(breakpoint)-(column)
 --------------------
 */
 .echo-grid-col-2, .echo-grid-col-3, .echo-grid-col-4, .echo-grid-col-5, .echo-grid-col-6, .echo-grid-col-7, .echo-grid-col-8, .echo-grid-col-9, .echo-grid-col-10, .echo-grid-col-12, .echo-grid-col, .echo-grid-col-xxs-2, .echo-grid-col-xxs-3, .echo-grid-col-xxs-4, .echo-grid-col-xxs-5, .echo-grid-col-xxs-6, .echo-grid-col-xxs-7, .echo-grid-col-xxs-8, .echo-grid-col-xxs-9, .echo-grid-col-xxs-10, .echo-grid-col-xxs-12, .echo-grid-col-xxs, .echo-grid-col-xs-2, .echo-grid-col-xs-3, .echo-grid-col-xs-4, .echo-grid-col-xs-5, .echo-grid-col-xs-6, .echo-grid-col-xs-7, .echo-grid-col-xs-8, .echo-grid-col-xs-9, .echo-grid-col-xs-10, .echo-grid-col-xs-12, .echo-grid-col-xs, .echo-grid-col-sm-2, .echo-grid-col-sm-3, .echo-grid-col-sm-4, .echo-grid-col-sm-5, .echo-grid-col-sm-6, .echo-grid-col-sm-7, .echo-grid-col-sm-8, .echo-grid-col-sm-9, .echo-grid-col-sm-10, .echo-grid-col-sm-12, .echo-grid-col-sm, .echo-grid-col-md-2, .echo-grid-col-md-3, .echo-grid-col-md-4, .echo-grid-col-md-5, .echo-grid-col-md-6, .echo-grid-col-md-7, .echo-grid-col-md-8, .echo-grid-col-md-9, .echo-grid-col-md-10, .echo-grid-col-md-12, .echo-grid-col-md, .echo-grid-col-lg-2, .echo-grid-col-lg-3, .echo-grid-col-lg-4, .echo-grid-col-lg-5, .echo-grid-col-lg-6, .echo-grid-col-lg-7, .echo-grid-col-lg-8, .echo-grid-col-lg-9, .echo-grid-col-lg-10, .echo-grid-col-lg-12, .echo-grid-col-lg, .echo-grid-col-xl-2, .echo-grid-col-xl-3, .echo-grid-col-xl-4, .echo-grid-col-xl-5, .echo-grid-col-xl-6, .echo-grid-col-xl-7, .echo-grid-col-xl-8, .echo-grid-col-xl-9, .echo-grid-col-xl-10, .echo-grid-col-xl-12, .echo-grid-col-xl, .echo-grid-col-xxl-2, .echo-grid-col-xxl-3, .echo-grid-col-xxl-4, .echo-grid-col-xxl-5, .echo-grid-col-xxl-6, .echo-grid-col-xxl-7, .echo-grid-col-xxl-8, .echo-grid-col-xxl-9, .echo-grid-col-xxl-10, .echo-grid-col-xxl-12, .echo-grid-col-xxl {
@@ -5867,46 +5866,6 @@ echo-grid-col-offset-(breakpoint)-(column)
   order: 12;
 }
 
-.echo-grid-col-offset-1 {
-  margin-left: 8.33333%;
-}
-
-.echo-grid-col-offset-2 {
-  margin-left: 16.66667%;
-}
-
-.echo-grid-col-offset-3 {
-  margin-left: 25%;
-}
-
-.echo-grid-col-offset-4 {
-  margin-left: 33.33333%;
-}
-
-.echo-grid-col-offset-5 {
-  margin-left: 41.66667%;
-}
-
-.echo-grid-col-offset-6 {
-  margin-left: 50%;
-}
-
-.echo-grid-col-offset-7 {
-  margin-left: 58.33333%;
-}
-
-.echo-grid-col-offset-8 {
-  margin-left: 66.66667%;
-}
-
-.echo-grid-col-offset-9 {
-  margin-left: 75%;
-}
-
-.echo-grid-col-offset-10 {
-  margin-left: 83.33333%;
-}
-
 @media (min-width: 20rem) {
   .echo-grid-col-xxs-2 {
     flex-basis: 16.66667%;
@@ -5992,39 +5951,6 @@ echo-grid-col-offset-(breakpoint)-(column)
   }
   .echo-grid-col-order-xxs-12 {
     order: 12;
-  }
-  .echo-grid-col-offset-xxs-0 {
-    margin-left: 0;
-  }
-  .echo-grid-col-offset-xxs-1 {
-    margin-left: 8.33333%;
-  }
-  .echo-grid-col-offset-xxs-2 {
-    margin-left: 16.66667%;
-  }
-  .echo-grid-col-offset-xxs-3 {
-    margin-left: 25%;
-  }
-  .echo-grid-col-offset-xxs-4 {
-    margin-left: 33.33333%;
-  }
-  .echo-grid-col-offset-xxs-5 {
-    margin-left: 41.66667%;
-  }
-  .echo-grid-col-offset-xxs-6 {
-    margin-left: 50%;
-  }
-  .echo-grid-col-offset-xxs-7 {
-    margin-left: 58.33333%;
-  }
-  .echo-grid-col-offset-xxs-8 {
-    margin-left: 66.66667%;
-  }
-  .echo-grid-col-offset-xxs-9 {
-    margin-left: 75%;
-  }
-  .echo-grid-col-offset-xxs-10 {
-    margin-left: 83.33333%;
   }
 }
 
@@ -6113,39 +6039,6 @@ echo-grid-col-offset-(breakpoint)-(column)
   }
   .echo-grid-col-order-xs-12 {
     order: 12;
-  }
-  .echo-grid-col-offset-xs-0 {
-    margin-left: 0;
-  }
-  .echo-grid-col-offset-xs-1 {
-    margin-left: 8.33333%;
-  }
-  .echo-grid-col-offset-xs-2 {
-    margin-left: 16.66667%;
-  }
-  .echo-grid-col-offset-xs-3 {
-    margin-left: 25%;
-  }
-  .echo-grid-col-offset-xs-4 {
-    margin-left: 33.33333%;
-  }
-  .echo-grid-col-offset-xs-5 {
-    margin-left: 41.66667%;
-  }
-  .echo-grid-col-offset-xs-6 {
-    margin-left: 50%;
-  }
-  .echo-grid-col-offset-xs-7 {
-    margin-left: 58.33333%;
-  }
-  .echo-grid-col-offset-xs-8 {
-    margin-left: 66.66667%;
-  }
-  .echo-grid-col-offset-xs-9 {
-    margin-left: 75%;
-  }
-  .echo-grid-col-offset-xs-10 {
-    margin-left: 83.33333%;
   }
 }
 
@@ -6241,39 +6134,6 @@ echo-grid-col-offset-(breakpoint)-(column)
   .echo-grid-col-order-sm-12 {
     order: 12;
   }
-  .echo-grid-col-offset-sm-0 {
-    margin-left: 0;
-  }
-  .echo-grid-col-offset-sm-1 {
-    margin-left: 8.33333%;
-  }
-  .echo-grid-col-offset-sm-2 {
-    margin-left: 16.66667%;
-  }
-  .echo-grid-col-offset-sm-3 {
-    margin-left: 25%;
-  }
-  .echo-grid-col-offset-sm-4 {
-    margin-left: 33.33333%;
-  }
-  .echo-grid-col-offset-sm-5 {
-    margin-left: 41.66667%;
-  }
-  .echo-grid-col-offset-sm-6 {
-    margin-left: 50%;
-  }
-  .echo-grid-col-offset-sm-7 {
-    margin-left: 58.33333%;
-  }
-  .echo-grid-col-offset-sm-8 {
-    margin-left: 66.66667%;
-  }
-  .echo-grid-col-offset-sm-9 {
-    margin-left: 75%;
-  }
-  .echo-grid-col-offset-sm-10 {
-    margin-left: 83.33333%;
-  }
 }
 
 @media (min-width: 48rem) {
@@ -6361,39 +6221,6 @@ echo-grid-col-offset-(breakpoint)-(column)
   }
   .echo-grid-col-order-md-12 {
     order: 12;
-  }
-  .echo-grid-col-offset-md-0 {
-    margin-left: 0;
-  }
-  .echo-grid-col-offset-md-1 {
-    margin-left: 8.33333%;
-  }
-  .echo-grid-col-offset-md-2 {
-    margin-left: 16.66667%;
-  }
-  .echo-grid-col-offset-md-3 {
-    margin-left: 25%;
-  }
-  .echo-grid-col-offset-md-4 {
-    margin-left: 33.33333%;
-  }
-  .echo-grid-col-offset-md-5 {
-    margin-left: 41.66667%;
-  }
-  .echo-grid-col-offset-md-6 {
-    margin-left: 50%;
-  }
-  .echo-grid-col-offset-md-7 {
-    margin-left: 58.33333%;
-  }
-  .echo-grid-col-offset-md-8 {
-    margin-left: 66.66667%;
-  }
-  .echo-grid-col-offset-md-9 {
-    margin-left: 75%;
-  }
-  .echo-grid-col-offset-md-10 {
-    margin-left: 83.33333%;
   }
 }
 
@@ -6483,39 +6310,6 @@ echo-grid-col-offset-(breakpoint)-(column)
   .echo-grid-col-order-lg-12 {
     order: 12;
   }
-  .echo-grid-col-offset-lg-0 {
-    margin-left: 0;
-  }
-  .echo-grid-col-offset-lg-1 {
-    margin-left: 8.33333%;
-  }
-  .echo-grid-col-offset-lg-2 {
-    margin-left: 16.66667%;
-  }
-  .echo-grid-col-offset-lg-3 {
-    margin-left: 25%;
-  }
-  .echo-grid-col-offset-lg-4 {
-    margin-left: 33.33333%;
-  }
-  .echo-grid-col-offset-lg-5 {
-    margin-left: 41.66667%;
-  }
-  .echo-grid-col-offset-lg-6 {
-    margin-left: 50%;
-  }
-  .echo-grid-col-offset-lg-7 {
-    margin-left: 58.33333%;
-  }
-  .echo-grid-col-offset-lg-8 {
-    margin-left: 66.66667%;
-  }
-  .echo-grid-col-offset-lg-9 {
-    margin-left: 75%;
-  }
-  .echo-grid-col-offset-lg-10 {
-    margin-left: 83.33333%;
-  }
 }
 
 @media (min-width: 80rem) {
@@ -6604,39 +6398,6 @@ echo-grid-col-offset-(breakpoint)-(column)
   .echo-grid-col-order-xl-12 {
     order: 12;
   }
-  .echo-grid-col-offset-xl-0 {
-    margin-left: 0;
-  }
-  .echo-grid-col-offset-xl-1 {
-    margin-left: 8.33333%;
-  }
-  .echo-grid-col-offset-xl-2 {
-    margin-left: 16.66667%;
-  }
-  .echo-grid-col-offset-xl-3 {
-    margin-left: 25%;
-  }
-  .echo-grid-col-offset-xl-4 {
-    margin-left: 33.33333%;
-  }
-  .echo-grid-col-offset-xl-5 {
-    margin-left: 41.66667%;
-  }
-  .echo-grid-col-offset-xl-6 {
-    margin-left: 50%;
-  }
-  .echo-grid-col-offset-xl-7 {
-    margin-left: 58.33333%;
-  }
-  .echo-grid-col-offset-xl-8 {
-    margin-left: 66.66667%;
-  }
-  .echo-grid-col-offset-xl-9 {
-    margin-left: 75%;
-  }
-  .echo-grid-col-offset-xl-10 {
-    margin-left: 83.33333%;
-  }
 }
 
 @media (min-width: 90rem) {
@@ -6724,39 +6485,6 @@ echo-grid-col-offset-(breakpoint)-(column)
   }
   .echo-grid-col-order-xxl-12 {
     order: 12;
-  }
-  .echo-grid-col-offset-xxl-0 {
-    margin-left: 0;
-  }
-  .echo-grid-col-offset-xxl-1 {
-    margin-left: 8.33333%;
-  }
-  .echo-grid-col-offset-xxl-2 {
-    margin-left: 16.66667%;
-  }
-  .echo-grid-col-offset-xxl-3 {
-    margin-left: 25%;
-  }
-  .echo-grid-col-offset-xxl-4 {
-    margin-left: 33.33333%;
-  }
-  .echo-grid-col-offset-xxl-5 {
-    margin-left: 41.66667%;
-  }
-  .echo-grid-col-offset-xxl-6 {
-    margin-left: 50%;
-  }
-  .echo-grid-col-offset-xxl-7 {
-    margin-left: 58.33333%;
-  }
-  .echo-grid-col-offset-xxl-8 {
-    margin-left: 66.66667%;
-  }
-  .echo-grid-col-offset-xxl-9 {
-    margin-left: 75%;
-  }
-  .echo-grid-col-offset-xxl-10 {
-    margin-left: 83.33333%;
   }
 }
 

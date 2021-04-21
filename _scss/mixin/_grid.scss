@@ -3,11 +3,6 @@
     max-width: percentage($size / $columns);
 }
 
-@mixin make-col-offset-flex($size, $columns: $grid-columns) {
-    $num: $size / $columns;
-    margin-left: if($num == 0, 0, percentage($num));
-}
-
 @mixin make-grid-columns-flex($columns: $grid-columns, $breakpoints: $grid-breakpoints) {
     %grid-column {
         flex-basis: 0%;
@@ -81,22 +76,6 @@
 
                 .#{$pr}#{$col}#{$c2}order#{$infix}#{$c3}#{$i} {
                     order: $i;
-                }
-
-            }
-
-            @for $i from 0 through ($columns - 1) {
-
-                @if ($optimize != true) or ( ($optimize == true) and ( $i < $grid-columns-max ) ) {
-
-                    @if not ($infix == "" and $i == 0) {
-
-                        .#{$pr}#{$col}#{$c2}offset#{$infix}#{$c3}#{$i} {
-                            @include make-col-offset-flex($i, $columns);
-                        }
-
-                    }
-
                 }
 
             }
