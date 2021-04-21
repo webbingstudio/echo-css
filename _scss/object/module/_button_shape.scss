@@ -7,7 +7,7 @@
 .#{$pr}#{$m}button#{$c3}block {
     display: block;
     width: 100%;
-    max-width: map-get( $object-max-widths, 'sm' );
+    max-width: map-get( $object-max-widths, 'md' );
     margin: 0 auto;
 
     &.#{$pr}#{$m}button {
@@ -16,10 +16,6 @@
     }
 
     &.#{$pr}#{$m}button#{$c3}lg {
-
-        @include media-breakpoint-up(sm) {
-            max-width: map-get( $object-max-widths, 'md' );
-        }
 
     }
 

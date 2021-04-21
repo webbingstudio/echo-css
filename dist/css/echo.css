@@ -679,19 +679,13 @@ echo-button-block
 .echo-button-block {
   display: block;
   width: 100%;
-  max-width: 22.5rem;
+  max-width: 30rem;
   margin: 0 auto;
 }
 
 .echo-button-block.echo-button {
   padding-left: 0;
   padding-right: 0;
-}
-
-@media (min-width: 26.75rem) {
-  .echo-button-block.echo-button-lg {
-    max-width: 30rem;
-  }
 }
 
 @media (min-width: 26.75rem) {
@@ -5645,15 +5639,6 @@ echo-container
   padding-right: 0.625rem;
 }
 
-.echo-container:before, .echo-container:after {
-  content: "";
-  display: table;
-}
-
-.echo-container:after {
-  clear: both;
-}
-
 @media (min-width: 48rem) {
   .echo-container {
     max-width: 49.25rem;
@@ -6912,20 +6897,42 @@ echo-buttons
 */
 .echo-buttons {
   display: grid;
-  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(calc( 50% - 1.25rem), 1fr));
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 48rem;
+  margin: 0 auto;
 }
 
 @media (min-width: 62.5rem) {
   .echo-buttons {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(calc( 1% - 1.25rem), 1fr));
   }
+}
+
+ul.echo-buttons {
+  padding: 0;
+  list-style-type: none;
 }
 
 .echo-buttons-item {
   display: flex;
-  align-items: stretch;
-  justify-content: flex-start;
-  width: 100%;
+  align-items: center;
+  margin: 0;
+}
+
+@media (max-width: 62.4rem) {
+  .echo-buttons-grow {
+    grid-template-columns: repeat(auto-fit, minmax(calc( 33.33333333% - 1.25rem), 1fr));
+  }
+}
+
+.echo-buttons-grow .echo-buttons-item:last-child {
+  grid-column: span 2;
+}
+
+.echo-buttons-grow .echo-buttons-item:nth-child(4n):last-child {
+  grid-column: span 3;
 }
 
 /*

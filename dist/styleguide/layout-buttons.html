@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>layout-buttons | Style guide | echo-css</title>
+    <meta property="og:title" content="layout-buttons | Style guide | echo-css">
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div id="echo-document">
+    <?php include('../doc_include/header.inc'); ?>
+
+    <main class="echo-p-main" role="main">
+        <div class="echo-doc-container echo-doc-container-fluid">
+
+            <div class="echo-doc-pagehead">
+                <h1 class="echo-doc-pagehead-title">layout-buttons</h1>
+            </div><!-- /.echo-doc-pagehead -->
+
+            <nav class="echo-doc-anchor">
+                <ul class="echo-list echo-list-horizontal">
+                    <li class="echo-list-item"><a href="#buttons" class="js-scrollto">echo-buttons</a></li>
+                    
+                    <li class="echo-list-item"><a href="#buttons-01-grow" class="js-scrollto">echo-buttons-item-grow</a></li>
+                    
+                </ul>
+            </nav>
+
+            <article class="echo-doc-post">
+                <div class="echo-doc-post-contents styleguide-contents"><h1 id="buttons" class="styleguide">echo-buttons</h1>
+
+<p><code>.echo-button.echo-button-block</code> を繰り返すための領域を作成する。 <code>div, ul</code> でマークアップできる。</p>
+
+<p>ボタンの数は、1個から4個を前提としている。<br>
+(breakpoint)が <code>md</code> 以下で最大2カラム、 <code>lg</code> 以上で最大4カラムとなる。</p>
+
+<p><code>.echo-buttons > .echo-button.echo-button-block</code> の幅は <code>.echo-container-sm</code> と同じ領域幅を、均等に割ったものとなる。<br>
+<code>grid-template-columns</code> プロパティを使用している関係で、Internet Explorer 11では正常な幅で表示されない。</p>
+
+<div class="example">
+
+<p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-sm">ボタン1個</p>
+
+<div class="echo-buttons echo-buttons-grow">
+
+    <div class="echo-buttons-item">
+        <a href="#" class="echo-button echo-button-block echo-button-xl echo-button-style-b echo-button-icon-arrow">ボタン</a>
+    </div><!-- /.echo-buttons-item -->
+
+</div><!-- /.echo-buttons -->
+
+<p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-sm echo-margin-top-lg">ボタン2個</p>
+
+<div class="echo-buttons">
+
+    <div class="echo-buttons-item">
+        <a href="#" class="echo-button echo-button-block echo-button-xl echo-button-style-b echo-button-icon-arrow">ボタン</a>
+    </div><!-- /.echo-buttons-item -->
+
+    <div class="echo-buttons-item">
+        <a href="#" class="echo-button echo-button-block echo-button-xl echo-button-style-a">ボタンの文字数が多い</a>
+    </div><!-- /.echo-buttons-item -->
+
+</div><!-- /.echo-buttons -->
+
+<p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-sm echo-margin-top-lg">ボタン3個</p>
+
+<div class="echo-buttons">
+
+    <div class="echo-buttons-item">
+        <a href="#" class="echo-button echo-button-block echo-button-xl echo-button-style-b echo-button-icon-arrow">ボタン</a>
+    </div><!-- /.echo-buttons-item -->
+
+    <div class="echo-buttons-item">
+        <a href="#" class="echo-button echo-button-block echo-button-xl echo-button-style-b">ボタン</a>
+    </div><!-- /.echo-buttons-item -->
+
+    <div class="echo-buttons-item">
+        <a href="#" class="echo-button echo-button-block echo-button-xl echo-button-style-a">ボタンの文字数が多い</a>
+    </div><!-- /.echo-buttons-item -->
+
+</div><!-- /.echo-buttons -->
+
+<p class="echo-margin-top-lg echo-text-center">ボタンの高さが異なる場合は縦中央揃えとなる。</p>
+
+<div class="echo-buttons">
+
+    <div class="echo-buttons-item">
+        <a href="#" class="echo-button echo-button-block echo-button echo-button-style-b echo-button-icon-arrow">ボタン</a>
+    </div><!-- /.echo-buttons-item -->
+
+    <div class="echo-buttons-item">
+        <a href="#" class="echo-button echo-button-block echo-button-xl echo-button-style-b">ボタン</a>
+    </div><!-- /.echo-buttons-item -->
+
+    <div class="echo-buttons-item">
+        <a href="#" class="echo-button echo-button-block echo-button-xl echo-button-style-a">ボタンの文字数が多い</a>
+    </div><!-- /.echo-buttons-item -->
+
+</div><!-- /.echo-buttons -->
+
+<p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-sm echo-margin-top-lg">ボタン4個（ulでマークアップ）</p>
+
+<ul class="echo-buttons">
+
+    <li class="echo-buttons-item">
+        <a href="#" class="echo-button echo-button-block echo-button-lg echo-button-style-b echo-button-icon-arrow">ボタン</a>
+    </li><!-- /.echo-buttons-item -->
+
+    <li class="echo-buttons-item">
+        <a href="#" class="echo-button echo-button-block echo-button-lg echo-button-style-b">ボタン</a>
+    </li><!-- /.echo-buttons-item -->
+
+    <li class="echo-buttons-item">
+        <a href="#" class="echo-button echo-button-block echo-button-lg echo-button-style-a">ボタンの文字数が多い</a>
+    </li><!-- /.echo-buttons-item -->
+
+    <li class="echo-buttons-item">
+        <a href="#" class="echo-button echo-button-block echo-button-lg echo-button-style-a">ボタン</a>
+    </li><!-- /.echo-buttons-item -->
+
+</ul><!-- /.echo-buttons -->
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-sm"&gt;ボタン1個&lt;/p&gt;
+
+&lt;div class="echo-buttons echo-buttons-grow"&gt;
+
+    &lt;div class="echo-buttons-item"&gt;
+        &lt;a href="#" class="echo-button echo-button-block echo-button-xl echo-button-style-b echo-button-icon-arrow"&gt;ボタン&lt;/a&gt;
+    &lt;/div&gt;&lt;!-- /.echo-buttons-item --&gt;
+
+&lt;/div&gt;&lt;!-- /.echo-buttons --&gt;
+
+&lt;p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-sm echo-margin-top-lg"&gt;ボタン2個&lt;/p&gt;
+
+&lt;div class="echo-buttons"&gt;
+
+    &lt;div class="echo-buttons-item"&gt;
+        &lt;a href="#" class="echo-button echo-button-block echo-button-xl echo-button-style-b echo-button-icon-arrow"&gt;ボタン&lt;/a&gt;
+    &lt;/div&gt;&lt;!-- /.echo-buttons-item --&gt;
+
+    &lt;div class="echo-buttons-item"&gt;
+        &lt;a href="#" class="echo-button echo-button-block echo-button-xl echo-button-style-a"&gt;ボタンの文字数が多い&lt;/a&gt;
+    &lt;/div&gt;&lt;!-- /.echo-buttons-item --&gt;
+
+&lt;/div&gt;&lt;!-- /.echo-buttons --&gt;
+
+&lt;p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-sm echo-margin-top-lg"&gt;ボタン3個&lt;/p&gt;
+
+&lt;div class="echo-buttons"&gt;
+
+    &lt;div class="echo-buttons-item"&gt;
+        &lt;a href="#" class="echo-button echo-button-block echo-button-xl echo-button-style-b echo-button-icon-arrow"&gt;ボタン&lt;/a&gt;
+    &lt;/div&gt;&lt;!-- /.echo-buttons-item --&gt;
+
+    &lt;div class="echo-buttons-item"&gt;
+        &lt;a href="#" class="echo-button echo-button-block echo-button-xl echo-button-style-b"&gt;ボタン&lt;/a&gt;
+    &lt;/div&gt;&lt;!-- /.echo-buttons-item --&gt;
+
+    &lt;div class="echo-buttons-item"&gt;
+        &lt;a href="#" class="echo-button echo-button-block echo-button-xl echo-button-style-a"&gt;ボタンの文字数が多い&lt;/a&gt;
+    &lt;/div&gt;&lt;!-- /.echo-buttons-item --&gt;
+
+&lt;/div&gt;&lt;!-- /.echo-buttons --&gt;
+
+&lt;p class="echo-margin-top-lg echo-text-center"&gt;ボタンの高さが異なる場合は縦中央揃えとなる。&lt;/p&gt;
+
+&lt;div class="echo-buttons"&gt;
+
+    &lt;div class="echo-buttons-item"&gt;
+        &lt;a href="#" class="echo-button echo-button-block echo-button echo-button-style-b echo-button-icon-arrow"&gt;ボタン&lt;/a&gt;
+    &lt;/div&gt;&lt;!-- /.echo-buttons-item --&gt;
+
+    &lt;div class="echo-buttons-item"&gt;
+        &lt;a href="#" class="echo-button echo-button-block echo-button-xl echo-button-style-b"&gt;ボタン&lt;/a&gt;
+    &lt;/div&gt;&lt;!-- /.echo-buttons-item --&gt;
+
+    &lt;div class="echo-buttons-item"&gt;
+        &lt;a href="#" class="echo-button echo-button-block echo-button-xl echo-button-style-a"&gt;ボタンの文字数が多い&lt;/a&gt;
+    &lt;/div&gt;&lt;!-- /.echo-buttons-item --&gt;
+
+&lt;/div&gt;&lt;!-- /.echo-buttons --&gt;
+
+&lt;p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-sm echo-margin-top-lg"&gt;ボタン4個（ulでマークアップ）&lt;/p&gt;
+
+&lt;ul class="echo-buttons"&gt;
+
+    &lt;li class="echo-buttons-item"&gt;
+        &lt;a href="#" class="echo-button echo-button-block echo-button-lg echo-button-style-b echo-button-icon-arrow"&gt;ボタン&lt;/a&gt;
+    &lt;/li&gt;&lt;!-- /.echo-buttons-item --&gt;
+
+    &lt;li class="echo-buttons-item"&gt;
+        &lt;a href="#" class="echo-button echo-button-block echo-button-lg echo-button-style-b"&gt;ボタン&lt;/a&gt;
+    &lt;/li&gt;&lt;!-- /.echo-buttons-item --&gt;
+
+    &lt;li class="echo-buttons-item"&gt;
+        &lt;a href="#" class="echo-button echo-button-block echo-button-lg echo-button-style-a"&gt;ボタンの文字数が多い&lt;/a&gt;
+    &lt;/li&gt;&lt;!-- /.echo-buttons-item --&gt;
+
+    &lt;li class="echo-buttons-item"&gt;
+        &lt;a href="#" class="echo-button echo-button-block echo-button-lg echo-button-style-a"&gt;ボタン&lt;/a&gt;
+    &lt;/li&gt;&lt;!-- /.echo-buttons-item --&gt;
+
+&lt;/ul&gt;&lt;!-- /.echo-buttons --&gt;</code></pre></div>
+
+
+<h2 id="buttons-01-grow" class="styleguide">echo-buttons-grow</h2>
+
+<p><code>.echo-buttons</code> に付与すると、最後の <code>.echo-buttons-item</code> の幅が200%になる。<br>
+ボタンの数が2個、もしくは3個を前提としている。<br>
+ボタンの数が1個の場合は何も起きない。4個の場合はボタンの幅が狭くなるため、ラベルをアイコンにする等の考慮が必要となる。</p>
+
+<div class="example">
+
+<p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-sm">ボタン1個</p>
+
+<div class="echo-buttons echo-buttons-grow">
+
+    <div class="echo-buttons-item">
+        <a href="#" class="echo-button echo-button-block echo-button-xl echo-button-style-b echo-button-icon-arrow">ボタン</a>
+    </div><!-- /.echo-buttons-item -->
+
+</div><!-- /.echo-buttons -->
+
+<p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-sm echo-margin-top-lg">ボタン2個</p>
+
+<div class="echo-buttons echo-buttons-grow">
+
+    <div class="echo-buttons-item">
+        <a href="#" class="echo-button echo-button-block echo-button-xl echo-button-style-b echo-button-icon-arrow">ボタン</a>
+    </div><!-- /.echo-buttons-item -->
+
+    <div class="echo-buttons-item">
+        <a href="#" class="echo-button echo-button-block echo-button-xl echo-button-style-a">ボタンの文字数が多い</a>
+    </div><!-- /.echo-buttons-item -->
+
+</div><!-- /.echo-buttons -->
+
+<p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-sm echo-margin-top-lg">ボタン3個</p>
+
+<div class="echo-buttons echo-buttons-grow">
+
+    <div class="echo-buttons-item">
+        <a href="#" class="echo-button echo-button-block echo-button-xl echo-button-style-b echo-button-icon-arrow">ボタン</a>
+    </div><!-- /.echo-buttons-item -->
+
+    <div class="echo-buttons-item">
+        <a href="#" class="echo-button echo-button-block echo-button-xl echo-button-style-b">ボタン</a>
+    </div><!-- /.echo-buttons-item -->
+
+    <div class="echo-buttons-item">
+        <a href="#" class="echo-button echo-button-block echo-button-xl echo-button-style-a">ボタンの文字数が多い</a>
+    </div><!-- /.echo-buttons-item -->
+
+</div><!-- /.echo-buttons -->
+
+<p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-sm echo-margin-top-lg">ボタン4個</p>
+
+<div class="echo-buttons echo-buttons-grow">
+
+    <div class="echo-buttons-item">
+        <a href="#" class="echo-button echo-button-block echo-button echo-button-style-b"><i class="fas fa-star echo-text-xl"></i><span class="echo-sr">お気に入り</span></a>
+    </div><!-- /.echo-buttons-item -->
+
+    <div class="echo-buttons-item">
+        <a href="#" class="echo-button echo-button-block echo-button echo-button-style-b"><i class="fas fa-heart echo-text-xl"></i><span class="echo-sr">いいね！</span></a>
+    </div><!-- /.echo-buttons-item -->
+
+    <div class="echo-buttons-item">
+        <a href="#" class="echo-button echo-button-block echo-button echo-button-style-b"><i class="fas fa-share-alt echo-text-xl"></i><span class="echo-sr">シェアする</span></a>
+    </div><!-- /.echo-buttons-item -->
+
+    <div class="echo-buttons-item">
+        <a href="#" class="echo-button echo-button-block echo-button echo-button-style-a"><i class="fas fa-download echo-text-xl"></i><span class="echo-margin-left-sm">ダウンロード</span></a>
+    </div><!-- /.echo-buttons-item -->
+
+</div><!-- /.echo-buttons -->
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-sm"&gt;ボタン1個&lt;/p&gt;
+
+&lt;div class="echo-buttons echo-buttons-grow"&gt;
+
+    &lt;div class="echo-buttons-item"&gt;
+        &lt;a href="#" class="echo-button echo-button-block echo-button-xl echo-button-style-b echo-button-icon-arrow"&gt;ボタン&lt;/a&gt;
+    &lt;/div&gt;&lt;!-- /.echo-buttons-item --&gt;
+
+&lt;/div&gt;&lt;!-- /.echo-buttons --&gt;
+
+&lt;p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-sm echo-margin-top-lg"&gt;ボタン2個&lt;/p&gt;
+
+&lt;div class="echo-buttons echo-buttons-grow"&gt;
+
+    &lt;div class="echo-buttons-item"&gt;
+        &lt;a href="#" class="echo-button echo-button-block echo-button-xl echo-button-style-b echo-button-icon-arrow"&gt;ボタン&lt;/a&gt;
+    &lt;/div&gt;&lt;!-- /.echo-buttons-item --&gt;
+
+    &lt;div class="echo-buttons-item"&gt;
+        &lt;a href="#" class="echo-button echo-button-block echo-button-xl echo-button-style-a"&gt;ボタンの文字数が多い&lt;/a&gt;
+    &lt;/div&gt;&lt;!-- /.echo-buttons-item --&gt;
+
+&lt;/div&gt;&lt;!-- /.echo-buttons --&gt;
+
+&lt;p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-sm echo-margin-top-lg"&gt;ボタン3個&lt;/p&gt;
+
+&lt;div class="echo-buttons echo-buttons-grow"&gt;
+
+    &lt;div class="echo-buttons-item"&gt;
+        &lt;a href="#" class="echo-button echo-button-block echo-button-xl echo-button-style-b echo-button-icon-arrow"&gt;ボタン&lt;/a&gt;
+    &lt;/div&gt;&lt;!-- /.echo-buttons-item --&gt;
+
+    &lt;div class="echo-buttons-item"&gt;
+        &lt;a href="#" class="echo-button echo-button-block echo-button-xl echo-button-style-b"&gt;ボタン&lt;/a&gt;
+    &lt;/div&gt;&lt;!-- /.echo-buttons-item --&gt;
+
+    &lt;div class="echo-buttons-item"&gt;
+        &lt;a href="#" class="echo-button echo-button-block echo-button-xl echo-button-style-a"&gt;ボタンの文字数が多い&lt;/a&gt;
+    &lt;/div&gt;&lt;!-- /.echo-buttons-item --&gt;
+
+&lt;/div&gt;&lt;!-- /.echo-buttons --&gt;
+
+&lt;p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-sm echo-margin-top-lg"&gt;ボタン4個&lt;/p&gt;
+
+&lt;div class="echo-buttons echo-buttons-grow"&gt;
+
+    &lt;div class="echo-buttons-item"&gt;
+        &lt;a href="#" class="echo-button echo-button-block echo-button echo-button-style-b"&gt;&lt;i class="fas fa-star echo-text-xl"&gt;&lt;/i&gt;&lt;span class="echo-sr"&gt;お気に入り&lt;/span&gt;&lt;/a&gt;
+    &lt;/div&gt;&lt;!-- /.echo-buttons-item --&gt;
+
+    &lt;div class="echo-buttons-item"&gt;
+        &lt;a href="#" class="echo-button echo-button-block echo-button echo-button-style-b"&gt;&lt;i class="fas fa-heart echo-text-xl"&gt;&lt;/i&gt;&lt;span class="echo-sr"&gt;いいね！&lt;/span&gt;&lt;/a&gt;
+    &lt;/div&gt;&lt;!-- /.echo-buttons-item --&gt;
+
+    &lt;div class="echo-buttons-item"&gt;
+        &lt;a href="#" class="echo-button echo-button-block echo-button echo-button-style-b"&gt;&lt;i class="fas fa-share-alt echo-text-xl"&gt;&lt;/i&gt;&lt;span class="echo-sr"&gt;シェアする&lt;/span&gt;&lt;/a&gt;
+    &lt;/div&gt;&lt;!-- /.echo-buttons-item --&gt;
+
+    &lt;div class="echo-buttons-item"&gt;
+        &lt;a href="#" class="echo-button echo-button-block echo-button echo-button-style-a"&gt;&lt;i class="fas fa-download echo-text-xl"&gt;&lt;/i&gt;&lt;span class="echo-margin-left-sm"&gt;ダウンロード&lt;/span&gt;&lt;/a&gt;
+    &lt;/div&gt;&lt;!-- /.echo-buttons-item --&gt;
+
+&lt;/div&gt;&lt;!-- /.echo-buttons --&gt;
+</code></pre></div>
+
+
+
+<?php include('../doc_include/footer.inc'); ?>

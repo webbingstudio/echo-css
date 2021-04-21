@@ -6,21 +6,48 @@
 
 .#{$pr}#{$l}buttons {
     display: grid;
-    gap: map-get( $grid-gutter-widths, lg );
+    grid-template-columns: repeat( auto-fit, minmax( calc( 50% - #{map-get( $grid-gutter-widths, 'md' )} ), 1fr ) );
+    gap: map-get( $grid-gutter-widths, md );
+    width: 100%;
+    max-width: map-get( $container-max-widths-md, md ) - map-get( $grid-gutter-widths, 'md' );
+    margin: 0 auto;
 
     @include media-breakpoint-up(lg) {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat( auto-fit, minmax( calc( 1% - #{map-get( $grid-gutter-widths, 'md' )} ), 1fr ) );
+    }
+
+    @at-root {
+
+        ul#{&} {
+            padding: 0;
+            list-style-type: none;
+        }
+
     }
 
 }
 
 .#{$pr}#{$l}buttons#{$c1}item {
     display: flex;
-    align-items: stretch;
-    justify-content: flex-start;
-    width: 100%;
+    align-items: center;
+    margin: 0;
+}
 
-    .#{$pr}#{$m}button {
+.#{$pr}#{$l}buttons#{$c3}grow {
+    @include media-breakpoint-down(md) {
+        grid-template-columns: repeat( auto-fit, minmax( calc( 33.33333333% - #{map-get( $grid-gutter-widths, 'md' )} ), 1fr ) );
+    }
+
+    .#{$pr}#{$l}buttons#{$c1}item {
+
+        &:last-child() {
+            grid-column: span 2;
+        }
+
+        &:nth-child(4n):last-child() {
+            grid-column: span 3;
+        }
+
     }
 
 }

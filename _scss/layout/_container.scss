@@ -5,10 +5,9 @@
 */
 
 .#{$pr}#{$l}container {
-    @include clearfix();
     margin-left: auto;
     margin-right: auto;
-    padding-left:  (map-get($grid-gutter-widths, md) / 2);
+    padding-left: (map-get($grid-gutter-widths, md) / 2);
     padding-right: (map-get($grid-gutter-widths, md) / 2);
 
     @each $breakpoint, $container-max-width in $container-max-widths-md {
