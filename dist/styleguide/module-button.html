@@ -262,11 +262,12 @@
 
 <h2 id="btn-03-size" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-button-(size)</h2>
 
-<p>ボタンのサイズを変える。(size)は、 <code>lg, xl, xxl</code> に対応している。</p>
+<p>ボタンのサイズを変える。(size)は、 <code>sm, lg, xl, xxl</code> に対応している。<br>
+<code>sm</code> はモバイル端末で求められる最低高さ(44px)を満たしていないため、メニューのボタン等の重要なインターフェースに使用することは推薦されない。</p>
 
 <h3 class="echo-doc-post-title-02">補足：xl, xxlの挙動</h3>
 
-<p><code>.echo-button-xl, .echo-button-xxl</code> は、(breakpoint)が <code>sm</code> 以下では一段階小さくなる。（モバイル端末では、lgとxlが同じ大きさとなる）</p>
+<p><code>.echo-button-xl, .echo-button-xxl</code> は、(breakpoint)が <code>sm</code> 以下では一段階小さくなる。（つまり、モバイル端末では、lgとxlは同じ大きさとなる）</p>
 
 <h3 class="echo-doc-post-title-02">note: Behavior of xl, xxl</h3>
 
@@ -274,19 +275,28 @@
 
 <div class="example">
 <p>
+  <dfn>echo-button-sm</dfn>
+  <a href="#" class="echo-button echo-button-sm echo-button-style-a">echo-button</a>
+</p>
+
+<p>
+  <dfn>default</dfn>
   <a href="#" class="echo-button echo-button-style-a">echo-button</a>
 </p>
 
 <p>
-  <a href="#" class="echo-button echo-button-lg echo-button-style-a">echo-button-lg</a>
+  <dfn>echo-button-lg</dfn>
+  <a href="#" class="echo-button echo-button-lg echo-button-style-a">echo-button</a>
 </p>
 
 <p>
-  <a href="#" class="echo-button echo-button-xl echo-button-style-a">echo-button-xl</a>
+  <dfn>echo-button-xl</dfn>
+  <a href="#" class="echo-button echo-button-xl echo-button-style-a">echo-button</a>
 </p>
 
 <p>
-  <a href="#" class="echo-button echo-button-xxl echo-button-style-a">echo-button-xxl</a>
+  <dfn>echo-button-xxl</dfn>
+  <a href="#" class="echo-button echo-button-xxl echo-button-style-a">echo-button</a>
 </p>
 </div>
 
@@ -441,6 +451,10 @@
 <div class="example">
 
 <p>
+  <a href="#" class="echo-button echo-button-sm echo-button-block echo-button-style-a">echo-button-block</a>
+</p>
+
+<p>
   <a href="#" class="echo-button echo-button-block echo-button-style-a">echo-button-block</a>
 </p>
 
@@ -457,44 +471,62 @@
 </p>
 
 <p>
+  <a href="#" class="echo-button echo-button-sm echo-button-block echo-button-style-b echo-button-icon-arrow">echo-button-block</a>
+</p>
+
+<p>
   <a href="#" class="echo-button echo-button-block echo-button-style-b echo-button-icon-arrow">echo-button-block</a>
 </p>
+
 <p>
   <a href="#" class="echo-button echo-button-lg echo-button-block echo-button-style-b echo-button-icon-arrow">echo-button-block</a>
 </p>
+
 <p>
   <a href="#" class="echo-button echo-button-xl echo-button-block echo-button-style-b echo-button-icon-arrow">echo-button-block</a>
 </p>
+
 <p>
   <a href="#" class="echo-button echo-button-xxl echo-button-block echo-button-style-b echo-button-icon-arrow">echo-button-block</a>
 </p>
 </div>
 
 <div class="codeblock"><pre><code class="language-markup">&lt;p&gt;
-  &lt;a href="#" class="echo-button echo-button-info echo-button-block echo-button-style-a"&gt;echo-button-block&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-sm echo-button-block echo-button-style-a"&gt;echo-button-block&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
-  &lt;a href="#" class="echo-button echo-button-lg echo-button-block echo-button-style-a echo-button-info"&gt;echo-button-block&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-block echo-button-style-a"&gt;echo-button-block&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
-  &lt;a href="#" class="echo-button echo-button-xl echo-button-block echo-button-style-a echo-button-info"&gt;echo-button-block&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-lg echo-button-block echo-button-style-a"&gt;echo-button-block&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
-  &lt;a href="#" class="echo-button echo-button-xxl echo-button-block echo-button-style-a echo-button-info"&gt;echo-button-block&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-xl echo-button-block echo-button-style-a"&gt;echo-button-block&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;a href="#" class="echo-button echo-button-xxl echo-button-block echo-button-style-a"&gt;echo-button-block&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;a href="#" class="echo-button echo-button-sm echo-button-block echo-button-style-b echo-button-icon-arrow"&gt;echo-button-block&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
   &lt;a href="#" class="echo-button echo-button-block echo-button-style-b echo-button-icon-arrow"&gt;echo-button-block&lt;/a&gt;
 &lt;/p&gt;
+
 &lt;p&gt;
   &lt;a href="#" class="echo-button echo-button-lg echo-button-block echo-button-style-b echo-button-icon-arrow"&gt;echo-button-block&lt;/a&gt;
 &lt;/p&gt;
+
 &lt;p&gt;
   &lt;a href="#" class="echo-button echo-button-xl echo-button-block echo-button-style-b echo-button-icon-arrow"&gt;echo-button-block&lt;/a&gt;
 &lt;/p&gt;
+
 &lt;p&gt;
   &lt;a href="#" class="echo-button echo-button-xxl echo-button-block echo-button-style-b echo-button-icon-arrow"&gt;echo-button-block&lt;/a&gt;
 &lt;/p&gt;
@@ -535,6 +567,10 @@
 </p>
 
 <p>
+  <a href="#" class="echo-button echo-button-sm echo-button-block echo-button-oval echo-button-style-a">echo-button-oval</a>
+</p>
+
+<p>
   <a href="#" class="echo-button echo-button-block echo-button-oval echo-button-style-a">echo-button-oval</a>
 </p>
 
@@ -553,50 +589,54 @@
 </div>
 
 
-<div class="codeblock"><pre><code class="language-markup">&lt;p>
-  &lt;a href="#" class="echo-button echo-button-oval">echo-button-oval&lt;/a>
-&lt;/p>
+<div class="codeblock"><pre><code class="language-markup">&lt;p&gt;
+  &lt;a href="#" class="echo-button echo-button-oval"&gt;echo-button-oval&lt;/a&gt;
+&lt;/p&gt;
 
-&lt;p>
-  &lt;a href="#" class="echo-button echo-button-oval echo-button-style-a">echo-button-oval&lt;/a>
-  &lt;a href="#" class="echo-button echo-button-oval echo-button-style-b">echo-button-oval&lt;/a>
-&lt;/p>
+&lt;p&gt;
+  &lt;a href="#" class="echo-button echo-button-oval echo-button-style-a"&gt;echo-button-oval&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-oval echo-button-style-b"&gt;echo-button-oval&lt;/a&gt;
+&lt;/p&gt;
 
-&lt;p>
-  &lt;a href="#" class="echo-button echo-button-oval echo-button-style-a echo-button-info">echo-button-oval&lt;/a>
-  &lt;a href="#" class="echo-button echo-button-oval echo-button-style-b echo-button-info">echo-button-oval&lt;/a>
-&lt;/p>
+&lt;p&gt;
+  &lt;a href="#" class="echo-button echo-button-oval echo-button-style-a echo-button-info"&gt;echo-button-oval&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-oval echo-button-style-b echo-button-info"&gt;echo-button-oval&lt;/a&gt;
+&lt;/p&gt;
 
-&lt;p>
-  &lt;a href="#" class="echo-button echo-button-oval echo-button-style-a echo-button-important">echo-button-oval&lt;/a>
-  &lt;a href="#" class="echo-button echo-button-oval echo-button-style-b echo-button-important">echo-button-oval&lt;/a>
-&lt;/p>
+&lt;p&gt;
+  &lt;a href="#" class="echo-button echo-button-oval echo-button-style-a echo-button-important"&gt;echo-button-oval&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-oval echo-button-style-b echo-button-important"&gt;echo-button-oval&lt;/a&gt;
+&lt;/p&gt;
 
-&lt;p class="echo-bg-default echo-padding-md">
-  &lt;a href="#" class="echo-button echo-button-oval echo-button-style-a echo-button-inverse">echo-button-oval&lt;/a>
-  &lt;a href="#" class="echo-button echo-button-oval echo-button-style-b echo-button-inverse">echo-button-oval&lt;/a>
-&lt;/p>
+&lt;p class="echo-bg-default echo-padding-md"&gt;
+  &lt;a href="#" class="echo-button echo-button-oval echo-button-style-a echo-button-inverse"&gt;echo-button-oval&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-oval echo-button-style-b echo-button-inverse"&gt;echo-button-oval&lt;/a&gt;
+&lt;/p&gt;
 
-&lt;p>
-  &lt;a href="#" class="echo-button echo-button-oval echo-button-style-a echo-button-icon-left echo-button-icon-arrow">echo-button-oval&lt;/a>
-  &lt;a href="#" class="echo-button echo-button-oval echo-button-style-a echo-button-icon-arrow">echo-button-oval&lt;/a>
-&lt;/p>
+&lt;p&gt;
+  &lt;a href="#" class="echo-button echo-button-oval echo-button-style-a echo-button-icon-left echo-button-icon-arrow"&gt;echo-button-oval&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-oval echo-button-style-a echo-button-icon-arrow"&gt;echo-button-oval&lt;/a&gt;
+&lt;/p&gt;
 
-&lt;p>
-  &lt;a href="#" class="echo-button echo-button-block echo-button-oval echo-button-style-a">echo-button-oval&lt;/a>
-&lt;/p>
+&lt;p&gt;
+  &lt;a href="#" class="echo-button echo-button-sm echo-button-block echo-button-oval echo-button-style-a"&gt;echo-button-oval&lt;/a&gt;
+&lt;/p&gt;
 
-&lt;p>
-  &lt;a href="#" class="echo-button echo-button-lg echo-button-block echo-button-oval echo-button-style-a">echo-button-oval&lt;/a>
-&lt;/p>
+&lt;p&gt;
+  &lt;a href="#" class="echo-button echo-button-block echo-button-oval echo-button-style-a"&gt;echo-button-oval&lt;/a&gt;
+&lt;/p&gt;
 
-&lt;p>
-  &lt;a href="#" class="echo-button echo-button-xl echo-button-block echo-button-oval echo-button-style-a">echo-button-oval&lt;/a>
-&lt;/p>
+&lt;p&gt;
+  &lt;a href="#" class="echo-button echo-button-lg echo-button-block echo-button-oval echo-button-style-a"&gt;echo-button-oval&lt;/a&gt;
+&lt;/p&gt;
 
-&lt;p>
-  &lt;a href="#" class="echo-button echo-button-xxl echo-button-block echo-button-oval echo-button-style-a">echo-button-oval&lt;/a>
-&lt;/p>
+&lt;p&gt;
+  &lt;a href="#" class="echo-button echo-button-xl echo-button-block echo-button-oval echo-button-style-a"&gt;echo-button-oval&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;a href="#" class="echo-button echo-button-xxl echo-button-block echo-button-oval echo-button-style-a"&gt;echo-button-oval&lt;/a&gt;
+&lt;/p&gt;
 </code></pre></div>
 
 
@@ -633,19 +673,23 @@
 </p>
 
 <p>
-  <a href="#" class="echo-button echo-button-block echo-button-circle echo-button-style-a">C</a>
+  <a href="#" class="echo-button echo-button-sm echo-button-circle echo-button-style-a">C</a>
 </p>
 
 <p>
-  <a href="#" class="echo-button echo-button-block echo-button-lg echo-button-circle echo-button-style-a">C</a>
+  <a href="#" class="echo-button echo-button-circle echo-button-style-a">C</a>
 </p>
 
 <p>
-  <a href="#" class="echo-button echo-button-block echo-button-xl echo-button-circle echo-button-style-a">C</a>
+  <a href="#" class="echo-button echo-button-lg echo-button-circle echo-button-style-a">C</a>
 </p>
 
 <p>
-  <a href="#" class="echo-button echo-button-block echo-button-xxl echo-button-circle echo-button-style-a">C</a>
+  <a href="#" class="echo-button echo-button-xl echo-button-circle echo-button-style-a">C</a>
+</p>
+
+<p>
+  <a href="#" class="echo-button echo-button-xxl echo-button-circle echo-button-style-a">C</a>
 </p>
 
 </div>
@@ -675,19 +719,23 @@
 &lt;/p&gt;
 
 &lt;p&gt;
-  &lt;a href="#" class="echo-button echo-button-block echo-button-circle echo-button-style-a"&gt;C&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-sm echo-button-circle echo-button-style-a"&gt;C&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
-  &lt;a href="#" class="echo-button echo-button-block echo-button-lg echo-button-circle echo-button-style-a"&gt;C&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-circle echo-button-style-a"&gt;C&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
-  &lt;a href="#" class="echo-button echo-button-block echo-button-xl echo-button-circle echo-button-style-a"&gt;C&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-lg echo-button-circle echo-button-style-a"&gt;C&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
-  &lt;a href="#" class="echo-button echo-button-block echo-button-xxl echo-button-circle echo-button-style-a"&gt;C&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-xl echo-button-circle echo-button-style-a"&gt;C&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;a href="#" class="echo-button echo-button-xxl echo-button-circle echo-button-style-a"&gt;C&lt;/a&gt;
 &lt;/p&gt;
 </code></pre></div>
 
@@ -724,19 +772,23 @@
 </p>
 
 <p>
-  <a href="#" class="echo-button echo-button-block echo-button-square echo-button-style-a">S</a>
+  <a href="#" class="echo-button echo-button-sm echo-button-square echo-button-style-a">S</a>
 </p>
 
 <p>
-  <a href="#" class="echo-button echo-button-block echo-button-lg echo-button-square echo-button-style-a">S</a>
+  <a href="#" class="echo-button echo-button-square echo-button-style-a">S</a>
 </p>
 
 <p>
-  <a href="#" class="echo-button echo-button-block echo-button-xl echo-button-square echo-button-style-a">S</a>
+  <a href="#" class="echo-button echo-button-lg echo-button-square echo-button-style-a">S</a>
 </p>
 
 <p>
-  <a href="#" class="echo-button echo-button-block echo-button-xxl echo-button-square echo-button-style-a">S</a>
+  <a href="#" class="echo-button echo-button-xl echo-button-square echo-button-style-a">S</a>
+</p>
+
+<p>
+  <a href="#" class="echo-button echo-button-xxl echo-button-square echo-button-style-a">S</a>
 </p>
 </div>
 
@@ -766,19 +818,23 @@
 &lt;/p&gt;
 
 &lt;p&gt;
-  &lt;a href="#" class="echo-button echo-button-block echo-button-square echo-button-style-a"&gt;S&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-sm echo-button-square echo-button-style-a"&gt;S&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
-  &lt;a href="#" class="echo-button echo-button-block echo-button-lg echo-button-square echo-button-style-a"&gt;S&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-square echo-button-style-a"&gt;S&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
-  &lt;a href="#" class="echo-button echo-button-block echo-button-xl echo-button-square echo-button-style-a"&gt;S&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-lg echo-button-square echo-button-style-a"&gt;S&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
-  &lt;a href="#" class="echo-button echo-button-block echo-button-xxl echo-button-square echo-button-style-a"&gt;S&lt;/a&gt;
+  &lt;a href="#" class="echo-button echo-button-xl echo-button-square echo-button-style-a"&gt;S&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;a href="#" class="echo-button echo-button-xxl echo-button-square echo-button-style-a"&gt;S&lt;/a&gt;
 &lt;/p&gt;
 </code></pre></div>
 

@@ -627,6 +627,14 @@ fieldset[disabled] .echo-button-style-b.echo-button-inverse.focus {
 echo-button-(size)
 --------------------
 */
+.echo-button-sm {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 0.75rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .echo-button-lg {
   padding-top: 0.875rem;
   padding-bottom: 0.875rem;
@@ -742,6 +750,12 @@ echo-button-circle
   padding: 0;
 }
 
+.echo-button-circle.echo-button-sm {
+  width: 2.25rem;
+  height: 2.25rem;
+  line-height: 2.25rem;
+}
+
 .echo-button-circle.echo-button-lg {
   width: 3.5rem;
   height: 3.5rem;
@@ -790,6 +804,12 @@ echo-button-square
 
 .echo-button-square.echo-button {
   padding: 0;
+}
+
+.echo-button-square.echo-button-sm {
+  width: 2.25rem;
+  height: 2.25rem;
+  line-height: 2.25rem;
 }
 
 .echo-button-square.echo-button-lg {

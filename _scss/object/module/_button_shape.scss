@@ -78,6 +78,12 @@ Specify a large value for "em", the button becomes an oval type
         padding: 0;
     }
 
+    &.#{$pr}#{$m}button#{$c3}sm {
+        width: $btn-circle-width-sm;
+        height: $btn-circle-width-sm;
+        line-height: $btn-circle-width-sm;
+    }
+
     &.#{$pr}#{$m}button#{$c3}lg {
         width: $btn-circle-width-lg;
         height: $btn-circle-width-lg;
@@ -126,6 +132,12 @@ Specify a large value for "em", the button becomes an oval type
 
     &.#{$pr}#{$m}button {
         padding: 0;
+    }
+
+    &.#{$pr}#{$m}button#{$c3}sm {
+        width: $btn-square-width-sm;
+        height: $btn-square-width-sm;
+        line-height: $btn-square-width-sm;
     }
 
     &.#{$pr}#{$m}button#{$c3}lg {
