@@ -40,9 +40,13 @@ Specify a large value for "em", the button becomes an oval type
     }
 
     &.#{$pr}#{$m}button#{$c3}lg {
-        width: $btn-circle-width-lg;
-        height: $btn-circle-width-lg;
-        line-height: $btn-circle-width-lg;
+
+        @include media-breakpoint-up(md) {
+            width: $btn-circle-width-lg;
+            height: $btn-circle-width-lg;
+            line-height: $btn-circle-width-lg;
+        }
+
     }
 
     &.#{$pr}#{$m}button#{$c3}xl {
@@ -55,6 +59,7 @@ Specify a large value for "em", the button becomes an oval type
             height: $btn-circle-width-xl;
             line-height: $btn-circle-width-xl;
         }
+
     }
 
     &.#{$pr}#{$m}button#{$c3}xxl {

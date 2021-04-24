@@ -54,14 +54,15 @@
                 <div class="echo-doc-post-contents styleguide-contents"><h2 id="btn" class="echo-doc-post-title-01">echo-button</h2>
 
 <p>リンク、インライン要素、フォームのボタン要素をボタン状に表示する。<br>
-最低 <code>2.75rem = 44px</code> の高さがあることが望ましい。<br>
-サブクラス <code>.echo-button-style-(style)</code> が必須であり、付与していない場合は最低限の装飾となる。</p>
+最低 <code>2.75rem = 44px</code> の高さがあることが望ましい。</p>
+
+<p>サブクラス <code>.echo-button-style-(style)</code> が必須であり、付与していない場合は最低限の装飾となる。</p>
 
 <p><code>.disabled</code> もしくは <code>disabled="disabled"</code> が付与されていると、反応しない見た目となる。<br>
 （他のフレームワークとの互換のため <code>.disabled</code> に接頭辞は設けていない）</p>
 
-<p>ボタンのdisplayプロパティは <code>inline-block</code> を指定している。このため、連続して配置すると右に改行コード分の余白が生じる。<br>
-余白を詰めたい場合は <code>.echo-button-block</code> を使用するか、包括するコンポーネントで調整すること。</p>
+<p>ボタンのdisplayプロパティは <code>inline-flex</code> を指定している。このため、連続して配置すると右に改行コード分の余白が生じる。<br>
+整列や中央寄せをしたい場合は <code>component > .echo-form</code> か <code>layout > .echo-buttons</code> を使用すること。</p>
 
 <div class="example">
 
@@ -260,16 +261,16 @@
 
 <h2 id="btn-03-size" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-button-(size)</h2>
 
-<p>ボタンのサイズを変える。(size)は、 <code>sm, lg, xl, xxl</code> に対応している。<br>
+<p>ボタンのサイズを変更する。(size)は、 <code>sm, lg, xl, xxl</code> に対応している。<br>
 <code>sm</code> はモバイル端末で求められる最低高さ(44px)を満たしていないため、メニューのボタン等の重要なインターフェースに使用することは推薦されない。</p>
 
 <h3 class="echo-doc-post-title-02">補足：xl, xxlの挙動</h3>
 
-<p><code>.echo-button-xl, .echo-button-xxl</code> は、(breakpoint)が <code>sm</code> 以下では一段階小さくなる。（つまり、モバイル端末では、lgとxlは同じ大きさとなる）</p>
+<p><code>.echo-button-lg, .echo-button-xl, .echo-button-xxl</code> は、(breakpoint)が <code>sm</code> 以下では一段階小さくなる。（つまり、モバイル端末では、defaultとlg, lgとxlは同じ大きさとなる）</p>
 
 <h3 class="echo-doc-post-title-02">note: Behavior of xl, xxl</h3>
 
-<p><code>.echo-button-xl, .echo-button-xxl</code> decreases by one level when (breakpoint) is less than <code>sm</code>. (On mobile devices, lg and xl are same size)</p>
+<p><code>.echo-button-xl, .echo-button-xxl</code> decreases by one level when (breakpoint) is less than <code>sm</code>. (On mobile devices, default and lg, lg and xl are same size)</p>
 
 <div class="example">
 <p>
@@ -278,7 +279,7 @@
 </p>
 
 <p>
-  <dfn>default</dfn>
+  <dfn>(default)</dfn>
   <a href="#" class="echo-button echo-button-style-a">echo-button</a>
 </p>
 

@@ -5,51 +5,37 @@
 */
 
 .#{$pr}#{$m}button#{$c3}sm {
-    padding-top: $btn-padding-y-sm;
-    padding-bottom: $btn-padding-y-sm;
+    min-height: $btn-height-sm;
     font-size: $btn-font-size-sm;
-    padding-left: $btn-padding-x-sm;
-    padding-right: $btn-padding-x-sm;
 }
 
 .#{$pr}#{$m}button#{$c3}lg {
-    padding-top: $btn-padding-y-lg;
-    padding-bottom: $btn-padding-y-lg;
-    font-size: $btn-font-size-lg;
-    padding-left: $btn-padding-x-lg;
-    padding-right: $btn-padding-x-lg;
+
+    @include media-breakpoint-up(md) {
+        min-height: $btn-height-lg;
+        font-size: $btn-font-size-lg;
+    }
+
 }
 
 .#{$pr}#{$m}button#{$c3}xl {
-    padding-top: $btn-padding-y-lg;
-    padding-bottom: $btn-padding-y-lg;
+    min-height: $btn-height-lg;
     font-size: $btn-font-size-lg;
-    padding-left: $btn-padding-x-lg;
-    padding-right: $btn-padding-x-lg;
 
     @include media-breakpoint-up(md) {
-        padding-top: $btn-padding-y-xl;
-        padding-bottom: $btn-padding-y-xl;
+        min-height: $btn-height-xl;
         font-size: $btn-font-size-xl;
-        padding-left: $btn-padding-x-xl;
-        padding-right: $btn-padding-x-xl;
     }
 
 }
 
 .#{$pr}#{$m}button#{$c3}xxl {
-    padding-top: $btn-padding-y-xl;
-    padding-bottom: $btn-padding-y-xl;
+    min-height: $btn-height-xl;
     font-size: $btn-font-size-xl;
-    padding-left: $btn-padding-x-xl;
-    padding-right: $btn-padding-x-xl;
 
     @include media-breakpoint-up(md) {
-        padding-top: $btn-padding-y-xxl;
-        padding-bottom: $btn-padding-y-xxl;
+        min-height: $btn-height-xxl;
         font-size: $btn-font-size-xxl;
-        padding-left: $btn-padding-x-xxl;
-        padding-right: $btn-padding-x-xxl;
     }
 
 }
