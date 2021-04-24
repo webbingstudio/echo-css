@@ -141,27 +141,6 @@
         font-size: $font-size-md;
     }
 
-    > .#{$pr}#{$m}button {
-        max-width: map-get( $object-max-widths, 'sm' );
-
-        @include media-breakpoint-down(sm) {
-            max-width: map-get( $object-max-widths, 'xs' );
-            padding-top: .5rem;
-            padding-bottom: .5rem;
-            font-size: $btn-font-size-sm;
-        }
-
-        @include media-breakpoint-up(lg) {
-            max-width: map-get( $object-max-widths, 'md' );
-            font-size: $btn-font-size-lg;
-        }
-
-        @include media-breakpoint-up(xl) {
-            font-size: $btn-font-size-xl;
-        }
-
-    }
-
     .#{$pr}#{$c}hero#{$c1}title + &,
     .#{$pr}#{$c}hero#{$c1}caption + &,
     .#{$pr}#{$c}hero#{$c1}body + & {

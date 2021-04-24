@@ -31,6 +31,20 @@
     display: flex;
     align-items: center;
     margin: 0;
+
+    .#{$pr}#{$m}button {
+        display: flex;
+        width: 100%;
+        max-width: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    [class*="#{$pr}#{$m}button#{$c2}icon"] {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
 }
 
 .#{$pr}#{$l}buttons#{$c3}grow {

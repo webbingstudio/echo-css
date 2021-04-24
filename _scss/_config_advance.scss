@@ -253,10 +253,18 @@ $nav-min-size: 2.75rem !default;
 
 $object-max-widths: (
     xs: 16rem,
-    sm: 22.5rem,
-    md: 30rem,
-    lg: 36rem,
-    xl: 48rem,
+    sm: 16rem + 4rem,
+    md: 16rem + 8rem,
+    lg: 16rem + 16rem,
+    xl: 16rem + 32rem,
+) !default;
+
+$button-max-widths: (
+    sm:  map-get( $object-max-widths, 'xs' ),
+    md:  map-get( $object-max-widths, 'sm' ),
+    lg:  map-get( $object-max-widths, 'md' ),
+    xl:  map-get( $object-max-widths, 'lg' ),
+    xxl: map-get( $object-max-widths, 'xl' )
 ) !default;
 
 $container-max-widths-sm: (

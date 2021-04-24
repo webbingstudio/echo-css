@@ -5,6 +5,7 @@
 */
 
 [class*="#{$pr}#{$m}button#{$c2}icon"] {
+    padding-right: 2.65em;
 
     &:after {
         content: "";
@@ -18,21 +19,14 @@
         transform-origin: center center;
     }
 
-    &:not(.#{$pr}#{$m}button#{$c3}block) {
-        padding-right: 2.65em;
-    }
-
 }
 
 .#{$pr}#{$m}button#{$c2}icon#{$c3}left {
+    padding-left: 2.65em;
 
     &:after {
         right: auto;
         left: .65em;
-    }
-
-    &:not(.#{$pr}#{$m}button#{$c3}block) {
-        padding-left: 2.65em;
     }
 
 }

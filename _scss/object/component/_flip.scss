@@ -178,19 +178,6 @@
         font-size: $font-size-md;
     }
 
-    > .#{$pr}#{$m}button {
-
-        @include media-breakpoint-down(sm) {
-            max-width: map-get( $object-max-widths, 'xs' );
-            font-size: $btn-font-size-sm;
-        }
-
-        @include media-breakpoint-up(lg) {
-            font-size: $btn-font-size-lg;
-        }
-
-    }
-
     .#{$pr}#{$c}flip#{$c1}title + &,
     .#{$pr}#{$c}flip#{$c1}caption + &,
     .#{$pr}#{$c}flip#{$c1}body + & {

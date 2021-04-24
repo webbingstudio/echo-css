@@ -11,15 +11,16 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    max-width: map-get( $object-max-widths, 'sm' );
+    max-width: map-get( $button-max-widths, 'md' );
     min-height: $btn-height-md;
     margin: 0 auto;
-    padding: 0 1em;
+    // 下マージンはベースライン分を引く
+    padding: .25em 1em .15em;
     background-color: $default-fade;
     border: $ui-btn-border-width solid $default-fade;
     color: $body-color;
     font-size: $btn-font-size-md;
-    line-height: 1;
+    line-height: $line-height-xs;
     border-radius: $btn-border-radius;
     vertical-align: middle;
     cursor: pointer;

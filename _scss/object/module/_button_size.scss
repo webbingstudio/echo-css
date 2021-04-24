@@ -5,11 +5,13 @@
 */
 
 .#{$pr}#{$m}button#{$c3}sm {
+    max-width: map-get( $button-max-widths, 'sm' );
     min-height: $btn-height-sm;
     font-size: $btn-font-size-sm;
 }
 
 .#{$pr}#{$m}button#{$c3}lg {
+    max-width: map-get( $button-max-widths, 'lg' );
 
     @include media-breakpoint-up(md) {
         min-height: $btn-height-lg;
@@ -19,6 +21,7 @@
 }
 
 .#{$pr}#{$m}button#{$c3}xl {
+    max-width: map-get( $button-max-widths, 'xl' );
     min-height: $btn-height-lg;
     font-size: $btn-font-size-lg;
 
@@ -30,6 +33,7 @@
 }
 
 .#{$pr}#{$m}button#{$c3}xxl {
+    max-width: map-get( $button-max-widths, 'xxl' );
     min-height: $btn-height-xl;
     font-size: $btn-font-size-xl;
 

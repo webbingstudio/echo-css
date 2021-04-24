@@ -144,4 +144,18 @@ a.#{$pr}#{$c}card#{$c1}inner {
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
+
+
+    > .#{$pr}#{$m}button {
+        display: flex;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    > [class*="#{$pr}#{$m}button#{$c2}icon"] {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
 }

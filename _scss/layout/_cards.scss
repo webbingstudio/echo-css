@@ -6,18 +6,15 @@
 
 .#{$pr}#{$l}cards {
     display: grid;
-    gap: map-get( $grid-gutter-widths, sm );
+    gap: map-get( $grid-gutter-widths, lg );
 
     @include media-breakpoint-up(sm) {
+        gap: map-get( $grid-gutter-widths, md );
         grid-template-columns: 1fr 1fr;
     }
 
     @include media-breakpoint-up(md) {
         grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    @include media-breakpoint-up(lg) {
-        gap: map-get( $grid-gutter-widths, md );
     }
 
     @include media-breakpoint-up(xl) {
