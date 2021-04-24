@@ -681,45 +681,6 @@ echo-button-(size)
 
 /*
 --------------------
-echo-button-block
---------------------
-*/
-.echo-button-block {
-  display: block;
-  width: 100%;
-  max-width: 30rem;
-  margin: 0 auto;
-}
-
-.echo-button-block.echo-button {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-@media (min-width: 26.75rem) {
-  .echo-button-block.echo-button-xl {
-    max-width: 36rem;
-  }
-}
-
-.echo-button-block.echo-button-xxl {
-  max-width: none;
-}
-
-@media (min-width: 26.75rem) {
-  .echo-button-block.echo-button-xxl {
-    max-width: 36rem;
-  }
-}
-
-@media (min-width: 62.5rem) {
-  .echo-button-block.echo-button-xxl {
-    max-width: 48rem;
-  }
-}
-
-/*
---------------------
 echo-button-oval
 --------------------
 */
