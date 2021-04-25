@@ -8,12 +8,19 @@
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax( calc( 50% - #{map-get( $grid-gutter-widths, 'md' )} ), 1fr ) );
     gap: map-get( $grid-gutter-widths, md );
-    width: 100%;
+    width: calc( 100% - #{map-get( $grid-gutter-widths, md )} );
     max-width: map-get( $container-max-widths-md, md ) - map-get( $grid-gutter-widths, 'md' );
     margin: 0 auto;
 
     @include media-breakpoint-up(lg) {
         grid-template-columns: repeat( auto-fit, minmax( calc( 1% - #{map-get( $grid-gutter-widths, 'md' )} ), 1fr ) );
+    }
+
+    .#{$pr}#{$l}container &,
+    .#{$pr}#{$c}card &,
+    .#{$pr}#{$c}flip &,
+    .#{$pr}#{$c}hero & {
+       width: 100%;
     }
 
     @at-root {
@@ -33,11 +40,13 @@
     margin: 0;
 
     .#{$pr}#{$m}button {
-        display: flex;
-        width: 100%;
-        max-width: none;
-        margin-left: auto;
-        margin-right: auto;
+
+        &:not(.#{$pr}#{$m}button#{$c3}square):not(.#{$pr}#{$m}button#{$c3}circle) {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
     }
 
     [class*="#{$pr}#{$m}button#{$c2}icon"] {

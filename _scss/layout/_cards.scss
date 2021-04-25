@@ -6,7 +6,9 @@
 
 .#{$pr}#{$l}cards {
     display: grid;
+    width: calc( 100% - #{map-get( $grid-gutter-widths, md )} );
     gap: map-get( $grid-gutter-widths, lg );
+    margin: 0 auto;
 
     @include media-breakpoint-up(sm) {
         gap: map-get( $grid-gutter-widths, md );

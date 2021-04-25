@@ -35,13 +35,15 @@
 
 <p><code>.echo-button</code> を、中央寄せで繰り返すための領域を作成する。 <code>div, ul</code> でマークアップできる。</p>
 
+<p><code>.echo-container, .echo-card, .echo-hero, .echo-flip</code> に包括されていない限り、 <code>.echo-container</code> と同じ大きさの左右余白が確保される。</p>
+
 <p>ボタンの数は、1個から4個を前提としている。<br>
 (breakpoint)が <code>md</code> 以下で最大2カラム、 <code>lg</code> 以上で最大4カラムとなる。</p>
 
 <p><code>.echo-button-item</code> の最大幅は <code>.echo-container-sm</code> と同じ領域幅を、ボタンの数で均等に割ったものとなる。<br>
 <code>grid-template-columns</code> プロパティを使用している関係で、Internet Explorer 11では正常な幅で表示されない。</p>
 
-<div class="example">
+<div style="margin-left: -10px; margin-right: -10px;">
 
 <p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-sm">ボタン1個</p>
 
@@ -102,7 +104,7 @@
 <div class="echo-buttons">
 
     <div class="echo-buttons-item">
-        <a href="#" class="echo-button echo-button echo-button-style-b echo-button-icon-arrow">ボタン</a>
+        <a href="#" class="echo-button echo-button-style-b echo-button-icon-arrow">ボタン</a>
     </div><!-- /.echo-buttons-item -->
 
     <div class="echo-buttons-item">
@@ -198,7 +200,7 @@
 &lt;div class="echo-buttons"&gt;
 
     &lt;div class="echo-buttons-item"&gt;
-        &lt;a href="#" class="echo-button echo-button echo-button-style-b echo-button-icon-arrow"&gt;ボタン&lt;/a&gt;
+        &lt;a href="#" class="echo-button echo-button-style-b echo-button-icon-arrow"&gt;ボタン&lt;/a&gt;
     &lt;/div&gt;&lt;!-- /.echo-buttons-item --&gt;
 
     &lt;div class="echo-buttons-item"&gt;
@@ -240,7 +242,7 @@
 ボタンの数が2個、もしくは3個を前提としている。<br>
 ボタンの数が1個の場合は何も起きない。4個の場合はボタンの幅が狭くなるため、ラベルをアイコンにする等の考慮が必要となる。</p>
 
-<div class="example">
+<div style="margin-left: -10px; margin-right: -10px;">
 
 <p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-sm">ボタン1個</p>
 
@@ -289,19 +291,19 @@
 <div class="echo-buttons echo-buttons-grow">
 
     <div class="echo-buttons-item">
-        <a href="#" class="echo-button echo-button echo-button-style-b"><i class="fas fa-star echo-text-xl"></i><span class="echo-sr">お気に入り</span></a>
+        <a href="#" class="echo-button echo-button-lg echo-button-style-b"><i class="fas fa-star echo-text-xl"></i><span class="echo-sr">お気に入り</span></a>
     </div><!-- /.echo-buttons-item -->
 
     <div class="echo-buttons-item">
-        <a href="#" class="echo-button echo-button echo-button-style-b"><i class="fas fa-heart echo-text-xl"></i><span class="echo-sr">いいね！</span></a>
+        <a href="#" class="echo-button echo-button-lg echo-button-style-b"><i class="fas fa-heart echo-text-xl"></i><span class="echo-sr">いいね！</span></a>
     </div><!-- /.echo-buttons-item -->
 
     <div class="echo-buttons-item">
-        <a href="#" class="echo-button echo-button echo-button-style-b"><i class="fas fa-share-alt echo-text-xl"></i><span class="echo-sr">シェアする</span></a>
+        <a href="#" class="echo-button echo-button-lg echo-button-style-b"><i class="fas fa-share-alt echo-text-xl"></i><span class="echo-sr">シェアする</span></a>
     </div><!-- /.echo-buttons-item -->
 
     <div class="echo-buttons-item">
-        <a href="#" class="echo-button echo-button echo-button-style-a"><i class="fas fa-download echo-text-xl"></i><span class="echo-margin-left-sm">ダウンロード</span></a>
+        <a href="#" class="echo-button echo-button-lg echo-button-style-a"><i class="fas fa-download echo-text-xl"></i><span class="echo-margin-left-sm">ダウンロード</span></a>
     </div><!-- /.echo-buttons-item -->
 
 </div><!-- /.echo-buttons -->
@@ -355,19 +357,19 @@
 &lt;div class="echo-buttons echo-buttons-grow"&gt;
 
     &lt;div class="echo-buttons-item"&gt;
-        &lt;a href="#" class="echo-button echo-button echo-button-style-b"&gt;&lt;i class="fas fa-star echo-text-xl"&gt;&lt;/i&gt;&lt;span class="echo-sr"&gt;お気に入り&lt;/span&gt;&lt;/a&gt;
+        &lt;a href="#" class="echo-button echo-button-lg echo-button-style-b"&gt;&lt;i class="fas fa-star echo-text-xl"&gt;&lt;/i&gt;&lt;span class="echo-sr"&gt;お気に入り&lt;/span&gt;&lt;/a&gt;
     &lt;/div&gt;&lt;!-- /.echo-buttons-item --&gt;
 
     &lt;div class="echo-buttons-item"&gt;
-        &lt;a href="#" class="echo-button echo-button echo-button-style-b"&gt;&lt;i class="fas fa-heart echo-text-xl"&gt;&lt;/i&gt;&lt;span class="echo-sr"&gt;いいね！&lt;/span&gt;&lt;/a&gt;
+        &lt;a href="#" class="echo-button echo-button-lg echo-button-style-b"&gt;&lt;i class="fas fa-heart echo-text-xl"&gt;&lt;/i&gt;&lt;span class="echo-sr"&gt;いいね！&lt;/span&gt;&lt;/a&gt;
     &lt;/div&gt;&lt;!-- /.echo-buttons-item --&gt;
 
     &lt;div class="echo-buttons-item"&gt;
-        &lt;a href="#" class="echo-button echo-button echo-button-style-b"&gt;&lt;i class="fas fa-share-alt echo-text-xl"&gt;&lt;/i&gt;&lt;span class="echo-sr"&gt;シェアする&lt;/span&gt;&lt;/a&gt;
+        &lt;a href="#" class="echo-button echo-button-lg echo-button-style-b"&gt;&lt;i class="fas fa-share-alt echo-text-xl"&gt;&lt;/i&gt;&lt;span class="echo-sr"&gt;シェアする&lt;/span&gt;&lt;/a&gt;
     &lt;/div&gt;&lt;!-- /.echo-buttons-item --&gt;
 
     &lt;div class="echo-buttons-item"&gt;
-        &lt;a href="#" class="echo-button echo-button echo-button-style-a"&gt;&lt;i class="fas fa-download echo-text-xl"&gt;&lt;/i&gt;&lt;span class="echo-margin-left-sm"&gt;ダウンロード&lt;/span&gt;&lt;/a&gt;
+        &lt;a href="#" class="echo-button echo-button-lg echo-button-style-a"&gt;&lt;i class="fas fa-download echo-text-xl"&gt;&lt;/i&gt;&lt;span class="echo-margin-left-sm"&gt;ダウンロード&lt;/span&gt;&lt;/a&gt;
     &lt;/div&gt;&lt;!-- /.echo-buttons-item --&gt;
 
 &lt;/div&gt;&lt;!-- /.echo-buttons --&gt;
