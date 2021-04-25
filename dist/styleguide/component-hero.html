@@ -26,10 +26,12 @@
                 <ul class="echo-list echo-list-horizontal">
 
                     <li class="echo-list-item"><a href="#hero" class="js-scrollto">echo-hero</a></li>
+
+                    <li class="echo-list-item"><a href="#hero-01-fit" class="js-scrollto">echo-hero-fit</a></li>
+
+                    <li class="echo-list-item"><a href="#hero-02-direction" class="js-scrollto">echo-hero-(direction)</a></li>
                     
-                    <li class="echo-list-item"><a href="#hero-01-direction" class="js-scrollto">echo-hero-(direction)</a></li>
-                    
-                    <li class="echo-list-item"><a href="#hero-02-inverse" class="js-scrollto">echo-hero-inverse</a></li>
+                    <li class="echo-list-item"><a href="#hero-03-inverse" class="js-scrollto">echo-hero-inverse</a></li>
                     
                 </ul>
             </nav>
@@ -38,7 +40,9 @@
                 <div class="echo-doc-post-contents styleguide-contents"><h2 id="hero" class="echo-doc-post-title-01">echo-hero</h2>
 
 <p>メインビジュアルなどに使用される全面背景を持つコンポーネントを表示する。<br>
-<code>.echo-hero-contents-inner</code> が必須であることと、内容が多すぎると領域をはみ出すことがある点に注意。</p>
+<code>.echo-title, .echo-button, .echo-buttons</code> を含めることができる。</p>
+
+<p><code>.echo-hero-contents-inner</code> が必須であることと、内容が多すぎると領域をはみ出すことがある点に注意する。</p>
 
 <p><code>.echo-hero-image</code> の画像は<strong>トリミングされず、縦横比を保って伸縮する。</strong>レスポンシブイメージを併用することが望ましい。<br>
 </p>
@@ -47,7 +51,6 @@
 
 <p><code>.echo-hero-title.echo-title</code> に付与されている <code>.echo-font-first</code> は<strong>必須ではない</strong>。詳細は <a href="./utility-font.html">utility > font</a> を参照。</p>
 
-<div class="example">
 <div class="echo-hero">
     <div class="echo-hero-image">
         <picture>
@@ -66,51 +69,67 @@
             <h2 class="echo-hero-title echo-title echo-font-first">吾輩は猫である</h2>
             <p class="echo-hero-caption">名前はまだ無い</p>
             <div class="echo-hero-body">
-                <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。</p>
+                <p>どこで生れたかとんと見当がつかぬ。<br>
+                    何でも薄暗いじめじめした所で<br class="echo-hidden-sm-up">ニャーニャー泣いていた事だけは記憶している。</p>
             </div><!-- /.echo-hero-body -->
-            <p class="echo-hero-link">
-                <a href="#" class="echo-button echo-button-style-b echo-button-icon-arrow">詳しくはこちら</a>
-            </p>
+            <div class="echo-hero-link">
+                <div class="echo-buttons">
+                    <div class="echo-buttons-item">
+                        <a href="#" class="echo-button echo-button-lg echo-button-style-b echo-button-icon-arrow">詳しくはこちら</a>
+                    </div><!-- /.echo-buttons-item -->
+                </div><!-- /.echo-buttons -->
+            </div><!-- /.echo-hero-link -->
         </div><!-- /.echo-hero-contents-inner -->
     </div><!-- /.echo-hero-contents -->
 </div><!-- /.echo-hero -->
-</div>
 
-<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-hero"&gt;
-    &lt;div class="echo-hero-image"&gt;
-        &lt;picture&gt;
-            &lt;source
+<p class="echo-title echo-title-style-a echo-title-level-3 echo-margin-top-lg echo-margin-bottom-md">複数のボタンを表示している例</p>
+
+<div class="echo-hero">
+    <div class="echo-hero-image">
+        <picture>
+            <source
                 media="(max-width:768px)"
                 srcset="../images/_dummy/image_10_m.jpg 768w"
-                sizes="100vw"&gt;
-            &lt;source
+                sizes="100vw">
+            <source
                 srcset="../images/_dummy/image_10.jpg 1280w"
-                sizes="(max-width:1280px) 100vw"&gt;
-            &lt;img src="../images/_dummy/image_10.jpg" alt=""&gt;
-        &lt;/picture&gt;
-    &lt;/div&gt;&lt;!-- /.echo-hero-image --&gt;
-    &lt;div class="echo-hero-contents"&gt;
-        &lt;div class="echo-hero-contents-inner"&gt;
-            &lt;h2 class="echo-hero-title echo-title echo-font-first"&gt;吾輩は猫である&lt;/h2&gt;
-            &lt;p class="echo-hero-caption"&gt;名前はまだ無い&lt;/p&gt;
-            &lt;div class="echo-hero-body"&gt;
-                &lt;p&gt;どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。&lt;/p&gt;
-            &lt;/div&gt;&lt;!-- /.echo-hero-body --&gt;
-            &lt;p class="echo-hero-link"&gt;
-                &lt;a href="#" class="echo-button echo-button-style-b echo-button-icon-arrow"&gt;詳しくはこちら&lt;/a&gt;
-            &lt;/p&gt;
-        &lt;/div&gt;&lt;!-- /.echo-hero-contents-inner --&gt;
-    &lt;/div&gt;&lt;!-- /.echo-hero-contents --&gt;
-&lt;/div&gt;&lt;!-- /.echo-hero --&gt;</code></pre></div>
+                sizes="(max-width:1280px) 100vw">
+            <img src="../images/_dummy/image_10.jpg" alt="">
+        </picture>
+    </div><!-- /.echo-hero-image -->
+    <div class="echo-hero-contents">
+        <div class="echo-hero-contents-inner">
+            <h2 class="echo-hero-title echo-title echo-font-first">吾輩は猫である</h2>
+            <p class="echo-hero-caption">名前はまだ無い</p>
+            <div class="echo-hero-body">
+                <p>どこで生れたかとんと見当がつかぬ。</p>
+            </div><!-- /.echo-hero-body -->
+            <div class="echo-hero-link">
+                <div class="echo-buttons">
+                    <div class="echo-buttons-item">
+                        <a href="#" class="echo-button echo-button-lg echo-button-style-b">ボタン1</a>
+                    </div><!-- /.echo-buttons-item -->
+                    <div class="echo-buttons-item">
+                        <a href="#" class="echo-button echo-button-lg echo-button-style-a">ボタン2</a>
+                    </div><!-- /.echo-buttons-item -->
+                </div><!-- /.echo-buttons -->
+            </div><!-- /.echo-hero-link -->
+        </div><!-- /.echo-hero-contents-inner -->
+    </div><!-- /.echo-hero-contents -->
+</div><!-- /.echo-hero -->
 
-<h2 id="hero-01-direction" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-hero-fit</h2>
+
+<div class="codeblock"><pre><code class="language-markup"></code></pre></div>
+
+
+<h2 id="hero-01-fit" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-hero-fit</h2>
 
 <p>背景画像が縦横比を保ってトリミングされる。<br>
 ブレークポイントが <code>xs</code> では <code>1:1</code> 、<code>sm, md, lg</code> では <code>16:9</code> 、<code>xl</code> 以上では <code>2.5:1</code> となる。<br>
 画像のトリミングにはobject-fitを使用しているため、Internet Explorer 11には対応していない。<br>
 ライブラリを追加した場合でも、<strong>レスポンシブイメージとの併用ができない</strong>ことに注意（画面サイズに関係なく、img要素のsrc属性に指定した画像が使用される）。</p>
 
-<div class="example">
 <div class="echo-hero echo-hero-fit">
     <div class="echo-hero-image">
         <picture>
@@ -129,53 +148,31 @@
             <h2 class="echo-hero-title echo-title echo-font-first">吾輩は猫である</h2>
             <p class="echo-hero-caption">名前はまだ無い</p>
             <div class="echo-hero-body">
-                <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。</p>
+                <p>どこで生れたかとんと見当がつかぬ。<br>
+                    何でも薄暗いじめじめした所で<br class="echo-hidden-sm-up">ニャーニャー泣いていた事だけは記憶している。</p>
             </div><!-- /.echo-hero-body -->
-            <p class="echo-hero-link">
-                <a href="#" class="echo-button echo-button-style-b echo-button-icon-arrow">詳しくはこちら</a>
-            </p>
+            <div class="echo-hero-link">
+                <div class="echo-buttons">
+                    <div class="echo-buttons-item">
+                        <a href="#" class="echo-button echo-button-lg echo-button-style-b echo-button-icon-arrow">詳しくはこちら</a>
+                    </div><!-- /.echo-buttons-item -->
+                </div><!-- /.echo-buttons -->
+            </div><!-- /.echo-hero-link -->
         </div><!-- /.echo-hero-contents-inner -->
     </div><!-- /.echo-hero-contents -->
 </div><!-- /.echo-hero -->
-</div>
 
-<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-hero echo-hero-fit"&gt;
-    &lt;div class="echo-hero-image"&gt;
-        &lt;picture&gt;
-            &lt;source
-                media="(max-width:768px)"
-                srcset="../images/_dummy/image_10_m.jpg 768w"
-                sizes="100vw"&gt;
-            &lt;source
-                srcset="../images/_dummy/image_10.jpg 1280w"
-                sizes="(max-width:1280px) 100vw"&gt;
-            &lt;img src="../images/_dummy/image_10.jpg" alt=""&gt;
-        &lt;/picture&gt;
-    &lt;/div&gt;&lt;!-- /.echo-hero-image --&gt;
-    &lt;div class="echo-hero-contents"&gt;
-        &lt;div class="echo-hero-contents-inner"&gt;
-            &lt;h2 class="echo-hero-title echo-title echo-font-first"&gt;吾輩は猫である&lt;/h2&gt;
-            &lt;p class="echo-hero-caption"&gt;名前はまだ無い&lt;/p&gt;
-            &lt;div class="echo-hero-body"&gt;
-                &lt;p&gt;どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。&lt;/p&gt;
-            &lt;/div&gt;&lt;!-- /.echo-hero-body --&gt;
-            &lt;p class="echo-hero-link"&gt;
-                &lt;a href="#" class="echo-button echo-button-style-b echo-button-icon-arrow"&gt;詳しくはこちら&lt;/a&gt;
-            &lt;/p&gt;
-        &lt;/div&gt;&lt;!-- /.echo-hero-contents-inner --&gt;
-    &lt;/div&gt;&lt;!-- /.echo-hero-contents --&gt;
-&lt;/div&gt;&lt;!-- /.echo-hero --&gt;</code></pre></div>
+<div class="codeblock"><pre><code class="language-markup"></code></pre></div>
 
-<h2 id="hero-01-direction" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-hero-(direction)</h2>
 
-<p>コンテンツブロックを指定した方向に寄せる。<br>
+<h2 id="hero-02-direction" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-hero-(direction)</h2>
+
+<p><code>.echo-hero-contents-inner</code> を指定した方向に寄せる。<br>
 ブレークポイントが <code>md</code> 以上の場合は最大幅が66%、 <code>lg</code> 以上の場合は50%に制限される。</p>
-
-<div class="example">
 
 <p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-sm">.echo-hero + .echo-hero-left</p>
 
-<div class="echo-hero echo-hero-left" style="margin-bottom: 2rem;">
+<div class="echo-hero echo-hero-fit echo-hero-left">
     <div class="echo-hero-image">
         <picture>
             <source
@@ -193,16 +190,17 @@
             <h2 class="echo-hero-title echo-title echo-font-first">吾輩は猫である</h2>
             <p class="echo-hero-caption">名前はまだ無い</p>
             <div class="echo-hero-body">
-                <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。</p>
+                <p>どこで生れたかとんと見当がつかぬ。<br>
+                    何でも薄暗いじめじめした所で<br class="echo-hidden-sm-up">ニャーニャー泣いていた事だけは記憶している。</p>
             </div><!-- /.echo-hero-body -->
-            <p class="echo-hero-link">
-                <a href="#" class="echo-button echo-button-style-b echo-button-icon-arrow">詳しくはこちら</a>
-            </p>
+            <div class="echo-hero-link">
+                <a href="#" class="echo-button echo-button-style-a echo-button-icon-arrow">詳しくはこちら</a>
+            </div><!-- /.echo-hero-link -->
         </div><!-- /.echo-hero-contents-inner -->
     </div><!-- /.echo-hero-contents -->
 </div><!-- /.echo-hero -->
 
-<p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-top-lg echo-margin-bottom-sm">.echo-hero + .echo-hero-right</p>
+<p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-top-xl echo-margin-bottom-sm">.echo-hero + .echo-hero-right</p>
 
 <div class="echo-hero echo-hero-right">
     <div class="echo-hero-image">
@@ -222,78 +220,24 @@
             <h2 class="echo-hero-title echo-title echo-font-first">吾輩は猫である</h2>
             <p class="echo-hero-caption">名前はまだ無い</p>
             <div class="echo-hero-body">
-                <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。</p>
+                <p>どこで生れたかとんと見当がつかぬ。<br>
+                    何でも薄暗いじめじめした所で<br class="echo-hidden-sm-up">ニャーニャー泣いていた事だけは記憶している。</p>
             </div><!-- /.echo-hero-body -->
-            <p class="echo-hero-link">
+            <div class="echo-hero-link">
                 <a href="#" class="echo-button echo-button-style-b echo-button-icon-arrow">詳しくはこちら</a>
-            </p>
+            </div><!-- /.echo-hero-link -->
         </div><!-- /.echo-hero-contents-inner -->
     </div><!-- /.echo-hero-contents -->
 </div><!-- /.echo-hero -->
 
-</div>
-
-<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-hero echo-hero-left"&gt;
-    &lt;div class="echo-hero-image"&gt;
-        &lt;picture&gt;
-            &lt;source
-                media="(max-width:768px)"
-                srcset="../images/_dummy/image_09_m.jpg 768w"
-                sizes="100vw"&gt;
-            &lt;source
-                srcset="../images/_dummy/image_09.jpg 1280w"
-                sizes="(max-width:1280px) 100vw"&gt;
-            &lt;img src="../images/_dummy/image_09.jpg" alt=""&gt;
-        &lt;/picture&gt;
-    &lt;/div&gt;&lt;!-- /.echo-hero-image --&gt;
-    &lt;div class="echo-hero-contents"&gt;
-        &lt;div class="echo-hero-contents-inner"&gt;
-            &lt;h2 class="echo-hero-title echo-title echo-font-first"&gt;吾輩は猫である&lt;/h2&gt;
-            &lt;p class="echo-hero-caption"&gt;名前はまだ無い&lt;/p&gt;
-            &lt;div class="echo-hero-body"&gt;
-                &lt;p&gt;どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。&lt;/p&gt;
-            &lt;/div&gt;&lt;!-- /.echo-hero-body --&gt;
-            &lt;p class="echo-hero-link"&gt;
-                &lt;a href="#" class="echo-button echo-button-style-b echo-button-icon-arrow"&gt;詳しくはこちら&lt;/a&gt;
-            &lt;/p&gt;
-        &lt;/div&gt;&lt;!-- /.echo-hero-contents-inner --&gt;
-    &lt;/div&gt;&lt;!-- /.echo-hero-contents --&gt;
-&lt;/div&gt;&lt;!-- /.echo-hero --&gt;
+<div class="codeblock"><pre><code class="language-markup"></code></pre></div>
 
 
-&lt;div class="echo-hero echo-hero-right"&gt;
-    &lt;div class="echo-hero-image"&gt;
-        &lt;picture&gt;
-            &lt;source
-                media="(max-width:768px)"
-                srcset="../images/_dummy/image_06_m.jpg 768w"
-                sizes="100vw"&gt;
-            &lt;source
-                srcset="../images/_dummy/image_06.jpg 1280w"
-                sizes="(max-width:1280px) 100vw"&gt;
-            &lt;img src="../images/_dummy/image_06.jpg" alt=""&gt;
-        &lt;/picture&gt;
-    &lt;/div&gt;&lt;!-- /.echo-hero-image --&gt;
-    &lt;div class="echo-hero-contents"&gt;
-        &lt;div class="echo-hero-contents-inner"&gt;
-            &lt;h2 class="echo-hero-title echo-title echo-font-first"&gt;吾輩は猫である&lt;/h2&gt;
-            &lt;p class="echo-hero-caption"&gt;名前はまだ無い&lt;/p&gt;
-            &lt;div class="echo-hero-body"&gt;
-                &lt;p&gt;どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。&lt;/p&gt;
-            &lt;/div&gt;&lt;!-- /.echo-hero-body --&gt;
-            &lt;p class="echo-hero-link"&gt;
-                &lt;a href="#" class="echo-button echo-button-style-b echo-button-icon-arrow"&gt;詳しくはこちら&lt;/a&gt;
-            &lt;/p&gt;
-        &lt;/div&gt;&lt;!-- /.echo-hero-contents-inner --&gt;
-    &lt;/div&gt;&lt;!-- /.echo-hero-contents --&gt;
-&lt;/div&gt;&lt;!-- /.echo-hero --&gt;</code></pre></div>
-
-<h2 id="hero-01-direction" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-hero-inverse</h2>
+<h2 id="hero-03-inverse" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-hero-inverse</h2>
 
 <p>コンテンツの色が反転する。<br>
-ボタンの色は <code>.echo-button-inverse</code> を付与しなければ変わらないことに注意。</p>
+ボタンの色は <code>.echo-button-inverse</code> を付与しなければ変わらないことに注意する。</p>
 
-<div class="example">
 <div class="echo-hero echo-hero-inverse">
     <div class="echo-hero-image">
         <picture>
@@ -312,41 +256,21 @@
             <h2 class="echo-hero-title echo-title echo-font-first">吾輩は猫である</h2>
             <p class="echo-hero-caption">名前はまだ無い</p>
             <div class="echo-hero-body">
-                <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。</p>
+                <p>どこで生れたかとんと見当がつかぬ。<br>
+                    何でも薄暗いじめじめした所で<br class="echo-hidden-sm-up">ニャーニャー泣いていた事だけは記憶している。</p>
             </div><!-- /.echo-hero-body -->
-            <p class="echo-hero-link">
-                <a href="#" class="echo-button echo-button-inverse echo-button-style-b echo-button-icon-arrow">詳しくはこちら</a>
-            </p>
+            <div class="echo-hero-link">
+                <div class="echo-buttons">
+                    <div class="echo-buttons-item">
+                        <a href="#" class="echo-button echo-button-inverse echo-button-lg echo-button-style-b echo-button-icon-arrow">詳しくはこちら</a>
+                    </div><!-- /.echo-buttons-item -->
+                </div><!-- /.echo-buttons -->
+            </div><!-- /.echo-hero-link -->
         </div><!-- /.echo-hero-contents-inner -->
     </div><!-- /.echo-hero-contents -->
 </div><!-- /.echo-hero -->
-</div>
 
-<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-hero echo-hero-inverse"&gt;
-    &lt;div class="echo-hero-image"&gt;
-        &lt;picture&gt;
-            &lt;source
-                media="(max-width:768px)"
-                srcset="../images/_dummy/image_07_m.jpg 768w"
-                sizes="100vw"&gt;
-            &lt;source
-                srcset="../images/_dummy/image_07.jpg 1280w"
-                sizes="(max-width:1280px) 100vw"&gt;
-            &lt;img src="../images/_dummy/image_07.jpg" alt=""&gt;
-        &lt;/picture&gt;
-    &lt;/div&gt;&lt;!-- /.echo-hero-image --&gt;
-    &lt;div class="echo-hero-contents"&gt;
-        &lt;div class="echo-hero-contents-inner"&gt;
-            &lt;h2 class="echo-hero-title echo-title echo-font-first"&gt;吾輩は猫である&lt;/h2&gt;
-            &lt;p class="echo-hero-caption"&gt;名前はまだ無い&lt;/p&gt;
-            &lt;div class="echo-hero-body"&gt;
-                &lt;p&gt;どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。&lt;/p&gt;
-            &lt;/div&gt;&lt;!-- /.echo-hero-body --&gt;
-            &lt;p class="echo-hero-link"&gt;
-                &lt;a href="#" class="echo-button echo-button-inverse echo-button-style-b echo-button-icon-arrow"&gt;詳しくはこちら&lt;/a&gt;
-            &lt;/p&gt;
-        &lt;/div&gt;&lt;!-- /.echo-hero-contents-inner --&gt;
-    &lt;/div&gt;&lt;!-- /.echo-hero-contents --&gt;
-&lt;/div&gt;&lt;!-- /.echo-hero --&gt;</code></pre></div>
+<div class="codeblock"><pre><code class="language-markup"></code></pre></div>
+
 
 <?php include('../doc_include/footer.inc'); ?>

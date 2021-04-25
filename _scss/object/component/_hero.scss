@@ -38,9 +38,11 @@
 .#{$pr}#{$c}hero#{$c1}contents#{$c1}inner {
     padding-left: ( $spacer * 1.5 );
     padding-right: ( $spacer * 1.5 );
+    margin-left: auto;
+    margin-right: auto;
 
     @include media-breakpoint-up(lg) {
-        flex-basis: map-get($container-max-widths-md, md);
+        max-width: map-get($container-max-widths-md, md);
     }
 
 }
@@ -128,6 +130,7 @@
 .#{$pr}#{$c}hero#{$c1}link {
     margin: 0;
     font-size: $font-size-xs;
+    text-align: center;
     line-height: 1;
 
     @include media-breakpoint-up(lg) {
@@ -138,9 +141,7 @@
         font-size: $font-size-md;
     }
 
-    .#{$pr}#{$c}hero#{$c1}title + &,
-    .#{$pr}#{$c}hero#{$c1}caption + &,
-    .#{$pr}#{$c}hero#{$c1}body + & {
+    [class*="#{$pr}#{$c}hero#{$c1}"] + & {
         margin-top: 1.5em;
 
         @include media-breakpoint-up(lg) {
@@ -213,11 +214,11 @@
     .#{$pr}#{$c}hero#{$c1}contents#{$c1}inner {
 
         @include media-breakpoint-up(md) {
-            flex-basis: 66.66666667%;
+            max-width: 66.66666666%;
         }
 
         @include media-breakpoint-up(lg) {
-            flex-basis: 50%;
+            max-width: 50%;
         }
 
     }
@@ -230,12 +231,14 @@
 
 .#{$pr}#{$c}hero#{$c3}left {
 
-    .#{$pr}#{$c}hero#{$c1}contents {
-        justify-content: flex-start;
+    .#{$pr}#{$c}hero#{$c1}contents#{$c1}inner {
+        margin-left: 0;
+        margin-right: auto;
     }
 
     .#{$pr}#{$c}hero#{$c1}title,
-    .#{$pr}#{$c}hero#{$c1}caption {
+    .#{$pr}#{$c}hero#{$c1}caption,
+    .#{$pr}#{$c}hero#{$c1}link {
         text-align: left;
     }
 
@@ -243,12 +246,14 @@
 
 .#{$pr}#{$c}hero#{$c3}right {
 
-    .#{$pr}#{$c}hero#{$c1}contents {
-        justify-content: flex-end;
+    .#{$pr}#{$c}hero#{$c1}contents#{$c1}inner {
+        margin-left: auto;
+        margin-right: 0;
     }
 
     .#{$pr}#{$c}hero#{$c1}title,
-    .#{$pr}#{$c}hero#{$c1}caption {
+    .#{$pr}#{$c}hero#{$c1}caption,
+    .#{$pr}#{$c}hero#{$c1}link {
         text-align: left;
     }
 
