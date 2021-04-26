@@ -25,8 +25,37 @@
     list-style-type: none;
     margin: 0 (map-get($grid-gutter-widths, md) / -2) (map-get($grid-gutter-widths, md) / -1);
     padding: 0;
+
+    @include media-breakpoint-up(lg) {
+        margin-left: (map-get($grid-gutter-widths, lg) / -2);
+        margin-right: (map-get($grid-gutter-widths, lg) / -2);
+        margin-bottom: (map-get($grid-gutter-widths, lg) / -1);
+    }
+
 }
 
+
+/*
+--------------------
+#{$pr}#{$col}
+--------------------
+*/
+
+[class*="#{$pr}#{$col}"] {
+    position: relative;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+    margin: 0;
+    padding: 0 (map-get($grid-gutter-widths, md) / 2) map-get($grid-gutter-widths, md);
+
+    @include media-breakpoint-up(lg) {
+        padding-left: (map-get($grid-gutter-widths, lg) / 2);
+        padding-right: (map-get($grid-gutter-widths, lg) / 2);
+        padding-bottom: map-get($grid-gutter-widths, lg);
+    }
+
+}
 
 /*
 --------------------
@@ -48,27 +77,47 @@
     margin-right: (map-get($grid-gutter-widths, sm) / -2);
     margin-bottom: (map-get($grid-gutter-widths, sm) / -1);
 
+    @include media-breakpoint-up(lg) {
+        margin-left: (map-get($grid-gutter-widths, md) / -2);
+        margin-right: (map-get($grid-gutter-widths, md) / -2);
+        margin-bottom: (map-get($grid-gutter-widths, md) / -1);
+    }
+
     [class*="#{$pr}#{$col}"] {
         padding-left: (map-get($grid-gutter-widths, sm) / 2);
         padding-right: (map-get($grid-gutter-widths, sm) / 2);
         padding-bottom: map-get($grid-gutter-widths, sm);
+
+        @include media-breakpoint-up(lg) {
+            padding-left: (map-get($grid-gutter-widths, md) / 2);
+            padding-right: (map-get($grid-gutter-widths, md) / 2);
+            padding-bottom: map-get($grid-gutter-widths, md);
+        }
+
     }
 
 }
 
 .#{$pr}#{$row}#{$c3}lg {
+    margin-left: (map-get($grid-gutter-widths, lg) / -2);
+    margin-right: (map-get($grid-gutter-widths, lg) / -2);
+    margin-bottom: (map-get($grid-gutter-widths, lg) / -1);
 
     @include media-breakpoint-up(lg) {
-        margin-left: (map-get($grid-gutter-widths, lg) / -2);
-        margin-right: (map-get($grid-gutter-widths, lg) / -2);
-        margin-bottom: (map-get($grid-gutter-widths, lg) / -1);
+        margin-left: (map-get($grid-gutter-widths, xl) / -2);
+        margin-right: (map-get($grid-gutter-widths, xl) / -2);
+        margin-bottom: (map-get($grid-gutter-widths, xl) / -1);
     }
 
     [class*="#{$pr}#{$col}"] {
+        padding-left: (map-get($grid-gutter-widths, lg) / 2);
+        padding-right: (map-get($grid-gutter-widths, lg) / 2);
+        padding-bottom: map-get($grid-gutter-widths, lg);
+
         @include media-breakpoint-up(lg) {
-            padding-left: (map-get($grid-gutter-widths, lg) / 2);
-            padding-right: (map-get($grid-gutter-widths, lg) / 2);
-            padding-bottom: map-get($grid-gutter-widths, lg);
+            padding-left: (map-get($grid-gutter-widths, xl) / 2);
+            padding-right: (map-get($grid-gutter-widths, xl) / 2);
+            padding-bottom: map-get($grid-gutter-widths, xl);
         }
 
     }
@@ -78,7 +127,6 @@
 
 /*
 --------------------
-#{$pr}#{$col}
 #{$pr}#{$col}#{$c2}(breakpoint)#{$c3}(column)
 #{$pr}#{$col}#{$c2}order#{$c2}(breakpoint)#{$c2}(first or last or number)
 --------------------

@@ -226,15 +226,15 @@ $spacing-max: (
 ) !default;
 
 $component-spacing-min: (
-    md:     10,
-    lg:     10,
-    xl:     10,
+    md:     8,
+    lg:     8,
+    xl:     8,
 ) !default;
 
 $component-spacing-max: (
-    md:     20,
-    lg:     30,
-    xl:     45,
+    md:     16,
+    lg:     24,
+    xl:     40,
 ) !default;
 
 
@@ -243,9 +243,10 @@ $component-spacing-max: (
 
 $grid-gutter-widths: (
     none:   0,
-    sm:     .75rem,
-    md:     1.25rem,
-    lg:     2.5rem
+    sm:     .5rem,
+    md:     1rem,
+    lg:     1.5rem,
+    xl:     2rem,
 ) !default;
 
 $nav-min-size: 2.75rem !default;

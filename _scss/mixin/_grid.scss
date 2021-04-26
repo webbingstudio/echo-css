@@ -10,17 +10,6 @@
         max-width: 100%;
     }
 
-    [class*="#{$pr}#{$col}"] {
-        position: relative;
-        flex-grow: 1;
-        flex-shrink: 1;
-        flex-basis: 0%;
-        margin: 0;
-        padding-left: (map-get($grid-gutter-widths, md) / 2);
-        padding-right: (map-get($grid-gutter-widths, md) / 2);
-        padding-bottom: map-get($grid-gutter-widths, md);
-    }
-
     @each $breakpoint in map-keys($breakpoints) {
         $infix: breakpoint-infix($breakpoint, $breakpoints);
 

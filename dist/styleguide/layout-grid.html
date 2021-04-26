@@ -47,17 +47,19 @@
 
 <p>flexboxによる、柔軟なグリッドのグループを包括する。<br>
 グリッドの仕様上、 <code>overflow: hidden</code> プロパティを付与した、この要素で包括することが望ましい。<br>
-（ <code>echo-grid-row</code> だけでは、 <code>echo-grid-row-lg</code> でグリッド余白を広げたときに水平スクロールバーが出てしまう）</p>
+（ <code>echo-grid-row</code> だけでは、グリッド余白が大きくなったときに水平スクロールバーが出てしまう）</p>
 
 <h2 id="grid-00-row" class="echo-doc-post-title-01">echo-grid-row</h2>
 
 <p>グリッドのアウトラインを作成する。 <code>ul ,ol</code> にも使用できる。<br>
-命名規則をbootstrapと同様にしたい場合は、 <code>/_scss/_config_advance.scss</code> の変数 <code>$row</code> を変更すること。</p>
+グリッド余白の大きさは、 (breakpoint) が <code>lg</code> のときにより大きくなる。</p>
+
+<p>命名規則をbootstrapと同様にしたい場合は、 <code>/_scss/_config_advance.scss</code> の変数 <code>$row</code> を変更すること。</p>
 
 <h2 id="grid-02-col" class="echo-doc-post-title-01">echo-grid-col</h2>
 
-<p>グリッドのセルを作成する。<br>
-このクラス単独では均等幅となり、(breakpoint)が <code>sm</code> 以下でグリッドが解除される。  </p>
+<p><code>.echo-grid-row</code> に含まれる前提で、グリッドのセルを作成する。<br>
+このクラス単独では、均等幅かつ、 (breakpoint)が <code>sm</code> 以下でグリッドが解除される。  </p>
 
 
 <p class="echo-title echo-title-level-4 m-style-a echo-margin-top-xl echo-margin-bottom-sm">一般的な均等幅のグリッド</p>
@@ -157,9 +159,24 @@
 
 <h2 id="grid-01-row-size" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-grid-row-(size)</h2>
 
-<p><code>.echo-grid-row</code> に付与すると、グリッド余白（gutter）が変更される。<br>
-(size)は <code>0, sm, lg</code> に対応しており、 <code>lg</code> は (breakpoint) が <code>lg</code> 以上のときのみ、余白が増える。<br>
-命名規則をbootstrapと同様にしたい場合は、 <code>/_scss/_\config_advance.scss</code> の変数 <code>$row</code> を変更すること。</p>
+<p><code>.echo-grid-row</code> に付与すると、グリッド余白が変更される。</p>
+
+<p>(size) は <code>0, sm, lg</code> に対応している。<br>
+デフォルトの余白は以下の通り。</p>
+
+<table class="echo-table echo-table-bordered echo-margin-bottom-md" style="width: auto;">
+  <thead>
+      <tr><th>(size) / (breakpoint)</th><th class="echo-text-center">md 以下</th><th class="echo-text-center">lg 以上</th></tr>
+  </thead>
+  <tbody>
+      <tr><th>0</th><td>0</td><td>0</td></tr>
+      <tr><th>sm</th><td>.5rem</td><td>1rem</td></tr>
+      <tr><th>(default)</th><td>1rem</td><td>1.5rem</td></tr>
+      <tr><th>lg</th><td>1.5rem</td><td>2rem</td></tr>
+  </tbody>
+</table>
+
+<p>命名規則をbootstrapと同様にしたい場合は、 <code>/_scss/_\config_advance.scss</code> の変数 <code>$row</code> を変更すること。</p>
 
 <p class="echo-title echo-title-level-4 m-style-a echo-margin-top-xl echo-margin-bottom-sm">.echo-grid-row-0</p>
 
