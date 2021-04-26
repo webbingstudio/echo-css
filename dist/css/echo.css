@@ -5948,9 +5948,9 @@ echo-grid-row-(size)
 
 @media (min-width: 62.5rem) {
   .echo-grid-row-lg {
-    margin-left: -1rem;
-    margin-right: -1rem;
-    margin-bottom: -2rem;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    margin-bottom: -3rem;
   }
 }
 
@@ -5962,9 +5962,9 @@ echo-grid-row-(size)
 
 @media (min-width: 62.5rem) {
   .echo-grid-row-lg [class*="echo-grid-col"] {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-bottom: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 3rem;
   }
 }
 
@@ -6728,6 +6728,7 @@ echo-buttons
 
 @media (min-width: 62.5rem) {
   .echo-buttons {
+    gap: 1.5rem;
     grid-template-columns: repeat(auto-fit, minmax(calc( 1% - 1rem), 1fr));
   }
 }
@@ -6922,7 +6923,7 @@ echo-forms
 @media (min-width: 62.5rem) {
   .echo-forms {
     display: grid;
-    gap: 1.5rem;
+    gap: 3rem;
     grid-template-columns: auto 1fr;
   }
 }
@@ -6951,7 +6952,7 @@ echo-forms
 
 @media (max-width: 62.4rem) {
   .echo-forms-contents {
-    margin-bottom: 1.5rem;
+    margin-bottom: 3rem;
   }
 }
 

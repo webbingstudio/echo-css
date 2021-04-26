@@ -9,7 +9,7 @@
 
     @include media-breakpoint-up(lg) {
         display: grid;
-        gap: map-get( $grid-gutter-widths, lg );
+        gap: map-get( $grid-gutter-widths, xl );
         grid-template-columns: auto 1fr;
     }
 
@@ -45,7 +45,7 @@
 .#{$pr}#{$l}forms#{$c1}contents {
 
     @include media-breakpoint-down(md) {
-        margin-bottom: map-get( $grid-gutter-widths, lg );
+        margin-bottom: map-get( $grid-gutter-widths, xl );
     }
 
 }

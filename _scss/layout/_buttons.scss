@@ -13,6 +13,7 @@
     margin: 0 auto;
 
     @include media-breakpoint-up(lg) {
+        gap: map-get( $grid-gutter-widths, lg );
         grid-template-columns: repeat( auto-fit, minmax( calc( 1% - #{map-get( $grid-gutter-widths, 'md' )} ), 1fr ) );
     }
 
