@@ -43,7 +43,7 @@
   <li>フォントファミリーが <code>first</code> になる。詳細は<a href="/docs/design-tokens-font.html">フォントファミリー</a>を参照。</li>
   <li><code>font-size, color</code> は要素本来のサイズを引き継ぐ</li>
   <li><code>margin</code> は0となる</li>
-  <li><code>line-height</code> は標準よりも少なく(1.25)なる</li>
+  <li><code>line-height</code> は標準よりも少なくなる(1.25)。</li>
 </ul>
 
 <div class="example">
@@ -80,11 +80,14 @@
 
 <h2 id="title-01-level" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-title-level-(level)</h2>
 
-<p>見出しレベルを変更する。ブレークポイントが <code>lg</code> 以上で拡大率（ジャンプ率）が増える。<br>
-(level)は<code>1-6</code>の6段階となる。あくまで外観のレベルであり、hx要素のレベルとは直結していないことに注意。</p>
+<p>見出しレベルとして、文字サイズを変更する。<br>
+(level) は<code>1-6</code>の6段階で、<strong>現在の文字サイズに対する相対</strong> (em) で大きくなる。<br>
+また、ブレークポイントが <code>lg</code> 以上でジャンプ率（拡大率）が増える。</p>
+
+<p>あくまで外観のレベルであり、hx要素のレベルとは直結していないことに注意。</p>
 
 <div class="example">
-<h1 class="echo-title echo-title-level-1">これはh1要素で見た目がレベル2です</h1>
+<h1 class="echo-title echo-title-level-1">これはh1要素で見た目がレベル1です</h1>
 <h1 class="echo-title echo-title-level-2">これはh1要素で見た目がレベル2です</h1>
 <h1 class="echo-title echo-title-level-3">これはh1要素で見た目がレベル3です</h1>
 <h1 class="echo-title echo-title-level-4">これはh1要素で見た目がレベル4です</h1>
@@ -125,10 +128,37 @@
 <p class="echo-title echo-title-level-4">これはp要素で見た目がレベル4です</p>
 <p class="echo-title echo-title-level-5">これはp要素で見た目がレベル5です</p>
 <p class="echo-title echo-title-level-6">これはp要素で見た目がレベル6です</p>
+
+<div class=" echo-text-xs echo-margin-top-lg echo-padding-sm echo-bg-default echo-bg-fade">
+    
+<p>この範囲では .echo-text-xs クラスが付与されているため、各見出しの文字サイズが小さくなっています。</p>
+
+<h1 class="echo-title echo-title-level-1">これはh1要素で見た目がレベル1です</h1>
+<h1 class="echo-title echo-title-level-2">これはh1要素で見た目がレベル2です</h1>
+<h1 class="echo-title echo-title-level-3">これはh1要素で見た目がレベル3です</h1>
+<h1 class="echo-title echo-title-level-4">これはh1要素で見た目がレベル4です</h1>
+<h1 class="echo-title echo-title-level-5">これはh1要素で見た目がレベル5です</h1>
+<h1 class="echo-title echo-title-level-6">これはh1要素で見た目がレベル6です</h1>
+
+</div>
+
+<div class=" echo-text-xl echo-margin-top-lg echo-padding-sm echo-bg-default echo-bg-fade">
+    
+<p>この範囲では .echo-text-xl クラスが付与されているため、各見出しの文字サイズが大きくなっています。</p>
+
+<h1 class="echo-title echo-title-level-1">これはh1要素で見た目がレベル1です</h1>
+<h1 class="echo-title echo-title-level-2">これはh1要素で見た目がレベル2です</h1>
+<h1 class="echo-title echo-title-level-3">これはh1要素で見た目がレベル3です</h1>
+<h1 class="echo-title echo-title-level-4">これはh1要素で見た目がレベル4です</h1>
+<h1 class="echo-title echo-title-level-5">これはh1要素で見た目がレベル5です</h1>
+<h1 class="echo-title echo-title-level-6">これはh1要素で見た目がレベル6です</h1>
+
+</div>
+
 </div>
 
 
-<div class="codeblock"><pre><code class="language-markup">&lt;h1 class="echo-title echo-title-level-1"&gt;これはh1要素で見た目がレベル2です&lt;/h1&gt;
+<div class="codeblock"><pre><code class="language-markup">&lt;h1 class="echo-title echo-title-level-1"&gt;これはh1要素で見た目がレベル1です&lt;/h1&gt;
 &lt;h1 class="echo-title echo-title-level-2"&gt;これはh1要素で見た目がレベル2です&lt;/h1&gt;
 &lt;h1 class="echo-title echo-title-level-3"&gt;これはh1要素で見た目がレベル3です&lt;/h1&gt;
 &lt;h1 class="echo-title echo-title-level-4"&gt;これはh1要素で見た目がレベル4です&lt;/h1&gt;
@@ -168,7 +198,34 @@
 &lt;p class="echo-title echo-title-level-3"&gt;これはp要素で見た目がレベル3です&lt;/p&gt;
 &lt;p class="echo-title echo-title-level-4"&gt;これはp要素で見た目がレベル4です&lt;/p&gt;
 &lt;p class="echo-title echo-title-level-5"&gt;これはp要素で見た目がレベル5です&lt;/p&gt;
-&lt;p class="echo-title echo-title-level-6"&gt;これはp要素で見た目がレベル6です&lt;/p&gt;</code></pre>
+&lt;p class="echo-title echo-title-level-6"&gt;これはp要素で見た目がレベル6です&lt;/p&gt;
+
+&lt;div class=" echo-text-xs echo-margin-top-lg echo-padding-sm echo-bg-default echo-bg-fade"&gt;
+    
+&lt;p&gt;この範囲では .echo-text-xs クラスが付与されているため、各見出しの文字サイズが小さくなっています。&lt;/p&gt;
+
+&lt;h1 class="echo-title echo-title-level-1"&gt;これはh1要素で見た目がレベル1です&lt;/h1&gt;
+&lt;h1 class="echo-title echo-title-level-2"&gt;これはh1要素で見た目がレベル2です&lt;/h1&gt;
+&lt;h1 class="echo-title echo-title-level-3"&gt;これはh1要素で見た目がレベル3です&lt;/h1&gt;
+&lt;h1 class="echo-title echo-title-level-4"&gt;これはh1要素で見た目がレベル4です&lt;/h1&gt;
+&lt;h1 class="echo-title echo-title-level-5"&gt;これはh1要素で見た目がレベル5です&lt;/h1&gt;
+&lt;h1 class="echo-title echo-title-level-6"&gt;これはh1要素で見た目がレベル6です&lt;/h1&gt;
+
+&lt;/div&gt;
+
+&lt;div class=" echo-text-xl echo-margin-top-lg echo-padding-sm echo-bg-default echo-bg-fade"&gt;
+    
+&lt;p&gt;この範囲では .echo-text-xl クラスが付与されているため、各見出しの文字サイズが大きくなっています。&lt;/p&gt;
+
+&lt;h1 class="echo-title echo-title-level-1"&gt;これはh1要素で見た目がレベル1です&lt;/h1&gt;
+&lt;h1 class="echo-title echo-title-level-2"&gt;これはh1要素で見た目がレベル2です&lt;/h1&gt;
+&lt;h1 class="echo-title echo-title-level-3"&gt;これはh1要素で見た目がレベル3です&lt;/h1&gt;
+&lt;h1 class="echo-title echo-title-level-4"&gt;これはh1要素で見た目がレベル4です&lt;/h1&gt;
+&lt;h1 class="echo-title echo-title-level-5"&gt;これはh1要素で見た目がレベル5です&lt;/h1&gt;
+&lt;h1 class="echo-title echo-title-level-6"&gt;これはh1要素で見た目がレベル6です&lt;/h1&gt;
+
+&lt;/div&gt;
+</code></pre>
 
 <h2 id="title-02-style" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-title-style-(style)</h2>
 
