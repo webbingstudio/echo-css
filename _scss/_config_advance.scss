@@ -288,3 +288,53 @@ $grid-columns:        12 !default;
 $grid-columns-max:    $grid-columns - 1 !default;
 
 
+// Buttons
+// -----------------------------------------
+
+$btn-min-height:        ( 44 / 14 ) + em !default;
+
+$button-min-font-sizes: (
+    sm:  .75rem,
+    md:  .875rem,
+    lg:  .875rem,
+    xl:  1rem,
+    xxl: 1.125rem
+) !default;
+
+$button-max-font-sizes: (
+    sm:  .875rem,
+    md:  1rem,
+    lg:  1.125rem,
+    xl:  1.25rem,
+    xxl: 1.5rem
+) !default;
+
+$button-min-widths: (
+    sm:  16rem,
+    md:  20rem,
+    lg:  20rem,
+    xl:  24rem,
+    xxl: 32rem
+) !default;
+
+$button-max-widths: (
+    sm:  20rem,
+    md:  24rem,
+    lg:  28rem,
+    xl:  32rem,
+    xxl: 48rem
+) !default;
+
+$btn-circle-width-sm:  $btn-min-height !default;
+$btn-circle-width-md:  $btn-min-height !default;
+$btn-circle-width-lg:  $btn-min-height !default;
+$btn-circle-width-xl:  $btn-min-height !default;
+$btn-circle-width-xxl: $btn-min-height !default;
+
+$btn-square-width-sm:  $btn-min-height !default;
+$btn-square-width-md:  $btn-min-height !default;
+$btn-square-width-lg:  $btn-min-height !default;
+$btn-square-width-xl:  $btn-min-height !default;
+$btn-square-width-xxl: $btn-min-height !default;
+
+

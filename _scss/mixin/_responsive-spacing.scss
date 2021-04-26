@@ -1,10 +1,10 @@
 @mixin responsive-spacing( $property, $min, $max ) {
 
     $diff_space: $max - $min;
-    $diff_breakpoint: map-get( $spacing-breakpoints, 'max' ) - map-get( $spacing-breakpoints, 'min' );
+    $diff_breakpoint: map-get( $responsive-breakpoints, 'max' ) - map-get( $responsive-breakpoints, 'min' );
 
     $vw: ( 100 * $diff_space ) / $diff_breakpoint;
-    $increase: round( $min - ( map-get( $spacing-breakpoints, 'min' )  / 100 ) * $vw );
+    $increase: round( $min - ( map-get( $responsive-breakpoints, 'min' )  / 100 ) * $vw );
 
     #{$property}: #{$max}px;
     #{$property}: clamp( #{$min}px, calc( #{$vw}vw + #{$increase}px ), #{$max}px );
