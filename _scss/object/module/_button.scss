@@ -11,20 +11,25 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    max-width: map-get( $button-max-widths, 'md' );
-    min-height: $btn-height-md;
+    max-width: map-get( $button-min-widths, 'md' );
+    min-height: $btn-min-height;
     margin: 0 auto;
-    // 下マージンはベースライン分を引く
-    padding: .25em 1em .15em;
+    // 下マージンはベースライン分をわずかに引く
+    padding: .5em 1em .4em;
     background-color: $default-fade;
     border: $ui-btn-border-width solid $default-fade;
     color: $body-color;
-    font-size: $btn-font-size-md;
+    font-size: map-get( $button-min-font-sizes, 'md' );
     line-height: $line-height-xs;
     border-radius: $btn-border-radius;
     vertical-align: middle;
     cursor: pointer;
     -webkit-appearance: none;
+
+    @include media-breakpoint-up(lg) {
+        max-width: map-get( $button-max-widths, 'md' );
+        font-size: map-get( $button-max-font-sizes, 'md' );
+    }
 
     &:hover,
     &:focus,

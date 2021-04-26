@@ -4,42 +4,98 @@
 --------------------
 */
 
+.#{$pr}#{$m}button {
+
+    &.#{$pr}#{$m}button#{$c3}fixed {
+
+        @include media-breakpoint-up(lg) {
+            max-width: map-get( $button-min-widths, 'md' );
+            font-size: map-get( $button-min-font-sizes, 'md' );
+        }
+
+    }
+
+}
+
 .#{$pr}#{$m}button#{$c3}sm {
-    max-width: map-get( $button-max-widths, 'sm' );
-    min-height: $btn-height-sm;
-    font-size: $btn-font-size-sm;
+    max-width: map-get( $button-min-widths, 'sm' );
+    font-size: map-get( $button-min-font-sizes, 'sm' );
+
+    @include media-breakpoint-up(lg) {
+        max-width: map-get( $button-max-widths, 'sm' );
+        font-size: map-get( $button-max-font-sizes, 'sm' );
+    }
+
+    &.#{$pr}#{$m}button#{$c3}fixed {
+
+        @include media-breakpoint-up(lg) {
+            max-width: map-get( $button-min-widths, 'sm' );
+            font-size: map-get( $button-min-font-sizes, 'sm' );
+        }
+
+    }
+
 }
 
 .#{$pr}#{$m}button#{$c3}lg {
-    max-width: map-get( $button-max-widths, 'lg' );
 
-    @include media-breakpoint-up(md) {
-        min-height: $btn-height-lg;
-        font-size: $btn-font-size-lg;
+    @include media-breakpoint-down(md) {
+        max-width: map-get( $button-min-widths, 'lg' );
+        font-size: map-get( $button-min-font-sizes, 'lg' );
+    }
+
+    @include media-breakpoint-up(lg) {
+        max-width: map-get( $button-max-widths, 'lg' );
+        font-size: map-get( $button-max-font-sizes, 'lg' );
+    }
+
+    &.#{$pr}#{$m}button#{$c3}fixed {
+
+        @include media-breakpoint-up(lg) {
+            max-width: map-get( $button-min-widths, 'lg' );
+            font-size: map-get( $button-min-font-sizes, 'lg' );
+        }
+
     }
 
 }
 
 .#{$pr}#{$m}button#{$c3}xl {
-    max-width: map-get( $button-max-widths, 'xl' );
-    min-height: $btn-height-lg;
-    font-size: $btn-font-size-lg;
+    max-width: map-get( $button-min-widths, 'xl' );
+    font-size: map-get( $button-min-font-sizes, 'xl' );
 
-    @include media-breakpoint-up(md) {
-        min-height: $btn-height-xl;
-        font-size: $btn-font-size-xl;
+    @include media-breakpoint-up(lg) {
+        max-width: map-get( $button-max-widths, 'xl' );
+        font-size: map-get( $button-max-font-sizes, 'xl' );
+    }
+
+    &.#{$pr}#{$m}button#{$c3}fixed {
+
+        @include media-breakpoint-up(lg) {
+            max-width: map-get( $button-min-widths, 'xl' );
+            font-size: map-get( $button-min-font-sizes, 'xl' );
+        }
+
     }
 
 }
 
 .#{$pr}#{$m}button#{$c3}xxl {
-    max-width: map-get( $button-max-widths, 'xxl' );
-    min-height: $btn-height-xl;
-    font-size: $btn-font-size-xl;
+    max-width: map-get( $button-min-widths, 'xxl' );
+    font-size: map-get( $button-min-font-sizes, 'xxl' );
 
-    @include media-breakpoint-up(md) {
-        min-height: $btn-height-xxl;
-        font-size: $btn-font-size-xxl;
+    @include media-breakpoint-up(lg) {
+        max-width: map-get( $button-max-widths, 'xxl' );
+        font-size: map-get( $button-max-font-sizes, 'xxl' );
+    }
+
+    &.#{$pr}#{$m}button#{$c3}fixed {
+
+        @include media-breakpoint-up(lg) {
+            max-width: map-get( $button-min-widths, 'xxl' );
+            font-size: map-get( $button-min-font-sizes, 'xxl' );
+        }
+
     }
 
 }
