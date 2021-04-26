@@ -39,7 +39,7 @@
         flex-basis: 100%;
         font-size: 1em;
 
-        @include media-breakpoint-up(md) {
+        @include media-breakpoint-up(lg) {
             flex-basis: 0;
         }
 
@@ -69,7 +69,7 @@
     margin: 0 .5em 0 0;
     white-space: nowrap;
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
         min-width: 8.5em;
     }
 
@@ -90,7 +90,7 @@
 .#{$pr}#{$c}headline#{$c1}title {
     margin: .25em 0 0;
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
         margin-top: 0;
     }
 
