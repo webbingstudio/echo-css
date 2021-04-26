@@ -331,16 +331,35 @@ $button-max-widths: (
     xxl: 60rem
 ) !default;
 
-$btn-circle-width-sm:  map-get( $button-min-heights, 'sm' ) !default;
-$btn-circle-width-md:  map-get( $button-min-heights, 'md' ) !default;
-$btn-circle-width-lg:  map-get( $button-min-heights, 'lg' ) !default;
-$btn-circle-width-xl:  map-get( $button-min-heights, 'xl' ) !default;
-$btn-circle-width-xxl: map-get( $button-min-heights, 'xxl' ) !default;
 
-$btn-square-width-sm:  map-get( $button-max-heights, 'sm' ) !default;
-$btn-square-width-md:  map-get( $button-max-heights, 'md' ) !default;
-$btn-square-width-lg:  map-get( $button-max-heights, 'lg' ) !default;
-$btn-square-width-xl:  map-get( $button-max-heights, 'xl' ) !default;
-$btn-square-width-xxl: map-get( $button-max-heights, 'xxl' ) !default;
+$button-circle-min-widths: (
+    sm:  map-get( $button-min-heights, 'sm' ),
+    md:  map-get( $button-min-heights, 'lg' ),
+    lg:  map-get( $button-min-heights, 'xxl' ),
+    xl:  4rem,
+    xxl: 5rem
+) !default;
 
+$button-circle-max-widths: (
+    sm:  map-get( $button-max-heights, 'sm' ),
+    md:  map-get( $button-max-heights, 'lg' ),
+    lg:  map-get( $button-max-heights, 'xxl' ),
+    xl:  6rem,
+    xxl: 7.5rem
+) !default;
 
+$button-square-min-widths: (
+    sm:  map-get( $button-min-heights, 'sm' ),
+    md:  map-get( $button-min-heights, 'lg' ),
+    lg:  map-get( $button-min-heights, 'xxl' ),
+    xl:  4rem,
+    xxl: 5rem
+) !default;
+
+$button-square-max-widths: (
+    sm:  map-get( $button-max-heights, 'sm' ),
+    md:  map-get( $button-max-heights, 'lg' ),
+    lg:  map-get( $button-max-heights, 'xxl' ),
+    xl:  6rem,
+    xxl: 7.5rem
+) !default;

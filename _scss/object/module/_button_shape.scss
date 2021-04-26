@@ -19,117 +19,147 @@ Specify a large value for "em", the button becomes an oval type
 /*
 --------------------
 #{$pr}#{$m}button#{$c3}circle
---------------------
-*/
-
-.#{$pr}#{$m}button#{$c3}circle {
-    overflow: hidden;
-    width: $btn-circle-width-md;
-    height: $btn-circle-width-md;
-    line-height: $btn-circle-width-md;
-    border-radius: 50%;
-
-    &.#{$pr}#{$m}button {
-        padding: 0;
-        min-height: none;
-    }
-
-    &.#{$pr}#{$m}button#{$c3}sm {
-        width: $btn-circle-width-sm;
-        height: $btn-circle-width-sm;
-        line-height: $btn-circle-width-sm;
-    }
-
-    &.#{$pr}#{$m}button#{$c3}lg {
-
-        @include media-breakpoint-up(md) {
-            width: $btn-circle-width-lg;
-            height: $btn-circle-width-lg;
-            line-height: $btn-circle-width-lg;
-        }
-
-    }
-
-    &.#{$pr}#{$m}button#{$c3}xl {
-        width: $btn-circle-width-lg;
-        height: $btn-circle-width-lg;
-        line-height: $btn-circle-width-lg;
-
-        @include media-breakpoint-up(md) {
-            width: $btn-circle-width-xl;
-            height: $btn-circle-width-xl;
-            line-height: $btn-circle-width-xl;
-        }
-
-    }
-
-    &.#{$pr}#{$m}button#{$c3}xxl {
-        width: $btn-circle-width-xl;
-        height: $btn-circle-width-xl;
-        line-height: $btn-circle-width-xl;
-
-        @include media-breakpoint-up(md) {
-            width: $btn-circle-width-xxl;
-            height: $btn-circle-width-xxl;
-            line-height: $btn-circle-width-xxl;
-        }
-
-    }
-
-}
-
-
-/*
---------------------
 #{$pr}#{$m}button#{$c3}square
 --------------------
 */
 
+.#{$pr}#{$m}button#{$c3}circle,
 .#{$pr}#{$m}button#{$c3}square {
     overflow: hidden;
-    width: $btn-square-width-md;
-    height: $btn-square-width-md;
-    line-height: $btn-square-width-md;
 
     &.#{$pr}#{$m}button {
         padding: 0;
-        min-height: none;
+        min-height: auto;
     }
 
-    &.#{$pr}#{$m}button#{$c3}sm {
-        width: $btn-square-width-sm;
-        height: $btn-square-width-sm;
-        line-height: $btn-square-width-sm;
-    }
+}
 
-    &.#{$pr}#{$m}button#{$c3}lg {
-        width: $btn-square-width-lg;
-        height: $btn-square-width-lg;
-        line-height: $btn-square-width-lg;
-    }
 
-    &.#{$pr}#{$m}button#{$c3}xl {
-        width: $btn-square-width-lg;
-        height: $btn-square-width-lg;
-        line-height: $btn-square-width-lg;
+.#{$pr}#{$m}button#{$c3}circle {
+    width: map-get( $button-circle-min-widths, 'md' );
+    height: map-get( $button-circle-min-widths, 'md' );
+    border-radius: 50%;
 
-        @include media-breakpoint-up(md) {
-            width: $btn-square-width-xl;
-            height: $btn-square-width-xl;
-            line-height: $btn-square-width-xl;
+    &:not(.#{$pr}#{$m}button#{$c3}fixed) {
+
+        @include media-breakpoint-up(lg) {
+            width: map-get( $button-circle-max-widths, 'md' );
+            height: map-get( $button-circle-max-widths, 'md' );
+            font-size: map-get( $button-max-font-sizes, 'md' );
         }
 
     }
 
-    &.#{$pr}#{$m}button#{$c3}xxl {
-        width: $btn-square-width-xl;
-        height: $btn-square-width-xl;
-        line-height: $btn-square-width-xl;
+    &.#{$pr}#{$m}button#{$c3}fixed {
 
-        @include media-breakpoint-up(md) {
-            width: $btn-square-width-xxl;
-            height: $btn-square-width-xxl;
-            line-height: $btn-square-width-xxl;
+        @include media-breakpoint-up(lg) {
+            max-width: map-get( $button-min-widths, 'md' );
+            min-height: map-get( $button-min-heights, 'md' );
+            font-size: map-get( $button-min-font-sizes, 'md' );
+        }
+
+    }
+
+}
+
+.#{$pr}#{$m}button#{$c3}circle.#{$pr}#{$m}button#{$c3}sm {
+    width: map-get( $button-circle-min-widths, 'sm' );
+    height: map-get( $button-circle-min-widths, 'sm' );
+
+    &:not(.#{$pr}#{$m}button#{$c3}fixed) {
+
+        @include media-breakpoint-up(lg) {
+            width: map-get( $button-circle-max-widths, 'sm' );
+            height: map-get( $button-circle-max-widths, 'sm' );
+            font-size: map-get( $button-max-font-sizes, 'sm' );
+        }
+
+    }
+
+    &.#{$pr}#{$m}button#{$c3}fixed {
+
+        @include media-breakpoint-up(lg) {
+            max-width: map-get( $button-min-widths, 'sm' );
+            min-height: map-get( $button-min-heights, 'sm' );
+            font-size: map-get( $button-min-font-sizes, 'sm' );
+        }
+
+    }
+
+}
+
+.#{$pr}#{$m}button#{$c3}circle.#{$pr}#{$m}button#{$c3}lg {
+    width: map-get( $button-circle-min-widths, 'lg' );
+    height: map-get( $button-circle-min-widths, 'lg' );
+
+    &:not(.#{$pr}#{$m}button#{$c3}fixed) {
+
+        @include media-breakpoint-up(lg) {
+            width: map-get( $button-circle-max-widths, 'lg' );
+            height: map-get( $button-circle-max-widths, 'lg' );
+            font-size: map-get( $button-max-font-sizes, 'lg' );
+        }
+
+    }
+
+    &.#{$pr}#{$m}button#{$c3}fixed {
+
+        @include media-breakpoint-up(lg) {
+            max-width: map-get( $button-min-widths, 'lg' );
+            min-height: map-get( $button-min-heights, 'lg' );
+            font-size: map-get( $button-min-font-sizes, 'lg' );
+        }
+
+    }
+
+}
+
+.#{$pr}#{$m}button#{$c3}circle.#{$pr}#{$m}button#{$c3}xl {
+    width: map-get( $button-circle-min-widths, 'xl' );
+    height: map-get( $button-circle-min-widths, 'xl' );
+
+    &:not(.#{$pr}#{$m}button#{$c3}fixed) {
+
+        @include media-breakpoint-up(lg) {
+            width: map-get( $button-circle-max-widths, 'xl' );
+            height: map-get( $button-circle-max-widths, 'xl' );
+            font-size: map-get( $button-max-font-sizes, 'xl' );
+        }
+
+    }
+
+    &.#{$pr}#{$m}button#{$c3}fixed {
+
+        @include media-breakpoint-up(lg) {
+            max-width: map-get( $button-min-widths, 'xl' );
+            min-height: map-get( $button-min-heights, 'xl' );
+            font-size: map-get( $button-min-font-sizes, 'xl' );
+        }
+
+    }
+
+}
+
+.#{$pr}#{$m}button#{$c3}circle.#{$pr}#{$m}button#{$c3}xxl {
+    width: map-get( $button-circle-min-widths, 'xxl' );
+    height: map-get( $button-circle-min-widths, 'xxl' );
+
+    &:not(.#{$pr}#{$m}button#{$c3}fixed) {
+
+        @include media-breakpoint-up(lg) {
+            width: map-get( $button-circle-max-widths, 'xxl' );
+            height: map-get( $button-circle-max-widths, 'xxl' );
+            font-size: map-get( $button-max-font-sizes, 'xxl' );
+        }
+
+    }
+
+    &.#{$pr}#{$m}button#{$c3}fixed {
+
+        @include media-breakpoint-up(lg) {
+            max-width: map-get( $button-min-widths, 'xxl' );
+            min-height: map-get( $button-min-heights, 'xxl' );
+            font-size: map-get( $button-min-font-sizes, 'xxl' );
         }
 
     }
@@ -137,3 +167,133 @@ Specify a large value for "em", the button becomes an oval type
 }
 
 
+
+.#{$pr}#{$m}button#{$c3}square {
+    width: map-get( $button-square-min-widths, 'md' );
+    height: map-get( $button-square-min-widths, 'md' );
+
+    &:not(.#{$pr}#{$m}button#{$c3}fixed) {
+
+        @include media-breakpoint-up(lg) {
+            width: map-get( $button-square-max-widths, 'md' );
+            height: map-get( $button-square-max-widths, 'md' );
+            font-size: map-get( $button-max-font-sizes, 'md' );
+        }
+
+    }
+
+    &.#{$pr}#{$m}button#{$c3}fixed {
+
+        @include media-breakpoint-up(lg) {
+            max-width: map-get( $button-min-widths, 'md' );
+            min-height: map-get( $button-min-heights, 'md' );
+            font-size: map-get( $button-min-font-sizes, 'md' );
+        }
+
+    }
+
+}
+
+.#{$pr}#{$m}button#{$c3}square.#{$pr}#{$m}button#{$c3}sm {
+    width: map-get( $button-square-min-widths, 'sm' );
+    height: map-get( $button-square-min-widths, 'sm' );
+
+    &:not(.#{$pr}#{$m}button#{$c3}fixed) {
+
+        @include media-breakpoint-up(lg) {
+            width: map-get( $button-square-max-widths, 'sm' );
+            height: map-get( $button-square-max-widths, 'sm' );
+            font-size: map-get( $button-max-font-sizes, 'sm' );
+        }
+
+    }
+
+    &.#{$pr}#{$m}button#{$c3}fixed {
+
+        @include media-breakpoint-up(lg) {
+            max-width: map-get( $button-min-widths, 'sm' );
+            min-height: map-get( $button-min-heights, 'sm' );
+            font-size: map-get( $button-min-font-sizes, 'sm' );
+        }
+
+    }
+
+}
+
+.#{$pr}#{$m}button#{$c3}square.#{$pr}#{$m}button#{$c3}lg {
+    width: map-get( $button-square-min-widths, 'lg' );
+    height: map-get( $button-square-min-widths, 'lg' );
+
+    &:not(.#{$pr}#{$m}button#{$c3}fixed) {
+
+        @include media-breakpoint-up(lg) {
+            width: map-get( $button-square-max-widths, 'lg' );
+            height: map-get( $button-square-max-widths, 'lg' );
+            font-size: map-get( $button-max-font-sizes, 'lg' );
+        }
+
+    }
+
+    &.#{$pr}#{$m}button#{$c3}fixed {
+
+        @include media-breakpoint-up(lg) {
+            max-width: map-get( $button-min-widths, 'lg' );
+            min-height: map-get( $button-min-heights, 'lg' );
+            font-size: map-get( $button-min-font-sizes, 'lg' );
+        }
+
+    }
+
+}
+
+.#{$pr}#{$m}button#{$c3}square.#{$pr}#{$m}button#{$c3}xl {
+    width: map-get( $button-square-min-widths, 'xl' );
+    height: map-get( $button-square-min-widths, 'xl' );
+
+    &:not(.#{$pr}#{$m}button#{$c3}fixed) {
+
+        @include media-breakpoint-up(lg) {
+            width: map-get( $button-square-max-widths, 'xl' );
+            height: map-get( $button-square-max-widths, 'xl' );
+            font-size: map-get( $button-max-font-sizes, 'xl' );
+        }
+
+    }
+
+    &.#{$pr}#{$m}button#{$c3}fixed {
+
+        @include media-breakpoint-up(lg) {
+            max-width: map-get( $button-min-widths, 'xl' );
+            min-height: map-get( $button-min-heights, 'xl' );
+            font-size: map-get( $button-min-font-sizes, 'xl' );
+        }
+
+    }
+
+}
+
+.#{$pr}#{$m}button#{$c3}square.#{$pr}#{$m}button#{$c3}xxl {
+    width: map-get( $button-square-min-widths, 'xxl' );
+    height: map-get( $button-square-min-widths, 'xxl' );
+
+    &:not(.#{$pr}#{$m}button#{$c3}fixed) {
+
+        @include media-breakpoint-up(lg) {
+            width: map-get( $button-square-max-widths, 'xxl' );
+            height: map-get( $button-square-max-widths, 'xxl' );
+            font-size: map-get( $button-max-font-sizes, 'xxl' );
+        }
+
+    }
+
+    &.#{$pr}#{$m}button#{$c3}fixed {
+
+        @include media-breakpoint-up(lg) {
+            max-width: map-get( $button-min-widths, 'xxl' );
+            min-height: map-get( $button-min-heights, 'xxl' );
+            font-size: map-get( $button-min-font-sizes, 'xxl' );
+        }
+
+    }
+
+}

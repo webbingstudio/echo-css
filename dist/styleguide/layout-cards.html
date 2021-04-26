@@ -24,9 +24,11 @@
             <article class="echo-doc-post">
                 <div class="echo-doc-post-contents styleguide-contents"><h2 id="cards" class="echo-doc-post-title-01">echo-cards</h2>
 
-<p class="echo-margin-bottom-lg"><code>.echo-card</code> をグリッド状に繰り返すための領域を作成する。(breakpoint)が <code>sm</code> 以上で2列、 <code>md</code> 以上で3列、 <code>xl</code> 以上で4列となる。</p>
+<p><code>.echo-card</code> をグリッド状に繰り返すための領域を作成する。(breakpoint)が <code>sm</code> 以上で2列、 <code>md</code> 以上で3列、 <code>xl</code> 以上で4列となる。</p>
 
-<p><code>.echo-container</code> に包括されていない限り、常に <code>echo-grid</code> と同じ大きさの左右余白が確保される。</p>
+<p><code>.echo-container</code> で幅を制限することが望ましいが必須ではない。</p>
+
+<p class="echo-margin-bottom-lg">なお、このサンプルコードでは、ボタンの大きさが変動しないよう <code>.echo-button-fixed</code> を付与している。</p>
 
 <div style="margin-left: -10px; margin-right: -10px;">
 
@@ -54,7 +56,7 @@
                     <p class="echo-card-body">このカードにはフッタがあります。フッタ内のボタンは、カードがどのような高さであっても、カードの下端に配置されます。</p>
                 </div><!-- /.echo-card-contents -->
                 <div class="echo-card-footer">
-                    <span class="echo-button echo-button-sm echo-button-style-b echo-button-icon-arrow">ボタン</span>
+                    <span class="echo-button echo-button-sm echo-button-fixed echo-button-style-b echo-button-icon-arrow">ボタン</span>
                 </div><!-- /.echo-card-footer -->
             </a><!-- /.echo-card-innner -->
         </div><!-- /.echo-card -->
@@ -82,7 +84,7 @@
                     <p class="echo-card-body">.echo-card-innner をa要素でマークアップすると、カード全体がリンク範囲になります。カードのどこかにカーソルを置くと、内包しているサムネイルとボタンの外観も変わります。</p>
                 </div><!-- /.echo-card-contents -->
                 <div class="echo-card-footer">
-                    <span class="echo-button echo-button-sm echo-button-style-b echo-button-icon-arrow">ボタン</span>
+                    <span class="echo-button echo-button-sm echo-button-fixed echo-button-style-b echo-button-icon-arrow">ボタン</span>
                 </div><!-- /.echo-card-footer -->
             </a><!-- /.echo-card-innner -->
         </div><!-- /.echo-card -->
@@ -110,7 +112,7 @@
                     <p class="echo-card-body">echo-cards, echo-cards-item を使用して並べました。画面幅によってカラム数が変化します。</p>
                 </div><!-- /.echo-card-contents -->
                 <div class="echo-card-footer">
-                    <span class="echo-button echo-button-sm echo-button-style-b echo-button-icon-arrow">ボタン</span>
+                    <span class="echo-button echo-button-sm echo-button-fixed echo-button-style-b echo-button-icon-arrow">ボタン</span>
                 </div><!-- /.echo-card-footer -->
             </a><!-- /.echo-card-innner -->
         </div><!-- /.echo-card -->
@@ -138,7 +140,7 @@
                     <p class="echo-card-body">何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
                 </div><!-- /.echo-card-contents -->
                 <div class="echo-card-footer">
-                    <span class="echo-button echo-button-sm echo-button-style-b echo-button-icon-arrow">ボタン</span>
+                    <span class="echo-button echo-button-sm echo-button-fixed echo-button-style-b echo-button-icon-arrow">ボタン</span>
                 </div><!-- /.echo-card-footer -->
             </a><!-- /.echo-card-innner -->
         </div><!-- /.echo-card -->
@@ -166,7 +168,7 @@
                     <p class="echo-card-body">何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</p>
                 </div><!-- /.echo-card-contents -->
                 <div class="echo-card-footer">
-                    <span class="echo-button echo-button-sm echo-button-style-b echo-button-icon-arrow">ボタン</span>
+                    <span class="echo-button echo-button-sm echo-button-fixed echo-button-style-b echo-button-icon-arrow">ボタン</span>
                 </div><!-- /.echo-card-footer -->
             </a><!-- /.echo-card-innner -->
         </div><!-- /.echo-card -->
@@ -194,7 +196,7 @@
                     <p class="echo-card-body">何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</p>
                 </div><!-- /.echo-card-contents -->
                 <div class="echo-card-footer">
-                    <span class="echo-button echo-button-sm echo-button-style-b echo-button-icon-arrow">ボタン</span>
+                    <span class="echo-button echo-button-sm echo-button-fixed echo-button-style-b echo-button-icon-arrow">ボタン</span>
                 </div><!-- /.echo-card-footer -->
             </a><!-- /.echo-card-innner -->
         </div><!-- /.echo-card -->
@@ -222,7 +224,7 @@
                     <p class="echo-card-body">何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</p>
                 </div><!-- /.echo-card-contents -->
                 <div class="echo-card-footer">
-                    <span class="echo-button echo-button-sm echo-button-style-b echo-button-icon-arrow">ボタン</span>
+                    <span class="echo-button echo-button-sm echo-button-fixed echo-button-style-b echo-button-icon-arrow">ボタン</span>
                 </div><!-- /.echo-card-footer -->
             </a><!-- /.echo-card-innner -->
         </div><!-- /.echo-card -->
@@ -250,7 +252,7 @@
                     <p class="echo-card-body">何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</p>
                 </div><!-- /.echo-card-contents -->
                 <div class="echo-card-footer">
-                    <span class="echo-button echo-button-sm echo-button-style-b echo-button-icon-arrow">ボタン</span>
+                    <span class="echo-button echo-button-sm echo-button-fixed echo-button-style-b echo-button-icon-arrow">ボタン</span>
                 </div><!-- /.echo-card-footer -->
             </a><!-- /.echo-card-innner -->
         </div><!-- /.echo-card -->
@@ -278,7 +280,7 @@
                     <p class="echo-card-body">何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</p>
                 </div><!-- /.echo-card-contents -->
                 <div class="echo-card-footer">
-                    <span class="echo-button echo-button-sm echo-button-style-b echo-button-icon-arrow">ボタン</span>
+                    <span class="echo-button echo-button-sm echo-button-fixed echo-button-style-b echo-button-icon-arrow">ボタン</span>
                 </div><!-- /.echo-card-footer -->
             </a><!-- /.echo-card-innner -->
         </div><!-- /.echo-card -->
@@ -306,7 +308,7 @@
                     <p class="echo-card-body">何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</p>
                 </div><!-- /.echo-card-contents -->
                 <div class="echo-card-footer">
-                    <span class="echo-button echo-button-sm echo-button-style-b echo-button-icon-arrow">ボタン</span>
+                    <span class="echo-button echo-button-sm echo-button-fixed echo-button-style-b echo-button-icon-arrow">ボタン</span>
                 </div><!-- /.echo-card-footer -->
             </a><!-- /.echo-card-innner -->
         </div><!-- /.echo-card -->
@@ -339,7 +341,7 @@
                     &lt;p class="echo-card-body"&gt;このカードにはフッタがあります。フッタ内のボタンは、カードがどのような高さであっても、カードの下端に配置されます。&lt;/p&gt;
                 &lt;/div&gt;&lt;!-- /.echo-card-contents --&gt;
                 &lt;div class="echo-card-footer"&gt;
-                    &lt;span class="echo-button echo-button-sm echo-button-style-b echo-button-icon-arrow"&gt;ボタン&lt;/span&gt;
+                    &lt;span class="echo-button echo-button-sm echo-button-fixed echo-button-style-b echo-button-icon-arrow"&gt;ボタン&lt;/span&gt;
                 &lt;/div&gt;&lt;!-- /.echo-card-footer --&gt;
             &lt;/a&gt;&lt;!-- /.echo-card-innner --&gt;
         &lt;/div&gt;&lt;!-- /.echo-card --&gt;
@@ -367,7 +369,7 @@
                     &lt;p class="echo-card-body"&gt;.echo-card-innner をa要素でマークアップすると、カード全体がリンク範囲になります。カードのどこかにカーソルを置くと、内包しているサムネイルとボタンの外観も変わります。&lt;/p&gt;
                 &lt;/div&gt;&lt;!-- /.echo-card-contents --&gt;
                 &lt;div class="echo-card-footer"&gt;
-                    &lt;span class="echo-button echo-button-sm echo-button-style-b echo-button-icon-arrow"&gt;ボタン&lt;/span&gt;
+                    &lt;span class="echo-button echo-button-sm echo-button-fixed echo-button-style-b echo-button-icon-arrow"&gt;ボタン&lt;/span&gt;
                 &lt;/div&gt;&lt;!-- /.echo-card-footer --&gt;
             &lt;/a&gt;&lt;!-- /.echo-card-innner --&gt;
         &lt;/div&gt;&lt;!-- /.echo-card --&gt;
@@ -395,7 +397,7 @@
                     &lt;p class="echo-card-body"&gt;echo-cards, echo-cards-item を使用して並べました。画面幅によってカラム数が変化します。&lt;/p&gt;
                 &lt;/div&gt;&lt;!-- /.echo-card-contents --&gt;
                 &lt;div class="echo-card-footer"&gt;
-                    &lt;span class="echo-button echo-button-sm echo-button-style-b echo-button-icon-arrow"&gt;ボタン&lt;/span&gt;
+                    &lt;span class="echo-button echo-button-sm echo-button-fixed echo-button-style-b echo-button-icon-arrow"&gt;ボタン&lt;/span&gt;
                 &lt;/div&gt;&lt;!-- /.echo-card-footer --&gt;
             &lt;/a&gt;&lt;!-- /.echo-card-innner --&gt;
         &lt;/div&gt;&lt;!-- /.echo-card --&gt;
@@ -423,7 +425,7 @@
                     &lt;p class="echo-card-body"&gt;何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。&lt;/p&gt;
                 &lt;/div&gt;&lt;!-- /.echo-card-contents --&gt;
                 &lt;div class="echo-card-footer"&gt;
-                    &lt;span class="echo-button echo-button-sm echo-button-style-b echo-button-icon-arrow"&gt;ボタン&lt;/span&gt;
+                    &lt;span class="echo-button echo-button-sm echo-button-fixed echo-button-style-b echo-button-icon-arrow"&gt;ボタン&lt;/span&gt;
                 &lt;/div&gt;&lt;!-- /.echo-card-footer --&gt;
             &lt;/a&gt;&lt;!-- /.echo-card-innner --&gt;
         &lt;/div&gt;&lt;!-- /.echo-card --&gt;
@@ -451,7 +453,7 @@
                     &lt;p class="echo-card-body"&gt;何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
                 &lt;/div&gt;&lt;!-- /.echo-card-contents --&gt;
                 &lt;div class="echo-card-footer"&gt;
-                    &lt;span class="echo-button echo-button-sm echo-button-style-b echo-button-icon-arrow"&gt;ボタン&lt;/span&gt;
+                    &lt;span class="echo-button echo-button-sm echo-button-fixed echo-button-style-b echo-button-icon-arrow"&gt;ボタン&lt;/span&gt;
                 &lt;/div&gt;&lt;!-- /.echo-card-footer --&gt;
             &lt;/a&gt;&lt;!-- /.echo-card-innner --&gt;
         &lt;/div&gt;&lt;!-- /.echo-card --&gt;
@@ -479,7 +481,7 @@
                     &lt;p class="echo-card-body"&gt;何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
                 &lt;/div&gt;&lt;!-- /.echo-card-contents --&gt;
                 &lt;div class="echo-card-footer"&gt;
-                    &lt;span class="echo-button echo-button-sm echo-button-style-b echo-button-icon-arrow"&gt;ボタン&lt;/span&gt;
+                    &lt;span class="echo-button echo-button-sm echo-button-fixed echo-button-style-b echo-button-icon-arrow"&gt;ボタン&lt;/span&gt;
                 &lt;/div&gt;&lt;!-- /.echo-card-footer --&gt;
             &lt;/a&gt;&lt;!-- /.echo-card-innner --&gt;
         &lt;/div&gt;&lt;!-- /.echo-card --&gt;
@@ -507,7 +509,7 @@
                     &lt;p class="echo-card-body"&gt;何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
                 &lt;/div&gt;&lt;!-- /.echo-card-contents --&gt;
                 &lt;div class="echo-card-footer"&gt;
-                    &lt;span class="echo-button echo-button-sm echo-button-style-b echo-button-icon-arrow"&gt;ボタン&lt;/span&gt;
+                    &lt;span class="echo-button echo-button-sm echo-button-fixed echo-button-style-b echo-button-icon-arrow"&gt;ボタン&lt;/span&gt;
                 &lt;/div&gt;&lt;!-- /.echo-card-footer --&gt;
             &lt;/a&gt;&lt;!-- /.echo-card-innner --&gt;
         &lt;/div&gt;&lt;!-- /.echo-card --&gt;
@@ -535,7 +537,7 @@
                     &lt;p class="echo-card-body"&gt;何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
                 &lt;/div&gt;&lt;!-- /.echo-card-contents --&gt;
                 &lt;div class="echo-card-footer"&gt;
-                    &lt;span class="echo-button echo-button-sm echo-button-style-b echo-button-icon-arrow"&gt;ボタン&lt;/span&gt;
+                    &lt;span class="echo-button echo-button-sm echo-button-fixed echo-button-style-b echo-button-icon-arrow"&gt;ボタン&lt;/span&gt;
                 &lt;/div&gt;&lt;!-- /.echo-card-footer --&gt;
             &lt;/a&gt;&lt;!-- /.echo-card-innner --&gt;
         &lt;/div&gt;&lt;!-- /.echo-card --&gt;
@@ -563,7 +565,7 @@
                     &lt;p class="echo-card-body"&gt;何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
                 &lt;/div&gt;&lt;!-- /.echo-card-contents --&gt;
                 &lt;div class="echo-card-footer"&gt;
-                    &lt;span class="echo-button echo-button-sm echo-button-style-b echo-button-icon-arrow"&gt;ボタン&lt;/span&gt;
+                    &lt;span class="echo-button echo-button-sm echo-button-fixed echo-button-style-b echo-button-icon-arrow"&gt;ボタン&lt;/span&gt;
                 &lt;/div&gt;&lt;!-- /.echo-card-footer --&gt;
             &lt;/a&gt;&lt;!-- /.echo-card-innner --&gt;
         &lt;/div&gt;&lt;!-- /.echo-card --&gt;
@@ -591,7 +593,7 @@
                     &lt;p class="echo-card-body"&gt;何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
                 &lt;/div&gt;&lt;!-- /.echo-card-contents --&gt;
                 &lt;div class="echo-card-footer"&gt;
-                    &lt;span class="echo-button echo-button-sm echo-button-style-b echo-button-icon-arrow"&gt;ボタン&lt;/span&gt;
+                    &lt;span class="echo-button echo-button-sm echo-button-fixed echo-button-style-b echo-button-icon-arrow"&gt;ボタン&lt;/span&gt;
                 &lt;/div&gt;&lt;!-- /.echo-card-footer --&gt;
             &lt;/a&gt;&lt;!-- /.echo-card-innner --&gt;
         &lt;/div&gt;&lt;!-- /.echo-card --&gt;
