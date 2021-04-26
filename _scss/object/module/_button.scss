@@ -12,7 +12,7 @@
     justify-content: center;
     text-align: center;
     max-width: map-get( $button-min-widths, 'md' );
-    min-height: $btn-min-height;
+    min-height: map-get( $button-min-heights, 'md' );
     margin: 0 auto;
     // 下マージンはベースライン分をわずかに引く
     padding: .5em 1em .4em;
@@ -25,11 +25,6 @@
     vertical-align: middle;
     cursor: pointer;
     -webkit-appearance: none;
-
-    @include media-breakpoint-up(lg) {
-        max-width: map-get( $button-max-widths, 'md' );
-        font-size: map-get( $button-max-font-sizes, 'md' );
-    }
 
     &:hover,
     &:focus,

@@ -56,7 +56,7 @@
                 <div class="echo-doc-post-contents styleguide-contents"><h2 id="btn" class="echo-doc-post-title-01">echo-button</h2>
 
 <p>リンク、インライン要素、フォームのボタン要素をボタン状に表示する。<br>
-最低高さは <code>3.142857143em = 44px</code> である。（後述の <code>.echo-button-(size)</code> との関係で単位はemとなる）</p>
+最低高さは <code>2.75rem = 44px</code> である。また、左右に <code>1em</code> の余白が確保される。</p>
 
 <p>サブクラス <code>.echo-button-style-(style)</code> が必須であり、付与していない場合は最低限の装飾となる。</p>
 
@@ -94,7 +94,7 @@
 
 <p>
   <dfn>テキストが極端に長い場合、または .echo-buttons に含まれる場合は最大幅で停止する。</dfn>
-  <a href="#" class="echo-button">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</a>
+  <a href="#" class="echo-button">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ</a>
 </p>
 
 </div>
@@ -274,28 +274,30 @@
 
 <h2 id="btn-03-size" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-button-(size)</h2>
 
-<p>ボタンの文字サイズ、最大幅を変更する（最低高さも単位がemであるため変更される）。<br>
-(size)は、 <code>sm, lg, xl, xxl</code> に対応している。<br>
-(breakpoint) が <code>lg</code> のときにそれぞれの値が変動し、(size) が大きくなるほど変動の割合も大きくなる。</p>
+<p>ボタンの文字サイズ、最低高さ、最大幅を変更する。<br>
+(size)は、 <code>sm, lg, xl, xxl</code> に対応している。</p>
 
-<p>デフォルトの、サイズの名称に対する高さと幅は以下の通り。<br>
-Sassを使用できる場合、 <code>_scss/config_advance.scss</code> の配列 <code>$button-min-font-sizes, $button-max-font-sizes, $button-min-widths, $button-max-widths</code>で変更できる。</p>
+<p>デフォルトの、サイズの名称に対する高さと幅は以下の通り。(breakpoint) が <code>lg</code> 以上で<strong>125%</strong>となる。</p>
 
-<table class="echo-table echo-table-bordered echo-margin-bottom-md" style="width: auto;">
-    <thead>
-        <tr><th rowspan="2">(size) / (breakpoint)</th><th colspan="2" class="echo-text-center">文字サイズ</th><th colspan="2" class="echo-text-center">幅</th></tr>
-        <tr><th class="echo-text-center">md 以下</th><th class="echo-text-center">lg 以上</th><th class="echo-text-center">md 以下</th><th class="echo-text-center">lg 以上</th></tr>
-    </thead>
-    <tbody>
-        <tr><th>sm</th><td>0.75rem (12px)</td><td>0.875rem (14px)</td><td>16rem</td><td>20rem</td></tr>
-        <tr><th>(default)</th><td>0.875rem (14px)</td><td>1rem (16px)</td><td>20rem</td><td>24rem</td></tr>
-        <tr><th>lg</th><td>0.875rem (14px)</td><td>1.125rem (18px)</td><td>20rem</td><td>28rem</td></tr>
-        <tr><th>xl</th><td>1rem (16px)</td><td>1.25rem (20px)</td><td>24rem</td><td>32rem</td></tr>
-        <tr><th>xxl</th><td>1.125rem (18px)</td><td>1.5rem (24px)</td><td>32rem</td><td>48rem</td></tr>
-    </tbody>
-</table>
+<div class="echo-table-responsive">
+  <table class="echo-table echo-table-bordered echo-margin-bottom-md" style="width: auto;">
+      <thead>
+          <tr><th rowspan="2">(size) / (breakpoint)</th><th colspan="2" class="echo-text-center">最低高さ</th><th colspan="2" class="echo-text-center">幅</th></tr>
+          <tr><th class="echo-text-center">md 以下</th><th class="echo-text-center">lg 以上</th><th class="echo-text-center">md 以下</th><th class="echo-text-center">lg 以上</th></tr>
+      </thead>
+      <tbody>
+          <tr><th>sm</th><td>2.5rem</td><td>3.125rem</td><td>16rem</td><td>20rem</td></tr>
+          <tr><th>(default)</th><td>2.75rem</td><td>3.4375rem</td><td>20rem</td><td>25rem</td></tr>
+          <tr><th>lg</th><td>2.75rem</td><td>3.4375rem</td><td>25rem</td><td>31.25rem</td></tr>
+          <tr><th>xl</th><td>3rem</td><td>3.75rem</td><td>38.4rem</td><td>48rem</td></tr>
+          <tr><th>xxl</th><td>3.5rem</td><td>4.375rem</td><td>48rem</td><td>60rem</td></tr>
+      </tbody>
+  </table>
+</div>
 
-<p>なお、 <code>sm</code> はモバイル端末で求められる最低高さ(44px)を満たしていないため、メニューのボタン等の重要なインターフェースに使用することは推薦されない。</p>
+<p><code>sm</code> はモバイル端末で求められる最低高さ(44px)を満たしていないため、メニューのボタン等の重要なインターフェースに使用することは推薦されない。</p>
+
+<p>Sassを使用できる場合、 <code>_scss/config_advance.scss</code> の配列 <code>$button-min-font-sizes, $button-max-font-sizes, $button-min-widths, $button-max-widths</code>で変更できる。</p>
 
 <div class="example">
 <p>
@@ -326,27 +328,27 @@ Sassを使用できる場合、 <code>_scss/config_advance.scss</code> の配列
 <p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-top-lg">テキストが極端に長い場合、または .echo-buttons に含まれる場合は最大幅で停止する。</p>
 <p>
   <dfn>echo-button-sm</dfn>
-  <a href="#" class="echo-button echo-button-sm echo-button-style-a">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</a>
+  <a href="#" class="echo-button echo-button-sm echo-button-style-a">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ</a>
 </p>
 
 <p>
   <dfn>(default)</dfn>
-  <a href="#" class="echo-button echo-button-style-a">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</a>
+  <a href="#" class="echo-button echo-button-style-a">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ</a>
 </p>
 
 <p>
   <dfn>echo-button-lg</dfn>
-  <a href="#" class="echo-button echo-button-lg echo-button-style-a">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</a>
+  <a href="#" class="echo-button echo-button-lg echo-button-style-a">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ</a>
 </p>
 
 <p>
   <dfn>echo-button-xl</dfn>
-  <a href="#" class="echo-button echo-button-xl echo-button-style-a">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</a>
+  <a href="#" class="echo-button echo-button-xl echo-button-style-a">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー</a>
 </p>
 
 <p>
   <dfn>echo-button-xxl</dfn>
-  <a href="#" class="echo-button echo-button-xxl echo-button-style-a">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</a>
+  <a href="#" class="echo-button echo-button-xxl echo-button-style-a">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している</a>
 </p>
 </div>
 
@@ -356,7 +358,7 @@ Sassを使用できる場合、 <code>_scss/config_advance.scss</code> の配列
 <h2 id="btn-03-fixed" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-button-fixed</h2>
 
 <p><code>.echo-button-(size)</code> と同時に付与すると、ボタンが (breakpoint) に関わらず常に同じサイズとなる。<br>
-ボタンのデザインが厳密な場合や、幅の変動が少ないグリッド内のコンポーネント等に使用する。</p>
+幅の変動が少ないグリッド内のコンポーネント等に使用する。</p>
 
 <p>各サイズは、前項の表内の最低値となる。</p>
 
@@ -389,27 +391,27 @@ Sassを使用できる場合、 <code>_scss/config_advance.scss</code> の配列
 <p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-top-lg">テキストが極端に長い場合、または .echo-buttons に含まれる場合は最大幅で停止する。</p>
 <p>
   <dfn>echo-button-sm</dfn>
-  <a href="#" class="echo-button echo-button-fixed echo-button-sm echo-button-style-a">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</a>
+  <a href="#" class="echo-button echo-button-fixed echo-button-sm echo-button-style-a">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ</a>
 </p>
 
 <p>
   <dfn>(default)</dfn>
-  <a href="#" class="echo-button echo-button-fixed echo-button-style-a">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</a>
+  <a href="#" class="echo-button echo-button-fixed echo-button-style-a">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ</a>
 </p>
 
 <p>
   <dfn>echo-button-lg</dfn>
-  <a href="#" class="echo-button echo-button-fixed echo-button-lg echo-button-style-a">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</a>
+  <a href="#" class="echo-button echo-button-fixed echo-button-lg echo-button-style-a">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ</a>
 </p>
 
 <p>
   <dfn>echo-button-xl</dfn>
-  <a href="#" class="echo-button echo-button-fixed echo-button-xl echo-button-style-a">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</a>
+  <a href="#" class="echo-button echo-button-fixed echo-button-xl echo-button-style-a">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー</a>
 </p>
 
 <p>
   <dfn>echo-button-xxl</dfn>
-  <a href="#" class="echo-button echo-button-fixed echo-button-xxl echo-button-style-a">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</a>
+  <a href="#" class="echo-button echo-button-fixed echo-button-xxl echo-button-style-a">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している</a>
 </p>
 </div>
 
