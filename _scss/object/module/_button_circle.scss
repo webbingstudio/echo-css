@@ -1,44 +1,19 @@
 /*
 --------------------
-#{$pr}#{$m}button#{$c3}oval
---------------------
-*/
-
-/*
-note: Meaning of "10em"
-「em」で大きな値を指定すると、ボタンが小判型になります。
-Specify a large value for "em", the button becomes an oval type
---------------------
-*/
-
-.#{$pr}#{$m}button#{$c3}oval {
-    border-radius: 10em;
-}
-
-
-/*
---------------------
 #{$pr}#{$m}button#{$c3}circle
-#{$pr}#{$m}button#{$c3}square
 --------------------
 */
 
-.#{$pr}#{$m}button#{$c3}circle,
-.#{$pr}#{$m}button#{$c3}square {
+.#{$pr}#{$m}button#{$c3}circle {
     overflow: hidden;
+    width: map-get( $button-circle-min-widths, 'md' );
+    height: map-get( $button-circle-min-widths, 'md' );
+    border-radius: 50%;
 
     &.#{$pr}#{$m}button {
         padding: 0;
         min-height: auto;
     }
-
-}
-
-
-.#{$pr}#{$m}button#{$c3}circle {
-    width: map-get( $button-circle-min-widths, 'md' );
-    height: map-get( $button-circle-min-widths, 'md' );
-    border-radius: 50%;
 
     &:not(.#{$pr}#{$m}button#{$c3}fixed) {
 

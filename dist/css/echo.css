@@ -630,6 +630,49 @@ fieldset[disabled] .echo-button-style-b.echo-button-inverse.focus {
 
 /*
 --------------------
+echo-button-icon
+--------------------
+*/
+[class*="echo-button-icon"] {
+  padding-right: 2.65em;
+}
+
+[class*="echo-button-icon"]:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: .65em;
+  transform: translateY(-50%);
+  width: 1em;
+  height: 1em;
+  font-size: 1em;
+  transform-origin: center center;
+}
+
+.echo-button-icon-left {
+  padding-left: 2.65em;
+}
+
+.echo-button-icon-left:after {
+  right: auto;
+  left: .65em;
+}
+
+.echo-button-icon-arrow:after {
+  width: .5em;
+  height: .5em;
+  border-top: .2em solid currentcolor;
+  border-left: .2em solid currentcolor;
+  border-radius: .1em;
+  transform: translateY(-50%) rotate(135deg);
+}
+
+.echo-button-icon-arrow.echo-button-icon-left:after {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+/*
+--------------------
 echo-button-(size)
 --------------------
 */
@@ -757,24 +800,18 @@ Specify a large value for "em", the button becomes an oval type
 /*
 --------------------
 echo-button-circle
-echo-button-square
 --------------------
 */
-.echo-button-circle,
-.echo-button-square {
-  overflow: hidden;
-}
-
-.echo-button-circle.echo-button,
-.echo-button-square.echo-button {
-  padding: 0;
-  min-height: auto;
-}
-
 .echo-button-circle {
+  overflow: hidden;
   width: 2.75rem;
   height: 2.75rem;
   border-radius: 50%;
+}
+
+.echo-button-circle.echo-button {
+  padding: 0;
+  min-height: auto;
 }
 
 @media (min-width: 62.5rem) {
@@ -984,45 +1021,118 @@ echo-button-square
 
 /*
 --------------------
-echo-button-icon
+echo-button-square
 --------------------
 */
-[class*="echo-button-icon"] {
-  padding-right: 2.65em;
+.echo-button-square {
+  overflow: hidden;
+  width: 2.75rem;
+  height: 2.75rem;
 }
 
-[class*="echo-button-icon"]:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: .65em;
-  transform: translateY(-50%);
-  width: 1em;
-  height: 1em;
-  font-size: 1em;
-  transform-origin: center center;
+.echo-button-square.echo-button {
+  padding: 0;
+  min-height: auto;
 }
 
-.echo-button-icon-left {
-  padding-left: 2.65em;
+@media (min-width: 62.5rem) {
+  .echo-button-square:not(.echo-button-fixed) {
+    width: 3.4375rem;
+    height: 3.4375rem;
+    font-size: 1rem;
+  }
 }
 
-.echo-button-icon-left:after {
-  right: auto;
-  left: .65em;
+@media (min-width: 62.5rem) {
+  .echo-button-square.echo-button-fixed {
+    max-width: 20rem;
+    min-height: 2.75rem;
+    font-size: 0.875rem;
+  }
 }
 
-.echo-button-icon-arrow:after {
-  width: .5em;
-  height: .5em;
-  border-top: .2em solid currentcolor;
-  border-left: .2em solid currentcolor;
-  border-radius: .1em;
-  transform: translateY(-50%) rotate(135deg);
+.echo-button-square.echo-button-sm {
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
-.echo-button-icon-arrow.echo-button-icon-left:after {
-  transform: translateY(-50%) rotate(-45deg);
+@media (min-width: 62.5rem) {
+  .echo-button-square.echo-button-sm:not(.echo-button-fixed) {
+    width: 3.125rem;
+    height: 3.125rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-button-square.echo-button-sm.echo-button-fixed {
+    max-width: 16rem;
+    min-height: 2.5rem;
+    font-size: 0.75rem;
+  }
+}
+
+.echo-button-square.echo-button-lg {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+@media (min-width: 62.5rem) {
+  .echo-button-square.echo-button-lg:not(.echo-button-fixed) {
+    width: 4.375rem;
+    height: 4.375rem;
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-button-square.echo-button-lg.echo-button-fixed {
+    max-width: 25rem;
+    min-height: 2.75rem;
+    font-size: 0.875rem;
+  }
+}
+
+.echo-button-square.echo-button-xl {
+  width: 4rem;
+  height: 4rem;
+}
+
+@media (min-width: 62.5rem) {
+  .echo-button-square.echo-button-xl:not(.echo-button-fixed) {
+    width: 6rem;
+    height: 6rem;
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-button-square.echo-button-xl.echo-button-fixed {
+    max-width: 38.4rem;
+    min-height: 3rem;
+    font-size: 1rem;
+  }
+}
+
+.echo-button-square.echo-button-xxl {
+  width: 5rem;
+  height: 5rem;
+}
+
+@media (min-width: 62.5rem) {
+  .echo-button-square.echo-button-xxl:not(.echo-button-fixed) {
+    width: 7.5rem;
+    height: 7.5rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-button-square.echo-button-xxl.echo-button-fixed {
+    max-width: 48rem;
+    min-height: 3.5rem;
+    font-size: 1.125rem;
+  }
 }
 
 /*
