@@ -32,10 +32,10 @@
     width: 100%;
 
     .#{$pr}#{$c}card {
-        max-width: none;
+        max-width: map-get( $object-max-widths, 'sm' );
 
-        @include media-breakpoint-down(md) {
-            max-width: map-get( $object-max-widths, 'sm' );
+        @include media-breakpoint-up(sm) {
+            max-width: none;
         }
 
     }

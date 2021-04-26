@@ -6816,12 +6816,12 @@ echo-cards
 }
 
 .echo-cards-item .echo-card {
-  max-width: none;
+  max-width: 20rem;
 }
 
-@media (max-width: 62.4rem) {
+@media (min-width: 26.75rem) {
   .echo-cards-item .echo-card {
-    max-width: 20rem;
+    max-width: none;
   }
 }
 
@@ -6846,7 +6846,7 @@ echo-medias
 */
 .echo-medias {
   display: grid;
-  gap: 2.5rem;
+  gap: 1.25rem;
   width: calc( 100% - 1.25rem);
   margin: 0 auto;
 }
