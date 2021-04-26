@@ -6,11 +6,11 @@
 
 .#{$pr}#{$l}headlines {
     width: calc( 100% - #{map-get( $grid-gutter-widths, md )} );
-    margin: 0 auto ( $spacer * -2 );
+    margin: 0 auto ( map-get( $grid-gutter-widths, md ) * -1 );
 }
 
 .#{$pr}#{$l}headlines#{$c1}item {
-    margin: 0 0 ( $spacer * 2 );
+    margin: 0 0 map-get( $grid-gutter-widths, md );
 
     .#{$pr}#{$c}headline {
     }
