@@ -23,18 +23,15 @@
         left: 50%;
         transform: translateX( -50% );
         width: 3em;
-        height: .25rem;
+        height: .1875em;
+        min-height: 3px;
+        max-height: 8px;
         background-color: $default-fade;
     }
 
     &.#{$pr}#{$m}title#{$c3}level#{$c3}4,
     &.#{$pr}#{$m}title#{$c3}level#{$c3}5,
     &.#{$pr}#{$m}title#{$c3}level#{$c3}6 {
-
-        &:after {
-            height: .1875rem;
-        }
-
     }
 
 }
@@ -49,6 +46,7 @@
         left: 0;
         width: 100%;
         height: .125rem;
+        min-height: 1px;
         background-color: $default;
         z-index: 11;
     }
@@ -56,10 +54,13 @@
     &:after {
         position: absolute;
         content: "";
-        bottom: -.125rem;
+        top: 100%;
         left: 0;
+        transform: translateY( -.125rem );
         width: 3em;
-        height: .25rem;
+        height: .1875em;
+        min-height: 3px;
+        max-height: 8px;
         background-color: $default-fade;
         z-index: 12;
     }
@@ -73,8 +74,7 @@
         }
 
         &:after {
-            bottom: -.125rem;
-            height: .1875rem;
+            transform: translateY( -.0625rem );
         }
 
     }
@@ -96,18 +96,15 @@
         left: 0;
         transform: translateY( -50% );
         width: .75em;
-        height: .25rem;
+        height: .1875em;
+        min-height: 3px;
+        max-height: 8px;
         background-color: $default-fade;
     }
 
     &.#{$pr}#{$m}title#{$c3}level#{$c3}4,
     &.#{$pr}#{$m}title#{$c3}level#{$c3}5,
     &.#{$pr}#{$m}title#{$c3}level#{$c3}6 {
-
-        &:after {
-            height: .1875rem;
-        }
-
     }
 
 }
