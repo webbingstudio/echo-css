@@ -124,10 +124,6 @@ img.echo-doc-header-logo {
 }
 
 
-.echo-doc-header-nav {
-    font-family: 'Helvetica', 'Roboto', '-apple-system', 'Open Sans', 'Arial', sans-serif;
-}
-
 @media (max-width: 767.9px) {
 
     .echo-doc-header-nav {
@@ -188,7 +184,6 @@ echo-doc-mainvisual
 .echo-doc-mainvisual .echo-hero-contents-inner {
     width: 100%;
     max-width: 25rem;
-    font-family: 'Helvetica', 'Roboto', '-apple-system', 'Open Sans', 'Arial', sans-serif;
 }
 
 @media (min-width: 1024px) {
@@ -200,6 +195,7 @@ echo-doc-mainvisual
 .echo-doc-mainvisual-logo {
     width: 180px;
     height: 63px;
+    vertical-align: bottom;
 }
 
 @media (min-width: 415px) {
@@ -223,24 +219,11 @@ echo-doc-mainvisual
     }
 }
 
-.echo-doc-mainvisual-download {
-    padding-top: 1.875rem;
+.echo-hero .echo-doc-mainvisual-download {
+    margin-top: 1.5em;
 }
 
 .echo-doc-mainvisual-more {
-    padding-top: 0.9375rem;
-    text-align: center;
-}
-@media (min-width: 425px) {
-    .echo-doc-mainvisual-more {
-        padding-top: 1.875rem;
-    }
-}
-@media (min-width: 1024px) {
-    .echo-doc-mainvisual-more {
-        padding-top: 3.75rem;
-        font-size: 1.5rem;
-    }
 }
 
 .echo-doc-mainvisual-more-icon {
@@ -297,10 +280,6 @@ echo-doc-presentation
     .echo-doc-presentation .echo-flip-title {
         font-size: 2.5rem;
     }
-}
-
-.echo-doc-presentation .echo-flip .echo-button {
-    font-family: 'Helvetica', 'Roboto', '-apple-system', 'Open Sans', 'Arial', sans-serif;
 }
 
 .echo-doc-presentation-01 .echo-flip-cover {
@@ -442,7 +421,6 @@ echo-doc-quickstart
     padding-bottom: 1.875rem;
     background-color: #333;
     color: #eee;
-    font-family: 'Helvetica', 'Roboto', '-apple-system', 'Open Sans', 'Arial', sans-serif;
 }
 
 @media (min-width: 960px) {
@@ -675,7 +653,6 @@ echo-doc-download
 }
 
 .echo-doc-download .echo-button {
-    font-family: 'Helvetica', 'Roboto', '-apple-system', 'Open Sans', 'Arial', sans-serif;
 }
 
 .echo-doc-download-lg {
@@ -886,7 +863,6 @@ echo-doc-sub
 .echo-doc-sub-title {
     margin: 0;
     padding-bottom: .5em;
-    font-family: 'Helvetica', 'Roboto', '-apple-system', 'Open Sans', 'Arial', sans-serif;
 }
 
 
@@ -951,7 +927,6 @@ echo-doc-footer
     margin: 0;
     text-align: center;
     letter-spacing: .05em;
-    font-family: 'Helvetica', 'Roboto', '-apple-system', 'Open Sans', 'Arial', sans-serif;
 }
 
 .echo-doc-footer-copyright {
@@ -959,7 +934,6 @@ echo-doc-footer
     padding-bottom: .5rem;
     text-align: center;
     letter-spacing: .05em;
-    font-family: 'Helvetica', 'Roboto', '-apple-system', 'Open Sans', 'Arial', sans-serif;
 }
 
 

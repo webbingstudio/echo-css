@@ -39,17 +39,38 @@
             <article class="echo-doc-post">
                 <div class="echo-doc-post-contents styleguide-contents"><h2 id="hero" class="echo-doc-post-title-01">echo-hero</h2>
 
-<p>メインビジュアルなどに使用される全面背景を持つコンポーネントを表示する。<br>
-<code>.echo-title, .echo-button, .echo-buttons</code> を含めることができる。</p>
+<p>メインビジュアルなどに使用される全面背景を持つコンポーネントを表示する。</p>
 
 <p><code>.echo-hero-contents-inner</code> が必須であることと、内容が多すぎると領域をはみ出すことがある点に注意する。</p>
 
 <p><code>.echo-hero-image</code> の画像は<strong>トリミングされず、縦横比を保って伸縮する。</strong>レスポンシブイメージを併用することが望ましい。<br>
 </p>
 
-<p><code>.echo-hero-header</code> のフォントサイズは通常より大きくなっている。このため、 <code>.echo-title</code> も追随して大きくなる。</p>
-
 <p><code>.echo-hero-title.echo-title</code> に付与されている <code>.echo-font-first</code> は<strong>必須ではない</strong>。詳細は <a href="./utility-font.html">utility > font</a> を参照。</p>
+
+<h3 class="echo-doc-post-title-02">補足：見出しのフォントサイズ</h3>  
+
+<p><code>.echo-hero-header</code> のフォントサイズは、標準 (1rem) よりも大きくなる。このため、内包される <code>.echo-title</code> も追随して大きくなる。<br>
+(breakpoint) ごとの拡大率は以下の通り。</p>
+
+<h3 class="echo-doc-post-title-02">Note: font size of title</h3>  
+
+<p>The font size of <code> .echo-hero-header </code> is larger than the root (1rem). Therefore, the included <code> .echo-title </code> also grows accordingly. <br>
+See the table below for the magnification for each (breakpoint).</p>
+
+<table class="echo-table echo-table-bordered echo-margin-bottom-lg" style="width: auto;">
+    <thead>
+        <tr><th>(breakpoint)</th><th>拡大率</th></tr>
+    </thead>
+    <tbody>
+        <tr><th>sm以下</th><td>125% (1.25rem)</td></tr>
+        <tr><th>md以上</th><td>150% (1.5rem)</td></tr>
+        <tr><th>xl以上</th><td>200% (2rem)</td></tr>
+    </tbody>
+</table>
+
+
+
 
 <div class="echo-hero">
     <div class="echo-hero-image">
