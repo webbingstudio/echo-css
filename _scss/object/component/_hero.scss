@@ -47,59 +47,39 @@
 
 }
 
-.#{$pr}#{$c}hero#{$c1}title {
-    font-size: 1.75rem;
-    text-align: center;
+.#{$pr}#{$c}hero#{$c1}contents#{$c1}inner > *:not(:last-child) {
+    margin: 0 0 1em;
+}
 
-    @include media-breakpoint-up(sm) {
-        font-size: 2.25rem;
-    }
+.#{$pr}#{$c}hero#{$c1}contents#{$c1}inner > .#{$pr}#{$c}hero#{$c1}link {
+    margin-top: 2em;
 
     @include media-breakpoint-up(md) {
-        font-size: 2.75rem;
-    }
-
-    @include media-breakpoint-up(lg) {
-        font-size: 3.25rem;
-    }
-
-    @include media-breakpoint-up(xl) {
-        font-size: 3.5rem;
-    }
-
-    @include media-breakpoint-up(xxl) {
-        font-size: 4rem;
+        margin-top: 3em;
     }
 
 }
 
-.#{$pr}#{$c}hero#{$c1}caption {
-    margin: 0;
-    font-size: $font-size-md;
-    line-height: $line-height-xs;
+.#{$pr}#{$c}hero#{$c1}header {
+    font-size: 1.25rem;
     text-align: center;
 
-    @include media-breakpoint-up(sm) {
-        font-size: $font-size-xl;
+    @include media-breakpoint-up(md) {
+        font-size: 1.75rem;
     }
 
-    @include media-breakpoint-up(lg) {
-        font-size: $font-size-xxl;
-    }
-
-    .#{$pr}#{$c}hero#{$c1}title + & {
-        margin-top: .5em;
+    @include media-breakpoint-up(xl) {
+        font-size: 2.25rem;
     }
 
 }
 
 .#{$pr}#{$c}hero#{$c1}body {
-    margin: 0;
     font-size: .625rem;
-    line-height: $line-height-lg;
+    line-height: $line-height-md;
     text-align: center;
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(sm) {
         font-size: .75rem;
     }
 
@@ -119,16 +99,9 @@
 
     }
 
-    .#{$pr}#{$c}hero#{$c1}title + &,
-    .#{$pr}#{$c}hero#{$c1}caption + &,
-    .#{$pr}#{$c}hero#{$c1}body + & {
-        margin-top: 1.5em;
-    }
-
 }
 
 .#{$pr}#{$c}hero#{$c1}link {
-    margin: 0;
     font-size: $font-size-xs;
     text-align: center;
     line-height: 1;
@@ -139,15 +112,6 @@
 
     @include media-breakpoint-up(xxl) {
         font-size: $font-size-md;
-    }
-
-    [class*="#{$pr}#{$c}hero#{$c1}"] + & {
-        margin-top: 1.5em;
-
-        @include media-breakpoint-up(lg) {
-            margin-top: 2em;
-        }
-
     }
 
 }
@@ -212,19 +176,20 @@
     }
 
     .#{$pr}#{$c}hero#{$c1}contents#{$c1}inner {
+        max-width: 75%;
 
         @include media-breakpoint-up(md) {
             max-width: 66.66666666%;
         }
 
-        @include media-breakpoint-up(xl) {
+        @include media-breakpoint-up(xxl) {
             max-width: 50%;
         }
 
-    }
+        > * {
+            text-align: left;
+        }
 
-    .#{$pr}#{$c}hero#{$c1}body {
-        text-align: left;
     }
 
 }
@@ -233,13 +198,6 @@
 
     .#{$pr}#{$c}hero#{$c1}contents#{$c1}inner {
         margin-left: 0;
-        margin-right: auto;
-    }
-
-    .#{$pr}#{$c}hero#{$c1}title,
-    .#{$pr}#{$c}hero#{$c1}caption,
-    .#{$pr}#{$c}hero#{$c1}link {
-        text-align: left;
     }
 
 }
@@ -247,14 +205,7 @@
 .#{$pr}#{$c}hero#{$c3}right {
 
     .#{$pr}#{$c}hero#{$c1}contents#{$c1}inner {
-        margin-left: auto;
         margin-right: 0;
-    }
-
-    .#{$pr}#{$c}hero#{$c1}title,
-    .#{$pr}#{$c}hero#{$c1}caption,
-    .#{$pr}#{$c}hero#{$c1}link {
-        text-align: left;
     }
 
 }
