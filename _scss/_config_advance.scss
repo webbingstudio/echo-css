@@ -190,22 +190,13 @@ $grid-breakpoints: (
 ) !default;
 
 $responsive-breakpoints: (
-    min:    360,
-    max:    1440
+    min:    (16 * 22.5),
+    max:    (16 * 90)
 ) !default;
 
 
 // Spacing
 // -----------------------------------------
-
-$spacing-fixed: (
-    5:     5,
-    10:    10,
-    20:    20,
-    30:    30,
-    45:    45,
-    60:    60
-) !default;
 
 $spacing-min: (
     xs:     4,
@@ -217,12 +208,12 @@ $spacing-min: (
 ) !default;
 
 $spacing-max: (
-    xs:     6,
-    sm:     12,
-    md:     24,
-    lg:     48,
-    xl:     64,
-    xxl:    96
+    xs:     map-get( $spacing-min, 'xs' ) * 1.5,
+    sm:     map-get( $spacing-min, 'sm' ) * 1.5,
+    md:     map-get( $spacing-min, 'md' ) * 1.5,
+    lg:     map-get( $spacing-min, 'lg' ) * 1.5,
+    xl:     map-get( $spacing-min, 'xl' ) * 1.5,
+    xxl:    map-get( $spacing-min, 'xxl' ) * 1.5
 ) !default;
 
 $component-spacing-min: (

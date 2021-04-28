@@ -6,42 +6,6 @@
 
 #{$u-wrap} {
 
-    @each $spacing in map-keys($spacing-fixed) {
-
-        .#{$pr}#{$u}padding#{$c3}#{$spacing} {
-            padding: #{$spacing}px;
-        }
-
-        .#{$pr}#{$u}padding#{$c2}top#{$c3}#{$spacing} {
-            padding-top: #{$spacing}px;
-        }
-
-        .#{$pr}#{$u}padding#{$c2}left#{$c3}#{$spacing} {
-            padding-left: #{$spacing}px;
-        }
-
-        .#{$pr}#{$u}padding#{$c2}bottom#{$c3}#{$spacing} {
-            padding-bottom: #{$spacing}px;
-        }
-
-        .#{$pr}#{$u}padding#{$c2}right#{$c3}#{$spacing} {
-            padding-right: #{$spacing}px;
-        }
-
-        .#{$pr}#{$u}padding#{$c2}x#{$c3}#{$spacing} {
-            padding-left: #{$spacing}px;
-            padding-right: #{$spacing}px;
-        }
-
-        .#{$pr}#{$u}padding#{$c2}y#{$c3}#{$spacing} {
-            padding-top: #{$spacing}px;
-            padding-bottom: #{$spacing}px;
-        }
-
-    }
-
-
-
     .#{$pr}#{$u}padding#{$c3}xs {
         @include responsive-spacing(
             'padding',
