@@ -88,7 +88,6 @@ a.#{$pr}#{$c}card#{$c1}inner {
 }
 
 .#{$pr}#{$c}card#{$c1}header,
-.#{$pr}#{$c}card#{$c1}contents,
 .#{$pr}#{$c}card#{$c1}footer {
     @include responsive-spacing(
         'padding-left',
@@ -102,8 +101,35 @@ a.#{$pr}#{$c}card#{$c1}inner {
         map-get( $component-spacing-max, 'md' )
     );
 
-    padding-top: $spacer;
-    padding-bottom: $spacer;
+    padding-top: map-get( $grid-gutter-widths, sm );
+    padding-bottom: map-get( $grid-gutter-widths, sm );
+    word-break: break-word;
+}
+
+.#{$pr}#{$c}card#{$c1}contents {
+    @include responsive-spacing(
+        'padding-top',
+        map-get( $component-spacing-min, 'md' ),
+        map-get( $component-spacing-max, 'md' )
+    );
+
+    @include responsive-spacing(
+        'padding-left',
+        map-get( $component-spacing-min, 'md' ),
+        map-get( $component-spacing-max, 'md' )
+    );
+
+    @include responsive-spacing(
+        'padding-bottom',
+        map-get( $component-spacing-min, 'md' ),
+        map-get( $component-spacing-max, 'md' )
+    );
+
+    @include responsive-spacing(
+        'padding-right',
+        map-get( $component-spacing-min, 'md' ),
+        map-get( $component-spacing-max, 'md' )
+    );
     word-break: break-word;
 }
 
@@ -114,16 +140,10 @@ a.#{$pr}#{$c}card#{$c1}inner {
     flex-grow: 1;
     font-size: $font-size-sm;
     line-height: $line-height-sm;
+}
 
-    > [class*="#{$pr}#{$c}card"] {
-        margin: 0;
-
-        + [class*="#{$pr}#{$c}card"] {
-            margin-top: $spacer;
-        }
-
-    }
-
+.#{$pr}#{$c}card#{$c1}contents > *:not(:last-child) {
+    margin: 0 0 .5em;
 }
 
 .#{$pr}#{$c}card#{$c1}title {
