@@ -93,13 +93,13 @@
 <hr class="echo-margin-y-lg">
 
 <p>モバイル環境でフォームが画面幅を超える場合は、自動改行される。<br>
-インラインのフォーム内でボタンを使用する場合は、サイズが変化しないよう .echo-button-fixed クラスを付与すること。</p>
+サイズを変更させたくない場合は .echo-button-fixed, .echo-input-fixed クラスを付与すること。</p>
 
 <div class="echo-form">
     <label for="form-default-05" class="echo-form-label">アカウント名</label>
-    <input type="text" class="echo-input" id="form-default-05" name="form_default_05" size="20" value="">
+    <input type="text" class="echo-input echo-input-fixed" id="form-default-05" name="form_default_05" size="20" value="">
     <label for="form-default-06" class="echo-form-label">パスワード</label>
-    <input type="password" class="echo-input" id="form-default-06" name="form_default_06" size="20" value="">
+    <input type="password" class="echo-input echo-input-fixed" id="form-default-06" name="form_default_06" size="20" value="">
     <button class="echo-button echo-button-fixed echo-button-style-a echo-button-info">ログイン</button>
 </div><!-- /.echo-form -->
 
@@ -149,11 +149,11 @@
 &lt;hr class="echo-margin-y-lg"&gt;
 
 &lt;p&gt;モバイル環境でフォームが画面幅を超える場合は、自動改行される。&lt;br&gt;
-インラインのフォーム内でボタンを使用する場合は、サイズが変化しないよう .echo-button-fixed クラスを付与すること。&lt;/p&gt;
+サイズを変更させたくない場合は .echo-button-fixed, .echo-input-fixed クラスを付与すること。&lt;/p&gt;
 
 &lt;div class="echo-form"&gt;
     &lt;label for="form-default-05" class="echo-form-label"&gt;アカウント名&lt;/label&gt;
-    &lt;input type="text" class="echo-input" id="form-default-05" name="form_default_05" size="20" value=""&gt;
+    &lt;input type="text" class="echo-input echo-input-fixed" id="form-default-05" name="form_default_05" size="20" value=""&gt;
     &lt;label for="form-default-06" class="echo-form-label"&gt;パスワード&lt;/label&gt;
     &lt;input type="password" class="echo-input" id="form-default-06" name="form_default_06" size="20" value=""&gt;
     &lt;button class="echo-button echo-button-fixed echo-button-style-a echo-button-info"&gt;ログイン&lt;/button&gt;
@@ -213,13 +213,13 @@
 <hr class="echo-margin-y-lg">
 
 <p>モバイル環境でフォームが画面幅を超える場合は、自動改行される。<br>
-インラインのフォーム内でボタンを使用する場合は、サイズが変化しないよう .echo-button-fixed クラスを付与すること。</p>
+サイズを変更させたくない場合は .echo-button-fixed, .echo-input-fixed クラスを付与すること。</p>
 
 <div class="echo-form echo-form-grow">
     <label for="form-grow-05" class="echo-form-label">アカウント名</label>
-    <input type="text" class="echo-input" id="form-grow-05" name="form_grow_05" size="20" value="">
+    <input type="text" class="echo-input echo-input-fixed" id="form-grow-05" name="form_grow_05" size="20" value="">
     <label for="form-grow-06" class="echo-form-label">パスワード</label>
-    <input type="password" class="echo-input" id="form-grow-06" name="form_grow_06" size="20" value="">
+    <input type="password" class="echo-input echo-input-fixed" id="form-grow-06" name="form_grow_06" size="20" value="">
     <button class="echo-button echo-button-fixed echo-button-style-a echo-button-info">ログイン</button>
 </div><!-- /.echo-form -->
 
@@ -272,13 +272,13 @@
 &lt;hr class="echo-margin-y-lg"&gt;
 
 &lt;p&gt;モバイル環境でフォームが画面幅を超える場合は、自動改行される。&lt;br&gt;
-インラインのフォーム内でボタンを使用する場合は、サイズが変化しないよう .echo-button-fixed クラスを付与すること。&lt;/p&gt;
+サイズを変更させたくない場合は .echo-button-fixed, .echo-input-fixed クラスを付与すること。&lt;/p&gt;
 
 &lt;div class="echo-form echo-form-grow"&gt;
     &lt;label for="form-grow-05" class="echo-form-label"&gt;アカウント名&lt;/label&gt;
-    &lt;input type="text" class="echo-input" id="form-grow-05" name="form_grow_05" size="20" value=""&gt;
+    &lt;input type="text" class="echo-input echo-input-fixed" id="form-grow-05" name="form_grow_05" size="20" value=""&gt;
     &lt;label for="form-grow-06" class="echo-form-label"&gt;パスワード&lt;/label&gt;
-    &lt;input type="password" class="echo-input" id="form-grow-06" name="form_grow_06" size="20" value=""&gt;
+    &lt;input type="password" class="echo-input echo-input-fixed" id="form-grow-06" name="form_grow_06" size="20" value=""&gt;
     &lt;button class="echo-button echo-button-fixed echo-button-style-a echo-button-info"&gt;ログイン&lt;/button&gt;
 &lt;/div&gt;&lt;!-- /.echo-form --&gt;
 </code></pre></div>
@@ -291,28 +291,28 @@
 
 <div class="echo-form echo-form-append">
     <input type="text" class="echo-input" name="search" size="30" placeholder="Keyword">
-    <button class="echo-button echo-button-fixed echo-button-style-a">検索</button>
+    <button class="echo-button echo-button-style-a">検索</button>
 </div><!-- /.echo-form -->
 
 <hr class="echo-margin-y-lg">
 
 <div class="echo-form echo-form-grow echo-form-append">
     <input type="text" class="echo-input" name="search" size="30" placeholder="Keyword">
-    <button class="echo-button echo-button-fixed echo-button-style-a">検索</button>
+    <button class="echo-button echo-button-style-a">検索</button>
 </div><!-- /.echo-form -->
 
 </div>
 
 <div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-form echo-form-append"&gt;
     &lt;input type="text" class="echo-input" name="search" size="30" placeholder="Keyword"&gt;
-    &lt;button class="echo-button echo-button-fixed echo-button-style-a"&gt;検索&lt;/button&gt;
+    &lt;button class="echo-button echo-button-style-a"&gt;検索&lt;/button&gt;
 &lt;/div&gt;&lt;!-- /.echo-form --&gt;
 
 &lt;hr class="echo-margin-y-lg"&gt;
 
 &lt;div class="echo-form echo-form-grow echo-form-append"&gt;
     &lt;input type="text" class="echo-input" name="search" size="30" placeholder="Keyword"&gt;
-    &lt;button class="echo-button echo-button-fixed echo-button-style-a"&gt;検索&lt;/button&gt;
+    &lt;button class="echo-button echo-button-style-a"&gt;検索&lt;/button&gt;
 &lt;/div&gt;&lt;!-- /.echo-form --&gt;
 </code></pre></div>
 
