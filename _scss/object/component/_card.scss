@@ -142,20 +142,12 @@ a.#{$pr}#{$c}card#{$c1}inner {
     line-height: $line-height-sm;
 }
 
+.#{$pr}#{$c}card#{$c1}contents > * {
+    margin: 0;
+}
+
 .#{$pr}#{$c}card#{$c1}contents > *:not(:last-child) {
-    margin: 0 0 .5em;
-}
-
-.#{$pr}#{$c}card#{$c1}title {
-    margin: 0;
-}
-
-.#{$pr}#{$c}card#{$c1}meta {
-    margin: 0;
-}
-
-.#{$pr}#{$c}card#{$c1}body {
-    margin: 0;
+    margin-bottom: .5em;
 }
 
 .#{$pr}#{$c}card#{$c1}footer {

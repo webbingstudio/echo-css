@@ -86,28 +86,14 @@ a.#{$pr}#{$c}media#{$c1}inner {
     );
     font-size: $font-size-sm;
     line-height: $line-height-sm;
-
-    [class*="#{$pr}#{$c}media"] {
-        margin: 0;
-
-        + [class*="#{$pr}#{$c}media"] {
-            margin-top: .5rem;
-        }
-
-    }
-
 }
 
-.#{$pr}#{$c}media#{$c1}title {
+.#{$pr}#{$c}media#{$c1}contents > * {
     margin: 0;
 }
 
-.#{$pr}#{$c}media#{$c1}meta {
-    margin: 0;
-}
-
-.#{$pr}#{$c}media#{$c1}body {
-    margin: 0;
+.#{$pr}#{$c}media#{$c1}contents > *:not(:last-child) {
+    margin-bottom: .5em;
 }
 
 
