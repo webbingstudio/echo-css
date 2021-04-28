@@ -6,7 +6,7 @@
 
 .#{$pr}#{$m}input {
     max-width: 100%;
-    padding: .75em;
+    padding: .5em 1em;
     background: $input-bg none;
     border: $input-border-width solid $input-border-color;
     color: $input-color;
@@ -21,7 +21,7 @@
         #{&}:not(textarea) {
             padding-top: 0;
             padding-bottom: 0;
-            min-height: 2.75rem;
+            min-height: map-get( $button-min-heights, 'md' );
         }
 
     }
@@ -44,43 +44,6 @@
 
         &:focus {
             background-color: $important-fade;
-        }
-
-    }
-
-}
-
-
-/*
---------------------
-#{$pr}#{$m}input#{$c3}(size)
---------------------
-*/
-
-.#{$pr}#{$m}input#{$c3}sm {
-    font-size: $font-size-xs;
-
-    @at-root {
-
-        #{&}:not(textarea) {
-            padding-top: 0;
-            padding-bottom: 0;
-            min-height: 2.25rem;
-        }
-
-    }
-
-}
-
-.#{$pr}#{$m}input#{$c3}lg {
-    font-size: $font-size-lg;
-
-    @at-root {
-
-        #{&}:not(textarea) {
-            padding-top: 0;
-            padding-bottom: 0;
-            min-height: 3.5rem;
         }
 
     }

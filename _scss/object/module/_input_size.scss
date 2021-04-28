@@ -1,0 +1,180 @@
+/*
+--------------------
+#{$pr}#{$m}input#{$c3}(size)
+--------------------
+*/
+
+.#{$pr}#{$m}input {
+    @include media-breakpoint-up(lg) {
+        font-size: $font-size-md;
+    }
+
+    &.#{$pr}#{$m}input#{$c3}fixed {
+
+        @include media-breakpoint-up(lg) {
+            font-size: $font-size-sm;
+        }
+
+    }
+
+    @at-root {
+
+        #{&}:not(textarea) {
+
+            @include media-breakpoint-up(lg) {
+                min-height: map-get( $button-max-heights, 'md' );
+            }
+
+        }
+
+        #{&}:not(textarea).#{$pr}#{$m}input#{$c3}fixed {
+
+            @include media-breakpoint-up(lg) {
+                min-height: map-get( $button-min-heights, 'md' );
+            }
+
+        }
+
+    }
+
+}
+
+.#{$pr}#{$m}input#{$c3}sm {
+    font-size: $font-size-sm;
+
+    @at-root {
+
+        #{&}:not(textarea) {
+            min-height: map-get( $button-min-heights, 'sm' );
+
+            @include media-breakpoint-up(lg) {
+                min-height: map-get( $button-max-heights, 'sm' );
+            }
+
+        }
+
+        #{&}:not(textarea).#{$pr}#{$m}input#{$c3}fixed {
+
+            @include media-breakpoint-up(lg) {
+                min-height: map-get( $button-min-heights, 'sm' );
+            }
+
+        }
+
+    }
+
+}
+
+.#{$pr}#{$m}input#{$c3}lg {
+    font-size: $font-size-md;
+
+    @include media-breakpoint-up(lg) {
+        font-size: $font-size-lg;
+    }
+
+    &.#{$pr}#{$m}input#{$c3}fixed {
+
+        @include media-breakpoint-up(lg) {
+            font-size: $font-size-lg;
+        }
+
+    }
+
+    @at-root {
+
+        #{&}:not(textarea) {
+            min-height: map-get( $button-min-heights, 'lg' );
+
+            @include media-breakpoint-up(lg) {
+                min-height: map-get( $button-max-heights, 'lg' );
+            }
+
+        }
+
+        #{&}:not(textarea).#{$pr}#{$m}input#{$c3}fixed {
+
+            @include media-breakpoint-up(lg) {
+                min-height: map-get( $button-min-heights, 'lg' );
+            }
+
+        }
+        
+    }
+
+}
+
+.#{$pr}#{$m}input#{$c3}xl {
+    font-size: $font-size-lg;
+
+    @include media-breakpoint-up(lg) {
+        font-size: $font-size-xl;
+    }
+
+    &.#{$pr}#{$m}input#{$c3}fixed {
+
+        @include media-breakpoint-up(lg) {
+            font-size: $font-size-lg;
+        }
+
+    }
+
+    @at-root {
+
+        #{&}:not(textarea) {
+            min-height: map-get( $button-min-heights, 'xl' );
+
+            @include media-breakpoint-up(lg) {
+                min-height: map-get( $button-max-heights, 'xl' );
+            }
+
+        }
+
+        #{&}:not(textarea).#{$pr}#{$m}input#{$c3}fixed {
+
+            @include media-breakpoint-up(lg) {
+                min-height: map-get( $button-min-heights, 'xl' );
+            }
+
+        }
+        
+    }
+
+}
+
+.#{$pr}#{$m}input#{$c3}xxl {
+    font-size: $font-size-xl;
+
+    @include media-breakpoint-up(lg) {
+        font-size: $font-size-xxl;
+    }
+
+    &.#{$pr}#{$m}input#{$c3}fixed {
+
+        @include media-breakpoint-up(lg) {
+            font-size: $font-size-xl;
+        }
+
+    }
+
+    @at-root {
+
+        #{&}:not(textarea) {
+            min-height: map-get( $button-min-heights, 'xxl' );
+
+            @include media-breakpoint-up(lg) {
+                min-height: map-get( $button-max-heights, 'xxl' );
+            }
+
+        }
+
+        #{&}:not(textarea).#{$pr}#{$m}input#{$c3}fixed {
+
+            @include media-breakpoint-up(lg) {
+                min-height: map-get( $button-min-heights, 'xxl' );
+            }
+
+        }
+
+    }
+
+}

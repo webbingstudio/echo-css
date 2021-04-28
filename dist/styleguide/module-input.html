@@ -24,10 +24,12 @@
 
             <nav class="echo-doc-anchor">
                 <ul class="echo-list echo-list-horizontal">
-                        
+
                     <li class="echo-list-item"><a href="#input" class="js-scrollto">echo-input</a></li>
-                    
+
                     <li class="echo-list-item"><a href="#input-01-size" class="js-scrollto">echo-input-(size)</a></li>
+
+                    <li class="echo-list-item"><a href="#input-02-fixed" class="js-scrollto">echo-input-fixed</a></li>
                     
                 </ul>
             </nav>
@@ -36,11 +38,15 @@
                 <div class="echo-doc-post-contents styleguide-contents"><h2 id="input" class="echo-doc-post-title-01">echo-input</h2>
 
 <p>テキスト入力を即す欄を表示する。要素に直接クラスを付与する（ほとんどの場合、input要素、textarea要素となる）。<br>
-デフォルトでは <code>2.75rem = 44px</code> の最低高さを持つ。</p>
+最低高さ（textarea要素以外）は <code>2.75rem = 44px</code> である。また、左右に <code>1em</code> の余白が確保される。</p>
 
-<p>余白・レイアウト等は <code>utility &gt; .echo-margin</code> や <code>component &gt; .echo-form</code> で指定する。<br>
-<code>.is-error</code> を付与するとエラー表示となり、色が <code>$important</code> に変わる。</p>
-<div class="example"><div class="echo-margin-bottom-lg">
+<p>レイアウトは <code>component &gt; .echo-form, layout &gt; .echo-forms</code> を使用することが望ましい。</p>
+
+<p><code>.is-error</code> を付与するとエラー表示となり、色が <code>$important</code> に変わる。</p>
+
+<div class="example">
+
+<div class="echo-margin-bottom-lg">
     <input type="text" class="echo-input" size="20" value="吾輩は猫である。" />
     <input type="text" class="echo-input is-error" size="20" value="* なに？ *" />
 </div>
@@ -48,35 +54,93 @@
     <textarea class="echo-input" rows="5" cols="60">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</textarea>
     <textarea class="echo-input is-error" rows="5" cols="60">* おおっと *</textarea>
 </div>
-</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-bottom-lg"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"echo-input"</span> <span class="na">size=</span><span class="s">"20"</span> <span class="na">value=</span><span class="s">"吾輩は猫である。"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"echo-input is-error"</span> <span class="na">size=</span><span class="s">"20"</span> <span class="na">value=</span><span class="s">"* なに？ *"</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div&gt;</span>
-    <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"echo-input"</span> <span class="na">rows=</span><span class="s">"5"</span> <span class="na">cols=</span><span class="s">"60"</span><span class="nt">&gt;</span>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<span class="nt">&lt;/textarea&gt;</span>
-    <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"echo-input is-error"</span> <span class="na">rows=</span><span class="s">"5"</span> <span class="na">cols=</span><span class="s">"60"</span><span class="nt">&gt;</span>* おおっと *<span class="nt">&lt;/textarea&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</pre></div>
+
+</div>
+
+
 <h2 id="input-01-size" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-input-(size)</h2>
 
-<p>テキスト入力を即す欄の全体のサイズを変更する。(size)は <code>sm, lg</code> に対応している。</p>
-<div class="example"><div class="echo-margin-bottom-lg">
+<p>テキスト入力を即す欄の文字サイズ、最低高さを変更する。<br>
+(size)は、 <code>sm, lg, xl, xxl</code> に対応している。</p>
+
+<p>(breakpoint) ごとの最低高さは <code>.echo-button-(size)</code> と同値となる。<br>
+詳細は <a href="./module-button.html#btn-03-size">.echo-button-(size)</a> を参照。</p>
+
+<p>このサンプルコードでは比較のため、同サイズのボタンを表示している。</p>
+
+<div class="example">
+<p>
+    <dfn>echo-input-sm</dfn>
     <input type="text" class="echo-input echo-input-sm" size="20" value="吾輩は猫である。" />
+    <a href="#" class="echo-button echo-button-sm echo-button-style-a">ボタン</a>
+</p>
+
+<p>
+    <dfn>(default)</dfn>
+    <input type="text" class="echo-input" size="20" value="吾輩は猫である。" />
+    <a href="#" class="echo-button echo-button-style-a">ボタン</a>
+</p>
+
+<p>
+    <dfn>echo-input-lg</dfn>
     <input type="text" class="echo-input echo-input-lg" size="20" value="吾輩は猫である。" />
+    <a href="#" class="echo-button echo-button-lg echo-button-style-a">ボタン</a>
+</p>
+<p>
+    <dfn>echo-input-xl</dfn>
+    <input type="text" class="echo-input echo-input-xl" size="20" value="吾輩は猫である。" />
+    <a href="#" class="echo-button echo-button-xl echo-button-style-a">ボタン</a>
+</p>
+
+<p>
+    <dfn>echo-input-xxl</dfn>
+    <input type="text" class="echo-input echo-input-xxl" size="20" value="吾輩は猫である。" />
+    <a href="#" class="echo-button echo-button-xxl echo-button-style-a">ボタン</a>
+</p>
+
 </div>
-<div>
-    <textarea class="echo-input echo-input-sm" rows="5" cols="60">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</textarea>
-    <textarea class="echo-input echo-input-lg" rows="5" cols="60">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</textarea>
+
+
+<h2 id="input-02-fixed" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-input-fixed</h2>
+
+<p><code>.echo-input-(size)</code> と同時に付与すると、テキスト入力を即す欄が (breakpoint) に関わらず常に同じサイズとなる。<br>
+幅の変動が少ないグリッド内のコンポーネント等に使用する。</p>
+
+<p>このサンプルコードでは比較のため、同サイズのボタンを表示している。</p>
+
+<div class="example">
+<p>
+    <dfn>echo-input-sm</dfn>
+    <input type="text" class="echo-input echo-input-fixed echo-input-sm" size="20" value="吾輩は猫である。" />
+    <a href="#" class="echo-button echo-button-fixed echo-button-sm echo-button-style-a">ボタン</a>
+</p>
+
+<p>
+    <dfn>(default)</dfn>
+    <input type="text" class="echo-input echo-input-fixed" size="20" value="吾輩は猫である。" />
+    <a href="#" class="echo-button echo-button-fixed echo-button-style-a">ボタン</a>
+</p>
+
+<p>
+    <dfn>echo-input-lg</dfn>
+    <input type="text" class="echo-input echo-input-fixed echo-input-lg" size="20" value="吾輩は猫である。" />
+    <a href="#" class="echo-button echo-button-fixed echo-button-lg echo-button-style-a">ボタン</a>
+</p>
+<p>
+    <dfn>echo-input-xl</dfn>
+    <input type="text" class="echo-input echo-input-fixed echo-input-xl" size="20" value="吾輩は猫である。" />
+    <a href="#" class="echo-button echo-button-fixed echo-button-xl echo-button-style-a">ボタン</a>
+</p>
+
+<p>
+    <dfn>echo-input-xxl</dfn>
+    <input type="text" class="echo-input echo-input-fixed echo-input-xxl" size="20" value="吾輩は猫である。" />
+    <a href="#" class="echo-button echo-button-fixed echo-button-xxl echo-button-style-a">ボタン</a>
+</p>
+
 </div>
-</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-margin-bottom-lg"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"echo-input echo-input-sm"</span> <span class="na">size=</span><span class="s">"20"</span> <span class="na">value=</span><span class="s">"吾輩は猫である。"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"echo-input echo-input-lg"</span> <span class="na">size=</span><span class="s">"20"</span> <span class="na">value=</span><span class="s">"吾輩は猫である。"</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div&gt;</span>
-    <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"echo-input echo-input-sm"</span> <span class="na">rows=</span><span class="s">"5"</span> <span class="na">cols=</span><span class="s">"60"</span><span class="nt">&gt;</span>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<span class="nt">&lt;/textarea&gt;</span>
-    <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"echo-input echo-input-lg"</span> <span class="na">rows=</span><span class="s">"5"</span> <span class="na">cols=</span><span class="s">"60"</span><span class="nt">&gt;</span>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<span class="nt">&lt;/textarea&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</pre></div>
+
+
 
 
 <?php include('../doc_include/footer.inc'); ?>

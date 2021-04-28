@@ -1307,7 +1307,7 @@ echo-input
 */
 .echo-input {
   max-width: 100%;
-  padding: .75em;
+  padding: .5em 1em;
   background: transparent none;
   border: 0.0625rem solid #333;
   color: #333;
@@ -1351,24 +1351,144 @@ echo-input
 echo-input-(size)
 --------------------
 */
+@media (min-width: 62.5rem) {
+  .echo-input {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-input.echo-input-fixed {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-input:not(textarea) {
+    min-height: 3.4375rem;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-input:not(textarea).echo-input-fixed {
+    min-height: 2.75rem;
+  }
+}
+
 .echo-input-sm {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
 }
 
 .echo-input-sm:not(textarea) {
-  padding-top: 0;
-  padding-bottom: 0;
-  min-height: 2.25rem;
+  min-height: 2.5rem;
+}
+
+@media (min-width: 62.5rem) {
+  .echo-input-sm:not(textarea) {
+    min-height: 3.125rem;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-input-sm:not(textarea).echo-input-fixed {
+    min-height: 2.5rem;
+  }
 }
 
 .echo-input-lg {
-  font-size: 1.125rem;
+  font-size: 1rem;
+}
+
+@media (min-width: 62.5rem) {
+  .echo-input-lg {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-input-lg.echo-input-fixed {
+    font-size: 1.125rem;
+  }
 }
 
 .echo-input-lg:not(textarea) {
-  padding-top: 0;
-  padding-bottom: 0;
+  min-height: 3rem;
+}
+
+@media (min-width: 62.5rem) {
+  .echo-input-lg:not(textarea) {
+    min-height: 3.75rem;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-input-lg:not(textarea).echo-input-fixed {
+    min-height: 3rem;
+  }
+}
+
+.echo-input-xl {
+  font-size: 1.125rem;
+}
+
+@media (min-width: 62.5rem) {
+  .echo-input-xl {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-input-xl.echo-input-fixed {
+    font-size: 1.125rem;
+  }
+}
+
+.echo-input-xl:not(textarea) {
+  min-height: 3.25rem;
+}
+
+@media (min-width: 62.5rem) {
+  .echo-input-xl:not(textarea) {
+    min-height: 4.0625rem;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-input-xl:not(textarea).echo-input-fixed {
+    min-height: 3.25rem;
+  }
+}
+
+.echo-input-xxl {
+  font-size: 1.25rem;
+}
+
+@media (min-width: 62.5rem) {
+  .echo-input-xxl {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-input-xxl.echo-input-fixed {
+    font-size: 1.25rem;
+  }
+}
+
+.echo-input-xxl:not(textarea) {
   min-height: 3.5rem;
+}
+
+@media (min-width: 62.5rem) {
+  .echo-input-xxl:not(textarea) {
+    min-height: 4.375rem;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-input-xxl:not(textarea).echo-input-fixed {
+    min-height: 3.5rem;
+  }
 }
 
 /*

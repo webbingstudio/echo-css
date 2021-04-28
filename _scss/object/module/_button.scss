@@ -14,8 +14,10 @@
     max-width: map-get( $button-min-widths, 'md' );
     min-height: map-get( $button-min-heights, 'md' );
     margin: 0 auto;
-    // 下マージンはベースライン分をわずかに引く
+
+    // padding-bottom, slightly subtracts baseline
     padding: .5em 1em .4em;
+
     background-color: $default-fade;
     border: $ui-btn-border-width solid $default-fade;
     color: $body-color;
