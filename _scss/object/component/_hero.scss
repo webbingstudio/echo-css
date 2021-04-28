@@ -75,15 +75,11 @@
 }
 
 .#{$pr}#{$c}hero#{$c1}body {
-    font-size: .625rem;
+    font-size: .75rem;
     line-height: $line-height-md;
     text-align: center;
 
-    @include media-breakpoint-up(sm) {
-        font-size: .75rem;
-    }
-
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
         font-size: .875rem;
     }
 
@@ -102,16 +98,20 @@
 }
 
 .#{$pr}#{$c}hero#{$c1}link {
-    font-size: $font-size-xs;
+    font-size: .625rem;
     text-align: center;
     line-height: 1;
 
-    @include media-breakpoint-up(lg) {
-        font-size: $font-size-sm;
+    @include media-breakpoint-up(sm) {
+        font-size: .75rem;
     }
 
-    @include media-breakpoint-up(xxl) {
-        font-size: $font-size-md;
+    @include media-breakpoint-up(lg) {
+        font-size: .875rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+        font-size: 1rem;
     }
 
 }

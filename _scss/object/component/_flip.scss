@@ -92,61 +92,42 @@
 
 }
 
-.#{$pr}#{$c}flip#{$c1}title {
-    font-size: 2rem;
+.#{$pr}#{$c}flip#{$c1}contents#{$c1}inner > *:not(:last-child) {
+    margin: 0 0 1em;
+}
 
-    @include media-breakpoint-up(sm) {
-        font-size: 2.25rem;
-    }
+.#{$pr}#{$c}flip#{$c1}contents#{$c1}inner > .#{$pr}#{$c}flip#{$c1}link {
+    margin-top: 2em;
 
     @include media-breakpoint-up(md) {
-        font-size: 2.5rem;
-    }
-
-    @include media-breakpoint-up(lg) {
-        font-size: 2.75rem;
-    }
-
-    @include media-breakpoint-up(xl) {
-        font-size: 3rem;
-    }
-
-    @include media-breakpoint-up(xxl) {
-        font-size: 3.25rem;
+        margin-top: 3em;
     }
 
 }
 
-.#{$pr}#{$c}flip#{$c1}caption {
-    margin: 0;
-    font-size: $font-size-md;
-    line-height: $line-height-xs;
+.#{$pr}#{$c}flip#{$c1}header {
+    font-size: 1.25rem;
 
-    @include media-breakpoint-up(sm) {
-        font-size: $font-size-xl;
+    @include media-breakpoint-up(md) {
+        font-size: 1.375rem;
     }
 
-    @include media-breakpoint-up(lg) {
-        font-size: $font-size-xxl;
-    }
-
-    .#{$pr}#{$c}flip#{$c1}title + & {
-        margin-top: .5em;
+    @include media-breakpoint-up(xl) {
+        font-size: 1.625rem;
     }
 
 }
 
 .#{$pr}#{$c}flip#{$c1}body {
-    margin: 0;
-    font-size: $font-size-xs;
-    line-height: $line-height-lg;
+    font-size: .75rem;
+    line-height: $line-height-md;
 
-    @include media-breakpoint-up(lg) {
-        font-size: $font-size-sm;
+    @include media-breakpoint-up(md) {
+        font-size: .875rem;
     }
 
-    @include media-breakpoint-up(xxl) {
-        font-size: $font-size-md;
+    @include media-breakpoint-up(xl) {
+        font-size: 1rem;
     }
 
     > p {
@@ -157,36 +138,18 @@
 
     }
 
-    .#{$pr}#{$c}flip#{$c1}title + &,
-    .#{$pr}#{$c}flip#{$c1}caption + &,
-    .#{$pr}#{$c}flip#{$c1}body + & {
-        margin-top: 1.5em;
-    }
-
 }
 
 .#{$pr}#{$c}flip#{$c1}link {
-    margin: 0;
-    font-size: $font-size-xs;
+    font-size: .75rem;
     line-height: 1;
 
-    @include media-breakpoint-up(lg) {
-        font-size: $font-size-sm;
+    @include media-breakpoint-up(md) {
+        font-size: .875rem;
     }
 
-    @include media-breakpoint-up(xxl) {
-        font-size: $font-size-md;
-    }
-
-    .#{$pr}#{$c}flip#{$c1}title + &,
-    .#{$pr}#{$c}flip#{$c1}caption + &,
-    .#{$pr}#{$c}flip#{$c1}body + & {
-        margin-top: 1.5em;
-
-        @include media-breakpoint-up(lg) {
-            margin-top: 2em;
-        }
-
+    @include media-breakpoint-up(xl) {
+        font-size: 1rem;
     }
 
 }

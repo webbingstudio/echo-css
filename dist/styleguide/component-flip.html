@@ -41,174 +41,470 @@
                 <div class="echo-doc-post-contents styleguide-contents"><h2 id="flip" class="echo-doc-post-title-01">echo-flip</h2>
 
 <p>全面背景とボックスを持つ、フリップボードのようなコンポーネントを表示する。<br>
-<code>.echo-flip-contents-inner</code> が必須であることに注意する。<br>
+<code>.echo-flip-cover</code> の背景画像はインラインスタイル、もしくは追加CSSで定義する。</p>
+
+<p><code>.echo-flip-contents-inner</code> が必須であることに注意する。<br>
 画面サイズによって <code>.echo-flip-contents-inner</code> の左右余白が大きく変化する。</p>
-
-<p><code>.echo-flip-cover</code> の背景画像はインラインスタイル、もしくは追加CSSで定義する。</p>
-
-<p><code>.echo-flip-title.echo-title</code> のフォントサイズはこのコンポーネント独自の変化をする。</p>
 
 <p><code>.echo-flip-title.echo-title</code> に付与されている <code>.echo-font-first</code> は<strong>必須ではない</strong>。詳細は <a href="./utility-font.html">utility > font</a> を参照。</p>
 
-<div class="example"><div class="echo-flip">
+<h3 class="echo-doc-post-title-02">補足：見出しのフォントサイズ</h3>  
+
+<p><code>.echo-flip-header, .echo-flip-body, .echo-flip-link</code> のフォントサイズは、画面サイズによって変動する。このため、内包される <code>.echo-title-level-(level), .echo-text-(size)</code> も追随して大きくなる。<br>
+(breakpoint) ごとの拡大率は以下の通り。</p>
+
+<h3 class="echo-doc-post-title-02">Note: font size of title</h3>  
+
+<p>The font size of <code> .echo-flip-header, .echo-flip-body, .echo-flip-link </code> changes according to the screen size. Therefore, the included <code> .echo-title-level- (level) and .echo-text- (size) </code> also increase accordingly. <br>
+The expansion rate for each (breakpoint) is as follows.</p>
+
+<table class="echo-table echo-table-bordered echo-margin-bottom-lg" style="width: auto;">
+    <thead>
+        <tr><th rowspan="2">(breakpoint)</th><th colspan="2" class="echo-text-center">拡大率</th></tr>
+        <tr><th>.echo-flip-header</th><th>.echo-flip-body<br>.echo-flip-link</th></tr>
+    </thead>
+    <tbody>
+        <tr><th>sm以下</th><td>125% (1.25rem)</td><td>75% (0.75rem)</td></tr>
+        <tr><th>md以上</th><td>137.5% (1.375rem)</td><td>87.5% (0.875rem)</td></tr>
+        <tr><th>xl以上</th><td>150% (1.5rem)</td><td>100% (1rem)</td></tr>
+    </tbody>
+</table>
+
+
+
+<div style="margin-left: -0.625rem; margin-right: -0.625rem;">
+
+<div class="echo-flip">
     <div class="echo-flip-cover" style="background-image: url(../images/_dummy/image_03.jpg)"></div>
     <div class="echo-flip-container">
         <div class="echo-flip-contents">
             <div class="echo-flip-contents-inner">
-                <h2 class="echo-flip-title echo-title echo-font-first">吾輩は猫である</h2>
-                <p class="echo-flip-caption">名前はまだ無い</p>
+                <div class="echo-flip-header">
+                    <h2 class="echo-flip-title echo-title echo-title-level-1 echo-font-first">吾輩は猫である</h2>
+                </div><!-- /.echo-flip-header -->
                 <div class="echo-flip-body">
-                    <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
+                    <p>名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>
+                    何でも薄暗いじめじめした所で<br class="echo-hidden-lg-up">ニャーニャー泣いていた事だけは記憶している。</p>
                 </div><!-- /.echo-flip-body -->
-                <p class="echo-flip-link">
+                <div class="echo-flip-link">
                     <a href="#" class="echo-button echo-button-style-b echo-button-icon-arrow">詳しくはこちら</a>
-                </p>
+                </div><!-- /.echo-flip-link -->
             </div><!-- /.echo-flip-contents-inner -->
         </div><!-- /.echo-flip-contents -->
     </div><!-- /.echo-flip-container -->
 </div><!-- /.echo-flip -->
+
+</div>
+<p class="echo-title echo-title-style-a echo-title-level-3 echo-margin-top-lg echo-margin-bottom-md">リード文先頭にキャプションを追加し、かつ複数のボタンを表示している例</p>
+
+<div style="margin-left: -0.625rem; margin-right: -0.625rem;">
+
+<div class="echo-flip">
+    <div class="echo-flip-cover" style="background-image: url(../images/_dummy/image_03.jpg)"></div>
+    <div class="echo-flip-container">
+        <div class="echo-flip-contents">
+            <div class="echo-flip-contents-inner">
+                <div class="echo-flip-header">
+                    <h2 class="echo-flip-title echo-title echo-title-level-1 echo-font-first">吾輩は猫である</h2>
+                </div><!-- /.echo-flip-header -->
+                <div class="echo-flip-body">
+                    <p class="echo-text-lg">名前はまだ無い</p>
+                    <p>どこで生れたかとんと見当がつかぬ。<br>
+                    何でも薄暗いじめじめした所で<br class="echo-hidden-lg-up">ニャーニャー泣いていた事だけは記憶している。</p>
+                </div><!-- /.echo-flip-body -->
+                <div class="echo-flip-link">
+                    <div class="echo-buttons">
+                        <div class="echo-buttons-item">
+                            <a href="#" class="echo-button echo-button-style-b">ボタン1</a>
+                        </div><!-- /.echo-buttons-item -->
+                        <div class="echo-buttons-item">
+                            <a href="#" class="echo-button echo-button-style-a">ボタン2</a>
+                        </div><!-- /.echo-buttons-item -->
+                    </div><!-- /.echo-buttons -->
+                </div><!-- /.echo-flip-link -->
+            </div><!-- /.echo-flip-contents-inner -->
+        </div><!-- /.echo-flip-contents -->
+    </div><!-- /.echo-flip-container -->
+</div><!-- /.echo-flip -->
+
+</div>
+
+<p class="echo-title echo-title-style-a echo-title-level-3 echo-margin-top-lg echo-margin-bottom-md">文字サイズを変更している例</p>
+
+<p>.echo-title-level-3 を使用して、見出しを小さくしている。<br>
+また、 .echo-flip-body > p に文字サイズを大きくするクラス .echo-text-lg を付与している。</p>
+
+<div style="margin-left: -0.625rem; margin-right: -0.625rem;">
+
+<div class="echo-flip">
+    <div class="echo-flip-cover" style="background-image: url(../images/_dummy/image_03.jpg)"></div>
+    <div class="echo-flip-container">
+        <div class="echo-flip-contents">
+            <div class="echo-flip-contents-inner">
+                <div class="echo-flip-header">
+                    <h2 class="echo-flip-title echo-title echo-title-style-c echo-title-level-3 echo-font-first">吾輩は猫である名前は</h2>
+                </div><!-- /.echo-flip-header -->
+                <div class="echo-flip-body">
+                    <p class="echo-text-lg">まだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</p>
+                </div><!-- /.echo-flip-body -->
+            </div><!-- /.echo-flip-contents-inner -->
+        </div><!-- /.echo-flip-contents -->
+    </div><!-- /.echo-flip-container -->
+</div><!-- /.echo-flip -->
+
 </div>
 
 
-<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-flip"&gt;
+<div class="codeblock"><pre><code class="language-markup">&lt;div style="margin-left: -0.625rem; margin-right: -0.625rem;"&gt;
+
+&lt;div class="echo-flip"&gt;
     &lt;div class="echo-flip-cover" style="background-image: url(../images/_dummy/image_03.jpg)"&gt;&lt;/div&gt;
     &lt;div class="echo-flip-container"&gt;
         &lt;div class="echo-flip-contents"&gt;
             &lt;div class="echo-flip-contents-inner"&gt;
-                &lt;h2 class="echo-flip-title echo-title echo-font-first"&gt;吾輩は猫である&lt;/h2&gt;
-                &lt;p class="echo-flip-caption"&gt;名前はまだ無い&lt;/p&gt;
+                &lt;div class="echo-flip-header"&gt;
+                    &lt;h2 class="echo-flip-title echo-title echo-title-level-1 echo-font-first"&gt;吾輩は猫である&lt;/h2&gt;
+                &lt;/div&gt;&lt;!-- /.echo-flip-header --&gt;
                 &lt;div class="echo-flip-body"&gt;
-                    &lt;p&gt;どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ&lt;/p&gt;
+                    &lt;p&gt;名前はまだ無い。どこで生れたかとんと見当がつかぬ。&lt;br&gt;
+                    何でも薄暗いじめじめした所で&lt;br class="echo-hidden-lg-up"&gt;ニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
                 &lt;/div&gt;&lt;!-- /.echo-flip-body --&gt;
-                &lt;p class="echo-flip-link"&gt;
+                &lt;div class="echo-flip-link"&gt;
                     &lt;a href="#" class="echo-button echo-button-style-b echo-button-icon-arrow"&gt;詳しくはこちら&lt;/a&gt;
-                &lt;/p&gt;
+                &lt;/div&gt;&lt;!-- /.echo-flip-link --&gt;
             &lt;/div&gt;&lt;!-- /.echo-flip-contents-inner --&gt;
         &lt;/div&gt;&lt;!-- /.echo-flip-contents --&gt;
     &lt;/div&gt;&lt;!-- /.echo-flip-container --&gt;
-&lt;/div&gt;&lt;!-- /.echo-flip --&gt;</code></pre></div>
+&lt;/div&gt;&lt;!-- /.echo-flip --&gt;
+
+&lt;/div&gt;
+&lt;p class="echo-title echo-title-style-a echo-title-level-3 echo-margin-top-lg echo-margin-bottom-md"&gt;リード文先頭にキャプションを追加し、かつ複数のボタンを表示している例&lt;/p&gt;
+
+&lt;div style="margin-left: -0.625rem; margin-right: -0.625rem;"&gt;
+
+&lt;div class="echo-flip"&gt;
+    &lt;div class="echo-flip-cover" style="background-image: url(../images/_dummy/image_03.jpg)"&gt;&lt;/div&gt;
+    &lt;div class="echo-flip-container"&gt;
+        &lt;div class="echo-flip-contents"&gt;
+            &lt;div class="echo-flip-contents-inner"&gt;
+                &lt;div class="echo-flip-header"&gt;
+                    &lt;h2 class="echo-flip-title echo-title echo-title-level-1 echo-font-first"&gt;吾輩は猫である&lt;/h2&gt;
+                &lt;/div&gt;&lt;!-- /.echo-flip-header --&gt;
+                &lt;div class="echo-flip-body"&gt;
+                    &lt;p class="echo-text-lg"&gt;名前はまだ無い&lt;/p&gt;
+                    &lt;p&gt;どこで生れたかとんと見当がつかぬ。&lt;br&gt;
+                    何でも薄暗いじめじめした所で&lt;br class="echo-hidden-lg-up"&gt;ニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
+                &lt;/div&gt;&lt;!-- /.echo-flip-body --&gt;
+                &lt;div class="echo-flip-link"&gt;
+                    &lt;div class="echo-buttons"&gt;
+                        &lt;div class="echo-buttons-item"&gt;
+                            &lt;a href="#" class="echo-button echo-button-style-b"&gt;ボタン1&lt;/a&gt;
+                        &lt;/div&gt;&lt;!-- /.echo-buttons-item --&gt;
+                        &lt;div class="echo-buttons-item"&gt;
+                            &lt;a href="#" class="echo-button echo-button-style-a"&gt;ボタン2&lt;/a&gt;
+                        &lt;/div&gt;&lt;!-- /.echo-buttons-item --&gt;
+                    &lt;/div&gt;&lt;!-- /.echo-buttons --&gt;
+                &lt;/div&gt;&lt;!-- /.echo-flip-link --&gt;
+            &lt;/div&gt;&lt;!-- /.echo-flip-contents-inner --&gt;
+        &lt;/div&gt;&lt;!-- /.echo-flip-contents --&gt;
+    &lt;/div&gt;&lt;!-- /.echo-flip-container --&gt;
+&lt;/div&gt;&lt;!-- /.echo-flip --&gt;
+
+&lt;/div&gt;
+
+&lt;p class="echo-title echo-title-style-a echo-title-level-3 echo-margin-top-lg echo-margin-bottom-md"&gt;文字サイズを変更している例&lt;/p&gt;
+
+&lt;p&gt;.echo-title-level-3 を使用して、見出しを小さくしている。&lt;br&gt;
+また、 .echo-flip-body &gt; p に文字サイズを大きくするクラス .echo-text-lg を付与している。&lt;/p&gt;
+
+&lt;div style="margin-left: -0.625rem; margin-right: -0.625rem;"&gt;
+
+&lt;div class="echo-flip"&gt;
+    &lt;div class="echo-flip-cover" style="background-image: url(../images/_dummy/image_03.jpg)"&gt;&lt;/div&gt;
+    &lt;div class="echo-flip-container"&gt;
+        &lt;div class="echo-flip-contents"&gt;
+            &lt;div class="echo-flip-contents-inner"&gt;
+                &lt;div class="echo-flip-header"&gt;
+                    &lt;h2 class="echo-flip-title echo-title echo-title-style-c echo-title-level-3 echo-font-first"&gt;吾輩は猫である名前は&lt;/h2&gt;
+                &lt;/div&gt;&lt;!-- /.echo-flip-header --&gt;
+                &lt;div class="echo-flip-body"&gt;
+                    &lt;p class="echo-text-lg"&gt;まだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
+                &lt;/div&gt;&lt;!-- /.echo-flip-body --&gt;
+            &lt;/div&gt;&lt;!-- /.echo-flip-contents-inner --&gt;
+        &lt;/div&gt;&lt;!-- /.echo-flip-contents --&gt;
+    &lt;/div&gt;&lt;!-- /.echo-flip-container --&gt;
+&lt;/div&gt;&lt;!-- /.echo-flip --&gt;
+
+&lt;/div&gt;
+</code></pre></div>
 
 <h2 id="flip-01-reverse" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-flip-reverse</h2>
 
-<p>(breakpoint)が <code>lg</code> 以上でのコンテンツの位置が逆となる。</p>
-<div class="example"><div class="echo-flip echo-flip-reverse">
+<p class="echo-margin-bottom-lg">(breakpoint)が <code>lg</code> 以上でのコンテンツの位置が逆となる。</p>
+
+
+<div style="margin-left: -0.625rem; margin-right: -0.625rem;">
+
+<div class="echo-flip echo-flip-reverse">
     <div class="echo-flip-cover" style="background-image: url(../images/_dummy/image_03.jpg)"></div>
     <div class="echo-flip-container">
         <div class="echo-flip-contents">
             <div class="echo-flip-contents-inner">
-                <h2 class="echo-flip-title echo-title echo-font-first">吾輩は猫である</h2>
-                <p class="echo-flip-caption">名前はまだ無い</p>
+                <div class="echo-flip-header">
+                    <h2 class="echo-flip-title echo-title echo-title-level-1 echo-font-first">吾輩は猫である</h2>
+                </div><!-- /.echo-flip-header -->
                 <div class="echo-flip-body">
-                    <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
+                    <p>名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>
+                    何でも薄暗いじめじめした所で<br class="echo-hidden-lg-up">ニャーニャー泣いていた事だけは記憶している。</p>
                 </div><!-- /.echo-flip-body -->
-                <p class="echo-flip-link">
+                <div class="echo-flip-link">
                     <a href="#" class="echo-button echo-button-style-b echo-button-icon-arrow">詳しくはこちら</a>
-                </p>
+                </div><!-- /.echo-flip-link -->
             </div><!-- /.echo-flip-contents-inner -->
         </div><!-- /.echo-flip-contents -->
     </div><!-- /.echo-flip-container -->
 </div><!-- /.echo-flip -->
+
 </div>
 
-<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-flip echo-flip-reverse"&gt;
+<div class="codeblock"><pre><code class="language-markup">&lt;div style="margin-left: -0.625rem; margin-right: -0.625rem;"&gt;
+
+&lt;div class="echo-flip echo-flip-reverse"&gt;
     &lt;div class="echo-flip-cover" style="background-image: url(../images/_dummy/image_03.jpg)"&gt;&lt;/div&gt;
     &lt;div class="echo-flip-container"&gt;
         &lt;div class="echo-flip-contents"&gt;
             &lt;div class="echo-flip-contents-inner"&gt;
-                &lt;h2 class="echo-flip-title echo-title echo-font-first"&gt;吾輩は猫である&lt;/h2&gt;
-                &lt;p class="echo-flip-caption"&gt;名前はまだ無い&lt;/p&gt;
+                &lt;div class="echo-flip-header"&gt;
+                    &lt;h2 class="echo-flip-title echo-title echo-title-level-1 echo-font-first"&gt;吾輩は猫である&lt;/h2&gt;
+                &lt;/div&gt;&lt;!-- /.echo-flip-header --&gt;
                 &lt;div class="echo-flip-body"&gt;
-                    &lt;p&gt;どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ&lt;/p&gt;
+                    &lt;p&gt;名前はまだ無い。どこで生れたかとんと見当がつかぬ。&lt;br&gt;
+                    何でも薄暗いじめじめした所で&lt;br class="echo-hidden-lg-up"&gt;ニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
                 &lt;/div&gt;&lt;!-- /.echo-flip-body --&gt;
-                &lt;p class="echo-flip-link"&gt;
+                &lt;div class="echo-flip-link"&gt;
                     &lt;a href="#" class="echo-button echo-button-style-b echo-button-icon-arrow"&gt;詳しくはこちら&lt;/a&gt;
-                &lt;/p&gt;
+                &lt;/div&gt;&lt;!-- /.echo-flip-link --&gt;
             &lt;/div&gt;&lt;!-- /.echo-flip-contents-inner --&gt;
         &lt;/div&gt;&lt;!-- /.echo-flip-contents --&gt;
     &lt;/div&gt;&lt;!-- /.echo-flip-container --&gt;
-&lt;/div&gt;&lt;!-- /.echo-flip --&gt;</code></pre></div>
+&lt;/div&gt;&lt;!-- /.echo-flip --&gt;
+
+&lt;/div&gt;
+</code></pre></div>
 
 
 <h2 id="flip-02-half" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-flip-half</h2>
 
-<p>(breakpoint)が <code>lg</code> 以上で、画像とコンテンツが二分割となる。</p>
-<div class="example"><div class="echo-flip echo-flip-half">
+<p class="echo-margin-bottom-lg">(breakpoint)が <code>lg</code> 以上で、画像とコンテンツが二分割となる。</p>
+
+
+<div style="margin-left: -0.625rem; margin-right: -0.625rem;">
+
+<div class="echo-flip echo-flip-half">
     <div class="echo-flip-cover" style="background-image: url(../images/_dummy/image_03.jpg)"></div>
     <div class="echo-flip-container">
         <div class="echo-flip-contents">
             <div class="echo-flip-contents-inner">
-                <h2 class="echo-flip-title echo-title echo-font-first">吾輩は猫である</h2>
-                <p class="echo-flip-caption">名前はまだ無い</p>
+                <div class="echo-flip-header">
+                    <h2 class="echo-flip-title echo-title echo-title-level-1 echo-font-first">吾輩は猫である</h2>
+                </div><!-- /.echo-flip-header -->
                 <div class="echo-flip-body">
-                    <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
+                    <p>名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>
+                    何でも薄暗いじめじめした所で<br class="echo-hidden-lg-up">ニャーニャー泣いていた事だけは記憶している。</p>
                 </div><!-- /.echo-flip-body -->
-                <p class="echo-flip-link">
+                <div class="echo-flip-link">
                     <a href="#" class="echo-button echo-button-style-b echo-button-icon-arrow">詳しくはこちら</a>
-                </p>
+                </div><!-- /.echo-flip-link -->
             </div><!-- /.echo-flip-contents-inner -->
         </div><!-- /.echo-flip-contents -->
     </div><!-- /.echo-flip-container -->
 </div><!-- /.echo-flip -->
+
 </div>
 
-<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-flip echo-flip-half"&gt;
+<p class="echo-title echo-title-style-a echo-title-level-3 echo-margin-top-lg echo-margin-bottom-md">.echo-flip-reverse を併用している例</p>
+
+<div style="margin-left: -0.625rem; margin-right: -0.625rem;">
+
+<div class="echo-flip echo-flip-half echo-flip-reverse">
+    <div class="echo-flip-cover" style="background-image: url(../images/_dummy/image_03.jpg)"></div>
+    <div class="echo-flip-container">
+        <div class="echo-flip-contents">
+            <div class="echo-flip-contents-inner">
+                <div class="echo-flip-header">
+                    <h2 class="echo-flip-title echo-title echo-title-level-1 echo-font-first">吾輩は猫である</h2>
+                </div><!-- /.echo-flip-header -->
+                <div class="echo-flip-body">
+                    <p>名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>
+                    何でも薄暗いじめじめした所で<br class="echo-hidden-lg-up">ニャーニャー泣いていた事だけは記憶している。</p>
+                </div><!-- /.echo-flip-body -->
+                <div class="echo-flip-link">
+                    <a href="#" class="echo-button echo-button-style-b echo-button-icon-arrow">詳しくはこちら</a>
+                </div><!-- /.echo-flip-link -->
+            </div><!-- /.echo-flip-contents-inner -->
+        </div><!-- /.echo-flip-contents -->
+    </div><!-- /.echo-flip-container -->
+</div><!-- /.echo-flip -->
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;div style="margin-left: -0.625rem; margin-right: -0.625rem;"&gt;
+
+&lt;div class="echo-flip echo-flip-half"&gt;
     &lt;div class="echo-flip-cover" style="background-image: url(../images/_dummy/image_03.jpg)"&gt;&lt;/div&gt;
     &lt;div class="echo-flip-container"&gt;
         &lt;div class="echo-flip-contents"&gt;
             &lt;div class="echo-flip-contents-inner"&gt;
-                &lt;h2 class="echo-flip-title echo-title echo-font-first"&gt;吾輩は猫である&lt;/h2&gt;
-                &lt;p class="echo-flip-caption"&gt;名前はまだ無い&lt;/p&gt;
+                &lt;div class="echo-flip-header"&gt;
+                    &lt;h2 class="echo-flip-title echo-title echo-title-level-1 echo-font-first"&gt;吾輩は猫である&lt;/h2&gt;
+                &lt;/div&gt;&lt;!-- /.echo-flip-header --&gt;
                 &lt;div class="echo-flip-body"&gt;
-                    &lt;p&gt;どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ&lt;/p&gt;
+                    &lt;p&gt;名前はまだ無い。どこで生れたかとんと見当がつかぬ。&lt;br&gt;
+                    何でも薄暗いじめじめした所で&lt;br class="echo-hidden-lg-up"&gt;ニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
                 &lt;/div&gt;&lt;!-- /.echo-flip-body --&gt;
-                &lt;p class="echo-flip-link"&gt;
+                &lt;div class="echo-flip-link"&gt;
                     &lt;a href="#" class="echo-button echo-button-style-b echo-button-icon-arrow"&gt;詳しくはこちら&lt;/a&gt;
-                &lt;/p&gt;
+                &lt;/div&gt;&lt;!-- /.echo-flip-link --&gt;
             &lt;/div&gt;&lt;!-- /.echo-flip-contents-inner --&gt;
         &lt;/div&gt;&lt;!-- /.echo-flip-contents --&gt;
     &lt;/div&gt;&lt;!-- /.echo-flip-container --&gt;
-&lt;/div&gt;&lt;!-- /.echo-flip --&gt;</code></pre></div>
+&lt;/div&gt;&lt;!-- /.echo-flip --&gt;
+
+&lt;/div&gt;
+
+&lt;p class="echo-title echo-title-style-a echo-title-level-3 echo-margin-top-lg echo-margin-bottom-md"&gt;.echo-flip-reverse を併用している例&lt;/p&gt;
+
+&lt;div style="margin-left: -0.625rem; margin-right: -0.625rem;"&gt;
+
+&lt;div class="echo-flip echo-flip-half echo-flip-reverse"&gt;
+    &lt;div class="echo-flip-cover" style="background-image: url(../images/_dummy/image_03.jpg)"&gt;&lt;/div&gt;
+    &lt;div class="echo-flip-container"&gt;
+        &lt;div class="echo-flip-contents"&gt;
+            &lt;div class="echo-flip-contents-inner"&gt;
+                &lt;div class="echo-flip-header"&gt;
+                    &lt;h2 class="echo-flip-title echo-title echo-title-level-1 echo-font-first"&gt;吾輩は猫である&lt;/h2&gt;
+                &lt;/div&gt;&lt;!-- /.echo-flip-header --&gt;
+                &lt;div class="echo-flip-body"&gt;
+                    &lt;p&gt;名前はまだ無い。どこで生れたかとんと見当がつかぬ。&lt;br&gt;
+                    何でも薄暗いじめじめした所で&lt;br class="echo-hidden-lg-up"&gt;ニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
+                &lt;/div&gt;&lt;!-- /.echo-flip-body --&gt;
+                &lt;div class="echo-flip-link"&gt;
+                    &lt;a href="#" class="echo-button echo-button-style-b echo-button-icon-arrow"&gt;詳しくはこちら&lt;/a&gt;
+                &lt;/div&gt;&lt;!-- /.echo-flip-link --&gt;
+            &lt;/div&gt;&lt;!-- /.echo-flip-contents-inner --&gt;
+        &lt;/div&gt;&lt;!-- /.echo-flip-contents --&gt;
+    &lt;/div&gt;&lt;!-- /.echo-flip-container --&gt;
+&lt;/div&gt;&lt;!-- /.echo-flip --&gt;
+
+&lt;/div&gt;
+</code></pre></div>
 
 
 <h2 id="flip-03-inverse" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-flip-inverse</h2>
 
-<p>コンテンツの色が反転する。<br>
+<p class="echo-margin-bottom-lg">コンテンツの色が反転する。<br>
 ボタンの色は <code>.echo-button-inverse</code> を付与しなければ変わらないことに注意。</p>
-<div class="example"><div class="echo-flip echo-flip-inverse">
+
+
+<div style="margin-left: -0.625rem; margin-right: -0.625rem;">
+
+<div class="echo-flip echo-flip-inverse">
     <div class="echo-flip-cover" style="background-image: url(../images/_dummy/image_03.jpg)"></div>
     <div class="echo-flip-container">
         <div class="echo-flip-contents">
             <div class="echo-flip-contents-inner">
-                <h2 class="echo-flip-title echo-title echo-font-first">吾輩は猫である</h2>
-                <p class="echo-flip-caption">名前はまだ無い</p>
+                <div class="echo-flip-header">
+                    <h2 class="echo-flip-title echo-title echo-title-level-1 echo-font-first">吾輩は猫である</h2>
+                </div><!-- /.echo-flip-header -->
                 <div class="echo-flip-body">
-                    <p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ</p>
+                    <p>名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>
+                    何でも薄暗いじめじめした所で<br class="echo-hidden-lg-up">ニャーニャー泣いていた事だけは記憶している。</p>
                 </div><!-- /.echo-flip-body -->
-                <p class="echo-flip-link">
-                    <a href="#" class="echo-button echo-button-style-a echo-button-inverse echo-button-icon-arrow">詳しくはこちら</a>
-                </p>
+                <div class="echo-flip-link">
+                    <a href="#" class="echo-button echo-button-inverse echo-button-style-b echo-button-icon-arrow">詳しくはこちら</a>
+                </div><!-- /.echo-flip-link -->
             </div><!-- /.echo-flip-contents-inner -->
         </div><!-- /.echo-flip-contents -->
     </div><!-- /.echo-flip-container -->
 </div><!-- /.echo-flip -->
+
 </div>
 
-<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-flip echo-flip-inverse"&gt;
+<p class="echo-title echo-title-style-a echo-title-level-3 echo-margin-top-lg echo-margin-bottom-md">.echo-flip-half.echo-flip-reverse を併用している例</p>
+
+<div style="margin-left: -0.625rem; margin-right: -0.625rem;">
+
+<div class="echo-flip echo-flip-inverse echo-flip-half echo-flip-reverse">
+    <div class="echo-flip-cover" style="background-image: url(../images/_dummy/image_03.jpg)"></div>
+    <div class="echo-flip-container">
+        <div class="echo-flip-contents">
+            <div class="echo-flip-contents-inner">
+                <div class="echo-flip-header">
+                    <h2 class="echo-flip-title echo-title echo-title-level-1 echo-font-first">吾輩は猫である</h2>
+                </div><!-- /.echo-flip-header -->
+                <div class="echo-flip-body">
+                    <p>名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>
+                    何でも薄暗いじめじめした所で<br class="echo-hidden-lg-up">ニャーニャー泣いていた事だけは記憶している。</p>
+                </div><!-- /.echo-flip-body -->
+                <div class="echo-flip-link">
+                    <a href="#" class="echo-button echo-button-inverse echo-button-style-b echo-button-icon-arrow">詳しくはこちら</a>
+                </div><!-- /.echo-flip-link -->
+            </div><!-- /.echo-flip-contents-inner -->
+        </div><!-- /.echo-flip-contents -->
+    </div><!-- /.echo-flip-container -->
+</div><!-- /.echo-flip -->
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;div style="margin-left: -0.625rem; margin-right: -0.625rem;"&gt;
+
+&lt;div class="echo-flip echo-flip-inverse"&gt;
     &lt;div class="echo-flip-cover" style="background-image: url(../images/_dummy/image_03.jpg)"&gt;&lt;/div&gt;
     &lt;div class="echo-flip-container"&gt;
         &lt;div class="echo-flip-contents"&gt;
             &lt;div class="echo-flip-contents-inner"&gt;
-                &lt;h2 class="echo-flip-title echo-title echo-font-first"&gt;吾輩は猫である&lt;/h2&gt;
-                &lt;p class="echo-flip-caption"&gt;名前はまだ無い&lt;/p&gt;
+                &lt;div class="echo-flip-header"&gt;
+                    &lt;h2 class="echo-flip-title echo-title echo-title-level-1 echo-font-first"&gt;吾輩は猫である&lt;/h2&gt;
+                &lt;/div&gt;&lt;!-- /.echo-flip-header --&gt;
                 &lt;div class="echo-flip-body"&gt;
-                    &lt;p&gt;どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ&lt;/p&gt;
+                    &lt;p&gt;名前はまだ無い。どこで生れたかとんと見当がつかぬ。&lt;br&gt;
+                    何でも薄暗いじめじめした所で&lt;br class="echo-hidden-lg-up"&gt;ニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
                 &lt;/div&gt;&lt;!-- /.echo-flip-body --&gt;
-                &lt;p class="echo-flip-link"&gt;
-                    &lt;a href="#" class="echo-button echo-button-style-a echo-button-inverse echo-button-icon-arrow"&gt;詳しくはこちら&lt;/a&gt;
-                &lt;/p&gt;
+                &lt;div class="echo-flip-link"&gt;
+                    &lt;a href="#" class="echo-button echo-button-inverse echo-button-style-b echo-button-icon-arrow"&gt;詳しくはこちら&lt;/a&gt;
+                &lt;/div&gt;&lt;!-- /.echo-flip-link --&gt;
             &lt;/div&gt;&lt;!-- /.echo-flip-contents-inner --&gt;
         &lt;/div&gt;&lt;!-- /.echo-flip-contents --&gt;
     &lt;/div&gt;&lt;!-- /.echo-flip-container --&gt;
-&lt;/div&gt;&lt;!-- /.echo-flip --&gt;</code></pre></div>
+&lt;/div&gt;&lt;!-- /.echo-flip --&gt;
+
+&lt;/div&gt;
+
+&lt;p class="echo-title echo-title-style-a echo-title-level-3 echo-margin-top-lg echo-margin-bottom-md"&gt;.echo-flip-half.echo-flip-reverse を併用している例&lt;/p&gt;
+
+&lt;div style="margin-left: -0.625rem; margin-right: -0.625rem;"&gt;
+
+&lt;div class="echo-flip echo-flip-inverse echo-flip-half echo-flip-reverse"&gt;
+    &lt;div class="echo-flip-cover" style="background-image: url(../images/_dummy/image_03.jpg)"&gt;&lt;/div&gt;
+    &lt;div class="echo-flip-container"&gt;
+        &lt;div class="echo-flip-contents"&gt;
+            &lt;div class="echo-flip-contents-inner"&gt;
+                &lt;div class="echo-flip-header"&gt;
+                    &lt;h2 class="echo-flip-title echo-title echo-title-level-1 echo-font-first"&gt;吾輩は猫である&lt;/h2&gt;
+                &lt;/div&gt;&lt;!-- /.echo-flip-header --&gt;
+                &lt;div class="echo-flip-body"&gt;
+                    &lt;p&gt;名前はまだ無い。どこで生れたかとんと見当がつかぬ。&lt;br&gt;
+                    何でも薄暗いじめじめした所で&lt;br class="echo-hidden-lg-up"&gt;ニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
+                &lt;/div&gt;&lt;!-- /.echo-flip-body --&gt;
+                &lt;div class="echo-flip-link"&gt;
+                    &lt;a href="#" class="echo-button echo-button-inverse echo-button-style-b echo-button-icon-arrow"&gt;詳しくはこちら&lt;/a&gt;
+                &lt;/div&gt;&lt;!-- /.echo-flip-link --&gt;
+            &lt;/div&gt;&lt;!-- /.echo-flip-contents-inner --&gt;
+        &lt;/div&gt;&lt;!-- /.echo-flip-contents --&gt;
+    &lt;/div&gt;&lt;!-- /.echo-flip-container --&gt;
+&lt;/div&gt;&lt;!-- /.echo-flip --&gt;
+
+&lt;/div&gt;
+</code></pre></div>
 
 <?php include('../doc_include/footer.inc'); ?>

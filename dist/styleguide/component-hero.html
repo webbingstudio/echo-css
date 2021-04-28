@@ -50,27 +50,29 @@
 
 <h3 class="echo-doc-post-title-02">補足：見出しのフォントサイズ</h3>  
 
-<p><code>.echo-hero-header</code> のフォントサイズは、標準 (1rem) よりも大きくなる。このため、内包される <code>.echo-title</code> も追随して大きくなる。<br>
+<p><code>.echo-hero-header, .echo-hero-body, .echo-hero-link</code> のフォントサイズは、画面サイズによって変動する。このため、内包される <code>.echo-title-level-(level), .echo-text-(size)</code> も追随して大きくなる。<br>
 (breakpoint) ごとの拡大率は以下の通り。</p>
 
 <h3 class="echo-doc-post-title-02">Note: font size of title</h3>  
 
-<p>The font size of <code> .echo-hero-header </code> is larger than the root (1rem). Therefore, the included <code> .echo-title </code> also grows accordingly. <br>
-See the table below for the magnification for each (breakpoint).</p>
+<p>The font size of <code> .echo-hero-header, .echo-hero-body, .echo-hero-link </code> changes according to the screen size. Therefore, the included <code> .echo-title-level- (level) and .echo-text- (size) </code> also increase accordingly. <br>
+The expansion rate for each (breakpoint) is as follows.</p>
+
 
 <table class="echo-table echo-table-bordered echo-margin-bottom-lg" style="width: auto;">
     <thead>
-        <tr><th>(breakpoint)</th><th>拡大率</th></tr>
+        <tr><th rowspan="2">(breakpoint)</th><th colspan="2" class="echo-text-center">拡大率</th></tr>
+        <tr><th>.echo-hero-header</th><th>.echo-hero-body<br>.echo-hero-link</th></tr>
     </thead>
     <tbody>
-        <tr><th>sm以下</th><td>125% (1.25rem)</td></tr>
-        <tr><th>md以上</th><td>150% (1.5rem)</td></tr>
-        <tr><th>xl以上</th><td>200% (2rem)</td></tr>
+        <tr><th>sm以下</th><td>125% (1.25rem)</td><td>75% (0.75rem)</td></tr>
+        <tr><th>md以上</th><td>150% (1.5rem)</td><td>87.5% (0.875rem)</td></tr>
+        <tr><th>xl以上</th><td>200% (2rem)</td><td>100% (1rem)</td></tr>
     </tbody>
 </table>
 
 
-
+<div style="margin-left: -0.625rem; margin-right: -0.625rem;">
 
 <div class="echo-hero">
     <div class="echo-hero-image">
@@ -105,7 +107,11 @@ See the table below for the magnification for each (breakpoint).</p>
     </div><!-- /.echo-hero-contents -->
 </div><!-- /.echo-hero -->
 
+</div>
+
 <p class="echo-title echo-title-style-a echo-title-level-3 echo-margin-top-lg echo-margin-bottom-md">リード文先頭にキャプションを追加し、かつ複数のボタンを表示している例</p>
+
+<div style="margin-left: -0.625rem; margin-right: -0.625rem;">
 
 <div class="echo-hero">
     <div class="echo-hero-image">
@@ -143,10 +149,14 @@ See the table below for the magnification for each (breakpoint).</p>
     </div><!-- /.echo-hero-contents -->
 </div><!-- /.echo-hero -->
 
+</div>
+
 <p class="echo-title echo-title-style-a echo-title-level-3 echo-margin-top-lg echo-margin-bottom-md">文字サイズを変更している例</p>
 
 <p>.echo-title-level-3 を使用して、見出しを小さくしている。<br>
-また、 .echo-hero-body > p に文字サイズをリセットするクラス .echo-text-md を付与している。</p>
+また、 .echo-hero-body > p に文字サイズを大きくするクラス .echo-text-lg を付与している。</p>
+
+<div style="margin-left: -0.625rem; margin-right: -0.625rem;">
 
 <div class="echo-hero">
     <div class="echo-hero-image">
@@ -173,8 +183,12 @@ See the table below for the magnification for each (breakpoint).</p>
     </div><!-- /.echo-hero-contents -->
 </div><!-- /.echo-hero -->
 
+</div>
 
-<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-hero"&gt;
+
+<div class="codeblock"><pre><code class="language-markup">&lt;div style="margin-left: -0.625rem; margin-right: -0.625rem;"&gt;
+
+&lt;div class="echo-hero"&gt;
     &lt;div class="echo-hero-image"&gt;
         &lt;picture&gt;
             &lt;source
@@ -207,7 +221,11 @@ See the table below for the magnification for each (breakpoint).</p>
     &lt;/div&gt;&lt;!-- /.echo-hero-contents --&gt;
 &lt;/div&gt;&lt;!-- /.echo-hero --&gt;
 
+&lt;/div&gt;
+
 &lt;p class="echo-title echo-title-style-a echo-title-level-3 echo-margin-top-lg echo-margin-bottom-md"&gt;リード文先頭にキャプションを追加し、かつ複数のボタンを表示している例&lt;/p&gt;
+
+&lt;div style="margin-left: -0.625rem; margin-right: -0.625rem;"&gt;
 
 &lt;div class="echo-hero"&gt;
     &lt;div class="echo-hero-image"&gt;
@@ -245,10 +263,14 @@ See the table below for the magnification for each (breakpoint).</p>
     &lt;/div&gt;&lt;!-- /.echo-hero-contents --&gt;
 &lt;/div&gt;&lt;!-- /.echo-hero --&gt;
 
+&lt;/div&gt;
+
 &lt;p class="echo-title echo-title-style-a echo-title-level-3 echo-margin-top-lg echo-margin-bottom-md"&gt;文字サイズを変更している例&lt;/p&gt;
 
 &lt;p&gt;.echo-title-level-3 を使用して、見出しを小さくしている。&lt;br&gt;
 また、 .echo-hero-body &gt; p に文字サイズをリセットするクラス .echo-text-md を付与している。&lt;/p&gt;
+
+&lt;div style="margin-left: -0.625rem; margin-right: -0.625rem;"&gt;
 
 &lt;div class="echo-hero"&gt;
     &lt;div class="echo-hero-image"&gt;
@@ -274,6 +296,8 @@ See the table below for the magnification for each (breakpoint).</p>
         &lt;/div&gt;&lt;!-- /.echo-hero-contents-inner --&gt;
     &lt;/div&gt;&lt;!-- /.echo-hero-contents --&gt;
 &lt;/div&gt;&lt;!-- /.echo-hero --&gt;
+
+&lt;/div&gt;
 </code></pre></div>
 
 
@@ -283,6 +307,8 @@ See the table below for the magnification for each (breakpoint).</p>
 ブレークポイントが <code>xs</code> では <code>1:1</code> 、<code>sm, md, lg</code> では <code>16:9</code> 、<code>xl</code> 以上では <code>2.5:1</code> となる。<br>
 画像のトリミングにはobject-fitを使用しているため、Internet Explorer 11には対応していない。<br>
 ライブラリを追加した場合でも、<strong>レスポンシブイメージとの併用ができない</strong>ことに注意（画面サイズに関係なく、img要素のsrc属性に指定した画像が使用される）。</p>
+
+<div style="margin-left: -0.625rem; margin-right: -0.625rem;">
 
 <div class="echo-hero echo-hero-fit">
     <div class="echo-hero-image">
@@ -317,6 +343,8 @@ See the table below for the magnification for each (breakpoint).</p>
     </div><!-- /.echo-hero-contents -->
 </div><!-- /.echo-hero -->
 
+</div>
+
 <div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-hero echo-hero-fit"&gt;
     &lt;div class="echo-hero-image"&gt;
         &lt;picture&gt;
@@ -349,6 +377,8 @@ See the table below for the magnification for each (breakpoint).</p>
         &lt;/div&gt;&lt;!-- /.echo-hero-contents-inner --&gt;
     &lt;/div&gt;&lt;!-- /.echo-hero-contents --&gt;
 &lt;/div&gt;&lt;!-- /.echo-hero --&gt;
+
+&lt;/div&gt;
 </code></pre></div>
 
 
@@ -358,6 +388,8 @@ See the table below for the magnification for each (breakpoint).</p>
 ブレークポイントが <code>md</code> 以上の場合は最大幅が66%、 <code>xxl</code> 以上の場合は50%に制限される。</p>
 
 <p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-sm">.echo-hero + .echo-hero-left</p>
+
+<div style="margin-left: -0.625rem; margin-right: -0.625rem;">
 
 <div class="echo-hero echo-hero-fit echo-hero-left">
     <div class="echo-hero-image">
@@ -389,7 +421,11 @@ See the table below for the magnification for each (breakpoint).</p>
     </div><!-- /.echo-hero-contents -->
 </div><!-- /.echo-hero -->
 
+</div>
+
 <p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-top-xl echo-margin-bottom-sm">.echo-hero + .echo-hero-right</p>
+
+<div style="margin-left: -0.625rem; margin-right: -0.625rem;">
 
 <div class="echo-hero echo-hero-right">
     <div class="echo-hero-image">
@@ -421,7 +457,11 @@ See the table below for the magnification for each (breakpoint).</p>
     </div><!-- /.echo-hero-contents -->
 </div><!-- /.echo-hero -->
 
+</div>
+
 <div class="codeblock"><pre><code class="language-markup">&lt;p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-sm"&gt;.echo-hero + .echo-hero-left&lt;/p&gt;
+
+&lt;div style="margin-left: -0.625rem; margin-right: -0.625rem;"&gt;
 
 &lt;div class="echo-hero echo-hero-fit echo-hero-left"&gt;
     &lt;div class="echo-hero-image"&gt;
@@ -453,7 +493,11 @@ See the table below for the magnification for each (breakpoint).</p>
     &lt;/div&gt;&lt;!-- /.echo-hero-contents --&gt;
 &lt;/div&gt;&lt;!-- /.echo-hero --&gt;
 
+&lt;/div&gt;
+
 &lt;p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-top-xl echo-margin-bottom-sm"&gt;.echo-hero + .echo-hero-right&lt;/p&gt;
+
+&lt;div style="margin-left: -0.625rem; margin-right: -0.625rem;"&gt;
 
 &lt;div class="echo-hero echo-hero-right"&gt;
     &lt;div class="echo-hero-image"&gt;
@@ -484,6 +528,8 @@ See the table below for the magnification for each (breakpoint).</p>
         &lt;/div&gt;&lt;!-- /.echo-hero-contents-inner --&gt;
     &lt;/div&gt;&lt;!-- /.echo-hero-contents --&gt;
 &lt;/div&gt;&lt;!-- /.echo-hero --&gt;
+
+&lt;/div&gt;
 </code></pre></div>
 
 
@@ -491,6 +537,8 @@ See the table below for the magnification for each (breakpoint).</p>
 
 <p>コンテンツの色が反転する。<br>
 ボタンの色は <code>.echo-button-inverse</code> を付与しなければ変わらないことに注意する。</p>
+
+<div style="margin-left: -0.625rem; margin-right: -0.625rem;">
 
 <div class="echo-hero echo-hero-inverse">
     <div class="echo-hero-image">
@@ -526,7 +574,9 @@ See the table below for the magnification for each (breakpoint).</p>
     </div><!-- /.echo-hero-contents -->
 </div><!-- /.echo-hero -->
 
-<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-hero echo-hero-inverse"&gt;
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">lt;div class="echo-hero echo-hero-inverse"&gt;
     &lt;div class="echo-hero-image"&gt;
         &lt;picture&gt;
             &lt;source
@@ -559,6 +609,8 @@ See the table below for the magnification for each (breakpoint).</p>
         &lt;/div&gt;&lt;!-- /.echo-hero-contents-inner --&gt;
     &lt;/div&gt;&lt;!-- /.echo-hero-contents --&gt;
 &lt;/div&gt;&lt;!-- /.echo-hero --&gt;
+
+&lt;/div&gt;
 </code></pre></div>
 
 
