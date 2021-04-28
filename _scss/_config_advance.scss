@@ -25,27 +25,27 @@ $nav-inverse-current-hover-color: $ui-inverse-current-hover-color !default;
 $nav-inverse-current-hover-bg:    $ui-inverse-current-hover-bg !default;
 
 // Paginate
-$paginate-border-width:                 $ui-btn-border-width !default;
-$paginate-color:                        $ui-color !default;
-$paginate-bg:                           $ui-bg !default;
-$paginate-border-color:                 $ui-border-color !default;
-$paginate-hover-color:                  $ui-hover-color !default;
-$paginate-hover-bg:                     $ui-hover-bg !default;
-$paginate-hover-border-color:           $ui-hover-border-color !default;
-$paginate-current-color:                $ui-current-color !default;
-$paginate-current-bg:                   $ui-current-bg !default;
-$paginate-current-border-color:         $ui-current-border-color !default;
+$paginate-border-width:                 $ui-border-width !default;
+$paginate-color:                        $nav-color !default;
+$paginate-bg:                           $nav-bg !default;
+$paginate-border-color:                 transparent !default;
+$paginate-hover-color:                  $nav-hover-color !default;
+$paginate-hover-bg:                     $nav-hover-bg !default;
+$paginate-hover-border-color:           $paginate-border-color !default;
+$paginate-current-color:                $nav-current-color !default;
+$paginate-current-bg:                   $nav-current-bg !default;
+$paginate-current-border-color:         $paginate-border-color !default;
 
 // Paginate (inverse)
-$paginate-inverse-color:                $ui-inverse-color !default;
-$paginate-inverse-bg:                   $ui-inverse-bg !default;
-$paginate-inverse-border-color:         $ui-inverse-border-color !default;
-$paginate-inverse-hover-color:          $ui-inverse-hover-color !default;
-$paginate-inverse-hover-bg:             $ui-inverse-hover-bg !default;
-$paginate-inverse-hover-border-color:   $ui-inverse-hover-border-color !default;
-$paginate-inverse-current-color:        $ui-inverse-current-color !default;
-$paginate-inverse-current-bg:           $ui-inverse-current-bg !default;
-$paginate-inverse-current-border-color: $ui-inverse-current-border-color !default;
+$paginate-inverse-color:                $nav-inverse-color !default;
+$paginate-inverse-bg:                   $nav-inverse-bg !default;
+$paginate-inverse-border-color:         transparent !default;
+$paginate-inverse-hover-color:          $nav-inverse-hover-color !default;
+$paginate-inverse-hover-bg:             $nav-inverse-hover-bg !default;
+$paginate-inverse-hover-border-color:   $paginate-inverse-border-color !default;
+$paginate-inverse-current-color:        $nav-inverse-current-color !default;
+$paginate-inverse-current-bg:           $nav-inverse-current-bg !default;
+$paginate-inverse-current-border-color: $paginate-inverse-border-color !default;
 
 // Input
 $input-border-width:       $ui-border-width !default;
