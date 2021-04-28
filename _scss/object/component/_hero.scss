@@ -47,8 +47,12 @@
 
 }
 
+.#{$pr}#{$c}hero#{$c1}contents#{$c1}inner > * {
+    margin: 0;
+}
+
 .#{$pr}#{$c}hero#{$c1}contents#{$c1}inner > *:not(:last-child) {
-    margin: 0 0 1em;
+    margin-bottom: 1em;
 }
 
 .#{$pr}#{$c}hero#{$c1}contents#{$c1}inner > .#{$pr}#{$c}hero#{$c1}link {

@@ -2998,8 +2998,12 @@ echo-flip
   }
 }
 
+.echo-flip-contents-inner > * {
+  margin: 0;
+}
+
 .echo-flip-contents-inner > *:not(:last-child) {
-  margin: 0 0 1em;
+  margin-bottom: 1em;
 }
 
 .echo-flip-contents-inner > .echo-flip-link {
@@ -3359,8 +3363,12 @@ echo-hero
   }
 }
 
+.echo-hero-contents-inner > * {
+  margin: 0;
+}
+
 .echo-hero-contents-inner > *:not(:last-child) {
-  margin: 0 0 1em;
+  margin-bottom: 1em;
 }
 
 .echo-hero-contents-inner > .echo-hero-link {
