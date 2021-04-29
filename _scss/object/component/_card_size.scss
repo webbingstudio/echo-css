@@ -4,10 +4,19 @@
 --------------------
 */
 
-.#{$pr}#{$c}card#{$c3}fixed {
+.#{$pr}#{$c}card {
+    font-size: $font-size-sm;
 
     @include media-breakpoint-up(lg) {
-        font-size: $font-size-sm;
+        font-size: $font-size-md;
+    }
+
+    &.#{$pr}#{$c}card#{$c3}fixed {
+
+        @include media-breakpoint-up(lg) {
+            font-size: $font-size-sm;
+        }
+
     }
 
 }

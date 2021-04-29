@@ -5,13 +5,7 @@
 */
 
 .#{$pr}#{$c}headline {
-    font-size: $font-size-sm;
     line-height: $line-height-sm;
-
-    @include media-breakpoint-up(lg) {
-        font-size: $font-size-md;
-    }
-
 }
 
 .#{$pr}#{$c}headline#{$c1}inner {

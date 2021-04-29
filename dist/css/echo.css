@@ -3036,14 +3036,7 @@ echo-card
   margin: 0 auto;
   background-color: #fff;
   color: #333;
-  font-size: 0.875rem;
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-@media (min-width: 62.5rem) {
-  .echo-card {
-    font-size: 1rem;
-  }
 }
 
 [class*="echo-grid-col"] > .echo-card {
@@ -3163,8 +3156,18 @@ a.echo-card-inner:hover .echo-card-title, a.echo-card-inner:focus .echo-card-tit
 echo-card(size)
 --------------------
 */
+.echo-card {
+  font-size: 0.875rem;
+}
+
 @media (min-width: 62.5rem) {
-  .echo-card-fixed {
+  .echo-card {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-card.echo-card-fixed {
     font-size: 0.875rem;
   }
 }
@@ -3485,14 +3488,7 @@ echo-headline
 --------------------
 */
 .echo-headline {
-  font-size: 0.875rem;
   line-height: 1.5;
-}
-
-@media (min-width: 62.5rem) {
-  .echo-headline {
-    font-size: 1rem;
-  }
 }
 
 .echo-headline-inner {
@@ -3580,8 +3576,18 @@ a.echo-headline-inner:not(:hover):not(:focus) .echo-headline-title {
 echo-headline(size)
 --------------------
 */
+.echo-headline {
+  font-size: 0.875rem;
+}
+
 @media (min-width: 62.5rem) {
-  .echo-headline-fixed {
+  .echo-headline {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-headline.echo-headline-fixed {
     font-size: 0.875rem;
   }
 }
@@ -3833,6 +3839,7 @@ echo-media
 */
 .echo-media {
   position: relative;
+  line-height: 1.5;
 }
 
 time[class*="echo-media"] {
@@ -3892,8 +3899,6 @@ a.echo-media-inner:hover .echo-media-title, a.echo-media-inner:focus .echo-media
   flex-basis: 0%;
   padding-left: 16px;
   padding-left: clamp(8px, calc( 0.74074vw + 5px), 16px);
-  font-size: 0.875rem;
-  line-height: 1.5;
 }
 
 .echo-media-contents > * {
@@ -3926,6 +3931,27 @@ echo-media-reverse
   padding-left: 0;
   padding-right: 16px;
   padding-right: clamp(8px, calc( 0.74074vw + 5px), 16px);
+}
+
+/*
+--------------------
+echo-media(size)
+--------------------
+*/
+.echo-media {
+  font-size: 0.75rem;
+}
+
+@media (min-width: 62.5rem) {
+  .echo-media {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-media.echo-media-fixed {
+    font-size: 0.75rem;
+  }
 }
 
 /*
@@ -6709,13 +6735,14 @@ echo-medias
 */
 .echo-medias {
   display: grid;
-  gap: 1rem;
+  gap: 1.5rem;
   width: calc( 100% - 1rem);
   margin: 0 auto;
 }
 
 @media (min-width: 62.5rem) {
   .echo-medias {
+    gap: 1rem;
     grid-template-columns: 1fr 1fr;
   }
 }

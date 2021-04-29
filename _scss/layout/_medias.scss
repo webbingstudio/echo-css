@@ -6,11 +6,12 @@
 
 .#{$pr}#{$l}medias {
     display: grid;
-    gap: map-get( $grid-gutter-widths, md );
+    gap: map-get( $grid-gutter-widths, lg );
     width: calc( 100% - #{map-get( $grid-gutter-widths, md )} );
     margin: 0 auto;
 
     @include media-breakpoint-up(lg) {
+        gap: map-get( $grid-gutter-widths, md );
         grid-template-columns: 1fr 1fr;
     }
 

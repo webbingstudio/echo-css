@@ -11,12 +11,7 @@
     margin: 0 auto;
     background-color: $body-bg;
     color: $body-color;
-    font-size: $font-size-sm;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
-
-    @include media-breakpoint-up(lg) {
-        font-size: $font-size-md;
-    }
 
     [class*="#{$pr}#{$col}"] > & {
         max-width: none;

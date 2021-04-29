@@ -6,6 +6,7 @@
 
 .#{$pr}#{$c}media {
     position: relative;
+    line-height: $line-height-sm;
 }
 
 time[class*="#{$pr}#{$c}media"] {
@@ -84,8 +85,6 @@ a.#{$pr}#{$c}media#{$c1}inner {
         map-get( $component-spacing-min, 'md' ),
         map-get( $component-spacing-max, 'md' )
     );
-    font-size: $font-size-sm;
-    line-height: $line-height-sm;
 }
 
 .#{$pr}#{$c}media#{$c1}contents > * {
