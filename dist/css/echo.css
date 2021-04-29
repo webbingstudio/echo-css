@@ -3036,7 +3036,14 @@ echo-card
   margin: 0 auto;
   background-color: #fff;
   color: #333;
+  font-size: 0.875rem;
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 62.5rem) {
+  .echo-card {
+    font-size: 1rem;
+  }
 }
 
 [class*="echo-grid-col"] > .echo-card {
@@ -3120,7 +3127,6 @@ a.echo-card-inner:hover .echo-card-title, a.echo-card-inner:focus .echo-card-tit
 
 .echo-card-contents {
   flex-grow: 1;
-  font-size: 0.875rem;
   line-height: 1.5;
 }
 
@@ -3150,6 +3156,17 @@ a.echo-card-inner:hover .echo-card-title, a.echo-card-inner:focus .echo-card-tit
 .echo-card-footer > [class*="echo-button-icon"] {
   padding-left: 1em;
   padding-right: 1em;
+}
+
+/*
+--------------------
+echo-card(size)
+--------------------
+*/
+@media (min-width: 62.5rem) {
+  .echo-card-fixed {
+    font-size: 0.875rem;
+  }
 }
 
 /*

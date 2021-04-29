@@ -1,0 +1,13 @@
+/*
+--------------------
+#{$pr}#{$c}card(size)
+--------------------
+*/
+
+.#{$pr}#{$c}card#{$c3}fixed {
+
+    @include media-breakpoint-up(lg) {
+        font-size: $font-size-sm;
+    }
+
+}
