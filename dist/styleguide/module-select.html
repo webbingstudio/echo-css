@@ -24,10 +24,12 @@
 
             <nav class="echo-doc-anchor">
                 <ul class="echo-list echo-list-horizontal">
-                    
+
                     <li class="echo-list-item"><a href="#select" class="js-scrollto">echo-select</a></li>
-                    
+
                     <li class="echo-list-item"><a href="#select-01-size" class="js-scrollto">echo-select-(size)</a></li>
+
+                    <li class="echo-list-item"><a href="#select-02-fixed" class="js-scrollto">echo-select-fixed</a></li>
                     
                 </ul>
             </nav>
@@ -35,13 +37,16 @@
             <article class="echo-doc-post">
                 <div class="echo-doc-post-contents styleguide-contents"><h2 id="select" class="echo-doc-post-title-01">echo-select</h2>
 
-<p>セレクトボックスをインライン表示する。select要素ではなく、包括している要素にクラスを付与する。<br>
-デフォルトでは <code>2.75rem = 44px</code> の最低高さを持つ。</p>
+<p>セレクトボックスを表示する。select要素ではなく、包括している要素にクラスを付与する。<br>
+最低高さは <code>2.75rem = 44px</code> である。</p>
 
-<p>余白・レイアウト等は <code>utility &gt; .echo-margin-(size)</code> や <code>component &gt; .echo-form</code> で指定する。<br>
-<code>.is-error</code> を付与するとエラー表示となり、色が <code>$important</code> に変わる。</p>
+<p>レイアウトは <code>component &gt; .echo-form, layout &gt; .echo-forms</code> を使用することが望ましい。</p>
 
-<div class="example"><div style="margin-bottom: 1rem;">
+<p><code>.is-error</code> を付与するとエラー表示となり、色が <code>$important</code> に変わる。</p>
+
+<div class="example">
+
+<div class="echo-margin-bottom-md">
     <div class="echo-select">
         <select>
             <option>月を選択...</option>
@@ -60,30 +65,26 @@
         <option value="">2015年</option>
     </select>
 </div>
-</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-select"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;select&gt;</span>
-            <span class="nt">&lt;option&gt;</span>月を選択...<span class="nt">&lt;/option&gt;</span>
-            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>2017年<span class="nt">&lt;/option&gt;</span>
-            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>2016年<span class="nt">&lt;/option&gt;</span>
-            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>2015年<span class="nt">&lt;/option&gt;</span>
-        <span class="nt">&lt;/select&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-select is-error"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;select&gt;</span>
-        <span class="nt">&lt;option&gt;</span>月を選択...<span class="nt">&lt;/option&gt;</span>
-        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>2017年<span class="nt">&lt;/option&gt;</span>
-        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>2016年<span class="nt">&lt;/option&gt;</span>
-        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>2015年<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;/select&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</pre></div>
+</div>
+
+
+
+
 <h2 id="select-01-size" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-select-(size)</h2>
 
-<p>セレクトボックスの全体のサイズを変更する。(size)は <code>sm, lg</code> に対応している。</p>
-<div class="example"><div style="margin-bottom: 1rem;">
+<p>セレクトボックスの文字サイズ、最低高さを変更する。<br>
+(size)は、 <code>sm, lg, xl, xxl</code> に対応している。</p>
+
+<p>(breakpoint) ごとの最低高さは <code>.echo-button-(size)</code> と同値となる。<br>
+詳細は <a href="./module-button.html#btn-03-size">.echo-button-(size)</a> を参照。</p>
+
+<p>このサンプルコードでは比較のため、同サイズのボタンを表示している。</p>
+
+<div class="example">
+
+<div class="echo-margin-bottom-md">
+    <dfn>echo-select-sm</dfn>
     <div class="echo-select echo-select-sm">
         <select>
             <option>月を選択...</option>
@@ -92,8 +93,24 @@
             <option value="">2015年</option>
         </select>
     </div>
+    <a href="#" class="echo-button echo-button-sm echo-button-style-a">ボタン</a>
 </div>
-<div>
+
+<div class="echo-margin-bottom-md">
+    <dfn>(default)</dfn>
+    <div class="echo-select">
+        <select>
+            <option>月を選択...</option>
+            <option value="">2017年</option>
+            <option value="">2016年</option>
+            <option value="">2015年</option>
+        </select>
+    </div>
+    <a href="#" class="echo-button echo-button-style-a">ボタン</a>
+</div>
+
+<div class="echo-margin-bottom-md">
+    <dfn>echo-select-lg</dfn>
     <div class="echo-select echo-select-lg">
         <select>
             <option>月を選択...</option>
@@ -102,27 +119,114 @@
             <option value="">2015年</option>
         </select>
     </div>
+    <a href="#" class="echo-button echo-button-lg echo-button-style-a">ボタン</a>
 </div>
-</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 1rem;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-select echo-select-sm"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;select&gt;</span>
-            <span class="nt">&lt;option&gt;</span>月を選択...<span class="nt">&lt;/option&gt;</span>
-            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>2017年<span class="nt">&lt;/option&gt;</span>
-            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>2016年<span class="nt">&lt;/option&gt;</span>
-            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>2015年<span class="nt">&lt;/option&gt;</span>
-        <span class="nt">&lt;/select&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-select echo-select-lg"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;select&gt;</span>
-            <span class="nt">&lt;option&gt;</span>月を選択...<span class="nt">&lt;/option&gt;</span>
-            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>2017年<span class="nt">&lt;/option&gt;</span>
-            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>2016年<span class="nt">&lt;/option&gt;</span>
-            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>2015年<span class="nt">&lt;/option&gt;</span>
-        <span class="nt">&lt;/select&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</pre></div>
+
+<div class="echo-margin-bottom-md">
+    <dfn>echo-select-xl</dfn>
+    <div class="echo-select echo-select-xl">
+        <select>
+            <option>月を選択...</option>
+            <option value="">2017年</option>
+            <option value="">2016年</option>
+            <option value="">2015年</option>
+        </select>
+    </div>
+    <a href="#" class="echo-button echo-button-xl echo-button-style-a">ボタン</a>
+</div>
+
+<div class="echo-margin-bottom-md">
+    <dfn>echo-select-xxl</dfn>
+    <div class="echo-select echo-select-xxl">
+        <select>
+            <option>月を選択...</option>
+            <option value="">2017年</option>
+            <option value="">2016年</option>
+            <option value="">2015年</option>
+        </select>
+    </div>
+    <a href="#" class="echo-button echo-button-xxl echo-button-style-a">ボタン</a>
+</div>
+
+</div>
+
+
+
+<h2 id="select-02-fixed" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-select-fixed</h2>
+
+<p><code>.echo-select-(size)</code> と同時に付与すると、セレクトボックスが (breakpoint) に関わらず常に同じサイズとなる。<br>
+幅の変動が少ないグリッド内のコンポーネント等に使用する。</p>
+
+<p>このサンプルコードでは比較のため、同サイズのボタンを表示している。</p>
+
+<div class="example">
+
+<div class="echo-margin-bottom-md">
+    <dfn>echo-select-sm</dfn>
+    <div class="echo-select echo-select-fixed echo-select-sm">
+        <select>
+            <option>月を選択...</option>
+            <option value="">2017年</option>
+            <option value="">2016年</option>
+            <option value="">2015年</option>
+        </select>
+    </div>
+    <a href="#" class="echo-button echo-button-fixed echo-button-sm echo-button-style-a">ボタン</a>
+</div>
+
+<div class="echo-margin-bottom-md">
+    <dfn>(default)</dfn>
+    <div class="echo-select echo-select-fixed">
+        <select>
+            <option>月を選択...</option>
+            <option value="">2017年</option>
+            <option value="">2016年</option>
+            <option value="">2015年</option>
+        </select>
+    </div>
+    <a href="#" class="echo-button echo-button-fixed echo-button-style-a">ボタン</a>
+</div>
+
+<div class="echo-margin-bottom-md">
+    <dfn>echo-select-lg</dfn>
+    <div class="echo-select echo-select-fixed echo-select-lg">
+        <select>
+            <option>月を選択...</option>
+            <option value="">2017年</option>
+            <option value="">2016年</option>
+            <option value="">2015年</option>
+        </select>
+    </div>
+    <a href="#" class="echo-button echo-button-fixed echo-button-lg echo-button-style-a">ボタン</a>
+</div>
+
+<div class="echo-margin-bottom-md">
+    <dfn>echo-select-xl</dfn>
+    <div class="echo-select echo-select-fixed echo-select-xl">
+        <select>
+            <option>月を選択...</option>
+            <option value="">2017年</option>
+            <option value="">2016年</option>
+            <option value="">2015年</option>
+        </select>
+    </div>
+    <a href="#" class="echo-button echo-button-fixed echo-button-xl echo-button-style-a">ボタン</a>
+</div>
+
+<div class="echo-margin-bottom-md">
+    <dfn>echo-select-xxl</dfn>
+    <div class="echo-select echo-select-fixed echo-select-xxl">
+        <select>
+            <option>月を選択...</option>
+            <option value="">2017年</option>
+            <option value="">2016年</option>
+            <option value="">2015年</option>
+        </select>
+    </div>
+    <a href="#" class="echo-button echo-button-fixed echo-button-xxl echo-button-style-a">ボタン</a>
+</div>
+
+</div>
+
 
 <?php include('../doc_include/footer.inc'); ?>

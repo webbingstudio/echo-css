@@ -8,17 +8,18 @@
     display: inline-block;
     position: relative;
     font-size: $font-size-sm;
+    vertical-align: middle;
 
     &:after {
         content: "";
         position: absolute;
         top: 50%;
         right: .75em;
-        width: 0.428571429em;
-        height: 0.428571429em;
+        width: .5em;
+        height: .5em;
         transform-origin: center center;
-        border-top: 1px solid $ui-color;
-        border-left: 1px solid $ui-color;
+        border-top: .142857143em solid $ui-color;
+        border-left: .142857143em solid $ui-color;
         transform:
             translateY( -70% )
             rotate( -135deg );
@@ -36,7 +37,7 @@
         color: $body-color;
         width: 100%;
         padding: 0 2.5em 0 .75em;
-        min-height: 2.75rem;
+        min-height: map-get( $button-min-heights, 'md' );
         background-color: $input-bg;
         border: $input-border-width solid $input-border-color;
         vertical-align: middle;
@@ -87,27 +88,3 @@
 
 }
 
-
-/*
---------------------
-#{$pr}#{$m}select#{$c3}(size)
---------------------
-*/
-
-.#{$pr}#{$m}select#{$c3}sm {
-    font-size: $font-size-xs;
-
-    select {
-        min-height: 2.25rem;
-    }
-
-}
-
-.#{$pr}#{$m}select#{$c3}lg {
-    font-size: $font-size-lg;
-
-    select {
-        min-height: 3.5rem;
-    }
-
-}
