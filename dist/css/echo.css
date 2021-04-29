@@ -3485,13 +3485,13 @@ echo-headline
 --------------------
 */
 .echo-headline {
-  line-height: 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
 }
 
-@media (max-width: 62.4rem) {
+@media (min-width: 62.5rem) {
   .echo-headline {
-    font-size: 0.875rem;
-    line-height: 1.3125rem;
+    font-size: 1rem;
   }
 }
 
@@ -3573,6 +3573,17 @@ a.echo-headline-inner:not(:hover):not(:focus) .echo-headline-title {
 
 .echo-headline-title a:not(:hover):not(:focus) {
   text-decoration: underline;
+}
+
+/*
+--------------------
+echo-headline(size)
+--------------------
+*/
+@media (min-width: 62.5rem) {
+  .echo-headline-fixed {
+    font-size: 0.875rem;
+  }
 }
 
 /*

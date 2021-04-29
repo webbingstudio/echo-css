@@ -5,13 +5,11 @@
 */
 
 .#{$pr}#{$c}headline {
+    font-size: $font-size-sm;
+    line-height: $line-height-sm;
 
-    // 相対値ではなくremで統一する
-    line-height: $font-size-md * $line-height-sm;
-
-    @include media-breakpoint-down(md) {
-        font-size: $font-size-sm;
-        line-height: $font-size-sm * $line-height-sm;
+    @include media-breakpoint-up(lg) {
+        font-size: $font-size-md;
     }
 
 }

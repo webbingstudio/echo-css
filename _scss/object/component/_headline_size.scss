@@ -1,0 +1,13 @@
+/*
+--------------------
+#{$pr}#{$c}headline(size)
+--------------------
+*/
+
+.#{$pr}#{$c}headline#{$c3}fixed {
+
+    @include media-breakpoint-up(lg) {
+        font-size: $font-size-sm;
+    }
+
+}
