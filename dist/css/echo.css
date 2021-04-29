@@ -1144,6 +1144,7 @@ echo-checkbox
   position: relative;
   display: inline-block;
   cursor: pointer;
+  font-size: 1em;
   line-height: 1.25;
 }
 
@@ -1167,6 +1168,7 @@ echo-checkbox
   width: 1.5em;
   height: 1.5em;
   margin: 0;
+  font-size: 1em;
   -webkit-appearance: none;
   appearance: none;
   z-index: 2;
@@ -1905,6 +1907,7 @@ echo-radio
   position: relative;
   display: inline-block;
   cursor: pointer;
+  font-size: 1em;
   line-height: 1.25;
 }
 
@@ -1928,6 +1931,7 @@ echo-radio
   width: 1.5em;
   height: 1.5em;
   margin: 0;
+  font-size: 1em;
   -webkit-appearance: none;
   appearance: none;
   z-index: 2;
@@ -3379,8 +3383,15 @@ echo-form
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
+  font-size: 0.875rem;
   margin: 0 0 -1em;
   line-height: 1;
+}
+
+@media (min-width: 62.5rem) {
+  .echo-form {
+    font-size: 1rem;
+  }
 }
 
 .echo-form > .echo-checkbox,
@@ -3437,7 +3448,7 @@ echo-form-error
   width: 100%;
   margin: 0;
   color: #d20b2a;
-  font-size: 0.875rem;
+  font-size: 0.875em;
   line-height: 1.5;
 }
 

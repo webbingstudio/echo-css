@@ -43,7 +43,10 @@
 <p>フォームの各入力欄を包括する。<br>
 フォーム内の各オブジェクトは <code>.echo-input, .echo-radio, .echo-select, .echo-checkbox, .echo-button</code> を参照。</p>
 
-<p>フォームラベルには <code>.echo-form-label</code> クラスを付与する。</p>
+<p>フォントサイズは、(breakpoint) が <code>sm</code> 以下で <code>87.5rem = 14px</code> 、<code>lg</code> 以上で <code>1rem = 16px</code> となる。<br>
+このため、内包される <code>.echo-form-label, .echo-form-error</code> のテキストも追随して大きくなる。</p>
+
+<p>各ラベルには <code>.echo-form-label</code> クラスを付与する。</p>
 
 <p>複数のフォームをグリッド状に揃える場合は、 <code>layout > .echo-forms</code>を使用すること。</p>
 
@@ -318,6 +321,8 @@
 <h2 id="form-04-error" class="echo-doc-post-title-01">echo-form-error</h2>
 
 <p>フォームの入力を間違えたときの補助テキストを表示する。文字色は <code>$important</code> となる。</p>
+
+<p>文字サイズは <code>.echo-form</code> の<strong>87.5%</strong>( <code>0.875em</code> )となり、16pxの場合は14pxとなる。</p>
 
 <div class="example">
 

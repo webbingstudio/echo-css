@@ -9,8 +9,13 @@
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
+    font-size: $font-size-sm;
     margin: 0 0 -1em;
     line-height: 1;
+
+    @include media-breakpoint-up(lg) {
+        font-size: $font-size-md;
+    }
 
     > .#{$pr}#{$m}checkbox,
     > .#{$pr}#{$m}radio {
@@ -84,6 +89,6 @@
     width: 100%;
     margin: 0;
     color: $important;
-    font-size: $font-size-sm;
+    font-size: 0.875em;
     line-height: $line-height-sm;
 }
