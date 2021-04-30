@@ -1,0 +1,89 @@
+/*
+--------------------
+#{$pr}#{$m}body(size)
+--------------------
+*/
+
+.#{$pr}#{$m}body {
+
+    @include media-breakpoint-up(lg) {
+        font-size: map-get( $body-max-font-sizes, 'md' );
+    }
+
+    &.#{$pr}#{$m}body#{$c3}fixed {
+
+        @include media-breakpoint-up(lg) {
+            font-size: map-get( $body-min-font-sizes, 'md' );
+        }
+
+    }
+
+}
+
+.#{$pr}#{$m}body#{$c3}xs {
+    font-size: map-get( $body-min-font-sizes, 'xs' );
+
+    @include media-breakpoint-up(lg) {
+        font-size: map-get( $body-max-font-sizes, 'xs' );
+    }
+
+    &.#{$pr}#{$m}body#{$c3}fixed {
+
+        @include media-breakpoint-up(lg) {
+            font-size: map-get( $body-min-font-sizes, 'xs' );
+        }
+
+    }
+
+}
+
+.#{$pr}#{$m}body#{$c3}sm {
+    font-size: map-get( $body-min-font-sizes, 'sm' );
+
+    @include media-breakpoint-up(lg) {
+        font-size: map-get( $body-max-font-sizes, 'sm' );
+    }
+
+    &.#{$pr}#{$m}body#{$c3}fixed {
+
+        @include media-breakpoint-up(lg) {
+            font-size: map-get( $body-min-font-sizes, 'sm' );
+        }
+
+    }
+
+}
+
+.#{$pr}#{$m}body#{$c3}lg {
+    font-size: map-get( $body-min-font-sizes, 'lg' );
+
+    @include media-breakpoint-up(lg) {
+        font-size: map-get( $body-max-font-sizes, 'lg' );
+    }
+
+    &.#{$pr}#{$m}body#{$c3}fixed {
+
+        @include media-breakpoint-up(lg) {
+            font-size: map-get( $body-min-font-sizes, 'lg' );
+        }
+
+    }
+
+}
+
+.#{$pr}#{$m}body#{$c3}xl {
+    font-size: map-get( $body-min-font-sizes, 'xl' );
+
+    @include media-breakpoint-up(lg) {
+        font-size: map-get( $body-max-font-sizes, 'xl' );
+    }
+
+    &.#{$pr}#{$m}body#{$c3}fixed {
+
+        @include media-breakpoint-up(lg) {
+            font-size: map-get( $body-min-font-sizes, 'xl' );
+        }
+
+    }
+
+}

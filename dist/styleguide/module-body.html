@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>module-body | Style guide | echo-css</title>
+        <meta property="og:title" content="module-body | Style guide | echo-css">
+
+        <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div id="echo-document">
+
+        <?php include('../doc_include/header.inc'); ?>
+
+        <main class="echo-p-main" role="main">
+                <div class="echo-doc-container echo-doc-container-fluid">
+
+                        <div class="echo-doc-pagehead">
+                                <h1 class="echo-doc-pagehead-title">module-body</h1>
+                        </div><!-- /.echo-doc-pagehead -->
+
+                        <nav class="echo-doc-anchor">
+                                <ul class="echo-list echo-list-horizontal">
+
+                                        <li class="echo-list-item"><a href="#body" class="js-scrollto">echo-body</a></li>
+
+                                        <li class="echo-list-item"><a href="#body-01-size" class="js-scrollto">echo-body-(size)</a></li>
+
+                                        <li class="echo-list-item"><a href="#body-02-fixed" class="js-scrollto">echo-body-fixed</a></li>
+
+                                </ul>
+                        </nav>
+
+                        <article class="echo-doc-post">
+                                <div class="echo-doc-post-contents styleguide-contents"><h2 id="body" class="echo-doc-post-title-01">echo-body</h2>
+
+<p>複数行となる可能性がある文章を表示する。<code>line-height</code> は、body要素の継承よりも大きくなる( <code>1.75</code> )。</p>
+
+<p>フォントサイズは、<strong>継承された文字サイズに対する相対</strong> (em) となる。 (breakpoint) が <code>sm</code> 以下で <code>87.5em</code> 、<code>lg</code> 以上で <code>1em</code> である。<br>
+このため、ユーティリティクラス <code>.echo-text-(size)</code> をコンテンツに使用した場合、追随して大きくなる。</p>
+
+<p>このサンプルコードではオブジェクトの境界がわかるよう、インラインスタイルで背景色を付与している。</p>
+
+<div class="example">
+
+<p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-md">p要素の場合</p>
+
+<p class="echo-body" style="background-color: rgba( 256, 240, 0, .2 );">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+
+<p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-md echo-margin-top-lg">section要素 > 複数のp要素の場合</p>
+
+<section class="echo-body" style="background-color: rgba( 256, 240, 0, .2 );">
+
+    <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+
+    <p>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。</p>
+
+    <p>第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。</p>
+
+    <p>これが人間の飲む煙草というものである事はようやくこの頃知った。</p>
+
+</section><!-- /.echo-body -->
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">
+</code></pre></div>
+
+
+<h2 id="body-01-size" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-body-(size)</h2>
+
+<p>文章の文字サイズを変更する。<br>
+(size)は、 <code>xs, sm, lg, xl</code> に対応しており、<strong>継承された文字サイズに対する相対</strong> (em) で大きくなる。</p>
+
+<p>デフォルトの、サイズの名称に対する値は以下の通り。<br>
+(breakpoint) が <code>lg</code> 以上で <strong>0.125em、もしくは0.25em</strong> 変化する。HTML要素が16pxだった場合は2px、もしくは4pxとなる。</p>
+
+<table class="echo-table echo-table-bordered echo-margin-bottom-md" style="width: auto;">
+        <thead>
+                <tr><th rowspan="2">(size) / (breakpoint)</th><th colspan="2" class="echo-text-center">文字サイズ</th></tr>
+                <tr><th class="echo-text-center">md 以下</th><th class="echo-text-center">lg 以上</th></tr>
+        </thead>
+        <tbody>
+                <tr><th>xs</th><td>0.625rem</td><td>0.75rem</td></tr>
+                <tr><th>sm</th><td>0.75rem</td><td>0.875rem</td></tr>
+                <tr><th>(default)</th><td>0.875rem</td><td>1rem</td></tr>
+                <tr><th>lg</th><td>1rem</td><td>1.25rem</td></tr>
+                <tr><th>xl</th><td>1.25rem</td><td>1.5rem</td></tr>
+        </tbody>
+</table>
+
+<p>Sassを使用できる場合、 <code>_scss/config_advance.scss</code> の配列 <code>$body-min-font-sizes, $body-max-font-sizes</code>で変更できる。</p>
+
+<div class="example">
+
+<p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-md">.echo-body-xs</p>
+
+<p class="echo-body echo-body-xs" style="background-color: rgba( 256, 240, 0, .2 );">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+
+<p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-md echo-margin-top-lg">.echo-body-sm</p>
+
+<p class="echo-body echo-body-sm" style="background-color: rgba( 256, 240, 0, .2 );">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+
+<p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-md echo-margin-top-lg">(default)</p>
+
+<p class="echo-body" style="background-color: rgba( 256, 240, 0, .2 );">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+
+<p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-md echo-margin-top-lg">.echo-body-lg</p>
+
+<p class="echo-body echo-body-lg" style="background-color: rgba( 256, 240, 0, .2 );">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+
+<p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-md echo-margin-top-lg">.echo-body-xl</p>
+
+<p class="echo-body echo-body-xl" style="background-color: rgba( 256, 240, 0, .2 );">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup"></code></pre></div>
+
+
+<h2 id="body-02-fixed" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-body-fixed</h2>
+
+<p><code>.echo-body-(size)</code> と同時に付与すると、文章が (breakpoint) に関わらず常に同じサイズとなる。<br>
+幅の変動が少ないグリッド内のコンポーネント等に使用する。</p>
+
+<p>各サイズは、前項の表内の最低値となる。</p>
+
+<div class="example">
+
+<p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-md">.echo-body-xs</p>
+
+<p class="echo-body echo-body-fixed echo-body-xs" style="background-color: rgba( 256, 240, 0, .2 );">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+
+<p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-md echo-margin-top-lg">.echo-body-sm</p>
+
+<p class="echo-body echo-body-fixed echo-body-sm" style="background-color: rgba( 256, 240, 0, .2 );">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+
+<p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-md echo-margin-top-lg">(default)</p>
+
+<p class="echo-body echo-body-fixed" style="background-color: rgba( 256, 240, 0, .2 );">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+
+<p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-md echo-margin-top-lg">.echo-body-lg</p>
+
+<p class="echo-body echo-body-fixed echo-body-lg" style="background-color: rgba( 256, 240, 0, .2 );">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+
+<p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-md echo-margin-top-lg">.echo-body-xl</p>
+
+<p class="echo-body echo-body-fixed echo-body-xl" style="background-color: rgba( 256, 240, 0, .2 );">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup"></code></pre></div>
+
+<?php include('../doc_include/footer.inc'); ?>

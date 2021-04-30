@@ -264,6 +264,102 @@ select {
 
 /*
 --------------------
+echo-body
+--------------------
+*/
+.echo-body {
+  margin: 0;
+  font-size: 0.875em;
+  line-height: 1.75;
+}
+
+.echo-body > *:last-child {
+  margin-bottom: 0;
+}
+
+/*
+--------------------
+echo-body(size)
+--------------------
+*/
+@media (min-width: 62.5rem) {
+  .echo-body {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-body.echo-body-fixed {
+    font-size: 0.875em;
+  }
+}
+
+.echo-body-xs {
+  font-size: 0.625em;
+}
+
+@media (min-width: 62.5rem) {
+  .echo-body-xs {
+    font-size: 0.75em;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-body-xs.echo-body-fixed {
+    font-size: 0.625em;
+  }
+}
+
+.echo-body-sm {
+  font-size: 0.75em;
+}
+
+@media (min-width: 62.5rem) {
+  .echo-body-sm {
+    font-size: 0.875em;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-body-sm.echo-body-fixed {
+    font-size: 0.75em;
+  }
+}
+
+.echo-body-lg {
+  font-size: 1em;
+}
+
+@media (min-width: 62.5rem) {
+  .echo-body-lg {
+    font-size: 1.25em;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-body-lg.echo-body-fixed {
+    font-size: 1em;
+  }
+}
+
+.echo-body-xl {
+  font-size: 1.25em;
+}
+
+@media (min-width: 62.5rem) {
+  .echo-body-xl {
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-body-xl.echo-body-fixed {
+    font-size: 1.25em;
+  }
+}
+
+/*
+--------------------
 echo-button
 --------------------
 */

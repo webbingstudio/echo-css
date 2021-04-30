@@ -1,0 +1,16 @@
+/*
+--------------------
+#{$pr}#{$m}body
+--------------------
+*/
+
+.#{$pr}#{$m}body {
+	margin: 0;
+    font-size: map-get( $body-min-font-sizes, 'md' );
+    line-height: $line-height-md;
+
+    & > *:last-child {
+    	margin-bottom: 0;
+    }
+
+}

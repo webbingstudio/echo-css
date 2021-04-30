@@ -41,9 +41,9 @@
 <p>hx要素、もしくはp要素を見出しへの利用を前提にリセットする。</p>
 <ul>
   <li>フォントファミリーが <code>first</code> になる。詳細は<a href="/docs/design-tokens-font.html">フォントファミリー</a>を参照。</li>
-  <li><code>font-size, color</code> は要素本来のサイズを引き継ぐ</li>
+  <li><code>font-size, color</code> は現在の要素に継承されたプロパティを引き継ぐ</li>
   <li><code>margin</code> は0となる</li>
-  <li><code>line-height</code> は標準よりも少なくなる(1.25)。</li>
+  <li><code>line-height</code> は、body要素の継承よりも小さくなる( <code>1.25</code> )。</li>
 </ul>
 
 <div class="example">
@@ -81,7 +81,7 @@
 <h2 id="title-01-level" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-title-level-(level)</h2>
 
 <p>見出しレベルとして、文字サイズを変更する。<br>
-(level) は<code>1-6</code>の6段階で、<strong>現在の文字サイズに対する相対</strong> (em) で大きくなる。<br>
+(level) は <code>1-6</code> に対応しており、<strong>継承された文字サイズに対する相対</strong> (em) で大きくなる。<br>
 また、ブレークポイントが <code>lg</code> 以上でジャンプ率（拡大率）が増える。</p>
 
 <div class="example">

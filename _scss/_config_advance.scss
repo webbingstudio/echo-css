@@ -272,7 +272,28 @@ $grid-columns:        12 !default;
 $grid-columns-max:    $grid-columns - 1 !default;
 
 
-// Buttons
+// Body
+// -----------------------------------------
+
+$body-min-font-sizes: (
+    xs:  .625em,
+    sm:  .75em,
+    md:  .875em,
+    lg:  1em,
+    xl:  1.25em
+) !default;
+
+$body-max-font-sizes: (
+    xs:  .75em,
+    sm:  .875em,
+    md:  1em,
+    lg:  1.25em,
+    xl:  1.5em
+) !default;
+
+
+
+// Button
 // -----------------------------------------
 
 $button-min-heights: (
@@ -354,4 +375,26 @@ $button-square-max-widths: (
     lg:  map-get( $button-max-heights, 'xxl' ),
     xl:  6rem,
     xxl: 7.5rem
+) !default;
+
+
+// Title
+// -----------------------------------------
+
+$title-min-font-sizes: (
+    6:  1em,
+    5:  1em,
+    4:  1.25em,
+    3:  1.5em,
+    2:  1.75em,
+    1:  2em
+) !default;
+
+$title-max-font-sizes: (
+    6:  1em,
+    5:  1.125em,
+    4:  1.375em,
+    3:  1.75em,
+    2:  2em,
+    1:  2.5em
 ) !default;
