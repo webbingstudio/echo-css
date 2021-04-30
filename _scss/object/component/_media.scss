@@ -6,7 +6,7 @@
 
 .#{$pr}#{$c}media {
     position: relative;
-    line-height: $line-height-sm;
+    font-size: $font-size-md;
 }
 
 time[class*="#{$pr}#{$c}media"] {
@@ -68,23 +68,18 @@ a.#{$pr}#{$c}media#{$c1}inner {
     flex-basis: auto;
     width: 33.33333333%;
     min-width: 100px;
+}
 
-    .#{$pr}#{$m}thumbnail {
-        background-color: $body-inverse-bg;
-        border: 0 none;
-    }
-
+.#{$pr}#{$c}media#{$c1}meta {
+    font-size: 0.875em;
+    line-height: $line-height-xs;
 }
 
 .#{$pr}#{$c}media#{$c1}contents {
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 0%;
-    @include responsive-spacing(
-        'padding-left',
-        map-get( $component-spacing-min, 'md' ),
-        map-get( $component-spacing-max, 'md' )
-    );
+    padding-left: 3%;
 }
 
 .#{$pr}#{$c}media#{$c1}contents > * {
@@ -92,7 +87,7 @@ a.#{$pr}#{$c}media#{$c1}inner {
 }
 
 .#{$pr}#{$c}media#{$c1}contents > *:not(:last-child) {
-    margin-bottom: .5em;
+    margin-bottom: map-get( $grid-gutter-widths, 'sm' );
 }
 
 
@@ -125,11 +120,7 @@ a.#{$pr}#{$c}media#{$c1}inner {
 
     .#{$pr}#{$c}media#{$c1}contents {
         padding-left: 0;
-        @include responsive-spacing(
-            'padding-right',
-            map-get( $component-spacing-min, 'md' ),
-            map-get( $component-spacing-max, 'md' )
-        );
+        padding-right: 3%;
     }
 
 }
