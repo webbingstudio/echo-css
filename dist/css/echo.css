@@ -3225,7 +3225,6 @@ a.echo-card-inner:hover .echo-card-title, a.echo-card-inner:focus .echo-card-tit
 }
 
 .echo-card-meta {
-  font-size: 0.875em;
   line-height: 1.25;
 }
 
@@ -3248,7 +3247,7 @@ a.echo-card-inner:hover .echo-card-title, a.echo-card-inner:focus .echo-card-tit
 }
 
 .echo-card-contents > *:not(:last-child) {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5em;
 }
 
 .echo-card-footer {
@@ -3279,18 +3278,18 @@ echo-card(size)
 --------------------
 */
 .echo-card {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
 }
 
 @media (min-width: 62.5rem) {
   .echo-card {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 }
 
 @media (min-width: 62.5rem) {
   .echo-card.echo-card-fixed {
-    font-size: 0.875rem;
+    font-size: 0.75rem;
   }
 }
 
