@@ -66,7 +66,23 @@
 
 </div>
 
-<div class="codeblock"><pre><code class="language-markup">
+<div class="codeblock"><pre><code class="language-markup">&lt;p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-md"&gt;p要素の場合&lt;/p&gt;
+
+&lt;p class="echo-body" style="background-color: rgba( 256, 240, 0, .2 );"&gt;吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。&lt;/p&gt;
+
+&lt;p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-md echo-margin-top-lg"&gt;section要素 &gt; 複数のp要素の場合&lt;/p&gt;
+
+&lt;section class="echo-body" style="background-color: rgba( 256, 240, 0, .2 );"&gt;
+
+    &lt;p&gt;吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。&lt;/p&gt;
+
+    &lt;p&gt;掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。&lt;/p&gt;
+
+    &lt;p&gt;第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。&lt;/p&gt;
+
+    &lt;p&gt;これが人間の飲む煙草というものである事はようやくこの頃知った。&lt;/p&gt;
+
+&lt;/section&gt;&lt;!-- /.echo-body --&gt;
 </code></pre></div>
 
 
@@ -75,20 +91,19 @@
 <p>文章の文字サイズを変更する。<br>
 (size)は、 <code>xs, sm, lg, xl</code> に対応しており、<strong>継承された文字サイズに対する相対</strong> (em) で大きくなる。</p>
 
-<p>デフォルトの、サイズの名称に対する値は以下の通り。<br>
-(breakpoint) が <code>lg</code> 以上で <strong>0.125em、もしくは0.25em</strong> 変化する。HTML要素が16pxだった場合は2px、もしくは4pxとなる。</p>
+<p>デフォルトの、サイズの名称に対する値は以下の通り。</p>
 
 <table class="echo-table echo-table-bordered echo-margin-bottom-md" style="width: auto;">
         <thead>
-                <tr><th rowspan="2">(size) / (breakpoint)</th><th colspan="2" class="echo-text-center">文字サイズ</th></tr>
+                <tr><th rowspan="2">(size) / (breakpoint)</th><th colspan="2" class="echo-text-center">文字サイズ</th><th rowspan="2">変化値<br><span class="echo-text-sm">(1em = 16px)</span></th></tr>
                 <tr><th class="echo-text-center">md 以下</th><th class="echo-text-center">lg 以上</th></tr>
         </thead>
         <tbody>
-                <tr><th>xs</th><td>0.625rem</td><td>0.75rem</td></tr>
-                <tr><th>sm</th><td>0.75rem</td><td>0.875rem</td></tr>
-                <tr><th>(default)</th><td>0.875rem</td><td>1rem</td></tr>
-                <tr><th>lg</th><td>1rem</td><td>1.25rem</td></tr>
-                <tr><th>xl</th><td>1.25rem</td><td>1.5rem</td></tr>
+                <tr><th>xs</th><td>0.625em</td><td>0.75em</td><td rowspan="3">0.125em<br>(2px)</td></tr>
+                <tr><th>sm</th><td>0.75em</td><td>0.875em</td></tr>
+                <tr><th>(default)</th><td>0.875em</td><td>1em</td></tr>
+                <tr><th>lg</th><td>1em</td><td>1.25em</td><td rowspan="2">0.25em<br>(4px)</td></tr>
+                <tr><th>xl</th><td>1.25em</td><td>1.5em</td></tr>
         </tbody>
 </table>
 
@@ -118,7 +133,25 @@
 
 </div>
 
-<div class="codeblock"><pre><code class="language-markup"></code></pre></div>
+<div class="codeblock"><pre><code class="language-markup">&lt;p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-md"&gt;.echo-body-xs&lt;/p&gt;
+
+&lt;p class="echo-body echo-body-xs" style="background-color: rgba( 256, 240, 0, .2 );"&gt;吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。&lt;/p&gt;
+
+&lt;p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-md echo-margin-top-lg"&gt;.echo-body-sm&lt;/p&gt;
+
+&lt;p class="echo-body echo-body-sm" style="background-color: rgba( 256, 240, 0, .2 );"&gt;吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。&lt;/p&gt;
+
+&lt;p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-md echo-margin-top-lg"&gt;(default)&lt;/p&gt;
+
+&lt;p class="echo-body" style="background-color: rgba( 256, 240, 0, .2 );"&gt;吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。&lt;/p&gt;
+
+&lt;p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-md echo-margin-top-lg"&gt;.echo-body-lg&lt;/p&gt;
+
+&lt;p class="echo-body echo-body-lg" style="background-color: rgba( 256, 240, 0, .2 );"&gt;吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。&lt;/p&gt;
+
+&lt;p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-md echo-margin-top-lg"&gt;.echo-body-xl&lt;/p&gt;
+
+&lt;p class="echo-body echo-body-xl" style="background-color: rgba( 256, 240, 0, .2 );"&gt;吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。&lt;/p&gt;</code></pre></div>
 
 
 <h2 id="body-02-fixed" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-body-fixed</h2>
@@ -152,6 +185,24 @@
 
 </div>
 
-<div class="codeblock"><pre><code class="language-markup"></code></pre></div>
+<div class="codeblock"><pre><code class="language-markup">&lt;p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-md"&gt;.echo-body-xs&lt;/p&gt;
+
+&lt;p class="echo-body echo-body-fixed echo-body-xs" style="background-color: rgba( 256, 240, 0, .2 );"&gt;吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。&lt;/p&gt;
+
+&lt;p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-md echo-margin-top-lg"&gt;.echo-body-sm&lt;/p&gt;
+
+&lt;p class="echo-body echo-body-fixed echo-body-sm" style="background-color: rgba( 256, 240, 0, .2 );"&gt;吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。&lt;/p&gt;
+
+&lt;p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-md echo-margin-top-lg"&gt;(default)&lt;/p&gt;
+
+&lt;p class="echo-body echo-body-fixed" style="background-color: rgba( 256, 240, 0, .2 );"&gt;吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。&lt;/p&gt;
+
+&lt;p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-md echo-margin-top-lg"&gt;.echo-body-lg&lt;/p&gt;
+
+&lt;p class="echo-body echo-body-fixed echo-body-lg" style="background-color: rgba( 256, 240, 0, .2 );"&gt;吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。&lt;/p&gt;
+
+&lt;p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-md echo-margin-top-lg"&gt;.echo-body-xl&lt;/p&gt;
+
+&lt;p class="echo-body echo-body-fixed echo-body-xl" style="background-color: rgba( 256, 240, 0, .2 );"&gt;吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。&lt;/p&gt;</code></pre></div>
 
 <?php include('../doc_include/footer.inc'); ?>
