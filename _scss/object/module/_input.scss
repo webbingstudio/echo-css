@@ -18,6 +18,10 @@
 
     @at-root {
 
+        textarea#{&} {
+            line-height: $line-height-sm;
+        }
+
         #{&}:not(textarea) {
             padding-top: 0;
             padding-bottom: 0;

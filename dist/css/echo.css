@@ -106,7 +106,6 @@ html {
 body {
   background-color: #fff;
   color: #333;
-  line-height: 1.75;
 }
 
 /*
@@ -212,10 +211,6 @@ input[type="date"],
 input[type="time"],
 input[type="number"] {
   line-height: 1;
-}
-
-textarea {
-  line-height: 1.5;
 }
 
 select {
@@ -1416,6 +1411,10 @@ echo-input
   appearance: none;
 }
 
+textarea.echo-input {
+  line-height: 1.5;
+}
+
 .echo-input:not(textarea) {
   padding-top: 0;
   padding-bottom: 0;
@@ -1780,7 +1779,6 @@ ul.echo-list li,
 .echo-list-item {
   position: relative;
   margin: 0;
-  line-height: 1.5;
 }
 
 ul.echo-list li ul,
@@ -2310,7 +2308,6 @@ echo-table
 
 .echo-table th,
 .echo-table td {
-  line-height: 1.5;
   border: 0 none;
   padding: 0 .5rem .5rem;
   vertical-align: top;
@@ -2328,7 +2325,6 @@ echo-table
   font-size: 1.125rem;
   text-align: center;
   margin: 0 0 .5rem;
-  line-height: 1.5;
 }
 
 /*
@@ -3216,7 +3212,6 @@ a.echo-card-inner:hover .echo-card-title, a.echo-card-inner:focus .echo-card-tit
 
 .echo-card-contents {
   flex-grow: 1;
-  line-height: 1.5;
 }
 
 .echo-card-contents > * {
@@ -3399,7 +3394,6 @@ echo-flip
 
 .echo-flip-body {
   font-size: .75rem;
-  line-height: 1.75;
 }
 
 @media (min-width: 48rem) {
@@ -3786,7 +3780,6 @@ echo-hero
 
 .echo-hero-body {
   font-size: .75rem;
-  line-height: 1.75;
   text-align: center;
 }
 
@@ -4276,7 +4269,6 @@ echo-serial
 
 .echo-serial .echo-nav-label {
   font-size: 0.75rem;
-  line-height: 1.25;
 }
 
 @media (min-width: 48rem) {
