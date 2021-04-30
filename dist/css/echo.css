@@ -3170,7 +3170,6 @@ echo-card
   margin: 0 auto;
   background-color: #fff;
   color: #333;
-  font-size: 1rem;
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
@@ -3272,6 +3271,27 @@ a.echo-card-inner:hover .echo-card-title, a.echo-card-inner:focus .echo-card-tit
 .echo-card-footer > [class*="echo-button-icon"] {
   padding-left: 1em;
   padding-right: 1em;
+}
+
+/*
+--------------------
+echo-card(size)
+--------------------
+*/
+.echo-card {
+  font-size: 0.875rem;
+}
+
+@media (min-width: 62.5rem) {
+  .echo-card {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-card.echo-card-fixed {
+    font-size: 0.875rem;
+  }
 }
 
 /*
@@ -3939,7 +3959,6 @@ echo-media
 */
 .echo-media {
   position: relative;
-  font-size: 1rem;
 }
 
 time[class*="echo-media"] {
@@ -4029,6 +4048,27 @@ echo-media-reverse
 .echo-media-reverse .echo-media-contents {
   padding-left: 0;
   padding-right: 3%;
+}
+
+/*
+--------------------
+echo-media(size)
+--------------------
+*/
+.echo-media {
+  font-size: 0.875rem;
+}
+
+@media (min-width: 62.5rem) {
+  .echo-media {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-media.echo-media-fixed {
+    font-size: 0.875rem;
+  }
 }
 
 /*

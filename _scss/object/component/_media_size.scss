@@ -1,0 +1,21 @@
+/*
+--------------------
+#{$pr}#{$c}media(size)
+--------------------
+*/
+.#{$pr}#{$c}media {
+    font-size: $font-size-sm;
+
+    @include media-breakpoint-up(lg) {
+        font-size: $font-size-md;
+    }
+
+    &.#{$pr}#{$c}media#{$c3}fixed {
+
+        @include media-breakpoint-up(lg) {
+            font-size: $font-size-sm;
+        }
+
+    }
+
+}
