@@ -1,55 +1,107 @@
 /*
 --------------------
-#{$pr}#{$m}title#{$c3}level#{$c3}(level)
+#{$pr}#{$m}title#{$c2}level#{$c3}(level)
 --------------------
 */
 
-.#{$pr}#{$m}title#{$c3}level#{$c3}1 {
-    font-size: ( 28/16 ) + em;
+.#{$pr}#{$m}title#{$c2}level#{$c3}6 {
+    font-size: map-get( $title-min-font-sizes, '6' );
 
     @include media-breakpoint-up(lg) {
-        font-size: ( 36/16 ) + em;
+        font-size: map-get( $title-max-font-sizes, '6' );
+    }
+
+    &.#{$pr}#{$m}title#{$c3}fixed {
+
+        @include media-breakpoint-up(lg) {
+            font-size: map-get( $title-min-font-sizes, '6' );
+        }
+
     }
 
 }
 
-.#{$pr}#{$m}title#{$c3}level#{$c3}2 {
-    font-size: ( 24/16 ) + em;
+.#{$pr}#{$m}title#{$c2}level#{$c3}5 {
+    font-size: map-get( $title-min-font-sizes, '5' );
 
     @include media-breakpoint-up(lg) {
-        font-size: ( 28/16 ) + em;
+        font-size: map-get( $title-max-font-sizes, '5' );
+    }
+
+    &.#{$pr}#{$m}title#{$c3}fixed {
+
+        @include media-breakpoint-up(lg) {
+            font-size: map-get( $title-min-font-sizes, '5' );
+        }
+
     }
 
 }
 
-.#{$pr}#{$m}title#{$c3}level#{$c3}3 {
-    font-size: ( 20/16 ) + em;
+.#{$pr}#{$m}title#{$c2}level#{$c3}4 {
+    font-size: map-get( $title-min-font-sizes, '4' );
 
     @include media-breakpoint-up(lg) {
-        font-size: ( 24/16 ) + em;
+        font-size: map-get( $title-max-font-sizes, '4' );
+    }
+
+    &.#{$pr}#{$m}title#{$c3}fixed {
+
+        @include media-breakpoint-up(lg) {
+            font-size: map-get( $title-min-font-sizes, '4' );
+        }
+
     }
 
 }
 
-.#{$pr}#{$m}title#{$c3}level#{$c3}4 {
-    font-size: ( 18/16 ) + em;
+.#{$pr}#{$m}title#{$c2}level#{$c3}3 {
+    font-size: map-get( $title-min-font-sizes, '3' );
 
     @include media-breakpoint-up(lg) {
-        font-size: ( 20/16 ) + em;
+        font-size: map-get( $title-max-font-sizes, '3' );
+    }
+
+    &.#{$pr}#{$m}title#{$c3}fixed {
+
+        @include media-breakpoint-up(lg) {
+            font-size: map-get( $title-min-font-sizes, '3' );
+        }
+
     }
 
 }
 
-.#{$pr}#{$m}title#{$c3}level#{$c3}5 {
-    font-size: ( 17/16 ) + em;
+.#{$pr}#{$m}title#{$c2}level#{$c3}2 {
+    font-size: map-get( $title-min-font-sizes, '2' );
 
     @include media-breakpoint-up(lg) {
-        font-size: ( 18/16 ) + em;
+        font-size: map-get( $title-max-font-sizes, '2' );
+    }
+
+    &.#{$pr}#{$m}title#{$c3}fixed {
+
+        @include media-breakpoint-up(lg) {
+            font-size: map-get( $title-min-font-sizes, '2' );
+        }
+
     }
 
 }
 
-.#{$pr}#{$m}title#{$c3}level#{$c3}6 {
-    font-size: ( 16/16 ) + em;
-}
+.#{$pr}#{$m}title#{$c2}level#{$c3}1 {
+    font-size: map-get( $title-min-font-sizes, '1' );
 
+    @include media-breakpoint-up(lg) {
+        font-size: map-get( $title-max-font-sizes, '1' );
+    }
+
+    &.#{$pr}#{$m}title#{$c3}fixed {
+
+        @include media-breakpoint-up(lg) {
+            font-size: map-get( $title-min-font-sizes, '1' );
+        }
+
+    }
+
+}
