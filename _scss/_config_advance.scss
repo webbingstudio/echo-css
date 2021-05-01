@@ -189,32 +189,16 @@ $grid-breakpoints: (
     xxl:     90rem
 ) !default;
 
+// 数値のみを単位「rem」で記述する
+// Describes only numeric value in units "rem"
 $responsive-breakpoints: (
-    min:    (16 * 22.5),
-    max:    (16 * 90)
+    min:    22.5,
+    max:    90
 ) !default;
 
 
 // Spacing
 // -----------------------------------------
-
-$spacing-min: (
-    xs:     4,
-    sm:     8,
-    md:     16,
-    lg:     32,
-    xl:     48,
-    xxl:    64
-) !default;
-
-$spacing-max: (
-    xs:     map-get( $spacing-min, 'xs' ) * 1.5,
-    sm:     map-get( $spacing-min, 'sm' ) * 1.5,
-    md:     map-get( $spacing-min, 'md' ) * 1.5,
-    lg:     map-get( $spacing-min, 'lg' ) * 1.5,
-    xl:     map-get( $spacing-min, 'xl' ) * 1.5,
-    xxl:    map-get( $spacing-min, 'xxl' ) * 1.5
-) !default;
 
 $component-spacing-min: (
     md:     8,
@@ -226,6 +210,26 @@ $component-spacing-max: (
     md:     16,
     lg:     24,
     xl:     40,
+) !default;
+
+// 数値のみを単位「rem」で記述する
+// Describes only numeric value in units "rem"
+$responsive-spacing-min: (
+    xs:     0.25,
+    sm:     0.5,
+    md:     1,
+    lg:     2,
+    xl:     3,
+    xxl:    4
+) !default;
+
+$responsive-spacing-max: (
+    xs:     map-get( $responsive-spacing-min, 'xs' ) * 1.5,
+    sm:     map-get( $responsive-spacing-min, 'sm' ) * 1.5,
+    md:     map-get( $responsive-spacing-min, 'md' ) * 1.5,
+    lg:     map-get( $responsive-spacing-min, 'lg' ) * 1.5,
+    xl:     map-get( $responsive-spacing-min, 'xl' ) * 1.5,
+    xxl:    map-get( $responsive-spacing-min, 'xxl' ) * 1.5
 ) !default;
 
 

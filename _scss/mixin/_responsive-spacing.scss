@@ -4,9 +4,9 @@
     $diff_breakpoint: map-get( $responsive-breakpoints, 'max' ) - map-get( $responsive-breakpoints, 'min' );
 
     $vw: ( 100 * $diff_space ) / $diff_breakpoint;
-    $increase: round( $min - ( map-get( $responsive-breakpoints, 'min' )  / 100 ) * $vw );
+    $increase: $min - ( map-get( $responsive-breakpoints, 'min' )  / 100 ) * $vw;
 
-    #{$property}: #{$max}px;
-    #{$property}: clamp( #{$min}px, calc( #{$vw}vw + #{$increase}px ), #{$max}px );
+    #{$property}: #{$max}rem;
+    #{$property}: clamp( #{$min}rem, calc( #{$vw}vw + #{$increase}rem ), #{$max}rem );
 
 }
