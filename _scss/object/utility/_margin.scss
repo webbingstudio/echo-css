@@ -9,66 +9,66 @@
     .#{$pr}#{$u}margin#{$c3}xs {
         @include responsive-spacing(
             'margin',
-            map-get( $spacing-min, 'xs' ),
-            map-get( $spacing-max, 'xs' )
+            map-get( $responsive-spacing-min, 'xs' ),
+            map-get( $responsive-spacing-max, 'xs' )
         );
     }
 
     .#{$pr}#{$u}margin#{$c2}top#{$c3}xs {
         @include responsive-spacing(
             'margin-top',
-            map-get( $spacing-min, 'xs' ),
-            map-get( $spacing-max, 'xs' )
+            map-get( $responsive-spacing-min, 'xs' ),
+            map-get( $responsive-spacing-max, 'xs' )
         );
     }
 
     .#{$pr}#{$u}margin#{$c2}left#{$c3}xs {
         @include responsive-spacing(
             'margin-left',
-            map-get( $spacing-min, 'xs' ),
-            map-get( $spacing-max, 'xs' )
+            map-get( $responsive-spacing-min, 'xs' ),
+            map-get( $responsive-spacing-max, 'xs' )
         );
     }
 
     .#{$pr}#{$u}margin#{$c2}bottom#{$c3}xs {
         @include responsive-spacing(
             'margin-bottom',
-            map-get( $spacing-min, 'xs' ),
-            map-get( $spacing-max, 'xs' )
+            map-get( $responsive-spacing-min, 'xs' ),
+            map-get( $responsive-spacing-max, 'xs' )
         );
     }
 
     .#{$pr}#{$u}margin#{$c2}right#{$c3}xs {
         @include responsive-spacing(
             'margin-right',
-            map-get( $spacing-min, 'xs' ),
-            map-get( $spacing-max, 'xs' )
+            map-get( $responsive-spacing-min, 'xs' ),
+            map-get( $responsive-spacing-max, 'xs' )
         );
     }
 
     .#{$pr}#{$u}margin#{$c2}x#{$c3}xs {
         @include responsive-spacing(
             'margin-left',
-            map-get( $spacing-min, 'xs' ),
-            map-get( $spacing-max, 'xs' )
+            map-get( $responsive-spacing-min, 'xs' ),
+            map-get( $responsive-spacing-max, 'xs' )
         );
         @include responsive-spacing(
             'margin-right',
-            map-get( $spacing-min, 'xs' ),
-            map-get( $spacing-max, 'xs' )
+            map-get( $responsive-spacing-min, 'xs' ),
+            map-get( $responsive-spacing-max, 'xs' )
         );
     }
 
     .#{$pr}#{$u}margin#{$c2}y#{$c3}xs {
         @include responsive-spacing(
             'margin-top',
-            map-get( $spacing-min, 'xs' ),
-            map-get( $spacing-max, 'xs' )
+            map-get( $responsive-spacing-min, 'xs' ),
+            map-get( $responsive-spacing-max, 'xs' )
         );
         @include responsive-spacing(
             'margin-bottom',
-            map-get( $spacing-min, 'xs' ),
-            map-get( $spacing-max, 'xs' )
+            map-get( $responsive-spacing-min, 'xs' ),
+            map-get( $responsive-spacing-max, 'xs' )
         );
     }
 
@@ -77,66 +77,66 @@
     .#{$pr}#{$u}margin#{$c3}sm {
         @include responsive-spacing(
             'margin',
-            map-get( $spacing-min, 'sm' ),
-            map-get( $spacing-max, 'sm' )
+            map-get( $responsive-spacing-min, 'sm' ),
+            map-get( $responsive-spacing-max, 'sm' )
         );
     }
 
     .#{$pr}#{$u}margin#{$c2}top#{$c3}sm {
         @include responsive-spacing(
             'margin-top',
-            map-get( $spacing-min, 'sm' ),
-            map-get( $spacing-max, 'sm' )
+            map-get( $responsive-spacing-min, 'sm' ),
+            map-get( $responsive-spacing-max, 'sm' )
         );
     }
 
     .#{$pr}#{$u}margin#{$c2}left#{$c3}sm {
         @include responsive-spacing(
             'margin-left',
-            map-get( $spacing-min, 'sm' ),
-            map-get( $spacing-max, 'sm' )
+            map-get( $responsive-spacing-min, 'sm' ),
+            map-get( $responsive-spacing-max, 'sm' )
         );
     }
 
     .#{$pr}#{$u}margin#{$c2}bottom#{$c3}sm {
         @include responsive-spacing(
             'margin-bottom',
-            map-get( $spacing-min, 'sm' ),
-            map-get( $spacing-max, 'sm' )
+            map-get( $responsive-spacing-min, 'sm' ),
+            map-get( $responsive-spacing-max, 'sm' )
         );
     }
 
     .#{$pr}#{$u}margin#{$c2}right#{$c3}sm {
         @include responsive-spacing(
             'margin-right',
-            map-get( $spacing-min, 'sm' ),
-            map-get( $spacing-max, 'sm' )
+            map-get( $responsive-spacing-min, 'sm' ),
+            map-get( $responsive-spacing-max, 'sm' )
         );
     }
 
     .#{$pr}#{$u}margin#{$c2}x#{$c3}sm {
         @include responsive-spacing(
             'margin-left',
-            map-get( $spacing-min, 'sm' ),
-            map-get( $spacing-max, 'sm' )
+            map-get( $responsive-spacing-min, 'sm' ),
+            map-get( $responsive-spacing-max, 'sm' )
         );
         @include responsive-spacing(
             'margin-right',
-            map-get( $spacing-min, 'sm' ),
-            map-get( $spacing-max, 'sm' )
+            map-get( $responsive-spacing-min, 'sm' ),
+            map-get( $responsive-spacing-max, 'sm' )
         );
     }
 
     .#{$pr}#{$u}margin#{$c2}y#{$c3}sm {
         @include responsive-spacing(
             'margin-top',
-            map-get( $spacing-min, 'sm' ),
-            map-get( $spacing-max, 'sm' )
+            map-get( $responsive-spacing-min, 'sm' ),
+            map-get( $responsive-spacing-max, 'sm' )
         );
         @include responsive-spacing(
             'margin-bottom',
-            map-get( $spacing-min, 'sm' ),
-            map-get( $spacing-max, 'sm' )
+            map-get( $responsive-spacing-min, 'sm' ),
+            map-get( $responsive-spacing-max, 'sm' )
         );
     }
 
@@ -145,66 +145,66 @@
     .#{$pr}#{$u}margin#{$c3}md {
         @include responsive-spacing(
             'margin',
-            map-get( $spacing-min, 'md' ),
-            map-get( $spacing-max, 'md' )
+            map-get( $responsive-spacing-min, 'md' ),
+            map-get( $responsive-spacing-max, 'md' )
         );
     }
 
     .#{$pr}#{$u}margin#{$c2}top#{$c3}md {
         @include responsive-spacing(
             'margin-top',
-            map-get( $spacing-min, 'md' ),
-            map-get( $spacing-max, 'md' )
+            map-get( $responsive-spacing-min, 'md' ),
+            map-get( $responsive-spacing-max, 'md' )
         );
     }
 
     .#{$pr}#{$u}margin#{$c2}left#{$c3}md {
         @include responsive-spacing(
             'margin-left',
-            map-get( $spacing-min, 'md' ),
-            map-get( $spacing-max, 'md' )
+            map-get( $responsive-spacing-min, 'md' ),
+            map-get( $responsive-spacing-max, 'md' )
         );
     }
 
     .#{$pr}#{$u}margin#{$c2}bottom#{$c3}md {
         @include responsive-spacing(
             'margin-bottom',
-            map-get( $spacing-min, 'md' ),
-            map-get( $spacing-max, 'md' )
+            map-get( $responsive-spacing-min, 'md' ),
+            map-get( $responsive-spacing-max, 'md' )
         );
     }
 
     .#{$pr}#{$u}margin#{$c2}right#{$c3}md {
         @include responsive-spacing(
             'margin-right',
-            map-get( $spacing-min, 'md' ),
-            map-get( $spacing-max, 'md' )
+            map-get( $responsive-spacing-min, 'md' ),
+            map-get( $responsive-spacing-max, 'md' )
         );
     }
 
     .#{$pr}#{$u}margin#{$c2}x#{$c3}md {
         @include responsive-spacing(
             'margin-left',
-            map-get( $spacing-min, 'md' ),
-            map-get( $spacing-max, 'md' )
+            map-get( $responsive-spacing-min, 'md' ),
+            map-get( $responsive-spacing-max, 'md' )
         );
         @include responsive-spacing(
             'margin-right',
-            map-get( $spacing-min, 'md' ),
-            map-get( $spacing-max, 'md' )
+            map-get( $responsive-spacing-min, 'md' ),
+            map-get( $responsive-spacing-max, 'md' )
         );
     }
 
     .#{$pr}#{$u}margin#{$c2}y#{$c3}md {
         @include responsive-spacing(
             'margin-top',
-            map-get( $spacing-min, 'md' ),
-            map-get( $spacing-max, 'md' )
+            map-get( $responsive-spacing-min, 'md' ),
+            map-get( $responsive-spacing-max, 'md' )
         );
         @include responsive-spacing(
             'margin-bottom',
-            map-get( $spacing-min, 'md' ),
-            map-get( $spacing-max, 'md' )
+            map-get( $responsive-spacing-min, 'md' ),
+            map-get( $responsive-spacing-max, 'md' )
         );
     }
 
@@ -213,66 +213,66 @@
     .#{$pr}#{$u}margin#{$c3}lg {
         @include responsive-spacing(
             'margin',
-            map-get( $spacing-min, 'lg' ),
-            map-get( $spacing-max, 'lg' )
+            map-get( $responsive-spacing-min, 'lg' ),
+            map-get( $responsive-spacing-max, 'lg' )
         );
     }
 
     .#{$pr}#{$u}margin#{$c2}top#{$c3}lg {
         @include responsive-spacing(
             'margin-top',
-            map-get( $spacing-min, 'lg' ),
-            map-get( $spacing-max, 'lg' )
+            map-get( $responsive-spacing-min, 'lg' ),
+            map-get( $responsive-spacing-max, 'lg' )
         );
     }
 
     .#{$pr}#{$u}margin#{$c2}left#{$c3}lg {
         @include responsive-spacing(
             'margin-left',
-            map-get( $spacing-min, 'lg' ),
-            map-get( $spacing-max, 'lg' )
+            map-get( $responsive-spacing-min, 'lg' ),
+            map-get( $responsive-spacing-max, 'lg' )
         );
     }
 
     .#{$pr}#{$u}margin#{$c2}bottom#{$c3}lg {
         @include responsive-spacing(
             'margin-bottom',
-            map-get( $spacing-min, 'lg' ),
-            map-get( $spacing-max, 'lg' )
+            map-get( $responsive-spacing-min, 'lg' ),
+            map-get( $responsive-spacing-max, 'lg' )
         );
     }
 
     .#{$pr}#{$u}margin#{$c2}right#{$c3}lg {
         @include responsive-spacing(
             'margin-right',
-            map-get( $spacing-min, 'lg' ),
-            map-get( $spacing-max, 'lg' )
+            map-get( $responsive-spacing-min, 'lg' ),
+            map-get( $responsive-spacing-max, 'lg' )
         );
     }
 
     .#{$pr}#{$u}margin#{$c2}x#{$c3}lg {
         @include responsive-spacing(
             'margin-left',
-            map-get( $spacing-min, 'lg' ),
-            map-get( $spacing-max, 'lg' )
+            map-get( $responsive-spacing-min, 'lg' ),
+            map-get( $responsive-spacing-max, 'lg' )
         );
         @include responsive-spacing(
             'margin-right',
-            map-get( $spacing-min, 'lg' ),
-            map-get( $spacing-max, 'lg' )
+            map-get( $responsive-spacing-min, 'lg' ),
+            map-get( $responsive-spacing-max, 'lg' )
         );
     }
 
     .#{$pr}#{$u}margin#{$c2}y#{$c3}lg {
         @include responsive-spacing(
             'margin-top',
-            map-get( $spacing-min, 'lg' ),
-            map-get( $spacing-max, 'lg' )
+            map-get( $responsive-spacing-min, 'lg' ),
+            map-get( $responsive-spacing-max, 'lg' )
         );
         @include responsive-spacing(
             'margin-bottom',
-            map-get( $spacing-min, 'lg' ),
-            map-get( $spacing-max, 'lg' )
+            map-get( $responsive-spacing-min, 'lg' ),
+            map-get( $responsive-spacing-max, 'lg' )
         );
     }
 
@@ -281,66 +281,66 @@
     .#{$pr}#{$u}margin#{$c3}xl {
         @include responsive-spacing(
             'margin',
-            map-get( $spacing-min, 'xl' ),
-            map-get( $spacing-max, 'xl' )
+            map-get( $responsive-spacing-min, 'xl' ),
+            map-get( $responsive-spacing-max, 'xl' )
         );
     }
 
     .#{$pr}#{$u}margin#{$c2}top#{$c3}xl {
         @include responsive-spacing(
             'margin-top',
-            map-get( $spacing-min, 'xl' ),
-            map-get( $spacing-max, 'xl' )
+            map-get( $responsive-spacing-min, 'xl' ),
+            map-get( $responsive-spacing-max, 'xl' )
         );
     }
 
     .#{$pr}#{$u}margin#{$c2}left#{$c3}xl {
         @include responsive-spacing(
             'margin-left',
-            map-get( $spacing-min, 'xl' ),
-            map-get( $spacing-max, 'xl' )
+            map-get( $responsive-spacing-min, 'xl' ),
+            map-get( $responsive-spacing-max, 'xl' )
         );
     }
 
     .#{$pr}#{$u}margin#{$c2}bottom#{$c3}xl {
         @include responsive-spacing(
             'margin-bottom',
-            map-get( $spacing-min, 'xl' ),
-            map-get( $spacing-max, 'xl' )
+            map-get( $responsive-spacing-min, 'xl' ),
+            map-get( $responsive-spacing-max, 'xl' )
         );
     }
 
     .#{$pr}#{$u}margin#{$c2}right#{$c3}xl {
         @include responsive-spacing(
             'margin-right',
-            map-get( $spacing-min, 'xl' ),
-            map-get( $spacing-max, 'xl' )
+            map-get( $responsive-spacing-min, 'xl' ),
+            map-get( $responsive-spacing-max, 'xl' )
         );
     }
 
     .#{$pr}#{$u}margin#{$c2}x#{$c3}xl {
         @include responsive-spacing(
             'margin-left',
-            map-get( $spacing-min, 'xl' ),
-            map-get( $spacing-max, 'xl' )
+            map-get( $responsive-spacing-min, 'xl' ),
+            map-get( $responsive-spacing-max, 'xl' )
         );
         @include responsive-spacing(
             'margin-right',
-            map-get( $spacing-min, 'xl' ),
-            map-get( $spacing-max, 'xl' )
+            map-get( $responsive-spacing-min, 'xl' ),
+            map-get( $responsive-spacing-max, 'xl' )
         );
     }
 
     .#{$pr}#{$u}margin#{$c2}y#{$c3}xl {
         @include responsive-spacing(
             'margin-top',
-            map-get( $spacing-min, 'xl' ),
-            map-get( $spacing-max, 'xl' )
+            map-get( $responsive-spacing-min, 'xl' ),
+            map-get( $responsive-spacing-max, 'xl' )
         );
         @include responsive-spacing(
             'margin-bottom',
-            map-get( $spacing-min, 'xl' ),
-            map-get( $spacing-max, 'xl' )
+            map-get( $responsive-spacing-min, 'xl' ),
+            map-get( $responsive-spacing-max, 'xl' )
         );
     }
 
@@ -349,66 +349,66 @@
     .#{$pr}#{$u}margin#{$c3}xxl {
         @include responsive-spacing(
             'margin',
-            map-get( $spacing-min, 'xxl' ),
-            map-get( $spacing-max, 'xxl' )
+            map-get( $responsive-spacing-min, 'xxl' ),
+            map-get( $responsive-spacing-max, 'xxl' )
         );
     }
 
     .#{$pr}#{$u}margin#{$c2}top#{$c3}xxl {
         @include responsive-spacing(
             'margin-top',
-            map-get( $spacing-min, 'xxl' ),
-            map-get( $spacing-max, 'xxl' )
+            map-get( $responsive-spacing-min, 'xxl' ),
+            map-get( $responsive-spacing-max, 'xxl' )
         );
     }
 
     .#{$pr}#{$u}margin#{$c2}left#{$c3}xxl {
         @include responsive-spacing(
             'margin-left',
-            map-get( $spacing-min, 'xxl' ),
-            map-get( $spacing-max, 'xxl' )
+            map-get( $responsive-spacing-min, 'xxl' ),
+            map-get( $responsive-spacing-max, 'xxl' )
         );
     }
 
     .#{$pr}#{$u}margin#{$c2}bottom#{$c3}xxl {
         @include responsive-spacing(
             'margin-bottom',
-            map-get( $spacing-min, 'xxl' ),
-            map-get( $spacing-max, 'xxl' )
+            map-get( $responsive-spacing-min, 'xxl' ),
+            map-get( $responsive-spacing-max, 'xxl' )
         );
     }
 
     .#{$pr}#{$u}margin#{$c2}right#{$c3}xxl {
         @include responsive-spacing(
             'margin-right',
-            map-get( $spacing-min, 'xxl' ),
-            map-get( $spacing-max, 'xxl' )
+            map-get( $responsive-spacing-min, 'xxl' ),
+            map-get( $responsive-spacing-max, 'xxl' )
         );
     }
 
     .#{$pr}#{$u}margin#{$c2}x#{$c3}xxl {
         @include responsive-spacing(
             'margin-left',
-            map-get( $spacing-min, 'xxl' ),
-            map-get( $spacing-max, 'xxl' )
+            map-get( $responsive-spacing-min, 'xxl' ),
+            map-get( $responsive-spacing-max, 'xxl' )
         );
         @include responsive-spacing(
             'margin-right',
-            map-get( $spacing-min, 'xxl' ),
-            map-get( $spacing-max, 'xxl' )
+            map-get( $responsive-spacing-min, 'xxl' ),
+            map-get( $responsive-spacing-max, 'xxl' )
         );
     }
 
     .#{$pr}#{$u}margin#{$c2}y#{$c3}xxl {
         @include responsive-spacing(
             'margin-top',
-            map-get( $spacing-min, 'xxl' ),
-            map-get( $spacing-max, 'xxl' )
+            map-get( $responsive-spacing-min, 'xxl' ),
+            map-get( $responsive-spacing-max, 'xxl' )
         );
         @include responsive-spacing(
             'margin-bottom',
-            map-get( $spacing-min, 'xxl' ),
-            map-get( $spacing-max, 'xxl' )
+            map-get( $responsive-spacing-min, 'xxl' ),
+            map-get( $responsive-spacing-max, 'xxl' )
         );
     }
 

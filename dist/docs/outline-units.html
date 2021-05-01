@@ -77,13 +77,22 @@
 
 <h3 class="echo-doc-post-title-02">clamp関数</h3>
 
-<p><a href="https://developer.mozilla.org/ja/docs/Web/CSS/clamp()" target="_blank">clamp関数</a>とは、モダンブラウザで使用できる、最小値・最大値を定義できるCSS関数です。変動が極端に大きく、相対値だけでは異常な値になってしまう可能性がある場合に、まれに使用しています。<br>
+<p><a href="https://developer.mozilla.org/ja/docs/Web/CSS/clamp()" target="_blank">clamp関数</a>とは、モダンブラウザで使用できる、最小値・最大値を定義できるCSS関数です。変動が極端に大きく、相対値だけでは不適切な値になってしまう可能性がある場合に、まれに使用しています。<br>
 Internet Explorerは非対応となるため、代替値を指定しています。</p>
 
 <ul>
     <li>画像と文章の間の余白（ <code>.echo-media</code> ）</li>
+    <li>余白を変更するユーティリティクラス（ <code>.echo-margin-***, .echo-padding-***</code> ）</li>
 </ul>
 
+<h3 class="echo-doc-post-title-02">補足と謝辞</h3>
+
+<p>echo.cssでは、デザイナーとの共有が困難になるため、複雑な計算をできるだけ行わないようにしています。<br>
+ですが、 <code>.echo-margin-***, .echo-padding-***</code> のみ、変化が滑らかになるよう、１次関数を使用しています。</p>
+
+<p>下記コンテンツを参考にさせていただきました。詳細を知りたい方は、ぜひ購読ください。</p>
+
+<p><a href="https://www.codegrid.net/articles/2021-responsive-spacing-1/" target="_blank">レスポンシブな空白のつくり方 | clamp()とvwを利用した伸び縮みする空白 | CodeGrid</a> (Japanese, Paid contents)</p>
 
 
 <div class="echo-buttons echo-padding-top-xl">
