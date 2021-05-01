@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>単位の扱い | 概要 | Documentation | echo-css</title>
+    <meta property="og:title" content="単位の扱い | 概要 | Documentation | echo-css">
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div id="echo-document">
+
+    <?php include('../doc_include/header.inc'); ?>
+
+    <main class="echo-p-main" role="main">
+        <div class="echo-doc-container">
+
+            <div class="echo-doc-pagehead">
+                <h1 class="echo-doc-pagehead-title">単位の扱い</h1>
+            </div><!-- /.echo-doc-pagehead -->
+
+            <article class="echo-doc-post">
+                <div class="echo-doc-post-contents styleguide-contents">
+
+<h2 class="echo-doc-post-title-01">相対値</h2>
+
+<p>echo.cssは、前項「<a href="./outline-responsive.html">レスポンシブ優先設計</a>」を維持するため、CSSのサイズに関する単位を文字サイズ、もしくはオブジェクトサイズによる相対値で統一しています。</p>
+
+<h3 class="echo-doc-post-title-02">単位なし</h3>
+
+<p><code>line-height</code> プロパティのみに使用しています。</p>
+
+<h3 class="echo-doc-post-title-02">rem</h3>
+
+<p>容易に大きさを変更してはならない要素に対して、pxの代替として使用しています。 <code>1rem = 16px</code> で算出しています。</p>
+
+<ul>
+    <li>ブレークポイント</li>
+    <li>幅可変オブジェクト（ <code>.echo-container</code> 等）の最大幅</li>
+    <li>デザインを緻密に検討することが多いオブジェクト（ <code>.echo-button, .echo-card, .echo-hero</code> 等）</li>
+    <li>ボーダーの幅</li>
+    <li>グリッド余白</li>
+    <li>表のセルの左右余白</li>
+    <li>各コンポーネントの基準となる文字サイズ</li>
+    <li>余白を変更するユーティリティクラス</li>
+</ul>
+
+
+<h3 class="echo-doc-post-title-02">em</h3>
+
+<p>親要素から継承したフォントサイズに追随しなければ不都合がある場合に使用しています。具体的には以下のいずれかです。</p>
+
+<ol>
+    <li>余白が大きすぎる、小さすぎる等、デザインに不整合が出る場合</li>
+    <li>打ち消しのためのCSSが大量に必要となり、コードが冗長になる場合</li>
+</ol>
+
+<ul>
+    <li>ラベル、見出しの文字サイズや余白</li>
+    <li>表のセルの上下余白</li>
+    <li>アイコン、シェブロン（&gt;）の大きさ</li>
+    <li>各コンポーネント内の要素の文字サイズ</li>
+    <li>文字サイズを変更するユーティリティクラス</li>
+</ul>
+
+<h3 class="echo-doc-post-title-02">パーセント</h3>
+
+<p>親要素のサイズが大幅に変動する場合に使用しています。</p>
+
+<ul>
+    <li>グリッドの幅</li>
+    <li>巨大なコンポーネント内のコンテンツ（ <code>.echo-hero</code> 等）</li>
+</ul>
+
+<h3 class="echo-doc-post-title-02">clamp関数</h3>
+
+<p><a href="https://developer.mozilla.org/ja/docs/Web/CSS/clamp()" target="_blank">clamp関数</a>とは、モダンブラウザで使用できる、最小値・最大値を定義できるCSS関数です。変動が極端に大きく、相対値だけでは異常な値になってしまう可能性がある場合に、まれに使用しています。<br>
+Internet Explorerは非対応となるため、代替値を指定しています。</p>
+
+<ul>
+    <li>画像と文章の間の余白（ <code>.echo-media</code> ）</li>
+</ul>
+
+
+
+<div class="echo-buttons echo-padding-top-xl">
+    <div class="echo-buttons-item">
+        <a href="./outline-rule.html" class="echo-button echo-button-lg echo-button-style-b echo-button-icon echo-button-arrow"><span class="echo-doc-button-guide">Next </span>コーディングルール</a>
+    </div>
+</div>
+
+
+<?php include('../doc_include/footer.inc'); ?>

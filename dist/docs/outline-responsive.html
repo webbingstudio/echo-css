@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>レスポンシブ優先設計 | 概要 | Documentation | echo-css</title>
+    <meta property="og:title" content="レスポンシブ優先設計 | 概要 | Documentation | echo-css">
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div id="echo-document">
+
+    <?php include('../doc_include/header.inc'); ?>
+
+    <main class="echo-p-main" role="main">
+        <div class="echo-doc-container">
+
+            <div class="echo-doc-pagehead">
+                <h1 class="echo-doc-pagehead-title">レスポンシブ優先設計</h1>
+            </div><!-- /.echo-doc-pagehead -->
+
+            <article class="echo-doc-post">
+                <div class="echo-doc-post-contents styleguide-contents">
+
+<h2 class="echo-doc-post-title-01">レスポンシブ優先設計とは</h2>
+
+<p>echo.cssは、ほぼすべてのオブジェクト（ <code>module, component, layout, project</code> ）に、<strong>現在の画面の幅に対して最も適切と考えられるスタイル</strong>を定義しています。<br>
+これを便宜的に「レスポンシブ優先設計 (Responsive first)」と呼びます。</p>
+
+<h2 class="echo-doc-post-title-01">一般的なCSSフレームワークとの違い</h2>
+
+<p>著名なCSSフレームワークの大半は、画面サイズでスタイルが変化するオブジェクトは、グリッドや余白等のレイアウト関連要素のみとなっています。</p>
+
+<p>しかし、他のオブジェクトが固定のスタイルのままでは「デスクトップではボタンが小さすぎる」「スマートフォンでは見出しが大きすぎる」という問題が生じます。<br>
+このため、echo.cssでは、レイアウト以外のオブジェクトに対しても、「画面サイズによりスタイルが変化する挙動」を標準（優先）としています。</p>
+
+<p>下記は <code>.echo-button, .echo-input, .echo-card</code> のサンプルです。画面サイズを変更すると、文字サイズ、ボタンの高さ、カードの余白が変化します。</p>
+
+<div class="example">
+
+<a href="#" class="echo-button echo-button-lg echo-button-style-a">これはボタンです</a>
+
+<hr class="echo-margin-y-lg">
+
+<input type="text" class="echo-input echo-input-lg" size="40" value="これは1行のテキスト入力欄です。" />
+
+<hr class="echo-margin-y-lg">
+
+<div class="echo-card">
+    <div class="echo-card-inner">
+        <div class="echo-card-object">
+            <figure class="echo-thumbnail echo-thumbnail-ogimage">
+                <picture>
+                <source
+                    media="(max-width:640px)"
+                    srcset="../images/_dummy/image_01_s.jpg 640w"
+                    sizes="100vw">
+                <source
+                    srcset="../images/_dummy/image_01.jpg 1280w"
+                    sizes="(max-width:1280px) 100vw, 1280px">
+                <img src="../images/_dummy/image_01.jpg" alt="">
+                </picture>
+            </figure><!-- /.echo-thumbnail -->
+        </div><!-- /.echo-card-object -->
+        <div class="echo-card-contents">
+            <p class="echo-card-body">これはカード型のコンポーネントです。画像と文章がセットになり、ドロップシャドウ効果が与えられます。</p>
+        </div><!-- /.echo-card-contents -->
+    </div><!-- /.echo-card-inner -->
+</div><!-- /.echo-card -->
+
+</div>
+
+<h2 class="echo-doc-post-title-01">レスポンシブにしてはならない状況への対応</h2>
+
+<p>ウェブサイトのデザインによっては、<strong>画面サイズによってスタイルが変わってはならない場合</strong>があります。予想される例は、以下のとおりです。</p>
+
+<ul>
+    <li>グリッド内に配置されるカードなど、オブジェクトの幅がほとんど変化しない場合</li>
+    <li>デスクトップで2カラムとなるウェブサイトで、サイドバー内のオブジェクトの幅がほとんど変化しない場合</li>
+    <li>ビットマップの背景画像を使用したリッチデザインのインターフェースを作成する場合</li>
+</ul>
+
+<p>echo.cssでは、このような状況に対応するため、可能な限り「画面サイズによりスタイルを変化させない挙動」を <code>.echo-***-fixed</code> という共通名称のサブクラスとして定義しています。</p>
+
+<p>下記は変化させない挙動のサンプルです。画面サイズを変更しても外観は変化しません。</p>
+
+<div class="example">
+
+<a href="#" class="echo-button echo-button-fixed echo-button-lg echo-button-style-a">これはボタンです</a>
+
+<hr class="echo-margin-y-lg">
+
+<input type="text" class="echo-input echo-input-fixed echo-input-lg" size="40" value="これは1行のテキスト入力欄です。" />
+
+<hr class="echo-margin-y-lg">
+
+<div class="echo-card echo-card-fixed">
+    <div class="echo-card-inner">
+        <div class="echo-card-object">
+            <figure class="echo-thumbnail echo-thumbnail-ogimage">
+                <picture>
+                <source
+                    media="(max-width:640px)"
+                    srcset="../images/_dummy/image_01_s.jpg 640w"
+                    sizes="100vw">
+                <source
+                    srcset="../images/_dummy/image_01.jpg 1280w"
+                    sizes="(max-width:1280px) 100vw, 1280px">
+                <img src="../images/_dummy/image_01.jpg" alt="">
+                </picture>
+            </figure><!-- /.echo-thumbnail -->
+        </div><!-- /.echo-card-object -->
+        <div class="echo-card-contents">
+            <p class="echo-card-body">これはカード型のコンポーネントです。画像と文章がセットになり、ドロップシャドウ効果が与えられます。</p>
+        </div><!-- /.echo-card-contents -->
+    </div><!-- /.echo-card-inner -->
+</div><!-- /.echo-card -->
+
+</div>
+
+
+<h2 class="echo-doc-post-title-01">混乱を防ぐために</h2>
+
+<p>レスポンシブデザインを多用すると、デザインカンプを作成するための具体的なサイズがわかりにくくなり、混乱を招きます。echo.cssでは、できる限りわかりやすくなるよう、以下の配慮をしています。</p>
+
+<ul>
+    <li>スタイルガイドに変化値・変化率を明記する</li>
+    <li><code>1rem = 16px</code> かつ (breakpoint) が <code>xs = 360px, xxl = 1440px</code> のときに、可能な限りピクセルを保つようにする</li>
+    <li>簡単な計算で理解できる変化に留める</li>
+    <li><code>em</code> と <code>rem</code> を使い分ける（<a href="./outline-units.html">次項「単位の扱い」</a>）</li>
+</ul>
+
+
+<div class="echo-buttons echo-padding-top-xl">
+    <div class="echo-buttons-item">
+        <a href="./outline-units.html" class="echo-button echo-button-lg echo-button-style-b echo-button-icon echo-button-arrow"><span class="echo-doc-button-guide">Next </span>単位の扱い</a>
+    </div>
+</div>
+
+
+<?php include('../doc_include/footer.inc'); ?>

@@ -14,6 +14,8 @@
         <li class="echo-nav-item"><span class="echo-doc-sitemap-header echo-nav-label">概要</span>
             <ul class="echo-doc-sitemap-list-flat echo-nav-list echo-nav-children">
                 <li class="echo-nav-item"><a href="./outline-layers.html" class="echo-nav-label">レイヤー構造</a></li>
+                <li class="echo-nav-item"><a href="./outline-responsive.html" class="echo-nav-label">レスポンシブ優先設計</a></li>
+                <li class="echo-nav-item"><a href="./outline-units.html" class="echo-nav-label">単位の扱い</a></li>
                 <li class="echo-nav-item"><a href="./outline-rule.html" class="echo-nav-label">コーディングルール</a></li>
             </ul>
         </li>
