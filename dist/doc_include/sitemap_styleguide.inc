@@ -5,7 +5,6 @@
             <ul class="echo-nav-list echo-nav-children">
                 <li class="echo-nav-item"><span class="echo-nav-label">module</span>
                     <ul class="echo-doc-sitemap-list-flat echo-nav-list echo-nav-children">
-                        <li class="echo-nav-item"><a href="./module-body.html" class="echo-nav-label">body</a></li>
                         <li class="echo-nav-item"><a href="./module-button.html" class="echo-nav-label">button</a></li>
                         <li class="echo-nav-item"><a href="./module-checkbox.html" class="echo-nav-label">checkbox</a></li>
                         <li class="echo-nav-item"><a href="./module-embed.html" class="echo-nav-label">embed</a></li>
