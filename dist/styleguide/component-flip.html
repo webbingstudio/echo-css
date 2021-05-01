@@ -50,7 +50,7 @@
 
 <h3 class="echo-doc-post-title-02">補足：フォントサイズ</h3>  
 
-<p><code>.echo-flip-header, .echo-flip-body, .echo-flip-link</code> のフォントサイズは、画面サイズによって変動する。このため、内包される <code>.echo-title-level-(level), .echo-text-(size)</code> も追随して大きくなる。<br>
+<p><code>.echo-flip-header, .echo-flip-body, .echo-flip-link</code> のフォントサイズは、画面サイズによって変化する。このため、内包する <code>.echo-title-level-(level), .echo-text-(size)</code> も追随する。<br>
 (breakpoint) ごとの拡大率は以下の通り。</p>
 
 <h3 class="echo-doc-post-title-02">Note: font size</h3>  
@@ -58,15 +58,16 @@
 <p>The font size of <code> .echo-flip-header, .echo-flip-body, .echo-flip-link </code> changes according to the screen size. Therefore, the included <code> .echo-title-level- (level) and .echo-text- (size) </code> also increase accordingly. <br>
 The expansion rate for each (breakpoint) is as follows.</p>
 
+
 <table class="echo-table echo-table-bordered echo-margin-bottom-lg" style="width: auto;">
     <thead>
-        <tr><th rowspan="2">(breakpoint)</th><th colspan="2" class="echo-text-center">拡大率</th></tr>
+        <tr><th rowspan="2">(breakpoint)</th><th colspan="2" class="echo-text-center">font-size (1rem = 16pxのとき)</th></tr>
         <tr><th>.echo-flip-header</th><th>.echo-flip-body<br>.echo-flip-link</th></tr>
     </thead>
     <tbody>
-        <tr><th>sm以下</th><td>125% (1.25rem)</td><td>75% (0.75rem)</td></tr>
-        <tr><th>md以上</th><td>137.5% (1.375rem)</td><td>87.5% (0.875rem)</td></tr>
-        <tr><th>xl以上</th><td>150% (1.5rem)</td><td>100% (1rem)</td></tr>
+        <tr><th>sm以下</th><td>1.125rem (18px)</td><td>0.75rem (12px)</td></tr>
+        <tr><th>md以上</th><td>1.25rem (20px)</td><td>0.875rem (14px)</td></tr>
+        <tr><th>xl以上</th><td>1.5rem (24px)</td><td>1.125rem (18px)</td></tr>
     </tbody>
 </table>
 

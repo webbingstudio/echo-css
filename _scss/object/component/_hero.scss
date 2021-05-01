@@ -36,10 +36,10 @@
 }
 
 .#{$pr}#{$c}hero#{$c1}contents#{$c1}inner {
-    padding-left: map-get($grid-gutter-widths, md);
-    padding-right: map-get($grid-gutter-widths, md);
     margin-left: auto;
     margin-right: auto;
+    padding-left: map-get($grid-gutter-widths, md);
+    padding-right: map-get($grid-gutter-widths, md);
 
     @include media-breakpoint-up(lg) {
         max-width: map-get($container-max-widths-md, md);
