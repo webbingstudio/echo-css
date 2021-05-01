@@ -3704,8 +3704,8 @@ echo-hero
 }
 
 .echo-hero-contents-inner {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 1rem;
+  padding-right: 1rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -3721,51 +3721,33 @@ echo-hero
 }
 
 .echo-hero-contents-inner > *:not(:last-child) {
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 62.5rem) {
+  .echo-hero-contents-inner > .echo-hero-header + * {
+    margin-top: 1.5rem;
+  }
 }
 
 .echo-hero-contents-inner > .echo-hero-link {
-  margin-top: 2em;
+  margin-top: 1.5rem;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 62.5rem) {
   .echo-hero-contents-inner > .echo-hero-link {
-    margin-top: 3em;
+    margin-top: 3rem;
   }
 }
 
 .echo-hero-header {
-  font-size: 1.25rem;
   text-align: center;
-}
-
-@media (min-width: 48rem) {
-  .echo-hero-header {
-    font-size: 1.5rem;
-  }
-}
-
-@media (min-width: 80rem) {
-  .echo-hero-header {
-    font-size: 2rem;
-  }
+  line-height: 1;
 }
 
 .echo-hero-body {
-  font-size: .75rem;
   text-align: center;
-}
-
-@media (min-width: 48rem) {
-  .echo-hero-body {
-    font-size: .875rem;
-  }
-}
-
-@media (min-width: 80rem) {
-  .echo-hero-body {
-    font-size: 1rem;
-  }
+  line-height: 2;
 }
 
 .echo-hero-body > p:last-child {
@@ -3773,27 +3755,8 @@ echo-hero
 }
 
 .echo-hero-link {
-  font-size: .625rem;
   text-align: center;
   line-height: 1;
-}
-
-@media (min-width: 26.75rem) {
-  .echo-hero-link {
-    font-size: .75rem;
-  }
-}
-
-@media (min-width: 62.5rem) {
-  .echo-hero-link {
-    font-size: .875rem;
-  }
-}
-
-@media (min-width: 80rem) {
-  .echo-hero-link {
-    font-size: 1rem;
-  }
 }
 
 /*
@@ -3892,6 +3855,59 @@ echo-hero-inverse
 .echo-hero-inverse {
   background-color: #333;
   color: #fff;
+}
+
+/*
+--------------------
+echo-hero(size)
+--------------------
+*/
+.echo-hero-header {
+  font-size: 1.125rem;
+}
+
+@media (min-width: 48rem) {
+  .echo-hero-header {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .echo-hero-header {
+    font-size: 1.5rem;
+  }
+}
+
+.echo-hero-body {
+  font-size: .75rem;
+}
+
+@media (min-width: 48rem) {
+  .echo-hero-body {
+    font-size: .875rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .echo-hero-body {
+    font-size: 1.125rem;
+  }
+}
+
+.echo-hero-link {
+  font-size: .75rem;
+}
+
+@media (min-width: 48rem) {
+  .echo-hero-link {
+    font-size: .875rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .echo-hero-link {
+    font-size: 1.125rem;
+  }
 }
 
 /*

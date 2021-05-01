@@ -36,8 +36,8 @@
 }
 
 .#{$pr}#{$c}hero#{$c1}contents#{$c1}inner {
-    padding-left: ( $spacer * 1.5 );
-    padding-right: ( $spacer * 1.5 );
+    padding-left: map-get($grid-gutter-widths, md);
+    padding-right: map-get($grid-gutter-widths, md);
     margin-left: auto;
     margin-right: auto;
 
@@ -52,43 +52,34 @@
 }
 
 .#{$pr}#{$c}hero#{$c1}contents#{$c1}inner > *:not(:last-child) {
-    margin-bottom: 1em;
+    margin-bottom: map-get( $grid-gutter-widths, 'md' );
+}
+
+.#{$pr}#{$c}hero#{$c1}contents#{$c1}inner > .#{$pr}#{$c}hero#{$c1}header + * {
+
+    @include media-breakpoint-up(lg) {
+        margin-top: map-get( $grid-gutter-widths, 'lg' );
+    }
+
 }
 
 .#{$pr}#{$c}hero#{$c1}contents#{$c1}inner > .#{$pr}#{$c}hero#{$c1}link {
-    margin-top: 2em;
+    margin-top: map-get( $grid-gutter-widths, 'lg' );
 
-    @include media-breakpoint-up(md) {
-        margin-top: 3em;
+    @include media-breakpoint-up(lg) {
+        margin-top: map-get( $grid-gutter-widths, 'xl' );
     }
 
 }
 
 .#{$pr}#{$c}hero#{$c1}header {
-    font-size: 1.25rem;
     text-align: center;
-
-    @include media-breakpoint-up(md) {
-        font-size: 1.5rem;
-    }
-
-    @include media-breakpoint-up(xl) {
-        font-size: 2rem;
-    }
-
+    line-height: 1;
 }
 
 .#{$pr}#{$c}hero#{$c1}body {
-    font-size: .75rem;
     text-align: center;
-
-    @include media-breakpoint-up(md) {
-        font-size: .875rem;
-    }
-
-    @include media-breakpoint-up(xl) {
-        font-size: 1rem;
-    }
+    line-height: $line-height-lg;
 
     > p {
 
@@ -101,22 +92,8 @@
 }
 
 .#{$pr}#{$c}hero#{$c1}link {
-    font-size: .625rem;
     text-align: center;
     line-height: 1;
-
-    @include media-breakpoint-up(sm) {
-        font-size: .75rem;
-    }
-
-    @include media-breakpoint-up(lg) {
-        font-size: .875rem;
-    }
-
-    @include media-breakpoint-up(xl) {
-        font-size: 1rem;
-    }
-
 }
 
 

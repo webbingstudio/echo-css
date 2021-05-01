@@ -1,0 +1,44 @@
+/*
+--------------------
+#{$pr}#{$c}hero(size)
+--------------------
+*/
+
+.#{$pr}#{$c}hero#{$c1}header {
+    font-size: 1.125rem;
+
+    @include media-breakpoint-up(md) {
+        font-size: 1.25rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+        font-size: 1.5rem;
+    }
+
+}
+
+.#{$pr}#{$c}hero#{$c1}body {
+    font-size: .75rem;
+
+    @include media-breakpoint-up(md) {
+        font-size: .875rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+        font-size: 1.125rem;
+    }
+
+}
+
+.#{$pr}#{$c}hero#{$c1}link {
+    font-size: .75rem;
+
+    @include media-breakpoint-up(md) {
+        font-size: .875rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+        font-size: 1.125rem;
+    }
+
+}
