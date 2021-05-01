@@ -27,6 +27,8 @@
                     
                     <li class="echo-list-item"><a href="#media" class="js-scrollto">echo-media</a></li>
 
+                    <li class="echo-list-item"><a href="#media-01-fixed" class="js-scrollto">echo-media-fixed</a></li>
+
                     <li class="echo-list-item"><a href="#media-02-middle" class="js-scrollto">echo-media-middle</a></li>
 
                     <li class="echo-list-item"><a href="#media-03-reverse" class="js-scrollto">echo-media-reverse</a></li>
@@ -39,18 +41,33 @@
                 <div class="echo-doc-post-contents styleguide-contents"><h2 id="media" class="echo-doc-post-title-01">echo-media</h2>
 
 <p>サムネイル等のメディアオブジェクトと、テキストオブジェクトが並列しているコンポーネントを表示する。<br>
-<code>.echo-title, .echo-thumbnail</code> を含む前提となっている。<br>
+<code>.echo-button, .echo-title, .echo-thumbnail</code> を含むことができる。<br>
 
-<p>フォントサイズは、(breakpoint) が <code>sm</code> 以下で <code>87.5rem = 14px</code> 、<code>lg</code> 以上で <code>1rem = 16px</code> となる。<br>
+<p>フォントサイズは、(breakpoint) が <code>sm</code> 以下で <code>0.75rem = 12px</code> 、<code>lg</code> 以上で <code>0.875rem = 14px</code> となる。<br>
 このため、内包される <code>.echo-title</code> のテキストも追随して大きくなる。</p>
 
-<p><code>.echo-media-object, .echo-media-contents</code> 間の内部余白は <code>3%</code> である。このため、画面サイズによって変化する。<br>
-<code>.echo-media-object</code> の最大幅は <code>33.33333333%</code> となっている。比率を変更したい場合は任意調整すること。</p>
-
-<p>フォントサイズは、(breakpoint) が <code>sm</code> 以下で <code>0.75rem = 12px</code> 、<code>lg</code> 以上で <code>0.875rem = 14px</code> となる。</p>
+<p><code>.echo-media-object</code> の最大幅は <code>33.33333333%</code> となっている。比率を変更したい場合は任意調整すること。</p>
 
 <p>リンクを含む場合は <code>.echo-media-title</code> に下線が引かれる。リンクが不要な場合であっても <code>.echo-media-inner</code> が必須であることに注意する。</p>
 
+<h3 class="echo-doc-post-title-02">補足：中間の余白</h3>
+
+<p><code>.echo-media-object, .echo-media-contents</code> 間の余白は<strong>画面サイズに対する相対</strong>で変動する。デフォルトの大きさは以下の通り。<br>
+Internet Explorerは変動に対応していないため、常に3%となる。</p>
+
+<h3 class="echo-doc-post-title-02">Note: Margins between</h3>
+
+<p>The gutter between <code>.echo-media-object</code> and <code>.echo-media-contents</code> varies relative to <strong>screen size</strong>. The default size is as follows. <br>
+Internet Explorer, which is not responsive, is always 3%.</p>
+
+<table class="echo-table echo-table-bordered echo-margin-bottom-lg" style="width: auto;">
+    <thead>
+        <tr><th>min</th><th>bases</th><th>max</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>0.5rem (8px)</td><td>3.5% (component width)</td><td>3rem (48px)</td></tr>
+    </tbody>
+</table>
 
 <div class="example">
 
@@ -129,6 +146,8 @@
     </a><!-- /.echo-media-inner -->
 </div><!-- /.echo-media -->
 
+</div>
+
 <div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-media"&gt;
     &lt;div class="echo-media-inner"&gt;
         &lt;div class="echo-media-object"&gt;
@@ -205,29 +224,52 @@
 &lt;/div&gt;&lt;!-- /.echo-media --&gt;</code></pre></div>
 
 
+<h2 id="media-01-fixed" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-media-fixed</h2>
 
-<hr class="echo-margin-y-lg">
+<p>文字が (breakpoint) に関わらず常に同じサイズとなる( <code>0.75rem = 12px</code> )。<br>
+幅の変動が少ないグリッド内のコンポーネント等に使用する。</p>
+
+<div class="example">
 
 <div style="max-width: 300px;">
 
-<div class="echo-media echo-text-xs echo-media-fixed">
+<div class="echo-media echo-media-fixed">
     <div class="echo-media-inner">
         <div class="echo-media-object">
-            <figure class="echo-thumbnail echo-thumbnail-circle">
+            <figure class="echo-thumbnail echo-thumbnail-square">
                 <img alt="" src="../images/_dummy/image_04_s.jpg">
             </figure><!-- /.echo-thumbnail -->
         </div><!-- /.echo-media-object -->
         <div class="echo-media-contents echo-text-sm">
             <p class="echo-media-title echo-title echo-title-level-6 echo-title-style-a">文字サイズを固定している例</p>
-            <p class="echo-media-body">サイドバーなどの狭い幅で表示する場合は、サムネイルを小さく、かつ、文字サイズを変更しないことが期待されます。 .echo-text-xs, echo-media-fixed を併用しています。</p>
+            <p class="echo-media-body">サイドバーなどの狭い幅で表示する場合は、サムネイルを小さく、かつ、文字サイズを変更しないことが期待されます。</p>
         </div><!-- /.echo-media-contents -->
     </div><!-- /.echo-media-inner -->
 </div><!-- /.echo-media -->
 
 </div>
 
+</div>
 
 
+<div class="codeblock"><pre><code class="language-markup">&lt;div style="max-width: 300px;"&gt;
+
+&lt;div class="echo-media echo-media-fixed"&gt;
+    &lt;div class="echo-media-inner"&gt;
+        &lt;div class="echo-media-object"&gt;
+            &lt;figure class="echo-thumbnail echo-thumbnail-square"&gt;
+                &lt;img alt="" src="../images/_dummy/image_04_s.jpg"&gt;
+            &lt;/figure&gt;&lt;!-- /.echo-thumbnail --&gt;
+        &lt;/div&gt;&lt;!-- /.echo-media-object --&gt;
+        &lt;div class="echo-media-contents echo-text-sm"&gt;
+            &lt;p class="echo-media-title echo-title echo-title-level-6 echo-title-style-a"&gt;文字サイズを固定している例&lt;/p&gt;
+            &lt;p class="echo-media-body"&gt;サイドバーなどの狭い幅で表示する場合は、サムネイルを小さく、かつ、文字サイズを変更しないことが期待されます。&lt;/p&gt;
+        &lt;/div&gt;&lt;!-- /.echo-media-contents --&gt;
+    &lt;/div&gt;&lt;!-- /.echo-media-inner --&gt;
+&lt;/div&gt;&lt;!-- /.echo-media --&gt;
+
+&lt;/div&gt;
+</code></pre></div>
 
 
 <h2 id="media-02-middle" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-media-middle</h2>

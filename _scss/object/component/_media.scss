@@ -79,6 +79,7 @@ a.#{$pr}#{$c}media#{$c1}inner {
     flex-shrink: 1;
     flex-basis: 0%;
     padding-left: 3%;
+    padding-left: clamp( map-get( $grid-gutter-widths, 'sm' ), 3.5%, map-get( $grid-gutter-widths, 'xl' ) );
 }
 
 .#{$pr}#{$c}media#{$c1}contents > * {
@@ -120,6 +121,7 @@ a.#{$pr}#{$c}media#{$c1}inner {
     .#{$pr}#{$c}media#{$c1}contents {
         padding-left: 0;
         padding-right: 3%;
+        padding-right: clamp( map-get( $grid-gutter-widths, 'sm' ), 3.5%, map-get( $grid-gutter-widths, 'xl' ) );
     }
 
 }
