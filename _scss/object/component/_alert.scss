@@ -8,14 +8,16 @@
     display: flex;
     align-items: stretch;
     margin: 0;
-    padding: .5em;
+    padding: map-get( $grid-gutter-widths, 'sm' );
     background-color: $default-fade;
     border: $border-alert-width solid $border-color;
-    font-size: $font-size-sm;
+    font-size: $font-size-xs;
     line-height: $line-height-sm;
 
     @include media-breakpoint-up(lg) {
-        font-size: $font-size-md;
+        padding-left: map-get( $grid-gutter-widths, 'md' );
+        padding-right: map-get( $grid-gutter-widths, 'md' );
+        font-size: $font-size-sm;
     }
 
     > p {
