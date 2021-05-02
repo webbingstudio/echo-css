@@ -53,4 +53,4 @@ Windows X and MacOS 10.15+
 - Firefox: latest
 
 Support status of Internet Explorer 11  
-https://echocss.webbingstudio.com/docs/introduction-ie11.html
+https://echocss.webbingstudio.com/docs/etc-ie11.html
