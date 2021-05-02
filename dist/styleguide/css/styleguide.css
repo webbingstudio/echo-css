@@ -845,6 +845,30 @@ echo-doc-post
     }
 }
 
+/*
+--------------------
+echo-doc-fonttable
+--------------------
+*/
+
+.echo-doc-fonttable {
+    width: auto;
+    margin-bottom: 2em;
+}
+
+.echo-doc-fonttable th,
+.echo-doc-fonttable td {
+    vertical-align: middle;
+}
+
+.echo-doc-fonttable th {
+    font-weight: normal;
+}
+
+.echo-doc-fonttable-size {
+    font-weight: bold;
+    text-align: center;
+}
 
 
 /*
@@ -977,9 +1001,13 @@ body.view-home .echo-doc-header-nav .echo-nav-item:first-child {
     margin-top: 2em;
 }
 
+.styleguide-contents > p {
+    line-height: 1.75;
+}
+
 .styleguide-contents > ul:not([class]) li,
 .styleguide-contents > ol:not([class]) li {
-    margin: 0 0 0 1.25rem;
+    margin-left: 1.25rem;
 }
 .styleguide-contents > ul:not([class]) li ul,
 .styleguide-contents > ul:not([class]) li ol,
@@ -992,21 +1020,6 @@ body.view-home .echo-doc-header-nav .echo-nav-item:first-child {
 .styleguide-contents > ol:not([class]) li ul li,
 .styleguide-contents > ol:not([class]) li ol li {
     margin-left: 0.625rem;
-}
-.styleguide-contents > ul:not([class]) li {
-    list-style-type: disc;
-}
-.styleguide-contents > ul:not([class]) li ul li {
-    list-style-type: circle;
-}
-.styleguide-contents > ul:not([class]) li ol li {
-    list-style-type: decimal;
-}
-.styleguide-contents > ol:not([class]) li {
-    list-style-type: decimal;
-}
-.styleguide-contents > ol:not([class]) li ul li {
-    list-style-type: circle;
 }
 .styleguide-contents > img:not([class]) {
     max-width: 100%;

@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>レスポンシブ優先設計 | 概要 | Documentation | echo-css</title>
-    <meta property="og:title" content="レスポンシブ優先設計 | 概要 | Documentation | echo-css">
+    <title>レスポンシブデザイン | 概要 | Documentation | echo-css</title>
+    <meta property="og:title" content="レスポンシブデザイン | 概要 | Documentation | echo-css">
 
     <?php include('../doc_include/html_head.inc'); ?>
 
@@ -19,25 +19,27 @@
         <div class="echo-doc-container">
 
             <div class="echo-doc-pagehead">
-                <h1 class="echo-doc-pagehead-title">レスポンシブ優先設計</h1>
+                <h1 class="echo-doc-pagehead-title">レスポンシブデザイン</h1>
             </div><!-- /.echo-doc-pagehead -->
 
             <article class="echo-doc-post">
                 <div class="echo-doc-post-contents styleguide-contents">
 
-<h2 class="echo-doc-post-title-01">レスポンシブ優先設計とは</h2>
+<h2 class="echo-doc-post-title-01">レスポンシブ優先設計</h2>
 
-<p>echo.cssは、ほぼすべてのオブジェクト（ <code>module, component, layout, project</code> ）に、<strong>現在の画面の幅に対して最も適切と考えられるスタイル</strong>を定義しています。</p>
+<p>echo.cssは、ほぼすべてのオブジェクトに、現在の画面の幅に対して最も適切と考えられるスタイルを定義しています。</p>
 
-<p>グリッドやコンテナ等のレイアウト関連要素は、画面サイズでスタイルが変化することが一般的です。<br>
+<p>グリッドやコンテナ等のオブジェクトは、画面サイズでスタイルが変化することが一般的です。<br>
 しかし、他のオブジェクトが固定のスタイルのままでは「デスクトップではボタンが小さすぎる」「スマートフォンでは余白が大きすぎる」という問題が生じます。</p>
 
-<p>このため、echo.cssでは「画面サイズによりスタイルが変化する挙動」を標準（優先）としています。<br>
-これを便宜的に「レスポンシブ優先設計 (Responsive first)」と呼びます。</p>
+<p>このため、echo.cssでは、<strong>画面サイズによりスタイルが変化する挙動を標準（優先）</strong>としています。</p>
 
-<p>下記は <code>.echo-button, .echo-input, .echo-card</code> のサンプルです。画面サイズを変更すると、文字サイズ、ボタンの高さ、カードの余白が変化します。</p>
+<p>下記は <code>.echo-title, .echo-button, .echo-input, .echo-card</code> のサンプルです。画面サイズを変更すると、文字サイズ、ボタンの高さ、カードの余白が変化します。</p>
 
 <div class="example">
+<h1 class="echo-title echo-title-level-2">これはレベル2の見出しです</h1>
+
+<hr class="echo-margin-y-lg">
 
 <a href="#" class="echo-button echo-button-lg echo-button-style-a">これはボタンです</a>
 
@@ -86,6 +88,10 @@
 <p>下記は変化させない挙動のサンプルです。画面サイズを変更しても外観は変化しません。</p>
 
 <div class="example">
+
+<h1 class="echo-title echo-title-fixed echo-title-level-2">これはレベル2の見出しです</h1>
+
+<hr class="echo-margin-y-lg">
 
 <a href="#" class="echo-button echo-button-fixed echo-button-lg echo-button-style-a">これはボタンです</a>
 
