@@ -266,6 +266,7 @@
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar;
+    padding-bottom: 1px;  
 
     > .#{$pr}#{$m}table {
         min-width: map-get($grid-breakpoints, md);
