@@ -48,28 +48,7 @@
 
 <p><code>.echo-hero-title.echo-title</code> に付与されている <code>.echo-font-first</code> は<strong>必須ではない</strong>。詳細は <a href="./utility-font.html">utility > font</a> を参照。</p>
 
-<h3 class="echo-doc-post-title-02">補足：フォントサイズ</h3>  
-
-<p><code>.echo-hero-header, .echo-hero-body, .echo-hero-link</code> のフォントサイズは、画面サイズによって変化する。このため、内包する <code>.echo-title-level-(level), .echo-text-(size)</code> も追随する。<br>
-(breakpoint) ごとの拡大率は以下の通り。</p>
-
-<h3 class="echo-doc-post-title-02">Note: font size</h3>  
-
-<p>The font size of <code> .echo-hero-header, .echo-hero-body, .echo-hero-link </code> changes according to the screen size. Therefore, the included <code> .echo-title-level- (level) and .echo-text- (size) </code> also increase accordingly. <br>
-The expansion rate for each (breakpoint) is as follows.</p>
-
-
-<table class="echo-table echo-table-bordered echo-margin-bottom-lg" style="width: auto;">
-    <thead>
-        <tr><th rowspan="2">(breakpoint)</th><th colspan="2" class="echo-text-center">font-size (1rem = 16pxのとき)</th></tr>
-        <tr><th>.echo-hero-header</th><th>.echo-hero-body<br>.echo-hero-link</th></tr>
-    </thead>
-    <tbody>
-        <tr><th>sm以下</th><td>1.125rem (18px)</td><td>0.75rem (12px)</td></tr>
-        <tr><th>md以上</th><td>1.25rem (20px)</td><td>0.875rem (14px)</td></tr>
-        <tr><th>xl以上</th><td>1.5rem (24px)</td><td>1.125rem (18px)</td></tr>
-    </tbody>
-</table>
+<?php include('../doc_include/fonttable_display.html'); ?>
 
 
 <div style="margin-left: -0.625rem; margin-right: -0.625rem;">
