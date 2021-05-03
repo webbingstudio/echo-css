@@ -131,15 +131,45 @@
 <p>レスポンシブデザインを多用すると、デザインカンプを作成するための具体的なサイズがわかりにくくなり、混乱を招きます。echo.cssでは、できる限りわかりやすくなるよう、以下の配慮をしています。</p>
 
 <ul>
-    <li>スタイルガイドに変化値・変化率を明記する</li>
+    <li>スタイルガイドに変化値・変化率を明記する（次項「レスポンシブグループ」、後述「<a href="./outline-fontsize.html">フォントサイズ</a>」）</li>
     <li><code>1rem = 16px</code> かつ (breakpoint) が <code>xs = 360px, xxl = 1440px</code> のときに、可能な限りピクセルを保つようにする</li>
-    <li><code>em</code> と <code>rem</code> を使い分ける（<a href="./outline-units.html">次項「単位の扱い」</a>）</li>
+    <li><code>em</code> と <code>rem</code> を使い分ける（<a href="./outline-units.html">後述「単位の扱い」</a>）</li>
 </ul>
+
+
+<h2 class="echo-doc-post-title-01">高度：レスポンシブグループ</h2>
+
+<p>画面サイズに対するオブジェクトの変化（特に文字サイズ）のパターンは、可能な限りグループで整理し、挙動を統一しています。</p>
+
+<h3 class="echo-doc-post-title-02">display</h3>
+
+<p>ヘッダ・本文・フッタが別々のパターンで変化し、かつ、ヘッダは他と比較して非常に大きく変化します。 <code>.echo-hero, .echo-flip</code> が属しています。</p>
+
+<h3 class="echo-doc-post-title-02">body</h3>
+
+<p>文字サイズが本文を前提に変化します。 <code>.echo-body, .echo-box, .echo-form</code> が属しています。</p>
+
+<h3 class="echo-doc-post-title-02">article</h3>
+
+<p>文字サイズが狭い範囲での表示、もしくは補足的な情報を前提に変化します。 <code>.echo-card, .echo-headline, .echo-media</code> が属しています。</p>
+
+<h3 class="echo-doc-post-title-02">title</h3>
+
+<p>文字サイズが、見出しレベルが小さい数字になるほど大きく変化します。 <code>.echo-title</code> が属しています。</p>
+
+<h3 class="echo-doc-post-title-02">form</h3>
+
+<p>文字サイズだけでなく、最低高さも変化します。 <code>.echo-nav, .echo-input, .echo-select</code> が属しています。formグループとbuttonグループはまったく同じ挙動です（フォームに並べたときの体裁を揃えるためです）。<br>
+なお <code>.echo-toggle</code> はこのグループには属していませんが、formグループと同じ高さと幅を持ちます。</p>
+
+<h3 class="echo-doc-post-title-02">button</h3>
+
+<p>formと同じ挙動で、さらに最大幅も変化します。 <code>.echo-button</code> が属しています。また、大きなボタン <code>xl, xxl</code> があります。</p>
 
 
 <div class="echo-buttons echo-padding-top-xl">
     <div class="echo-buttons-item">
-        <a href="./outline-units.html" class="echo-button echo-button-lg echo-button-style-b echo-button-icon echo-button-arrow"><span class="echo-doc-button-guide">Next </span>単位の扱い</a>
+        <a href="./outline-fontsize.html" class="echo-button echo-button-lg echo-button-style-b echo-button-icon echo-button-arrow"><span class="echo-doc-button-guide">Next </span>フォントサイズ</a>
     </div>
 </div>
 

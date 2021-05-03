@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>文字サイズ | 概要 | Documentation | echo-css</title>
-    <meta property="og:title" content="文字サイズ | 概要 | Documentation | echo-css">
+    <title>フォントサイズ | 概要 | Documentation | echo-css</title>
+    <meta property="og:title" content="フォントサイズ | 概要 | Documentation | echo-css">
 
     <?php include('../doc_include/html_head.inc'); ?>
 
@@ -19,7 +19,7 @@
         <div class="echo-doc-container">
 
             <div class="echo-doc-pagehead">
-                <h1 class="echo-doc-pagehead-title">文字サイズ</h1>
+                <h1 class="echo-doc-pagehead-title">フォントサイズ</h1>
             </div><!-- /.echo-doc-pagehead -->
 
             <article class="echo-doc-post">
@@ -28,7 +28,7 @@
 <h2 class="echo-doc-post-title-01">代替名</h2>
 
 <p>echo.cssでは、文字の大きさを変更するクラス名には、プロパティの値ではなく代替名を使用しています。<br>
-<code>xs, sm, md, lg, xl, xxl</code> の6段階があります。</p>
+<code>xxs, xs, sm, md, lg, xl, xxl, 3l, 4l, 5l</code> の10段階があります。 <code>xxs</code> と <code>3l</code> 以上は、慎重に使用する必要があります。</p>
 
 <p>スタイルガイドでは <strong>(fontsize)</strong> と記載しています。</p>
 
@@ -40,16 +40,18 @@
 
 <?php include('../doc_include/fonttable_display.html'); ?>
 
-<p>例えば <code>.echo-hero</code> の本文は、(breakpoint) が <code>xl</code> 以上のときは (fontsize) が <code>lg</code> となります。</p>
+<p>例えば <code>.echo-hero</code> の本文 <code>.echo-hero-body</code> は、(breakpoint) が <code>xl</code> 以上のときは (fontsize) が <code>lg</code> となります。</p>
+
+<p>各表には <span class="echo-label echo-label-style-b echo-label-info echo-margin-x-xs echo-text-sm">group: display</span> というラベルがあります。これは、この表が「display」のレスポンシブグループ（先述「<a href="./outline-responsive.html">レスポンシブデザイン</a>」）であることを示しています。</p>
 
 <h3 class="echo-doc-post-title-02">あなたがデザイナーではない場合</h3>
 
-<p>「ヘッダはそれ以外と比較して、かなり（2段階）文字が大きくなる」程度に捉えてください。echo.cssが常に適切な文字サイズを提供します。</p>
+<p>「ヘッダはそれ以外と比較して、1emの文字サイズが、<b>かなり</b>大きくなる」程度に捉えてください。echo.cssが常に適切な文字サイズを提供します。</p>
 
 <h3 class="echo-doc-post-title-02">あなたがデザイナーである場合</h3>
 
 <p>後述「代替名と実際の値」の表から、実際の値を確認してください。<br>
-「ヘッダの文字サイズは、スマートフォンで18px、タブレットで20px、高解像度で24pxになる」と換算してください。</p>
+「ヘッダの1emの文字サイズは、スマートフォンで18px、タブレットで20px、デスクトップで24pxになる」と換算してください。</p>
 
 
 <h2 class="echo-doc-post-title-01">相対サイズのオブジェクト</h2>
@@ -82,6 +84,7 @@ px列は、16pxの文字に対して適用したときの参考値です。</p>
     </tbody>
 </table>
 
+
 <h2 class="echo-doc-post-title-01">高度：文字サイズを変化させるクラス</h2>
 
 <p>echo.cssでは、精緻なタイポグラフィを実現するために、文字サイズを変更させるユーティリティクラスが2種類あります。<br>
@@ -94,34 +97,6 @@ px列は、16pxの文字に対して適用したときの参考値です。</p>
 <h3 class="echo-doc-post-title-02"><a href="/styleguide/utility-text.html#text-04-sizetosize">echo-text-(fontsize1)to(fontsize2)</a></h3>
 
 <p>文字サイズが(fontsize1)のときに(fontsize2)に変化するようにします。 <code>.echo-hero-header</code> など、文字サイズが定義されているオブジェクトの文字サイズを正確に変更したいときに使用します。</p>
-
-<h2 class="echo-doc-post-title-01">高度：文字サイズ変化のグループ</h2>
-
-<p>文字サイズの変化のパターンは、可能な限りグループで整理しています。</p>
-
-<p>各表には <span class="echo-label echo-label-style-b echo-label-info echo-margin-x-xs echo-text-sm">group: display</span> というラベルがあります。これは、この表が「display」のパターンであることを示しています。</p>
-
-<p>※グループ名はシステム上のものです。覚える必要はまったくありません。</p>
-
-<h3 class="echo-doc-post-title-02">display</h3>
-
-<p>ヘッダ・本文・フッタが別々のパターンで変化し、かつ、ヘッダは他と比較して非常に大きく変化します。 <code>.echo-hero, .echo-flip</code> が属しています。</p>
-
-<h3 class="echo-doc-post-title-02">body</h3>
-
-<p>文字サイズが本文を前提に変化します。 <code>.echo-body, .echo-box, .echo-form</code> が属しています。</p>
-
-<h3 class="echo-doc-post-title-02">article</h3>
-
-<p>文字サイズが狭い範囲での表示、もしくは補足的な情報を前提に変化します。 <code>.echo-card, .echo-hedline, .echo-media</code> が属しています。</p>
-
-<h3 class="echo-doc-post-title-02">title</h3>
-
-<p>文字サイズが、見出しレベルが小さい数字になるほど大きく変化します。 <code>.echo-title</code> が属しています。</p>
-
-<h3 class="echo-doc-post-title-02">form</h3>
-
-<p>文字サイズだけでなく、最低高さも変化します。 <code>.echo-button, .echo-nav, .echo-input, .echo-select</code> が属しています。</p>
 
 
 <div class="echo-buttons echo-padding-top-xl">
