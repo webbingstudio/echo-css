@@ -276,7 +276,7 @@ echo-button
   background-color: #eee;
   border: 0.125rem solid #eee;
   color: #333;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   line-height: 1.25;
   border-radius: 0.25rem;
   vertical-align: middle;
@@ -675,7 +675,7 @@ echo-button-(size)
   .echo-button {
     max-width: 25rem;
     min-height: 2.75rem;
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 }
 
@@ -683,7 +683,7 @@ echo-button-(size)
   .echo-button.echo-button-fixed {
     max-width: 20rem;
     min-height: 2.5rem;
-    font-size: 0.75rem;
+    font-size: 0.875rem;
   }
 }
 
@@ -713,7 +713,7 @@ echo-button-(size)
   .echo-button-lg {
     max-width: 25rem;
     min-height: 2.75rem;
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 }
 
@@ -721,7 +721,7 @@ echo-button-(size)
   .echo-button-lg {
     max-width: 31.25rem;
     min-height: 3.25rem;
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 
@@ -729,7 +729,7 @@ echo-button-(size)
   .echo-button-lg.echo-button-fixed {
     max-width: 25rem;
     min-height: 2.75rem;
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 }
 
@@ -813,7 +813,7 @@ echo-button-circle
   .echo-button-circle:not(.echo-button-fixed) {
     width: 3.25rem;
     height: 3.25rem;
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 }
 
@@ -821,7 +821,7 @@ echo-button-circle
   .echo-button-circle.echo-button-fixed {
     max-width: 20rem;
     min-height: 2.5rem;
-    font-size: 0.75rem;
+    font-size: 0.875rem;
   }
 }
 
@@ -855,7 +855,7 @@ echo-button-circle
   .echo-button-circle.echo-button-lg:not(.echo-button-fixed) {
     width: 4rem;
     height: 4rem;
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 
@@ -863,7 +863,7 @@ echo-button-circle
   .echo-button-circle.echo-button-lg.echo-button-fixed {
     max-width: 25rem;
     min-height: 2.75rem;
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 }
 
@@ -918,7 +918,7 @@ echo-button-circle
   .echo-button-square:not(.echo-button-fixed) {
     width: 3.25rem;
     height: 3.25rem;
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 }
 
@@ -926,7 +926,7 @@ echo-button-circle
   .echo-button-square.echo-button-fixed {
     max-width: 20rem;
     min-height: 2.5rem;
-    font-size: 0.75rem;
+    font-size: 0.875rem;
   }
 }
 
@@ -960,7 +960,7 @@ echo-button-circle
   .echo-button-square.echo-button-lg:not(.echo-button-fixed) {
     width: 4rem;
     height: 4rem;
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 
@@ -968,7 +968,7 @@ echo-button-circle
   .echo-button-square.echo-button-lg.echo-button-fixed {
     max-width: 25rem;
     min-height: 2.75rem;
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 }
 
@@ -1034,7 +1034,7 @@ echo-button-square
   .echo-button-square:not(.echo-button-fixed) {
     width: 3.25rem;
     height: 3.25rem;
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 }
 
@@ -1042,7 +1042,7 @@ echo-button-square
   .echo-button-square.echo-button-fixed {
     max-width: 20rem;
     min-height: 2.5rem;
-    font-size: 0.75rem;
+    font-size: 0.875rem;
   }
 }
 
@@ -1076,7 +1076,7 @@ echo-button-square
   .echo-button-square.echo-button-lg:not(.echo-button-fixed) {
     width: 4rem;
     height: 4rem;
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 
@@ -1084,7 +1084,7 @@ echo-button-square
   .echo-button-square.echo-button-lg.echo-button-fixed {
     max-width: 25rem;
     min-height: 2.75rem;
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 }
 
@@ -1308,7 +1308,6 @@ echo-input
   background: transparent none;
   border: 0.0625rem solid #333;
   color: #333;
-  font-size: 0.875rem;
   border-radius: 0.25rem;
   vertical-align: middle;
   -webkit-appearance: none;
@@ -1322,7 +1321,6 @@ textarea.echo-input {
 .echo-input:not(textarea) {
   padding-top: 0;
   padding-bottom: 0;
-  min-height: 2.5rem;
 }
 
 .echo-input:focus {
@@ -1352,143 +1350,60 @@ textarea.echo-input {
 echo-input-(size)
 --------------------
 */
+.echo-input {
+  font-size: 0.875rem;
+  min-height: 2.5rem;
+}
+
 @media (min-width: 62.5rem) {
   .echo-input {
     font-size: 1rem;
+    min-height: 2.75rem;
   }
 }
 
 @media (min-width: 62.5rem) {
   .echo-input.echo-input-fixed {
     font-size: 0.875rem;
-  }
-}
-
-@media (min-width: 62.5rem) {
-  .echo-input:not(textarea) {
-    min-height: 2.75rem;
-  }
-}
-
-@media (min-width: 62.5rem) {
-  .echo-input:not(textarea).echo-input-fixed {
     min-height: 2.5rem;
   }
 }
 
 .echo-input-sm {
-  font-size: 0.875rem;
-}
-
-.echo-input-sm:not(textarea) {
+  font-size: 0.75rem;
   min-height: 2.25rem;
 }
 
 @media (min-width: 62.5rem) {
-  .echo-input-sm:not(textarea) {
+  .echo-input-sm {
+    font-size: 0.875rem;
     min-height: 2.5rem;
   }
 }
 
 @media (min-width: 62.5rem) {
-  .echo-input-sm:not(textarea).echo-input-fixed {
+  .echo-input-sm.echo-input-fixed {
+    font-size: 0.75rem;
     min-height: 2.25rem;
   }
 }
 
 .echo-input-lg {
   font-size: 1rem;
+  min-height: 2.75rem;
 }
 
 @media (min-width: 62.5rem) {
   .echo-input-lg {
     font-size: 1.125rem;
+    min-height: 3.25rem;
   }
 }
 
 @media (min-width: 62.5rem) {
   .echo-input-lg.echo-input-fixed {
-    font-size: 1.125rem;
-  }
-}
-
-.echo-input-lg:not(textarea) {
-  min-height: 2.75rem;
-}
-
-@media (min-width: 62.5rem) {
-  .echo-input-lg:not(textarea) {
-    min-height: 3.25rem;
-  }
-}
-
-@media (min-width: 62.5rem) {
-  .echo-input-lg:not(textarea).echo-input-fixed {
+    font-size: 1rem;
     min-height: 2.75rem;
-  }
-}
-
-.echo-input-xl {
-  font-size: 1.125rem;
-}
-
-@media (min-width: 62.5rem) {
-  .echo-input-xl {
-    font-size: 1.25rem;
-  }
-}
-
-@media (min-width: 62.5rem) {
-  .echo-input-xl.echo-input-fixed {
-    font-size: 1.125rem;
-  }
-}
-
-.echo-input-xl:not(textarea) {
-  min-height: 3rem;
-}
-
-@media (min-width: 62.5rem) {
-  .echo-input-xl:not(textarea) {
-    min-height: 3.5rem;
-  }
-}
-
-@media (min-width: 62.5rem) {
-  .echo-input-xl:not(textarea).echo-input-fixed {
-    min-height: 3rem;
-  }
-}
-
-.echo-input-xxl {
-  font-size: 1.25rem;
-}
-
-@media (min-width: 62.5rem) {
-  .echo-input-xxl {
-    font-size: 1.5rem;
-  }
-}
-
-@media (min-width: 62.5rem) {
-  .echo-input-xxl.echo-input-fixed {
-    font-size: 1.25rem;
-  }
-}
-
-.echo-input-xxl:not(textarea) {
-  min-height: 3.25rem;
-}
-
-@media (min-width: 62.5rem) {
-  .echo-input-xxl:not(textarea) {
-    min-height: 4rem;
-  }
-}
-
-@media (min-width: 62.5rem) {
-  .echo-input-xxl:not(textarea).echo-input-fixed {
-    min-height: 3.25rem;
   }
 }
 
@@ -1831,20 +1746,20 @@ echo-nav-(size)
 --------------------
 */
 .echo-nav .echo-nav-label {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   min-height: 2.5rem;
 }
 
 @media (min-width: 62.5rem) {
   .echo-nav .echo-nav-label {
-    font-size: 0.875rem;
+    font-size: 1rem;
     min-height: 2.75rem;
   }
 }
 
 @media (min-width: 62.5rem) {
   .echo-nav.echo-nav-fixed .echo-nav-label {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     min-height: 2.5rem;
   }
 }
@@ -1869,20 +1784,20 @@ echo-nav-(size)
 }
 
 .echo-nav-lg .echo-nav-label {
-  font-size: 0.875rem;
+  font-size: 1rem;
   min-height: 2.75rem;
 }
 
 @media (min-width: 62.5rem) {
   .echo-nav-lg .echo-nav-label {
-    font-size: 1rem;
+    font-size: 1.125rem;
     min-height: 3.25rem;
   }
 }
 
 @media (min-width: 62.5rem) {
   .echo-nav-lg.echo-nav-fixed .echo-nav-label {
-    font-size: 0.875rem;
+    font-size: 1rem;
     min-height: 2.75rem;
   }
 }

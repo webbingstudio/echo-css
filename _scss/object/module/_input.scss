@@ -10,7 +10,6 @@
     background: $input-bg none;
     border: $input-border-width solid $input-border-color;
     color: $input-color;
-    font-size: $font-size-sm;
     border-radius: $border-radius-md;
     vertical-align: middle;
     -webkit-appearance: none;
@@ -25,7 +24,6 @@
         #{&}:not(textarea) {
             padding-top: 0;
             padding-bottom: 0;
-            min-height: map-get( $button-min-heights, 'md' );
         }
 
     }
