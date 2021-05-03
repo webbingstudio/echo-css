@@ -3529,15 +3529,8 @@ echo-form
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-  font-size: 0.875rem;
   margin: 0 0 -1em;
   line-height: 1;
-}
-
-@media (min-width: 62.5rem) {
-  .echo-form {
-    font-size: 1rem;
-  }
 }
 
 .echo-form > .echo-checkbox,
@@ -3587,6 +3580,18 @@ echo-form-append
 
 /*
 --------------------
+echo-form-info
+--------------------
+*/
+.echo-form-info {
+  width: 100%;
+  margin: 0;
+  color: #1976d2;
+  line-height: 1.5;
+}
+
+/*
+--------------------
 echo-form-error
 --------------------
 */
@@ -3594,8 +3599,60 @@ echo-form-error
   width: 100%;
   margin: 0;
   color: #d20b2a;
-  font-size: 0.875em;
   line-height: 1.5;
+}
+
+/*
+--------------------
+echo-form(size)
+--------------------
+*/
+.echo-form {
+  font-size: 0.875rem;
+}
+
+@media (min-width: 62.5rem) {
+  .echo-form {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-form.echo-form-fixed {
+    font-size: 0.875rem;
+  }
+}
+
+.echo-form-info {
+  font-size: 0.75rem;
+}
+
+@media (min-width: 62.5rem) {
+  .echo-form-info {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-form-fixed .echo-form-info {
+    font-size: 0.75rem;
+  }
+}
+
+.echo-form-error {
+  font-size: 0.75rem;
+}
+
+@media (min-width: 62.5rem) {
+  .echo-form-error {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-form-fixed .echo-form-error {
+    font-size: 0.75rem;
+  }
 }
 
 /*

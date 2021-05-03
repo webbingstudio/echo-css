@@ -24,12 +24,14 @@
 
             <nav class="echo-doc-anchor">
                 <ul class="echo-list echo-list-horizontal">
-                        
+
                     <li class="echo-list-item"><a href="#form" class="js-scrollto">echo-form</a></li>
 
-                    <li class="echo-list-item"><a href="#form-01-grow" class="js-scrollto">echo-form-grow</a></li>
+                    <li class="echo-list-item"><a href="#form-01-fixed" class="js-scrollto">echo-form-fixed</a></li>
 
-                    <li class="echo-list-item"><a href="#form-02-append" class="js-scrollto">echo-form-append</a></li>
+                    <li class="echo-list-item"><a href="#form-02-grow" class="js-scrollto">echo-form-grow</a></li>
+
+                    <li class="echo-list-item"><a href="#form-03-append" class="js-scrollto">echo-form-append</a></li>
 
                     <li class="echo-list-item"><a href="#form-04-error" class="js-scrollto">echo-form-error</a></li>
 
@@ -43,12 +45,11 @@
 <p>フォームの各入力欄を包括する。<br>
 フォーム内の各オブジェクトは <code>.echo-input, .echo-radio, .echo-select, .echo-checkbox, .echo-button</code> を参照。</p>
 
-<p>フォントサイズは、(breakpoint) が <code>md</code> 以下で <code>0.875rem = 14px</code> 、<code>lg</code> 以上で <code>1rem = 16px</code> となる。<br>
-このため、内包される <code>.echo-form-label, .echo-form-error</code> のテキストも追随して大きくなる。</p>
-
 <p>各ラベルには <code>.echo-form-label</code> クラスを付与する。</p>
 
 <p>複数のフォームをグリッド状に揃える場合は、 <code>layout > .echo-forms</code>を使用すること。</p>
+
+<?php include('../doc_include/fonttable_body.html'); ?>
 
 <div class="example">
 
@@ -95,8 +96,7 @@
 
 <hr class="echo-margin-y-lg">
 
-<p>モバイル環境でフォームが画面幅を超える場合は、自動改行される。<br>
-大きなフォームのサイズを変化させたくない場合は .echo-button-fixed, .echo-input-fixed, .echo-select-fixed クラスを付与すること。</p>
+<p>モバイル環境でフォームが画面幅を超える場合は、自動改行される。</p>
 
 <div class="echo-form">
     <label for="form-default-05" class="echo-form-label">アカウント名</label>
@@ -104,18 +104,6 @@
     <label for="form-default-06" class="echo-form-label">パスワード</label>
     <input type="password" class="echo-input" id="form-default-06" name="form_default_06" size="20" value="">
     <button class="echo-button echo-button-style-a echo-button-info">ログイン</button>
-</div><!-- /.echo-form -->
-
-<hr class="echo-margin-y-lg">
-
-<p>大きなフォームのサイズを変化させたくない場合は .echo-button-fixed, .echo-input-fixed, .echo-select-fixed クラスを付与すること。</p>
-
-<div class="echo-form">
-    <label for="form-default-05" class="echo-form-label">アカウント名</label>
-    <input type="text" class="echo-input echo-input-xl echo-input-fixed" id="form-default-05" name="form_default_05" size="20" value="">
-    <label for="form-default-06" class="echo-form-label">パスワード</label>
-    <input type="password" class="echo-input echo-input-xl echo-input-fixed" id="form-default-06" name="form_default_06" size="20" value="">
-    <button class="echo-button echo-button-xl echo-button-fixed echo-button-style-a echo-button-info">ログイン</button>
 </div><!-- /.echo-form -->
 
 </div>
@@ -163,8 +151,7 @@
 
 &lt;hr class="echo-margin-y-lg"&gt;
 
-&lt;p&gt;モバイル環境でフォームが画面幅を超える場合は、自動改行される。&lt;br&gt;
-大きなフォームのサイズを変化させたくない場合は .echo-button-fixed, .echo-input-fixed, .echo-select-fixed クラスを付与すること。&lt;/p&gt;
+&lt;p&gt;モバイル環境でフォームが画面幅を超える場合は、自動改行される。&lt;/p&gt;
 
 &lt;div class="echo-form"&gt;
     &lt;label for="form-default-05" class="echo-form-label"&gt;アカウント名&lt;/label&gt;
@@ -173,22 +160,39 @@
     &lt;input type="password" class="echo-input" id="form-default-06" name="form_default_06" size="20" value=""&gt;
     &lt;button class="echo-button echo-button-style-a echo-button-info"&gt;ログイン&lt;/button&gt;
 &lt;/div&gt;&lt;!-- /.echo-form --&gt;
+</code></pre></div>
 
-&lt;hr class="echo-margin-y-lg"&gt;
 
-&lt;p&gt;大きなフォームのサイズを変化させたくない場合は .echo-button-fixed, .echo-input-fixed, .echo-select-fixed クラスを付与すること。&lt;/p&gt;
+<h2 id="form-01-fixed" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-form-fixed</h2>
 
-&lt;div class="echo-form"&gt;
+<p>文字と余白が (breakpoint) に関わらず常に同じサイズとなる。<br>
+幅の変動が少ないグリッド内のコンポーネント等に使用する。</p>
+
+<p><strong>ボタン、入力欄のサイズは .echo-form-fixed に連動しない。</strong>変化させたくない場合は .echo-button-fixed, .echo-input-fixed, .echo-select-fixed クラスを付与すること。</p>
+
+<div class="example">
+
+<div class="echo-form echo-form-fixed">
+    <label for="form-default-05" class="echo-form-label">アカウント名</label>
+    <input type="text" class="echo-input echo-input-fixed" id="form-default-05" name="form_default_05" size="20" value="">
+    <label for="form-default-06" class="echo-form-label">パスワード</label>
+    <input type="password" class="echo-input echo-input-fixed" id="form-default-06" name="form_default_06" size="20" value="">
+    <button class="echo-button echo-button-fixed echo-button-style-a echo-button-info">ログイン</button>
+</div><!-- /.echo-form -->
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-form echo-form-fixed"&gt;
     &lt;label for="form-default-05" class="echo-form-label"&gt;アカウント名&lt;/label&gt;
-    &lt;input type="text" class="echo-input echo-input-xl echo-input-fixed" id="form-default-05" name="form_default_05" size="20" value=""&gt;
+    &lt;input type="text" class="echo-input echo-input-fixed" id="form-default-05" name="form_default_05" size="20" value=""&gt;
     &lt;label for="form-default-06" class="echo-form-label"&gt;パスワード&lt;/label&gt;
-    &lt;input type="password" class="echo-input echo-input-xl echo-input-fixed" id="form-default-06" name="form_default_06" size="20" value=""&gt;
-    &lt;button class="echo-button echo-button-xl echo-button-fixed echo-button-style-a echo-button-info"&gt;ログイン&lt;/button&gt;
+    &lt;input type="password" class="echo-input echo-input-fixed" id="form-default-06" name="form_default_06" size="20" value=""&gt;
+    &lt;button class="echo-button echo-button-fixed echo-button-style-a echo-button-info"&gt;ログイン&lt;/button&gt;
 &lt;/div&gt;&lt;!-- /.echo-form --&gt;
 </code></pre></div>
 
 
-<h2 id="form-01-grow" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-form-grow</h2>
+<h2 id="form-02-grow" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-form-grow</h2>
 
 <p><code>.echo-input, .echo-select</code> が <code>.echo-form</code> 全体を埋めるように伸びる。</p>
 
@@ -284,7 +288,7 @@
 &lt;/div&gt;&lt;!-- /.echo-form --&gt;
 </code></pre></div>
 
-<h2 id="form-02-append" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-form-append</h2>
+<h2 id="form-03-append" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-form-append</h2>
 
 <p><code>.echo-input</code> に <code>.echo-button</code> が接していた場合は角丸を解除する。</p>
 
@@ -318,11 +322,34 @@
 </code></pre></div>
 
 
-<h2 id="form-04-error" class="echo-doc-post-title-01">echo-form-error</h2>
+<h2 id="form-04-error" class="echo-doc-post-title-01">echo-form-info</h2>
+
+<p>フォームの入力方法を説明する補助テキストを表示する。文字色は <code>$info</code> となる。</p>
+
+<p>文字サイズは <code>.echo-form</code> の(fontsize)が一段階下がる。</p>
+
+<div class="example">
+
+<div class="echo-form">
+    <label for="demo-info-01" class="echo-form-label">Twitter ID</label>
+    <input type="text" class="echo-input" id="demo-info-01" name="demo_info_01" size="20" value="webbing_cms">
+    <p class="echo-form-info">プロフィールページのURL末尾の、英数字のIDを入力してください。</p>
+</div><!-- /.echo-form -->
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-form"&gt;
+    &lt;label for="demo-error-01" class="echo-form-label"&gt;フリガナ&lt;/label&gt;
+    &lt;input type="text" class="echo-input is-error" id="demo-error-01" name="demo_error_01" size="30" value="山田一郎"&gt;
+    &lt;p class="echo-form-error"&gt;フリガナはカタカナで入力してください。&lt;/p&gt;
+&lt;/div&gt;&lt;!-- /.echo-form --&gt;</code></pre></div>
+
+
+<h2 id="form-05-error" class="echo-doc-post-title-01">echo-form-error</h2>
 
 <p>フォームの入力を間違えたときの補助テキストを表示する。文字色は <code>$important</code> となる。</p>
 
-<p>文字サイズは <code>.echo-form</code> の<strong>87.5%</strong>( <code>0.875em</code> )となり、16pxの場合は14pxとなる。</p>
+<p>文字サイズは <code>.echo-form</code> の(fontsize)が一段階下がる。</p>
 
 <div class="example">
 
