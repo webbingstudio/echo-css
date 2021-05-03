@@ -244,16 +244,6 @@ $grid-gutter-widths: (
     xl:     3rem,
 ) !default;
 
-$nav-min-size: 2.75rem !default;
-
-$object-max-widths: (
-    xs:  16rem,
-    sm:  20rem,
-    md:  25rem,
-    lg:  38rem,
-    xl:  48rem
-) !default;
-
 $container-max-widths-sm: (
     md: 48rem + map-get( $grid-gutter-widths, 'md' ),
     lg: 60rem + map-get( $grid-gutter-widths, 'md' )
@@ -276,23 +266,27 @@ $grid-columns:        12 !default;
 $grid-columns-max:    $grid-columns - 1 !default;
 
 
+// Width (Button, Card ...)
+// -----------------------------------------
+
+$object-max-widths: (
+    xs:  16rem,
+    sm:  20rem,
+    md:  25rem,
+    lg:  38rem,
+    xl:  48rem
+) !default;
+
+
 // Body
 // -----------------------------------------
 
 $body-min-font-sizes: (
-    xs:  .625em,
-    sm:  .75em,
-    md:  .875em,
-    lg:  1em,
-    xl:  1.25em
+    md:  $font-size-sm
 ) !default;
 
 $body-max-font-sizes: (
-    xs:  .75em,
-    sm:  .875em,
-    md:  1em,
-    lg:  1.25em,
-    xl:  1.5em
+    md:  $font-size-md
 ) !default;
 
 
@@ -301,35 +295,35 @@ $body-max-font-sizes: (
 // -----------------------------------------
 
 $button-min-heights: (
-    sm:  2.5rem,
-    md:  2.75rem,
-    lg:  3rem,
-    xl:  3.25rem,
-    xxl: 3.5rem
+    sm:  2.25rem,
+    md:  2.5rem,
+    lg:  2.75rem,
+    xl:  3rem,
+    xxl: 3.25rem
 ) !default;
 
 $button-max-heights: (
     sm:  2.5rem,
     md:  2.75rem,
-    lg:  map-get( $button-min-heights, 'lg' ) * 1.25,
-    xl:  map-get( $button-min-heights, 'xl' ) * 1.25,
-    xxl: map-get( $button-min-heights, 'xxl' ) * 1.25
+    lg:  3.25rem,
+    xl:  3.5rem,
+    xxl: 4rem
 ) !default;
 
 $button-min-font-sizes: (
-    sm:  .75rem,
-    md:  .875rem,
-    lg:  .9375rem,
-    xl:  1.125rem,
-    xxl: 1.375rem
+    sm:  $font-size-xs,
+    md:  $font-size-xs,
+    lg:  $font-size-sm,
+    xl:  $font-size-md,
+    xxl: $font-size-lg
 ) !default;
 
 $button-max-font-sizes: (
-    sm:  .875rem,
-    md:  1rem,
-    lg:  1.125rem,
-    xl:  1.5rem,
-    xxl: 1.75rem
+    sm:  $font-size-sm,
+    md:  $font-size-sm,
+    lg:  $font-size-md,
+    xl:  $font-size-lg,
+    xxl: $font-size-xl
 ) !default;
 
 $button-min-widths: (
@@ -379,6 +373,34 @@ $button-square-max-widths: (
     lg:  map-get( $button-max-heights, 'xxl' ),
     xl:  6rem,
     xxl: 7.5rem
+) !default;
+
+
+// Nav
+// -----------------------------------------
+
+$nav-min-heights: (
+    sm:  map-get( $button-min-heights, 'sm' ),
+    md:  map-get( $button-min-heights, 'md' ),
+    lg:  map-get( $button-min-heights, 'lg' )
+) !default;
+
+$nav-max-heights: (
+    sm:  map-get( $button-max-heights, 'sm' ),
+    md:  map-get( $button-max-heights, 'md' ),
+    lg:  map-get( $button-max-heights, 'lg' )
+) !default;
+
+$nav-min-font-sizes: (
+    sm:  map-get( $button-min-font-sizes, 'sm' ),
+    md:  map-get( $button-min-font-sizes, 'md' ),
+    lg:  map-get( $button-min-font-sizes, 'lg' )
+) !default;
+
+$nav-max-font-sizes: (
+    sm:  map-get( $button-max-font-sizes, 'sm' ),
+    md:  map-get( $button-max-font-sizes, 'md' ),
+    lg:  map-get( $button-max-font-sizes, 'lg' )
 ) !default;
 
 

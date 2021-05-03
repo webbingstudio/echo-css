@@ -1,0 +1,99 @@
+/*
+--------------------
+#{$pr}#{$m}nav#{$c3}(size)
+--------------------
+*/
+
+.#{$pr}#{$m}nav {
+
+    .#{$pr}#{$m}nav#{$c3}label {
+        font-size: $font-size-xs;
+        min-height: map-get( $nav-min-heights, 'md' );
+    }
+
+    .#{$pr}#{$m}nav#{$c3}label {
+
+        @include media-breakpoint-up(lg) {
+            font-size: $font-size-sm;
+            min-height: map-get( $nav-max-heights, 'md' );
+        }
+
+    }
+
+    &.#{$pr}#{$m}nav#{$c3}fixed {
+
+        .#{$pr}#{$m}nav#{$c3}label {
+
+            @include media-breakpoint-up(lg) {
+                font-size: $font-size-xs;
+                min-height: map-get( $nav-min-heights, 'md' );
+            }
+
+        }
+
+    }
+
+}
+
+.#{$pr}#{$m}nav#{$c3}sm {
+
+    .#{$pr}#{$m}nav#{$c3}label {
+        min-height: map-get( $nav-min-heights, 'sm' );
+
+        @include media-breakpoint-up(lg) {
+            font-size: $font-size-sm;
+            min-height: map-get( $nav-max-heights, 'sm' );
+        }
+
+    }
+
+    @at-root {
+
+        #{&}.#{$pr}#{$m}nav#{$c3}fixed {
+
+            .#{$pr}#{$m}nav#{$c3}label {
+
+                @include media-breakpoint-up(lg) {
+                    font-size: $font-size-xs;
+                    min-height: map-get( $nav-min-heights, 'sm' );
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+.#{$pr}#{$m}nav#{$c3}lg {
+
+    .#{$pr}#{$m}nav#{$c3}label {
+        font-size: $font-size-md;
+        min-height: map-get( $nav-min-heights, 'lg' );
+
+        @include media-breakpoint-up(lg) {
+            font-size: $font-size-lg;
+            min-height: map-get( $nav-max-heights, 'lg' );
+        }
+
+    }
+
+    @at-root {
+
+        #{&}.#{$pr}#{$m}nav#{$c3}fixed {
+
+            .#{$pr}#{$m}nav#{$c3}label {
+
+                @include media-breakpoint-up(lg) {
+                    font-size: $font-size-md;
+                    min-height: map-get( $nav-min-heights, 'lg' );
+                }
+
+            }
+
+        }
+
+    }
+
+}

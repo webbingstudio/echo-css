@@ -38,14 +38,15 @@
             <article class="echo-doc-post">
                 <div class="echo-doc-post-contents styleguide-contents"><h2 id="nav" class="echo-doc-post-title-01">echo-nav</h2>
 
-<p>クリック範囲が広いナビゲーションを表示する。包括要素、もしくは<code>.nav</code>自体に薄い背景色を指定する必要がある。<br>
+<p>クリック範囲が広いナビゲーションを表示する。包括要素、もしくは <code>.echo-nav</code> 自体に薄い背景色を指定する必要がある。<br>
 テキストが複数行になった場合でも、ナビゲーションのすべてのテキストが縦中央に整列する。</p>
-
-<p>各リンクボタンの最低高さは <code>2.75rem = 44px</code> 、文字サイズは <code>0.75em = 14px</code> であり、 <strong>画面サイズに関わらず常にこの値を維持する。</strong></p>
 
 <p>displayプロパティは <code>inline-block</code> を指定している。 <code>block</code> に変更するか、幅を100%に伸ばすと、各ボタンは均等幅となる。</p>
 
 <p><code>.echo-nav-label</code> 内に、装飾目的等で子要素を使用すると崩れる場合は、ダミーのインライン要素を緩衝として加える。ここでは <code>span.echo-nav-text</code> としている。</p>
+
+<?php include('../doc_include/fonttable_nav.html'); ?>
+
 
 <div class="example">
 
@@ -62,7 +63,7 @@
 
 <p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-sm echo-margin-top-lg">Font Awesomeを併用した例</p>
 
-<nav class="echo-nav" style="width: 100%;">
+<nav class="echo-nav">
     <ul class="echo-nav-list">
         <li class="echo-nav-item">
             <a href="#" class="echo-nav-label"><span class="echo-nav-text"><i class="echo-text-xxl echo-padding-bottom-xs fas fa-home"></i><br>吾輩は</span></a>
@@ -100,7 +101,7 @@
 
 &lt;p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-sm echo-margin-top-lg"&gt;Font Awesomeを併用した例&lt;/p&gt;
 
-&lt;nav class="echo-nav" style="width: 100%;"&gt;
+&lt;nav class="echo-nav"&gt;
     &lt;ul class="echo-nav-list"&gt;
         &lt;li class="echo-nav-item"&gt;
             &lt;a href="#" class="echo-nav-label"&gt;&lt;span class="echo-nav-text"&gt;&lt;i class="echo-text-xxl echo-padding-bottom-xs fas fa-home"&gt;&lt;/i&gt;&lt;br&gt;吾輩は&lt;/span&gt;&lt;/a&gt;
@@ -298,7 +299,7 @@
 <p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-sm echo-margin-top-lg">Font Awesomeを併用した例</p>
 
 <div class="echo-padding-sm echo-bg-default">
-    <nav class="echo-nav echo-nav-inverse" style="width: 100%;">
+    <nav class="echo-nav echo-nav-inverse">
         <ul class="echo-nav-list">
             <li class="echo-nav-item">
                 <a href="#" class="echo-nav-label"><span class="echo-nav-text"><i class="echo-text-xxl echo-padding-bottom-xs fas fa-home"></i><br>吾輩は</span></a>
@@ -340,7 +341,7 @@
 &lt;p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-sm echo-margin-top-lg"&gt;Font Awesomeを併用した例&lt;/p&gt;
 
 &lt;div class="echo-padding-sm echo-bg-default"&gt;
-    &lt;nav class="echo-nav echo-nav-inverse" style="width: 100%;"&gt;
+    &lt;nav class="echo-nav echo-nav-inverse"&gt;
         &lt;ul class="echo-nav-list"&gt;
             &lt;li class="echo-nav-item"&gt;
                 &lt;a href="#" class="echo-nav-label"&gt;&lt;span class="echo-nav-text"&gt;&lt;i class="echo-text-xxl echo-padding-bottom-xs fas fa-home"&gt;&lt;/i&gt;&lt;br&gt;吾輩は&lt;/span&gt;&lt;/a&gt;

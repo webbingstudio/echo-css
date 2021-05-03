@@ -7,8 +7,8 @@
 .#{$pr}#{$m}toggle {
     position: relative;
     display: inline-block;
-    width: $nav-min-size;
-    height: $nav-min-size;
+    width: map-get( $nav-min-heights, 'md' );
+    height: map-get( $nav-min-heights, 'md' );
     padding: 0;
     line-height: 1;
     border-width: 0;

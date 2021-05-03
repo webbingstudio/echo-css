@@ -16,15 +16,6 @@
         flex-direction: column;
     }
 
-    .#{$pr}#{$m}nav#{$c1}label {
-        font-size: $font-size-xs;
-
-        @include media-breakpoint-up(md) {
-            font-size: $font-size-sm;
-        }
-
-    }
-
     .#{$pr}#{$m}nav#{$c1}item {
         flex-grow: 1;
 

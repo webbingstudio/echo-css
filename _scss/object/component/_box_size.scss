@@ -5,10 +5,10 @@
 */
 
 .#{$pr}#{$c}box {
-    font-size: $font-size-sm;
+    font-size: map-get( $body-min-font-sizes, 'md' );
 
     @include media-breakpoint-up(lg) {
-        font-size: $font-size-md;
+        font-size: map-get( $body-max-font-sizes, 'md' );
     }
 
     &.#{$pr}#{$c}box#{$c3}fixed {
@@ -18,10 +18,9 @@
         }
 
         @include media-breakpoint-up(lg) {
-            font-size: $font-size-sm;
+            font-size: map-get( $body-min-font-sizes, 'md' );
         }
 
     }
 
 }
-
