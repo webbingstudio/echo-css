@@ -48,29 +48,7 @@
 
 <p><code>.echo-flip-title.echo-title</code> に付与されている <code>.echo-font-first</code> は<strong>必須ではない</strong>。詳細は <a href="./utility-font.html">utility > font</a> を参照。</p>
 
-<h3 class="echo-doc-post-title-02">補足：フォントサイズ</h3>  
-
-<p><code>.echo-flip-header, .echo-flip-body, .echo-flip-link</code> のフォントサイズは、画面サイズによって変化する。このため、内包する <code>.echo-title-level-(level), .echo-text-(size)</code> も追随する。<br>
-(breakpoint) ごとの拡大率は以下の通り。</p>
-
-<h3 class="echo-doc-post-title-02">Note: font size</h3>  
-
-<p>The font size of <code> .echo-flip-header, .echo-flip-body, .echo-flip-link </code> changes according to the screen size. Therefore, the included <code> .echo-title-level- (level) and .echo-text- (size) </code> also increase accordingly. <br>
-The expansion rate for each (breakpoint) is as follows.</p>
-
-
-<table class="echo-table echo-table-bordered echo-margin-bottom-lg" style="width: auto;">
-    <thead>
-        <tr><th rowspan="2">(breakpoint)</th><th colspan="2" class="echo-text-center">font-size (1rem = 16pxのとき)</th></tr>
-        <tr><th>.echo-flip-header</th><th>.echo-flip-body<br>.echo-flip-link</th></tr>
-    </thead>
-    <tbody>
-        <tr><th>sm以下</th><td>1.125rem (18px)</td><td>0.75rem (12px)</td></tr>
-        <tr><th>md以上</th><td>1.25rem (20px)</td><td>0.875rem (14px)</td></tr>
-        <tr><th>xl以上</th><td>1.5rem (24px)</td><td>1.125rem (18px)</td></tr>
-    </tbody>
-</table>
-
+<?php include('../doc_include/fonttable_display.html'); ?>
 
 
 <div style="margin-left: -0.625rem; margin-right: -0.625rem;">
@@ -133,7 +111,7 @@ The expansion rate for each (breakpoint) is as follows.</p>
 <p class="echo-title echo-title-style-a echo-title-level-3 echo-margin-top-lg echo-margin-bottom-md">文字サイズを変更している例</p>
 
 <p>.echo-title-level-3 を使用して、見出しを小さくしている。<br>
-また、 .echo-flip-body > p に文字サイズを大きくするクラス .echo-text-xl を付与している。</p>
+また、 .echo-flip-body > p に文字サイズを大きくするクラス .echo-text-xstomd を付与している。モバイル端末での文字サイズが1rem(16px)となる。</p>
 
 <div style="margin-left: -0.625rem; margin-right: -0.625rem;">
 
@@ -146,7 +124,7 @@ The expansion rate for each (breakpoint) is as follows.</p>
                     <h2 class="echo-flip-title echo-title echo-title-style-c echo-title-level-3 echo-font-first">吾輩は猫である名前は</h2>
                 </div><!-- /.echo-flip-header -->
                 <div class="echo-flip-body">
-                    <p class="echo-text-xl">まだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</p>
+                    <p class="echo-text-xstomd">まだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</p>
                 </div><!-- /.echo-flip-body -->
             </div><!-- /.echo-flip-contents-inner -->
         </div><!-- /.echo-flip-contents -->
@@ -216,7 +194,7 @@ The expansion rate for each (breakpoint) is as follows.</p>
 &lt;p class="echo-title echo-title-style-a echo-title-level-3 echo-margin-top-lg echo-margin-bottom-md"&gt;文字サイズを変更している例&lt;/p&gt;
 
 &lt;p&gt;.echo-title-level-3 を使用して、見出しを小さくしている。&lt;br&gt;
-また、 .echo-flip-body &gt; p に文字サイズを大きくするクラス .echo-text-xl を付与している。&lt;/p&gt;
+また、 .echo-flip-body &gt; p に文字サイズを大きくするクラス .echo-text-xstomd を付与している。モバイル端末での文字サイズが1rem(16px)となる。&lt;/p&gt;
 
 &lt;div style="margin-left: -0.625rem; margin-right: -0.625rem;"&gt;
 
@@ -229,7 +207,7 @@ The expansion rate for each (breakpoint) is as follows.</p>
                     &lt;h2 class="echo-flip-title echo-title echo-title-style-c echo-title-level-3 echo-font-first"&gt;吾輩は猫である名前は&lt;/h2&gt;
                 &lt;/div&gt;&lt;!-- /.echo-flip-header --&gt;
                 &lt;div class="echo-flip-body"&gt;
-                    &lt;p class="echo-text-xl"&gt;まだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
+                    &lt;p class="echo-text-xstomd"&gt;まだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
                 &lt;/div&gt;&lt;!-- /.echo-flip-body --&gt;
             &lt;/div&gt;&lt;!-- /.echo-flip-contents-inner --&gt;
         &lt;/div&gt;&lt;!-- /.echo-flip-contents --&gt;
