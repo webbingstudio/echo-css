@@ -14,7 +14,7 @@
                 <li class="echo-nav-item"><a href="./outline-layers.html" class="echo-nav-label">レイヤー構造</a></li>
                 <li class="echo-nav-item"><a href="./outline-responsive.html" class="echo-nav-label">レスポンシブデザイン</a></li>
                 <li class="echo-nav-item"><a href="./outline-units.html" class="echo-nav-label">単位の扱い</a></li>
-                <li class="echo-nav-item"><a href="./outline-font-size.html" class="echo-nav-label">文字サイズ</a></li>
+                <li class="echo-nav-item"><a href="./outline-fontsize.html" class="echo-nav-label">文字サイズ</a></li>
                 <li class="echo-nav-item"><a href="./outline-breakpoint.html" class="echo-nav-label">ブレークポイント</a></li>
                 <li class="echo-nav-item"><a href="./outline-rule.html" class="echo-nav-label">コーディングルール</a></li>
             </ul>
