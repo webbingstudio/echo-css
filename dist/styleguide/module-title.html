@@ -88,22 +88,7 @@
 
 <p>(level) は <code>1-6</code> に対応しているが、これは <code>h1 - h6</code> 要素に併せた便宜的な名称であり、h1要素に「6」を使用しても問題ない。</p>
 
-<p>デフォルトの、サイズの名称に対する値は以下の通り。</p>
-
-<table class="echo-table echo-table-bordered echo-margin-bottom-md" style="width: auto;">
-        <thead>
-                <tr><th rowspan="2">(level) / (breakpoint)</th><th colspan="2" class="echo-text-center">文字サイズ</th><th rowspan="2">変化値<br><span class="echo-text-sm">(1em = 16px)</span></th></tr>
-                <tr><th class="echo-text-center">md 以下</th><th class="echo-text-center">lg 以上</th></tr>
-        </thead>
-        <tbody>
-                <tr><th>6</th><td>1em</td><td>1.125em</td><td>0.125em<br>(2px)</td></tr>
-                <tr><th>5</th><td>1.0625em</td><td>1.25em</td><td>0.1875em<br>(3px)</td></tr>
-                <tr><th>4</th><td>1.25em</td><td>1.5em</td><td rowspan="3">0.25em<br>(4px)</td></tr>
-                <tr><th>3</th><td>1.5em</td><td>1.75em</td></tr>
-                <tr><th>2</th><td>1.75em</td><td>2em</td></tr>
-                <tr><th>1</th><td>2em</td><td>2.5em</td><td>0.5em<br>(8px)</td></tr>
-        </tbody>
-</table>
+<?php include('../doc_include/fonttable_title_level.html'); ?>
 
 <p>Sassを使用できる場合、 <code>_scss/config_advance.scss</code> の配列 <code>$title-min-font-sizes, $title-max-font-sizes</code>で変更できる。</p>
 
