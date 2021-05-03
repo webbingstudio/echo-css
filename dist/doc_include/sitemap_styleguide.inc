@@ -23,6 +23,7 @@
                 <li class="echo-nav-item"><span class="echo-nav-label">component</span>
                     <ul class="echo-doc-sitemap-list-flat echo-nav-list echo-nav-children">
                         <li class="echo-nav-item"><a href="./component-alert.html" class="echo-nav-label">alert</a></li>
+                        <li class="echo-nav-item"><a href="./component-body.html" class="echo-nav-label">body</a></li>
                         <li class="echo-nav-item"><a href="./component-box.html" class="echo-nav-label">box</a></li>
                         <li class="echo-nav-item"><a href="./component-card.html" class="echo-nav-label">card</a></li>
                         <li class="echo-nav-item"><a href="./component-flip.html" class="echo-nav-label">flip</a></li>

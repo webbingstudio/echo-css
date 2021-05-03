@@ -3000,6 +3000,41 @@ echo-alert-(color)
 
 /*
 --------------------
+echo-body
+--------------------
+*/
+.echo-body {
+  margin: 0;
+  line-height: 2;
+}
+
+.echo-body *:last-child {
+  margin-bottom: 0;
+}
+
+/*
+--------------------
+echo-body(size)
+--------------------
+*/
+.echo-body {
+  font-size: 0.875rem;
+}
+
+@media (min-width: 62.5rem) {
+  .echo-body {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-body.echo-box-fixed {
+    font-size: 0.875rem;
+  }
+}
+
+/*
+--------------------
 echo-box
 --------------------
 */

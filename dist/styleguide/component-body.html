@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>component-body | Style guide | echo-css</title>
+    <meta property="og:title" content="component-body | Style guide | echo-css">
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div id="echo-document">
+
+    <?php include('../doc_include/header.inc'); ?>
+
+    <main class="echo-p-main" role="main">
+        <div class="echo-doc-container echo-doc-container-fluid">
+
+            <div class="echo-doc-pagehead">
+                <h1 class="echo-doc-pagehead-title">component-body</h1>
+            </div><!-- /.echo-doc-pagehead -->
+
+            <nav class="echo-doc-anchor">
+                <ul class="echo-list echo-list-horizontal">
+
+                    <li class="echo-list-item"><a href="#body" class="js-scrollto">echo-body</a></li>
+
+                    <li class="echo-list-item"><a href="#body-01-fixed" class="js-scrollto">echo-body-fixed</a></li>
+
+                </ul>
+            </nav>
+            
+
+            <article class="echo-doc-post">
+                <div class="echo-doc-post-contents styleguide-contents"><h2 id="box" class="echo-doc-post-title-01">echo-body</h2>
+
+<p>長文を前提とした体裁で表示する。</p>
+
+<p>文字サイズ、行間( <code>1.75</code> )以外のスタイルは定義していない。</p>
+
+<?php include('../doc_include/fonttable_body.html'); ?>
+
+<p>このサンプルでは、範囲がわかるようインラインスタイルで背景色を付与している。</p>
+
+<div class="example">
+
+<div class="echo-body" style="background-color: #fff9dd">
+    <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+    <p>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+</div><!-- /.echo-body -->
+
+<hr class="echo-margin-y-lg">
+
+<div class="echo-body">
+    <div class="echo-text-sm" style="background-color: #fff9dd">
+        <p>これは文字サイズを変更した例です。 .echo-text-sm クラスを付与すると、文字サイズが 87.5%(0.875em) となります。<br>
+        (breakpoint) がmd以下で 12.25px (0.875rem * 0.875) 、lg以上で14px (1rem * 0.875) となります。 .echo-body に直接付与すると文字サイズが固定値になってしまうことと、一般的なブラウザの文字サイズの下限は 10px であることに注意してください。</p>
+    </div>
+</div><!-- /.echo-body -->
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-body" style="background-color: #fff9dd"&gt;
+    &lt;p&gt;吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;br&gt;
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。&lt;/p&gt;
+    &lt;p&gt;この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。&lt;/p&gt;
+&lt;/div&gt;&lt;!-- /.echo-body --&gt;
+
+&lt;hr class="echo-margin-y-lg"&gt;
+
+&lt;div class="echo-body" style="background-color: #fff9dd"&gt;
+    &lt;div class="echo-text-sm"&gt;
+        &lt;p&gt;これは文字サイズを変更した例です。 .echo-text-sm クラスを付与すると、文字サイズが 87.5%(0.875em) となります。&lt;br&gt;
+        (breakpoint) がmd以下で 12.25px (0.875rem * 0.875) 、lg以上で14px (1rem * 0.875) となります。 .echo-body に直接付与すると文字サイズが固定値になってしまうことと、一般的なブラウザの文字サイズの下限は 10px であることに注意してください。&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;&lt;!-- /.echo-body --&gt;
+</code></pre></div>
+
+
+<h2 id="box-01-fixed" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-body-fixed</h2>
+
+<p>文字が (breakpoint) に関わらず常に同じサイズとなる。<br>
+幅の変動が少ないグリッド内のコンポーネント等に使用する。</p>
+
+<div class="example">
+
+<div class="echo-body echo-body-fixed" style="background-color: #fff9dd">
+    <p>.echo-body-fixed を付与すると、画面サイズに関わらず、基準となる文字サイズと余白を維持します。1rem = 16pxであれば14pxとなります。</p>
+    <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+</div><!-- /.echo-body -->
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-body echo-body-fixed" style="background-color: #fff9dd"&gt;
+    &lt;p&gt;.echo-body-fixed を付与すると、画面サイズに関わらず、基準となる文字サイズと余白を維持します。1rem = 16pxであれば14pxとなります。&lt;/p&gt;
+    &lt;p&gt;吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;br&gt;
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。&lt;/p&gt;
+&lt;/div&gt;&lt;!-- /.echo-body --&gt;
+</code></pre></div>
+
+
+<?php include('../doc_include/footer.inc'); ?>
