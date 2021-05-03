@@ -7,7 +7,7 @@
             </p><!-- /.s-header-brand -->
 
             <div class="echo-doc-header-nav">
-                <nav class="echo-nav">
+                <nav class="echo-nav echo-nav-lg">
                     <ul class="echo-nav-list">
                         <li class="echo-nav-item"><a href="<?php echo $echo_path; ?>" class="echo-nav-label">Home</a></li>
                         <li class="echo-nav-item"><a href="<?php echo $echo_path; ?>docs/" class="echo-nav-label">Documentation</a></li>

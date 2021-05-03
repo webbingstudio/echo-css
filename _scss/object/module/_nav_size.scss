@@ -7,14 +7,14 @@
 .#{$pr}#{$m}nav {
 
     .#{$pr}#{$m}nav#{$c3}label {
-        font-size: $font-size-xs;
+        font-size: map-get( $nav-min-font-sizes, 'md' );
         min-height: map-get( $nav-min-heights, 'md' );
     }
 
     .#{$pr}#{$m}nav#{$c3}label {
 
         @include media-breakpoint-up(lg) {
-            font-size: $font-size-sm;
+            font-size: map-get( $nav-max-font-sizes, 'md' );
             min-height: map-get( $nav-max-heights, 'md' );
         }
 
@@ -25,7 +25,7 @@
         .#{$pr}#{$m}nav#{$c3}label {
 
             @include media-breakpoint-up(lg) {
-                font-size: $font-size-xs;
+                font-size: map-get( $nav-min-font-sizes, 'md' );
                 min-height: map-get( $nav-min-heights, 'md' );
             }
 
@@ -38,10 +38,11 @@
 .#{$pr}#{$m}nav#{$c3}sm {
 
     .#{$pr}#{$m}nav#{$c3}label {
+        font-size: map-get( $nav-min-font-sizes, 'sm' );
         min-height: map-get( $nav-min-heights, 'sm' );
 
         @include media-breakpoint-up(lg) {
-            font-size: $font-size-sm;
+            font-size: map-get( $nav-max-font-sizes, 'sm' );
             min-height: map-get( $nav-max-heights, 'sm' );
         }
 
@@ -54,7 +55,7 @@
             .#{$pr}#{$m}nav#{$c3}label {
 
                 @include media-breakpoint-up(lg) {
-                    font-size: $font-size-xs;
+                    font-size: map-get( $nav-min-font-sizes, 'sm' );
                     min-height: map-get( $nav-min-heights, 'sm' );
                 }
 
@@ -69,11 +70,11 @@
 .#{$pr}#{$m}nav#{$c3}lg {
 
     .#{$pr}#{$m}nav#{$c3}label {
-        font-size: $font-size-md;
+        font-size: map-get( $nav-min-font-sizes, 'lg' );
         min-height: map-get( $nav-min-heights, 'lg' );
 
         @include media-breakpoint-up(lg) {
-            font-size: $font-size-lg;
+            font-size: map-get( $nav-max-font-sizes, 'lg' );
             min-height: map-get( $nav-max-heights, 'lg' );
         }
 
@@ -86,7 +87,7 @@
             .#{$pr}#{$m}nav#{$c3}label {
 
                 @include media-breakpoint-up(lg) {
-                    font-size: $font-size-md;
+                    font-size: map-get( $nav-min-font-sizes, 'lg' );
                     min-height: map-get( $nav-min-heights, 'lg' );
                 }
 
