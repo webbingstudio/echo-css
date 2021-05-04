@@ -12,7 +12,6 @@
                         <li class="echo-nav-item"><a href="<?php echo $echo_path; ?>" class="echo-nav-label">Home</a></li>
                         <li class="echo-nav-item"><a href="<?php echo $echo_path; ?>docs/" class="echo-nav-label">Documentation</a></li>
                         <li class="echo-nav-item"><a href="<?php echo $echo_path; ?>styleguide/" class="echo-nav-label">Style guide</a></li>
-                        <li class="echo-nav-item"><a href="<?php echo $echo_path; ?>template/" class="echo-nav-label">Template</a></li>
                     </ul>
                 </nav>
             </div><!-- /.echo-doc-header-nav -->
