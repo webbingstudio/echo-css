@@ -5,13 +5,15 @@
 */
 
 .#{$pr}#{$p}main {
-    position: relative;
-    padding-top: ($spacer * 3);
-    padding-bottom: ($spacer * 3);
-
-    @include media-breakpoint-up(lg) {
-        padding-top: ($spacer * 4.5);
-        padding-bottom: ($spacer * 4.5);
-    }
+    @include responsive-spacing(
+        'padding-top',
+        map-get( $responsive-spacing-min, 'lg' ),
+        map-get( $responsive-spacing-max, 'lg' )
+    );
+    @include responsive-spacing(
+        'padding-bottom',
+        map-get( $responsive-spacing-min, 'lg' ),
+        map-get( $responsive-spacing-max, 'lg' )
+    );
 
 }

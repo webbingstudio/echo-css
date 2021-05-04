@@ -6,13 +6,6 @@
 
 .#{$pr}#{$p}header {
     background-color: $body-bg;
-    padding-top: ($spacer * .8);
-    padding-bottom: ($spacer * .8);
-
-    @include media-breakpoint-up(lg) {
-        padding-top: ($spacer * 1.5);
-        padding-bottom: ($spacer * 1.5);
-    }
 }
 
 .#{$pr}#{$p}header#{$c1}contents {
@@ -26,17 +19,18 @@
     flex-grow: 0;
     flex-shrink: 1;
     flex-basis: auto;
+    height: 100%;
     margin: 0;
-    padding-right: $spacer;
+    padding-right: map-get( $grid-gutter-widths, 'sm' );
     line-height: 1;
 
     img {
         display: block;
-        max-width: map-get( $object-max-widths, 'xs' );
-        height: auto;
+        width: auto;
+        height: ( map-get( $nav-min-heights, 'md' ) * 0.8 );
 
-        @include media-breakpoint-up(sm) {
-            max-width: none;
+        @include media-breakpoint-up(lg) {
+            height: ( map-get( $nav-max-heights, 'md' ) * 0.8 );
         }
 
     }
@@ -51,12 +45,8 @@
 
     @include media-breakpoint-up(lg) {
         display: block;
-        padding-right: $spacer;
+        padding-right: map-get( $grid-gutter-widths, 'sm' );
         text-align: right;
-    }
-
-    .#{$pr}#{$m}nav#{$c1}label {
-        font-size: $font-size-sm;
     }
 
 }
@@ -65,37 +55,18 @@
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: auto;
-    text-align: right;
-    padding-right: ($spacer / 2);
 
     @include media-breakpoint-up(lg) {
         flex-grow: 0;
         padding-right: 0;
     }
 
-    ul.#{$pr}#{$m}list-horizontal {
+    .#{$pr}#{$m}list-horizontal {
+        justify-content: flex-end;
 
-        li.#{$pr}#{$m}list#{$c1}item {
-
-/*
-note: Spacing of the clickable elements
-クリックできる要素間の余白の最低値は、8pxと言われています。
-The minimum value of the margin between clickable elements is said that to be 8px
---------------------
-*/
-
-            padding-left: .5rem;
-            padding-right: 0;
-            letter-spacing: -.4em;
-
-            &:first-child {
-                padding-left: 0;
-            }
-
-            .#{$pr}#{$m}button {
-                letter-spacing: normal;
-            }
-
+        .#{$pr}#{$m}list#{$c1}item {
+            margin-left: 0;
+            margin-right: map-get( $grid-gutter-widths, 'sm' );
         }
 
     }

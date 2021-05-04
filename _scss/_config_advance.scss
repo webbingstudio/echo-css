@@ -16,12 +16,6 @@ $c3: '-' !default;   // to value
 }
 
 
-// Spacer
-// -----------------------------------------
-
-$spacer: 10px !default;
-
-
 // Code Optimize
 // -----------------------------------------
 
@@ -216,7 +210,7 @@ $button-min-heights: (
 $button-max-heights: (
     sm:  2.5rem,
     md:  2.75rem,
-    lg:  3.25rem,
+    lg:  3.125rem,
     xl:  3.5rem,
     xxl: 4rem
 ) !default;
@@ -256,34 +250,34 @@ $button-max-widths: (
 
 $button-circle-min-widths: (
     sm:  map-get( $button-min-heights, 'sm' ),
-    md:  map-get( $button-min-heights, 'lg' ),
-    lg:  map-get( $button-min-heights, 'xxl' ),
-    xl:  4rem,
-    xxl: 5rem
+    md:  map-get( $button-min-heights, 'md' ),
+    lg:  map-get( $button-min-heights, 'lg' ),
+    xl:  map-get( $button-min-heights, 'xl' ),
+    xxl: map-get( $button-min-heights, 'xxl' )
 ) !default;
 
 $button-circle-max-widths: (
     sm:  map-get( $button-max-heights, 'sm' ),
-    md:  map-get( $button-max-heights, 'lg' ),
-    lg:  map-get( $button-max-heights, 'xxl' ),
-    xl:  6rem,
-    xxl: 7.5rem
+    md:  map-get( $button-max-heights, 'md' ),
+    lg:  map-get( $button-max-heights, 'lg' ),
+    xl:  map-get( $button-max-heights, 'xl' ),
+    xxl: map-get( $button-max-heights, 'xxl' )
 ) !default;
 
 $button-square-min-widths: (
     sm:  map-get( $button-min-heights, 'sm' ),
-    md:  map-get( $button-min-heights, 'lg' ),
-    lg:  map-get( $button-min-heights, 'xxl' ),
-    xl:  4rem,
-    xxl: 5rem
+    md:  map-get( $button-min-heights, 'md' ),
+    lg:  map-get( $button-min-heights, 'lg' ),
+    xl:  map-get( $button-min-heights, 'xl' ),
+    xxl: map-get( $button-min-heights, 'xxl' )
 ) !default;
 
 $button-square-max-widths: (
     sm:  map-get( $button-max-heights, 'sm' ),
-    md:  map-get( $button-max-heights, 'lg' ),
-    lg:  map-get( $button-max-heights, 'xxl' ),
-    xl:  6rem,
-    xxl: 7.5rem
+    md:  map-get( $button-max-heights, 'md' ),
+    lg:  map-get( $button-max-heights, 'lg' ),
+    xl:  map-get( $button-max-heights, 'xl' ),
+    xxl: map-get( $button-max-heights, 'xxl' )
 ) !default;
 
 
