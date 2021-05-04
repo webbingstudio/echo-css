@@ -804,23 +804,22 @@ echo-button-circle
   border-radius: 50%;
 }
 
+@media (min-width: 62.5rem) {
+  .echo-button-circle {
+    width: 3.25rem;
+    height: 3.25rem;
+  }
+}
+
 .echo-button-circle.echo-button {
   padding: 0;
   min-height: auto;
 }
 
 @media (min-width: 62.5rem) {
-  .echo-button-circle:not(.echo-button-fixed) {
-    width: 3.25rem;
-    height: 3.25rem;
-    font-size: 1rem;
-  }
-}
-
-@media (min-width: 62.5rem) {
   .echo-button-circle.echo-button-fixed {
-    max-width: 20rem;
-    min-height: 2.5rem;
+    width: 2.75rem;
+    height: 2.75rem;
     font-size: 0.875rem;
   }
 }
@@ -831,7 +830,7 @@ echo-button-circle
 }
 
 @media (min-width: 62.5rem) {
-  .echo-button-circle.echo-button-sm:not(.echo-button-fixed) {
+  .echo-button-circle.echo-button-sm {
     width: 2.5rem;
     height: 2.5rem;
     font-size: 0.875rem;
@@ -840,8 +839,8 @@ echo-button-circle
 
 @media (min-width: 62.5rem) {
   .echo-button-circle.echo-button-sm.echo-button-fixed {
-    max-width: 16rem;
-    min-height: 2.25rem;
+    width: 2.25rem;
+    height: 2.25rem;
     font-size: 0.75rem;
   }
 }
@@ -852,7 +851,7 @@ echo-button-circle
 }
 
 @media (min-width: 62.5rem) {
-  .echo-button-circle.echo-button-lg:not(.echo-button-fixed) {
+  .echo-button-circle.echo-button-lg {
     width: 4rem;
     height: 4rem;
     font-size: 1.125rem;
@@ -861,8 +860,8 @@ echo-button-circle
 
 @media (min-width: 62.5rem) {
   .echo-button-circle.echo-button-lg.echo-button-fixed {
-    max-width: 25rem;
-    min-height: 2.75rem;
+    width: 3.25rem;
+    height: 3.25rem;
     font-size: 1rem;
   }
 }
@@ -873,7 +872,7 @@ echo-button-circle
 }
 
 @media (min-width: 62.5rem) {
-  .echo-button-circle.echo-button-xl:not(.echo-button-fixed) {
+  .echo-button-circle.echo-button-xl {
     width: 6rem;
     height: 6rem;
     font-size: 1.25rem;
@@ -882,8 +881,8 @@ echo-button-circle
 
 @media (min-width: 62.5rem) {
   .echo-button-circle.echo-button-xl.echo-button-fixed {
-    max-width: 38.4rem;
-    min-height: 3rem;
+    width: 4rem;
+    height: 4rem;
     font-size: 1.125rem;
   }
 }
@@ -894,7 +893,7 @@ echo-button-circle
 }
 
 @media (min-width: 62.5rem) {
-  .echo-button-circle.echo-button-xxl:not(.echo-button-fixed) {
+  .echo-button-circle.echo-button-xxl {
     width: 7.5rem;
     height: 7.5rem;
     font-size: 1.5rem;
@@ -903,113 +902,8 @@ echo-button-circle
 
 @media (min-width: 62.5rem) {
   .echo-button-circle.echo-button-xxl.echo-button-fixed {
-    max-width: 48rem;
-    min-height: 3.25rem;
-    font-size: 1.25rem;
-  }
-}
-
-.echo-button-square {
-  width: 2.75rem;
-  height: 2.75rem;
-}
-
-@media (min-width: 62.5rem) {
-  .echo-button-square:not(.echo-button-fixed) {
-    width: 3.25rem;
-    height: 3.25rem;
-    font-size: 1rem;
-  }
-}
-
-@media (min-width: 62.5rem) {
-  .echo-button-square.echo-button-fixed {
-    max-width: 20rem;
-    min-height: 2.5rem;
-    font-size: 0.875rem;
-  }
-}
-
-.echo-button-square.echo-button-sm {
-  width: 2.25rem;
-  height: 2.25rem;
-}
-
-@media (min-width: 62.5rem) {
-  .echo-button-square.echo-button-sm:not(.echo-button-fixed) {
-    width: 2.5rem;
-    height: 2.5rem;
-    font-size: 0.875rem;
-  }
-}
-
-@media (min-width: 62.5rem) {
-  .echo-button-square.echo-button-sm.echo-button-fixed {
-    max-width: 16rem;
-    min-height: 2.25rem;
-    font-size: 0.75rem;
-  }
-}
-
-.echo-button-square.echo-button-lg {
-  width: 3.25rem;
-  height: 3.25rem;
-}
-
-@media (min-width: 62.5rem) {
-  .echo-button-square.echo-button-lg:not(.echo-button-fixed) {
-    width: 4rem;
-    height: 4rem;
-    font-size: 1.125rem;
-  }
-}
-
-@media (min-width: 62.5rem) {
-  .echo-button-square.echo-button-lg.echo-button-fixed {
-    max-width: 25rem;
-    min-height: 2.75rem;
-    font-size: 1rem;
-  }
-}
-
-.echo-button-square.echo-button-xl {
-  width: 4rem;
-  height: 4rem;
-}
-
-@media (min-width: 62.5rem) {
-  .echo-button-square.echo-button-xl:not(.echo-button-fixed) {
-    width: 6rem;
-    height: 6rem;
-    font-size: 1.25rem;
-  }
-}
-
-@media (min-width: 62.5rem) {
-  .echo-button-square.echo-button-xl.echo-button-fixed {
-    max-width: 38.4rem;
-    min-height: 3rem;
-    font-size: 1.125rem;
-  }
-}
-
-.echo-button-square.echo-button-xxl {
-  width: 5rem;
-  height: 5rem;
-}
-
-@media (min-width: 62.5rem) {
-  .echo-button-square.echo-button-xxl:not(.echo-button-fixed) {
-    width: 7.5rem;
-    height: 7.5rem;
-    font-size: 1.5rem;
-  }
-}
-
-@media (min-width: 62.5rem) {
-  .echo-button-square.echo-button-xxl.echo-button-fixed {
-    max-width: 48rem;
-    min-height: 3.25rem;
+    width: 5rem;
+    height: 5rem;
     font-size: 1.25rem;
   }
 }
@@ -1025,23 +919,22 @@ echo-button-square
   height: 2.75rem;
 }
 
+@media (min-width: 62.5rem) {
+  .echo-button-square {
+    width: 3.25rem;
+    height: 3.25rem;
+  }
+}
+
 .echo-button-square.echo-button {
   padding: 0;
   min-height: auto;
 }
 
 @media (min-width: 62.5rem) {
-  .echo-button-square:not(.echo-button-fixed) {
-    width: 3.25rem;
-    height: 3.25rem;
-    font-size: 1rem;
-  }
-}
-
-@media (min-width: 62.5rem) {
   .echo-button-square.echo-button-fixed {
-    max-width: 20rem;
-    min-height: 2.5rem;
+    width: 2.75rem;
+    height: 2.75rem;
     font-size: 0.875rem;
   }
 }
@@ -1052,7 +945,7 @@ echo-button-square
 }
 
 @media (min-width: 62.5rem) {
-  .echo-button-square.echo-button-sm:not(.echo-button-fixed) {
+  .echo-button-square.echo-button-sm {
     width: 2.5rem;
     height: 2.5rem;
     font-size: 0.875rem;
@@ -1061,8 +954,8 @@ echo-button-square
 
 @media (min-width: 62.5rem) {
   .echo-button-square.echo-button-sm.echo-button-fixed {
-    max-width: 16rem;
-    min-height: 2.25rem;
+    width: 2.25rem;
+    height: 2.25rem;
     font-size: 0.75rem;
   }
 }
@@ -1073,7 +966,7 @@ echo-button-square
 }
 
 @media (min-width: 62.5rem) {
-  .echo-button-square.echo-button-lg:not(.echo-button-fixed) {
+  .echo-button-square.echo-button-lg {
     width: 4rem;
     height: 4rem;
     font-size: 1.125rem;
@@ -1082,8 +975,8 @@ echo-button-square
 
 @media (min-width: 62.5rem) {
   .echo-button-square.echo-button-lg.echo-button-fixed {
-    max-width: 25rem;
-    min-height: 2.75rem;
+    width: 3.25rem;
+    height: 3.25rem;
     font-size: 1rem;
   }
 }
@@ -1094,7 +987,7 @@ echo-button-square
 }
 
 @media (min-width: 62.5rem) {
-  .echo-button-square.echo-button-xl:not(.echo-button-fixed) {
+  .echo-button-square.echo-button-xl {
     width: 6rem;
     height: 6rem;
     font-size: 1.25rem;
@@ -1103,8 +996,8 @@ echo-button-square
 
 @media (min-width: 62.5rem) {
   .echo-button-square.echo-button-xl.echo-button-fixed {
-    max-width: 38.4rem;
-    min-height: 3rem;
+    width: 4rem;
+    height: 4rem;
     font-size: 1.125rem;
   }
 }
@@ -1115,7 +1008,7 @@ echo-button-square
 }
 
 @media (min-width: 62.5rem) {
-  .echo-button-square.echo-button-xxl:not(.echo-button-fixed) {
+  .echo-button-square.echo-button-xxl {
     width: 7.5rem;
     height: 7.5rem;
     font-size: 1.5rem;
@@ -1124,8 +1017,8 @@ echo-button-square
 
 @media (min-width: 62.5rem) {
   .echo-button-square.echo-button-xxl.echo-button-fixed {
-    max-width: 48rem;
-    min-height: 3.25rem;
+    width: 5rem;
+    height: 5rem;
     font-size: 1.25rem;
   }
 }
@@ -2699,8 +2592,6 @@ echo-toggle
 .echo-toggle {
   position: relative;
   display: inline-block;
-  width: 2.5rem;
-  height: 2.5rem;
   padding: 0;
   line-height: 1;
   border-width: 0;
@@ -2778,6 +2669,31 @@ echo-toggle
 .echo-toggle[aria-expanded="true"] .echo-toggle-line:after {
   top: 0;
   transform: rotate(-45deg);
+}
+
+/*
+--------------------
+echo-toggle(size)
+--------------------
+*/
+.echo-toggle {
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
+@media (min-width: 62.5rem) {
+  .echo-toggle {
+    width: 3.25rem;
+    height: 3.25rem;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-toggle.echo-toggle-fixed {
+    width: 2.75rem;
+    height: 2.75rem;
+    font-size: 0.875rem;
+  }
 }
 
 /*

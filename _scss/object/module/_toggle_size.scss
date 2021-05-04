@@ -1,0 +1,27 @@
+/*
+--------------------
+#{$pr}#{$m}toggle(size)
+--------------------
+*/
+
+.#{$pr}#{$m}toggle {
+    width: map-get( $button-square-min-widths, 'md' );
+    height: map-get( $button-square-min-widths, 'md' );
+
+    @include media-breakpoint-up(lg) {
+        width: map-get( $button-square-max-widths, 'md' );
+        height: map-get( $button-square-max-widths, 'md' );
+    }
+
+    &.#{$pr}#{$m}toggle#{$c3}fixed {
+
+        @include media-breakpoint-up(lg) {
+            width: map-get( $button-square-min-widths, 'md' );
+            height: map-get( $button-square-min-widths, 'md' );
+            font-size: map-get( $button-min-font-sizes, 'md' );
+        }
+
+    }
+
+}
+

@@ -27,7 +27,9 @@
 
                     <li class="echo-list-item"><a href="#toggle" class="js-scrollto">echo-toggle</a></li>
 
-                    <li class="echo-list-item"><a href="#toggle-01-inverse" class="js-scrollto">echo-toggle-inverse</a></li>
+                    <li class="echo-list-item"><a href="#toggle-01-fixed" class="js-scrollto">echo-toggle-fixed</a></li>
+
+                    <li class="echo-list-item"><a href="#toggle-02-inverse" class="js-scrollto">echo-toggle-inverse</a></li>
 
                 </ul>
             </nav>
@@ -36,7 +38,10 @@
                 <div class="echo-doc-post-contents styleguide-contents"><h2 id="toggle" class="echo-doc-post-title-01">echo-toggle</h2>
 
 <p>メニューを展開するためのトグルボタンを表示する。<br>
-<code>aria-expanded</code> 属性を付与する前提となっており、値が <code>true</code> のときにアイコンが変化する。</p>
+<code>.echo-button.echo-button-square</code> と同じ高さと幅を持つ。サイズの詳細は<a href="./module-button.html">.echo-button</a>を参照。</p>
+
+<p><code>aria-expanded</code> 属性を付与する前提となっており、値が <code>true</code> のときにアイコンがアニメーションを伴い変化する。</p>
+
 <div class="example">
     <div class="echo-text-center echo-padding-bottom-md">
         <p>aria-expanded = &quot;false&quot;</p>
@@ -52,7 +57,27 @@
 &lt;button class="echo-toggle" aria-expanded="true" aria-label="Menu"&gt;&lt;span class="echo-toggle-line"&gt;&lt;/span&gt;&lt;span class="echo-sr"&gt;メニュー&lt;/span&gt;&lt;/button&gt;</code></pre></div>
 
 
-<h2 id="toggle-01-inverse" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-toggle-inverse</h2>
+<h2 id="toggle-01-fixed" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-toggle-fixed</h2>
+
+<p>(breakpoint) に関わらず常に同じサイズとなる。<br>
+デザイン等の理由で大きさを変更したくない場合に使用する。</p>
+
+<div class="example">
+    <div class="echo-text-center echo-padding-bottom-md">
+        <p>aria-expanded = &quot;false&quot;</p>
+        <button class="echo-toggle echo-toggle-fixed" aria-expanded="false" aria-label="Menu"><span class="echo-toggle-line"></span><span class="echo-sr">メニュー</span></button>
+    </div>
+    <div class="echo-text-center">
+        <p>aria-expanded = &quot;true&quot;</p>
+        <button class="echo-toggle echo-toggle-fixed" aria-expanded="true" aria-label="Menu"><span class="echo-toggle-line"></span><span class="echo-sr">メニュー</span></button>
+    </div>
+</div>
+<div class="codeblock"><pre><code class="language-markup">&lt;button class="echo-toggle echo-toggle-fixed" aria-expanded="false" aria-label="Menu"&gt;&lt;span class="echo-toggle-line"&gt;&lt;/span&gt;&lt;span class="echo-sr"&gt;メニュー&lt;/span&gt;&lt;/button&gt;
+
+&lt;button class="echo-toggle echo-toggle-fixed" aria-expanded="true" aria-label="Menu"&gt;&lt;span class="echo-toggle-line"&gt;&lt;/span&gt;&lt;span class="echo-sr"&gt;メニュー&lt;/span&gt;&lt;/button&gt;</code></pre></div>
+
+
+<h2 id="toggle-02-inverse" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-toggle-inverse</h2>
 
 <p>トグルボタンの色を反転する。包括要素に濃い背景色を指定する必要がある。</p>
 
