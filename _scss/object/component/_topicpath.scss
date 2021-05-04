@@ -6,7 +6,6 @@
 
 .#{$pr}#{$c}topicpath {
     position: relative;
-    line-height: 1;
 
     &:after {
         content: "";
@@ -19,39 +18,44 @@
         z-index: 12;
     }
 
-    .#{$pr}#{$m}list {
+    .#{$pr}#{$m}nav {
+    }
+
+    .#{$pr}#{$m}nav#{$c1}list {
+        flex-wrap: nowrap;
+    }
+
+    .#{$pr}#{$m}nav#{$c1}item {
         display: flex;
         flex-wrap: nowrap;
-        justify-content: flex-start;
+        margin-right: .5em;
+        align-items: center;
 
-        .#{$pr}#{$m}list#{$c1}item {
-            display: flex;
-            flex-wrap: nowrap;
-            align-items: center;
-            margin-right: 1em;
+        &:not(:first-child) {
 
-            &:not(:first-child) {
-
-                &:before {
-                    flex-grow: 0;
-                    content: "";
-                    width: .4em;
-                    height: .4em;
-                    transform-origin: center center;
-                    border-top: 1px solid currentcolor;
-                    border-left: 1px solid currentcolor;
-                    margin-right: 1em;
-                    transform: rotate( 135deg );
-                }
-
-            }
-
-            &:last-child {
-                padding-right: 3em;
+            &:before {
+                flex-grow: 0;
+                content: "";
+                width: .4em;
+                height: .4em;
+                transform-origin: center center;
+                border-top: .0625rem solid currentcolor;
+                border-left: .0625rem solid currentcolor;
+                margin-right: .75em;
+                transform: rotate( 135deg );
             }
 
         }
 
+        &:last-child {
+            padding-right: 3em;
+        }
+
+    }
+
+    .#{$pr}#{$m}nav#{$c1}label {
+        padding-left: 0;
+        padding-right: 0;
     }
 
 }
@@ -67,24 +71,4 @@
     overflow: auto;
     white-space: nowrap;
     z-index: 11;
-}
-
-.#{$pr}#{$c}topicpath#{$c1}label {
-    flex-grow: 0;
-    padding: .5em 0;
-
-    @at-root {
-
-        a#{&} {
-            color: $nav-color;
-
-            &:hover,
-            &:focus {
-                color: $nav-hover-color;
-            }
-
-        }
-
-    }
-
 }

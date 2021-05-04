@@ -697,17 +697,9 @@ echo-topicpath
   background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, white 100%);
 }
 
-.echo-topicpath .echo-list .echo-list-item:not(:first-child):before {
+.echo-topicpath .echo-nav-item:not(:first-child):before {
   border-top-color: currentcolor;
   border-left-color: currentcolor;
-}
-
-a.echo-topicpath-label {
-  color: #333;
-}
-
-a.echo-topicpath-label:hover, a.echo-topicpath-label:focus {
-  color: #333;
 }
 
 /*

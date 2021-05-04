@@ -1,0 +1,17 @@
+/*
+--------------------
+#{$pr}#{$c}topicpath(font)
+--------------------
+*/
+
+.#{$pr}#{$c}topicpath {
+
+    .#{$pr}#{$m}nav#{$c1}item {
+
+        &:last-child {
+            @include font-family-weight( 'root', 'bold' );
+        }
+
+    }
+
+}

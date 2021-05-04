@@ -10,35 +10,13 @@
         background: linear-gradient( 90deg, rgba( $body-bg, 0 ) 0%, rgba( $body-bg, 1 ) 100% );
     }
 
-    .#{$pr}#{$m}list {
+    .#{$pr}#{$m}nav#{$c1}item {
 
-        .#{$pr}#{$m}list#{$c1}item {
+        &:not(:first-child) {
 
-            &:not(:first-child) {
-
-                &:before {
-                    border-top-color: currentcolor;
-                    border-left-color: currentcolor;
-                }
-
-            }
-
-        }
-
-    }
-
-}
-
-.#{$pr}#{$c}topicpath#{$c1}label {
-
-    @at-root {
-
-        a#{&} {
-            color: $nav-color;
-
-            &:hover,
-            &:focus {
-                color: $nav-hover-color;
+            &:before {
+                border-top-color: currentcolor;
+                border-left-color: currentcolor;
             }
 
         }

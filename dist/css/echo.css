@@ -1657,6 +1657,27 @@ ul.echo-list-horizontal li:last-child,
 
 /*
 --------------------
+echo-list(size)
+--------------------
+*/
+.echo-list {
+  font-size: 0.875rem;
+}
+
+@media (min-width: 62.5rem) {
+  .echo-list {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-list.echo-list-fixed {
+    font-size: 0.875rem;
+  }
+}
+
+/*
+--------------------
 echo-nav
 --------------------
 */
@@ -4423,7 +4444,6 @@ echo-topicpath
 */
 .echo-topicpath {
   position: relative;
-  line-height: 1;
 }
 
 .echo-topicpath:after {
@@ -4437,33 +4457,36 @@ echo-topicpath
   z-index: 12;
 }
 
-.echo-topicpath .echo-list {
-  display: flex;
+.echo-topicpath .echo-nav-list {
   flex-wrap: nowrap;
-  justify-content: flex-start;
 }
 
-.echo-topicpath .echo-list .echo-list-item {
+.echo-topicpath .echo-nav-item {
   display: flex;
   flex-wrap: nowrap;
+  margin-right: .5em;
   align-items: center;
-  margin-right: 1em;
 }
 
-.echo-topicpath .echo-list .echo-list-item:not(:first-child):before {
+.echo-topicpath .echo-nav-item:not(:first-child):before {
   flex-grow: 0;
   content: "";
   width: .4em;
   height: .4em;
   transform-origin: center center;
-  border-top: 1px solid currentcolor;
-  border-left: 1px solid currentcolor;
-  margin-right: 1em;
+  border-top: .0625rem solid currentcolor;
+  border-left: .0625rem solid currentcolor;
+  margin-right: .75em;
   transform: rotate(135deg);
 }
 
-.echo-topicpath .echo-list .echo-list-item:last-child {
+.echo-topicpath .echo-nav-item:last-child {
   padding-right: 3em;
+}
+
+.echo-topicpath .echo-nav-label {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .echo-topicpath-inner {
@@ -4479,38 +4502,14 @@ echo-topicpath
   z-index: 11;
 }
 
-.echo-topicpath-label {
-  flex-grow: 0;
-  padding: .5em 0;
-}
-
-a.echo-topicpath-label {
-  color: #333;
-}
-
-a.echo-topicpath-label:hover, a.echo-topicpath-label:focus {
-  color: #333;
-}
-
 /*
 --------------------
-echo-topicpath(size)
+echo-topicpath(font)
 --------------------
 */
-.echo-topicpath {
-  font-size: 0.75rem;
-}
-
-@media (min-width: 62.5rem) {
-  .echo-topicpath {
-    font-size: 0.875rem;
-  }
-}
-
-@media (min-width: 62.5rem) {
-  .echo-topicpath-fixed {
-    font-size: 0.75rem;
-  }
+.echo-topicpath .echo-nav-item:last-child {
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
+  font-weight: 600;
 }
 
 /*
@@ -4522,17 +4521,9 @@ echo-topicpath
   background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, white 100%);
 }
 
-.echo-topicpath .echo-list .echo-list-item:not(:first-child):before {
+.echo-topicpath .echo-nav-item:not(:first-child):before {
   border-top-color: currentcolor;
   border-left-color: currentcolor;
-}
-
-a.echo-topicpath-label {
-  color: #333;
-}
-
-a.echo-topicpath-label:hover, a.echo-topicpath-label:focus {
-  color: #333;
 }
 
 /*
