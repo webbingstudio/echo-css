@@ -4423,14 +4423,7 @@ echo-topicpath
 */
 .echo-topicpath {
   position: relative;
-  font-size: 0.75rem;
   line-height: 1;
-}
-
-@media (min-width: 62.5rem) {
-  .echo-topicpath {
-    font-size: 0.875rem;
-  }
 }
 
 .echo-topicpath:after {
@@ -4497,6 +4490,27 @@ a.echo-topicpath-label {
 
 a.echo-topicpath-label:hover, a.echo-topicpath-label:focus {
   color: #333;
+}
+
+/*
+--------------------
+echo-topicpath(size)
+--------------------
+*/
+.echo-topicpath {
+  font-size: 0.75rem;
+}
+
+@media (min-width: 62.5rem) {
+  .echo-topicpath {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-topicpath-fixed {
+    font-size: 0.75rem;
+  }
 }
 
 /*

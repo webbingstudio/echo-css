@@ -27,6 +27,8 @@
 
                     <li class="echo-list-item"><a href="#topicpath" class="js-scrollto">echo-topicpath</a></li>
 
+                    <li class="echo-list-item"><a href="#topicpath-01-fixed" class="js-scrollto">echo-topicpath-fixed</a></li>
+
                 </ul>
             </nav>
             
@@ -34,18 +36,18 @@
             <article class="echo-doc-post">
                 <div class="echo-doc-post-contents styleguide-contents"><h2 id="topicpath" class="echo-doc-post-title-01">echo-topicpath</h2>
 
-<p>トピックパス（パンくずリスト、ページ階層ナビゲーション）を前提とした外観に変更する。<br>
+<p>トピックパス（パンくずリスト、ページ階層ナビゲーション）を前提とした外観に変更する。 <code>.echo-list</code> を包括する。<br>
 テキストリンクの色は <code>$ui-color = $default-strong</code> となる。<br>
 クリックをしやすくするために、リンクの上下には <code>0.5em</code> の余白を設けている。</p>
 
-<p>フォントサイズは、(breakpoint) が <code>md</code> 以下で <code>0.75rem = 12px</code> 、<code>lg</code> 以上で <code>0.875rem = 14px</code> となる。<br>
-このため、内包される <code>.echo-title</code> のテキストも追随して大きくなる。</p>
-
-<p><code>.echo-list</code> を包括し、モバイル端末等でリストが画面の幅よりも長くなった場合は、右側にスクロール（スワイプ）を促すフェードアウトが表示される。</p>
+<p>モバイル端末等でリストが画面の幅よりも長くなった場合は、右側にスクロール（スワイプ）を促すフェードアウトが表示される。</p>
 
 <p>schema.orgの構造化データに対応したマークアップをする場合は、リンク内のテキストにも要素が必要となる。例では <code>.echo-topicpath-name</code> を付与している。</p>
 
+<?php include('../doc_include/fonttable_article.html'); ?>
+
 <div class="example">
+
 <p class="echo-title echo-title-level-4 m-style-a echo-margin-bottom-sm">一般的なトピックパス</p>
 
 <nav class="echo-topicpath">
@@ -130,6 +132,72 @@
 &lt;p class="echo-margin-bottom-lg"&gt;ウィンドウ幅を縮めて、スクロールを促すインターフェースが表示されることを確認してください。&lt;/p&gt;
 
 &lt;nav class="echo-topicpath"&gt;
+    &lt;div class="echo-topicpath-inner"&gt;
+        &lt;ol class="echo-list" itemscope itemtype="http://schema.org/BreadcrumbList"&gt;
+            &lt;li class="echo-list-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"&gt;
+                &lt;a href="#" class="echo-topicpath-label" itemprop="item"&gt;&lt;span class="echo-topicpath-name" itemprop="name"&gt;リストの一番目&lt;/span&gt;&lt;/a&gt;
+                &lt;meta itemprop="position" content="1"&gt;
+            &lt;/li&gt;
+            &lt;li class="echo-list-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"&gt;
+                &lt;a href="#" class="echo-topicpath-label" itemprop="item"&gt;&lt;span class="echo-topicpath-name" itemprop="name"&gt;リストの二番目です&lt;/span&gt;&lt;/a&gt;
+                &lt;meta itemprop="position" content="2"&gt;
+            &lt;/li&gt;
+            &lt;li class="echo-list-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"&gt;
+                &lt;a href="#" class="echo-topicpath-label" itemprop="item"&gt;&lt;span class="echo-topicpath-name" itemprop="name"&gt;リストの三番目はタイトルが長いです&lt;/span&gt;&lt;/a&gt;
+                &lt;meta itemprop="position" content="3"&gt;
+            &lt;/li&gt;
+            &lt;li class="echo-list-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"&gt;
+                &lt;a href="#" class="echo-topicpath-label" itemprop="item"&gt;&lt;span class="echo-topicpath-name" itemprop="name"&gt;リストの四番目&lt;/span&gt;&lt;/a&gt;
+                &lt;meta itemprop="position" content="4"&gt;
+            &lt;/li&gt;
+            &lt;li class="echo-list-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"&gt;
+                &lt;a href="#" class="echo-topicpath-label" itemprop="item"&gt;&lt;span class="echo-topicpath-name" itemprop="name"&gt;リストの五番目もタイトルが長いです&lt;/span&gt;&lt;/a&gt;
+                &lt;meta itemprop="position" content="5"&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/div&gt;&lt;!-- /.echo-topicpath-inner --&gt;
+&lt;/nav&gt;&lt;!-- /.echo-topicpath --&gt;
+</code></pre></div>
+
+
+
+<h2 id="topicpath-01-fixed" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-topicpath-fixed</h2>
+
+<p>文字が (breakpoint) に関わらず常に同じサイズとなる。<br>
+デザイン等の理由で文字サイズを大きくしたくない場合に使用する。</p>
+
+<div class="example">
+
+<nav class="echo-topicpath echo-topicpath-fixed">
+    <div class="echo-topicpath-inner">
+        <ol class="echo-list" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li class="echo-list-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a href="#" class="echo-topicpath-label" itemprop="item"><span class="echo-topicpath-name" itemprop="name">リストの一番目</span></a>
+                <meta itemprop="position" content="1">
+            </li>
+            <li class="echo-list-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a href="#" class="echo-topicpath-label" itemprop="item"><span class="echo-topicpath-name" itemprop="name">リストの二番目です</span></a>
+                <meta itemprop="position" content="2">
+            </li>
+            <li class="echo-list-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a href="#" class="echo-topicpath-label" itemprop="item"><span class="echo-topicpath-name" itemprop="name">リストの三番目はタイトルが長いです</span></a>
+                <meta itemprop="position" content="3">
+            </li>
+            <li class="echo-list-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a href="#" class="echo-topicpath-label" itemprop="item"><span class="echo-topicpath-name" itemprop="name">リストの四番目</span></a>
+                <meta itemprop="position" content="4">
+            </li>
+            <li class="echo-list-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a href="#" class="echo-topicpath-label" itemprop="item"><span class="echo-topicpath-name" itemprop="name">リストの五番目もタイトルが長いです</span></a>
+                <meta itemprop="position" content="5">
+            </li>
+        </ol>
+    </div><!-- /.echo-topicpath-inner -->
+</nav><!-- /.echo-topicpath -->
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;nav class="echo-topicpath echo-topicpath-fixed"&gt;
     &lt;div class="echo-topicpath-inner"&gt;
         &lt;ol class="echo-list" itemscope itemtype="http://schema.org/BreadcrumbList"&gt;
             &lt;li class="echo-list-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"&gt;
