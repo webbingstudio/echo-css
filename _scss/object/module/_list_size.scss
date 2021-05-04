@@ -1,0 +1,22 @@
+/*
+--------------------
+#{$pr}#{$m}list(size)
+--------------------
+*/
+
+.#{$pr}#{$m}list {
+    font-size: map-get( $body-min-font-sizes, 'md' );
+
+    @include media-breakpoint-up(lg) {
+        font-size: map-get( $body-max-font-sizes, 'md' );
+    }
+
+    &.#{$pr}#{$m}list#{$c3}fixed {
+
+        @include media-breakpoint-up(lg) {
+            font-size: map-get( $body-min-font-sizes, 'md' );
+        }
+
+    }
+
+}

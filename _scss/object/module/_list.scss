@@ -10,13 +10,14 @@
     list-style-type: none;
 }
 
-ul.#{$pr}#{$m}list li,
+.#{$pr}#{$m}list li,
 .#{$pr}#{$m}list#{$c1}item {
     position: relative;
     margin: 0;
 }
 
-ul.#{$pr}#{$m}list li ul,
+.#{$pr}#{$m}list li ul,
+.#{$pr}#{$m}list li ol,
 .#{$pr}#{$m}list#{$c1}children {
     margin: 0;
     padding-left: 0;
@@ -30,20 +31,19 @@ ul.#{$pr}#{$m}list li ul,
 --------------------
 */
 
-ul.#{$pr}#{$m}list#{$c3}vertical li,
+.#{$pr}#{$m}list#{$c3}vertical li,
 .#{$pr}#{$m}list#{$c3}vertical .#{$pr}#{$m}list#{$c1}item {
-    margin-top: .75em;
-    margin-bottom: .75em;
+
+    &:not(:first-child) {
+        margin-top: .75em;
+    }
+
 }
 
-ul.#{$pr}#{$m}list#{$c3}vertical li ul,
+.#{$pr}#{$m}list#{$c3}vertical li ul,
+.#{$pr}#{$m}list#{$c3}vertical li ol,
 .#{$pr}#{$m}list#{$c3}vertical .#{$pr}#{$m}list#{$c1}children {
     padding-left: 1.5em;
-}
-
-ul.#{$pr}#{$m}list#{$c3}vertical li ul li,
-.#{$pr}#{$m}list#{$c3}vertical .#{$pr}#{$m}list#{$c1}children .#{$pr}#{$m}list#{$c1}item {
-    font-size: .9em;
 }
 
 
@@ -54,22 +54,19 @@ ul.#{$pr}#{$m}list#{$c3}vertical li ul li,
 */
 
 .#{$pr}#{$m}list#{$c3}horizontal {
-    letter-spacing: -.4em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-ul.#{$pr}#{$m}list#{$c3}horizontal li,
+.#{$pr}#{$m}list#{$c3}horizontal li,
 .#{$pr}#{$m}list#{$c3}horizontal .#{$pr}#{$m}list#{$c1}item {
-    display: inline;
-    padding-left: 1em;
-    padding-right: 1em;
-    letter-spacing: normal;
+    flex-grow: 0;
+    margin-left: 1em;
+    margin-right: 1em;
 
-    &:first-child {
-        padding-left: 0;
-    }
-
-    &:last-child {
-        padding-right: 0;
+    &:not(:first-child) {
+        margin-top: 0;
     }
 
 }

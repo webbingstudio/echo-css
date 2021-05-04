@@ -736,14 +736,14 @@ echo-button-(size)
 .echo-button-xl {
   max-width: 38.4rem;
   min-height: 3rem;
-  font-size: 1rem;
+  font-size: 1.125rem;
 }
 
 @media (min-width: 62.5rem) {
   .echo-button-xl {
     max-width: 48rem;
     min-height: 3.5rem;
-    font-size: 1.125rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -751,21 +751,21 @@ echo-button-(size)
   .echo-button-xl.echo-button-fixed {
     max-width: 38.4rem;
     min-height: 3rem;
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 
 .echo-button-xxl {
   max-width: 48rem;
   min-height: 3.25rem;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
 }
 
 @media (min-width: 62.5rem) {
   .echo-button-xxl {
     max-width: 60rem;
     min-height: 4rem;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -773,7 +773,7 @@ echo-button-(size)
   .echo-button-xxl.echo-button-fixed {
     max-width: 48rem;
     min-height: 3.25rem;
-    font-size: 1.125rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -876,7 +876,7 @@ echo-button-circle
   .echo-button-circle.echo-button-xl:not(.echo-button-fixed) {
     width: 6rem;
     height: 6rem;
-    font-size: 1.125rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -884,7 +884,7 @@ echo-button-circle
   .echo-button-circle.echo-button-xl.echo-button-fixed {
     max-width: 38.4rem;
     min-height: 3rem;
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 
@@ -897,7 +897,7 @@ echo-button-circle
   .echo-button-circle.echo-button-xxl:not(.echo-button-fixed) {
     width: 7.5rem;
     height: 7.5rem;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -905,7 +905,7 @@ echo-button-circle
   .echo-button-circle.echo-button-xxl.echo-button-fixed {
     max-width: 48rem;
     min-height: 3.25rem;
-    font-size: 1.125rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -981,7 +981,7 @@ echo-button-circle
   .echo-button-square.echo-button-xl:not(.echo-button-fixed) {
     width: 6rem;
     height: 6rem;
-    font-size: 1.125rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -989,7 +989,7 @@ echo-button-circle
   .echo-button-square.echo-button-xl.echo-button-fixed {
     max-width: 38.4rem;
     min-height: 3rem;
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 
@@ -1002,7 +1002,7 @@ echo-button-circle
   .echo-button-square.echo-button-xxl:not(.echo-button-fixed) {
     width: 7.5rem;
     height: 7.5rem;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -1010,7 +1010,7 @@ echo-button-circle
   .echo-button-square.echo-button-xxl.echo-button-fixed {
     max-width: 48rem;
     min-height: 3.25rem;
-    font-size: 1.125rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -1097,7 +1097,7 @@ echo-button-square
   .echo-button-square.echo-button-xl:not(.echo-button-fixed) {
     width: 6rem;
     height: 6rem;
-    font-size: 1.125rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -1105,7 +1105,7 @@ echo-button-square
   .echo-button-square.echo-button-xl.echo-button-fixed {
     max-width: 38.4rem;
     min-height: 3rem;
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 
@@ -1118,7 +1118,7 @@ echo-button-square
   .echo-button-square.echo-button-xxl:not(.echo-button-fixed) {
     width: 7.5rem;
     height: 7.5rem;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -1126,7 +1126,7 @@ echo-button-square
   .echo-button-square.echo-button-xxl.echo-button-fixed {
     max-width: 48rem;
     min-height: 3.25rem;
-    font-size: 1.125rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -1594,13 +1594,14 @@ echo-list
   list-style-type: none;
 }
 
-ul.echo-list li,
+.echo-list li,
 .echo-list-item {
   position: relative;
   margin: 0;
 }
 
-ul.echo-list li ul,
+.echo-list li ul,
+.echo-list li ol,
 .echo-list-children {
   margin: 0;
   padding-left: 0;
@@ -1612,20 +1613,15 @@ ul.echo-list li ul,
 echo-list-vertical
 --------------------
 */
-ul.echo-list-vertical li,
-.echo-list-vertical .echo-list-item {
+.echo-list-vertical li:not(:first-child),
+.echo-list-vertical .echo-list-item:not(:first-child) {
   margin-top: .75em;
-  margin-bottom: .75em;
 }
 
-ul.echo-list-vertical li ul,
+.echo-list-vertical li ul,
+.echo-list-vertical li ol,
 .echo-list-vertical .echo-list-children {
   padding-left: 1.5em;
-}
-
-ul.echo-list-vertical li ul li,
-.echo-list-vertical .echo-list-children .echo-list-item {
-  font-size: .9em;
 }
 
 /*
@@ -1634,25 +1630,21 @@ echo-list-horizontal
 --------------------
 */
 .echo-list-horizontal {
-  letter-spacing: -.4em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-ul.echo-list-horizontal li,
+.echo-list-horizontal li,
 .echo-list-horizontal .echo-list-item {
-  display: inline;
-  padding-left: 1em;
-  padding-right: 1em;
-  letter-spacing: normal;
+  flex-grow: 0;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
-ul.echo-list-horizontal li:first-child,
-.echo-list-horizontal .echo-list-item:first-child {
-  padding-left: 0;
-}
-
-ul.echo-list-horizontal li:last-child,
-.echo-list-horizontal .echo-list-item:last-child {
-  padding-right: 0;
+.echo-list-horizontal li:not(:first-child),
+.echo-list-horizontal .echo-list-item:not(:first-child) {
+  margin-top: 0;
 }
 
 /*
