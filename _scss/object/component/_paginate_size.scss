@@ -1,0 +1,89 @@
+/*
+--------------------
+#{$pr}#{$c}paginate(size)
+--------------------
+*/
+
+.#{$pr}#{$c}paginate {
+
+    .#{$pr}#{$m}nav#{$c1}label {
+        width: map-get( $nav-min-heights, 'md' );
+        height: map-get( $nav-min-heights, 'md' );
+
+        @include media-breakpoint-up(lg) {
+            width: map-get( $nav-max-heights, 'md' );
+            height: map-get( $nav-max-heights, 'md' );
+        }
+
+    }
+
+    &.#{$pr}#{$m}nav#{$c3}fixed {
+
+        .#{$pr}#{$m}nav#{$c1}label {
+
+            @include media-breakpoint-up(lg) {
+                width: map-get( $nav-min-heights, 'md' );
+                height: map-get( $nav-min-heights, 'md' );
+            }
+
+        }
+
+    }
+
+    .#{$pr}#{$m}nav#{$c3}sm {
+
+        .#{$pr}#{$m}nav#{$c1}label {
+            width: map-get( $nav-min-heights, 'sm' );
+            height: map-get( $nav-min-heights, 'sm' );
+
+            @include media-breakpoint-up(lg) {
+                width: map-get( $nav-max-heights, 'sm' );
+                height: map-get( $nav-max-heights, 'sm' );
+            }
+
+        }
+
+    }
+
+    .#{$pr}#{$m}nav#{$c3}sm.#{$pr}#{$m}nav#{$c3}fixed {
+
+        .#{$pr}#{$m}nav#{$c1}label {
+
+            @include media-breakpoint-up(lg) {
+                width: map-get( $nav-min-heights, 'sm' );
+                height: map-get( $nav-min-heights, 'sm' );
+            }
+
+        }
+
+    }
+
+    .#{$pr}#{$m}nav#{$c3}lg {
+
+        .#{$pr}#{$m}nav#{$c1}label {
+            width: map-get( $nav-min-heights, 'lg' );
+            height: map-get( $nav-min-heights, 'lg' );
+
+            @include media-breakpoint-up(lg) {
+                width: map-get( $nav-max-heights, 'lg' );
+                height: map-get( $nav-max-heights, 'lg' );
+            }
+
+        }
+
+    }
+
+    .#{$pr}#{$m}nav#{$c3}lg.#{$pr}#{$m}nav#{$c3}fixed {
+
+        .#{$pr}#{$m}nav#{$c1}label {
+
+            @include media-breakpoint-up(lg) {
+                width: map-get( $nav-min-heights, 'lg' );
+                height: map-get( $nav-min-heights, 'lg' );
+            }
+
+        }
+
+    }
+
+}

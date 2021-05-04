@@ -616,37 +616,37 @@ echo-paginate(color)
 
 .echo-paginate .echo-nav:not(.echo-nav-inverse) .echo-nav-item.is-current .echo-nav-label {
   background-color: #333;
-  border-color: transparent;
+  border-color: #333;
   color: #fff;
 }
 
 .echo-paginate .echo-nav:not(.echo-nav-inverse) a.echo-nav-label {
   background-color: transparent;
-  border-color: transparent;
+  border-color: #333;
   color: #333;
 }
 
 .echo-paginate .echo-nav:not(.echo-nav-inverse) a.echo-nav-label:hover, .echo-paginate .echo-nav:not(.echo-nav-inverse) a.echo-nav-label:focus {
   background-color: #eee;
-  border-color: transparent;
+  border-color: #333;
   color: #333;
 }
 
 .echo-paginate .echo-nav-inverse .echo-nav-item.is-current .echo-nav-label {
   background-color: #fff;
-  border-color: transparent;
+  border-color: #fff;
   color: #333;
 }
 
 .echo-paginate .echo-nav-inverse a.echo-nav-label {
   background-color: transparent;
-  border-color: transparent;
+  border-color: #fff;
   color: #fff;
 }
 
 .echo-paginate .echo-nav-inverse a.echo-nav-label:hover, .echo-paginate .echo-nav-inverse a.echo-nav-label:focus {
   background-color: rgba(255, 255, 255, 0.15);
-  border-color: transparent;
+  border-color: #fff;
   color: #fff;
 }
 

@@ -5,25 +5,25 @@
 */
 
 .#{$pr}#{$c}paginate {
+    overflow: hidden;
+    max-width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: $font-size-sm;
 
     .#{$pr}#{$m}nav {
         flex-grow: 0;
     }
 
     .#{$pr}#{$m}nav#{$c1}list {
-        margin-left: -.5rem;
+        margin-left: ( $paginate-gutter * -1 );
     }
 
     .#{$pr}#{$m}nav#{$c1}item {
         position: relative;
         display: flex;
         justify-content: center;
-        align-items: stretch;
-        margin-left: .5rem;
+        margin-left: $paginate-gutter;
         flex-grow: 1;
 
         &:not(.#{$paginate-prev}):not(.#{$paginate-next}):not(.#{$paginate-ellipsis}) {
@@ -85,14 +85,20 @@
 
         &.#{$paginate-ellipsis} {
             align-items: center;
+
+            .#{$pr}#{$m}nav#{$c1}label {
+                width: auto;
+                padding-left: .5em;
+                padding-right: .5em;
+                border: 0 none transparent;
+            }
+
         }
 
     }
 
     .#{$pr}#{$m}nav#{$c1}label {
         flex-wrap: nowrap;
-        min-width: 2.75rem;
-        min-height: 2.75rem;
         padding: 0;
         border-style: solid;
         border-width: $paginate-border-width;

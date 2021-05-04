@@ -9,9 +9,6 @@
     .#{$pr}#{$m}nav#{$c3}label {
         font-size: map-get( $nav-min-font-sizes, 'md' );
         min-height: map-get( $nav-min-heights, 'md' );
-    }
-
-    .#{$pr}#{$m}nav#{$c3}label {
 
         @include media-breakpoint-up(lg) {
             font-size: map-get( $nav-max-font-sizes, 'md' );

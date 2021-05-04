@@ -4037,10 +4037,11 @@ echo-paginate
 --------------------
 */
 .echo-paginate {
+  overflow: hidden;
+  max-width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.875rem;
 }
 
 .echo-paginate .echo-nav {
@@ -4048,15 +4049,14 @@ echo-paginate
 }
 
 .echo-paginate .echo-nav-list {
-  margin-left: -.5rem;
+  margin-left: 0;
 }
 
 .echo-paginate .echo-nav-item {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: stretch;
-  margin-left: .5rem;
+  margin-left: 0;
   flex-grow: 1;
 }
 
@@ -4093,49 +4093,116 @@ echo-paginate
   align-items: center;
 }
 
+.echo-paginate .echo-nav-item.ellipsis .echo-nav-label {
+  width: auto;
+  padding-left: .5em;
+  padding-right: .5em;
+  border: 0 none transparent;
+}
+
 .echo-paginate .echo-nav-label {
   flex-wrap: nowrap;
-  min-width: 2.75rem;
-  min-height: 2.75rem;
   padding: 0;
   border-style: solid;
-  border-width: 0.0625rem;
+  border-width: 0;
 }
 
 .echo-paginate .echo-nav:not(.echo-nav-inverse) .echo-nav-item.is-current .echo-nav-label {
   background-color: #333;
-  border-color: transparent;
+  border-color: #333;
   color: #fff;
 }
 
 .echo-paginate .echo-nav:not(.echo-nav-inverse) a.echo-nav-label {
   background-color: transparent;
-  border-color: transparent;
+  border-color: #333;
   color: #333;
 }
 
 .echo-paginate .echo-nav:not(.echo-nav-inverse) a.echo-nav-label:hover, .echo-paginate .echo-nav:not(.echo-nav-inverse) a.echo-nav-label:focus {
   background-color: #eee;
-  border-color: transparent;
+  border-color: #333;
   color: #333;
 }
 
 .echo-paginate .echo-nav-inverse .echo-nav-item.is-current .echo-nav-label {
   background-color: #fff;
-  border-color: transparent;
+  border-color: #fff;
   color: #333;
 }
 
 .echo-paginate .echo-nav-inverse a.echo-nav-label {
   background-color: transparent;
-  border-color: transparent;
+  border-color: #fff;
   color: #fff;
 }
 
 .echo-paginate .echo-nav-inverse a.echo-nav-label:hover, .echo-paginate .echo-nav-inverse a.echo-nav-label:focus {
   background-color: rgba(255, 255, 255, 0.15);
-  border-color: transparent;
+  border-color: #fff;
   color: #fff;
+}
+
+/*
+--------------------
+echo-paginate(size)
+--------------------
+*/
+.echo-paginate .echo-nav-label {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+@media (min-width: 62.5rem) {
+  .echo-paginate .echo-nav-label {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-paginate.echo-nav-fixed .echo-nav-label {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+.echo-paginate .echo-nav-sm .echo-nav-label {
+  width: 2.25rem;
+  height: 2.25rem;
+}
+
+@media (min-width: 62.5rem) {
+  .echo-paginate .echo-nav-sm .echo-nav-label {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-paginate .echo-nav-sm.echo-nav-fixed .echo-nav-label {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+}
+
+.echo-paginate .echo-nav-lg .echo-nav-label {
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
+@media (min-width: 62.5rem) {
+  .echo-paginate .echo-nav-lg .echo-nav-label {
+    width: 3.25rem;
+    height: 3.25rem;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-paginate .echo-nav-lg.echo-nav-fixed .echo-nav-label {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
 }
 
 /*
@@ -4150,37 +4217,37 @@ echo-paginate(color)
 
 .echo-paginate .echo-nav:not(.echo-nav-inverse) .echo-nav-item.is-current .echo-nav-label {
   background-color: #333;
-  border-color: transparent;
+  border-color: #333;
   color: #fff;
 }
 
 .echo-paginate .echo-nav:not(.echo-nav-inverse) a.echo-nav-label {
   background-color: transparent;
-  border-color: transparent;
+  border-color: #333;
   color: #333;
 }
 
 .echo-paginate .echo-nav:not(.echo-nav-inverse) a.echo-nav-label:hover, .echo-paginate .echo-nav:not(.echo-nav-inverse) a.echo-nav-label:focus {
   background-color: #eee;
-  border-color: transparent;
+  border-color: #333;
   color: #333;
 }
 
 .echo-paginate .echo-nav-inverse .echo-nav-item.is-current .echo-nav-label {
   background-color: #fff;
-  border-color: transparent;
+  border-color: #fff;
   color: #333;
 }
 
 .echo-paginate .echo-nav-inverse a.echo-nav-label {
   background-color: transparent;
-  border-color: transparent;
+  border-color: #fff;
   color: #fff;
 }
 
 .echo-paginate .echo-nav-inverse a.echo-nav-label:hover, .echo-paginate .echo-nav-inverse a.echo-nav-label:focus {
   background-color: rgba(255, 255, 255, 0.15);
-  border-color: transparent;
+  border-color: #fff;
   color: #fff;
 }
 

@@ -1,79 +1,6 @@
 // Config: advance
 // ========================================
 
-// Color
-// -----------------------------------------
-
-// Navigation
-$nav-color:                       $ui-color !default;
-$nav-bg:                          $ui-bg !default;
-$nav-hover-color:                 $ui-hover-color !default;
-$nav-hover-bg:                    $ui-hover-bg !default;
-$nav-current-color:               $ui-current-color !default;
-$nav-current-bg:                  $ui-current-bg !default;
-$nav-current-hover-color:         $ui-current-hover-color !default;
-$nav-current-hover-bg:            $ui-current-hover-bg !default;
-
-// Navigation (inverse)
-$nav-inverse-color:               $ui-inverse-color !default;
-$nav-inverse-bg:                  $ui-inverse-bg !default;
-$nav-inverse-hover-color:         $ui-inverse-hover-color !default;
-$nav-inverse-hover-bg:            $ui-inverse-hover-bg !default;
-$nav-inverse-current-color:       $ui-inverse-current-color !default;
-$nav-inverse-current-bg:          $ui-inverse-current-bg !default;
-$nav-inverse-current-hover-color: $ui-inverse-current-hover-color !default;
-$nav-inverse-current-hover-bg:    $ui-inverse-current-hover-bg !default;
-
-// Paginate
-$paginate-border-width:                 $ui-border-width !default;
-$paginate-color:                        $nav-color !default;
-$paginate-bg:                           $nav-bg !default;
-$paginate-border-color:                 transparent !default;
-$paginate-hover-color:                  $nav-hover-color !default;
-$paginate-hover-bg:                     $nav-hover-bg !default;
-$paginate-hover-border-color:           $paginate-border-color !default;
-$paginate-current-color:                $nav-current-color !default;
-$paginate-current-bg:                   $nav-current-bg !default;
-$paginate-current-border-color:         $paginate-border-color !default;
-
-// Paginate (inverse)
-$paginate-inverse-color:                $nav-inverse-color !default;
-$paginate-inverse-bg:                   $nav-inverse-bg !default;
-$paginate-inverse-border-color:         transparent !default;
-$paginate-inverse-hover-color:          $nav-inverse-hover-color !default;
-$paginate-inverse-hover-bg:             $nav-inverse-hover-bg !default;
-$paginate-inverse-hover-border-color:   $paginate-inverse-border-color !default;
-$paginate-inverse-current-color:        $nav-inverse-current-color !default;
-$paginate-inverse-current-bg:           $nav-inverse-current-bg !default;
-$paginate-inverse-current-border-color: $paginate-inverse-border-color !default;
-
-// Input
-$input-border-width:       $ui-border-width !default;
-$input-color:              $ui-color !default;
-$input-bg:                 $ui-bg !default;
-$input-border-color:       $ui-border-color !default;
-$input-focus-color:        $ui-color !default;
-$input-focus-bg:           $ui-hover-bg !default;
-$input-focus-border-color: $ui-border-color !default;
-
-// Checkbox
-$checkbox-border-width:         $ui-border-width !default;
-$checkbox-color:                $ui-color !default;
-$checkbox-bg:                   $body-bg !default;
-$checkbox-border-color:         $ui-border-color !default;
-$checkbox-checked-color:        $ui-current-color !default;
-$checkbox-checked-bg:           $ui-icon-color !default;
-$checkbox-checked-border-color: $ui-icon-color !default;
-
-// Radio
-$radio-border-width:         $ui-border-width !default;
-$radio-color:                $ui-color !default;
-$radio-bg:                   $body-bg !default;
-$radio-border-color:         $ui-border-color !default;
-$radio-checked-color:        $ui-icon-color !default;
-$radio-checked-bg:           $ui-bg !default;
-$radio-checked-border-color: $ui-icon-color !default;
-
 
 // Conjunction
 // -----------------------------------------
@@ -157,22 +84,6 @@ $nav-current: "is-current" !default;
 // error-name
 // ex. is-error, error...
 $error: "is-error" !default;
-
-// paginate-prev-name
-// ex. prev, previous, paginate-prev...
-$paginate-prev: "prev" !default;
-
-// paginate-next-name
-// ex. next, paginate-next...
-$paginate-next: "next" !default;
-
-// paginate-current-name
-// ex. $nav-current, current, paginate-current...
-$paginate-current: $nav-current !default;
-
-// paginate-ellipsis-name
-// ex. ellipsis, ommition...
-$paginate-ellipsis: "ellipsis" !default;
 
 
 // Breakpoints
@@ -424,3 +335,87 @@ $title-max-font-sizes: (
     '2':  2em,
     '1':  2.5em
 ) !default;
+
+
+// Paginate
+// -----------------------------------------
+
+$paginate-border-width: 0 !default;
+$paginate-gutter:       0 !default;
+$paginate-prev:         "prev" !default;
+$paginate-next:         "next" !default;
+$paginate-ellipsis:     "ellipsis" !default;
+$paginate-current:      $nav-current !default;
+
+
+// Color
+// -----------------------------------------
+
+// Navigation
+$nav-color:                       $ui-color !default;
+$nav-bg:                          $ui-bg !default;
+$nav-hover-color:                 $ui-hover-color !default;
+$nav-hover-bg:                    $ui-hover-bg !default;
+$nav-current-color:               $ui-current-color !default;
+$nav-current-bg:                  $ui-current-bg !default;
+$nav-current-hover-color:         $ui-current-hover-color !default;
+$nav-current-hover-bg:            $ui-current-hover-bg !default;
+
+// Navigation (inverse)
+$nav-inverse-color:               $ui-inverse-color !default;
+$nav-inverse-bg:                  $ui-inverse-bg !default;
+$nav-inverse-hover-color:         $ui-inverse-hover-color !default;
+$nav-inverse-hover-bg:            $ui-inverse-hover-bg !default;
+$nav-inverse-current-color:       $ui-inverse-current-color !default;
+$nav-inverse-current-bg:          $ui-inverse-current-bg !default;
+$nav-inverse-current-hover-color: $ui-inverse-current-hover-color !default;
+$nav-inverse-current-hover-bg:    $ui-inverse-current-hover-bg !default;
+
+// Paginate
+$paginate-color:                        $nav-color !default;
+$paginate-bg:                           $nav-bg !default;
+$paginate-border-color:                 $nav-color !default;
+$paginate-hover-color:                  $nav-hover-color !default;
+$paginate-hover-bg:                     $nav-hover-bg !default;
+$paginate-hover-border-color:           $paginate-border-color !default;
+$paginate-current-color:                $nav-current-color !default;
+$paginate-current-bg:                   $nav-current-bg !default;
+$paginate-current-border-color:         $paginate-border-color !default;
+
+// Paginate (inverse)
+$paginate-inverse-color:                $nav-inverse-color !default;
+$paginate-inverse-bg:                   $nav-inverse-bg !default;
+$paginate-inverse-border-color:         $nav-inverse-color !default;
+$paginate-inverse-hover-color:          $nav-inverse-hover-color !default;
+$paginate-inverse-hover-bg:             $nav-inverse-hover-bg !default;
+$paginate-inverse-hover-border-color:   $paginate-inverse-border-color !default;
+$paginate-inverse-current-color:        $nav-inverse-current-color !default;
+$paginate-inverse-current-bg:           $nav-inverse-current-bg !default;
+$paginate-inverse-current-border-color: $paginate-inverse-border-color !default;
+
+// Input
+$input-border-width:       $ui-border-width !default;
+$input-color:              $ui-color !default;
+$input-bg:                 $ui-bg !default;
+$input-border-color:       $ui-border-color !default;
+$input-focus-color:        $ui-color !default;
+$input-focus-bg:           $ui-hover-bg !default;
+$input-focus-border-color: $ui-border-color !default;
+
+// Checkbox
+$checkbox-border-width:         $ui-border-width !default;
+$checkbox-color:                $ui-color !default;
+$checkbox-bg:                   $body-bg !default;
+$checkbox-border-color:         $ui-border-color !default;
+$checkbox-checked-color:        $ui-current-color !default;
+$checkbox-checked-bg:           $ui-icon-color !default;
+$checkbox-checked-border-color: $ui-icon-color !default;
+
+// Radio
+$radio-border-width:         $ui-border-width !default;
+$radio-color:                $ui-color !default;
+$radio-bg:                   $body-bg !default;
+$radio-border-color:         $ui-border-color !default;
+$radio-checked-color:        $ui-icon-color !default;
+$radio-checked-bg:           $ui-bg !default;
+$radio-checked-border-color: $ui-icon-color !default;
