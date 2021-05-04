@@ -7,7 +7,6 @@
 .#{$pr}#{$m}select {
     display: inline-block;
     position: relative;
-    font-size: $font-size-sm;
     vertical-align: middle;
 
     &:after {
@@ -26,10 +25,7 @@
         z-index: 3;
     }
 
-    // Firefoxがline-heightの指定を無視するため、高さを固定している
-    // It fixes the height because Firefox ignores line-height designation
-
-    select {
+    > select {
         overflow: hidden;
         -webkit-appearance: none;
         appearance: none;
@@ -37,7 +33,6 @@
         color: $body-color;
         width: 100%;
         padding: 0 2.5em 0 .75em;
-        min-height: map-get( $button-min-heights, 'md' );
         background-color: $input-bg;
         border: $input-border-width solid $input-border-color;
         vertical-align: middle;

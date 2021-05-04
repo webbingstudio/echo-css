@@ -1,35 +1,34 @@
 /*
 --------------------
-#{$pr}#{$m}select(size)
+#{$pr}#{$m}select#{$c3}(size)
 --------------------
 */
 
 .#{$pr}#{$m}select {
+    font-size: map-get( $nav-min-font-sizes, 'md' );
 
-    @include media-breakpoint-up(lg) {
-        font-size: $font-size-md;
+    > select {
+        min-height: map-get( $nav-min-heights, 'md' );
     }
 
-    select {
+    @include media-breakpoint-up(lg) {
+        font-size: map-get( $nav-max-font-sizes, 'md' );
 
-        @include media-breakpoint-up(lg) {
-            min-height: map-get( $button-max-heights, 'md' );
+        > select {
+            min-height: map-get( $nav-max-heights, 'md' );
         }
-        
+
     }
 
     &.#{$pr}#{$m}select#{$c3}fixed {
 
         @include media-breakpoint-up(lg) {
-            font-size: $font-size-sm;
-        }
+            font-size: map-get( $nav-min-font-sizes, 'md' );
 
-        select {
-
-            @include media-breakpoint-up(lg) {
-                min-height: map-get( $button-min-heights, 'md' );
+            > select {
+                min-height: map-get( $nav-min-heights, 'md' );
             }
-            
+
         }
 
     }
@@ -37,25 +36,30 @@
 }
 
 .#{$pr}#{$m}select#{$c3}sm {
-    font-size: $font-size-sm;
+    font-size: map-get( $nav-min-font-sizes, 'sm' );
 
-    select {
-        min-height: map-get( $button-min-heights, 'sm' );
+    > select {
+        min-height: map-get( $nav-min-heights, 'sm' );
+    }
 
-        @include media-breakpoint-up(lg) {
-            min-height: map-get( $button-max-heights, 'sm' );
+    @include media-breakpoint-up(lg) {
+        font-size: map-get( $nav-max-font-sizes, 'sm' );
+
+        > select {
+            min-height: map-get( $nav-max-heights, 'sm' );
         }
-        
+
     }
 
     &.#{$pr}#{$m}select#{$c3}fixed {
 
-        select {
+        @include media-breakpoint-up(lg) {
+            font-size: map-get( $nav-min-font-sizes, 'sm' );
 
-            @include media-breakpoint-up(lg) {
-                min-height: map-get( $button-min-heights, 'sm' );
+            > select {
+                min-height: map-get( $nav-min-heights, 'sm' );
             }
-            
+
         }
 
     }
@@ -63,101 +67,30 @@
 }
 
 .#{$pr}#{$m}select#{$c3}lg {
-    font-size: $font-size-md;
+    font-size: map-get( $nav-min-font-sizes, 'lg' );
 
-    @include media-breakpoint-up(lg) {
-        font-size: $font-size-lg;
+    > select {
+        min-height: map-get( $nav-min-heights, 'lg' );
     }
 
-    select {
-        min-height: map-get( $button-min-heights, 'lg' );
+    @include media-breakpoint-up(lg) {
+        font-size: map-get( $nav-max-font-sizes, 'lg' );
 
-        @include media-breakpoint-up(lg) {
-            min-height: map-get( $button-max-heights, 'lg' );
+        > select {
+            min-height: map-get( $nav-max-heights, 'lg' );
         }
-        
+
     }
 
     &.#{$pr}#{$m}select#{$c3}fixed {
 
         @include media-breakpoint-up(lg) {
-            font-size: $font-size-md;
-        }
+            font-size: map-get( $nav-min-font-sizes, 'lg' );
 
-        select {
-
-            @include media-breakpoint-up(lg) {
-                min-height: map-get( $button-min-heights, 'lg' );
+            > select {
+                min-height: map-get( $nav-min-heights, 'lg' );
             }
-            
-        }
 
-    }
-
-}
-
-.#{$pr}#{$m}select#{$c3}xl {
-    font-size: $font-size-lg;
-
-    @include media-breakpoint-up(lg) {
-        font-size: $font-size-xl;
-    }
-
-    select {
-        min-height: map-get( $button-min-heights, 'xl' );
-
-        @include media-breakpoint-up(lg) {
-            min-height: map-get( $button-max-heights, 'xl' );
-        }
-        
-    }
-
-    &.#{$pr}#{$m}select#{$c3}fixed {
-
-        @include media-breakpoint-up(lg) {
-            font-size: $font-size-lg;
-        }
-
-        select {
-
-            @include media-breakpoint-up(lg) {
-                min-height: map-get( $button-min-heights, 'xl' );
-            }
-            
-        }
-
-    }
-
-}
-
-.#{$pr}#{$m}select#{$c3}xxl {
-    font-size: $font-size-xl;
-
-    @include media-breakpoint-up(lg) {
-        font-size: $font-size-xxl;
-    }
-
-    select {
-        min-height: map-get( $button-min-heights, 'xxl' );
-
-        @include media-breakpoint-up(lg) {
-            min-height: map-get( $button-max-heights, 'xxl' );
-        }
-        
-    }
-
-    &.#{$pr}#{$m}select#{$c3}fixed {
-
-        @include media-breakpoint-up(lg) {
-            font-size: $font-size-xl;
-        }
-
-        select {
-
-            @include media-breakpoint-up(lg) {
-                min-height: map-get( $button-min-heights, 'xxl' );
-            }
-            
         }
 
     }

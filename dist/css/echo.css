@@ -1943,7 +1943,6 @@ echo-select
 .echo-select {
   display: inline-block;
   position: relative;
-  font-size: 0.875rem;
   vertical-align: middle;
 }
 
@@ -1961,7 +1960,7 @@ echo-select
   z-index: 3;
 }
 
-.echo-select select {
+.echo-select > select {
   overflow: hidden;
   -webkit-appearance: none;
   appearance: none;
@@ -1969,7 +1968,6 @@ echo-select
   color: #333;
   width: 100%;
   padding: 0 2.5em 0 .75em;
-  min-height: 2.5rem;
   background-color: transparent;
   border: 0.0625rem solid #333;
   vertical-align: middle;
@@ -1977,11 +1975,11 @@ echo-select
   z-index: 2;
 }
 
-.echo-select select::-ms-expand {
+.echo-select > select::-ms-expand {
   display: none;
 }
 
-.echo-select select:focus {
+.echo-select > select:focus {
   color: #333;
   background-color: #eee;
   border-color: #333;
@@ -2012,17 +2010,22 @@ echo-select
 
 /*
 --------------------
-echo-select(size)
+echo-select-(size)
 --------------------
 */
+.echo-select {
+  font-size: 0.875rem;
+}
+
+.echo-select > select {
+  min-height: 2.5rem;
+}
+
 @media (min-width: 62.5rem) {
   .echo-select {
     font-size: 1rem;
   }
-}
-
-@media (min-width: 62.5rem) {
-  .echo-select select {
+  .echo-select > select {
     min-height: 2.75rem;
   }
 }
@@ -2031,30 +2034,33 @@ echo-select(size)
   .echo-select.echo-select-fixed {
     font-size: 0.875rem;
   }
-}
-
-@media (min-width: 62.5rem) {
-  .echo-select.echo-select-fixed select {
+  .echo-select.echo-select-fixed > select {
     min-height: 2.5rem;
   }
 }
 
 .echo-select-sm {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
 }
 
-.echo-select-sm select {
+.echo-select-sm > select {
   min-height: 2.25rem;
 }
 
 @media (min-width: 62.5rem) {
-  .echo-select-sm select {
+  .echo-select-sm {
+    font-size: 0.875rem;
+  }
+  .echo-select-sm > select {
     min-height: 2.5rem;
   }
 }
 
 @media (min-width: 62.5rem) {
-  .echo-select-sm.echo-select-fixed select {
+  .echo-select-sm.echo-select-fixed {
+    font-size: 0.75rem;
+  }
+  .echo-select-sm.echo-select-fixed > select {
     min-height: 2.25rem;
   }
 }
@@ -2063,18 +2069,15 @@ echo-select(size)
   font-size: 1rem;
 }
 
-@media (min-width: 62.5rem) {
-  .echo-select-lg {
-    font-size: 1.125rem;
-  }
-}
-
-.echo-select-lg select {
+.echo-select-lg > select {
   min-height: 2.75rem;
 }
 
 @media (min-width: 62.5rem) {
-  .echo-select-lg select {
+  .echo-select-lg {
+    font-size: 1.125rem;
+  }
+  .echo-select-lg > select {
     min-height: 3.25rem;
   }
 }
@@ -2083,75 +2086,8 @@ echo-select(size)
   .echo-select-lg.echo-select-fixed {
     font-size: 1rem;
   }
-}
-
-@media (min-width: 62.5rem) {
-  .echo-select-lg.echo-select-fixed select {
+  .echo-select-lg.echo-select-fixed > select {
     min-height: 2.75rem;
-  }
-}
-
-.echo-select-xl {
-  font-size: 1.125rem;
-}
-
-@media (min-width: 62.5rem) {
-  .echo-select-xl {
-    font-size: 1.25rem;
-  }
-}
-
-.echo-select-xl select {
-  min-height: 3rem;
-}
-
-@media (min-width: 62.5rem) {
-  .echo-select-xl select {
-    min-height: 3.5rem;
-  }
-}
-
-@media (min-width: 62.5rem) {
-  .echo-select-xl.echo-select-fixed {
-    font-size: 1.125rem;
-  }
-}
-
-@media (min-width: 62.5rem) {
-  .echo-select-xl.echo-select-fixed select {
-    min-height: 3rem;
-  }
-}
-
-.echo-select-xxl {
-  font-size: 1.25rem;
-}
-
-@media (min-width: 62.5rem) {
-  .echo-select-xxl {
-    font-size: 1.5rem;
-  }
-}
-
-.echo-select-xxl select {
-  min-height: 3.25rem;
-}
-
-@media (min-width: 62.5rem) {
-  .echo-select-xxl select {
-    min-height: 4rem;
-  }
-}
-
-@media (min-width: 62.5rem) {
-  .echo-select-xxl.echo-select-fixed {
-    font-size: 1.25rem;
-  }
-}
-
-@media (min-width: 62.5rem) {
-  .echo-select-xxl.echo-select-fixed select {
-    min-height: 3.25rem;
   }
 }
 
