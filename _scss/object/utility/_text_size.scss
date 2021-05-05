@@ -1,42 +1,17 @@
 /*
 --------------------
 #{$pr}#{$u}text#{$c3}(size)
+#{$pr}#{$u}text#{$c3}(size)#{$c2}(breakpont)#{$c3}(up or down)
 --------------------
 */
 
 #{$u-wrap} {
 
-    .#{$pr}#{$u}text#{$c3}xxs {
-        font-size: ( 10 / 16 ) + em;
+    @include make-text-size();
+
+    .#{$pr}#{$u}text#{$c3}1rem {
+        font-size: 1rem;
     }
-
-    .#{$pr}#{$u}text#{$c3}xs {
-        font-size: ( 12 / 16 ) + em;
-    }
-
-    .#{$pr}#{$u}text#{$c3}sm {
-        font-size: ( 14 / 16 ) + em;
-    }
-
-    .#{$pr}#{$u}text#{$c3}md {
-        font-size: 1em;
-    }
-
-    .#{$pr}#{$u}text#{$c3}lg {
-        font-size: ( 18 / 16 ) + em;
-    }
-
-    .#{$pr}#{$u}text#{$c3}xl {
-        font-size: ( 20 / 16 ) + em;
-    }
-
-    .#{$pr}#{$u}text#{$c3}xxl {
-        font-size: ( 24 / 16 ) + em;
-    }
-
-}
-
-#{$u-wrap} {
 
     .#{$pr}#{$u}text#{$c3}xxstoxs {
         font-size: ( 12 / 10 ) + em;

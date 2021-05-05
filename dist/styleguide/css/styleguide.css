@@ -198,7 +198,7 @@ echo-doc-mainvisual
     .echo-doc-mainvisual .echo-hero-contents {
         width: 100%;
         top: auto;
-        bottom: 3%;
+        bottom: 2%;
         transform:
             translateX( -50% )
             translateY( 0 );
@@ -311,6 +311,7 @@ echo-doc-presentation
 }
 
 .echo-doc-presentation-02 .echo-flip-cover {
+    border: 1px solid #ccc;
     background-image: url(../../images/echo/img_presentation_02.jpg);
 }
 
@@ -321,15 +322,36 @@ echo-doc-presentation
 
 /*
 --------------------
-echo-doc-pickup
+echo-doc-bem
 --------------------
 */
 
-.echo-doc-pickup {
+.echo-doc-bem-body {
+    max-width: 40em;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 0.875rem;
+    line-height: 2;
 }
 
-.echo-doc-pickup-title {
+@media (min-width: 768px) {
+
+    .echo-doc-bem-body {
+        font-size: 1rem;
+    }
+
 }
+
+@media (min-width: 1440px) {
+
+    .echo-doc-bem-body {
+        font-size: 1.25rem;
+    }
+
+}
+
 
 /*
 --------------------
@@ -339,16 +361,24 @@ echo-doc-sns
 
 .echo-doc-sns .echo-button.echo-button-circle {
     background-color: #fff;
-    width: 3rem;
-    height: 3rem;
+    width: 4rem;
+    height: 4rem;
     transition: transform .6s;
+}
+
+.echo-doc-sns .echo-button:not(:first-child) {
+    margin-left: 1rem;
 }
 
 @media (min-width: 768px) {
 
 .echo-doc-sns .echo-button.echo-button-circle {
-    width: 4rem;
-    height: 4rem;
+    width: 5rem;
+    height: 5rem;
+}
+
+.echo-doc-sns .echo-button:not(:first-child) {
+    margin-left: 2rem;
 }
 
 }
@@ -358,6 +388,10 @@ echo-doc-sns
 .echo-doc-sns .echo-button.echo-button-circle {
     width: 6rem;
     height: 6rem;
+}
+
+.echo-doc-sns .echo-button:not(:first-child) {
+    margin-left: 3rem;
 }
 
 }

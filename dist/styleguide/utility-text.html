@@ -28,9 +28,14 @@
                     
                     <li class="echo-list-item"><a href="#text-02-direction" class="js-scrollto">echo-text-(direction)(-(breakpont)-(up or down))</a></li>
 
-                    <li class="echo-list-item"><a href="#text-03-fontsize" class="js-scrollto">echo-text-(fontsize)</a></li>
+                </ul>
+                <ul class="echo-list echo-list-horizontal">
+
+                    <li class="echo-list-item"><a href="#text-03-fontsize" class="js-scrollto">echo-text-(fontsize)(-(breakpont)-(up or down))</a></li>
 
                     <li class="echo-list-item"><a href="#text-04-sizetosize" class="js-scrollto">echo-text-(fontsize1)to(fontsize2)</a></li>
+
+                    <li class="echo-list-item"><a href="#text-04-1rem" class="js-scrollto">echo-text-1rem</a></li>
                     
                 </ul>
             </nav>
@@ -41,7 +46,10 @@
 <p>文字色を変更する。<br>
 オブジェクト・コンポーネントを可能な限り上書きするが、 <code>:hover, :focus</code> 等のステートがあるオブジェクトには対応していない。<br>
 (color)は<a href="../docs/design-tokens-color.html">標準のカラーテーブル</a>を参照。</p>
-<div class="example"><p class="echo-text-default">echo-text-default:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+
+<div class="example">
+
+<p class="echo-text-default">echo-text-default:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
 <p class="echo-text-info">echo-text-info:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
 <p class="echo-text-important">echo-text-important:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
 <p class="echo-bg-default echo-padding-sm"><span class="echo-text-inverse">echo-text-inverse:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</span></p>
@@ -49,7 +57,11 @@
 </div>
 
 
-<div class="codeblock"><pre><code class="language-markup"></code></pre></div>
+<div class="codeblock"><pre><code class="language-markup">&lt;p class="echo-text-default"&gt;echo-text-default:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
+&lt;p class="echo-text-info"&gt;echo-text-info:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
+&lt;p class="echo-text-important"&gt;echo-text-important:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
+&lt;p class="echo-bg-default echo-padding-sm"&gt;&lt;span class="echo-text-inverse"&gt;echo-text-inverse:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。&lt;/span&gt;&lt;/p&gt;
+</code></pre></div>
 
 
 <h2 id="text-02-direction" class="echo-doc-post-title-01">echo-text-(direction)(-(breakpont)-(up or down))</h2>
@@ -57,7 +69,10 @@
 <p>ブロック要素内の文章を指定した方向へ寄せる。<br>
 (breakpoint)の指定がない場合は、常にその方向となる。<br>
 (breakpoint)の指定がある場合は、(breakpoint)以上、もしくは以下のときに、指定した方向へ寄せる。</p>
-<div class="example"><p class="echo-text-center">echo-text-center:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
+
+<div class="example">
+
+<p class="echo-text-center">echo-text-center:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
 <p class="echo-text-right">echo-text-right:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>何でも薄暗いじめじめした所で<br>ニャーニャー泣いていた事だけは記憶している。</p>
 
 <div class="echo-text-center" style="background-color: #dee;">
@@ -80,17 +95,37 @@
 </div>
 
 
-<div class="codeblock"><pre><code class="language-markup"></code></pre></div>
+<div class="codeblock"><pre><code class="language-markup">&lt;p class="echo-text-center"&gt;echo-text-center:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。&lt;br&gt;何でも薄暗いじめじめした所で&lt;br&gt;ニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
+&lt;p class="echo-text-right"&gt;echo-text-right:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。&lt;br&gt;何でも薄暗いじめじめした所で&lt;br&gt;ニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
 
+&lt;div class="echo-text-center" style="background-color: #dee;"&gt;
+    &lt;p&gt;echo-text-center:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
+    &lt;p class="echo-text-left"&gt;echo-text-left:何でも薄暗いじめじめした所で&lt;/p&gt;
+    &lt;p&gt;ニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
+&lt;/div&gt;
 
-<h2 id="text-03-fontsize" class="echo-doc-post-title-01">echo-text-(fontsize)</h2>
+&lt;p class="echo-text-center-lg-up"&gt;echo-text-center-lg-up:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。&lt;br&gt;何でも薄暗いじめじめした所で&lt;br&gt;ニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
+&lt;p class="echo-text-right-sm-up"&gt;echo-text-right-sm-up:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。&lt;br&gt;何でも薄暗いじめじめした所で&lt;br&gt;ニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
 
-<p>文字サイズを曖昧に変更する。<br>
-変化率は、文字サイズが特に定義されていない場合に、 <a href="/docs/outline-fontsize.html">(fontsize)</a> に変化すべき倍率となる。</p>
+&lt;div class="echo-text-center-lg-up" style="background-color: #dee;"&gt;
+    &lt;p&gt;echo-text-center-lg-up:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
+    &lt;p class="echo-text-left-sm-down"&gt;echo-text-left-sm-down:何でも薄暗いじめじめした所で&lt;/p&gt;
+    &lt;p&gt;ニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p class="echo-text-right echo-text-center-lg-up"&gt;echo-text-right:echo-text-center-lg-up:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。&lt;br&gt;何でも薄暗いじめじめした所で&lt;br&gt;ニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
+</code></pre></div>
+
+<h2 id="text-03-fontsize" class="echo-doc-post-title-01">echo-text-(fontsize)(-(breakpont)-(up or down))</h2>
+
+<p>文字サイズが特に定義されていない( <code>1rem</code> )場合に、 <a href="/docs/outline-fontsize.html">(fontsize)</a> に変化すべき倍率に変更する。</p>
 
 <p><strong>現在の要素に継承されている文字サイズからの相対</strong>（ <code>em</code> ）で変化する。このため、<code>xs = 0.75rem</code> に対して <code>echo-text-lg</code> を使用すると、18pxではなく13.5pxとなる。</p>
 
-<p><code>.echo-text-md</code> は <code>1em</code> となるため、何も起きない。既存のフォントサイズを打ち消す場合に使用する。</p>
+<p>(breakpoint)の指定がない場合は、常にそのサイズとなる。<br>
+(breakpoint)の指定がある場合は、(breakpoint)以上、もしくは以下のときに、指定したサイズとなる。</p>
+
+<p><code>.echo-text-md</code> は <code>1em</code> となるため、大半は何も起きない。既存のフォントサイズを打ち消す場合に使用する。</p>
 
 <div class="example">
 
@@ -107,6 +142,20 @@
 
 <p>.echo-label の文字サイズは 0.7em です。<span class="echo-label echo-text-md">しかし .echo-text-mdで本来の文字サイズを打ち消しました</span></p>
 
+<hr class="echo-margin-y-lg">
+
+<p class="echo-text-xxs-sm-up">echo-text-xxs-sm-up:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="echo-text-xs-md-up">echo-text-xs-md-up:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="echo-text-sm-lg-up">echo-text-sm-lg-up:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+
+<p class="echo-text-lg-sm-down">echo-text-lg-sm-down:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="echo-text-xl-md-down">echo-text-xl-md-down:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+<p class="echo-text-xxl-lg-down">echo-text-xxl-lg-down:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+
+<p class="echo-text-sm-xs-down echo-text-lg-xl-up">echo-text-sm-xs-down echo-text-lg-xl-up:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+
+<p>.echo-label の文字サイズは 0.7em です。<span class="echo-label echo-text-md-xl-up">しかし .echo-text-md-xl-upで本来の文字サイズを打ち消しました</span></p>
+
 </div>
 
 <div class="codeblock"><pre><code class="language-markup">&lt;p class="echo-text-xxs"&gt;echo-text-xxs:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
@@ -121,6 +170,20 @@
 &lt;p style="font-size: 2rem;"&gt;2rem:吾輩は猫である。&lt;span class="echo-text-xxs"&gt;名前はまだ無い。echo-text-xxs:どこで生れたか&lt;/span&gt;とんと見当がつかぬ。&lt;/p&gt;
 
 &lt;p&gt;.echo-label の文字サイズは 0.7em です。&lt;span class="echo-label echo-text-md"&gt;しかし .echo-text-mdで本来の文字サイズを打ち消しました&lt;/span&gt;&lt;/p&gt;
+
+&lt;hr class="echo-margin-y-lg"&gt;
+
+&lt;p class="echo-text-xxs-sm-up"&gt;echo-text-xxs-sm-up:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
+&lt;p class="echo-text-xs-md-up"&gt;echo-text-xs-md-up:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
+&lt;p class="echo-text-sm-lg-up"&gt;echo-text-sm-lg-up:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
+
+&lt;p class="echo-text-lg-sm-down"&gt;echo-text-lg-sm-down:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
+&lt;p class="echo-text-xl-md-down"&gt;echo-text-xl-md-down:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
+&lt;p class="echo-text-xxl-lg-down"&gt;echo-text-xxl-lg-down:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
+
+&lt;p class="echo-text-sm-xs-down echo-text-lg-xl-up"&gt;echo-text-sm-xs-down echo-text-lg-xl-up:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
+
+&lt;p&gt;.echo-label の文字サイズは 0.7em です。&lt;span class="echo-label echo-text-md-xl-up"&gt;しかし .echo-text-md-xl-upで本来の文字サイズを打ち消しました&lt;/span&gt;&lt;/p&gt;
 </code></pre></div>
 
 
@@ -223,6 +286,19 @@
 &lt;p class="echo-text-xxl"&gt;吾輩は猫である。名前はまだ無い。&lt;span class="echo-text-xxltolg"&gt;echo-text-xxltolg:どこで生れたかとんと&lt;/span&gt;見当がつかぬ。&lt;/p&gt;
 &lt;p class="echo-text-xxl"&gt;吾輩は猫である。名前はまだ無い。&lt;span class="echo-text-xxltoxl"&gt;echo-text-xxltoxl:どこで生れたかとんと&lt;/span&gt;見当がつかぬ。&lt;/p&gt;</code></pre></div>
 
+
+
+<h2 id="text-04-1rem" class="echo-doc-post-title-01">echo-text-1rem</h2>
+
+<p>文字サイズを強制的に <code>1rem</code> に変更する。</p>
+
+<div class="example">
+
+<p class="echo-text-xxs">echo-text-xxs:吾輩は猫である。名前はまだ無い。<span class="echo-text-1rem">echo-text-1rem:どこで生れたか<span class="echo-text-xxl">echo-text-xxl:とんと</span></span>見当がつかぬ。</p>
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;p class="echo-text-xxs"&gt;echo-text-xxs:吾輩は猫である。名前はまだ無い。&lt;span class="echo-text-1rem"&gt;echo-text-1rem:どこで生れたか&lt;span class="echo-text-xxl"&gt;echo-text-xxl:とんと&lt;/span&gt;&lt;/span&gt;見当がつかぬ。&lt;/p&gt;</code></pre></div>
 
 
 <?php include('../doc_include/footer.inc'); ?>

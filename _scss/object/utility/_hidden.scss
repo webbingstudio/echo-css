@@ -8,12 +8,16 @@
 
     @each $breakpoint in map-keys($grid-breakpoints) {
 
-        @include media-breakpoint-up($breakpoint) {
+        @if ( $breakpoint != 'default' ) {
 
-            @if ($breakpoint != 'xxs') {
+            @include media-breakpoint-up($breakpoint) {
 
-                .#{$pr}#{$u}hidden#{$c3}#{$breakpoint}#{$c3}up {
-                    display: none;
+                @if ($breakpoint != 'xxs') {
+
+                    .#{$pr}#{$u}hidden#{$c3}#{$breakpoint}#{$c3}up {
+                        display: none;
+                    }
+
                 }
 
             }

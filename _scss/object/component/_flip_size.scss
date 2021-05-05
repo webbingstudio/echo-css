@@ -31,27 +31,27 @@
 }
 
 .#{$pr}#{$c}flip#{$c1}body {
-    font-size: $font-size-xs;
+    font-size: $font-size-sm;
 
     @include media-breakpoint-up(md) {
-        font-size: $font-size-sm;
+        font-size: $font-size-md;
     }
 
     @include media-breakpoint-up(xl) {
-        font-size: $font-size-md;
+        font-size: $font-size-lg;
     }
 
 }
 
 .#{$pr}#{$c}flip#{$c1}link {
-    font-size: $font-size-xs;
+    font-size: $font-size-sm;
 
     @include media-breakpoint-up(md) {
-        font-size: $font-size-sm;
+        font-size: $font-size-md;
     }
 
     @include media-breakpoint-up(xl) {
-        font-size: $font-size-md;
+        font-size: $font-size-lg;
     }
 
 }

@@ -3325,34 +3325,34 @@ echo-flip(size)
 }
 
 .echo-flip-body {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
 }
 
 @media (min-width: 48rem) {
   .echo-flip-body {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width: 80rem) {
   .echo-flip-body {
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 
 .echo-flip-link {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
 }
 
 @media (min-width: 48rem) {
   .echo-flip-link {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width: 80rem) {
   .echo-flip-link {
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 
@@ -3869,34 +3869,34 @@ echo-hero(size)
 }
 
 .echo-hero-body {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
 }
 
 @media (min-width: 48rem) {
   .echo-hero-body {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width: 80rem) {
   .echo-hero-body {
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 
 .echo-hero-link {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
 }
 
 @media (min-width: 48rem) {
   .echo-hero-link {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width: 80rem) {
   .echo-hero-link {
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 
@@ -4679,10 +4679,6 @@ echo-font-bold
 echo-hidden-(breakpoint)-up
 --------------------
 */
-#echo-document .echo-hidden-default-up {
-  display: none;
-}
-
 @media (min-width: 22.5rem) {
   #echo-document .echo-hidden-xs-up {
     display: none;
@@ -5481,30 +5477,6 @@ echo-text-(direction)-(breakpont)-(up or down)
   text-align: right;
 }
 
-#echo-document .echo-text-left-default-up {
-  text-align: left;
-}
-
-#echo-document .echo-text-center-default-up {
-  text-align: center;
-}
-
-#echo-document .echo-text-right-default-up {
-  text-align: right;
-}
-
-@media (max-width: 19.9rem) {
-  #echo-document .echo-text-left-default-down {
-    text-align: left;
-  }
-  #echo-document .echo-text-center-default-down {
-    text-align: center;
-  }
-  #echo-document .echo-text-right-default-down {
-    text-align: right;
-  }
-}
-
 @media (min-width: 20rem) {
   #echo-document .echo-text-left-xxs-up {
     text-align: left;
@@ -5676,6 +5648,7 @@ echo-text-(direction)-(breakpont)-(up or down)
 /*
 --------------------
 echo-text-(size)
+echo-text-(size)-(breakpont)-(up or down)
 --------------------
 */
 #echo-document .echo-text-xxs {
@@ -5704,6 +5677,350 @@ echo-text-(size)
 
 #echo-document .echo-text-xxl {
   font-size: 1.5em;
+}
+
+@media (min-width: 20rem) {
+  #echo-document .echo-text-xxs-xxs-up {
+    font-size: 0.625em;
+  }
+  #echo-document .echo-text-xs-xxs-up {
+    font-size: 0.75em;
+  }
+  #echo-document .echo-text-sm-xxs-up {
+    font-size: 0.875em;
+  }
+  #echo-document .echo-text-md-xxs-up {
+    font-size: 1em;
+  }
+  #echo-document .echo-text-lg-xxs-up {
+    font-size: 1.125em;
+  }
+  #echo-document .echo-text-xl-xxs-up {
+    font-size: 1.25em;
+  }
+  #echo-document .echo-text-xxl-xxs-up {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 22.4rem) {
+  #echo-document .echo-text-xxs-xxs-down {
+    font-size: 0.625em;
+  }
+  #echo-document .echo-text-xs-xxs-down {
+    font-size: 0.75em;
+  }
+  #echo-document .echo-text-sm-xxs-down {
+    font-size: 0.875em;
+  }
+  #echo-document .echo-text-md-xxs-down {
+    font-size: 1em;
+  }
+  #echo-document .echo-text-lg-xxs-down {
+    font-size: 1.125em;
+  }
+  #echo-document .echo-text-xl-xxs-down {
+    font-size: 1.25em;
+  }
+  #echo-document .echo-text-xxl-xxs-down {
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 22.5rem) {
+  #echo-document .echo-text-xxs-xs-up {
+    font-size: 0.625em;
+  }
+  #echo-document .echo-text-xs-xs-up {
+    font-size: 0.75em;
+  }
+  #echo-document .echo-text-sm-xs-up {
+    font-size: 0.875em;
+  }
+  #echo-document .echo-text-md-xs-up {
+    font-size: 1em;
+  }
+  #echo-document .echo-text-lg-xs-up {
+    font-size: 1.125em;
+  }
+  #echo-document .echo-text-xl-xs-up {
+    font-size: 1.25em;
+  }
+  #echo-document .echo-text-xxl-xs-up {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 26.65rem) {
+  #echo-document .echo-text-xxs-xs-down {
+    font-size: 0.625em;
+  }
+  #echo-document .echo-text-xs-xs-down {
+    font-size: 0.75em;
+  }
+  #echo-document .echo-text-sm-xs-down {
+    font-size: 0.875em;
+  }
+  #echo-document .echo-text-md-xs-down {
+    font-size: 1em;
+  }
+  #echo-document .echo-text-lg-xs-down {
+    font-size: 1.125em;
+  }
+  #echo-document .echo-text-xl-xs-down {
+    font-size: 1.25em;
+  }
+  #echo-document .echo-text-xxl-xs-down {
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 26.75rem) {
+  #echo-document .echo-text-xxs-sm-up {
+    font-size: 0.625em;
+  }
+  #echo-document .echo-text-xs-sm-up {
+    font-size: 0.75em;
+  }
+  #echo-document .echo-text-sm-sm-up {
+    font-size: 0.875em;
+  }
+  #echo-document .echo-text-md-sm-up {
+    font-size: 1em;
+  }
+  #echo-document .echo-text-lg-sm-up {
+    font-size: 1.125em;
+  }
+  #echo-document .echo-text-xl-sm-up {
+    font-size: 1.25em;
+  }
+  #echo-document .echo-text-xxl-sm-up {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 47.9rem) {
+  #echo-document .echo-text-xxs-sm-down {
+    font-size: 0.625em;
+  }
+  #echo-document .echo-text-xs-sm-down {
+    font-size: 0.75em;
+  }
+  #echo-document .echo-text-sm-sm-down {
+    font-size: 0.875em;
+  }
+  #echo-document .echo-text-md-sm-down {
+    font-size: 1em;
+  }
+  #echo-document .echo-text-lg-sm-down {
+    font-size: 1.125em;
+  }
+  #echo-document .echo-text-xl-sm-down {
+    font-size: 1.25em;
+  }
+  #echo-document .echo-text-xxl-sm-down {
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 48rem) {
+  #echo-document .echo-text-xxs-md-up {
+    font-size: 0.625em;
+  }
+  #echo-document .echo-text-xs-md-up {
+    font-size: 0.75em;
+  }
+  #echo-document .echo-text-sm-md-up {
+    font-size: 0.875em;
+  }
+  #echo-document .echo-text-md-md-up {
+    font-size: 1em;
+  }
+  #echo-document .echo-text-lg-md-up {
+    font-size: 1.125em;
+  }
+  #echo-document .echo-text-xl-md-up {
+    font-size: 1.25em;
+  }
+  #echo-document .echo-text-xxl-md-up {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 62.4rem) {
+  #echo-document .echo-text-xxs-md-down {
+    font-size: 0.625em;
+  }
+  #echo-document .echo-text-xs-md-down {
+    font-size: 0.75em;
+  }
+  #echo-document .echo-text-sm-md-down {
+    font-size: 0.875em;
+  }
+  #echo-document .echo-text-md-md-down {
+    font-size: 1em;
+  }
+  #echo-document .echo-text-lg-md-down {
+    font-size: 1.125em;
+  }
+  #echo-document .echo-text-xl-md-down {
+    font-size: 1.25em;
+  }
+  #echo-document .echo-text-xxl-md-down {
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  #echo-document .echo-text-xxs-lg-up {
+    font-size: 0.625em;
+  }
+  #echo-document .echo-text-xs-lg-up {
+    font-size: 0.75em;
+  }
+  #echo-document .echo-text-sm-lg-up {
+    font-size: 0.875em;
+  }
+  #echo-document .echo-text-md-lg-up {
+    font-size: 1em;
+  }
+  #echo-document .echo-text-lg-lg-up {
+    font-size: 1.125em;
+  }
+  #echo-document .echo-text-xl-lg-up {
+    font-size: 1.25em;
+  }
+  #echo-document .echo-text-xxl-lg-up {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 79.9rem) {
+  #echo-document .echo-text-xxs-lg-down {
+    font-size: 0.625em;
+  }
+  #echo-document .echo-text-xs-lg-down {
+    font-size: 0.75em;
+  }
+  #echo-document .echo-text-sm-lg-down {
+    font-size: 0.875em;
+  }
+  #echo-document .echo-text-md-lg-down {
+    font-size: 1em;
+  }
+  #echo-document .echo-text-lg-lg-down {
+    font-size: 1.125em;
+  }
+  #echo-document .echo-text-xl-lg-down {
+    font-size: 1.25em;
+  }
+  #echo-document .echo-text-xxl-lg-down {
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 80rem) {
+  #echo-document .echo-text-xxs-xl-up {
+    font-size: 0.625em;
+  }
+  #echo-document .echo-text-xs-xl-up {
+    font-size: 0.75em;
+  }
+  #echo-document .echo-text-sm-xl-up {
+    font-size: 0.875em;
+  }
+  #echo-document .echo-text-md-xl-up {
+    font-size: 1em;
+  }
+  #echo-document .echo-text-lg-xl-up {
+    font-size: 1.125em;
+  }
+  #echo-document .echo-text-xl-xl-up {
+    font-size: 1.25em;
+  }
+  #echo-document .echo-text-xxl-xl-up {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 89.9rem) {
+  #echo-document .echo-text-xxs-xl-down {
+    font-size: 0.625em;
+  }
+  #echo-document .echo-text-xs-xl-down {
+    font-size: 0.75em;
+  }
+  #echo-document .echo-text-sm-xl-down {
+    font-size: 0.875em;
+  }
+  #echo-document .echo-text-md-xl-down {
+    font-size: 1em;
+  }
+  #echo-document .echo-text-lg-xl-down {
+    font-size: 1.125em;
+  }
+  #echo-document .echo-text-xl-xl-down {
+    font-size: 1.25em;
+  }
+  #echo-document .echo-text-xxl-xl-down {
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 90rem) {
+  #echo-document .echo-text-xxs-xxl-up {
+    font-size: 0.625em;
+  }
+  #echo-document .echo-text-xs-xxl-up {
+    font-size: 0.75em;
+  }
+  #echo-document .echo-text-sm-xxl-up {
+    font-size: 0.875em;
+  }
+  #echo-document .echo-text-md-xxl-up {
+    font-size: 1em;
+  }
+  #echo-document .echo-text-lg-xxl-up {
+    font-size: 1.125em;
+  }
+  #echo-document .echo-text-xl-xxl-up {
+    font-size: 1.25em;
+  }
+  #echo-document .echo-text-xxl-xxl-up {
+    font-size: 1.5em;
+  }
+}
+
+#echo-document .echo-text-xxs-xxl-down {
+  font-size: 0.625em;
+}
+
+#echo-document .echo-text-xs-xxl-down {
+  font-size: 0.75em;
+}
+
+#echo-document .echo-text-sm-xxl-down {
+  font-size: 0.875em;
+}
+
+#echo-document .echo-text-md-xxl-down {
+  font-size: 1em;
+}
+
+#echo-document .echo-text-lg-xxl-down {
+  font-size: 1.125em;
+}
+
+#echo-document .echo-text-xl-xxl-down {
+  font-size: 1.25em;
+}
+
+#echo-document .echo-text-xxl-xxl-down {
+  font-size: 1.5em;
+}
+
+#echo-document .echo-text-1rem {
+  font-size: 1rem;
 }
 
 #echo-document .echo-text-xxstoxs {
