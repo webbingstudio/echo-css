@@ -74,8 +74,6 @@ echo-doc-header
     font-size: .875rem;
     line-height: 1;
     background-color: rgba( 255,255,255,.75 );
-    transition: .5s background-color;
-    border-bottom: 0.0625rem solid #ccc;
     z-index: 101;
 }
 
@@ -709,7 +707,8 @@ echo-doc-pagehead
 */
 
 .echo-doc-pagehead {
-    padding: 0 0 1rem;
+    padding-bottom: 1.5rem;
+    padding-bottom: clamp(1rem, calc( 0.74074vw + 0.83333rem), 1.5rem);
 }
 
 .echo-doc-pagehead-title {
@@ -879,11 +878,10 @@ echo-doc-sitemap
 
 .echo-doc-sitemap .echo-nav-label {
     white-space: nowrap;
-    min-height: 2.5em;
 }
 
 .echo-doc-sitemap .echo-nav-children {
-    padding-left: 2rem;
+    padding-left: 2em;
 }
 
 .echo-doc-sitemap span.echo-nav-label {
@@ -893,11 +891,11 @@ echo-doc-sitemap
 }
 
 .echo-doc-sitemap .echo-doc-sitemap-header {
-    font-size: 1.25rem;
+    font-size: 1.25em;
 }
 
 .echo-doc-sitemap .echo-doc-sitemap-list-flat {
-    padding-left: 1rem;
+    padding-left: 1em;
     flex-direction: row;
     justify-content: flex-start;
 }
@@ -907,7 +905,7 @@ echo-doc-sitemap
 }
 
 .echo-doc-sitemap .echo-doc-sitemap-list-flat a.echo-nav-label {
-    padding-left: 1rem;
+    padding-left: 1em;
 }
 
 
@@ -918,21 +916,21 @@ echo-doc-footer
 */
 
 .echo-doc-footer {
+    padding-top: 1.5rem;
+    padding-top: clamp(1rem, calc( 0.74074vw + 0.83333rem), 1.5rem);
+    padding-bottom: 4.5rem;
+    padding-bottom: clamp(3rem, calc( 2.22222vw + 2.5rem), 4.5rem);
     font-size: .875rem;
-    padding-top: 1.875rem;
-    padding-bottom: 3.75rem;
-    border-top: 0.0625rem solid #ccc;
+    text-align: center;
+    line-height: 1.25;
 }
 
 .echo-doc-footer-notice {
-    margin: 0;
-    text-align: center;
     letter-spacing: .05em;
 }
 
 .echo-doc-footer-copyright {
-    margin: 0;
-    padding-bottom: .5rem;
+    margin-bottom: 0;
     text-align: center;
     letter-spacing: .05em;
 }
