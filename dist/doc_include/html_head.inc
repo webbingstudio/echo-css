@@ -3,8 +3,7 @@ if( !isset( $echo_path ) ) {
     $echo_path = '../';
 }
 ?>
-    <link rel="stylesheet" href="<?php echo $echo_path; ?>css/echo.min.css<?php echo '?var=' . date('YmdHis'); ?>">
-
+    <link id="echocss-core" rel="stylesheet" href="<?php echo $echo_path; ?>css/echo.min.css<?php echo '?var=' . date('YmdHis'); ?>">
 
     <script
         src="https://code.jquery.com/jquery-2.2.4.min.js"
@@ -23,13 +22,16 @@ if( !isset( $echo_path ) ) {
 
     <link rel="stylesheet" href="<?php echo $echo_path; ?>styleguide/css/prism.css">
 
-    <meta name="twitter:site" content="@webbingstudio">
+    <meta name="twitter:site" content="@webbing_cms">
     <meta name="twitter:card" content="summary_large_image">
     <meta property="og:image" content="https://echocss.webbingstudio.com/share/ogp.jpg">
-    <link rel="shortcut icon" href="<?php echo $echo_path; ?>share/favicon.ico">
-    <link rel="apple-touch-icon" sizes="72x72" href="<?php echo $echo_path; ?>share/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="<?php echo $echo_path; ?>share/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="<?php echo $echo_path; ?>share/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="<?php echo $echo_path; ?>share/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="<?php echo $echo_path; ?>share/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="<?php echo $echo_path; ?>share/apple-touch-icon-152x152.png">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/share/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/share/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/share/favicon-16x16.png">
+    <link rel="manifest" href="/share/site.webmanifest">
+    <link rel="mask-icon" href="/share/safari-pinned-tab.svg" color="#333333">
+    <link rel="shortcut icon" href="/share/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="/share/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">

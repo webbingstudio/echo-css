@@ -90,37 +90,46 @@ echo-doc-header
 @media (min-width: 768px) {
     .echo-doc-header-contents {
         display: flex;
-        align-items: center;
+        align-items: stretch;
         align-content: space-between;
     }
 }
 
 .echo-doc-header-brand {
     margin: 0;
-    padding-bottom: .25rem;
-    font-size: 1rem;
-    text-align: center;
-    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
 
 @media (min-width: 768px) {
+
     .echo-doc-header-brand {
         flex: 0 0 auto;
-        text-align: left;
+        justify-content: flex-start;
     }
+
 }
 
-img.echo-doc-header-logo {
-    display: inline-block;
+.echo-doc-header-brand a {
+    text-decoration: none;
+}
+
+.echo-doc-header-brand svg {
     width: auto;
-    height: 2rem;
+    height: 2.25rem;
+    fill: #333;
     vertical-align: middle;
 }
 
+
 .echo-label.echo-doc-header-version {
-    margin-left: 1em;
-    letter-spacing: .1rem;
-    vertical-align: bottom;
+    position: relative;
+    top: .25rem;
+    margin-left: 1rem;
+    font-size: .875em;
+    letter-spacing: .1em;
 }
 
 
