@@ -26,8 +26,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 /*
@@ -37,6 +36,7 @@ typography(font)
 */
 html {
   font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
+  font-weight: 300;
   font-weight: 300;
 }
 
@@ -49,6 +49,7 @@ In Japan, there is a tendency to specify sans-serif fonts in the form input fiel
 textarea,
 input {
   font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
+  font-weight: 300;
   font-weight: 300;
 }
 
@@ -63,8 +64,16 @@ echo-title(font)
 --------------------
 */
 .echo-title {
-  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
-  font-weight: 600;
+  font-weight: bold;
+}
+
+/*
+--------------------
+echo-flip(font)
+--------------------
+*/
+.echo-flip-lead {
+  font-weight: bold;
 }
 
 /*
@@ -73,13 +82,11 @@ echo-form(font)
 --------------------
 */
 .echo-form-label {
-  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 .echo-form-error {
-  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 /*
@@ -90,11 +97,22 @@ echo-headline(font)
 .echo-headline-header {
   font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
   font-weight: 300;
+  font-weight: 300;
 }
 
 .echo-headline-title {
   font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
   font-weight: 300;
+  font-weight: 300;
+}
+
+/*
+--------------------
+echo-hero(font)
+--------------------
+*/
+.echo-hero-lead {
+  font-weight: bold;
 }
 
 /*
@@ -103,8 +121,7 @@ echo-topicpath(font)
 --------------------
 */
 .echo-topicpath .echo-nav-item:last-child {
-  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 /*
@@ -113,8 +130,7 @@ echo-forms(font)
 --------------------
 */
 .echo-forms-label {
-  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 /*
@@ -123,42 +139,46 @@ echo-font-(face)
 echo-font-bold
 --------------------
 */
+#echo-document .echo-font-bold {
+  font-weight: bold;
+}
+
 #echo-document .echo-font-root {
   font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
+  font-weight: 300;
   font-weight: 300;
 }
 
 #echo-document .echo-font-root.echo-font-bold {
-  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 #echo-document .echo-font-first {
   font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
   font-weight: 300;
+  font-weight: 300;
 }
 
 #echo-document .echo-font-first.echo-font-bold {
-  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 #echo-document .echo-font-second {
   font-family: "Helvetica", "Roboto", "-apple-system", "Open Sans", "Arial", sans-serif;
   font-weight: 300;
+  font-weight: 300;
 }
 
 #echo-document .echo-font-second.echo-font-bold {
-  font-family: "Helvetica", "Roboto", "-apple-system", "Open Sans", "Arial", sans-serif;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 #echo-document .echo-font-third {
   font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
   font-weight: 300;
+  font-weight: 300;
 }
 
 #echo-document .echo-font-third.echo-font-bold {
-  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
-  font-weight: 600;
+  font-weight: bold;
 }

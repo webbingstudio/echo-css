@@ -7,18 +7,23 @@
     @if ($family == 'root') {
 
         @if ($weight == 'bold') {
-            @if (variable-exists(font-family-bold-root)) {
-                font-family: $font-family-bold-root;
-            }
-            @if (variable-exists(font-weight-bold-root)) {
-                font-weight: $font-weight-bold-root;
-            } @else {
+            @if ( $font-family-bold-root == $font-family-root ) {
                 font-weight: bold;
+            } @else {
+                @if (variable-exists(font-family-bold-root)) {
+                    font-family: $font-family-bold-root;
+                }
+                @if (variable-exists(font-weight-bold-root)) {
+                    font-weight: $font-weight-bold-root;
+                }
             }
 
         } @else {
             @if (variable-exists(font-family-root)) {
                 font-family: $font-family-root;
+            }
+            @if (variable-exists(font-weight-root)) {
+                font-weight: $font-weight-root;
             }
 
         }
@@ -37,18 +42,23 @@
     @if ($family == 'first') {
 
         @if ($weight == 'bold') {
-            @if (variable-exists(font-family-bold-first)) {
-                font-family: $font-family-bold-first;
-            }
-            @if (variable-exists(font-weight-bold-first)) {
-                font-weight: $font-weight-bold-first;
-            } @else {
+            @if ( $font-family-bold-first == $font-family-first ) {
                 font-weight: bold;
+            } @else {
+                @if (variable-exists(font-family-bold-first)) {
+                    font-family: $font-family-bold-first;
+                }
+                @if (variable-exists(font-weight-bold-first)) {
+                    font-weight: $font-weight-bold-first;
+                }
             }
 
         } @else {
             @if (variable-exists(font-family-first)) {
                 font-family: $font-family-first;
+            }
+            @if (variable-exists(font-weight-first)) {
+                font-weight: $font-weight-first;
             }
 
         }
@@ -67,18 +77,23 @@
     @if ($family == 'second') {
 
         @if ($weight == 'bold') {
-            @if (variable-exists(font-family-bold-second)) {
-                font-family: $font-family-bold-second;
-            }
-            @if (variable-exists(font-weight-bold-second)) {
-                font-weight: $font-weight-bold-second;
-            } @else {
+            @if ( $font-family-bold-second == $font-family-second ) {
                 font-weight: bold;
+            } @else {
+                @if (variable-exists(font-family-bold-second)) {
+                    font-family: $font-family-bold-second;
+                }
+                @if (variable-exists(font-weight-bold-second)) {
+                    font-weight: $font-weight-bold-second;
+                }
             }
 
         } @else {
             @if (variable-exists(font-family-second)) {
                 font-family: $font-family-second;
+            }
+            @if (variable-exists(font-weight-second)) {
+                font-weight: $font-weight-second;
             }
 
         }
@@ -97,18 +112,23 @@
     @if ($family == 'third') {
 
         @if ($weight == 'bold') {
-            @if (variable-exists(font-family-bold-third)) {
-                font-family: $font-family-bold-third;
-            }
-            @if (variable-exists(font-weight-bold-third)) {
-                font-weight: $font-weight-bold-third;
-            } @else {
+            @if ( $font-family-bold-third == $font-family-third ) {
                 font-weight: bold;
+            } @else {
+                @if (variable-exists(font-family-bold-third)) {
+                    font-family: $font-family-bold-third;
+                }
+                @if (variable-exists(font-weight-bold-third)) {
+                    font-weight: $font-weight-bold-third;
+                }
             }
 
         } @else {
             @if (variable-exists(font-family-third)) {
                 font-family: $font-family-third;
+            }
+            @if (variable-exists(font-weight-third)) {
+                font-weight: $font-weight-third;
             }
 
         }
@@ -122,12 +142,6 @@
 
         }
 
-    }
-
-    @if ($family == 'mono') {
-        @if (variable-exists(font-family-mono)) {
-            font-family: $font-family-mono;
-        }
     }
 
 }

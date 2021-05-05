@@ -7,6 +7,10 @@
 
 #{$u-wrap} {
 
+    .#{$pr}#{$u}font#{$c3}bold {
+        @include font-family-weight( 'root', 'bold' );
+    }
+
     .#{$pr}#{$u}font#{$c3}root {
         @include font-family-weight( 'root', 'normal' );
 

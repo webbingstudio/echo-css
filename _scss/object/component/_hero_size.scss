@@ -5,40 +5,53 @@
 */
 
 .#{$pr}#{$c}hero#{$c1}header {
-    font-size: 1.125rem;
+    font-size: $font-size-lg;
 
     @include media-breakpoint-up(md) {
-        font-size: 1.25rem;
+        font-size: $font-size-xl;
     }
 
     @include media-breakpoint-up(xl) {
-        font-size: 1.5rem;
+        font-size: $font-size-xxl;
+    }
+
+}
+
+.#{$pr}#{$c}hero#{$c1}lead {
+    font-size: $font-size-md;
+
+    @include media-breakpoint-up(md) {
+        font-size: $font-size-lg;
+    }
+
+    @include media-breakpoint-up(xl) {
+        font-size: $font-size-xl;
     }
 
 }
 
 .#{$pr}#{$c}hero#{$c1}body {
-    font-size: .75rem;
+    font-size: $font-size-xs;
 
     @include media-breakpoint-up(md) {
-        font-size: .875rem;
+        font-size: $font-size-sm;
     }
 
     @include media-breakpoint-up(xl) {
-        font-size: 1rem;
+        font-size: $font-size-md;
     }
 
 }
 
 .#{$pr}#{$c}hero#{$c1}link {
-    font-size: .75rem;
+    font-size: $font-size-xs;
 
     @include media-breakpoint-up(md) {
-        font-size: .875rem;
+        font-size: $font-size-sm;
     }
 
     @include media-breakpoint-up(xl) {
-        font-size: 1rem;
+        font-size: $font-size-md;
     }
 
 }

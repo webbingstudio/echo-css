@@ -43,6 +43,8 @@
 
 <p><code>.echo-hero-contents-inner</code> が必須であることと、内容が多すぎると領域をはみ出すことがある点に注意する。</p>
 
+<p><code>.echo-hero-lead</code> は短文向けの要素となる。 <code>.echo-hero-body</code> とは文字サイズが異なるだけではなく、文字が太くなり、行高さがやや少なくなる。</p>
+
 <p><code>.echo-hero-image</code> の画像は<strong>トリミングされず、縦横比を保って伸縮する。</strong>レスポンシブイメージを併用することが望ましい。<br>
 </p>
 
@@ -71,9 +73,12 @@
             <div class="echo-hero-header">
                 <h2 class="echo-hero-title echo-title echo-title-level-1 echo-font-first">吾輩は猫である</h2>
             </div><!-- /.echo-hero-header -->
+            <div class="echo-hero-lead">
+                <p>名前はまだ無い。</p>
+            </div><!-- /.echo-hero-lead -->
             <div class="echo-hero-body">
-                <p>名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>
-                何でも薄暗いじめじめした所で<br class="echo-hidden-lg-up">ニャーニャー泣いていた事だけは記憶している。</p>
+                <p>どこで生れたかとんと見当がつかぬ。<br>
+                何でも薄暗いじめじめした所でニャーニャー</p>
             </div><!-- /.echo-hero-body -->
             <div class="echo-hero-link">
                 <div class="echo-buttons">
@@ -88,7 +93,7 @@
 
 </div>
 
-<p class="echo-title echo-title-style-a echo-title-level-3 echo-margin-top-lg echo-margin-bottom-md">リード文先頭にキャプションを追加し、かつ複数のボタンを表示している例</p>
+<p class="echo-title echo-title-style-a echo-title-level-3 echo-margin-top-lg echo-margin-bottom-md">.echo-hero-leadのみを本文に使用し、かつ複数のボタンを表示している例</p>
 
 <div style="margin-left: -0.625rem; margin-right: -0.625rem;">
 
@@ -110,10 +115,10 @@
             <div class="echo-hero-header">
                 <h2 class="echo-hero-title echo-title echo-title-level-1 echo-font-first">吾輩は猫である</h2>
             </div><!-- /.echo-hero-header -->
-            <div class="echo-hero-body">
-                <p class="echo-text-xl">名前はまだ無い</p>
-                <p>どこで生れたかとんと見当がつかぬ。</p>
-            </div><!-- /.echo-hero-body -->
+            <div class="echo-hero-lead">
+                <p>名前はまだ無い<br>
+                どこで生れたかとんと見当がつかぬ。</p>
+            </div><!-- /.echo-hero-lead -->
             <div class="echo-hero-link">
                 <div class="echo-buttons">
                     <div class="echo-buttons-item">
@@ -185,9 +190,12 @@
             &lt;div class="echo-hero-header"&gt;
                 &lt;h2 class="echo-hero-title echo-title echo-title-level-1 echo-font-first"&gt;吾輩は猫である&lt;/h2&gt;
             &lt;/div&gt;&lt;!-- /.echo-hero-header --&gt;
+            &lt;div class="echo-hero-lead"&gt;
+                &lt;p&gt;名前はまだ無い。&lt;/p&gt;
+            &lt;/div&gt;&lt;!-- /.echo-hero-lead --&gt;
             &lt;div class="echo-hero-body"&gt;
-                &lt;p&gt;名前はまだ無い。どこで生れたかとんと見当がつかぬ。&lt;br&gt;
-                何でも薄暗いじめじめした所で&lt;br class="echo-hidden-lg-up"&gt;ニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
+                &lt;p&gt;どこで生れたかとんと見当がつかぬ。&lt;br&gt;
+                何でも薄暗いじめじめした所でニャーニャー&lt;/p&gt;
             &lt;/div&gt;&lt;!-- /.echo-hero-body --&gt;
             &lt;div class="echo-hero-link"&gt;
                 &lt;div class="echo-buttons"&gt;
@@ -202,7 +210,7 @@
 
 &lt;/div&gt;
 
-&lt;p class="echo-title echo-title-style-a echo-title-level-3 echo-margin-top-lg echo-margin-bottom-md"&gt;リード文先頭にキャプションを追加し、かつ複数のボタンを表示している例&lt;/p&gt;
+&lt;p class="echo-title echo-title-style-a echo-title-level-3 echo-margin-top-lg echo-margin-bottom-md"&gt;.echo-hero-leadのみを本文に使用し、かつ複数のボタンを表示している例&lt;/p&gt;
 
 &lt;div style="margin-left: -0.625rem; margin-right: -0.625rem;"&gt;
 
@@ -224,10 +232,10 @@
             &lt;div class="echo-hero-header"&gt;
                 &lt;h2 class="echo-hero-title echo-title echo-title-level-1 echo-font-first"&gt;吾輩は猫である&lt;/h2&gt;
             &lt;/div&gt;&lt;!-- /.echo-hero-header --&gt;
-            &lt;div class="echo-hero-body"&gt;
-                &lt;p class="echo-text-xl"&gt;名前はまだ無い&lt;/p&gt;
-                &lt;p&gt;どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
-            &lt;/div&gt;&lt;!-- /.echo-hero-body --&gt;
+            &lt;div class="echo-hero-lead"&gt;
+                &lt;p&gt;名前はまだ無い&lt;br&gt;
+                どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
+            &lt;/div&gt;&lt;!-- /.echo-hero-lead --&gt;
             &lt;div class="echo-hero-link"&gt;
                 &lt;div class="echo-buttons"&gt;
                     &lt;div class="echo-buttons-item"&gt;
@@ -388,8 +396,10 @@
             <div class="echo-hero-header">
                 <h2 class="echo-hero-title echo-title echo-title-level-2 echo-font-first">吾輩は猫である</h2>
             </div><!-- /.echo-hero-header -->
+            <div class="echo-hero-lead">
+                <p>名前はまだ無い</p>
+            </div><!-- /.echo-hero-lead -->
             <div class="echo-hero-body">
-                <p class="echo-text-xl">名前はまだ無い</p>
                 <p>どこで生れたかとんと見当がつかぬ。<br>
                     何でも薄暗いじめじめした所で<br class="echo-hidden-sm-up">ニャーニャー泣いていた事だけは記憶している。</p>
             </div><!-- /.echo-hero-body -->
@@ -424,8 +434,10 @@
             <div class="echo-hero-header">
                 <h2 class="echo-hero-title echo-title echo-title-level-2 echo-font-first">吾輩は猫である</h2>
             </div><!-- /.echo-hero-header -->
+            <div class="echo-hero-lead">
+                <p>名前はまだ無い</p>
+            </div><!-- /.echo-hero-lead -->
             <div class="echo-hero-body">
-                <p class="echo-text-xl">名前はまだ無い</p>
                 <p>どこで生れたかとんと見当がつかぬ。<br>
                     何でも薄暗いじめじめした所で<br class="echo-hidden-sm-up">ニャーニャー泣いていた事だけは記憶している。</p>
             </div><!-- /.echo-hero-body -->
@@ -460,8 +472,10 @@
             &lt;div class="echo-hero-header"&gt;
                 &lt;h2 class="echo-hero-title echo-title echo-title-level-2 echo-font-first"&gt;吾輩は猫である&lt;/h2&gt;
             &lt;/div&gt;&lt;!-- /.echo-hero-header --&gt;
+            &lt;div class="echo-hero-lead"&gt;
+                &lt;p&gt;名前はまだ無い&lt;/p&gt;
+            &lt;/div&gt;&lt;!-- /.echo-hero-lead --&gt;
             &lt;div class="echo-hero-body"&gt;
-                &lt;p class="echo-text-xl"&gt;名前はまだ無い&lt;/p&gt;
                 &lt;p&gt;どこで生れたかとんと見当がつかぬ。&lt;br&gt;
                     何でも薄暗いじめじめした所で&lt;br class="echo-hidden-sm-up"&gt;ニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
             &lt;/div&gt;&lt;!-- /.echo-hero-body --&gt;
@@ -496,8 +510,10 @@
             &lt;div class="echo-hero-header"&gt;
                 &lt;h2 class="echo-hero-title echo-title echo-title-level-2 echo-font-first"&gt;吾輩は猫である&lt;/h2&gt;
             &lt;/div&gt;&lt;!-- /.echo-hero-header --&gt;
+            &lt;div class="echo-hero-lead"&gt;
+                &lt;p&gt;名前はまだ無い&lt;/p&gt;
+            &lt;/div&gt;&lt;!-- /.echo-hero-lead --&gt;
             &lt;div class="echo-hero-body"&gt;
-                &lt;p class="echo-text-xl"&gt;名前はまだ無い&lt;/p&gt;
                 &lt;p&gt;どこで生れたかとんと見当がつかぬ。&lt;br&gt;
                     何でも薄暗いじめじめした所で&lt;br class="echo-hidden-sm-up"&gt;ニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
             &lt;/div&gt;&lt;!-- /.echo-hero-body --&gt;
@@ -537,8 +553,10 @@
             <div class="echo-hero-header">
                 <h2 class="echo-hero-title echo-title echo-title-level-2 echo-font-first">吾輩は猫である</h2>
             </div><!-- /.echo-hero-header -->
+            <div class="echo-hero-lead">
+                <p>名前はまだ無い</p>
+            </div><!-- /.echo-hero-lead -->
             <div class="echo-hero-body">
-                <p class="echo-text-xl">名前はまだ無い</p>
                 <p>どこで生れたかとんと見当がつかぬ。<br>
                     何でも薄暗いじめじめした所で<br class="echo-hidden-sm-up">ニャーニャー泣いていた事だけは記憶している。</p>
             </div><!-- /.echo-hero-body -->
@@ -573,8 +591,10 @@
             &lt;div class="echo-hero-header"&gt;
                 &lt;h2 class="echo-hero-title echo-title echo-title-level-2 echo-font-first"&gt;吾輩は猫である&lt;/h2&gt;
             &lt;/div&gt;&lt;!-- /.echo-hero-header --&gt;
+            &lt;div class="echo-hero-lead"&gt;
+                &lt;p&gt;名前はまだ無い&lt;/p&gt;
+            &lt;/div&gt;&lt;!-- /.echo-hero-lead --&gt;
             &lt;div class="echo-hero-body"&gt;
-                &lt;p class="echo-text-xl"&gt;名前はまだ無い&lt;/p&gt;
                 &lt;p&gt;どこで生れたかとんと見当がつかぬ。&lt;br&gt;
                     何でも薄暗いじめじめした所で&lt;br class="echo-hidden-sm-up"&gt;ニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
             &lt;/div&gt;&lt;!-- /.echo-hero-body --&gt;

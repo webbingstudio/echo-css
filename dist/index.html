@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>echo.css : CSS framework optimized for CMS theming</title>
-    <meta property="og:title" content="echo.css : CSS framework optimized for CMS theming">
+    <title>echo.css つたわりやすいCSSフレームワーク</title>
+    <meta property="og:title" content="echo.css つたわりやすいCSSフレームワーク">
 
     <?php
         $echo_path = './';
@@ -52,7 +52,7 @@
                         </div><!-- /.echo-hero-header -->
 
                         <div class="echo-hero-lead">
-                            <p><strong>version 3.0.0</strong></p>
+                            <p class="echo-text-xl">version 3.0.0</p>
                             <p>つたわりやすい　つかいやすい<br>
                             わたしたちのCSSフレームワーク</p>
                         </div><!-- /.echo-hero-body -->
@@ -85,34 +85,56 @@
                 <div class="echo-flip-container">
                     <div class="echo-flip-contents">
                         <div class="echo-flip-contents-inner">
-                            <h2 class="echo-flip-title">CMSサイト制作に最適化</h2>
-                            <p class="echo-flip-body"><span class="echo-text-lg">&quot;echo.css&quot;</span>は、SMACSS, FLOCSSを設計ベースとしたCSSフレームワークです。特に、WordPress等の<strong>CMSを組み込んだウェブサイトの制作</strong>に最適化しています。<br>
-                            CMSによく見られる機能を想定したコンポーネント、コンテンツの微調整を行う補助クラスを数多く実装しています。<br>
-                            ぜひ「スタイルガイド」をご覧ください。</p>
-                            <p class="echo-flip-link">
-                                <a href="./styleguide/" class="echo-button echo-button-lg echo-button-icon-arrow echo-button-style-b"><i class="fas fa-gem echo-margin-right-sm"></i>Style guide</a>
-                            </p>
+                            <h2 class="echo-flip-title echo-title echo-title-level-1">レスポンシブデザイン</h2>
+                            <div class="echo-flip-body">
+                                <p>すべてのオブジェクトが、画面サイズに応じて適切なサイズに伸縮します。<br>
+                                「見出しだけ小さい」「ボタンだけ大きい」と悩むことはありません。</p>
+                                <p>文字サイズなどの変化のパターンは役割ごとにグループ化。スタイルガイドの各ページに値が明記されているので、デザイナーとも簡単に共有できます。</p>
+                                <p>複数カラムレイアウトでありがちな「ここでは伸縮してほしくない」にも対応しています。</p>
+                            </div><!-- /.echo-flip-body -->
+                            <div class="echo-flip-link">
+                                <a href="./styleguide/" class="echo-button echo-button-lg echo-button-icon-arrow echo-button-style-b"><i class="fas fa-gem echo-margin-right-sm"></i>スタイルガイド</a>
+                            </div><!-- /.echo-flip-body -->
                         </div><!-- /.echo-flip-contents-inner -->
                     </div><!-- /.echo-flip-contents -->
                 </div><!-- /.echo-flip-container -->
             </div><!-- /.echo-flip -->
         </div><!-- /.echo-doc-presentation -->
 
-        <div class="echo-doc-presentation echo-doc-presentation-02">
+        <div id="presentation-color" class="echo-doc-presentation echo-doc-presentation-02">
             <div class="echo-flip echo-flip-half">
                 <div class="echo-flip-cover"></div>
                 <div class="echo-flip-container">
                     <div class="echo-flip-contents">
                         <div class="echo-flip-contents-inner">
-                            <h2 class="echo-flip-title">チーム制作を想定</h2>
-                            <p class="echo-flip-body">実務のウェブ制作において、たった一人でサイトのすべてを担当することはまれです。ほとんどの場合、ディレクター、デザイナー、コーダー（もしくはフロントエンドエンジニア）が相互に協力しあって進めていきます。<br>
-                            このときコーダーは、デザイナーの意向やディレクターの変更指示を、コードの整合性を保ちつつ反映できるかが問われます。<br>
-                            echo.cssは、将来的な拡張や想定外対応を意識した、すべての人に理解しやすい設計を心がけています。</p>
+                            <h2 class="echo-flip-title echo-title echo-title-level-1">色とフォント</h2>
+                            <div class="echo-flip-body">
+                                <p>echo.cssはグレースケールと2色のシステムカラーのみで構成しています。クリーンなウェブサイトづくりに最適です。</p>
+                                <p>Sassを利用できる環境なら、日本のウェブフォントサービスの大問題「font-weight: bold で太さを変えられない」も変数設定だけで解決します。</p>
+                                <p>パッケージには、色とフォントのスタイルだけを抜き出した、上書き用CSSも含まれています。色を変えたり、クラスを増やすカスタマイズが簡単にできます。</p>
+                            </div><!-- /.echo-flip-body -->
+                            <div class="echo-flip-link">
+                                <a href="#" class="echo-button echo-button-lg echo-button-style-a echo-button-info"><i class="fas fa-palette echo-margin-right-sm"></i>色を変えてみる</a>
+                            </div><!-- /.echo-flip-body -->
                         </div><!-- /.echo-flip-contents-inner -->
                     </div><!-- /.echo-flip-contents -->
                 </div><!-- /.echo-flip-container -->
             </div><!-- /.echo-flip -->
         </div><!-- /.echo-doc-presentation -->
+
+        <div class="echo-doc-pickup echo-padding-y-xl echo-bg-default echo-bg-fade">
+
+            <h2 class="echo-doc-pickup-title echo-title echo-title-level-2 echo-title-style-b echo-margin-bottom-lg">なんだ、BEMじゃないのか</h2>
+
+            <div class="echo-container echo-container-sm">
+                <div class="echo-body echo-body-lg">
+                    <p class="echo-text-xl echo-text-center-md-up">＼\ まって！帰らないでー！ /／</p>
+                    <p>echo.cssのコーディングルールはハイフンつなぎの「SMACSS」です。しかし…なんと！コーディングルールをBEMに変更することができます。接頭辞の「echo-」を消したり、<a href="https://github.com/hiloki/flocss" target="_blank">FLOCSS</a>のようにレイヤー接頭辞をつけるなども、自由自在です。</p>
+                    <p>Sassの変数の修正が必要なのですが…BEM派なら大丈夫ですよね？</p>
+                </div><!-- /.echo-doc-pickup -->
+            </div><!-- /.echo-container -->
+
+        </div><!-- /.echo-doc-pickup -->
 
         <div class="echo-doc-presentation echo-doc-presentation-03">
             <div class="echo-flip echo-flip-half echo-flip-reverse">
@@ -120,16 +142,66 @@
                 <div class="echo-flip-container">
                     <div class="echo-flip-contents">
                         <div class="echo-flip-contents-inner">
-                            <h2 class="echo-flip-title">マルチバイト言語への配慮</h2>
-                            <p class="echo-flip-body">日本、中国、韓国などの東アジア圏では、英語圏のシングルバイト言語に加え、特殊なマルチバイト言語を使用しています。<br>
-                            文字の種類は数千字におよび、画数が多い、精細な文字も少なくありません。このため、タイポグラフィやウェブフォントサービスにも、特殊なルールが見られます。<br>
-                            echo.cssは、東アジア圏の言語で書かれたウェブサイトを美しく、効率的に制作できるよう配慮しています。
-                            </p>
+                            <h2 class="echo-flip-title echo-title echo-title-level-1">CMSに最適化</h2>
+                            <div class="echo-flip-body">
+                                <p>WordPress、Movable Type、Drupalなどの「コンテンツ・マネージメント・システム」。これらのテーマ制作のために、echo.cssは生まれました。</p>
+                                <p>ブログやポータルサイトでよく見る、サイト回遊率を向上するオブジェクトを網羅しています。object-fitによる新しい画像トリミングなど、サイト運営を軽減する機能も充実しています。</p>
+                            </div><!-- /.echo-flip-body -->
+                            <div class="echo-flip-link">
+                                <div class="echo-buttons echo-margin-bottom-md">
+
+                                    <div class="echo-buttons-item">
+                                        <a href="#" class="echo-button echo-button-style-b"><span class="echo-button-text"><span class="echo-font-bold">thumbnail</span><br><span class="echo-text-smtoxxs">トリミング</span></span></a>
+                                    </div><!-- /.echo-buttons-item -->
+
+                                    <div class="echo-buttons-item">
+                                        <a href="#" class="echo-button echo-button-style-b"><span class="echo-button-text"><span class="echo-font-bold">headline</span><br><span class="echo-text-smtoxxs">日付+タイトル</span></span></a>
+                                    </div><!-- /.echo-buttons-item -->
+
+                                </div><!-- /.echo-buttons -->
+                                <div class="echo-buttons">
+
+                                    <div class="echo-buttons-item">
+                                        <a href="#" class="echo-button echo-button-style-b"><span class="echo-button-text"><span class="echo-font-bold">serial</span><br><span class="echo-text-smtoxxs">前後リンク</span></span></a>
+                                    </div><!-- /.echo-buttons-item -->
+
+                                    <div class="echo-buttons-item">
+                                        <a href="#" class="echo-button echo-button-style-b"><span class="echo-button-text"><span class="echo-font-bold">step</span><br><span class="echo-text-smtoxxs">順番に読ませる</span></span></a>
+                                    </div><!-- /.echo-buttons-item -->
+
+                                </div><!-- /.echo-buttons -->
+                            </div><!-- /.echo-flip-body -->
                         </div><!-- /.echo-flip-contents-inner -->
                     </div><!-- /.echo-flip-contents -->
                 </div><!-- /.echo-flip-container -->
             </div><!-- /.echo-flip -->
         </div><!-- /.echo-doc-presentation -->
+
+        <div class="echo-doc-sns echo-padding-y-xl echo-bg-info">
+
+            <h2 class="echo-doc-pickup-title echo-title echo-title-level-4 echo-title-style-b echo-margin-bottom-lg">ご意見・ご感想をシェアしてください</h2>
+
+            <div class="echo-buttons echo-margin-bottom-md">
+
+                <div class="echo-buttons-item">
+                    <a href="http://twitter.com/share?text=echo.css&url=https://echocss.webbingstudio.com/&hashtags=echocss" target="_blank" rel="nofollow" class="echo-doc-button-twitter echo-button echo-button-style-a echo-button-inverse echo-button-circle"><span class="echo-button-text"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" fill="none" /><path d="M20.5,57.19c23.39,0,36.19-19.38,36.19-36.19,0-.55,0-1.1,0-1.65A26,26,0,0,0,63,12.77a25.35,25.35,0,0,1-7.31,2,12.76,12.76,0,0,0,5.6-7,25.53,25.53,0,0,1-8.08,3.09,12.73,12.73,0,0,0-21.68,11.6A36.06,36.06,0,0,1,5.32,9.13a12.72,12.72,0,0,0,3.93,17,12.58,12.58,0,0,1-5.77-1.59v.16A12.72,12.72,0,0,0,13.69,37.15a12.7,12.7,0,0,1-5.75.22A12.73,12.73,0,0,0,19.83,46.2,25.59,25.59,0,0,1,1,51.48a36,36,0,0,0,19.5,5.7"/></svg><span class="echo-sr">ツイートする</span></span></a>
+                </div><!-- /.echo-buttons-item -->
+
+                <div class="echo-buttons-item">
+                    <a href="http://www.facebook.com/share.php?u=http://echocss.webbingstudio.com/" target="_blank" rel="nofollow" class="echo-doc-button-facebook echo-button echo-button-style-a echo-button-inverse echo-button-circle"><span class="echo-button-text"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" fill="none"/><path d="M60,32A28,28,0,1,0,27.62,59.66V40.09H20.51V32h7.11V25.83c0-7,4.18-10.89,10.58-10.89a43.71,43.71,0,0,1,6.27.54v6.89H40.94c-3.48,0-4.57,2.16-4.57,4.38V32h7.77L42.9,40.09H36.37V59.66A28,28,0,0,0,60,32Z" /></svg><span class="echo-sr">Facebookでシェアする</span></span></a>
+                </div><!-- /.echo-buttons-item -->
+
+                <div class="echo-buttons-item">
+                    <a href="https://social-plugins.line.me/lineit/share?url=http%3A%2F%2Fechocss.webbingstudio.com%2F" target="_blank" rel="nofollow" class="echo-doc-button-line echo-button echo-button-style-a echo-button-inverse echo-button-circle"><span class="echo-button-text"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" fill="none"/><path d="M61,29.9c0-13-13-23.53-29-23.53S3,16.93,3,29.9C3,41.54,13.32,51.28,27.25,53.12c.95.2,2.23.62,2.56,1.43a6,6,0,0,1,.09,2.62s-.34,2-.41,2.49c-.13.73-.58,2.86,2.51,1.56s16.7-9.84,22.79-16.84h0C59,39.77,61,35.1,61,29.9ZM21.77,36.83a.57.57,0,0,1-.57.57H13.08a.55.55,0,0,1-.39-.16h0a.55.55,0,0,1-.16-.39h0V24.2a.57.57,0,0,1,.57-.57h2a.57.57,0,0,1,.57.57v10H21.2a.56.56,0,0,1,.57.57Zm4.9,0a.56.56,0,0,1-.56.56h-2a.56.56,0,0,1-.56-.56V24.2a.56.56,0,0,1,.56-.57h2a.56.56,0,0,1,.56.57Zm14,0a.56.56,0,0,1-.56.56H37.87l0,0h0l0,0h0a.67.67,0,0,1-.15-.14l-5.8-7.83v7.5a.56.56,0,0,1-.56.56h-2a.56.56,0,0,1-.57-.56V24.2a.56.56,0,0,1,.57-.57h2.29l0,0h0l0,0h0l0,0h0l0,0h0l0,.06,5.79,7.82V24.2a.56.56,0,0,1,.56-.57h2a.56.56,0,0,1,.56.57Zm11.24-10.6a.58.58,0,0,1-.57.57H45.82v2.13h5.52a.57.57,0,0,1,.57.57v2a.58.58,0,0,1-.57.57H45.82v2.13h5.52a.57.57,0,0,1,.57.57v2a.58.58,0,0,1-.57.57H43.22a.58.58,0,0,1-.39-.16h0a.55.55,0,0,1-.16-.39h0V24.2h0a.53.53,0,0,1,.16-.39h0a.58.58,0,0,1,.4-.16h8.12a.57.57,0,0,1,.57.57Z" /></svg><span class="echo-sr">LINEに送る</span></span></a>
+                </div><!-- /.echo-buttons-item -->
+
+                <div class="echo-buttons-item">
+                    <a href="http://b.hatena.ne.jp/add?mode=confirm&url=http://echocss.webbingstudio.com/" target="_blank" rel="nofollow" class="echo-doc-button-hatena echo-button echo-button-style-a echo-button-inverse echo-button-circle"><span class="echo-button-text"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500"><rect width="500" height="500" rx="101.9" ry="101.9" fill="#00a4de"/><g fill="#fff"><path d="M278.2,258.1q-13.6-15.2-37.8-17c14.4-3.9,24.8-9.6,31.4-17.3s9.8-17.8,9.8-30.7A55,55,0,0,0,275,166a48.8,48.8,0,0,0-19.2-18.6c-7.3-4-16-6.9-26.2-8.6s-28.1-2.4-53.7-2.4H113.6V363.6h64.2q38.7,0,55.8-2.6c11.4-1.8,20.9-4.8,28.6-8.9a52.5,52.5,0,0,0,21.9-21.4c5.1-9.2,7.7-19.9,7.7-32.1C291.8,281.7,287.3,268.2,278.2,258.1Zm-107-71.4h13.3q23.1,0,31,5.2c5.3,3.5,7.9,9.5,7.9,18s-2.9,14-8.5,17.4-16.1,5-31.4,5H171.2V186.7Zm52.8,130.3c-6.1,3.7-16.5,5.5-31.1,5.5H171.2V273h22.6c15,0,25.4,1.9,30.9,5.7s8.4,10.4,8.4,20S230.1,313.4,223.9,317.1Z"/><path d="M357.6,306.1a28.8,28.8,0,1,0,28.8,28.8A28.8,28.8,0,0,0,357.6,306.1Z"/><rect x="332.6" y="136.4" width="50" height="151.52"/></g></svg><span class="echo-sr">はてなブックマーク</span></span></a>
+                </div><!-- /.echo-buttons-item -->
+
+            </div><!-- /.echo-buttons -->
+
+        </div><!-- /.echo-doc-sns -->
 
         <div class="echo-doc-pickup echo-padding-y-xl">
             <div class="echo-container echo-container-lg">

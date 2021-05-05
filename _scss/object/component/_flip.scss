@@ -106,15 +106,23 @@
 
 .#{$pr}#{$c}flip#{$c1}contents#{$c1}inner > .#{$pr}#{$c}flip#{$c1}link {
     margin-top: map-get( $grid-gutter-widths, 'lg' );
-
-    @include media-breakpoint-up(lg) {
-        margin-top: map-get( $grid-gutter-widths, 'xl' );
-    }
-
 }
 
 .#{$pr}#{$c}flip#{$c1}header {
     line-height: 1;
+}
+
+.#{$pr}#{$c}flip#{$c1}lead {
+    line-height: $line-height-md;
+
+    > p {
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+    }
+
 }
 
 .#{$pr}#{$c}flip#{$c1}body {

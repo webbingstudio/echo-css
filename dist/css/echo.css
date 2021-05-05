@@ -63,8 +63,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 button,
@@ -90,8 +89,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 /*
@@ -238,6 +236,7 @@ typography(font)
 html {
   font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
   font-weight: 300;
+  font-weight: 300;
 }
 
 /*
@@ -249,6 +248,7 @@ In Japan, there is a tendency to specify sans-serif fonts in the form input fiel
 textarea,
 input {
   font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
+  font-weight: 300;
   font-weight: 300;
 }
 
@@ -2580,8 +2580,7 @@ echo-title(font)
 --------------------
 */
 .echo-title {
-  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 /*
@@ -3210,14 +3209,16 @@ echo-flip
   margin-top: 1.5rem;
 }
 
-@media (min-width: 62.5rem) {
-  .echo-flip-contents-inner > .echo-flip-link {
-    margin-top: 3rem;
-  }
-}
-
 .echo-flip-header {
   line-height: 1;
+}
+
+.echo-flip-lead {
+  line-height: 1.75;
+}
+
+.echo-flip-lead > p:last-child {
+  margin-bottom: 0;
 }
 
 .echo-flip-body {
@@ -3307,13 +3308,29 @@ echo-flip(size)
   }
 }
 
+.echo-flip-lead {
+  font-size: 1rem;
+}
+
+@media (min-width: 48rem) {
+  .echo-flip-lead {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .echo-flip-lead {
+    font-size: 1.25rem;
+  }
+}
+
 .echo-flip-body {
-  font-size: .75rem;
+  font-size: 0.75rem;
 }
 
 @media (min-width: 48rem) {
   .echo-flip-body {
-    font-size: .875rem;
+    font-size: 0.875rem;
   }
 }
 
@@ -3324,12 +3341,12 @@ echo-flip(size)
 }
 
 .echo-flip-link {
-  font-size: .75rem;
+  font-size: 0.75rem;
 }
 
 @media (min-width: 48rem) {
   .echo-flip-link {
-    font-size: .875rem;
+    font-size: 0.875rem;
   }
 }
 
@@ -3337,6 +3354,15 @@ echo-flip(size)
   .echo-flip-link {
     font-size: 1rem;
   }
+}
+
+/*
+--------------------
+echo-flip(font)
+--------------------
+*/
+.echo-flip-lead {
+  font-weight: bold;
 }
 
 /*
@@ -3481,13 +3507,11 @@ echo-form(font)
 --------------------
 */
 .echo-form-label {
-  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 .echo-form-error {
-  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 /*
@@ -3608,10 +3632,12 @@ echo-headline(font)
 .echo-headline-header {
   font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
   font-weight: 300;
+  font-weight: 300;
 }
 
 .echo-headline-title {
   font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
+  font-weight: 300;
   font-weight: 300;
 }
 
@@ -3679,15 +3705,18 @@ echo-hero
   margin-top: 1.5rem;
 }
 
-@media (min-width: 62.5rem) {
-  .echo-hero-contents-inner > .echo-hero-link {
-    margin-top: 3rem;
-  }
-}
-
 .echo-hero-header {
   text-align: center;
   line-height: 1;
+}
+
+.echo-hero-lead {
+  text-align: center;
+  line-height: 1.75;
+}
+
+.echo-hero-lead > p:last-child {
+  margin-bottom: 0;
 }
 
 .echo-hero-body {
@@ -3823,13 +3852,29 @@ echo-hero(size)
   }
 }
 
+.echo-hero-lead {
+  font-size: 1rem;
+}
+
+@media (min-width: 48rem) {
+  .echo-hero-lead {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .echo-hero-lead {
+    font-size: 1.25rem;
+  }
+}
+
 .echo-hero-body {
-  font-size: .75rem;
+  font-size: 0.75rem;
 }
 
 @media (min-width: 48rem) {
   .echo-hero-body {
-    font-size: .875rem;
+    font-size: 0.875rem;
   }
 }
 
@@ -3840,12 +3885,12 @@ echo-hero(size)
 }
 
 .echo-hero-link {
-  font-size: .75rem;
+  font-size: 0.75rem;
 }
 
 @media (min-width: 48rem) {
   .echo-hero-link {
-    font-size: .875rem;
+    font-size: 0.875rem;
   }
 }
 
@@ -3853,6 +3898,15 @@ echo-hero(size)
   .echo-hero-link {
     font-size: 1rem;
   }
+}
+
+/*
+--------------------
+echo-hero(font)
+--------------------
+*/
+.echo-hero-lead {
+  font-weight: bold;
 }
 
 /*
@@ -4483,8 +4537,7 @@ echo-topicpath(font)
 --------------------
 */
 .echo-topicpath .echo-nav-item:last-child {
-  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 /*
@@ -4577,44 +4630,48 @@ echo-font-(face)
 echo-font-bold
 --------------------
 */
+#echo-document .echo-font-bold {
+  font-weight: bold;
+}
+
 #echo-document .echo-font-root {
   font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
+  font-weight: 300;
   font-weight: 300;
 }
 
 #echo-document .echo-font-root.echo-font-bold {
-  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 #echo-document .echo-font-first {
   font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
   font-weight: 300;
+  font-weight: 300;
 }
 
 #echo-document .echo-font-first.echo-font-bold {
-  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 #echo-document .echo-font-second {
   font-family: "Helvetica", "Roboto", "-apple-system", "Open Sans", "Arial", sans-serif;
   font-weight: 300;
+  font-weight: 300;
 }
 
 #echo-document .echo-font-second.echo-font-bold {
-  font-family: "Helvetica", "Roboto", "-apple-system", "Open Sans", "Arial", sans-serif;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 #echo-document .echo-font-third {
   font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
   font-weight: 300;
+  font-weight: 300;
 }
 
 #echo-document .echo-font-third.echo-font-bold {
-  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 /*
@@ -7010,8 +7067,7 @@ echo-forms(font)
 --------------------
 */
 .echo-forms-label {
-  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 /*

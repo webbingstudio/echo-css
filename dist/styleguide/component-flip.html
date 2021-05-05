@@ -46,6 +46,8 @@
 <p><code>.echo-flip-contents-inner</code> が必須であることに注意する。<br>
 画面サイズによって <code>.echo-flip-contents-inner</code> の左右余白が大きく変化する。</p>
 
+<p><code>.echo-flip-lead</code> は短文向けの要素となる。 <code>.echo-flip-body</code> とは文字サイズが異なるだけではなく、文字が太くなり、行高さがやや少なくなる。</p>
+
 <p><code>.echo-flip-title.echo-title</code> に付与されている <code>.echo-font-first</code> は<strong>必須ではない</strong>。詳細は <a href="./utility-font.html">utility > font</a> を参照。</p>
 
 <?php include('../doc_include/fonttable_display.html'); ?>
@@ -61,8 +63,11 @@
                 <div class="echo-flip-header">
                     <h2 class="echo-flip-title echo-title echo-title-level-1 echo-font-first">吾輩は猫である</h2>
                 </div><!-- /.echo-flip-header -->
+                <div class="echo-flip-lead">
+                    <p>名前はまだ無い。</p>
+                </div><!-- /.echo-flip-lead -->
                 <div class="echo-flip-body">
-                    <p>名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>
+                    <p>どこで生れたかとんと見当がつかぬ。<br>
                     何でも薄暗いじめじめした所で<br class="echo-hidden-lg-up">ニャーニャー泣いていた事だけは記憶している。</p>
                 </div><!-- /.echo-flip-body -->
                 <div class="echo-flip-link">
@@ -74,7 +79,7 @@
 </div><!-- /.echo-flip -->
 
 </div>
-<p class="echo-title echo-title-style-a echo-title-level-3 echo-margin-top-lg echo-margin-bottom-md">リード文先頭にキャプションを追加し、かつ複数のボタンを表示している例</p>
+<p class="echo-title echo-title-style-a echo-title-level-3 echo-margin-top-lg echo-margin-bottom-md">.echo-flip-leadのみを本文に使用し、かつ複数のボタンを表示している例</p>
 
 <div style="margin-left: -0.625rem; margin-right: -0.625rem;">
 
@@ -86,11 +91,10 @@
                 <div class="echo-flip-header">
                     <h2 class="echo-flip-title echo-title echo-title-level-1 echo-font-first">吾輩は猫である</h2>
                 </div><!-- /.echo-flip-header -->
-                <div class="echo-flip-body">
-                    <p class="echo-text-xl">名前はまだ無い</p>
-                    <p>どこで生れたかとんと見当がつかぬ。<br>
-                    何でも薄暗いじめじめした所で<br class="echo-hidden-lg-up">ニャーニャー泣いていた事だけは記憶している。</p>
-                </div><!-- /.echo-flip-body -->
+                <div class="echo-flip-lead">
+                    <p>名前はまだ無い<br>
+                    どこで生れたかとんと見当がつかぬ。</p>
+                </div><!-- /.echo-flip-lead -->
                 <div class="echo-flip-link">
                     <div class="echo-buttons">
                         <div class="echo-buttons-item">
@@ -144,8 +148,11 @@
                 &lt;div class="echo-flip-header"&gt;
                     &lt;h2 class="echo-flip-title echo-title echo-title-level-1 echo-font-first"&gt;吾輩は猫である&lt;/h2&gt;
                 &lt;/div&gt;&lt;!-- /.echo-flip-header --&gt;
+                &lt;div class="echo-flip-lead"&gt;
+                    &lt;p&gt;名前はまだ無い。&lt;/p&gt;
+                &lt;/div&gt;&lt;!-- /.echo-flip-lead --&gt;
                 &lt;div class="echo-flip-body"&gt;
-                    &lt;p&gt;名前はまだ無い。どこで生れたかとんと見当がつかぬ。&lt;br&gt;
+                    &lt;p&gt;どこで生れたかとんと見当がつかぬ。&lt;br&gt;
                     何でも薄暗いじめじめした所で&lt;br class="echo-hidden-lg-up"&gt;ニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
                 &lt;/div&gt;&lt;!-- /.echo-flip-body --&gt;
                 &lt;div class="echo-flip-link"&gt;
@@ -157,7 +164,7 @@
 &lt;/div&gt;&lt;!-- /.echo-flip --&gt;
 
 &lt;/div&gt;
-&lt;p class="echo-title echo-title-style-a echo-title-level-3 echo-margin-top-lg echo-margin-bottom-md"&gt;リード文先頭にキャプションを追加し、かつ複数のボタンを表示している例&lt;/p&gt;
+&lt;p class="echo-title echo-title-style-a echo-title-level-3 echo-margin-top-lg echo-margin-bottom-md"&gt;.echo-flip-leadのみを本文に使用し、かつ複数のボタンを表示している例&lt;/p&gt;
 
 &lt;div style="margin-left: -0.625rem; margin-right: -0.625rem;"&gt;
 
@@ -169,11 +176,10 @@
                 &lt;div class="echo-flip-header"&gt;
                     &lt;h2 class="echo-flip-title echo-title echo-title-level-1 echo-font-first"&gt;吾輩は猫である&lt;/h2&gt;
                 &lt;/div&gt;&lt;!-- /.echo-flip-header --&gt;
-                &lt;div class="echo-flip-body"&gt;
-                    &lt;p class="echo-text-xl"&gt;名前はまだ無い&lt;/p&gt;
-                    &lt;p&gt;どこで生れたかとんと見当がつかぬ。&lt;br&gt;
-                    何でも薄暗いじめじめした所で&lt;br class="echo-hidden-lg-up"&gt;ニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
-                &lt;/div&gt;&lt;!-- /.echo-flip-body --&gt;
+                &lt;div class="echo-flip-lead"&gt;
+                    &lt;p&gt;名前はまだ無い&lt;br&gt;
+                    どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
+                &lt;/div&gt;&lt;!-- /.echo-flip-lead --&gt;
                 &lt;div class="echo-flip-link"&gt;
                     &lt;div class="echo-buttons"&gt;
                         &lt;div class="echo-buttons-item"&gt;
