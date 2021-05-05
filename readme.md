@@ -1,7 +1,7 @@
 echo.css
 ====================================
 
-<img alt="echo" src="https://echocss.webbingstudio.com/images/logo.svg" height="60" />
+<img alt="echo" src="https://echocss.webbingstudio.com/images/echo/logo.svg" height="60" />
 
 CSS framework optimized for CMS theming
 
