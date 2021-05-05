@@ -333,6 +333,48 @@ echo-doc-pickup
 .echo-doc-pickup-title {
 }
 
+/*
+--------------------
+echo-doc-sns
+--------------------
+*/
+
+.echo-doc-sns .echo-button.echo-button-circle {
+    background-color: #fff;
+    width: 3rem;
+    height: 3rem;
+    transition: transform .6s;
+}
+
+@media (min-width: 768px) {
+
+.echo-doc-sns .echo-button.echo-button-circle {
+    width: 4rem;
+    height: 4rem;
+}
+
+}
+
+@media (min-width: 1000px) {
+
+.echo-doc-sns .echo-button.echo-button-circle {
+    width: 6rem;
+    height: 6rem;
+}
+
+}
+
+.echo-doc-sns .echo-button svg {
+    width: 70%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.echo-doc-sns .echo-button:hover {
+    transform: scale(1.2);
+    transform-origin: center center;
+}
+
 
 /*
 --------------------
