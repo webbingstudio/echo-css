@@ -4425,8 +4425,15 @@ echo-step
 --------------------
 */
 .echo-step {
-  max-width: 20rem;
+  width: calc( 100% - 1rem);
   margin: 0 auto;
+}
+
+@media (min-width: 26.75rem) {
+  .echo-step {
+    width: 100%;
+    max-width: 26rem;
+  }
 }
 
 .echo-step .echo-nav.echo-nav-vertical .echo-nav-list {

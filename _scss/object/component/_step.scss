@@ -5,8 +5,13 @@
 */
 
 .#{$pr}#{$c}step {
-    max-width: map-get( $object-max-widths, 'md' );
+    width: calc( 100% - #{map-get( $grid-gutter-widths, 'md' )} );
     margin: 0 auto;
+
+    @include media-breakpoint-up(sm) {
+        width: 100%;
+        max-width: map-get( $object-max-widths, 'lg' );
+    }
 
     .#{$pr}#{$m}nav.#{$pr}#{$m}nav#{$c3}vertical {
 
