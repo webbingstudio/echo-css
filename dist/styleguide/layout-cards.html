@@ -29,7 +29,9 @@
 <p>(breakpoint)が <code>sm</code> 以上で2列、 <code>md</code> 以上で3列、 <code>xl</code> 以上で4列となる。<br>
 また、 (breakpoint)が <code>sm</code> 以上で最大幅の制限が解除される（グリッドのセルの100%となる）。</p>
 
-<p class="echo-margin-bottom-lg"><code>.echo-container</code> で幅を制限することが望ましいが必須ではない。</p>
+<p><code>.echo-container</code> で幅を制限することが望ましいが必須ではない。</p>
+
+<p class="echo-margin-bottom-lg">Internet Explorer 11では、<code>grid-template-columns</code> プロパティを使用している関係で、すべての <code>.echo-card</code> が余白がない状態で縦に並ぶ。IEで同じ体裁とする場合は、このコンポーネントを使用せず、 <code>.echo-grid</code> に書き換えること。</p>
 
 <div style="margin-left: -10px; margin-right: -10px;">
 

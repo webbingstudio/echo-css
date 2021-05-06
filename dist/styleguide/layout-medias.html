@@ -26,7 +26,9 @@
 
 <p><code>.echo-media</code> をグリッド状に繰り返すための領域を作成する。(breakpoint)が <code>lg</code> 以上で2列となる。</p>
 
-<p class="echo-margin-bottom-lg"><code>.echo-container</code> で幅を制限することが望ましいが必須ではない。</p>
+<p><code>.echo-container</code> で幅を制限することが望ましいが必須ではない。</p>
+
+<p class="echo-margin-bottom-lg">Internet Explorer 11では、<code>grid-template-columns</code> プロパティを使用している関係で、すべての <code>.echo-media</code> が余白がない状態で縦に並ぶ。IEで同じ体裁とする場合は、このコンポーネントを使用せず、 <code>.echo-grid</code> に書き換えること。</p>
 
 <div style="margin-left: -10px; margin-right: -10px;">
 

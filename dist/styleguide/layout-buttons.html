@@ -38,8 +38,9 @@
 <p>ボタンの数は、1個から4個を前提としている。<br>
 (breakpoint)が <code>md</code> 以下で最大2カラム、 <code>lg</code> 以上で最大4カラムとなる。</p>
 
-<p><code>.echo-button-item</code> の最大幅は <code>.echo-container-sm</code> と同じ領域幅を、ボタンの数で均等に割ったものとなる。<br>
-<code>grid-template-columns</code> プロパティを使用している関係で、Internet Explorer 11では正常な幅で表示されない。</p>
+<p><code>.echo-button-item</code> の最大幅は <code>.echo-container-sm</code> と同じ領域幅を、ボタンの数で均等に割ったものとなる。</p>
+
+<p>Internet Explorer 11では、<code>grid-template-columns</code> プロパティを使用している関係で、すべてのボタンが余白がない状態で縦に並ぶ（クリックはできる）。</p>
 
 <div style="margin-left: -10px; margin-right: -10px;">
 

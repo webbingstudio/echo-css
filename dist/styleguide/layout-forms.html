@@ -33,6 +33,9 @@
 <p>ヘッダ <code>.echo-forms-header</code> には、ラベル <code>.echo-forms-label</code> が含まれる前提となっている。<br>
 ラベルに兄弟要素がある場合は整列される。ここでは例として <code>.echo-forms-meta.echo-labels</code> でラベル群を含めている。</p>
 
+<p>Internet Explorer 11では、<code>grid-template-columns</code> プロパティを使用している関係で、すべての <code>.echo-form</code> が余白がない状態で縦に並び、入力に著しい支障が生じる。<br>
+IEで同じ体裁とする場合は、このコンポーネントを使用せず、 <code>.echo-table.echo-table-0to12</code> 等に書き換えること。</p>
+
 <div class="example">
 
 <div class="echo-container echo-container-sm">
