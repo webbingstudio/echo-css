@@ -9,7 +9,6 @@
     margin: 0 auto;
 
     @include media-breakpoint-up(sm) {
-        width: 100%;
         max-width: map-get( $object-max-widths, 'lg' );
     }
 
