@@ -44,12 +44,18 @@
     </ol>
 </div>
 
-<h2 class="echo-doc-post-title-01">非対応の機能</h2>
+<h2 id="disabled" class="echo-doc-post-title-01">非対応の機能</h2>
 
-<h3 class="echo-doc-post-title-02">img要素のトリミング</h3>
+<h3 class="echo-doc-post-title-02">.echo-buttons, .echo-cards, .echo-mediasが段組にならない</h3>
 
-<p>以下の状況で、<a href="https://developer.mozilla.org/ja/docs/Web/CSS/object-fit" target="_blank">object-fit</a>によるトリミングを行うようになりました。<br>
-Internet Explorer11でトリミングに対応する場合は、別途ライブラリを追加してください。</p>
+<p>Internet Explorer 11は、柔軟なグリッドレイアウトを定義する、grid-template-columnsプロパティに対応していません。このため、すべてのセルが余白がない状態で縦に並びます。<br>
+IEで同じ体裁とする場合は、このコンポーネントを使用せず、 <code>.echo-grid, .echo-table</code> 等に書き換えてください。</p>
+
+
+<h3 class="echo-doc-post-title-02">img要素をCSSでトリミングしたときに画像が歪む</h3>
+
+<p>Internet Explorerでは非対応のプロパティである、<a href="https://developer.mozilla.org/ja/docs/Web/CSS/object-fit" target="_blank">object-fit</a>によるトリミングを行うようになりました。<br>
+対応する場合は、以下のクラスに別途ポリフィル（補正ライブラリ）を適用してください。</p>
 
 <h4 class="echo-doc-post-title-03"><a href="../styleguide/module-thumbnail.html">.echo-thumbnail</a></h4>
 
@@ -59,6 +65,10 @@ Internet Explorer11でトリミングに対応する場合は、別途ライブ�
 
 <p><code>.echo-hero-fit</code> を使用した場合</p>
 
+<h3 class="echo-doc-post-title-02">ラベル・ナビゲーションの文字が上にずれる</h3>
 
+<p>Internet Explorerは、 <code>display: flex</code> を指定した要素のheightプロパティが <code>auto</code> になっていると、align-itemsプロパティが反映されない不具合があります。<br>
+このため、min-heightプロパティのみとなっている <code>.echo-label, .echo-nav-label</code> のテキストが上にずれて見えます。<br>
+対応する場合は、 <code>.echo-label, .echo-nav-label</code> のheightプロパティに、具体的な値を指定してください（ただし、テキストの増減による柔軟性は失われます）。</p>
 
 <?php include('../doc_include/footer.inc'); ?>
