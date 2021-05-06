@@ -11,7 +11,7 @@
         font-size: map-get( $body-max-font-sizes, 'md' );
     }
 
-    &.#{$pr}#{$c}box#{$c3}fixed {
+    &.#{$pr}#{$c}body#{$c3}fixed {
 
         @include media-breakpoint-up(lg) {
             font-size: map-get( $body-min-font-sizes, 'md' );
