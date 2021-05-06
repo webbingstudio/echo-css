@@ -70,7 +70,12 @@
 .#{$pr}#{$c}flip#{$c1}contents#{$c1}inner {
     max-width: map-get( $object-max-widths, 'lg' );
     margin: 0 auto;
-    padding: map-get( $grid-gutter-widths, 'md' );
+    padding: map-get( $grid-gutter-widths, 'lg' ) map-get( $grid-gutter-widths, 'md' );
+
+    @include media-breakpoint-only(md) {
+        padding-left: 0;
+        padding-right: 0;
+    }
 
     @include media-breakpoint-up(lg) {
         position: absolute;

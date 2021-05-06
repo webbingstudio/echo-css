@@ -3210,7 +3210,14 @@ echo-flip
 .echo-flip-contents-inner {
   max-width: 26rem;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
+}
+
+@media (min-width: 48rem) and (max-width: 62.4rem) {
+  .echo-flip-contents-inner {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 @media (min-width: 62.5rem) {
