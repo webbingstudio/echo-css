@@ -12,8 +12,8 @@
         include('./doc_include/html_head.inc');
     ?>
 
-<meta name="description" content="echo.cssは、SMACSS, FLOCSSを設計ベースとしたCSSフレームワークです。特に、WordPress等のCMSを組み込んだウェブサイトの制作に最適化しています。MITライセンスで提供しています。">
-<meta property="og:description" content="echo.cssは、SMACSS, FLOCSSを設計ベースとしたCSSフレームワークです。特に、WordPress等のCMSを組み込んだウェブサイトの制作に最適化しています。MITライセンスで提供しています。">
+<meta name="description" content="echo.cssは、CSSフレームワークです。WordPress等のCMSを組み込んだサイト制作に最適化しています。MITライセンスで提供しています。">
+<meta property="og:description" content="echo.cssは、CSSフレームワークです。WordPress等のCMSを組み込んだサイト制作に最適化しています。MITライセンスで提供しています。">
 
 </head>
 <body class="view-home">
@@ -312,10 +312,7 @@
 
     </main>
 
-    <footer class="echo-doc-footer" role="contentinfo">
-        <p class="echo-doc-footer-notice">echo.css : Code licensed <a href="https://github.com/webbingstudio/echo-css/blob/master/LICENSE" target="_blank" rel="license noopener">MIT</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</p>
-        <p class="echo-doc-footer-copyright"><small>&copy; 2020 <a href="https://webbingstudio.com/" target="_blank">WebbingStudio</a></small></p>
-    </footer>
+    <?php include('./doc_include/footer_copyright.inc'); ?>
 
 </div><!-- /#echo-document -->
 </body>
