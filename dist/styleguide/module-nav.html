@@ -45,9 +45,22 @@
 <p>クリック範囲が広いナビゲーションを表示する。包括要素、もしくは <code>.echo-nav</code> 自体に薄い背景色を指定する必要がある。<br>
 テキストが複数行になった場合でも、ナビゲーションのすべてのテキストが縦中央に整列する。</p>
 
-<p>displayプロパティは <code>inline-block</code> を指定している。 <code>block</code> に変更するか、幅を100%に伸ばすと、各ボタンは均等幅となる。</p>
-
 <p><code>.echo-nav-label</code> 内に、装飾目的等で子要素を使用すると崩れる場合は、ダミーのインライン要素を緩衝として加える。ここでは <code>span.echo-nav-text</code> としている。</p>
+
+<h3 class="echo-doc-post-title-02">補足：ボタンを均等幅にする場合</h3>
+
+<p><code>.echo-nav-item</code> の <code>flex-basis</code> プロパティの値は <code>auto</code> である。<br>
+<code>0%</code> を指定すると、各ボタンは画面に対し自動的に均等幅となるが、Internet Explorerでナビゲーションのボタンが重なりクリックできなくなる。</p>
+
+<p>これはInternet Explorerがflex-basisを正しく解釈できないことによる不具合である。IEに対応するには、均等幅にしたい <code>.echo-nav</code> のdisplayプロパティを <code>block</code> に変更すること。</p>
+
+<h3 class="echo-doc-post-title-02">Note: When making the width of the buttons even</h3>
+
+<p>The value of the <code>flex-basis</code> property of <code>.echo-nav-item</code> is <code>auto</code>. <br>
+If <code>0%</code> is specified, each button will automatically be evenly widthd to the screen, but the navigation buttons will overlap and cannot be clicked in Internet Explorer.</p>
+
+<p>This is a bug because Internet Explorer cannot interpret flex-basis correctly. To support IE, change the display property of <code>.echo-nav</code> that you want to have an even width to <code>block</code>.</p>
+
 
 <?php include('../doc_include/fonttable_nav.html'); ?>
 
