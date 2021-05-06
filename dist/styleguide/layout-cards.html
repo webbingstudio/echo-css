@@ -24,7 +24,10 @@
             <article class="echo-doc-post">
                 <div class="echo-doc-post-contents styleguide-contents"><h2 id="cards" class="echo-doc-post-title-01">echo-cards</h2>
 
-<p><code>.echo-card</code> をグリッド状に繰り返すための領域を作成する。(breakpoint)が <code>sm</code> 以上で2列、 <code>md</code> 以上で3列、 <code>xl</code> 以上で4列となる。</p>
+<p><code>.echo-card</code> をグリッド状に繰り返すための領域を作成する。<code>.echo-card.echo-card-sm</code> の使用が望ましい。</p>
+
+<p>(breakpoint)が <code>sm</code> 以上で2列、 <code>md</code> 以上で3列、 <code>xl</code> 以上で4列となる。<br>
+また、 (breakpoint)が <code>sm</code> 以上で最大幅の制限が解除される（グリッドのセルの100%となる）。</p>
 
 <p class="echo-margin-bottom-lg"><code>.echo-container</code> で幅を制限することが望ましいが必須ではない。</p>
 
@@ -32,7 +35,7 @@
 
 <div class="echo-cards">
     <div class="echo-cards-item">
-        <div class="echo-card">
+        <div class="echo-card echo-card-sm">
             <a href="#" class="echo-card-inner">
                 <div class="echo-card-object">
                     <figure class="echo-thumbnail echo-thumbnail-16to9">
@@ -60,7 +63,7 @@
         </div><!-- /.echo-card -->
     </div><!-- /.echo-cards-item -->
     <div class="echo-cards-item">
-        <div class="echo-card">
+        <div class="echo-card echo-card-sm">
             <a href="#" class="echo-card-inner">
                 <div class="echo-card-object">
                     <figure class="echo-thumbnail echo-thumbnail-16to9">
@@ -88,7 +91,7 @@
         </div><!-- /.echo-card -->
     </div><!-- /.echo-cards-item -->
     <div class="echo-cards-item">
-        <div class="echo-card">
+        <div class="echo-card echo-card-sm">
             <a href="#" class="echo-card-inner">
                 <div class="echo-card-object">
                     <figure class="echo-thumbnail echo-thumbnail-16to9">
@@ -116,7 +119,7 @@
         </div><!-- /.echo-card -->
     </div><!-- /.echo-cards-item -->
     <div class="echo-cards-item">
-        <div class="echo-card">
+        <div class="echo-card echo-card-sm">
             <a href="#" class="echo-card-inner">
                 <div class="echo-card-object">
                     <figure class="echo-thumbnail echo-thumbnail-16to9">
@@ -144,7 +147,7 @@
         </div><!-- /.echo-card -->
     </div><!-- /.echo-cards-item -->
     <div class="echo-cards-item">
-        <div class="echo-card">
+        <div class="echo-card echo-card-sm">
             <a href="#" class="echo-card-inner">
                 <div class="echo-card-object">
                     <figure class="echo-thumbnail echo-thumbnail-16to9">
@@ -172,7 +175,7 @@
         </div><!-- /.echo-card -->
     </div><!-- /.echo-cards-item -->
     <div class="echo-cards-item">
-        <div class="echo-card">
+        <div class="echo-card echo-card-sm">
             <a href="#" class="echo-card-inner">
                 <div class="echo-card-object">
                     <figure class="echo-thumbnail echo-thumbnail-16to9">
@@ -200,7 +203,7 @@
         </div><!-- /.echo-card -->
     </div><!-- /.echo-cards-item -->
     <div class="echo-cards-item">
-        <div class="echo-card">
+        <div class="echo-card echo-card-sm">
             <a href="#" class="echo-card-inner">
                 <div class="echo-card-object">
                     <figure class="echo-thumbnail echo-thumbnail-16to9">
@@ -228,7 +231,7 @@
         </div><!-- /.echo-card -->
     </div><!-- /.echo-cards-item -->
     <div class="echo-cards-item">
-        <div class="echo-card">
+        <div class="echo-card echo-card-sm">
             <a href="#" class="echo-card-inner">
                 <div class="echo-card-object">
                     <figure class="echo-thumbnail echo-thumbnail-16to9">
@@ -256,7 +259,7 @@
         </div><!-- /.echo-card -->
     </div><!-- /.echo-cards-item -->
     <div class="echo-cards-item">
-        <div class="echo-card">
+        <div class="echo-card echo-card-sm">
             <a href="#" class="echo-card-inner">
                 <div class="echo-card-object">
                     <figure class="echo-thumbnail echo-thumbnail-16to9">
@@ -284,7 +287,7 @@
         </div><!-- /.echo-card -->
     </div><!-- /.echo-cards-item -->
     <div class="echo-cards-item">
-        <div class="echo-card">
+        <div class="echo-card echo-card-sm">
             <a href="#" class="echo-card-inner">
                 <div class="echo-card-object">
                     <figure class="echo-thumbnail echo-thumbnail-16to9">
@@ -317,7 +320,7 @@
 
 <div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-cards"&gt;
     &lt;div class="echo-cards-item"&gt;
-        &lt;div class="echo-card"&gt;
+        &lt;div class="echo-card echo-card-sm"&gt;
             &lt;a href="#" class="echo-card-inner"&gt;
                 &lt;div class="echo-card-object"&gt;
                     &lt;figure class="echo-thumbnail echo-thumbnail-16to9"&gt;
@@ -345,7 +348,7 @@
         &lt;/div&gt;&lt;!-- /.echo-card --&gt;
     &lt;/div&gt;&lt;!-- /.echo-cards-item --&gt;
     &lt;div class="echo-cards-item"&gt;
-        &lt;div class="echo-card"&gt;
+        &lt;div class="echo-card echo-card-sm"&gt;
             &lt;a href="#" class="echo-card-inner"&gt;
                 &lt;div class="echo-card-object"&gt;
                     &lt;figure class="echo-thumbnail echo-thumbnail-16to9"&gt;
@@ -373,7 +376,7 @@
         &lt;/div&gt;&lt;!-- /.echo-card --&gt;
     &lt;/div&gt;&lt;!-- /.echo-cards-item --&gt;
     &lt;div class="echo-cards-item"&gt;
-        &lt;div class="echo-card"&gt;
+        &lt;div class="echo-card echo-card-sm"&gt;
             &lt;a href="#" class="echo-card-inner"&gt;
                 &lt;div class="echo-card-object"&gt;
                     &lt;figure class="echo-thumbnail echo-thumbnail-16to9"&gt;
@@ -401,7 +404,7 @@
         &lt;/div&gt;&lt;!-- /.echo-card --&gt;
     &lt;/div&gt;&lt;!-- /.echo-cards-item --&gt;
     &lt;div class="echo-cards-item"&gt;
-        &lt;div class="echo-card"&gt;
+        &lt;div class="echo-card echo-card-sm"&gt;
             &lt;a href="#" class="echo-card-inner"&gt;
                 &lt;div class="echo-card-object"&gt;
                     &lt;figure class="echo-thumbnail echo-thumbnail-16to9"&gt;
@@ -429,7 +432,7 @@
         &lt;/div&gt;&lt;!-- /.echo-card --&gt;
     &lt;/div&gt;&lt;!-- /.echo-cards-item --&gt;
     &lt;div class="echo-cards-item"&gt;
-        &lt;div class="echo-card"&gt;
+        &lt;div class="echo-card echo-card-sm"&gt;
             &lt;a href="#" class="echo-card-inner"&gt;
                 &lt;div class="echo-card-object"&gt;
                     &lt;figure class="echo-thumbnail echo-thumbnail-16to9"&gt;
@@ -457,7 +460,7 @@
         &lt;/div&gt;&lt;!-- /.echo-card --&gt;
     &lt;/div&gt;&lt;!-- /.echo-cards-item --&gt;
     &lt;div class="echo-cards-item"&gt;
-        &lt;div class="echo-card"&gt;
+        &lt;div class="echo-card echo-card-sm"&gt;
             &lt;a href="#" class="echo-card-inner"&gt;
                 &lt;div class="echo-card-object"&gt;
                     &lt;figure class="echo-thumbnail echo-thumbnail-16to9"&gt;
@@ -485,7 +488,7 @@
         &lt;/div&gt;&lt;!-- /.echo-card --&gt;
     &lt;/div&gt;&lt;!-- /.echo-cards-item --&gt;
     &lt;div class="echo-cards-item"&gt;
-        &lt;div class="echo-card"&gt;
+        &lt;div class="echo-card echo-card-sm"&gt;
             &lt;a href="#" class="echo-card-inner"&gt;
                 &lt;div class="echo-card-object"&gt;
                     &lt;figure class="echo-thumbnail echo-thumbnail-16to9"&gt;
@@ -513,7 +516,7 @@
         &lt;/div&gt;&lt;!-- /.echo-card --&gt;
     &lt;/div&gt;&lt;!-- /.echo-cards-item --&gt;
     &lt;div class="echo-cards-item"&gt;
-        &lt;div class="echo-card"&gt;
+        &lt;div class="echo-card echo-card-sm"&gt;
             &lt;a href="#" class="echo-card-inner"&gt;
                 &lt;div class="echo-card-object"&gt;
                     &lt;figure class="echo-thumbnail echo-thumbnail-16to9"&gt;
@@ -541,7 +544,7 @@
         &lt;/div&gt;&lt;!-- /.echo-card --&gt;
     &lt;/div&gt;&lt;!-- /.echo-cards-item --&gt;
     &lt;div class="echo-cards-item"&gt;
-        &lt;div class="echo-card"&gt;
+        &lt;div class="echo-card echo-card-sm"&gt;
             &lt;a href="#" class="echo-card-inner"&gt;
                 &lt;div class="echo-card-object"&gt;
                     &lt;figure class="echo-thumbnail echo-thumbnail-16to9"&gt;
@@ -569,7 +572,7 @@
         &lt;/div&gt;&lt;!-- /.echo-card --&gt;
     &lt;/div&gt;&lt;!-- /.echo-cards-item --&gt;
     &lt;div class="echo-cards-item"&gt;
-        &lt;div class="echo-card"&gt;
+        &lt;div class="echo-card echo-card-sm"&gt;
             &lt;a href="#" class="echo-card-inner"&gt;
                 &lt;div class="echo-card-object"&gt;
                     &lt;figure class="echo-thumbnail echo-thumbnail-16to9"&gt;

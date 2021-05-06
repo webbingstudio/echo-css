@@ -27,7 +27,9 @@
 
                     <li class="echo-list-item"><a href="#card" class="js-scrollto">echo-card</a></li>
 
-                    <li class="echo-list-item"><a href="#card-01-fixed" class="js-scrollto">echo-card-fixed</a></li>
+                    <li class="echo-list-item"><a href="#card-01-size" class="js-scrollto">echo-card-(size)</a></li>
+
+                    <li class="echo-list-item"><a href="#card-02-fixed" class="js-scrollto">echo-card-fixed</a></li>
 
                 </ul>
             </nav>
@@ -41,7 +43,7 @@
 <p>リンクを含む場合は <code>.echo-card-title</code> に下線が引かれる。リンクが不要な場合であっても <code>.echo-card-inner</code> が必須であることに注意する。<br>
 カードの背景色は、body要素の基本背景色 <code>$body-bg</code> となる。</p>
 
-<?php include('../doc_include/fonttable_article.html'); ?>
+<?php include('../doc_include/fonttable_card.html'); ?>
 
 <h3 class="echo-doc-post-title-02">補足: カードのフッタ</h3>
 
@@ -78,7 +80,7 @@ Also,  <code>.echo-card-footer > .echo-button</code> is centered. Use <code>.ech
         </div><!-- /.echo-card-object -->
         <div class="echo-card-contents">
             <p class="echo-card-meta">2021.05.01</p>
-            <p class="echo-card-body">これはカードの本文です。 .echo-cards に含まれない場合、最大幅は24remとなり、画面中央に配置されます。カードにはヘッダを付けることができます。.echo-card-title には .echo-title を付与できます（推薦）。</p>
+            <p class="echo-card-body">これはカードの本文です。 .echo-cards に含まれない場合、最大幅を保って画面中央に配置されます。カードにはヘッダを付けることができます。.echo-card-title には .echo-title を付与できます（推薦）。</p>
         </div><!-- /.echo-card-contents -->
     </div><!-- /.echo-card-inner -->
 </div><!-- /.echo-card -->
@@ -288,7 +290,7 @@ Also,  <code>.echo-card-footer > .echo-button</code> is centered. Use <code>.ech
         &lt;/div&gt;&lt;!-- /.echo-card-object --&gt;
         &lt;div class="echo-card-contents"&gt;
             &lt;p class="echo-card-meta"&gt;2021.05.01&lt;/p&gt;
-            &lt;p class="echo-card-body"&gt;これはカードの本文です。 .echo-cards に含まれない場合、最大幅は24remとなり、画面中央に配置されます。カードにはヘッダを付けることができます。.echo-card-title には .echo-title を付与できます（推薦）。&lt;/p&gt;
+            &lt;p class="echo-card-body"&gt;これはカードの本文です。 .echo-cards に含まれない場合、最大幅を保って画面中央に配置されます。カードにはヘッダを付けることができます。.echo-card-title には .echo-title を付与できます（推薦）。&lt;/p&gt;
         &lt;/div&gt;&lt;!-- /.echo-card-contents --&gt;
     &lt;/div&gt;&lt;!-- /.echo-card-inner --&gt;
 &lt;/div&gt;&lt;!-- /.echo-card --&gt;
@@ -477,12 +479,220 @@ Also,  <code>.echo-card-footer > .echo-button</code> is centered. Use <code>.ech
 </code></pre></div>
 
 
-<h2 id="card-01-fixed" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-card-fixed</h2>
+<h2 id="card-01-size" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-card-(size)</h2>
+
+<p>カードの文字サイズと最低高さを変更する。<br>
+(size)は、 <code>sm, lg</code> に対応している。</p>
+
+<p><code>lg</code> のみ (breakpoint) が <code>xl</code> のときに <code>.echo-card-contents</code> の余白も拡大する。</p>
+
+<div class="example">
+
+<div class="echo-card echo-card-sm">
+    <div class="echo-card-inner">
+        <div class="echo-card-header">
+            <h3 class="echo-card-title echo-title echo-title-level-4 echo-title-style-b">これはカードです</h3>
+        </div><!-- /.echo-card-header -->
+        <div class="echo-card-object">
+            <figure class="echo-thumbnail echo-thumbnail-ogimage">
+                <picture>
+                <source
+                    media="(max-width:640px)"
+                    srcset="../images/_dummy/image_01_s.jpg 640w"
+                    sizes="100vw">
+                <source
+                    srcset="../images/_dummy/image_01.jpg 1280w"
+                    sizes="(max-width:1280px) 100vw, 1280px">
+                <img src="../images/_dummy/image_01.jpg" alt="">
+                </picture>
+            </figure><!-- /.echo-thumbnail -->
+        </div><!-- /.echo-card-object -->
+        <div class="echo-card-contents">
+            <p class="echo-card-meta">2021.05.01</p>
+            <p class="echo-card-body">これはカードの本文です。 .echo-cards に含まれない場合、最大幅を保って画面中央に配置されます。カードにはヘッダを付けることができます。.echo-card-title には .echo-title を付与できます（推薦）。</p>
+        </div><!-- /.echo-card-contents -->
+    </div><!-- /.echo-card-inner -->
+</div><!-- /.echo-card -->
+
+<hr class="echo-margin-y-lg">
+
+<div class="echo-card">
+    <div class="echo-card-inner">
+        <div class="echo-card-header">
+            <h3 class="echo-card-title echo-title echo-title-level-4 echo-title-style-b">これはカードです</h3>
+        </div><!-- /.echo-card-header -->
+        <div class="echo-card-object">
+            <figure class="echo-thumbnail echo-thumbnail-ogimage">
+                <picture>
+                <source
+                    media="(max-width:640px)"
+                    srcset="../images/_dummy/image_01_s.jpg 640w"
+                    sizes="100vw">
+                <source
+                    srcset="../images/_dummy/image_01.jpg 1280w"
+                    sizes="(max-width:1280px) 100vw, 1280px">
+                <img src="../images/_dummy/image_01.jpg" alt="">
+                </picture>
+            </figure><!-- /.echo-thumbnail -->
+        </div><!-- /.echo-card-object -->
+        <div class="echo-card-contents">
+            <p class="echo-card-meta">2021.05.01</p>
+            <p class="echo-card-body">これはカードの本文です。 .echo-cards に含まれない場合、最大幅を保って画面中央に配置されます。カードにはヘッダを付けることができます。.echo-card-title には .echo-title を付与できます（推薦）。</p>
+        </div><!-- /.echo-card-contents -->
+    </div><!-- /.echo-card-inner -->
+</div><!-- /.echo-card -->
+
+<hr class="echo-margin-y-lg">
+
+<div class="echo-card echo-card-lg">
+    <div class="echo-card-inner">
+        <div class="echo-card-header">
+            <h3 class="echo-card-title echo-title echo-title-level-4 echo-title-style-b">これはカードです</h3>
+        </div><!-- /.echo-card-header -->
+        <div class="echo-card-object">
+            <figure class="echo-thumbnail echo-thumbnail-ogimage">
+                <picture>
+                <source
+                    media="(max-width:640px)"
+                    srcset="../images/_dummy/image_01_s.jpg 640w"
+                    sizes="100vw">
+                <source
+                    srcset="../images/_dummy/image_01.jpg 1280w"
+                    sizes="(max-width:1280px) 100vw, 1280px">
+                <img src="../images/_dummy/image_01.jpg" alt="">
+                </picture>
+            </figure><!-- /.echo-thumbnail -->
+        </div><!-- /.echo-card-object -->
+        <div class="echo-card-contents">
+            <p class="echo-card-meta">2021.05.01</p>
+            <p class="echo-card-body">これはカードの本文です。 .echo-cards に含まれない場合、最大幅を保って画面中央に配置されます。カードにはヘッダを付けることができます。.echo-card-title には .echo-title を付与できます（推薦）。</p>
+        </div><!-- /.echo-card-contents -->
+    </div><!-- /.echo-card-inner -->
+</div><!-- /.echo-card -->
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-card echo-card-sm"&gt;
+    &lt;div class="echo-card-inner"&gt;
+        &lt;div class="echo-card-header"&gt;
+            &lt;h3 class="echo-card-title echo-title echo-title-level-4 echo-title-style-b"&gt;これはカードです&lt;/h3&gt;
+        &lt;/div&gt;&lt;!-- /.echo-card-header --&gt;
+        &lt;div class="echo-card-object"&gt;
+            &lt;figure class="echo-thumbnail echo-thumbnail-ogimage"&gt;
+                &lt;picture&gt;
+                &lt;source
+                    media="(max-width:640px)"
+                    srcset="../images/_dummy/image_01_s.jpg 640w"
+                    sizes="100vw"&gt;
+                &lt;source
+                    srcset="../images/_dummy/image_01.jpg 1280w"
+                    sizes="(max-width:1280px) 100vw, 1280px"&gt;
+                &lt;img src="../images/_dummy/image_01.jpg" alt=""&gt;
+                &lt;/picture&gt;
+            &lt;/figure&gt;&lt;!-- /.echo-thumbnail --&gt;
+        &lt;/div&gt;&lt;!-- /.echo-card-object --&gt;
+        &lt;div class="echo-card-contents"&gt;
+            &lt;p class="echo-card-meta"&gt;2021.05.01&lt;/p&gt;
+            &lt;p class="echo-card-body"&gt;これはカードの本文です。 .echo-cards に含まれない場合、最大幅を保って画面中央に配置されます。カードにはヘッダを付けることができます。.echo-card-title には .echo-title を付与できます（推薦）。&lt;/p&gt;
+        &lt;/div&gt;&lt;!-- /.echo-card-contents --&gt;
+    &lt;/div&gt;&lt;!-- /.echo-card-inner --&gt;
+&lt;/div&gt;&lt;!-- /.echo-card --&gt;
+
+&lt;hr class="echo-margin-y-lg"&gt;
+
+&lt;div class="echo-card"&gt;
+    &lt;div class="echo-card-inner"&gt;
+        &lt;div class="echo-card-header"&gt;
+            &lt;h3 class="echo-card-title echo-title echo-title-level-4 echo-title-style-b"&gt;これはカードです&lt;/h3&gt;
+        &lt;/div&gt;&lt;!-- /.echo-card-header --&gt;
+        &lt;div class="echo-card-object"&gt;
+            &lt;figure class="echo-thumbnail echo-thumbnail-ogimage"&gt;
+                &lt;picture&gt;
+                &lt;source
+                    media="(max-width:640px)"
+                    srcset="../images/_dummy/image_01_s.jpg 640w"
+                    sizes="100vw"&gt;
+                &lt;source
+                    srcset="../images/_dummy/image_01.jpg 1280w"
+                    sizes="(max-width:1280px) 100vw, 1280px"&gt;
+                &lt;img src="../images/_dummy/image_01.jpg" alt=""&gt;
+                &lt;/picture&gt;
+            &lt;/figure&gt;&lt;!-- /.echo-thumbnail --&gt;
+        &lt;/div&gt;&lt;!-- /.echo-card-object --&gt;
+        &lt;div class="echo-card-contents"&gt;
+            &lt;p class="echo-card-meta"&gt;2021.05.01&lt;/p&gt;
+            &lt;p class="echo-card-body"&gt;これはカードの本文です。 .echo-cards に含まれない場合、最大幅を保って画面中央に配置されます。カードにはヘッダを付けることができます。.echo-card-title には .echo-title を付与できます（推薦）。&lt;/p&gt;
+        &lt;/div&gt;&lt;!-- /.echo-card-contents --&gt;
+    &lt;/div&gt;&lt;!-- /.echo-card-inner --&gt;
+&lt;/div&gt;&lt;!-- /.echo-card --&gt;
+
+&lt;hr class="echo-margin-y-lg"&gt;
+
+&lt;div class="echo-card echo-card-lg"&gt;
+    &lt;div class="echo-card-inner"&gt;
+        &lt;div class="echo-card-header"&gt;
+            &lt;h3 class="echo-card-title echo-title echo-title-level-4 echo-title-style-b"&gt;これはカードです&lt;/h3&gt;
+        &lt;/div&gt;&lt;!-- /.echo-card-header --&gt;
+        &lt;div class="echo-card-object"&gt;
+            &lt;figure class="echo-thumbnail echo-thumbnail-ogimage"&gt;
+                &lt;picture&gt;
+                &lt;source
+                    media="(max-width:640px)"
+                    srcset="../images/_dummy/image_01_s.jpg 640w"
+                    sizes="100vw"&gt;
+                &lt;source
+                    srcset="../images/_dummy/image_01.jpg 1280w"
+                    sizes="(max-width:1280px) 100vw, 1280px"&gt;
+                &lt;img src="../images/_dummy/image_01.jpg" alt=""&gt;
+                &lt;/picture&gt;
+            &lt;/figure&gt;&lt;!-- /.echo-thumbnail --&gt;
+        &lt;/div&gt;&lt;!-- /.echo-card-object --&gt;
+        &lt;div class="echo-card-contents"&gt;
+            &lt;p class="echo-card-meta"&gt;2021.05.01&lt;/p&gt;
+            &lt;p class="echo-card-body"&gt;これはカードの本文です。 .echo-cards に含まれない場合、最大幅を保って画面中央に配置されます。カードにはヘッダを付けることができます。.echo-card-title には .echo-title を付与できます（推薦）。&lt;/p&gt;
+        &lt;/div&gt;&lt;!-- /.echo-card-contents --&gt;
+    &lt;/div&gt;&lt;!-- /.echo-card-inner --&gt;
+&lt;/div&gt;&lt;!-- /.echo-card --&gt;
+</code></pre></div>
+
+
+<h2 id="card-02-fixed" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-card-fixed</h2>
 
 <p>文字が (breakpoint) に関わらず常に同じサイズとなる。<br>
 幅の変動が少ないグリッド内のコンポーネント等に使用する。</p>
 
 <div class="example">
+
+<div class="echo-card echo-card-sm echo-card-fixed">
+    <div class="echo-card-inner">
+        <div class="echo-card-header">
+            <h3 class="echo-card-title echo-title echo-title-level-4 echo-title-style-b">文字サイズの固定</h3>
+        </div><!-- /.echo-card-header -->
+        <div class="echo-card-object">
+            <figure class="echo-thumbnail echo-thumbnail-ogimage">
+                <picture>
+                <source
+                    media="(max-width:640px)"
+                    srcset="../images/_dummy/image_01_s.jpg 640w"
+                    sizes="100vw">
+                <source
+                    srcset="../images/_dummy/image_01.jpg 1280w"
+                    sizes="(max-width:1280px) 100vw, 1280px">
+                <img src="../images/_dummy/image_01.jpg" alt="">
+                </picture>
+            </figure><!-- /.echo-thumbnail -->
+        </div><!-- /.echo-card-object -->
+        <div class="echo-card-contents">
+            <p class="echo-card-meta">2021.05.01</p>
+            <p class="echo-card-body">.echo-card-fixed を付与すると、画面サイズに関わらず、基準となる文字サイズを維持します。ボタンのサイズは追随しません。ボタンも固定する場合は、別途 .echo-button-fixed を付与します。</p>
+        </div><!-- /.echo-card-contents -->
+        <div class="echo-card-footer">
+            <a href="#" class="echo-button echo-button-fixed echo-button-sm echo-button-style-b echo-button-icon-arrow">ボタン</a>
+        </div><!-- /.echo-card-footer -->
+    </div><!-- /.echo-card-inner -->
+</div><!-- /.echo-card -->
+
+<hr class="echo-margin-y-lg">
 
 <div class="echo-card echo-card-fixed">
     <div class="echo-card-inner">
@@ -505,21 +715,51 @@ Also,  <code>.echo-card-footer > .echo-button</code> is centered. Use <code>.ech
         </div><!-- /.echo-card-object -->
         <div class="echo-card-contents">
             <p class="echo-card-meta">2021.05.01</p>
-            <p class="echo-card-body">.echo-card-fixed を付与すると、画面サイズに関わらず、基準となる文字サイズを維持します。1rem = 16pxであれば12pxとなります。<br>
-            ボタンのサイズは追随しません。ボタンも固定する場合は、別途 .echo-button-fixed を付与します。</p>
+            <p class="echo-card-body">.echo-card-fixed を付与すると、画面サイズに関わらず、基準となる文字サイズを維持します。ボタンのサイズは追随しません。ボタンも固定する場合は、別途 .echo-button-fixed を付与します。</p>
         </div><!-- /.echo-card-contents -->
         <div class="echo-card-footer">
-            <a href="#" class="echo-button echo-button-fixed echo-button-sm echo-button-style-b echo-button-icon-arrow">ボタン</a>
+            <a href="#" class="echo-button echo-button-fixed echo-button-md echo-button-style-b echo-button-icon-arrow">ボタン</a>
+        </div><!-- /.echo-card-footer -->
+    </div><!-- /.echo-card-inner -->
+</div><!-- /.echo-card -->
+
+<hr class="echo-margin-y-lg">
+
+<div class="echo-card echo-card-lg echo-card-fixed">
+    <div class="echo-card-inner">
+        <div class="echo-card-header">
+            <h3 class="echo-card-title echo-title echo-title-level-4 echo-title-style-b">文字サイズの固定</h3>
+        </div><!-- /.echo-card-header -->
+        <div class="echo-card-object">
+            <figure class="echo-thumbnail echo-thumbnail-ogimage">
+                <picture>
+                <source
+                    media="(max-width:640px)"
+                    srcset="../images/_dummy/image_01_s.jpg 640w"
+                    sizes="100vw">
+                <source
+                    srcset="../images/_dummy/image_01.jpg 1280w"
+                    sizes="(max-width:1280px) 100vw, 1280px">
+                <img src="../images/_dummy/image_01.jpg" alt="">
+                </picture>
+            </figure><!-- /.echo-thumbnail -->
+        </div><!-- /.echo-card-object -->
+        <div class="echo-card-contents">
+            <p class="echo-card-meta">2021.05.01</p>
+            <p class="echo-card-body">.echo-card-fixed を付与すると、画面サイズに関わらず、基準となる文字サイズを維持します。ボタンのサイズは追随しません。ボタンも固定する場合は、別途 .echo-button-fixed を付与します。</p>
+        </div><!-- /.echo-card-contents -->
+        <div class="echo-card-footer">
+            <a href="#" class="echo-button echo-button-fixed echo-button-lg echo-button-style-b echo-button-icon-arrow">ボタン</a>
         </div><!-- /.echo-card-footer -->
     </div><!-- /.echo-card-inner -->
 </div><!-- /.echo-card -->
 
 </div>
 
-<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-card echo-card-fixed"&gt;
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-card echo-card-sm echo-card-fixed"&gt;
     &lt;div class="echo-card-inner"&gt;
         &lt;div class="echo-card-header"&gt;
-            &lt;h3 class="echo-card-title echo-title echo-title-level-3 echo-title-style-b"&gt;これはカードです&lt;/h3&gt;
+            &lt;h3 class="echo-card-title echo-title echo-title-level-4 echo-title-style-b"&gt;文字サイズの固定&lt;/h3&gt;
         &lt;/div&gt;&lt;!-- /.echo-card-header --&gt;
         &lt;div class="echo-card-object"&gt;
             &lt;figure class="echo-thumbnail echo-thumbnail-ogimage"&gt;
@@ -537,13 +777,76 @@ Also,  <code>.echo-card-footer > .echo-button</code> is centered. Use <code>.ech
         &lt;/div&gt;&lt;!-- /.echo-card-object --&gt;
         &lt;div class="echo-card-contents"&gt;
             &lt;p class="echo-card-meta"&gt;2021.05.01&lt;/p&gt;
-            &lt;p class="echo-card-body"&gt;.echo-card-fixed を付与すると、画面サイズに関わらず、基準となる文字サイズが0.875remを維持します。1rem = 16pxであれば14pxとなります。&lt;/p&gt;
+            &lt;p class="echo-card-body"&gt;.echo-card-fixed を付与すると、画面サイズに関わらず、基準となる文字サイズを維持します。ボタンのサイズは追随しません。ボタンも固定する場合は、別途 .echo-button-fixed を付与します。&lt;/p&gt;
         &lt;/div&gt;&lt;!-- /.echo-card-contents --&gt;
         &lt;div class="echo-card-footer"&gt;
             &lt;a href="#" class="echo-button echo-button-fixed echo-button-sm echo-button-style-b echo-button-icon-arrow"&gt;ボタン&lt;/a&gt;
         &lt;/div&gt;&lt;!-- /.echo-card-footer --&gt;
     &lt;/div&gt;&lt;!-- /.echo-card-inner --&gt;
 &lt;/div&gt;&lt;!-- /.echo-card --&gt;
-</code></pre></div>
+
+&lt;hr class="echo-margin-y-lg"&gt;
+
+&lt;div class="echo-card echo-card-fixed"&gt;
+    &lt;div class="echo-card-inner"&gt;
+        &lt;div class="echo-card-header"&gt;
+            &lt;h3 class="echo-card-title echo-title echo-title-level-4 echo-title-style-b"&gt;文字サイズの固定&lt;/h3&gt;
+        &lt;/div&gt;&lt;!-- /.echo-card-header --&gt;
+        &lt;div class="echo-card-object"&gt;
+            &lt;figure class="echo-thumbnail echo-thumbnail-ogimage"&gt;
+                &lt;picture&gt;
+                &lt;source
+                    media="(max-width:640px)"
+                    srcset="../images/_dummy/image_01_s.jpg 640w"
+                    sizes="100vw"&gt;
+                &lt;source
+                    srcset="../images/_dummy/image_01.jpg 1280w"
+                    sizes="(max-width:1280px) 100vw, 1280px"&gt;
+                &lt;img src="../images/_dummy/image_01.jpg" alt=""&gt;
+                &lt;/picture&gt;
+            &lt;/figure&gt;&lt;!-- /.echo-thumbnail --&gt;
+        &lt;/div&gt;&lt;!-- /.echo-card-object --&gt;
+        &lt;div class="echo-card-contents"&gt;
+            &lt;p class="echo-card-meta"&gt;2021.05.01&lt;/p&gt;
+            &lt;p class="echo-card-body"&gt;.echo-card-fixed を付与すると、画面サイズに関わらず、基準となる文字サイズを維持します。ボタンのサイズは追随しません。ボタンも固定する場合は、別途 .echo-button-fixed を付与します。&lt;/p&gt;
+        &lt;/div&gt;&lt;!-- /.echo-card-contents --&gt;
+        &lt;div class="echo-card-footer"&gt;
+            &lt;a href="#" class="echo-button echo-button-fixed echo-button-md echo-button-style-b echo-button-icon-arrow"&gt;ボタン&lt;/a&gt;
+        &lt;/div&gt;&lt;!-- /.echo-card-footer --&gt;
+    &lt;/div&gt;&lt;!-- /.echo-card-inner --&gt;
+&lt;/div&gt;&lt;!-- /.echo-card --&gt;
+
+&lt;hr class="echo-margin-y-lg"&gt;
+
+&lt;div class="echo-card echo-card-lg echo-card-fixed"&gt;
+    &lt;div class="echo-card-inner"&gt;
+        &lt;div class="echo-card-header"&gt;
+            &lt;h3 class="echo-card-title echo-title echo-title-level-4 echo-title-style-b"&gt;文字サイズの固定&lt;/h3&gt;
+        &lt;/div&gt;&lt;!-- /.echo-card-header --&gt;
+        &lt;div class="echo-card-object"&gt;
+            &lt;figure class="echo-thumbnail echo-thumbnail-ogimage"&gt;
+                &lt;picture&gt;
+                &lt;source
+                    media="(max-width:640px)"
+                    srcset="../images/_dummy/image_01_s.jpg 640w"
+                    sizes="100vw"&gt;
+                &lt;source
+                    srcset="../images/_dummy/image_01.jpg 1280w"
+                    sizes="(max-width:1280px) 100vw, 1280px"&gt;
+                &lt;img src="../images/_dummy/image_01.jpg" alt=""&gt;
+                &lt;/picture&gt;
+            &lt;/figure&gt;&lt;!-- /.echo-thumbnail --&gt;
+        &lt;/div&gt;&lt;!-- /.echo-card-object --&gt;
+        &lt;div class="echo-card-contents"&gt;
+            &lt;p class="echo-card-meta"&gt;2021.05.01&lt;/p&gt;
+            &lt;p class="echo-card-body"&gt;.echo-card-fixed を付与すると、画面サイズに関わらず、基準となる文字サイズを維持します。ボタンのサイズは追随しません。ボタンも固定する場合は、別途 .echo-button-fixed を付与します。&lt;/p&gt;
+        &lt;/div&gt;&lt;!-- /.echo-card-contents --&gt;
+        &lt;div class="echo-card-footer"&gt;
+            &lt;a href="#" class="echo-button echo-button-fixed echo-button-lg echo-button-style-b echo-button-icon-arrow"&gt;ボタン&lt;/a&gt;
+        &lt;/div&gt;&lt;!-- /.echo-card-footer --&gt;
+    &lt;/div&gt;&lt;!-- /.echo-card-inner --&gt;
+&lt;/div&gt;&lt;!-- /.echo-card --&gt;
+
+&lt;/div&gt;</code></pre></div>
 
 <?php include('../doc_include/footer.inc'); ?>

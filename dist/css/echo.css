@@ -673,7 +673,7 @@ echo-button-(size)
 */
 @media (min-width: 62.5rem) {
   .echo-button {
-    max-width: 25rem;
+    max-width: 20rem;
     min-height: 2.75rem;
     font-size: 1rem;
   }
@@ -695,7 +695,7 @@ echo-button-(size)
 
 @media (min-width: 62.5rem) {
   .echo-button-sm {
-    max-width: 20rem;
+    max-width: 16rem;
     min-height: 2.5rem;
     font-size: 0.875rem;
   }
@@ -711,7 +711,7 @@ echo-button-(size)
 
 @media (max-width: 62.4rem) {
   .echo-button-lg {
-    max-width: 25rem;
+    max-width: 26rem;
     min-height: 2.75rem;
     font-size: 1rem;
   }
@@ -719,7 +719,7 @@ echo-button-(size)
 
 @media (min-width: 62.5rem) {
   .echo-button-lg {
-    max-width: 31.25rem;
+    max-width: 26rem;
     min-height: 3.125rem;
     font-size: 1.125rem;
   }
@@ -727,21 +727,21 @@ echo-button-(size)
 
 @media (min-width: 62.5rem) {
   .echo-button-lg.echo-button-fixed {
-    max-width: 25rem;
+    max-width: 26rem;
     min-height: 2.75rem;
     font-size: 1rem;
   }
 }
 
 .echo-button-xl {
-  max-width: 38.4rem;
+  max-width: 37.5rem;
   min-height: 3rem;
   font-size: 1.125rem;
 }
 
 @media (min-width: 62.5rem) {
   .echo-button-xl {
-    max-width: 48rem;
+    max-width: 37.5rem;
     min-height: 3.5rem;
     font-size: 1.25rem;
   }
@@ -749,7 +749,7 @@ echo-button-(size)
 
 @media (min-width: 62.5rem) {
   .echo-button-xl.echo-button-fixed {
-    max-width: 38.4rem;
+    max-width: 37.5rem;
     min-height: 3rem;
     font-size: 1.125rem;
   }
@@ -763,7 +763,7 @@ echo-button-(size)
 
 @media (min-width: 62.5rem) {
   .echo-button-xxl {
-    max-width: 60rem;
+    max-width: 48rem;
     min-height: 4rem;
     font-size: 1.5rem;
   }
@@ -2964,7 +2964,6 @@ echo-card
 .echo-card {
   position: relative;
   width: 100%;
-  max-width: 25rem;
   margin: 0 auto;
   background-color: #fff;
   color: #333;
@@ -3076,18 +3075,59 @@ echo-card(size)
 --------------------
 */
 .echo-card {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
+  max-width: 37.5rem;
 }
 
 @media (min-width: 62.5rem) {
   .echo-card {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width: 62.5rem) {
   .echo-card.echo-card-fixed {
+    font-size: 0.875rem;
+  }
+}
+
+.echo-card-sm {
+  font-size: 0.75rem;
+  max-width: 20rem;
+}
+
+@media (min-width: 62.5rem) {
+  .echo-card-sm {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-card-sm.echo-card-fixed {
     font-size: 0.75rem;
+  }
+}
+
+.echo-card-lg {
+  font-size: 1rem;
+  max-width: 48rem;
+}
+
+@media (min-width: 62.5rem) {
+  .echo-card-lg {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .echo-card-lg .echo-card-contents {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-card-lg.echo-card-fixed {
+    font-size: 1rem;
   }
 }
 
@@ -3168,7 +3208,7 @@ echo-flip
 }
 
 .echo-flip-contents-inner {
-  max-width: 38rem;
+  max-width: 26rem;
   margin: 0 auto;
   padding: 1rem;
 }
@@ -4378,7 +4418,7 @@ echo-step
 --------------------
 */
 .echo-step {
-  max-width: 25rem;
+  max-width: 20rem;
   margin: 0 auto;
 }
 
@@ -7281,10 +7321,6 @@ echo-cards
   align-items: stretch;
   justify-content: center;
   width: 100%;
-}
-
-.echo-cards-item .echo-card {
-  max-width: 20rem;
 }
 
 @media (min-width: 26.75rem) {

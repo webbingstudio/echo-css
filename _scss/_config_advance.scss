@@ -175,11 +175,11 @@ $grid-columns-max:    $grid-columns - 1 !default;
 // -----------------------------------------
 
 $object-max-widths: (
-    xs:  16rem,
-    sm:  20rem,
-    md:  25rem,
-    lg:  38rem,
-    xl:  48rem
+    sm:  16rem,
+    md:  20rem,
+    lg:  26rem,
+    xl:  37.5rem,
+    xxl: 48rem
 ) !default;
 
 
@@ -234,17 +234,17 @@ $button-max-font-sizes: (
 $button-min-widths: (
     sm:  16rem,
     md:  20rem,
-    lg:  25rem,
-    xl:  38.4rem,
+    lg:  26rem,
+    xl:  37.5rem,
     xxl: 48rem
 ) !default;
 
 $button-max-widths: (
-    sm:  map-get( $button-min-widths, 'sm' ) * 1.25,
-    md:  map-get( $button-min-widths, 'md' ) * 1.25,
-    lg:  map-get( $button-min-widths, 'lg' ) * 1.25,
-    xl:  map-get( $button-min-widths, 'xl' ) * 1.25,
-    xxl: map-get( $button-min-widths, 'xxl' ) * 1.25
+    sm:  map-get( $button-min-widths, 'sm' ),
+    md:  map-get( $button-min-widths, 'md' ),
+    lg:  map-get( $button-min-widths, 'lg' ),
+    xl:  map-get( $button-min-widths, 'xl' ),
+    xxl: map-get( $button-min-widths, 'xxl' )
 ) !default;
 
 
