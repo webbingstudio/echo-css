@@ -48,7 +48,8 @@
 <p><code>.echo-hero-image</code> の画像は<strong>トリミングされず、縦横比を保って伸縮する。</strong>レスポンシブイメージを併用することが望ましい。<br>
 </p>
 
-<p><code>.echo-hero-title.echo-title</code> に付与されている <code>.echo-font-first</code> は<strong>必須ではない</strong>。詳細は <a href="./utility-font.html">utility > font</a> を参照。</p>
+<p><code>.echo-flip-title.echo-title</code> に付与されている <code>.echo-font-first, .echo-font-third</code> は<strong>必須ではない</strong>。詳細は <a href="./utility-font.html">utility > font</a> を参照。</p>
+
 
 <?php include('../doc_include/fonttable_display.html'); ?>
 
@@ -126,6 +127,51 @@
                     </div><!-- /.echo-buttons-item -->
                     <div class="echo-buttons-item">
                         <a href="#" class="echo-button echo-button-style-a">ボタン2</a>
+                    </div><!-- /.echo-buttons-item -->
+                </div><!-- /.echo-buttons -->
+            </div><!-- /.echo-hero-link -->
+        </div><!-- /.echo-hero-contents-inner -->
+    </div><!-- /.echo-hero-contents -->
+</div><!-- /.echo-hero -->
+
+</div>
+
+
+<p class="echo-title echo-title-style-a echo-title-level-3 echo-margin-top-lg echo-margin-bottom-md">.echo-hero-titleのフォントを変更した例</p>
+
+<p class="echo-margin-bottom-md">ユーティリティクラス .echo-font-third は、字体を大見出し用に変更する。デフォルトでは游明朝体 (Yu Mincho) となる。</p>
+
+<div style="margin-left: -0.625rem; margin-right: -0.625rem;">
+
+<div class="echo-hero">
+    <div class="echo-hero-image">
+        <picture>
+            <source
+                media="(max-width:768px)"
+                srcset="../images/_dummy/image_10_m.jpg 768w"
+                sizes="100vw">
+            <source
+                srcset="../images/_dummy/image_10.jpg 1280w"
+                sizes="(max-width:1280px) 100vw">
+            <img src="../images/_dummy/image_10.jpg" alt="">
+        </picture>
+    </div><!-- /.echo-hero-image -->
+    <div class="echo-hero-contents">
+        <div class="echo-hero-contents-inner">
+            <div class="echo-hero-header">
+                <h2 class="echo-hero-title echo-title echo-title-level-1 echo-font-third">吾輩は猫である</h2>
+            </div><!-- /.echo-hero-header -->
+            <div class="echo-hero-lead">
+                <p>名前はまだ無い。</p>
+            </div><!-- /.echo-hero-lead -->
+            <div class="echo-hero-body">
+                <p>どこで生れたかとんと見当がつかぬ。<br>
+                何でも薄暗いじめじめした所でニャーニャー</p>
+            </div><!-- /.echo-hero-body -->
+            <div class="echo-hero-link">
+                <div class="echo-buttons">
+                    <div class="echo-buttons-item">
+                        <a href="#" class="echo-button echo-button-style-b echo-button-icon-arrow">詳しくはこちら</a>
                     </div><!-- /.echo-buttons-item -->
                 </div><!-- /.echo-buttons -->
             </div><!-- /.echo-hero-link -->
@@ -243,6 +289,51 @@
                     &lt;/div&gt;&lt;!-- /.echo-buttons-item --&gt;
                     &lt;div class="echo-buttons-item"&gt;
                         &lt;a href="#" class="echo-button echo-button-style-a"&gt;ボタン2&lt;/a&gt;
+                    &lt;/div&gt;&lt;!-- /.echo-buttons-item --&gt;
+                &lt;/div&gt;&lt;!-- /.echo-buttons --&gt;
+            &lt;/div&gt;&lt;!-- /.echo-hero-link --&gt;
+        &lt;/div&gt;&lt;!-- /.echo-hero-contents-inner --&gt;
+    &lt;/div&gt;&lt;!-- /.echo-hero-contents --&gt;
+&lt;/div&gt;&lt;!-- /.echo-hero --&gt;
+
+&lt;/div&gt;
+
+
+&lt;p class="echo-title echo-title-style-a echo-title-level-3 echo-margin-top-lg echo-margin-bottom-md"&gt;.echo-hero-titleのフォントを変更した例&lt;/p&gt;
+
+&lt;p class="echo-margin-bottom-md"&gt;ユーティリティクラス .echo-font-third は、字体を大見出し用に変更する。デフォルトでは游明朝体 (Yu Mincho) となる。&lt;/p&gt;
+
+&lt;div style="margin-left: -0.625rem; margin-right: -0.625rem;"&gt;
+
+&lt;div class="echo-hero"&gt;
+    &lt;div class="echo-hero-image"&gt;
+        &lt;picture&gt;
+            &lt;source
+                media="(max-width:768px)"
+                srcset="../images/_dummy/image_10_m.jpg 768w"
+                sizes="100vw"&gt;
+            &lt;source
+                srcset="../images/_dummy/image_10.jpg 1280w"
+                sizes="(max-width:1280px) 100vw"&gt;
+            &lt;img src="../images/_dummy/image_10.jpg" alt=""&gt;
+        &lt;/picture&gt;
+    &lt;/div&gt;&lt;!-- /.echo-hero-image --&gt;
+    &lt;div class="echo-hero-contents"&gt;
+        &lt;div class="echo-hero-contents-inner"&gt;
+            &lt;div class="echo-hero-header"&gt;
+                &lt;h2 class="echo-hero-title echo-title echo-title-level-1 echo-font-third"&gt;吾輩は猫である&lt;/h2&gt;
+            &lt;/div&gt;&lt;!-- /.echo-hero-header --&gt;
+            &lt;div class="echo-hero-lead"&gt;
+                &lt;p&gt;名前はまだ無い。&lt;/p&gt;
+            &lt;/div&gt;&lt;!-- /.echo-hero-lead --&gt;
+            &lt;div class="echo-hero-body"&gt;
+                &lt;p&gt;どこで生れたかとんと見当がつかぬ。&lt;br&gt;
+                何でも薄暗いじめじめした所でニャーニャー&lt;/p&gt;
+            &lt;/div&gt;&lt;!-- /.echo-hero-body --&gt;
+            &lt;div class="echo-hero-link"&gt;
+                &lt;div class="echo-buttons"&gt;
+                    &lt;div class="echo-buttons-item"&gt;
+                        &lt;a href="#" class="echo-button echo-button-style-b echo-button-icon-arrow"&gt;詳しくはこちら&lt;/a&gt;
                     &lt;/div&gt;&lt;!-- /.echo-buttons-item --&gt;
                 &lt;/div&gt;&lt;!-- /.echo-buttons --&gt;
             &lt;/div&gt;&lt;!-- /.echo-hero-link --&gt;
