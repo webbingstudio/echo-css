@@ -9,6 +9,7 @@
 
     <?php include('../doc_include/html_head.inc'); ?>
 
+<style>.echo-container{background-color: #5ad}</style>
 </head>
 <body>
 <div id="echo-document">
@@ -24,66 +25,167 @@
 
             <nav class="echo-doc-anchor">
                 <ul class="echo-list echo-list-horizontal">
-                    
+
                     <li class="echo-list-item"><a href="#container" class="js-scrollto">echo-container</a></li>
-                    
+
                     <li class="echo-list-item"><a href="#container-01-fluid" class="js-scrollto">echo-container-fluid</a></li>
-                    
-                    <li class="echo-list-item"><a href="#container-02-sm" class="js-scrollto">echo-container-sm</a></li>
-                    
-                    <li class="echo-list-item"><a href="#container-03-lg" class="js-scrollto">echo-container-lg</a></li>
-                    
+
+                    <li class="echo-list-item"><a href="#container-02-size" class="js-scrollto">echo-container-(size)</a></li>
+
                 </ul>
             </nav><!-- /.p-anchor -->
 
             <article class="p-post">
                 <div class="p-post-contents styleguide-contents"><h2 id="container" class="echo-doc-post-title-01">echo-container</h2>
 
-<p>デバイスに応じて適切に本文幅を調整するコンテナブロック。<br>
-<code>/_scss/_config_advance.scss</code> の「<code>$container-max-widths-md</code>」の定義を参照する。</p>
-<div class="example"><div class="echo-container" style="background-color: #5ad;">
+<p><strong>内包する要素</strong>の最大幅を、デバイスに応じて適切に調整するコンテナブロックを表示する。<br>
+常に <code>0.5rem</code> の左右余白を確保する。</p>
+
+<p>デフォルトでは、日本国の一般的なウェブサイトのコンテンツ幅に沿うよう変化する。<br>
+Sassを使用できる場合、最大幅は一括変更できる。 <code>/_scss/_config_advance.scss</code> の配列 <code>$container-max-widths-md</code> の値を参照する。</p>
+
+<div class="echo-table-responsive echo-margin-top-lg echo-margin-bottom-sm">
+    <table class="echo-doc-fonttable echo-table echo-table-bordered">
+        <caption>内包する要素の最大幅の変化</caption>
+        <thead>
+            <tr>
+                <th rowspan="2">(breakpoint)</th>
+                <th class="echo-text-center">.echo-container-xs</th>
+                <th class="echo-text-center">.echo-container-sm</th>
+                <th class="echo-text-center">.echo-container</th>
+                <th class="echo-text-center">.echo-container-lg</th>
+                <th class="echo-text-center">.echo-container-fluid</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>md以下</th>
+                <td rowspan="4" class="echo-text-center">48rem<br>(768px)</td>
+                <td class="echo-text-center">48rem<br>(768px)</td>
+                <td class="echo-text-center">48rem<br>(768px)</td>
+                <td class="echo-text-center">48rem<br>(768px)</td>
+                <td rowspan="4" class="echo-text-center">none</td>
+            </tr>
+            <tr>
+                <th>lg以上</th>
+                <td rowspan="3" class="echo-text-center">60rem<br>(960px)</td>
+                <td class="echo-text-center">60rem<br>(960px)</td>
+                <td class="echo-text-center">60rem<br>(960px)</td>
+            </tr>
+            <tr>
+                <th>xl以上</th>
+                <td rowspan="2" class="echo-text-center">75rem<br>(1200px)</td>
+                <td class="echo-text-center">75rem<br>(1200px)</td>
+            </tr>
+            <tr>
+                <th>xxl以上</th>
+                <td class="echo-text-center">90rem<br>(1440px)</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<p>このサンプルコードでは、範囲がわかるよう背景色を追加している。背景色が薄くなっている範囲が、内包する要素の最大幅となる。</p>
+
+<div class="echo-margin-y-xl" style="margin-left: -0.625rem; margin-right: -0.625rem;">
+
+<div class="echo-container">
     <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5);">(contents)</div>
 </div>
+
 </div>
 
-<div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-container"</span> <span class="na">style=</span><span class="s">"background-color: #5ad;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 5px; text-align: center; background-color: rgba(255,255,255,.5);"</span><span class="nt">&gt;</span>(contents)<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</pre></div>
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-margin-y-xl" style="margin-left: -0.625rem; margin-right: -0.625rem;"&gt;
 
+&lt;div class="echo-container"&gt;
+    &lt;div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5);"&gt;(contents)&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;</code></pre></div>
 
 
 <h2 id="container-01-fluid" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-container-fluid</h2>
 
 <p>コンテナブロックの最大幅の制限を行わない。</p>
-<div class="example"><div class="echo-container echo-container-fluid" style="background-color: #5ad;">
-    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5);">(contents)</div>
-</div>
-</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-container echo-container-fluid"</span> <span class="na">style=</span><span class="s">"background-color: #5ad;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 5px; text-align: center; background-color: rgba(255,255,255,.5);"</span><span class="nt">&gt;</span>(contents)<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</pre></div>
-<h2 id="container-02-sm" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-container-sm</h2>
 
-<p>コンテナブロックの最大幅が通常よりも狭くなる。<br>
-<code>/_scss/_config_advance.scss</code> の「<code>$container-max-widths-sm</code>」の定義を参照する。</p>
-<div class="example"><div class="echo-container echo-container-sm" style="background-color: #5ad;">
-    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5);">(contents)</div>
-</div>
-</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-container echo-container-sm"</span> <span class="na">style=</span><span class="s">"background-color: #5ad;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 5px; text-align: center; background-color: rgba(255,255,255,.5);"</span><span class="nt">&gt;</span>(contents)<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</pre></div>
-<h2 id="container-03-lg" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-container-lg</h2>
+<div style="margin-left: -0.625rem; margin-right: -0.625rem;">
 
-<p>コンテナブロックの最大幅が通常よりも広くなる。<br>
-<code>/_scss/_config_advance.scss</code> の「<code>$container-max-widths-lg</code>」の定義を参照する。</p>
-<div class="example"><div class="echo-container echo-container-lg" style="background-color: #5ad;">
+<div class="echo-container echo-container-fluid">
     <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5);">(contents)</div>
 </div>
-</div><div class="codeblock"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"echo-container echo-container-lg"</span> <span class="na">style=</span><span class="s">"background-color: #5ad;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 5px; text-align: center; background-color: rgba(255,255,255,.5);"</span><span class="nt">&gt;</span>(contents)<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</pre></div>
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;div style="margin-left: -0.625rem; margin-right: -0.625rem;"&gt;
+
+&lt;div class="echo-container echo-container-fluid"&gt;
+    &lt;div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5);"&gt;(contents)&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;</code></pre></div>
+
+
+<h2 id="container-02-size" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-container-(size)</h2>
+
+<p>コンテナブロックの最大幅を変更する。 (size) は <code>xs, sm, lg</code> に対応している。</p>
+
+<p class="echo-margin-bottom-lg">それぞれの最大幅は、 <code>/_scss/_config_advance.scss</code> の配列 <code>$container-max-widths-xs, $container-max-widths-sm, $container-max-widths-lg, $container-max-widths-xl</code> の値を参照する。</p>
+
+<div style="margin-left: -0.625rem; margin-right: -0.625rem;">
+
+<p class="echo-title echo-title-style-b echo-title-level-4 echo-margin-bottom-sm">echo-container-xs</p>
+
+<div class="echo-container echo-container-xs">
+    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5);">(contents)</div>
+</div>
+
+<p class="echo-title echo-title-style-b echo-title-level-4 echo-margin-top-lg echo-margin-bottom-sm">echo-container-sm</p>
+
+<div class="echo-container echo-container-sm">
+    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5);">(contents)</div>
+</div>
+
+<p class="echo-title echo-title-style-b echo-title-level-4 echo-margin-top-lg echo-margin-bottom-sm">(default)</p>
+
+<div class="echo-container">
+    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5);">(contents)</div>
+</div>
+
+<p class="echo-title echo-title-style-b echo-title-level-4 echo-margin-top-lg echo-margin-bottom-sm">echo-container-lg</p>
+
+<div class="echo-container echo-container-lg">
+    <div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5);">(contents)</div>
+</div>
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;div style="margin-left: -0.625rem; margin-right: -0.625rem;"&gt;
+
+&lt;p class="echo-title echo-title-style-b echo-title-level-4 echo-margin-bottom-sm"&gt;echo-container-xs&lt;/p&gt;
+
+&lt;div class="echo-container echo-container-xs"&gt;
+    &lt;div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5);"&gt;(contents)&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p class="echo-title echo-title-style-b echo-title-level-4 echo-margin-top-lg echo-margin-bottom-sm"&gt;echo-container-sm&lt;/p&gt;
+
+&lt;div class="echo-container echo-container-sm"&gt;
+    &lt;div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5);"&gt;(contents)&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p class="echo-title echo-title-style-b echo-title-level-4 echo-margin-top-lg echo-margin-bottom-sm"&gt;(default)&lt;/p&gt;
+
+&lt;div class="echo-container"&gt;
+    &lt;div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5);"&gt;(contents)&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p class="echo-title echo-title-style-b echo-title-level-4 echo-margin-top-lg echo-margin-bottom-sm"&gt;echo-container-lg&lt;/p&gt;
+
+&lt;div class="echo-container echo-container-lg"&gt;
+    &lt;div style="padding: 5px; text-align: center; background-color: rgba(255,255,255,.5);"&gt;(contents)&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;</code></pre></div>
 
 <?php include('../doc_include/footer.inc'); ?>

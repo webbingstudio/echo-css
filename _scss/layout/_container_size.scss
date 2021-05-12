@@ -1,0 +1,41 @@
+/*
+--------------------
+#{$pr}#{$l}container#{$c3}(size)
+--------------------
+*/
+
+.#{$pr}#{$l}container#{$c3}xs {
+
+    @each $breakpoint, $container-max-width in $container-max-widths-xs {
+
+        @include media-breakpoint-up($breakpoint) {
+            max-width: $container-max-width;
+        }
+
+    }
+
+}
+
+.#{$pr}#{$l}container#{$c3}sm {
+
+    @each $breakpoint, $container-max-width in $container-max-widths-sm {
+
+        @include media-breakpoint-up($breakpoint) {
+            max-width: $container-max-width;
+        }
+
+    }
+
+}
+
+.#{$pr}#{$l}container#{$c3}lg {
+
+    @each $breakpoint, $container-max-width in $container-max-widths-lg {
+
+        @include media-breakpoint-up($breakpoint) {
+            max-width: $container-max-width;
+        }
+
+    }
+
+}

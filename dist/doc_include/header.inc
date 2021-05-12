@@ -1,5 +1,5 @@
 <header class="echo-doc-header">
-    <div class="echo-container">
+    <div class="echo-doc-container">
         <div class="echo-doc-header-contents">
 
             <p class="echo-doc-header-brand">

@@ -3186,7 +3186,7 @@ echo-flip
 
 @media (min-width: 90rem) {
   .echo-flip-container {
-    max-width: 87.5rem;
+    max-width: 90rem;
   }
 }
 
@@ -6273,9 +6273,15 @@ echo-container-fluid
 
 /*
 --------------------
-echo-container-sm
+echo-container-(size)
 --------------------
 */
+@media (min-width: 48rem) {
+  .echo-container-xs {
+    max-width: 49rem;
+  }
+}
+
 @media (min-width: 48rem) {
   .echo-container-sm {
     max-width: 49rem;
@@ -6288,11 +6294,6 @@ echo-container-sm
   }
 }
 
-/*
---------------------
-echo-container-lg
---------------------
-*/
 @media (min-width: 48rem) {
   .echo-container-lg {
     max-width: 49rem;
@@ -6313,7 +6314,7 @@ echo-container-lg
 
 @media (min-width: 90rem) {
   .echo-container-lg {
-    max-width: 88.5rem;
+    max-width: 91rem;
   }
 }
 

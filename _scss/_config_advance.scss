@@ -149,6 +149,10 @@ $grid-gutter-widths: (
     xl:     3rem,
 ) !default;
 
+$container-max-widths-xs: (
+    md: 48rem + map-get( $grid-gutter-widths, 'md' )
+) !default;
+
 $container-max-widths-sm: (
     md: 48rem + map-get( $grid-gutter-widths, 'md' ),
     lg: 60rem + map-get( $grid-gutter-widths, 'md' )
@@ -164,7 +168,7 @@ $container-max-widths-lg: (
     md:  48rem + map-get( $grid-gutter-widths, 'md' ),
     lg:  60rem + map-get( $grid-gutter-widths, 'md' ),
     xl:  75rem + map-get( $grid-gutter-widths, 'md' ),
-    xxl: 87.5rem + map-get( $grid-gutter-widths, 'md' ),
+    xxl: 90rem + map-get( $grid-gutter-widths, 'md' ),
 ) !default;
 
 $grid-columns:        12 !default;
