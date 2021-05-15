@@ -5,6 +5,23 @@
 */
 
 .#{$pr}#{$c}headline {
+    font-size: $font-size-sm;
+
+    @include media-breakpoint-up(lg) {
+        font-size: $font-size-md;
+    }
+
+    &.#{$pr}#{$c}headline#{$c3}fixed {
+
+        @include media-breakpoint-up(lg) {
+            font-size: $font-size-md;
+        }
+
+    }
+
+}
+
+.#{$pr}#{$c}headline#{$c3}sm {
     font-size: $font-size-xs;
 
     @include media-breakpoint-up(lg) {
@@ -20,3 +37,21 @@
     }
 
 }
+
+.#{$pr}#{$c}headline#{$c3}lg {
+    font-size: $font-size-md;
+
+    @include media-breakpoint-up(lg) {
+        font-size: $font-size-lg;
+    }
+
+    &.#{$pr}#{$c}headline#{$c3}fixed {
+
+        @include media-breakpoint-up(lg) {
+            font-size: $font-size-md;
+        }
+
+    }
+
+}
+

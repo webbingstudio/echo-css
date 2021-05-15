@@ -3595,12 +3595,6 @@ echo-headline
   font-size: 1em;
 }
 
-@media (min-width: 62.5rem) {
-  .echo-headline-inner > .echo-headline-title {
-    flex-basis: 0;
-  }
-}
-
 a.echo-headline-inner {
   color: #333;
   text-decoration: none;
@@ -3613,12 +3607,6 @@ a.echo-headline-inner:not(:hover):not(:focus) .echo-headline-title {
 .echo-headline-header {
   margin: 0 .5em 0 0;
   white-space: nowrap;
-}
-
-@media (min-width: 62.5rem) {
-  .echo-headline-header {
-    min-width: 8.5em;
-  }
 }
 
 .echo-headline-category {
@@ -3636,12 +3624,6 @@ a.echo-headline-inner:not(:hover):not(:focus) .echo-headline-title {
   margin: .25em 0 0;
 }
 
-@media (min-width: 62.5rem) {
-  .echo-headline-title {
-    margin-top: 0;
-  }
-}
-
 .echo-headline-title a {
   color: #333;
 }
@@ -3650,24 +3632,69 @@ a.echo-headline-inner:not(:hover):not(:focus) .echo-headline-title {
   text-decoration: underline;
 }
 
+@media (min-width: 62.5rem) {
+  .echo-headline:not(.echo-headline-fixed) .echo-headline-header {
+    min-width: 8.5em;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-headline:not(.echo-headline-fixed) .echo-headline-title {
+    flex-basis: 0;
+    margin-top: 0;
+  }
+}
+
 /*
 --------------------
 echo-headline(size)
 --------------------
 */
 .echo-headline {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
 }
 
 @media (min-width: 62.5rem) {
   .echo-headline {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width: 62.5rem) {
   .echo-headline.echo-headline-fixed {
+    font-size: 1rem;
+  }
+}
+
+.echo-headline-sm {
+  font-size: 0.75rem;
+}
+
+@media (min-width: 62.5rem) {
+  .echo-headline-sm {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-headline-sm.echo-headline-fixed {
     font-size: 0.75rem;
+  }
+}
+
+.echo-headline-lg {
+  font-size: 1rem;
+}
+
+@media (min-width: 62.5rem) {
+  .echo-headline-lg {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-headline-lg.echo-headline-fixed {
+    font-size: 1rem;
   }
 }
 

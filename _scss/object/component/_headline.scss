@@ -30,11 +30,6 @@
         flex-grow: 1;
         flex-basis: 100%;
         font-size: 1em;
-
-        @include media-breakpoint-up(lg) {
-            flex-basis: 0;
-        }
-
     }
 
     @at-root {
@@ -60,11 +55,6 @@
 .#{$pr}#{$c}headline#{$c1}header {
     margin: 0 .5em 0 0;
     white-space: nowrap;
-
-    @include media-breakpoint-up(lg) {
-        min-width: 8.5em;
-    }
-
 }
 
 .#{$pr}#{$c}headline#{$c1}category {
@@ -82,15 +72,32 @@
 .#{$pr}#{$c}headline#{$c1}title {
     margin: .25em 0 0;
 
-    @include media-breakpoint-up(lg) {
-        margin-top: 0;
-    }
-
     a {
         color: $body-color;
 
         &:not(:hover):not(:focus) {
             text-decoration: underline;
+        }
+
+    }
+
+}
+
+.#{$pr}#{$c}headline:not(.#{$pr}#{$c}headline#{$c3}fixed) {
+
+    & .#{$pr}#{$c}headline#{$c1}header {
+
+        @include media-breakpoint-up(lg) {
+            min-width: 8.5em;
+        }
+
+    }
+
+    & .#{$pr}#{$c}headline#{$c1}title {
+
+        @include media-breakpoint-up(lg) {
+            flex-basis: 0;
+            margin-top: 0;
         }
 
     }
