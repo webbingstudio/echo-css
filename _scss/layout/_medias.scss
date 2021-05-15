@@ -18,12 +18,14 @@
 }
 
 .#{$pr}#{$l}medias#{$c1}item {
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    width: 100%;
 
     .#{$pr}#{$c}media {
+        width: 100%;
+        height: 100%;
+    }
+
+    .#{$pr}#{$c}media#{$c3}inner {
+        height: 100%;
     }
 
 }

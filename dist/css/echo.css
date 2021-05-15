@@ -7436,11 +7436,13 @@ echo-medias
   }
 }
 
-.echo-medias-item {
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
+.echo-medias-item .echo-media {
   width: 100%;
+  height: 100%;
+}
+
+.echo-medias-item .echo-media-inner {
+  height: 100%;
 }
 
 /*
