@@ -3,7 +3,25 @@
 #{$pr}#{$c}media(size)
 --------------------
 */
+
 .#{$pr}#{$c}media {
+    font-size: $font-size-sm;
+
+    @include media-breakpoint-up(lg) {
+        font-size: $font-size-md;
+    }
+
+    &.#{$pr}#{$c}media#{$c3}fixed {
+
+        @include media-breakpoint-up(lg) {
+            font-size: $font-size-sm;
+        }
+
+    }
+
+}
+
+.#{$pr}#{$c}media#{$c3}sm {
     font-size: $font-size-xs;
 
     @include media-breakpoint-up(lg) {
@@ -19,3 +37,21 @@
     }
 
 }
+
+.#{$pr}#{$c}media#{$c3}lg {
+    font-size: $font-size-md;
+
+    @include media-breakpoint-up(lg) {
+        font-size: $font-size-lg;
+    }
+
+    &.#{$pr}#{$c}media#{$c3}fixed {
+
+        @include media-breakpoint-up(lg) {
+            font-size: $font-size-md;
+        }
+
+    }
+
+}
+

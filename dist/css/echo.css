@@ -4089,18 +4089,50 @@ echo-media(size)
 --------------------
 */
 .echo-media {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
 }
 
 @media (min-width: 62.5rem) {
   .echo-media {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width: 62.5rem) {
   .echo-media.echo-media-fixed {
+    font-size: 0.875rem;
+  }
+}
+
+.echo-media-sm {
+  font-size: 0.75rem;
+}
+
+@media (min-width: 62.5rem) {
+  .echo-media-sm {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-media-sm.echo-media-fixed {
     font-size: 0.75rem;
+  }
+}
+
+.echo-media-lg {
+  font-size: 1rem;
+}
+
+@media (min-width: 62.5rem) {
+  .echo-media-lg {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .echo-media-lg.echo-media-fixed {
+    font-size: 1rem;
   }
 }
 
