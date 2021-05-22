@@ -1,21 +1,28 @@
 {
-  "name": "echo_css",
+  "name": "echo-css",
   "version": "1.0.0",
-  "description": "CSS Framework \"echo\"",
-  "main": "index.js",
+  "description": "CSS framework optimized for CMS theming",
+  "main": "gulpfile.js",
   "scripts": {
     "gulp": "gulp"
   },
-  "author": "WebbingStudio",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webbingstudio/echo-css.git"
+  },
+  "author": "webbingstudio",
   "license": "ISC",
-  "devDependencies": {
+  "bugs": {
+    "url": "https://github.com/webbingstudio/echo-css/issues"
+  },
+  "homepage": "https://github.com/webbingstudio/echo-css#readme",
+  "dependencies": {
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-cssmin": "^0.2.0",
     "gulp-plumber": "^1.2.1",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-rename": "^1.1.0",
+    "gulp-sass": "^4.1.0",
     "gulp-uglify": "^3.0.2"
-  },
-  "dependencies": {}
+  }
 }
