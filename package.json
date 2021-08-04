@@ -4,12 +4,15 @@
   "description": "CSS framework optimized for CMS theming",
   "main": "index.js",
   "scripts": {
-    "build-all": "run-s build:*",
-    "build": "run-s build:scss build:postcss",
+    "watch:css": "watch \"npm run build:css\" src/scss",
+    "watch:js": "watch \"npm run build:js\" src/js",
+    "build": "run-s build:*",
+    "build:css": "run-s build:scss build:postcss build:scssmin build:postcssmin",
     "build:scss": "sass src/scss/test.scss:dist/css/test.css --style expanded --no-source-map",
     "build:postcss": "postcss dist/css/test.css -c=postcss.config.js --no-map -o dist/css/test.css",
     "build:scssmin": "sass src/scss/test.scss:dist/css/test.min.css --style compressed --no-source-map",
-    "build:postcssmin": "postcss dist/css/test.min.css -c=postcss.config.js --no-map -o dist/css/test.min.css"
+    "build:postcssmin": "postcss dist/css/test.min.css -c=postcss.config.js --no-map -o dist/css/test.min.css",
+    "build:js": "cpx \"./src/js/*.js\" ./dist/plugins"
   },
   "repository": {
     "type": "git",
@@ -24,9 +27,16 @@
   "homepage": "https://echocss.webbingstudio.com",
   "devDependencies": {
     "autoprefixer": "^10.3.1",
+    "cpx": "^1.5.0",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.3.6",
     "postcss-cli": "^8.3.1",
-    "sass": "^1.37.5"
-  }
+    "sass": "^1.37.5",
+    "watch": "^1.0.2"
+  },
+  "browserslist": [
+    "> .2%",
+    "not ie <= 10",
+    "not op_mini all"
+  ]
 }
