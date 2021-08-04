@@ -1,0 +1,32 @@
+$pr: 'echo-' !default;
+$color: '#06c' !default;
+
+/*
+--------------------
+#{$pr}u-bg-(color)
+#{$pr}u-bg-fade
+--------------------
+*/
+
+#document {
+
+    .#{$pr}u-bg-default {
+        background-color: $color;
+
+        &.#{$pr}u-bg-fade {
+            background-color: $color;
+        }
+
+    }
+
+    .#{$pr}u-bg-info {
+        background-color: $color;
+
+
+        &.#{$pr}u-bg-fade {
+            background-color: $color;
+        }
+
+    }
+
+}

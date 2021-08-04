@@ -4,7 +4,11 @@
   "description": "CSS framework optimized for CMS theming",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build":"npm-run-all -s build:*",
+    "build:scss":"sass src/scss/test.scss:dist/css/test.css --style expanded --no-source-map",
+    "build:scssmin":"sass src/scss/test.scss:dist/css/test.min.css --style compressed --no-source-map",
+    "build:postcss":"postcss dist/css/test.css -c=postcss.config.js --no-map -o dist/css/test.css",
+    "build:postcssmin":"postcss dist/css/test.min.css -c=postcss.config.js --no-map -o dist/css/test.min.css"
   },
   "repository": {
     "type": "git",
