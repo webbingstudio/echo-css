@@ -1,7 +1,7 @@
-module.exports = () => ({
-  plugins: {
-    autoprefixer: {
-      grid: 'autoplace'
-    }
-  }
-});
+module.exports = {
+  plugins: [
+    require('autoprefixer')({
+      grid: 'autoplace',
+    })
+  ],
+};
