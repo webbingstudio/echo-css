@@ -23,13 +23,13 @@
     justify-content: flex-start;
     align-items: stretch;
     list-style-type: none;
-    margin: 0 (map-get($grid-gutter-widths, md) / -2) (map-get($grid-gutter-widths, md) / -1);
+    margin: 0 (math.div(map-get($grid-gutter-widths, md),-2)) (math.div(map-get($grid-gutter-widths, md),-1));
     padding: 0;
 
     @include media-breakpoint-up(lg) {
-        margin-left: (map-get($grid-gutter-widths, lg) / -2);
-        margin-right: (map-get($grid-gutter-widths, lg) / -2);
-        margin-bottom: (map-get($grid-gutter-widths, lg) / -1);
+        margin-left: (math.div(map-get($grid-gutter-widths, lg),-2));
+        margin-right: (math.div(map-get($grid-gutter-widths, lg),-2));
+        margin-bottom: (math.div(map-get($grid-gutter-widths, lg),-1));
     }
 
 }
@@ -47,11 +47,11 @@
     flex-shrink: 1;
     flex-basis: 0%;
     margin: 0;
-    padding: 0 (map-get($grid-gutter-widths, md) / 2) map-get($grid-gutter-widths, md);
+    padding: 0 (math.div(map-get($grid-gutter-widths, md),2)) map-get($grid-gutter-widths, md);
 
     @include media-breakpoint-up(lg) {
-        padding-left: (map-get($grid-gutter-widths, lg) / 2);
-        padding-right: (map-get($grid-gutter-widths, lg) / 2);
+        padding-left: (math.div(map-get($grid-gutter-widths, lg),2));
+        padding-right: (math.div(map-get($grid-gutter-widths, lg),2));
         padding-bottom: map-get($grid-gutter-widths, lg);
     }
 
@@ -73,24 +73,24 @@
 }
 
 .#{$pr}#{$row}#{$c3}sm {
-    margin-left: (map-get($grid-gutter-widths, sm) / -2);
-    margin-right: (map-get($grid-gutter-widths, sm) / -2);
-    margin-bottom: (map-get($grid-gutter-widths, sm) / -1);
+    margin-left: (math.div(map-get($grid-gutter-widths, sm),-2));
+    margin-right: (math.div(map-get($grid-gutter-widths, sm),-2));
+    margin-bottom: (math.div(map-get($grid-gutter-widths, sm),-1));
 
     @include media-breakpoint-up(lg) {
-        margin-left: (map-get($grid-gutter-widths, md) / -2);
-        margin-right: (map-get($grid-gutter-widths, md) / -2);
-        margin-bottom: (map-get($grid-gutter-widths, md) / -1);
+        margin-left: (math.div(map-get($grid-gutter-widths, md),-2));
+        margin-right: (math.div(map-get($grid-gutter-widths, md),-2));
+        margin-bottom: (math.div(map-get($grid-gutter-widths, md),-1));
     }
 
     [class*="#{$pr}#{$col}"] {
-        padding-left: (map-get($grid-gutter-widths, sm) / 2);
-        padding-right: (map-get($grid-gutter-widths, sm) / 2);
+        padding-left: (math.div(map-get($grid-gutter-widths, sm),2));
+        padding-right: (math.div(map-get($grid-gutter-widths, sm),2));
         padding-bottom: map-get($grid-gutter-widths, sm);
 
         @include media-breakpoint-up(lg) {
-            padding-left: (map-get($grid-gutter-widths, md) / 2);
-            padding-right: (map-get($grid-gutter-widths, md) / 2);
+            padding-left: (math.div(map-get($grid-gutter-widths, md),2));
+            padding-right: (math.div(map-get($grid-gutter-widths, md),2));
             padding-bottom: map-get($grid-gutter-widths, md);
         }
 
@@ -99,24 +99,24 @@
 }
 
 .#{$pr}#{$row}#{$c3}lg {
-    margin-left: (map-get($grid-gutter-widths, lg) / -2);
-    margin-right: (map-get($grid-gutter-widths, lg) / -2);
-    margin-bottom: (map-get($grid-gutter-widths, lg) / -1);
+    margin-left: (math.div(map-get($grid-gutter-widths, lg),-2));
+    margin-right: (math.div(map-get($grid-gutter-widths, lg),-2));
+    margin-bottom: (math.div(map-get($grid-gutter-widths, lg),-1));
 
     @include media-breakpoint-up(lg) {
-        margin-left: (map-get($grid-gutter-widths, xl) / -2);
-        margin-right: (map-get($grid-gutter-widths, xl) / -2);
-        margin-bottom: (map-get($grid-gutter-widths, xl) / -1);
+        margin-left: (math.div(map-get($grid-gutter-widths, xl),-2));
+        margin-right: (math.div(map-get($grid-gutter-widths, xl),-2));
+        margin-bottom: (math.div(map-get($grid-gutter-widths, xl),-1));
     }
 
     [class*="#{$pr}#{$col}"] {
-        padding-left: (map-get($grid-gutter-widths, lg) / 2);
-        padding-right: (map-get($grid-gutter-widths, lg) / 2);
+        padding-left: (math.div(map-get($grid-gutter-widths, lg),2));
+        padding-right: (math.div(map-get($grid-gutter-widths, lg),2));
         padding-bottom: map-get($grid-gutter-widths, lg);
 
         @include media-breakpoint-up(lg) {
-            padding-left: (map-get($grid-gutter-widths, xl) / 2);
-            padding-right: (map-get($grid-gutter-widths, xl) / 2);
+            padding-left: (math.div(map-get($grid-gutter-widths, xl),2));
+            padding-right: (math.div(map-get($grid-gutter-widths, xl),2));
             padding-bottom: map-get($grid-gutter-widths, xl);
         }
 
