@@ -6,12 +6,13 @@
   "scripts": {
     "build-all": "run-s css js",
     "watch": "watch \"npm run css\" src/scss",
-    "css": "run-s build:scss build:csscopy build:postcssorg build:postcssmin",
-    "js": "run-s build:jscopy build:jsuscrollto build:jsutoggle",
-    "css:scss": "sass src/scss:dist/css/_uncompressed --style expanded --no-source-map",
-    "css:csscopy": "cpx \"./dist/css/_uncompressed/*.css\" ./dist/css && rename ./dist/css/*.css {{f}}.min.css",
-    "css:postcssorg": "postcss dist/css/_uncompressed -c=postcss.config.js --no-map -o dist/css/_uncompressed",
-    "css:postcssmin": "postcss dist/css -c=postcss.config.js --no-map -o dist/css",
+    "css": "run-s css:scssmin css:postcssmin",
+    "css-all": "run-s css:scssorg css:postcssorg css:scssmin css:postcssmin",
+    "js": "run-s js:jscopy js:jsuscrollto js:jsutoggle",
+    "css:scssorg": "sass src/scss:dist/css/_uncompressed --style expanded --no-source-map",
+    "css:scssmin": "rimraf ./dist/css/*.min.css && sass src/scss:dist/css --style compressed --no-source-map",
+    "css:postcssorg": "postcss ./dist/css/_uncompressed -c=postcss.config.js --no-map --dir ./dist/css/_uncompressed",
+    "css:postcssmin": "postcss ./dist/css -c=postcss.config.js --no-map --dir ./dist/css && rename ./dist/css/*.css {{f}}.min.css",
     "js:jscopy": "cpx \"./src/js/*.js\" ./dist/plugins",
     "js:jsuscrollto": "uglifyjs dist/plugins/scrollto.js -o dist/plugins/scrollto.min.js",
     "js:jsutoggle": "uglifyjs dist/plugins/toggle.js -o dist/plugins/toggle.min.js"
@@ -34,13 +35,14 @@
     "postcss": "^8.3.6",
     "postcss-cli": "^8.3.1",
     "rename-cli": "^6.2.1",
+    "rimraf": "^3.0.2",
     "sass": "^1.37.5",
     "uglify-js": "^3.14.1",
     "watch": "^1.0.2"
   },
   "browserslist": [
     "> .2%",
-    "not ie <= 10",
+    "not ie <= 11",
     "not op_mini all"
   ]
 }

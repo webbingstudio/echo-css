@@ -121,10 +121,10 @@
 
         th,
         td {
-            width: percentage(9 / 12);
+            width: percentage(math.div(9,12));
 
             &:first-child {
-                width: percentage(3 / 12);
+                width: percentage(math.div(3,12));
             }
 
         }
@@ -139,10 +139,10 @@
 
         th,
         td {
-            width: percentage(8 / 12);
+            width: percentage(math.div(8,12));
 
             &:first-child {
-                width: percentage(4 / 12);
+                width: percentage(math.div(4,12));
             }
 
         }
@@ -157,10 +157,10 @@
 
         th,
         td {
-            width: percentage(3 / 12);
+            width: percentage(math.div(3,12));
 
             &:last-child {
-                width: percentage(6 / 12);
+                width: percentage(math.div(6,12));
             }
 
         }
