@@ -4,7 +4,6 @@
   "description": "CSS framework optimized for CMS theming",
   "main": "index.js",
   "scripts": {
-    "build-all": "run-s css js",
     "watch": "watch \"npm run css\" src/scss",
     "css": "run-s css:scssmin css:postcssmin css:rename",
     "css-org": "run-s css:scssorg css:postcssorg",

@@ -1,6 +1,6 @@
 /*!
  * echo.toggle.js v1.0.0
- * Perform processing on the premise of menu open / close and switching of toggle buttons.
+ * Perform processing on the premise of menu open-close and switching of toggle buttons.
  * 
  * Copyright 2019 WebbingStudio
  * Released under the MIT license

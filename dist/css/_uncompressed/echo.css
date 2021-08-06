@@ -3710,7 +3710,7 @@ a.echo-media-inner:hover .echo-media-title, a.echo-media-inner:focus .echo-media
   flex-shrink: 1;
   flex-basis: 0%;
   padding-left: 3%;
-  padding-left: clamp( map-get( $grid-gutter-widths, "sm" ), 3.5%, map-get( $grid-gutter-widths, "xl" ) );
+  padding-left: clamp( .5rem, 3.5%, 3rem );
 }
 
 .echo-media-contents > * {
@@ -3741,7 +3741,7 @@ echo-media-reverse
 .echo-media-reverse .echo-media-contents {
   padding-left: 0;
   padding-right: 3%;
-  padding-right: clamp( map-get( $grid-gutter-widths, "sm" ), 3.5%, map-get( $grid-gutter-widths, "xl" ) );
+  padding-right: clamp( .5rem, 3.5%, 3rem );
 }
 
 /*
