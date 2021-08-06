@@ -3,8 +3,6 @@
 #{$pr}#{$c}media
 --------------------
 */
-$wsm: map-get( $grid-gutter-widths, 'sm' ) as var;
-$wxl: map-get( $grid-gutter-widths, 'xl' ) as var;
 
 .#{$pr}#{$c}media {
     position: relative;
@@ -80,7 +78,7 @@ a.#{$pr}#{$c}media#{$c1}inner {
     flex-shrink: 1;
     flex-basis: 0%;
     padding-left: 3%;
-    padding-left: clamp( var.$wsm, 3.5%, var.$wxl );
+    padding-left: clamp( .5rem, 3.5%, 3rem );
 }
 
 .#{$pr}#{$c}media#{$c1}contents > * {
@@ -122,7 +120,7 @@ a.#{$pr}#{$c}media#{$c1}inner {
     .#{$pr}#{$c}media#{$c1}contents {
         padding-left: 0;
         padding-right: 3%;
-        padding-right: clamp( var.$wsm, 3.5%, var.$wxl );
+        padding-right: clamp( .5rem, 3.5%, 3rem );
     }
 
 }

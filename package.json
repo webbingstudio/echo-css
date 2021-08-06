@@ -6,13 +6,14 @@
   "scripts": {
     "build-all": "run-s css js",
     "watch": "watch \"npm run css\" src/scss",
-    "css": "run-s css:scssmin css:postcssmin",
+    "css": "run-s css:scssmin css:postcssmin css:rename",
     "css-org": "run-s css:scssorg css:postcssorg",
     "js": "run-s js:jscopy js:jsuscrollto js:jsutoggle",
     "css:scssorg": "sass src/scss:dist/css/_uncompressed --style expanded --no-source-map",
-    "css:scssmin": "rimraf ./dist/css/*.min.css && cpx 'dist/css/_uncompressed/*.css' dist/css",
+    "css:scssmin": "rimraf ./dist/css/*.min.css && sass src/scss:dist/css --style expanded --no-source-map",
     "css:postcssorg": "postcss ./dist/css/_uncompressed -c=postcss.config.js --no-map --dir ./dist/css/_uncompressed",
-    "css:postcssmin": "postcss ./dist/css -c=postcss.config.js --no-map --dir ./dist/css && rename ./dist/css/*.css {{f}}.min.css",
+    "css:postcssmin": "postcss ./dist/css -c=postcss.config.js --no-map --dir ./dist/css",
+    "css:rename": "rename ./dist/css/*.css {{f}}.min.css",
     "js:jscopy": "cpx \"./src/js/*.js\" ./dist/plugins",
     "js:jsuscrollto": "uglifyjs dist/plugins/scrollto.js -o dist/plugins/scrollto.min.js",
     "js:jsutoggle": "uglifyjs dist/plugins/toggle.js -o dist/plugins/toggle.min.js"
