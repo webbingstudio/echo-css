@@ -55,15 +55,15 @@
 
 @mixin make-text-size($b: $grid-breakpoints) {
     .#{$pr}#{$u}text#{$c3}xxs {
-        font-size: ( 10 / 16 ) + em;
+        font-size: math.div(10,16) + em;
     }
 
     .#{$pr}#{$u}text#{$c3}xs {
-        font-size: ( 12 / 16 ) + em;
+        font-size: math.div(12,16) + em;
     }
 
     .#{$pr}#{$u}text#{$c3}sm {
-        font-size: ( 14 / 16 ) + em;
+        font-size: math.div(14,16) + em;
     }
 
     .#{$pr}#{$u}text#{$c3}md {
@@ -71,15 +71,15 @@
     }
 
     .#{$pr}#{$u}text#{$c3}lg {
-        font-size: ( 18 / 16 ) + em;
+        font-size: math.div(18,16) + em;
     }
 
     .#{$pr}#{$u}text#{$c3}xl {
-        font-size: ( 20 / 16 ) + em;
+        font-size: math.div(20,16) + em;
     }
 
     .#{$pr}#{$u}text#{$c3}xxl {
-        font-size: ( 24 / 16 ) + em;
+        font-size: math.div(24,16) + em;
     }
 
     @each $breakpoint in map-keys($b) {
@@ -88,15 +88,15 @@
 
             @include media-breakpoint-up($breakpoint, $b) {
                 .#{$pr}#{$u}text#{$c3}xxs#{$c2}#{$breakpoint}#{$c3}up {
-                    font-size: ( 10 / 16 ) + em;
+                    font-size: math.div(10,16) + em;
                 }
 
                 .#{$pr}#{$u}text#{$c3}xs#{$c2}#{$breakpoint}#{$c3}up {
-                    font-size: ( 12 / 16 ) + em;
+                    font-size: math.div(12,16) + em;
                 }
 
                 .#{$pr}#{$u}text#{$c3}sm#{$c2}#{$breakpoint}#{$c3}up {
-                    font-size: ( 14 / 16 ) + em;
+                    font-size: math.div(14,16) + em;
                 }
 
                 .#{$pr}#{$u}text#{$c3}md#{$c2}#{$breakpoint}#{$c3}up {
@@ -104,30 +104,30 @@
                 }
 
                 .#{$pr}#{$u}text#{$c3}lg#{$c2}#{$breakpoint}#{$c3}up {
-                    font-size: ( 18 / 16 ) + em;
+                    font-size: math.div(18,16) + em;
                 }
 
                 .#{$pr}#{$u}text#{$c3}xl#{$c2}#{$breakpoint}#{$c3}up {
-                    font-size: ( 20 / 16 ) + em;
+                    font-size: math.div(20,16) + em;
                 }
 
                 .#{$pr}#{$u}text#{$c3}xxl#{$c2}#{$breakpoint}#{$c3}up {
-                    font-size: ( 24 / 16 ) + em;
+                    font-size: math.div(24,16) + em;
                 }
 
             }
 
             @include media-breakpoint-down($breakpoint, $b) {
                 .#{$pr}#{$u}text#{$c3}xxs#{$c2}#{$breakpoint}#{$c3}down {
-                    font-size: ( 10 / 16 ) + em;
+                    font-size: math.div(10,16) + em;
                 }
 
                 .#{$pr}#{$u}text#{$c3}xs#{$c2}#{$breakpoint}#{$c3}down {
-                    font-size: ( 12 / 16 ) + em;
+                    font-size: math.div(12,16) + em;
                 }
 
                 .#{$pr}#{$u}text#{$c3}sm#{$c2}#{$breakpoint}#{$c3}down {
-                    font-size: ( 14 / 16 ) + em;
+                    font-size: math.div(14,16) + em;
                 }
 
                 .#{$pr}#{$u}text#{$c3}md#{$c2}#{$breakpoint}#{$c3}down {
@@ -135,15 +135,15 @@
                 }
 
                 .#{$pr}#{$u}text#{$c3}lg#{$c2}#{$breakpoint}#{$c3}down {
-                    font-size: ( 18 / 16 ) + em;
+                    font-size: math.div(18,16) + em;
                 }
 
                 .#{$pr}#{$u}text#{$c3}xl#{$c2}#{$breakpoint}#{$c3}down {
-                    font-size: ( 20 / 16 ) + em;
+                    font-size: math.div(20,16) + em;
                 }
 
                 .#{$pr}#{$u}text#{$c3}xxl#{$c2}#{$breakpoint}#{$c3}down {
-                    font-size: ( 24 / 16 ) + em;
+                    font-size: math.div(24,16) + em;
                 }
 
             }
