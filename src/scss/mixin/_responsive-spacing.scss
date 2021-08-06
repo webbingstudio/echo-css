@@ -3,8 +3,8 @@
     $diff_space: $max - $min;
     $diff_breakpoint: map-get( $responsive-breakpoints, 'max' ) - map-get( $responsive-breakpoints, 'min' );
 
-    $vw: ( 100 * $diff_space ) / $diff_breakpoint;
-    $increase: $min - ( map-get( $responsive-breakpoints, 'min' )  / 100 ) * $vw;
+    $vw: math.div( ( 100 * $diff_space ), $diff_breakpoint );
+    $increase: $min - math.div( map-get( $responsive-breakpoints, 'min' ), 100 ) * $vw;
 
     #{$property}: #{$max}rem;
     #{$property}: clamp( #{$min}rem, calc( #{$vw}vw + #{$increase}rem ), #{$max}rem );

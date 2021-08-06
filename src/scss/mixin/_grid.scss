@@ -1,6 +1,6 @@
 @mixin make-col-flex($size, $columns: $grid-columns) {
-    flex-basis: percentage($size / $columns);
-    max-width: percentage($size / $columns);
+    flex-basis: percentage(math.div($size,$columns));
+    max-width: percentage(math.div($size,$columns));
 }
 
 @mixin make-grid-columns-flex($columns: $grid-columns, $breakpoints: $grid-breakpoints) {

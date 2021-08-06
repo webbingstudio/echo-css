@@ -25,7 +25,7 @@
         .#{$pr}#{$m}nav#{$c1}label {
             justify-content: center;
             text-align: center;
-            height: ( 44 / 16 ) + em;
+            height: math-div(44,16) + em;
             padding-top: 0;
             padding-bottom: 0;
             border: $ui-border-width solid transparent;
@@ -53,7 +53,7 @@
 
             .#{$pr}#{$m}nav#{$c1}label {
                 position: relative;
-                padding-left: ( 44 / 16 ) + ( 8 / 16 ) + em;
+                padding-left: math.div(44,16) + math.div(8,16) + em;
 
                 &:before {
                     position: absolute;
@@ -64,7 +64,7 @@
                     justify-content: center;
                     counter-increment: item;
                     content: counter( item );
-                    min-width: ( 44 / 16 ) + em;
+                    min-width: math.div(44,16) + em;
                     height: 100%;
                     background-color: $nav-hover-bg;
                     transition:
