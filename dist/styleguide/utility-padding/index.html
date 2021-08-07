@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>utility-padding | Style guide | echo-css</title>
+    <meta property="og:title" content="utility-padding | Style guide | echo-css">
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div id="echo-document">
+    <?php include('../doc_include/header.inc'); ?>
+
+    <main class="echo-p-main" role="main">
+        <div class="echo-doc-container echo-doc-container-fluid">
+
+            <div class="echo-doc-pagehead">
+                <h1 class="echo-doc-pagehead-title">utility-padding</h1>
+            </div><!-- /.echo-doc-pagehead -->
+
+            <nav class="echo-doc-anchor">
+                <ul class="echo-list echo-list-horizontal">
+                        
+                        <li class="echo-list-item"><a href="#padding-0" class="js-scrollto">echo-padding-(direction)-0</a></li>
+
+                        <li class="echo-list-item"><a href="#padding-size" class="js-scrollto">echo-padding-(direction)-(size)</a></li>
+                        
+                    </ul>
+                </nav>
+
+            <article class="echo-doc-post">
+                <div class="echo-doc-post-contents styleguide-contents">
+
+<h2 id="padding-0" class="echo-doc-post-title-01">echo-padding-(direction)-0</h2>
+
+<p>ブロック要素の内部余白を強制的に消す。</p>
+
+<div class="example"><div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-0"><div style="background-color: rgba(255,255,255,.35);">echo-padding-0</div></div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-top-0"><div style="background-color: rgba(255,255,255,.35);">echo-padding-top-0</div></div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-left-0"><div style="background-color: rgba(255,255,255,.35);">echo-padding-left-0</div></div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-bottom-0"><div style="background-color: rgba(255,255,255,.35);">echo-padding-bottom-0</div></div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-right-0"><div style="background-color: rgba(255,255,255,.35);">echo-padding-right-0</div></div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-x-0"><div style="background-color: rgba(255,255,255,.35);">echo-padding-x-0</div></div></div>
+<div style="padding: 1px; background-color: #f38899;"><div class="echo-padding-y-0"><div style="background-color: rgba(255,255,255,.35);">echo-padding-y-0</div></div></div>
+</div>
+
+
+<h2 id="padding-size" class="echo-doc-post-title-01">echo-padding-(direction)-(size)</h2>
+
+<p>ブロック要素の内部余白を変更する。<br>
+余白は (breakpoint) が <code>xs - xxl</code> の間、 <strong>画面サイズに対する相対</strong>で変動する。</p>
+
+<p>デフォルトの、サイズの名称に対する余白のピクセル数は以下の通り。最大値が最小値の<strong>150%</strong>となる。<br>
+Internet Explorerは変動に対応していないため、常に最大値となる。</p>
+
+<p>Sassを使用できる場合、ピクセル数は <code>_scss/config_advance.scss</code> の配列 <code>$spacing-min, $spacing-max</code> で変更できる。</p>
+
+<table class="echo-table echo-table-bordered" style="width: auto;">
+    <thead>
+        <tr><th rowspan="2">(size)</th><th colspan="2">(breakpoint)</th></tr>
+        <tr><th>xs <span class="echo-text-sm">(min)</span></th><th>xxl <span class="echo-text-sm">(max)</span></th></tr>
+    </thead>
+    <tbody>
+        <tr><th>xs</th><td>0.25rem (4px)</td><td>0.375rem (6px)</td></tr>
+        <tr><th>sm</th><td>0.5rem (8px)</td><td>0.75rem (12px)</td></tr>
+        <tr><th>md</th><td>1rem (16px)</td><td>1.5rem (24px)</td></tr>
+        <tr><th>lg</th><td>2rem (32px)</td><td>3rem (48px)</td></tr>
+        <tr><th>xl</th><td>3rem (48px)</td><td>4.5rem (72px)</td></tr>
+        <tr><th>xxl</th><td>4rem (64px)</td><td>6rem (96px)</td></tr>
+    </tbody>
+</table>
+
+<div class="example"><div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-xs"><div style="background-color: rgba(255,255,255,.35);">echo-padding-xs</div></div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-top-xs"><div style="background-color: rgba(255,255,255,.35);">echo-padding-top-xs</div></div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-right-xs"><div style="background-color: rgba(255,255,255,.35);">echo-padding-right-xs</div></div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-bottom-xs"><div style="background-color: rgba(255,255,255,.35);">echo-padding-bottom-xs</div></div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-left-xs"><div style="background-color: rgba(255,255,255,.35);">echo-padding-left-xs</div></div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-x-xs"><div style="background-color: rgba(255,255,255,.35);">echo-padding-x-xs</div></div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-y-xs"><div style="background-color: rgba(255,255,255,.35);">echo-padding-y-xs</div></div></div>
+
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-sm"><div style="background-color: rgba(255,255,255,.35);">echo-padding-sm</div></div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-top-sm"><div style="background-color: rgba(255,255,255,.35);">echo-padding-top-sm</div></div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-right-sm"><div style="background-color: rgba(255,255,255,.35);">echo-padding-right-sm</div></div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-bottom-sm"><div style="background-color: rgba(255,255,255,.35);">echo-padding-bottom-sm</div></div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-left-sm"><div style="background-color: rgba(255,255,255,.35);">echo-padding-left-sm</div></div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-x-sm"><div style="background-color: rgba(255,255,255,.35);">echo-padding-x-sm</div></div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-y-sm"><div style="background-color: rgba(255,255,255,.35);">echo-padding-y-sm</div></div></div>
+
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="u-m-md" style="background-color: rgba(255,255,255,.35);">echo-padding-md</div></div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-top-md"><div style="background-color: rgba(255,255,255,.35);">echo-padding-top-md</div></div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-right-md"><div style="background-color: rgba(255,255,255,.35);">echo-padding-right-md</div></div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-bottom-md"><div style="background-color: rgba(255,255,255,.35);">echo-padding-bottom-md</div></div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-left-md"><div style="background-color: rgba(255,255,255,.35);">echo-padding-left-md</div></div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-x-md"><div style="background-color: rgba(255,255,255,.35);">echo-padding-x-md</div></div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-y-md"><div style="background-color: rgba(255,255,255,.35);">echo-padding-y-md</div></div></div>
+
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-lg"><div style="background-color: rgba(255,255,255,.35);">echo-padding-lg</div></div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-top-lg"><div style="background-color: rgba(255,255,255,.35);">echo-padding-top-lg</div></div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-right-lg"><div style="background-color: rgba(255,255,255,.35);">echo-padding-right-lg</div></div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-bottom-lg"><div style="background-color: rgba(255,255,255,.35);">echo-padding-bottom-lg</div></div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-left-lg"><div style="background-color: rgba(255,255,255,.35);">echo-padding-left-lg</div></div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-x-lg"><div style="background-color: rgba(255,255,255,.35);">echo-padding-x-lg</div></div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-y-lg"><div style="background-color: rgba(255,255,255,.35);">echo-padding-y-lg</div></div></div>
+
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-xl"><div style="background-color: rgba(255,255,255,.35);">echo-padding-xl</div></div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-top-xl"><div style="background-color: rgba(255,255,255,.35);">echo-padding-top-xl</div></div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-right-xl"><div style="background-color: rgba(255,255,255,.35);">echo-padding-right-xl</div></div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-bottom-xl"><div style="background-color: rgba(255,255,255,.35);">echo-padding-bottom-xl</div></div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-left-xl"><div style="background-color: rgba(255,255,255,.35);">echo-padding-left-xl</div></div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-x-xl"><div style="background-color: rgba(255,255,255,.35);">echo-padding-x-xl</div></div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-y-xl"><div style="background-color: rgba(255,255,255,.35);">echo-padding-y-xl</div></div></div>
+
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-xxl"><div style="background-color: rgba(255,255,255,.35);">echo-padding-xxl</div></div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-top-xxl"><div style="background-color: rgba(255,255,255,.35);">echo-padding-top-xxl</div></div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-right-xxl"><div style="background-color: rgba(255,255,255,.35);">echo-padding-right-xxl</div></div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-bottom-xxl"><div style="background-color: rgba(255,255,255,.35);">echo-padding-bottom-xxl</div></div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-left-xxl"><div style="background-color: rgba(255,255,255,.35);">echo-padding-left-xxl</div></div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-x-xxl"><div style="background-color: rgba(255,255,255,.35);">echo-padding-x-xxl</div></div></div>
+<div style="margin-bottom: 1rem; padding: 1px; background-color: #f38899;"><div class="echo-padding-y-xxl"><div style="background-color: rgba(255,255,255,.35);">echo-padding-y-xxl</div></div></div>
+</div>
+
+<?php include('../doc_include/footer.inc'); ?>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>module-input | Style guide | echo-css</title>
+    <meta property="og:title" content="module-input | Style guide | echo-css">
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div id="echo-document">
+
+    <?php include('../doc_include/header.inc'); ?>
+
+    <main class="echo-p-main" role="main">
+        <div class="echo-doc-container echo-doc-container-fluid">
+
+            <div class="echo-doc-pagehead">
+                <h1 class="echo-doc-pagehead-title">module-input</h1>
+            </div><!-- /.echo-doc-pagehead -->
+
+            <nav class="echo-doc-anchor">
+                <ul class="echo-list echo-list-horizontal">
+
+                    <li class="echo-list-item"><a href="#input" class="js-scrollto">echo-input</a></li>
+
+                    <li class="echo-list-item"><a href="#input-01-size" class="js-scrollto">echo-input-(size)</a></li>
+
+                    <li class="echo-list-item"><a href="#input-02-fixed" class="js-scrollto">echo-input-fixed</a></li>
+                    
+                </ul>
+            </nav>
+
+            <article class="echo-doc-post">
+                <div class="echo-doc-post-contents styleguide-contents"><h2 id="input" class="echo-doc-post-title-01">echo-input</h2>
+
+<p>テキスト入力を即す欄を表示する。要素に直接クラスを付与する（ほとんどの場合、input要素、textarea要素となる）。<br>
+左右に <code>1em</code> の余白が確保される。</p>
+
+<p>レイアウトは <code>component &gt; .echo-form, layout &gt; .echo-forms</code> を使用することが望ましい。</p>
+
+<p><code>.is-error</code> を付与するとエラー表示となり、色が <code>$important</code> に変わる。</p>
+
+<?php include('../doc_include/fonttable_form.html'); ?>
+
+<div class="example">
+
+<div class="echo-margin-bottom-lg">
+    <input type="text" class="echo-input" size="20" value="吾輩は猫である。" />
+    <input type="text" class="echo-input is-error" size="20" value="* なに？ *" />
+</div>
+<div>
+    <textarea class="echo-input" rows="5" cols="60">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</textarea>
+    <textarea class="echo-input is-error" rows="5" cols="60">* おおっと *</textarea>
+</div>
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-margin-bottom-lg"&gt;
+    &lt;input type="text" class="echo-input" size="20" value="吾輩は猫である。" /&gt;
+    &lt;input type="text" class="echo-input is-error" size="20" value="* なに？ *" /&gt;
+&lt;/div&gt;
+&lt;div&gt;
+    &lt;textarea class="echo-input" rows="5" cols="60"&gt;吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。&lt;/textarea&gt;
+    &lt;textarea class="echo-input is-error" rows="5" cols="60"&gt;* おおっと *&lt;/textarea&gt;
+&lt;/div&gt;
+</code></pre></div>
+
+
+<h2 id="input-01-size" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-input-(size)</h2>
+
+<p>テキスト入力を即す欄の文字サイズ、最低高さを変更する。<br>
+(size)は、 <code>sm, lg</code> に対応している。</p>
+
+<p>このサンプルコードでは比較のため、同サイズのボタンを表示している。</p>
+
+<div class="example">
+<p>
+    <dfn>echo-input-sm</dfn>
+    <input type="text" class="echo-input echo-input-sm" size="20" value="吾輩は猫である。" />
+    <a href="#" class="echo-button echo-button-sm echo-button-style-a">ボタン</a>
+</p>
+
+<p>
+    <dfn>(default)</dfn>
+    <input type="text" class="echo-input" size="20" value="吾輩は猫である。" />
+    <a href="#" class="echo-button echo-button-style-a">ボタン</a>
+</p>
+
+<p>
+    <dfn>echo-input-lg</dfn>
+    <input type="text" class="echo-input echo-input-lg" size="20" value="吾輩は猫である。" />
+    <a href="#" class="echo-button echo-button-lg echo-button-style-a">ボタン</a>
+</p>
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;p&gt;
+    &lt;dfn&gt;echo-input-sm&lt;/dfn&gt;
+    &lt;input type="text" class="echo-input echo-input-sm" size="20" value="吾輩は猫である。" /&gt;
+    &lt;a href="#" class="echo-button echo-button-sm echo-button-style-a"&gt;ボタン&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+    &lt;dfn&gt;(default)&lt;/dfn&gt;
+    &lt;input type="text" class="echo-input" size="20" value="吾輩は猫である。" /&gt;
+    &lt;a href="#" class="echo-button echo-button-style-a"&gt;ボタン&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+    &lt;dfn&gt;echo-input-lg&lt;/dfn&gt;
+    &lt;input type="text" class="echo-input echo-input-lg" size="20" value="吾輩は猫である。" /&gt;
+    &lt;a href="#" class="echo-button echo-button-lg echo-button-style-a"&gt;ボタン&lt;/a&gt;
+&lt;/p&gt;</code></pre></div>
+
+
+<h2 id="input-02-fixed" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-input-fixed</h2>
+
+<p><code>.echo-input-(size)</code> と同時に付与すると、テキスト入力を即す欄が (breakpoint) に関わらず常に同じサイズとなる。<br>
+幅の変動が少ないグリッド内のコンポーネント等に使用する。</p>
+
+<p>このサンプルコードでは比較のため、同サイズのボタンを表示している。</p>
+
+<div class="example">
+<p>
+    <dfn>echo-input-sm</dfn>
+    <input type="text" class="echo-input echo-input-fixed echo-input-sm" size="20" value="吾輩は猫である。" />
+    <a href="#" class="echo-button echo-button-fixed echo-button-sm echo-button-style-a">ボタン</a>
+</p>
+
+<p>
+    <dfn>(default)</dfn>
+    <input type="text" class="echo-input echo-input-fixed" size="20" value="吾輩は猫である。" />
+    <a href="#" class="echo-button echo-button-fixed echo-button-style-a">ボタン</a>
+</p>
+
+<p>
+    <dfn>echo-input-lg</dfn>
+    <input type="text" class="echo-input echo-input-fixed echo-input-lg" size="20" value="吾輩は猫である。" />
+    <a href="#" class="echo-button echo-button-fixed echo-button-lg echo-button-style-a">ボタン</a>
+</p>
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;p&gt;
+    &lt;dfn&gt;echo-input-sm&lt;/dfn&gt;
+    &lt;input type="text" class="echo-input echo-input-fixed echo-input-sm" size="20" value="吾輩は猫である。" /&gt;
+    &lt;a href="#" class="echo-button echo-button-fixed echo-button-sm echo-button-style-a"&gt;ボタン&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+    &lt;dfn&gt;(default)&lt;/dfn&gt;
+    &lt;input type="text" class="echo-input echo-input-fixed" size="20" value="吾輩は猫である。" /&gt;
+    &lt;a href="#" class="echo-button echo-button-fixed echo-button-style-a"&gt;ボタン&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+    &lt;dfn&gt;echo-input-lg&lt;/dfn&gt;
+    &lt;input type="text" class="echo-input echo-input-fixed echo-input-lg" size="20" value="吾輩は猫である。" /&gt;
+    &lt;a href="#" class="echo-button echo-button-fixed echo-button-lg echo-button-style-a"&gt;ボタン&lt;/a&gt;
+&lt;/p&gt;</code></pre></div>
+
+
+
+
+<?php include('../doc_include/footer.inc'); ?>

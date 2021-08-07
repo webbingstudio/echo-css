@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>component-headline | Style guide | echo-css</title>
+    <meta property="og:title" content="component-headline | Style guide | echo-css">
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div id="echo-document">
+
+    <?php include('../doc_include/header.inc'); ?>
+
+    <main class="echo-p-main" role="main">
+        <div class="echo-doc-container echo-doc-container-fluid">
+
+            <div class="echo-doc-pagehead">
+                <h1 class="echo-doc-pagehead-title">component-headline</h1>
+            </div><!-- /.echo-doc-pagehead -->
+
+            <nav class="echo-doc-anchor">
+                <ul class="echo-list echo-list-horizontal">
+
+                    <li class="echo-list-item"><a href="#headline" class="js-scrollto">echo-headline</a></li>
+
+                    <li class="echo-list-item"><a href="#headline-01-size" class="js-scrollto">echo-headline-(size)</a></li>
+
+                    <li class="echo-list-item"><a href="#headline-02-fixed" class="js-scrollto">echo-headline-fixed</a></li>
+
+                </ul>
+            </nav>
+
+            <article class="echo-doc-post">
+                <div class="echo-doc-post-contents styleguide-contents"><h2 id="headline" class="echo-doc-post-title-01">echo-headline</h2>
+
+<p>新着情報のエントリー繰り返し部分などに使用する、ヘッダとタイトルを併記したコンポーネントを表示する。<br>
+(breakpoint) が <code>lg</code> 以上で、flexboxによるインライン表示となる。</p>
+
+<p>リンクを含む場合は <code>.echo-headline-title</code> に下線が引かれる。リンクが不要な場合であっても <code>.echo-headline-inner</code> が必須であることに注意する。</p>
+
+<?php include('../doc_include/fonttable_article.html'); ?>
+
+<h3 class="echo-doc-post-title-02">補足：ヘッダの幅</h3>
+
+<p><code>.echo-headline-header</code> には <code>min-width: 8.5em;</code> のスタイルが定義されている。一般的な日本語の日付表記は文字数が変化するため、ヘッダを最も文字幅が大きくなる「20**年12月28日」で整列するための措置である。<br>
+異なる表記を使用する場合は、 <code>min-width</code> を調整すること。</p>
+
+<h3 class="echo-doc-post-title-02">note: Header width</h3>
+
+<p><code>.echo-headline-header</code> defines the style <code>min-width: 8.5em;</code> . In general Japanese date notation, the number of characters changes, so it is a measure to adjust the headers to "20**年12月28日(December 28, 20**)" where the character width is the largest.
+If you use a different notation, adjust the <code>min-width</code>.</p>
+
+<div class="example">
+
+<p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-sm">article要素、タイトルがh2要素の場合</p>
+
+<article class="echo-headline">
+    <div class="echo-headline-inner">
+        <time class="echo-headline-header" datetime="2020-12-28T09:00:00+09:00">2020年12月28日</time>
+        <p class="echo-headline-category">
+            <a href="#" class="echo-label echo-label-style-a">カテゴリー</a>
+        </p>
+        <h2 class="echo-headline-title"><a href="#">タイトルとラベルが別々のリンクになっています。吾輩は猫である。名前はまだ無い。</a></h2>
+    </div><!-- /.echo-headline-inner -->
+</article><!-- /.echo-headline -->
+
+<p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-sm echo-margin-top-lg">dl要素の場合</p>
+
+<article class="echo-headline">
+    <dl class="echo-headline-inner">
+        <dt class="echo-headline-header">2020年12月28日</dt>
+        <dd class="echo-headline-title"><a href="#">吾輩は猫である。名前はまだ無い。</a></dd>
+    </dl><!-- /.echo-headline-inner -->
+</article><!-- /.echo-headline -->
+
+<p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-sm echo-margin-top-lg">全体をリンク範囲とした例</p>
+
+<article class="echo-headline echo-margin-top-20">
+    <a href="#" class="echo-headline-inner">
+        <time class="echo-headline-header" datetime="2020-12-28T09:00:00+09:00">2020年12月28日</time>
+        <p class="echo-headline-category">
+            <span class="echo-label echo-label-style-a">カテゴリー</span>
+        </p>
+        <h2 class="echo-headline-title">ヘッドライン全体がリンクになっています。吾輩は猫である。名前はまだ無い。</h2>
+    </a><!-- /.echo-headline-inner -->
+</article><!-- /.echo-headline -->
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-sm"&gt;article要素、タイトルがh2要素の場合&lt;/p&gt;
+
+&lt;article class="echo-headline"&gt;
+    &lt;div class="echo-headline-inner"&gt;
+        &lt;time class="echo-headline-header" datetime="2020-12-28T09:00:00+09:00"&gt;2020年12月28日&lt;/time&gt;
+        &lt;p class="echo-headline-category"&gt;
+            &lt;a href="#" class="echo-label echo-label-style-a"&gt;カテゴリー&lt;/a&gt;
+        &lt;/p&gt;
+        &lt;h2 class="echo-headline-title"&gt;&lt;a href="#"&gt;タイトルとラベルが別々のリンクになっています。吾輩は猫である。名前はまだ無い。&lt;/a&gt;&lt;/h2&gt;
+    &lt;/div&gt;&lt;!-- /.echo-headline-inner --&gt;
+&lt;/article&gt;&lt;!-- /.echo-headline --&gt;
+
+&lt;p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-sm echo-margin-top-lg"&gt;dl要素の場合&lt;/p&gt;
+
+&lt;article class="echo-headline"&gt;
+    &lt;dl class="echo-headline-inner"&gt;
+        &lt;dt class="echo-headline-header"&gt;2020年12月28日&lt;/dt&gt;
+        &lt;dd class="echo-headline-title"&gt;&lt;a href="#"&gt;吾輩は猫である。名前はまだ無い。&lt;/a&gt;&lt;/dd&gt;
+    &lt;/dl&gt;&lt;!-- /.echo-headline-inner --&gt;
+&lt;/article&gt;&lt;!-- /.echo-headline --&gt;
+
+&lt;p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-sm echo-margin-top-lg"&gt;全体をリンク範囲とした例&lt;/p&gt;
+
+&lt;article class="echo-headline echo-margin-top-20"&gt;
+    &lt;a href="#" class="echo-headline-inner"&gt;
+        &lt;time class="echo-headline-header" datetime="2020-12-28T09:00:00+09:00"&gt;2020年12月28日&lt;/time&gt;
+        &lt;p class="echo-headline-category"&gt;
+            &lt;span class="echo-label echo-label-style-a"&gt;カテゴリー&lt;/span&gt;
+        &lt;/p&gt;
+        &lt;h2 class="echo-headline-title"&gt;ヘッドライン全体がリンクになっています。吾輩は猫である。名前はまだ無い。&lt;/h2&gt;
+    &lt;/a&gt;&lt;!-- /.echo-headline-inner --&gt;
+&lt;/article&gt;&lt;!-- /.echo-headline --&gt;
+</code></pre></div>
+
+
+<h2 id="headline-01-size" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-headline-(size)</h2>
+
+<p>文字サイズを変更する。<br>
+(size)は、 <code>sm, lg</code> に対応している。</p>
+
+<div class="example">
+
+<p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-md">.echo-headline-sm</p>
+
+<article class="echo-headline echo-headline-sm">
+    <div class="echo-headline-inner">
+        <time class="echo-headline-header" datetime="2020-12-28T09:00:00+09:00">2020年12月28日</time>
+        <p class="echo-headline-category">
+            <a href="#" class="echo-label echo-label-style-a">カテゴリー</a>
+        </p>
+        <h2 class="echo-headline-title"><a href="#">タイトルとラベルが別々のリンクになっています。吾輩は猫である。名前はまだ無い。</a></h2>
+    </div><!-- /.echo-headline-inner -->
+</article><!-- /.echo-headline -->
+
+<p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-top-lg echo-margin-bottom-md">(default)</p>
+
+<article class="echo-headline">
+    <div class="echo-headline-inner">
+        <time class="echo-headline-header" datetime="2020-12-28T09:00:00+09:00">2020年12月28日</time>
+        <p class="echo-headline-category">
+            <a href="#" class="echo-label echo-label-style-a">カテゴリー</a>
+        </p>
+        <h2 class="echo-headline-title"><a href="#">タイトルとラベルが別々のリンクになっています。吾輩は猫である。名前はまだ無い。</a></h2>
+    </div><!-- /.echo-headline-inner -->
+</article><!-- /.echo-headline -->
+
+<p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-top-lg echo-margin-bottom-md">.echo-headline-lg</p>
+
+<article class="echo-headline echo-headline-lg">
+    <div class="echo-headline-inner">
+        <time class="echo-headline-header" datetime="2020-12-28T09:00:00+09:00">2020年12月28日</time>
+        <p class="echo-headline-category">
+            <a href="#" class="echo-label echo-label-style-a">カテゴリー</a>
+        </p>
+        <h2 class="echo-headline-title"><a href="#">タイトルとラベルが別々のリンクになっています。吾輩は猫である。名前はまだ無い。</a></h2>
+    </div><!-- /.echo-headline-inner -->
+</article><!-- /.echo-headline -->
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-md"&gt;.echo-headline-sm&lt;/p&gt;
+
+&lt;article class="echo-headline echo-headline-sm"&gt;
+    &lt;div class="echo-headline-inner"&gt;
+        &lt;time class="echo-headline-header" datetime="2020-12-28T09:00:00+09:00"&gt;2020年12月28日&lt;/time&gt;
+        &lt;p class="echo-headline-category"&gt;
+            &lt;a href="#" class="echo-label echo-label-style-a"&gt;カテゴリー&lt;/a&gt;
+        &lt;/p&gt;
+        &lt;h2 class="echo-headline-title"&gt;&lt;a href="#"&gt;タイトルとラベルが別々のリンクになっています。吾輩は猫である。名前はまだ無い。&lt;/a&gt;&lt;/h2&gt;
+    &lt;/div&gt;&lt;!-- /.echo-headline-inner --&gt;
+&lt;/article&gt;&lt;!-- /.echo-headline --&gt;
+
+&lt;p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-top-lg echo-margin-bottom-md"&gt;(default)&lt;/p&gt;
+
+&lt;article class="echo-headline"&gt;
+    &lt;div class="echo-headline-inner"&gt;
+        &lt;time class="echo-headline-header" datetime="2020-12-28T09:00:00+09:00"&gt;2020年12月28日&lt;/time&gt;
+        &lt;p class="echo-headline-category"&gt;
+            &lt;a href="#" class="echo-label echo-label-style-a"&gt;カテゴリー&lt;/a&gt;
+        &lt;/p&gt;
+        &lt;h2 class="echo-headline-title"&gt;&lt;a href="#"&gt;タイトルとラベルが別々のリンクになっています。吾輩は猫である。名前はまだ無い。&lt;/a&gt;&lt;/h2&gt;
+    &lt;/div&gt;&lt;!-- /.echo-headline-inner --&gt;
+&lt;/article&gt;&lt;!-- /.echo-headline --&gt;
+
+&lt;p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-top-lg echo-margin-bottom-md"&gt;.echo-headline-lg&lt;/p&gt;
+
+&lt;article class="echo-headline echo-headline-lg"&gt;
+    &lt;div class="echo-headline-inner"&gt;
+        &lt;time class="echo-headline-header" datetime="2020-12-28T09:00:00+09:00"&gt;2020年12月28日&lt;/time&gt;
+        &lt;p class="echo-headline-category"&gt;
+            &lt;a href="#" class="echo-label echo-label-style-a"&gt;カテゴリー&lt;/a&gt;
+        &lt;/p&gt;
+        &lt;h2 class="echo-headline-title"&gt;&lt;a href="#"&gt;タイトルとラベルが別々のリンクになっています。吾輩は猫である。名前はまだ無い。&lt;/a&gt;&lt;/h2&gt;
+    &lt;/div&gt;&lt;!-- /.echo-headline-inner --&gt;
+&lt;/article&gt;&lt;!-- /.echo-headline --&gt;</code></pre></div>
+
+
+<h2 id="headline-02-fixed" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-headline-fixed</h2>
+
+<p>文字が (breakpoint) に関わらず常に同じサイズとなり、かつ、 (breakpoint) が <code>lg</code> 以上であってもインラインに整列しなくなる。<br>
+幅の変動が少ないグリッド内のコンポーネント等に使用する。</p>
+
+<div class="example">
+
+<p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-md">.echo-headline-sm</p>
+
+<article class="echo-headline echo-headline-sm echo-headline-fixed">
+    <div class="echo-headline-inner">
+        <time class="echo-headline-header" datetime="2020-12-28T09:00:00+09:00">2020年12月28日</time>
+        <p class="echo-headline-category">
+            <a href="#" class="echo-label echo-label-style-a">カテゴリー</a>
+        </p>
+        <h2 class="echo-headline-title"><a href="#">タイトルとラベルが別々のリンクになっています。吾輩は猫である。名前はまだ無い。</a></h2>
+    </div><!-- /.echo-headline-inner -->
+</article><!-- /.echo-headline -->
+
+<p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-top-lg echo-margin-bottom-md">(default)</p>
+
+<article class="echo-headline echo-headline-fixed">
+    <div class="echo-headline-inner">
+        <time class="echo-headline-header" datetime="2020-12-28T09:00:00+09:00">2020年12月28日</time>
+        <p class="echo-headline-category">
+            <a href="#" class="echo-label echo-label-style-a">カテゴリー</a>
+        </p>
+        <h2 class="echo-headline-title"><a href="#">タイトルとラベルが別々のリンクになっています。吾輩は猫である。名前はまだ無い。</a></h2>
+    </div><!-- /.echo-headline-inner -->
+</article><!-- /.echo-headline -->
+
+<p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-top-lg echo-margin-bottom-md">.echo-headline-lg</p>
+
+<article class="echo-headline echo-headline-lg echo-headline-fixed">
+    <div class="echo-headline-inner">
+        <time class="echo-headline-header" datetime="2020-12-28T09:00:00+09:00">2020年12月28日</time>
+        <p class="echo-headline-category">
+            <a href="#" class="echo-label echo-label-style-a">カテゴリー</a>
+        </p>
+        <h2 class="echo-headline-title"><a href="#">タイトルとラベルが別々のリンクになっています。吾輩は猫である。名前はまだ無い。</a></h2>
+    </div><!-- /.echo-headline-inner -->
+</article><!-- /.echo-headline -->
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-md"&gt;.echo-headline-sm&lt;/p&gt;
+
+&lt;article class="echo-headline echo-headline-sm echo-headline-fixed"&gt;
+    &lt;div class="echo-headline-inner"&gt;
+        &lt;time class="echo-headline-header" datetime="2020-12-28T09:00:00+09:00"&gt;2020年12月28日&lt;/time&gt;
+        &lt;p class="echo-headline-category"&gt;
+            &lt;a href="#" class="echo-label echo-label-style-a"&gt;カテゴリー&lt;/a&gt;
+        &lt;/p&gt;
+        &lt;h2 class="echo-headline-title"&gt;&lt;a href="#"&gt;タイトルとラベルが別々のリンクになっています。吾輩は猫である。名前はまだ無い。&lt;/a&gt;&lt;/h2&gt;
+    &lt;/div&gt;&lt;!-- /.echo-headline-inner --&gt;
+&lt;/article&gt;&lt;!-- /.echo-headline --&gt;
+
+&lt;p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-top-lg echo-margin-bottom-md"&gt;(default)&lt;/p&gt;
+
+&lt;article class="echo-headline echo-headline-fixed"&gt;
+    &lt;div class="echo-headline-inner"&gt;
+        &lt;time class="echo-headline-header" datetime="2020-12-28T09:00:00+09:00"&gt;2020年12月28日&lt;/time&gt;
+        &lt;p class="echo-headline-category"&gt;
+            &lt;a href="#" class="echo-label echo-label-style-a"&gt;カテゴリー&lt;/a&gt;
+        &lt;/p&gt;
+        &lt;h2 class="echo-headline-title"&gt;&lt;a href="#"&gt;タイトルとラベルが別々のリンクになっています。吾輩は猫である。名前はまだ無い。&lt;/a&gt;&lt;/h2&gt;
+    &lt;/div&gt;&lt;!-- /.echo-headline-inner --&gt;
+&lt;/article&gt;&lt;!-- /.echo-headline --&gt;
+
+&lt;p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-top-lg echo-margin-bottom-md"&gt;.echo-headline-lg&lt;/p&gt;
+
+&lt;article class="echo-headline echo-headline-lg echo-headline-fixed"&gt;
+    &lt;div class="echo-headline-inner"&gt;
+        &lt;time class="echo-headline-header" datetime="2020-12-28T09:00:00+09:00"&gt;2020年12月28日&lt;/time&gt;
+        &lt;p class="echo-headline-category"&gt;
+            &lt;a href="#" class="echo-label echo-label-style-a"&gt;カテゴリー&lt;/a&gt;
+        &lt;/p&gt;
+        &lt;h2 class="echo-headline-title"&gt;&lt;a href="#"&gt;タイトルとラベルが別々のリンクになっています。吾輩は猫である。名前はまだ無い。&lt;/a&gt;&lt;/h2&gt;
+    &lt;/div&gt;&lt;!-- /.echo-headline-inner --&gt;
+&lt;/article&gt;&lt;!-- /.echo-headline --&gt;</code></pre></div>
+
+<?php include('../doc_include/footer.inc'); ?>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>component-box | Style guide | echo-css</title>
+    <meta property="og:title" content="component-box | Style guide | echo-css">
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div id="echo-document">
+
+    <?php include('../doc_include/header.inc'); ?>
+
+    <main class="echo-p-main" role="main">
+        <div class="echo-doc-container echo-doc-container-fluid">
+
+            <div class="echo-doc-pagehead">
+                <h1 class="echo-doc-pagehead-title">component-box</h1>
+            </div><!-- /.echo-doc-pagehead -->
+
+            <nav class="echo-doc-anchor">
+                <ul class="echo-list echo-list-horizontal">
+
+                    <li class="echo-list-item"><a href="#box" class="js-scrollto">echo-box</a></li>
+
+                    <li class="echo-list-item"><a href="#box-01-fixed" class="js-scrollto">echo-box-fixed</a></li>
+
+                    <li class="echo-list-item"><a href="#box-02-style" class="js-scrollto">echo-box-style-(style)</a></li>
+
+                    <li class="echo-list-item"><a href="#box-03-color" class="js-scrollto">echo-box-(color)</a></li>
+                    
+                </ul>
+            </nav>
+
+            <article class="echo-doc-post">
+                <div class="echo-doc-post-contents styleguide-contents"><h2 id="box" class="echo-doc-post-title-01">echo-box</h2>
+
+<p>複数の要素をグループ化して、箱状に強調する。</p>
+
+<p>(breakpoint) が <code>md</code> 以上で全体の余白が大きくなる。また、 <code>xxl</code> 以上で左右余白がさらに大きくなる。</p>
+
+<p>サブクラス <code>.echo-box-style-(style)</code> を付与していない場合は背景色が <code>$default-fade</code> となる。</p>
+
+<?php include('../doc_include/fonttable_body.html'); ?>
+
+<div class="example">
+
+<div class="echo-box">
+    <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+    <p>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+</div><!-- /.echo-box -->
+
+<hr class="echo-margin-y-lg">
+
+<div class="echo-box">
+    <div class="echo-text-sm">
+        <p>これは文字サイズを変更した例です。 .echo-text-sm クラスを付与すると、文字サイズが 87.5%(0.875em) となります。<br>
+        (breakpoint) がmd以下で 12.25px (0.875rem * 0.875) 、lg以上で14px (1rem * 0.875) となります。 .echo-box に直接付与すると文字サイズが固定値になってしまうことと、一般的なブラウザの文字サイズの下限は 10px であることに注意してください。</p>
+    </div>
+</div><!-- /.echo-box -->
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-box"&gt;
+    &lt;p&gt;吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;br&gt;
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。&lt;/p&gt;
+    &lt;p&gt;この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。&lt;/p&gt;
+&lt;/div&gt;&lt;!-- /.echo-box --&gt;
+
+&lt;hr class="echo-margin-y-lg"&gt;
+
+&lt;div class="echo-box"&gt;
+    &lt;div class="echo-text-sm"&gt;
+        &lt;p&gt;これは文字サイズを変更した例です。 .echo-text-sm クラスを付与すると、文字サイズが 87.5%(0.875em) となります。&lt;br&gt;
+        (breakpoint) がmd以下で 12.25px (0.875rem * 0.875) 、lg以上で14px (1rem * 0.875) となります。 .echo-box に直接付与すると文字サイズが固定値になってしまうことと、一般的なブラウザの文字サイズの下限は 10px であることに注意してください。&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;&lt;!-- /.echo-box --&gt;
+</code></pre></div>
+
+
+<h2 id="box-01-fixed" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-box-fixed</h2>
+
+<p>文字と余白が (breakpoint) に関わらず常に同じサイズとなる。<br>
+幅の変動が少ないグリッド内のコンポーネント等に使用する。</p>
+
+<div class="example">
+
+<div class="echo-box echo-box-fixed">
+    <p>.echo-box-fixed を付与すると、画面サイズに関わらず、基準となる文字サイズと余白を維持します。1rem = 16pxであれば14pxとなります。</p>
+    <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+</div><!-- /.echo-box -->
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-box echo-box-fixed"&gt;
+    &lt;p&gt;.echo-box-fixed を付与すると、画面サイズに関わらず、基準となる文字サイズと余白を維持します。1rem = 16pxであれば14pxとなります。&lt;/p&gt;
+    &lt;p&gt;吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;br&gt;
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。&lt;/p&gt;
+&lt;/div&gt;&lt;!-- /.echo-box --&gt;
+</code></pre></div>
+
+
+<h2 id="box-02-style" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-box-style-(style)</h2>
+
+<p>箱の外観を変更する。<br>
+<code>.echo-box-(color)</code> が付与されていない場合は背景の色が <code>$default-fade</code> 、罫線の色が <code>$default</code> となる。</p>
+
+<div class="example">
+
+<div class="echo-box echo-box-style-a">
+    <p>echo-box-style-a:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+    <p>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+</div><!-- /.echo-box -->
+
+<hr class="echo-margin-y-lg">
+
+<div class="echo-box echo-box-style-b">
+    <p>echo-box-style-b:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+    <p>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+</div><!-- /.echo-box -->
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-box echo-box-style-a"&gt;
+    &lt;p&gt;echo-box-style-a:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;br&gt;
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。&lt;/p&gt;
+    &lt;p&gt;この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。&lt;/p&gt;
+&lt;/div&gt;&lt;!-- /.echo-box --&gt;
+
+&lt;hr class="echo-margin-y-lg"&gt;
+
+&lt;div class="echo-box echo-box-style-b"&gt;
+    &lt;p&gt;echo-box-style-b:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;br&gt;
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。&lt;/p&gt;
+    &lt;p&gt;この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。&lt;/p&gt;
+&lt;/div&gt;&lt;!-- /.echo-box --&gt;
+</code></pre></div>
+
+
+<h2 id="box-03-color" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-box-(color)</h2>
+
+<p>箱の色を変更する。(color)は<a href="../docs/design-tokens-color.html">標準のカラーテーブル</a>を参照。</p>
+
+<div class="example">
+
+<div class="echo-box echo-box-style-a echo-box-info">
+    <p>echo-box-info:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+    <p>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+</div><!-- /.echo-box -->
+
+<hr class="echo-margin-y-lg">
+
+<div class="echo-box echo-box-style-b echo-box-info">
+    <p>echo-box-info:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+    <p>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+</div><!-- /.echo-box -->
+
+<hr class="echo-margin-y-lg">
+
+<div class="echo-box echo-box-style-a echo-box-important">
+    <p>echo-box-important:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+    <p>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+</div><!-- /.echo-box -->
+
+<hr class="echo-margin-y-lg">
+
+<div class="echo-box echo-box-style-b echo-box-important">
+    <p>echo-box-important:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+    <p>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+</div><!-- /.echo-box -->
+
+<hr class="echo-margin-y-lg">
+
+<div class="echo-bg-default echo-padding-sm echo-margin-bottom-lg">
+
+<div class="echo-box echo-box-style-a echo-box-inverse">
+    <p>echo-box-inverse:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+    <p>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+</div><!-- /.echo-box -->
+
+<hr class="echo-margin-y-lg">
+
+<div class="echo-box echo-box-style-b echo-box-inverse echo-margin-bottom-0">
+    <p>echo-box-inverse:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。<br>
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+    <p>この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+</div><!-- /.echo-box -->
+
+</div>
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-box echo-box-style-a echo-box-info"&gt;
+    &lt;p&gt;echo-box-info:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;br&gt;
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。&lt;/p&gt;
+    &lt;p&gt;この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。&lt;/p&gt;
+&lt;/div&gt;&lt;!-- /.echo-box --&gt;
+
+&lt;hr class="echo-margin-y-lg"&gt;
+
+&lt;div class="echo-box echo-box-style-b echo-box-info"&gt;
+    &lt;p&gt;echo-box-info:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;br&gt;
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。&lt;/p&gt;
+    &lt;p&gt;この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。&lt;/p&gt;
+&lt;/div&gt;&lt;!-- /.echo-box --&gt;
+
+&lt;hr class="echo-margin-y-lg"&gt;
+
+&lt;div class="echo-box echo-box-style-a echo-box-important"&gt;
+    &lt;p&gt;echo-box-important:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;br&gt;
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。&lt;/p&gt;
+    &lt;p&gt;この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。&lt;/p&gt;
+&lt;/div&gt;&lt;!-- /.echo-box --&gt;
+
+&lt;hr class="echo-margin-y-lg"&gt;
+
+&lt;div class="echo-box echo-box-style-b echo-box-important"&gt;
+    &lt;p&gt;echo-box-important:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;br&gt;
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。&lt;/p&gt;
+    &lt;p&gt;この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。&lt;/p&gt;
+&lt;/div&gt;&lt;!-- /.echo-box --&gt;
+
+&lt;hr class="echo-margin-y-lg"&gt;
+
+&lt;div class="echo-bg-default echo-padding-sm echo-margin-bottom-lg"&gt;
+
+&lt;div class="echo-box echo-box-style-a echo-box-inverse"&gt;
+    &lt;p&gt;echo-box-inverse:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;br&gt;
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。&lt;/p&gt;
+    &lt;p&gt;この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。&lt;/p&gt;
+&lt;/div&gt;&lt;!-- /.echo-box --&gt;
+
+&lt;hr class="echo-margin-y-lg"&gt;
+
+&lt;div class="echo-box echo-box-style-b echo-box-inverse echo-margin-bottom-0"&gt;
+    &lt;p&gt;echo-box-inverse:吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;br&gt;
+    吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。&lt;/p&gt;
+    &lt;p&gt;この書生というのは時々我々を捕えて煮て食うという話である。
+    しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。&lt;/p&gt;
+&lt;/div&gt;&lt;!-- /.echo-box --&gt;
+
+&lt;/div&gt;
+</code></pre></div>
+
+<?php include('../doc_include/footer.inc'); ?>

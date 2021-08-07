@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>utility-hidden | Style guide | echo-css</title>
+    <meta property="og:title" content="utility-hidden | Style guide | echo-css">
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div id="echo-document">
+    <?php include('../doc_include/header.inc'); ?>
+
+    <main class="echo-p-main" role="main">
+        <div class="echo-doc-container echo-doc-container-fluid">
+
+            <div class="echo-doc-pagehead">
+                <h1 class="echo-doc-pagehead-title">utility-hidden</h1>
+            </div><!-- /.echo-doc-pagehead -->
+
+            <nav class="echo-doc-anchor">
+                <ul class="echo-list echo-list-horizontal">
+                        
+                        <li class="echo-list-item"><a href="#hidden-01-breakpoint-up" class="js-scrollto">echo-hidden-(breakpoint)-up</a></li>
+                        
+                        <li class="echo-list-item"><a href="#hidden-02-breakpoint-down" class="js-scrollto">echo-hidden-(breakpoint)-down</a></li>
+                        
+                    </ul>
+                </nav>
+
+                <article class="echo-doc-post">
+                    <div class="echo-doc-post-contents styleguide-contents">
+
+<h2 id="hidden-01-breakpoint-up" class="echo-doc-post-title-01">echo-hidden-(breakpoint)-up</h2>
+
+<p>(breakpoint)で指定した画面幅以上で要素を非表示にする。特性上、echo-hidden-xs-upはない。</p>
+<div class="example"><div class="echo-hidden-sm-up" style="margin-bottom: 1rem;"><span class="echo-button echo-button-style-b">echo-hidden-sm-up</span></div>
+<div class="echo-hidden-md-up" style="margin-bottom: 1rem;"><span class="echo-button echo-button-style-a">echo-hidden-md-up</span></div>
+<div class="echo-hidden-lg-up" style="margin-bottom: 1rem;"><span class="echo-button echo-button-style-b echo-button-info">echo-hidden-lg-up</span></div>
+<div class="echo-hidden-xl-up" style="margin-bottom: 1rem;"><span class="echo-button echo-button-style-a echo-button-info">echo-hidden-xl-up</span></div>
+<div class="echo-hidden-xxl-up" style="margin-bottom: 1rem;"><span class="echo-button echo-button-style-b echo-button-important">echo-hidden-xxl-up</span></div>
+</div>
+
+
+<h2 id="hidden-02-breakpoint-down" class="echo-doc-post-title-01">echo-hidden-(breakpoint)-down</h2>
+
+<p>(breakpoint)で指定した画面幅未満で要素を非表示にする。特性上、echo-hidden-xxl-downはない。</p>
+<div class="example"><div class="echo-hidden-xs-down" style="margin-bottom: 1rem;"><span class="echo-button echo-button-style-b">echo-hidden-xs-down</span></div>
+<div class="echo-hidden-sm-down" style="margin-bottom: 1rem;"><span class="echo-button echo-button-style-a">echo-hidden-sm-down</span></div>
+<div class="echo-hidden-md-down" style="margin-bottom: 1rem;"><span class="echo-button echo-button-style-b echo-button-info">echo-hidden-md-down</span></div>
+<div class="echo-hidden-lg-down" style="margin-bottom: 1rem;"><span class="echo-button echo-button-style-a echo-button-info">echo-hidden-lg-down</span></div>
+<div class="echo-hidden-xl-down" style="margin-bottom: 1rem;"><span class="echo-button echo-button-style-b echo-button-important">echo-hidden-xl-down</span></div>
+</div>
+
+<?php include('../doc_include/footer.inc'); ?>

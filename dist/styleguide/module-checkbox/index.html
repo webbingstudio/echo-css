@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>module-checkbox | Style guide | echo-css</title>
+    <meta property="og:title" content="module-checkbox | Style guide | echo-css">
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div id="echo-document">
+
+    <?php include('../doc_include/header.inc'); ?>
+
+    <main class="echo-p-main" role="main">
+        <div class="echo-doc-container echo-doc-container-fluid">
+
+            <div class="echo-doc-pagehead">
+                <h1 class="echo-doc-pagehead-title">module-checkbox</h1>
+            </div><!-- /.echo-doc-pagehead -->
+
+            <article class="echo-doc-post">
+                <div class="echo-doc-post-contents styleguide-contents"><h2 id="checkbox" class="echo-doc-post-title-01">echo-checkbox</h2>
+
+<p>チェックボックスとラベルをインライン表示する。input要素ではなく、包括している要素にクラスを付与する（ほとんどの場合、label要素となる）。<br>
+本来のUIは<strong>キーボード操作を阻害しない</strong>前提で隠され、代替として <code>.echo-checkbox-icon</code> をCSSで装飾したアイコンを表示する。</p>
+<p>アイコンの色は <code>$default</code> （文字色と同じ）が定義されている。Sassを使用している場合は <code>_scss/_config_basic.scss</code> 内の変数 <code>$ui-icon-color</code> で一括変更ができる。</p>
+<p>余白・レイアウト等は <code>utility &gt; .echo-padding</code> や <code>component &gt; .echo-form</code> で指定する。<br>
+<code>.is-error</code> を同時に使用するとエラーがあったときの表示となる。 </p>
+
+<dl>
+    <dt>参考記事</dt>
+    <dd class="echo-margin-left-0">
+        <a href="https://qiita.com/Garyuten/items/b87b7d91279c0bded576" target="_blank">アクセシビリティで気をつけるchecbox,radioのCSS&#64;Garyuten</a><br>
+        <a href="https://webbingstudio.com/weblog/entry-881.html" target="_blank">アクセシビリティを考慮した、チェックボックスとラジオボタンのCSSのサンプル |  ウェビンブログ</a>
+    </dd>
+</dl>
+
+<div class="example">
+    <span class="echo-margin-right-md">
+        <label class="echo-checkbox" for="checkbox1"><input type="checkbox" name="checkbox1" id="checkbox1" value="1"><span class="echo-checkbox-icon"></span><span class="echo-checkbox-label">チェックボックス１番目</span></label>
+    </span>
+
+    <span class="echo-margin-right-md">
+        <label class="echo-checkbox echo-margin-right-md" for="checkbox2"><input type="checkbox" name="checkbox2" id="checkbox2" value="2" checked="checked"><span class="echo-checkbox-icon"></span><span class="echo-checkbox-label">チェックボックス２番目</span></label>
+    </span>
+
+    <label class="echo-checkbox is-error" for="checkbox3"><input type="checkbox" name="checkbox3" id="checkbox3" value="3"><span class="echo-checkbox-icon"></span><span class="echo-checkbox-label">チェックボックス３番目</span></label>
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;span class="echo-margin-right-md"&gt;
+    &lt;label class="echo-checkbox" for="checkbox1"&gt;&lt;input type="checkbox" name="checkbox1" id="checkbox1" value="1"&gt;&lt;span class="echo-checkbox-icon"&gt;&lt;/span&gt;&lt;span class="echo-checkbox-label"&gt;チェックボックス１番目&lt;/span&gt;&lt;/label&gt;
+&lt;/span&gt;
+
+&lt;span class="echo-margin-right-md"&gt;
+    &lt;label class="echo-checkbox echo-margin-right-md" for="checkbox2"&gt;&lt;input type="checkbox" name="checkbox2" id="checkbox2" value="2" checked="checked"&gt;&lt;span class="echo-checkbox-icon"&gt;&lt;/span&gt;&lt;span class="echo-checkbox-label"&gt;チェックボックス２番目&lt;/span&gt;&lt;/label&gt;
+&lt;/span&gt;
+
+&lt;label class="echo-checkbox is-error" for="checkbox3"&gt;&lt;input type="checkbox" name="checkbox3" id="checkbox3" value="3"&gt;&lt;span class="echo-checkbox-icon"&gt;&lt;/span&gt;&lt;span class="echo-checkbox-label"&gt;チェックボックス３番目&lt;/span&gt;&lt;/label&gt;
+</code></pre></div>
+
+<?php include('../doc_include/footer.inc'); ?>

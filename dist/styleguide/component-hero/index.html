@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>component-hero | Style guide | echo-css</title>
+    <meta property="og:title" content="component-hero | Style guide | echo-css">
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div id="echo-document">
+
+    <?php include('../doc_include/header.inc'); ?>
+
+    <main class="echo-p-main" role="main">
+        <div class="echo-doc-container echo-doc-container-fluid">
+
+            <div class="echo-doc-pagehead">
+                <h1 class="echo-doc-pagehead-title">component-hero</h1>
+            </div><!-- /.echo-doc-pagehead -->
+
+            <nav class="echo-doc-anchor">
+                <ul class="echo-list echo-list-horizontal">
+
+                    <li class="echo-list-item"><a href="#hero" class="js-scrollto">echo-hero</a></li>
+
+                    <li class="echo-list-item"><a href="#hero-01-fit" class="js-scrollto">echo-hero-fit</a></li>
+
+                    <li class="echo-list-item"><a href="#hero-02-direction" class="js-scrollto">echo-hero-(direction)</a></li>
+                    
+                    <li class="echo-list-item"><a href="#hero-03-inverse" class="js-scrollto">echo-hero-inverse</a></li>
+                    
+                </ul>
+            </nav>
+                
+            <article class="echo-doc-post">
+                <div class="echo-doc-post-contents styleguide-contents"><h2 id="hero" class="echo-doc-post-title-01">echo-hero</h2>
+
+<p>メインビジュアルなどに使用される全面背景を持つコンポーネントを表示する。</p>
+
+<p><code>.echo-hero-contents-inner</code> が必須であることと、内容が多すぎると領域をはみ出すことがある点に注意する。</p>
+
+<p><code>.echo-hero-lead</code> は短文向けの要素となる。 <code>.echo-hero-body</code> とは文字サイズが異なるだけではなく、文字が太くなり、行高さがやや少なくなる。</p>
+
+<p><code>.echo-hero-image</code> の画像は<strong>トリミングされず、縦横比を保って伸縮する。</strong>レスポンシブイメージを併用することが望ましい。<br>
+</p>
+
+<p><code>.echo-flip-title.echo-title</code> に付与されている <code>.echo-font-first, .echo-font-third</code> は<strong>必須ではない</strong>。詳細は <a href="./utility-font.html">utility > font</a> を参照。</p>
+
+
+<?php include('../doc_include/fonttable_display.html'); ?>
+
+
+<div style="margin-left: -0.625rem; margin-right: -0.625rem;">
+
+<div class="echo-hero">
+    <div class="echo-hero-image">
+        <picture>
+            <source
+                media="(max-width:768px)"
+                srcset="../images/_dummy/image_10_m.jpg 768w"
+                sizes="100vw">
+            <source
+                srcset="../images/_dummy/image_10.jpg 1280w"
+                sizes="(max-width:1280px) 100vw">
+            <img src="../images/_dummy/image_10.jpg" alt="">
+        </picture>
+    </div><!-- /.echo-hero-image -->
+    <div class="echo-hero-contents">
+        <div class="echo-hero-contents-inner">
+            <div class="echo-hero-header">
+                <h2 class="echo-hero-title echo-title echo-title-level-1 echo-font-first">吾輩は猫である</h2>
+            </div><!-- /.echo-hero-header -->
+            <div class="echo-hero-lead">
+                <p>名前はまだ無い。</p>
+            </div><!-- /.echo-hero-lead -->
+            <div class="echo-hero-body">
+                <p>どこで生れたかとんと見当がつかぬ。<br>
+                何でも薄暗いじめじめした所でニャーニャー</p>
+            </div><!-- /.echo-hero-body -->
+            <div class="echo-hero-link">
+                <div class="echo-buttons">
+                    <div class="echo-buttons-item">
+                        <a href="#" class="echo-button echo-button-style-b echo-button-icon-arrow">詳しくはこちら</a>
+                    </div><!-- /.echo-buttons-item -->
+                </div><!-- /.echo-buttons -->
+            </div><!-- /.echo-hero-link -->
+        </div><!-- /.echo-hero-contents-inner -->
+    </div><!-- /.echo-hero-contents -->
+</div><!-- /.echo-hero -->
+
+</div>
+
+<p class="echo-title echo-title-style-a echo-title-level-3 echo-margin-top-lg echo-margin-bottom-md">.echo-hero-leadのみを本文に使用し、かつ複数のボタンを表示している例</p>
+
+<div style="margin-left: -0.625rem; margin-right: -0.625rem;">
+
+<div class="echo-hero">
+    <div class="echo-hero-image">
+        <picture>
+            <source
+                media="(max-width:768px)"
+                srcset="../images/_dummy/image_10_m.jpg 768w"
+                sizes="100vw">
+            <source
+                srcset="../images/_dummy/image_10.jpg 1280w"
+                sizes="(max-width:1280px) 100vw">
+            <img src="../images/_dummy/image_10.jpg" alt="">
+        </picture>
+    </div><!-- /.echo-hero-image -->
+    <div class="echo-hero-contents">
+        <div class="echo-hero-contents-inner">
+            <div class="echo-hero-header">
+                <h2 class="echo-hero-title echo-title echo-title-level-1 echo-font-first">吾輩は猫である</h2>
+            </div><!-- /.echo-hero-header -->
+            <div class="echo-hero-lead">
+                <p>名前はまだ無い<br>
+                どこで生れたかとんと見当がつかぬ。</p>
+            </div><!-- /.echo-hero-lead -->
+            <div class="echo-hero-link">
+                <div class="echo-buttons">
+                    <div class="echo-buttons-item">
+                        <a href="#" class="echo-button echo-button-style-b">ボタン1</a>
+                    </div><!-- /.echo-buttons-item -->
+                    <div class="echo-buttons-item">
+                        <a href="#" class="echo-button echo-button-style-a">ボタン2</a>
+                    </div><!-- /.echo-buttons-item -->
+                </div><!-- /.echo-buttons -->
+            </div><!-- /.echo-hero-link -->
+        </div><!-- /.echo-hero-contents-inner -->
+    </div><!-- /.echo-hero-contents -->
+</div><!-- /.echo-hero -->
+
+</div>
+
+
+<p class="echo-title echo-title-style-a echo-title-level-3 echo-margin-top-lg echo-margin-bottom-md">.echo-hero-titleのフォントを変更した例</p>
+
+<p class="echo-margin-bottom-md">ユーティリティクラス .echo-font-third は、字体を大見出し用に変更する。デフォルトでは游明朝体 (Yu Mincho) となる。</p>
+
+<div style="margin-left: -0.625rem; margin-right: -0.625rem;">
+
+<div class="echo-hero">
+    <div class="echo-hero-image">
+        <picture>
+            <source
+                media="(max-width:768px)"
+                srcset="../images/_dummy/image_10_m.jpg 768w"
+                sizes="100vw">
+            <source
+                srcset="../images/_dummy/image_10.jpg 1280w"
+                sizes="(max-width:1280px) 100vw">
+            <img src="../images/_dummy/image_10.jpg" alt="">
+        </picture>
+    </div><!-- /.echo-hero-image -->
+    <div class="echo-hero-contents">
+        <div class="echo-hero-contents-inner">
+            <div class="echo-hero-header">
+                <h2 class="echo-hero-title echo-title echo-title-level-1 echo-font-third">吾輩は猫である</h2>
+            </div><!-- /.echo-hero-header -->
+            <div class="echo-hero-lead">
+                <p>名前はまだ無い。</p>
+            </div><!-- /.echo-hero-lead -->
+            <div class="echo-hero-body">
+                <p>どこで生れたかとんと見当がつかぬ。<br>
+                何でも薄暗いじめじめした所でニャーニャー</p>
+            </div><!-- /.echo-hero-body -->
+            <div class="echo-hero-link">
+                <div class="echo-buttons">
+                    <div class="echo-buttons-item">
+                        <a href="#" class="echo-button echo-button-style-b echo-button-icon-arrow">詳しくはこちら</a>
+                    </div><!-- /.echo-buttons-item -->
+                </div><!-- /.echo-buttons -->
+            </div><!-- /.echo-hero-link -->
+        </div><!-- /.echo-hero-contents-inner -->
+    </div><!-- /.echo-hero-contents -->
+</div><!-- /.echo-hero -->
+
+</div>
+
+<p class="echo-title echo-title-style-a echo-title-level-3 echo-margin-top-lg echo-margin-bottom-md">文字サイズを変更している例</p>
+
+<p>.echo-title-level-3 を使用して、見出しを小さくしている。<br>
+また、 .echo-hero-body > p に文字サイズを大きくするクラス .echo-text-xstomd を付与している。モバイル端末での文字サイズが1rem(16px)となる。</p>
+
+<div style="margin-left: -0.625rem; margin-right: -0.625rem;">
+
+<div class="echo-hero">
+    <div class="echo-hero-image">
+        <picture>
+            <source
+                media="(max-width:768px)"
+                srcset="../images/_dummy/image_10_m.jpg 768w"
+                sizes="100vw">
+            <source
+                srcset="../images/_dummy/image_10.jpg 1280w"
+                sizes="(max-width:1280px) 100vw">
+            <img src="../images/_dummy/image_10.jpg" alt="">
+        </picture>
+    </div><!-- /.echo-hero-image -->
+    <div class="echo-hero-contents">
+        <div class="echo-hero-contents-inner">
+            <div class="echo-hero-header">
+                <h2 class="echo-hero-title echo-title echo-title-style-c echo-title-level-3 echo-font-first">吾輩は猫である名前は</h2>
+            </div><!-- /.echo-hero-header -->
+            <div class="echo-hero-body">
+                <p class="echo-text-smtomd">まだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</p>
+            </div><!-- /.echo-hero-body -->
+        </div><!-- /.echo-hero-contents-inner -->
+    </div><!-- /.echo-hero-contents -->
+</div><!-- /.echo-hero -->
+
+</div>
+
+
+<div class="codeblock"><pre><code class="language-markup">&lt;div style="margin-left: -0.625rem; margin-right: -0.625rem;"&gt;
+
+&lt;div class="echo-hero"&gt;
+    &lt;div class="echo-hero-image"&gt;
+        &lt;picture&gt;
+            &lt;source
+                media="(max-width:768px)"
+                srcset="../images/_dummy/image_10_m.jpg 768w"
+                sizes="100vw"&gt;
+            &lt;source
+                srcset="../images/_dummy/image_10.jpg 1280w"
+                sizes="(max-width:1280px) 100vw"&gt;
+            &lt;img src="../images/_dummy/image_10.jpg" alt=""&gt;
+        &lt;/picture&gt;
+    &lt;/div&gt;&lt;!-- /.echo-hero-image --&gt;
+    &lt;div class="echo-hero-contents"&gt;
+        &lt;div class="echo-hero-contents-inner"&gt;
+            &lt;div class="echo-hero-header"&gt;
+                &lt;h2 class="echo-hero-title echo-title echo-title-level-1 echo-font-first"&gt;吾輩は猫である&lt;/h2&gt;
+            &lt;/div&gt;&lt;!-- /.echo-hero-header --&gt;
+            &lt;div class="echo-hero-lead"&gt;
+                &lt;p&gt;名前はまだ無い。&lt;/p&gt;
+            &lt;/div&gt;&lt;!-- /.echo-hero-lead --&gt;
+            &lt;div class="echo-hero-body"&gt;
+                &lt;p&gt;どこで生れたかとんと見当がつかぬ。&lt;br&gt;
+                何でも薄暗いじめじめした所でニャーニャー&lt;/p&gt;
+            &lt;/div&gt;&lt;!-- /.echo-hero-body --&gt;
+            &lt;div class="echo-hero-link"&gt;
+                &lt;div class="echo-buttons"&gt;
+                    &lt;div class="echo-buttons-item"&gt;
+                        &lt;a href="#" class="echo-button echo-button-style-b echo-button-icon-arrow"&gt;詳しくはこちら&lt;/a&gt;
+                    &lt;/div&gt;&lt;!-- /.echo-buttons-item --&gt;
+                &lt;/div&gt;&lt;!-- /.echo-buttons --&gt;
+            &lt;/div&gt;&lt;!-- /.echo-hero-link --&gt;
+        &lt;/div&gt;&lt;!-- /.echo-hero-contents-inner --&gt;
+    &lt;/div&gt;&lt;!-- /.echo-hero-contents --&gt;
+&lt;/div&gt;&lt;!-- /.echo-hero --&gt;
+
+&lt;/div&gt;
+
+&lt;p class="echo-title echo-title-style-a echo-title-level-3 echo-margin-top-lg echo-margin-bottom-md"&gt;.echo-hero-leadのみを本文に使用し、かつ複数のボタンを表示している例&lt;/p&gt;
+
+&lt;div style="margin-left: -0.625rem; margin-right: -0.625rem;"&gt;
+
+&lt;div class="echo-hero"&gt;
+    &lt;div class="echo-hero-image"&gt;
+        &lt;picture&gt;
+            &lt;source
+                media="(max-width:768px)"
+                srcset="../images/_dummy/image_10_m.jpg 768w"
+                sizes="100vw"&gt;
+            &lt;source
+                srcset="../images/_dummy/image_10.jpg 1280w"
+                sizes="(max-width:1280px) 100vw"&gt;
+            &lt;img src="../images/_dummy/image_10.jpg" alt=""&gt;
+        &lt;/picture&gt;
+    &lt;/div&gt;&lt;!-- /.echo-hero-image --&gt;
+    &lt;div class="echo-hero-contents"&gt;
+        &lt;div class="echo-hero-contents-inner"&gt;
+            &lt;div class="echo-hero-header"&gt;
+                &lt;h2 class="echo-hero-title echo-title echo-title-level-1 echo-font-first"&gt;吾輩は猫である&lt;/h2&gt;
+            &lt;/div&gt;&lt;!-- /.echo-hero-header --&gt;
+            &lt;div class="echo-hero-lead"&gt;
+                &lt;p&gt;名前はまだ無い&lt;br&gt;
+                どこで生れたかとんと見当がつかぬ。&lt;/p&gt;
+            &lt;/div&gt;&lt;!-- /.echo-hero-lead --&gt;
+            &lt;div class="echo-hero-link"&gt;
+                &lt;div class="echo-buttons"&gt;
+                    &lt;div class="echo-buttons-item"&gt;
+                        &lt;a href="#" class="echo-button echo-button-style-b"&gt;ボタン1&lt;/a&gt;
+                    &lt;/div&gt;&lt;!-- /.echo-buttons-item --&gt;
+                    &lt;div class="echo-buttons-item"&gt;
+                        &lt;a href="#" class="echo-button echo-button-style-a"&gt;ボタン2&lt;/a&gt;
+                    &lt;/div&gt;&lt;!-- /.echo-buttons-item --&gt;
+                &lt;/div&gt;&lt;!-- /.echo-buttons --&gt;
+            &lt;/div&gt;&lt;!-- /.echo-hero-link --&gt;
+        &lt;/div&gt;&lt;!-- /.echo-hero-contents-inner --&gt;
+    &lt;/div&gt;&lt;!-- /.echo-hero-contents --&gt;
+&lt;/div&gt;&lt;!-- /.echo-hero --&gt;
+
+&lt;/div&gt;
+
+
+&lt;p class="echo-title echo-title-style-a echo-title-level-3 echo-margin-top-lg echo-margin-bottom-md"&gt;.echo-hero-titleのフォントを変更した例&lt;/p&gt;
+
+&lt;p class="echo-margin-bottom-md"&gt;ユーティリティクラス .echo-font-third は、字体を大見出し用に変更する。デフォルトでは游明朝体 (Yu Mincho) となる。&lt;/p&gt;
+
+&lt;div style="margin-left: -0.625rem; margin-right: -0.625rem;"&gt;
+
+&lt;div class="echo-hero"&gt;
+    &lt;div class="echo-hero-image"&gt;
+        &lt;picture&gt;
+            &lt;source
+                media="(max-width:768px)"
+                srcset="../images/_dummy/image_10_m.jpg 768w"
+                sizes="100vw"&gt;
+            &lt;source
+                srcset="../images/_dummy/image_10.jpg 1280w"
+                sizes="(max-width:1280px) 100vw"&gt;
+            &lt;img src="../images/_dummy/image_10.jpg" alt=""&gt;
+        &lt;/picture&gt;
+    &lt;/div&gt;&lt;!-- /.echo-hero-image --&gt;
+    &lt;div class="echo-hero-contents"&gt;
+        &lt;div class="echo-hero-contents-inner"&gt;
+            &lt;div class="echo-hero-header"&gt;
+                &lt;h2 class="echo-hero-title echo-title echo-title-level-1 echo-font-third"&gt;吾輩は猫である&lt;/h2&gt;
+            &lt;/div&gt;&lt;!-- /.echo-hero-header --&gt;
+            &lt;div class="echo-hero-lead"&gt;
+                &lt;p&gt;名前はまだ無い。&lt;/p&gt;
+            &lt;/div&gt;&lt;!-- /.echo-hero-lead --&gt;
+            &lt;div class="echo-hero-body"&gt;
+                &lt;p&gt;どこで生れたかとんと見当がつかぬ。&lt;br&gt;
+                何でも薄暗いじめじめした所でニャーニャー&lt;/p&gt;
+            &lt;/div&gt;&lt;!-- /.echo-hero-body --&gt;
+            &lt;div class="echo-hero-link"&gt;
+                &lt;div class="echo-buttons"&gt;
+                    &lt;div class="echo-buttons-item"&gt;
+                        &lt;a href="#" class="echo-button echo-button-style-b echo-button-icon-arrow"&gt;詳しくはこちら&lt;/a&gt;
+                    &lt;/div&gt;&lt;!-- /.echo-buttons-item --&gt;
+                &lt;/div&gt;&lt;!-- /.echo-buttons --&gt;
+            &lt;/div&gt;&lt;!-- /.echo-hero-link --&gt;
+        &lt;/div&gt;&lt;!-- /.echo-hero-contents-inner --&gt;
+    &lt;/div&gt;&lt;!-- /.echo-hero-contents --&gt;
+&lt;/div&gt;&lt;!-- /.echo-hero --&gt;
+
+&lt;/div&gt;
+
+&lt;p class="echo-title echo-title-style-a echo-title-level-3 echo-margin-top-lg echo-margin-bottom-md"&gt;文字サイズを変更している例&lt;/p&gt;
+
+&lt;p&gt;.echo-title-level-3 を使用して、見出しを小さくしている。&lt;br&gt;
+また、 .echo-hero-body &gt; p に文字サイズを大きくするクラス .echo-text-smtomd を付与している。モバイル端末での文字サイズが1rem(16px)となる。&lt;/p&gt;
+
+&lt;div style="margin-left: -0.625rem; margin-right: -0.625rem;"&gt;
+
+&lt;div class="echo-hero"&gt;
+    &lt;div class="echo-hero-image"&gt;
+        &lt;picture&gt;
+            &lt;source
+                media="(max-width:768px)"
+                srcset="../images/_dummy/image_10_m.jpg 768w"
+                sizes="100vw"&gt;
+            &lt;source
+                srcset="../images/_dummy/image_10.jpg 1280w"
+                sizes="(max-width:1280px) 100vw"&gt;
+            &lt;img src="../images/_dummy/image_10.jpg" alt=""&gt;
+        &lt;/picture&gt;
+    &lt;/div&gt;&lt;!-- /.echo-hero-image --&gt;
+    &lt;div class="echo-hero-contents"&gt;
+        &lt;div class="echo-hero-contents-inner"&gt;
+            &lt;div class="echo-hero-header"&gt;
+                &lt;h2 class="echo-hero-title echo-title echo-title-style-c echo-title-level-3 echo-font-first"&gt;吾輩は猫である名前は&lt;/h2&gt;
+            &lt;/div&gt;&lt;!-- /.echo-hero-header --&gt;
+            &lt;div class="echo-hero-body"&gt;
+                &lt;p class="smtomd"&gt;まだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
+            &lt;/div&gt;&lt;!-- /.echo-hero-body --&gt;
+        &lt;/div&gt;&lt;!-- /.echo-hero-contents-inner --&gt;
+    &lt;/div&gt;&lt;!-- /.echo-hero-contents --&gt;
+&lt;/div&gt;&lt;!-- /.echo-hero --&gt;
+
+&lt;/div&gt;
+</code></pre></div>
+
+
+<h2 id="hero-01-fit" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-hero-fit</h2>
+
+<p>背景画像が縦横比を保ってトリミングされる。<br>
+ブレークポイントが <code>xs</code> では <code>1:1</code> 、<code>sm, md, lg</code> では <code>16:9</code> 、<code>xl</code> 以上では <code>2.5:1</code> となる。<br>
+画像のトリミングにはobject-fitを使用しているため、Internet Explorer 11には対応していない。<br>
+ライブラリを追加した場合でも、<strong>レスポンシブイメージとの併用ができない</strong>ことに注意（画面サイズに関係なく、img要素のsrc属性に指定した画像が使用される）。</p>
+
+<div style="margin-left: -0.625rem; margin-right: -0.625rem;">
+
+<div class="echo-hero echo-hero-fit">
+    <div class="echo-hero-image">
+        <picture>
+            <source
+                media="(max-width:768px)"
+                srcset="../images/_dummy/image_10_m.jpg 768w"
+                sizes="100vw">
+            <source
+                srcset="../images/_dummy/image_10.jpg 1280w"
+                sizes="(max-width:1280px) 100vw">
+            <img src="../images/_dummy/image_10.jpg" alt="">
+        </picture>
+    </div><!-- /.echo-hero-image -->
+    <div class="echo-hero-contents">
+        <div class="echo-hero-contents-inner">
+            <div class="echo-hero-header">
+                <h2 class="echo-hero-title echo-title echo-title-style-b echo-title-level-1 echo-font-first">吾輩は猫である</h2>
+            </div><!-- /.echo-hero-header -->
+            <div class="echo-hero-body">
+                <p>名前はまだ無い。どこで生れたかとんと見当がつかぬ。<br>
+                何でも薄暗いじめじめした所で<br class="echo-hidden-lg-up">ニャーニャー泣いていた事だけは記憶している。</p>
+            </div><!-- /.echo-hero-body -->
+            <div class="echo-hero-link">
+                <div class="echo-buttons">
+                    <div class="echo-buttons-item">
+                        <a href="#" class="echo-button echo-button-style-b echo-button-icon-arrow">詳しくはこちら</a>
+                    </div><!-- /.echo-buttons-item -->
+                </div><!-- /.echo-buttons -->
+            </div><!-- /.echo-hero-link -->
+        </div><!-- /.echo-hero-contents-inner -->
+    </div><!-- /.echo-hero-contents -->
+</div><!-- /.echo-hero -->
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-hero echo-hero-fit"&gt;
+    &lt;div class="echo-hero-image"&gt;
+        &lt;picture&gt;
+            &lt;source
+                media="(max-width:768px)"
+                srcset="../images/_dummy/image_10_m.jpg 768w"
+                sizes="100vw"&gt;
+            &lt;source
+                srcset="../images/_dummy/image_10.jpg 1280w"
+                sizes="(max-width:1280px) 100vw"&gt;
+            &lt;img src="../images/_dummy/image_10.jpg" alt=""&gt;
+        &lt;/picture&gt;
+    &lt;/div&gt;&lt;!-- /.echo-hero-image --&gt;
+    &lt;div class="echo-hero-contents"&gt;
+        &lt;div class="echo-hero-contents-inner"&gt;
+            &lt;div class="echo-hero-header"&gt;
+                &lt;h2 class="echo-hero-title echo-title echo-title-style-b echo-title-level-1 echo-font-first"&gt;吾輩は猫である&lt;/h2&gt;
+            &lt;/div&gt;&lt;!-- /.echo-hero-header --&gt;
+            &lt;div class="echo-hero-body"&gt;
+                &lt;p&gt;名前はまだ無い。どこで生れたかとんと見当がつかぬ。&lt;br&gt;
+                何でも薄暗いじめじめした所で&lt;br class="echo-hidden-lg-up"&gt;ニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
+            &lt;/div&gt;&lt;!-- /.echo-hero-body --&gt;
+            &lt;div class="echo-hero-link"&gt;
+                &lt;div class="echo-buttons"&gt;
+                    &lt;div class="echo-buttons-item"&gt;
+                        &lt;a href="#" class="echo-button echo-button-style-b echo-button-icon-arrow"&gt;詳しくはこちら&lt;/a&gt;
+                    &lt;/div&gt;&lt;!-- /.echo-buttons-item --&gt;
+                &lt;/div&gt;&lt;!-- /.echo-buttons --&gt;
+            &lt;/div&gt;&lt;!-- /.echo-hero-link --&gt;
+        &lt;/div&gt;&lt;!-- /.echo-hero-contents-inner --&gt;
+    &lt;/div&gt;&lt;!-- /.echo-hero-contents --&gt;
+&lt;/div&gt;&lt;!-- /.echo-hero --&gt;
+
+&lt;/div&gt;
+</code></pre></div>
+
+
+<h2 id="hero-02-direction" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-hero-(direction)</h2>
+
+<p><code>.echo-hero-contents-inner</code> を指定した方向に寄せる。<br>
+ブレークポイントが <code>md</code> 以上の場合は最大幅が66%、 <code>xxl</code> 以上の場合は50%に制限される。</p>
+
+<p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-sm">.echo-hero + .echo-hero-left</p>
+
+<div style="margin-left: -0.625rem; margin-right: -0.625rem;">
+
+<div class="echo-hero echo-hero-fit echo-hero-left">
+    <div class="echo-hero-image">
+        <picture>
+            <source
+                media="(max-width:768px)"
+                srcset="../images/_dummy/image_09_m.jpg 768w"
+                sizes="100vw">
+            <source
+                srcset="../images/_dummy/image_09.jpg 1280w"
+                sizes="(max-width:1280px) 100vw">
+            <img src="../images/_dummy/image_09.jpg" alt="">
+        </picture>
+    </div><!-- /.echo-hero-image -->
+    <div class="echo-hero-contents">
+        <div class="echo-hero-contents-inner">
+            <div class="echo-hero-header">
+                <h2 class="echo-hero-title echo-title echo-title-level-2 echo-font-first">吾輩は猫である</h2>
+            </div><!-- /.echo-hero-header -->
+            <div class="echo-hero-lead">
+                <p>名前はまだ無い</p>
+            </div><!-- /.echo-hero-lead -->
+            <div class="echo-hero-body">
+                <p>どこで生れたかとんと見当がつかぬ。<br>
+                    何でも薄暗いじめじめした所で<br class="echo-hidden-sm-up">ニャーニャー泣いていた事だけは記憶している。</p>
+            </div><!-- /.echo-hero-body -->
+            <div class="echo-hero-link">
+                <a href="#" class="echo-button echo-button-style-a echo-button-icon-arrow">詳しくはこちら</a>
+            </div><!-- /.echo-hero-link -->
+        </div><!-- /.echo-hero-contents-inner -->
+    </div><!-- /.echo-hero-contents -->
+</div><!-- /.echo-hero -->
+
+</div>
+
+<p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-top-xl echo-margin-bottom-sm">.echo-hero + .echo-hero-right</p>
+
+<div style="margin-left: -0.625rem; margin-right: -0.625rem;">
+
+<div class="echo-hero echo-hero-right">
+    <div class="echo-hero-image">
+        <picture>
+            <source
+                media="(max-width:768px)"
+                srcset="../images/_dummy/image_06_m.jpg 768w"
+                sizes="100vw">
+            <source
+                srcset="../images/_dummy/image_06.jpg 1280w"
+                sizes="(max-width:1280px) 100vw">
+            <img src="../images/_dummy/image_06.jpg" alt="">
+        </picture>
+    </div><!-- /.echo-hero-image -->
+    <div class="echo-hero-contents">
+        <div class="echo-hero-contents-inner">
+            <div class="echo-hero-header">
+                <h2 class="echo-hero-title echo-title echo-title-level-2 echo-font-first">吾輩は猫である</h2>
+            </div><!-- /.echo-hero-header -->
+            <div class="echo-hero-lead">
+                <p>名前はまだ無い</p>
+            </div><!-- /.echo-hero-lead -->
+            <div class="echo-hero-body">
+                <p>どこで生れたかとんと見当がつかぬ。<br>
+                    何でも薄暗いじめじめした所で<br class="echo-hidden-sm-up">ニャーニャー泣いていた事だけは記憶している。</p>
+            </div><!-- /.echo-hero-body -->
+            <div class="echo-hero-link">
+                <a href="#" class="echo-button echo-button-style-b echo-button-icon-arrow">詳しくはこちら</a>
+            </div><!-- /.echo-hero-link -->
+        </div><!-- /.echo-hero-contents-inner -->
+    </div><!-- /.echo-hero-contents -->
+</div><!-- /.echo-hero -->
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-sm"&gt;.echo-hero + .echo-hero-left&lt;/p&gt;
+
+&lt;div style="margin-left: -0.625rem; margin-right: -0.625rem;"&gt;
+
+&lt;div class="echo-hero echo-hero-fit echo-hero-left"&gt;
+    &lt;div class="echo-hero-image"&gt;
+        &lt;picture&gt;
+            &lt;source
+                media="(max-width:768px)"
+                srcset="../images/_dummy/image_09_m.jpg 768w"
+                sizes="100vw"&gt;
+            &lt;source
+                srcset="../images/_dummy/image_09.jpg 1280w"
+                sizes="(max-width:1280px) 100vw"&gt;
+            &lt;img src="../images/_dummy/image_09.jpg" alt=""&gt;
+        &lt;/picture&gt;
+    &lt;/div&gt;&lt;!-- /.echo-hero-image --&gt;
+    &lt;div class="echo-hero-contents"&gt;
+        &lt;div class="echo-hero-contents-inner"&gt;
+            &lt;div class="echo-hero-header"&gt;
+                &lt;h2 class="echo-hero-title echo-title echo-title-level-2 echo-font-first"&gt;吾輩は猫である&lt;/h2&gt;
+            &lt;/div&gt;&lt;!-- /.echo-hero-header --&gt;
+            &lt;div class="echo-hero-lead"&gt;
+                &lt;p&gt;名前はまだ無い&lt;/p&gt;
+            &lt;/div&gt;&lt;!-- /.echo-hero-lead --&gt;
+            &lt;div class="echo-hero-body"&gt;
+                &lt;p&gt;どこで生れたかとんと見当がつかぬ。&lt;br&gt;
+                    何でも薄暗いじめじめした所で&lt;br class="echo-hidden-sm-up"&gt;ニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
+            &lt;/div&gt;&lt;!-- /.echo-hero-body --&gt;
+            &lt;div class="echo-hero-link"&gt;
+                &lt;a href="#" class="echo-button echo-button-style-a echo-button-icon-arrow"&gt;詳しくはこちら&lt;/a&gt;
+            &lt;/div&gt;&lt;!-- /.echo-hero-link --&gt;
+        &lt;/div&gt;&lt;!-- /.echo-hero-contents-inner --&gt;
+    &lt;/div&gt;&lt;!-- /.echo-hero-contents --&gt;
+&lt;/div&gt;&lt;!-- /.echo-hero --&gt;
+
+&lt;/div&gt;
+
+&lt;p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-top-xl echo-margin-bottom-sm"&gt;.echo-hero + .echo-hero-right&lt;/p&gt;
+
+&lt;div style="margin-left: -0.625rem; margin-right: -0.625rem;"&gt;
+
+&lt;div class="echo-hero echo-hero-right"&gt;
+    &lt;div class="echo-hero-image"&gt;
+        &lt;picture&gt;
+            &lt;source
+                media="(max-width:768px)"
+                srcset="../images/_dummy/image_06_m.jpg 768w"
+                sizes="100vw"&gt;
+            &lt;source
+                srcset="../images/_dummy/image_06.jpg 1280w"
+                sizes="(max-width:1280px) 100vw"&gt;
+            &lt;img src="../images/_dummy/image_06.jpg" alt=""&gt;
+        &lt;/picture&gt;
+    &lt;/div&gt;&lt;!-- /.echo-hero-image --&gt;
+    &lt;div class="echo-hero-contents"&gt;
+        &lt;div class="echo-hero-contents-inner"&gt;
+            &lt;div class="echo-hero-header"&gt;
+                &lt;h2 class="echo-hero-title echo-title echo-title-level-2 echo-font-first"&gt;吾輩は猫である&lt;/h2&gt;
+            &lt;/div&gt;&lt;!-- /.echo-hero-header --&gt;
+            &lt;div class="echo-hero-lead"&gt;
+                &lt;p&gt;名前はまだ無い&lt;/p&gt;
+            &lt;/div&gt;&lt;!-- /.echo-hero-lead --&gt;
+            &lt;div class="echo-hero-body"&gt;
+                &lt;p&gt;どこで生れたかとんと見当がつかぬ。&lt;br&gt;
+                    何でも薄暗いじめじめした所で&lt;br class="echo-hidden-sm-up"&gt;ニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
+            &lt;/div&gt;&lt;!-- /.echo-hero-body --&gt;
+            &lt;div class="echo-hero-link"&gt;
+                &lt;a href="#" class="echo-button echo-button-style-b echo-button-icon-arrow"&gt;詳しくはこちら&lt;/a&gt;
+            &lt;/div&gt;&lt;!-- /.echo-hero-link --&gt;
+        &lt;/div&gt;&lt;!-- /.echo-hero-contents-inner --&gt;
+    &lt;/div&gt;&lt;!-- /.echo-hero-contents --&gt;
+&lt;/div&gt;&lt;!-- /.echo-hero --&gt;
+
+&lt;/div&gt;
+</code></pre></div>
+
+
+<h2 id="hero-03-inverse" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-hero-inverse</h2>
+
+<p>コンテンツの色が反転する。<br>
+ボタンの色は <code>.echo-button-inverse</code> を付与しなければ変わらないことに注意する。</p>
+
+<div style="margin-left: -0.625rem; margin-right: -0.625rem;">
+
+<div class="echo-hero echo-hero-inverse">
+    <div class="echo-hero-image">
+        <picture>
+            <source
+                media="(max-width:768px)"
+                srcset="../images/_dummy/image_07_m.jpg 768w"
+                sizes="100vw">
+            <source
+                srcset="../images/_dummy/image_07.jpg 1280w"
+                sizes="(max-width:1280px) 100vw">
+            <img src="../images/_dummy/image_07.jpg" alt="">
+        </picture>
+    </div><!-- /.echo-hero-image -->
+    <div class="echo-hero-contents">
+        <div class="echo-hero-contents-inner">
+            <div class="echo-hero-header">
+                <h2 class="echo-hero-title echo-title echo-title-level-2 echo-font-first">吾輩は猫である</h2>
+            </div><!-- /.echo-hero-header -->
+            <div class="echo-hero-lead">
+                <p>名前はまだ無い</p>
+            </div><!-- /.echo-hero-lead -->
+            <div class="echo-hero-body">
+                <p>どこで生れたかとんと見当がつかぬ。<br>
+                    何でも薄暗いじめじめした所で<br class="echo-hidden-sm-up">ニャーニャー泣いていた事だけは記憶している。</p>
+            </div><!-- /.echo-hero-body -->
+            <div class="echo-hero-link">
+                <div class="echo-buttons">
+                    <div class="echo-buttons-item">
+                        <a href="#" class="echo-button echo-button-inverse echo-button-style-b echo-button-icon-arrow">詳しくはこちら</a>
+                    </div><!-- /.echo-buttons-item -->
+                </div><!-- /.echo-buttons -->
+            </div><!-- /.echo-hero-link -->
+        </div><!-- /.echo-hero-contents-inner -->
+    </div><!-- /.echo-hero-contents -->
+</div><!-- /.echo-hero -->
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">lt;div class="echo-hero echo-hero-inverse"&gt;
+    &lt;div class="echo-hero-image"&gt;
+        &lt;picture&gt;
+            &lt;source
+                media="(max-width:768px)"
+                srcset="../images/_dummy/image_07_m.jpg 768w"
+                sizes="100vw"&gt;
+            &lt;source
+                srcset="../images/_dummy/image_07.jpg 1280w"
+                sizes="(max-width:1280px) 100vw"&gt;
+            &lt;img src="../images/_dummy/image_07.jpg" alt=""&gt;
+        &lt;/picture&gt;
+    &lt;/div&gt;&lt;!-- /.echo-hero-image --&gt;
+    &lt;div class="echo-hero-contents"&gt;
+        &lt;div class="echo-hero-contents-inner"&gt;
+            &lt;div class="echo-hero-header"&gt;
+                &lt;h2 class="echo-hero-title echo-title echo-title-level-2 echo-font-first"&gt;吾輩は猫である&lt;/h2&gt;
+            &lt;/div&gt;&lt;!-- /.echo-hero-header --&gt;
+            &lt;div class="echo-hero-lead"&gt;
+                &lt;p&gt;名前はまだ無い&lt;/p&gt;
+            &lt;/div&gt;&lt;!-- /.echo-hero-lead --&gt;
+            &lt;div class="echo-hero-body"&gt;
+                &lt;p&gt;どこで生れたかとんと見当がつかぬ。&lt;br&gt;
+                    何でも薄暗いじめじめした所で&lt;br class="echo-hidden-sm-up"&gt;ニャーニャー泣いていた事だけは記憶している。&lt;/p&gt;
+            &lt;/div&gt;&lt;!-- /.echo-hero-body --&gt;
+            &lt;div class="echo-hero-link"&gt;
+                &lt;div class="echo-buttons"&gt;
+                    &lt;div class="echo-buttons-item"&gt;
+                        &lt;a href="#" class="echo-button echo-button-inverse echo-button-style-b echo-button-icon-arrow"&gt;詳しくはこちら&lt;/a&gt;
+                    &lt;/div&gt;&lt;!-- /.echo-buttons-item --&gt;
+                &lt;/div&gt;&lt;!-- /.echo-buttons --&gt;
+            &lt;/div&gt;&lt;!-- /.echo-hero-link --&gt;
+        &lt;/div&gt;&lt;!-- /.echo-hero-contents-inner --&gt;
+    &lt;/div&gt;&lt;!-- /.echo-hero-contents --&gt;
+&lt;/div&gt;&lt;!-- /.echo-hero --&gt;
+
+&lt;/div&gt;
+</code></pre></div>
+
+
+<?php include('../doc_include/footer.inc'); ?>

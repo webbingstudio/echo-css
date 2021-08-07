@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>layout-forms | Style guide | echo-css</title>
+    <meta property="og:title" content="layout-forms | Style guide | echo-css">
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div id="echo-document">
+    <?php include('../doc_include/header.inc'); ?>
+
+    <main class="echo-p-main" role="main">
+        <div class="echo-doc-container echo-doc-container-fluid">
+
+            <div class="echo-doc-pagehead">
+                <h1 class="echo-doc-pagehead-title">layout-forms</h1>
+            </div><!-- /.echo-doc-pagehead -->
+
+            <article class="echo-doc-post">
+                <div class="echo-doc-post-contents styleguide-contents"><h2 id="forms" class="echo-doc-post-title-01">echo-forms</h2>
+
+<p><code>.echo-form</code> を繰り返すための領域を作成する。</p>
+
+<p><code>.echo-forms-header, .echo-forms-contents > .echo-form</code> を交互に繰り返す前提となり、(breakpoint)が <code>lg</code> 以上でグリッド状に表示される。</p>
+
+<p><code>.echo-forms-header</code> の幅は、最もコンテンツが多い要素に揃う。</p>
+
+<p>ヘッダ <code>.echo-forms-header</code> には、ラベル <code>.echo-forms-label</code> が含まれる前提となっている。<br>
+ラベルに兄弟要素がある場合は整列される。ここでは例として <code>.echo-forms-meta.echo-labels</code> でラベル群を含めている。</p>
+
+<p>Internet Explorer 11では、<code>grid-template-columns</code> プロパティを使用している関係で、すべての <code>.echo-form</code> が余白がない状態で縦に並び、入力に著しい支障が生じる。<br>
+IEで同じ体裁とする場合は、このコンポーネントを使用せず、 <code>.echo-table.echo-table-0to12</code> 等に書き換えること。</p>
+
+<div class="example">
+
+<div class="echo-container echo-container-sm">
+
+<p class="echo-margin-bottom-lg">.echo-form-grow の挙動の確認のため、 .echo-container で幅を制限している。</p>
+
+<div class="echo-forms">
+
+    <div class="echo-forms-header">
+        <label for="forms-01" class="echo-forms-label">氏名</label>
+        <div class="echo-forms-meta echo-labels">
+            <ul class="echo-labels-list">
+                <li class="echo-labels-item"><span class="echo-label echo-label-style-a echo-label-important">必須</span></li>
+            </ul><!-- /.echo-labels-list -->
+        </div><!-- /.echo-labels -->
+    </div><!-- /.echo-forms-header -->
+
+    <div class="echo-forms-contents">
+        <div class="echo-form">
+            <label for="forms-01" class="echo-form-label">姓</label>
+            <input type="text" class="echo-input" id="forms-01" name="forms_01" size="10" value="" placeholder="山田">
+            <label for="forms-02" class="echo-form-label">名</label>
+            <input type="text" class="echo-input" id="forms-02" name="forms_02" size="10" value="" placeholder="一郎">
+        </div><!-- /.echo-form -->
+    </div><!-- /.echo-forms-contents -->
+
+    <div class="echo-forms-header">
+        <label for="forms-03" class="echo-forms-label">フリガナ</label>
+        <div class="echo-forms-meta echo-labels">
+            <ul class="echo-labels-list">
+                <li class="echo-labels-item"><span class="echo-label echo-label-style-a echo-label-important">必須</span></li>
+                <li class="echo-labels-item"><span class="echo-label echo-label-style-b echo-label-info">カタカナ</span></li>
+            </ul><!-- /.echo-labels-list -->
+        </div><!-- /.echo-labels -->
+    </div><!-- /.echo-forms-header -->
+
+    <div class="echo-forms-contents">
+        <div class="echo-form">
+            <label for="forms-03" class="echo-form-label">セイ</label>
+            <input type="text" class="echo-input" id="forms-03" name="forms-03" size="10" value="" placeholder="ヤマダ">
+            <label for="forms-04" class="echo-form-label">メイ</label>
+            <input type="text" class="echo-input" id="forms-04" name="forms_04" size="10" value="" placeholder="イチロウ">
+        </div><!-- /.echo-form -->
+    </div><!-- /.echo-forms-contents -->
+
+    <div class="echo-forms-header">
+        <label for="forms-05" class="echo-forms-label">メッセージ</label>
+    </div><!-- /.echo-forms-header -->
+
+    <div class="echo-forms-contents">
+        <div class="echo-form echo-form-grow">
+            <textarea id="forms-05" class="echo-input" name="forms_05" rows="5" cols="50" placeholder="メッセージをどうぞ"></textarea>
+        </div><!-- /.echo-form -->
+    </div><!-- /.echo-forms-contents -->
+
+    <div class="echo-forms-header">
+        <label class="echo-forms-label" for="forms-06">好きな映画</label>
+        <span class="echo-label echo-label-style-b echo-label-info">任意</span>
+    </div><!-- /.echo-forms-header -->
+
+    <div class="echo-forms-contents">
+        <div class="echo-form">
+            <div class="echo-select">
+                <select id="forms-06" name="forms_06">
+                    <option value="">選択してください</option>
+                    <option value="raputa">天空の城ラピュタ</option>
+                    <option value="charlie">チャーリーとチョコレート工場</option>
+                    <option value="schindler">シンドラーのリスト</option>
+                </select>
+            </div><!-- /.echo-select -->
+        </div><!-- /.echo-form -->
+    </div><!-- /.echo-forms-contents -->
+
+    <div class="echo-forms-header">
+        <span class="echo-forms-label">好きな食べ物</span>
+    </div><!-- /.echo-forms-header -->
+
+    <div class="echo-forms-contents">
+        <div class="echo-form">
+            <label class="echo-checkbox" for="forms-07-01"><input type="checkbox" name="forms_07[]" id="forms-07-01" value="りんご"><span class="echo-checkbox-icon"></span><span class="echo-checkbox-label">りんご</span></label>
+            <label class="echo-checkbox" for="forms-07-02"><input type="checkbox" name="forms_07[]" id="forms-07-02" value="バナナ"><span class="echo-checkbox-icon"></span><span class="echo-checkbox-label">バナナ</span></label>
+            <label class="echo-checkbox" for="forms-07-03"><input type="checkbox" name="forms_07[]" id="forms-07-03" value="ぶどう"><span class="echo-checkbox-icon"></span><span class="echo-checkbox-label">ぶどう</span></label>
+            <label class="echo-checkbox" for="forms-07-04"><input type="checkbox" name="forms_07[]" id="forms-07-04" value="みかん"><span class="echo-checkbox-icon"></span><span class="echo-checkbox-label">みかん</span></label>
+            <label class="echo-checkbox" for="forms-07-05"><input type="checkbox" name="forms_07[]" id="forms-07-05" value="キウイ"><span class="echo-checkbox-icon"></span><span class="echo-checkbox-label">キウイ</span></label>
+            <label class="echo-checkbox" for="forms-07-06"><input type="checkbox" name="forms_07[]" id="forms-07-06" value="かき"><span class="echo-checkbox-icon"></span><span class="echo-checkbox-label">かき</span></label>
+            <label class="echo-checkbox" for="forms-07-07"><input type="checkbox" name="forms_07[]" id="forms-07-07" value="メロン"><span class="echo-checkbox-icon"></span><span class="echo-checkbox-label">メロン</span></label>
+            <label class="echo-checkbox" for="forms-07-08"><input type="checkbox" name="forms_07[]" id="forms-07-08" value="いちご"><span class="echo-checkbox-icon"></span><span class="echo-checkbox-label">いちご</span></label>
+            <label class="echo-checkbox" for="forms-07-09"><input type="checkbox" name="forms_07[]" id="forms-07-09" value="マンゴー"><span class="echo-checkbox-icon"></span><span class="echo-checkbox-label">マンゴー</span></label>
+            <p class="echo-form-info">いくつでも選択できます。</p>
+        </div><!-- /.echo-form -->
+    </div><!-- /.echo-forms-contents -->
+
+</div><!-- /.echo-forms -->
+
+</div><!-- /.echo-container -->
+
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-container echo-container-sm"&gt;
+
+&lt;p class="echo-margin-bottom-lg"&gt;.echo-form-grow の挙動の確認のため、 .echo-container で幅を制限している。&lt;/p&gt;
+
+&lt;div class="echo-forms"&gt;
+
+    &lt;div class="echo-forms-header"&gt;
+        &lt;label for="forms-01" class="echo-forms-label"&gt;氏名&lt;/label&gt;
+        &lt;div class="echo-forms-meta echo-labels"&gt;
+            &lt;ul class="echo-labels-list"&gt;
+                &lt;li class="echo-labels-item"&gt;&lt;span class="echo-label echo-label-style-a echo-label-important"&gt;必須&lt;/span&gt;&lt;/li&gt;
+            &lt;/ul&gt;&lt;!-- /.echo-labels-list --&gt;
+        &lt;/div&gt;&lt;!-- /.echo-labels --&gt;
+    &lt;/div&gt;&lt;!-- /.echo-forms-header --&gt;
+
+    &lt;div class="echo-forms-contents"&gt;
+        &lt;div class="echo-form"&gt;
+            &lt;label for="forms-01" class="echo-form-label"&gt;姓&lt;/label&gt;
+            &lt;input type="text" class="echo-input" id="forms-01" name="forms_01" size="10" value="" placeholder="山田"&gt;
+            &lt;label for="forms-02" class="echo-form-label"&gt;名&lt;/label&gt;
+            &lt;input type="text" class="echo-input" id="forms-02" name="forms_02" size="10" value="" placeholder="一郎"&gt;
+        &lt;/div&gt;&lt;!-- /.echo-form --&gt;
+    &lt;/div&gt;&lt;!-- /.echo-forms-contents --&gt;
+
+    &lt;div class="echo-forms-header"&gt;
+        &lt;label for="forms-03" class="echo-forms-label"&gt;フリガナ&lt;/label&gt;
+        &lt;div class="echo-forms-meta echo-labels"&gt;
+            &lt;ul class="echo-labels-list"&gt;
+                &lt;li class="echo-labels-item"&gt;&lt;span class="echo-label echo-label-style-a echo-label-important"&gt;必須&lt;/span&gt;&lt;/li&gt;
+                &lt;li class="echo-labels-item"&gt;&lt;span class="echo-label echo-label-style-b echo-label-info"&gt;カタカナ&lt;/span&gt;&lt;/li&gt;
+            &lt;/ul&gt;&lt;!-- /.echo-labels-list --&gt;
+        &lt;/div&gt;&lt;!-- /.echo-labels --&gt;
+    &lt;/div&gt;&lt;!-- /.echo-forms-header --&gt;
+
+    &lt;div class="echo-forms-contents"&gt;
+        &lt;div class="echo-form"&gt;
+            &lt;label for="forms-03" class="echo-form-label"&gt;セイ&lt;/label&gt;
+            &lt;input type="text" class="echo-input" id="forms-03" name="forms-03" size="10" value="" placeholder="ヤマダ"&gt;
+            &lt;label for="forms-04" class="echo-form-label"&gt;メイ&lt;/label&gt;
+            &lt;input type="text" class="echo-input" id="forms-04" name="forms_04" size="10" value="" placeholder="イチロウ"&gt;
+        &lt;/div&gt;&lt;!-- /.echo-form --&gt;
+    &lt;/div&gt;&lt;!-- /.echo-forms-contents --&gt;
+
+    &lt;div class="echo-forms-header"&gt;
+        &lt;label for="forms-05" class="echo-forms-label"&gt;メッセージ&lt;/label&gt;
+    &lt;/div&gt;&lt;!-- /.echo-forms-header --&gt;
+
+    &lt;div class="echo-forms-contents"&gt;
+        &lt;div class="echo-form echo-form-grow"&gt;
+            &lt;textarea id="forms-05" class="echo-input" name="forms_05" rows="5" cols="50" placeholder="メッセージをどうぞ"&gt;&lt;/textarea&gt;
+        &lt;/div&gt;&lt;!-- /.echo-form --&gt;
+    &lt;/div&gt;&lt;!-- /.echo-forms-contents --&gt;
+
+    &lt;div class="echo-forms-header"&gt;
+        &lt;label class="echo-forms-label" for="forms-06"&gt;好きな映画&lt;/label&gt;
+        &lt;span class="echo-label echo-label-style-b echo-label-info"&gt;任意&lt;/span&gt;
+    &lt;/div&gt;&lt;!-- /.echo-forms-header --&gt;
+
+    &lt;div class="echo-forms-contents"&gt;
+        &lt;div class="echo-form"&gt;
+            &lt;div class="echo-select"&gt;
+                &lt;select id="forms-06" name="forms_06"&gt;
+                    &lt;option value=""&gt;選択してください&lt;/option&gt;
+                    &lt;option value="raputa"&gt;天空の城ラピュタ&lt;/option&gt;
+                    &lt;option value="charlie"&gt;チャーリーとチョコレート工場&lt;/option&gt;
+                    &lt;option value="schindler"&gt;シンドラーのリスト&lt;/option&gt;
+                &lt;/select&gt;
+            &lt;/div&gt;&lt;!-- /.echo-select --&gt;
+        &lt;/div&gt;&lt;!-- /.echo-form --&gt;
+    &lt;/div&gt;&lt;!-- /.echo-forms-contents --&gt;
+
+    &lt;div class="echo-forms-header"&gt;
+        &lt;span class="echo-forms-label"&gt;好きな食べ物&lt;/span&gt;
+    &lt;/div&gt;&lt;!-- /.echo-forms-header --&gt;
+
+    &lt;div class="echo-forms-contents"&gt;
+        &lt;div class="echo-form"&gt;
+            &lt;label class="echo-checkbox" for="forms-07-01"&gt;&lt;input type="checkbox" name="forms_07[]" id="forms-07-01" value="りんご"&gt;&lt;span class="echo-checkbox-icon"&gt;&lt;/span&gt;&lt;span class="echo-checkbox-label"&gt;りんご&lt;/span&gt;&lt;/label&gt;
+            &lt;label class="echo-checkbox" for="forms-07-02"&gt;&lt;input type="checkbox" name="forms_07[]" id="forms-07-02" value="バナナ"&gt;&lt;span class="echo-checkbox-icon"&gt;&lt;/span&gt;&lt;span class="echo-checkbox-label"&gt;バナナ&lt;/span&gt;&lt;/label&gt;
+            &lt;label class="echo-checkbox" for="forms-07-03"&gt;&lt;input type="checkbox" name="forms_07[]" id="forms-07-03" value="ぶどう"&gt;&lt;span class="echo-checkbox-icon"&gt;&lt;/span&gt;&lt;span class="echo-checkbox-label"&gt;ぶどう&lt;/span&gt;&lt;/label&gt;
+            &lt;label class="echo-checkbox" for="forms-07-04"&gt;&lt;input type="checkbox" name="forms_07[]" id="forms-07-04" value="みかん"&gt;&lt;span class="echo-checkbox-icon"&gt;&lt;/span&gt;&lt;span class="echo-checkbox-label"&gt;みかん&lt;/span&gt;&lt;/label&gt;
+            &lt;label class="echo-checkbox" for="forms-07-05"&gt;&lt;input type="checkbox" name="forms_07[]" id="forms-07-05" value="キウイ"&gt;&lt;span class="echo-checkbox-icon"&gt;&lt;/span&gt;&lt;span class="echo-checkbox-label"&gt;キウイ&lt;/span&gt;&lt;/label&gt;
+            &lt;label class="echo-checkbox" for="forms-07-06"&gt;&lt;input type="checkbox" name="forms_07[]" id="forms-07-06" value="かき"&gt;&lt;span class="echo-checkbox-icon"&gt;&lt;/span&gt;&lt;span class="echo-checkbox-label"&gt;かき&lt;/span&gt;&lt;/label&gt;
+            &lt;label class="echo-checkbox" for="forms-07-07"&gt;&lt;input type="checkbox" name="forms_07[]" id="forms-07-07" value="メロン"&gt;&lt;span class="echo-checkbox-icon"&gt;&lt;/span&gt;&lt;span class="echo-checkbox-label"&gt;メロン&lt;/span&gt;&lt;/label&gt;
+            &lt;label class="echo-checkbox" for="forms-07-08"&gt;&lt;input type="checkbox" name="forms_07[]" id="forms-07-08" value="いちご"&gt;&lt;span class="echo-checkbox-icon"&gt;&lt;/span&gt;&lt;span class="echo-checkbox-label"&gt;いちご&lt;/span&gt;&lt;/label&gt;
+            &lt;label class="echo-checkbox" for="forms-07-09"&gt;&lt;input type="checkbox" name="forms_07[]" id="forms-07-09" value="マンゴー"&gt;&lt;span class="echo-checkbox-icon"&gt;&lt;/span&gt;&lt;span class="echo-checkbox-label"&gt;マンゴー&lt;/span&gt;&lt;/label&gt;
+        &lt;/div&gt;&lt;!-- /.echo-form --&gt;
+        &lt;p class="echo-text-info echo-margin-top-sm echo-margin-bottom-0"&gt;いくつでも選択できます。&lt;/p&gt;
+    &lt;/div&gt;&lt;!-- /.echo-forms-contents --&gt;
+
+&lt;/div&gt;&lt;!-- /.echo-forms --&gt;
+
+&lt;/div&gt;&lt;!-- /.echo-container --&gt;
+</code></pre></div>
+
+<?php include('../doc_include/footer.inc'); ?>

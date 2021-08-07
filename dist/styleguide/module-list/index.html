@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>module-list | Style guide | echo-css</title>
+    <meta property="og:title" content="module-list | Style guide | echo-css">
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div id="echo-document">
+
+    <?php include('../doc_include/header.inc'); ?>
+
+    <main class="echo-p-main" role="main">
+        <div class="echo-doc-container echo-doc-container-fluid">
+
+            <div class="echo-doc-pagehead">
+                <h1 class="echo-doc-pagehead-title">module-list</h1>
+            </div><!-- /.echo-doc-pagehead -->
+
+            <nav class="echo-doc-anchor">
+                <ul class="echo-list echo-list-horizontal">
+
+                    <li class="echo-list-item"><a href="#list" class="js-scrollto">echo-list</a></li>
+
+                    <li class="echo-list-item"><a href="#list-01-fixed" class="js-scrollto">echo-list-fixed</a></li>
+
+                    <li class="echo-list-item"><a href="#list-02-vertical" class="js-scrollto">echo-list-vertical</a></li>
+
+                    <li class="echo-list-item"><a href="#list-03-horizontal" class="js-scrollto">echo-list-horizontal</a></li>
+                    
+                </ul>
+            </nav>
+
+            <article class="echo-doc-post">
+                <div class="echo-doc-post-contents styleguide-contents"><h2 id="list" class="echo-doc-post-title-01">echo-list</h2>
+
+<p>改行される可能性があるテキストの表示を前提としたリストを表示する。このクラス単独ではリストのスタイルの打ち消しと整列のみを行う。<br>
+<code>ul, ol</code> に使用した場合は、子要素にクラスを指定していなくても有効になる。  </p>
+
+<?php include('../doc_include/fonttable_body.html'); ?>
+
+<p>このサンプルでは、範囲がわかるようインラインスタイルで背景色を付与している。</p>
+
+<div class="example">
+
+<p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-md">すべての要素にクラスを付与した場合</p>
+
+<ul class="echo-list" style="background-color: #fff9dd">
+    <li class="echo-list-item">あいうえおかきくけ10さしすせ</li>
+    <li class="echo-list-item">あいうえおかきく
+        <ul class="echo-list-children">
+            <li class="echo-list-item">あいうえお</li>
+            <li class="echo-list-item">あいうえおかきくけ10さしすせそたちつて20
+                <ul class="echo-list-children">
+                    <li class="echo-list-item">あいうえお</li>
+                    <li class="echo-list-item">あいうえおかきくけ10さしすせそたちつて20</li>
+                    <li class="echo-list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
+                    <li class="echo-list-item">あいうえおかきくけ10</li>
+                </ul>
+            </li>
+            <li class="echo-list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
+            <li class="echo-list-item">あいうえおかきくけ10</li>
+        </ul>
+    </li>
+    <li class="echo-list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
+    <li class="echo-list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
+</ul>
+
+<p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-md echo-margin-top-lg">ulのみクラスを付与した場合</p>
+
+<ul class="echo-list" style="background-color: #fff9dd">
+    <li>あいうえおかきくけ10さしすせ</li>
+    <li>あいうえおかきく
+        <ul>
+            <li>あいうえお</li>
+            <li>あいうえおかきくけ10さしすせそたちつて20
+                <ul>
+                    <li>あいうえお</li>
+                    <li>あいうえおかきくけ10さしすせそたちつて20</li>
+                    <li>あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
+                    <li>あいうえおかきくけ10</li>
+                </ul>
+            </li>
+            <li>あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
+            <li>あいうえおかきくけ10</li>
+        </ul>
+    </li>
+    <li>あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
+    <li>あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
+</ul>
+
+</div>
+
+
+<div class="codeblock"><pre><code class="language-markup">&lt;p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-md"&gt;すべての要素にクラスを付与した場合&lt;/p&gt;
+
+&lt;ul class="echo-list" style="background-color: #fff9dd"&gt;
+    &lt;li class="echo-list-item"&gt;あいうえおかきくけ10さしすせ&lt;/li&gt;
+    &lt;li class="echo-list-item"&gt;あいうえおかきく
+        &lt;ul class="echo-list-children"&gt;
+            &lt;li class="echo-list-item"&gt;あいうえお&lt;/li&gt;
+            &lt;li class="echo-list-item"&gt;あいうえおかきくけ10さしすせそたちつて20
+                &lt;ul class="echo-list-children"&gt;
+                    &lt;li class="echo-list-item"&gt;あいうえお&lt;/li&gt;
+                    &lt;li class="echo-list-item"&gt;あいうえおかきくけ10さしすせそたちつて20&lt;/li&gt;
+                    &lt;li class="echo-list-item"&gt;あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50&lt;/li&gt;
+                    &lt;li class="echo-list-item"&gt;あいうえおかきくけ10&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li class="echo-list-item"&gt;あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50&lt;/li&gt;
+            &lt;li class="echo-list-item"&gt;あいうえおかきくけ10&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li class="echo-list-item"&gt;あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50&lt;/li&gt;
+    &lt;li class="echo-list-item"&gt;あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-md echo-margin-top-lg"&gt;ulのみクラスを付与した場合&lt;/p&gt;
+
+&lt;ul class="echo-list" style="background-color: #fff9dd"&gt;
+    &lt;li&gt;あいうえおかきくけ10さしすせ&lt;/li&gt;
+    &lt;li&gt;あいうえおかきく
+        &lt;ul&gt;
+            &lt;li&gt;あいうえお&lt;/li&gt;
+            &lt;li&gt;あいうえおかきくけ10さしすせそたちつて20
+                &lt;ul&gt;
+                    &lt;li&gt;あいうえお&lt;/li&gt;
+                    &lt;li&gt;あいうえおかきくけ10さしすせそたちつて20&lt;/li&gt;
+                    &lt;li&gt;あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50&lt;/li&gt;
+                    &lt;li&gt;あいうえおかきくけ10&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50&lt;/li&gt;
+            &lt;li&gt;あいうえおかきくけ10&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50&lt;/li&gt;
+    &lt;li&gt;あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50&lt;/li&gt;
+&lt;/ul&gt;</code></pre></div>
+
+
+<h2 id="list-01-fixed" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-list-fixed</h2>
+
+<p>文字が (breakpoint) に関わらず常に同じサイズとなる。<br>
+幅の変動が少ないグリッド内のコンポーネント等に使用する。</p>
+
+<div class="example">
+
+<ul class="echo-list echo-list-fixed" style="background-color: #fff9dd">
+    <li class="echo-list-item">あいうえおかきくけ10さしすせ</li>
+    <li class="echo-list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
+    <li class="echo-list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
+</ul>
+
+</div>
+
+
+<div class="codeblock"><pre><code class="language-markup">&lt;ul class="echo-list echo-list-fixed" style="background-color: #fff9dd"&gt;
+    &lt;li class="echo-list-item"&gt;あいうえおかきくけ10さしすせ&lt;/li&gt;
+    &lt;li class="echo-list-item"&gt;あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50&lt;/li&gt;
+    &lt;li class="echo-list-item"&gt;あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50&lt;/li&gt;
+&lt;/ul&gt;</code></pre></div>
+
+
+<h2 id="list-02-vertical" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-list-vertical</h2>
+
+<p>階層構造を持ったリストを表示する。</p>
+
+<div class="example">
+
+<p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-md">すべての要素にクラスを付与した場合</p>
+
+<ul class="echo-list echo-list-vertical" style="background-color: #fff9dd">
+    <li class="echo-list-item">あいうえおかきくけ10さしすせ</li>
+    <li class="echo-list-item">あいうえおかきく
+        <ul class="echo-list-children">
+            <li class="echo-list-item">あいうえお</li>
+            <li class="echo-list-item">あいうえおかきくけ10さしすせそたちつて20
+                <ul class="echo-list-children">
+                    <li class="echo-list-item">あいうえお</li>
+                    <li class="echo-list-item">あいうえおかきくけ10さしすせそたちつて20</li>
+                    <li class="echo-list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20</li>
+                    <li class="echo-list-item">あいうえおかきくけ10</li>
+                </ul>
+            </li>
+            <li class="echo-list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのは</li>
+            <li class="echo-list-item">あいうえおかきくけ10</li>
+        </ul>
+    </li>
+    <li class="echo-list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえ</li>
+    <li class="echo-list-item">あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
+</ul>
+
+<p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-md echo-margin-top-lg">olのみクラスを付与した場合</p>
+
+<ol class="echo-list echo-list-vertical" style="background-color: #fff9dd">
+    <li>あいうえおかきくけ10さしすせ</li>
+    <li>あいうえおかきく
+        <ol>
+            <li>あいうえお</li>
+            <li>あいうえおかきくけ10さしすせそたちつて20
+                <ol>
+                    <li>あいうえお</li>
+                    <li>あいうえおかきくけ10さしすせそたちつて20</li>
+                    <li>あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
+                    <li>あいうえおかきくけ10</li>
+                </ol>
+            </li>
+            <li>あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
+            <li>あいうえおかきくけ10</li>
+        </ol>
+    </li>
+    <li>あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
+    <li>あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50</li>
+</ol>
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-md"&gt;すべての要素にクラスを付与した場合&lt;/p&gt;
+
+&lt;ul class="echo-list echo-list-vertical" style="background-color: #fff9dd"&gt;
+    &lt;li class="echo-list-item"&gt;あいうえおかきくけ10さしすせ&lt;/li&gt;
+    &lt;li class="echo-list-item"&gt;あいうえおかきく
+        &lt;ul class="echo-list-children"&gt;
+            &lt;li class="echo-list-item"&gt;あいうえお&lt;/li&gt;
+            &lt;li class="echo-list-item"&gt;あいうえおかきくけ10さしすせそたちつて20
+                &lt;ul class="echo-list-children"&gt;
+                    &lt;li class="echo-list-item"&gt;あいうえお&lt;/li&gt;
+                    &lt;li class="echo-list-item"&gt;あいうえおかきくけ10さしすせそたちつて20&lt;/li&gt;
+                    &lt;li class="echo-list-item"&gt;あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20&lt;/li&gt;
+                    &lt;li class="echo-list-item"&gt;あいうえおかきくけ10&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li class="echo-list-item"&gt;あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのは&lt;/li&gt;
+            &lt;li class="echo-list-item"&gt;あいうえおかきくけ10&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li class="echo-list-item"&gt;あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえ&lt;/li&gt;
+    &lt;li class="echo-list-item"&gt;あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-md echo-margin-top-lg"&gt;olのみクラスを付与した場合&lt;/p&gt;
+
+&lt;ol class="echo-list echo-list-vertical" style="background-color: #fff9dd"&gt;
+    &lt;li&gt;あいうえおかきくけ10さしすせ&lt;/li&gt;
+    &lt;li&gt;あいうえおかきく
+        &lt;ol&gt;
+            &lt;li&gt;あいうえお&lt;/li&gt;
+            &lt;li&gt;あいうえおかきくけ10さしすせそたちつて20
+                &lt;ol&gt;
+                    &lt;li&gt;あいうえお&lt;/li&gt;
+                    &lt;li&gt;あいうえおかきくけ10さしすせそたちつて20&lt;/li&gt;
+                    &lt;li&gt;あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50&lt;/li&gt;
+                    &lt;li&gt;あいうえおかきくけ10&lt;/li&gt;
+                &lt;/ol&gt;
+            &lt;/li&gt;
+            &lt;li&gt;あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50&lt;/li&gt;
+            &lt;li&gt;あいうえおかきくけ10&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/li&gt;
+    &lt;li&gt;あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50&lt;/li&gt;
+    &lt;li&gt;あいうえおかきくけ10さしすせそたちつて20なにぬねのはひふへ30まみむめもやゆよっ40らりるれろわをんー50&lt;/li&gt;
+&lt;/ol&gt;</code></pre></div>
+
+
+
+<h2 id="list-03-horizontal" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-list-horizontal</h2>
+
+<p>水平、かつ中央に整列するリストを表示する。階層構造を持たせることはできない。  </p>
+
+<div class="example">
+
+<p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-md">すべての要素にクラスを付与した場合</p>
+
+<ul class="echo-list echo-list-horizontal" style="background-color: #fff9dd">
+    <li class="echo-list-item">あいうえおかきくけ10さしすせ</li>
+    <li class="echo-list-item">あいうえおかきく</li>
+    <li class="echo-list-item">あいうえお</li>
+    <li class="echo-list-item">あいうえおかきくけ</li>
+</ul>
+
+<p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-md echo-margin-top-lg">ulのみクラスを付与した場合</p>
+
+<ul class="echo-list echo-list-horizontal" style="background-color: #fff9dd">
+    <li>あいうえおかきくけ10さしすせ</li>
+    <li>あいうえおかきく</li>
+    <li>あいうえお</li>
+    <li>あいうえおかきくけ</li>
+</ul>
+
+</div>
+
+
+<div class="codeblock"><pre><code class="language-markup">&lt;p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-md"&gt;すべての要素にクラスを付与した場合&lt;/p&gt;
+
+&lt;ul class="echo-list echo-list-horizontal" style="background-color: #fff9dd"&gt;
+    &lt;li class="echo-list-item"&gt;あいうえおかきくけ10さしすせ&lt;/li&gt;
+    &lt;li class="echo-list-item"&gt;あいうえおかきく&lt;/li&gt;
+    &lt;li class="echo-list-item"&gt;あいうえお&lt;/li&gt;
+    &lt;li class="echo-list-item"&gt;あいうえおかきくけ&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p class="echo-title echo-title-style-a echo-title-level-4 echo-margin-bottom-md echo-margin-top-lg"&gt;ulのみクラスを付与した場合&lt;/p&gt;
+
+&lt;ul class="echo-list echo-list-horizontal" style="background-color: #fff9dd"&gt;
+    &lt;li&gt;あいうえおかきくけ10さしすせ&lt;/li&gt;
+    &lt;li&gt;あいうえおかきく&lt;/li&gt;
+    &lt;li&gt;あいうえお&lt;/li&gt;
+    &lt;li&gt;あいうえおかきくけ&lt;/li&gt;
+&lt;/ul&gt;</code></pre></div>
+
+<?php include('../doc_include/footer.inc'); ?>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>module-select | Style guide | echo-css</title>
+    <meta property="og:title" content="module-select | Style guide | echo-css">
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div id="echo-document">
+
+    <?php include('../doc_include/header.inc'); ?>
+
+    <main class="echo-p-main" role="main">
+        <div class="echo-doc-container echo-doc-container-fluid">
+
+            <div class="echo-doc-pagehead">
+                <h1 class="echo-doc-pagehead-title">module-select</h1>
+            </div><!-- /.echo-doc-pagehead -->
+
+            <nav class="echo-doc-anchor">
+                <ul class="echo-list echo-list-horizontal">
+
+                    <li class="echo-list-item"><a href="#select" class="js-scrollto">echo-select</a></li>
+
+                    <li class="echo-list-item"><a href="#select-01-size" class="js-scrollto">echo-select-(size)</a></li>
+
+                    <li class="echo-list-item"><a href="#select-02-fixed" class="js-scrollto">echo-select-fixed</a></li>
+                    
+                </ul>
+            </nav>
+                
+            <article class="echo-doc-post">
+                <div class="echo-doc-post-contents styleguide-contents"><h2 id="select" class="echo-doc-post-title-01">echo-select</h2>
+
+<p>セレクトボックスを表示する。select要素ではなく、包括している要素にクラスを付与する。<br>
+左に <code>0.75em</code> 、右に <code>2.5em</code> の余白が確保される。また、右端には展開できることを示す、CSSでスタイルを定義したシェブロンが表示される。</p>
+
+<p>レイアウトは <code>component &gt; .echo-form, layout &gt; .echo-forms</code> を使用することが望ましい。</p>
+
+<p><code>.is-error</code> を付与するとエラー表示となり、色が <code>$important</code> に変わる。</p>
+
+<?php include('../doc_include/fonttable_select.html'); ?>
+
+<div class="example">
+
+<div class="echo-select">
+    <select>
+        <option>年を選択...</option>
+        <option value="2021年">2021年</option>
+        <option value="2020年">2020年</option>
+        <option value="2019年">2019年</option>
+        <option value="2018年">2018年</option>
+    </select>
+</div>
+
+<div class="echo-select is-error">
+    <select>
+        <option>年を選択...</option>
+        <option value="2021年">2021年</option>
+        <option value="2020年">2020年</option>
+        <option value="2019年">2019年</option>
+        <option value="2018年">2018年</option>
+    </select>
+</div>
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-select"&gt;
+    &lt;select&gt;
+        &lt;option&gt;年を選択...&lt;/option&gt;
+        &lt;option value="2021年"&gt;2021年&lt;/option&gt;
+        &lt;option value="2020年"&gt;2020年&lt;/option&gt;
+        &lt;option value="2019年"&gt;2019年&lt;/option&gt;
+        &lt;option value="2018年"&gt;2018年&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/div&gt;
+
+&lt;div class="echo-select is-error"&gt;
+    &lt;select&gt;
+        &lt;option&gt;年を選択...&lt;/option&gt;
+        &lt;option value="2021年"&gt;2021年&lt;/option&gt;
+        &lt;option value="2020年"&gt;2020年&lt;/option&gt;
+        &lt;option value="2019年"&gt;2019年&lt;/option&gt;
+        &lt;option value="2018年"&gt;2018年&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/div&gt;</code></pre></div>
+
+
+<h2 id="select-01-size" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-select-(size)</h2>
+
+<p>セレクトボックスの文字サイズ、最低高さを変更する。<br>
+(size)は、 <code>sm, lg</code> に対応している。</p>
+
+<p>このサンプルコードでは比較のため、同サイズのボタンを表示している。</p>
+
+<div class="example">
+
+<p class="echo-title echo-title-style-a echo-title-level-5 echo-margin-bottom-md">echo-select-sm</p>
+
+<div class="echo-select echo-select-sm">
+    <select>
+        <option>年を選択...</option>
+        <option value="2021年">2021年</option>
+        <option value="2020年">2020年</option>
+        <option value="2019年">2019年</option>
+        <option value="2018年">2018年</option>
+    </select>
+</div>
+<input type="button" class="echo-button echo-button-sm echo-button-style-a" value="ボタン" />
+
+
+<p class="echo-title echo-title-style-a echo-title-level-5 echo-margin-bottom-md echo-margin-top-lg">(default)</p>
+
+<div class="echo-select">
+    <select>
+        <option>年を選択...</option>
+        <option value="2021年">2021年</option>
+        <option value="2020年">2020年</option>
+        <option value="2019年">2019年</option>
+        <option value="2018年">2018年</option>
+    </select>
+</div>
+<input type="button" class="echo-button echo-button-style-a" value="ボタン" />
+
+
+<p class="echo-title echo-title-style-a echo-title-level-5 echo-margin-bottom-md echo-margin-top-lg">echo-select-lg</p>
+
+<div class="echo-select echo-select-lg">
+    <select>
+        <option>年を選択...</option>
+        <option value="2021年">2021年</option>
+        <option value="2020年">2020年</option>
+        <option value="2019年">2019年</option>
+        <option value="2018年">2018年</option>
+    </select>
+</div>
+<input type="button" class="echo-button echo-button-lg echo-button-style-a" value="ボタン" />
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;p class="echo-title echo-title-style-a echo-title-level-5 echo-margin-bottom-md"&gt;echo-select-sm&lt;/p&gt;
+
+&lt;div class="echo-select echo-select-sm"&gt;
+    &lt;select&gt;
+        &lt;option&gt;年を選択...&lt;/option&gt;
+        &lt;option value="2021年"&gt;2021年&lt;/option&gt;
+        &lt;option value="2020年"&gt;2020年&lt;/option&gt;
+        &lt;option value="2019年"&gt;2019年&lt;/option&gt;
+        &lt;option value="2018年"&gt;2018年&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/div&gt;
+&lt;input type="button" class="echo-button echo-button-sm echo-button-style-a" value="ボタン" /&gt;
+
+
+&lt;p class="echo-title echo-title-style-a echo-title-level-5 echo-margin-bottom-md echo-margin-top-lg"&gt;(default)&lt;/p&gt;
+
+&lt;div class="echo-select"&gt;
+    &lt;select&gt;
+        &lt;option&gt;年を選択...&lt;/option&gt;
+        &lt;option value="2021年"&gt;2021年&lt;/option&gt;
+        &lt;option value="2020年"&gt;2020年&lt;/option&gt;
+        &lt;option value="2019年"&gt;2019年&lt;/option&gt;
+        &lt;option value="2018年"&gt;2018年&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/div&gt;
+&lt;input type="button" class="echo-button echo-button-style-a" value="ボタン" /&gt;
+
+
+&lt;p class="echo-title echo-title-style-a echo-title-level-5 echo-margin-bottom-md echo-margin-top-lg"&gt;echo-select-lg&lt;/p&gt;
+
+&lt;div class="echo-select echo-select-lg"&gt;
+    &lt;select&gt;
+        &lt;option&gt;年を選択...&lt;/option&gt;
+        &lt;option value="2021年"&gt;2021年&lt;/option&gt;
+        &lt;option value="2020年"&gt;2020年&lt;/option&gt;
+        &lt;option value="2019年"&gt;2019年&lt;/option&gt;
+        &lt;option value="2018年"&gt;2018年&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/div&gt;
+&lt;input type="button" class="echo-button echo-button-lg echo-button-style-a" value="ボタン" /&gt;</code></pre></div>
+
+
+<h2 id="select-02-fixed" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-select-fixed</h2>
+
+<p><code>.echo-select-(size)</code> と同時に付与すると、セレクトボックスが (breakpoint) に関わらず常に同じサイズとなる。<br>
+幅の変動が少ないグリッド内のコンポーネント等に使用する。</p>
+
+<p>このサンプルコードでは比較のため、同サイズのボタンを表示している。</p>
+
+<div class="example">
+
+<p class="echo-title echo-title-style-a echo-title-level-5 echo-margin-bottom-md">echo-select-sm</p>
+
+<div class="echo-select echo-select-fixed echo-select-sm">
+    <select>
+        <option>月を選択...</option>
+        <option value="">2017年</option>
+        <option value="">2016年</option>
+        <option value="">2015年</option>
+    </select>
+</div>
+<input type="button" class="echo-button echo-button-fixed echo-button-sm echo-button-style-a" value="ボタン" />
+
+
+<p class="echo-title echo-title-style-a echo-title-level-5 echo-margin-bottom-md echo-margin-top-lg">(default)</p>
+
+<div class="echo-select echo-select-fixed">
+    <select>
+        <option>月を選択...</option>
+        <option value="">2017年</option>
+        <option value="">2016年</option>
+        <option value="">2015年</option>
+    </select>
+</div>
+<input type="button" class="echo-button echo-button-fixed echo-button-style-a" value="ボタン" />
+
+
+<p class="echo-title echo-title-style-a echo-title-level-5 echo-margin-bottom-md echo-margin-top-lg">echo-select-lg</p>
+
+<div class="echo-select echo-select-fixed echo-select-lg">
+    <select>
+        <option>月を選択...</option>
+        <option value="">2017年</option>
+        <option value="">2016年</option>
+        <option value="">2015年</option>
+    </select>
+</div>
+<input type="button" class="echo-button echo-button-fixed echo-button-lg echo-button-style-a" value="ボタン" />
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;p class="echo-title echo-title-style-a echo-title-level-5 echo-margin-bottom-md"&gt;echo-select-sm&lt;/p&gt;
+
+&lt;div class="echo-select echo-select-fixed echo-select-sm"&gt;
+    &lt;select&gt;
+        &lt;option&gt;月を選択...&lt;/option&gt;
+        &lt;option value=""&gt;2017年&lt;/option&gt;
+        &lt;option value=""&gt;2016年&lt;/option&gt;
+        &lt;option value=""&gt;2015年&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/div&gt;
+&lt;input type="button" class="echo-button echo-button-fixed echo-button-sm echo-button-style-a" value="ボタン" /&gt;
+
+
+&lt;p class="echo-title echo-title-style-a echo-title-level-5 echo-margin-bottom-md echo-margin-top-lg"&gt;(default)&lt;/p&gt;
+
+&lt;div class="echo-select echo-select-fixed"&gt;
+    &lt;select&gt;
+        &lt;option&gt;月を選択...&lt;/option&gt;
+        &lt;option value=""&gt;2017年&lt;/option&gt;
+        &lt;option value=""&gt;2016年&lt;/option&gt;
+        &lt;option value=""&gt;2015年&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/div&gt;
+&lt;input type="button" class="echo-button echo-button-fixed echo-button-style-a" value="ボタン" /&gt;
+
+
+&lt;p class="echo-title echo-title-style-a echo-title-level-5 echo-margin-bottom-md echo-margin-top-lg"&gt;echo-select-lg&lt;/p&gt;
+
+&lt;div class="echo-select echo-select-fixed echo-select-lg"&gt;
+    &lt;select&gt;
+        &lt;option&gt;月を選択...&lt;/option&gt;
+        &lt;option value=""&gt;2017年&lt;/option&gt;
+        &lt;option value=""&gt;2016年&lt;/option&gt;
+        &lt;option value=""&gt;2015年&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/div&gt;
+&lt;input type="button" class="echo-button echo-button-fixed echo-button-lg echo-button-style-a" value="ボタン" /&gt;</code></pre></div>
+
+
+<?php include('../doc_include/footer.inc'); ?>

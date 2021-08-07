@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>layout-labels | Style guide | css</title>
+    <meta property="og:title" content="layout-labels | Style guide | css">
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div id="echo-document">
+
+    <?php include('../doc_include/header.inc'); ?>
+
+    <main class="echo-p-main" role="main">
+        <div class="echo-doc-container echo-doc-container-fluid">
+
+            <div class="echo-doc-pagehead">
+                <h1 class="echo-doc-pagehead-title">layout-labels</h1>
+            </div><!-- /.echo-doc-pagehead -->
+
+            <nav class="echo-doc-anchor">
+                <ul class="echo-list echo-list-horizontal">
+
+                    <li class="echo-list-item"><a href="#labels" class="js-scrollto">echo-labels</a></li>
+
+                </ul>
+            </nav>
+            
+
+            <article class="echo-doc-post">
+                <div class="echo-doc-post-contents styleguide-contents"><h2 id="labels" class="echo-doc-post-title-01">echo-labels</h2>
+
+<p><code>.echo-label</code> を繰り返すための領域を作成する。</p>
+
+<p>ヘッダを含む場合は定義リスト <code>dl > dt, dd</code> を使用する。含まない場合はリスト <code>ul > li</code> でマークアップすること。</p>
+
+<p><a href="/docs/etc-ie11.html#disabled">Internet Explorer 11のラベル・ナビゲーションの不具合について</a></p>
+
+<div class="example">
+
+<p class="echo-title echo-title-level-4 echo-title-style-a echo-margin-bottom-sm">ヘッダがある場合</p>
+
+<nav class="echo-labels">
+    <dl class="echo-labels-list">
+        <dt class="echo-labels-header">タグ</dt>
+        <dd class="echo-labels-item"><a href="#" class="echo-label echo-label-style-a">ラベル</a></dd>
+        <dd class="echo-labels-item"><a href="#" class="echo-label echo-label-style-a">テキストが長いラベル</a></dd>
+        <dd class="echo-labels-item"><a href="#" class="echo-label echo-label-style-a">ラベル</a></dd>
+        <dd class="echo-labels-item"><a href="#" class="echo-label echo-label-style-a">テキストがとても長いラベル</a></dd>
+        <dd class="echo-labels-item"><a href="#" class="echo-label echo-label-style-a">ラベル</a></dd>
+        <dd class="echo-labels-item"><a href="#" class="echo-label echo-label-style-a">ラベル</a></dd>
+    </dl><!-- /.echo-labels-list -->
+</nav><!-- /.echo-labels -->
+
+<p class="echo-title echo-title-level-4 echo-title-style-a echo-margin-top-lg echo-margin-bottom-sm">ヘッダがない場合</p>
+
+<nav class="echo-labels">
+    <ul class="echo-labels-list">
+        <li class="echo-labels-item"><a href="#" class="echo-label echo-label-oval echo-label-style-a">ラベル</a></li>
+        <li class="echo-labels-item"><a href="#" class="echo-label echo-label-oval echo-label-style-a">テキストが長いラベル</a></li>
+        <li class="echo-labels-item"><a href="#" class="echo-label echo-label-oval echo-label-style-a">ラベル</a></li>
+        <li class="echo-labels-item"><a href="#" class="echo-label echo-label-oval echo-label-style-a">テキストがとても長いラベル</a></li>
+        <li class="echo-labels-item"><a href="#" class="echo-label echo-label-oval echo-label-style-a">ラベル</a></li>
+        <li class="echo-labels-item"><a href="#" class="echo-label echo-label-oval echo-label-style-a">ラベル</a></li>
+    </ul><!-- /.echo-labels-list -->
+</nav><!-- /.echo-labels -->
+
+</div>
+
+
+<div class="codeblock"><pre><code class="language-markup">&lt;p class="echo-title echo-title-level-4 echo-title-style-a echo-margin-bottom-sm"&gt;ヘッダがある場合&lt;/p&gt;
+
+&lt;nav class="echo-labels"&gt;
+    &lt;dl class="echo-labels-list"&gt;
+        &lt;dt class="echo-labels-header"&gt;タグ&lt;/dt&gt;
+        &lt;dd class="echo-labels-item"&gt;&lt;a href="#" class="echo-label echo-label-style-a"&gt;ラベル&lt;/a&gt;&lt;/dd&gt;
+        &lt;dd class="echo-labels-item"&gt;&lt;a href="#" class="echo-label echo-label-style-a"&gt;テキストが長いラベル&lt;/a&gt;&lt;/dd&gt;
+        &lt;dd class="echo-labels-item"&gt;&lt;a href="#" class="echo-label echo-label-style-a"&gt;ラベル&lt;/a&gt;&lt;/dd&gt;
+        &lt;dd class="echo-labels-item"&gt;&lt;a href="#" class="echo-label echo-label-style-a"&gt;テキストがとても長いラベル&lt;/a&gt;&lt;/dd&gt;
+        &lt;dd class="echo-labels-item"&gt;&lt;a href="#" class="echo-label echo-label-style-a"&gt;ラベル&lt;/a&gt;&lt;/dd&gt;
+        &lt;dd class="echo-labels-item"&gt;&lt;a href="#" class="echo-label echo-label-style-a"&gt;ラベル&lt;/a&gt;&lt;/dd&gt;
+    &lt;/dl&gt;&lt;!-- /.echo-labels-list --&gt;
+&lt;/nav&gt;&lt;!-- /.echo-labels --&gt;
+
+&lt;p class="echo-title echo-title-level-4 echo-title-style-a echo-margin-top-lg echo-margin-bottom-sm"&gt;ヘッダがない場合&lt;/p&gt;
+
+&lt;nav class="echo-labels"&gt;
+    &lt;ul class="echo-labels-list"&gt;
+        &lt;li class="echo-labels-item"&gt;&lt;a href="#" class="echo-label echo-label-oval echo-label-style-a"&gt;ラベル&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="echo-labels-item"&gt;&lt;a href="#" class="echo-label echo-label-oval echo-label-style-a"&gt;テキストが長いラベル&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="echo-labels-item"&gt;&lt;a href="#" class="echo-label echo-label-oval echo-label-style-a"&gt;ラベル&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="echo-labels-item"&gt;&lt;a href="#" class="echo-label echo-label-oval echo-label-style-a"&gt;テキストがとても長いラベル&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="echo-labels-item"&gt;&lt;a href="#" class="echo-label echo-label-oval echo-label-style-a"&gt;ラベル&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="echo-labels-item"&gt;&lt;a href="#" class="echo-label echo-label-oval echo-label-style-a"&gt;ラベル&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;&lt;!-- /.echo-labels-list --&gt;
+&lt;/nav&gt;&lt;!-- /.echo-labels --&gt;
+</code></pre></div>
+
+                </div>
+            </article>
+
+<?php include('../doc_include/footer.inc'); ?>

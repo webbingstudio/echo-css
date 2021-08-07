@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>component-form | Style guide | echo-css</title>
+    <meta property="og:title" content="component-form | Style guide | echo-css">
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div id="echo-document">
+
+    <?php include('../doc_include/header.inc'); ?>
+
+    <main class="echo-p-main" role="main">
+        <div class="echo-doc-container echo-doc-container-fluid">
+
+            <div class="echo-doc-pagehead">
+                <h1 class="echo-doc-pagehead-title">component-form</h1>
+            </div><!-- /.echo-doc-pagehead -->
+
+            <nav class="echo-doc-anchor">
+                <ul class="echo-list echo-list-horizontal">
+
+                    <li class="echo-list-item"><a href="#form" class="js-scrollto">echo-form</a></li>
+
+                    <li class="echo-list-item"><a href="#form-01-fixed" class="js-scrollto">echo-form-fixed</a></li>
+
+                    <li class="echo-list-item"><a href="#form-02-grow" class="js-scrollto">echo-form-grow</a></li>
+
+                    <li class="echo-list-item"><a href="#form-03-append" class="js-scrollto">echo-form-append</a></li>
+
+                    <li class="echo-list-item"><a href="#form-04-info" class="js-scrollto">echo-form-info</a></li>
+
+                    <li class="echo-list-item"><a href="#form-05-error" class="js-scrollto">echo-form-error</a></li>
+
+                </ul>
+            </nav>
+            
+
+            <article class="echo-doc-post">
+                <div class="echo-doc-post-contents styleguide-contents"><h2 id="form" class="echo-doc-post-title-01">echo-form</h2>
+
+<p>フォームの各入力欄を包括する。<br>
+フォーム内の各オブジェクトは <code>.echo-input, .echo-radio, .echo-select, .echo-checkbox, .echo-button</code> を参照。</p>
+
+<p>各ラベルには <code>.echo-form-label</code> クラスを付与する。</p>
+
+<p>複数のフォームをグリッド状に揃える場合は、 <code>layout > .echo-forms</code>を使用すること。</p>
+
+<?php include('../doc_include/fonttable_body.html'); ?>
+
+<div class="example">
+
+<div class="echo-form">
+    <label for="form-default-01" class="echo-form-label">姓</label>
+    <input type="text" class="echo-input" id="form-default-01" name="form_default_01" size="10" value="" placeholder="山田">
+    <label for="form-default-02" class="echo-form-label">名</label>
+    <input type="text" class="echo-input" id="form-default-02" name="form_default_02" size="10" value="" placeholder="一郎">
+</div><!-- /.echo-form -->
+
+<hr class="echo-margin-y-lg">
+
+<div class="echo-form">
+    <label for="demo01-02" class="echo-form-label">メッセージ</label>
+    <textarea id="demo01-02" class="echo-input" name="demo02" rows="5" cols="50" placeholder="メッセージをどうぞ"></textarea>
+</div><!-- /.echo-form -->
+
+<hr class="echo-margin-y-lg">
+
+<div class="echo-form">
+    <label class="echo-form-label" for="form-default-03">好きな映画</label>
+    <div class="echo-select">
+        <select id="form-default-03" name="form_default_03">
+            <option value="">選択してください</option>
+            <option value="raputa">天空の城ラピュタ</option>
+            <option value="charlie">チャーリーとチョコレート工場</option>
+            <option value="schindler">シンドラーのリスト</option>
+        </select>
+    </div><!-- /.echo-select -->
+</div><!-- /.echo-form -->
+
+<hr class="echo-margin-y-lg">
+
+<div class="echo-form">
+    <span class="echo-form-label">好きな食べ物（いくつでも選択できます）</span>
+    <label class="echo-checkbox" for="form-default-04-01"><input type="checkbox" name="form_default_04[]" id="form-default-04-01" value="りんご"><span class="echo-checkbox-icon"></span><span class="echo-checkbox-label">りんご</span></label>
+    <label class="echo-checkbox" for="form-default-04-02"><input type="checkbox" name="form_default_04[]" id="form-default-04-02" value="バナナ"><span class="echo-checkbox-icon"></span><span class="echo-checkbox-label">バナナ</span></label>
+    <label class="echo-checkbox" for="form-default-04-03"><input type="checkbox" name="form_default_04[]" id="form-default-04-03" value="ぶどう"><span class="echo-checkbox-icon"></span><span class="echo-checkbox-label">ぶどう</span></label>
+    <label class="echo-checkbox" for="form-default-04-04"><input type="checkbox" name="form_default_04[]" id="form-default-04-04" value="みかん"><span class="echo-checkbox-icon"></span><span class="echo-checkbox-label">みかん</span></label>
+    <label class="echo-checkbox" for="form-default-04-05"><input type="checkbox" name="form_default_04[]" id="form-default-04-05" value="キウイ"><span class="echo-checkbox-icon"></span><span class="echo-checkbox-label">キウイ</span></label>
+    <label class="echo-checkbox" for="form-default-04-06"><input type="checkbox" name="form_default_04[]" id="form-default-04-06" value="かき"><span class="echo-checkbox-icon"></span><span class="echo-checkbox-label">かき</span></label>
+    <label class="echo-checkbox" for="form-default-04-07"><input type="checkbox" name="form_default_04[]" id="form-default-04-07" value="メロン"><span class="echo-checkbox-icon"></span><span class="echo-checkbox-label">メロン</span></label>
+</div><!-- /.echo-form -->
+
+<hr class="echo-margin-y-lg">
+
+<p>モバイル環境でフォームが画面幅を超える場合は、自動改行される。</p>
+
+<div class="echo-form">
+    <label for="form-default-05" class="echo-form-label">アカウント名</label>
+    <input type="text" class="echo-input" id="form-default-05" name="form_default_05" size="20" value="">
+    <label for="form-default-06" class="echo-form-label">パスワード</label>
+    <input type="password" class="echo-input" id="form-default-06" name="form_default_06" size="20" value="">
+    <button class="echo-button echo-button-style-a echo-button-info">ログイン</button>
+</div><!-- /.echo-form -->
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-form"&gt;
+    &lt;label for="form-default-01" class="echo-form-label"&gt;姓&lt;/label&gt;
+    &lt;input type="text" class="echo-input" id="form-default-01" name="form_default_01" size="10" value="" placeholder="山田"&gt;
+    &lt;label for="form-default-02" class="echo-form-label"&gt;名&lt;/label&gt;
+    &lt;input type="text" class="echo-input" id="form-default-02" name="form_default_02" size="10" value="" placeholder="一郎"&gt;
+&lt;/div&gt;&lt;!-- /.echo-form --&gt;
+
+&lt;hr class="echo-margin-y-lg"&gt;
+
+&lt;div class="echo-form"&gt;
+    &lt;label for="demo01-02" class="echo-form-label"&gt;メッセージ&lt;/label&gt;
+    &lt;textarea id="demo01-02" class="echo-input" name="demo02" rows="5" cols="50" placeholder="メッセージをどうぞ"&gt;&lt;/textarea&gt;
+&lt;/div&gt;&lt;!-- /.echo-form --&gt;
+
+&lt;hr class="echo-margin-y-lg"&gt;
+
+&lt;div class="echo-form"&gt;
+    &lt;label class="echo-form-label" for="form-default-03"&gt;好きな映画&lt;/label&gt;
+    &lt;div class="echo-select"&gt;
+        &lt;select id="form-default-03" name="form_default_03"&gt;
+            &lt;option value=""&gt;選択してください&lt;/option&gt;
+            &lt;option value="raputa"&gt;天空の城ラピュタ&lt;/option&gt;
+            &lt;option value="charlie"&gt;チャーリーとチョコレート工場&lt;/option&gt;
+            &lt;option value="schindler"&gt;シンドラーのリスト&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;&lt;!-- /.echo-select --&gt;
+&lt;/div&gt;&lt;!-- /.echo-form --&gt;
+
+&lt;hr class="echo-margin-y-lg"&gt;
+
+&lt;div class="echo-form"&gt;
+    &lt;span class="echo-form-label"&gt;好きな食べ物（いくつでも選択できます）&lt;/span&gt;
+    &lt;label class="echo-checkbox" for="form-default-04-01"&gt;&lt;input type="checkbox" name="form_default_04[]" id="form-default-04-01" value="りんご"&gt;&lt;span class="echo-checkbox-icon"&gt;&lt;/span&gt;&lt;span class="echo-checkbox-label"&gt;りんご&lt;/span&gt;&lt;/label&gt;
+    &lt;label class="echo-checkbox" for="form-default-04-02"&gt;&lt;input type="checkbox" name="form_default_04[]" id="form-default-04-02" value="バナナ"&gt;&lt;span class="echo-checkbox-icon"&gt;&lt;/span&gt;&lt;span class="echo-checkbox-label"&gt;バナナ&lt;/span&gt;&lt;/label&gt;
+    &lt;label class="echo-checkbox" for="form-default-04-03"&gt;&lt;input type="checkbox" name="form_default_04[]" id="form-default-04-03" value="ぶどう"&gt;&lt;span class="echo-checkbox-icon"&gt;&lt;/span&gt;&lt;span class="echo-checkbox-label"&gt;ぶどう&lt;/span&gt;&lt;/label&gt;
+    &lt;label class="echo-checkbox" for="form-default-04-04"&gt;&lt;input type="checkbox" name="form_default_04[]" id="form-default-04-04" value="みかん"&gt;&lt;span class="echo-checkbox-icon"&gt;&lt;/span&gt;&lt;span class="echo-checkbox-label"&gt;みかん&lt;/span&gt;&lt;/label&gt;
+    &lt;label class="echo-checkbox" for="form-default-04-05"&gt;&lt;input type="checkbox" name="form_default_04[]" id="form-default-04-05" value="キウイ"&gt;&lt;span class="echo-checkbox-icon"&gt;&lt;/span&gt;&lt;span class="echo-checkbox-label"&gt;キウイ&lt;/span&gt;&lt;/label&gt;
+    &lt;label class="echo-checkbox" for="form-default-04-06"&gt;&lt;input type="checkbox" name="form_default_04[]" id="form-default-04-06" value="かき"&gt;&lt;span class="echo-checkbox-icon"&gt;&lt;/span&gt;&lt;span class="echo-checkbox-label"&gt;かき&lt;/span&gt;&lt;/label&gt;
+    &lt;label class="echo-checkbox" for="form-default-04-07"&gt;&lt;input type="checkbox" name="form_default_04[]" id="form-default-04-07" value="メロン"&gt;&lt;span class="echo-checkbox-icon"&gt;&lt;/span&gt;&lt;span class="echo-checkbox-label"&gt;メロン&lt;/span&gt;&lt;/label&gt;
+&lt;/div&gt;&lt;!-- /.echo-form --&gt;
+
+&lt;hr class="echo-margin-y-lg"&gt;
+
+&lt;p&gt;モバイル環境でフォームが画面幅を超える場合は、自動改行される。&lt;/p&gt;
+
+&lt;div class="echo-form"&gt;
+    &lt;label for="form-default-05" class="echo-form-label"&gt;アカウント名&lt;/label&gt;
+    &lt;input type="text" class="echo-input" id="form-default-05" name="form_default_05" size="20" value=""&gt;
+    &lt;label for="form-default-06" class="echo-form-label"&gt;パスワード&lt;/label&gt;
+    &lt;input type="password" class="echo-input" id="form-default-06" name="form_default_06" size="20" value=""&gt;
+    &lt;button class="echo-button echo-button-style-a echo-button-info"&gt;ログイン&lt;/button&gt;
+&lt;/div&gt;&lt;!-- /.echo-form --&gt;
+</code></pre></div>
+
+
+<h2 id="form-01-fixed" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-form-fixed</h2>
+
+<p>文字と余白が (breakpoint) に関わらず常に同じサイズとなる。<br>
+幅の変動が少ないグリッド内のコンポーネント等に使用する。</p>
+
+<p><strong>ボタン、入力欄のサイズは .echo-form-fixed に連動しない。</strong>変化させたくない場合は .echo-button-fixed, .echo-input-fixed, .echo-select-fixed クラスを付与すること。</p>
+
+<div class="example">
+
+<div class="echo-form echo-form-fixed">
+    <label for="form-default-05" class="echo-form-label">アカウント名</label>
+    <input type="text" class="echo-input echo-input-fixed" id="form-default-05" name="form_default_05" size="20" value="">
+    <label for="form-default-06" class="echo-form-label">パスワード</label>
+    <input type="password" class="echo-input echo-input-fixed" id="form-default-06" name="form_default_06" size="20" value="">
+    <button class="echo-button echo-button-fixed echo-button-style-a echo-button-info">ログイン</button>
+</div><!-- /.echo-form -->
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-form echo-form-fixed"&gt;
+    &lt;label for="form-default-05" class="echo-form-label"&gt;アカウント名&lt;/label&gt;
+    &lt;input type="text" class="echo-input echo-input-fixed" id="form-default-05" name="form_default_05" size="20" value=""&gt;
+    &lt;label for="form-default-06" class="echo-form-label"&gt;パスワード&lt;/label&gt;
+    &lt;input type="password" class="echo-input echo-input-fixed" id="form-default-06" name="form_default_06" size="20" value=""&gt;
+    &lt;button class="echo-button echo-button-fixed echo-button-style-a echo-button-info"&gt;ログイン&lt;/button&gt;
+&lt;/div&gt;&lt;!-- /.echo-form --&gt;
+</code></pre></div>
+
+
+<h2 id="form-02-grow" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-form-grow</h2>
+
+<p><code>.echo-input, .echo-select</code> が <code>.echo-form</code> 全体を埋めるように伸びる。</p>
+
+<div class="example">
+
+<div class="echo-form echo-form-grow">
+    <label for="form-grow-01" class="echo-form-label">姓</label>
+    <input type="text" class="echo-input" id="form-grow-01" name="form_grow_01" size="10" value="" placeholder="山田">
+    <label for="form-grow-02" class="echo-form-label">名</label>
+    <input type="text" class="echo-input" id="form-grow-02" name="form_grow_02" size="10" value="" placeholder="一郎">
+</div><!-- /.echo-form -->
+
+<hr class="echo-margin-y-lg">
+
+<div class="echo-form echo-form-grow">
+    <label for="demo01-02" class="echo-form-label">メッセージ</label>
+    <textarea id="demo01-02" class="echo-input" name="demo02" rows="5" cols="50" placeholder="メッセージをどうぞ"></textarea>
+</div><!-- /.echo-form -->
+
+<hr class="echo-margin-y-lg">
+
+<div class="echo-form echo-form-grow">
+    <label class="echo-form-label" for="form-grow-03">好きな映画</label>
+    <div class="echo-select">
+        <select id="form-grow-03" name="form_grow_03">
+            <option value="">選択してください</option>
+            <option value="raputa">天空の城ラピュタ</option>
+            <option value="charlie">チャーリーとチョコレート工場</option>
+            <option value="schindler">シンドラーのリスト</option>
+        </select>
+    </div><!-- /.echo-select -->
+</div><!-- /.echo-form -->
+
+<hr class="echo-margin-y-lg">
+
+<p>チェックボックス・ラジオボタンは、このクラスを付与しても何も起きない。</p>
+
+<div class="echo-form echo-form-grow">
+    <span class="echo-form-label">好きな食べ物（いくつでも選択できます）</span>
+    <label class="echo-checkbox" for="form-grow-04-01"><input type="checkbox" name="form_grow_04[]" id="form-grow-04-01" value="りんご"><span class="echo-checkbox-icon"></span><span class="echo-checkbox-label">りんご</span></label>
+    <label class="echo-checkbox" for="form-grow-04-02"><input type="checkbox" name="form_grow_04[]" id="form-grow-04-02" value="バナナ"><span class="echo-checkbox-icon"></span><span class="echo-checkbox-label">バナナ</span></label>
+    <label class="echo-checkbox" for="form-grow-04-03"><input type="checkbox" name="form_grow_04[]" id="form-grow-04-03" value="ぶどう"><span class="echo-checkbox-icon"></span><span class="echo-checkbox-label">ぶどう</span></label>
+    <label class="echo-checkbox" for="form-grow-04-04"><input type="checkbox" name="form_grow_04[]" id="form-grow-04-04" value="みかん"><span class="echo-checkbox-icon"></span><span class="echo-checkbox-label">みかん</span></label>
+    <label class="echo-checkbox" for="form-grow-04-05"><input type="checkbox" name="form_grow_04[]" id="form-grow-04-05" value="キウイ"><span class="echo-checkbox-icon"></span><span class="echo-checkbox-label">キウイ</span></label>
+    <label class="echo-checkbox" for="form-grow-04-06"><input type="checkbox" name="form_grow_04[]" id="form-grow-04-06" value="かき"><span class="echo-checkbox-icon"></span><span class="echo-checkbox-label">かき</span></label>
+    <label class="echo-checkbox" for="form-grow-04-07"><input type="checkbox" name="form_grow_04[]" id="form-grow-04-07" value="メロン"><span class="echo-checkbox-icon"></span><span class="echo-checkbox-label">メロン</span></label>
+</div><!-- /.echo-form -->
+
+</div>
+
+
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-form echo-form-grow"&gt;
+    &lt;label for="form-grow-01" class="echo-form-label"&gt;姓&lt;/label&gt;
+    &lt;input type="text" class="echo-input" id="form-grow-01" name="form_grow_01" size="10" value="" placeholder="山田"&gt;
+    &lt;label for="form-grow-02" class="echo-form-label"&gt;名&lt;/label&gt;
+    &lt;input type="text" class="echo-input" id="form-grow-02" name="form_grow_02" size="10" value="" placeholder="一郎"&gt;
+&lt;/div&gt;&lt;!-- /.echo-form --&gt;
+
+&lt;hr class="echo-margin-y-lg"&gt;
+
+&lt;div class="echo-form echo-form-grow"&gt;
+    &lt;label for="demo01-02" class="echo-form-label"&gt;メッセージ&lt;/label&gt;
+    &lt;textarea id="demo01-02" class="echo-input" name="demo02" rows="5" cols="50" placeholder="メッセージをどうぞ"&gt;&lt;/textarea&gt;
+&lt;/div&gt;&lt;!-- /.echo-form --&gt;
+
+&lt;hr class="echo-margin-y-lg"&gt;
+
+&lt;div class="echo-form echo-form-grow"&gt;
+    &lt;label class="echo-form-label" for="form-grow-03"&gt;好きな映画&lt;/label&gt;
+    &lt;div class="echo-select"&gt;
+        &lt;select id="form-grow-03" name="form_grow_03"&gt;
+            &lt;option value=""&gt;選択してください&lt;/option&gt;
+            &lt;option value="raputa"&gt;天空の城ラピュタ&lt;/option&gt;
+            &lt;option value="charlie"&gt;チャーリーとチョコレート工場&lt;/option&gt;
+            &lt;option value="schindler"&gt;シンドラーのリスト&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;&lt;!-- /.echo-select --&gt;
+&lt;/div&gt;&lt;!-- /.echo-form --&gt;
+
+&lt;hr class="echo-margin-y-lg"&gt;
+
+&lt;p&gt;チェックボックス・ラジオボタンは、このクラスを付与しても何も起きない。&lt;/p&gt;
+
+&lt;div class="echo-form echo-form-grow"&gt;
+    &lt;span class="echo-form-label"&gt;好きな食べ物（いくつでも選択できます）&lt;/span&gt;
+    &lt;label class="echo-checkbox" for="form-grow-04-01"&gt;&lt;input type="checkbox" name="form_grow_04[]" id="form-grow-04-01" value="りんご"&gt;&lt;span class="echo-checkbox-icon"&gt;&lt;/span&gt;&lt;span class="echo-checkbox-label"&gt;りんご&lt;/span&gt;&lt;/label&gt;
+    &lt;label class="echo-checkbox" for="form-grow-04-02"&gt;&lt;input type="checkbox" name="form_grow_04[]" id="form-grow-04-02" value="バナナ"&gt;&lt;span class="echo-checkbox-icon"&gt;&lt;/span&gt;&lt;span class="echo-checkbox-label"&gt;バナナ&lt;/span&gt;&lt;/label&gt;
+    &lt;label class="echo-checkbox" for="form-grow-04-03"&gt;&lt;input type="checkbox" name="form_grow_04[]" id="form-grow-04-03" value="ぶどう"&gt;&lt;span class="echo-checkbox-icon"&gt;&lt;/span&gt;&lt;span class="echo-checkbox-label"&gt;ぶどう&lt;/span&gt;&lt;/label&gt;
+    &lt;label class="echo-checkbox" for="form-grow-04-04"&gt;&lt;input type="checkbox" name="form_grow_04[]" id="form-grow-04-04" value="みかん"&gt;&lt;span class="echo-checkbox-icon"&gt;&lt;/span&gt;&lt;span class="echo-checkbox-label"&gt;みかん&lt;/span&gt;&lt;/label&gt;
+    &lt;label class="echo-checkbox" for="form-grow-04-05"&gt;&lt;input type="checkbox" name="form_grow_04[]" id="form-grow-04-05" value="キウイ"&gt;&lt;span class="echo-checkbox-icon"&gt;&lt;/span&gt;&lt;span class="echo-checkbox-label"&gt;キウイ&lt;/span&gt;&lt;/label&gt;
+    &lt;label class="echo-checkbox" for="form-grow-04-06"&gt;&lt;input type="checkbox" name="form_grow_04[]" id="form-grow-04-06" value="かき"&gt;&lt;span class="echo-checkbox-icon"&gt;&lt;/span&gt;&lt;span class="echo-checkbox-label"&gt;かき&lt;/span&gt;&lt;/label&gt;
+    &lt;label class="echo-checkbox" for="form-grow-04-07"&gt;&lt;input type="checkbox" name="form_grow_04[]" id="form-grow-04-07" value="メロン"&gt;&lt;span class="echo-checkbox-icon"&gt;&lt;/span&gt;&lt;span class="echo-checkbox-label"&gt;メロン&lt;/span&gt;&lt;/label&gt;
+&lt;/div&gt;&lt;!-- /.echo-form --&gt;
+</code></pre></div>
+
+<h2 id="form-03-append" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-form-append</h2>
+
+<p><code>.echo-input</code> に <code>.echo-button</code> が接していた場合は角丸を解除する。</p>
+
+<div class="example">
+
+<div class="echo-form echo-form-append">
+    <input type="text" class="echo-input" name="search" size="30" placeholder="Keyword">
+    <button class="echo-button echo-button-style-a">検索</button>
+</div><!-- /.echo-form -->
+
+<hr class="echo-margin-y-lg">
+
+<div class="echo-form echo-form-grow echo-form-append">
+    <input type="text" class="echo-input" name="search" size="30" placeholder="Keyword">
+    <button class="echo-button echo-button-style-a">検索</button>
+</div><!-- /.echo-form -->
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-form echo-form-append"&gt;
+    &lt;input type="text" class="echo-input" name="search" size="30" placeholder="Keyword"&gt;
+    &lt;button class="echo-button echo-button-style-a"&gt;検索&lt;/button&gt;
+&lt;/div&gt;&lt;!-- /.echo-form --&gt;
+
+&lt;hr class="echo-margin-y-lg"&gt;
+
+&lt;div class="echo-form echo-form-grow echo-form-append"&gt;
+    &lt;input type="text" class="echo-input" name="search" size="30" placeholder="Keyword"&gt;
+    &lt;button class="echo-button echo-button-style-a"&gt;検索&lt;/button&gt;
+&lt;/div&gt;&lt;!-- /.echo-form --&gt;
+</code></pre></div>
+
+
+<h2 id="form-04-info" class="echo-doc-post-title-01">echo-form-info</h2>
+
+<p>フォームの入力方法を説明する補助テキストを表示する。文字色は <code>$info</code> となる。</p>
+
+<p>文字サイズは <code>.echo-form</code> の(fontsize)が一段階下がる。</p>
+
+<div class="example">
+
+<div class="echo-form">
+    <label for="demo-info-01" class="echo-form-label">Twitter ID</label>
+    <input type="text" class="echo-input" id="demo-info-01" name="demo_info_01" size="20" value="webbing_cms">
+    <p class="echo-form-info">プロフィールページのURL末尾の、英数字のIDを入力してください。</p>
+</div><!-- /.echo-form -->
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-form"&gt;
+    &lt;label for="demo-error-01" class="echo-form-label"&gt;フリガナ&lt;/label&gt;
+    &lt;input type="text" class="echo-input is-error" id="demo-error-01" name="demo_error_01" size="30" value="山田一郎"&gt;
+    &lt;p class="echo-form-error"&gt;フリガナはカタカナで入力してください。&lt;/p&gt;
+&lt;/div&gt;&lt;!-- /.echo-form --&gt;</code></pre></div>
+
+
+<h2 id="form-05-error" class="echo-doc-post-title-01">echo-form-error</h2>
+
+<p>フォームの入力を間違えたときの補助テキストを表示する。文字色は <code>$important</code> となる。</p>
+
+<p>文字サイズは <code>.echo-form</code> の(fontsize)が一段階下がる。</p>
+
+<div class="example">
+
+<div class="echo-form">
+    <label for="demo-error-01" class="echo-form-label">フリガナ</label>
+    <input type="text" class="echo-input is-error" id="demo-error-01" name="demo_error_01" size="30" value="山田一郎">
+    <p class="echo-form-error">フリガナはカタカナで入力してください。</p>
+</div><!-- /.echo-form -->
+
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-form"&gt;
+    &lt;label for="demo-error-01" class="echo-form-label"&gt;フリガナ&lt;/label&gt;
+    &lt;input type="text" class="echo-input is-error" id="demo-error-01" name="demo_error_01" size="30" value="山田一郎"&gt;
+    &lt;p class="echo-form-error"&gt;フリガナはカタカナで入力してください。&lt;/p&gt;
+&lt;/div&gt;&lt;!-- /.echo-form --&gt;</code></pre></div>
+
+
+<?php include('../doc_include/footer.inc'); ?>

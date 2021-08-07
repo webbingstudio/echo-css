@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>component-overlay | Style guide | echo-css</title>
+    <meta property="og:title" content="component-overlay | Style guide | echo-css">
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div id="echo-document">
+
+    <?php include('../doc_include/header.inc'); ?>
+
+    <main class="echo-p-main" role="main">
+        <div class="echo-doc-container echo-doc-container-fluid">
+
+            <div class="echo-doc-pagehead">
+                <h1 class="echo-doc-pagehead-title">component-overlay</h1>
+            </div><!-- /.echo-doc-pagehead -->
+
+            <nav class="echo-doc-anchor">
+                <ul class="echo-list echo-list-horizontal">
+                    
+                    <li class="echo-list-item"><a href="#overlay" class="js-scrollto">echo-overlay</a></li>
+                    
+                    <li class="echo-list-item"><a href="#overlay-01-inverse" class="js-scrollto">echo-overlay-inverse</a></li>
+                    
+                </ul>
+            </nav>
+            
+
+            <article class="echo-doc-post">
+                <div class="echo-doc-post-contents styleguide-contents"><h2 id="overlay" class="echo-doc-post-title-01">echo-overlay</h2>
+
+<p>特定条件で表示状態となる、画面全体を覆うコンポーネントを表示する。<br>
+画面全体を覆っている <code>.echo-overlay-bg</code> と、内容を含む <code>.echo-overlay-contents</code> の二重構造となっている。</p>
+
+<p>使用する際は、JavaScript等で「なんらかのトリガーで表示し、かつbody要素のスクロールを禁止する処理」を行う必要がある。</p>
+
+<p><code>z-index</code> は <code>1000</code> となっている。常に表示する要素は、レイヤーを <code>1001</code> 以上にすること。</p>
+
+<div class="example">
+    <div class="echo-text-center echo-margin-0 echo-padding-y-lg echo-padding-bottom-md">
+        <button class="echo-button echo-button-style-a echo-button-lg js-toggle" data-toggle-target="#menu-01" data-toggle-sync=".js-toggle-sync-01" aria-expanded="false" aria-label="Menu">オーバーレイを表示</button>
+    </div>
+
+    <div class="echo-overlay" id="menu-01">
+        <div class="echo-overlay-bg"></div>
+        <div class="echo-overlay-contents">
+
+            <nav class="echo-nav echo-nav-vertical">
+                <ul class="echo-nav-list">
+                    <li class="echo-nav-item">
+                        <a href="#" class="echo-nav-label">ボタン</a>
+                    </li>
+                    <li class="echo-nav-item">
+                        <a href="#" class="echo-nav-label is-current">現在のページ</a>
+                        <ul class="echo-nav-list echo-nav-children">
+                            <li class="echo-nav-item">
+                                <a href="#" class="echo-nav-label">2階層目ボタン</a>
+                                <ul class="echo-nav-list echo-nav-children">
+                                    <li class="echo-nav-item">
+                                        <a href="#" class="echo-nav-label">3階層目ボタン</a>
+                                    </li>
+                                    <li class="echo-nav-item">
+                                        <a href="#" class="echo-nav-label">3階層目ボタン</a>
+                                    </li>
+                                    <li class="echo-nav-item">
+                                        <a href="#" class="echo-nav-label">3階層目ボタン</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="echo-nav-item">
+                                <a href="#" class="echo-nav-label">2階層目ボタン</a>
+                            </li>
+                            <li class="echo-nav-item">
+                                <a href="#" class="echo-nav-label">2階層目ボタン</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="echo-nav-item">
+                        <a href="#" class="echo-nav-label">文字数が多いボタンです</a>
+                    </li>
+                    <li class="echo-nav-item">
+                        <a href="#" class="echo-nav-label"><span class="echo-nav-text"><span class="echo-text-xs">複数行の</span><br>ボタン</span></a>
+                    </li>
+                    <li class="echo-nav-item">
+                        <a href="#" class="echo-nav-label">ボタン</a>
+                    </li>
+                    <li class="echo-nav-item">
+                        <a href="#" class="echo-nav-label">ボタン</a>
+                    </li>
+                </ul>
+            </nav><!-- /.nav -->
+
+            <p class="echo-text-center echo-margin-0 echo-padding-y-lg"><input type="button" class="echo-button echo-button-style-a echo-button-lg js-toggle-sync-01" data-toggle-target="#menu-01" aria-expanded="false" value="オーバーレイを閉じる" /></p>
+
+        </div><!-- /.echo-overlay-contents -->
+    </div><!-- /.echo-overlay -->
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-overlay"&gt;
+    &lt;div class="echo-overlay-bg"&gt;&lt;/div&gt;
+    &lt;div class="echo-overlay-contents"&gt;
+        (contents)
+    &lt;/div&gt;&lt;!-- /.echo-overlay-contents --&gt;
+&lt;/div&gt;&lt;!-- /.echo-overlay --&gt;</code></pre></div>
+
+
+<h2 id="media-01-inverse" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-overlay-inverse</h2>
+
+<p>文字色と背景色が反転する。</p>
+
+<div class="example">
+    <div class="echo-text-center echo-padding-bottom-md">
+        <button class="echo-button echo-button-style-a echo-button-lg js-toggle" data-toggle-target="#menu-02" data-toggle-sync=".js-toggle-sync-02" aria-expanded="false" aria-label="Menu">オーバーレイを表示</button>
+    </div>
+
+    <div class="echo-overlay echo-overlay-inverse" id="menu-02">
+        <div class="echo-overlay-bg"></div>
+        <div class="echo-overlay-contents">
+
+
+            <nav class="echo-nav echo-nav-vertical echo-nav-inverse">
+                <ul class="echo-nav-list">
+                    <li class="echo-nav-item">
+                        <a href="#" class="echo-nav-label">ボタン</a>
+                    </li>
+                    <li class="echo-nav-item">
+                        <a href="#" class="echo-nav-label is-current">現在のページ</a>
+                        <ul class="echo-nav-list echo-nav-children">
+                            <li class="echo-nav-item">
+                                <a href="#" class="echo-nav-label">2階層目ボタン</a>
+                                <ul class="echo-nav-list echo-nav-children">
+                                    <li class="echo-nav-item">
+                                        <a href="#" class="echo-nav-label">3階層目ボタン</a>
+                                    </li>
+                                    <li class="echo-nav-item">
+                                        <a href="#" class="echo-nav-label">3階層目ボタン</a>
+                                    </li>
+                                    <li class="echo-nav-item">
+                                        <a href="#" class="echo-nav-label">3階層目ボタン</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="echo-nav-item">
+                                <a href="#" class="echo-nav-label">2階層目ボタン</a>
+                            </li>
+                            <li class="echo-nav-item">
+                                <a href="#" class="echo-nav-label">2階層目ボタン</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="echo-nav-item">
+                        <a href="#" class="echo-nav-label">文字数が多いボタンです</a>
+                    </li>
+                    <li class="echo-nav-item">
+                        <a href="#" class="echo-nav-label"><span class="echo-nav-text"><span class="echo-text-xs">複数行の</span><br>ボタン</span></a>
+                    </li>
+                    <li class="echo-nav-item">
+                        <a href="#" class="echo-nav-label">ボタン</a>
+                    </li>
+                    <li class="echo-nav-item">
+                        <a href="#" class="echo-nav-label">ボタン</a>
+                    </li>
+                </ul>
+            </nav><!-- /.nav -->
+
+            <p class="echo-text-center echo-margin-0 echo-padding-y-lg echo-margin-0 echo-padding-y-lg"><input type="button" class="echo-button echo-button-style-a echo-button-inverse echo-button-lg js-toggle-sync-02" data-toggle-target="#menu-02" aria-expanded="false" value="オーバーレイを閉じる" /></p>
+
+        </div><!-- /.echo-overlay-contents -->
+    </div><!-- /.echo-overlay -->
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="echo-overlay echo-overlay-inverse"&gt;
+    &lt;div class="echo-overlay-bg"&gt;&lt;/div&gt;
+    &lt;div class="echo-overlay-contents"&gt;
+        (contents)
+    &lt;/div&gt;&lt;!-- /.echo-overlay-contents --&gt;
+&lt;/div&gt;&lt;!-- /.echo-overlay --&gt;</code></pre></div>
+
+<?php include('../doc_include/footer.inc'); ?>

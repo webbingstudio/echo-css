@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>module-title | Style guide | echo-css</title>
+    <meta property="og:title" content="module-title | Style guide | echo-css">
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div id="echo-document">
+
+    <?php include('../doc_include/header.inc'); ?>
+
+    <main class="echo-p-main" role="main">
+        <div class="echo-doc-container echo-doc-container-fluid">
+
+            <div class="echo-doc-pagehead">
+                <h1 class="echo-doc-pagehead-title">module-title</h1>
+            </div><!-- /.echo-doc-pagehead -->
+
+            <nav class="echo-doc-anchor">
+                <ul class="echo-list echo-list-horizontal">
+
+                    <li class="echo-list-item"><a href="#title" class="js-scrollto">echo-title</a></li>
+
+                    <li class="echo-list-item"><a href="#title-01-level" class="js-scrollto">echo-title-level-(level)</a></li>
+
+                    <li class="echo-list-item"><a href="#title-02-fixed" class="js-scrollto">echo-title-level-(level)</a></li>
+
+                    <li class="echo-list-item"><a href="#title-03-style" class="js-scrollto">echo-title-style-(style)</a></li>
+                    
+                </ul>
+            </nav>
+                
+
+            <article class="echo-doc-post">
+                <div class="echo-doc-post-contents styleguide-contents"><h2 id="btn" class="echo-doc-post-title-01">echo-title</h2>
+
+<p>hx要素、もしくはp要素を見出しへの利用を前提にリセットする。</p>
+<ul>
+  <li>フォントファミリーが <code>first</code> になる。詳細は<a href="/docs/design-tokens-font.html">フォントファミリー</a>を参照。</li>
+  <li><code>font-size</code> は指定しない（ブラウザの見出し要素の規定値）</li>
+  <li><code>margin</code> は0となる</li>
+  <li><code>line-height</code> は、body要素の継承よりも小さくなる( <code>1.25</code> )。</li>
+</ul>
+
+<div class="example">
+<h1 class="echo-title">これはh1要素です</h1>
+<h1 class="echo-title"><a href="#">リンクを付与したh1要素です</a></h1>
+<h2 class="echo-title">これはh2要素です</h2>
+<h2 class="echo-title"><a href="#">リンクを付与したh2要素です</a></h2>
+<h3 class="echo-title">これはh3要素です</h3>
+<h3 class="echo-title"><a href="#">リンクを付与したh3要素です</a></h3>
+<h4 class="echo-title">これはh4要素です</h4>
+<h4 class="echo-title"><a href="#">リンクを付与したh4要素です</a></h4>
+<h5 class="echo-title">これはh5要素です</h5>
+<h5 class="echo-title"><a href="#">リンクを付与したh5要素です</a></h5>
+<h6 class="echo-title">これはh6要素です</h6>
+<h6 class="echo-title"><a href="#">リンクを付与したh6要素です</a></h6>
+<p class="echo-title">これはp要素です</p>
+<p class="echo-title"><a href="#">リンクを付与したp要素です</a></p>
+</div>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;h1 class="echo-title"&gt;これはh1要素です&lt;/h1&gt;
+&lt;h1 class="echo-title"&gt;&lt;a href="#"&gt;リンクを付与したh1要素です&lt;/a&gt;&lt;/h1&gt;
+&lt;h2 class="echo-title"&gt;これはh2要素です&lt;/h2&gt;
+&lt;h2 class="echo-title"&gt;&lt;a href="#"&gt;リンクを付与したh2要素です&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 class="echo-title"&gt;これはh3要素です&lt;/h3&gt;
+&lt;h3 class="echo-title"&gt;&lt;a href="#"&gt;リンクを付与したh3要素です&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 class="echo-title"&gt;これはh4要素です&lt;/h4&gt;
+&lt;h4 class="echo-title"&gt;&lt;a href="#"&gt;リンクを付与したh4要素です&lt;/a&gt;&lt;/h4&gt;
+&lt;h5 class="echo-title"&gt;これはh5要素です&lt;/h5&gt;
+&lt;h5 class="echo-title"&gt;&lt;a href="#"&gt;リンクを付与したh5要素です&lt;/a&gt;&lt;/h5&gt;
+&lt;h6 class="echo-title"&gt;これはh6要素です&lt;/h6&gt;
+&lt;h6 class="echo-title"&gt;&lt;a href="#"&gt;リンクを付与したh6要素です&lt;/a&gt;&lt;/h6&gt;
+&lt;p class="echo-title"&gt;これはp要素です&lt;/p&gt;
+&lt;p class="echo-title"&gt;&lt;a href="#"&gt;リンクを付与したp要素です&lt;/a&gt;&lt;/p&gt;</code></pre>
+
+
+<h2 id="title-01-level" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-title-level-(level)</h2>
+
+<p>見出しの文字サイズを、見出しレベルとして望ましい大きさに変更する。<br>
+<strong>継承された文字サイズに対する相対</strong> (em) で大きくなる。</p>
+
+<p>(level) は <code>1-6</code> に対応しているが、これは <code>h1 - h6</code> 要素に併せた便宜的な名称であり、h1要素に「6」を使用しても問題ない。</p>
+
+<?php include('../doc_include/fonttable_title_level.html'); ?>
+
+<p>Sassを使用できる場合、 <code>_scss/config_advance.scss</code> の配列 <code>$title-min-font-sizes, $title-max-font-sizes</code>で変更できる。</p>
+
+
+<div class="example">
+
+<h1 class="echo-title echo-title-level-1">これはh1要素で見た目がレベル1です</h1>
+<h1 class="echo-title echo-title-level-2">これはh1要素で見た目がレベル2です</h1>
+<h1 class="echo-title echo-title-level-3">これはh1要素で見た目がレベル3です</h1>
+<h1 class="echo-title echo-title-level-4">これはh1要素で見た目がレベル4です</h1>
+<h1 class="echo-title echo-title-level-5">これはh1要素で見た目がレベル5です</h1>
+<h1 class="echo-title echo-title-level-6">これはh1要素で見た目がレベル6です</h1>
+<h2 class="echo-title echo-title-level-1">これはh2要素で見た目がレベル1です</h2>
+<h2 class="echo-title echo-title-level-2">これはh2要素で見た目がレベル2です</h2>
+<h2 class="echo-title echo-title-level-3">これはh2要素で見た目がレベル3です</h2>
+<h2 class="echo-title echo-title-level-4">これはh2要素で見た目がレベル4です</h2>
+<h2 class="echo-title echo-title-level-5">これはh2要素で見た目がレベル5です</h2>
+<h2 class="echo-title echo-title-level-6">これはh2要素で見た目がレベル6です</h2>
+<h3 class="echo-title echo-title-level-1">これはh3要素で見た目がレベル1です</h3>
+<h3 class="echo-title echo-title-level-2">これはh3要素で見た目がレベル2です</h3>
+<h3 class="echo-title echo-title-level-3">これはh3要素で見た目がレベル3です</h3>
+<h3 class="echo-title echo-title-level-4">これはh3要素で見た目がレベル4です</h3>
+<h3 class="echo-title echo-title-level-5">これはh3要素で見た目がレベル5です</h3>
+<h3 class="echo-title echo-title-level-6">これはh3要素で見た目がレベル6です</h3>
+<h4 class="echo-title echo-title-level-1">これはh4要素で見た目がレベル1です</h4>
+<h4 class="echo-title echo-title-level-2">これはh4要素で見た目がレベル2です</h4>
+<h4 class="echo-title echo-title-level-3">これはh4要素で見た目がレベル3です</h4>
+<h4 class="echo-title echo-title-level-5">これはh4要素で見た目がレベル5です</h4>
+<h4 class="echo-title echo-title-level-6">これはh4要素で見た目がレベル6です</h4>
+<h5 class="echo-title echo-title-level-1">これはh5要素で見た目がレベル1です</h5>
+<h5 class="echo-title echo-title-level-2">これはh5要素で見た目がレベル2です</h5>
+<h5 class="echo-title echo-title-level-3">これはh5要素で見た目がレベル3です</h5>
+<h5 class="echo-title echo-title-level-4">これはh5要素で見た目がレベル4です</h5>
+<h5 class="echo-title echo-title-level-5">これはh5要素で見た目がレベル5です</h5>
+<h5 class="echo-title echo-title-level-6">これはh5要素で見た目がレベル6です</h5>
+<h6 class="echo-title echo-title-level-1">これはh6要素で見た目がレベル1です</h6>
+<h6 class="echo-title echo-title-level-2">これはh6要素で見た目がレベル2です</h6>
+<h6 class="echo-title echo-title-level-3">これはh6要素で見た目がレベル3です</h6>
+<h6 class="echo-title echo-title-level-4">これはh6要素で見た目がレベル4です</h6>
+<h6 class="echo-title echo-title-level-5">これはh6要素で見た目がレベル5です</h6>
+<h6 class="echo-title echo-title-level-6">これはh6要素で見た目がレベル6です</h6>
+<p class="echo-title echo-title-level-1">これはp要素で見た目がレベル1です</p>
+<p class="echo-title echo-title-level-2">これはp要素で見た目がレベル2です</p>
+<p class="echo-title echo-title-level-3">これはp要素で見た目がレベル3です</p>
+<p class="echo-title echo-title-level-4">これはp要素で見た目がレベル4です</p>
+<p class="echo-title echo-title-level-5">これはp要素で見た目がレベル5です</p>
+<p class="echo-title echo-title-level-6">これはp要素で見た目がレベル6です</p>
+
+<div class="echo-text-xs echo-margin-top-lg echo-padding-sm echo-bg-default echo-bg-fade">
+    
+<p>この範囲では .echo-text-xs クラスが付与されているため、各見出しの文字サイズが小さくなっています。</p>
+
+<h1 class="echo-title echo-title-level-1">これはh1要素で見た目がレベル1です</h1>
+<h1 class="echo-title echo-title-level-2">これはh1要素で見た目がレベル2です</h1>
+<h1 class="echo-title echo-title-level-3">これはh1要素で見た目がレベル3です</h1>
+<h1 class="echo-title echo-title-level-4">これはh1要素で見た目がレベル4です</h1>
+<h1 class="echo-title echo-title-level-5">これはh1要素で見た目がレベル5です</h1>
+<h1 class="echo-title echo-title-level-6">これはh1要素で見た目がレベル6です</h1>
+
+</div>
+
+<div class="echo-text-xl echo-margin-top-lg echo-padding-sm echo-bg-default echo-bg-fade">
+    
+<p>この範囲では .echo-text-xl クラスが付与されているため、各見出しの文字サイズが大きくなっています。</p>
+
+<h1 class="echo-title echo-title-level-1">これはh1要素で見た目がレベル1です</h1>
+<h1 class="echo-title echo-title-level-2">これはh1要素で見た目がレベル2です</h1>
+<h1 class="echo-title echo-title-level-3">これはh1要素で見た目がレベル3です</h1>
+<h1 class="echo-title echo-title-level-4">これはh1要素で見た目がレベル4です</h1>
+<h1 class="echo-title echo-title-level-5">これはh1要素で見た目がレベル5です</h1>
+<h1 class="echo-title echo-title-level-6">これはh1要素で見た目がレベル6です</h1>
+
+</div>
+
+</div>
+
+
+<div class="codeblock"><pre><code class="language-markup">&lt;h1 class="echo-title echo-title-level-1"&gt;これはh1要素で見た目がレベル1です&lt;/h1&gt;
+&lt;h1 class="echo-title echo-title-level-2"&gt;これはh1要素で見た目がレベル2です&lt;/h1&gt;
+&lt;h1 class="echo-title echo-title-level-3"&gt;これはh1要素で見た目がレベル3です&lt;/h1&gt;
+&lt;h1 class="echo-title echo-title-level-4"&gt;これはh1要素で見た目がレベル4です&lt;/h1&gt;
+&lt;h1 class="echo-title echo-title-level-5"&gt;これはh1要素で見た目がレベル5です&lt;/h1&gt;
+&lt;h1 class="echo-title echo-title-level-6"&gt;これはh1要素で見た目がレベル6です&lt;/h1&gt;
+&lt;h2 class="echo-title echo-title-level-1"&gt;これはh2要素で見た目がレベル1です&lt;/h2&gt;
+&lt;h2 class="echo-title echo-title-level-2"&gt;これはh2要素で見た目がレベル2です&lt;/h2&gt;
+&lt;h2 class="echo-title echo-title-level-3"&gt;これはh2要素で見た目がレベル3です&lt;/h2&gt;
+&lt;h2 class="echo-title echo-title-level-4"&gt;これはh2要素で見た目がレベル4です&lt;/h2&gt;
+&lt;h2 class="echo-title echo-title-level-5"&gt;これはh2要素で見た目がレベル5です&lt;/h2&gt;
+&lt;h2 class="echo-title echo-title-level-6"&gt;これはh2要素で見た目がレベル6です&lt;/h2&gt;
+&lt;h3 class="echo-title echo-title-level-1"&gt;これはh3要素で見た目がレベル1です&lt;/h3&gt;
+&lt;h3 class="echo-title echo-title-level-2"&gt;これはh3要素で見た目がレベル2です&lt;/h3&gt;
+&lt;h3 class="echo-title echo-title-level-3"&gt;これはh3要素で見た目がレベル3です&lt;/h3&gt;
+&lt;h3 class="echo-title echo-title-level-4"&gt;これはh3要素で見た目がレベル4です&lt;/h3&gt;
+&lt;h3 class="echo-title echo-title-level-5"&gt;これはh3要素で見た目がレベル5です&lt;/h3&gt;
+&lt;h3 class="echo-title echo-title-level-6"&gt;これはh3要素で見た目がレベル6です&lt;/h3&gt;
+&lt;h4 class="echo-title echo-title-level-1"&gt;これはh4要素で見た目がレベル1です&lt;/h4&gt;
+&lt;h4 class="echo-title echo-title-level-2"&gt;これはh4要素で見た目がレベル2です&lt;/h4&gt;
+&lt;h4 class="echo-title echo-title-level-3"&gt;これはh4要素で見た目がレベル3です&lt;/h4&gt;
+&lt;h4 class="echo-title echo-title-level-5"&gt;これはh4要素で見た目がレベル5です&lt;/h4&gt;
+&lt;h4 class="echo-title echo-title-level-6"&gt;これはh4要素で見た目がレベル6です&lt;/h4&gt;
+&lt;h5 class="echo-title echo-title-level-1"&gt;これはh5要素で見た目がレベル1です&lt;/h5&gt;
+&lt;h5 class="echo-title echo-title-level-2"&gt;これはh5要素で見た目がレベル2です&lt;/h5&gt;
+&lt;h5 class="echo-title echo-title-level-3"&gt;これはh5要素で見た目がレベル3です&lt;/h5&gt;
+&lt;h5 class="echo-title echo-title-level-4"&gt;これはh5要素で見た目がレベル4です&lt;/h5&gt;
+&lt;h5 class="echo-title echo-title-level-5"&gt;これはh5要素で見た目がレベル5です&lt;/h5&gt;
+&lt;h5 class="echo-title echo-title-level-6"&gt;これはh5要素で見た目がレベル6です&lt;/h5&gt;
+&lt;h6 class="echo-title echo-title-level-1"&gt;これはh6要素で見た目がレベル1です&lt;/h6&gt;
+&lt;h6 class="echo-title echo-title-level-2"&gt;これはh6要素で見た目がレベル2です&lt;/h6&gt;
+&lt;h6 class="echo-title echo-title-level-3"&gt;これはh6要素で見た目がレベル3です&lt;/h6&gt;
+&lt;h6 class="echo-title echo-title-level-4"&gt;これはh6要素で見た目がレベル4です&lt;/h6&gt;
+&lt;h6 class="echo-title echo-title-level-5"&gt;これはh6要素で見た目がレベル5です&lt;/h6&gt;
+&lt;h6 class="echo-title echo-title-level-6"&gt;これはh6要素で見た目がレベル6です&lt;/h6&gt;
+&lt;p class="echo-title echo-title-level-1"&gt;これはp要素で見た目がレベル1です&lt;/p&gt;
+&lt;p class="echo-title echo-title-level-2"&gt;これはp要素で見た目がレベル2です&lt;/p&gt;
+&lt;p class="echo-title echo-title-level-3"&gt;これはp要素で見た目がレベル3です&lt;/p&gt;
+&lt;p class="echo-title echo-title-level-4"&gt;これはp要素で見た目がレベル4です&lt;/p&gt;
+&lt;p class="echo-title echo-title-level-5"&gt;これはp要素で見た目がレベル5です&lt;/p&gt;
+&lt;p class="echo-title echo-title-level-6"&gt;これはp要素で見た目がレベル6です&lt;/p&gt;
+
+&lt;div class="echo-text-xs echo-margin-top-lg echo-padding-sm echo-bg-default echo-bg-fade"&gt;
+    
+&lt;p&gt;この範囲では .echo-text-xs クラスが付与されているため、各見出しの文字サイズが小さくなっています。&lt;/p&gt;
+
+&lt;h1 class="echo-title echo-title-level-1"&gt;これはh1要素で見た目がレベル1です&lt;/h1&gt;
+&lt;h1 class="echo-title echo-title-level-2"&gt;これはh1要素で見た目がレベル2です&lt;/h1&gt;
+&lt;h1 class="echo-title echo-title-level-3"&gt;これはh1要素で見た目がレベル3です&lt;/h1&gt;
+&lt;h1 class="echo-title echo-title-level-4"&gt;これはh1要素で見た目がレベル4です&lt;/h1&gt;
+&lt;h1 class="echo-title echo-title-level-5"&gt;これはh1要素で見た目がレベル5です&lt;/h1&gt;
+&lt;h1 class="echo-title echo-title-level-6"&gt;これはh1要素で見た目がレベル6です&lt;/h1&gt;
+
+&lt;/div&gt;
+
+&lt;div class="echo-text-xl echo-margin-top-lg echo-padding-sm echo-bg-default echo-bg-fade"&gt;
+    
+&lt;p&gt;この範囲では .echo-text-xl クラスが付与されているため、各見出しの文字サイズが大きくなっています。&lt;/p&gt;
+
+&lt;h1 class="echo-title echo-title-level-1"&gt;これはh1要素で見た目がレベル1です&lt;/h1&gt;
+&lt;h1 class="echo-title echo-title-level-2"&gt;これはh1要素で見た目がレベル2です&lt;/h1&gt;
+&lt;h1 class="echo-title echo-title-level-3"&gt;これはh1要素で見た目がレベル3です&lt;/h1&gt;
+&lt;h1 class="echo-title echo-title-level-4"&gt;これはh1要素で見た目がレベル4です&lt;/h1&gt;
+&lt;h1 class="echo-title echo-title-level-5"&gt;これはh1要素で見た目がレベル5です&lt;/h1&gt;
+&lt;h1 class="echo-title echo-title-level-6"&gt;これはh1要素で見た目がレベル6です&lt;/h1&gt;
+
+&lt;/div&gt;
+</code></pre>
+
+
+<h2 id="title-02-fixed" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-title-fixed</h2>
+
+<p><code>.echo-title-level-(size)</code> と同時に付与すると、見出しが (breakpoint) に関わらず常に同じサイズとなる。<br>
+幅の変動が少ないグリッド内のコンポーネント等に使用する。</p>
+
+<p>各サイズは、前項の表内の最低値となる。</p>
+
+<div class="example">
+
+<h1 class="echo-title echo-title-fixed echo-title-level-1">これはh1要素で見た目がレベル1です</h1>
+<h1 class="echo-title echo-title-fixed echo-title-level-2">これはh1要素で見た目がレベル2です</h1>
+<h1 class="echo-title echo-title-fixed echo-title-level-3">これはh1要素で見た目がレベル3です</h1>
+<h1 class="echo-title echo-title-fixed echo-title-level-4">これはh1要素で見た目がレベル4です</h1>
+<h1 class="echo-title echo-title-fixed echo-title-level-5">これはh1要素で見た目がレベル5です</h1>
+<h1 class="echo-title echo-title-fixed echo-title-level-6">これはh1要素で見た目がレベル6です</h1>
+<h2 class="echo-title echo-title-fixed echo-title-level-1">これはh2要素で見た目がレベル1です</h2>
+<h2 class="echo-title echo-title-fixed echo-title-level-2">これはh2要素で見た目がレベル2です</h2>
+<h2 class="echo-title echo-title-fixed echo-title-level-3">これはh2要素で見た目がレベル3です</h2>
+<h2 class="echo-title echo-title-fixed echo-title-level-4">これはh2要素で見た目がレベル4です</h2>
+<h2 class="echo-title echo-title-fixed echo-title-level-5">これはh2要素で見た目がレベル5です</h2>
+<h2 class="echo-title echo-title-fixed echo-title-level-6">これはh2要素で見た目がレベル6です</h2>
+<h3 class="echo-title echo-title-fixed echo-title-level-1">これはh3要素で見た目がレベル1です</h3>
+<h3 class="echo-title echo-title-fixed echo-title-level-2">これはh3要素で見た目がレベル2です</h3>
+<h3 class="echo-title echo-title-fixed echo-title-level-3">これはh3要素で見た目がレベル3です</h3>
+<h3 class="echo-title echo-title-fixed echo-title-level-4">これはh3要素で見た目がレベル4です</h3>
+<h3 class="echo-title echo-title-fixed echo-title-level-5">これはh3要素で見た目がレベル5です</h3>
+<h3 class="echo-title echo-title-fixed echo-title-level-6">これはh3要素で見た目がレベル6です</h3>
+<h4 class="echo-title echo-title-fixed echo-title-level-1">これはh4要素で見た目がレベル1です</h4>
+<h4 class="echo-title echo-title-fixed echo-title-level-2">これはh4要素で見た目がレベル2です</h4>
+<h4 class="echo-title echo-title-fixed echo-title-level-3">これはh4要素で見た目がレベル3です</h4>
+<h4 class="echo-title echo-title-fixed echo-title-level-5">これはh4要素で見た目がレベル5です</h4>
+<h4 class="echo-title echo-title-fixed echo-title-level-6">これはh4要素で見た目がレベル6です</h4>
+<h5 class="echo-title echo-title-fixed echo-title-level-1">これはh5要素で見た目がレベル1です</h5>
+<h5 class="echo-title echo-title-fixed echo-title-level-2">これはh5要素で見た目がレベル2です</h5>
+<h5 class="echo-title echo-title-fixed echo-title-level-3">これはh5要素で見た目がレベル3です</h5>
+<h5 class="echo-title echo-title-fixed echo-title-level-4">これはh5要素で見た目がレベル4です</h5>
+<h5 class="echo-title echo-title-fixed echo-title-level-5">これはh5要素で見た目がレベル5です</h5>
+<h5 class="echo-title echo-title-fixed echo-title-level-6">これはh5要素で見た目がレベル6です</h5>
+<h6 class="echo-title echo-title-fixed echo-title-level-1">これはh6要素で見た目がレベル1です</h6>
+<h6 class="echo-title echo-title-fixed echo-title-level-2">これはh6要素で見た目がレベル2です</h6>
+<h6 class="echo-title echo-title-fixed echo-title-level-3">これはh6要素で見た目がレベル3です</h6>
+<h6 class="echo-title echo-title-fixed echo-title-level-4">これはh6要素で見た目がレベル4です</h6>
+<h6 class="echo-title echo-title-fixed echo-title-level-5">これはh6要素で見た目がレベル5です</h6>
+<h6 class="echo-title echo-title-fixed echo-title-level-6">これはh6要素で見た目がレベル6です</h6>
+<p class="echo-title echo-title-fixed echo-title-level-1">これはp要素で見た目がレベル1です</p>
+<p class="echo-title echo-title-fixed echo-title-level-2">これはp要素で見た目がレベル2です</p>
+<p class="echo-title echo-title-fixed echo-title-level-3">これはp要素で見た目がレベル3です</p>
+<p class="echo-title echo-title-fixed echo-title-level-4">これはp要素で見た目がレベル4です</p>
+<p class="echo-title echo-title-fixed echo-title-level-5">これはp要素で見た目がレベル5です</p>
+<p class="echo-title echo-title-fixed echo-title-level-6">これはp要素で見た目がレベル6です</p>
+
+</div>
+
+
+<div class="codeblock"><pre><code class="language-markup">&lt;h1 class="echo-title echo-title-fixed echo-title-level-1"&gt;これはh1要素で見た目がレベル1です&lt;/h1&gt;
+&lt;h1 class="echo-title echo-title-fixed echo-title-level-2"&gt;これはh1要素で見た目がレベル2です&lt;/h1&gt;
+&lt;h1 class="echo-title echo-title-fixed echo-title-level-3"&gt;これはh1要素で見た目がレベル3です&lt;/h1&gt;
+&lt;h1 class="echo-title echo-title-fixed echo-title-level-4"&gt;これはh1要素で見た目がレベル4です&lt;/h1&gt;
+&lt;h1 class="echo-title echo-title-fixed echo-title-level-5"&gt;これはh1要素で見た目がレベル5です&lt;/h1&gt;
+&lt;h1 class="echo-title echo-title-fixed echo-title-level-6"&gt;これはh1要素で見た目がレベル6です&lt;/h1&gt;
+&lt;h2 class="echo-title echo-title-fixed echo-title-level-1"&gt;これはh2要素で見た目がレベル1です&lt;/h2&gt;
+&lt;h2 class="echo-title echo-title-fixed echo-title-level-2"&gt;これはh2要素で見た目がレベル2です&lt;/h2&gt;
+&lt;h2 class="echo-title echo-title-fixed echo-title-level-3"&gt;これはh2要素で見た目がレベル3です&lt;/h2&gt;
+&lt;h2 class="echo-title echo-title-fixed echo-title-level-4"&gt;これはh2要素で見た目がレベル4です&lt;/h2&gt;
+&lt;h2 class="echo-title echo-title-fixed echo-title-level-5"&gt;これはh2要素で見た目がレベル5です&lt;/h2&gt;
+&lt;h2 class="echo-title echo-title-fixed echo-title-level-6"&gt;これはh2要素で見た目がレベル6です&lt;/h2&gt;
+&lt;h3 class="echo-title echo-title-fixed echo-title-level-1"&gt;これはh3要素で見た目がレベル1です&lt;/h3&gt;
+&lt;h3 class="echo-title echo-title-fixed echo-title-level-2"&gt;これはh3要素で見た目がレベル2です&lt;/h3&gt;
+&lt;h3 class="echo-title echo-title-fixed echo-title-level-3"&gt;これはh3要素で見た目がレベル3です&lt;/h3&gt;
+&lt;h3 class="echo-title echo-title-fixed echo-title-level-4"&gt;これはh3要素で見た目がレベル4です&lt;/h3&gt;
+&lt;h3 class="echo-title echo-title-fixed echo-title-level-5"&gt;これはh3要素で見た目がレベル5です&lt;/h3&gt;
+&lt;h3 class="echo-title echo-title-fixed echo-title-level-6"&gt;これはh3要素で見た目がレベル6です&lt;/h3&gt;
+&lt;h4 class="echo-title echo-title-fixed echo-title-level-1"&gt;これはh4要素で見た目がレベル1です&lt;/h4&gt;
+&lt;h4 class="echo-title echo-title-fixed echo-title-level-2"&gt;これはh4要素で見た目がレベル2です&lt;/h4&gt;
+&lt;h4 class="echo-title echo-title-fixed echo-title-level-3"&gt;これはh4要素で見た目がレベル3です&lt;/h4&gt;
+&lt;h4 class="echo-title echo-title-fixed echo-title-level-5"&gt;これはh4要素で見た目がレベル5です&lt;/h4&gt;
+&lt;h4 class="echo-title echo-title-fixed echo-title-level-6"&gt;これはh4要素で見た目がレベル6です&lt;/h4&gt;
+&lt;h5 class="echo-title echo-title-fixed echo-title-level-1"&gt;これはh5要素で見た目がレベル1です&lt;/h5&gt;
+&lt;h5 class="echo-title echo-title-fixed echo-title-level-2"&gt;これはh5要素で見た目がレベル2です&lt;/h5&gt;
+&lt;h5 class="echo-title echo-title-fixed echo-title-level-3"&gt;これはh5要素で見た目がレベル3です&lt;/h5&gt;
+&lt;h5 class="echo-title echo-title-fixed echo-title-level-4"&gt;これはh5要素で見た目がレベル4です&lt;/h5&gt;
+&lt;h5 class="echo-title echo-title-fixed echo-title-level-5"&gt;これはh5要素で見た目がレベル5です&lt;/h5&gt;
+&lt;h5 class="echo-title echo-title-fixed echo-title-level-6"&gt;これはh5要素で見た目がレベル6です&lt;/h5&gt;
+&lt;h6 class="echo-title echo-title-fixed echo-title-level-1"&gt;これはh6要素で見た目がレベル1です&lt;/h6&gt;
+&lt;h6 class="echo-title echo-title-fixed echo-title-level-2"&gt;これはh6要素で見た目がレベル2です&lt;/h6&gt;
+&lt;h6 class="echo-title echo-title-fixed echo-title-level-3"&gt;これはh6要素で見た目がレベル3です&lt;/h6&gt;
+&lt;h6 class="echo-title echo-title-fixed echo-title-level-4"&gt;これはh6要素で見た目がレベル4です&lt;/h6&gt;
+&lt;h6 class="echo-title echo-title-fixed echo-title-level-5"&gt;これはh6要素で見た目がレベル5です&lt;/h6&gt;
+&lt;h6 class="echo-title echo-title-fixed echo-title-level-6"&gt;これはh6要素で見た目がレベル6です&lt;/h6&gt;
+&lt;p class="echo-title echo-title-fixed echo-title-level-1"&gt;これはp要素で見た目がレベル1です&lt;/p&gt;
+&lt;p class="echo-title echo-title-fixed echo-title-level-2"&gt;これはp要素で見た目がレベル2です&lt;/p&gt;
+&lt;p class="echo-title echo-title-fixed echo-title-level-3"&gt;これはp要素で見た目がレベル3です&lt;/p&gt;
+&lt;p class="echo-title echo-title-fixed echo-title-level-4"&gt;これはp要素で見た目がレベル4です&lt;/p&gt;
+&lt;p class="echo-title echo-title-fixed echo-title-level-5"&gt;これはp要素で見た目がレベル5です&lt;/p&gt;
+&lt;p class="echo-title echo-title-fixed echo-title-level-6"&gt;これはp要素で見た目がレベル6です&lt;/p&gt;
+</code></pre>
+
+
+<h2 id="title-03-style" class="echo-doc-post-title-01"><span class="echo-doc-label echo-doc-label-sub">sub class</span> echo-title-style-(style)</h2>
+
+<p>見出しの外観を変更する。(style)は<code>a-f</code>の6種類となるが、破綻しない程度に追加しても構わない。</p>
+
+<p>線の太さやブレットの大きさは <code>.echo-title-level-(level)</code> の影響を受け変化する。<br>
+線、背景、ブレットの色は <code>$default</code> （文字色と同じ）が定義されている。Sassを使用している場合は <code>_scss/_config_basic.scss</code> 内の変数 <code>$title-key-color, $title-key-bg</code> で一括変更ができる。</p>
+
+<p>一部の外観はリンクを付与すると下線によって見栄えに問題が生じるが、下線を消すとWCAG 2.1の達成基準を満たせなくなることに注意。</p>
+
+<div class="example">
+<p class="echo-title echo-title-level-1 echo-title-style-a">見出しレベル1スタイルaです</p>
+<p class="echo-title echo-title-level-2 echo-title-style-a">見出しレベル2スタイルaです</p>
+<p class="echo-title echo-title-level-3 echo-title-style-a">見出しレベル3スタイルaです</p>
+<p class="echo-title echo-title-level-4 echo-title-style-a">見出しレベル4スタイルaです</p>
+<p class="echo-title echo-title-level-5 echo-title-style-a">見出しレベル5スタイルaです</p>
+<p class="echo-title echo-title-level-6 echo-title-style-a">見出しレベル6スタイルaです</p>
+<p class="echo-title echo-title-level-1 echo-title-style-b">見出しレベル1スタイルbです</p>
+<p class="echo-title echo-title-level-2 echo-title-style-b">見出しレベル2スタイルbです</p>
+<p class="echo-title echo-title-level-3 echo-title-style-b">見出しレベル3スタイルbです</p>
+<p class="echo-title echo-title-level-4 echo-title-style-b">見出しレベル4スタイルbです</p>
+<p class="echo-title echo-title-level-5 echo-title-style-b">見出しレベル5スタイルbです</p>
+<p class="echo-title echo-title-level-6 echo-title-style-b">見出しレベル6スタイルbです</p>
+<p class="echo-title echo-title-level-1 echo-title-style-c">見出しレベル1スタイルcです</p>
+<p class="echo-title echo-title-level-2 echo-title-style-c">見出しレベル2スタイルcです</p>
+<p class="echo-title echo-title-level-3 echo-title-style-c">見出しレベル3スタイルcです</p>
+<p class="echo-title echo-title-level-4 echo-title-style-c">見出しレベル4スタイルcです</p>
+<p class="echo-title echo-title-level-5 echo-title-style-c">見出しレベル5スタイルcです</p>
+<p class="echo-title echo-title-level-6 echo-title-style-c">見出しレベル6スタイルcです</p>
+<p class="echo-title echo-title-level-1 echo-title-style-d">見出しレベル1スタイルdです</p>
+<p class="echo-title echo-title-level-2 echo-title-style-d">見出しレベル2スタイルdです</p>
+<p class="echo-title echo-title-level-3 echo-title-style-d">見出しレベル3スタイルdです</p>
+<p class="echo-title echo-title-level-4 echo-title-style-d">見出しレベル4スタイルdです</p>
+<p class="echo-title echo-title-level-5 echo-title-style-d">見出しレベル5スタイルdです</p>
+<p class="echo-title echo-title-level-6 echo-title-style-d">見出しレベル6スタイルdです</p>
+<p class="echo-title echo-title-level-1 echo-title-style-e">見出しレベル1スタイルeです</p>
+<p class="echo-title echo-title-level-2 echo-title-style-e">見出しレベル2スタイルeです</p>
+<p class="echo-title echo-title-level-3 echo-title-style-e">見出しレベル3スタイルeです</p>
+<p class="echo-title echo-title-level-4 echo-title-style-e">見出しレベル4スタイルeです</p>
+<p class="echo-title echo-title-level-5 echo-title-style-e">見出しレベル5スタイルeです</p>
+<p class="echo-title echo-title-level-6 echo-title-style-e">見出しレベル6スタイルeです</p>
+<p class="echo-title echo-title-level-1 echo-title-style-f">見出しレベル1スタイルfです</p>
+<p class="echo-title echo-title-level-2 echo-title-style-f">見出しレベル2スタイルfです</p>
+<p class="echo-title echo-title-level-3 echo-title-style-f">見出しレベル3スタイルfです</p>
+<p class="echo-title echo-title-level-4 echo-title-style-f">見出しレベル4スタイルfです</p>
+<p class="echo-title echo-title-level-5 echo-title-style-f">見出しレベル5スタイルfです</p>
+<p class="echo-title echo-title-level-6 echo-title-style-f">見出しレベル6スタイルfです</p>
+</div>
+
+
+<div class="codeblock"><pre><code class="language-markup">&lt;p class="echo-title echo-title-level-1 echo-title-style-a"&gt;見出しレベル1スタイルaです&lt;/p&gt;
+&lt;p class="echo-title echo-title-level-2 echo-title-style-a"&gt;見出しレベル2スタイルaです&lt;/p&gt;
+&lt;p class="echo-title echo-title-level-3 echo-title-style-a"&gt;見出しレベル3スタイルaです&lt;/p&gt;
+&lt;p class="echo-title echo-title-level-4 echo-title-style-a"&gt;見出しレベル4スタイルaです&lt;/p&gt;
+&lt;p class="echo-title echo-title-level-5 echo-title-style-a"&gt;見出しレベル5スタイルaです&lt;/p&gt;
+&lt;p class="echo-title echo-title-level-6 echo-title-style-a"&gt;見出しレベル6スタイルaです&lt;/p&gt;
+&lt;p class="echo-title echo-title-level-1 echo-title-style-b"&gt;見出しレベル1スタイルbです&lt;/p&gt;
+&lt;p class="echo-title echo-title-level-2 echo-title-style-b"&gt;見出しレベル2スタイルbです&lt;/p&gt;
+&lt;p class="echo-title echo-title-level-3 echo-title-style-b"&gt;見出しレベル3スタイルbです&lt;/p&gt;
+&lt;p class="echo-title echo-title-level-4 echo-title-style-b"&gt;見出しレベル4スタイルbです&lt;/p&gt;
+&lt;p class="echo-title echo-title-level-5 echo-title-style-b"&gt;見出しレベル5スタイルbです&lt;/p&gt;
+&lt;p class="echo-title echo-title-level-6 echo-title-style-b"&gt;見出しレベル6スタイルbです&lt;/p&gt;
+&lt;p class="echo-title echo-title-level-1 echo-title-style-c"&gt;見出しレベル1スタイルcです&lt;/p&gt;
+&lt;p class="echo-title echo-title-level-2 echo-title-style-c"&gt;見出しレベル2スタイルcです&lt;/p&gt;
+&lt;p class="echo-title echo-title-level-3 echo-title-style-c"&gt;見出しレベル3スタイルcです&lt;/p&gt;
+&lt;p class="echo-title echo-title-level-4 echo-title-style-c"&gt;見出しレベル4スタイルcです&lt;/p&gt;
+&lt;p class="echo-title echo-title-level-5 echo-title-style-c"&gt;見出しレベル5スタイルcです&lt;/p&gt;
+&lt;p class="echo-title echo-title-level-6 echo-title-style-c"&gt;見出しレベル6スタイルcです&lt;/p&gt;
+&lt;p class="echo-title echo-title-level-1 echo-title-style-d"&gt;見出しレベル1スタイルdです&lt;/p&gt;
+&lt;p class="echo-title echo-title-level-2 echo-title-style-d"&gt;見出しレベル2スタイルdです&lt;/p&gt;
+&lt;p class="echo-title echo-title-level-3 echo-title-style-d"&gt;見出しレベル3スタイルdです&lt;/p&gt;
+&lt;p class="echo-title echo-title-level-4 echo-title-style-d"&gt;見出しレベル4スタイルdです&lt;/p&gt;
+&lt;p class="echo-title echo-title-level-5 echo-title-style-d"&gt;見出しレベル5スタイルdです&lt;/p&gt;
+&lt;p class="echo-title echo-title-level-6 echo-title-style-d"&gt;見出しレベル6スタイルdです&lt;/p&gt;
+&lt;p class="echo-title echo-title-level-1 echo-title-style-e"&gt;見出しレベル1スタイルeです&lt;/p&gt;
+&lt;p class="echo-title echo-title-level-2 echo-title-style-e"&gt;見出しレベル2スタイルeです&lt;/p&gt;
+&lt;p class="echo-title echo-title-level-3 echo-title-style-e"&gt;見出しレベル3スタイルeです&lt;/p&gt;
+&lt;p class="echo-title echo-title-level-4 echo-title-style-e"&gt;見出しレベル4スタイルeです&lt;/p&gt;
+&lt;p class="echo-title echo-title-level-5 echo-title-style-e"&gt;見出しレベル5スタイルeです&lt;/p&gt;
+&lt;p class="echo-title echo-title-level-6 echo-title-style-e"&gt;見出しレベル6スタイルeです&lt;/p&gt;
+&lt;p class="echo-title echo-title-level-1 echo-title-style-f"&gt;見出しレベル1スタイルfです&lt;/p&gt;
+&lt;p class="echo-title echo-title-level-2 echo-title-style-f"&gt;見出しレベル2スタイルfです&lt;/p&gt;
+&lt;p class="echo-title echo-title-level-3 echo-title-style-f"&gt;見出しレベル3スタイルfです&lt;/p&gt;
+&lt;p class="echo-title echo-title-level-4 echo-title-style-f"&gt;見出しレベル4スタイルfです&lt;/p&gt;
+&lt;p class="echo-title echo-title-level-5 echo-title-style-f"&gt;見出しレベル5スタイルfです&lt;/p&gt;
+&lt;p class="echo-title echo-title-level-6 echo-title-style-f"&gt;見出しレベル6スタイルfです&lt;/p&gt;</code></pre>
+
+<?php include('../doc_include/footer.inc'); ?>
