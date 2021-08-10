@@ -1,3 +1,4 @@
+// npx @11ty/eleventy --serve
 module.exports = function(eleventyConfig) {
   return {
     dir: {
