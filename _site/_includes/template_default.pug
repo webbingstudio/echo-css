@@ -72,7 +72,9 @@ html(lang="ja")
         .echo-doc-container
           if pagehead !== false
             +pagehead() #{pageTitle}
-          block content
-          if next !== null
-            +nextNav(next)
-          include footer.pug
+          article.echo-doc-post
+            .echo-doc-post-contents.styleguide-contents
+              block content
+        if next !== null
+          +nextNav(next)
+      include footer.pug
