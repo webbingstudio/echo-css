@@ -2,24 +2,154 @@ extends ../_includes/template_default.pug
 
 block variables
   -
-    const pageTitle = "pug test";
+    const pageTitle = "カラーテーブル";
+    const next = {
+      label: "フォントファミリー",
+      href: "./design-tokens-font/"
+    }
 
 block content
-  p
-    | 吾輩は人間と同居して彼等を観察すればするほど、彼等は我儘なものだと断言せざるを得ないようになった。
-    br
-    | ことに吾輩が時々同衾する小供のごときに至っては言語同断である。自分の勝手な時は人を逆さにしたり、頭へ袋をかぶせたり、抛り出したり、へっついの中へ押し込んだりする。
+  .
+    <h2 class="echo-doc-post-title-01">標準のカラーテーブル</h2>
 
-block prepend content
-  p
-    | prepend_しかも吾輩の方で少しでも手出しをしようものなら家内総がかりで追い廻して迫害を加える。
-    br
-    | この間もちょっと畳で爪を磨いだら細君が非常に怒ってそれから容易に座敷へ入れない。台所の板の間で他が顫えていても一向平気なものである。
+    <p>echo.cssで使用されている、色名とカラーコードの対応は以下の通りです。</p>
 
-block append content
-  p
-    | append_しかも吾輩の方で少しでも手出しをしようものなら家内総がかりで追い廻して迫害を加える。
-    br
-    | この間もちょっと畳で爪を磨いだら細君が非常に怒ってそれから容易に座敷へ入れない。台所の板の間で他が顫えていても一向平気なものである。
+    <div class="echo-table-responsive">
+        <table class="echo-table echo-table-bordered">
+            <thead>
+                <tr>
+                    <th rowspan="2" colspan="2" style="width: 22%;">&nbsp;</th>
+                    <th colspan="3" class="echo-text-center">強度</th>
+                </tr>
+                <tr>
+                    <th class="echo-text-center" style="width: 26%;">normal</th>
+                    <th class="echo-text-center" style="width: 26%;">strong</th>
+                    <th class="echo-text-center" style="width: 26%;">fade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th rowspan="4" class="echo-text-center" style="width: 1%; white-space: nowrap; vertical-align: middle;">色名</th>
+                    <th class="echo-text-center">default</th>
+                    <td><span class="echo-doc-colorchip echo-bg-default"></span>#333</td>
+                    <td><span class="echo-doc-colorchip" style="background-color: #000;"></span>#000</td>
+                    <td><span class="echo-doc-colorchip echo-bg-default echo-bg-fade"></span>#eee</td>
+                </tr>
+                <tr>
+                    <th class="echo-text-center">info</th>
+                    <td><span class="echo-doc-colorchip echo-bg-info"></span>#1976d2</td>
+                    <td><span class="echo-doc-colorchip" style="background-color: #0057af;"></span>#0057af</td>
+                    <td><span class="echo-doc-colorchip echo-bg-info echo-bg-fade"></span>#e3f0ff</td>
+                </tr>
+                <tr>
+                    <th class="echo-text-center">important</th>
+                    <td><span class="echo-doc-colorchip echo-bg-important"></span>#d20b2a</td>
+                    <td><span class="echo-doc-colorchip" style="background-color: #d20b2a;"></span>#d20b2a</td>
+                    <td><span class="echo-doc-colorchip echo-bg-important echo-bg-fade"></span>#ffe9f0</td>
+                </tr>
+                <tr>
+                    <th class="echo-text-center">inverse</th>
+                    <td class="echo-bg-default"><span class="echo-doc-colorchip echo-bg-inverse"></span>#fff</td>
+                    <td class="echo-bg-default"><span class="echo-doc-colorchip" style="background-color: #fff;"></span>#fff</td>
+                    <td class="echo-bg-default"><span class="echo-doc-colorchip echo-bg-inverse echo-bg-fade"></span>rgba( 255,255,255,.15 )</td>
+                </tr>
+            </tbody>
+        </table>
+    </div><!-- /.echo-table-responsive -->
+
+    <h2 class="echo-doc-post-title-01">色名と役割</h2>
+
+    <p>echo.cssでは、4種類のシステムカラーを定義しています。</p>
+
+    <h4 class="echo-doc-post-title-03"><span class="echo-doc-colorchip echo-bg-default"></span>default</h4>
+
+    <p>ウェブサイトの文字色を指定します。<strong>グレースケール、もしくは彩度が低い色</strong>を想定しています。ナビゲーション、フォームなどのユーザーインターフェースにも使用されています。</p>
+
+    <h4 class="echo-doc-post-title-03"><span class="echo-doc-colorchip echo-bg-info"></span>info</h4>
+
+    <p>弱い注目色を指定します。<a href="#" onclick="return false;">通常のテキストリンク</a>に使用されています。ウェブサイトのフォームなどで、ポジティブな情報を提供する際にも使用されます。ウェブサイトにおけるブランドカラーが望ましく、echo.cssでは青を使用しています。</p>
+
+    <h4 class="echo-doc-post-title-03"><span class="echo-doc-colorchip echo-bg-important"></span>important</h4>
+
+    <p>ウェブサイトの強い注目色に使用される色を指定します。フォームなどで、ネガティブな情報を提供する際にも使用されます。日本語圏では赤が一般に使用されます。</p>
+
+    <h4 class="echo-doc-post-title-03"><span class="echo-doc-colorchip echo-bg-inverse"></span>inverse</h4>
+
+    <p>背景が暗色だったときの色を指定します。一般に、defaultの反転色が使用されます。</p>
+
+    <h3 class="echo-doc-post-title-02">デザインカラーの廃止について</h3>
+
+    <p>Version 2.x までのecho.cssには、装飾目的のデザインカラー <code>$first, $second, $third</code> が定義されていましたが、以下の理由から廃止し、システムカラーのみとなりました。</p>
+
+    <ul>
+        <li>アクセシビリティ達成基準（コントラスト比、色覚障害者への対応など）を満たすことが難しいため</li>
+        <li>装飾目的の色名はデザイナーの方針により決定され、エンジニアが定義するものではないため</li>
+        <li>CMSで構築されたウェブサイトの場合、装飾用のクラス名はシステム側で決められているため（WordPressのGutenberg等）</li>
+        <li>ラベルのサブクラスは色名ではなく、ラベルを生成するシステムのカテゴリー名が反映されることが多いため</li>
+    </ul>
+
+
+    <h2 class="echo-doc-post-title-01">色の強度と役割</h2>
+
+    <p>それぞれの色は、強度で分類され、適切なオブジェクトで使用されることを想定しています。<br>
+    <code>light, dark</code> などの明度を表す単語を使用していないのは、暗色背景のウェブサイトに使用した場合の矛盾を防ぐためです。<br>
+    コントラスト比を確保できない問題があるため、中間の強度（ライトグレー）は使用していません。</p>
+
+    <h3 class="echo-doc-post-title-02">normal</h3>
+
+    <p>塗りつぶしやアウトラインの基本色です。ボタンやラベルなど、大半のオブジェクトで使用されています。</p>
+
+    <h3 class="echo-doc-post-title-02">strong</h3>
+
+    <p>小さな文字の色など、<strong>高いコントラスト比を確保すべき箇所</strong>に指定します。normalが充分なコントラスト比を持っている場合は、同じカラーコードを使用しても構いません。</p>
+
+    <h3 class="echo-doc-post-title-02">fade</h3>
+
+    <p>弱い背景色を前提として使用されている強度です。 <code>.echo-alert, .echo-box</code> などに使用されています。基本の文字色（default + normal）に対して、充分なコントラスト比を確保している必要があります。</p>
+
+    <h2 class="echo-doc-post-title-01">色を変更する</h2>
+
+    <h3 class="echo-doc-post-title-02">Sassを使用する場合</h3>
+
+    <p>プロジェクト内の <code>_scss/_config_basic.scss</code> の <code>$default</code> 以降の任意の色変数を変更したうえでビルドしてください。<br>
+    下記の例では <code>info</code> が緑系、 <code>important</code> がオレンジ系になります。</p>
+
+    <div class="codeblock"><pre><code class="language-scss">$info:                      #182 !default;
+    $info-strong:               #182 !default;
+    $info-fade:                 #e9f6f3 !default;
+
+    $important:                 #ec7e00 !default;
+    $important-strong:          #dc6300 !default;
+    $important-fade:            #fff6e6 !default;</code></pre></div>
+
+    <h3 class="echo-doc-post-title-02">Sassを使用しない場合</h3>
+
+    <p><code>css/echo-color.css</code> は、色の指定のみをまとめたCSSファイルです。<br>
+    このファイルを直接編集（置換）することで、カラーテーブルを変更したり、 <code>.echo-bg-first</code> 等の独自のクラスを追加できます。</p>
+
+    <p>以下のとおり <code>echo.min.css</code> よりも後に読み込んで使用してください。</p>
+
+    <div class="codeblock"><pre><code class="language-markup">&lt;link rel="stylesheet" href="/css/echo.min.css"&gt;
+    &lt;link rel="stylesheet" href="/css/echo-color.css"&gt;
+    </code></pre></div>
+
+
+    <h2 class="echo-doc-post-title-01">アクセシビリティ</h2>
+
+    <p>echo.cssのカラーテーブルは、WCAG 2.1の達成基準と、多くの視覚障害者・色覚障害者の識別に配慮しています。<br>
+    しかしCSSフレームワークの性格上、<a href="https://waic.github.io/wcag21/guidelines/#contrast-enhanced">達成基準1.4.6「コントラスト (高度)」</a>を満たすことは難しくなっています。達成を意識する場合は、以下の点に注意してください。</p>
+
+    <ul>
+        <li><code>.echo-alert-info, .echo-alert-important</code> はコントラストが不足しています。以下のいずれかの修正を行ってください。
+            <ol>
+                <li>文字色を <code>$body-color</code> にする</li>
+                <li>背景色を <code>$body-bg</code> にする</li>
+                <li>テキストを太字にする</li>
+            </ol>
+        </li>
+        <li><code>.echo-nav, .echo-pager</code> のhover時のスタイルは、コントラストが不足しています。サイトデザインに応じて、色に依存しないスタイルに変更してください。</li>
+        <li><code>.echo-label</code> を重要なリンクに使用しないでください。</li>
+        <li><code>.echo-bg-info, .echo-bg-important</code> を広い範囲に使用することは避けてください。</li>
+    </ul>
 
 

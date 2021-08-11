@@ -66,6 +66,13 @@ html(lang="ja")
       <meta name="theme-color" content="#ffffff">
 
   body
-    include header.pug
-    block content
-    include footer.pug
+    #echo-document
+      include header.pug
+      main.echo-p-main(role="main")
+        .echo-doc-container
+          if pagehead !== false
+            +pagehead() #{pageTitle}
+          block content
+          if next !== null
+            +nextNav(next)
+          include footer.pug

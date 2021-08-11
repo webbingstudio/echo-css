@@ -3,3 +3,23 @@ mixin label(classes)
 
   #{tag}(class="echo-label",class=classes)
     block
+
+mixin pagehead(wrapClasses = [], titleClasses = [])
+  div(class="echo-doc-pagehead",class=wrapClasses)
+    h1(class="echo-doc-pagehead-title",class=titleClasses)
+      block
+
+mixin nextNav(prop)
+  -
+    const buttonClasses = prop.buttonClasses ? prop.buttonClasses : [];
+
+  div(class="echo-buttons echo-margin-y-xl")
+    .echo-buttons-item
+      a(
+        href=prop.href,
+        class="echo-button echo-button-lg echo-button-style-b echo-button-icon echo-button-arrow",
+        class=buttonClasses
+      )
+        span.echo-doc-button-guide
+          | Next
+        | #{prop.label}
