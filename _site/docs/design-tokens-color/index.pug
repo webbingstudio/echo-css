@@ -1,12 +1,12 @@
-extends ../_includes/template_default.pug
+---
+tags: docs
+pageTitle: "カラーテーブル"
+next:
+  label: "フォントファミリー"
+  href: "./design-tokens-font/"
+---
 
-block variables
-  -
-    const pageTitle = "カラーテーブル";
-    const next = {
-      label: "フォントファミリー",
-      href: "./design-tokens-font/"
-    }
+extends ../../_includes/template_default.pug
 
 block content
   h2.echo-doc-post-title-01 標準のカラーテーブル
