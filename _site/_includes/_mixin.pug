@@ -1,3 +1,9 @@
+mixin codeblock(language)
+  .codeblock
+    pre
+      code(class="language-" + language)
+        block
+
 mixin label(classes)
   - const tag = "span";
 

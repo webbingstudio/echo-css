@@ -1,0 +1,160 @@
+---
+tags: docs
+category: "Documentation"
+pageTitle: "フォントファミリー"
+next:
+  label: "echo.cssとは？"
+  href: "/docs/etc-about/"
+---
+
+extends ../../_includes/template_default.pug
+
+block content
+  h2.echo-doc-post-title-01 標準のフォント
+  p 世界でも類を見ない文字種（ひらがな・カタカナ・漢字・全角英数・半角英数）を使用する日本語圏では、商業ウェブサイトでのフォントファミリーの指定が、非常に精細になっています。
+    br
+    | echo.cssでは、要素の役割に応じて、最大で4種類のフォントを使用することができます。
+  p 標準の、CSS・Sass内のフォント名称とフォントの対応は以下の通りです。
+    br
+    | フォントは 
+    code
+      | _scss/_config_basic.scss
+    |
+    | で変更することができます。
+
+  .
+    <div class="echo-table-responsive">
+      <table class="echo-table echo-table-bordered">
+          <thead>
+              <tr>
+                  <th rowspan="2" class="echo-text-center" style="width: 15%;">フォント名称</th>
+                  <th class="echo-text-center" style="width: 50%;">役割</th>
+                  <th class="echo-text-center" style="width: 35%;">使用されているモジュール</th>
+              </tr>
+              <tr>
+                  <th colspan="2" class="echo-text-center">適用されるフォント</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <th rowspan="2" class="echo-text-center">root</th>
+                  <td>body要素に指定する、ウェブサイト内のベースフォント。</td>
+                  <td><code>.echo-font-root</code></td>
+              </tr>
+              <tr>
+                  <td colspan="2" class="echo-font-mono echo-text-info">'Hiragino Sans', 'Hiragino Kaku Gothic ProN', '-apple-system', 'BlinkMacSystemFont', 'Meiryo', sans-serif</td>
+              </tr>
+              <tr>
+                  <th rowspan="2" class="echo-text-center echo-font-first echo-font-bold">first</th>
+                  <td>汎用の見出し用フォント。</td>
+                  <td><code>.echo-title</code> <code>.echo-font-first</code></td>
+              </tr>
+              <tr>
+                  <td colspan="2">rootと同じフォント</td>
+              </tr>
+              <tr>
+                  <th rowspan="2" class="echo-text-center echo-font-second echo-font-bold">second</th>
+                  <td>日付や英文を表示する箇所に指定する、英字用フォント。<br>
+                  echo.cssでは <code>object > utility</code> のみ使用している。</td>
+                  <td><code>.echo-font-second</code></td>
+              </tr>
+              <tr>
+                  <td colspan="2" class="echo-font-mono echo-text-info">'Helvetica', 'Roboto', '-apple-system', 'Open Sans', 'Arial', sans-serif</td>
+              </tr>
+              <tr>
+                  <th rowspan="2" class="echo-text-center echo-font-third echo-font-bold">third</th>
+                  <td>特別な見出し等に指定する、デザインフォント。<br>
+                  echo.cssでは <code>object > utility</code> のみ使用している。</td>
+                  <td><code>.echo-font-third</code></td>
+              </tr>
+              <tr>
+                  <td colspan="2" class="echo-font-mono echo-text-info">'游明朝', 'Yu Mincho', '游明朝体', 'YuMincho', 'Hiragino Mincho Pro', 'ＭＳ Ｐ明朝', 'MS PMincho', 'Bookman Old Style', 'Times New Roman', '-apple-system', 'BlinkMacSystemFont', serif</td>
+              </tr>
+          </tbody>
+      </table>
+    </div><!-- /.echo-table-responsive -->
+
+  h2.echo-doc-post-title-01 日本語ウェブフォントサービスにおける、font-weight問題について
+  p 著名な日本語ウェブフォントサービスでは、CSSプロパティの 
+    code
+      | font-weight
+    |
+    | だけでは、文字の太さを変更できない問題があります。
+    br
+    | 特定ブラウザでの不具合の回避、見た目の問題など、サービスごとに理由は異なり、今のところ解消される様子はありません。
+  ul
+    li
+      a(href="https://webfont.fontplus.jp/faq/4125",target="_blank")
+        | 太字指定が反映されません。 | FONTPLUS
+    li
+      a(href="https://support.typesquare.com/hc/ja/articles/223237868-%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88%E3%82%A6%E3%82%A8%E3%82%A4%E3%83%88%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%E3%81%8C-bold%E8%A8%AD%E5%AE%9A%E3%81%8C%E5%8F%8D%E6%98%A0%E3%81%95%E3%82%8C%E3%81%BE%E3%81%9B%E3%82%93-",target="_blank")
+        | フォントウエイトを変更したいが、bold設定が反映されません。 &ndash; TypeSquare
+  p echo.cssでは、これらのサービスを使用したときに不都合が出ないよう、SCSSファイルに以下の対策をしています。
+  .echo-box.echo-box-style-a.echo-box-info
+    ul
+      li フォント関連の変数を、normalとboldの二種類に分けて指定する
+      li 文字の太さが変更されるクラスのスタイル指定では、 
+        code
+          | font-family
+        |
+        | を併記する
+  h2.echo-doc-post-title-01 フォントを変更する
+  h3.echo-doc-post-title-02 Sassを使用する場合
+  p プロジェクト内の 
+    code
+      | _scss/_config_basic.scss
+    |
+    | の変数 
+    code
+      | $font-family-***
+    |
+    | を変更したうえでビルドしてください。
+    br
+    | 下記の例では 
+    code
+      | third
+    |
+    | のフォントが「
+    a(href="https://fontplus.jp/font-list/tsukugopr5-r-between2-light",target="_blank")
+      | 筑紫ゴシックPrとBetween Pro2の混植
+    | 」となります。
+
+  +codeblock("scss")
+    .
+      // third: display
+      $font-family-third:            'TsukuGoPr5-R-Between2-Light', '-apple-system', 'BlinkMacSystemFont', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif !default;
+      $font-weight-third:            300 !default;
+      $font-family-bold-third:       'TsukuGoPro-B-Between2-Medium', '-apple-system', 'BlinkMacSystemFont', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif !default;
+      $font-weight-bold-third:       700 !default;
+
+  p なお、 
+    code
+      | $font-family-***
+    |
+    | と 
+    code
+      | $font-family-bold-***
+    |
+    | が同じ値だった場合、 
+    code
+      | font-weight: bold 
+    |
+    | のみが出力されます。
+  h3.echo-doc-post-title-02 Sassを使用しない場合
+  p
+    code
+      | css/echo-font.css
+    |
+    | は、フォント指定のみをまとめたCSSファイルです。
+    br
+    | このファイルを直接編集（置換）することで、フォントを変更できます。
+  p 以下のとおり 
+    code
+      | echo.min.css
+    |
+    | よりも後に読み込んで使用してください。
+
+  +codeblock("markup")
+    .
+      &lt;link rel="stylesheet" href="/css/echo.min.css"&gt;
+      &lt;link rel="stylesheet" href="/css/echo-font.css"&gt;

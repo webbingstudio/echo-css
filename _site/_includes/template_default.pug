@@ -14,7 +14,10 @@ html(lang="ja")
       http-equiv="x-ua-compatible",
       content="ie=edge"
     )
-    title #{pageTitle} | #{siteName}
+    title #{pageTitle} | 
+      if category
+        | #{category} | 
+      | #{siteName}
     meta(
       property="og:title",
       content=pageTitle + " | " + siteName

@@ -1,9 +1,10 @@
 ---
 tags: docs
+category: "Documentation"
 pageTitle: "カラーテーブル"
 next:
   label: "フォントファミリー"
-  href: "./design-tokens-font/"
+  href: "/docs/design-tokens-font/"
 ---
 
 extends ../../_includes/template_default.pug
@@ -138,17 +139,17 @@ block content
     |
     code important
     |  がオレンジ系になります。
-  .codeblock
-    pre
-      code.language-scss
-        .
-          $info:             #182 !default;
-          $info-strong:      #182 !default;
-          $info-fade:        #e9f6f3 !default;
 
-          $important:        #ec7e00 !default;
-          $important-strong: #dc6300 !default;
-          $important-fade:   #fff6e6 !default;
+  +codeblock("scss")
+    .
+      $info:             #182 !default;
+      $info-strong:      #182 !default;
+      $info-fade:        #e9f6f3 !default;
+
+      $important:        #ec7e00 !default;
+      $important-strong: #dc6300 !default;
+      $important-fade:   #fff6e6 !default;
+
   h3.echo-doc-post-title-02 Sassを使用しない場合</h3>
   p
     code css/echo-color.css
@@ -160,12 +161,12 @@ block content
   p 以下のとおり
     code echo.min.css
     |  よりも後に読み込んで使用してください。
-  .codeblock
-    pre
-      code.language-markup
-        .
-          &lt;link rel="stylesheet" href="/css/echo.min.css"&gt;
-          &lt;link rel="stylesheet" href="/css/echo-color.css"&gt;
+
+  +codeblock("markup")
+    .
+      &lt;link rel="stylesheet" href="/css/echo.min.css"&gt;
+      &lt;link rel="stylesheet" href="/css/echo-color.css"&gt;
+
   h2.echo-doc-post-title-01 アクセシビリティ
   p echo.cssのカラーテーブルは、WCAG 2.1の達成基準と、多くの視覚障害者・色覚障害者の識別に配慮しています。
     br
