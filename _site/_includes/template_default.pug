@@ -78,6 +78,13 @@ html(lang="ja")
           article.echo-doc-post
             .echo-doc-post-contents.styleguide-contents
               block content
+
         if next !== null
           +nextNav(next)
+
+      .echo-doc-sub(role="complementary")
+        .echo-doc-container
+          if category === "Documentation"
+            include sitemap_docs.pug
+
       include footer.pug
