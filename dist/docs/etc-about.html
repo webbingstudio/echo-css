@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>echo.cssとは？ | 余談 | Documentation | echo-css</title>
+    <meta property="og:title" content="echo.cssとは？ | 余談 | Documentation | echo-css">
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div id="echo-document">
+
+    <?php include('../doc_include/header.inc'); ?>
+
+    <main class="echo-p-main" role="main">
+        <div class="echo-doc-container">
+
+            <div class="echo-doc-pagehead">
+                <h1 class="echo-doc-pagehead-title">echo.cssとは？</h1>
+            </div><!-- /.echo-doc-pagehead -->
+
+            <article class="echo-doc-post">
+                <div class="echo-doc-post-contents styleguide-contents">
+
+<h2 class="echo-doc-post-title-01">制作の背景</h2>
+
+<p>echo.cssは、愛知県豊橋市のフロントエンドエンジニア、<a href="https://webbingstudio.com/" target="_blank">ウェビングスタジオ</a>が個人で制作、公開しています。</p>
+
+<p>ウェビングスタジオでは、CMSの組み込みを前提としたコーポレートサイトの制作を中心に受注しています。<br>
+発注元の大半はウェブ制作会社で、デザインカンプ（またはワイヤーフレーム）を受け取って制作しますが、常にいくつかの課題がありました。</p>
+
+<h3 class="echo-doc-post-title-02">課題1: デザイン反映の際の工数</h3>
+
+<p>CMSテーマのプロトタイプの段階でコーディングに不備があると、デザイナーの細かい意匠を反映できず、大きな手戻りにつながっていました。<br>
+Bootstrap等の既存フレームワークを利用することで改善できないかと考えたこともありました（実際、Bootstrapを採用したCMSテーマは多数あります）。<br>
+しかし、どのフレームワークも「<strong>スタートアップ等ですぐ使えること</strong>」を優先しており、UIなどの外観デザインがしっかりと作られています。そのため、デザインを変更しなければならないときの工数が、一から作成するときよりも多くなってしまう状況でした。</p>
+
+<h3 class="echo-doc-post-title-02">課題2: 納品後の改修</h3>
+
+<p>CMSはその特性上、納品後にほぼ必ずコンテンツの改修が行われます。その際、まったく想定外（文字数、色、サイズ等）のコンテンツが追加されることがよくあります。CSS側が変更・拡充に対応できない状況を避けたいところです。</p>
+
+<h3 class="echo-doc-post-title-02">課題3: 文字サイズ</h3>
+
+<p>コンテンツの内容やフォントの種類によって、文字サイズを微妙に調整することがあります。基本的には、各オブジェクトの文字サイズはフレームワーク側で適切なものを提供してほしいです。しかし、変更したくなったときに、容易に対応できることが理想です。</p>
+
+<h3 class="echo-doc-post-title-02">課題4: ブロックエディタの普及</h3>
+
+<p>WordPressのGutenbergによって、幅を自由に変更できるブロックエディタが普及しました。このため、旧来のCSSフレームワークの定番となっていた<strong>コンテナタグでオブジェクトの最大サイズをまとめて固定する</strong>ことができなくなりました。また、色などの豊富なオプションに対応しなければならなくなりました。</p>
+
+<p class="echo-margin-top-lg">このような背景から、いかにこれらの課題を改善するかを考えて制作したのが、echo.cssです。</p>
+
+
+<h2 class="echo-doc-post-title-01"><span class="echo-text-lg">&quot;echo&quot;</span>プロジェクトについて</h2>
+
+<p>echo.cssは、ウェビングスタジオのCMS関連の個人制作プロジェクトの一環です。<br>
+このプロジェクトで制作したものにはすべて、名前に<strong>&quot;echo&quot;</strong>が付けられています。</p>
+
+<p><a href="https://echocss.webbingstudio.com/" target="_blank">https://echocss.webbingstudio.com/</a></p>
+
+<h3 class="echo-doc-post-title-02">命名の由来</h3>
+
+<p>この単語が好きだから、というのが第一の理由ですが（笑）</p>
+
+<ul>
+    <li>多くのCMSは、PHPで動作します。必ず使用されるメソッドが、結果を出力する「echo」です。</li>
+    <li>「echo」は日本語で「響く」という意味があります。日本には「打てば響く」ということわざがあります。打てば響くプロダクトにしたいと思います。</li>
+</ul>
+
+
+<div class="echo-buttons echo-padding-top-xl">
+    <div class="echo-buttons-item">
+        <a href="./etc-ie11.html" class="echo-button echo-button-lg echo-button-style-b echo-button-icon echo-button-arrow"><span class="echo-doc-button-guide">Next </span>Internet Explorer 11への対応</a>
+    </div>
+</div>
+
+
+<?php include('../doc_include/footer.inc'); ?>

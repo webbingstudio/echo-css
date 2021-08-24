@@ -1,0 +1,84 @@
+@charset "UTF-8";
+/*!
+ * echo.toggle.css v1.0.0
+ * 
+ * Perform processing on the premise of menu open / close and switching of toggle buttons.
+ * 
+ * Copyright 2019 WebbingStudio
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ * 
+ */
+
+/* js-toggleが有効になっている間、body要素に付与される */
+.js-toggle-wrap {
+}
+
+/* 対象となる要素が表示されている間、body要素に付与される */
+.js-toggle-active {
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* js-toggleが有効になっている間、対象となる要素に付与される */
+.js-toggle-wrap .js-toggle-ready {
+    display: block;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+/* 対象となる要素が表示されたときに、対象となる要素に付与される */
+.js-toggle-wrap .js-toggle-open {
+    width: auto;
+    height: auto;
+    opacity: 1;
+    animation-duration: .5s;
+    animation-name: toggle-fade-in;
+}
+
+/* 対象となる要素が非表示となったときに、対象となる要素に付与される */
+.js-toggle-wrap .js-toggle-close {
+    animation-duration: .5s;
+    animation-name: toggle-fade-out;
+}
+
+@keyframes toggle-fade-in {
+
+    0% {
+        width: auto;
+        height: auto;
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+@keyframes toggle-fade-out {
+
+    0% {
+        width: auto;
+        height: auto;
+        opacity: 1;
+    }
+
+    99% {
+        width: auto;
+        height: auto;
+        opacity: .01;
+    }
+
+    100% {
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+
+}
+
+
+

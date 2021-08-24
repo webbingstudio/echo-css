@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>基本のテンプレート | はじめに | Documentation | echo-css</title>
+    <meta property="og:title" content="基本のテンプレート | はじめに | Documentation | echo-css">
+
+    <?php include('../doc_include/html_head.inc'); ?>
+
+</head>
+<body>
+<div id="echo-document">
+
+    <?php include('../doc_include/header.inc'); ?>
+
+    <main class="echo-p-main" role="main">
+        <div class="echo-doc-container">
+
+            <div class="echo-doc-pagehead">
+                <h1 class="echo-doc-pagehead-title">基本のテンプレート</h1>
+            </div><!-- /.echo-doc-pagehead -->
+
+            <article class="echo-doc-post">
+                <div class="echo-doc-post-contents styleguide-contents">
+
+<h2 class="echo-doc-post-title-01">基本構造</h2>
+
+<p>echo.cssが想定しているHTML構造は、以下の通りです。</p>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ja"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;meta http-equiv="x-ua-compatible" content="ie=edge"&gt;
+
+    &lt;title&gt;基本のテンプレート | echo.css&lt;/title&gt;
+
+    &lt;link rel="stylesheet" href="/css/echo.min.css"&gt;
+    &lt;link rel="stylesheet" href="/plugins/toggle.css"&gt;
+
+    &lt;script src="https://code.jquery.com/jquery-2.2.4.min.js"&gt;&lt;/script&gt;
+    &lt;script src="/plugins/toggle.min.js">&lt;/script&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id="echo-document"&gt;
+
+    &lt;header class="echo-p-header" role="banner"&gt;
+        &lt;div class="echo-container"&gt;
+
+            ここはサイトのヘッダです
+
+        &lt;/div&gt;&lt;!-- /.echo-container --&gt;
+    &lt;/header&gt;&lt;!-- /.echo-p-header --&gt;
+
+    &lt;main class="echo-p-main" role="main"&gt;
+        &lt;div class="echo-container"&gt;
+
+            こんにちは世界！
+
+        &lt;/div&gt;&lt;!-- /.echo-container --&gt;
+    &lt;/main&gt;&lt;!-- /.echo-p-main --&gt;
+
+    &lt;footer class="echo-p-footer" role="contentinfo"&gt;
+        &lt;div class="echo-container"&gt;
+
+            ここはサイトのフッタです
+
+        &lt;/div&gt;&lt;!-- /.echo-container --&gt;
+    &lt;/footer&gt;&lt;!-- /.echo-p-footer --&gt;
+
+&lt;/div&gt;&lt;!-- /.echo-document --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre></div>
+
+<h2 class="echo-doc-post-title-01">#echo-documentの役割</h2>
+
+<p>コンテンツ全体を包括している <code>#echo-document</code> は、文字サイズや背景色を強制的に変更する「ユーティリティクラス」の優先度を上げる役割を持っています。</p>
+
+<p>※body要素にid属性を付与することは推薦しません。<br>
+※CSSセレクタにid属性を使用したくない場合は、echo.css内の <code>#echo-document</code> を変更してください。</p>
+
+<h2 class="echo-doc-post-title-01">.echo-containerの役割</h2>
+
+<p>.echo-containerは名前の通り、コンテンツを適切に画面中央に配置するコンテナタグです。より良いウェブサイトの制作には必須となります。<br>
+echo.cssは、コンテナタグの幅は一種類ではありません。ヘッダとフッタは通常の幅のコンテナタグ、サブカラムはスリムなコンテナタグ、といった、変化のあるページを作成できます。</p>
+
+<div class="codeblock"><pre><code class="language-markup">&lt;div class="example"&gt;
+    &lt;div class="echo-container echo-container-sm"&gt;
+
+        最大幅がスリムになります
+
+    &lt;/div&gt;&lt;!-- /.echo-container --&gt;
+&lt;/div&gt;&lt;!-- /.example --&gt;</code></pre></div>
+
+<h2 class="echo-doc-post-title-01">接頭辞が echo-p- になっているクラス</h2>
+
+<p><code>.echo-p-header, .echo-p-footer, .echo-p-main</code> の3つのクラスのみ、接頭辞に <code>p-</code> が含まれます。<br>
+echo.cssでは、ウェブサイトによって大きくデザインが異なるオブジェクトを<strong>projectレイヤー</strong>として扱っています。projectレイヤーは使用しないか、もしくはスタイルを上書きさせることを前提としているため、ウェブサイトが成立する最低限のスタイルのみ定義しています。</p>
+
+<p>レイヤーについては「<a href="./outline-layers.html">レイヤー構造</a>」の解説を参照ください。</p>
+
+<h2 class="echo-doc-post-title-01">ブロックエディタとコンテナタグの干渉</h2>
+
+<p>WordPressのGutenbergなど、CMSの「ブロックエディタ」で編集可能にする場合は、本文エリアで <code>.echo-container</code> での幅制限を行わないよう注意してください。画像ブロック・グループブロック等に設定されている「幅広」「全幅」オプションを使用できなくなります。</p>
+
+<h2 class="echo-doc-post-title-01">プラグイン</h2>
+
+<p><code>/plugins/toggle.css</code>、<code>/plugins/toggle.min.js</code> は、オーバーレイメニューを開閉するためのプラグインです。jQueryに依存しています。<br>
+オーバーレイメニューを使用しない、またはjQueryを使用しない場合は読み込む必要はありません。</p>
+
+
+<div class="echo-buttons echo-padding-top-xl">
+    <div class="echo-buttons-item">
+        <a href="./introduction-bem.html" class="echo-button echo-button-lg echo-button-style-b echo-button-icon echo-button-arrow"><span class="echo-doc-button-guide">Next </span>BEM記法で使用する</a>
+    </div>
+</div>
+
+
+<?php include('../doc_include/footer.inc'); ?>

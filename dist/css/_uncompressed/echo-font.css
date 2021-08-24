@@ -1,0 +1,176 @@
+@charset "UTF-8";
+/*!
+ * echo.css(font) - version 3.0.1
+ * 
+ * "echo" is CSS framework, built with consider CMS theming in East asian countries.
+ * https://echocss.webbingstudio.com/
+ * 
+ * Copyright 2018 - 2021 WebbingStudio
+ * Released under the MIT license
+ * https://opensource.org/licenses/MIT
+ * 
+ */
+/*
+--------------------
+reset(font)
+--------------------
+*/
+b,
+th,
+dt,
+optgroup,
+strong,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+/*
+--------------------
+typography(font)
+--------------------
+*/
+html {
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
+  font-weight: 300;
+  font-weight: 300;
+}
+
+/*
+note: Font Families in Form
+日本では、フォームの入力フィールドにサンセリフフォントを指定する傾向があります。 これは、入力フォームに適用される標準フォントが、OSによって大きく異なるためです。
+In Japan, there is a tendency to specify sans-serif fonts in the form input fields. This is because standard fonts applied to input fields vary greatly depending on the OS.
+--------------------
+*/
+textarea,
+input {
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
+  font-weight: 300;
+  font-weight: 300;
+}
+
+select {
+  font-family: "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  font-weight: 300;
+}
+
+/*
+--------------------
+echo-title(font)
+--------------------
+*/
+.echo-title {
+  font-weight: bold;
+}
+
+/*
+--------------------
+echo-flip(font)
+--------------------
+*/
+.echo-flip-lead {
+  font-weight: bold;
+}
+
+/*
+--------------------
+echo-form(font)
+--------------------
+*/
+.echo-form-label {
+  font-weight: bold;
+}
+
+.echo-form-error {
+  font-weight: bold;
+}
+
+/*
+--------------------
+echo-headline(font)
+--------------------
+*/
+.echo-headline-header {
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
+  font-weight: 300;
+  font-weight: 300;
+}
+
+.echo-headline-title {
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
+  font-weight: 300;
+  font-weight: 300;
+}
+
+/*
+--------------------
+echo-hero(font)
+--------------------
+*/
+.echo-hero-lead {
+  font-weight: bold;
+}
+
+/*
+--------------------
+echo-topicpath(font)
+--------------------
+*/
+.echo-topicpath .echo-nav-item:last-child {
+  font-weight: bold;
+}
+
+/*
+--------------------
+echo-forms(font)
+--------------------
+*/
+.echo-forms-label {
+  font-weight: bold;
+}
+
+/*
+--------------------
+echo-font-(face)
+echo-font-bold
+--------------------
+*/
+#echo-document .echo-font-bold {
+  font-weight: bold;
+}
+#echo-document .echo-font-root {
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
+  font-weight: 300;
+  font-weight: 300;
+}
+#echo-document .echo-font-root.echo-font-bold {
+  font-weight: bold;
+}
+#echo-document .echo-font-first {
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "-apple-system", "BlinkMacSystemFont", "Meiryo", sans-serif;
+  font-weight: 300;
+  font-weight: 300;
+}
+#echo-document .echo-font-first.echo-font-bold {
+  font-weight: bold;
+}
+#echo-document .echo-font-second {
+  font-family: "Helvetica", "Roboto", "-apple-system", "Open Sans", "Arial", sans-serif;
+  font-weight: 300;
+  font-weight: 300;
+}
+#echo-document .echo-font-second.echo-font-bold {
+  font-weight: bold;
+}
+#echo-document .echo-font-third {
+  font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", "Bookman Old Style", "Times New Roman", "-apple-system", "BlinkMacSystemFont", serif;
+  font-weight: 300;
+  font-weight: 300;
+}
+#echo-document .echo-font-third.echo-font-bold {
+  font-weight: bold;
+}
