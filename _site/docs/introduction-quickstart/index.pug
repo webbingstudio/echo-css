@@ -1,0 +1,120 @@
+---
+category: "Documentation"
+order: 1
+pageTitle: "さっそく始める"
+---
+
+extends ../../_includes/template_default.pug
+
+block content
+  h2.echo-doc-post-title-01 ダウンロード
+  p GitHubのリポジトリから、最新のパッケージをダウンロードしてください。
+  p <a href="https://github.com/webbingstudio/echo-css/archive/master.zip" target="_blank"><i class="fas fa-download echo-margin-right-sm"></i>https://github.com/webbingstudio/echo-css/archive/master.zip</a>
+  p パッケージを解凍すると、SCSS、CSS、ドキュメント（これ）、スタイルガイドがすべて含まれているプロジェクトが展開されます。
+  p CSSファイル <code>dist/css/echo.min.css</code> を、あなたのウェブサイトに読み込ませてください。
+
+  +codeblock("markup")
+    .
+      &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/echo.min.css&quot;&gt;
+
+  p 文字サイズや背景色を強制的に変更する「ユーティリティクラス」を利用したい場合は、body全体を包括している要素（なければdiv要素等を追加する）に <code>id=&quot;echo-document&quot;</code> を付与してください。
+
+  +codeblock("markup")
+    .
+      &lt;body&gt;
+          &lt;div id="echo-document"&gt;
+              ...
+          &lt;/div&gt;
+      &lt;/body&gt;
+
+  h2.echo-doc-post-title-01 色・フォントを自由に変更する
+  p echo.cssでは、色・フォントのスタイルが分かれているCSSファイルも用意しています。
+  p 自分で色の追加や変更を行いたい場合は <code>dist/css/echo-color.css, dist/css/echo-font.css</code> を、<code>dist/css/echo.min.css</code> よりも後に読み込ませてください。
+
+  +codeblock("markup")
+    .
+      &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/echo.min.css&quot;&gt;
+      &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/echo-color.css&quot;&gt;
+      &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/echo-font.css&quot;&gt;
+
+  h2.echo-doc-post-title-01 Sassを活用する
+  p 色の一括変更、利用予定のないクラスの削除を行いたい場合は、Sassの活用をお勧めします。
+  p 展開したファイル一式を、あなたのプロジェクトのディレクトリに配置してください。
+    br
+    | <code>/dist/</code> が、ドキュメントルートとなります。
+  h3.echo-doc-post-title-02 不要なファイルについて
+  p 以下のファイル・ディレクトリは、このサイト用のファイルです。プロジェクトからは削除してください。localhostを構築している場合、 <code>/styleguide/</code> を残しておくと、動作チェックができます。
+  ul
+    li /_site/ 以下すべて
+    li /dist/index.html
+    li /dist/docs/ 以下すべて
+    li /dist/styleguide/ 以下すべて
+    li /dist/share/ 以下すべて
+  h3.echo-doc-post-title-02 パッケージをインストールする
+  p 以下のコマンドを実行して、 <code>/package.json</code> に記載されたパッケージをインストールしてください。
+
+  +codeblock()
+    .
+      npm install
+
+  p このサイトでは、HTMLジェネレーター「<a href="https://www.11ty.dev/" target="_blank">@11ty/eleventy</a>」を使用しています。11tyを利用する予定がない場合はパッケージ一覧から削除してください。
+  h3.echo-doc-post-title-02 作業を始める
+  p 以降は、作業前に以下のコマンドを実行すると、常時 <code>/src/scss/</code> ディレクトリの変更が、 <code>/dist/css/</code> 以下に、コードが圧縮された状態でビルドされるようになります。
+
+  +codeblock()
+    .
+      npm run watch
+
+  p <code>/_scss/_config_basic.scss</code> に記載されたカラーコード、フォント名を変更して、動作を確認してください。
+
+  h3.echo-doc-post-title-02 未圧縮CSSを書き出す
+  p 以下のコマンドを実行すると、その時点の <code>/src/scss/</code> ディレクトリの内容が、 <code>/dist/css/_uncompressed/</code> 以下に未圧縮でビルドされます。
+
+  +codeblock()
+    .
+      npm run css-org
+
+  h3.echo-doc-post-title-02 常にCSSを圧縮せずに書き出す
+  p CSSを圧縮したくない場合は、npm-scripts等の修正が必要となります。 <code>/package.json</code> の7行目付近の以下のスクリプトを探してください。
+
+  .echo-margin-bottom-lg
+    +codeblock("js")
+      .
+        "css": "run-s css:scssmin css:postcssmin css:rename",
+
+  p コードを以下の通り修正してください。
+
+  .echo-margin-bottom-lg
+    +codeblock("js")
+      .
+        "css": "run-s css:scssmin",
+
+  p また、 <code>/dist/postcss.config.js</code> に記述されている以下のコードを、
+
+  .echo-margin-bottom-lg
+    +codeblock("js")
+      .
+        module.exports = {
+          plugins: [
+            require('autoprefixer')({
+              grid: 'autoplace',
+            }),
+            require('cssnano')({
+              preset: 'default',
+            }),
+          ]
+        };
+
+  p 以下の通り修正して cssnano を無効にしてください。
+
+  +codeblock("js")
+    .
+      module.exports = {
+        plugins: [
+          require('autoprefixer')({
+            grid: 'autoplace',
+          })
+        ]
+      };
+
+

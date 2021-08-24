@@ -1,7 +1,10 @@
 mixin codeblock(language)
   .codeblock
     pre
-      code(class="language-" + language)
+      if language !== undefined
+        code(class=`language-${language}`)
+          block
+      else
         block
 
 mixin label(classes)
@@ -15,17 +18,24 @@ mixin pagehead(wrapClasses = [], titleClasses = [])
     h1(class="echo-doc-pagehead-title",class=titleClasses)
       block
 
-mixin nextNav(prop)
+mixin nextNav(order)
   -
-    const buttonClasses = prop.buttonClasses ? prop.buttonClasses : [];
+    let nextID = Number.parseInt(order)+1;
+    let next = collections.all.filter((a) => Number.parseInt(a.data.order) === nextID);
+  
+  if next.length === 0
+    -
+      nextID = (Math.trunc(order/10)*10)+11;
+      next = collections.all.filter((a) => Number.parseInt(a.data.order) === nextID);
 
-  div(class="echo-buttons echo-margin-y-xl")
-    .echo-buttons-item
-      a(
-        href=prop.href,
-        class="echo-button echo-button-lg echo-button-style-b echo-button-icon echo-button-arrow",
-        class=buttonClasses
-      )
-        span.echo-doc-button-guide
-          | Next
-        | #{prop.label}
+  each item in next
+    p 
+    .echo-buttons.echo-margin-top-lg
+      .echo-buttons-item
+        a(
+          href=item.url,
+          class="echo-button echo-button-lg echo-button-style-b echo-button-icon echo-button-icon-arrow"
+        )
+          span.echo-doc-button-guide
+            | Next
+          | #{item.data.pageTitle}

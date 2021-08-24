@@ -79,8 +79,7 @@ html(lang="ja")
             .echo-doc-post-contents.styleguide-contents
               block content
 
-        if next !== null
-          +nextNav(next)
+        +nextNav(order)
 
       .echo-doc-sub(role="complementary")
         .echo-doc-container
