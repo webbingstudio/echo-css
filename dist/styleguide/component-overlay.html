@@ -9,6 +9,20 @@
 
     <?php include('../doc_include/html_head.inc'); ?>
 
+    <style>
+        body.js-clickit-open {
+            overflow: hidden;
+            height: 100vh;
+        }
+        .echo-overlay[aria-hidden="false"] {
+            display: block;
+        }
+        .echo-overlay[aria-hidden="true"] {
+            overflow: hidden;
+            width: 0;
+            height: 0;
+        }
+    </style>
 </head>
 <body>
 <div id="echo-document">
@@ -44,11 +58,14 @@
 <p><code>z-index</code> は <code>1000</code> となっている。常に表示する要素は、レイヤーを <code>1001</code> 以上にすること。</p>
 
 <div class="example">
-    <div class="echo-text-center echo-margin-0 echo-padding-y-lg echo-padding-bottom-md">
-        <button class="echo-button echo-button-style-a echo-button-lg js-toggle" data-toggle-target="#menu-01" data-toggle-sync=".js-toggle-sync-01" aria-expanded="false" aria-label="Menu">オーバーレイを表示</button>
+    <div class="echo-text-center echo-margin-0 echo-padding-y-md echo-padding-bottom-md">
+        <button class="echo-button echo-button-style-a js-overlay-01-01" aria-controls="menu-01-01" aria-expanded="false" aria-label="Menu">メニューを表示</button>
+    </div>
+    <div class="echo-text-center echo-margin-0 echo-padding-y-md echo-padding-bottom-md">
+        <button class="echo-button echo-button-style-a js-overlay-01-02" aria-controls="menu-01-02" aria-expanded="false" aria-label="Menu">モーダルポップアップを表示</button>
     </div>
 
-    <div class="echo-overlay" id="menu-01">
+    <div class="echo-overlay" id="menu-01-01">
         <div class="echo-overlay-bg"></div>
         <div class="echo-overlay-contents">
 
@@ -97,8 +114,28 @@
                 </ul>
             </nav><!-- /.nav -->
 
-            <p class="echo-text-center echo-margin-0 echo-padding-y-lg"><input type="button" class="echo-button echo-button-style-a echo-button-lg js-toggle-sync-01" data-toggle-target="#menu-01" aria-expanded="false" value="オーバーレイを閉じる" /></p>
+            <p class="echo-text-center echo-margin-0 echo-padding-y-lg"><input type="button" class="echo-button echo-button-style-a echo-button-lg js-overlay-close-01-01" aria-expanded="false" value="オーバーレイを閉じる" /></p>
 
+        </div><!-- /.echo-overlay-contents -->
+    </div><!-- /.echo-overlay -->
+
+
+    <div class="echo-overlay" id="menu-01-02">
+        <div class="echo-overlay-bg"></div>
+        <div class="echo-overlay-contents echo-padding-y-xl js-overlay-close-01-02" aria-expanded="false">
+            <div class="echo-container echo-container-xs">
+                <p class="echo-text-sm echo-text-right">背景をクリックすると閉じます</p>
+                <div class="echo-box">
+                    <div class="echo-body">
+                        <p>これはモーダルポップアップです。</p>
+                        <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+                        <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+                        <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+                        <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+                        <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+                    </div><!-- /.echo-body -->
+                </div><!-- /.echo-box -->
+            </div><!-- /.echo-container -->
         </div><!-- /.echo-overlay-contents -->
     </div><!-- /.echo-overlay -->
 </div>
@@ -116,11 +153,14 @@
 <p>文字色と背景色が反転する。</p>
 
 <div class="example">
-    <div class="echo-text-center echo-padding-bottom-md">
-        <button class="echo-button echo-button-style-a echo-button-lg js-toggle" data-toggle-target="#menu-02" data-toggle-sync=".js-toggle-sync-02" aria-expanded="false" aria-label="Menu">オーバーレイを表示</button>
+    <div class="echo-text-center echo-margin-0 echo-padding-y-md echo-padding-bottom-md">
+        <button class="echo-button echo-button-style-a js-overlay-02-01" aria-controls="menu-02-01" aria-expanded="false" aria-label="Menu">メニューを表示</button>
+    </div>
+    <div class="echo-text-center echo-margin-0 echo-padding-y-md echo-padding-bottom-md">
+        <button class="echo-button echo-button-style-a js-overlay-02-02" aria-controls="menu-02-02" aria-expanded="false" aria-label="Menu">モーダルポップアップを表示</button>
     </div>
 
-    <div class="echo-overlay echo-overlay-inverse" id="menu-02">
+    <div class="echo-overlay echo-overlay-inverse" id="menu-02-01">
         <div class="echo-overlay-bg"></div>
         <div class="echo-overlay-contents">
 
@@ -170,8 +210,27 @@
                 </ul>
             </nav><!-- /.nav -->
 
-            <p class="echo-text-center echo-margin-0 echo-padding-y-lg echo-margin-0 echo-padding-y-lg"><input type="button" class="echo-button echo-button-style-a echo-button-inverse echo-button-lg js-toggle-sync-02" data-toggle-target="#menu-02" aria-expanded="false" value="オーバーレイを閉じる" /></p>
+            <p class="echo-text-center echo-margin-0 echo-padding-y-lg echo-margin-0 echo-padding-y-lg"><input type="button" class="echo-button echo-button-style-a echo-button-inverse echo-button-lg js-overlay-close-02-01" aria-expanded="false" value="オーバーレイを閉じる" /></p>
 
+        </div><!-- /.echo-overlay-contents -->
+    </div><!-- /.echo-overlay -->
+
+    <div class="echo-overlay echo-overlay-inverse" id="menu-02-02">
+        <div class="echo-overlay-bg"></div>
+        <div class="echo-overlay-contents echo-padding-y-xl js-overlay-close-02-02" aria-expanded="false">
+            <div class="echo-container echo-container-xs">
+                <p class="echo-text-sm echo-text-right">背景をクリックすると閉じます</p>
+                <div class="echo-box echo-bg-inverse">
+                    <div class="echo-body">
+                        <p>これはモーダルポップアップです。</p>
+                        <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+                        <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+                        <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+                        <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+                        <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+                    </div><!-- /.echo-body -->
+                </div><!-- /.echo-box -->
+            </div><!-- /.echo-container -->
         </div><!-- /.echo-overlay-contents -->
     </div><!-- /.echo-overlay -->
 </div>
@@ -182,5 +241,38 @@
         (contents)
     &lt;/div&gt;&lt;!-- /.echo-overlay-contents --&gt;
 &lt;/div&gt;&lt;!-- /.echo-overlay --&gt;</code></pre></div>
+
+
+<script>
+    const modal_01_01 = new ClickIt({
+        mode: 'modal',
+        trigger: '.js-overlay-01-01',
+        sync: '.js-overlay-close-01-01'
+    });
+    const modal_01_02 = new ClickIt({
+        mode: 'modal',
+        trigger: '.js-overlay-01-02',
+        sync: '.js-overlay-close-01-02',
+        self: true
+    });
+    const modal_02_01 = new ClickIt({
+        mode: 'modal',
+        trigger: '.js-overlay-02-01',
+        sync: '.js-overlay-close-02-01'
+    });
+    const modal_02_02 = new ClickIt({
+        mode: 'modal',
+        trigger: '.js-overlay-02-02',
+        sync: '.js-overlay-close-02-02',
+        self: true
+    });
+    
+    window.addEventListener('DOMContentLoaded', () => {
+        modal_01_01.init();
+        modal_01_02.init();
+        modal_02_01.init();
+        modal_02_02.init();
+    });
+</script>
 
 <?php include('../doc_include/footer.inc'); ?>

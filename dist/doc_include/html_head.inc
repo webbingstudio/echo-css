@@ -10,9 +10,10 @@ if( !isset( $echo_path ) ) {
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
         crossorigin="anonymous"></script>
 
+    <script src="https://webbingstudio.github.io/clickit-js/js/clickit.js"></script>
     <script src="<?php echo $echo_path; ?>plugins/scrollto.min.js<?php echo '?var=' . date('YmdHis'); ?>"></script>
     <link rel="stylesheet" href="<?php echo $echo_path; ?>plugins/toggle.css<?php echo '?var=' . date('YmdHis'); ?>">
-    <script src="<?php echo $echo_path; ?>plugins/toggle.min.js<?php echo '?var=' . date('YmdHis'); ?>"></script>
+    <script src="<?php echo $echo_path; ?>plugins/toggle.js<?php echo '?var=' . date('YmdHis'); ?>"></script>
 
     <script src="<?php echo $echo_path; ?>styleguide/js/prism.js"></script>
 
