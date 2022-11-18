@@ -122,7 +122,7 @@
 
     <div class="echo-overlay" id="menu-01-02">
         <div class="echo-overlay-bg"></div>
-        <div class="echo-overlay-contents echo-padding-y-xl js-overlay-close-01-02" aria-expanded="false">
+        <div id="js-overlay-close-01-02" class="echo-overlay-contents echo-padding-x-lg echo-padding-y-xl">
             <div class="echo-container echo-container-xs">
                 <p class="echo-text-sm echo-text-right">背景をクリックすると閉じます</p>
                 <div class="echo-box">
@@ -217,7 +217,7 @@
 
     <div class="echo-overlay echo-overlay-inverse" id="menu-02-02">
         <div class="echo-overlay-bg"></div>
-        <div class="echo-overlay-contents echo-padding-y-xl js-overlay-close-02-02" aria-expanded="false">
+        <div id="js-overlay-close-02-02" class="echo-overlay-contents echo-padding-x-lg echo-padding-y-xl">
             <div class="echo-container echo-container-xs">
                 <p class="echo-text-sm echo-text-right">背景をクリックすると閉じます</p>
                 <div class="echo-box echo-bg-inverse">
@@ -251,9 +251,7 @@
     });
     const modal_01_02 = new ClickIt({
         mode: 'modal',
-        trigger: '.js-overlay-01-02',
-        sync: '.js-overlay-close-01-02',
-        self: true
+        trigger: '.js-overlay-01-02'
     });
     const modal_02_01 = new ClickIt({
         mode: 'modal',
@@ -262,9 +260,7 @@
     });
     const modal_02_02 = new ClickIt({
         mode: 'modal',
-        trigger: '.js-overlay-02-02',
-        sync: '.js-overlay-close-02-02',
-        self: true
+        trigger: '.js-overlay-02-02'
     });
     
     window.addEventListener('DOMContentLoaded', () => {
@@ -272,6 +268,24 @@
         modal_01_02.init();
         modal_02_01.init();
         modal_02_02.init();
+
+        const close01 = document.getElementById('js-overlay-close-01-02');
+        if( (modal_01_02) && (close01) ) {
+            close01.addEventListener( 'click', e => {
+                if( e.target.getAttribute('id') === 'js-overlay-close-01-02' ) {
+                    modal_01_02.closeAll();
+                }
+            });
+        }
+
+        const close02 = document.getElementById('js-overlay-close-02-02');
+        if( (modal_02_02) && (close02) ) {
+            close02.addEventListener( 'click', e => {
+                if( e.target.getAttribute('id') === 'js-overlay-close-02-02' ) {
+                    modal_02_02.closeAll();
+                }
+            });
+        }
     });
 </script>
 
